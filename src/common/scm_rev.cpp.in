@@ -1,0 +1,19 @@
+// SPDX-FileCopyrightText: Copyright 2024 shadPS4 Emulator Project
+// SPDX-License-Identifier: GPL-2.0-or-later
+
+#include "common/scm_rev.h"
+
+namespace Common {
+
+constexpr char g_version[]  = "@APP_VERSION@";
+constexpr bool g_is_release = @APP_IS_RELEASE@;
+
+constexpr char g_scm_rev[]         = "@GIT_REV@";
+constexpr char g_scm_branch[]      = "@GIT_BRANCH@";
+constexpr char g_scm_desc[]        = "@GIT_DESC@";
+constexpr char g_scm_remote_name[] = "@GIT_REMOTE_NAME@";
+constexpr char g_scm_remote_url[]  = "@GIT_REMOTE_URL@";
+constexpr char g_scm_date[]        = "@BUILD_DATE@";
+
+} // namespace
+
