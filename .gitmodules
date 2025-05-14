@@ -30,10 +30,6 @@
 	path = externals/toml11
 	url = https://github.com/ToruNiina/toml11.git
 	shallow = true
-[submodule "externals/tracy"]
-	path = externals/tracy
-	url = https://github.com/shadps4-emu/tracy.git
-	shallow = true
 [submodule "externals/ext-boost"]
 	path = externals/ext-boost
 	url = https://github.com/shadps4-emu/ext-boost.git

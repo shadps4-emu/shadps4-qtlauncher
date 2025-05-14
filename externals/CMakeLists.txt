@@ -89,35 +89,6 @@ if (NOT TARGET half::half)
     add_library(half::half ALIAS half)
 endif()
 
-# Dear ImGui
-add_library(Dear_ImGui
-        dear_imgui/imgui.cpp
-        dear_imgui/imgui_demo.cpp
-        dear_imgui/imgui_draw.cpp
-        dear_imgui/imgui_internal.h
-        dear_imgui/imgui_tables.cpp
-        dear_imgui/imgui_widgets.cpp
-)
-target_include_directories(Dear_ImGui INTERFACE dear_imgui/)
-
-# Tracy
-if (CMAKE_BUILD_TYPE STREQUAL "Release")
-    option(TRACY_ENABLE "" OFF)
-else()
-    option(TRACY_ENABLE "" ON)
-endif()
-option(TRACY_NO_CRASH_HANDLER "" ON) # Otherwise texture cache exceptions will be treaten as a crash
-option(TRACY_ON_DEMAND "" ON)
-option(TRACY_NO_FRAME_IMAGE "" ON)
-option(TRACY_FIBERS "" OFF) # For AmdGpu frontend profiling, disabled due to instability
-option(TRACY_NO_SYSTEM_TRACING "" ON)
-option(TRACY_NO_CALLSTACK "" ON)
-option(TRACY_NO_CODE_TRANSFER "" ON)
-option(TRACY_NO_SAMPLING "" ON)
-option(TRACY_ONLY_LOCALHOST "" ON)
-option(TRACY_NO_CONTEXT_SWITCH "" ON)
-add_subdirectory(tracy)
-
 # pugixml
 if (NOT TARGET pugixml::pugixml)
     add_subdirectory(pugixml)
