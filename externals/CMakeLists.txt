@@ -103,13 +103,6 @@ endif()
 
 # Apple-only dependencies
 if (APPLE)
-    # date
-    if (NOT TARGET date::date-tz)
-        option(BUILD_TZ_LIB "" ON)
-        option(USE_SYSTEM_TZ_DB "" ON)
-        add_subdirectory(date)
-    endif()
-
     # MoltenVK
     if (NOT TARGET MoltenVK)
         add_subdirectory(MoltenVK)
