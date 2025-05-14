@@ -46,10 +46,6 @@
 	path = externals/zydis
 	url = https://github.com/zyantific/zydis.git
 	shallow = true
-[submodule "externals/sirit"]
-	path = externals/sirit
-	url = https://github.com/shadps4-emu/sirit.git
-	shallow = true
 [submodule "externals/xxhash"]
 	path = externals/xxhash
 	url = https://github.com/Cyan4973/xxHash.git
@@ -66,10 +62,6 @@
 	path = externals/date
 	url = https://github.com/HowardHinnant/date.git
 	shallow = true
-[submodule "externals/ffmpeg-core"]
-	path = externals/ffmpeg-core
-	url = https://github.com/shadps4-emu/ext-ffmpeg-core.git
-	shallow = true
 [submodule "externals/half"]
 	path = externals/half
 	url = https://github.com/ROCm/half.git
@@ -83,18 +75,6 @@
 	path = externals/pugixml
 	url = https://github.com/zeux/pugixml.git
 	shallow = true
-[submodule "externals/discord-rpc"]
-	path = externals/discord-rpc
-	url = https://github.com/shadps4-emu/ext-discord-rpc.git
-	shallow = true
-[submodule "externals/LibAtrac9"]
-	path = externals/LibAtrac9
-	url = https://github.com/shadps4-emu/ext-LibAtrac9.git
-	shallow = true
-[submodule "externals/libpng"]
-	path = externals/libpng
-	url = https://github.com/pnggroup/libpng
-	shallow = true
 [submodule "externals/MoltenVK/SPIRV-Cross"]
 	path = externals/MoltenVK/SPIRV-Cross
 	url = https://github.com/KhronosGroup/SPIRV-Cross
@@ -107,9 +87,6 @@
 	path = externals/MoltenVK/cereal
 	url = https://github.com/USCiLab/cereal
 	shallow = true
-[submodule "externals/libusb"]
-	path = externals/libusb
-	url = https://github.com/libusb/libusb-cmake.git
 [submodule "externals/volk"]
 	path = externals/volk
 	url = https://github.com/zeux/volk.git
