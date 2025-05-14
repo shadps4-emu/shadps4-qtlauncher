@@ -446,8 +446,8 @@ endif()
 
 create_target_directory_groups(shadps4)
 
-target_link_libraries(shadps4 PRIVATE magic_enum::magic_enum fmt::fmt toml11::toml11 tsl::robin_map xbyak::xbyak Tracy::TracyClient Dear_ImGui half::half ZLIB::ZLIB Vulkan::Headers volk_headers)
-target_link_libraries(shadps4 PRIVATE Boost::headers xxHash::xxhash Zydis::Zydis SDL3::SDL3 pugixml::pugixml stb::headers)
+target_link_libraries(shadps4 PRIVATE magic_enum::magic_enum fmt::fmt toml11::toml11 tsl::robin_map half::half ZLIB::ZLIB Vulkan::Headers volk_headers)
+target_link_libraries(shadps4 PRIVATE Boost::headers SDL3::SDL3 pugixml::pugixml stb::headers)
 
 
 # Optional due to https://github.com/shadps4-emu/shadPS4/issues/1704
@@ -491,8 +491,6 @@ if (APPLE)
         target_link_options(shadps4 PRIVATE -Wl,-no_pie,-no_fixup_chains,-no_huge,-pagezero_size,0x4000,-segaddr,TCB_SPACE,0x4000,-segaddr,SYSTEM_MANAGED,0x400000,-segaddr,SYSTEM_RESERVED,0x7FFFFC000,-image_base,0x20000000000)
     endif()
 
-    # Replacement for std::chrono::time_zone
-    target_link_libraries(shadps4 PRIVATE date::date-tz)
 endif()
 
 if (NOT ENABLE_QT_GUI)
@@ -508,7 +506,7 @@ if (ENABLE_QT_GUI)
 endif()
 
 if (WIN32)
-    target_link_libraries(shadps4 PRIVATE mincore winpthreads)
+    target_link_libraries(shadps4 PRIVATE mincore)
 
     if (MSVC)
         # MSVC likes putting opinions on what people can use, disable:
