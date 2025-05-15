@@ -63,11 +63,6 @@ if (NOT TARGET tsl::robin_map)
     add_subdirectory(robin-map)
 endif()
 
-# Xbyak
-if (NOT TARGET xbyak::xbyak)
-    add_subdirectory(xbyak)
-endif()
-
 # MagicEnum
 if (NOT TARGET magic_enum::magic_enum)
     add_subdirectory(magic_enum)
@@ -86,25 +81,6 @@ if (NOT TARGET toml11::toml11)
     endif()
 endif()
 
-# xxHash
-if (NOT TARGET xxHash::xxhash)
-    add_library(xxhash xxhash/xxhash.h xxhash/xxhash.c)
-    target_include_directories(xxhash PUBLIC xxhash)
-    add_library(xxHash::xxhash ALIAS xxhash)
-endif()
-
-# Zydis
-if (NOT TARGET Zydis::Zydis)
-    option(ZYDIS_BUILD_TOOLS "" OFF)
-    option(ZYDIS_BUILD_EXAMPLES "" OFF)
-    add_subdirectory(zydis)
-endif()
-
-# Winpthreads
-if (WIN32)
-    add_subdirectory(winpthreads)
-    target_include_directories(winpthreads INTERFACE winpthreads/include)
-endif()
 
 # half
 if (NOT TARGET half::half)
@@ -112,35 +88,6 @@ if (NOT TARGET half::half)
     target_include_directories(half INTERFACE half/include)
     add_library(half::half ALIAS half)
 endif()
-
-# Dear ImGui
-add_library(Dear_ImGui
-        dear_imgui/imgui.cpp
-        dear_imgui/imgui_demo.cpp
-        dear_imgui/imgui_draw.cpp
-        dear_imgui/imgui_internal.h
-        dear_imgui/imgui_tables.cpp
-        dear_imgui/imgui_widgets.cpp
-)
-target_include_directories(Dear_ImGui INTERFACE dear_imgui/)
-
-# Tracy
-if (CMAKE_BUILD_TYPE STREQUAL "Release")
-    option(TRACY_ENABLE "" OFF)
-else()
-    option(TRACY_ENABLE "" ON)
-endif()
-option(TRACY_NO_CRASH_HANDLER "" ON) # Otherwise texture cache exceptions will be treaten as a crash
-option(TRACY_ON_DEMAND "" ON)
-option(TRACY_NO_FRAME_IMAGE "" ON)
-option(TRACY_FIBERS "" OFF) # For AmdGpu frontend profiling, disabled due to instability
-option(TRACY_NO_SYSTEM_TRACING "" ON)
-option(TRACY_NO_CALLSTACK "" ON)
-option(TRACY_NO_CODE_TRANSFER "" ON)
-option(TRACY_NO_SAMPLING "" ON)
-option(TRACY_ONLY_LOCALHOST "" ON)
-option(TRACY_NO_CONTEXT_SWITCH "" ON)
-add_subdirectory(tracy)
 
 # pugixml
 if (NOT TARGET pugixml::pugixml)
@@ -156,13 +103,6 @@ endif()
 
 # Apple-only dependencies
 if (APPLE)
-    # date
-    if (NOT TARGET date::date-tz)
-        option(BUILD_TZ_LIB "" ON)
-        option(USE_SYSTEM_TZ_DB "" ON)
-        add_subdirectory(date)
-    endif()
-
     # MoltenVK
     if (NOT TARGET MoltenVK)
         add_subdirectory(MoltenVK)

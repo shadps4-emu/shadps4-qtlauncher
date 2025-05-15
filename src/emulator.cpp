@@ -5,7 +5,6 @@
 #include <fmt/core.h>
 
 #include "common/config.h"
-#include "common/debug.h"
 #include "common/logging/backend.h"
 #include "common/logging/log.h"
 #ifdef ENABLE_QT_GUI
@@ -23,7 +22,7 @@
 #include "core/file_format/trp.h"
 #include "emulator.h"
 
-//Frontend::WindowSDL* g_window = nullptr;
+// Frontend::WindowSDL* g_window = nullptr;
 
 namespace Core {
 
@@ -41,14 +40,11 @@ Emulator::~Emulator() {
 }
 
 void Emulator::Run(const std::filesystem::path& file, const std::vector<std::string> args) {
- 
 
     std::quick_exit(0);
 }
 
-void Emulator::LoadSystemModules(const std::string& game_serial) {
-
-}
+void Emulator::LoadSystemModules(const std::string& game_serial) {}
 
 #ifdef ENABLE_QT_GUI
 void Emulator::UpdatePlayTime(const std::string& serial) {
