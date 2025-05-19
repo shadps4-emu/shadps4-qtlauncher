@@ -17,7 +17,7 @@ if (NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Release)
 endif()
 
-project(shadPS4 CXX C ASM ${ADDITIONAL_LANGUAGES})
+project(shadPS4QtLauncher CXX C ASM ${ADDITIONAL_LANGUAGES})
 
 # Forcing PIE makes sure that the base address is high enough so that it doesn't clash with the PS4 memory.
 if(UNIX AND NOT APPLE)
@@ -417,7 +417,7 @@ set(QT_GUI src/qt_gui/about_dialog.cpp
 endif()
 
 if (ENABLE_QT_GUI)
-    qt_add_executable(shadps4
+    qt_add_executable(shadPS4QtLauncher
         ${AUDIO_CORE}
         ${INPUT}
         ${QT_GUI}
@@ -427,7 +427,7 @@ if (ENABLE_QT_GUI)
         src/images/shadPS4.icns
     )
 else()
-    add_executable(shadps4
+    add_executable(shadPS4QtLauncher
         ${AUDIO_CORE}
         ${INPUT}
         ${COMMON}
@@ -441,25 +441,25 @@ else()
     )
 endif()
 
-create_target_directory_groups(shadps4)
+create_target_directory_groups(shadPS4QtLauncher)
 
-target_link_libraries(shadps4 PRIVATE magic_enum::magic_enum fmt::fmt toml11::toml11 tsl::robin_map half::half ZLIB::ZLIB Vulkan::Headers volk_headers)
-target_link_libraries(shadps4 PRIVATE Boost::headers SDL3::SDL3 pugixml::pugixml stb::headers)
+target_link_libraries(shadPS4QtLauncher PRIVATE magic_enum::magic_enum fmt::fmt toml11::toml11 tsl::robin_map half::half ZLIB::ZLIB Vulkan::Headers volk_headers)
+target_link_libraries(shadPS4QtLauncher PRIVATE Boost::headers SDL3::SDL3 pugixml::pugixml stb::headers)
 
 
 # Optional due to https://github.com/shadps4-emu/shadPS4/issues/1704
 if (${CMAKE_SYSTEM_NAME} STREQUAL "Linux" AND ENABLE_USERFAULTFD)
-    target_compile_definitions(shadps4 PRIVATE ENABLE_USERFAULTFD)
+    target_compile_definitions(shadPS4QtLauncher PRIVATE ENABLE_USERFAULTFD)
 endif()
 
 if (APPLE)
     # Include MoltenVK, along with an ICD file so it can be found by the system Vulkan loader if used for loading layers.
     if (ENABLE_QT_GUI)
         set(MVK_BUNDLE_PATH "Resources/vulkan/icd.d")
-        set_property(TARGET shadps4 APPEND PROPERTY BUILD_RPATH "@executable_path/../${MVK_BUNDLE_PATH}")
+        set_property(TARGET shadPS4QtLauncher APPEND PROPERTY BUILD_RPATH "@executable_path/../${MVK_BUNDLE_PATH}")
         set(MVK_DST ${CMAKE_CURRENT_BINARY_DIR}/shadps4.app/Contents/${MVK_BUNDLE_PATH})
     else()
-        set_property(TARGET shadps4 APPEND PROPERTY BUILD_RPATH "@executable_path")
+        set_property(TARGET shadPS4QtLauncher APPEND PROPERTY BUILD_RPATH "@executable_path")
         set(MVK_DST ${CMAKE_CURRENT_BINARY_DIR})
     endif()
 
@@ -481,21 +481,21 @@ if (APPLE)
         COMMAND ${CMAKE_COMMAND} -E copy ${MVK_DYLIB_SRC} ${MVK_DYLIB_DST})
     add_custom_target(CopyMoltenVK DEPENDS ${MVK_ICD_DST} ${MVK_DYLIB_DST})
     add_dependencies(CopyMoltenVK MoltenVK)
-    add_dependencies(shadps4 CopyMoltenVK)
+    add_dependencies(shadPS4QtLauncher CopyMoltenVK)
 
     if (ARCHITECTURE STREQUAL "x86_64")
         # Reserve system-managed memory space.
-        target_link_options(shadps4 PRIVATE -Wl,-no_pie,-no_fixup_chains,-no_huge,-pagezero_size,0x4000,-segaddr,TCB_SPACE,0x4000,-segaddr,SYSTEM_MANAGED,0x400000,-segaddr,SYSTEM_RESERVED,0x7FFFFC000,-image_base,0x20000000000)
+        target_link_options(shadPS4QtLauncher PRIVATE -Wl,-no_pie,-no_fixup_chains,-no_huge,-pagezero_size,0x4000,-segaddr,TCB_SPACE,0x4000,-segaddr,SYSTEM_MANAGED,0x400000,-segaddr,SYSTEM_RESERVED,0x7FFFFC000,-image_base,0x20000000000)
     endif()
 
 endif()
 
 if (NOT ENABLE_QT_GUI)
-  target_link_libraries(shadps4 PRIVATE SDL3::SDL3)
+  target_link_libraries(shadPS4QtLauncher PRIVATE SDL3::SDL3)
 endif()
 
 if (ENABLE_QT_GUI)
-    target_link_libraries(shadps4 PRIVATE Qt6::Widgets Qt6::Concurrent Qt6::Network Qt6::Multimedia)
+    target_link_libraries(shadPS4QtLauncher PRIVATE Qt6::Widgets Qt6::Concurrent Qt6::Network Qt6::Multimedia)
     add_definitions(-DENABLE_QT_GUI)
     if (ENABLE_UPDATER)
         add_definitions(-DENABLE_UPDATER)
@@ -503,7 +503,7 @@ if (ENABLE_QT_GUI)
 endif()
 
 if (WIN32)
-    target_link_libraries(shadps4 PRIVATE mincore)
+    target_link_libraries(shadPS4QtLauncher PRIVATE mincore)
 
     if (MSVC)
         # MSVC likes putting opinions on what people can use, disable:
@@ -521,31 +521,31 @@ if (WIN32)
     add_definitions(-DNTDDI_VERSION=0x0A000006 -D_WIN32_WINNT=0x0A00 -DWINVER=0x0A00)
 
     if (MSVC)
-        target_link_libraries(shadps4 PRIVATE clang_rt.builtins-x86_64.lib)
+        target_link_libraries(shadPS4QtLauncher PRIVATE clang_rt.builtins-x86_64.lib)
     endif()
 
     # Disable ASLR so we can reserve the user area
     if (MSVC)
-        target_link_options(shadps4 PRIVATE /DYNAMICBASE:NO)
+        target_link_options(shadPS4QtLauncher PRIVATE /DYNAMICBASE:NO)
     else()
-        target_link_options(shadps4 PRIVATE -Wl,--disable-dynamicbase)
+        target_link_options(shadPS4QtLauncher PRIVATE -Wl,--disable-dynamicbase)
     endif()
 
     # Increase stack commit area (Needed, otherwise there are crashes)
     if (MSVC)
-        target_link_options(shadps4 PRIVATE /STACK:0x200000,0x200000)
+        target_link_options(shadPS4QtLauncher PRIVATE /STACK:0x200000,0x200000)
     else()
-        target_link_options(shadps4 PRIVATE -Wl,--stack,2097152)
+        target_link_options(shadPS4QtLauncher PRIVATE -Wl,--stack,2097152)
     endif()
 endif()
 
 if (WIN32)
-    target_sources(shadps4 PRIVATE src/shadps4.rc)
+    target_sources(shadPS4QtLauncher PRIVATE src/shadps4.rc)
 endif()
 
 add_definitions(-DBOOST_ASIO_STANDALONE)
 
-target_include_directories(shadps4 PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(shadPS4QtLauncher PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 
 
 # embed resources
@@ -558,10 +558,10 @@ cmrc_add_resource_library(embedded-resources
         src/images/gold.png
         src/images/platinum.png
         src/images/silver.png)
-target_link_libraries(shadps4 PRIVATE res::embedded)
+target_link_libraries(shadPS4QtLauncher PRIVATE res::embedded)
 
 if (ENABLE_QT_GUI)
-    set_target_properties(shadps4 PROPERTIES
+    set_target_properties(shadPS4QtLauncher PROPERTIES
 #       WIN32_EXECUTABLE ON
         MACOSX_BUNDLE ON
         MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/dist/MacOSBundleInfo.plist.in"
@@ -576,13 +576,13 @@ endif()
 if (UNIX AND NOT APPLE)
     if (ENABLE_QT_GUI)
         find_package(OpenSSL REQUIRED)
-        target_link_libraries(shadps4 PRIVATE ${OPENSSL_LIBRARIES})
+        target_link_libraries(shadPS4QtLauncher PRIVATE ${OPENSSL_LIBRARIES})
     endif()
 endif()
 
 
 # Install rules
-install(TARGETS shadps4 BUNDLE DESTINATION .)
+install(TARGETS shadPS4QtLauncher BUNDLE DESTINATION .)
 
 if (ENABLE_QT_GUI AND CMAKE_SYSTEM_NAME STREQUAL "Linux")
     install(FILES "dist/net.shadps4.shadPS4.desktop" DESTINATION "share/applications")
