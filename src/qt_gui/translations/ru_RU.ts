@@ -2422,11 +2422,11 @@
     </message>
     <message>
       <source>Audio Device (general)</source>
-      <translation type="unfinished">Audio Device (general)</translation>
+      <translation>Аудио устройство (общее)</translation>
     </message>
     <message>
       <source>Audio Device (DS4 speaker)</source>
-      <translation type="unfinished">Audio Device (DS4 speaker)</translation>
+      <translation>Аудио устройство (динамик DS4)</translation>
     </message>
   </context>
   <context>
