@@ -11,12 +11,7 @@ IpcClient::IpcClient(QObject* parent)
     : QObject(parent) {
 }
 
-void IpcClient::startEmulator(const QString& exe, const QStringList& args, const QString& workDir) {
-    QFileInfo fileInfo(exe);
-    if (!fileInfo.exists()) {
-        LOG_ERROR(IPC, "ShadPS4 instance at {} don't exist", exe.toStdString());
-    }
-
+void IpcClient::startEmulator(const QFileInfo& exe, const QStringList& args, const QString& workDir) {
     process = std::make_unique<QProcess>(this);
 
     connect(process.get(), &QProcess::readyReadStandardError, this, [this]{ onStderr(); });
@@ -29,8 +24,8 @@ void IpcClient::startEmulator(const QString& exe, const QStringList& args, const
     env.insert("SHADPS4_ENABLE_IPC", "true");
     process->setProcessEnvironment(env);
 
-    process->setWorkingDirectory(workDir.isEmpty() ? fileInfo.absolutePath() : workDir);
-    process->start(fileInfo.absoluteFilePath(), args, QIODevice::ReadWrite);
+    process->setWorkingDirectory(workDir.isEmpty() ? exe.absolutePath() : workDir);
+    process->start(exe.absoluteFilePath(), args, QIODevice::ReadWrite);
 }
 
 void IpcClient::runGame() {

@@ -6,6 +6,7 @@
 #include <functional>
 
 #include <QProcess>
+#include <QFileInfo>
 
 #include "core/memory_patcher.h"
 
@@ -13,7 +14,7 @@ class IpcClient : public QObject {
     Q_OBJECT
 public:
     explicit IpcClient(QObject* parent = nullptr);
-    void startEmulator(const QString& exe, const QStringList& args, const QString& workDir = QString());
+    void startEmulator(const QFileInfo& exe, const QStringList& args, const QString& workDir = QString());
     void runGame();
     void pauseGame();
     void resumeGame();

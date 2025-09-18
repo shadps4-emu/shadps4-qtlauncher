@@ -64,16 +64,16 @@ bool MainWindow::Init() {
     std::string remote_host = Common::GetRemoteNameFromLink();
     if (Common::g_is_release) {
         if (remote_host == "shadps4-emu" || remote_url.length() == 0) {
-            window_title = fmt::format("shadPS4 v{}", Common::g_version);
+            window_title = fmt::format("shadPS4QtLauncher v{}", Common::g_version);
         } else {
-            window_title = fmt::format("shadPS4 {}/v{}", remote_host, Common::g_version);
+            window_title = fmt::format("shadPS4QtLauncher {}/v{}", remote_host, Common::g_version);
         }
     } else {
         if (remote_host == "shadps4-emu" || remote_url.length() == 0) {
-            window_title = fmt::format("shadPS4 v{} {} {}", Common::g_version, Common::g_scm_branch,
+            window_title = fmt::format("shadPS4QtLauncher v{} {} {}", Common::g_version, Common::g_scm_branch,
                                        Common::g_scm_desc);
         } else {
-            window_title = fmt::format("shadPS4 v{} {}/{} {}", Common::g_version, remote_host,
+            window_title = fmt::format("shadPS4QtLauncher v{} {}/{} {}", Common::g_version, remote_host,
                                        Common::g_scm_branch, Common::g_scm_desc);
         }
     }
@@ -1232,11 +1232,17 @@ void MainWindow::StartEmulator(std::filesystem::path path) {
     isGameRunning = true;
     last_game_path = path;
     QString exe = m_gui_settings->GetValue(gui::gen_shadPath).toString();
+    QFileInfo fileInfo(exe);
+    if (!fileInfo.exists()) {
+        LOG_ERROR(IPC, "ShadPS4 instance at {} don't exist", exe.toStdString());
+    }
+
     QStringList args{"--game", QString::fromStdWString(path.wstring())};
 
-    QString workDir = QFileInfo(exe).absolutePath();
+    QString workDir = fileInfo.absolutePath();
 
-    m_ipc_client->startEmulator(exe, args, workDir);
+    m_ipc_client->startEmulator(fileInfo, args, workDir);
+
     auto gameInfo = GameInfoClass();
     auto dir = path.parent_path();
     auto info = gameInfo.readGameInfo(dir);
@@ -1246,6 +1252,7 @@ void MainWindow::StartEmulator(std::filesystem::path path) {
     for (auto patch : patches) {
         m_ipc_client->sendMemoryPatches(patch.modName, patch.address, patch.value, patch.target, patch.size, patch.maskOffset, patch.littleEndian, patch.mask, patch.maskOffset);
     }
+
     m_ipc_client->runGame();
 }
 
@@ -1253,7 +1260,8 @@ void MainWindow::RestartEmulator() {
     QString exe = m_gui_settings->GetValue(gui::gen_shadPath).toString();
     QStringList args{"--game", QString::fromStdWString(last_game_path.wstring())};
 
-    QString workDir = QFileInfo(exe).absolutePath();
+    QFileInfo fileInfo(exe);
+    QString workDir = fileInfo.absolutePath();
 
-    m_ipc_client->startEmulator(exe, args, workDir);
+    m_ipc_client->startEmulator(fileInfo, args, workDir);
 }
