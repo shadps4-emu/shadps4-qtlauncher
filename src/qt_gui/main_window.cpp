@@ -74,7 +74,7 @@ bool MainWindow::Init() {
                                        Common::g_scm_branch, Common::g_scm_desc);
         } else {
             window_title = fmt::format("shadPS4QtLauncher v{} {}/{} {}", Common::g_version,
-                                   remote_host, Common::g_scm_branch, Common::g_scm_desc);
+                                       remote_host, Common::g_scm_branch, Common::g_scm_desc);
         }
     }
     setWindowTitle(QString::fromStdString(window_title));
@@ -1251,7 +1251,7 @@ void MainWindow::StartEmulator(std::filesystem::path path) {
     auto patches = MemoryPatcher::readPatches(gameSerial, appVersion);
     for (auto patch : patches) {
         m_ipc_client->sendMemoryPatches(patch.modName, patch.address, patch.value, patch.target,
-                                     patch.size, patch.maskOffset, patch.littleEndian,
+                                        patch.size, patch.maskOffset, patch.littleEndian,
                                         patch.mask, patch.maskOffset);
     }
 
