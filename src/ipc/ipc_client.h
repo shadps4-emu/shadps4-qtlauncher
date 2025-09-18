@@ -5,8 +5,8 @@
 
 #include <functional>
 
-#include <QProcess>
 #include <QFileInfo>
+#include <QProcess>
 
 #include "core/memory_patcher.h"
 
@@ -14,7 +14,8 @@ class IpcClient : public QObject {
     Q_OBJECT
 public:
     explicit IpcClient(QObject* parent = nullptr);
-    void startEmulator(const QFileInfo& exe, const QStringList& args, const QString& workDir = QString());
+    void startEmulator(const QFileInfo& exe, const QStringList& args,
+                       const QString& workDir = QString());
     void runGame();
     void pauseGame();
     void resumeGame();
@@ -22,8 +23,8 @@ public:
     void restartEmulator();
     void toggleFullscreen();
     void sendMemoryPatches(std::string modNameStr, std::string offsetStr, std::string valueStr,
-                 std::string targetStr, std::string sizeStr, bool isOffset, bool littleEndian,
-                 MemoryPatcher::PatchMask patchMask, int maskOffset);
+                 std::string targetStr, std::string sizeStr, bool isOffset,
+                 bool littleEndian, MemoryPatcher::PatchMask patchMask, int maskOffset);
     std::function<void()> gameClosedFunc;
     std::function<void()> restartEmulatorFunc;
 

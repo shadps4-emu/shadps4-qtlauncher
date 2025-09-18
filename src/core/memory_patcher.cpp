@@ -116,7 +116,7 @@ std::vector<PendingPatch> readPatches(std::string gameSerial, std::string appVer
                     const QString tgt =
                         (type == "mask_jump32") ? a.value("Target").toString() : QString{};
                     const QString sz =
-                        (type == "mask_jump32") ? a.value("Size").toString()   : QString{};
+                        (type == "mask_jump32") ? a.value("Size").toString() : QString{};
 
                     if (!isEnabled) {
                         continue;

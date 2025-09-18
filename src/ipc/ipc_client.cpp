@@ -4,19 +4,19 @@
 #include <QDir>
 #include <QProcessEnvironment>
 
-#include "ipc_client.h"
 #include "common/logging/log.h"
+#include "ipc_client.h"
 
-IpcClient::IpcClient(QObject* parent)
-    : QObject(parent) {
-}
 
-void IpcClient::startEmulator(const QFileInfo& exe, const QStringList& args, const QString& workDir) {
+IpcClient::IpcClient(QObject* parent) : QObject(parent) {}
+
+void IpcClient::startEmulator(const QFileInfo& exe, const QStringList& args,
+                              const QString& workDir) {
     process = std::make_unique<QProcess>(this);
 
-    connect(process.get(), &QProcess::readyReadStandardError, this, [this]{ onStderr(); });
-    connect(process.get(), &QProcess::readyReadStandardOutput, this, [this]{ onStdout(); });
-    connect(process.get(), &QProcess::finished, this, [this]{ onProcessClosed(); });
+    connect(process.get(), &QProcess::readyReadStandardError, this, [this] { onStderr(); });
+    connect(process.get(), &QProcess::readyReadStandardOutput, this, [this] { onStdout(); });
+    connect(process.get(), &QProcess::finished, this, [this] { onProcessClosed(); });
 
     process->setProcessChannelMode(QProcess::SeparateChannels);
 
@@ -54,9 +54,10 @@ void IpcClient::toggleFullscreen() {
     writeLine("TOGGLE_FULLSCREEN");
 }
 
-void IpcClient::sendMemoryPatches(std::string modNameStr, std::string offsetStr, std::string valueStr,
-                 std::string targetStr, std::string sizeStr, bool isOffset, bool littleEndian,
-                 MemoryPatcher::PatchMask patchMask, int maskOffset) {
+void IpcClient::sendMemoryPatches(std::string modNameStr, std::string offsetStr,
+                                  std::string valueStr, std::string targetStr, std::string sizeStr,
+                                  bool isOffset, bool littleEndian,
+                                  MemoryPatcher::PatchMask patchMask, int maskOffset) {
     writeLine("PATCH_MEMORY");
     writeLine(QString::fromStdString(modNameStr));
     writeLine(QString::fromStdString(offsetStr));
@@ -76,20 +77,22 @@ void IpcClient::onStderr() {
         QByteArray line = buffer.left(idx);
         buffer.remove(0, idx + 1);
 
-        if (!line.isEmpty() && line.back() == '\r') line.chop(1);
-        if (!line.startsWith(";")) continue;
+        if (!line.isEmpty() && line.back() == '\r') {
+            line.chop(1);
+        }
+
+        if (!line.startsWith(";")) {
+            continue;
+        }
 
         const QString s = QString::fromUtf8(line.mid(1)).trimmed();
         if (s == "#IPC_ENABLED") {
             LOG_INFO(IPC, "IPC detected");
-        }
-        else if (s == "ENABLE_MEMORY_PATCH") {
+        } else if (s == "ENABLE_MEMORY_PATCH") {
             LOG_INFO(IPC, "Feature detected: 'Memory patch'");
-        }
-        else if (s == "ENABLE_EMU_CONTROL") {
+        } else if (s == "ENABLE_EMU_CONTROL") {
             LOG_INFO(IPC, "Feature detected: 'Emu Control'");
-        }
-        else if (s == "#IPC_END") {
+        } else if (s == "#IPC_END") {
             writeLine("RUN");
             LOG_INFO(IPC, "IPC: start emu");
         }

@@ -6,8 +6,8 @@
 #include "unordered_map"
 
 #include "common/config.h"
-#include "common/memory_patcher.h"
 #include "common/logging/backend.h"
+#include "common/memory_patcher.h"
 #include "qt_gui/game_install_dialog.h"
 #include "qt_gui/main_window.h"
 #ifdef _WIN32
