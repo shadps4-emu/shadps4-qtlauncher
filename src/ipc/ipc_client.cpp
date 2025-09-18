@@ -47,9 +47,6 @@ void IpcClient::resumeGame() {
 
 void IpcClient::stopEmulator() {
     writeLine("STOP");
-    process->disconnect();
-    process->deleteLater();
-    process.reset();
 }
 
 void IpcClient::restartEmulator() {
@@ -105,12 +102,16 @@ void IpcClient::onStderr() {
 }
 
 void IpcClient::onStdout() {
-    printf(process->readAllStandardOutput());
+    printf("%s", process->readAllStandardOutput().toStdString().c_str());
 }
 
 void IpcClient::onProcessClosed() {
     gameClosedFunc();
+    process->disconnect();
+    process->deleteLater();
+    process.reset();
     if (pendingRestart) {
+        pendingRestart = false;
         restartEmulatorFunc();
     }
 }
