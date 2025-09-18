@@ -2431,6 +2431,14 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
       <source>Audio Device (DS4 speaker)</source>
       <translation>Audiogerät (DS4 Lautsprecher)</translation>
     </message>
+    <message>
+      <source>shadPS4 Path</source>
+      <translation type="unfinished">shadPS4 Path</translation>
+    </message>
+    <message>
+      <source>Select the shadPS4 executable</source>
+      <translation type="unfinished">Select the shadPS4 executable</translation>
+    </message>
   </context>
   <context>
     <name>TrophyViewer</name>
