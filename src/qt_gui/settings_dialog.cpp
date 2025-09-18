@@ -359,7 +359,19 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
                 delete selected_item;
             }
         });
+        connect(ui->browse_shad_path, &QPushButton::clicked, this, [this]() {
+            const auto shad_exe_path = m_gui_settings->GetValue(gui::gen_shadPath).toString();
+            QString initial_path;
 
+            QString shad_folder_path_string = QFileDialog::getOpenFileName(
+                this, tr("Select the shadPS4 executable"), initial_path);
+
+            auto file_path = Common::FS::PathFromQString(shad_folder_path_string);
+            if (!file_path.empty()) {
+                ui->currentShadPath->setText(shad_folder_path_string);
+                m_gui_settings->SetValue(gui::gen_shadPath, shad_folder_path_string);
+            }
+        });
         connect(ui->browseButton, &QPushButton::clicked, this, [this]() {
             const auto save_data_path = Config::GetSaveDataPath();
             QString initial_path;
@@ -498,6 +510,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         ui->gameFoldersListWidget->installEventFilter(this);
         ui->addFolderButton->installEventFilter(this);
         ui->removeFolderButton->installEventFilter(this);
+        ui->currentShadPath->setText(m_gui_settings->GetValue(gui::gen_shadPath).toString());
         ui->saveDataGroupBox->installEventFilter(this);
         ui->currentSaveDataPath->installEventFilter(this);
         ui->currentDLCFolder->installEventFilter(this);
@@ -1092,16 +1105,6 @@ void SettingsDialog::UpdateSettings(bool is_specific) {
         Config::setAllGameInstallDirs(dirs_with_states);
 
         BackgroundMusicPlayer::getInstance().setVolume(ui->BGMVolumeSlider->value());
-
-#ifdef ENABLE_DISCORD_RPC
-        auto* rpc = Common::Singleton<DiscordRPCHandler::RPC>::Instance();
-        if (Config::getEnableDiscordRPC()) {
-            rpc->init();
-            rpc->setStatusIdling();
-        } else {
-            rpc->shutdown();
-        }
-#endif
 
         Config::setLoadGameSizeEnabled(ui->gameSizeCheckBox->isChecked());
         Config::setTrophyKey(ui->trophyKeyLineEdit->text().toStdString());

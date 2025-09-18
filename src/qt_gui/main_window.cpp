@@ -19,16 +19,14 @@
 #include "common/scm_rev.h"
 #include "common/string_util.h"
 #include "control_settings.h"
+#include "core/memory_patcher.h"
 #include "game_install_dialog.h"
 #include "hotkeys.h"
 #include "input/input_handler.h"
+#include "ipc/ipc_client.h"
 #include "kbm_gui.h"
 #include "main_window.h"
 #include "settings_dialog.h"
-
-#ifdef ENABLE_DISCORD_RPC
-#include "common/discord_rpc_handler.h"
-#endif
 
 MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
@@ -37,6 +35,10 @@ MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent), ui(new Ui::MainWi
     m_gui_settings = std::make_shared<gui_settings>();
     ui->toggleLabelsAct->setChecked(
         m_gui_settings->GetValue(gui::mw_showLabelsUnderIcons).toBool());
+
+    m_ipc_client = std::make_shared<IpcClient>(this);
+    m_ipc_client->gameClosedFunc = [this]() { onGameClosed(); };
+    m_ipc_client->restartEmulatorFunc = [this]() { RestartEmulator(); };
 }
 
 MainWindow::~MainWindow() {
@@ -62,17 +64,17 @@ bool MainWindow::Init() {
     std::string remote_host = Common::GetRemoteNameFromLink();
     if (Common::g_is_release) {
         if (remote_host == "shadps4-emu" || remote_url.length() == 0) {
-            window_title = fmt::format("shadPS4 v{}", Common::g_version);
+            window_title = fmt::format("shadPS4QtLauncher v{}", Common::g_version);
         } else {
-            window_title = fmt::format("shadPS4 {}/v{}", remote_host, Common::g_version);
+            window_title = fmt::format("shadPS4QtLauncher {}/v{}", remote_host, Common::g_version);
         }
     } else {
         if (remote_host == "shadps4-emu" || remote_url.length() == 0) {
-            window_title = fmt::format("shadPS4 v{} {} {}", Common::g_version, Common::g_scm_branch,
-                                       Common::g_scm_desc);
-        } else {
-            window_title = fmt::format("shadPS4 v{} {}/{} {}", Common::g_version, remote_host,
+            window_title = fmt::format("shadPS4QtLauncher v{} {} {}", Common::g_version,
                                        Common::g_scm_branch, Common::g_scm_desc);
+        } else {
+            window_title = fmt::format("shadPS4QtLauncher v{} {}/{} {}", Common::g_version,
+                                       remote_host, Common::g_scm_branch, Common::g_scm_desc);
         }
     }
     setWindowTitle(QString::fromStdString(window_title));
@@ -93,14 +95,6 @@ bool MainWindow::Init() {
     QString statusMessage = tr("Games: ") + QString::number(numGames) + " (" +
                             QString::number(duration.count()) + "ms)";
     statusBar->showMessage(statusMessage);
-
-#ifdef ENABLE_DISCORD_RPC
-    if (Config::getEnableDiscordRPC()) {
-        auto* rpc = Common::Singleton<DiscordRPCHandler::RPC>::Instance();
-        rpc->init();
-        rpc->setStatusIdling();
-    }
-#endif
 
     return true;
 }
@@ -132,12 +126,26 @@ void MainWindow::CreateActions() {
 }
 
 void MainWindow::PauseGame() {
-    SDL_Event event;
-    SDL_memset(&event, 0, sizeof(event));
-    event.type = SDL_EVENT_TOGGLE_PAUSE;
-    is_paused = !is_paused;
-    UpdateToolbarButtons();
-    SDL_PushEvent(&event);
+    if (is_paused) {
+        m_ipc_client->resumeGame();
+        is_paused = false;
+    } else {
+        m_ipc_client->pauseGame();
+        is_paused = true;
+    }
+}
+
+void MainWindow::StopGame() {
+    m_ipc_client->stopEmulator();
+}
+
+void MainWindow::onGameClosed() {
+    isGameRunning = false;
+    is_paused = false;
+}
+
+void MainWindow::RestartGame() {
+    m_ipc_client->restartEmulator();
 }
 
 void MainWindow::toggleLabelsUnderIcons() {
@@ -150,10 +158,7 @@ void MainWindow::toggleLabelsUnderIcons() {
 }
 
 void MainWindow::toggleFullscreen() {
-    SDL_Event event;
-    SDL_memset(&event, 0, sizeof(event));
-    event.type = SDL_EVENT_TOGGLE_FULLSCREEN;
-    SDL_PushEvent(&event);
+    m_ipc_client->toggleFullscreen();
 }
 
 QWidget* MainWindow::createButtonWithLabel(QPushButton* button, const QString& labelText,
@@ -401,6 +406,8 @@ void MainWindow::CreateConnects() {
 
     connect(ui->playButton, &QPushButton::clicked, this, &MainWindow::StartGame);
     connect(ui->pauseButton, &QPushButton::clicked, this, &MainWindow::PauseGame);
+    connect(ui->stopButton, &QPushButton::clicked, this, &MainWindow::StopGame);
+    connect(ui->restartButton, &QPushButton::clicked, this, &MainWindow::RestartGame);
     connect(m_game_grid_frame.get(), &QTableWidget::cellDoubleClicked, this,
             &MainWindow::StartGame);
     connect(m_game_list_frame.get(), &QTableWidget::cellDoubleClicked, this,
@@ -1223,15 +1230,41 @@ void MainWindow::StartEmulator(std::filesystem::path path) {
         return;
     }
     isGameRunning = true;
-#ifdef __APPLE__
-    // SDL on macOS requires main thread.
-    Core::Emulator emulator;
-    emulator.Run(path);
-#else
-    std::thread emulator_thread([=] {
-        Core::Emulator emulator;
-        emulator.Run(path);
-    });
-    emulator_thread.detach();
-#endif
+    last_game_path = path;
+    QString exe = m_gui_settings->GetValue(gui::gen_shadPath).toString();
+    QFileInfo fileInfo(exe);
+    if (!fileInfo.exists()) {
+        LOG_ERROR(IPC, "ShadPS4 instance at {} don't exist", exe.toStdString());
+    }
+
+    QStringList args{"--game", QString::fromStdWString(path.wstring())};
+
+    QString workDir = fileInfo.absolutePath();
+
+    m_ipc_client->startEmulator(fileInfo, args, workDir);
+
+    auto gameInfo = GameInfoClass();
+    auto dir = path.parent_path();
+    auto info = gameInfo.readGameInfo(dir);
+    auto appVersion = info.version;
+    auto gameSerial = info.serial;
+    auto patches = MemoryPatcher::readPatches(gameSerial, appVersion);
+    for (auto patch : patches) {
+        m_ipc_client->sendMemoryPatches(patch.modName, patch.address, patch.value, patch.target,
+                                        patch.size, patch.maskOffset, patch.littleEndian,
+                                        patch.mask, patch.maskOffset);
+    }
+
+    m_ipc_client->runGame();
+}
+
+void MainWindow::RestartEmulator() {
+    QString exe = m_gui_settings->GetValue(gui::gen_shadPath).toString();
+    QStringList args{"--game", QString::fromStdWString(last_game_path.wstring())};
+
+    QFileInfo fileInfo(exe);
+    QString workDir = fileInfo.absolutePath();
+
+    m_ipc_client->startEmulator(fileInfo, args, workDir);
+    m_ipc_client->runGame();
 }

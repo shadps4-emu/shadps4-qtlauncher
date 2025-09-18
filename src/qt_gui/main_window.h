@@ -15,12 +15,12 @@
 #include "core/file_format/psf.h"
 #include "core/file_sys/fs.h"
 #include "elf_viewer.h"
-#include "emulator.h"
 #include "game_grid_frame.h"
 #include "game_info.h"
 #include "game_list_frame.h"
 #include "game_list_utils.h"
 #include "gui_settings.h"
+#include "ipc/ipc_client.h"
 #include "main_window_themes.h"
 #include "main_window_ui.h"
 
@@ -38,6 +38,8 @@ public:
     void InstallDirectory();
     void StartGame();
     void PauseGame();
+    void StopGame();
+    void RestartGame();
     bool showLabels;
 
 private Q_SLOTS:
@@ -61,6 +63,7 @@ private:
     void CreateRecentGameActions();
     void CreateDockWindows();
     void LoadGameLists();
+    void onGameClosed();
 
 #ifdef ENABLE_UPDATER
     void CheckUpdateMain(bool checkSave);
@@ -75,6 +78,7 @@ private:
     void PlayBackgroundMusic();
     QIcon RecolorIcon(const QIcon& icon, bool isWhite);
     void StartEmulator(std::filesystem::path);
+    void RestartEmulator();
 
     bool isIconBlack = false;
     bool isTableList = true;
@@ -106,6 +110,9 @@ private:
 
     QTranslator* translator;
     std::shared_ptr<gui_settings> m_gui_settings;
+
+    std::shared_ptr<IpcClient> m_ipc_client;
+    std::filesystem::path last_game_path;
 
 protected:
     bool eventFilter(QObject* obj, QEvent* event) override;
