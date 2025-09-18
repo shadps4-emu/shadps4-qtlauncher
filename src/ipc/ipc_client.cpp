@@ -7,7 +7,6 @@
 #include "common/logging/log.h"
 #include "ipc_client.h"
 
-
 IpcClient::IpcClient(QObject* parent) : QObject(parent) {}
 
 void IpcClient::startEmulator(const QFileInfo& exe, const QStringList& args,
