@@ -55,8 +55,8 @@ jobs:
         echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
         echo "shorthash=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
         echo "fullhash=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
-
-  windows:
+        
+  windows-qt:
     runs-on: windows-2025
     needs: get-info
     steps:
@@ -113,8 +113,8 @@ jobs:
       with:
         name: shadps4-win64-qt-${{ needs.get-info.outputs.date }}-${{ needs.get-info.outputs.shorthash }}
         path: upload/
-
-  macos:
+        
+  macos-qt:
     runs-on: macos-15
     needs: get-info
     steps:
@@ -175,7 +175,7 @@ jobs:
         name: shadps4-macos-qt-${{ needs.get-info.outputs.date }}-${{ needs.get-info.outputs.shorthash }}
         path: shadps4-macos-qt.tar.gz
 
-  linux:
+  linux-qt:
     runs-on: ubuntu-24.04
     needs: get-info
     steps:
@@ -226,8 +226,8 @@ jobs:
       with:
         name: shadps4-linux-qt-${{ needs.get-info.outputs.date }}-${{ needs.get-info.outputs.shorthash }}
         path: Shadps4-qt.AppImage
-
-  linux-gcc:
+        
+  linux-qt-gcc:
     runs-on: ubuntu-24.04
     needs: get-info
     steps:
@@ -265,7 +265,7 @@ jobs:
 
   pre-release:
     if: github.ref == 'refs/heads/main' && github.repository == 'shadps4-emu/shadps4-qtlauncher' && github.event_name == 'push'
-    needs: [get-info, windows, macos, linux]
+    needs: [get-info, windows-qt, macos-qt, linux-qt]
     runs-on: ubuntu-latest
     steps:
     - name: Download all artifacts
