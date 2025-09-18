@@ -662,6 +662,8 @@ set(DEV_TOOLS src/core/devtools/layer.cpp
               src/core/devtools/widget/shader_list.h
               src/core/devtools/widget/text_editor.cpp
               src/core/devtools/widget/text_editor.h
+              src/core/memory_patcher.cpp
+              src/core/memory_patcher.h
 )
 
 set(COMMON src/common/logging/backend.cpp
@@ -1103,7 +1105,6 @@ set(QT_GUI src/qt_gui/about_dialog.cpp
            src/qt_gui/settings_dialog.cpp
            src/qt_gui/settings_dialog.h
            src/qt_gui/settings_dialog.ui
-           src/qt_gui/main.cpp
            src/qt_gui/gui_settings.cpp
            src/qt_gui/gui_settings.h
            src/qt_gui/settings.cpp
@@ -1113,43 +1114,29 @@ set(QT_GUI src/qt_gui/about_dialog.cpp
            src/qt_gui/hotkeys.h
            src/qt_gui/hotkeys.cpp
            src/qt_gui/hotkeys.ui
-           ${EMULATOR}
            ${RESOURCE_FILES}
            ${TRANSLATIONS}
            ${UPDATER}
 )
 endif()
 
-if (ENABLE_QT_GUI)
-    qt_add_executable(shadps4
-        ${AUDIO_CORE}
-        ${IMGUI}
-        ${INPUT}
-        ${QT_GUI}
-        ${COMMON}
-        ${CORE}
-        ${SHADER_RECOMPILER}
-        ${VIDEO_CORE}
-        ${EMULATOR}
-        src/images/shadPS4.icns
-    )
-else()
-    add_executable(shadps4
-        ${AUDIO_CORE}
-        ${IMGUI}
-        ${INPUT}
-        ${COMMON}
-        ${CORE}
-        ${SHADER_RECOMPILER}
-        ${VIDEO_CORE}
-        ${EMULATOR}
-        src/main.cpp
-        src/emulator.cpp
-        src/emulator.h
-        src/sdl_window.h
-        src/sdl_window.cpp
-    )
-endif()
+set(IPC src/ipc/ipc_client.cpp
+        src/ipc/ipc_client.h
+)
+qt_add_executable(shadps4
+    ${AUDIO_CORE}
+    ${IMGUI}
+    ${INPUT}
+    ${QT_GUI}
+    ${COMMON}
+    ${CORE}
+    ${SHADER_RECOMPILER}
+    ${VIDEO_CORE}
+    ${IPC}
+    ${EMULATOR}
+    src/images/shadPS4.icns
+    src/main.cpp
+)
 
 create_target_directory_groups(shadps4)
 

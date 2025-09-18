@@ -24,7 +24,7 @@ const gui_value gen_guiLanguage = gui_value(general_settings, "guiLanguage", "en
 const gui_value gen_elfDirs =
     gui_value(main_window, "elfDirs", QVariant::fromValue(QList<QString>()));
 const gui_value gen_theme = gui_value(general_settings, "theme", 0);
-
+const gui_value gen_shadPath = gui_value(main_window, "shadPath", "");
 // main window settings
 const gui_value mw_geometry = gui_value(main_window, "geometry", QByteArray());
 const gui_value mw_showLabelsUnderIcons = gui_value(main_window, "showLabelsUnderIcons", true);
