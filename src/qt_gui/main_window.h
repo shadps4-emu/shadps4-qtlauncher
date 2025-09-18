@@ -20,9 +20,9 @@
 #include "game_list_frame.h"
 #include "game_list_utils.h"
 #include "gui_settings.h"
+#include "ipc/ipc_client.h"
 #include "main_window_themes.h"
 #include "main_window_ui.h"
-#include "ipc/ipc_client.h"
 
 class GameListFrame;
 

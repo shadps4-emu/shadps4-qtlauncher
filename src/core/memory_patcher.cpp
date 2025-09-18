@@ -11,8 +11,8 @@
 #include <QString>
 #include <QXmlStreamReader>
 
-#include "common/path_util.h"
 #include "common/logging/log.h"
+#include "common/path_util.h"
 #include "qt_gui/game_info.h"
 
 #include "memory_patcher.h"
@@ -40,7 +40,7 @@ std::vector<PendingPatch> readPatches(std::string gameSerial, std::string appVer
         jsonFile.close();
 
         const QJsonDocument jsonDoc = QJsonDocument::fromJson(jsonData);
-        const QJsonObject   jsonObject = jsonDoc.object();
+        const QJsonObject jsonObject = jsonDoc.object();
 
         QString selectedFileName;
         const QString serial = QString::fromStdString(gameSerial);
@@ -79,7 +79,9 @@ std::vector<PendingPatch> readPatches(std::string gameSerial, std::string appVer
         while (!xmlReader.atEnd()) {
             xmlReader.readNext();
 
-            if (!xmlReader.isStartElement()) continue;
+            if (!xmlReader.isStartElement()) {
+                continue;
+            }
 
             if (xmlReader.name() == QStringLiteral("Metadata")) {
                 QString name = xmlReader.attributes().value("Name").toString();
@@ -94,11 +96,10 @@ std::vector<PendingPatch> readPatches(std::string gameSerial, std::string appVer
                     }
                 }
                 versionMatches = (appVer.toStdString() == appVersion);
-            }
-            else if (xmlReader.name() == QStringLiteral("PatchList")) {
+            } else if (xmlReader.name() == QStringLiteral("PatchList")) {
                 while (!xmlReader.atEnd() &&
-                      !(xmlReader.tokenType() == QXmlStreamReader::EndElement &&
-                        xmlReader.name() == QStringLiteral("PatchList"))) {
+                       !(xmlReader.tokenType() == QXmlStreamReader::EndElement &&
+                         xmlReader.name() == QStringLiteral("PatchList"))) {
 
                     xmlReader.readNext();
 
@@ -108,27 +109,32 @@ std::vector<PendingPatch> readPatches(std::string gameSerial, std::string appVer
                     }
 
                     const QXmlStreamAttributes a = xmlReader.attributes();
-                    const QString type   = a.value("Type").toString();
-                    const QString addr   = a.value("Address").toString();
-                    QString       val    = a.value("Value").toString();
+                    const QString type = a.value("Type").toString();
+                    const QString addr = a.value("Address").toString();
+                    QString val = a.value("Value").toString();
                     const QString offStr = a.value("Offset").toString();
-                    const QString tgt    = (type == "mask_jump32") ? a.value("Target").toString() : QString{};
-                    const QString sz     = (type == "mask_jump32") ? a.value("Size").toString()   : QString{};
+                    const QString tgt =
+                        (type == "mask_jump32") ? a.value("Target").toString() : QString{};
+                    const QString sz =
+                        (type == "mask_jump32") ? a.value("Size").toString()   : QString{};
 
-                    if (!isEnabled) continue;
-                    if ((type != "mask" && type != "mask_jump32") && !versionMatches) continue;
+                    if (!isEnabled) {
+                        continue;
+                    }
+                    if ((type != "mask" && type != "mask_jump32") && !versionMatches) {
+                        continue;
+                    }
 
                     PendingPatch pp;
-                    pp.modName  = currentPatchName;
-                    pp.address  = addr.toStdString();
+                    pp.modName = currentPatchName;
+                    pp.address = addr.toStdString();
 
                     if (type == "mask" || type == "mask_jump32") {
                         if (!offStr.toStdString().empty()) {
                             pp.maskOffset = std::stoi(offStr.toStdString(), nullptr, 10);
                         }
-                        pp.mask = (type == "mask")
-                                 ? MemoryPatcher::PatchMask::Mask
-                                 : MemoryPatcher::PatchMask::Mask_Jump32;
+                        pp.mask = (type == "mask") ? MemoryPatcher::PatchMask::Mask
+                                                   : MemoryPatcher::PatchMask::Mask_Jump32;
                         pp.value = val.toStdString();
                         pp.target = tgt.toStdString();
                         pp.size = sz.toStdString();
@@ -151,10 +157,8 @@ std::vector<PendingPatch> readPatches(std::string gameSerial, std::string appVer
         } else {
             LOG_INFO(Loader, "Patches parsed successfully, repository: {}", folder.toStdString());
         }
-
-
     }
     return pending;
 }
 
-}
+} // namespace MemoryPatcher

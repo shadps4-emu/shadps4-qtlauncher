@@ -19,14 +19,14 @@
 #include "common/scm_rev.h"
 #include "common/string_util.h"
 #include "control_settings.h"
+#include "core/memory_patcher.h"
 #include "game_install_dialog.h"
 #include "hotkeys.h"
 #include "input/input_handler.h"
+#include "ipc/ipc_client.h"
 #include "kbm_gui.h"
 #include "main_window.h"
 #include "settings_dialog.h"
-#include "ipc/ipc_client.h"
-#include "core/memory_patcher.h"
 
 MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
@@ -70,11 +70,11 @@ bool MainWindow::Init() {
         }
     } else {
         if (remote_host == "shadps4-emu" || remote_url.length() == 0) {
-            window_title = fmt::format("shadPS4QtLauncher v{} {} {}", Common::g_version, Common::g_scm_branch,
-                                       Common::g_scm_desc);
-        } else {
-            window_title = fmt::format("shadPS4QtLauncher v{} {}/{} {}", Common::g_version, remote_host,
+            window_title = fmt::format("shadPS4QtLauncher v{} {} {}", Common::g_version,
                                        Common::g_scm_branch, Common::g_scm_desc);
+        } else {
+            window_title = fmt::format("shadPS4QtLauncher v{} {}/{} {}", Common::g_version,
+                                   remote_host, Common::g_scm_branch, Common::g_scm_desc);
         }
     }
     setWindowTitle(QString::fromStdString(window_title));
@@ -1250,7 +1250,9 @@ void MainWindow::StartEmulator(std::filesystem::path path) {
     auto gameSerial = info.serial;
     auto patches = MemoryPatcher::readPatches(gameSerial, appVersion);
     for (auto patch : patches) {
-        m_ipc_client->sendMemoryPatches(patch.modName, patch.address, patch.value, patch.target, patch.size, patch.maskOffset, patch.littleEndian, patch.mask, patch.maskOffset);
+        m_ipc_client->sendMemoryPatches(patch.modName, patch.address, patch.value, patch.target,
+                                     patch.size, patch.maskOffset, patch.littleEndian,
+                                        patch.mask, patch.maskOffset);
     }
 
     m_ipc_client->runGame();
