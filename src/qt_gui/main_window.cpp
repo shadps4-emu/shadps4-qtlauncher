@@ -1264,4 +1264,5 @@ void MainWindow::RestartEmulator() {
     QString workDir = fileInfo.absolutePath();
 
     m_ipc_client->startEmulator(fileInfo, args, workDir);
+    m_ipc_client->runGame();
 }
