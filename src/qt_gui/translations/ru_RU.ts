@@ -2422,11 +2422,11 @@
     </message>
     <message>
       <source>Audio Device (general)</source>
-      <translation>Аудио устройство (главное)</translation>
+      <translation>Аудиоустройство (главное)</translation>
     </message>
     <message>
       <source>Audio Device (DS4 speaker)</source>
-      <translation>Аудио устройство (динамик DS4)</translation>
+      <translation>Аудиоустройство (динамик DS4)</translation>
     </message>
     <message>
       <source>shadPS4 Path</source>
