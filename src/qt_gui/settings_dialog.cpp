@@ -31,13 +31,13 @@
 #include "sdl_event_wrapper.h"
 #include "settings_dialog.h"
 #include "ui_settings_dialog.h"
-#include "video_core/renderer_vulkan/vk_instance.h"
-#include "video_core/renderer_vulkan/vk_presenter.h"
+// #include "video_core/renderer_vulkan/vk_instance.h"
+// #include "video_core/renderer_vulkan/vk_presenter.h"
 
 #define VOLK_IMPLEMENTATION
 #include "volk.h"
 
-extern std::unique_ptr<Vulkan::Presenter> presenter;
+// extern std::unique_ptr<Vulkan::Presenter> presenter;
 
 QStringList languageNames = {"Arabic",
                              "Czech",
@@ -243,7 +243,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         connect(ui->horizontalVolumeSlider, &QSlider::valueChanged, this, [this](int value) {
             VolumeSliderChange(value);
             Config::setVolumeSlider(value, is_game_specific);
-            Libraries::AudioOut::AdjustVol();
+            // Libraries::AudioOut::AdjustVol();
         });
 
 #ifdef ENABLE_UPDATER
@@ -447,25 +447,25 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         ui->RCASValue->setText(RCASValue);
     });
 
-    if (presenter) {
-        connect(ui->RCASSlider, &QSlider::valueChanged, this, [this](int value) {
-            presenter->GetFsrSettingsRef().rcas_attenuation = static_cast<float>(value / 1000.0f);
-        });
+//     if (presenter) {
+//         connect(ui->RCASSlider, &QSlider::valueChanged, this, [this](int value) {
+//             presenter->GetFsrSettingsRef().rcas_attenuation = static_cast<float>(value / 1000.0f);
+//         });
 
-#if (QT_VERSION < QT_VERSION_CHECK(6, 7, 0))
-        connect(ui->FSRCheckBox, &QCheckBox::stateChanged, this,
-                [this](int state) { presenter->GetFsrSettingsRef().enable = state; });
+// #if (QT_VERSION < QT_VERSION_CHECK(6, 7, 0))
+//         connect(ui->FSRCheckBox, &QCheckBox::stateChanged, this,
+//                 [this](int state) { presenter->GetFsrSettingsRef().enable = state; });
 
-        connect(ui->RCASCheckBox, &QCheckBox::stateChanged, this,
-                [this](int state) { presenter->GetFsrSettingsRef().use_rcas = state; });
-#else
-        connect(ui->FSRCheckBox, &QCheckBox::checkStateChanged, this,
-                [this](Qt::CheckState state) { presenter->GetFsrSettingsRef().enable = state; });
+//         connect(ui->RCASCheckBox, &QCheckBox::stateChanged, this,
+//                 [this](int state) { presenter->GetFsrSettingsRef().use_rcas = state; });
+// #else
+//         connect(ui->FSRCheckBox, &QCheckBox::checkStateChanged, this,
+//                 [this](Qt::CheckState state) { presenter->GetFsrSettingsRef().enable = state; });
 
-        connect(ui->RCASCheckBox, &QCheckBox::checkStateChanged, this,
-                [this](Qt::CheckState state) { presenter->GetFsrSettingsRef().use_rcas = state; });
-#endif
-    }
+//         connect(ui->RCASCheckBox, &QCheckBox::checkStateChanged, this,
+//                 [this](Qt::CheckState state) { presenter->GetFsrSettingsRef().use_rcas = state; });
+// #endif
+//     }
 
     // Descriptions
     {
@@ -1189,14 +1189,14 @@ void SettingsDialog::SyncRealTimeWidgetstoConfig() {
     is_game_specific ? Config::resetGameSpecificValue("volumeSlider")
                      : Config::setVolumeSlider(sliderValue);
 
-    if (presenter) {
-        presenter->GetFsrSettingsRef().enable =
-            toml::find_or<bool>(gs_data, "GPU", "fsrEnabled", true);
-        presenter->GetFsrSettingsRef().use_rcas =
-            toml::find_or<bool>(gs_data, "GPU", "rcasEnabled", true);
-        presenter->GetFsrSettingsRef().rcas_attenuation =
-            static_cast<float>(toml::find_or<int>(gs_data, "GPU", "rcasAttenuation", 250) / 1000.f);
-    }
+    // if (presenter) {
+    //     presenter->GetFsrSettingsRef().enable =
+    //         toml::find_or<bool>(gs_data, "GPU", "fsrEnabled", true);
+    //     presenter->GetFsrSettingsRef().use_rcas =
+    //         toml::find_or<bool>(gs_data, "GPU", "rcasEnabled", true);
+    //     presenter->GetFsrSettingsRef().rcas_attenuation =
+    //         static_cast<float>(toml::find_or<int>(gs_data, "GPU", "rcasAttenuation", 250) / 1000.f);
+    // }
 }
 
 void SettingsDialog::setDefaultValues() {

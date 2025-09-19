@@ -255,9 +255,9 @@ void HandleTable::CreateStdHandles() {
             std::shared_ptr<Devices::BaseDevice>{reinterpret_cast<Devices::BaseDevice*>(device)};
     };
     // order matters
-    setup("/dev/stdin", new Devices::Logger("stdin", false));   // stdin
-    setup("/dev/stdout", new Devices::Logger("stdout", false)); // stdout
-    setup("/dev/stderr", new Devices::Logger("stderr", true));  // stderr
+    // setup("/dev/stdin", new Devices::Logger("stdin", false));   // stdin
+    // setup("/dev/stdout", new Devices::Logger("stdout", false)); // stdout
+    // setup("/dev/stderr", new Devices::Logger("stderr", true));  // stderr
 }
 
 int HandleTable::GetFileDescriptor(File* file) {

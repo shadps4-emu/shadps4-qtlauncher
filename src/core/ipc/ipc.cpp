@@ -94,44 +94,45 @@ void IPC::InputLoop() {
         return std::stoull(str, nullptr, 0);
     };
 
+    // this is the reciever side
     while (true) {
-        auto& cmd = next_str();
-        if (cmd.empty()) {
-            continue;
-        }
-        if (cmd == "RUN") {
-            run_semaphore.release();
-        } else if (cmd == "START") {
-            start_semaphore.release();
-        } else if (cmd == "PATCH_MEMORY") {
-            MemoryPatcher::patchInfo entry;
-            entry.gameSerial = "*";
-            entry.modNameStr = next_str();
-            entry.offsetStr = next_str();
-            entry.valueStr = next_str();
-            entry.targetStr = next_str();
-            entry.sizeStr = next_str();
-            entry.isOffset = next_u64() != 0;
-            entry.littleEndian = next_u64() != 0;
-            entry.patchMask = static_cast<MemoryPatcher::PatchMask>(next_u64());
-            entry.maskOffset = static_cast<int>(next_u64());
-            MemoryPatcher::AddPatchToQueue(entry);
-        } else if (cmd == "PAUSE") {
-            DebugState.PauseGuestThreads();
-        } else if (cmd == "RESUME") {
-            DebugState.ResumeGuestThreads();
-        } else if (cmd == "STOP") {
-            SDL_Event event;
-            SDL_memset(&event, 0, sizeof(event));
-            event.type = SDL_EVENT_QUIT;
-            SDL_PushEvent(&event);
-        } else if (cmd == "TOGGLE_FULLSCREEN") {
-            SDL_Event event;
-            SDL_memset(&event, 0, sizeof(event));
-            event.type = SDL_EVENT_TOGGLE_FULLSCREEN;
-            SDL_PushEvent(&event);
-        } else {
-            std::cerr << ";UNKNOWN CMD: " << cmd << std::endl;
-        }
+    //     auto& cmd = next_str();
+    //     if (cmd.empty()) {
+    //         continue;
+    //     }
+    //     if (cmd == "RUN") {
+    //         run_semaphore.release();
+    //     } else if (cmd == "START") {
+    //         start_semaphore.release();
+    //     } else if (cmd == "PATCH_MEMORY") {
+    //         MemoryPatcher::patchInfo entry;
+    //         entry.gameSerial = "*";
+    //         entry.modNameStr = next_str();
+    //         entry.offsetStr = next_str();
+    //         entry.valueStr = next_str();
+    //         entry.targetStr = next_str();
+    //         entry.sizeStr = next_str();
+    //         entry.isOffset = next_u64() != 0;
+    //         entry.littleEndian = next_u64() != 0;
+    //         entry.patchMask = static_cast<MemoryPatcher::PatchMask>(next_u64());
+    //         entry.maskOffset = static_cast<int>(next_u64());
+    //         MemoryPatcher::AddPatchToQueue(entry);
+    //     } else if (cmd == "PAUSE") {
+    //         DebugState.PauseGuestThreads();
+    //     } else if (cmd == "RESUME") {
+    //         DebugState.ResumeGuestThreads();
+    //     } else if (cmd == "STOP") {
+    //         SDL_Event event;
+    //         SDL_memset(&event, 0, sizeof(event));
+    //         event.type = SDL_EVENT_QUIT;
+    //         SDL_PushEvent(&event);
+    //     } else if (cmd == "TOGGLE_FULLSCREEN") {
+    //         SDL_Event event;
+    //         SDL_memset(&event, 0, sizeof(event));
+    //         event.type = SDL_EVENT_TOGGLE_FULLSCREEN;
+    //         SDL_PushEvent(&event);
+    //     } else {
+    //         std::cerr << ";UNKNOWN CMD: " << cmd << std::endl;
+    //     }
     }
 }
