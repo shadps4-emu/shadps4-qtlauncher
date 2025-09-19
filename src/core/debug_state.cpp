@@ -125,7 +125,8 @@ static void ResumeThread(ThreadID id) {
 //             const AmdGpu::PM4ItOpcode opcode = header->opcode;
 //             if (Core::Devtools::Widget::IsDrawCall(opcode)) {
 //                 const auto offset =
-//                     reinterpret_cast<uintptr_t>(header) - reinterpret_cast<uintptr_t>(initial_data);
+//                     reinterpret_cast<uintptr_t>(header) -
+//                     reinterpret_cast<uintptr_t>(initial_data);
 //                 const auto addr = dump.base_addr + offset;
 //                 waiting_reg_dumps.emplace(addr, &frame);
 //                 waiting_reg_dumps_dbg.emplace(
@@ -206,7 +207,9 @@ static void ResumeThread(ThreadID id) {
 //                                    vk::ShaderModule module, std::span<const u32> spv,
 //                                    std::span<const u32> raw_code, std::span<const u32> patch_spv,
 //                                    bool is_patched) {
-//     shader_dump_list.emplace_back(name, l_stage, module, std::vector<u32>{spv.begin(), spv.end()},
+//     shader_dump_list.emplace_back(name, l_stage, module, std::vector<u32>{spv.begin(),
+//     spv.end()},
 //                                   std::vector<u32>{raw_code.begin(), raw_code.end()},
-//                                   std::vector<u32>{patch_spv.begin(), patch_spv.end()}, is_patched);
+//                                   std::vector<u32>{patch_spv.begin(), patch_spv.end()},
+//                                   is_patched);
 // }

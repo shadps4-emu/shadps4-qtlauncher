@@ -242,8 +242,8 @@ void Hotkeys::SaveHotkeys(bool CloseOnSave) {
     output_file.close();
 
     // this also parses global hotkeys
-    if (GameRunning)
-        // Input::ParseInputConfig("default");
+    // if (GameRunning)
+    // Input::ParseInputConfig("default");
 
     if (CloseOnSave)
         QWidget::close();

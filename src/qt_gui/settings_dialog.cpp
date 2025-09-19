@@ -447,25 +447,28 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         ui->RCASValue->setText(RCASValue);
     });
 
-//     if (presenter) {
-//         connect(ui->RCASSlider, &QSlider::valueChanged, this, [this](int value) {
-//             presenter->GetFsrSettingsRef().rcas_attenuation = static_cast<float>(value / 1000.0f);
-//         });
+    //     if (presenter) {
+    //         connect(ui->RCASSlider, &QSlider::valueChanged, this, [this](int value) {
+    //             presenter->GetFsrSettingsRef().rcas_attenuation = static_cast<float>(value /
+    //             1000.0f);
+    //         });
 
-// #if (QT_VERSION < QT_VERSION_CHECK(6, 7, 0))
-//         connect(ui->FSRCheckBox, &QCheckBox::stateChanged, this,
-//                 [this](int state) { presenter->GetFsrSettingsRef().enable = state; });
+    // #if (QT_VERSION < QT_VERSION_CHECK(6, 7, 0))
+    //         connect(ui->FSRCheckBox, &QCheckBox::stateChanged, this,
+    //                 [this](int state) { presenter->GetFsrSettingsRef().enable = state; });
 
-//         connect(ui->RCASCheckBox, &QCheckBox::stateChanged, this,
-//                 [this](int state) { presenter->GetFsrSettingsRef().use_rcas = state; });
-// #else
-//         connect(ui->FSRCheckBox, &QCheckBox::checkStateChanged, this,
-//                 [this](Qt::CheckState state) { presenter->GetFsrSettingsRef().enable = state; });
+    //         connect(ui->RCASCheckBox, &QCheckBox::stateChanged, this,
+    //                 [this](int state) { presenter->GetFsrSettingsRef().use_rcas = state; });
+    // #else
+    //         connect(ui->FSRCheckBox, &QCheckBox::checkStateChanged, this,
+    //                 [this](Qt::CheckState state) { presenter->GetFsrSettingsRef().enable = state;
+    //                 });
 
-//         connect(ui->RCASCheckBox, &QCheckBox::checkStateChanged, this,
-//                 [this](Qt::CheckState state) { presenter->GetFsrSettingsRef().use_rcas = state; });
-// #endif
-//     }
+    //         connect(ui->RCASCheckBox, &QCheckBox::checkStateChanged, this,
+    //                 [this](Qt::CheckState state) { presenter->GetFsrSettingsRef().use_rcas =
+    //                 state; });
+    // #endif
+    //     }
 
     // Descriptions
     {
@@ -1195,7 +1198,8 @@ void SettingsDialog::SyncRealTimeWidgetstoConfig() {
     //     presenter->GetFsrSettingsRef().use_rcas =
     //         toml::find_or<bool>(gs_data, "GPU", "rcasEnabled", true);
     //     presenter->GetFsrSettingsRef().rcas_attenuation =
-    //         static_cast<float>(toml::find_or<int>(gs_data, "GPU", "rcasAttenuation", 250) / 1000.f);
+    //         static_cast<float>(toml::find_or<int>(gs_data, "GPU", "rcasAttenuation", 250) /
+    //         1000.f);
     // }
 }
 

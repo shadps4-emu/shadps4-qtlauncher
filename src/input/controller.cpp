@@ -172,7 +172,8 @@ using Libraries::Pad::OrbisPadButtonDataOffset;
 //                                           Libraries::Pad::OrbisFQuaternion& lastOrientation,
 //                                           Libraries::Pad::OrbisFQuaternion& orientation) {
 //     Libraries::Pad::OrbisFQuaternion q = lastOrientation;
-//     Libraries::Pad::OrbisFQuaternion ω = {angularVelocity.x, angularVelocity.y, angularVelocity.z,
+//     Libraries::Pad::OrbisFQuaternion ω = {angularVelocity.x, angularVelocity.y,
+//     angularVelocity.z,
 //                                           0.0f};
 
 //     Libraries::Pad::OrbisFQuaternion qω = {q.w * ω.x + q.x * ω.w + q.y * ω.z - q.z * ω.y,

@@ -222,7 +222,8 @@ public:
     // void PushRegsDump(uintptr_t base_addr, uintptr_t header_addr,
     //                   const AmdGpu::Liverpool::Regs& regs);
     // using CsState = AmdGpu::Liverpool::ComputeProgram;
-    // void PushRegsDumpCompute(uintptr_t base_addr, uintptr_t header_addr, const CsState& cs_state);
+    // void PushRegsDumpCompute(uintptr_t base_addr, uintptr_t header_addr, const CsState&
+    // cs_state);
 
     // void CollectShader(const std::string& name, Shader::LogicalStage l_stage,
     //                    vk::ShaderModule module, std::span<const u32> spv,
