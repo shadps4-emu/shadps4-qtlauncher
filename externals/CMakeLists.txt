@@ -27,10 +27,10 @@ if (NOT TARGET fmt::fmt)
 endif()
 
 # FFmpeg
-if (NOT TARGET FFmpeg::ffmpeg)
-    add_subdirectory(ffmpeg-core)
-    add_library(FFmpeg::ffmpeg ALIAS ffmpeg)
-endif()
+# if (NOT TARGET FFmpeg::ffmpeg)
+#     add_subdirectory(ffmpeg-core)
+#     add_library(FFmpeg::ffmpeg ALIAS ffmpeg)
+# endif()
 
 # LibAtrac9
 file(GLOB LIBATRAC9_SOURCES LibAtrac9/C/src/*.c)
@@ -70,30 +70,30 @@ if (NOT TARGET Vulkan::Headers)
 endif()
 
 # VMA
-if (NOT TARGET GPUOpen::VulkanMemoryAllocator)
-    add_subdirectory(vma)
-endif()
+# if (NOT TARGET GPUOpen::VulkanMemoryAllocator)
+#     add_subdirectory(vma)
+# endif()
 
 # RenderDoc
-if (NOT TARGET RenderDoc::API)
-    add_library(renderdoc INTERFACE)
-    target_include_directories(renderdoc INTERFACE ./renderdoc)
-    add_library(RenderDoc::API ALIAS renderdoc)
-endif()
+# if (NOT TARGET RenderDoc::API)
+#     add_library(renderdoc INTERFACE)
+#     target_include_directories(renderdoc INTERFACE ./renderdoc)
+#     add_library(RenderDoc::API ALIAS renderdoc)
+# endif()
 
 # glslang
-if (NOT TARGET glslang::glslang)
-    set(SKIP_GLSLANG_INSTALL ON CACHE BOOL "")
-    set(ENABLE_GLSLANG_BINARIES OFF CACHE BOOL "")
-    set(ENABLE_SPVREMAPPER OFF CACHE BOOL "")
-    set(ENABLE_CTEST OFF CACHE BOOL "")
-    set(ENABLE_HLSL OFF CACHE BOOL "")
-    set(BUILD_EXTERNAL OFF CACHE BOOL "")
-    set(ENABLE_OPT OFF CACHE BOOL "")
-    add_subdirectory(glslang)
-    file(COPY glslang/SPIRV DESTINATION glslang/glslang FILES_MATCHING PATTERN "*.h")
-    target_include_directories(glslang INTERFACE "${CMAKE_CURRENT_BINARY_DIR}/glslang")
-endif()
+# if (NOT TARGET glslang::glslang)
+#     set(SKIP_GLSLANG_INSTALL ON CACHE BOOL "")
+#     set(ENABLE_GLSLANG_BINARIES OFF CACHE BOOL "")
+#     set(ENABLE_SPVREMAPPER OFF CACHE BOOL "")
+#     set(ENABLE_CTEST OFF CACHE BOOL "")
+#     set(ENABLE_HLSL OFF CACHE BOOL "")
+#     set(BUILD_EXTERNAL OFF CACHE BOOL "")
+#     set(ENABLE_OPT OFF CACHE BOOL "")
+#     add_subdirectory(glslang)
+#     file(COPY glslang/SPIRV DESTINATION glslang/glslang FILES_MATCHING PATTERN "*.h")
+#     target_include_directories(glslang INTERFACE "${CMAKE_CURRENT_BINARY_DIR}/glslang")
+# endif()
 
 # Robin-map
 if (NOT TARGET tsl::robin_map)
@@ -138,17 +138,17 @@ if (NOT TARGET Zydis::Zydis)
 endif()
 
 # sirit
-add_subdirectory(sirit)
-if (WIN32)
-    target_compile_options(sirit PUBLIC "-Wno-error=unused-command-line-argument")
-endif()
+# add_subdirectory(sirit)
+# if (WIN32)
+#     target_compile_options(sirit PUBLIC "-Wno-error=unused-command-line-argument")
+# endif()
 
 # half
-if (NOT TARGET half::half)
-    add_library(half INTERFACE)
-    target_include_directories(half INTERFACE half/include)
-    add_library(half::half ALIAS half)
-endif()
+# if (NOT TARGET half::half)
+#     add_library(half INTERFACE)
+#     target_include_directories(half INTERFACE half/include)
+#     add_library(half::half ALIAS half)
+# endif()
 
 # libpng
 if (NOT TARGET PNG::PNG)
@@ -162,22 +162,22 @@ if (NOT TARGET PNG::PNG)
 endif()
 
 # Tracy
-if (CMAKE_BUILD_TYPE STREQUAL "Release")
-    option(TRACY_ENABLE "" OFF)
-else()
-    option(TRACY_ENABLE "" ON)
-endif()
-option(TRACY_NO_CRASH_HANDLER "" ON) # Otherwise texture cache exceptions will be treaten as a crash
-option(TRACY_ON_DEMAND "" ON)
-option(TRACY_NO_FRAME_IMAGE "" ON)
-option(TRACY_FIBERS "" OFF) # For AmdGpu frontend profiling, disabled due to instability
-option(TRACY_NO_SYSTEM_TRACING "" ON)
-option(TRACY_NO_CALLSTACK "" ON)
-option(TRACY_NO_CODE_TRANSFER "" ON)
-option(TRACY_NO_SAMPLING "" ON)
-option(TRACY_ONLY_LOCALHOST "" ON)
-option(TRACY_NO_CONTEXT_SWITCH "" ON)
-add_subdirectory(tracy)
+# if (CMAKE_BUILD_TYPE STREQUAL "Release")
+#     option(TRACY_ENABLE "" OFF)
+# else()
+#     option(TRACY_ENABLE "" ON)
+# endif()
+# option(TRACY_NO_CRASH_HANDLER "" ON) # Otherwise texture cache exceptions will be treaten as a crash
+# option(TRACY_ON_DEMAND "" ON)
+# option(TRACY_NO_FRAME_IMAGE "" ON)
+# option(TRACY_FIBERS "" OFF) # For AmdGpu frontend profiling, disabled due to instability
+# option(TRACY_NO_SYSTEM_TRACING "" ON)
+# option(TRACY_NO_CALLSTACK "" ON)
+# option(TRACY_NO_CODE_TRANSFER "" ON)
+# option(TRACY_NO_SAMPLING "" ON)
+# option(TRACY_ONLY_LOCALHOST "" ON)
+# option(TRACY_NO_CONTEXT_SWITCH "" ON)
+# add_subdirectory(tracy)
 
 # pugixml
 if (NOT TARGET pugixml::pugixml)
@@ -185,10 +185,10 @@ if (NOT TARGET pugixml::pugixml)
 endif()
 
 # libusb
-if (NOT TARGET libusb::usb)
-    add_subdirectory(ext-libusb)
-    add_library(libusb::usb ALIAS usb-1.0)
-endif()
+# if (NOT TARGET libusb::usb)
+#     add_subdirectory(ext-libusb)
+#     add_library(libusb::usb ALIAS usb-1.0)
+# endif()
 
 # Discord RPC
 if (ENABLE_DISCORD_RPC)
@@ -196,7 +196,7 @@ if (ENABLE_DISCORD_RPC)
 endif()
 
 # GCN Headers
-add_subdirectory(gcn)
+# add_subdirectory(gcn)
 
 # stb
 if (NOT TARGET stb::headers)
@@ -219,9 +219,9 @@ if (APPLE)
     endif()
 
     # MoltenVK
-    if (NOT TARGET MoltenVK)
-        add_subdirectory(MoltenVK)
-    endif()
+    # if (NOT TARGET MoltenVK)
+    #     add_subdirectory(MoltenVK)
+    # endif()
 
     if (NOT TARGET epoll-shim)
         add_subdirectory(epoll-shim)

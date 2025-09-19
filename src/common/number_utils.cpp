@@ -2,7 +2,6 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include <array>
-#include <half.hpp>
 
 #include "common/number_utils.h"
 // #include "video_core/amdgpu/pixel_format.h"
@@ -82,10 +81,6 @@ float Uf10ToF32(u16 val) {
     }
 
     return f32.f;
-}
-
-float Uf16ToF32(u16 val) {
-    return half_float::half_cast<float>(reinterpret_cast<half_float::half&>(val));
 }
 
 float U2ToUnorm(u8 val) {
