@@ -378,6 +378,7 @@ set(CORE src/core/file_format/psf.cpp
 
 set(INPUT src/input/controller.cpp
           src/input/controller.h
+          src/input/input_handler.h
 )
 
 qt_add_resources(RESOURCE_FILES src/shadps4.qrc)

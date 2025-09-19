@@ -13,7 +13,6 @@
 #include "common/config.h"
 #include "common/logging/log.h"
 #include "common/scm_rev.h"
-#include "core/libraries/audio/audioout.h"
 #include "qt_gui/compatibility_info.h"
 #ifdef ENABLE_DISCORD_RPC
 #include "common/discord_rpc_handler.h"
