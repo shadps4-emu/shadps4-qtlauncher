@@ -31,7 +31,6 @@ if(UNIX AND NOT APPLE)
     endif()
 endif()
 
-option(ENABLE_QT_GUI "Enable the Qt GUI. If not selected then the emulator uses a minimal SDL-based UI instead" OFF)
 option(ENABLE_DISCORD_RPC "Enable the Discord RPC integration" ON)
 option(ENABLE_UPDATER "Enables the options to updater" ON)
 
@@ -220,7 +219,7 @@ if(NOT GIT_REMOTE_URL_LOWER MATCHES "shadps4-emu/shadps4" OR NOT GIT_BRANCH STRE
     set(ENABLE_UPDATER OFF)
 endif()
 
-if(WIN32 AND ENABLE_QT_GUI AND NOT CMAKE_PREFIX_PATH)
+if(WIN32 AND NOT CMAKE_PREFIX_PATH)
     include("${CMAKE_CURRENT_SOURCE_DIR}/cmake/DetectQtInstallation.cmake")
 endif ()
 
@@ -262,29 +261,27 @@ endif()
 add_subdirectory(externals)
 include_directories(src)
 
-if(ENABLE_QT_GUI)
-    find_package(Qt6 REQUIRED COMPONENTS Widgets Concurrent LinguistTools Network Multimedia)
-    qt_standard_project_setup()
-    set(CMAKE_AUTORCC ON)
-    set(CMAKE_AUTOMOC ON)
-    set(CMAKE_AUTOUIC ON)
+find_package(Qt6 REQUIRED COMPONENTS Widgets Concurrent LinguistTools Network Multimedia)
+qt_standard_project_setup()
+set(CMAKE_AUTORCC ON)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTOUIC ON)
 
-    set(QT_TRANSLATIONS "${PROJECT_SOURCE_DIR}/src/qt_gui/translations")
-    file(GLOB_RECURSE TRANSLATIONS_TS ${QT_TRANSLATIONS}/*.ts)
+set(QT_TRANSLATIONS "${PROJECT_SOURCE_DIR}/src/qt_gui/translations")
+file(GLOB_RECURSE TRANSLATIONS_TS ${QT_TRANSLATIONS}/*.ts)
 
-    set_source_files_properties(${TRANSLATIONS_TS} PROPERTIES OUTPUT_LOCATION "${CMAKE_CURRENT_BINARY_DIR}/translations")
-    qt_add_translation(TRANSLATIONS_QM ${TRANSLATIONS_TS})
+set_source_files_properties(${TRANSLATIONS_TS} PROPERTIES OUTPUT_LOCATION "${CMAKE_CURRENT_BINARY_DIR}/translations")
+qt_add_translation(TRANSLATIONS_QM ${TRANSLATIONS_TS})
 
-    set(TRANSLATIONS_QRC ${CMAKE_CURRENT_BINARY_DIR}/translations/translations.qrc)
-    file(WRITE ${TRANSLATIONS_QRC} "<RCC><qresource prefix=\"translations\">\n")
-    foreach (QM ${TRANSLATIONS_QM})
-        get_filename_component(QM_FILE ${QM} NAME)
-        file(APPEND ${TRANSLATIONS_QRC} "<file>${QM_FILE}</file>\n")
-    endforeach (QM)
-    file(APPEND ${TRANSLATIONS_QRC} "</qresource></RCC>")
+set(TRANSLATIONS_QRC ${CMAKE_CURRENT_BINARY_DIR}/translations/translations.qrc)
+file(WRITE ${TRANSLATIONS_QRC} "<RCC><qresource prefix=\"translations\">\n")
+foreach (QM ${TRANSLATIONS_QM})
+    get_filename_component(QM_FILE ${QM} NAME)
+    file(APPEND ${TRANSLATIONS_QRC} "<file>${QM_FILE}</file>\n")
+endforeach (QM)
+file(APPEND ${TRANSLATIONS_QRC} "</qresource></RCC>")
 
-    qt_add_resources(TRANSLATIONS ${TRANSLATIONS_QRC})
-endif()
+qt_add_resources(TRANSLATIONS ${TRANSLATIONS_QRC})
 
 set(AJM_LIB src/core/libraries/ajm/ajm.cpp
             src/core/libraries/ajm/ajm.h
@@ -1053,7 +1050,6 @@ set(EMULATOR src/emulator.cpp
 
 # The above is shared in SDL and Qt version (TODO share them all)
 
-if(ENABLE_QT_GUI)
 qt_add_resources(RESOURCE_FILES src/shadps4.qrc)
 
 if (ENABLE_UPDATER)
@@ -1118,7 +1114,6 @@ set(QT_GUI src/qt_gui/about_dialog.cpp
            ${TRANSLATIONS}
            ${UPDATER}
 )
-endif()
 
 set(IPC src/ipc/ipc_client.cpp
         src/ipc/ipc_client.h
@@ -1161,18 +1156,13 @@ endif()
 
 if (APPLE)
     # Include MoltenVK, along with an ICD file so it can be found by the system Vulkan loader if used for loading layers.
-    if (ENABLE_QT_GUI)
-        set(MVK_BUNDLE_PATH "Resources/vulkan/icd.d")
-        set_property(TARGET shadPS4QtLauncher APPEND PROPERTY BUILD_RPATH "@executable_path/../${MVK_BUNDLE_PATH}")
-        set(MVK_DST ${CMAKE_CURRENT_BINARY_DIR}/shadps4.app/Contents/${MVK_BUNDLE_PATH})
+    set(MVK_BUNDLE_PATH "Resources/vulkan/icd.d")
+    set_property(TARGET shadPS4QtLauncher APPEND PROPERTY BUILD_RPATH "@executable_path/../${MVK_BUNDLE_PATH}")
+    set(MVK_DST ${CMAKE_CURRENT_BINARY_DIR}/shadps4.app/Contents/${MVK_BUNDLE_PATH})
 
-        add_custom_command(
-            OUTPUT ${MVK_DST}
-            COMMAND ${CMAKE_COMMAND} -E make_directory ${MVK_DST})
-    else()
-        set_property(TARGET shadPS4QtLauncher APPEND PROPERTY BUILD_RPATH "@executable_path")
-        set(MVK_DST ${CMAKE_CURRENT_BINARY_DIR})
-    endif()
+    add_custom_command(
+        OUTPUT ${MVK_DST}
+        COMMAND ${CMAKE_COMMAND} -E make_directory ${MVK_DST})
 
     set(MVK_DYLIB_SRC ${CMAKE_CURRENT_BINARY_DIR}/externals/MoltenVK/libMoltenVK.dylib)
     set(MVK_DYLIB_DST ${MVK_DST}/libMoltenVK.dylib)
@@ -1200,12 +1190,10 @@ if (APPLE)
     target_link_libraries(shadPS4QtLauncher PRIVATE date::date-tz epoll-shim)
 endif()
 
-if (ENABLE_QT_GUI)
-    target_link_libraries(shadPS4QtLauncher PRIVATE Qt6::Widgets Qt6::Concurrent Qt6::Network Qt6::Multimedia)
-    add_definitions(-DENABLE_QT_GUI)
-    if (ENABLE_UPDATER)
-        add_definitions(-DENABLE_UPDATER)
-    endif()
+target_link_libraries(shadPS4QtLauncher PRIVATE Qt6::Widgets Qt6::Concurrent Qt6::Network Qt6::Multimedia)
+add_definitions(-DENABLE_QT_GUI) # todo
+if (ENABLE_UPDATER)
+    add_definitions(-DENABLE_UPDATER)
 endif()
 
 if (WIN32)
@@ -1278,24 +1266,20 @@ add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/src/imgui/renderer)
 add_dependencies(shadPS4QtLauncher ImGui_Resources)
 target_include_directories(shadPS4QtLauncher PRIVATE ${IMGUI_RESOURCES_INCLUDE})
 
-if (ENABLE_QT_GUI)
-    set_target_properties(shadPS4QtLauncher PROPERTIES
+set_target_properties(shadPS4QtLauncher PROPERTIES
 #       WIN32_EXECUTABLE ON
-        MACOSX_BUNDLE ON
-        MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/dist/MacOSBundleInfo.plist.in"
-        MACOSX_BUNDLE_ICON_FILE "shadPS4.icns"
-        MACOSX_BUNDLE_SHORT_VERSION_STRING "${APP_VERSION}"
-    )
+    MACOSX_BUNDLE ON
+    MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/dist/MacOSBundleInfo.plist.in"
+    MACOSX_BUNDLE_ICON_FILE "shadPS4.icns"
+    MACOSX_BUNDLE_SHORT_VERSION_STRING "${APP_VERSION}"
+)
 
-    set_source_files_properties(src/images/shadPS4.icns PROPERTIES
-        MACOSX_PACKAGE_LOCATION Resources)
-endif()
+set_source_files_properties(src/images/shadPS4.icns PROPERTIES
+    MACOSX_PACKAGE_LOCATION Resources)
 
 if (UNIX AND NOT APPLE)
-    if (ENABLE_QT_GUI)
-        find_package(OpenSSL REQUIRED)
-        target_link_libraries(shadPS4QtLauncher PRIVATE ${OPENSSL_LIBRARIES})
-    endif()
+    find_package(OpenSSL REQUIRED)
+    target_link_libraries(shadPS4QtLauncher PRIVATE ${OPENSSL_LIBRARIES})
 endif()
 
 # Discord RPC
@@ -1306,7 +1290,7 @@ endif()
 # Install rules
 install(TARGETS shadPS4QtLauncher BUNDLE DESTINATION .)
 
-if (ENABLE_QT_GUI AND CMAKE_SYSTEM_NAME STREQUAL "Linux")
+if (CMAKE_SYSTEM_NAME STREQUAL "Linux")
     install(FILES "dist/net.shadps4.shadPS4.desktop" DESTINATION "share/applications")
     install(FILES "dist/net.shadps4.shadPS4.metainfo.xml" DESTINATION "share/metainfo")
     install(FILES ".github/shadps4.png" DESTINATION "share/icons/hicolor/512x512/apps" RENAME "net.shadps4.shadPS4.png")
