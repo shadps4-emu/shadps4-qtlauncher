@@ -49,6 +49,7 @@ private:
     void VolumeSliderChange(int value);
     void onAudioDeviceChange(bool isAdd);
     void pollSDLevents();
+    void getPhysicalDevices();
 
     std::unique_ptr<Ui::SettingsDialog> ui;
 

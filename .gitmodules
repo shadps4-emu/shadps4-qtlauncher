@@ -113,3 +113,7 @@
 	path = externals/hwinfo
 	url = https://github.com/shadps4-emu/ext-hwinfo
 	shallow = true
+[submodule "externals/volk"]
+	path = externals/volk
+	url = https://github.com/zeux/volk.git
+	branch = master

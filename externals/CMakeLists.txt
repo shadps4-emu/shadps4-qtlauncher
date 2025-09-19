@@ -238,3 +238,5 @@ if (APPLE)
         add_subdirectory(epoll-shim)
     endif()
 endif()
+
+add_subdirectory(volk)

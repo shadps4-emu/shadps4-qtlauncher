@@ -34,6 +34,9 @@
 #include "video_core/renderer_vulkan/vk_instance.h"
 #include "video_core/renderer_vulkan/vk_presenter.h"
 
+#define VOLK_IMPLEMENTATION
+#include "volk.h"
+
 extern std::unique_ptr<Vulkan::Presenter> presenter;
 
 QStringList languageNames = {"Arabic",
@@ -91,6 +94,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
 
     ui->setupUi(this);
     ui->tabWidgetSettings->setUsesScrollButtons(false);
+    getPhysicalDevices();
 
     initialHeight = this->height();
 
@@ -140,8 +144,8 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
 
     if (m_physical_devices.empty()) {
         // Populate cache of physical devices.
-        Vulkan::Instance instance(false, false);
-        auto physical_devices = instance.GetPhysicalDevices();
+        // Vulkan::Instance instance(false, false);
+        /* auto physical_devices = getPhysicalDevices();
         for (const vk::PhysicalDevice physical_device : physical_devices) {
             auto prop = physical_device.getProperties();
             QString name = QString::fromUtf8(prop.deviceName, -1);
@@ -149,7 +153,8 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
                 name += tr(" * Unsupported Vulkan Version");
             }
             m_physical_devices.push_back(name);
-        }
+        }*/
+        getPhysicalDevices();
     }
 
     // Add list of available GPUs
@@ -1265,4 +1270,53 @@ void SettingsDialog::onAudioDeviceChange(bool isAdd) {
     ui->DsAudioComboBox->setCurrentText(QString::fromStdString(Config::getPadSpkOutputDevice()));
 
     SDL_free(devices);
+}
+
+void SettingsDialog::getPhysicalDevices() {
+    if (volkInitialize() != VK_SUCCESS) {
+        qWarning() << "Failed to initialize Volk.";
+        return;
+    }
+
+    // Create Vulkan instance
+    VkApplicationInfo appInfo{};
+    appInfo.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
+    appInfo.pApplicationName = "shadPS4 launcher";
+    appInfo.applicationVersion = VK_MAKE_VERSION(1, 0, 0);
+    appInfo.pEngineName = "No Engine";
+    appInfo.engineVersion = VK_MAKE_VERSION(1, 0, 0);
+    appInfo.apiVersion = VK_API_VERSION_1_0;
+
+    VkInstanceCreateInfo instInfo{};
+    instInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
+    instInfo.pApplicationInfo = &appInfo;
+
+    VkInstance instance;
+    if (vkCreateInstance(&instInfo, nullptr, &instance) != VK_SUCCESS) {
+        qWarning() << "Failed to create Vulkan instance.";
+        return;
+    }
+
+    // Load instance-based function pointers
+    volkLoadInstance(instance);
+
+    // Enumerate devices
+    uint32_t deviceCount = 0;
+    vkEnumeratePhysicalDevices(instance, &deviceCount, nullptr);
+    if (deviceCount == 0) {
+        qWarning() << "No Vulkan physical devices found.";
+        return;
+    }
+
+    std::vector<VkPhysicalDevice> devices(deviceCount);
+    vkEnumeratePhysicalDevices(instance, &deviceCount, devices.data());
+
+    for (uint32_t i = 0; i < deviceCount; ++i) {
+        VkPhysicalDeviceProperties props;
+        vkGetPhysicalDeviceProperties(devices[i], &props);
+        QString name = QString::fromUtf8(props.deviceName, -1);
+        m_physical_devices.push_back(name);
+    }
+
+    vkDestroyInstance(instance, nullptr);
 }
