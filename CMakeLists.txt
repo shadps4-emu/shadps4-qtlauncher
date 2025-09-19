@@ -339,8 +339,6 @@ set(COMMON src/common/logging/backend.cpp
            src/common/slot_vector.h
            src/common/spin_lock.cpp
            src/common/spin_lock.h
-           src/common/stb.cpp
-           src/common/stb.h
            src/common/string_literal.h
            src/common/string_util.cpp
            src/common/string_util.h
@@ -472,7 +470,7 @@ qt_add_executable(shadPS4QtLauncher
 create_target_directory_groups(shadPS4QtLauncher)
 
 target_link_libraries(shadPS4QtLauncher PRIVATE magic_enum::magic_enum fmt::fmt toml11::toml11 tsl::robin_map xbyak::xbyak ZLIB::ZLIB PNG::PNG)
-target_link_libraries(shadPS4QtLauncher PRIVATE Boost::headers LibAtrac9 xxHash::xxhash Zydis::Zydis SDL3::SDL3 pugixml::pugixml stb::headers lfreist-hwinfo::hwinfo volk_headers)
+target_link_libraries(shadPS4QtLauncher PRIVATE Boost::headers LibAtrac9 xxHash::xxhash Zydis::Zydis SDL3::SDL3 pugixml::pugixml lfreist-hwinfo::hwinfo volk_headers)
 
 if (ENABLE_DISCORD_RPC)
     target_compile_definitions(shadPS4QtLauncher PRIVATE ENABLE_DISCORD_RPC)
