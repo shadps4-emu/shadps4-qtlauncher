@@ -2422,11 +2422,19 @@
     </message>
     <message>
       <source>Audio Device (general)</source>
-      <translation type="unfinished">Audio Device (general)</translation>
+      <translation>Dispositivo Audio (Generale)</translation>
     </message>
     <message>
       <source>Audio Device (DS4 speaker)</source>
-      <translation type="unfinished">Audio Device (DS4 speaker)</translation>
+      <translation>Dispositivo Audio (altoparlante DS4)</translation>
+    </message>
+    <message>
+      <source>shadPS4 Path</source>
+      <translation type="unfinished">shadPS4 Path</translation>
+    </message>
+    <message>
+      <source>Select the shadPS4 executable</source>
+      <translation type="unfinished">Select the shadPS4 executable</translation>
     </message>
   </context>
   <context>

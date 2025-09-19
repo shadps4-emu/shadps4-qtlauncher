@@ -2422,11 +2422,19 @@
     </message>
     <message>
       <source>Audio Device (general)</source>
-      <translation type="unfinished">Audio Device (general)</translation>
+      <translation>Аудиоустройство (главное)</translation>
     </message>
     <message>
       <source>Audio Device (DS4 speaker)</source>
-      <translation type="unfinished">Audio Device (DS4 speaker)</translation>
+      <translation>Аудиоустройство (динамик DS4)</translation>
+    </message>
+    <message>
+      <source>shadPS4 Path</source>
+      <translation>Путь к shadPS4</translation>
+    </message>
+    <message>
+      <source>Select the shadPS4 executable</source>
+      <translation>Выберите исполняемый файл shadPS4</translation>
     </message>
   </context>
   <context>
