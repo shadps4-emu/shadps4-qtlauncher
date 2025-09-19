@@ -7,7 +7,6 @@
 #include <vector>
 #include "common/types.h"
 #include "core/loader/elf.h"
-#include "core/loader/symbols_resolver.h"
 
 namespace Core {
 
@@ -228,8 +227,8 @@ public:
     DynamicModuleInfo dynamic_info{};
     std::vector<u8> m_dynamic;
     std::vector<u8> m_dynamic_data;
-    Loader::SymbolsResolver export_sym;
-    Loader::SymbolsResolver import_sym;
+    // Loader::SymbolsResolver export_sym;
+    // Loader::SymbolsResolver import_sym;
     ThreadLocalImage tls{};
     OrbisKernelModuleInfo info{};
     std::vector<u8> rela_bits;

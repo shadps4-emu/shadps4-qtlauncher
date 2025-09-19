@@ -11,8 +11,6 @@
 #error What the fuck is this compiler
 #endif
 
-#include <tracy/Tracy.hpp>
-
 static inline bool IsProfilerConnected() {
 #if TRACY_ENABLE
     return tracy::GetProfiler().IsConnected();

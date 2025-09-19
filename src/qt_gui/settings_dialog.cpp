@@ -13,7 +13,6 @@
 #include "common/config.h"
 #include "common/logging/log.h"
 #include "common/scm_rev.h"
-#include "core/libraries/audio/audioout.h"
 #include "qt_gui/compatibility_info.h"
 #ifdef ENABLE_DISCORD_RPC
 #include "common/discord_rpc_handler.h"
@@ -31,10 +30,13 @@
 #include "sdl_event_wrapper.h"
 #include "settings_dialog.h"
 #include "ui_settings_dialog.h"
-#include "video_core/renderer_vulkan/vk_instance.h"
-#include "video_core/renderer_vulkan/vk_presenter.h"
+// #include "video_core/renderer_vulkan/vk_instance.h"
+// #include "video_core/renderer_vulkan/vk_presenter.h"
 
-extern std::unique_ptr<Vulkan::Presenter> presenter;
+#define VOLK_IMPLEMENTATION
+#include "volk.h"
+
+// extern std::unique_ptr<Vulkan::Presenter> presenter;
 
 QStringList languageNames = {"Arabic",
                              "Czech",
@@ -91,6 +93,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
 
     ui->setupUi(this);
     ui->tabWidgetSettings->setUsesScrollButtons(false);
+    getPhysicalDevices();
 
     initialHeight = this->height();
 
@@ -140,8 +143,8 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
 
     if (m_physical_devices.empty()) {
         // Populate cache of physical devices.
-        Vulkan::Instance instance(false, false);
-        auto physical_devices = instance.GetPhysicalDevices();
+        // Vulkan::Instance instance(false, false);
+        /* auto physical_devices = getPhysicalDevices();
         for (const vk::PhysicalDevice physical_device : physical_devices) {
             auto prop = physical_device.getProperties();
             QString name = QString::fromUtf8(prop.deviceName, -1);
@@ -149,7 +152,8 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
                 name += tr(" * Unsupported Vulkan Version");
             }
             m_physical_devices.push_back(name);
-        }
+        }*/
+        getPhysicalDevices();
     }
 
     // Add list of available GPUs
@@ -238,7 +242,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         connect(ui->horizontalVolumeSlider, &QSlider::valueChanged, this, [this](int value) {
             VolumeSliderChange(value);
             Config::setVolumeSlider(value, is_game_specific);
-            Libraries::AudioOut::AdjustVol();
+            // Libraries::AudioOut::AdjustVol();
         });
 
 #ifdef ENABLE_UPDATER
@@ -442,25 +446,28 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         ui->RCASValue->setText(RCASValue);
     });
 
-    if (presenter) {
-        connect(ui->RCASSlider, &QSlider::valueChanged, this, [this](int value) {
-            presenter->GetFsrSettingsRef().rcas_attenuation = static_cast<float>(value / 1000.0f);
-        });
+    //     if (presenter) {
+    //         connect(ui->RCASSlider, &QSlider::valueChanged, this, [this](int value) {
+    //             presenter->GetFsrSettingsRef().rcas_attenuation = static_cast<float>(value /
+    //             1000.0f);
+    //         });
 
-#if (QT_VERSION < QT_VERSION_CHECK(6, 7, 0))
-        connect(ui->FSRCheckBox, &QCheckBox::stateChanged, this,
-                [this](int state) { presenter->GetFsrSettingsRef().enable = state; });
+    // #if (QT_VERSION < QT_VERSION_CHECK(6, 7, 0))
+    //         connect(ui->FSRCheckBox, &QCheckBox::stateChanged, this,
+    //                 [this](int state) { presenter->GetFsrSettingsRef().enable = state; });
 
-        connect(ui->RCASCheckBox, &QCheckBox::stateChanged, this,
-                [this](int state) { presenter->GetFsrSettingsRef().use_rcas = state; });
-#else
-        connect(ui->FSRCheckBox, &QCheckBox::checkStateChanged, this,
-                [this](Qt::CheckState state) { presenter->GetFsrSettingsRef().enable = state; });
+    //         connect(ui->RCASCheckBox, &QCheckBox::stateChanged, this,
+    //                 [this](int state) { presenter->GetFsrSettingsRef().use_rcas = state; });
+    // #else
+    //         connect(ui->FSRCheckBox, &QCheckBox::checkStateChanged, this,
+    //                 [this](Qt::CheckState state) { presenter->GetFsrSettingsRef().enable = state;
+    //                 });
 
-        connect(ui->RCASCheckBox, &QCheckBox::checkStateChanged, this,
-                [this](Qt::CheckState state) { presenter->GetFsrSettingsRef().use_rcas = state; });
-#endif
-    }
+    //         connect(ui->RCASCheckBox, &QCheckBox::checkStateChanged, this,
+    //                 [this](Qt::CheckState state) { presenter->GetFsrSettingsRef().use_rcas =
+    //                 state; });
+    // #endif
+    //     }
 
     // Descriptions
     {
@@ -1184,14 +1191,15 @@ void SettingsDialog::SyncRealTimeWidgetstoConfig() {
     is_game_specific ? Config::resetGameSpecificValue("volumeSlider")
                      : Config::setVolumeSlider(sliderValue);
 
-    if (presenter) {
-        presenter->GetFsrSettingsRef().enable =
-            toml::find_or<bool>(gs_data, "GPU", "fsrEnabled", true);
-        presenter->GetFsrSettingsRef().use_rcas =
-            toml::find_or<bool>(gs_data, "GPU", "rcasEnabled", true);
-        presenter->GetFsrSettingsRef().rcas_attenuation =
-            static_cast<float>(toml::find_or<int>(gs_data, "GPU", "rcasAttenuation", 250) / 1000.f);
-    }
+    // if (presenter) {
+    //     presenter->GetFsrSettingsRef().enable =
+    //         toml::find_or<bool>(gs_data, "GPU", "fsrEnabled", true);
+    //     presenter->GetFsrSettingsRef().use_rcas =
+    //         toml::find_or<bool>(gs_data, "GPU", "rcasEnabled", true);
+    //     presenter->GetFsrSettingsRef().rcas_attenuation =
+    //         static_cast<float>(toml::find_or<int>(gs_data, "GPU", "rcasAttenuation", 250) /
+    //         1000.f);
+    // }
 }
 
 void SettingsDialog::setDefaultValues() {
@@ -1265,4 +1273,53 @@ void SettingsDialog::onAudioDeviceChange(bool isAdd) {
     ui->DsAudioComboBox->setCurrentText(QString::fromStdString(Config::getPadSpkOutputDevice()));
 
     SDL_free(devices);
+}
+
+void SettingsDialog::getPhysicalDevices() {
+    if (volkInitialize() != VK_SUCCESS) {
+        qWarning() << "Failed to initialize Volk.";
+        return;
+    }
+
+    // Create Vulkan instance
+    VkApplicationInfo appInfo{};
+    appInfo.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
+    appInfo.pApplicationName = "shadPS4 launcher";
+    appInfo.applicationVersion = VK_MAKE_VERSION(1, 0, 0);
+    appInfo.pEngineName = "No Engine";
+    appInfo.engineVersion = VK_MAKE_VERSION(1, 0, 0);
+    appInfo.apiVersion = VK_API_VERSION_1_0;
+
+    VkInstanceCreateInfo instInfo{};
+    instInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
+    instInfo.pApplicationInfo = &appInfo;
+
+    VkInstance instance;
+    if (vkCreateInstance(&instInfo, nullptr, &instance) != VK_SUCCESS) {
+        qWarning() << "Failed to create Vulkan instance.";
+        return;
+    }
+
+    // Load instance-based function pointers
+    volkLoadInstance(instance);
+
+    // Enumerate devices
+    uint32_t deviceCount = 0;
+    vkEnumeratePhysicalDevices(instance, &deviceCount, nullptr);
+    if (deviceCount == 0) {
+        qWarning() << "No Vulkan physical devices found.";
+        return;
+    }
+
+    std::vector<VkPhysicalDevice> devices(deviceCount);
+    vkEnumeratePhysicalDevices(instance, &deviceCount, devices.data());
+
+    for (uint32_t i = 0; i < deviceCount; ++i) {
+        VkPhysicalDeviceProperties props;
+        vkGetPhysicalDeviceProperties(devices[i], &props);
+        QString name = QString::fromUtf8(props.deviceName, -1);
+        m_physical_devices.push_back(name);
+    }
+
+    vkDestroyInstance(instance, nullptr);
 }

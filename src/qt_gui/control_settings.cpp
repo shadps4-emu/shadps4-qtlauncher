@@ -350,8 +350,8 @@ void ControlSettings::SaveControllerConfig(bool CloseOnSave) {
     Config::save(Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "config.toml");
 
     if (GameRunning) {
-        Config::GetUseUnifiedInputConfig() ? Input::ParseInputConfig("default")
-                                           : Input::ParseInputConfig(RunningGameSerial);
+        // Config::GetUseUnifiedInputConfig() ? Input::ParseInputConfig("default")
+        //                                    : Input::ParseInputConfig(RunningGameSerial);
     }
 
     if (CloseOnSave)
