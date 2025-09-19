@@ -364,17 +364,10 @@ if (ENABLE_DISCORD_RPC)
     list(APPEND COMMON src/common/discord_rpc_handler.cpp src/common/discord_rpc_handler.h)
 endif()
 
-set(CORE 
-         src/core/file_format/pfs.h
-         src/core/file_format/psf.cpp
+set(CORE src/core/file_format/psf.cpp
          src/core/file_format/psf.h
-         src/core/file_format/playgo_chunk.cpp
-         src/core/file_format/playgo_chunk.h
          src/core/file_format/trp.cpp
          src/core/file_format/trp.h
-         src/core/file_sys/fs.cpp
-         src/core/file_sys/fs.h
-         src/core/ipc/ipc.h
          src/core/loader/elf.cpp
          src/core/loader/elf.h
          src/core/debug_state.cpp
@@ -386,8 +379,6 @@ set(CORE
 set(INPUT src/input/controller.cpp
           src/input/controller.h
 )
-
-# The above is shared in SDL and Qt version (TODO share them all)
 
 qt_add_resources(RESOURCE_FILES src/shadps4.qrc)
 
