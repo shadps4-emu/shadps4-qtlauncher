@@ -385,12 +385,6 @@ set(CORE
          src/core/signals.h
 )
 
-if (ARCHITECTURE STREQUAL "x86_64")
-    set(CORE ${CORE}
-             src/core/cpu_patches.cpp
-             src/core/cpu_patches.h)
-endif()
-
 set(INPUT src/input/controller.cpp
           src/input/controller.h
 )
