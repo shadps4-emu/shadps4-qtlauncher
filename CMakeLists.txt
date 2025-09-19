@@ -659,8 +659,6 @@ set(DEV_TOOLS src/core/devtools/layer.cpp
               src/core/devtools/widget/shader_list.h
               src/core/devtools/widget/text_editor.cpp
               src/core/devtools/widget/text_editor.h
-              src/core/memory_patcher.cpp
-              src/core/memory_patcher.h
 )
 
 set(COMMON src/common/logging/backend.cpp
@@ -736,6 +734,8 @@ set(COMMON src/common/logging/backend.cpp
            src/common/number_utils.cpp
            src/common/memory_patcher.h
            src/common/memory_patcher.cpp
+           src/core/memory_patcher.cpp
+           src/core/memory_patcher.h
            ${CMAKE_CURRENT_BINARY_DIR}/src/common/scm_rev.cpp
            src/common/scm_rev.h
 )
@@ -744,34 +744,34 @@ if (ENABLE_DISCORD_RPC)
     list(APPEND COMMON src/common/discord_rpc_handler.cpp src/common/discord_rpc_handler.h)
 endif()
 
-set(CORE src/core/aerolib/stubs.cpp
-         src/core/aerolib/stubs.h
-         src/core/aerolib/aerolib.cpp
-         src/core/aerolib/aerolib.h
-         src/core/address_space.cpp
-         src/core/address_space.h
-         src/core/file_sys/devices/base_device.cpp
-         src/core/file_sys/devices/base_device.h
-         src/core/file_sys/devices/ioccom.h
-         src/core/file_sys/devices/logger.cpp
-         src/core/file_sys/devices/logger.h
-         src/core/file_sys/devices/nop_device.h
-         src/core/file_sys/devices/console_device.cpp
-         src/core/file_sys/devices/console_device.h
-         src/core/file_sys/devices/deci_tty6_device.cpp
-         src/core/file_sys/devices/deci_tty6_device.h
-         src/core/file_sys/devices/random_device.cpp
-         src/core/file_sys/devices/random_device.h
-         src/core/file_sys/devices/urandom_device.cpp
-         src/core/file_sys/devices/urandom_device.h
-         src/core/file_sys/devices/srandom_device.cpp
-         src/core/file_sys/devices/srandom_device.h
-         src/core/file_sys/directories/base_directory.cpp
-         src/core/file_sys/directories/base_directory.h
-         src/core/file_sys/directories/normal_directory.cpp
-         src/core/file_sys/directories/normal_directory.h
-         src/core/file_sys/directories/pfs_directory.cpp
-         src/core/file_sys/directories/pfs_directory.h
+set(CORE # src/core/aerolib/stubs.cpp
+         # src/core/aerolib/stubs.h
+         # src/core/aerolib/aerolib.cpp
+         # src/core/aerolib/aerolib.h
+         # src/core/address_space.cpp
+         # src/core/address_space.h
+         # src/core/file_sys/devices/base_device.cpp
+         # src/core/file_sys/devices/base_device.h
+         # src/core/file_sys/devices/ioccom.h
+         # src/core/file_sys/devices/logger.cpp
+         # src/core/file_sys/devices/logger.h
+         # src/core/file_sys/devices/nop_device.h
+         # src/core/file_sys/devices/console_device.cpp
+         # src/core/file_sys/devices/console_device.h
+         # src/core/file_sys/devices/deci_tty6_device.cpp
+         # src/core/file_sys/devices/deci_tty6_device.h
+         # src/core/file_sys/devices/random_device.cpp
+         # src/core/file_sys/devices/random_device.h
+         # src/core/file_sys/devices/urandom_device.cpp
+         # src/core/file_sys/devices/urandom_device.h
+         # src/core/file_sys/devices/srandom_device.cpp
+         # src/core/file_sys/devices/srandom_device.h
+         # src/core/file_sys/directories/base_directory.cpp
+         # src/core/file_sys/directories/base_directory.h
+         # src/core/file_sys/directories/normal_directory.cpp
+         # src/core/file_sys/directories/normal_directory.h
+         # src/core/file_sys/directories/pfs_directory.cpp
+         # src/core/file_sys/directories/pfs_directory.h
          src/core/file_format/pfs.h
          src/core/file_format/psf.cpp
          src/core/file_format/psf.h
@@ -783,55 +783,55 @@ set(CORE src/core/aerolib/stubs.cpp
          src/core/file_sys/fs.h
          src/core/ipc/ipc.cpp
          src/core/ipc/ipc.h
-         src/core/loader/dwarf.cpp
-         src/core/loader/dwarf.h
+         # src/core/loader/dwarf.cpp
+         # src/core/loader/dwarf.h
          src/core/loader/elf.cpp
          src/core/loader/elf.h
-         src/core/loader/symbols_resolver.h
-         src/core/loader/symbols_resolver.cpp
-         src/core/libraries/libs.h
-         src/core/libraries/libs.cpp
-         ${AJM_LIB}
-         ${AVPLAYER_LIB}
-         ${AUDIO_LIB}
-         ${GNM_LIB}
-         ${KERNEL_LIB}
-         ${NETWORK_LIBS}
-         ${SYSTEM_LIBS}
-         ${HLE_LIBC_INTERNAL_LIB}
-         ${PAD_LIB}
-         ${SYSTEM_GESTURE_LIB}
-         ${VIDEOOUT_LIB}
-         ${NP_LIBS}
-         ${PNG_LIB}
-         ${JPEG_LIB}
-         ${PLAYGO_LIB}
-         ${RANDOM_LIB}
-         ${USBD_LIB}
-         ${ZLIB_LIB}
-         ${MISC_LIBS}
-         ${IME_LIB}
-         ${FIBER_LIB}
-         ${VDEC_LIB}
-         ${VR_LIBS}
-         ${CAMERA_LIBS}
-         ${COMPANION_LIBS}
-         ${DEV_TOOLS}
+         # src/core/loader/symbols_resolver.h
+         # src/core/loader/symbols_resolver.cpp
+         # src/core/libraries/libs.h
+         # src/core/libraries/libs.cpp
+         # ${AJM_LIB}
+         # ${AVPLAYER_LIB}
+         # ${AUDIO_LIB}
+         # ${GNM_LIB}
+         # ${KERNEL_LIB}
+         # ${NETWORK_LIBS}
+         # ${SYSTEM_LIBS}
+         # ${HLE_LIBC_INTERNAL_LIB}
+         # ${PAD_LIB}
+         # ${SYSTEM_GESTURE_LIB}
+         # ${VIDEOOUT_LIB}
+         # ${NP_LIBS}
+         # ${PNG_LIB}
+         # ${JPEG_LIB}
+         # ${PLAYGO_LIB}
+         # ${RANDOM_LIB}
+         # ${USBD_LIB}
+         # ${ZLIB_LIB}
+         # ${MISC_LIBS}
+         # ${IME_LIB}
+         # ${FIBER_LIB}
+         # ${VDEC_LIB}
+         # ${VR_LIBS}
+         # ${CAMERA_LIBS}
+         # ${COMPANION_LIBS}
+         # ${DEV_TOOLS}
          src/core/debug_state.cpp
          src/core/debug_state.h
-         src/core/linker.cpp
-         src/core/linker.h
-         src/core/memory.cpp
-         src/core/memory.h
-         src/core/module.cpp
-         src/core/module.h
-         src/core/platform.h
+         # src/core/linker.cpp
+         # src/core/linker.h
+         # src/core/memory.cpp
+         # src/core/memory.h
+         # src/core/module.cpp
+         # src/core/module.h
+         # src/core/platform.h
          src/core/signals.cpp
          src/core/signals.h
-         src/core/thread.cpp
-         src/core/thread.h
-         src/core/tls.cpp
-         src/core/tls.h
+         # src/core/thread.cpp
+         # src/core/thread.h
+         # src/core/tls.cpp
+         # src/core/tls.h
 )
 
 if (ARCHITECTURE STREQUAL "x86_64")
@@ -1036,10 +1036,10 @@ set(IMGUI src/imgui/imgui_config.h
 
 set(INPUT src/input/controller.cpp
           src/input/controller.h
-          src/input/input_handler.cpp
-          src/input/input_handler.h
-          src/input/input_mouse.cpp
-          src/input/input_mouse.h
+          # src/input/input_handler.cpp
+          # src/input/input_handler.h
+          # src/input/input_mouse.cpp
+          # src/input/input_mouse.h
 )
 
 set(EMULATOR src/emulator.cpp
@@ -1067,7 +1067,7 @@ set(QT_GUI src/qt_gui/about_dialog.cpp
            src/qt_gui/cheats_patches.h
            src/qt_gui/compatibility_info.cpp
            src/qt_gui/compatibility_info.h
-	   src/qt_gui/control_settings.cpp	   
+	       src/qt_gui/control_settings.cpp	   
            src/qt_gui/control_settings.h
            src/qt_gui/control_settings.ui
            src/qt_gui/kbm_gui.cpp	   
@@ -1119,16 +1119,16 @@ set(IPC src/ipc/ipc_client.cpp
         src/ipc/ipc_client.h
 )
 qt_add_executable(shadPS4QtLauncher
-    ${AUDIO_CORE}
-    ${IMGUI}
+    # ${AUDIO_CORE}
+    # ${IMGUI}
     ${INPUT}
     ${QT_GUI}
     ${COMMON}
     ${CORE}
-    ${SHADER_RECOMPILER}
-    ${VIDEO_CORE}
+    # ${SHADER_RECOMPILER}
+    # ${VIDEO_CORE}
     ${IPC}
-    ${EMULATOR}
+    # ${EMULATOR}
     src/images/shadPS4.icns
     src/main.cpp
 )
