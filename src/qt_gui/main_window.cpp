@@ -15,10 +15,10 @@
 #include "check_update.h"
 #endif
 #include "common/io_file.h"
+#include "common/logging/log.h"
 #include "common/path_util.h"
 #include "common/scm_rev.h"
 #include "common/string_util.h"
-#include "common/logging/log.h"
 #include "control_settings.h"
 #include "core/memory_patcher.h"
 #include "game_install_dialog.h"
