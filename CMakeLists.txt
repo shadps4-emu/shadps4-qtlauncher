@@ -319,15 +319,15 @@ set(COMMON src/common/logging/backend.cpp
            src/common/scope_exit.h
            src/common/fixed_value.h
            src/common/func_traits.h
-           src/common/native_clock.cpp
-           src/common/native_clock.h
+        #    src/common/native_clock.cpp
+        #    src/common/native_clock.h
            src/common/path_util.cpp
            src/common/path_util.h
            src/common/object_pool.h
            src/common/polyfill_thread.h
-           src/common/range_lock.h
-           src/common/rdtsc.cpp
-           src/common/rdtsc.h
+        #    src/common/range_lock.h
+        #    src/common/rdtsc.cpp
+        #    src/common/rdtsc.h
            src/common/recursive_lock.cpp
            src/common/recursive_lock.h
            src/common/sha1.h
@@ -335,23 +335,23 @@ set(COMMON src/common/logging/backend.cpp
            src/common/signal_context.h
            src/common/signal_context.cpp
            src/common/singleton.h
-           src/common/slab_heap.h
-           src/common/slot_vector.h
-           src/common/spin_lock.cpp
-           src/common/spin_lock.h
+        #    src/common/slab_heap.h
+        #    src/common/slot_vector.h
+        #    src/common/spin_lock.cpp
+        #    src/common/spin_lock.h
            src/common/string_literal.h
            src/common/string_util.cpp
            src/common/string_util.h
            src/common/thread.cpp
            src/common/thread.h
            src/common/types.h
-           src/common/uint128.h
+        #    src/common/uint128.h
            src/common/unique_function.h
            src/common/va_ctx.h
            src/common/ntapi.h
            src/common/ntapi.cpp
-           src/common/number_utils.h
-           src/common/number_utils.cpp
+        #    src/common/number_utils.h
+        #    src/common/number_utils.cpp
            src/common/memory_patcher.h
            src/common/memory_patcher.cpp
            src/core/memory_patcher.cpp
