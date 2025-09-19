@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: Copyright 2024 shadPS4 Emulator Project
+# SPDX-FileCopyrightText: Copyright 2025 shadPS4 Emulator Project
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 # Version 3.24 needed for FetchContent OVERRIDE_FIND_PACKAGE
@@ -481,15 +481,6 @@ if (ENABLE_DISCORD_RPC)
     target_compile_definitions(shadPS4QtLauncher PRIVATE ENABLE_DISCORD_RPC)
 endif()
 
-if (${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
-    # Optional due to https://github.com/shadps4-emu/shadPS4/issues/1704
-    if (ENABLE_USERFAULTFD)
-        target_compile_definitions(shadPS4QtLauncher PRIVATE ENABLE_USERFAULTFD)
-    endif()
-
-    target_link_libraries(shadPS4QtLauncher PRIVATE uuid)
-endif()
-
 if (APPLE)
     # Include MoltenVK, along with an ICD file so it can be found by the system Vulkan loader if used for loading layers.
     set(MVK_BUNDLE_PATH "Resources/vulkan/icd.d")
@@ -576,13 +567,6 @@ endif()
 add_definitions(-DBOOST_ASIO_STANDALONE)
 
 target_include_directories(shadPS4QtLauncher PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
-
-# Shaders sources
-# set(HOST_SHADERS_INCLUDE ${CMAKE_CURRENT_SOURCE_DIR}/src/video_core/host_shaders)
-
-# add_subdirectory(${HOST_SHADERS_INCLUDE})
-# add_dependencies(shadPS4QtLauncher host_shaders)
-# target_include_directories(shadPS4QtLauncher PRIVATE ${HOST_SHADERS_INCLUDE})
 
 # embed resources
 

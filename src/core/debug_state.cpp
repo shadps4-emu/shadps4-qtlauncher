@@ -7,11 +7,6 @@
 #include "common/native_clock.h"
 #include "common/singleton.h"
 #include "debug_state.h"
-// #include "devtools/widget/common.h"
-#include "libraries/kernel/time.h"
-#include "libraries/system/msgdialog.h"
-// #include "video_core/amdgpu/pm4_cmds.h"
-// #include "video_core/renderer_vulkan/vk_pipeline_cache.h"
 
 using namespace DebugStateType;
 

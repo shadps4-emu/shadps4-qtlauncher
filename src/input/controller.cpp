@@ -4,7 +4,6 @@
 #include <SDL3/SDL.h>
 #include "common/config.h"
 #include "common/logging/log.h"
-#include "core/libraries/kernel/time.h"
 #include "core/libraries/pad/pad.h"
 #include "input/controller.h"
 

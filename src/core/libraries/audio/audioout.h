@@ -8,7 +8,6 @@
 #include <mutex>
 
 #include "common/bit_field.h"
-#include "core/libraries/kernel/threads.h"
 #include "core/libraries/system/userservice.h"
 
 namespace Libraries::AudioOut {
@@ -90,7 +89,7 @@ struct PortOut {
     void* output_buffer;
     std::condition_variable_any output_cv;
     bool output_ready;
-    Kernel::Thread output_thread{};
+    // Kernel::Thread output_thread{};
 
     OrbisAudioOutPort type;
     AudioFormatInfo format_info;

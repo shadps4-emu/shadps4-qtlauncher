@@ -11,7 +11,7 @@
 #include "common/io_file.h"
 #include "common/logging/formatter.h"
 // #include "core/file_sys/devices/base_device.h"
-#include "core/file_sys/directories/base_directory.h"
+// #include "core/file_sys/directories/base_directory.h"
 
 namespace Libraries::Net {
 struct Socket;
@@ -87,9 +87,9 @@ struct File {
     std::string m_guest_name;
     Common::FS::IOFile f;
     std::mutex m_mutex;
-    std::shared_ptr<Directories::BaseDirectory> directory; // only valid for type == Directory
+    // std::shared_ptr<Directories::BaseDirectory> directory; // only valid for type == Directory
     // std::shared_ptr<Devices::BaseDevice> device;           // only valid for type == Device
-    std::shared_ptr<Libraries::Net::Socket> socket;        // only valid for type == Socket
+    // std::shared_ptr<Libraries::Net::Socket> socket;        // only valid for type == Socket
 };
 
 class HandleTable {
