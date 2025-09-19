@@ -469,7 +469,7 @@ qt_add_executable(shadPS4QtLauncher
 
 create_target_directory_groups(shadPS4QtLauncher)
 
-target_link_libraries(shadPS4QtLauncher PRIVATE magic_enum::magic_enum fmt::fmt toml11::toml11 tsl::robin_map xbyak::xbyak ZLIB::ZLIB PNG::PNG)
+target_link_libraries(shadPS4QtLauncher PRIVATE magic_enum::magic_enum Vulkan::Headers fmt::fmt toml11::toml11 tsl::robin_map xbyak::xbyak ZLIB::ZLIB PNG::PNG)
 target_link_libraries(shadPS4QtLauncher PRIVATE Boost::headers LibAtrac9 xxHash::xxhash Zydis::Zydis SDL3::SDL3 pugixml::pugixml lfreist-hwinfo::hwinfo volk_headers)
 
 if (ENABLE_DISCORD_RPC)
