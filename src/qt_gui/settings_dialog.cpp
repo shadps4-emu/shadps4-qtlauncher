@@ -246,15 +246,6 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         });
 
 #ifdef ENABLE_UPDATER
-#if (QT_VERSION < QT_VERSION_CHECK(6, 7, 0))
-        connect(ui->updateCheckBox, &QCheckBox::stateChanged, this, [this](int state) {
-            m_gui_settings->SetValue(gui::gen_checkForUpdates, state == Qt::Checked);
-        });
-
-        connect(ui->changelogCheckBox, &QCheckBox::stateChanged, this, [this](int state) {
-            m_gui_settings->SetValue(gui::gen_showChangeLog, state == Qt::Checked);
-        });
-#else
         connect(ui->updateCheckBox, &QCheckBox::checkStateChanged, this,
                 [this](Qt::CheckState state) {
                     m_gui_settings->SetValue(gui::gen_checkForUpdates, state == Qt::Checked);
@@ -264,8 +255,6 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
                 [this](Qt::CheckState state) {
                     m_gui_settings->SetValue(gui::gen_showChangeLog, state == Qt::Checked);
                 });
-#endif
-
         connect(ui->updateComboBox, &QComboBox::currentTextChanged, this,
                 [this](const QString& channel) {
                     if (channelMap.contains(channel)) {
@@ -285,14 +274,8 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
                     m_compat_info->UpdateCompatibilityDatabase(this, true);
                     emit CompatibilityChanged();
                 });
-
-#if (QT_VERSION < QT_VERSION_CHECK(6, 7, 0))
-        connect(ui->enableCompatibilityCheckBox, &QCheckBox::stateChanged, this,
-                [this, m_compat_info](int state) {
-#else
         connect(ui->enableCompatibilityCheckBox, &QCheckBox::checkStateChanged, this,
                 [this, m_compat_info](Qt::CheckState state) {
-#endif
                     Config::setCompatibilityEnabled(state);
                     if (state) {
                         m_compat_info->LoadCompatibilityFile();
@@ -309,14 +292,10 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         connect(ui->BGMVolumeSlider, &QSlider::valueChanged, this,
                 [](int value) { BackgroundMusicPlayer::getInstance().setVolume(value); });
 
-#if (QT_VERSION < QT_VERSION_CHECK(6, 7, 0))
-        connect(ui->showBackgroundImageCheckBox, &QCheckBox::stateChanged, this, [this](int state) {
-#else
         connect(ui->showBackgroundImageCheckBox, &QCheckBox::checkStateChanged, this,
                 [this](Qt::CheckState state) {
-#endif
-            m_gui_settings->SetValue(gui::gl_showBackgroundImage, state == Qt::Checked);
-        });
+                    m_gui_settings->SetValue(gui::gl_showBackgroundImage, state == Qt::Checked);
+                });
     }
 
     // USER TAB
@@ -451,14 +430,6 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
     //             presenter->GetFsrSettingsRef().rcas_attenuation = static_cast<float>(value /
     //             1000.0f);
     //         });
-
-    // #if (QT_VERSION < QT_VERSION_CHECK(6, 7, 0))
-    //         connect(ui->FSRCheckBox, &QCheckBox::stateChanged, this,
-    //                 [this](int state) { presenter->GetFsrSettingsRef().enable = state; });
-
-    //         connect(ui->RCASCheckBox, &QCheckBox::stateChanged, this,
-    //                 [this](int state) { presenter->GetFsrSettingsRef().use_rcas = state; });
-    // #else
     //         connect(ui->FSRCheckBox, &QCheckBox::checkStateChanged, this,
     //                 [this](Qt::CheckState state) { presenter->GetFsrSettingsRef().enable = state;
     //                 });
@@ -466,7 +437,6 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
     //         connect(ui->RCASCheckBox, &QCheckBox::checkStateChanged, this,
     //                 [this](Qt::CheckState state) { presenter->GetFsrSettingsRef().use_rcas =
     //                 state; });
-    // #endif
     //     }
 
     // Descriptions
