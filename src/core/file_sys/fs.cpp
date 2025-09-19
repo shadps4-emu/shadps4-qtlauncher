@@ -4,8 +4,8 @@
 #include <algorithm>
 #include "common/config.h"
 #include "common/string_util.h"
-#include "core/file_sys/devices/logger.h"
-#include "core/file_sys/devices/nop_device.h"
+// #include "core/file_sys/devices/logger.h"
+// #include "core/file_sys/devices/nop_device.h"
 #include "core/file_sys/fs.h"
 
 namespace Core::FileSys {
@@ -190,84 +190,84 @@ void MntPoints::IterateDirectory(std::string_view guest_directory,
     }
 }
 
-int HandleTable::CreateHandle() {
-    std::scoped_lock lock{m_mutex};
+// int HandleTable::CreateHandle() {
+//     std::scoped_lock lock{m_mutex};
 
-    auto* file = new File{};
-    file->is_opened = false;
+//     auto* file = new File{};
+//     file->is_opened = false;
 
-    int existingFilesNum = m_files.size();
+//     int existingFilesNum = m_files.size();
 
-    for (int index = 0; index < existingFilesNum; index++) {
-        if (m_files.at(index) == nullptr) {
-            m_files[index] = file;
-            return index;
-        }
-    }
+//     for (int index = 0; index < existingFilesNum; index++) {
+//         if (m_files.at(index) == nullptr) {
+//             m_files[index] = file;
+//             return index;
+//         }
+//     }
 
-    m_files.push_back(file);
-    return m_files.size() - 1;
-}
+//     m_files.push_back(file);
+//     return m_files.size() - 1;
+// }
 
-void HandleTable::DeleteHandle(int d) {
-    std::scoped_lock lock{m_mutex};
-    delete m_files.at(d);
-    m_files[d] = nullptr;
-}
+// void HandleTable::DeleteHandle(int d) {
+//     std::scoped_lock lock{m_mutex};
+//     delete m_files.at(d);
+//     m_files[d] = nullptr;
+// }
 
-File* HandleTable::GetFile(int d) {
-    std::scoped_lock lock{m_mutex};
-    if (d < 0 || d >= m_files.size()) {
-        return nullptr;
-    }
-    return m_files.at(d);
-}
+// File* HandleTable::GetFile(int d) {
+//     std::scoped_lock lock{m_mutex};
+//     if (d < 0 || d >= m_files.size()) {
+//         return nullptr;
+//     }
+//     return m_files.at(d);
+// }
 
-File* HandleTable::GetSocket(int d) {
-    std::scoped_lock lock{m_mutex};
-    if (d < 0 || d >= m_files.size()) {
-        return nullptr;
-    }
-    auto file = m_files.at(d);
-    if (file->type != Core::FileSys::FileType::Socket) {
-        return nullptr;
-    }
-    return file;
-}
+// File* HandleTable::GetSocket(int d) {
+//     std::scoped_lock lock{m_mutex};
+//     if (d < 0 || d >= m_files.size()) {
+//         return nullptr;
+//     }
+//     auto file = m_files.at(d);
+//     if (file->type != Core::FileSys::FileType::Socket) {
+//         return nullptr;
+//     }
+//     return file;
+// }
 
-File* HandleTable::GetFile(const std::filesystem::path& host_name) {
-    for (auto* file : m_files) {
-        if (file != nullptr && file->m_host_name == host_name) {
-            return file;
-        }
-    }
-    return nullptr;
-}
+// File* HandleTable::GetFile(const std::filesystem::path& host_name) {
+//     for (auto* file : m_files) {
+//         if (file != nullptr && file->m_host_name == host_name) {
+//             return file;
+//         }
+//     }
+//     return nullptr;
+// }
 
-void HandleTable::CreateStdHandles() {
-    auto setup = [this](const char* path, auto* device) {
-        int fd = CreateHandle();
-        auto* file = GetFile(fd);
-        file->is_opened = true;
-        file->type = FileType::Device;
-        file->m_guest_name = path;
-        file->device =
-            std::shared_ptr<Devices::BaseDevice>{reinterpret_cast<Devices::BaseDevice*>(device)};
-    };
-    // order matters
-    // setup("/dev/stdin", new Devices::Logger("stdin", false));   // stdin
-    // setup("/dev/stdout", new Devices::Logger("stdout", false)); // stdout
-    // setup("/dev/stderr", new Devices::Logger("stderr", true));  // stderr
-}
+// void HandleTable::CreateStdHandles() {
+//     auto setup = [this](const char* path, auto* device) {
+//         int fd = CreateHandle();
+//         auto* file = GetFile(fd);
+//         file->is_opened = true;
+//         file->type = FileType::Device;
+//         file->m_guest_name = path;
+//         file->device =
+//             std::shared_ptr<Devices::BaseDevice>{reinterpret_cast<Devices::BaseDevice*>(device)};
+//     };
+//     // order matters
+//     // setup("/dev/stdin", new Devices::Logger("stdin", false));   // stdin
+//     // setup("/dev/stdout", new Devices::Logger("stdout", false)); // stdout
+//     // setup("/dev/stderr", new Devices::Logger("stderr", true));  // stderr
+// }
 
-int HandleTable::GetFileDescriptor(File* file) {
-    std::scoped_lock lock{m_mutex};
-    auto it = std::find(m_files.begin(), m_files.end(), file);
+// int HandleTable::GetFileDescriptor(File* file) {
+//     std::scoped_lock lock{m_mutex};
+//     auto it = std::find(m_files.begin(), m_files.end(), file);
 
-    if (it != m_files.end()) {
-        return std::distance(m_files.begin(), it);
-    }
-    return 0;
-}
+//     if (it != m_files.end()) {
+//         return std::distance(m_files.begin(), it);
+//     }
+//     return 0;
+// }
 
 } // namespace Core::FileSys
