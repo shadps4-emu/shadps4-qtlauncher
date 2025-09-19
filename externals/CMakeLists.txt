@@ -161,17 +161,6 @@ if (NOT TARGET PNG::PNG)
     add_library(PNG::PNG ALIAS png_static)
 endif()
 
-# Dear ImGui
-add_library(Dear_ImGui
-        dear_imgui/imgui.cpp
-        dear_imgui/imgui_demo.cpp
-        dear_imgui/imgui_draw.cpp
-        dear_imgui/imgui_internal.h
-        dear_imgui/imgui_tables.cpp
-        dear_imgui/imgui_widgets.cpp
-)
-target_include_directories(Dear_ImGui INTERFACE dear_imgui/)
-
 # Tracy
 if (CMAKE_BUILD_TYPE STREQUAL "Release")
     option(TRACY_ENABLE "" OFF)

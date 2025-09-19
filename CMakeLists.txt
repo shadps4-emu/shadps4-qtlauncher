@@ -471,11 +471,8 @@ qt_add_executable(shadPS4QtLauncher
 
 create_target_directory_groups(shadPS4QtLauncher)
 
-target_link_libraries(shadPS4QtLauncher PRIVATE magic_enum::magic_enum fmt::fmt toml11::toml11 tsl::robin_map xbyak::xbyak Tracy::TracyClient RenderDoc::API FFmpeg::ffmpeg Dear_ImGui gcn half::half ZLIB::ZLIB PNG::PNG)
+target_link_libraries(shadPS4QtLauncher PRIVATE magic_enum::magic_enum fmt::fmt toml11::toml11 tsl::robin_map xbyak::xbyak Tracy::TracyClient RenderDoc::API FFmpeg::ffmpeg  gcn half::half ZLIB::ZLIB PNG::PNG)
 target_link_libraries(shadPS4QtLauncher PRIVATE Boost::headers GPUOpen::VulkanMemoryAllocator LibAtrac9 sirit Vulkan::Headers xxHash::xxhash Zydis::Zydis glslang::glslang SDL3::SDL3 pugixml::pugixml stb::headers libusb::usb lfreist-hwinfo::hwinfo volk_headers)
-
-target_compile_definitions(shadPS4QtLauncher PRIVATE IMGUI_USER_CONFIG="imgui/imgui_config.h")
-target_compile_definitions(Dear_ImGui PRIVATE IMGUI_USER_CONFIG="${PROJECT_SOURCE_DIR}/src/imgui/imgui_config.h")
 
 if (ENABLE_DISCORD_RPC)
     target_compile_definitions(shadPS4QtLauncher PRIVATE ENABLE_DISCORD_RPC)
@@ -580,11 +577,6 @@ cmrc_add_resource_library(embedded-resources
         src/images/platinum.png
         src/images/silver.png)
 target_link_libraries(shadPS4QtLauncher PRIVATE res::embedded)
-
-# ImGui resources
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/src/imgui/renderer)
-add_dependencies(shadPS4QtLauncher ImGui_Resources)
-target_include_directories(shadPS4QtLauncher PRIVATE ${IMGUI_RESOURCES_INCLUDE})
 
 set_target_properties(shadPS4QtLauncher PROPERTIES
 #       WIN32_EXECUTABLE ON
