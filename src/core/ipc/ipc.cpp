@@ -13,7 +13,7 @@
 #include "common/types.h"
 #include "core/debug_state.h"
 #include "input/input_handler.h"
-#include "sdl_window.h"
+// #include "sdl_window.h"
 
 /**
  * Protocol summary:

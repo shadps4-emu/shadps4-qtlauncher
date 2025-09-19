@@ -1242,11 +1242,11 @@ add_definitions(-DBOOST_ASIO_STANDALONE)
 target_include_directories(shadPS4QtLauncher PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 
 # Shaders sources
-set(HOST_SHADERS_INCLUDE ${CMAKE_CURRENT_SOURCE_DIR}/src/video_core/host_shaders)
+# set(HOST_SHADERS_INCLUDE ${CMAKE_CURRENT_SOURCE_DIR}/src/video_core/host_shaders)
 
-add_subdirectory(${HOST_SHADERS_INCLUDE})
-add_dependencies(shadPS4QtLauncher host_shaders)
-target_include_directories(shadPS4QtLauncher PRIVATE ${HOST_SHADERS_INCLUDE})
+# add_subdirectory(${HOST_SHADERS_INCLUDE})
+# add_dependencies(shadPS4QtLauncher host_shaders)
+# target_include_directories(shadPS4QtLauncher PRIVATE ${HOST_SHADERS_INCLUDE})
 
 # embed resources
 

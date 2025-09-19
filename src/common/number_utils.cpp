@@ -5,8 +5,8 @@
 #include <half.hpp>
 
 #include "common/number_utils.h"
-#include "video_core/amdgpu/pixel_format.h"
-#include "video_core/amdgpu/types.h"
+// #include "video_core/amdgpu/pixel_format.h"
+// #include "video_core/amdgpu/types.h"
 
 #define UF11_EXPONENT_SHIFT 6
 #define UF10_EXPONENT_SHIFT 5
