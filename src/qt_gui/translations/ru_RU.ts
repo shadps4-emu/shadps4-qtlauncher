@@ -2229,10 +2229,6 @@
       <translation>Открыть папку с пользовательскими изображениями/звуками трофеев:\nВы можете добавить пользовательские изображения к трофеям и аудио.\nДобавьте файлы в custom_trophy со следующими именами:\ntrophy.wav ИЛИ trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nПримечание: звук будет работать только в QT-версии.</translation>
     </message>
     <message>
-      <source> * Unsupported Vulkan Version</source>
-      <translation> * Неподдерживаемая версия Vulkan</translation>
-    </message>
-    <message>
       <source>Experimental Features</source>
       <translation>Экспериментальные функции</translation>
     </message>
