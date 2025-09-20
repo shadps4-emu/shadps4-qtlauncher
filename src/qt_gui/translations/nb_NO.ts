@@ -2229,10 +2229,6 @@
       <translation>Åpne mappa med tilpassede bilder og lyder for trofé:\nDu kan legge til tilpassede bilder til trofeer og en lyd.\nLegg filene til custom_trophy med følgende navn:\ntrophy.wav ELLER trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nMerk: Lyden avspilles kun i Qt-versjonen.</translation>
     </message>
     <message>
-      <source> * Unsupported Vulkan Version</source>
-      <translation> *Ustøttet Vulkan-versjon</translation>
-    </message>
-    <message>
       <source>Experimental Features</source>
       <translation>Eksperimentelle funksjoner</translation>
     </message>
