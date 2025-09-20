@@ -2229,10 +2229,6 @@
       <translation>Özel kupa görüntüleri/sesleri klasörünü aç:\nKupalara özel görüntüler ve sesler ekleyebilirsiniz.\nDosyaları aşağıdaki adlarla custom_trophy'ye ekleyin:\ntrophy.wav ya da trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nNot: Ses yalnızca QT sürümlerinde çalışacaktır.</translation>
     </message>
     <message>
-      <source> * Unsupported Vulkan Version</source>
-      <translation> * Desteklenmeyen Vulkan Sürümü</translation>
-    </message>
-    <message>
       <source>Experimental Features</source>
       <translation>Deneysel Özellikler</translation>
     </message>

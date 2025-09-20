@@ -2232,10 +2232,6 @@ trophy.wav ODER trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\n
 Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
     </message>
     <message>
-      <source> * Unsupported Vulkan Version</source>
-      <translation> * Nicht unterstützte Vulkan Version</translation>
-    </message>
-    <message>
       <source>Experimental Features</source>
       <translation>Experimentelle Funktionen</translation>
     </message>

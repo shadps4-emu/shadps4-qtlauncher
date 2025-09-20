@@ -2229,10 +2229,6 @@
       <translation>Otwórz niestandardowy folder obrazów/dźwięków:\nMożesz dodać własne obrazy dla trofeów i ich dźwięki.\nDodaj pliki do custom_trophy o następujących nazwach:\ntrophy.wav LUB trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nUwaga: Dźwięki działają tylko w wersji QT.</translation>
     </message>
     <message>
-      <source> * Unsupported Vulkan Version</source>
-      <translation> * Nieobsługiwana wersja Vulkan</translation>
-    </message>
-    <message>
       <source>Experimental Features</source>
       <translation>Funkcje eksperymentalne</translation>
     </message>

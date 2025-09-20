@@ -2229,10 +2229,6 @@
       <translation>Hap dosjen e imazheve/tingujve të trofeve të personalizuar:\nMund të shtosh imazhe të personalizuara për trofetë dhe një audio.\nShto skedarët në dosjen custom_trophy me emrat që vijojnë:\ntrophy.wav ose trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nShënim: Tingulli do të punojë vetëm në versionet QT.</translation>
     </message>
     <message>
-      <source> * Unsupported Vulkan Version</source>
-      <translation> * Version i pambështetur i Vulkan</translation>
-    </message>
-    <message>
       <source>Experimental Features</source>
       <translation>Veçori Eksperimentale</translation>
     </message>

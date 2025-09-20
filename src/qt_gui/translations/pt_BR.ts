@@ -2229,10 +2229,6 @@
       <translation>Abrir a pasta de imagens e sons de troféus personalizados:\nVocê pode adicionar imagens personalizadas aos troféus e um áudio.\nAdicione os arquivos na pasta custom_trophy com os seguintes nomes:\ntrophy.wav OU trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nObservação: O som funcionará apenas em versões Qt.</translation>
     </message>
     <message>
-      <source> * Unsupported Vulkan Version</source>
-      <translation> * Versão do Vulkan não suportada</translation>
-    </message>
-    <message>
       <source>Experimental Features</source>
       <translation>Recursos Experimentais</translation>
     </message>

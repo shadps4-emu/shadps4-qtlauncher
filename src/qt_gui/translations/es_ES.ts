@@ -2229,10 +2229,6 @@
       <translation>Abre la carpeta de trofeos/sonidos personalizados:\nPuedes añadir imágenes y un audio personalizados a los trofeos.\nAñade los archivos a custom_trophy con los siguientes nombres:\ntrophy.wav o trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nNota: El sonido sólo funcionará en versiones QT.</translation>
     </message>
     <message>
-      <source> * Unsupported Vulkan Version</source>
-      <translation> * Versión de Vulkan no soportada</translation>
-    </message>
-    <message>
       <source>Experimental Features</source>
       <translation>Características experimentales</translation>
     </message>

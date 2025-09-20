@@ -2229,10 +2229,6 @@
       <translation>پوشه تصاویر/صداهای تروفی سفارشی را باز کنید:\n شما می‌توانید تصاویر و صدای سفارشی به تروفی‌ها اضافه کنید.\n فایل‌ها را با نام‌های زیر به custom_trophy اضافه کنید:\ntrophy.wav یا trophy.mp3، bronze.png، gold.png، platinum.png، silver.png \nتوجه: صدا فقط در نسخه‌های QT کار می‌کند.</translation>
     </message>
     <message>
-      <source> * Unsupported Vulkan Version</source>
-      <translation type="unfinished"> * Unsupported Vulkan Version</translation>
-    </message>
-    <message>
       <source>Experimental Features</source>
       <translation type="unfinished">Experimental Features</translation>
     </message>
