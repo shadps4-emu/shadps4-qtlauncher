@@ -2230,10 +2230,6 @@ Nightly: نُسخ تحتوي على أحدث الميزات، لكنها أقل 
       <translation>افتح مجلد الصور/الأصوات الخاصة بالجوائز المخصصة:\nيمكنك إضافة صور مخصصة للجوائز وصوت مرفق.\nأضف الملفات إلى مجلد custom_trophy بالأسماء التالية:\ntrophy.wav أو trophy.mp3، bronze.png، gold.png، platinum.png، silver.png\nملاحظة: الصوت سيعمل فقط في الإصدارات التي تستخدم QT.</translation>
     </message>
     <message>
-      <source> * Unsupported Vulkan Version</source>
-      <translation>نسخ Vulkan غير مدعومة</translation>
-    </message>
-    <message>
       <source>Experimental Features</source>
       <translation>الميزات التجريبية</translation>
     </message>
