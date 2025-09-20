@@ -2229,10 +2229,6 @@
       <translation>打开自定义奖杯图像/声音文件夹：\n您可以自定义奖杯图像和声音。\n将文件添加到 custom_trophy 文件夹中，文件名如下：\ntrophy.wav 或 trophy.mp3、bronze.png、gold.png、platinum.png、silver.png。\n注意：自定义声音只能在 QT 版本中生效。</translation>
     </message>
     <message>
-      <source> * Unsupported Vulkan Version</source>
-      <translation> * 不支持的 Vulkan 版本</translation>
-    </message>
-    <message>
       <source>Experimental Features</source>
       <translation>实验性功能</translation>
     </message>
