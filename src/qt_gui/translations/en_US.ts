@@ -2223,10 +2223,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source> * Unsupported Vulkan Version</source>
-        <translation type="unfinished"> * Unsupported Vulkan Version</translation>
-    </message>
-    <message>
         <source>Experimental Features</source>
         <translation type="unfinished"></translation>
     </message>
