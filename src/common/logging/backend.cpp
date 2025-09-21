@@ -176,19 +176,6 @@ public:
         // Propagate important log messages to the profiler
         if (IsProfilerConnected()) {
             const auto& msg_str = fmt::format("[{}] {}", GetLogClassName(log_class), message);
-            switch (log_level) {
-            case Level::Warning:
-                TRACE_WARN(msg_str);
-                break;
-            case Level::Error:
-                TRACE_ERROR(msg_str);
-                break;
-            case Level::Critical:
-                TRACE_CRIT(msg_str);
-                break;
-            default:
-                break;
-            }
         }
 
         if (!filter.CheckMessage(log_class, log_level) || !Config::getLoggingEnabled()) {

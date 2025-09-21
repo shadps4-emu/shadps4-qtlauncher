@@ -13,7 +13,7 @@
 #ifdef _WIN32
 #include <windows.h>
 #endif
-#include "emulator.h"
+// #include "emulator.h"
 // Custom message handler to ignore Qt logs
 void customMessageHandler(QtMsgType, const QMessageLogContext&, const QString&) {}
 

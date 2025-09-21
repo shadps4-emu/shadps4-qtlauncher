@@ -342,8 +342,8 @@ QString(tr("Cannot bind any unique input more than once. Duplicate inputs mapped
     Config::save(Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "config.toml");
 
     if (GameRunning) {
-        Config::GetUseUnifiedInputConfig() ? Input::ParseInputConfig("default")
-                                           : Input::ParseInputConfig(RunningGameSerial);
+        // Config::GetUseUnifiedInputConfig() ? Input::ParseInputConfig("default")
+        //                                    : Input::ParseInputConfig(RunningGameSerial);
     }
 
     if (close_on_save)
