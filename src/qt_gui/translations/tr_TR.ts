@@ -1012,11 +1012,11 @@
     </message>
     <message>
       <source>Game-specific Settings...</source>
-      <translation type="unfinished">Game-specific Settings...</translation>
+      <translation>Oyuna Özel Ayarlar...</translation>
     </message>
     <message>
       <source>Configure Game-specific Settings</source>
-      <translation type="unfinished">Configure Game-specific Settings</translation>
+      <translation>Oyuna Özel Ayarları Yapılandır</translation>
     </message>
     <message>
       <source>Create Game-specific Settings from Global Settings</source>
@@ -1024,11 +1024,11 @@
     </message>
     <message>
       <source>Delete Game-specific Settings</source>
-      <translation type="unfinished">Delete Game-specific Settings</translation>
+      <translation>Oyuna Özel Ayarları Sil</translation>
     </message>
     <message>
       <source>Update Database</source>
-      <translation>Veri Tabanını Güncelle</translation>
+      <translation>Veritabanını Güncelle</translation>
     </message>
     <message>
       <source>View Report</source>
@@ -1044,7 +1044,7 @@
     </message>
     <message>
       <source>Delete game-specific settings?</source>
-      <translation type="unfinished">Delete game-specific settings?</translation>
+      <translation>Oyuna özel ayarlar silinsin mi?</translation>
     </message>
   </context>
   <context>
@@ -1074,11 +1074,11 @@
     <name>Hotkeys</name>
     <message>
       <source>Customize Hotkeys</source>
-      <translation type="unfinished">Customize Hotkeys</translation>
+      <translation>Kısayol Tuşlarını Özelleştir</translation>
     </message>
     <message>
       <source>Controller Hotkeys</source>
-      <translation>Kontrolcü Kısayolları</translation>
+      <translation>Kontrolcü Kısayol Tuşları</translation>
     </message>
     <message>
       <source>Show FPS Counter</source>
@@ -1102,23 +1102,23 @@
     </message>
     <message>
       <source>Toggle Pause</source>
-      <translation type="unfinished">Toggle Pause</translation>
+      <translation>Duraklatmayı Aç/Kapat</translation>
     </message>
     <message>
       <source>Keyboard Hotkeys</source>
-      <translation>Klavye Kısayolları</translation>
+      <translation>Klavye Kısayol Tuşları</translation>
     </message>
     <message>
       <source>Renderdoc Capture (for debugging only)</source>
-      <translation type="unfinished">Renderdoc Capture (for debugging only)</translation>
+      <translation>Renderdoc Yakalama (sadece hata ayıklama için)</translation>
     </message>
     <message>
       <source>Toggle Mouse to Joystick Emulation</source>
-      <translation>Fareyi Joystick Olarak Kullanmayı Aç/Kapat</translation>
+      <translation>Fareyi Kontrolcü Olarak Kullanmayı Aç/Kapat</translation>
     </message>
     <message>
       <source>Toggle Mouse to Gyro Emulation</source>
-      <translation type="unfinished">Toggle Mouse to Gyro Emulation</translation>
+      <translation>Fareyi Jiroskop Olarak Kullanmayı Aç/Kapat</translation>
     </message>
     <message>
       <source>Tip: Up to three simultaneous inputs can be assigned for each hotkey</source>
@@ -1148,7 +1148,7 @@
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-      <translation type="unfinished">Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
+      <translation>Aynı tuş birden fazla kez atanamaz. Aşağıdaki tuşlara birden fazla giriş atanmış:
 
 %1</translation>
     </message>
@@ -1380,15 +1380,15 @@
     </message>
     <message>
       <source>Add a new preset after the selected row</source>
-      <translation type="unfinished">Add a new preset after the selected row</translation>
+      <translation>Seçili satırdan sonra yeni bir ön ayar ekle</translation>
     </message>
     <message>
       <source>Remove selected presets</source>
-      <translation type="unfinished">Remove selected presets</translation>
+      <translation>Seçili ön ayarı kaldır</translation>
     </message>
     <message>
       <source>Load the selected preset</source>
-      <translation type="unfinished">Load the selected preset</translation>
+      <translation>Seçili ön ayarı yükle</translation>
     </message>
   </context>
   <context>
@@ -1846,7 +1846,7 @@
     </message>
     <message>
       <source>Enable Readbacks</source>
-      <translation>Geri okuma özelliğini etkinleştir</translation>
+      <translation>Görüntü Geri Okumayı Etkinleştir</translation>
     </message>
     <message>
       <source>Enable Readback Linear Images</source>
@@ -2246,31 +2246,31 @@
     </message>
     <message>
       <source>Crash Diagnostics:\nCreates a .yaml file with info about the Vulkan state at the time of crashing.\nUseful for debugging &apos;Device lost&apos; errors. If you have this enabled, you should enable Host AND Guest Debug Markers.\nYou need Vulkan Validation Layers enabled and the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Crash Diagnostics:\nCreates a .yaml file with info about the Vulkan state at the time of crashing.\nUseful for debugging &apos;Device lost&apos; errors. If you have this enabled, you should enable Host AND Guest Debug Markers.\nYou need Vulkan Validation Layers enabled and the Vulkan SDK for this to work.</translation>
+      <translation>Çökme Tanılamaları:\nÇökme anındaki Vulkan durumu hakkında bilgi içeren bir .yaml dosyası oluşturur.\n&apos;Cihaz kayıp&apos; hatalarını ayıklamak için kullanışlıdır. Bunu etkinleştirdiyseniz, Ana Bilgisayar ve Konuk Hata Ayıklama İşaretleyicileri'ni etkinleştirmelisiniz.\nÇalışabilmesi için Vulkan Doğrulama Katmanları'nın etkinleştirilmesine ve Vulkan SDK'sine ihtiyacınız vardır.</translation>
     </message>
     <message>
       <source>Enable Logging</source>
-      <translation type="unfinished">Enable Logging</translation>
+      <translation>Günlük Kaydını Etkinleştir</translation>
     </message>
     <message>
       <source>Enable Logging:\nEnables logging.\nDo not change this if you do not know what you&apos;re doing!\nWhen asking for help, make sure this setting is ENABLED.</source>
-      <translation type="unfinished">Enable Logging:\nEnables logging.\nDo not change this if you do not know what you&apos;re doing!\nWhen asking for help, make sure this setting is ENABLED.</translation>
+      <translation>Günlük Kaydını Etkinleştir:\nGünlük kaydını etkinleştirir.\nNe yaptığınızı bilmiyorsanız bunu değiştirmeyin!\nYardım isterken bu ayarın ETKİN olduğundan emin olun.</translation>
     </message>
     <message>
       <source>Present Mode</source>
-      <translation type="unfinished">Present Mode</translation>
+      <translation>Sunum Modu</translation>
     </message>
     <message>
       <source>Mailbox (Vsync)</source>
-      <translation type="unfinished">Mailbox (Vsync)</translation>
+      <translation>Mailbox (Vsync)</translation>
     </message>
     <message>
       <source>Fifo (Vsync)</source>
-      <translation type="unfinished">Fifo (Vsync)</translation>
+      <translation>Fifo (Vsync)</translation>
     </message>
     <message>
       <source>Immediate (No Vsync)</source>
-      <translation type="unfinished">Immediate (No Vsync)</translation>
+      <translation>Anlık (Vsync yok)</translation>
     </message>
     <message>
       <source>DLC Folder</source>
@@ -2286,11 +2286,11 @@
     </message>
     <message>
       <source>DLC Path:\nThe folder where game DLC loaded from.</source>
-      <translation type="unfinished">DLC Path:\nThe folder where game DLC loaded from.</translation>
+      <translation>DLC Yolu:\nOyun DLC'sinin yüklendiği klasördür.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the DLC path.</translation>
+      <translation>Gözat:\nDLC yolu olarak ayarlamak için bir klasöre göz atın.</translation>
     </message>
     <message>
       <source>FSR Settings</source>
@@ -2298,7 +2298,7 @@
     </message>
     <message>
       <source>Enable FSR</source>
-      <translation type="unfinished">Enable FSR</translation>
+      <translation>FSR</translation>
     </message>
     <message>
       <source>Enable RCAS (sharpening)</source>
@@ -2306,11 +2306,11 @@
     </message>
     <message>
       <source>RCAS Attenuation:</source>
-      <translation type="unfinished">RCAS Attenuation:</translation>
+      <translation>RCAS Zayıflatması:</translation>
     </message>
     <message>
       <source>Load Presets...</source>
-      <translation type="unfinished">Load Presets...</translation>
+      <translation>Ön Ayarları Yükle...</translation>
     </message>
     <message>
       <source>Log</source>
@@ -2318,27 +2318,27 @@
     </message>
     <message>
       <source>Open Log Location:\nOpen the folder where the log file is saved.</source>
-      <translation type="unfinished">Open Log Location:\nOpen the folder where the log file is saved.</translation>
+      <translation>Günlük Konumunu Aç:\nGünlük dosyasının kaydedildiği klasörü açar.</translation>
     </message>
     <message>
       <source>Microphone:\nNone: Does not use the microphone.\nDefault Device: Will use the default device defined in the system.\nOr manually choose the microphone to be used from the list.</source>
-      <translation type="unfinished">Microphone:\nNone: Does not use the microphone.\nDefault Device: Will use the default device defined in the system.\nOr manually choose the microphone to be used from the list.</translation>
+      <translation>Mikrofon:\nHiçbiri: Mikrofonu kullanmaz.\nVarsayılan Cihaz: Sistemde tanımlanan varsayılan cihazı kullanacaktır.\nVeya kullanılacak mikrofonu listeden manuel olarak seçin.</translation>
     </message>
     <message>
       <source>Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</source>
-      <translation type="unfinished">Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</translation>
+      <translation>Ses:\nOyunların ses seviyesini genel olarak ayarlayın. Aralık %0-%500 arasında değişir ve varsayılan değer %100'dür.</translation>
     </message>
     <message>
       <source>Default tab when opening settings:\nChoose which tab will open, the default is General.</source>
-      <translation type="unfinished">Default tab when opening settings:\nChoose which tab will open, the default is General.</translation>
+      <translation>Ayarlar açıldığında varsayılan sekme:\nHangi sekmenin açılacağını seçin, varsayılan ayar Genel'dir.</translation>
     </message>
     <message>
       <source>Show Game Size In List:\nThere is the size of the game in the list.</source>
-      <translation type="unfinished">Show Game Size In List:\nThere is the size of the game in the list.</translation>
+      <translation>Oyun Boyutunu Listede Göster:\nListede oyunun boyutu da vardır.</translation>
     </message>
     <message>
       <source>Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</source>
-      <translation type="unfinished">Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</translation>
+      <translation>Hareket Kontrollerini Etkinleştir:\nEtkinleştirildiğinde, destekleniyorsa kontrolcünün hareket kontrolünü kullanacaktır.</translation>
     </message>
     <message>
       <source>Vblank Frequency</source>
@@ -2350,11 +2350,11 @@
     </message>
     <message>
       <source>Enable Direct Memory Access</source>
-      <translation type="unfinished">Enable Direct Memory Access</translation>
+      <translation>Doğrudan Bellek Erişimini Etkinleştir</translation>
     </message>
     <message>
       <source>Enable Devkit Console Mode</source>
-      <translation type="unfinished">Enable Devkit Console Mode</translation>
+      <translation>Devkit Konsol Modunu Etkinleştir</translation>
     </message>
     <message>
       <source>Set &quot;PSN signed-in&quot; to True</source>
@@ -2366,7 +2366,7 @@
     </message>
     <message>
       <source>Miscellaneous</source>
-      <translation type="unfinished">Miscellaneous</translation>
+      <translation>Çeşitli</translation>
     </message>
     <message>
       <source>Frontend</source>
@@ -2386,19 +2386,19 @@
     </message>
     <message>
       <source>Enable PS4 Neo Mode</source>
-      <translation>PS4 Neo Modu'nu Etkinleştir</translation>
+      <translation>PS4 Neo Modunu Etkinleştir</translation>
     </message>
     <message>
       <source>Enable Direct Memory Access:\nEnables arbitrary memory access from the GPU to CPU memory.</source>
-      <translation type="unfinished">Enable Direct Memory Access:\nEnables arbitrary memory access from the GPU to CPU memory.</translation>
+      <translation>Doğrudan Bellek Erişimini Etkinleştir:\nGPU’nun CPU belleğine doğrudan erişimini etkinleştirir.</translation>
     </message>
     <message>
       <source>Enable PS4 Neo Mode:\nAdds support for PS4 Pro emulation and memory size. Currently causes instability in a large number of tested games.</source>
-      <translation type="unfinished">Enable PS4 Neo Mode:\nAdds support for PS4 Pro emulation and memory size. Currently causes instability in a large number of tested games.</translation>
+      <translation>PS4 Neo Modunu Etkinleştir:\nPS4 Pro emülasyonu ve bellek boyutu için destek ekler. Şu anda test edilen çok sayıda oyunda kararsızlığa neden olmaktadır.</translation>
     </message>
     <message>
       <source>Enable Devkit Console Mode:\nAdds support for Devkit console memory size.</source>
-      <translation type="unfinished">Enable Devkit Console Mode:\nAdds support for Devkit console memory size.</translation>
+      <translation>Devkit Konsol Modunu Etkinleştir:\nDevkit konsol bellek boyutu desteği ekler.</translation>
     </message>
     <message>
       <source>Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</source>
@@ -2410,11 +2410,11 @@
     </message>
     <message>
       <source>Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Vulkan Doğrulama Katmanlarını Etkinleştir:\nVulkan render edicisinin durumunu doğrulayan ve iç durumu hakkındaki bilgileri günlüğe kaydeden bir sistemi etkinleştirir.\nBu durum performansı düşürecek ve muhtemelen emülasyon davranışını değiştirecektir.\nBunun çalışması için Vulkan SDK'sine ihtiyacınız vardır.</translation>
     </message>
     <message>
       <source>Enable Vulkan Synchronization Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Vulkan Synchronization Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Vulkan Senkronizasyon Doğrulamasını Etkinleştir:\nVulkan renderlama görevlerinin zamanlamasını doğrulayan bir sistemi etkinleştirir.\nBu durum performansı düşürecek ve muhtemelen emülasyon davranışını değiştirecektir.\nBunun çalışması için Vulkan SDK'sine ihtiyacınız vardır.</translation>
     </message>
     <message>
       <source>Audio Device (general)</source>
@@ -2430,7 +2430,7 @@
     </message>
     <message>
       <source>Select the shadPS4 executable</source>
-      <translation type="unfinished">Select the shadPS4 executable</translation>
+      <translation>shadPS4 yürütülebilir dosyasını seç</translation>
     </message>
   </context>
   <context>
