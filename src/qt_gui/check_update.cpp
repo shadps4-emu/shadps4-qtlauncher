@@ -47,10 +47,11 @@ void CheckUpdate::CheckForUpdates(const bool showMessage) {
     while (checkName) {
         updateChannel = m_gui_settings->GetValue(gui::gen_updateChannel).toString();
         if (updateChannel == "Nightly") {
-            url = QUrl("https://api.github.com/repos/shadps4-emu/shadPS4/releases");
+            url = QUrl("https://api.github.com/repos/shadps4-emu/shadps4-qtlauncher/releases");
             checkName = false;
         } else if (updateChannel == "Release") {
-            url = QUrl("https://api.github.com/repos/shadps4-emu/shadPS4/releases/latest");
+            url =
+                QUrl("https://api.github.com/repos/shadps4-emu/shadps4-qtlauncher/releases/latest");
             checkName = false;
         } else {
             if (Common::g_is_release) {
@@ -310,7 +311,7 @@ void CheckUpdate::requestChangelog(const QString& currentRev, const QString& lat
                                    const QString& downloadUrl, const QString& latestDate,
                                    const QString& currentDate) {
     QString compareUrlString =
-        QString("https://api.github.com/repos/shadps4-emu/shadPS4/compare/%1...%2")
+        QString("https://api.github.com/repos/shadps4-emu/shadps4-qtlauncher/compare/%1...%2")
             .arg(currentRev)
             .arg(latestRev);
 
@@ -360,15 +361,14 @@ void CheckUpdate::requestChangelog(const QString& currentRev, const QString& lat
                         QRegularExpressionMatch match = i.next();
                         newChanges += changes.mid(lastIndex, match.capturedStart() - lastIndex);
                         QString num = match.captured(1);
-                        newChanges +=
-                            QString(
-                                "(<a "
-                                "href=\"https://github.com/shadps4-emu/shadPS4/pull/%1\">#%1</a>)")
-                                .arg(num);
+                        newChanges += QString("(<a "
+                                              "href=\"https://github.com/shadps4-emu/"
+                                              "shadps4-qtlauncher/pull/%1\">#%1</a>)")
+                                          .arg(num);
                         lastIndex = match.capturedEnd();
                     }
 
-                    newChanges += changes.mid(lastIndex);
+                    newChanges += changes.m id(lastIndex);
                     changes = newChanges;
 
                     textField->setOpenExternalLinks(true);
@@ -487,7 +487,7 @@ void CheckUpdate::Install() {
         "Remove-Item -Force -LiteralPath '%3\\update.ps1'\n"
         "Remove-Item -Force -LiteralPath '%3\\temp_download_update.zip'\n"
         "Remove-Item -Recurse -Force '%2'\n"
-        "Start-Process -FilePath '%3\\shadps4.exe' "
+        "Start-Process -FilePath '%3\\shadPS4QtLauncher.exe' "
         "-WorkingDirectory ([WildcardPattern]::Escape('%3'))\n");
     arguments << "-ExecutionPolicy"
               << "Bypass"
@@ -589,7 +589,7 @@ void CheckUpdate::Install() {
         "sleep 2\n"
         "rm \"%3/update.sh\"\n"
         "chmod +x \"%3/shadps4.app/Contents/MacOS/shadps4\"\n"
-        "open \"%3/shadps4.app\"\n"
+        "open \"%3/shadPS4QtLauncher.app\"\n"
         "rm -r \"%2\"\n");
 
     arguments << scriptFileName;
