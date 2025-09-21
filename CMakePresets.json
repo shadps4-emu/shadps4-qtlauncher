@@ -12,8 +12,7 @@
       "displayName": "Clang x64 Debug",
       "inherits": ["x64-Clang-Base"],
       "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Debug",
-        "ENABLE_QT_GUI": "ON"
+        "CMAKE_BUILD_TYPE": "Debug"
       }
     },
     {
@@ -21,8 +20,7 @@
       "displayName": "Clang x64 Release",
       "inherits": ["x64-Clang-Base"],
       "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Release",
-        "ENABLE_QT_GUI": "ON"
+        "CMAKE_BUILD_TYPE": "Release"
       }
     },
     {
@@ -30,8 +28,7 @@
       "displayName": "Clang x64 RelWithDebInfo",
       "inherits": ["x64-Clang-Base"],
       "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "RelWithDebInfo",
-        "ENABLE_QT_GUI": "ON"
+        "CMAKE_BUILD_TYPE": "RelWithDebInfo"
       }
     }
   ]
