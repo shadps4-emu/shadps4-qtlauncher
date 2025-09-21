@@ -2426,11 +2426,11 @@
     </message>
     <message>
       <source>shadPS4 Path</source>
-      <translation type="unfinished">shadPS4 Path</translation>
+      <translation>Percorso shadPS4</translation>
     </message>
     <message>
       <source>Select the shadPS4 executable</source>
-      <translation type="unfinished">Select the shadPS4 executable</translation>
+      <translation>Selezionare l'eseguibile di shadPS4</translation>
     </message>
   </context>
   <context>
