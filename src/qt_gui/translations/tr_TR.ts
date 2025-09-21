@@ -1090,7 +1090,7 @@
     </message>
     <message>
       <source>Quit Emulation</source>
-      <translation type="unfinished">Quit Emulation</translation>
+      <translation>Emülasyonu Sonlandır</translation>
     </message>
     <message>
       <source>Reload Button Mappings</source>
@@ -1154,7 +1154,7 @@
     </message>
     <message>
       <source>Waiting for inputs</source>
-      <translation type="unfinished">Waiting for inputs</translation>
+      <translation>Giriş bekleniyor</translation>
     </message>
   </context>
   <context>
@@ -2314,7 +2314,7 @@
     </message>
     <message>
       <source>Log</source>
-      <translation type="unfinished">Log</translation>
+      <translation>Günlük</translation>
     </message>
     <message>
       <source>Open Log Location:\nOpen the folder where the log file is saved.</source>
@@ -2418,15 +2418,15 @@
     </message>
     <message>
       <source>Audio Device (general)</source>
-      <translation type="unfinished">Audio Device (general)</translation>
+      <translation>Ses Cihazı (genel)</translation>
     </message>
     <message>
       <source>Audio Device (DS4 speaker)</source>
-      <translation type="unfinished">Audio Device (DS4 speaker)</translation>
+      <translation>Ses Cihazı (DS4 hoparlörü)</translation>
     </message>
     <message>
       <source>shadPS4 Path</source>
-      <translation type="unfinished">shadPS4 Path</translation>
+      <translation>shadPS4 Yolu</translation>
     </message>
     <message>
       <source>Select the shadPS4 executable</source>
