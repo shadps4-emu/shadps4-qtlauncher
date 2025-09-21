@@ -361,10 +361,10 @@ void CheckUpdate::requestChangelog(const QString& currentRev, const QString& lat
                         QRegularExpressionMatch match = i.next();
                         newChanges += changes.mid(lastIndex, match.capturedStart() - lastIndex);
                         QString num = match.captured(1);
-                        newChanges +=
-                            QString("(<a "
-                                    "href=\"https://github.com/shadps4-emu/shadps4-qtlauncher/pull/%1\">#%1</a>)")
-                                .arg(num);
+                        newChanges += QString("(<a "
+                                              "href=\"https://github.com/shadps4-emu/"
+                                              "shadps4-qtlauncher/pull/%1\">#%1</a>)")
+                                          .arg(num);
                         lastIndex = match.capturedEnd();
                     }
 
