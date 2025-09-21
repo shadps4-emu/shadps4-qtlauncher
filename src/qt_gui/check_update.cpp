@@ -50,7 +50,8 @@ void CheckUpdate::CheckForUpdates(const bool showMessage) {
             url = QUrl("https://api.github.com/repos/shadps4-emu/shadps4-qtlauncher/releases");
             checkName = false;
         } else if (updateChannel == "Release") {
-            url = QUrl("https://api.github.com/repos/shadps4-emu/shadps4-qtlauncher/releases/latest");
+            url =
+                QUrl("https://api.github.com/repos/shadps4-emu/shadps4-qtlauncher/releases/latest");
             checkName = false;
         } else {
             if (Common::g_is_release) {
@@ -361,14 +362,13 @@ void CheckUpdate::requestChangelog(const QString& currentRev, const QString& lat
                         newChanges += changes.mid(lastIndex, match.capturedStart() - lastIndex);
                         QString num = match.captured(1);
                         newChanges +=
-                            QString(
-                                "(<a "
-                                "href=\"https://github.com/shadps4-emu/shadps4-qtlauncher/pull/%1\">#%1</a>)")
+                            QString("(<a "
+                                    "href=\"https://github.com/shadps4-emu/shadps4-qtlauncher/pull/%1\">#%1</a>)")
                                 .arg(num);
                         lastIndex = match.capturedEnd();
                     }
 
-                    newChanges += changes.mid(lastIndex);
+                    newChanges += changes.m id(lastIndex);
                     changes = newChanges;
 
                     textField->setOpenExternalLinks(true);
