@@ -2422,15 +2422,15 @@
     </message>
     <message>
       <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
-      <translation type="unfinished">Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</translation>
+      <translation>Bruk skyggeleggerdumping:\nFor teknisk feilsøking lagrer skyggeleggerne fra spillet i en mappe mens de gjengis.</translation>
     </message>
     <message>
       <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</source>
-      <translation type="unfinished">Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</translation>
+      <translation>Bruk Null GPU:\nFor teknisk feilsøking deaktiverer spillets-gjengivelse som om det ikke var noen grafikkort. Det vil ikke gjengis bilde til skjermen.</translation>
     </message>
     <message>
       <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
-      <translation type="unfinished">DLC Path:\nThe folder where game DLC is loaded from.</translation>
+      <translation>DLC-mappe:\nMappa hvor spill-DLC-ene lastes fra.</translation>
     </message>
   </context>
   <context>
