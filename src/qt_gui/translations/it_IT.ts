@@ -2025,14 +2025,6 @@
       <translation>Larghezza/Altezza:\nImposta la dimensione della finestra dell&apos;emulatore all&apos;avvio, che può essere ridimensionata durante il gioco.\nQuesto è diverso dalla risoluzione in gioco.</translation>
     </message>
     <message>
-      <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the games shaders to a folder as they render.</source>
-      <translation>Abilita Pompaggio Shader:\nPer scopi di debug tecnico, salva gli shader dei giochi in una cartella mentre vengono resi.</translation>
-    </message>
-    <message>
-      <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card.</source>
-      <translation>Abilita GPU Null:\nPer scopi di debug tecnico, disabilita il rendering del gioco come se non ci fosse alcuna scheda grafica.</translation>
-    </message>
-    <message>
       <source>Enable HDR:\nEnables HDR in games that support it.\nYour monitor must have support for the BT2020 PQ color space and the RGB10A2 swapchain format.</source>
       <translation>Abilita HDR:\nAbilita HDR nei giochi che lo supportano.\nIl tuo monitor deve avere il supporto per lo spazio colore BT2020 PQ e il formato swapchain RGB10A2.</translation>
     </message>
@@ -2285,10 +2277,6 @@
       <translation>Modalità presentazione:\nConfigura come sarà presentato l'output video a schermo.\n\nMailbox: i frame si sincronizzano con la frequenza di aggiornamento dello schermo. I nuovi frame sostituiranno tutti i frame in sospeso. Riduce la latenza, ma può saltare frame se l'esecuzione del rendering è lenta.\nFifo: i frame si sincronizzano con la frequenza di aggiornamento del tuo schermo. I nuovi frame saranno accodati dietro i frame in sospeso. Assicura che tutti i fotogrammi siano presentati, ma potrebbe aumentare la latenza.\nImmediato: i fotogrammi sono immediatamente presentati sullo schermo quando sono pronti. Può causare tearing.</translation>
     </message>
     <message>
-      <source>DLC Path:\nThe folder where game DLC loaded from.</source>
-      <translation>Percorso DLC:\nLa cartella da cui sono caricati i dati DLC.</translation>
-    </message>
-    <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
       <translation>Esplora:\nEsplora una cartella da impostare come percorso dati DLC.</translation>
     </message>
@@ -2431,6 +2419,18 @@
     <message>
       <source>Select the shadPS4 executable</source>
       <translation>Selezionare l'eseguibile di shadPS4</translation>
+    </message>
+    <message>
+      <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
+      <translation type="unfinished">Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</translation>
+    </message>
+    <message>
+      <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</source>
+      <translation type="unfinished">Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</translation>
+    </message>
+    <message>
+      <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
+      <translation type="unfinished">DLC Path:\nThe folder where game DLC is loaded from.</translation>
     </message>
   </context>
   <context>
