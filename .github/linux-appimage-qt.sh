@@ -30,4 +30,4 @@ cp -a "$GITHUB_WORKSPACE/build/translations" AppDir/usr/bin
 ./linuxdeploy-x86_64.AppImage --appdir AppDir -d "$GITHUB_WORKSPACE"/dist/net.shadps4.shadPS4.desktop  -e "$GITHUB_WORKSPACE"/build/shadps4 -i "$GITHUB_WORKSPACE"/src/images/net.shadps4.shadPS4.svg --plugin qt
 rm AppDir/usr/plugins/multimedia/libgstreamermediaplugin.so
 ./linuxdeploy-x86_64.AppImage --appdir AppDir --output appimage
-mv shadPS4-x86_64.AppImage Shadps4-qt.AppImage
+mv shadPS4-x86_64.AppImage shadPS4QtLauncher-qt.AppImage
