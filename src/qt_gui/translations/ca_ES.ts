@@ -2025,14 +2025,6 @@
       <translation>Amplada/Alçada:\nEstableix les mides de la finestra de l'emulador quan s'inicia, durant el joc es pot canviar la mida.\nAixò és diferent que la resolució del joc.</translation>
     </message>
     <message>
-      <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the games shaders to a folder as they render.</source>
-      <translation>Activa els abocats de shaders:\nPer la millora de la depuració tècnica, desa els shaders del joc en una carpeta mentre es renderitzen.</translation>
-    </message>
-    <message>
-      <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card.</source>
-      <translation>Habilita GPU Nul·la:\nPer la millora de la depuració tècnica, desactiva el renderitzat del joc si no hi ha una targeta gràfica.</translation>
-    </message>
-    <message>
       <source>Enable HDR:\nEnables HDR in games that support it.\nYour monitor must have support for the BT2020 PQ color space and the RGB10A2 swapchain format.</source>
       <translation>Activa HDR:\nActiva HDR els jocs que ho suporten.\nEl teu monitor ha de donar suport a l'espai de color BT2020 PQ i al format de cadena d'intercanvi RGB10A2.</translation>
     </message>
@@ -2285,10 +2277,6 @@
       <translation>Mode Presentació:\nConfigura com es presenta la sortida de vídeo a la teva pantalla.\n\nBústia de correu: Sincronitza els fotogrames amb la taxa de refresc de la teva pantalla. Els nous fotogrames reemplacen qualsevol fotograma pendent. Redueix la latència però pot provocar salts de fotogrames si es queden enrere.\nFifo: Els fotogrames es sincronitzen amb la taxa de refresc de la teva pantalla. Els nous fotogrames es posaran en cua darrere els fotogrames pendents. Assegura mostrar tots els fotogrames però augmenta la latència.\nImmediat: Els fotogrames es presenten immediatament a la teva pantalla quan estan disponibles. Pot provocar errors gràfics.</translation>
     </message>
     <message>
-      <source>DLC Path:\nThe folder where game DLC loaded from.</source>
-      <translation>Ruta DLC:\nLa carpeta des d'on es carrega el contingut DLC.</translation>
-    </message>
-    <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
       <translation>Navegador:\nCerca una carpeta per establir com a ruta DLC.</translation>
     </message>
@@ -2431,6 +2419,18 @@
     <message>
       <source>Select the shadPS4 executable</source>
       <translation>Selecciona el fitxer executable de shadPS4</translation>
+    </message>
+    <message>
+      <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
+      <translation type="unfinished">Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</translation>
+    </message>
+    <message>
+      <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</source>
+      <translation type="unfinished">Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</translation>
+    </message>
+    <message>
+      <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
+      <translation type="unfinished">DLC Path:\nThe folder where game DLC is loaded from.</translation>
     </message>
   </context>
   <context>
