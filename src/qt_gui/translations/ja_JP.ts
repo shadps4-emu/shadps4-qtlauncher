@@ -2025,14 +2025,6 @@
       <translation>幅/高さ:\n起動時にエミュレーターウィンドウのサイズを設定します。ゲーム中でもサイズを変更することができます。\nこれはゲーム内の解像度とは異なります。</translation>
     </message>
     <message>
-      <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the games shaders to a folder as they render.</source>
-      <translation>シェーダーダンプを有効にする:\n技術的なデバッグの目的で、レンダリング中にゲームのシェーダーをフォルダーに保存します。</translation>
-    </message>
-    <message>
-      <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card.</source>
-      <translation>Null GPUを有効にする:\n技術的なデバッグの目的で、グラフィックスカードがないかのようにゲームのレンダリングを無効にします。</translation>
-    </message>
-    <message>
       <source>Enable HDR:\nEnables HDR in games that support it.\nYour monitor must have support for the BT2020 PQ color space and the RGB10A2 swapchain format.</source>
       <translation>HDRを有効にする：\n対応ゲームでHDRを有効にします。\nお使いのモニターはBT2020 PQカラースペースとRGB10A2スワップチェーン形式に対応している必要があります。</translation>
     </message>
@@ -2229,10 +2221,6 @@
       <translation type="unfinished">Open the custom trophy images/sounds folder:\nYou can add custom images to the trophies and an audio.\nAdd the files to custom_trophy with the following names:\ntrophy.wav OR trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nNote: The sound will only work in QT versions.</translation>
     </message>
     <message>
-      <source> * Unsupported Vulkan Version</source>
-      <translation> * サポートされていないVulkanバージョン</translation>
-    </message>
-    <message>
       <source>Experimental Features</source>
       <translation>試験的な機能</translation>
     </message>
@@ -2287,10 +2275,6 @@
     <message>
       <source>Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</source>
       <translation>表示モード：\nビデオ出力が画面にどのように表示されるかを設定します。\n\nメールボックス：フレームは画面のリフレッシュレートと同期します。新規フレームは待機中のフレームを置き換えます。遅延は減少しますが、処理が遅れた場合にフレームがスキップされる可能性があります。\nFIFO: フレームは画面のリフレッシュレートに同期します。新規フレームは待機中のフレームの後ろにキューイングされます。全フレームの表示を保証しますが、遅延が増加する可能性があります。\n即時: フレームは準備完了次第、直ちに画面に表示されます。ティアリングが発生する可能性があります。</translation>
-    </message>
-    <message>
-      <source>DLC Path:\nThe folder where game DLC loaded from.</source>
-      <translation type="unfinished">DLC Path:\nThe folder where game DLC loaded from.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
@@ -2435,6 +2419,18 @@
     <message>
       <source>Select the shadPS4 executable</source>
       <translation type="unfinished">Select the shadPS4 executable</translation>
+    </message>
+    <message>
+      <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
+      <translation type="unfinished">Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</translation>
+    </message>
+    <message>
+      <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</source>
+      <translation type="unfinished">Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</translation>
+    </message>
+    <message>
+      <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
+      <translation type="unfinished">DLC Path:\nThe folder where game DLC is loaded from.</translation>
     </message>
   </context>
   <context>

@@ -2025,14 +2025,6 @@
       <translation>Ширина/Высота:\nУстановите размер окна эмулятора при запуске, который может быть изменен во время игры.\nЭто отличается от разрешения в игре.</translation>
     </message>
     <message>
-      <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the games shaders to a folder as they render.</source>
-      <translation>Включить дамп шейдеров:\nДля технической отладки сохраняет шейдеры игр в папку во время рендеринга.</translation>
-    </message>
-    <message>
-      <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card.</source>
-      <translation>Включить NULL GPU:\nДля технической отладки отключает рендеринг игры так, как будто графической карты нет.</translation>
-    </message>
-    <message>
       <source>Enable HDR:\nEnables HDR in games that support it.\nYour monitor must have support for the BT2020 PQ color space and the RGB10A2 swapchain format.</source>
       <translation>Включить HDR:\nВключает HDR в играх, которые его поддерживают.\nВаш монитор должен иметь поддержку цветового пространства BT2020 PQ и формата swapchain RGB10A2.</translation>
     </message>
@@ -2229,10 +2221,6 @@
       <translation>Открыть папку с пользовательскими изображениями/звуками трофеев:\nВы можете добавить пользовательские изображения к трофеям и аудио.\nДобавьте файлы в custom_trophy со следующими именами:\ntrophy.wav ИЛИ trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nПримечание: звук будет работать только в QT-версии.</translation>
     </message>
     <message>
-      <source> * Unsupported Vulkan Version</source>
-      <translation> * Неподдерживаемая версия Vulkan</translation>
-    </message>
-    <message>
       <source>Experimental Features</source>
       <translation>Экспериментальные функции</translation>
     </message>
@@ -2287,10 +2275,6 @@
     <message>
       <source>Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</source>
       <translation>Режим представления:\nНастраивает, как вывод видео будет предоставлен на экране.\n\nMailbox: Кадры синхронизируются с частотой обновления экрана. Новые кадры будут заменять ожидающие кадры. Уменьшает задержку, но может пропустить кадры, если отстаёт.\nFifo: Кадры синхронизируются с частотой обновления экрана. Новые кадры будут в очереди за ожидаемыми кадрами. Обеспечивает отображение всех кадров, но может увеличить задержку.\nImmediate: Кадры отображаются на экране сразу после готовности. Может приводить к разрывам.</translation>
-    </message>
-    <message>
-      <source>DLC Path:\nThe folder where game DLC loaded from.</source>
-      <translation>Путь к DLC:\nПапка, из которой загружаются DLC для игры.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
@@ -2435,6 +2419,18 @@
     <message>
       <source>Select the shadPS4 executable</source>
       <translation>Выберите исполняемый файл shadPS4</translation>
+    </message>
+    <message>
+      <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
+      <translation>Включить дамп шейдеров:\nДля технической отладки сохраняет шейдеры игр в папку во время рендеринга.</translation>
+    </message>
+    <message>
+      <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</source>
+      <translation>Включить Null GPU:\nДля технической отладки отключает рендеринг игры так, как будто графической карты нет. Экран будет чёрным.</translation>
+    </message>
+    <message>
+      <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
+      <translation>Путь к DLC:\nПапка, из которой загружаются DLC для игры.</translation>
     </message>
   </context>
   <context>

@@ -2025,14 +2025,6 @@
       <translation>寬度/高度：\n設定模擬器啟動時的視窗大小，可以在遊戲過程中調整。\n這與遊戲內部解析度不同。</translation>
     </message>
     <message>
-      <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the games shaders to a folder as they render.</source>
-      <translation>啟用著色器傾印：\n作為技術偵錯用途，將遊戲的著色器在渲染時儲存到資料夾中。</translation>
-    </message>
-    <message>
-      <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card.</source>
-      <translation>啟用空值GPU：\n作為技術偵錯用途，停用遊戲渲染，彷如沒有顯示卡。</translation>
-    </message>
-    <message>
       <source>Enable HDR:\nEnables HDR in games that support it.\nYour monitor must have support for the BT2020 PQ color space and the RGB10A2 swapchain format.</source>
       <translation>啟用 HDR：\n在支援 HDR 的遊戲中啟用 HDR。 \n您的顯示器必須支援 BT2020 PQ 色彩空間和 RGB10A2 交換鏈格式。</translation>
     </message>
@@ -2229,10 +2221,6 @@
       <translation>開啟自訂獎盃影像/聲音資料夾：\n您可以將自訂影像新增至獎盃和音訊。 \n將檔案加入 custom_tropy，名稱如下：\ntropy.wav OR trophy.mp3、bronze.png、gold.png、platinum.png、silver.png\n注意：聲音僅在 QT 版本中有效。</translation>
     </message>
     <message>
-      <source> * Unsupported Vulkan Version</source>
-      <translation type="unfinished"> * Unsupported Vulkan Version</translation>
-    </message>
-    <message>
       <source>Experimental Features</source>
       <translation type="unfinished">Experimental Features</translation>
     </message>
@@ -2287,10 +2275,6 @@
     <message>
       <source>Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</source>
       <translation type="unfinished">Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</translation>
-    </message>
-    <message>
-      <source>DLC Path:\nThe folder where game DLC loaded from.</source>
-      <translation type="unfinished">DLC Path:\nThe folder where game DLC loaded from.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
@@ -2435,6 +2419,18 @@
     <message>
       <source>Select the shadPS4 executable</source>
       <translation type="unfinished">Select the shadPS4 executable</translation>
+    </message>
+    <message>
+      <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
+      <translation type="unfinished">Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</translation>
+    </message>
+    <message>
+      <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</source>
+      <translation type="unfinished">Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</translation>
+    </message>
+    <message>
+      <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
+      <translation type="unfinished">DLC Path:\nThe folder where game DLC is loaded from.</translation>
     </message>
   </context>
   <context>
