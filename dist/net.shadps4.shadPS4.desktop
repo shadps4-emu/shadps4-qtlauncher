@@ -1,9 +1,9 @@
 [Desktop Entry]
-Name=shadPS4QtLauncher
-Exec=shadps4
+Name=shadps4QtLauncher
+Exec=shadps4QtLauncher
 Terminal=false
 Type=Application
 Icon=net.shadps4.shadPS4
-Comment=PlayStation 4 emulator
+Comment=Launcher for shadPS4 emulator
 Categories=Game;Emulator;
-StartupWMClass=shadps4;
+StartupWMClass=shadps4QtLauncher;
