@@ -2024,14 +2024,6 @@ Einzigartige Inputs können nicht öfters als einmal gebunden werden. Input-Dupl
       <translation>Fenstergröße:\nLegt die Größe des Emulator-Fensters zum Starten fest und kann während des Spielens angepasst werden.\nDiese Einstellung ist unabhängig von der In-Game-Auflösung.</translation>
     </message>
     <message>
-      <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the games shaders to a folder as they render.</source>
-      <translation>Shader-Dumping aktivieren:\nZum technischen Debuggen speichert es die Shaders des Spiels in einem Ordner während der Wiedergabe.</translation>
-    </message>
-    <message>
-      <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card.</source>
-      <translation>NULL GPU aktivieren:\nFür technisches Debugging wird sämtliches Rendering deaktiviert als wäre keine Grafikkarte vorhanden.</translation>
-    </message>
-    <message>
       <source>Enable HDR:\nEnables HDR in games that support it.\nYour monitor must have support for the BT2020 PQ color space and the RGB10A2 swapchain format.</source>
       <translation>HDR:\nAktiviert HDR in Spielen, die es unterstützen.\nIhr Monitor muss Unterstützung für den BT2020 PQ Farbraum und das RGB10A2 Swapchain Format haben.</translation>
     </message>
@@ -2288,10 +2280,6 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
       <translation>Präsentationsmodus:\nKonfiguriert, wie die Videoausgabe auf dem Bildschirm dargestellt werden soll.\n\nMailbox (Vsync): Die Frames werden mit der Aktualisierungsrate des Bildschirms synchronisiert. Neue Frames ersetzen alle ausstehenden Frames. Reduziert die Latenz, kann jedoch Frames überspringen, wenn es zu Verzögerungen kommt.\nFIFO (Vsync): Die Frames werden mit der Aktualisierungsrate des Bildschirms synchronisiert. Neue Frames werden hinter ausstehenden Frames in die Warteschlange gestellt. Stellt sicher, dass alle Frames angezeigt werden, kann jedoch die Latenz erhöhen.\nSofort (kein Vsync): Die Frames werden sofort auf dem Bildschirm angezeigt, sobald sie bereit sind. Kann zu Bildfehlern (Tearing) führen.</translation>
     </message>
     <message>
-      <source>DLC Path:\nThe folder where game DLC loaded from.</source>
-      <translation>DLC-Pfad:\nDer Ordner, aus denen DLCs geladen werden können.</translation>
-    </message>
-    <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
       <translation>Durchsuchen:\nLege einen Ordner für DLCs fest.</translation>
     </message>
@@ -2434,6 +2422,18 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
     <message>
       <source>Select the shadPS4 executable</source>
       <translation>Wähle eine shadPS4-Anwendungsdatei aus</translation>
+    </message>
+    <message>
+      <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
+      <translation type="unfinished">Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</translation>
+    </message>
+    <message>
+      <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</source>
+      <translation type="unfinished">Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</translation>
+    </message>
+    <message>
+      <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
+      <translation type="unfinished">DLC Path:\nThe folder where game DLC is loaded from.</translation>
     </message>
   </context>
   <context>
