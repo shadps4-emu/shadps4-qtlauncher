@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
   <id translate="no">net.shadps4.shadPS4</id>
-  <name translate="no">shadPS4</name>
+  <name translate="no">shadPS4QtLauncher</name>
   <developer id="net.shadps4.shadPS4">
     <name>shadPS4 Contributors</name>
     <url translate="no">https://github.com/shadps4-emu/shadps4/graphs/contributors</url>
