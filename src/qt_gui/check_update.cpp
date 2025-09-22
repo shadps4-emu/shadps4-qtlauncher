@@ -368,7 +368,7 @@ void CheckUpdate::requestChangelog(const QString& currentRev, const QString& lat
                         lastIndex = match.capturedEnd();
                     }
 
-                    newChanges += changes.m id(lastIndex);
+                    newChanges += changes.mid(lastIndex);
                     changes = newChanges;
 
                     textField->setOpenExternalLinks(true);
