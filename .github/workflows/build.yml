@@ -111,7 +111,7 @@ jobs:
     - name: Upload Windows Qt artifact
       uses: actions/upload-artifact@v4
       with:
-        name: shadps4-win64-qt-${{ needs.get-info.outputs.date }}-${{ needs.get-info.outputs.shorthash }}
+        name: shadPS4QtLauncher-win64-qt-${{ needs.get-info.outputs.date }}-${{ needs.get-info.outputs.shorthash }}
         path: upload/
         
   macos-qt:
@@ -167,13 +167,13 @@ jobs:
     - name: Package and Upload macOS Qt artifact
       run: |
         mkdir upload
-        mv ${{github.workspace}}/build/shadps4.app upload
-        macdeployqt upload/shadps4.app
-        tar cf shadps4-macos-qt.tar.gz -C upload .
+        mv ${{github.workspace}}/build/shadPS4QtLauncher.app upload
+        macdeployqt upload/shadPS4QtLauncher.app
+        tar cf shadPS4QtLauncher-macos-qt.tar.gz -C upload .
     - uses: actions/upload-artifact@v4
       with:
-        name: shadps4-macos-qt-${{ needs.get-info.outputs.date }}-${{ needs.get-info.outputs.shorthash }}
-        path: shadps4-macos-qt.tar.gz
+        name: shadPS4QtLauncher-macos-qt-${{ needs.get-info.outputs.date }}-${{ needs.get-info.outputs.shorthash }}
+        path: shadPS4QtLauncher-macos-qt.tar.gz
 
   linux-qt:
     runs-on: ubuntu-24.04
@@ -221,11 +221,11 @@ jobs:
 
     - name: Package and Upload Linux Qt artifact
       run: |
-        tar cf shadps4-linux-qt.tar.gz -C ${{github.workspace}}/build shadps4
+        tar cf shadPS4QtLauncher-linux-qt.tar.gz -C ${{github.workspace}}/build shadPS4QtLauncher
     - uses: actions/upload-artifact@v4
       with:
-        name: shadps4-linux-qt-${{ needs.get-info.outputs.date }}-${{ needs.get-info.outputs.shorthash }}
-        path: Shadps4-qt.AppImage
+        name: shadPS4QtLauncher-linux-qt-${{ needs.get-info.outputs.date }}-${{ needs.get-info.outputs.shorthash }}
+        path: shadPS4QtLauncher-qt.AppImage
         
   linux-qt-gcc:
     runs-on: ubuntu-24.04
