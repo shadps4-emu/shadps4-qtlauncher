@@ -1235,7 +1235,9 @@ void MainWindow::StartEmulator(std::filesystem::path path) {
     QString exe = m_gui_settings->GetValue(gui::gen_shadPath).toString();
     QFileInfo fileInfo(exe);
     if (!fileInfo.exists()) {
-        QMessageBox::critical(nullptr, tr("ShadPS4"), QString(tr("ShadPS4 is not found!\nPlease change ShadPS4 path in settings.")));
+        QMessageBox::critical(
+            nullptr, tr("ShadPS4"),
+            QString(tr("ShadPS4 is not found!\nPlease change ShadPS4 path in settings.")));
         return;
     }
 
