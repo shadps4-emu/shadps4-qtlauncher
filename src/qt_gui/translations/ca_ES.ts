@@ -2422,15 +2422,15 @@
     </message>
     <message>
       <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
-      <translation type="unfinished">Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</translation>
+      <translation>Activa els abocats de shaders:\nPer la millora de la depuració tècnica, desa els shaders del joc en una carpeta mentre es renderitzen.</translation>
     </message>
     <message>
       <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</source>
-      <translation type="unfinished">Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</translation>
+      <translation>Habilita GPU Nul·la:\nPer la millora de la depuració tècnica, desactiva el renderitzat del joc si no hi ha una targeta gràfica. La pantalla es tornarà negra.</translation>
     </message>
     <message>
       <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
-      <translation type="unfinished">DLC Path:\nThe folder where game DLC is loaded from.</translation>
+      <translation>Ruta DLC:\nLa carpeta des d'on es carrega el contingut DLC.</translation>
     </message>
   </context>
   <context>
