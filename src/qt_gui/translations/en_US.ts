@@ -2019,14 +2019,6 @@
         <translation>Width/Height:\nSets the size of the emulator window at launch, which can be resized during gameplay.\nThis is different from the in-game resolution.</translation>
     </message>
     <message>
-        <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the games shaders to a folder as they render.</source>
-        <translation>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the games shaders to a folder as they render.</translation>
-    </message>
-    <message>
-        <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card.</source>
-        <translation>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card.</translation>
-    </message>
-    <message>
         <source>Enable HDR:\nEnables HDR in games that support it.\nYour monitor must have support for the BT2020 PQ color space and the RGB10A2 swapchain format.</source>
         <translation>Enable HDR:\nEnables HDR in games that support it.\nYour monitor must have support for the BT2020 PQ color space and the RGB10A2 swapchain format.</translation>
     </message>
@@ -2279,10 +2271,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>DLC Path:\nThe folder where game DLC loaded from.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2424,6 +2412,18 @@
     </message>
     <message>
         <source>Select the shadPS4 executable</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
