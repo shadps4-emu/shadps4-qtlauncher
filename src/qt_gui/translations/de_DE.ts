@@ -2425,15 +2425,15 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
     </message>
     <message>
       <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
-      <translation type="unfinished">Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</translation>
+      <translation>Shader-Dumping aktivieren:\nFür technisches Debugging werden Shaders, die während des Spielens erzeugt werden, in einem Ordner gespeichert.</translation>
     </message>
     <message>
       <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</source>
-      <translation type="unfinished">Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</translation>
+      <translation>NULL GPU aktivieren:\nFür technisches Debugging wird sämtliches Rendering deaktiviert als wäre keine Grafikkarte vorhanden. Das Bild bleibt schwarz.</translation>
     </message>
     <message>
       <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
-      <translation type="unfinished">DLC Path:\nThe folder where game DLC is loaded from.</translation>
+      <translation>DLC-Pfad:\nDer Ordner, aus denen DLCs geladen werden können.</translation>
     </message>
   </context>
   <context>
