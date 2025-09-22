@@ -2025,14 +2025,6 @@
       <translation>Bredde / Høyde:\nAngir størrelsen på emulatorvinduet ved oppstart, som kan endres under spillingen.\nDette er annerledes fra oppløsningen i spillet.</translation>
     </message>
     <message>
-      <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the games shaders to a folder as they render.</source>
-      <translation>Bruk skyggeleggerdumping:\nFor teknisk feilsøking lagrer skyggeleggerne fra spillet i en mappe mens de gjengis.</translation>
-    </message>
-    <message>
-      <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card.</source>
-      <translation>Bruk Null GPU:\nFor teknisk feilsøking deaktiverer spillets-gjengivelse som om det ikke var noen grafikkort.</translation>
-    </message>
-    <message>
       <source>Enable HDR:\nEnables HDR in games that support it.\nYour monitor must have support for the BT2020 PQ color space and the RGB10A2 swapchain format.</source>
       <translation>Bruk HDR:\nTillater bruk av HDR i spill som støtter det.\nSkjermen din må ha støtte for BT2020 PQ fargerom og RGB10A2 swapchain-format.</translation>
     </message>
@@ -2285,10 +2277,6 @@
       <translation>Presentasjonsmodus:\nSetter opp hvordan video-utdata skal presenteres til skjermen.\n\n«Mailbox»: Bildene synkroniseres med skjermens oppdateringsfrekvens. Nye bilder erstatter gamle bilder i køen. Reduserer ventetid men kan hoppe over bilder hvis de er forsinket.\n«FIFO»: Bildene synkroniseres med skjermens oppdateringsfrekvens. Nye bilder settes i kø bak gamle bilder. Dette sikrer at alle bildene vises men kan øke ventetid.\nUmiddelbart: Bildene vises til skjermen med en gang når de er klare. Kan forutsake bilderiving.</translation>
     </message>
     <message>
-      <source>DLC Path:\nThe folder where game DLC loaded from.</source>
-      <translation>DLC-mappe:\nMappa hvor spill-DLC-ene lastes fra.</translation>
-    </message>
-    <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
       <translation>Bla gjennom:\nLet etter en mappe for å angi den som DLC-adressen.</translation>
     </message>
@@ -2431,6 +2419,18 @@
     <message>
       <source>Select the shadPS4 executable</source>
       <translation>Velg programfila til shadPS4</translation>
+    </message>
+    <message>
+      <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
+      <translation type="unfinished">Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</translation>
+    </message>
+    <message>
+      <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</source>
+      <translation type="unfinished">Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</translation>
+    </message>
+    <message>
+      <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
+      <translation type="unfinished">DLC Path:\nThe folder where game DLC is loaded from.</translation>
     </message>
   </context>
   <context>
