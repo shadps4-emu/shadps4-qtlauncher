@@ -298,11 +298,11 @@ jobs:
       uses: ncipollo/release-action@v1
       with:
         token: ${{ secrets.SHADPS4QT_TOKEN_REPO }}
-        name: "Pre-release-shadPS4QtLauncher-${{ needs.get-info.outputs.date }}-${{ needs.get-info.outputs.shorthash }}"
-        tag: "Pre-release-shadPS4QtLauncher-${{ needs.get-info.outputs.date }}-${{ needs.get-info.outputs.fullhash }}"
+        name: "shadPS4QtLauncher-${{ needs.get-info.outputs.date }}-${{ needs.get-info.outputs.shorthash }}"
+        tag: "shadPS4QtLauncher-${{ needs.get-info.outputs.date }}-${{ needs.get-info.outputs.fullhash }}"
         draft: false
         prerelease: true
-        body: "Full Changelog: [${{ env.last_release_tag }}...${{ needs.get-info.outputs.shorthash }}](https://github.com/shadps4-emu/shadps4-qtlauncher/compare/${{ env.last_release_tag }}...${{ needs.get-info.outputs.fullhash }})"
+        body: "QtLaucher: It is the emulator interface"
         artifacts: ./artifacts/*.zip
         
     - name: Get current pre-release information
