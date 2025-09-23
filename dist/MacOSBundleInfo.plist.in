@@ -8,11 +8,11 @@
 	<string>APPL</string>
 
 	<key>CFBundleName</key>
-	<string>shadps4</string>
+	<string>shadPS4QtLauncher</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.shadps4-emu.shadps4</string>
+	<string>com.shadps4-emu.shadps4-qtlauncher</string>
 	<key>CFBundleExecutable</key>
-	<string>shadps4</string>
+	<string>shadPS4QtLauncher</string>
 
 	<key>CFBundleVersion</key>
 	<string>1.0.0</string>

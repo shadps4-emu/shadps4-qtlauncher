@@ -5,7 +5,6 @@
 #include "common/config.h"
 #include "common/logging/log.h"
 #include "common/path_util.h"
-#include "common/string_util.h"
 #include "game_list_frame.h"
 #include "game_list_utils.h"
 

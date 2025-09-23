@@ -32,7 +32,6 @@
 #include "common/logging/log.h"
 #include "common/memory_patcher.h"
 #include "common/path_util.h"
-#include "core/module.h"
 
 CheatsPatches::CheatsPatches(const QString& gameName, const QString& gameSerial,
                              const QString& gameVersion, const QString& gameSize,

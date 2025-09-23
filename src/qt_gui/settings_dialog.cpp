@@ -14,10 +14,6 @@
 #include "common/logging/log.h"
 #include "common/scm_rev.h"
 #include "qt_gui/compatibility_info.h"
-#ifdef ENABLE_DISCORD_RPC
-#include "common/discord_rpc_handler.h"
-#include "common/singleton.h"
-#endif
 #ifdef ENABLE_UPDATER
 #include "check_update.h"
 #endif

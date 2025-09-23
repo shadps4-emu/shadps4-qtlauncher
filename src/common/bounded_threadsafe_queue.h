@@ -8,7 +8,6 @@
 #include <cstddef>
 #include <memory>
 #include <mutex>
-#include "common/polyfill_thread.h"
 
 namespace Common {
 
@@ -122,7 +121,7 @@ private:
         } else if constexpr (Mode == PopMode::WaitWithStopToken) {
             // Wait until the queue is not empty.
             std::unique_lock lock{consumer_cv_mutex};
-            Common::CondvarWait(consumer_cv, lock, stop_token, [this, read_index] {
+            consumer_cv.wait(lock, stop_token, [this, read_index] {
                 return read_index != m_write_index.load(std::memory_order::acquire);
             });
             if (stop_token.stop_requested()) {
