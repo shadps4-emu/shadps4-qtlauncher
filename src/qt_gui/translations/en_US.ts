@@ -1154,6 +1154,18 @@
     </message>
 </context>
 <context>
+    <name>IpcClient</name>
+    <message>
+        <source>ShadPS4</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ShadPS4 is not found!
+Please change ShadPS4 path in settings.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>KBMSettings</name>
     <message>
         <source>Configure Controls</source>
@@ -1645,6 +1657,15 @@
     </message>
     <message>
         <source>Customize Hotkeys</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ShadPS4</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ShadPS4 is not found!
+Please change ShadPS4 path in settings.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
