@@ -1141,6 +1141,7 @@ void setDefaultValues(bool is_game_specific) {
         isPSNSignedIn.set(false, is_game_specific);
         isConnectedToNetwork.set(false, is_game_specific);
         directMemoryAccessEnabled.set(false, is_game_specific);
+        vblankFrequency.set(60, is_game_specific);
     }
 
     // Entries with game-specific settings that are in both the game-specific and global GUI
@@ -1170,7 +1171,6 @@ void setDefaultValues(bool is_game_specific) {
     isNullGpu.set(false, is_game_specific);
     shouldCopyGPUBuffers.set(false, is_game_specific);
     shouldDumpShaders.set(false, is_game_specific);
-    vblankFrequency.set(60, is_game_specific);
     isFullscreen.set(false, is_game_specific);
     fullscreenMode.set("Windowed", is_game_specific);
     presentMode.set("Mailbox", is_game_specific);

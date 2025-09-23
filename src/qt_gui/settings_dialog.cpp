@@ -113,6 +113,9 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         // Experimental tab
         ui->tabWidgetSettings->setTabVisible(8, false);
         ui->chooseHomeTabComboBox->removeItem(8);
+
+        // Graphics tab
+        ui->heightDivider->hide();
     }
 
     std::filesystem::path config_file =
@@ -700,13 +703,13 @@ void SettingsDialog::LoadValuesFromConfig() {
     ui->networkConnectedCheckBox->setChecked(
         toml::find_or<bool>(data, "General", "isConnectedToNetwork", false));
     ui->psnSignInCheckBox->setChecked(toml::find_or<bool>(data, "General", "isPSNSignedIn", false));
+    ui->vblankSpinBox->setValue(toml::find_or<int>(data, "GPU", "vblankFrequency", 60));
 
     // First options is auto selection -1, so gpuId on the GUI will always have to subtract 1
     // when setting and add 1 when getting to select the correct gpu in Qt
     ui->graphicsAdapterBox->setCurrentIndex(toml::find_or<int>(data, "Vulkan", "gpuId", -1) + 1);
     ui->widthSpinBox->setValue(toml::find_or<int>(data, "GPU", "screenWidth", 1280));
     ui->heightSpinBox->setValue(toml::find_or<int>(data, "GPU", "screenHeight", 720));
-    ui->vblankSpinBox->setValue(toml::find_or<int>(data, "GPU", "vblankFrequency", 60));
     ui->dumpShadersCheckBox->setChecked(toml::find_or<bool>(data, "GPU", "dumpShaders", false));
     ui->nullGpuCheckBox->setChecked(toml::find_or<bool>(data, "GPU", "nullGpu", false));
     ui->enableHDRCheckBox->setChecked(toml::find_or<bool>(data, "GPU", "allowHDR", false));
@@ -1040,6 +1043,7 @@ void SettingsDialog::UpdateSettings(bool is_specific) {
     Config::setNeoMode(ui->neoCheckBox->isChecked(), is_specific);
     Config::setConnectedToNetwork(ui->networkConnectedCheckBox->isChecked(), is_specific);
     Config::setPSNSignedIn(ui->psnSignInCheckBox->isChecked(), is_specific);
+    Config::setVblankFreq(ui->vblankSpinBox->value(), is_specific);
 
     Config::setIsFullscreen(
         screenModeMap.value(ui->displayModeComboBox->currentText()) != "Windowed", is_specific);
@@ -1077,7 +1081,6 @@ void SettingsDialog::UpdateSettings(bool is_specific) {
     Config::setLanguage(languageIndexes[ui->consoleLanguageComboBox->currentIndex()], is_specific);
     Config::setWindowWidth(ui->widthSpinBox->value(), is_specific);
     Config::setWindowHeight(ui->heightSpinBox->value(), is_specific);
-    Config::setVblankFreq(ui->vblankSpinBox->value(), is_specific);
     Config::setDumpShaders(ui->dumpShadersCheckBox->isChecked(), is_specific);
     Config::setNullGpu(ui->nullGpuCheckBox->isChecked(), is_specific);
     Config::setFsrEnabled(ui->FSRCheckBox->isChecked(), is_specific);
