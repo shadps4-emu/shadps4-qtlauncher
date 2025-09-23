@@ -1158,6 +1158,19 @@
     </message>
   </context>
   <context>
+    <name>IpcClient</name>
+    <message>
+      <source>ShadPS4</source>
+      <translation type="unfinished">ShadPS4</translation>
+    </message>
+    <message>
+      <source>ShadPS4 is not found!
+Please change ShadPS4 path in settings.</source>
+      <translation type="unfinished">ShadPS4 is not found!
+Please change ShadPS4 path in settings.</translation>
+    </message>
+  </context>
+  <context>
     <name>KBMSettings</name>
     <message>
       <source>Configure Controls</source>
@@ -1653,6 +1666,16 @@
       <source>Customize Hotkeys</source>
       <translation>Anpassa snabbtangenter</translation>
     </message>
+    <message>
+      <source>ShadPS4</source>
+      <translation type="unfinished">ShadPS4</translation>
+    </message>
+    <message>
+      <source>ShadPS4 is not found!
+Please change ShadPS4 path in settings.</source>
+      <translation type="unfinished">ShadPS4 is not found!
+Please change ShadPS4 path in settings.</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -2025,14 +2048,6 @@
       <translation>Bredd/Höjd:\nStäller in storleken för emulatorfönstret vid uppstart, som kan storleksändras under spelning.\nDetta är inte det samma som spelupplösningen.</translation>
     </message>
     <message>
-      <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the games shaders to a folder as they render.</source>
-      <translation>Aktivera Shaders Dumping:\nFör teknisk felsökning, sparar spelets shaders till en mapp när de renderas.</translation>
-    </message>
-    <message>
-      <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card.</source>
-      <translation>Aktivera Null GPU:\nFör teknisk felsökning, inaktiverar spelrenderingen som om det inte fanns något grafikkort.</translation>
-    </message>
-    <message>
       <source>Enable HDR:\nEnables HDR in games that support it.\nYour monitor must have support for the BT2020 PQ color space and the RGB10A2 swapchain format.</source>
       <translation>Aktivera HDR:\nAktiverar HDR i spel som har stöd för det.\nDin skärm måste ha stöd för färgrymden BT2020 PQ samt swapchain-formatet RGB10A2.</translation>
     </message>
@@ -2229,10 +2244,6 @@
       <translation>Öppna mappen för anpassade trofébilder/ljud:\nDu kan lägga till egna bilder till troféerna och ett ljud.\nLägg till filerna i custom_trophy med följande namn:\ntrophy.wav ELLER trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nObservera: Ljudet fungerar endast i QT-versioner.</translation>
     </message>
     <message>
-      <source> * Unsupported Vulkan Version</source>
-      <translation> * Versionen av Vulkan stöds inte</translation>
-    </message>
-    <message>
       <source>Experimental Features</source>
       <translation>Experimentella funktioner</translation>
     </message>
@@ -2287,10 +2298,6 @@
     <message>
       <source>Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</source>
       <translation>Nuvarande läge:\nKonfigurerar hur videoutgången ska visas på skärmen.\n\nMailbox: Bildrutorna synkroniseras med skärmens uppdateringsfrekvens. Nya bildrutor ersätter alla väntande bildrutor. Minskar fördröjningen men kan hoppa över bildrutor om det uppstår fördröjning.\nFifo: Bildrutorna synkroniseras med skärmens uppdateringsfrekvens. Nya bildrutor placeras i kö bakom väntande bildrutor. Säkerställer att alla bildrutor visas men kan öka fördröjningen.\nOmedelbar: Bildrutorna visas omedelbart på skärmen när de är klara. Kan resultera i tearing.</translation>
-    </message>
-    <message>
-      <source>DLC Path:\nThe folder where game DLC loaded from.</source>
-      <translation>DLC-sökväg:\nMappen där spelens DLC läses in från.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
@@ -2435,6 +2442,18 @@
     <message>
       <source>Select the shadPS4 executable</source>
       <translation>Välj körbar shadPS4-fil</translation>
+    </message>
+    <message>
+      <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
+      <translation>Aktivera dumpning av shaders:\nFör teknisk felsökning sparas spelets shaders i en mapp när de renderas.</translation>
+    </message>
+    <message>
+      <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</source>
+      <translation>Aktivera Null GPU:\nFör teknisk felsökning inaktiveras spelrenderingen som om det inte fanns något grafikkort. Skärmen blir svart.</translation>
+    </message>
+    <message>
+      <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
+      <translation>DLC-sökväg:\nMappen där spelets DLC, hämtningsbart innehåll, läses in från.</translation>
     </message>
   </context>
   <context>

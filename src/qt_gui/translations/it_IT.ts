@@ -1158,6 +1158,19 @@
     </message>
   </context>
   <context>
+    <name>IpcClient</name>
+    <message>
+      <source>ShadPS4</source>
+      <translation type="unfinished">ShadPS4</translation>
+    </message>
+    <message>
+      <source>ShadPS4 is not found!
+Please change ShadPS4 path in settings.</source>
+      <translation type="unfinished">ShadPS4 is not found!
+Please change ShadPS4 path in settings.</translation>
+    </message>
+  </context>
+  <context>
     <name>KBMSettings</name>
     <message>
       <source>Configure Controls</source>
@@ -1653,6 +1666,16 @@
       <source>Customize Hotkeys</source>
       <translation>Personalizza Scorciatoie</translation>
     </message>
+    <message>
+      <source>ShadPS4</source>
+      <translation type="unfinished">ShadPS4</translation>
+    </message>
+    <message>
+      <source>ShadPS4 is not found!
+Please change ShadPS4 path in settings.</source>
+      <translation type="unfinished">ShadPS4 is not found!
+Please change ShadPS4 path in settings.</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -2025,14 +2048,6 @@
       <translation>Larghezza/Altezza:\nImposta la dimensione della finestra dell&apos;emulatore all&apos;avvio, che può essere ridimensionata durante il gioco.\nQuesto è diverso dalla risoluzione in gioco.</translation>
     </message>
     <message>
-      <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the games shaders to a folder as they render.</source>
-      <translation>Abilita Pompaggio Shader:\nPer scopi di debug tecnico, salva gli shader dei giochi in una cartella mentre vengono resi.</translation>
-    </message>
-    <message>
-      <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card.</source>
-      <translation>Abilita GPU Null:\nPer scopi di debug tecnico, disabilita il rendering del gioco come se non ci fosse alcuna scheda grafica.</translation>
-    </message>
-    <message>
       <source>Enable HDR:\nEnables HDR in games that support it.\nYour monitor must have support for the BT2020 PQ color space and the RGB10A2 swapchain format.</source>
       <translation>Abilita HDR:\nAbilita HDR nei giochi che lo supportano.\nIl tuo monitor deve avere il supporto per lo spazio colore BT2020 PQ e il formato swapchain RGB10A2.</translation>
     </message>
@@ -2229,10 +2244,6 @@
       <translation>Apri la cartella personalizzata delle immagini/suoni trofei:\nÈ possibile aggiungere immagini personalizzate ai trofei e un audio.\nAggiungi i file a custom_trophy con i seguenti nomi:\ntrophy.wav OPPURE trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nNota: Il suono funzionerà solo nelle versioni QT.</translation>
     </message>
     <message>
-      <source> * Unsupported Vulkan Version</source>
-      <translation> * Versione Vulkan non supportata</translation>
-    </message>
-    <message>
       <source>Experimental Features</source>
       <translation>Funzionalità Sperimentali</translation>
     </message>
@@ -2287,10 +2298,6 @@
     <message>
       <source>Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</source>
       <translation>Modalità presentazione:\nConfigura come sarà presentato l'output video a schermo.\n\nMailbox: i frame si sincronizzano con la frequenza di aggiornamento dello schermo. I nuovi frame sostituiranno tutti i frame in sospeso. Riduce la latenza, ma può saltare frame se l'esecuzione del rendering è lenta.\nFifo: i frame si sincronizzano con la frequenza di aggiornamento del tuo schermo. I nuovi frame saranno accodati dietro i frame in sospeso. Assicura che tutti i fotogrammi siano presentati, ma potrebbe aumentare la latenza.\nImmediato: i fotogrammi sono immediatamente presentati sullo schermo quando sono pronti. Può causare tearing.</translation>
-    </message>
-    <message>
-      <source>DLC Path:\nThe folder where game DLC loaded from.</source>
-      <translation>Percorso DLC:\nLa cartella da cui sono caricati i dati DLC.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
@@ -2430,11 +2437,23 @@
     </message>
     <message>
       <source>shadPS4 Path</source>
-      <translation type="unfinished">shadPS4 Path</translation>
+      <translation>Percorso shadPS4</translation>
     </message>
     <message>
       <source>Select the shadPS4 executable</source>
-      <translation type="unfinished">Select the shadPS4 executable</translation>
+      <translation>Selezionare l'eseguibile di shadPS4</translation>
+    </message>
+    <message>
+      <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
+      <translation>Abilita Scaricamento Shader:\nPer scopi di debug tecnico, salva gli shader dei giochi in una cartella mentre vengono renderizzati.</translation>
+    </message>
+    <message>
+      <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</source>
+      <translation>Abilita GPU Null:\nPer scopi di debug tecnico, disabilita il rendering del gioco come se non ci fosse alcuna scheda grafica. La schermata non mostrerà nessun elemento grafico.</translation>
+    </message>
+    <message>
+      <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
+      <translation>Percorso DLC:\nLa cartella da cui sono caricati i dati DLC.</translation>
     </message>
   </context>
   <context>

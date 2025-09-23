@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include <QDir>
+#include <QMessageBox>
 #include <QProcessEnvironment>
 
 #include "common/logging/log.h"
@@ -114,6 +115,13 @@ void IpcClient::onProcessClosed() {
 }
 
 void IpcClient::writeLine(const QString& text) {
+    if (process == nullptr) {
+        QMessageBox::critical(
+            nullptr, tr("ShadPS4"),
+            QString(tr("ShadPS4 is not found!\nPlease change ShadPS4 path in settings.")));
+        return;
+    }
+
     QByteArray data = text.toUtf8();
     data.append('\n');
     process->write(data);

@@ -1158,6 +1158,19 @@
     </message>
   </context>
   <context>
+    <name>IpcClient</name>
+    <message>
+      <source>ShadPS4</source>
+      <translation type="unfinished">ShadPS4</translation>
+    </message>
+    <message>
+      <source>ShadPS4 is not found!
+Please change ShadPS4 path in settings.</source>
+      <translation type="unfinished">ShadPS4 is not found!
+Please change ShadPS4 path in settings.</translation>
+    </message>
+  </context>
+  <context>
     <name>KBMSettings</name>
     <message>
       <source>Configure Controls</source>
@@ -1653,6 +1666,16 @@
       <source>Customize Hotkeys</source>
       <translation>自定义快捷键</translation>
     </message>
+    <message>
+      <source>ShadPS4</source>
+      <translation type="unfinished">ShadPS4</translation>
+    </message>
+    <message>
+      <source>ShadPS4 is not found!
+Please change ShadPS4 path in settings.</source>
+      <translation type="unfinished">ShadPS4 is not found!
+Please change ShadPS4 path in settings.</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -2025,14 +2048,6 @@
       <translation>宽度/高度：\n设置启动游戏时的窗口大小，游戏过程中可以调整。\n这与游戏内的分辨率不同。</translation>
     </message>
     <message>
-      <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the games shaders to a folder as they render.</source>
-      <translation>启用着色器转储：\n用于技术调试，在渲染期间将游戏着色器保存到文件夹中。</translation>
-    </message>
-    <message>
-      <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card.</source>
-      <translation>启用 NULL GPU：\n用于技术调试，禁用游戏渲染，就像没有显卡一样。</translation>
-    </message>
-    <message>
       <source>Enable HDR:\nEnables HDR in games that support it.\nYour monitor must have support for the BT2020 PQ color space and the RGB10A2 swapchain format.</source>
       <translation>启用 HDR：\n在支持 HDR 的游戏中启用 HDR。\n您的显示器必须支持 BT2020 PQ 色彩空间和 RGB10A2 交换链格式。</translation>
     </message>
@@ -2229,10 +2244,6 @@
       <translation>打开自定义奖杯图像/声音文件夹：\n您可以自定义奖杯图像和声音。\n将文件添加到 custom_trophy 文件夹中，文件名如下：\ntrophy.wav 或 trophy.mp3、bronze.png、gold.png、platinum.png、silver.png。\n注意：自定义声音只能在 QT 版本中生效。</translation>
     </message>
     <message>
-      <source> * Unsupported Vulkan Version</source>
-      <translation> * 不支持的 Vulkan 版本</translation>
-    </message>
-    <message>
       <source>Experimental Features</source>
       <translation>实验性功能</translation>
     </message>
@@ -2287,10 +2298,6 @@
     <message>
       <source>Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</source>
       <translation>呈现模式：\n配置视频输出到屏幕的显示方式。\n\n信箱模式：帧画面与屏幕刷新率同步。新帧将替换所有待处理帧，可降低延迟但落后时可能跳帧。\n先进先出：帧画面与屏幕刷新率同步。新帧将排列在待处理帧之后，确保所有帧都被呈现但可能增加延迟。\n即时模式：帧画面准备就绪后立即显示于屏幕，可能导致画面撕裂。</translation>
-    </message>
-    <message>
-      <source>DLC Path:\nThe folder where game DLC loaded from.</source>
-      <translation>DLC 路径：\n游戏DLC 加载的文件夹。</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
@@ -2435,6 +2442,18 @@
     <message>
       <source>Select the shadPS4 executable</source>
       <translation>选择 shadPS4 可执行文件</translation>
+    </message>
+    <message>
+      <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
+      <translation>启用着色器转储：\n出于技术调试目的，该功能将在着色器渲染时将其实时保存至指定文件夹。</translation>
+    </message>
+    <message>
+      <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</source>
+      <translation>启用 NULL GPU：\n出于技术调试目的，该选项将禁用游戏渲染功能（模拟无显卡状态）。启用后屏幕将显示为黑屏。</translation>
+    </message>
+    <message>
+      <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
+      <translation>DLC路径：\n用于加载游戏DLC内容的文件夹。</translation>
     </message>
   </context>
   <context>
