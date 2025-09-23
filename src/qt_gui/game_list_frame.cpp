@@ -415,7 +415,7 @@ void GameListFrame::SetTableItem(int row, int column, QString itemStr) {
     label->setGraphicsEffect(shadowEffect); // Apply shadow effect to the QLabel
 
     layout->addWidget(label);
-    if (column != 8 && column != 1)
+    if (column != 8 && column != 1 && column != 9)
         layout->setAlignment(Qt::AlignCenter);
     widget->setLayout(layout);
     this->setItem(row, column, item);
