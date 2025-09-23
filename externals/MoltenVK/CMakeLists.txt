@@ -33,14 +33,6 @@ find_library(IOSURFACE_LIBRARY IOSurface REQUIRED)
 find_library(METAL_LIBRARY Metal REQUIRED)
 find_library(QUARTZCORE_LIBRARY QuartzCore REQUIRED)
 
-# cereal
-option(SKIP_PORTABILITY_TEST "" ON)
-option(BUILD_DOC "" OFF)
-option(BUILD_SANDBOX "" OFF)
-option(SKIP_PERFORMANCE_COMPARISON "" ON)
-option(SPIRV_CROSS_SKIP_INSTALL "" ON)
-add_subdirectory(cereal)
-
 # SPIRV-Cross
 option(SPIRV_CROSS_CLI "" OFF)
 option(SPIRV_CROSS_ENABLE_TESTS "" OFF)
@@ -89,5 +81,5 @@ target_include_directories(MoltenVK PRIVATE ${MVK_INCLUDES})
 target_compile_options(MoltenVK PRIVATE -w)
 target_link_libraries(MoltenVK PRIVATE
         ${APPKIT_LIBRARY} ${FOUNDATION_LIBRARY} ${IOKIT_LIBRARY} ${IOSURFACE_LIBRARY} ${METAL_LIBRARY} ${QUARTZCORE_LIBRARY}
-        Vulkan::Headers cereal::cereal spirv-cross-msl MoltenVKCommon MoltenVKShaderConverter)
-target_compile_definitions(MoltenVK PRIVATE MVK_FRAMEWORK_VERSION=${MVK_VERSION} MVK_USE_METAL_PRIVATE_API=1)
+        Vulkan::Headers spirv-cross-msl MoltenVKCommon MoltenVKShaderConverter)
+target_compile_definitions(MoltenVK PRIVATE MVK_FRAMEWORK_VERSION=${MVK_VERSION} MVK_USE_METAL_PRIVATE_API=1 MVK_USE_CEREAL=0)

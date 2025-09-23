@@ -7,9 +7,7 @@
 #include <optional>
 #include <vector>
 
-#ifdef ENABLE_QT_GUI
 class QString; // to avoid including <QString> in this header
-#endif
 
 namespace Common::FS {
 
@@ -99,7 +97,6 @@ constexpr auto LOG_FILE = "shad_log.txt";
  */
 void SetUserPath(PathType user_path, const std::filesystem::path& new_path);
 
-#ifdef ENABLE_QT_GUI
 /**
  * Converts an std::filesystem::path to a QString.
  * The native underlying string of a path is wstring on Windows and string on POSIX.
@@ -116,7 +113,6 @@ void PathToQString(QString& result, const std::filesystem::path& path);
  * @param path The path to convert
  */
 [[nodiscard]] std::filesystem::path PathFromQString(const QString& path);
-#endif
 
 /**
  * Recursively searches for a game directory by its ID.

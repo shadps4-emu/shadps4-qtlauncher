@@ -8,9 +8,8 @@
 #include <span>
 #include <type_traits>
 
-#include "common/concepts.h"
+#include "common/enum.h"
 #include "common/types.h"
-#include "enum.h"
 
 namespace Common::FS {
 
@@ -63,6 +62,9 @@ enum class SeekOrigin : u32 {
     End,             // Seeks from the end of the file.
 };
 
+template <typename T>
+concept IsContiguousContainer = std::contiguous_iterator<typename T::iterator>;
+
 class IOFile final {
 public:
     IOFile();
@@ -102,14 +104,10 @@ public:
         return file != nullptr;
     }
 
-    uintptr_t GetFileMapping();
-
     int Open(const std::filesystem::path& path, FileAccessMode mode,
              FileType type = FileType::BinaryFile,
              FileShareFlag flag = FileShareFlag::ShareReadOnly);
     void Close();
-
-    void Unlink();
 
     bool Flush() const;
     bool Commit() const;

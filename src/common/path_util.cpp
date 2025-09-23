@@ -5,7 +5,6 @@
 #include <unordered_map>
 #include "common/logging/log.h"
 #include "common/path_util.h"
-#include "common/scope_exit.h"
 
 #ifdef __APPLE__
 #include <CoreFoundation/CFBundle.h>
@@ -25,9 +24,7 @@
 #endif
 #endif
 
-#ifdef ENABLE_QT_GUI
 #include <QString>
-#endif
 
 namespace Common::FS {
 
@@ -40,12 +37,9 @@ using CreateOriginalPathForURLFunc = CFURLRef __nullable (*)(CFURLRef translocat
                                                              CFErrorRef* __nullable error);
 
 static CFURLRef UntranslocateBundlePath(const CFURLRef bundle_path) {
+    CFURLRef path = nullptr;
     if (void* security_handle =
             dlopen("/System/Library/Frameworks/Security.framework/Security", RTLD_LAZY)) {
-        SCOPE_EXIT {
-            dlclose(security_handle);
-        };
-
         const auto IsTranslocatedURL = reinterpret_cast<IsTranslocatedURLFunc>(
             dlsym(security_handle, "SecTranslocateIsTranslocatedURL"));
         const auto CreateOriginalPathForURL = reinterpret_cast<CreateOriginalPathForURLFunc>(
@@ -54,41 +48,40 @@ static CFURLRef UntranslocateBundlePath(const CFURLRef bundle_path) {
         bool is_translocated = false;
         if (IsTranslocatedURL && CreateOriginalPathForURL &&
             IsTranslocatedURL(bundle_path, &is_translocated, nullptr) && is_translocated) {
-            return CreateOriginalPathForURL(bundle_path, nullptr);
+            path = CreateOriginalPathForURL(bundle_path, nullptr);
         }
+
+        dlclose(security_handle);
     }
-    return nullptr;
+    return path;
 }
 
 static std::optional<std::filesystem::path> GetBundleParentDirectory() {
+    std::optional<std::filesystem::path> path = std::nullopt;
     if (CFBundleRef bundle_ref = CFBundleGetMainBundle()) {
         if (CFURLRef bundle_url_ref = CFBundleCopyBundleURL(bundle_ref)) {
-            SCOPE_EXIT {
-                CFRelease(bundle_url_ref);
-            };
-
             CFURLRef untranslocated_url_ref = UntranslocateBundlePath(bundle_url_ref);
-            SCOPE_EXIT {
-                if (untranslocated_url_ref) {
-                    CFRelease(untranslocated_url_ref);
-                }
-            };
 
             char app_bundle_path[MAXPATHLEN];
             if (CFURLGetFileSystemRepresentation(
                     untranslocated_url_ref ? untranslocated_url_ref : bundle_url_ref, true,
                     reinterpret_cast<u8*>(app_bundle_path), sizeof(app_bundle_path))) {
                 std::filesystem::path bundle_path{app_bundle_path};
-                return bundle_path.parent_path();
+                path = bundle_path.parent_path();
             }
+
+            if (untranslocated_url_ref) {
+                CFRelease(untranslocated_url_ref);
+            }
+            CFRelease(bundle_url_ref);
         }
     }
-    return std::nullopt;
+    return path;
 }
 #endif
 
 static auto UserPaths = [] {
-#if defined(__APPLE__) && defined(ENABLE_QT_GUI)
+#if defined(__APPLE__)
     // Set the current path to the directory containing the app bundle.
     if (const auto bundle_dir = GetBundleParentDirectory()) {
         std::filesystem::current_path(*bundle_dir);
@@ -229,7 +222,6 @@ std::optional<fs::path> FindGameByID(const fs::path& dir, const std::string& gam
     return std::nullopt;
 }
 
-#ifdef ENABLE_QT_GUI
 void PathToQString(QString& result, const std::filesystem::path& path) {
 #ifdef _WIN32
     result = QString::fromStdWString(path.wstring());
@@ -245,6 +237,5 @@ std::filesystem::path PathFromQString(const QString& path) {
     return std::filesystem::path(path.toStdString());
 #endif
 }
-#endif
 
 } // namespace Common::FS

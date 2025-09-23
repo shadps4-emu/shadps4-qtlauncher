@@ -4,24 +4,16 @@
 #include <chrono>
 #include <filesystem>
 #include <thread>
-
 #include <fmt/format.h>
-
-#ifdef _WIN32
-#include <windows.h> // For OutputDebugStringW
-#endif
 
 #include "common/bounded_threadsafe_queue.h"
 #include "common/config.h"
-#include "common/debug.h"
 #include "common/io_file.h"
 #include "common/logging/backend.h"
 #include "common/logging/log.h"
 #include "common/logging/log_entry.h"
 #include "common/logging/text_formatter.h"
 #include "common/path_util.h"
-#include "common/string_util.h"
-#include "common/thread.h"
 
 namespace Common::Log {
 
@@ -96,26 +88,6 @@ private:
     std::size_t bytes_written = 0;
 };
 
-/**
- * Backend that writes to Visual Studio's output window
- */
-class DebuggerBackend {
-public:
-    explicit DebuggerBackend() = default;
-
-    ~DebuggerBackend() = default;
-
-    void Write(const Entry& entry) {
-#ifdef _WIN32
-        ::OutputDebugStringW(UTF8ToUTF16W(FormatLogMessage(entry).append(1, '\n')).c_str());
-#endif
-    }
-
-    void Flush() {}
-
-    void EnableForStacktrace() {}
-};
-
 bool initialization_in_progress_suppress_logging = true;
 
 /**
@@ -173,11 +145,6 @@ public:
 
     void PushEntry(Class log_class, Level log_level, const char* filename, unsigned int line_num,
                    const char* function, std::string message) {
-        // Propagate important log messages to the profiler
-        if (IsProfilerConnected()) {
-            const auto& msg_str = fmt::format("[{}] {}", GetLogClassName(log_class), message);
-        }
-
         if (!filter.CheckMessage(log_class, log_level) || !Config::getLoggingEnabled()) {
             return;
         }
@@ -211,7 +178,6 @@ private:
 
     void StartBackendThread() {
         backend_thread = std::jthread([this](std::stop_token stop_token) {
-            Common::SetCurrentThreadName("shadPS4:Log");
             Entry entry;
             const auto write_logs = [this, &entry]() {
                 ForEachBackend([&entry](auto& backend) { backend.Write(entry); });
@@ -241,7 +207,6 @@ private:
     }
 
     void ForEachBackend(auto lambda) {
-        // lambda(debugger_backend);
         lambda(color_console_backend);
         lambda(file_backend);
     }
@@ -253,7 +218,6 @@ private:
     static inline std::unique_ptr<Impl, decltype(&Deleter)> instance{nullptr, Deleter};
 
     Filter filter;
-    DebuggerBackend debugger_backend{};
     ColorConsoleBackend color_console_backend{};
     FileBackend file_backend;
 

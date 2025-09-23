@@ -3,16 +3,12 @@
 
 #include <vector>
 
-#include "common/alignment.h"
 #include "common/assert.h"
-#include "common/error.h"
 #include "common/io_file.h"
 #include "common/logging/log.h"
 #include "common/path_util.h"
 
 #ifdef _WIN32
-#include "common/ntapi.h"
-
 #include <io.h>
 #include <share.h>
 #include <windows.h>
@@ -222,58 +218,6 @@ void IOFile::Close() {
     if (file_mapping && file_access_mode == FileAccessMode::ReadWrite) {
         CloseHandle(std::bit_cast<HANDLE>(file_mapping));
     }
-#endif
-}
-
-void IOFile::Unlink() {
-    if (!IsOpen()) {
-        return;
-    }
-
-    // Mark the file for deletion
-    // TODO: Also remove the file path?
-#ifdef _WIN64
-    FILE_DISPOSITION_INFORMATION disposition;
-    IO_STATUS_BLOCK iosb;
-
-    const int fd = fileno(file);
-    HANDLE hfile = reinterpret_cast<HANDLE>(_get_osfhandle(fd));
-
-    disposition.DeleteFile = TRUE;
-    NtSetInformationFile(hfile, &iosb, &disposition, sizeof(disposition),
-                         FileDispositionInformation);
-#else
-    if (unlink(file_path.c_str()) != 0) {
-        const auto ec = std::error_code{errno, std::generic_category()};
-        LOG_ERROR(Common_Filesystem, "Failed to unlink the file at path={}, ec_message={}",
-                  PathToUTF8String(file_path), ec.message());
-    }
-#endif
-}
-
-uintptr_t IOFile::GetFileMapping() {
-    if (file_mapping) {
-        return file_mapping;
-    }
-#ifdef _WIN64
-    const int fd = fileno(file);
-
-    HANDLE hfile = reinterpret_cast<HANDLE>(_get_osfhandle(fd));
-    HANDLE mapping = nullptr;
-
-    if (file_access_mode == FileAccessMode::ReadWrite) {
-        mapping = CreateFileMapping2(hfile, NULL, FILE_MAP_WRITE, PAGE_READWRITE, SEC_COMMIT, 0,
-                                     NULL, NULL, 0);
-    } else {
-        mapping = hfile;
-    }
-
-    file_mapping = std::bit_cast<uintptr_t>(mapping);
-    ASSERT_MSG(file_mapping, "{}", Common::GetLastErrorMsg());
-    return file_mapping;
-#else
-    file_mapping = fileno(file);
-    return file_mapping;
 #endif
 }
 

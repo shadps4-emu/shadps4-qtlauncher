@@ -5,8 +5,6 @@
 #include <codecvt>
 #include <sstream>
 #include <string>
-#include <pugixml.hpp>
-#ifdef ENABLE_QT_GUI
 #include <QDir>
 #include <QFile>
 #include <QJsonArray>
@@ -16,10 +14,10 @@
 #include <QMessageBox>
 #include <QString>
 #include <QXmlStreamReader>
-#endif
-#include "common/elf_info.h"
+#include <pugixml.hpp>
 #include "common/logging/log.h"
 #include "common/path_util.h"
+#include "common/singleton.h"
 #include "core/file_format/psf.h"
 #include "memory_patcher.h"
 
@@ -206,7 +204,6 @@ void OnGameLoaded() {
     }
     ApplyPendingPatches();
 
-#ifdef ENABLE_QT_GUI
     // We use the QT headers for the xml and json parsing, this define is only true on QT builds
     QString patchDir;
     Common::FS::PathToQString(patchDir, Common::FS::GetUserPath(Common::FS::PathType::PatchesDir));
@@ -371,7 +368,6 @@ void OnGameLoaded() {
         }
         ApplyPendingPatches();
     }
-#endif
 }
 
 void AddPatchToQueue(patchInfo patchToAdd) {
