@@ -95,6 +95,20 @@ void IpcClient::onStderr() {
         } else if (s == "#IPC_END") {
             writeLine("RUN");
             LOG_INFO(IPC, "IPC: start emu");
+        } else if (s == "RESTART") {
+            parsingState = ParsingState::args_counter;
+         }
+
+        if (parsingState == ParsingState::args_counter) {
+            argsCounter = s.toInt();
+            parsingState = ParsingState::args;
+        }
+
+        if (parsingState == ParsingState::args) {
+            parsedArgs.push_back(s.toStdString());
+            if (parsedArgs.size() == argsCounter) {
+                parsingState = ParsingState::normal;
+            }
         }
     }
 }
