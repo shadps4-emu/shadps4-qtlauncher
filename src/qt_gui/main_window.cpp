@@ -652,9 +652,8 @@ void MainWindow::CreateConnects() {
                     new CheatsPatches(empty, empty, empty, empty, empty, nullptr);
                 connect(cheatsPatches, &CheatsPatches::downloadFinished, onDownloadFinished);
 
-                pendingDownloads += 3;
+                pendingDownloads += 2;
 
-                cheatsPatches->downloadCheats("wolf2022", gameSerial, gameVersion, false);
                 cheatsPatches->downloadCheats("GoldHEN", gameSerial, gameVersion, false);
                 cheatsPatches->downloadCheats("shadPS4", gameSerial, gameVersion, false);
             }
