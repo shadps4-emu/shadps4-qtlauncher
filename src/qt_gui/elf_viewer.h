@@ -5,7 +5,7 @@
 
 #include <QFileDialog>
 
-#include "core/loader/elf.h"
+#include "core/file_format/elf.h"
 #include "game_list_frame.h"
 
 class ElfViewer : public QTableWidget {
@@ -18,7 +18,7 @@ private:
     void CheckElfFolders();
     void OpenElfFiles();
 
-    Core::Loader::Elf m_elf_file;
+    Elf m_elf_file;
     QStringList dir_list;
     QStringList elf_headers_list;
     QList<QString> list;

@@ -277,7 +277,6 @@ set(COMMON src/common/logging/backend.cpp
            src/common/aes.h
            src/common/assert.cpp
            src/common/assert.h
-           src/common/bit_field.h
            src/common/bounded_threadsafe_queue.h
            src/common/config.cpp
            src/common/config.h
@@ -287,7 +286,6 @@ set(COMMON src/common/logging/backend.cpp
            src/common/io_file.h
            src/common/path_util.cpp
            src/common/path_util.h
-           src/common/singleton.h
            src/common/types.h
            src/common/memory_patcher.h
            src/common/memory_patcher.cpp
@@ -295,19 +293,16 @@ set(COMMON src/common/logging/backend.cpp
            src/common/scm_rev.h
 )
 
-set(CORE src/core/file_format/psf.cpp
+set(CORE src/core/file_format/elf.cpp
+         src/core/file_format/elf.h
+         src/core/file_format/psf.cpp
          src/core/file_format/psf.h
          src/core/file_format/trp.cpp
          src/core/file_format/trp.h
-         src/core/loader/elf.cpp
-         src/core/loader/elf.h
-         src/core/memory_patcher.cpp
-         src/core/memory_patcher.h
 )
 
 set(INPUT src/input/controller.cpp
           src/input/controller.h
-          src/input/input_handler.h
 )
 
 qt_add_resources(RESOURCE_FILES src/shadps4.qrc)

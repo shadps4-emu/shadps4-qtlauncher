@@ -2,22 +2,11 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #pragma once
-#include <cstring>
+
 #include <string>
 #include <vector>
 
-#if defined(WIN32)
-#define EXPORT __declspec(dllexport)
-#else
-#define EXPORT __attribute__((visibility("default")))
-#endif
-
 namespace MemoryPatcher {
-
-extern EXPORT uintptr_t g_eboot_address;
-extern uint64_t g_eboot_image_size;
-extern std::string g_game_serial;
-extern std::string patchFile;
 
 enum PatchMask : uint8_t {
     None,
@@ -25,29 +14,19 @@ enum PatchMask : uint8_t {
     Mask_Jump32,
 };
 
-struct patchInfo {
-    std::string gameSerial;
-    std::string modNameStr;
-    std::string offsetStr;
-    std::string valueStr;
-    std::string targetStr;
-    std::string sizeStr;
-    bool isOffset;
-    bool littleEndian;
-    PatchMask patchMask;
-    int maskOffset;
+struct PendingPatch {
+    std::string modName;
+    std::string address;
+    std::string value;
+    std::string target;
+    std::string size;
+    bool littleEndian = false;
+    PatchMask mask = PatchMask::None;
+    int maskOffset = 0;
 };
 
-std::string convertValueToHex(const std::string type, const std::string valueStr);
+std::string convertValueToHex(std::string type, std::string valueStr);
 
-void OnGameLoaded();
-void AddPatchToQueue(patchInfo patchToAdd);
-
-void PatchMemory(std::string modNameStr, std::string offsetStr, std::string valueStr,
-                 std::string targetStr, std::string sizeStr, bool isOffset, bool littleEndian,
-                 PatchMask patchMask = PatchMask::None, int maskOffset = 0);
-
-static std::vector<int32_t> PatternToByte(const std::string& pattern);
-uintptr_t PatternScan(const std::string& signature);
+std::vector<PendingPatch> readPatches(std::string gameSerial, std::string appVersion);
 
 } // namespace MemoryPatcher

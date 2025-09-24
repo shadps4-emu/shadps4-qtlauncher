@@ -12,7 +12,6 @@
 #include "common/path_util.h"
 #include "hotkeys.h"
 #include "input/controller.h"
-#include "input/input_handler.h"
 #include "sdl_event_wrapper.h"
 #include "ui_hotkeys.h"
 

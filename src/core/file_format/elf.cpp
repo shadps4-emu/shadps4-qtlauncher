@@ -4,9 +4,7 @@
 #include <fmt/core.h>
 #include "common/assert.h"
 #include "common/logging/log.h"
-#include "core/loader/elf.h"
-
-namespace Core::Loader {
+#include "core/file_format/elf.h"
 
 using namespace Common::FS;
 
@@ -530,5 +528,3 @@ void Elf::PHeaderDebugDump(const std::filesystem::path& file_name) {
         }
     }
 }
-
-} // namespace Core::Loader
