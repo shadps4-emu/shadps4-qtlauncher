@@ -1160,13 +1160,13 @@ Einzigartige Inputs können nicht öfters als einmal gebunden werden. Input-Dupl
     <name>IpcClient</name>
     <message>
       <source>ShadPS4</source>
-      <translation type="unfinished">ShadPS4</translation>
+      <translation>ShadPS4</translation>
     </message>
     <message>
       <source>ShadPS4 is not found!
 Please change ShadPS4 path in settings.</source>
-      <translation type="unfinished">ShadPS4 is not found!
-Please change ShadPS4 path in settings.</translation>
+      <translation>ShadPS4 wurde nicht gefunden!
+Bitte ändere den ShadPS4-Pfad in den Einstellungen.</translation>
     </message>
   </context>
   <context>
@@ -1667,13 +1667,13 @@ Please change ShadPS4 path in settings.</translation>
     </message>
     <message>
       <source>ShadPS4</source>
-      <translation type="unfinished">ShadPS4</translation>
+      <translation>ShadPS4</translation>
     </message>
     <message>
       <source>ShadPS4 is not found!
 Please change ShadPS4 path in settings.</source>
-      <translation type="unfinished">ShadPS4 is not found!
-Please change ShadPS4 path in settings.</translation>
+      <translation>ShadPS4 wurde nicht gefunden!
+Bitte ändere den ShadPS4-Pfad in den Einstellungen.</translation>
     </message>
   </context>
   <context>

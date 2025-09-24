@@ -1161,13 +1161,13 @@
     <name>IpcClient</name>
     <message>
       <source>ShadPS4</source>
-      <translation type="unfinished">ShadPS4</translation>
+      <translation>shadPS4</translation>
     </message>
     <message>
       <source>ShadPS4 is not found!
 Please change ShadPS4 path in settings.</source>
-      <translation type="unfinished">ShadPS4 is not found!
-Please change ShadPS4 path in settings.</translation>
+      <translation>Fant ikke shadPS4!
+Endre mappa til shadPS4 i innstillingene.</translation>
     </message>
   </context>
   <context>
@@ -1668,13 +1668,13 @@ Please change ShadPS4 path in settings.</translation>
     </message>
     <message>
       <source>ShadPS4</source>
-      <translation type="unfinished">ShadPS4</translation>
+      <translation>shadPS4</translation>
     </message>
     <message>
       <source>ShadPS4 is not found!
 Please change ShadPS4 path in settings.</source>
-      <translation type="unfinished">ShadPS4 is not found!
-Please change ShadPS4 path in settings.</translation>
+      <translation>Fant ikke shadPS4!
+Endre mappa til shadPS4 i innstillingene.</translation>
     </message>
   </context>
   <context>
