@@ -10,7 +10,6 @@
 #include "common/config.h"
 #include "common/path_util.h"
 #include "game_info.h"
-#include "sdl_window.h"
 
 #include <QCheckBox>
 #include <QCloseEvent>

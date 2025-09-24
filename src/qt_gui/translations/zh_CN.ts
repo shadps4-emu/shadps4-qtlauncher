@@ -1158,6 +1158,19 @@
     </message>
   </context>
   <context>
+    <name>IpcClient</name>
+    <message>
+      <source>ShadPS4</source>
+      <translation type="unfinished">ShadPS4</translation>
+    </message>
+    <message>
+      <source>ShadPS4 is not found!
+Please change ShadPS4 path in settings.</source>
+      <translation type="unfinished">ShadPS4 is not found!
+Please change ShadPS4 path in settings.</translation>
+    </message>
+  </context>
+  <context>
     <name>KBMSettings</name>
     <message>
       <source>Configure Controls</source>
@@ -1652,6 +1665,16 @@
     <message>
       <source>Customize Hotkeys</source>
       <translation>自定义快捷键</translation>
+    </message>
+    <message>
+      <source>ShadPS4</source>
+      <translation type="unfinished">ShadPS4</translation>
+    </message>
+    <message>
+      <source>ShadPS4 is not found!
+Please change ShadPS4 path in settings.</source>
+      <translation type="unfinished">ShadPS4 is not found!
+Please change ShadPS4 path in settings.</translation>
     </message>
   </context>
   <context>
@@ -2422,15 +2445,15 @@
     </message>
     <message>
       <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
-      <translation type="unfinished">Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</translation>
+      <translation>启用着色器转储：\n出于技术调试目的，该功能将在着色器渲染时将其实时保存至指定文件夹。</translation>
     </message>
     <message>
       <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</source>
-      <translation type="unfinished">Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</translation>
+      <translation>启用 NULL GPU：\n出于技术调试目的，该选项将禁用游戏渲染功能（模拟无显卡状态）。启用后屏幕将显示为黑屏。</translation>
     </message>
     <message>
       <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
-      <translation type="unfinished">DLC Path:\nThe folder where game DLC is loaded from.</translation>
+      <translation>DLC路径：\n用于加载游戏DLC内容的文件夹。</translation>
     </message>
   </context>
   <context>

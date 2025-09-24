@@ -31,7 +31,6 @@ if(UNIX AND NOT APPLE)
     endif()
 endif()
 
-option(ENABLE_DISCORD_RPC "Enable the Discord RPC integration" ON)
 option(ENABLE_UPDATER "Enables the options to updater" ON)
 
 # First, determine whether to use CMAKE_OSX_ARCHITECTURES or CMAKE_SYSTEM_PROCESSOR.
@@ -224,29 +223,11 @@ if(WIN32 AND NOT CMAKE_PREFIX_PATH)
 endif ()
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
-find_package(Boost 1.84.0 CONFIG)
-find_package(FFmpeg 5.1.2 MODULE)
 find_package(fmt 10.2.0 CONFIG)
-find_package(glslang 15 CONFIG)
-find_package(half 1.12.0 MODULE)
-find_package(magic_enum 0.9.7 CONFIG)
-find_package(PNG 1.6 MODULE)
-find_package(RenderDoc 1.6.0 MODULE)
 find_package(SDL3 3.1.2 CONFIG)
-find_package(stb MODULE)
 find_package(toml11 4.2.0 CONFIG)
-find_package(tsl-robin-map 1.3.0 CONFIG)
 find_package(VulkanHeaders 1.4.324 CONFIG)
-find_package(VulkanMemoryAllocator 3.1.0 CONFIG)
-find_package(xbyak 7.07 CONFIG)
-find_package(xxHash 0.8.2 MODULE)
-find_package(ZLIB 1.3 MODULE)
-find_package(Zydis 5.0.0 CONFIG)
 find_package(pugixml 1.14 CONFIG)
-if (APPLE)
-    find_package(date 3.0.1 CONFIG)
-    find_package(epoll-shim 3.14 CONFIG)
-endif()
 list(POP_BACK CMAKE_MODULE_PATH)
 
 if (CMAKE_CXX_COMPILER_ID STREQUAL "Clang" OR CMAKE_CXX_COMPILER_ID STREQUAL "AppleClang")
@@ -294,75 +275,25 @@ set(COMMON src/common/logging/backend.cpp
            src/common/logging/text_formatter.h
            src/common/logging/types.h
            src/common/aes.h
-           src/common/alignment.h
-           src/common/arch.h
            src/common/assert.cpp
            src/common/assert.h
-           src/common/bit_array.h
            src/common/bit_field.h
            src/common/bounded_threadsafe_queue.h
-           src/common/concepts.h
            src/common/config.cpp
            src/common/config.h
-           src/common/cstring.h
-           src/common/debug.h
-           src/common/decoder.cpp
-           src/common/decoder.h
-           src/common/elf_info.h
            src/common/endian.h
            src/common/enum.h
            src/common/io_file.cpp
            src/common/io_file.h
-           src/common/lru_cache.h
-           src/common/error.cpp
-           src/common/error.h
-           src/common/scope_exit.h
-           src/common/fixed_value.h
-           src/common/func_traits.h
-        #    src/common/native_clock.cpp
-        #    src/common/native_clock.h
            src/common/path_util.cpp
            src/common/path_util.h
-           src/common/object_pool.h
-           src/common/polyfill_thread.h
-        #    src/common/range_lock.h
-        #    src/common/rdtsc.cpp
-        #    src/common/rdtsc.h
-           src/common/recursive_lock.cpp
-           src/common/recursive_lock.h
-           src/common/sha1.h
-           src/common/shared_first_mutex.h
-           src/common/signal_context.h
-           src/common/signal_context.cpp
            src/common/singleton.h
-        #    src/common/slab_heap.h
-        #    src/common/slot_vector.h
-        #    src/common/spin_lock.cpp
-        #    src/common/spin_lock.h
-           src/common/string_literal.h
-           src/common/string_util.cpp
-           src/common/string_util.h
-           src/common/thread.cpp
-           src/common/thread.h
            src/common/types.h
-        #    src/common/uint128.h
-           src/common/unique_function.h
-           src/common/va_ctx.h
-           src/common/ntapi.h
-           src/common/ntapi.cpp
-        #    src/common/number_utils.h
-        #    src/common/number_utils.cpp
            src/common/memory_patcher.h
            src/common/memory_patcher.cpp
-           src/core/memory_patcher.cpp
-           src/core/memory_patcher.h
            ${CMAKE_CURRENT_BINARY_DIR}/src/common/scm_rev.cpp
            src/common/scm_rev.h
 )
-
-if (ENABLE_DISCORD_RPC)
-    list(APPEND COMMON src/common/discord_rpc_handler.cpp src/common/discord_rpc_handler.h)
-endif()
 
 set(CORE src/core/file_format/psf.cpp
          src/core/file_format/psf.h
@@ -370,10 +301,8 @@ set(CORE src/core/file_format/psf.cpp
          src/core/file_format/trp.h
          src/core/loader/elf.cpp
          src/core/loader/elf.h
-         src/core/debug_state.cpp
-         src/core/debug_state.h
-         src/core/signals.cpp
-         src/core/signals.h
+         src/core/memory_patcher.cpp
+         src/core/memory_patcher.h
 )
 
 set(INPUT src/input/controller.cpp
@@ -461,18 +390,13 @@ qt_add_executable(shadPS4QtLauncher
 
 create_target_directory_groups(shadPS4QtLauncher)
 
-target_link_libraries(shadPS4QtLauncher PRIVATE magic_enum::magic_enum Vulkan::Headers fmt::fmt toml11::toml11 tsl::robin_map xbyak::xbyak ZLIB::ZLIB PNG::PNG)
-target_link_libraries(shadPS4QtLauncher PRIVATE Boost::headers LibAtrac9 xxHash::xxhash Zydis::Zydis SDL3::SDL3 pugixml::pugixml lfreist-hwinfo::hwinfo volk_headers)
-
-if (ENABLE_DISCORD_RPC)
-    target_compile_definitions(shadPS4QtLauncher PRIVATE ENABLE_DISCORD_RPC)
-endif()
+target_link_libraries(shadPS4QtLauncher PRIVATE Vulkan::Headers fmt::fmt toml11::toml11 SDL3::SDL3 pugixml::pugixml volk_headers)
 
 if (APPLE)
     # Include MoltenVK, along with an ICD file so it can be found by the system Vulkan loader if used for loading layers.
     set(MVK_BUNDLE_PATH "Resources/vulkan/icd.d")
     set_property(TARGET shadPS4QtLauncher APPEND PROPERTY BUILD_RPATH "@executable_path/../${MVK_BUNDLE_PATH}")
-    set(MVK_DST ${CMAKE_CURRENT_BINARY_DIR}/shadps4.app/Contents/${MVK_BUNDLE_PATH})
+    set(MVK_DST ${CMAKE_CURRENT_BINARY_DIR}/shadPS4QtLauncher.app/Contents/${MVK_BUNDLE_PATH})
 
     add_custom_command(
         OUTPUT ${MVK_DST}
@@ -494,18 +418,9 @@ if (APPLE)
     add_custom_target(CopyMoltenVK DEPENDS ${MVK_ICD_DST} ${MVK_DYLIB_DST})
     add_dependencies(CopyMoltenVK MoltenVK)
     add_dependencies(shadPS4QtLauncher CopyMoltenVK)
-
-    if (ARCHITECTURE STREQUAL "x86_64")
-        # Reserve system-managed memory space.
-        target_link_options(shadPS4QtLauncher PRIVATE -Wl,-ld_classic,-no_pie,-no_fixup_chains,-no_huge,-pagezero_size,0x4000,-segaddr,TCB_SPACE,0x4000,-segaddr,SYSTEM_MANAGED,0x400000,-segaddr,SYSTEM_RESERVED,0x7FFFFC000,-image_base,0x20000000000)
-    endif()
-
-    # Replacement for std::chrono::time_zone
-    target_link_libraries(shadPS4QtLauncher PRIVATE date::date-tz epoll-shim)
 endif()
 
 target_link_libraries(shadPS4QtLauncher PRIVATE Qt6::Widgets Qt6::Concurrent Qt6::Network Qt6::Multimedia)
-add_definitions(-DENABLE_QT_GUI) # todo
 if (ENABLE_UPDATER)
     add_definitions(-DENABLE_UPDATER)
 endif()
@@ -551,8 +466,6 @@ if (WIN32)
     target_sources(shadPS4QtLauncher PRIVATE src/shadps4.rc)
 endif()
 
-add_definitions(-DBOOST_ASIO_STANDALONE)
-
 target_include_directories(shadPS4QtLauncher PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 
 # embed resources
@@ -582,11 +495,6 @@ set_source_files_properties(src/images/shadPS4.icns PROPERTIES
 if (UNIX AND NOT APPLE)
     find_package(OpenSSL REQUIRED)
     target_link_libraries(shadPS4QtLauncher PRIVATE ${OPENSSL_LIBRARIES})
-endif()
-
-# Discord RPC
-if (ENABLE_DISCORD_RPC)
-    target_link_libraries(shadPS4QtLauncher PRIVATE discord-rpc)
 endif()
 
 # Install rules

@@ -8,7 +8,7 @@
 #include <QFileInfo>
 #include <QProcess>
 
-#include "core/memory_patcher.h"
+#include "common/memory_patcher.h"
 
 class IpcClient : public QObject {
     Q_OBJECT

@@ -5,6 +5,7 @@ path = [
     "REUSE.toml",
     "crowdin.yml",
     "CMakeSettings.json",
+    "CMakeDarwinPresets.json",
     "CMakeLinuxPresets.json",
     "CMakeWindowsPresets.json",
     "CMakePresets.json",
@@ -17,6 +18,7 @@ path = [
     "dist/net.shadps4.shadPS4.desktop",
     "dist/net.shadps4.shadPS4_metadata.pot",
     "dist/net.shadps4.shadPS4.metainfo.xml",
+    "dist/qt.conf",
     "documents/changelog.md",
     "documents/Quickstart/2.png",
     "documents/Screenshots/*",
@@ -90,34 +92,6 @@ SPDX-FileCopyrightText = "2009-2010 Iowa State University"
 SPDX-License-Identifier = "BSL-1.0"
 
 [[annotations]]
-path = "externals/renderdoc/**"
-precedence = "aggregate"
-SPDX-FileCopyrightText = "2019-2024 Baldur Karlsson"
-SPDX-License-Identifier = "MIT"
-
-[[annotations]]
-path = "externals/stb/**"
-precedence = "aggregate"
-SPDX-FileCopyrightText = "2017 Sean Barrett"
-SPDX-License-Identifier = "MIT"
-
-[[annotations]]
-path = "externals/tracy/**"
-precedence = "aggregate"
-SPDX-FileCopyrightText = "2017-2024 Bartosz Taudul <wolf@nereid.pl>"
-SPDX-License-Identifier = "BSD-3-Clause"
-
-[[annotations]]
-path = "externals/gcn/include/**"
-SPDX-FileCopyrightText = "NONE"
-SPDX-License-Identifier = "CC0-1.0"
-
-[[annotations]]
 path = "cmake/CMakeRC.cmake"
 SPDX-FileCopyrightText = "Copyright (c) 2017 vector-of-bool <vectorofbool@gmail.com>"
 SPDX-License-Identifier = "MIT"
-
-[[annotations]]
-path = "dist/qt.conf"
-SPDX-FileCopyrightText = "shadPS4 Emulator Project"
-SPDX-License-Identifier = "GPL-2.0-or-later"
