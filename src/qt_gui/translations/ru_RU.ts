@@ -1161,7 +1161,7 @@
     <name>IpcClient</name>
     <message>
       <source>ShadPS4</source>
-      <translation/>
+      <translation type="unfinished">ShadPS4</translation>
     </message>
     <message>
       <source>ShadPS4 is not found!
