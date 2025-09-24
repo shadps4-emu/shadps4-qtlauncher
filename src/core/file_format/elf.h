@@ -458,8 +458,6 @@ struct eh_frame_hdr {
     uint32_t fde_count;
 };
 
-namespace Core::Loader {
-
 class Elf {
 public:
     Elf() = default;
@@ -517,5 +515,3 @@ private:
     std::vector<elf_section_header> m_elf_shdr;
     elf_program_id_header m_self_id_header{};
 };
-
-} // namespace Core::Loader

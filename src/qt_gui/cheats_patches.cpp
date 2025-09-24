@@ -1244,7 +1244,7 @@ void CheatsPatches::applyCheat(const QString& modName, bool enabled) {
     if (!m_cheats.contains(modName))
         return;
 
-    if (MemoryPatcher::g_eboot_address == 0 && enabled) {
+    if (/* MemoryPatcher::g_eboot_address == 0 && */ enabled) {
         QMessageBox::critical(this, tr("Error"),
                               tr("Can't apply cheats before the game is started"));
         uncheckAllCheatCheckBoxes();
@@ -1260,12 +1260,13 @@ void CheatsPatches::applyCheat(const QString& modName, bool enabled) {
         std::string offsetStr = memoryMod.offset.toStdString();
         std::string valueStr = value.toStdString();
 
-        if (MemoryPatcher::g_eboot_address == 0)
+        /* if (MemoryPatcher::g_eboot_address == 0)
             return;
 
         // Determine if the hint field is present
         bool isHintPresent = m_cheats[modName].hasHint;
         MemoryPatcher::PatchMemory(modNameStr, offsetStr, valueStr, "", "", !isHintPresent, false);
+      */
     }
 }
 
@@ -1304,7 +1305,7 @@ void CheatsPatches::applyPatch(const QString& patchName, bool enabled) {
                 maskOffsetValue = std::stoi(maskOffsetStr.toStdString(), 0, 10);
             }
 
-            if (MemoryPatcher::g_eboot_address == 0) {
+            /* if (MemoryPatcher::g_eboot_address == 0) {
                 MemoryPatcher::patchInfo addingPatch;
                 addingPatch.gameSerial = patchInfo.serial.toStdString();
                 addingPatch.modNameStr = patchName.toStdString();
@@ -1320,7 +1321,7 @@ void CheatsPatches::applyPatch(const QString& patchName, bool enabled) {
             }
             MemoryPatcher::PatchMemory(patchName.toStdString(), address.toStdString(),
                                        patchValue.toStdString(), "", "", false, littleEndian,
-                                       patchMask);
+                                       patchMask); */
         }
     }
 }

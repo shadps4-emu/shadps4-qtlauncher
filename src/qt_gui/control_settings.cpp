@@ -8,7 +8,7 @@
 #include "common/logging/log.h"
 #include "common/path_util.h"
 #include "control_settings.h"
-#include "input/input_handler.h"
+#include "input/controller.h"
 #include "ui_control_settings.h"
 
 ControlSettings::ControlSettings(std::shared_ptr<GameInfoClass> game_info_get, bool isGameRunning,
@@ -1026,12 +1026,12 @@ void ControlSettings::Cleanup() {
         SDL_QuitSubSystem(SDL_INIT_EVENTS);
         SDL_Quit();
     } else {
-        if (!Config::getBackgroundControllerInput()) {
+        /* if (!Config::getBackgroundControllerInput()) {
             SDL_SetHint(SDL_HINT_JOYSTICK_ALLOW_BACKGROUND_EVENTS, "0");
         }
         SDL_Event checkGamepad{};
         checkGamepad.type = SDL_EVENT_CHANGE_CONTROLLER;
-        SDL_PushEvent(&checkGamepad);
+        SDL_PushEvent(&checkGamepad); */
     }
 }
 

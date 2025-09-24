@@ -10,7 +10,6 @@
 #include <SDL3/SDL_events.h>
 
 #include "common/path_util.h"
-#include "input/input_handler.h"
 #include "kbm_config_dialog.h"
 #include "kbm_gui.h"
 #include "kbm_help_dialog.h"
