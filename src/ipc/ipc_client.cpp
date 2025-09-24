@@ -132,7 +132,7 @@ void IpcClient::writeLine(const QString& text) {
     if (process == nullptr) {
         QMessageBox::critical(
             nullptr, tr("ShadPS4"),
-            QString(tr("ShadPS4 is not found!\nPlease change ShadPS4 path in settings.")));
+            QString(tr("shadPS4 is not found!\nPlease change shadPS4 path in settings.")));
         return;
     }
 
