@@ -29,6 +29,7 @@ public:
     std::function<void()> restartEmulatorFunc;
 
     enum ParsingState { normal, args_counter, args };
+    std::vector<std::string> parsedArgs;
 
 private:
     void onStderr();
@@ -42,5 +43,4 @@ private:
 
     ParsingState parsingState;
     int argsCounter;
-    std::vector<std::string> parsedArgs;
 };
