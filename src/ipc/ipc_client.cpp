@@ -12,11 +12,16 @@ IpcClient::IpcClient(QObject* parent) : QObject(parent) {}
 
 void IpcClient::startEmulator(const QFileInfo& exe, const QStringList& args,
                               const QString& workDir) {
-    process = std::make_unique<QProcess>(this);
+    if (process) {
+        process->disconnect();
+        process->deleteLater();
+        process = nullptr;
+    }
+    process = new QProcess(this);
 
-    connect(process.get(), &QProcess::readyReadStandardError, this, [this] { onStderr(); });
-    connect(process.get(), &QProcess::readyReadStandardOutput, this, [this] { onStdout(); });
-    connect(process.get(), &QProcess::finished, this, [this] { onProcessClosed(); });
+    connect(process, &QProcess::readyReadStandardError, this, [this] { onStderr(); });
+    connect(process, &QProcess::readyReadStandardOutput, this, [this] { onStdout(); });
+    connect(process, &QProcess::finished, this, [this] { onProcessClosed(); });
 
     process->setProcessChannelMode(QProcess::SeparateChannels);
 
@@ -47,7 +52,6 @@ void IpcClient::stopEmulator() {
 void IpcClient::restartEmulator() {
     stopEmulator();
     pendingRestart = true;
-    restartEmulatorFunc();
 }
 
 void IpcClient::toggleFullscreen() {
@@ -95,6 +99,22 @@ void IpcClient::onStderr() {
         } else if (s == "#IPC_END") {
             writeLine("RUN");
             LOG_INFO(IPC, "IPC: start emu");
+        } else if (s == "RESTART") {
+            parsingState = ParsingState::args_counter;
+        }
+
+        else if (parsingState == ParsingState::args_counter) {
+            argsCounter = s.toInt();
+            parsingState = ParsingState::args;
+        }
+
+        else if (parsingState == ParsingState::args) {
+            parsedArgs.push_back(s.toStdString());
+            if (parsedArgs.size() == argsCounter) {
+                parsingState = ParsingState::normal;
+                pendingRestart = true;
+                stopEmulator();
+            }
         }
     }
 }
@@ -105,9 +125,11 @@ void IpcClient::onStdout() {
 
 void IpcClient::onProcessClosed() {
     gameClosedFunc();
-    process->disconnect();
-    process->deleteLater();
-    process.reset();
+    if (process) {
+        process->disconnect();
+        process->deleteLater();
+        process = nullptr;
+    }
     if (pendingRestart) {
         pendingRestart = false;
         restartEmulatorFunc();
@@ -118,7 +140,7 @@ void IpcClient::writeLine(const QString& text) {
     if (process == nullptr) {
         QMessageBox::critical(
             nullptr, tr("ShadPS4"),
-            QString(tr("ShadPS4 is not found!\nPlease change ShadPS4 path in settings.")));
+            QString(tr("shadPS4 is not found!\nPlease change shadPS4 path in settings.")));
         return;
     }
 

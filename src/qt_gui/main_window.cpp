@@ -1262,6 +1262,14 @@ void MainWindow::RestartEmulator() {
     QString exe = m_gui_settings->GetValue(gui::gen_shadPath).toString();
     QStringList args{"--game", QString::fromStdWString(last_game_path.wstring())};
 
+    if (m_ipc_client->parsedArgs.size() > 0) {
+        args.clear();
+        for (auto arg : m_ipc_client->parsedArgs) {
+            args.append(QString::fromStdString(arg));
+        }
+        m_ipc_client->parsedArgs.clear();
+    }
+
     QFileInfo fileInfo(exe);
     QString workDir = fileInfo.absolutePath();
 

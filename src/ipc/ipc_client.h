@@ -28,13 +28,19 @@ public:
     std::function<void()> gameClosedFunc;
     std::function<void()> restartEmulatorFunc;
 
+    enum ParsingState { normal, args_counter, args };
+    std::vector<std::string> parsedArgs;
+
 private:
     void onStderr();
     void onStdout();
     void onProcessClosed();
     void writeLine(const QString& text);
 
-    std::unique_ptr<QProcess> process;
+    QProcess* process = nullptr;
     QByteArray buffer;
     bool pendingRestart = false;
+
+    ParsingState parsingState;
+    int argsCounter;
 };
