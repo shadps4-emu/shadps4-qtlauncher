@@ -12,11 +12,16 @@ IpcClient::IpcClient(QObject* parent) : QObject(parent) {}
 
 void IpcClient::startEmulator(const QFileInfo& exe, const QStringList& args,
                               const QString& workDir) {
-    process = std::make_unique<QProcess>(this);
+    if (process) {
+        process->disconnect();
+        process->deleteLater();
+        process = nullptr;
+    }
+    process = new QProcess(this);
 
-    connect(process.get(), &QProcess::readyReadStandardError, this, [this] { onStderr(); });
-    connect(process.get(), &QProcess::readyReadStandardOutput, this, [this] { onStdout(); });
-    connect(process.get(), &QProcess::finished, this, [this] { onProcessClosed(); });
+    connect(process, &QProcess::readyReadStandardError, this, [this] { onStderr(); });
+    connect(process, &QProcess::readyReadStandardOutput, this, [this] { onStdout(); });
+    connect(process, &QProcess::finished, this, [this] { onProcessClosed(); });
 
     process->setProcessChannelMode(QProcess::SeparateChannels);
 
@@ -47,7 +52,6 @@ void IpcClient::stopEmulator() {
 void IpcClient::restartEmulator() {
     stopEmulator();
     pendingRestart = true;
-    restartEmulatorFunc();
 }
 
 void IpcClient::toggleFullscreen() {
@@ -121,9 +125,11 @@ void IpcClient::onStdout() {
 
 void IpcClient::onProcessClosed() {
     gameClosedFunc();
-    process->disconnect();
-    process->deleteLater();
-    process.reset();
+    if (process) {
+        process->disconnect();
+        process->deleteLater();
+        process = nullptr;
+    }
     if (pendingRestart) {
         pendingRestart = false;
         restartEmulatorFunc();

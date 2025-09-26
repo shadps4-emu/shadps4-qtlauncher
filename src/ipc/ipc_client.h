@@ -37,7 +37,7 @@ private:
     void onProcessClosed();
     void writeLine(const QString& text);
 
-    std::unique_ptr<QProcess> process;
+    QProcess* process = nullptr;
     QByteArray buffer;
     bool pendingRestart = false;
 
