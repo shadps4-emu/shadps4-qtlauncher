@@ -11,6 +11,7 @@
 
 #include "about_dialog.h"
 #include "cheats_patches.h"
+#include "version_dialog.h"
 #ifdef ENABLE_UPDATER
 #include "check_update.h"
 #endif
@@ -499,9 +500,15 @@ void MainWindow::CreateConnects() {
     });
 #endif
 
+    // connect(ui->aboutAct, &QAction::triggered, this, [this]() {
+    //     auto aboutDialog = new AboutDialog(m_gui_settings, this);
+    //     aboutDialog->exec();
+    // });
+
+    // connect(ui->aboutAct, &QPushButton::clicked, this, [this]() {
     connect(ui->aboutAct, &QAction::triggered, this, [this]() {
-        auto aboutDialog = new AboutDialog(m_gui_settings, this);
-        aboutDialog->exec();
+        auto versionDialog = new VersionDialog(m_gui_settings, this);
+        versionDialog->exec();
     });
 
     connect(ui->configureHotkeys, &QAction::triggered, this, [this]() {

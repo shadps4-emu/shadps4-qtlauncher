@@ -3,12 +3,14 @@
 
 #include <vector>
 #include <QCompleter>
+#include <QDesktopServices>
 #include <QDirIterator>
 #include <QFileDialog>
 #include <QHoverEvent>
 #include <QMessageBox>
 #include <SDL3/SDL.h>
 #include <fmt/format.h>
+#include <toml.hpp>
 
 #include "common/config.h"
 #include "common/logging/log.h"
@@ -17,8 +19,6 @@
 #ifdef ENABLE_UPDATER
 #include "check_update.h"
 #endif
-#include <QDesktopServices>
-#include <toml.hpp>
 #include "background_music_player.h"
 #include "common/logging/backend.h"
 #include "common/logging/filter.h"
@@ -362,19 +362,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
                 delete selected_item;
             }
         });
-        connect(ui->browse_shad_path, &QPushButton::clicked, this, [this]() {
-            const auto shad_exe_path = m_gui_settings->GetValue(gui::gen_shadPath).toString();
-            QString initial_path;
 
-            QString shad_folder_path_string = QFileDialog::getOpenFileName(
-                this, tr("Select the shadPS4 executable"), initial_path);
-
-            auto file_path = Common::FS::PathFromQString(shad_folder_path_string);
-            if (!file_path.empty()) {
-                ui->currentShadPath->setText(shad_folder_path_string);
-                m_gui_settings->SetValue(gui::gen_shadPath, shad_folder_path_string);
-            }
-        });
         connect(ui->browseButton, &QPushButton::clicked, this, [this]() {
             const auto save_data_path = Config::GetSaveDataPath();
             QString initial_path;
@@ -515,8 +503,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         ui->gameFoldersGroupBox->installEventFilter(this);
         ui->gameFoldersListWidget->installEventFilter(this);
         ui->addFolderButton->installEventFilter(this);
-        ui->removeFolderButton->installEventFilter(this);
-        ui->currentShadPath->setText(m_gui_settings->GetValue(gui::gen_shadPath).toString());
+        ui->removeFolderButton->installEventFilter(this);        
         ui->saveDataGroupBox->installEventFilter(this);
         ui->currentSaveDataPath->installEventFilter(this);
         ui->currentDLCFolder->installEventFilter(this);
