@@ -101,7 +101,7 @@ void IpcClient::onStderr() {
             LOG_INFO(IPC, "IPC: start emu");
         } else if (s == "RESTART") {
             parsingState = ParsingState::args_counter;
-         }
+        }
 
         else if (parsingState == ParsingState::args_counter) {
             argsCounter = s.toInt();

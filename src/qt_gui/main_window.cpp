@@ -1268,7 +1268,6 @@ void MainWindow::RestartEmulator() {
             args.append(QString::fromStdString(arg));
         }
         m_ipc_client->parsedArgs.clear();
-
     }
 
     QFileInfo fileInfo(exe);
