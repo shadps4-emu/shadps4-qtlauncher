@@ -1163,10 +1163,10 @@ Einzigartige Inputs können nicht öfters als einmal gebunden werden. Input-Dupl
       <translation>ShadPS4</translation>
     </message>
     <message>
-      <source>ShadPS4 is not found!
-Please change ShadPS4 path in settings.</source>
-      <translation>ShadPS4 wurde nicht gefunden!
-Bitte ändere den ShadPS4-Pfad in den Einstellungen.</translation>
+      <source>shadPS4 is not found!
+Please change shadPS4 path in settings.</source>
+      <translation>shadPS4 wurde nicht gefunden!
+Bitte ändere den shadPS4-Pfad in den Einstellungen.</translation>
     </message>
   </context>
   <context>

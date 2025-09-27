@@ -1164,10 +1164,10 @@
       <translation>ShadPS4</translation>
     </message>
     <message>
-      <source>ShadPS4 is not found!
-Please change ShadPS4 path in settings.</source>
-      <translation>ShadPS4未找到！
-请在设置中更改ShadPS4路径。</translation>
+      <source>shadPS4 is not found!
+Please change shadPS4 path in settings.</source>
+      <translation>shadPS4未找到！
+请在设置中更改shadPS4路径。</translation>
     </message>
   </context>
   <context>
