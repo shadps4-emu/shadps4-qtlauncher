@@ -1160,8 +1160,8 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>ShadPS4 is not found!
-Please change ShadPS4 path in settings.</source>
+        <source>shadPS4 is not found!
+Please change shadPS4 path in settings.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
