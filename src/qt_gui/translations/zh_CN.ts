@@ -1166,8 +1166,8 @@
     <message>
       <source>shadPS4 is not found!
 Please change shadPS4 path in settings.</source>
-      <translation type="unfinished">shadPS4 is not found!
-Please change shadPS4 path in settings.</translation>
+      <translation>shadPS4未找到！
+请在设置中更改shadPS4路径。</translation>
     </message>
   </context>
   <context>
