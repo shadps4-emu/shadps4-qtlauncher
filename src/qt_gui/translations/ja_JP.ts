@@ -1012,7 +1012,7 @@
     </message>
     <message>
       <source>Game-specific Settings...</source>
-      <translation type="unfinished">Game-specific Settings...</translation>
+      <translation>ゲーム固有の設定...</translation>
     </message>
     <message>
       <source>Configure Game-specific Settings</source>
@@ -1161,7 +1161,7 @@
     <name>IpcClient</name>
     <message>
       <source>ShadPS4</source>
-      <translation type="unfinished">ShadPS4</translation>
+      <translation>ShadPS4</translation>
     </message>
     <message>
       <source>shadPS4 is not found!
@@ -1668,7 +1668,7 @@ Please change shadPS4 path in settings.</translation>
     </message>
     <message>
       <source>ShadPS4</source>
-      <translation type="unfinished">ShadPS4</translation>
+      <translation>ShadPS4</translation>
     </message>
     <message>
       <source>ShadPS4 is not found!
@@ -2385,7 +2385,7 @@ Please change ShadPS4 path in settings.</translation>
     </message>
     <message>
       <source>Experimental</source>
-      <translation type="unfinished">Experimental</translation>
+      <translation>実験的</translation>
     </message>
     <message>
       <source>Show Splash Screen When Launching Game</source>
