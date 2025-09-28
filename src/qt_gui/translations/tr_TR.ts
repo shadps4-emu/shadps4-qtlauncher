@@ -1161,13 +1161,13 @@
     <name>IpcClient</name>
     <message>
       <source>ShadPS4</source>
-      <translation type="unfinished">ShadPS4</translation>
+      <translation>ShadPS4</translation>
     </message>
     <message>
       <source>shadPS4 is not found!
 Please change shadPS4 path in settings.</source>
-      <translation type="unfinished">shadPS4 is not found!
-Please change shadPS4 path in settings.</translation>
+      <translation>shadPS4 bulunamadı!
+Lütfen ayarlardan shadPS4 yolunu değiştirin.</translation>
     </message>
   </context>
   <context>
@@ -1668,13 +1668,13 @@ Please change shadPS4 path in settings.</translation>
     </message>
     <message>
       <source>ShadPS4</source>
-      <translation type="unfinished">ShadPS4</translation>
+      <translation>ShadPS4</translation>
     </message>
     <message>
       <source>ShadPS4 is not found!
 Please change ShadPS4 path in settings.</source>
-      <translation type="unfinished">ShadPS4 is not found!
-Please change ShadPS4 path in settings.</translation>
+      <translation>ShadPS4 bulunamadı!
+Lütfen ayarlardan ShadPS4 yolunu değiştirin.</translation>
     </message>
   </context>
   <context>
@@ -2313,7 +2313,7 @@ Please change ShadPS4 path in settings.</translation>
     </message>
     <message>
       <source>Enable RCAS (sharpening)</source>
-      <translation type="unfinished">Enable RCAS (sharpening)</translation>
+      <translation>RCAS (keskinleştirme)</translation>
     </message>
     <message>
       <source>RCAS Attenuation:</source>
