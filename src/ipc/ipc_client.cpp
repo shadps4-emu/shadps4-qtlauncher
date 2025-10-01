@@ -86,6 +86,7 @@ void IpcClient::onStderr() {
         }
 
         if (!line.startsWith(";")) {
+            LOG_ERROR(Tty, "{}", line.toStdString());
             continue;
         }
 
