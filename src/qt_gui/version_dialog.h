@@ -17,10 +17,15 @@ class VersionDialog : public QDialog {
 public:
     explicit VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget* parent = nullptr);
     ~VersionDialog();
+    void DownloadListVersion();
+    void InstallSelectedVersion();
 
 private:
     Ui::VersionDialog* ui;
     std::shared_ptr<gui_settings> m_gui_settings;
 
     void LoadinstalledList();
+    QStringList LoadDownloadCache();
+    void SaveDownloadCache(const QStringList& versions);
+    void PopulateDownloadTree(const QStringList& versions);
 };
