@@ -75,7 +75,7 @@ private:
     void LoadTranslation();
     void PlayBackgroundMusic();
     QIcon RecolorIcon(const QIcon& icon, bool isWhite);
-    void StartEmulator(std::filesystem::path, QStringList args);
+    void StartEmulator(std::filesystem::path, QStringList args = {});
     void RestartEmulator();
 
     bool isIconBlack = false;

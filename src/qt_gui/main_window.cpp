@@ -985,7 +985,7 @@ void MainWindow::BootGame() {
                                       QString(tr("Eboot.bin file not found")));
                 return;
             }
-            StartEmulator(path, {});
+            StartEmulator(path);
         }
     }
 }
@@ -1175,7 +1175,7 @@ void MainWindow::CreateRecentGameActions() {
             QMessageBox::critical(nullptr, tr("Run Game"), QString(tr("Eboot.bin file not found")));
             return;
         }
-        StartEmulator(gamePath, {});
+        StartEmulator(gamePath);
     });
 }
 
