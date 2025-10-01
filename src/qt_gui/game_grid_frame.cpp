@@ -37,9 +37,10 @@ GameGridFrame::GameGridFrame(std::shared_ptr<gui_settings> gui_settings,
     connect(this, &QTableWidget::customContextMenuRequested, this, [=, this](const QPoint& pos) {
         int changedFavorite = m_gui_context_menus.RequestGameMenu(
             pos, m_game_info->m_games, m_compat_info, m_gui_settings, this, true,
-            [mw = QPointer<MainWindow>(qobject_cast<MainWindow*>(this->window()))]
-            (const QStringList& args) {
-                if (mw) mw->StartGameWithArgs(args);
+            [mw = QPointer<MainWindow>(qobject_cast<MainWindow*>(this->window()))](
+                const QStringList& args) {
+                if (mw)
+                    mw->StartGameWithArgs(args);
             });
         PopulateGameGrid(m_game_info->m_games, false);
     });
