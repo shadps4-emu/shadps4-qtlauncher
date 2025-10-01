@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: Copyright 2024 shadPS4 Emulator Project
+// SPDX-FileCopyrightText: Copyright 2025 shadPS4 Emulator Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #pragma once
@@ -23,8 +23,6 @@
 #include "main_window_themes.h"
 #include "main_window_ui.h"
 
-class GameListFrame;
-
 class MainWindow : public QMainWindow {
     Q_OBJECT
 signals:
@@ -36,6 +34,7 @@ public:
     bool Init();
     void InstallDirectory();
     void StartGame();
+    void StartGameWithArgs(QStringList args = {});
     void PauseGame();
     void StopGame();
     void RestartGame();
@@ -76,7 +75,7 @@ private:
     void LoadTranslation();
     void PlayBackgroundMusic();
     QIcon RecolorIcon(const QIcon& icon, bool isWhite);
-    void StartEmulator(std::filesystem::path);
+    void StartEmulator(std::filesystem::path, QStringList args);
     void RestartEmulator();
 
     bool isIconBlack = false;

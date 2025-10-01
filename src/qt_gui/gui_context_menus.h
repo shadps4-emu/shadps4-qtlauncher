@@ -1,7 +1,9 @@
-// SPDX-FileCopyrightText: Copyright 2024 shadPS4 Emulator Project
+// SPDX-FileCopyrightText: Copyright 2025 shadPS4 Emulator Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #pragma once
+
+#include <functional>
 
 #include <QClipboard>
 #include <QDesktopServices>
@@ -34,7 +36,8 @@ class GuiContextMenus : public QObject {
 public:
     int RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_games,
                         std::shared_ptr<CompatibilityInfoClass> m_compat_info,
-                        std::shared_ptr<gui_settings> settings, QTableWidget* widget, bool isList) {
+                        std::shared_ptr<gui_settings> settings, QTableWidget* widget, bool isList,
+                        std::function<void(QStringList)> launch_func) {
         QPoint global_pos = widget->viewport()->mapToGlobal(pos);
         std::shared_ptr<gui_settings> m_gui_settings = std::move(settings);
         int itemID = 0;
@@ -53,6 +56,16 @@ public:
         // Setup menu.
         QMenu menu(widget);
 
+        QMenu* launchMenu = new QMenu(tr("Launch..."), widget);
+        QAction* launchNormally =
+            new QAction(tr("Launch with game specific configs (default)"), widget);
+        QAction* launchWithGlobalConfig = new QAction(tr("Launch with global config only"), widget);
+        QAction* launchCleanly = new QAction(tr("Launch with default settings"), widget);
+
+        launchMenu->addAction(launchNormally);
+        launchMenu->addAction(launchWithGlobalConfig);
+        launchMenu->addAction(launchCleanly);
+
         // "Open Folder..." submenu
         QMenu* openFolderMenu = new QMenu(tr("Open Folder..."), widget);
         QAction* openGameFolder = new QAction(tr("Open Game Folder"), widget);
@@ -65,6 +78,7 @@ public:
         openFolderMenu->addAction(openSaveDataFolder);
         openFolderMenu->addAction(openLogFolder);
 
+        menu.addMenu(launchMenu);
         menu.addMenu(openFolderMenu);
 
         QMenu* gameConfigMenu = new QMenu(tr("Game-specific Settings..."), widget);
@@ -163,6 +177,16 @@ public:
         auto selected = menu.exec(global_pos);
         if (!selected) {
             return changedFavorite;
+        }
+
+        if (selected == launchNormally) {
+            launch_func({});
+        }
+        if (selected == launchWithGlobalConfig) {
+            launch_func({"--config-global"});
+        }
+        if (selected == launchCleanly) {
+            launch_func({"--config-clean"});
         }
 
         if (selected == openGameFolder) {

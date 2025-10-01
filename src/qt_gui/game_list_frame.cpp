@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: Copyright 2024 shadPS4 Emulator Project
+// SPDX-FileCopyrightText: Copyright 2025 shadPS4 Emulator Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include <QToolTip>
@@ -7,6 +7,7 @@
 #include "common/path_util.h"
 #include "game_list_frame.h"
 #include "game_list_utils.h"
+#include "main_window.h"
 
 GameListFrame::GameListFrame(std::shared_ptr<gui_settings> gui_settings,
                              std::shared_ptr<GameInfoClass> game_info_get,
@@ -81,7 +82,10 @@ GameListFrame::GameListFrame(std::shared_ptr<gui_settings> gui_settings,
 
     connect(this, &QTableWidget::customContextMenuRequested, this, [=, this](const QPoint& pos) {
         int changedFavorite = m_gui_context_menus.RequestGameMenu(
-            pos, m_game_info->m_games, m_compat_info, m_gui_settings, this, true);
+            pos, m_game_info->m_games, m_compat_info, m_gui_settings, this, true,
+            [this](QStringList args) {
+                dynamic_cast<MainWindow*>(this->parent())->StartGameWithArgs(args);
+            });
         PopulateGameList(false);
     });
 

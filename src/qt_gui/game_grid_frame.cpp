@@ -1,8 +1,9 @@
-// SPDX-FileCopyrightText: Copyright 2024 shadPS4 Emulator Project
+// SPDX-FileCopyrightText: Copyright 2025 shadPS4 Emulator Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include "common/path_util.h"
 #include "game_grid_frame.h"
+#include "main_window.h"
 #include "qt_gui/compatibility_info.h"
 
 GameGridFrame::GameGridFrame(std::shared_ptr<gui_settings> gui_settings,
@@ -34,8 +35,11 @@ GameGridFrame::GameGridFrame(std::shared_ptr<gui_settings> gui_settings,
     connect(this->horizontalScrollBar(), &QScrollBar::valueChanged, this,
             &GameGridFrame::RefreshGridBackgroundImage);
     connect(this, &QTableWidget::customContextMenuRequested, this, [=, this](const QPoint& pos) {
-        m_gui_context_menus.RequestGameMenu(pos, m_game_info->m_games, m_compat_info,
-                                            m_gui_settings, this, false);
+        m_gui_context_menus.RequestGameMenu(
+            pos, m_game_info->m_games, m_compat_info, m_gui_settings, this, false,
+            [this](QStringList args) {
+                dynamic_cast<MainWindow*>(this->parent())->StartGameWithArgs(args);
+            });
         PopulateGameGrid(m_game_info->m_games, false);
     });
 }
