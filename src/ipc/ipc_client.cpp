@@ -105,7 +105,7 @@ void IpcClient::onStderr() {
                     LOG_WARNING(IPC, "Feature: '{}' is not supported by the choosen emulator version", capability);
                 }
             }
-            LOG_INFO(IPC, "IPC: start emu");
+            LOG_INFO(IPC, "start emu");
             writeLine("RUN");
             startGameFunc();
         } else if (s == "RESTART") {
