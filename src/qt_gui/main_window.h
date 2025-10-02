@@ -63,6 +63,7 @@ private:
     void CreateDockWindows();
     void LoadGameLists();
     void onGameClosed();
+    void RunGame();
 
 #ifdef ENABLE_UPDATER
     void CheckUpdateMain(bool checkSave);

@@ -33,7 +33,7 @@ void IpcClient::startEmulator(const QFileInfo& exe, const QStringList& args,
     process->start(exe.absoluteFilePath(), args, QIODevice::ReadWrite);
 }
 
-void IpcClient::runGame() {
+void IpcClient::startGame() {
     writeLine("START");
 }
 
@@ -94,12 +94,20 @@ void IpcClient::onStderr() {
         if (s == "#IPC_ENABLED") {
             LOG_INFO(IPC, "IPC detected");
         } else if (s == "ENABLE_MEMORY_PATCH") {
-            LOG_INFO(IPC, "Feature detected: 'Memory patch'");
+            supportedCapabilities["memory_patch"] = true;
+            LOG_INFO(IPC, "Feature detected: 'memory_patch'");
         } else if (s == "ENABLE_EMU_CONTROL") {
-            LOG_INFO(IPC, "Feature detected: 'Emu Control'");
+            supportedCapabilities["emu_control"] = true;
+            LOG_INFO(IPC, "Feature detected: 'emu_control'");
         } else if (s == "#IPC_END") {
-            writeLine("RUN");
+            for (const auto& [capability, supported] : supportedCapabilities) {
+                if (!supported) {
+                    LOG_WARNING(IPC, "Feature: '{}' is not supported by the choosen emulator version", capability);
+                }
+            }
             LOG_INFO(IPC, "IPC: start emu");
+            writeLine("RUN");
+            startGameFunc();
         } else if (s == "RESTART") {
             parsingState = ParsingState::args_counter;
         }
