@@ -109,9 +109,6 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         // Experimental tab
         ui->tabWidgetSettings->setTabVisible(8, false);
         ui->chooseHomeTabComboBox->removeItem(8);
-
-        // Graphics tab
-        ui->heightDivider->hide();
     }
 
     std::filesystem::path config_file =
@@ -541,6 +538,8 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         ui->hostMarkersCheckBox->installEventFilter(this);
         ui->collectShaderCheckBox->installEventFilter(this);
         ui->copyGPUBuffersCheckBox->installEventFilter(this);
+
+        // Experimental
         ui->readbacksCheckBox->installEventFilter(this);
         ui->readbackLinearImagesCheckBox->installEventFilter(this);
         ui->dumpShadersCheckBox->installEventFilter(this);
@@ -549,6 +548,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         ui->neoCheckBox->installEventFilter(this);
         ui->networkConnectedCheckBox->installEventFilter(this);
         ui->psnSignInCheckBox->installEventFilter(this);
+        ui->dmemGroupBox->installEventFilter(this);
     }
 
     SdlEventWrapper::Wrapper::wrapperActive = true;
@@ -700,6 +700,7 @@ void SettingsDialog::LoadValuesFromConfig() {
         toml::find_or<bool>(data, "General", "isConnectedToNetwork", false));
     ui->psnSignInCheckBox->setChecked(toml::find_or<bool>(data, "General", "isPSNSignedIn", false));
     ui->vblankSpinBox->setValue(toml::find_or<int>(data, "GPU", "vblankFrequency", 60));
+    ui->dmemSpinBox->setValue(toml::find_or<int>(data, "General", "extraDmemInMbytes", 0));
 
     // First options is auto selection -1, so gpuId on the GUI will always have to subtract 1
     // when setting and add 1 when getting to select the correct gpu in Qt
@@ -979,10 +980,6 @@ void SettingsDialog::updateNoteTextEdit(const QString& elementName) {
         text = tr("Copy GPU Buffers:\\nGets around race conditions involving GPU submits.\\nMay or may not help with PM4 type 0 crashes.");
     } else if (elementName == "collectShaderCheckBox") {
         text = tr("Collect Shaders:\\nYou need this enabled to edit shaders with the debug menu (Ctrl + F10).");
-    } else if (elementName == "readbacksCheckBox") {
-        text = tr("Enable Readbacks:\\nEnable GPU memory readbacks and writebacks.\\nThis is required for proper behavior in some games.\\nMight cause stability and/or performance issues.");
-    } else if (elementName == "readbackLinearImagesCheckBox") {
-        text = tr("Enable Readback Linear Images:\\nEnables async downloading of GPU modified linear images.\\nMight fix issues in some games.");
     } else if (elementName == "separateLogFilesCheckbox") {
         text = tr("Separate Log Files:\\nWrites a separate logfile for each game.");
     } else if (elementName == "enableLoggingCheckBox") {
@@ -999,7 +996,10 @@ void SettingsDialog::updateNoteTextEdit(const QString& elementName) {
         text = tr("Show Game Size In List:\\nThere is the size of the game in the list.");
     } else if (elementName == "motionControlsCheckBox") {
         text = tr("Enable Motion Controls:\\nWhen enabled it will use the controller's motion control if supported.");
-    } else if (elementName == "dmaCheckBox") {
+    } 
+
+    // Experimental
+    if (elementName == "dmaCheckBox") {
         text = tr("Enable Direct Memory Access:\\nEnables arbitrary memory access from the GPU to CPU memory.");
     } else if (elementName == "neoCheckBox") {
         text = tr("Enable PS4 Neo Mode:\\nAdds support for PS4 Pro emulation and memory size. Currently causes instability in a large number of tested games.");
@@ -1008,8 +1008,15 @@ void SettingsDialog::updateNoteTextEdit(const QString& elementName) {
     } else if (elementName == "networkConnectedCheckBox") {
         text = tr("Set Network Connected to True:\\nForces games to detect an active network connection. Actual online capabilities are not yet supported.");
     } else if (elementName == "psnSignInCheckBox") {
-        text = tr("Set PSN Signed-in to True:\\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported."); 
+        text = tr("Set PSN Signed-in to True:\\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported.");
+    } else if (elementName == "readbacksCheckBox") {
+        text = tr("Enable Readbacks:\\nEnable GPU memory readbacks and writebacks.\\nThis is required for proper behavior in some games.\\nMight cause stability and/or performance issues.");
+    } else if (elementName == "readbackLinearImagesCheckBox") {
+        text = tr("Enable Readback Linear Images:\\nEnables async downloading of GPU modified linear images.\\nMight fix issues in some games.");
+    } else if (elementName == "dmemGroupBox") {
+        text = tr("Additional DMem Allocation:\\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.");
     }
+
     // clang-format on
     ui->descriptionText->setText(text.replace("\\n", "\n"));
 }
@@ -1040,6 +1047,7 @@ void SettingsDialog::UpdateSettings(bool is_specific) {
     Config::setConnectedToNetwork(ui->networkConnectedCheckBox->isChecked(), is_specific);
     Config::setPSNSignedIn(ui->psnSignInCheckBox->isChecked(), is_specific);
     Config::setVblankFreq(ui->vblankSpinBox->value(), is_specific);
+    Config::setExtraDmemInMbytes(ui->dmemSpinBox->value(), is_specific);
 
     Config::setIsFullscreen(
         screenModeMap.value(ui->displayModeComboBox->currentText()) != "Windowed", is_specific);
