@@ -115,6 +115,7 @@ public:
 static ConfigEntry<int> volumeSlider(100);
 static ConfigEntry<bool> isNeo(false);
 static ConfigEntry<bool> isDevKit(false);
+static ConfigEntry<int> extraDmemInMbytes(0);
 static ConfigEntry<bool> isPSNSignedIn(false);
 static ConfigEntry<bool> isTrophyPopupDisabled(false);
 static ConfigEntry<double> trophyNotificationDuration(6.0);
@@ -750,6 +751,16 @@ void setPSNSignedIn(bool sign, bool is_game_specific) {
     isPSNSignedIn.set(sign, is_game_specific);
 }
 
+int getExtraDmemInMbytes() {
+    return extraDmemInMbytes.get();
+}
+
+void setExtraDmemInMbytes(int value, bool is_game_specific) {
+    // Disable setting in global config
+    is_game_specific ? extraDmemInMbytes.game_specific_value = value
+                     : extraDmemInMbytes.base_value = 0;
+}
+
 string getDefaultControllerID() {
     return defaultControllerID.get();
 }
@@ -814,6 +825,10 @@ void load(const std::filesystem::path& path, bool is_game_specific) {
 
     if (data.contains("General")) {
         const toml::value& general = data.at("General");
+
+        if (is_game_specific) { // do not get this value from the base config
+            extraDmemInMbytes.setFromToml(general, "extraDmemInMbytes", is_game_specific);
+        }
 
         volumeSlider.setFromToml(general, "volumeSlider", is_game_specific);
         isNeo.setFromToml(general, "isPS4Pro", is_game_specific);
@@ -1006,6 +1021,11 @@ void save(const std::filesystem::path& path, bool is_game_specific) {
         fmt::print("Saving new configuration file {}\n", fmt::UTF(path.u8string()));
     }
 
+    // Do not save in global config
+    if (is_game_specific) {
+        extraDmemInMbytes.setTomlValue(data, "General", "extraDmemInMbytes", is_game_specific);
+    }
+
     // Entries saved by the game-specific settings GUI
     volumeSlider.setTomlValue(data, "General", "volumeSlider", is_game_specific);
     isTrophyPopupDisabled.setTomlValue(data, "General", "isTrophyPopupDisabled", is_game_specific);
@@ -1142,6 +1162,7 @@ void setDefaultValues(bool is_game_specific) {
         isConnectedToNetwork.set(false, is_game_specific);
         directMemoryAccessEnabled.set(false, is_game_specific);
         vblankFrequency.set(60, is_game_specific);
+        extraDmemInMbytes.set(0, is_game_specific);
     }
 
     // Entries with game-specific settings that are in both the game-specific and global GUI
