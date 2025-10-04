@@ -37,6 +37,7 @@ MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent), ui(new Ui::MainWi
     m_ipc_client = std::make_shared<IpcClient>(this);
     m_ipc_client->gameClosedFunc = [this]() { onGameClosed(); };
     m_ipc_client->restartEmulatorFunc = [this]() { RestartEmulator(); };
+    m_ipc_client->startGameFunc = [this]() { RunGame(); };
 }
 
 MainWindow::~MainWindow() {
@@ -1232,8 +1233,8 @@ void MainWindow::StartEmulator(std::filesystem::path path) {
     QFileInfo fileInfo(exe);
     if (!fileInfo.exists()) {
         QMessageBox::critical(
-            nullptr, tr("ShadPS4"),
-            QString(tr("ShadPS4 is not found!\nPlease change ShadPS4 path in settings.")));
+            nullptr, tr("shadPS4"),
+            QString(tr("shadPS4 is not found!\nPlease change shadPS4 path in settings.")));
         return;
     }
 
@@ -1242,9 +1243,11 @@ void MainWindow::StartEmulator(std::filesystem::path path) {
     QString workDir = fileInfo.absolutePath();
 
     m_ipc_client->startEmulator(fileInfo, args, workDir);
+}
 
+void MainWindow::RunGame() {
     auto gameInfo = GameInfoClass();
-    auto dir = path.parent_path();
+    auto dir = last_game_path.parent_path();
     auto info = gameInfo.readGameInfo(dir);
     auto appVersion = info.version;
     auto gameSerial = info.serial;
@@ -1255,7 +1258,7 @@ void MainWindow::StartEmulator(std::filesystem::path path) {
                                         patch.mask, patch.maskOffset);
     }
 
-    m_ipc_client->runGame();
+    m_ipc_client->startGame();
 }
 
 void MainWindow::RestartEmulator() {
@@ -1274,5 +1277,4 @@ void MainWindow::RestartEmulator() {
     QString workDir = fileInfo.absolutePath();
 
     m_ipc_client->startEmulator(fileInfo, args, workDir);
-    m_ipc_client->runGame();
 }
