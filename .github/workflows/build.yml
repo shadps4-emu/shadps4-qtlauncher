@@ -17,14 +17,14 @@ jobs:
     runs-on: ubuntu-24.04
     continue-on-error: true
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
     - uses: fsfe/reuse-action@v5
 
   clang-format:
     runs-on: ubuntu-24.04
     continue-on-error: true
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
       with:
         fetch-depth: 0
     - name: Install
@@ -45,7 +45,7 @@ jobs:
       shorthash: ${{ steps.vars.outputs.shorthash }}
       fullhash: ${{ steps.vars.outputs.fullhash }}
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
     - name: Get date and git hash
       id: vars
       run: |
@@ -60,14 +60,14 @@ jobs:
     runs-on: windows-2025
     needs: get-info
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
       with:
         submodules: recursive
 
     - name: Setup Qt
       uses: jurplel/install-qt-action@v4
       with:
-        version: 6.9.2
+        version: 6.9.3
         host: windows
         target: desktop
         arch: win64_msvc2022_64
@@ -86,7 +86,7 @@ jobs:
             ${{ env.cache-name }}-
 
     - name: Cache CMake Build
-      uses: hendrikmuhs/ccache-action@v1.2.18
+      uses: hendrikmuhs/ccache-action@v1.2.19
       env:
           cache-name: ${{ runner.os }}-qt-cache-cmake-build
       with:
@@ -121,7 +121,7 @@ jobs:
       matrix:
         arch: [ "arm64", "x86_64" ]
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
       with:
         submodules: recursive
 
@@ -133,7 +133,7 @@ jobs:
     - name: Setup Qt
       uses: jurplel/install-qt-action@v4
       with:
-        version: 6.9.2
+        version: 6.9.3
         host: mac
         target: desktop
         arch: clang_64
@@ -152,7 +152,7 @@ jobs:
             ${{ env.cache-name }}- 
 
     - name: Cache CMake Build
-      uses: hendrikmuhs/ccache-action@v1.2.18
+      uses: hendrikmuhs/ccache-action@v1.2.19
       env:
           cache-name: ${{ runner.os }}-${{ matrix.arch }}-qt-cache-cmake-build
       with:
@@ -183,7 +183,7 @@ jobs:
     runs-on: ubuntu-24.04
     needs: get-info
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
       with:
         submodules: recursive
 
@@ -207,7 +207,7 @@ jobs:
             ${{ env.cache-name }}- 
 
     - name: Cache CMake Build
-      uses: hendrikmuhs/ccache-action@v1.2.18
+      uses: hendrikmuhs/ccache-action@v1.2.19
       env:
           cache-name: ${{ runner.os }}-qt-cache-cmake-build
       with:
@@ -235,7 +235,7 @@ jobs:
     runs-on: ubuntu-24.04
     needs: get-info
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
       with:
         submodules: recursive
 
@@ -254,7 +254,7 @@ jobs:
             ${{ env.cache-name }}- 
 
     - name: Cache CMake Build
-      uses: hendrikmuhs/ccache-action@v1.2.18
+      uses: hendrikmuhs/ccache-action@v1.2.19
       env:
           cache-name: ${{ runner.os }}-qt-gcc-cache-cmake-build
       with:
