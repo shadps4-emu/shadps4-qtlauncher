@@ -323,6 +323,21 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
                                       Common::FS::GetUserPath(Common::FS::PathType::CustomTrophy));
             QDesktopServices::openUrl(QUrl::fromLocalFile(userPath));
         });
+
+        connect(ui->PortableUserButton, &QPushButton::clicked, this, []() {
+            QString userDir;
+            Common::FS::PathToQString(userDir, std::filesystem::current_path() / "user");
+            if (std::filesystem::exists(std::filesystem::current_path() / "user")) {
+                QMessageBox::information(NULL, tr("Cannot create portable user folder"),
+                                         tr("%1 already exists").arg(userDir));
+            } else {
+                std::filesystem::copy(Common::FS::GetUserPath(Common::FS::PathType::UserDir),
+                                      std::filesystem::current_path() / "user",
+                                      std::filesystem::copy_options::recursive);
+                QMessageBox::information(NULL, tr("Portable user folder created"),
+                                         tr("%1 successfully created.").arg(userDir));
+            }
+        });
     }
 
     // INPUT TAB
@@ -402,18 +417,18 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
             }
         });
 
-        connect(ui->PortableUserButton, &QPushButton::clicked, this, []() {
-            QString userDir;
-            Common::FS::PathToQString(userDir, std::filesystem::current_path() / "user");
-            if (std::filesystem::exists(std::filesystem::current_path() / "user")) {
-                QMessageBox::information(NULL, tr("Cannot create portable user folder"),
-                                         tr("%1 already exists").arg(userDir));
-            } else {
-                std::filesystem::copy(Common::FS::GetUserPath(Common::FS::PathType::UserDir),
-                                      std::filesystem::current_path() / "user",
-                                      std::filesystem::copy_options::recursive);
-                QMessageBox::information(NULL, tr("Portable user folder created"),
-                                         tr("%1 successfully created.").arg(userDir));
+        connect(ui->browse_sysmodules, &QPushButton::clicked, this, [this]() {
+            const auto sysmodules_path = Config::getSysModulesPath();
+            QString initial_path;
+            Common::FS::PathToQString(initial_path, sysmodules_path);
+
+            QString sysmodules_path_string =
+                QFileDialog::getExistingDirectory(this, tr("Select the DLC folder"), initial_path);
+
+            auto file_path = Common::FS::PathFromQString(sysmodules_path_string);
+            if (!file_path.empty()) {
+                Config::setSysModulesPath(file_path);
+                ui->sysmodulesPath->setText(sysmodules_path_string);
             }
         });
     }
@@ -490,6 +505,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         ui->OpenCustomTrophyLocationButton->installEventFilter(this);
         ui->label_Trophy->installEventFilter(this);
         ui->trophyKeyLineEdit->installEventFilter(this);
+        ui->PortableUserFolderGroupBox->installEventFilter(this);
 
         // Input
         ui->hideCursorGroupBox->installEventFilter(this);
@@ -513,13 +529,13 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         ui->gameFoldersListWidget->installEventFilter(this);
         ui->addFolderButton->installEventFilter(this);
         ui->removeFolderButton->installEventFilter(this);
-        ui->currentShadPath->setText(m_gui_settings->GetValue(gui::gen_shadPath).toString());
         ui->saveDataGroupBox->installEventFilter(this);
+        ui->sysmodulesGroupBox->installEventFilter(this);
+        ui->browse_sysmodules->installEventFilter(this);
         ui->currentSaveDataPath->installEventFilter(this);
         ui->currentDLCFolder->installEventFilter(this);
         ui->browseButton->installEventFilter(this);
         ui->folderButton->installEventFilter(this);
-        ui->PortableUserFolderGroupBox->installEventFilter(this);
 
         // Log
         ui->logTypeGroupBox->installEventFilter(this);
@@ -614,6 +630,8 @@ void SettingsDialog::LoadValuesFromConfig() {
 
     // Entries with no game-specific settings
     if (!is_game_specific) {
+        ui->currentShadPath->setText(m_gui_settings->GetValue(gui::gen_shadPath).toString());
+
         const auto save_data_path = Config::GetSaveDataPath();
         QString save_data_path_string;
         Common::FS::PathToQString(save_data_path_string, save_data_path);
@@ -623,6 +641,11 @@ void SettingsDialog::LoadValuesFromConfig() {
         QString dlc_folder_path_string;
         Common::FS::PathToQString(dlc_folder_path_string, dlc_folder_path);
         ui->currentDLCFolder->setText(dlc_folder_path_string);
+
+        const auto sysmodules_path = Config::getSysModulesPath();
+        QString sysmodules_path_string;
+        Common::FS::PathToQString(sysmodules_path_string, sysmodules_path);
+        ui->sysmodulesPath->setText(sysmodules_path_string);
 
         ui->emulatorLanguageComboBox->setCurrentIndex(
             languages[m_gui_settings->GetValue(gui::gen_guiLanguage).toString().toStdString()]);
@@ -945,6 +968,10 @@ void SettingsDialog::updateNoteTextEdit(const QString& elementName) {
         text = tr("Remove:\\nRemove a folder from the list.");
     } else if (elementName == "PortableUserFolderGroupBox") {
         text = tr("Portable user folder:\\nStores shadPS4 settings and data that will be applied only to the shadPS4 build located in the current folder. Restart the app after creating the portable user folder to begin using it.");
+    } else if (elementName == "sysmodulesGroupBox") {
+        text = tr("PS4 Sysmodules Path:\\nThe folder where PS4 sysmodules are loaded from.");
+    } else if (elementName == "browse_sysmodules") {
+        text = tr("Browse:\\nBrowse for a folder to set as the sysmodules path.");
     }
 
     // DLC Folder
