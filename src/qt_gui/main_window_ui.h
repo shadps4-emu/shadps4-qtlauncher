@@ -52,6 +52,8 @@ public:
     QPushButton* keyboardButton;
     QPushButton* fullscreenButton;
     QPushButton* restartButton;
+    QPushButton* versionManagerdButton;
+    QComboBox* versionComboBox;
 
     QWidget* sizeSliderContainer;
     QHBoxLayout* sizeSliderContainer_layout;
@@ -343,6 +345,15 @@ public:
         menuHelp->addAction(updaterAct);
 #endif
         menuHelp->addAction(aboutAct);
+
+        versionComboBox = new QComboBox(centralWidget);
+        versionComboBox->setObjectName("versionComboBox");
+        versionComboBox->setMinimumWidth(100);
+
+        versionManagerdButton = new QPushButton(centralWidget);
+        versionManagerdButton->setFlat(true);
+        versionManagerdButton->setIcon(QIcon(":images/folder_icon.png"));
+        versionManagerdButton->setIconSize(QSize(40, 40));
 
         retranslateUi(MainWindow);
 

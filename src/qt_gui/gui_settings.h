@@ -24,7 +24,7 @@ const gui_value gen_guiLanguage = gui_value(general_settings, "guiLanguage", "en
 const gui_value gen_elfDirs =
     gui_value(main_window, "elfDirs", QVariant::fromValue(QList<QString>()));
 const gui_value gen_theme = gui_value(general_settings, "theme", 0);
-const gui_value gen_shadPath = gui_value(main_window, "shadPath", "");
+
 // main window settings
 const gui_value mw_geometry = gui_value(main_window, "geometry", QByteArray());
 const gui_value mw_showLabelsUnderIcons = gui_value(main_window, "showLabelsUnderIcons", true);
@@ -46,6 +46,10 @@ const gui_value gg_slider_pos = gui_value(game_grid, "slider_pos", 0);
 // favorites list
 const gui_value favorites_list =
     gui_value(favorites, "favoritesList", QVariant::fromValue(QList<QString>()));
+
+// version manager
+const gui_value vm_versionPath = gui_value(main_window, "versionPath", "");
+const gui_value vm_versionSelected = gui_value(main_window, "versionSelected", "");
 
 } // namespace gui
 

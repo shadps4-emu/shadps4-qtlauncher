@@ -20,6 +20,7 @@
 
 #include "common/config.h"
 #include "gui_settings.h"
+#include "qt_gui/main_window.h"
 #include "ui_version_dialog.h"
 #include "version_dialog.h"
 
@@ -27,7 +28,17 @@ VersionDialog::VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget
     : QDialog(parent), ui(new Ui::VersionDialog), m_gui_settings(std::move(gui_settings)) {
     ui->setupUi(this);
 
-    ui->currentShadPath->setText(m_gui_settings->GetValue(gui::gen_shadPath).toString());
+    if (m_gui_settings->GetValue(gui::vm_versionPath).toString() == "") {
+        QString versionDir = QString::fromStdString(
+            Common::FS::GetUserPath(Common::FS::PathType::VersionDir).string());
+        QDir dir(versionDir);
+        if (!dir.exists()) {
+            dir.mkpath(".");
+        }
+        m_gui_settings->SetValue(gui::vm_versionPath, versionDir);
+    }
+
+    ui->currentVersionPath->setText(m_gui_settings->GetValue(gui::vm_versionPath).toString());
 
     LoadinstalledList();
 
@@ -38,17 +49,19 @@ VersionDialog::VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget
         DownloadListVersion();
     }
 
-    connect(ui->browse_shad_path, &QPushButton::clicked, this, [this]() {
-        const auto shad_exe_path = m_gui_settings->GetValue(gui::gen_shadPath).toString();
+    connect(ui->browse_versionPath, &QPushButton::clicked, this, [this]() {
+        const auto shad_exe_path = m_gui_settings->GetValue(gui::vm_versionPath).toString();
         QString initial_path = shad_exe_path;
 
-        QString shad_folder_path_string =
-            QFileDialog::getExistingDirectory(this, tr("Select the shadPS4 folder"), initial_path);
+        QString shad_folder_path_string = QFileDialog::getExistingDirectory(
+            this, tr("Select the folder where the emulator versions will be installed"),
+            initial_path);
 
         auto folder_path = Common::FS::PathFromQString(shad_folder_path_string);
         if (!folder_path.empty()) {
-            ui->currentShadPath->setText(shad_folder_path_string);
-            m_gui_settings->SetValue(gui::gen_shadPath, shad_folder_path_string);
+            ui->currentVersionPath->setText(shad_folder_path_string);
+            m_gui_settings->SetValue(gui::vm_versionPath, shad_folder_path_string);
+            LoadinstalledList();
         }
     });
 
@@ -82,7 +95,7 @@ VersionDialog::VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget
 
         folderName = folderName.trimmed();
 
-        QString basePath = m_gui_settings->GetValue(gui::gen_shadPath).toString();
+        QString basePath = m_gui_settings->GetValue(gui::vm_versionPath).toString();
         QString newFolderPath = QDir(basePath).filePath(folderName);
 
         QDir dir;
@@ -117,7 +130,7 @@ VersionDialog::VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget
         }
 
         // Get the actual path of the invisible column folder
-        QString fullPath = selectedItem->text(3);
+        QString fullPath = selectedItem->text(4);
         if (fullPath.isEmpty()) {
             QMessageBox::critical(this, tr("Error"), tr("Failed to determine the folder path."));
             return;
@@ -143,10 +156,33 @@ VersionDialog::VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget
 
     connect(ui->checkVersionDownloadButton, &QPushButton::clicked, this,
             [this]() { DownloadListVersion(); });
+
+    connect(ui->installedTreeWidget, &QTreeWidget::itemChanged, this,
+            &VersionDialog::onItemChanged);
 };
 
 VersionDialog::~VersionDialog() {
     delete ui;
+}
+
+void VersionDialog::onItemChanged(QTreeWidgetItem* item, int column) {
+    if (column == 0) {
+        if (item->checkState(0) == Qt::Checked) {
+            for (int row = 0; row < ui->installedTreeWidget->topLevelItemCount(); ++row) {
+                QTreeWidgetItem* topItem = ui->installedTreeWidget->topLevelItem(row);
+                if (topItem != item) {
+                    topItem->setCheckState(0, Qt::Unchecked);
+                    topItem->setSelected(false);
+                }
+            }
+            QString fullPath = item->text(4);
+            m_gui_settings->SetValue(gui::vm_versionSelected, fullPath);
+
+            item->setSelected(true);
+        } else {
+            item->setSelected(false);
+        }
+    }
 }
 
 void VersionDialog::DownloadListVersion() {
@@ -258,11 +294,12 @@ void VersionDialog::InstallSelectedVersion() {
     connect(
         ui->downloadTreeWidget, &QTreeWidget::itemClicked, this,
         [this](QTreeWidgetItem* item, int) {
-            if (m_gui_settings->GetValue(gui::gen_shadPath).toString() == "") {
+            if (m_gui_settings->GetValue(gui::vm_versionPath).toString() == "") {
 
                 QMessageBox::StandardButton reply;
-                reply = QMessageBox::warning(this, tr("Select the shadPS4 folder"),
-                                             // clang-format off
+                reply = QMessageBox::warning(
+                    this, tr("Select the folder where the emulator versions will be installed"),
+                    // clang-format off
 tr("First you need to choose a location to save the versions in\n'Path to save versions'"));
                 // clang-format on
                 return;
@@ -306,7 +343,6 @@ tr("First you need to choose a location to save the versions in\n'Path to save v
                     reply->deleteLater();
                     return;
                 }
-
                 QByteArray response = reply->readAll();
                 QJsonDocument doc = QJsonDocument::fromJson(response);
 
@@ -337,7 +373,6 @@ tr("First you need to choose a location to save the versions in\n'Path to save v
                         break;
                     }
                 }
-
                 if (downloadUrl.isEmpty()) {
                     QMessageBox::warning(this, tr("Error"),
                                          tr("No files available for this platform."));
@@ -345,7 +380,7 @@ tr("First you need to choose a location to save the versions in\n'Path to save v
                     return;
                 }
 
-                QString userPath = m_gui_settings->GetValue(gui::gen_shadPath).toString();
+                QString userPath = m_gui_settings->GetValue(gui::vm_versionPath).toString();
                 QString fileName = "temp_download_update.zip";
                 QString destinationPath = userPath + "/" + fileName;
 
@@ -463,9 +498,18 @@ tr("First you need to choose a location to save the versions in\n'Path to save v
                                 4000, this, [this, folderName, progressDialog, versionName]() {
                                     progressDialog->close();
                                     progressDialog->deleteLater();
+
+                                    QString userPath =
+                                        m_gui_settings->GetValue(gui::vm_versionPath).toString();
+                                    QString fullPath = QDir(userPath).filePath(folderName);
+
+                                    m_gui_settings->SetValue(gui::vm_versionSelected, fullPath);
+
                                     QMessageBox::information(
                                         this, tr("Download"),
-                                        tr("Version %1 has been downloaded").arg(versionName));
+                                        tr("Version %1 has been downloaded and selected.")
+                                            .arg(versionName));
+
                                     VersionDialog::LoadinstalledList();
                                 });
 
@@ -481,28 +525,29 @@ tr("First you need to choose a location to save the versions in\n'Path to save v
 }
 
 void VersionDialog::LoadinstalledList() {
-    QString path = m_gui_settings->GetValue(gui::gen_shadPath).toString();
+    QString path = m_gui_settings->GetValue(gui::vm_versionPath).toString();
     QDir dir(path);
     if (!dir.exists() || path.isEmpty())
         return;
 
     ui->installedTreeWidget->clear();
-    ui->installedTreeWidget->setColumnCount(4);        // 4 = FullPath
-    ui->installedTreeWidget->setColumnHidden(3, true); // FullPath invisible
+    ui->installedTreeWidget->setColumnCount(5);
+    ui->installedTreeWidget->setColumnHidden(4, true);
 
     QStringList folders = dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot);
 
     QRegularExpression versionRegex("^v(\\d+)\\.(\\d+)\\.(\\d+)$");
 
     QVector<QPair<QVector<int>, QString>> versionedDirs;
+
     QStringList otherDirs;
+    QString savedVersionPath = m_gui_settings->GetValue(gui::vm_versionSelected).toString();
 
     for (const QString& folder : folders) {
         if (folder == "Pre-release") {
             otherDirs.append(folder);
             continue;
         }
-
         QRegularExpressionMatch match = versionRegex.match(folder.section(" - ", 0, 0));
         if (match.hasMatch()) {
             QVector<int> versionParts = {match.captured(1).toInt(), match.captured(2).toInt(),
@@ -517,71 +562,83 @@ void VersionDialog::LoadinstalledList() {
 
     std::sort(versionedDirs.begin(), versionedDirs.end(), [](const auto& a, const auto& b) {
         if (a.first[0] != b.first[0])
-            return a.first[0] > b.first[0]; // major
+            return a.first[0] > b.first[0];
         if (a.first[1] != b.first[1])
-            return a.first[1] > b.first[1]; // minor
-        return a.first[2] > b.first[2];     // patch
+            return a.first[1] > b.first[1];
+        return a.first[2] > b.first[2];
     });
 
-    // add (Pre-release, Test Build...)
+    // Add (Pre-release, Test Build...)
     for (const QString& folder : otherDirs) {
         QTreeWidgetItem* item = new QTreeWidgetItem(ui->installedTreeWidget);
         QString fullPath = QDir(path).filePath(folder);
-        item->setText(3, fullPath); // FullPath invisible column
+        item->setText(4, fullPath);
+        item->setCheckState(0, Qt::Unchecked);
 
         if (folder.startsWith("Pre-release-shadPS4")) {
             QStringList parts = folder.split('-');
-            item->setText(0, "Pre-release"); // Version
+            item->setText(1, "Pre-release");
             QString shortHash;
             if (parts.size() >= 7) {
                 shortHash = parts[6].left(7);
             } else {
                 shortHash = "";
             }
-            item->setText(1, shortHash);
+            item->setText(2, shortHash);
             if (parts.size() >= 6) {
                 QString date = QString("%1-%2-%3").arg(parts[3], parts[4], parts[5]);
-                item->setText(2, date);
+                item->setText(3, date);
             } else {
-                item->setText(2, "");
+                item->setText(3, "");
             }
         } else if (folder.contains(" - ")) {
             QStringList parts = folder.split(" - ");
-            item->setText(0, parts.value(0));
-            item->setText(1, parts.value(1));
-            item->setText(2, parts.value(2));
+            item->setText(1, parts.value(0));
+            item->setText(2, parts.value(1));
+            item->setText(3, parts.value(2));
         } else {
-            item->setText(0, folder); // only Version
-            item->setText(1, "");
+            item->setText(1, folder);
             item->setText(2, "");
+            item->setText(3, "");
+        }
+
+        if (fullPath == savedVersionPath) {
+            item->setCheckState(0, Qt::Checked);
         }
     }
 
-    // add versions
+    // Add versions
     for (const auto& pair : versionedDirs) {
         QTreeWidgetItem* item = new QTreeWidgetItem(ui->installedTreeWidget);
         QString fullPath = QDir(path).filePath(pair.second);
-        item->setText(3, fullPath); // FullPath invisible column
+        item->setText(4, fullPath);
+        item->setCheckState(0, Qt::Unchecked);
 
         if (pair.second.contains(" - ")) {
             QStringList parts = pair.second.split(" - ");
-            item->setText(0, parts.value(0)); // Version
-            item->setText(1, parts.value(1)); // Name
-            item->setText(2, parts.value(2)); // Date
+            item->setText(1, parts.value(0));
+            item->setText(2, parts.value(1));
+            item->setText(3, parts.value(2));
         } else {
-            item->setText(0, pair.second); // only Version
-            item->setText(1, "");
+            item->setText(1, pair.second);
             item->setText(2, "");
+            item->setText(3, "");
+        }
+
+        if (fullPath == savedVersionPath) {
+            item->setCheckState(0, Qt::Checked);
         }
     }
-
-    ui->installedTreeWidget->resizeColumnToContents(1); // 1 = Name
-    ui->installedTreeWidget->setColumnWidth(1, ui->installedTreeWidget->columnWidth(1) + 50);
+    ui->installedTreeWidget->resizeColumnToContents(0);
+    ui->installedTreeWidget->resizeColumnToContents(1);
+    ui->installedTreeWidget->resizeColumnToContents(2);
+    ui->installedTreeWidget->setColumnWidth(1, ui->installedTreeWidget->columnWidth(1) + 10);
+    ui->installedTreeWidget->setColumnWidth(2, ui->installedTreeWidget->columnWidth(2) + 20);
 }
 
 QStringList VersionDialog::LoadDownloadCache() {
     QString cachePath =
-        QDir(m_gui_settings->GetValue(gui::gen_shadPath).toString()).filePath("cache.version");
+        QDir(m_gui_settings->GetValue(gui::vm_versionPath).toString()).filePath("cache.version");
     QStringList cachedVersions;
     QFile file(cachePath);
     if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
@@ -594,7 +651,7 @@ QStringList VersionDialog::LoadDownloadCache() {
 
 void VersionDialog::SaveDownloadCache(const QStringList& versions) {
     QString cachePath =
-        QDir(m_gui_settings->GetValue(gui::gen_shadPath).toString()).filePath("cache.version");
+        QDir(m_gui_settings->GetValue(gui::vm_versionPath).toString()).filePath("cache.version");
     QFile file(cachePath);
     if (file.open(QIODevice::WriteOnly | QIODevice::Text)) {
         QTextStream out(&file);

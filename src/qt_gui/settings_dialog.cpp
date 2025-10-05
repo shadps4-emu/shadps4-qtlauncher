@@ -503,7 +503,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         ui->gameFoldersGroupBox->installEventFilter(this);
         ui->gameFoldersListWidget->installEventFilter(this);
         ui->addFolderButton->installEventFilter(this);
-        ui->removeFolderButton->installEventFilter(this);        
+        ui->removeFolderButton->installEventFilter(this);
         ui->saveDataGroupBox->installEventFilter(this);
         ui->currentSaveDataPath->installEventFilter(this);
         ui->currentDLCFolder->installEventFilter(this);

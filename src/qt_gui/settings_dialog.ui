@@ -59,7 +59,7 @@
       </size>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>5</number>
      </property>
      <property name="usesScrollButtons">
       <bool>true</bool>
@@ -76,8 +76,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>946</width>
-         <height>536</height>
+         <width>579</width>
+         <height>482</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="generalTabVLayout" stretch="0">
@@ -320,8 +320,8 @@
                       <rect>
                        <x>0</x>
                        <y>0</y>
-                       <width>408</width>
-                       <height>68</height>
+                       <width>98</width>
+                       <height>47</height>
                       </rect>
                      </property>
                      <layout class="QHBoxLayout" name="horizontalLayout_6">
@@ -422,8 +422,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>932</width>
-         <height>507</height>
+         <width>946</width>
+         <height>516</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -1033,8 +1033,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>946</width>
-         <height>536</height>
+         <width>809</width>
+         <height>353</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="graphicsTabVLayout" stretch="0,0">
@@ -1440,8 +1440,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>946</width>
-         <height>536</height>
+         <width>497</width>
+         <height>348</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="userTabVLayout" stretch="0,0,1">
@@ -1656,7 +1656,7 @@
          <x>0</x>
          <y>0</y>
          <width>946</width>
-         <height>536</height>
+         <height>501</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="inputTabVLayout" stretch="0,0,0">
@@ -1942,7 +1942,7 @@
          <x>0</x>
          <y>0</y>
          <width>946</width>
-         <height>536</height>
+         <height>501</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="pathsTabLayout">
@@ -1985,39 +1985,6 @@
            </item>
            <item>
             <widget class="QListWidget" name="gameFoldersListWidget"/>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item>
-         <widget class="QGroupBox" name="shadps4GroupBox">
-          <property name="title">
-           <string>shadPS4 Path</string>
-          </property>
-          <layout class="QVBoxLayout" name="verticalLayout_shadps4">
-           <item>
-            <layout class="QHBoxLayout" name="horizontalLayout_shadps4">
-             <item>
-              <widget class="QLineEdit" name="currentShadPath">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="placeholderText">
-                <string/>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="browse_shad_path">
-               <property name="text">
-                <string>Browse</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
            </item>
           </layout>
          </widget>
@@ -2143,8 +2110,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>946</width>
-         <height>536</height>
+         <width>292</width>
+         <height>299</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -2289,8 +2256,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>946</width>
-         <height>234</height>
+         <width>565</width>
+         <height>229</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -2464,8 +2431,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>946</width>
-         <height>287</height>
+         <width>427</width>
+         <height>402</height>
         </rect>
        </property>
        <property name="sizePolicy">

@@ -4,6 +4,7 @@
 #pragma once
 
 #include <QDialog>
+#include <QTreeWidget>
 
 #include "gui_settings.h"
 
@@ -17,6 +18,7 @@ class VersionDialog : public QDialog {
 public:
     explicit VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget* parent = nullptr);
     ~VersionDialog();
+    void onItemChanged(QTreeWidgetItem* item, int column);
     void DownloadListVersion();
     void InstallSelectedVersion();
 

@@ -251,6 +251,15 @@ void MainWindow::AddUiWidgets() {
 
     ui->playButton->setVisible(true);
     ui->pauseButton->setVisible(false);
+
+    // Expandable spacer to push elements to the right
+    QWidget* expandingSpacer = new QWidget(this);
+    expandingSpacer->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
+    ui->toolBar->addWidget(expandingSpacer);
+    ui->toolBar->addWidget(ui->versionComboBox);
+    ui->toolBar->addWidget(
+        createButtonWithLabel(ui->versionManagerdButton, tr("Version Manager"), showLabels));
+    LoadVersionComboBox();
 }
 
 void MainWindow::UpdateToolbarButtons() {
@@ -493,6 +502,17 @@ void MainWindow::CreateConnects() {
         kbmWindow->exec();
     });
 
+    connect(ui->versionManagerdButton, &QPushButton::clicked, this, [this]() {
+        auto versionDialog = new VersionDialog(m_gui_settings, this);
+
+        connect(versionDialog, &QDialog::finished, this, [this](int) {
+            // this is not working properly...
+            // LoadVersionComboBox();
+        });
+
+        versionDialog->exec();
+    });
+
 #ifdef ENABLE_UPDATER
     connect(ui->updaterAct, &QAction::triggered, this, [this]() {
         auto checkUpdate = new CheckUpdate(m_gui_settings, true);
@@ -500,15 +520,9 @@ void MainWindow::CreateConnects() {
     });
 #endif
 
-    // connect(ui->aboutAct, &QAction::triggered, this, [this]() {
-    //     auto aboutDialog = new AboutDialog(m_gui_settings, this);
-    //     aboutDialog->exec();
-    // });
-
-    // connect(ui->aboutAct, &QPushButton::clicked, this, [this]() {
     connect(ui->aboutAct, &QAction::triggered, this, [this]() {
-        auto versionDialog = new VersionDialog(m_gui_settings, this);
-        versionDialog->exec();
+        auto aboutDialog = new AboutDialog(m_gui_settings, this);
+        aboutDialog->exec();
     });
 
     connect(ui->configureHotkeys, &QAction::triggered, this, [this]() {
@@ -1233,9 +1247,22 @@ void MainWindow::StartEmulator(std::filesystem::path path) {
         QMessageBox::critical(nullptr, tr("Run Game"), QString(tr("Game is already running!")));
         return;
     }
+
+    QString selectedVersion = m_gui_settings->GetValue(gui::vm_versionSelected).toString();
+    if (selectedVersion.isEmpty()) {
+        QMessageBox::warning(
+            this, tr("No Version Selected"),
+            // clang-format off
+tr("First, download an emulator version by selecting one from the download screen."));
+        // clang-format on
+        auto versionDialog = new VersionDialog(m_gui_settings, this);
+        versionDialog->exec();
+        return;
+    }
+
     isGameRunning = true;
     last_game_path = path;
-    QString exe = m_gui_settings->GetValue(gui::gen_shadPath).toString();
+    QString exe = selectedVersion + "/shadPS4.exe";
     QFileInfo fileInfo(exe);
     if (!fileInfo.exists()) {
         QMessageBox::critical(
@@ -1266,7 +1293,7 @@ void MainWindow::StartEmulator(std::filesystem::path path) {
 }
 
 void MainWindow::RestartEmulator() {
-    QString exe = m_gui_settings->GetValue(gui::gen_shadPath).toString();
+    QString exe = m_gui_settings->GetValue(gui::vm_versionSelected).toString() + "/shadPS4.exe";
     QStringList args{"--game", QString::fromStdWString(last_game_path.wstring())};
 
     QFileInfo fileInfo(exe);
@@ -1274,4 +1301,84 @@ void MainWindow::RestartEmulator() {
 
     m_ipc_client->startEmulator(fileInfo, args, workDir);
     m_ipc_client->runGame();
+}
+
+void MainWindow::LoadVersionComboBox() {
+    QString path = m_gui_settings->GetValue(gui::vm_versionPath).toString();
+    if (path.isEmpty() || !QDir(path).exists())
+        return;
+
+    ui->versionComboBox->clear();
+
+    QStringList folders = QDir(path).entryList(QDir::Dirs | QDir::NoDotAndDotDot);
+    QRegularExpression versionRegex("^v(\\d+)\\.(\\d+)\\.(\\d+)$");
+
+    QVector<QPair<QVector<int>, QString>> versionedDirs;
+    QStringList otherDirs;
+
+    QString savedVersionPath = m_gui_settings->GetValue(gui::vm_versionSelected).toString();
+
+    for (const QString& folder : folders) {
+        if (folder == "Pre-release") {
+            otherDirs.append(folder);
+            continue;
+        }
+
+        QRegularExpressionMatch match = versionRegex.match(folder.section(" - ", 0, 0));
+        if (match.hasMatch()) {
+            QVector<int> versionParts = {match.captured(1).toInt(), match.captured(2).toInt(),
+                                         match.captured(3).toInt()};
+            versionedDirs.append({versionParts, folder});
+        } else {
+            otherDirs.append(folder);
+        }
+    }
+
+    std::sort(otherDirs.begin(), otherDirs.end());
+
+    std::sort(versionedDirs.begin(), versionedDirs.end(), [](const auto& a, const auto& b) {
+        if (a.first[0] != b.first[0])
+            return a.first[0] > b.first[0];
+        if (a.first[1] != b.first[1])
+            return a.first[1] > b.first[1];
+        return a.first[2] > b.first[2];
+    });
+
+    auto addEntry = [&](const QString& folder) {
+        QString fullPath = QDir(path).filePath(folder);
+        QString label;
+
+        if (folder.startsWith("Pre-release-shadPS4")) {
+            label = "Pre-release";
+        } else if (folder.contains(" - ")) {
+            label = folder.section(" - ", 0, 0);
+        } else {
+            label = folder;
+        }
+
+        ui->versionComboBox->addItem(label, fullPath);
+    };
+
+    for (const QString& folder : otherDirs) {
+        addEntry(folder);
+    }
+
+    for (const auto& pair : versionedDirs) {
+        addEntry(pair.second);
+    }
+
+    int selectedIndex = ui->versionComboBox->findData(savedVersionPath);
+
+    if (selectedIndex >= 0) {
+        ui->versionComboBox->setCurrentIndex(selectedIndex);
+    } else if (ui->versionComboBox->count() > 0) {
+        ui->versionComboBox->setCurrentIndex(0);
+        selectedIndex = 0;
+    }
+
+    connect(ui->versionComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this,
+            [this](int index) {
+                QString fullPath = ui->versionComboBox->itemData(index).toString();
+                m_gui_settings->SetValue(gui::vm_versionSelected, fullPath);
+            });
 }
