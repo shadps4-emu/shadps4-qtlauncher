@@ -618,8 +618,6 @@ void SettingsDialog::LoadValuesFromConfig() {
 
     // Entries with no game-specific settings
     if (!is_game_specific) {
-        ui->currentShadPath->setText(m_gui_settings->GetValue(gui::gen_shadPath).toString());
-
         const auto save_data_path = Config::GetSaveDataPath();
         QString save_data_path_string;
         Common::FS::PathToQString(save_data_path_string, save_data_path);
