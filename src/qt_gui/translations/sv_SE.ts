@@ -2457,11 +2457,11 @@ Please change ShadPS4 path in settings.</source>
     </message>
     <message>
       <source>Additional DMem Allocation</source>
-      <translation type="unfinished">Additional DMem Allocation</translation>
+      <translation>Ytterligare DMem-allokering</translation>
     </message>
     <message>
       <source>Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</source>
-      <translation type="unfinished">Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</translation>
+      <translation>Ytterligare DMem-allokering:\nTvingar allokering av den angivna mängden ytterligare DMem. Kraschar eller orsakar problem i vissa spel.</translation>
     </message>
   </context>
   <context>
