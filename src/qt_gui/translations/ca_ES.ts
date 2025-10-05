@@ -2457,11 +2457,11 @@ Canvia, si us plau, la ruta de ShadPS4 a configuració.</translation>
     </message>
     <message>
       <source>Additional DMem Allocation</source>
-      <translation type="unfinished">Additional DMem Allocation</translation>
+      <translation>Ubicació addicional DMem</translation>
     </message>
     <message>
       <source>Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</source>
-      <translation type="unfinished">Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</translation>
+      <translation>Ubicació addicional DMem:\nForça la ubicació d'una determinada quantitat de DMem. Pot provocar errors en alguns jocs.</translation>
     </message>
   </context>
   <context>
