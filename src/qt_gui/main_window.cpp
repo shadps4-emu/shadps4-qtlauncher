@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: Copyright 2024 shadPS4 Emulator Project
+// SPDX-FileCopyrightText: Copyright 2025 shadPS4 Emulator Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include "SDL3/SDL_events.h"
@@ -873,7 +873,7 @@ void MainWindow::CreateConnects() {
     });
 }
 
-void MainWindow::StartGame() {
+void MainWindow::StartGameWithArgs(QStringList args) {
     BackgroundMusicPlayer::getInstance().stopMusic();
     QString gamePath = "";
     int table_mode = m_gui_settings->GetValue(gui::gl_mode).toInt();
@@ -903,10 +903,14 @@ void MainWindow::StartGame() {
             QMessageBox::critical(nullptr, tr("Run Game"), QString(tr("Eboot.bin file not found")));
             return;
         }
-        StartEmulator(path);
+        StartEmulator(path, args);
 
         UpdateToolbarButtons();
     }
+}
+
+void MainWindow::StartGame() {
+    StartGameWithArgs({});
 }
 
 bool isTable;
@@ -1242,7 +1246,7 @@ bool MainWindow::eventFilter(QObject* obj, QEvent* event) {
     return QMainWindow::eventFilter(obj, event);
 }
 
-void MainWindow::StartEmulator(std::filesystem::path path) {
+void MainWindow::StartEmulator(std::filesystem::path path, QStringList args) {
     if (isGameRunning) {
         QMessageBox::critical(nullptr, tr("Run Game"), QString(tr("Game is already running!")));
         return;
@@ -1271,11 +1275,13 @@ tr("First, download an emulator version by selecting one from the download scree
         return;
     }
 
-    QStringList args{"--game", QString::fromStdWString(path.wstring())};
+    QStringList final_args{"--game", QString::fromStdWString(path.wstring())};
+
+    final_args.append(args);
 
     QString workDir = fileInfo.absolutePath();
 
-    m_ipc_client->startEmulator(fileInfo, args, workDir);
+    m_ipc_client->startEmulator(fileInfo, final_args, workDir);
 
     auto gameInfo = GameInfoClass();
     auto dir = path.parent_path();
@@ -1295,6 +1301,14 @@ tr("First, download an emulator version by selecting one from the download scree
 void MainWindow::RestartEmulator() {
     QString exe = m_gui_settings->GetValue(gui::vm_versionSelected).toString() + "/shadPS4.exe";
     QStringList args{"--game", QString::fromStdWString(last_game_path.wstring())};
+
+    if (m_ipc_client->parsedArgs.size() > 0) {
+        args.clear();
+        for (auto arg : m_ipc_client->parsedArgs) {
+            args.append(QString::fromStdString(arg));
+        }
+        m_ipc_client->parsedArgs.clear();
+    }
 
     QFileInfo fileInfo(exe);
     QString workDir = fileInfo.absolutePath();

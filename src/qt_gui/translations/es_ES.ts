@@ -1161,13 +1161,13 @@
     <name>IpcClient</name>
     <message>
       <source>ShadPS4</source>
-      <translation type="unfinished">ShadPS4</translation>
+      <translation>ShadPS4</translation>
     </message>
     <message>
-      <source>ShadPS4 is not found!
-Please change ShadPS4 path in settings.</source>
-      <translation type="unfinished">ShadPS4 is not found!
-Please change ShadPS4 path in settings.</translation>
+      <source>shadPS4 is not found!
+Please change shadPS4 path in settings.</source>
+      <translation>¡shadPS4 no encontrado!
+Cambia la ruta de shadPS4 en la configuración.</translation>
     </message>
   </context>
   <context>
@@ -1668,13 +1668,13 @@ Please change ShadPS4 path in settings.</translation>
     </message>
     <message>
       <source>ShadPS4</source>
-      <translation type="unfinished">ShadPS4</translation>
+      <translation>ShadPS4</translation>
     </message>
     <message>
       <source>ShadPS4 is not found!
 Please change ShadPS4 path in settings.</source>
-      <translation type="unfinished">ShadPS4 is not found!
-Please change ShadPS4 path in settings.</translation>
+      <translation>¡ShadPS4 no encontrado!
+Cambia la ruta de ShadPS4 en la configuración.</translation>
     </message>
   </context>
   <context>
@@ -2377,83 +2377,83 @@ Please change ShadPS4 path in settings.</translation>
     </message>
     <message>
       <source>Miscellaneous</source>
-      <translation type="unfinished">Miscellaneous</translation>
+      <translation>Miscelánea</translation>
     </message>
     <message>
       <source>Frontend</source>
-      <translation type="unfinished">Frontend</translation>
+      <translation>Interfaz de usuario</translation>
     </message>
     <message>
       <source>Experimental</source>
-      <translation type="unfinished">Experimental</translation>
+      <translation>Experimental</translation>
     </message>
     <message>
       <source>Show Splash Screen When Launching Game</source>
-      <translation type="unfinished">Show Splash Screen When Launching Game</translation>
+      <translation>Mostrar pantalla de inicio al arrancar un juego</translation>
     </message>
     <message>
       <source>General Frontend Settings</source>
-      <translation type="unfinished">General Frontend Settings</translation>
+      <translation>Ajustes generales de la interfaz</translation>
     </message>
     <message>
       <source>Enable PS4 Neo Mode</source>
-      <translation type="unfinished">Enable PS4 Neo Mode</translation>
+      <translation>Habilitar modo PS4 Neo</translation>
     </message>
     <message>
       <source>Enable Direct Memory Access:\nEnables arbitrary memory access from the GPU to CPU memory.</source>
-      <translation type="unfinished">Enable Direct Memory Access:\nEnables arbitrary memory access from the GPU to CPU memory.</translation>
+      <translation>Habilitar acceso directo a memoria (DMA):\nHabilita el acceso arbitrario entre la GPU y la memoria de la CPU.</translation>
     </message>
     <message>
       <source>Enable PS4 Neo Mode:\nAdds support for PS4 Pro emulation and memory size. Currently causes instability in a large number of tested games.</source>
-      <translation type="unfinished">Enable PS4 Neo Mode:\nAdds support for PS4 Pro emulation and memory size. Currently causes instability in a large number of tested games.</translation>
+      <translation>Habilitar modo PS4 Neo:\nAñade soporte para la emulación y el tamaño de memoria de una PS4 Pro. Ahora mismo provoca inestabilidades en una gran cantidad de juegos probados.</translation>
     </message>
     <message>
       <source>Enable Devkit Console Mode:\nAdds support for Devkit console memory size.</source>
-      <translation type="unfinished">Enable Devkit Console Mode:\nAdds support for Devkit console memory size.</translation>
+      <translation>Habilitar modo kit de desarrollo:\nAñade el soporte para el tamaño de la memoria de una consola de desarrollo.</translation>
     </message>
     <message>
       <source>Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</source>
-      <translation type="unfinished">Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</translation>
+      <translation>Cambia la opción «Conexión a red» a verdadero:\nFuerza a los juegos a detectar una conexión de red activa. Las funciones reales de red aún no están soportadas.</translation>
     </message>
     <message>
       <source>Set PSN Signed-in to True:\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported.</source>
-      <translation type="unfinished">Set PSN Signed-in to True:\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported.</translation>
+      <translation>Cambia la opción «Inicio de sesión en PSN» a verdadero:\nFuerza a los juegos a detectar una sesión iniciada en PSN. Las funciones reales de PSN aún no están soportadas.</translation>
     </message>
     <message>
       <source>Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Habilitar capas de validación de Vulkan:\nHabilita un sistema que valida el estado del renderizador de Vulkan y registra información sobre su estado interno.\nReducirá el rendimiento y probablemente cambiará el comportamiento de la emulación.\nEs necesario tener instalado el SDK de Vulkan para que funcione este ajuste.</translation>
     </message>
     <message>
       <source>Enable Vulkan Synchronization Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Vulkan Synchronization Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Habilitar validación de sincronización de Vulkan:\nHabilita un sistema que valida la sincronización de las tareas de renderizado de Vulkan.\nReducirá el rendimiento y probablemente cambiará el comportamiento de la emulación.\nEs necesario tener instalado el SDK de Vulkan para que funcione este ajuste.</translation>
     </message>
     <message>
       <source>Audio Device (general)</source>
-      <translation type="unfinished">Audio Device (general)</translation>
+      <translation>Dispositivo de audio (general)</translation>
     </message>
     <message>
       <source>Audio Device (DS4 speaker)</source>
-      <translation type="unfinished">Audio Device (DS4 speaker)</translation>
+      <translation>Dispositivo de audio (altavoz de DS4)</translation>
     </message>
     <message>
       <source>shadPS4 Path</source>
-      <translation type="unfinished">shadPS4 Path</translation>
+      <translation>Ruta de shadPS4</translation>
     </message>
     <message>
       <source>Select the shadPS4 executable</source>
-      <translation type="unfinished">Select the shadPS4 executable</translation>
+      <translation>Seleccionar ejecutable de shadPS4</translation>
     </message>
     <message>
       <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
-      <translation type="unfinished">Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</translation>
+      <translation>Habilitar volcado de Shaders:\nGuarda los shaders (sombreadores) del juego en una carpeta a medida que se vayan renderizando. Para fines de depuración técnica.</translation>
     </message>
     <message>
       <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</source>
-      <translation type="unfinished">Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</translation>
+      <translation>Habilitar GPU NULL:\nDesactiva el renderizado del juego, como si no hubiese una tarjeta gráfica. Para fines de depuración técnica. La imagen se quedará en negro.</translation>
     </message>
     <message>
       <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
-      <translation type="unfinished">DLC Path:\nThe folder where game DLC is loaded from.</translation>
+      <translation>Ruta de DLC:\nLa carpeta donde se cargarán los DLC de los juegos.</translation>
     </message>
   </context>
   <context>

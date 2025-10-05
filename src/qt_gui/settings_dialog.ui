@@ -12,7 +12,7 @@
     <x>0</x>
     <y>0</y>
     <width>970</width>
-    <height>765</height>
+    <height>767</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -76,8 +76,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>579</width>
-         <height>482</height>
+         <width>946</width>
+         <height>503</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="generalTabVLayout" stretch="0">
@@ -1033,8 +1033,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>809</width>
-         <height>353</height>
+         <width>946</width>
+         <height>503</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="graphicsTabVLayout" stretch="0,0">
@@ -1248,49 +1248,6 @@
                    </layout>
                   </widget>
                  </item>
-                 <item>
-                  <widget class="QGroupBox" name="heightDivider">
-                   <property name="title">
-                    <string>Vblank Frequency</string>
-                   </property>
-                   <layout class="QVBoxLayout" name="vblankLayout">
-                    <item>
-                     <widget class="QSpinBox" name="vblankSpinBox">
-                      <property name="frame">
-                       <bool>true</bool>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
-                      </property>
-                      <property name="specialValueText">
-                       <string/>
-                      </property>
-                      <property name="accelerated">
-                       <bool>true</bool>
-                      </property>
-                      <property name="correctionMode">
-                       <enum>QAbstractSpinBox::CorrectionMode::CorrectToNearestValue</enum>
-                      </property>
-                      <property name="keyboardTracking">
-                       <bool>false</bool>
-                      </property>
-                      <property name="suffix">
-                       <string notr="true">Hz</string>
-                      </property>
-                      <property name="minimum">
-                       <number>60</number>
-                      </property>
-                      <property name="maximum">
-                       <number>9999</number>
-                      </property>
-                      <property name="value">
-                       <number>60</number>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
                 </layout>
                </item>
                <item>
@@ -1440,8 +1397,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>497</width>
-         <height>348</height>
+         <width>946</width>
+         <height>503</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="userTabVLayout" stretch="0,0,1">
@@ -1620,6 +1577,58 @@
            </layout>
           </item>
           <item>
+           <widget class="QGroupBox" name="PortableUserFolderGroupBox">
+            <property name="title">
+             <string>Portable User Folder</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_2">
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_9">
+               <item>
+                <spacer name="horizontalSpacer_6">
+                 <property name="orientation">
+                  <enum>Qt::Orientation::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QPushButton" name="PortableUserButton">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="text">
+                  <string>Create Portable User Folder from Common User Folder</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_5">
+                 <property name="orientation">
+                  <enum>Qt::Orientation::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
            <layout class="QHBoxLayout" name="horizontalLayout_5"/>
           </item>
          </layout>
@@ -1656,7 +1665,7 @@
          <x>0</x>
          <y>0</y>
          <width>946</width>
-         <height>501</height>
+         <height>503</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="inputTabVLayout" stretch="0,0,0">
@@ -1942,7 +1951,7 @@
          <x>0</x>
          <y>0</y>
          <width>946</width>
-         <height>501</height>
+         <height>503</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="pathsTabLayout">
@@ -2044,51 +2053,26 @@
          </widget>
         </item>
         <item>
-         <widget class="QGroupBox" name="PortableUserFolderGroupBox">
+         <widget class="QGroupBox" name="sysmodulesGroupBox">
           <property name="title">
-           <string>Portable User Folder</string>
+           <string>PS4 Sysmodules Folder</string>
           </property>
-          <layout class="QVBoxLayout" name="verticalLayout_2">
+          <layout class="QVBoxLayout" name="dlcFolderGroupBox_4">
            <item>
-            <layout class="QHBoxLayout" name="horizontalLayout_9">
+            <layout class="QHBoxLayout" name="horizontalLayout_18">
              <item>
-              <spacer name="horizontalSpacer_6">
-               <property name="orientation">
-                <enum>Qt::Orientation::Horizontal</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>40</width>
-                 <height>20</height>
-                </size>
-               </property>
-              </spacer>
-             </item>
-             <item>
-              <widget class="QPushButton" name="PortableUserButton">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="text">
-                <string>Create Portable User Folder from Common User Folder</string>
+              <widget class="QLineEdit" name="sysmodulesPath">
+               <property name="readOnly">
+                <bool>true</bool>
                </property>
               </widget>
              </item>
              <item>
-              <spacer name="horizontalSpacer_5">
-               <property name="orientation">
-                <enum>Qt::Orientation::Horizontal</enum>
+              <widget class="QPushButton" name="browse_sysmodules">
+               <property name="text">
+                <string>Browse</string>
                </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>40</width>
-                 <height>20</height>
-                </size>
-               </property>
-              </spacer>
+              </widget>
              </item>
             </layout>
            </item>
@@ -2110,7 +2094,7 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>292</width>
+         <width>946</width>
          <height>299</height>
         </rect>
        </property>
@@ -2431,8 +2415,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>427</width>
-         <height>402</height>
+         <width>946</width>
+         <height>395</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -2525,6 +2509,100 @@
               </layout>
              </widget>
             </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_10">
+              <item>
+               <widget class="QGroupBox" name="dmemGroupBox">
+                <property name="title">
+                 <string>Additional DMem Allocation</string>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_4">
+                 <item>
+                  <widget class="QSpinBox" name="dmemSpinBox">
+                   <property name="frame">
+                    <bool>true</bool>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+                   </property>
+                   <property name="specialValueText">
+                    <string/>
+                   </property>
+                   <property name="accelerated">
+                    <bool>true</bool>
+                   </property>
+                   <property name="correctionMode">
+                    <enum>QAbstractSpinBox::CorrectionMode::CorrectToNearestValue</enum>
+                   </property>
+                   <property name="keyboardTracking">
+                    <bool>false</bool>
+                   </property>
+                   <property name="suffix">
+                    <string notr="true">MB</string>
+                   </property>
+                   <property name="minimum">
+                    <number>0</number>
+                   </property>
+                   <property name="maximum">
+                    <number>100000</number>
+                   </property>
+                   <property name="value">
+                    <number>0</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QGroupBox" name="heightDivider">
+                <property name="title">
+                 <string>Vblank Frequency</string>
+                </property>
+                <layout class="QVBoxLayout" name="vblankLayout">
+                 <item>
+                  <widget class="QSpinBox" name="vblankSpinBox">
+                   <property name="frame">
+                    <bool>true</bool>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+                   </property>
+                   <property name="specialValueText">
+                    <string/>
+                   </property>
+                   <property name="accelerated">
+                    <bool>true</bool>
+                   </property>
+                   <property name="correctionMode">
+                    <enum>QAbstractSpinBox::CorrectionMode::CorrectToNearestValue</enum>
+                   </property>
+                   <property name="keyboardTracking">
+                    <bool>false</bool>
+                   </property>
+                   <property name="suffix">
+                    <string notr="true">Hz</string>
+                   </property>
+                   <property name="minimum">
+                    <number>60</number>
+                   </property>
+                   <property name="maximum">
+                    <number>9999</number>
+                   </property>
+                   <property name="value">
+                    <number>60</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_11">
             <item>
              <widget class="QLabel" name="ExperimentalLabel">
               <property name="sizeIncrement">

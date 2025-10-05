@@ -1164,8 +1164,8 @@
       <translation>shadPS4</translation>
     </message>
     <message>
-      <source>ShadPS4 is not found!
-Please change ShadPS4 path in settings.</source>
+      <source>shadPS4 is not found!
+Please change shadPS4 path in settings.</source>
       <translation>Fant ikke shadPS4!
 Endre mappa til shadPS4 i innstillingene.</translation>
     </message>
