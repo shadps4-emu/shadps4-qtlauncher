@@ -2455,6 +2455,14 @@ Please change ShadPS4 path in settings.</source>
       <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
       <translation>DLC路径：\n用于加载游戏DLC内容的文件夹。</translation>
     </message>
+    <message>
+      <source>Additional DMem Allocation</source>
+      <translation type="unfinished">Additional DMem Allocation</translation>
+    </message>
+    <message>
+      <source>Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</source>
+      <translation type="unfinished">Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</translation>
+    </message>
   </context>
   <context>
     <name>TrophyViewer</name>
