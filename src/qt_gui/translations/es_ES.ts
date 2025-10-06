@@ -2455,6 +2455,14 @@ Cambia la ruta de ShadPS4 en la configuración.</translation>
       <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
       <translation>Ruta de DLC:\nLa carpeta donde se cargarán los DLC de los juegos.</translation>
     </message>
+    <message>
+      <source>Additional DMem Allocation</source>
+      <translation type="unfinished">Additional DMem Allocation</translation>
+    </message>
+    <message>
+      <source>Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</source>
+      <translation type="unfinished">Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</translation>
+    </message>
   </context>
   <context>
     <name>TrophyViewer</name>

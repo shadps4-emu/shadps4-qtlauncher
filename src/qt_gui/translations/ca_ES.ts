@@ -2455,6 +2455,14 @@ Canvia, si us plau, la ruta de ShadPS4 a configuració.</translation>
       <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
       <translation>Ruta DLC:\nLa carpeta des d'on es carrega el contingut DLC.</translation>
     </message>
+    <message>
+      <source>Additional DMem Allocation</source>
+      <translation>Ubicació addicional DMem</translation>
+    </message>
+    <message>
+      <source>Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</source>
+      <translation>Ubicació addicional DMem:\nForça la ubicació d'una determinada quantitat de DMem. Pot provocar errors en alguns jocs.</translation>
+    </message>
   </context>
   <context>
     <name>TrophyViewer</name>

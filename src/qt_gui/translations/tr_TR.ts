@@ -2455,6 +2455,14 @@ Lütfen ayarlardan ShadPS4 yolunu değiştirin.</translation>
       <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
       <translation>DLC Yolu:\nOyun DLC'sinin yüklendiği klasördür.</translation>
     </message>
+    <message>
+      <source>Additional DMem Allocation</source>
+      <translation type="unfinished">Additional DMem Allocation</translation>
+    </message>
+    <message>
+      <source>Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</source>
+      <translation type="unfinished">Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</translation>
+    </message>
   </context>
   <context>
     <name>TrophyViewer</name>
