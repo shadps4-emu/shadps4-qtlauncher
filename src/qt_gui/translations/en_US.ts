@@ -1044,6 +1044,22 @@
         <source>Delete game-specific settings?</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Launch...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Launch with game specific configs (default)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Launch with global config only</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Launch with default settings</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>HelpDialog</name>
@@ -2453,6 +2469,18 @@ Please change ShadPS4 path in settings.</source>
     </message>
     <message>
         <source>Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PS4 Sysmodules Folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Browse:\nBrowse for a folder to set as the sysmodules path.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
