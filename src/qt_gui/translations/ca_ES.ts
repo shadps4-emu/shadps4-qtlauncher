@@ -1048,19 +1048,19 @@
     </message>
     <message>
       <source>Launch...</source>
-      <translation type="unfinished">Launch...</translation>
+      <translation>Executant...</translation>
     </message>
     <message>
       <source>Launch with game specific configs (default)</source>
-      <translation type="unfinished">Launch with game specific configs (default)</translation>
+      <translation>Executa amb la configuració específica del joc (per defecte)</translation>
     </message>
     <message>
       <source>Launch with global config only</source>
-      <translation type="unfinished">Launch with global config only</translation>
+      <translation>Executa només amb la configuració global</translation>
     </message>
     <message>
       <source>Launch with default settings</source>
-      <translation type="unfinished">Launch with default settings</translation>
+      <translation>Executa amb la configuració per defecte</translation>
     </message>
   </context>
   <context>
@@ -2481,15 +2481,15 @@ Canvia, si us plau, la ruta de ShadPS4 a configuració.</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Folder</source>
-      <translation type="unfinished">PS4 Sysmodules Folder</translation>
+      <translation>Carpeta de PS4 de Sysmodules</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</source>
-      <translation type="unfinished">PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</translation>
+      <translation>Ruta de sysmodules de PS4:\nLa carpeta des de la qual sysmodules de PS4 es carrega.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the sysmodules path.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the sysmodules path.</translation>
+      <translation>Cercar:\nCerca per una carpeta per establir com la ruta de sysmodules.</translation>
     </message>
   </context>
   <context>
