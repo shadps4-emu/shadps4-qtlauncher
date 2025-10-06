@@ -1048,19 +1048,19 @@
     </message>
     <message>
       <source>Launch...</source>
-      <translation type="unfinished">Launch...</translation>
+      <translation>Start …</translation>
     </message>
     <message>
       <source>Launch with game specific configs (default)</source>
-      <translation type="unfinished">Launch with game specific configs (default)</translation>
+      <translation>Start med spillspesifikke oppsett (standard)</translation>
     </message>
     <message>
       <source>Launch with global config only</source>
-      <translation type="unfinished">Launch with global config only</translation>
+      <translation>Start kun med global oppsett</translation>
     </message>
     <message>
       <source>Launch with default settings</source>
-      <translation type="unfinished">Launch with default settings</translation>
+      <translation>Start med standardinnstillinger</translation>
     </message>
   </context>
   <context>
@@ -2481,15 +2481,15 @@ Endre mappa til shadPS4 i innstillingene.</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Folder</source>
-      <translation type="unfinished">PS4 Sysmodules Folder</translation>
+      <translation>PS4 «Sysmodules»-mappe</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</source>
-      <translation type="unfinished">PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</translation>
+      <translation>PS4 «Sysmodules»-mappe:\nMappa hvor PS4-systemmoduler lastes fra.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the sysmodules path.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the sysmodules path.</translation>
+      <translation>Endre mappe:\nBla gjennom for å finne mappa til systemmodulene.</translation>
     </message>
   </context>
   <context>
