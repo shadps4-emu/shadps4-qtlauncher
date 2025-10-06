@@ -309,8 +309,10 @@ int getExtraDmemInMbytes() {
     return extraDmemInMbytes.get();
 }
 
-void setExtraDmemInMbytes(int value) {
-    extraDmemInMbytes.base_value = 0;
+void setExtraDmemInMbytes(int value, bool is_game_specific) {
+    // Disable setting in global config
+    is_game_specific ? extraDmemInMbytes.game_specific_value = value
+                     : extraDmemInMbytes.base_value = 0;
 }
 
 bool getIsFullscreen() {
