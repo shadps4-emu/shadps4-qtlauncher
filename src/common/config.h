@@ -9,6 +9,13 @@
 
 namespace Config {
 
+enum class ConfigMode {
+    Default,
+    Global,
+    Clean,
+};
+void setConfigMode(ConfigMode mode);
+
 struct GameInstallDir {
     std::filesystem::path path;
     bool enabled;
@@ -114,10 +121,11 @@ bool isNeoModeConsole();
 void setNeoMode(bool enable, bool is_game_specific = false);
 bool isDevKitConsole();
 void setDevKitConsole(bool enable, bool is_game_specific = false);
-int getExtraDmemInMbytes();
-void setExtraDmemInMbytes(int value, bool is_game_specific = false);
 
-bool vkValidationGpuEnabled(); // no set
+bool vkValidationCoreEnabled(); // no set
+bool vkValidationGpuEnabled();  // no set
+int getExtraDmemInMbytes();
+void setExtraDmemInMbytes(int value);
 bool getIsMotionControlsEnabled();
 void setIsMotionControlsEnabled(bool use, bool is_game_specific = false);
 std::string getDefaultControllerID();

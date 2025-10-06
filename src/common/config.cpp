@@ -8,6 +8,7 @@
 #include <fmt/xchar.h> // for wstring support
 #include <toml.hpp>
 
+#include "common/assert.h"
 #include "common/config.h"
 #include "common/logging/formatter.h"
 #include "common/path_util.h"
@@ -74,18 +75,34 @@ std::optional<T> get_optional(const toml::value& v, const std::string& key) {
 
 namespace Config {
 
+ConfigMode config_mode = ConfigMode::Default;
+
+void setConfigMode(ConfigMode mode) {
+    config_mode = mode;
+}
+
 template <typename T>
 class ConfigEntry {
 public:
+    const T default_value;
     T base_value;
     optional<T> game_specific_value;
-    ConfigEntry(const T& t = T()) : base_value(t), game_specific_value(nullopt) {}
+    ConfigEntry(const T& t = T()) : default_value(t), base_value(t), game_specific_value(nullopt) {}
     ConfigEntry operator=(const T& t) {
         base_value = t;
         return *this;
     }
     const T get() const {
-        return game_specific_value.has_value() ? *game_specific_value : base_value;
+        switch (config_mode) {
+        case ConfigMode::Default:
+            return game_specific_value.value_or(base_value);
+        case ConfigMode::Global:
+            return base_value;
+        case ConfigMode::Clean:
+            return default_value;
+        default:
+            UNREACHABLE();
+        }
     }
     void setFromToml(const toml::value& v, const std::string& key, bool is_game_specific = false) {
         if (is_game_specific) {
@@ -170,6 +187,7 @@ static ConfigEntry<int> rcasAttenuation(250);
 // Vulkan
 static ConfigEntry<s32> gpuId(-1);
 static ConfigEntry<bool> vkValidation(false);
+static ConfigEntry<bool> vkValidationCore(true);
 static ConfigEntry<bool> vkValidationSync(false);
 static ConfigEntry<bool> vkValidationGpu(false);
 static ConfigEntry<bool> vkCrashDiagnostic(false);
@@ -285,6 +303,14 @@ bool isNeoModeConsole() {
 
 bool isDevKitConsole() {
     return isDevKit.get();
+}
+
+int getExtraDmemInMbytes() {
+    return extraDmemInMbytes.get();
+}
+
+void setExtraDmemInMbytes(int value) {
+    extraDmemInMbytes.base_value = 0;
 }
 
 bool getIsFullscreen() {
@@ -444,6 +470,10 @@ u32 vblankFreq() {
 
 bool vkValidationEnabled() {
     return vkValidation.get();
+}
+
+bool vkValidationCoreEnabled() {
+    return vkValidationCore.get();
 }
 
 bool vkValidationSyncEnabled() {
@@ -763,16 +793,6 @@ void setPSNSignedIn(bool sign, bool is_game_specific) {
     isPSNSignedIn.set(sign, is_game_specific);
 }
 
-int getExtraDmemInMbytes() {
-    return extraDmemInMbytes.get();
-}
-
-void setExtraDmemInMbytes(int value, bool is_game_specific) {
-    // Disable setting in global config
-    is_game_specific ? extraDmemInMbytes.game_specific_value = value
-                     : extraDmemInMbytes.base_value = 0;
-}
-
 string getDefaultControllerID() {
     return defaultControllerID.get();
 }
@@ -838,13 +858,12 @@ void load(const std::filesystem::path& path, bool is_game_specific) {
     if (data.contains("General")) {
         const toml::value& general = data.at("General");
 
-        if (is_game_specific) { // do not get this value from the base config
-            extraDmemInMbytes.setFromToml(general, "extraDmemInMbytes", is_game_specific);
-        }
-
         volumeSlider.setFromToml(general, "volumeSlider", is_game_specific);
         isNeo.setFromToml(general, "isPS4Pro", is_game_specific);
         isDevKit.setFromToml(general, "isDevKit", is_game_specific);
+        if (is_game_specific) { // do not get this value from the base config
+            extraDmemInMbytes.setFromToml(general, "extraDmemInMbytes", is_game_specific);
+        }
         isPSNSignedIn.setFromToml(general, "isPSNSignedIn", is_game_specific);
         isTrophyPopupDisabled.setFromToml(general, "isTrophyPopupDisabled", is_game_specific);
         trophyNotificationDuration.setFromToml(general, "trophyNotificationDuration",
@@ -914,6 +933,7 @@ void load(const std::filesystem::path& path, bool is_game_specific) {
 
         gpuId.setFromToml(vk, "gpuId", is_game_specific);
         vkValidation.setFromToml(vk, "validation", is_game_specific);
+        vkValidationCore.setFromToml(vk, "validation_core", is_game_specific);
         vkValidationSync.setFromToml(vk, "validation_sync", is_game_specific);
         vkValidationGpu.setFromToml(vk, "validation_gpu", is_game_specific);
         vkCrashDiagnostic.setFromToml(vk, "crashDiagnostic", is_game_specific);
@@ -983,8 +1003,8 @@ void load(const std::filesystem::path& path, bool is_game_specific) {
 
 void sortTomlSections(toml::ordered_value& data) {
     toml::ordered_value ordered_data;
-    std::vector<string> section_order = {"General", "Input", "GPU", "Vulkan",
-                                         "Debug",   "Keys",  "GUI", "Settings"};
+    std::vector<string> section_order = {"General", "Input", "Audio", "GPU",     "Vulkan",
+                                         "Debug",   "Keys",  "GUI",   "Settings"};
 
     for (const auto& section : section_order) {
         if (data.contains(section)) {
@@ -1034,11 +1054,6 @@ void save(const std::filesystem::path& path, bool is_game_specific) {
         fmt::print("Saving new configuration file {}\n", fmt::UTF(path.u8string()));
     }
 
-    // Do not save in global config
-    if (is_game_specific) {
-        extraDmemInMbytes.setTomlValue(data, "General", "extraDmemInMbytes", is_game_specific);
-    }
-
     // Entries saved by the game-specific settings GUI
     volumeSlider.setTomlValue(data, "General", "volumeSlider", is_game_specific);
     isTrophyPopupDisabled.setTomlValue(data, "General", "isTrophyPopupDisabled", is_game_specific);
@@ -1052,6 +1067,9 @@ void save(const std::filesystem::path& path, bool is_game_specific) {
     isSideTrophy.setTomlValue(data, "General", "sideTrophy", is_game_specific);
     isNeo.setTomlValue(data, "General", "isPS4Pro", is_game_specific);
     isDevKit.setTomlValue(data, "General", "isDevKit", is_game_specific);
+    if (is_game_specific) {
+        extraDmemInMbytes.setTomlValue(data, "General", "extraDmemInMbytes", is_game_specific);
+    }
     isPSNSignedIn.setTomlValue(data, "General", "isPSNSignedIn", is_game_specific);
     isConnectedToNetwork.setTomlValue(data, "General", "isConnectedToNetwork", is_game_specific);
 
@@ -1151,6 +1169,7 @@ void save(const std::filesystem::path& path, bool is_game_specific) {
         data["GPU"]["internalScreenWidth"] = internalScreenWidth.base_value;
         data["GPU"]["internalScreenHeight"] = internalScreenHeight.base_value;
         data["GPU"]["patchShaders"] = shouldPatchShaders.base_value;
+        data["Vulkan"]["validation_core"] = vkValidationCore.base_value;
         data["Vulkan"]["validation_gpu"] = vkValidationGpu.base_value;
         data["Debug"]["FPSColor"] = isFpsColor.base_value;
     }
@@ -1175,7 +1194,6 @@ void setDefaultValues(bool is_game_specific) {
         isPSNSignedIn.set(false, is_game_specific);
         isConnectedToNetwork.set(false, is_game_specific);
         directMemoryAccessEnabled.set(false, is_game_specific);
-        vblankFrequency.set(60, is_game_specific);
         extraDmemInMbytes.set(0, is_game_specific);
     }
 
@@ -1206,6 +1224,7 @@ void setDefaultValues(bool is_game_specific) {
     isNullGpu.set(false, is_game_specific);
     shouldCopyGPUBuffers.set(false, is_game_specific);
     shouldDumpShaders.set(false, is_game_specific);
+    vblankFrequency.set(60, is_game_specific);
     isFullscreen.set(false, is_game_specific);
     fullscreenMode.set("Windowed", is_game_specific);
     presentMode.set("Mailbox", is_game_specific);
@@ -1217,6 +1236,7 @@ void setDefaultValues(bool is_game_specific) {
     // GS - Vulkan
     gpuId.set(-1, is_game_specific);
     vkValidation.set(false, is_game_specific);
+    vkValidationCore.set(true, is_game_specific);
     vkValidationSync.set(false, is_game_specific);
     vkValidationGpu.set(false, is_game_specific);
     vkCrashDiagnostic.set(false, is_game_specific);
