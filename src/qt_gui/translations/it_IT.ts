@@ -1166,8 +1166,8 @@
     <message>
       <source>shadPS4 is not found!
 Please change shadPS4 path in settings.</source>
-      <translation type="unfinished">shadPS4 is not found!
-Please change shadPS4 path in settings.</translation>
+      <translation>shadPS4 non trovato!
+Si prega di cambiare il percorso shadPS4 nelle impostazioni.</translation>
     </message>
   </context>
   <context>
@@ -2454,6 +2454,14 @@ Si prega di cambiare il percorso ShadPS4 nelle impostazioni.</translation>
     <message>
       <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
       <translation>Percorso DLC:\nLa cartella da cui sono caricati i dati DLC.</translation>
+    </message>
+    <message>
+      <source>Additional DMem Allocation</source>
+      <translation type="unfinished">Additional DMem Allocation</translation>
+    </message>
+    <message>
+      <source>Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</source>
+      <translation type="unfinished">Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</translation>
     </message>
   </context>
   <context>

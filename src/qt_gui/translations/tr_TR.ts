@@ -1122,7 +1122,7 @@
     </message>
     <message>
       <source>Tip: Up to three simultaneous inputs can be assigned for each hotkey</source>
-      <translation type="unfinished">Tip: Up to three simultaneous inputs can be assigned for each hotkey</translation>
+      <translation>İpucu: Her bir işlev için en fazla üç kısayol tuşu atanabilir</translation>
     </message>
     <message>
       <source>Save</source>
@@ -1161,13 +1161,13 @@
     <name>IpcClient</name>
     <message>
       <source>ShadPS4</source>
-      <translation type="unfinished">ShadPS4</translation>
+      <translation>ShadPS4</translation>
     </message>
     <message>
       <source>shadPS4 is not found!
 Please change shadPS4 path in settings.</source>
-      <translation type="unfinished">shadPS4 is not found!
-Please change shadPS4 path in settings.</translation>
+      <translation>shadPS4 bulunamadı!
+Lütfen ayarlardan shadPS4 yolunu değiştirin.</translation>
     </message>
   </context>
   <context>
@@ -1373,7 +1373,7 @@ Please change shadPS4 path in settings.</translation>
     <name>LogPresetsDialog</name>
     <message>
       <source>Log Filter Presets</source>
-      <translation type="unfinished">Log Filter Presets</translation>
+      <translation>Günlük Filtreleme Ön Ayarları</translation>
     </message>
     <message>
       <source>Comment</source>
@@ -1668,13 +1668,13 @@ Please change shadPS4 path in settings.</translation>
     </message>
     <message>
       <source>ShadPS4</source>
-      <translation type="unfinished">ShadPS4</translation>
+      <translation>ShadPS4</translation>
     </message>
     <message>
       <source>ShadPS4 is not found!
 Please change ShadPS4 path in settings.</source>
-      <translation type="unfinished">ShadPS4 is not found!
-Please change ShadPS4 path in settings.</translation>
+      <translation>ShadPS4 bulunamadı!
+Lütfen ayarlardan ShadPS4 yolunu değiştirin.</translation>
     </message>
   </context>
   <context>
@@ -1801,7 +1801,7 @@ Please change ShadPS4 path in settings.</translation>
     </message>
     <message>
       <source>Enable Shaders Dumping</source>
-      <translation>Shader Kaydını Etkinleştir</translation>
+      <translation>Gölgelendirici Kaydını Etkinleştir</translation>
     </message>
     <message>
       <source>Enable NULL GPU</source>
@@ -2313,7 +2313,7 @@ Please change ShadPS4 path in settings.</translation>
     </message>
     <message>
       <source>Enable RCAS (sharpening)</source>
-      <translation type="unfinished">Enable RCAS (sharpening)</translation>
+      <translation>RCAS (keskinleştirme)</translation>
     </message>
     <message>
       <source>RCAS Attenuation:</source>
@@ -2345,7 +2345,7 @@ Please change ShadPS4 path in settings.</translation>
     </message>
     <message>
       <source>Show Game Size In List:\nThere is the size of the game in the list.</source>
-      <translation>Oyun Boyutunu Listede Göster:\nListede oyunun boyutu da vardır.</translation>
+      <translation>Oyun Boyutunu Listede Göster:\nListede oyunun boyutu gösterilir.</translation>
     </message>
     <message>
       <source>Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</source>
@@ -2357,7 +2357,7 @@ Please change ShadPS4 path in settings.</translation>
     </message>
     <message>
       <source>Vblank Frequency:\nThe frame rate at which the emulator refreshes at (60hz is the baseline, whether the game runs at 30 or 60fps). Changing this may have adverse effects, such as increasing the game speed, or breaking critical game functionality that does not expect this to change!</source>
-      <translation type="unfinished">Vblank Frequency:\nThe frame rate at which the emulator refreshes at (60hz is the baseline, whether the game runs at 30 or 60fps). Changing this may have adverse effects, such as increasing the game speed, or breaking critical game functionality that does not expect this to change!</translation>
+      <translation>Vblank Sıklığı:\nEmülatörün yenilendiği kare hızıdır (Oyun 30 veya 60 fps'de çalışsa da temel değer 60hz'dir.). Bunu değiştirmek, oyun hızının artması veya bu değişikliği öngörmeyen kritik oyun işlevlerinin bozulması gibi olumsuz etkilere neden olabilir!</translation>
     </message>
     <message>
       <source>Enable Direct Memory Access</source>
@@ -2381,7 +2381,7 @@ Please change ShadPS4 path in settings.</translation>
     </message>
     <message>
       <source>Frontend</source>
-      <translation type="unfinished">Frontend</translation>
+      <translation>Arayüz</translation>
     </message>
     <message>
       <source>Experimental</source>
@@ -2393,7 +2393,7 @@ Please change ShadPS4 path in settings.</translation>
     </message>
     <message>
       <source>General Frontend Settings</source>
-      <translation type="unfinished">General Frontend Settings</translation>
+      <translation>Genel Arayüz Ayarları</translation>
     </message>
     <message>
       <source>Enable PS4 Neo Mode</source>
@@ -2445,15 +2445,23 @@ Please change ShadPS4 path in settings.</translation>
     </message>
     <message>
       <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
-      <translation type="unfinished">Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</translation>
+      <translation>Gölgelendirici Kaydını Etkinleştir:\nTeknik hata ayıklama amacıyla, gölgelendiricileri render edildikçe bir klasöre kaydeder.</translation>
     </message>
     <message>
       <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</source>
-      <translation type="unfinished">Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</translation>
+      <translation>Null GPU'yu Etkinleştir:\nTeknik hata ayıklama amacıyla, oyunun render edilmesini grafik kartı yokmuş gibi devre dışı bırakır. Ekran siyah olacaktır.</translation>
     </message>
     <message>
       <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
-      <translation type="unfinished">DLC Path:\nThe folder where game DLC is loaded from.</translation>
+      <translation>DLC Yolu:\nOyun DLC'sinin yüklendiği klasördür.</translation>
+    </message>
+    <message>
+      <source>Additional DMem Allocation</source>
+      <translation type="unfinished">Additional DMem Allocation</translation>
+    </message>
+    <message>
+      <source>Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</source>
+      <translation type="unfinished">Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</translation>
     </message>
   </context>
   <context>

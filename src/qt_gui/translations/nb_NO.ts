@@ -2455,6 +2455,14 @@ Endre mappa til shadPS4 i innstillingene.</translation>
       <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
       <translation>DLC-mappe:\nMappa hvor spill-DLC-ene lastes fra.</translation>
     </message>
+    <message>
+      <source>Additional DMem Allocation</source>
+      <translation>Ytterligere direkte-minne tildeling</translation>
+    </message>
+    <message>
+      <source>Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</source>
+      <translation>Ytterligere direkte-minne tildeling:\nTvinger gjennom tildeling av ytterligere mengde direkte-minne. Forårsaker krasj eller andre feil i noen spill.</translation>
+    </message>
   </context>
   <context>
     <name>TrophyViewer</name>

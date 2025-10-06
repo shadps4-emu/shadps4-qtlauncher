@@ -109,9 +109,6 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         // Experimental tab
         ui->tabWidgetSettings->setTabVisible(8, false);
         ui->chooseHomeTabComboBox->removeItem(8);
-
-        // Graphics tab
-        ui->heightDivider->hide();
     }
 
     std::filesystem::path config_file =
@@ -326,6 +323,21 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
                                       Common::FS::GetUserPath(Common::FS::PathType::CustomTrophy));
             QDesktopServices::openUrl(QUrl::fromLocalFile(userPath));
         });
+
+        connect(ui->PortableUserButton, &QPushButton::clicked, this, []() {
+            QString userDir;
+            Common::FS::PathToQString(userDir, std::filesystem::current_path() / "user");
+            if (std::filesystem::exists(std::filesystem::current_path() / "user")) {
+                QMessageBox::information(NULL, tr("Cannot create portable user folder"),
+                                         tr("%1 already exists").arg(userDir));
+            } else {
+                std::filesystem::copy(Common::FS::GetUserPath(Common::FS::PathType::UserDir),
+                                      std::filesystem::current_path() / "user",
+                                      std::filesystem::copy_options::recursive);
+                QMessageBox::information(NULL, tr("Portable user folder created"),
+                                         tr("%1 successfully created.").arg(userDir));
+            }
+        });
     }
 
     // INPUT TAB
@@ -405,18 +417,18 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
             }
         });
 
-        connect(ui->PortableUserButton, &QPushButton::clicked, this, []() {
-            QString userDir;
-            Common::FS::PathToQString(userDir, std::filesystem::current_path() / "user");
-            if (std::filesystem::exists(std::filesystem::current_path() / "user")) {
-                QMessageBox::information(NULL, tr("Cannot create portable user folder"),
-                                         tr("%1 already exists").arg(userDir));
-            } else {
-                std::filesystem::copy(Common::FS::GetUserPath(Common::FS::PathType::UserDir),
-                                      std::filesystem::current_path() / "user",
-                                      std::filesystem::copy_options::recursive);
-                QMessageBox::information(NULL, tr("Portable user folder created"),
-                                         tr("%1 successfully created.").arg(userDir));
+        connect(ui->browse_sysmodules, &QPushButton::clicked, this, [this]() {
+            const auto sysmodules_path = Config::getSysModulesPath();
+            QString initial_path;
+            Common::FS::PathToQString(initial_path, sysmodules_path);
+
+            QString sysmodules_path_string =
+                QFileDialog::getExistingDirectory(this, tr("Select the DLC folder"), initial_path);
+
+            auto file_path = Common::FS::PathFromQString(sysmodules_path_string);
+            if (!file_path.empty()) {
+                Config::setSysModulesPath(file_path);
+                ui->sysmodulesPath->setText(sysmodules_path_string);
             }
         });
     }
@@ -493,6 +505,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         ui->OpenCustomTrophyLocationButton->installEventFilter(this);
         ui->label_Trophy->installEventFilter(this);
         ui->trophyKeyLineEdit->installEventFilter(this);
+        ui->PortableUserFolderGroupBox->installEventFilter(this);
 
         // Input
         ui->hideCursorGroupBox->installEventFilter(this);
@@ -516,13 +529,13 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         ui->gameFoldersListWidget->installEventFilter(this);
         ui->addFolderButton->installEventFilter(this);
         ui->removeFolderButton->installEventFilter(this);
-        ui->currentShadPath->setText(m_gui_settings->GetValue(gui::gen_shadPath).toString());
         ui->saveDataGroupBox->installEventFilter(this);
+        ui->sysmodulesGroupBox->installEventFilter(this);
+        ui->browse_sysmodules->installEventFilter(this);
         ui->currentSaveDataPath->installEventFilter(this);
         ui->currentDLCFolder->installEventFilter(this);
         ui->browseButton->installEventFilter(this);
         ui->folderButton->installEventFilter(this);
-        ui->PortableUserFolderGroupBox->installEventFilter(this);
 
         // Log
         ui->logTypeGroupBox->installEventFilter(this);
@@ -541,6 +554,8 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         ui->hostMarkersCheckBox->installEventFilter(this);
         ui->collectShaderCheckBox->installEventFilter(this);
         ui->copyGPUBuffersCheckBox->installEventFilter(this);
+
+        // Experimental
         ui->readbacksCheckBox->installEventFilter(this);
         ui->readbackLinearImagesCheckBox->installEventFilter(this);
         ui->dumpShadersCheckBox->installEventFilter(this);
@@ -549,6 +564,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         ui->neoCheckBox->installEventFilter(this);
         ui->networkConnectedCheckBox->installEventFilter(this);
         ui->psnSignInCheckBox->installEventFilter(this);
+        ui->dmemGroupBox->installEventFilter(this);
     }
 
     SdlEventWrapper::Wrapper::wrapperActive = true;
@@ -614,6 +630,8 @@ void SettingsDialog::LoadValuesFromConfig() {
 
     // Entries with no game-specific settings
     if (!is_game_specific) {
+        ui->currentShadPath->setText(m_gui_settings->GetValue(gui::gen_shadPath).toString());
+
         const auto save_data_path = Config::GetSaveDataPath();
         QString save_data_path_string;
         Common::FS::PathToQString(save_data_path_string, save_data_path);
@@ -623,6 +641,11 @@ void SettingsDialog::LoadValuesFromConfig() {
         QString dlc_folder_path_string;
         Common::FS::PathToQString(dlc_folder_path_string, dlc_folder_path);
         ui->currentDLCFolder->setText(dlc_folder_path_string);
+
+        const auto sysmodules_path = Config::getSysModulesPath();
+        QString sysmodules_path_string;
+        Common::FS::PathToQString(sysmodules_path_string, sysmodules_path);
+        ui->sysmodulesPath->setText(sysmodules_path_string);
 
         ui->emulatorLanguageComboBox->setCurrentIndex(
             languages[m_gui_settings->GetValue(gui::gen_guiLanguage).toString().toStdString()]);
@@ -700,6 +723,7 @@ void SettingsDialog::LoadValuesFromConfig() {
         toml::find_or<bool>(data, "General", "isConnectedToNetwork", false));
     ui->psnSignInCheckBox->setChecked(toml::find_or<bool>(data, "General", "isPSNSignedIn", false));
     ui->vblankSpinBox->setValue(toml::find_or<int>(data, "GPU", "vblankFrequency", 60));
+    ui->dmemSpinBox->setValue(toml::find_or<int>(data, "General", "extraDmemInMbytes", 0));
 
     // First options is auto selection -1, so gpuId on the GUI will always have to subtract 1
     // when setting and add 1 when getting to select the correct gpu in Qt
@@ -944,6 +968,10 @@ void SettingsDialog::updateNoteTextEdit(const QString& elementName) {
         text = tr("Remove:\\nRemove a folder from the list.");
     } else if (elementName == "PortableUserFolderGroupBox") {
         text = tr("Portable user folder:\\nStores shadPS4 settings and data that will be applied only to the shadPS4 build located in the current folder. Restart the app after creating the portable user folder to begin using it.");
+    } else if (elementName == "sysmodulesGroupBox") {
+        text = tr("PS4 Sysmodules Path:\\nThe folder where PS4 sysmodules are loaded from.");
+    } else if (elementName == "browse_sysmodules") {
+        text = tr("Browse:\\nBrowse for a folder to set as the sysmodules path.");
     }
 
     // DLC Folder
@@ -979,10 +1007,6 @@ void SettingsDialog::updateNoteTextEdit(const QString& elementName) {
         text = tr("Copy GPU Buffers:\\nGets around race conditions involving GPU submits.\\nMay or may not help with PM4 type 0 crashes.");
     } else if (elementName == "collectShaderCheckBox") {
         text = tr("Collect Shaders:\\nYou need this enabled to edit shaders with the debug menu (Ctrl + F10).");
-    } else if (elementName == "readbacksCheckBox") {
-        text = tr("Enable Readbacks:\\nEnable GPU memory readbacks and writebacks.\\nThis is required for proper behavior in some games.\\nMight cause stability and/or performance issues.");
-    } else if (elementName == "readbackLinearImagesCheckBox") {
-        text = tr("Enable Readback Linear Images:\\nEnables async downloading of GPU modified linear images.\\nMight fix issues in some games.");
     } else if (elementName == "separateLogFilesCheckbox") {
         text = tr("Separate Log Files:\\nWrites a separate logfile for each game.");
     } else if (elementName == "enableLoggingCheckBox") {
@@ -999,7 +1023,10 @@ void SettingsDialog::updateNoteTextEdit(const QString& elementName) {
         text = tr("Show Game Size In List:\\nThere is the size of the game in the list.");
     } else if (elementName == "motionControlsCheckBox") {
         text = tr("Enable Motion Controls:\\nWhen enabled it will use the controller's motion control if supported.");
-    } else if (elementName == "dmaCheckBox") {
+    } 
+
+    // Experimental
+    if (elementName == "dmaCheckBox") {
         text = tr("Enable Direct Memory Access:\\nEnables arbitrary memory access from the GPU to CPU memory.");
     } else if (elementName == "neoCheckBox") {
         text = tr("Enable PS4 Neo Mode:\\nAdds support for PS4 Pro emulation and memory size. Currently causes instability in a large number of tested games.");
@@ -1008,8 +1035,15 @@ void SettingsDialog::updateNoteTextEdit(const QString& elementName) {
     } else if (elementName == "networkConnectedCheckBox") {
         text = tr("Set Network Connected to True:\\nForces games to detect an active network connection. Actual online capabilities are not yet supported.");
     } else if (elementName == "psnSignInCheckBox") {
-        text = tr("Set PSN Signed-in to True:\\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported."); 
+        text = tr("Set PSN Signed-in to True:\\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported.");
+    } else if (elementName == "readbacksCheckBox") {
+        text = tr("Enable Readbacks:\\nEnable GPU memory readbacks and writebacks.\\nThis is required for proper behavior in some games.\\nMight cause stability and/or performance issues.");
+    } else if (elementName == "readbackLinearImagesCheckBox") {
+        text = tr("Enable Readback Linear Images:\\nEnables async downloading of GPU modified linear images.\\nMight fix issues in some games.");
+    } else if (elementName == "dmemGroupBox") {
+        text = tr("Additional DMem Allocation:\\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.");
     }
+
     // clang-format on
     ui->descriptionText->setText(text.replace("\\n", "\n"));
 }
@@ -1040,6 +1074,7 @@ void SettingsDialog::UpdateSettings(bool is_specific) {
     Config::setConnectedToNetwork(ui->networkConnectedCheckBox->isChecked(), is_specific);
     Config::setPSNSignedIn(ui->psnSignInCheckBox->isChecked(), is_specific);
     Config::setVblankFreq(ui->vblankSpinBox->value(), is_specific);
+    Config::setExtraDmemInMbytes(ui->dmemSpinBox->value(), is_specific);
 
     Config::setIsFullscreen(
         screenModeMap.value(ui->displayModeComboBox->currentText()) != "Windowed", is_specific);
