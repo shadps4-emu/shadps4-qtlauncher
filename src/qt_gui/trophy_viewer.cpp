@@ -315,6 +315,12 @@ void TrophyViewer::PopulateTrophyWidget(QString title) {
         std::vector<QImage> icons;
 
         for (const QFileInfo& iconInfo : iconDirList) {
+            QString fileName = iconInfo.fileName();
+
+            // Skip files that start with "icon" or "ICON"
+            if (fileName.startsWith("icon") || fileName.startsWith("ICON"))
+                continue;
+
             QImage icon =
                 QImage(iconInfo.absoluteFilePath())
                     .scaled(QSize(128, 128), Qt::KeepAspectRatio, Qt::SmoothTransformation);
