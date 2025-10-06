@@ -31,8 +31,10 @@ public:
 
     enum ParsingState { normal, args_counter, args };
     std::vector<std::string> parsedArgs;
-    std::unordered_map<std::string, bool> supportedCapabilities {{"memory_patch", false},
-                                                                 {"emu_control", false}};
+    std::unordered_map<std::string, bool> supportedCapabilities {
+        {"memory_patch", false},
+        {"emu_control", false},
+    };
 
 private:
     void onStderr();
