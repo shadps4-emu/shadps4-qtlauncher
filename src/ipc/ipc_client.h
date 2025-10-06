@@ -16,7 +16,7 @@ public:
     explicit IpcClient(QObject* parent = nullptr);
     void startEmulator(const QFileInfo& exe, const QStringList& args,
                        const QString& workDir = QString());
-    void runGame();
+    void startGame();
     void pauseGame();
     void resumeGame();
     void stopEmulator();
@@ -26,10 +26,15 @@ public:
                            std::string targetStr, std::string sizeStr, bool isOffset,
                            bool littleEndian, MemoryPatcher::PatchMask patchMask, int maskOffset);
     std::function<void()> gameClosedFunc;
+    std::function<void()> startGameFunc;
     std::function<void()> restartEmulatorFunc;
 
     enum ParsingState { normal, args_counter, args };
     std::vector<std::string> parsedArgs;
+    std::unordered_map<std::string, bool> supportedCapabilities{
+        {"memory_patch", false},
+        {"emu_control", false},
+    };
 
 private:
     void onStderr();
