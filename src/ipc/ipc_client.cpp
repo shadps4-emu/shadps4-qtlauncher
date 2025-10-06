@@ -101,8 +101,10 @@ void IpcClient::onStderr() {
             LOG_INFO(IPC, "Feature detected: 'emu_control'");
         } else if (s == "#IPC_END") {
             for (const auto& [capability, supported] : supportedCapabilities) {
-                if (!supported) {
-                    LOG_WARNING(IPC, "Feature: '{}' is not supported by the choosen emulator version", capability);
+                if (not supported) {
+                    LOG_WARNING(IPC,
+                                "Feature: '{}' is not supported by the choosen emulator version",
+                                capability);
                 }
             }
             LOG_INFO(IPC, "start emu");
