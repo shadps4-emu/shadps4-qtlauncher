@@ -1045,6 +1045,22 @@ Einzigartige Inputs können nicht öfters als einmal gebunden werden. Input-Dupl
       <source>Delete game-specific settings?</source>
       <translation>Individuelle Konfiguration löschen?</translation>
     </message>
+    <message>
+      <source>Launch...</source>
+      <translation type="unfinished">Launch...</translation>
+    </message>
+    <message>
+      <source>Launch with game specific configs (default)</source>
+      <translation type="unfinished">Launch with game specific configs (default)</translation>
+    </message>
+    <message>
+      <source>Launch with global config only</source>
+      <translation type="unfinished">Launch with global config only</translation>
+    </message>
+    <message>
+      <source>Launch with default settings</source>
+      <translation type="unfinished">Launch with default settings</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -2465,6 +2481,18 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
     <message>
       <source>Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</source>
       <translation type="unfinished">Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</translation>
+    </message>
+    <message>
+      <source>PS4 Sysmodules Folder</source>
+      <translation type="unfinished">PS4 Sysmodules Folder</translation>
+    </message>
+    <message>
+      <source>PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</source>
+      <translation type="unfinished">PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</translation>
+    </message>
+    <message>
+      <source>Browse:\nBrowse for a folder to set as the sysmodules path.</source>
+      <translation type="unfinished">Browse:\nBrowse for a folder to set as the sysmodules path.</translation>
     </message>
   </context>
   <context>
