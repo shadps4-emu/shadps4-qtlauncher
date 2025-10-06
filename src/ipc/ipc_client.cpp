@@ -107,7 +107,7 @@ void IpcClient::onStderr() {
                                 capability);
                 }
             }
-            LOG_INFO(IPC, "start emu");
+            LOG_INFO(IPC, "Start emu");
             writeLine("RUN");
             startGameFunc();
         } else if (s == "RESTART") {
