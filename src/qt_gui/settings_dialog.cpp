@@ -1153,8 +1153,8 @@ void SettingsDialog::UpdateSettings(bool is_specific) {
         Config::setEnableDiscordRPC(ui->discordRPCCheckbox->isChecked());
         m_gui_settings->SetValue(gui::gl_showCompatibility,
                                  ui->enableCompatibilityCheckBox->isChecked());
-        Config::setCheckCompatibilityOnStartup(
-            ui->checkCompatibilityOnStartupCheckBox->isChecked());
+        m_gui_settings->SetValue(gui::gen_checkCompatibilityAtStartup,
+                                 ui->checkCompatibilityOnStartupCheckBox->isChecked());
         m_gui_settings->SetValue(gui::gl_playBackgroundMusic, ui->playBGMCheckBox->isChecked());
         m_gui_settings->SetValue(gui::gl_backgroundMusicVolume, ui->BGMVolumeSlider->value());
         m_gui_settings->SetValue(gui::gen_checkForUpdates, ui->updateCheckBox->isChecked());
@@ -1254,6 +1254,7 @@ void SettingsDialog::setDefaultValues() {
         m_gui_settings->SetValue(gui::gen_guiLanguage, "en_US");
         m_gui_settings->SetValue(gui::gl_showLoadGameSizeEnabled, true);
         m_gui_settings->SetValue(gui::gl_showCompatibility, false);
+        m_gui_settings->SetValue(gui::gen_checkCompatibilityAtStartup, false);
     }
 }
 

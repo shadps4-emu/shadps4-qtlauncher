@@ -348,7 +348,7 @@ void MainWindow::LoadGameLists() {
         m_compat_info->LoadCompatibilityFile();
 
     // Update compatibility database
-    if (Config::getCheckCompatibilityOnStartup())
+    if (m_gui_settings->GetValue(gui::gen_checkCompatibilityAtStartup).toBool())
         m_compat_info->UpdateCompatibilityDatabase(this);
 
     // Get game info from game folders.

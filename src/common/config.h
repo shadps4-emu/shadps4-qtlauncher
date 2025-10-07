@@ -149,7 +149,6 @@ void setSysModulesPath(const std::filesystem::path& path);
 
 // TODO
 std::filesystem::path GetSaveDataPath();
-bool getCheckCompatibilityOnStartup();
 std::string getUserName();
 std::string getChooseHomeTab();
 bool GetUseUnifiedInputConfig();
@@ -161,7 +160,6 @@ void SetControllerCustomColor(int r, int b, int g);
 void setGameInstallDirs(const std::vector<std::filesystem::path>& dirs_config);
 void setAllGameInstallDirs(const std::vector<GameInstallDir>& dirs_config);
 void setSaveDataPath(const std::filesystem::path& path);
-void setCheckCompatibilityOnStartup(bool use);
 // Gui
 bool addGameInstallDir(const std::filesystem::path& dir, bool enabled = true);
 void removeGameInstallDir(const std::filesystem::path& dir);
