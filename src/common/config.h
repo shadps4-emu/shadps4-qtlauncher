@@ -72,6 +72,10 @@ bool vkValidationEnabled();
 void setVkValidation(bool enable, bool is_game_specific = false);
 bool vkValidationSyncEnabled();
 void setVkSyncValidation(bool enable, bool is_game_specific = false);
+bool vkValidationGpuEnabled();
+void setVkGpuValidation(bool enable, bool is_game_specific = false);
+bool vkValidationCoreEnabled();
+void setVkCoreValidation(bool enable, bool is_game_specific = false);
 bool getVkCrashDiagnosticEnabled();
 void setVkCrashDiagnosticEnabled(bool enable, bool is_game_specific = false);
 bool getVkHostMarkersEnabled();
@@ -117,7 +121,6 @@ void setDevKitConsole(bool enable, bool is_game_specific = false);
 int getExtraDmemInMbytes();
 void setExtraDmemInMbytes(int value, bool is_game_specific = false);
 
-bool vkValidationGpuEnabled(); // no set
 bool getIsMotionControlsEnabled();
 void setIsMotionControlsEnabled(bool use, bool is_game_specific = false);
 std::string getDefaultControllerID();

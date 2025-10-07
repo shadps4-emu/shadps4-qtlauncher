@@ -172,6 +172,7 @@ static ConfigEntry<s32> gpuId(-1);
 static ConfigEntry<bool> vkValidation(false);
 static ConfigEntry<bool> vkValidationSync(false);
 static ConfigEntry<bool> vkValidationGpu(false);
+static ConfigEntry<bool> vkValidationCore(true);
 static ConfigEntry<bool> vkCrashDiagnostic(false);
 static ConfigEntry<bool> vkHostMarkers(false);
 static ConfigEntry<bool> vkGuestMarkers(false);
@@ -454,6 +455,10 @@ bool vkValidationGpuEnabled() {
     return vkValidationGpu.get();
 }
 
+bool vkValidationCoreEnabled() {
+    return vkValidationCore.get();
+}
+
 bool getVkCrashDiagnosticEnabled() {
     return vkCrashDiagnostic.get();
 }
@@ -568,6 +573,14 @@ void setVkValidation(bool enable, bool is_game_specific) {
 
 void setVkSyncValidation(bool enable, bool is_game_specific) {
     vkValidationSync.set(enable, is_game_specific);
+}
+
+void setVkCoreValidation(bool enable, bool is_game_specific) {
+    vkValidationCore.set(enable, is_game_specific);
+}
+
+void setVkGpuValidation(bool enable, bool is_game_specific) {
+    vkValidationGpu.set(enable, is_game_specific);
 }
 
 void setRdocEnabled(bool enable, bool is_game_specific) {
@@ -914,6 +927,7 @@ void load(const std::filesystem::path& path, bool is_game_specific) {
 
         gpuId.setFromToml(vk, "gpuId", is_game_specific);
         vkValidation.setFromToml(vk, "validation", is_game_specific);
+        vkValidationCore.setFromToml(vk, "validation_core", is_game_specific);
         vkValidationSync.setFromToml(vk, "validation_sync", is_game_specific);
         vkValidationGpu.setFromToml(vk, "validation_gpu", is_game_specific);
         vkCrashDiagnostic.setFromToml(vk, "crashDiagnostic", is_game_specific);
@@ -1086,6 +1100,8 @@ void save(const std::filesystem::path& path, bool is_game_specific) {
     gpuId.setTomlValue(data, "Vulkan", "gpuId", is_game_specific);
     vkValidation.setTomlValue(data, "Vulkan", "validation", is_game_specific);
     vkValidationSync.setTomlValue(data, "Vulkan", "validation_sync", is_game_specific);
+    vkValidationCore.setTomlValue(data, "Vulkan", "validation_core", is_game_specific);
+    vkValidationGpu.setTomlValue(data, "Vulkan", "validation_gpu", is_game_specific);
     vkCrashDiagnostic.setTomlValue(data, "Vulkan", "crashDiagnostic", is_game_specific);
     vkHostMarkers.setTomlValue(data, "Vulkan", "hostMarkers", is_game_specific);
     vkGuestMarkers.setTomlValue(data, "Vulkan", "guestMarkers", is_game_specific);
@@ -1151,7 +1167,6 @@ void save(const std::filesystem::path& path, bool is_game_specific) {
         data["GPU"]["internalScreenWidth"] = internalScreenWidth.base_value;
         data["GPU"]["internalScreenHeight"] = internalScreenHeight.base_value;
         data["GPU"]["patchShaders"] = shouldPatchShaders.base_value;
-        data["Vulkan"]["validation_gpu"] = vkValidationGpu.base_value;
         data["Debug"]["FPSColor"] = isFpsColor.base_value;
     }
 
@@ -1217,6 +1232,7 @@ void setDefaultValues(bool is_game_specific) {
     // GS - Vulkan
     gpuId.set(-1, is_game_specific);
     vkValidation.set(false, is_game_specific);
+    vkValidationCore.set(true, is_game_specific);
     vkValidationSync.set(false, is_game_specific);
     vkValidationGpu.set(false, is_game_specific);
     vkCrashDiagnostic.set(false, is_game_specific);
