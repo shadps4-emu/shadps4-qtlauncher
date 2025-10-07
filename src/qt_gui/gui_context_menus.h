@@ -169,7 +169,7 @@ public:
 
         menu.addMenu(compatibilityMenu);
 
-        compatibilityMenu->setEnabled(Config::getCompatibilityEnabled());
+        compatibilityMenu->setEnabled(m_gui_settings->GetValue(gui::gl_showCompatibility).toBool());
         viewCompatibilityReport->setEnabled(m_games[itemID].compatibility.status !=
                                             CompatibilityStatus::Unknown);
 
@@ -378,7 +378,7 @@ public:
             Common::FS::PathToQString(iconPath, m_games[itemID].icon_path);
             QPixmap gameImage(iconPath);
             CheatsPatches* cheatsPatches =
-                new CheatsPatches(settings,gameName, gameSerial, gameVersion, gameSize, gameImage);
+                new CheatsPatches(settings, gameName, gameSerial, gameVersion, gameSize, gameImage);
             cheatsPatches->show();
             connect(widget->parent(), &QWidget::destroyed, cheatsPatches,
                     [cheatsPatches]() { cheatsPatches->deleteLater(); });

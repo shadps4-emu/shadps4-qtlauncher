@@ -128,7 +128,6 @@ static ConfigEntry<string> isSideTrophy("right");
 static ConfigEntry<bool> isConnectedToNetwork(false);
 static bool enableDiscordRPC = false;
 static bool checkCompatibilityOnStartup = false;
-static bool compatibilityData = false;
 static std::filesystem::path sys_modules_path = {};
 
 // Input
@@ -469,10 +468,6 @@ void setVkGuestMarkersEnabled(bool enable, bool is_game_specific) {
     vkGuestMarkers.set(enable, is_game_specific);
 }
 
-bool getCompatibilityEnabled() {
-    return compatibilityData;
-}
-
 bool getCheckCompatibilityOnStartup() {
     return checkCompatibilityOnStartup;
 }
@@ -655,10 +650,6 @@ void setSpecialPadClass(int type) {
 
 void setIsMotionControlsEnabled(bool use, bool is_game_specific) {
     isMotionControlsEnabled.set(use, is_game_specific);
-}
-
-void setCompatibilityEnabled(bool use) {
-    compatibilityData = use;
 }
 
 void setCheckCompatibilityOnStartup(bool use) {
@@ -846,7 +837,6 @@ void load(const std::filesystem::path& path, bool is_game_specific) {
         userName.setFromToml(general, "userName", is_game_specific);
         isShowSplash.setFromToml(general, "showSplash", is_game_specific);
         isSideTrophy.setFromToml(general, "sideTrophy", is_game_specific);
-        compatibilityData = toml::find_or<bool>(general, "compatibilityEnabled", compatibilityData);
         checkCompatibilityOnStartup = toml::find_or<bool>(general, "checkCompatibilityOnStartup",
                                                           checkCompatibilityOnStartup);
 
@@ -1120,7 +1110,6 @@ void save(const std::filesystem::path& path, bool is_game_specific) {
 
         // Non game-specific entries
         data["General"]["enableDiscordRPC"] = enableDiscordRPC;
-        data["General"]["compatibilityEnabled"] = compatibilityData;
         data["General"]["checkCompatibilityOnStartup"] = checkCompatibilityOnStartup;
         data["General"]["sysModulesPath"] = string{fmt::UTF(sys_modules_path.u8string()).data};
         data["GUI"]["installDirs"] = install_dirs;
@@ -1226,7 +1215,6 @@ void setDefaultValues(bool is_game_specific) {
 
         // General
         enableDiscordRPC = false;
-        compatibilityData = false;
         checkCompatibilityOnStartup = false;
 
         // Input

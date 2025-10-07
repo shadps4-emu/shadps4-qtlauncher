@@ -344,7 +344,7 @@ void MainWindow::CreateDockWindows() {
 
 void MainWindow::LoadGameLists() {
     // Load compatibility database
-    if (Config::getCompatibilityEnabled())
+    if (m_gui_settings->GetValue(gui::gl_showCompatibility).toBool())
         m_compat_info->LoadCompatibilityFile();
 
     // Update compatibility database

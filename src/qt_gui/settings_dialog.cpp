@@ -289,7 +289,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         connect(ui->enableCompatibilityCheckBox, &QCheckBox::checkStateChanged, this,
                 [this, m_compat_info](Qt::CheckState state) {
 #endif
-                    Config::setCompatibilityEnabled(state);
+                    m_gui_settings->SetValue(gui::gl_showCompatibility, state);
                     if (state) {
                         m_compat_info->LoadCompatibilityFile();
                     }
@@ -1151,7 +1151,8 @@ void SettingsDialog::UpdateSettings(bool is_specific) {
                                  ui->gameSizeCheckBox->isChecked());
         Config::setTrophyKey(ui->trophyKeyLineEdit->text().toStdString());
         Config::setEnableDiscordRPC(ui->discordRPCCheckbox->isChecked());
-        Config::setCompatibilityEnabled(ui->enableCompatibilityCheckBox->isChecked());
+        m_gui_settings->SetValue(gui::gl_showCompatibility,
+                                 ui->enableCompatibilityCheckBox->isChecked());
         Config::setCheckCompatibilityOnStartup(
             ui->checkCompatibilityOnStartupCheckBox->isChecked());
         m_gui_settings->SetValue(gui::gl_playBackgroundMusic, ui->playBGMCheckBox->isChecked());
@@ -1252,6 +1253,7 @@ void SettingsDialog::setDefaultValues() {
         }
         m_gui_settings->SetValue(gui::gen_guiLanguage, "en_US");
         m_gui_settings->SetValue(gui::gl_showLoadGameSizeEnabled, true);
+        m_gui_settings->SetValue(gui::gl_showCompatibility, false);
     }
 }
 
