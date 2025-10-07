@@ -1046,6 +1046,22 @@
       <source>Delete game-specific settings?</source>
       <translation>Удалить индивидуальную конфигурацию?</translation>
     </message>
+    <message>
+      <source>Launch...</source>
+      <translation>Запустить...</translation>
+    </message>
+    <message>
+      <source>Launch with game specific configs (default)</source>
+      <translation>Запуск с индивидуальной конфигурацией (по умолчанию)</translation>
+    </message>
+    <message>
+      <source>Launch with global config only</source>
+      <translation>Запуск только с глобальными настройками</translation>
+    </message>
+    <message>
+      <source>Launch with default settings</source>
+      <translation>Запуск с настройками по умолчанию</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -2462,6 +2478,18 @@ Please change ShadPS4 path in settings.</source>
     <message>
       <source>Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</source>
       <translation>Дополнительное распределение DMem\nЗаставляет выделить определённое количество DMem. Вызывает вылеты или проблемы в некоторых играх.</translation>
+    </message>
+    <message>
+      <source>PS4 Sysmodules Folder</source>
+      <translation>Папка системных модулей PS4</translation>
+    </message>
+    <message>
+      <source>PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</source>
+      <translation>Папка системных модулей PS4:\nПапка, из которой загружаются системные модули PS4.</translation>
+    </message>
+    <message>
+      <source>Browse:\nBrowse for a folder to set as the sysmodules path.</source>
+      <translation>Обзор:\nНайдите папку, которую можно указать в качестве пути для системных модулей.</translation>
     </message>
   </context>
   <context>

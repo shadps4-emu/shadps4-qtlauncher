@@ -1046,6 +1046,22 @@
       <source>Delete game-specific settings?</source>
       <translation>Oyuna özel ayarlar silinsin mi?</translation>
     </message>
+    <message>
+      <source>Launch...</source>
+      <translation type="unfinished">Launch...</translation>
+    </message>
+    <message>
+      <source>Launch with game specific configs (default)</source>
+      <translation type="unfinished">Launch with game specific configs (default)</translation>
+    </message>
+    <message>
+      <source>Launch with global config only</source>
+      <translation type="unfinished">Launch with global config only</translation>
+    </message>
+    <message>
+      <source>Launch with default settings</source>
+      <translation type="unfinished">Launch with default settings</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -2413,7 +2429,7 @@ Lütfen ayarlardan ShadPS4 yolunu değiştirin.</translation>
     </message>
     <message>
       <source>Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</source>
-      <translation type="unfinished">Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</translation>
+      <translation>Ağ Bağlantısını Aktifleştir:\nOyunların aktif bir ağ bağlantısı olduğunu algılamasını sağlar. Gerçek çevrim içi özellikler henüz desteklenmemektedir.</translation>
     </message>
     <message>
       <source>Set PSN Signed-in to True:\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported.</source>
@@ -2462,6 +2478,18 @@ Lütfen ayarlardan ShadPS4 yolunu değiştirin.</translation>
     <message>
       <source>Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</source>
       <translation type="unfinished">Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</translation>
+    </message>
+    <message>
+      <source>PS4 Sysmodules Folder</source>
+      <translation type="unfinished">PS4 Sysmodules Folder</translation>
+    </message>
+    <message>
+      <source>PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</source>
+      <translation type="unfinished">PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</translation>
+    </message>
+    <message>
+      <source>Browse:\nBrowse for a folder to set as the sysmodules path.</source>
+      <translation type="unfinished">Browse:\nBrowse for a folder to set as the sysmodules path.</translation>
     </message>
   </context>
   <context>

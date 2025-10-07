@@ -1046,6 +1046,22 @@
       <source>Delete game-specific settings?</source>
       <translation>Vols esborrar la configuració específica del joc?</translation>
     </message>
+    <message>
+      <source>Launch...</source>
+      <translation>Executant...</translation>
+    </message>
+    <message>
+      <source>Launch with game specific configs (default)</source>
+      <translation>Executa amb la configuració específica del joc (per defecte)</translation>
+    </message>
+    <message>
+      <source>Launch with global config only</source>
+      <translation>Executa només amb la configuració global</translation>
+    </message>
+    <message>
+      <source>Launch with default settings</source>
+      <translation>Executa amb la configuració per defecte</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -2462,6 +2478,18 @@ Canvia, si us plau, la ruta de ShadPS4 a configuració.</translation>
     <message>
       <source>Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</source>
       <translation>Ubicació addicional DMem:\nForça la ubicació d'una determinada quantitat de DMem. Pot provocar errors en alguns jocs.</translation>
+    </message>
+    <message>
+      <source>PS4 Sysmodules Folder</source>
+      <translation>Carpeta de PS4 de Sysmodules</translation>
+    </message>
+    <message>
+      <source>PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</source>
+      <translation>Ruta de sysmodules de PS4:\nLa carpeta des de la qual sysmodules de PS4 es carrega.</translation>
+    </message>
+    <message>
+      <source>Browse:\nBrowse for a folder to set as the sysmodules path.</source>
+      <translation>Cercar:\nCerca per una carpeta per establir com la ruta de sysmodules.</translation>
     </message>
   </context>
   <context>

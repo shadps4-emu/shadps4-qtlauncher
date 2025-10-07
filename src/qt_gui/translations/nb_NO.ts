@@ -1046,6 +1046,22 @@
       <source>Delete game-specific settings?</source>
       <translation>Slett innstillinger for enkeltspill?</translation>
     </message>
+    <message>
+      <source>Launch...</source>
+      <translation>Start …</translation>
+    </message>
+    <message>
+      <source>Launch with game specific configs (default)</source>
+      <translation>Start med spillspesifikke oppsett (standard)</translation>
+    </message>
+    <message>
+      <source>Launch with global config only</source>
+      <translation>Start kun med global oppsett</translation>
+    </message>
+    <message>
+      <source>Launch with default settings</source>
+      <translation>Start med standardinnstillinger</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -2462,6 +2478,18 @@ Endre mappa til shadPS4 i innstillingene.</translation>
     <message>
       <source>Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</source>
       <translation>Ytterligere direkte-minne tildeling:\nTvinger gjennom tildeling av ytterligere mengde direkte-minne. Forårsaker krasj eller andre feil i noen spill.</translation>
+    </message>
+    <message>
+      <source>PS4 Sysmodules Folder</source>
+      <translation>PS4 «Sysmodules»-mappe</translation>
+    </message>
+    <message>
+      <source>PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</source>
+      <translation>PS4 «Sysmodules»-mappe:\nMappa hvor PS4-systemmoduler lastes fra.</translation>
+    </message>
+    <message>
+      <source>Browse:\nBrowse for a folder to set as the sysmodules path.</source>
+      <translation>Endre mappe:\nBla gjennom for å finne mappa til systemmodulene.</translation>
     </message>
   </context>
   <context>
