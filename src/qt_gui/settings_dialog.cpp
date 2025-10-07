@@ -1147,7 +1147,8 @@ void SettingsDialog::UpdateSettings(bool is_specific) {
 
         BackgroundMusicPlayer::getInstance().setVolume(ui->BGMVolumeSlider->value());
 
-        Config::setLoadGameSizeEnabled(ui->gameSizeCheckBox->isChecked());
+        m_gui_settings->SetValue(gui::gl_showLoadGameSizeEnabled,
+                                 ui->gameSizeCheckBox->isChecked());
         Config::setTrophyKey(ui->trophyKeyLineEdit->text().toStdString());
         Config::setEnableDiscordRPC(ui->discordRPCCheckbox->isChecked());
         Config::setCompatibilityEnabled(ui->enableCompatibilityCheckBox->isChecked());
@@ -1250,6 +1251,7 @@ void SettingsDialog::setDefaultValues() {
             m_gui_settings->SetValue(gui::gen_updateChannel, "Nightly");
         }
         m_gui_settings->SetValue(gui::gen_guiLanguage, "en_US");
+        m_gui_settings->SetValue(gui::gl_showLoadGameSizeEnabled, true);
     }
 }
 

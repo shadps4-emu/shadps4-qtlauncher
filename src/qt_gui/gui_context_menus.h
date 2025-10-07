@@ -132,7 +132,7 @@ public:
         copyMenu->addAction(copyName);
         copyMenu->addAction(copySerial);
         copyMenu->addAction(copyVersion);
-        if (Config::GetLoadGameSizeEnabled()) {
+        if (settings->GetValue(gui::gl_showLoadGameSizeEnabled).toBool()) {
             copyMenu->addAction(copySize);
         }
         copyMenu->addAction(copyNameAll);
@@ -378,7 +378,7 @@ public:
             Common::FS::PathToQString(iconPath, m_games[itemID].icon_path);
             QPixmap gameImage(iconPath);
             CheatsPatches* cheatsPatches =
-                new CheatsPatches(gameName, gameSerial, gameVersion, gameSize, gameImage);
+                new CheatsPatches(settings,gameName, gameSerial, gameVersion, gameSize, gameImage);
             cheatsPatches->show();
             connect(widget->parent(), &QWidget::destroyed, cheatsPatches,
                     [cheatsPatches]() { cheatsPatches->deleteLater(); });
@@ -540,7 +540,7 @@ public:
 
         if (selected == copyNameAll) {
             QString GameSizeEnabled;
-            if (Config::GetLoadGameSizeEnabled()) {
+            if (settings->GetValue(gui::gl_showLoadGameSizeEnabled).toBool()) {
                 GameSizeEnabled = " | Size:" + QString::fromStdString(m_games[itemID].size);
             }
 

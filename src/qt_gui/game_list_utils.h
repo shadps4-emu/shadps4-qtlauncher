@@ -57,14 +57,14 @@ public:
         return sizeString + " " + suffixes[suffixIndex];
     }
 
-    static void GetFolderSize(GameInfo& game) {
+    static void GetFolderSize(GameInfo& game,bool gameSizeEnabled) {
         QString dirPath;
         Common::FS::PathToQString(dirPath, game.path);
         QDir dir(dirPath);
         QDirIterator it(dir.absolutePath(), QDirIterator::Subdirectories);
         qint64 total = 0;
 
-        if (!Config::GetLoadGameSizeEnabled()) {
+        if (!gameSizeEnabled) {
             game.size = FormatSize(0).toStdString();
             return;
         }

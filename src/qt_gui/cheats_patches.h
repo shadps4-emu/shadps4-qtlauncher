@@ -4,6 +4,7 @@
 #ifndef CHEATS_PATCHES_H
 #define CHEATS_PATCHES_H
 
+#include <memory>
 #include <QCheckBox>
 #include <QComboBox>
 #include <QGroupBox>
@@ -23,13 +24,15 @@
 #include <QVBoxLayout>
 #include <QVector>
 #include <QWidget>
+#include "gui_settings.h"
 
 class CheatsPatches : public QWidget {
     Q_OBJECT
 
 public:
-    CheatsPatches(const QString& gameName, const QString& gameSerial, const QString& gameVersion,
-                  const QString& gameSize, const QPixmap& gameImage, QWidget* parent = nullptr);
+    CheatsPatches(std::shared_ptr<gui_settings> gui_settings, const QString& gameName,
+                  const QString& gameSerial, const QString& gameVersion, const QString& gameSize,
+                  const QPixmap& gameImage, QWidget* parent = nullptr);
     ~CheatsPatches();
 
     void downloadCheats(const QString& source, const QString& m_gameSerial,
@@ -98,6 +101,7 @@ private:
     QMap<QString, Cheat> m_cheats;
     QMap<QString, PatchInfo> m_patchInfos;
     QVector<QCheckBox*> m_cheatCheckBoxes;
+    std::shared_ptr<gui_settings> m_gui_settings;
 
     // UI Elements
     QVBoxLayout* rightLayout;

@@ -140,9 +140,7 @@ std::filesystem::path getSysModulesPath();
 void setSysModulesPath(const std::filesystem::path& path);
 
 // TODO
-bool GetLoadGameSizeEnabled();
 std::filesystem::path GetSaveDataPath();
-void setLoadGameSizeEnabled(bool enable);
 bool getCompatibilityEnabled();
 bool getCheckCompatibilityOnStartup();
 std::string getUserName();

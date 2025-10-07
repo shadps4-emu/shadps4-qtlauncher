@@ -9,15 +9,17 @@
 #include "common/config.h"
 #include "core/file_format/psf.h"
 #include "game_list_utils.h"
+#include "gui_settings.h"
 
 class GameInfoClass : public QObject {
     Q_OBJECT
 public:
-    GameInfoClass();
+    GameInfoClass(std::shared_ptr<gui_settings> gui_settings);
     ~GameInfoClass();
     void GetGameInfo(QWidget* parent = nullptr);
     QVector<GameInfo> m_games;
     QVector<GameInfo> m_games_backup;
+    std::shared_ptr<gui_settings> m_gui_settings;
 
     static void SceUpdateChecker(const std::string sceItem, std::filesystem::path& gameItem,
                                  std::filesystem::path& update_folder,

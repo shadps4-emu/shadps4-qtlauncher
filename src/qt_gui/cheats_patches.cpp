@@ -33,11 +33,13 @@
 #include "common/memory_patcher.h"
 #include "common/path_util.h"
 
-CheatsPatches::CheatsPatches(const QString& gameName, const QString& gameSerial,
+CheatsPatches::CheatsPatches(std::shared_ptr<gui_settings> gui_settings,
+                             const QString& gameName, const QString& gameSerial,
                              const QString& gameVersion, const QString& gameSize,
                              const QPixmap& gameImage, QWidget* parent)
     : QWidget(parent), m_gameName(gameName), m_gameSerial(gameSerial), m_gameVersion(gameVersion),
-      m_gameSize(gameSize), m_gameImage(gameImage), manager(new QNetworkAccessManager(this)) {
+      m_gameSize(gameSize), m_gameImage(gameImage),
+      m_gui_settings(std::move(gui_settings)), manager(new QNetworkAccessManager(this)) {
     setupUI();
     resize(500, 400);
     setWindowTitle(tr("Cheats / Patches for ") + m_gameName);
@@ -93,7 +95,7 @@ void CheatsPatches::setupUI() {
     gameVersionLabel->setAlignment(Qt::AlignLeft);
     gameInfoLayout->addWidget(gameVersionLabel);
 
-    if (Config::GetLoadGameSizeEnabled()) {
+    if (m_gui_settings->GetValue(gui::gl_showLoadGameSizeEnabled).toBool()) {
         QLabel* gameSizeLabel = new QLabel(tr("Size: ") + m_gameSize);
         gameSizeLabel->setAlignment(Qt::AlignLeft);
         gameInfoLayout->addWidget(gameSizeLabel);

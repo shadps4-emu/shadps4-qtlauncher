@@ -139,7 +139,7 @@ void GameListFrame::PopulateGameList(bool isInitialPopulation) {
     this->m_current_item = nullptr;
     // Do not show status column if it is not enabled
     this->setColumnHidden(2, !Config::getCompatibilityEnabled());
-    this->setColumnHidden(6, !Config::GetLoadGameSizeEnabled());
+    this->setColumnHidden(6, !m_gui_settings->GetValue(gui::gl_showLoadGameSizeEnabled).toBool());
 
     this->setRowCount(m_game_info->m_games.size());
     ResizeIcons(icon_size);

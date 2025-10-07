@@ -649,7 +649,7 @@ void MainWindow::CreateConnects() {
                 QString gameVersion = QString::fromStdString(game.version);
 
                 CheatsPatches* cheatsPatches =
-                    new CheatsPatches(empty, empty, empty, empty, empty, nullptr);
+                    new CheatsPatches(m_gui_settings, empty, empty, empty, empty, empty, nullptr);
                 connect(cheatsPatches, &CheatsPatches::downloadFinished, onDownloadFinished);
 
                 pendingDownloads += 2;
@@ -665,7 +665,7 @@ void MainWindow::CreateConnects() {
 
             panelDialog->accept();
         });
-        connect(downloadAllPatchesButton, &QPushButton::clicked, [panelDialog]() {
+        connect(downloadAllPatchesButton, &QPushButton::clicked, [this, panelDialog]() {
             QEventLoop eventLoop;
             int pendingDownloads = 0;
 
@@ -677,7 +677,7 @@ void MainWindow::CreateConnects() {
 
             QString empty = "";
             CheatsPatches* cheatsPatches =
-                new CheatsPatches(empty, empty, empty, empty, empty, nullptr);
+                new CheatsPatches(m_gui_settings, empty, empty, empty, empty, empty, nullptr);
             connect(cheatsPatches, &CheatsPatches::downloadFinished, onDownloadFinished);
 
             pendingDownloads += 2;
@@ -1252,7 +1252,7 @@ void MainWindow::StartEmulator(std::filesystem::path path, QStringList args) {
 }
 
 void MainWindow::RunGame() {
-    auto gameInfo = GameInfoClass();
+    auto gameInfo = GameInfoClass(m_gui_settings);
     auto dir = last_game_path.parent_path();
     auto info = gameInfo.readGameInfo(dir);
     auto appVersion = info.version;

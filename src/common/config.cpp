@@ -185,7 +185,6 @@ static ConfigEntry<bool> isFpsColor(true);
 static ConfigEntry<bool> logEnabled(true);
 
 // GUI
-static bool load_game_size = true;
 static std::vector<GameInstallDir> settings_install_dirs = {};
 std::vector<bool> install_dirs_enabled = {};
 std::filesystem::path settings_addon_install_dir = {};
@@ -260,10 +259,6 @@ void setTrophyKey(string key) {
     trophyKey = key;
 }
 
-bool GetLoadGameSizeEnabled() {
-    return load_game_size;
-}
-
 std::filesystem::path GetSaveDataPath() {
     if (save_data_path.empty()) {
         return Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "savedata";
@@ -273,10 +268,6 @@ std::filesystem::path GetSaveDataPath() {
 
 void setVolumeSlider(int volumeValue, bool is_game_specific) {
     volumeSlider.set(volumeValue, is_game_specific);
-}
-
-void setLoadGameSizeEnabled(bool enable) {
-    load_game_size = enable;
 }
 
 bool isNeoModeConsole() {
@@ -937,8 +928,6 @@ void load(const std::filesystem::path& path, bool is_game_specific) {
     if (data.contains("GUI")) {
         const toml::value& gui = data.at("GUI");
 
-        load_game_size = toml::find_or<bool>(gui, "loadGameSizeEnabled", load_game_size);
-
         const auto install_dir_array =
             toml::find_or<std::vector<std::u8string>>(gui, "installDirs", {});
 
@@ -1137,7 +1126,6 @@ void save(const std::filesystem::path& path, bool is_game_specific) {
         data["GUI"]["installDirs"] = install_dirs;
         data["GUI"]["installDirsEnabled"] = install_dirs_enabled;
         data["GUI"]["saveDataPath"] = string{fmt::UTF(save_data_path.u8string()).data};
-        data["GUI"]["loadGameSizeEnabled"] = load_game_size;
         data["GUI"]["addonInstallDir"] =
             string{fmt::UTF(settings_addon_install_dir.u8string()).data};
         data["Debug"]["ConfigVersion"] = config_version;
@@ -1257,9 +1245,6 @@ void setDefaultValues(bool is_game_specific) {
         shouldPatchShaders.base_value = false;
         internalScreenWidth.base_value = 1280;
         internalScreenHeight.base_value = 720;
-
-        // GUI
-        load_game_size = true;
 
         // Debug
         isFpsColor.base_value = true;
