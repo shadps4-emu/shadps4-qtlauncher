@@ -1047,19 +1047,19 @@ Einzigartige Inputs können nicht öfters als einmal gebunden werden. Input-Dupl
     </message>
     <message>
       <source>Launch...</source>
-      <translation type="unfinished">Launch...</translation>
+      <translation>Starten mit...</translation>
     </message>
     <message>
       <source>Launch with game specific configs (default)</source>
-      <translation type="unfinished">Launch with game specific configs (default)</translation>
+      <translation>Starte mit der individuelle Konfiguration (Standard)</translation>
     </message>
     <message>
       <source>Launch with global config only</source>
-      <translation type="unfinished">Launch with global config only</translation>
+      <translation>Starte mit den allgemeinen Einstellungen</translation>
     </message>
     <message>
       <source>Launch with default settings</source>
-      <translation type="unfinished">Launch with default settings</translation>
+      <translation>Starte mit Standardeinstellungen</translation>
     </message>
   </context>
   <context>
@@ -1684,8 +1684,8 @@ Bitte ändere den shadPS4-Pfad in den Einstellungen.</translation>
     <message>
       <source>shadPS4 is not found!
 Please change shadPS4 path in settings.</source>
-      <translation type="unfinished">shadPS4 is not found!
-Please change shadPS4 path in settings.</translation>
+      <translation>shadPS4 wurde nicht gefunden!
+Bitte ändere den shadPS4-Pfad in den Einstellungen.</translation>
     </message>
   </context>
   <context>
@@ -2472,23 +2472,23 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
     </message>
     <message>
       <source>Additional DMem Allocation</source>
-      <translation type="unfinished">Additional DMem Allocation</translation>
+      <translation>Zusätzliche DMem-Zuweisung</translation>
     </message>
     <message>
       <source>Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</source>
-      <translation type="unfinished">Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</translation>
+      <translation>Zusätzliche DMem-Zuweisung:\nErzwingt eine Zuordnung zusätzlichen DMem mit der angegebenen Menge. Kann in einigen Spielen Abstürze oder sonstigen Probleme verursachen.</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Folder</source>
-      <translation type="unfinished">PS4 Sysmodules Folder</translation>
+      <translation>PS4 sysmodules-Pfad</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</source>
-      <translation type="unfinished">PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</translation>
+      <translation>PS4 sysmodules-Pfad:\nDer Ordner, aus denen die sysmodules der PS4 geladen werden können.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the sysmodules path.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the sysmodules path.</translation>
+      <translation>Durchsuchen:\nLege einen Ordner für sysmodules fest.</translation>
     </message>
   </context>
   <context>
