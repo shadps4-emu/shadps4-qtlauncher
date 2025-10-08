@@ -352,7 +352,8 @@ void MainWindow::LoadGameLists() {
         m_compat_info->UpdateCompatibilityDatabase(this);
 
     // Get game info from game folders.
-    m_game_info->GetGameInfo(this);
+    bool showSize = m_gui_settings->GetValue(gui::gl_showLoadGameSizeEnabled).toBool();
+    m_game_info->GetGameInfo(showSize, this);
     if (isTableList) {
         m_game_list_frame->PopulateGameList();
     } else {
@@ -935,7 +936,8 @@ void MainWindow::ShowGameList() {
 
 void MainWindow::RefreshGameTable() {
     // m_game_info->m_games.clear();
-    m_game_info->GetGameInfo(this);
+    bool showSize = m_gui_settings->GetValue(gui::gl_showLoadGameSizeEnabled).toBool();
+    m_game_info->GetGameInfo(showSize, this);
     m_game_list_frame->clearContents();
     m_game_list_frame->PopulateGameList();
     m_game_grid_frame->clearContents();
@@ -1252,7 +1254,7 @@ void MainWindow::StartEmulator(std::filesystem::path path, QStringList args) {
 }
 
 void MainWindow::RunGame() {
-    auto gameInfo = GameInfoClass(m_gui_settings);
+    auto gameInfo = GameInfoClass();
     auto dir = last_game_path.parent_path();
     auto info = gameInfo.readGameInfo(dir);
     auto appVersion = info.version;
