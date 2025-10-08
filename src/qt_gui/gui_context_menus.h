@@ -377,8 +377,8 @@ public:
             QString iconPath;
             Common::FS::PathToQString(iconPath, m_games[itemID].icon_path);
             QPixmap gameImage(iconPath);
-            CheatsPatches* cheatsPatches =
-                new CheatsPatches(settings, gameName, gameSerial, gameVersion, gameSize, gameImage);
+            CheatsPatches* cheatsPatches = new CheatsPatches(m_gui_settings, gameName, gameSerial,
+                                                             gameVersion, gameSize, gameImage);
             cheatsPatches->show();
             connect(widget->parent(), &QWidget::destroyed, cheatsPatches,
                     [cheatsPatches]() { cheatsPatches->deleteLater(); });
