@@ -317,8 +317,8 @@ void TrophyViewer::PopulateTrophyWidget(QString title) {
         for (const QFileInfo& iconInfo : iconDirList) {
             QString fileName = iconInfo.fileName();
 
-            // Skip files that start with "icon" or "ICON"
-            if (fileName.startsWith("icon") || fileName.startsWith("ICON"))
+            // Skip files that doesn't start with "trop" or "TROP"
+            if (!fileName.startsWith("trop") || !fileName.startsWith("TROP"))
                 continue;
 
             QImage icon =
