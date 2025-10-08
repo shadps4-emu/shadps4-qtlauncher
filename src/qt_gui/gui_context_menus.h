@@ -132,7 +132,7 @@ public:
         copyMenu->addAction(copyName);
         copyMenu->addAction(copySerial);
         copyMenu->addAction(copyVersion);
-        if (settings->GetValue(gui::gl_showLoadGameSizeEnabled).toBool()) {
+        if (m_gui_settings->GetValue(gui::gl_showLoadGameSizeEnabled).toBool()) {
             copyMenu->addAction(copySize);
         }
         copyMenu->addAction(copyNameAll);
