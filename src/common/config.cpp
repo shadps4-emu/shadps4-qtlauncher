@@ -187,7 +187,6 @@ static ConfigEntry<bool> vkValidation(false);
 static ConfigEntry<bool> vkValidationCore(true);
 static ConfigEntry<bool> vkValidationSync(false);
 static ConfigEntry<bool> vkValidationGpu(false);
-static ConfigEntry<bool> vkValidationCore(true);
 static ConfigEntry<bool> vkCrashDiagnostic(false);
 static ConfigEntry<bool> vkHostMarkers(false);
 static ConfigEntry<bool> vkGuestMarkers(false);
@@ -469,10 +468,6 @@ bool vkValidationSyncEnabled() {
 
 bool vkValidationGpuEnabled() {
     return vkValidationGpu.get();
-}
-
-bool vkValidationCoreEnabled() {
-    return vkValidationCore.get();
 }
 
 bool getVkCrashDiagnosticEnabled() {
