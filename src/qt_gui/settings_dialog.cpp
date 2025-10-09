@@ -803,9 +803,8 @@ void SettingsDialog::LoadValuesFromConfig() {
     ui->DsAudioComboBox->setCurrentText(QString::fromStdString(
         toml::find_or<std::string>(data, "General", "padSpkOutputDevice", "")));
 
-    std::string chooseHomeTab =
-        toml::find_or<std::string>(data, "General", "chooseHomeTab", "General");
-    QString translatedText = chooseHomeTabMap.key(QString::fromStdString(chooseHomeTab));
+    QString chooseHomeTab = m_gui_settings->GetValue(gui::gen_homeTab).toString();
+    QString translatedText = chooseHomeTabMap.key(chooseHomeTab);
     if (translatedText.isEmpty()) {
         translatedText = tr("General");
     }
@@ -1128,9 +1127,6 @@ void SettingsDialog::UpdateSettings(bool is_specific) {
     Config::setVkCrashDiagnosticEnabled(ui->crashDiagnosticsCheckBox->isChecked(), is_specific);
     Config::setCollectShaderForDebug(ui->collectShaderCheckBox->isChecked(), is_specific);
     Config::setCopyGPUCmdBuffers(ui->copyGPUBuffersCheckBox->isChecked(), is_specific);
-    Config::setChooseHomeTab(
-        chooseHomeTabMap.value(ui->chooseHomeTabComboBox->currentText()).toStdString(),
-        is_specific);
 
     // Entries with no game-specific settings
     if (!is_specific) {
@@ -1166,6 +1162,8 @@ void SettingsDialog::UpdateSettings(bool is_specific) {
         m_gui_settings->SetValue(gui::gl_backgroundImageOpacity,
                                  std::clamp(ui->backgroundImageOpacitySlider->value(), 0, 100));
         emit BackgroundOpacityChanged(ui->backgroundImageOpacitySlider->value());
+        m_gui_settings->SetValue(gui::gen_homeTab,
+                                 chooseHomeTabMap.value(ui->chooseHomeTabComboBox->currentText()));
     }
 }
 
@@ -1255,6 +1253,7 @@ void SettingsDialog::setDefaultValues() {
         m_gui_settings->SetValue(gui::gl_showLoadGameSizeEnabled, true);
         m_gui_settings->SetValue(gui::gl_showCompatibility, false);
         m_gui_settings->SetValue(gui::gen_checkCompatibilityAtStartup, false);
+        m_gui_settings->SetValue(gui::gen_homeTab, "General");
     }
 }
 

@@ -143,14 +143,12 @@ void setRcasAttenuation(int value, bool is_game_specific = false);
 bool getIsConnectedToNetwork();
 void setConnectedToNetwork(bool enable, bool is_game_specific = false);
 void setUserName(const std::string& name, bool is_game_specific = false);
-void setChooseHomeTab(const std::string& type, bool is_game_specific = false);
 std::filesystem::path getSysModulesPath();
 void setSysModulesPath(const std::filesystem::path& path);
 
 // TODO
 std::filesystem::path GetSaveDataPath();
 std::string getUserName();
-std::string getChooseHomeTab();
 bool GetUseUnifiedInputConfig();
 void SetUseUnifiedInputConfig(bool use);
 bool GetOverrideControllerColor();

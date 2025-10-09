@@ -139,7 +139,6 @@ static ConfigEntry<double> trophyNotificationDuration(6.0);
 static ConfigEntry<string> logFilter("");
 static ConfigEntry<string> logType("sync");
 static ConfigEntry<string> userName("shadPS4");
-static ConfigEntry<string> chooseHomeTab("General");
 static ConfigEntry<bool> isShowSplash(false);
 static ConfigEntry<string> isSideTrophy("right");
 static ConfigEntry<bool> isConnectedToNetwork(false);
@@ -378,10 +377,6 @@ string getLogType() {
 
 string getUserName() {
     return userName.get();
-}
-
-string getChooseHomeTab() {
-    return chooseHomeTab.get();
 }
 
 bool getUseSpecialPad() {
@@ -663,10 +658,6 @@ void setUserName(const string& name, bool is_game_specific) {
     userName.set(name, is_game_specific);
 }
 
-void setChooseHomeTab(const string& type, bool is_game_specific) {
-    chooseHomeTab.set(type, is_game_specific);
-}
-
 void setUseSpecialPad(bool use) {
     useSpecialPad.base_value = use;
 }
@@ -851,7 +842,6 @@ void load(const std::filesystem::path& path, bool is_game_specific) {
         isSideTrophy.setFromToml(general, "sideTrophy", is_game_specific);
 
         isConnectedToNetwork.setFromToml(general, "isConnectedToNetwork", is_game_specific);
-        chooseHomeTab.setFromToml(general, "chooseHomeTab", is_game_specific);
         defaultControllerID.setFromToml(general, "defaultControllerID", is_game_specific);
         sys_modules_path = toml::find_fs_path_or(general, "sysModulesPath", sys_modules_path);
     }
@@ -1032,7 +1022,6 @@ void save(const std::filesystem::path& path, bool is_game_specific) {
     logFilter.setTomlValue(data, "General", "logFilter", is_game_specific);
     logType.setTomlValue(data, "General", "logType", is_game_specific);
     userName.setTomlValue(data, "General", "userName", is_game_specific);
-    chooseHomeTab.setTomlValue(data, "General", "chooseHomeTab", is_game_specific);
     isShowSplash.setTomlValue(data, "General", "showSplash", is_game_specific);
     isSideTrophy.setTomlValue(data, "General", "sideTrophy", is_game_specific);
     isNeo.setTomlValue(data, "General", "isPS4Pro", is_game_specific);
@@ -1172,7 +1161,6 @@ void setDefaultValues(bool is_game_specific) {
     logFilter.set("", is_game_specific);
     logType.set("sync", is_game_specific);
     userName.set("shadPS4", is_game_specific);
-    chooseHomeTab.set("General", is_game_specific);
     isShowSplash.set(false, is_game_specific);
     isSideTrophy.set("right", is_game_specific);
 

@@ -27,6 +27,7 @@ const gui_value gen_theme = gui_value(general_settings, "theme", 0);
 const gui_value gen_shadPath = gui_value(general_settings, "shadPath", "");
 const gui_value gen_checkCompatibilityAtStartup =
     gui_value(general_settings, "checkCompatibilityAtStartup", false);
+const gui_value gen_homeTab = gui_value(general_settings, "homeTab", "General");
 
 // main window settings
 const gui_value mw_geometry = gui_value(main_window, "geometry", QByteArray());
