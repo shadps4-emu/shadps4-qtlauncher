@@ -57,7 +57,7 @@ bool MainWindow::Init() {
     SetLastUsedTheme();
     SetLastIconSizeBullet();
     // show ui
-    setMinimumSize(720, 405);
+    setMinimumSize(850, 405);
     std::string window_title = "";
     std::string remote_url(Common::g_scm_remote_url);
     std::string remote_host = Common::GetRemoteNameFromLink();
@@ -252,13 +252,17 @@ void MainWindow::AddUiWidgets() {
     ui->playButton->setVisible(true);
     ui->pauseButton->setVisible(false);
 
-    // Expandable spacer to push elements to the right
+    // Expandable spacer to push elements to the right (Version Manager)
     QWidget* expandingSpacer = new QWidget(this);
     expandingSpacer->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
     ui->toolBar->addWidget(expandingSpacer);
-    ui->toolBar->addWidget(ui->versionComboBox);
-    ui->toolBar->addWidget(
-        createButtonWithLabel(ui->versionManagerdButton, tr("Version Manager"), showLabels));
+    QWidget* versionContainer = new QWidget(this);
+    QVBoxLayout* versionLayout = new QVBoxLayout(versionContainer);
+    versionLayout->setContentsMargins(0, 0, 0, 0);
+    versionLayout->addWidget(ui->versionComboBox);
+    versionLayout->addWidget(ui->versionManagerButton);
+    ui->versionManagerButton->setText(tr("Version Manager"));
+    ui->toolBar->addWidget(versionContainer);
     LoadVersionComboBox();
 }
 
@@ -502,14 +506,9 @@ void MainWindow::CreateConnects() {
         kbmWindow->exec();
     });
 
-    connect(ui->versionManagerdButton, &QPushButton::clicked, this, [this]() {
+    connect(ui->versionManagerButton, &QPushButton::clicked, this, [this]() {
         auto versionDialog = new VersionDialog(m_gui_settings, this);
-
-        connect(versionDialog, &QDialog::finished, this, [this](int) {
-            // this is not working properly...
-            // LoadVersionComboBox();
-        });
-
+        connect(versionDialog, &QDialog::finished, this, [this](int) { LoadVersionComboBox(); });
         versionDialog->exec();
     });
 
@@ -1266,7 +1265,16 @@ tr("First, download an emulator version by selecting one from the download scree
 
     isGameRunning = true;
     last_game_path = path;
-    QString exe = selectedVersion + "/shadPS4.exe";
+
+    QString exeName;
+#ifdef Q_OS_WIN
+    exeName = "/shadPS4.exe";
+#elif defined(Q_OS_LINUX)
+    exeName = "/shadPS4.AppImage";
+#elif defined(Q_OS_MACOS)
+    exeName = "/shadPS4";
+#endif
+    QString exe = selectedVersion + exeName;
     QFileInfo fileInfo(exe);
     if (!fileInfo.exists()) {
         QMessageBox::critical(
@@ -1299,7 +1307,16 @@ tr("First, download an emulator version by selecting one from the download scree
 }
 
 void MainWindow::RestartEmulator() {
-    QString exe = m_gui_settings->GetValue(gui::vm_versionSelected).toString() + "/shadPS4.exe";
+    QString exeName;
+#ifdef Q_OS_WIN
+    exeName = "/shadPS4.exe";
+#elif defined(Q_OS_LINUX)
+    exeName = "/shadPS4.AppImage";
+#elif defined(Q_OS_MACOS)
+    exeName = "/shadPS4";
+#endif
+
+    QString exe = m_gui_settings->GetValue(gui::vm_versionSelected).toString() + exeName;
     QStringList args{"--game", QString::fromStdWString(last_game_path.wstring())};
 
     if (m_ipc_client->parsedArgs.size() > 0) {
@@ -1319,8 +1336,12 @@ void MainWindow::RestartEmulator() {
 
 void MainWindow::LoadVersionComboBox() {
     QString path = m_gui_settings->GetValue(gui::vm_versionPath).toString();
-    if (path.isEmpty() || !QDir(path).exists())
+    if (path.isEmpty() || !QDir(path).exists()) {
+        ui->versionComboBox->clear();
+        ui->versionComboBox->addItem(tr("No version selected"));
+        ui->versionComboBox->setCurrentIndex(0);
         return;
+    }
 
     ui->versionComboBox->clear();
 
@@ -1390,7 +1411,7 @@ void MainWindow::LoadVersionComboBox() {
         selectedIndex = 0;
     }
 
-    connect(ui->versionComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this,
+    connect(ui->versionComboBox, QOverload<int>::of(&QComboBox::activated), this,
             [this](int index) {
                 QString fullPath = ui->versionComboBox->itemData(index).toString();
                 m_gui_settings->SetValue(gui::vm_versionSelected, fullPath);
