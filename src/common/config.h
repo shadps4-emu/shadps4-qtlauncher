@@ -79,6 +79,10 @@ bool vkValidationEnabled();
 void setVkValidation(bool enable, bool is_game_specific = false);
 bool vkValidationSyncEnabled();
 void setVkSyncValidation(bool enable, bool is_game_specific = false);
+bool vkValidationGpuEnabled();
+void setVkGpuValidation(bool enable, bool is_game_specific = false);
+bool vkValidationCoreEnabled();
+void setVkCoreValidation(bool enable, bool is_game_specific = false);
 bool getVkCrashDiagnosticEnabled();
 void setVkCrashDiagnosticEnabled(bool enable, bool is_game_specific = false);
 bool getVkHostMarkersEnabled();
@@ -122,8 +126,6 @@ void setNeoMode(bool enable, bool is_game_specific = false);
 bool isDevKitConsole();
 void setDevKitConsole(bool enable, bool is_game_specific = false);
 
-bool vkValidationCoreEnabled(); // no set
-bool vkValidationGpuEnabled();  // no set
 int getExtraDmemInMbytes();
 void setExtraDmemInMbytes(int value, bool is_game_specific = false);
 bool getIsMotionControlsEnabled();
