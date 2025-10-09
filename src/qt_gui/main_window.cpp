@@ -1336,7 +1336,11 @@ void MainWindow::RestartEmulator() {
 
 void MainWindow::LoadVersionComboBox() {
     QString path = m_gui_settings->GetValue(gui::vm_versionPath).toString();
-    if (path.isEmpty() || !QDir(path).exists()) {
+    if (path.isEmpty() || !QDir(path).exists())
+        return;
+
+    QString savedVersionPath = m_gui_settings->GetValue(gui::vm_versionSelected).toString();
+    if (savedVersionPath.isEmpty() || !QDir(savedVersionPath).exists()) {
         ui->versionComboBox->clear();
         ui->versionComboBox->addItem(tr("No version selected"));
         ui->versionComboBox->setCurrentIndex(0);
@@ -1350,8 +1354,6 @@ void MainWindow::LoadVersionComboBox() {
 
     QVector<QPair<QVector<int>, QString>> versionedDirs;
     QStringList otherDirs;
-
-    QString savedVersionPath = m_gui_settings->GetValue(gui::vm_versionSelected).toString();
 
     for (const QString& folder : folders) {
         if (folder == "Pre-release") {
