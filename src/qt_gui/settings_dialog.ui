@@ -320,8 +320,8 @@
                       <rect>
                        <x>0</x>
                        <y>0</y>
-                       <width>408</width>
-                       <height>68</height>
+                       <width>98</width>
+                       <height>47</height>
                       </rect>
                      </property>
                      <layout class="QHBoxLayout" name="horizontalLayout_6">
@@ -422,8 +422,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>932</width>
-         <height>507</height>
+         <width>946</width>
+         <height>516</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -1999,39 +1999,6 @@
          </widget>
         </item>
         <item>
-         <widget class="QGroupBox" name="shadps4GroupBox">
-          <property name="title">
-           <string>shadPS4 Path</string>
-          </property>
-          <layout class="QVBoxLayout" name="verticalLayout_shadps4">
-           <item>
-            <layout class="QHBoxLayout" name="horizontalLayout_shadps4">
-             <item>
-              <widget class="QLineEdit" name="currentShadPath">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="placeholderText">
-                <string/>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="browse_shad_path">
-               <property name="text">
-                <string>Browse</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item>
          <widget class="QGroupBox" name="dlcFolderGroupBox_2">
           <property name="title">
            <string>DLC Folder</string>
@@ -2273,8 +2240,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>946</width>
-         <height>234</height>
+         <width>565</width>
+         <height>229</height>
         </rect>
        </property>
        <property name="sizePolicy">

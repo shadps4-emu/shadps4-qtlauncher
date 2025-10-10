@@ -11,6 +11,7 @@
 
 #include "about_dialog.h"
 #include "cheats_patches.h"
+#include "version_dialog.h"
 #ifdef ENABLE_UPDATER
 #include "check_update.h"
 #endif
@@ -57,7 +58,7 @@ bool MainWindow::Init() {
     SetLastUsedTheme();
     SetLastIconSizeBullet();
     // show ui
-    setMinimumSize(720, 405);
+    setMinimumSize(900, 405);
     std::string window_title = "";
     std::string remote_url(Common::g_scm_remote_url);
     std::string remote_host = Common::GetRemoteNameFromLink();
@@ -80,10 +81,16 @@ bool MainWindow::Init() {
     this->show();
     // load game list
     LoadGameLists();
+
 #ifdef ENABLE_UPDATER
     // Check for update
     CheckUpdateMain(true);
 #endif
+
+    if (m_gui_settings->GetValue(gui::vm_checkOnStartup).toBool()) {
+        auto versionDialog = new VersionDialog(m_gui_settings, this);
+        versionDialog->checkUpdatePre(false);
+    }
 
     auto end = std::chrono::steady_clock::now();
     auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
@@ -251,6 +258,19 @@ void MainWindow::AddUiWidgets() {
 
     ui->playButton->setVisible(true);
     ui->pauseButton->setVisible(false);
+
+    // Expandable spacer to push elements to the right (Version Manager)
+    QWidget* expandingSpacer = new QWidget(this);
+    expandingSpacer->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
+    ui->toolBar->addWidget(expandingSpacer);
+    QWidget* versionContainer = new QWidget(this);
+    QVBoxLayout* versionLayout = new QVBoxLayout(versionContainer);
+    versionLayout->setContentsMargins(0, 0, 0, 0);
+    versionLayout->addWidget(ui->versionComboBox);
+    versionLayout->addWidget(ui->versionManagerButton);
+    ui->versionManagerButton->setText(tr("Version Manager"));
+    ui->toolBar->addWidget(versionContainer);
+    LoadVersionComboBox();
 }
 
 void MainWindow::UpdateToolbarButtons() {
@@ -492,6 +512,12 @@ void MainWindow::CreateConnects() {
     connect(ui->keyboardButton, &QPushButton::clicked, this, [this]() {
         auto kbmWindow = new KBMSettings(m_game_info, isGameRunning, runningGameSerial, this);
         kbmWindow->exec();
+    });
+
+    connect(ui->versionManagerButton, &QPushButton::clicked, this, [this]() {
+        auto versionDialog = new VersionDialog(m_gui_settings, this);
+        connect(versionDialog, &QDialog::finished, this, [this](int) { LoadVersionComboBox(); });
+        versionDialog->exec();
     });
 
 #ifdef ENABLE_UPDATER
@@ -1233,9 +1259,31 @@ void MainWindow::StartEmulator(std::filesystem::path path, QStringList args) {
         QMessageBox::critical(nullptr, tr("Run Game"), QString(tr("Game is already running!")));
         return;
     }
+
+    QString selectedVersion = m_gui_settings->GetValue(gui::vm_versionSelected).toString();
+    if (selectedVersion.isEmpty()) {
+        QMessageBox::warning(this, tr("No Version Selected"),
+                             // clang-format off
+tr("No emulator version was selected.\nThe Version Manager menu will then open.\nSelect an emulator version from the right panel."));
+        // clang-format on
+        auto versionDialog = new VersionDialog(m_gui_settings, this);
+        connect(versionDialog, &QDialog::finished, this, [this](int) { LoadVersionComboBox(); });
+        versionDialog->exec();
+        return;
+    }
+
     isGameRunning = true;
     last_game_path = path;
-    QString exe = m_gui_settings->GetValue(gui::gen_shadPath).toString();
+
+    QString exeName;
+#ifdef Q_OS_WIN
+    exeName = "/shadPS4.exe";
+#elif defined(Q_OS_LINUX)
+    exeName = "/shadPS4.AppImage";
+#elif defined(Q_OS_MACOS)
+    exeName = "/shadPS4";
+#endif
+    QString exe = selectedVersion + exeName;
     QFileInfo fileInfo(exe);
     if (!fileInfo.exists()) {
         QMessageBox::critical(
@@ -1270,7 +1318,16 @@ void MainWindow::RunGame() {
 }
 
 void MainWindow::RestartEmulator() {
-    QString exe = m_gui_settings->GetValue(gui::gen_shadPath).toString();
+    QString exeName;
+#ifdef Q_OS_WIN
+    exeName = "/shadPS4.exe";
+#elif defined(Q_OS_LINUX)
+    exeName = "/shadPS4.AppImage";
+#elif defined(Q_OS_MACOS)
+    exeName = "/shadPS4";
+#endif
+
+    QString exe = m_gui_settings->GetValue(gui::vm_versionSelected).toString() + exeName;
     QStringList args{"--game", QString::fromStdWString(last_game_path.wstring())};
 
     if (m_ipc_client->parsedArgs.size() > 0) {
@@ -1285,4 +1342,95 @@ void MainWindow::RestartEmulator() {
     QString workDir = fileInfo.absolutePath();
 
     m_ipc_client->startEmulator(fileInfo, args, workDir);
+}
+
+void MainWindow::LoadVersionComboBox() {
+    QString savedVersionPath = m_gui_settings->GetValue(gui::vm_versionSelected).toString();
+    if (savedVersionPath.isEmpty() || !QDir(savedVersionPath).exists()) {
+        ui->versionComboBox->clear();
+        ui->versionComboBox->addItem(tr("No version selected"));
+        ui->versionComboBox->setCurrentIndex(0);
+        ui->versionComboBox->setSizeAdjustPolicy(QComboBox::AdjustToContents);
+        ui->versionComboBox->adjustSize();
+        return;
+    }
+
+    QString path = m_gui_settings->GetValue(gui::vm_versionPath).toString();
+    if (path.isEmpty() || !QDir(path).exists())
+        return;
+
+    ui->versionComboBox->clear();
+
+    QStringList folders = QDir(path).entryList(QDir::Dirs | QDir::NoDotAndDotDot);
+    QRegularExpression versionRegex("^v(\\d+)\\.(\\d+)\\.(\\d+)$");
+
+    QVector<QPair<QVector<int>, QString>> versionedDirs;
+    QStringList otherDirs;
+
+    for (const QString& folder : folders) {
+        if (folder == "Pre-release") {
+            otherDirs.append(folder);
+            continue;
+        }
+
+        QRegularExpressionMatch match = versionRegex.match(folder.section(" - ", 0, 0));
+        if (match.hasMatch()) {
+            QVector<int> versionParts = {match.captured(1).toInt(), match.captured(2).toInt(),
+                                         match.captured(3).toInt()};
+            versionedDirs.append({versionParts, folder});
+        } else {
+            otherDirs.append(folder);
+        }
+    }
+
+    std::sort(otherDirs.begin(), otherDirs.end());
+
+    std::sort(versionedDirs.begin(), versionedDirs.end(), [](const auto& a, const auto& b) {
+        if (a.first[0] != b.first[0])
+            return a.first[0] > b.first[0];
+        if (a.first[1] != b.first[1])
+            return a.first[1] > b.first[1];
+        return a.first[2] > b.first[2];
+    });
+
+    auto addEntry = [&](const QString& folder) {
+        QString fullPath = QDir(path).filePath(folder);
+        QString label;
+
+        if (folder.startsWith("Pre-release-shadPS4")) {
+            label = "Pre-release";
+        } else if (folder.contains(" - ")) {
+            label = folder.section(" - ", 0, 0);
+        } else {
+            label = folder;
+        }
+
+        ui->versionComboBox->addItem(label, fullPath);
+    };
+
+    for (const QString& folder : otherDirs) {
+        addEntry(folder);
+    }
+
+    for (const auto& pair : versionedDirs) {
+        addEntry(pair.second);
+    }
+
+    int selectedIndex = ui->versionComboBox->findData(savedVersionPath);
+
+    if (selectedIndex >= 0) {
+        ui->versionComboBox->setCurrentIndex(selectedIndex);
+    } else if (ui->versionComboBox->count() > 0) {
+        ui->versionComboBox->setCurrentIndex(0);
+        selectedIndex = 0;
+    }
+
+    connect(ui->versionComboBox, QOverload<int>::of(&QComboBox::activated), this,
+            [this](int index) {
+                QString fullPath = ui->versionComboBox->itemData(index).toString();
+                m_gui_settings->SetValue(gui::vm_versionSelected, fullPath);
+            });
+
+    ui->versionComboBox->setSizeAdjustPolicy(QComboBox::AdjustToContents);
+    ui->versionComboBox->adjustSize();
 }
