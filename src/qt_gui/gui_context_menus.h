@@ -169,7 +169,7 @@ public:
 
         menu.addMenu(compatibilityMenu);
 
-        compatibilityMenu->setEnabled(Config::getCompatibilityEnabled());
+        compatibilityMenu->setEnabled(m_gui_settings->GetValue(gui::gl_showCompatibility).toBool());
         viewCompatibilityReport->setEnabled(m_games[itemID].compatibility.status !=
                                             CompatibilityStatus::Unknown);
 

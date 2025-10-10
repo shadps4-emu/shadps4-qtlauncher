@@ -59,7 +59,7 @@
       </size>
      </property>
      <property name="currentIndex">
-      <number>5</number>
+      <number>7</number>
      </property>
      <property name="usesScrollButtons">
       <bool>true</bool>
@@ -422,8 +422,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>946</width>
-         <height>516</height>
+         <width>932</width>
+         <height>504</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -2240,8 +2240,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>565</width>
-         <height>229</height>
+         <width>946</width>
+         <height>418</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -2295,23 +2295,16 @@
                 </widget>
                </item>
                <item>
-                <widget class="QCheckBox" name="vkValidationCheckBox">
-                 <property name="text">
-                  <string>Enable Vulkan Validation Layers</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QCheckBox" name="vkSyncValidationCheckBox">
-                 <property name="text">
-                  <string>Enable Vulkan Synchronization Validation</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
                 <widget class="QCheckBox" name="rdocCheckBox">
                  <property name="text">
                   <string>Enable RenderDoc Debugging</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QCheckBox" name="copyGPUBuffersCheckBox">
+                 <property name="text">
+                  <string>Copy GPU Buffers</string>
                  </property>
                 </widget>
                </item>
@@ -2360,13 +2353,6 @@
                 </widget>
                </item>
                <item>
-                <widget class="QCheckBox" name="copyGPUBuffersCheckBox">
-                 <property name="text">
-                  <string>Copy GPU Buffers</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
                 <widget class="QCheckBox" name="hostMarkersCheckBox">
                  <property name="text">
                   <string>Host Debug Markers</string>
@@ -2382,6 +2368,75 @@
                </item>
               </layout>
              </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_13">
+            <item>
+             <widget class="QGroupBox" name="VkValidationGroupBox">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="title">
+               <string>Vulkan Validation (Requires Vulkan SDK)</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_11">
+               <item>
+                <widget class="QCheckBox" name="vkValidationCheckBox">
+                 <property name="text">
+                  <string>Enable Vulkan Validation Layers</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QGroupBox" name="vkLayersGroupBox">
+                 <property name="title">
+                  <string>Validation Layers</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_12">
+                  <item>
+                   <widget class="QCheckBox" name="vkCoreValidationCheckBox">
+                    <property name="text">
+                     <string>Enable Core Validation</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="vkSyncValidationCheckBox">
+                    <property name="text">
+                     <string>Enable Sync Validation</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="vkGpuValidationCheckBox">
+                    <property name="text">
+                     <string>Enable GPU-Assisted Validation</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_7">
+              <property name="orientation">
+               <enum>Qt::Orientation::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
             </item>
            </layout>
           </item>
@@ -2416,7 +2471,7 @@
          <x>0</x>
          <y>0</y>
          <width>946</width>
-         <height>395</height>
+         <height>388</height>
         </rect>
        </property>
        <property name="sizePolicy">

@@ -289,7 +289,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         connect(ui->enableCompatibilityCheckBox, &QCheckBox::checkStateChanged, this,
                 [this, m_compat_info](Qt::CheckState state) {
 #endif
-                    Config::setCompatibilityEnabled(state);
+                    m_gui_settings->SetValue(gui::gl_showCompatibility, state);
                     if (state) {
                         m_compat_info->LoadCompatibilityFile();
                     }
@@ -437,6 +437,16 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
                     [this](const QString& filter) { ui->logFilterLineEdit->setText(filter); });
             dlg->exec();
         });
+
+#if (QT_VERSION < QT_VERSION_CHECK(6, 7, 0))
+        connect(ui->vkValidationCheckBox, &QCheckBox::stateChanged, this, [this](int state) {
+#else
+        connect(ui->vkValidationCheckBox, &QCheckBox::checkStateChanged, this,
+                [this](Qt::CheckState state) {
+#endif
+            state ? ui->vkLayersGroupBox->setVisible(true)
+                  : ui->vkLayersGroupBox->setVisible(false);
+        });
     }
 
     // GRAPHICS TAB
@@ -536,6 +546,8 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         ui->debugDump->installEventFilter(this);
         ui->vkValidationCheckBox->installEventFilter(this);
         ui->vkSyncValidationCheckBox->installEventFilter(this);
+        ui->vkCoreValidationCheckBox->installEventFilter(this);
+        ui->vkGpuValidationCheckBox->installEventFilter(this);
         ui->rdocCheckBox->installEventFilter(this);
         ui->crashDiagnosticsCheckBox->installEventFilter(this);
         ui->guestMarkersCheckBox->installEventFilter(this);
@@ -772,6 +784,13 @@ void SettingsDialog::LoadValuesFromConfig() {
     ui->vkValidationCheckBox->setChecked(toml::find_or<bool>(data, "Vulkan", "validation", false));
     ui->vkSyncValidationCheckBox->setChecked(
         toml::find_or<bool>(data, "Vulkan", "validation_sync", false));
+    ui->vkCoreValidationCheckBox->setChecked(
+        toml::find_or<bool>(data, "Vulkan", "validation_core", false));
+    ui->vkGpuValidationCheckBox->setChecked(
+        toml::find_or<bool>(data, "Vulkan", "validation_gpu", false));
+    ui->vkValidationCheckBox->isChecked() ? ui->vkLayersGroupBox->setVisible(true)
+                                          : ui->vkLayersGroupBox->setVisible(false);
+
     ui->rdocCheckBox->setChecked(toml::find_or<bool>(data, "Vulkan", "rdocEnable", false));
     ui->crashDiagnosticsCheckBox->setChecked(
         toml::find_or<bool>(data, "Vulkan", "crashDiagnostic", false));
@@ -789,9 +808,8 @@ void SettingsDialog::LoadValuesFromConfig() {
     ui->DsAudioComboBox->setCurrentText(QString::fromStdString(
         toml::find_or<std::string>(data, "General", "padSpkOutputDevice", "")));
 
-    std::string chooseHomeTab =
-        toml::find_or<std::string>(data, "General", "chooseHomeTab", "General");
-    QString translatedText = chooseHomeTabMap.key(QString::fromStdString(chooseHomeTab));
+    QString chooseHomeTab = m_gui_settings->GetValue(gui::gen_homeTab).toString();
+    QString translatedText = chooseHomeTabMap.key(chooseHomeTab);
     if (translatedText.isEmpty()) {
         translatedText = tr("General");
     }
@@ -980,7 +998,11 @@ void SettingsDialog::updateNoteTextEdit(const QString& elementName) {
     } else if (elementName == "vkValidationCheckBox") {
         text = tr("Enable Vulkan Validation Layers:\\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\\nThis will reduce performance and likely change the behavior of emulation.\\nYou need the Vulkan SDK for this to work.");
     } else if (elementName == "vkSyncValidationCheckBox") {
-        text = tr("Enable Vulkan Synchronization Validation:\\nEnables a system that validates the timing of Vulkan rendering tasks.\\nThis will reduce performance and likely change the behavior of emulation.\\nYou need the Vulkan SDK for this to work.");
+        text = tr("Enable Sync Validation:\\nEnables a system that validates the timing of Vulkan rendering tasks.\\nThis will reduce performance and likely change the behavior of emulation.\\nYou need the Vulkan SDK for this to work.");
+    } else if (elementName == "vkCoreValidationCheckBox") {
+        text = tr("Enable Core Validation:\\nEnables the main API validation functions.\\nThis will reduce performance and likely change the behavior of emulation.\\nYou need the Vulkan SDK for this to work.");
+    } else if (elementName == "vkGpuValidationCheckBox") {
+        text = tr("Enable GPU-Assisted Validation:\\nInstruments shaders with code that validates if they are behaving correctly.\\nThis will reduce performance and likely change the behavior of emulation.\\nYou need the Vulkan SDK for this to work.");
     } else if (elementName == "rdocCheckBox") {
         text = tr("Enable RenderDoc Debugging:\\nIf enabled, the emulator will provide compatibility with Renderdoc to allow capture and analysis of the currently rendered frame.");
     } else if (elementName == "crashDiagnosticsCheckBox") {
@@ -1108,15 +1130,14 @@ void SettingsDialog::UpdateSettings(bool is_specific) {
     Config::setSeparateLogFilesEnabled(ui->separateLogFilesCheckbox->isChecked(), is_specific);
     Config::setVkValidation(ui->vkValidationCheckBox->isChecked(), is_specific);
     Config::setVkSyncValidation(ui->vkSyncValidationCheckBox->isChecked(), is_specific);
+    Config::setVkCoreValidation(ui->vkCoreValidationCheckBox->isChecked(), is_specific);
+    Config::setVkGpuValidation(ui->vkGpuValidationCheckBox->isChecked(), is_specific);
     Config::setRdocEnabled(ui->rdocCheckBox->isChecked(), is_specific);
     Config::setVkHostMarkersEnabled(ui->hostMarkersCheckBox->isChecked(), is_specific);
     Config::setVkGuestMarkersEnabled(ui->guestMarkersCheckBox->isChecked(), is_specific);
     Config::setVkCrashDiagnosticEnabled(ui->crashDiagnosticsCheckBox->isChecked(), is_specific);
     Config::setCollectShaderForDebug(ui->collectShaderCheckBox->isChecked(), is_specific);
     Config::setCopyGPUCmdBuffers(ui->copyGPUBuffersCheckBox->isChecked(), is_specific);
-    Config::setChooseHomeTab(
-        chooseHomeTabMap.value(ui->chooseHomeTabComboBox->currentText()).toStdString(),
-        is_specific);
 
     // Entries with no game-specific settings
     if (!is_specific) {
@@ -1137,9 +1158,10 @@ void SettingsDialog::UpdateSettings(bool is_specific) {
                                  ui->gameSizeCheckBox->isChecked());
         Config::setTrophyKey(ui->trophyKeyLineEdit->text().toStdString());
         Config::setEnableDiscordRPC(ui->discordRPCCheckbox->isChecked());
-        Config::setCompatibilityEnabled(ui->enableCompatibilityCheckBox->isChecked());
-        Config::setCheckCompatibilityOnStartup(
-            ui->checkCompatibilityOnStartupCheckBox->isChecked());
+        m_gui_settings->SetValue(gui::gl_showCompatibility,
+                                 ui->enableCompatibilityCheckBox->isChecked());
+        m_gui_settings->SetValue(gui::gen_checkCompatibilityAtStartup,
+                                 ui->checkCompatibilityOnStartupCheckBox->isChecked());
         m_gui_settings->SetValue(gui::gl_playBackgroundMusic, ui->playBGMCheckBox->isChecked());
         m_gui_settings->SetValue(gui::gl_backgroundMusicVolume, ui->BGMVolumeSlider->value());
         m_gui_settings->SetValue(gui::gen_checkForUpdates, ui->updateCheckBox->isChecked());
@@ -1151,6 +1173,8 @@ void SettingsDialog::UpdateSettings(bool is_specific) {
         m_gui_settings->SetValue(gui::gl_backgroundImageOpacity,
                                  std::clamp(ui->backgroundImageOpacitySlider->value(), 0, 100));
         emit BackgroundOpacityChanged(ui->backgroundImageOpacitySlider->value());
+        m_gui_settings->SetValue(gui::gen_homeTab,
+                                 chooseHomeTabMap.value(ui->chooseHomeTabComboBox->currentText()));
     }
 }
 
@@ -1238,6 +1262,9 @@ void SettingsDialog::setDefaultValues() {
         }
         m_gui_settings->SetValue(gui::gen_guiLanguage, "en_US");
         m_gui_settings->SetValue(gui::gl_showLoadGameSizeEnabled, true);
+        m_gui_settings->SetValue(gui::gl_showCompatibility, false);
+        m_gui_settings->SetValue(gui::gen_checkCompatibilityAtStartup, false);
+        m_gui_settings->SetValue(gui::gen_homeTab, "General");
     }
 }
 

@@ -9,6 +9,13 @@
 
 namespace Config {
 
+enum class ConfigMode {
+    Default,
+    Global,
+    Clean,
+};
+void setConfigMode(ConfigMode mode);
+
 struct GameInstallDir {
     std::filesystem::path path;
     bool enabled;
@@ -72,6 +79,10 @@ bool vkValidationEnabled();
 void setVkValidation(bool enable, bool is_game_specific = false);
 bool vkValidationSyncEnabled();
 void setVkSyncValidation(bool enable, bool is_game_specific = false);
+bool vkValidationGpuEnabled();
+void setVkGpuValidation(bool enable, bool is_game_specific = false);
+bool vkValidationCoreEnabled();
+void setVkCoreValidation(bool enable, bool is_game_specific = false);
 bool getVkCrashDiagnosticEnabled();
 void setVkCrashDiagnosticEnabled(bool enable, bool is_game_specific = false);
 bool getVkHostMarkersEnabled();
@@ -114,10 +125,9 @@ bool isNeoModeConsole();
 void setNeoMode(bool enable, bool is_game_specific = false);
 bool isDevKitConsole();
 void setDevKitConsole(bool enable, bool is_game_specific = false);
+
 int getExtraDmemInMbytes();
 void setExtraDmemInMbytes(int value, bool is_game_specific = false);
-
-bool vkValidationGpuEnabled(); // no set
 bool getIsMotionControlsEnabled();
 void setIsMotionControlsEnabled(bool use, bool is_game_specific = false);
 std::string getDefaultControllerID();
@@ -135,16 +145,12 @@ void setRcasAttenuation(int value, bool is_game_specific = false);
 bool getIsConnectedToNetwork();
 void setConnectedToNetwork(bool enable, bool is_game_specific = false);
 void setUserName(const std::string& name, bool is_game_specific = false);
-void setChooseHomeTab(const std::string& type, bool is_game_specific = false);
 std::filesystem::path getSysModulesPath();
 void setSysModulesPath(const std::filesystem::path& path);
 
 // TODO
 std::filesystem::path GetSaveDataPath();
-bool getCompatibilityEnabled();
-bool getCheckCompatibilityOnStartup();
 std::string getUserName();
-std::string getChooseHomeTab();
 bool GetUseUnifiedInputConfig();
 void SetUseUnifiedInputConfig(bool use);
 bool GetOverrideControllerColor();
@@ -154,8 +160,6 @@ void SetControllerCustomColor(int r, int b, int g);
 void setGameInstallDirs(const std::vector<std::filesystem::path>& dirs_config);
 void setAllGameInstallDirs(const std::vector<GameInstallDir>& dirs_config);
 void setSaveDataPath(const std::filesystem::path& path);
-void setCompatibilityEnabled(bool use);
-void setCheckCompatibilityOnStartup(bool use);
 // Gui
 bool addGameInstallDir(const std::filesystem::path& dir, bool enabled = true);
 void removeGameInstallDir(const std::filesystem::path& dir);
