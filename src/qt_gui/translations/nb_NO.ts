@@ -1683,12 +1683,8 @@ Endre mappa til shadPS4 i innstillingene.</translation>
       <translation>Tilpass hurtigtaster</translation>
     </message>
     <message>
-      <source>ShadPS4</source>
-      <translation>shadPS4</translation>
-    </message>
-    <message>
-      <source>ShadPS4 is not found!
-Please change ShadPS4 path in settings.</source>
+      <source>shadPS4 is not found!
+Please change shadPS4 path in settings.</source>
       <translation>Fant ikke shadPS4!
 Endre mappa til shadPS4 i innstillingene.</translation>
     </message>
@@ -2065,7 +2061,7 @@ Endre mappa til shadPS4 i innstillingene.</translation>
     </message>
     <message>
       <source>Enable HDR:\nEnables HDR in games that support it.\nYour monitor must have support for the BT2020 PQ color space and the RGB10A2 swapchain format.</source>
-      <translation>Bruk HDR:\nTillater bruk av HDR i spill som støtter det.\nSkjermen din må ha støtte for BT2020 PQ fargerom og RGB10A2 swapchain-format.</translation>
+      <translation>Bruk HDR:\nTillater bruk av HDR i spill som støtter det.\nSkjermen din må ha støtte for BT2020 PQ fargerom og RGB10A2 byttekjede-format.</translation>
     </message>
     <message>
       <source>Game Folders:\nThe list of folders to check for installed games.</source>

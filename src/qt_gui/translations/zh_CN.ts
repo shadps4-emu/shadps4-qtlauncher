@@ -1048,19 +1048,19 @@
     </message>
     <message>
       <source>Launch...</source>
-      <translation type="unfinished">Launch...</translation>
+      <translation>启动……</translation>
     </message>
     <message>
       <source>Launch with game specific configs (default)</source>
-      <translation type="unfinished">Launch with game specific configs (default)</translation>
+      <translation>以游戏特定配置启动(默认)</translation>
     </message>
     <message>
       <source>Launch with global config only</source>
-      <translation type="unfinished">Launch with global config only</translation>
+      <translation>仅通过全局配置启动</translation>
     </message>
     <message>
       <source>Launch with default settings</source>
-      <translation type="unfinished">Launch with default settings</translation>
+      <translation>以默认设置启动</translation>
     </message>
   </context>
   <context>
@@ -1683,14 +1683,10 @@ Please change shadPS4 path in settings.</source>
       <translation>自定义快捷键</translation>
     </message>
     <message>
-      <source>ShadPS4</source>
-      <translation>ShadPS4</translation>
-    </message>
-    <message>
-      <source>ShadPS4 is not found!
-Please change ShadPS4 path in settings.</source>
-      <translation>ShadPS4未找到！
-请在设置中更改ShadPS4路径。</translation>
+      <source>shadPS4 is not found!
+Please change shadPS4 path in settings.</source>
+      <translation>shadPS4未找到！
+请在设置中更改shadPS4路径。</translation>
     </message>
   </context>
   <context>
@@ -2473,23 +2469,23 @@ Please change ShadPS4 path in settings.</source>
     </message>
     <message>
       <source>Additional DMem Allocation</source>
-      <translation type="unfinished">Additional DMem Allocation</translation>
+      <translation>额外设备内存分配</translation>
     </message>
     <message>
       <source>Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</source>
-      <translation type="unfinished">Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</translation>
+      <translation>额外设备内存分配：\n强制分配指定容量的额外设备内存。注意：在某些游戏中可能导致崩溃或其他问题！</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Folder</source>
-      <translation type="unfinished">PS4 Sysmodules Folder</translation>
+      <translation>PS4系统模块文件夹</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</source>
-      <translation type="unfinished">PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</translation>
+      <translation>PS4系统模块路径：\n用于加载PS4系统模块的文件夹。</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the sysmodules path.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the sysmodules path.</translation>
+      <translation>浏览：\n请选择要设为系统模块路径的文件夹。</translation>
     </message>
   </context>
   <context>
