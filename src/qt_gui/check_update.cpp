@@ -32,7 +32,7 @@ CheckUpdate::CheckUpdate(std::shared_ptr<gui_settings> gui_settings, const bool 
                          QWidget* parent)
     : QDialog(parent), m_gui_settings(std::move(gui_settings)),
       networkManager(new QNetworkAccessManager(this)) {
-    setWindowTitle(tr("Auto Updater"));
+    setWindowTitle(tr("Auto Updater - Interface"));
     setFixedSize(0, 0);
     CheckForUpdates(showMessage);
 }
@@ -194,7 +194,7 @@ void CheckUpdate::setupUI(const QString& downloadUrl, const QString& latestDate,
     imageLabel->setScaledContents(true);
     imageLabel->setFixedSize(50, 50);
 
-    QLabel* titleLabel = new QLabel("<h1>" + tr("Update Available") + "</h1>", this);
+    QLabel* titleLabel = new QLabel("<h1>" + tr("Update Available (Interface)") + "</h1>", this);
     titleLayout->addWidget(imageLabel);
     titleLayout->addWidget(titleLabel);
     layout->addLayout(titleLayout);

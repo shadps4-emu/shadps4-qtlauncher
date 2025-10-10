@@ -13,6 +13,7 @@ const QString main_window = "main_window";
 const QString game_list = "game_list";
 const QString game_grid = "game_grid";
 const QString favorites = "favorites";
+const QString version_manager = "version_manager";
 
 // general
 const gui_value gen_checkForUpdates = gui_value(general_settings, "checkForUpdates", false);
@@ -48,8 +49,10 @@ const gui_value favorites_list =
     gui_value(favorites, "favoritesList", QVariant::fromValue(QList<QString>()));
 
 // version manager
-const gui_value vm_versionPath = gui_value(main_window, "versionPath", "");
-const gui_value vm_versionSelected = gui_value(main_window, "versionSelected", "");
+const gui_value vm_versionPath = gui_value(version_manager, "versionPath", "");
+const gui_value vm_versionSelected = gui_value(version_manager, "versionSelected", "");
+const gui_value vm_showChangeLog = gui_value(version_manager, "showChangeLog", "");
+const gui_value vm_checkOnStartup = gui_value(version_manager, "checkOnStartup", "");
 
 } // namespace gui
 

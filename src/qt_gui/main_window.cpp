@@ -57,7 +57,7 @@ bool MainWindow::Init() {
     SetLastUsedTheme();
     SetLastIconSizeBullet();
     // show ui
-    setMinimumSize(850, 405);
+    setMinimumSize(900, 405);
     std::string window_title = "";
     std::string remote_url(Common::g_scm_remote_url);
     std::string remote_host = Common::GetRemoteNameFromLink();
@@ -84,6 +84,11 @@ bool MainWindow::Init() {
     // Check for update
     CheckUpdateMain(true);
 #endif
+
+    if (m_gui_settings->GetValue(gui::vm_checkOnStartup).toBool()) {
+        auto versionDialog = new VersionDialog(m_gui_settings, this);
+        versionDialog->checkUpdatePre(false);
+    }
 
     auto end = std::chrono::steady_clock::now();
     auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
@@ -1335,17 +1340,19 @@ void MainWindow::RestartEmulator() {
 }
 
 void MainWindow::LoadVersionComboBox() {
-    QString path = m_gui_settings->GetValue(gui::vm_versionPath).toString();
-    if (path.isEmpty() || !QDir(path).exists())
-        return;
-
     QString savedVersionPath = m_gui_settings->GetValue(gui::vm_versionSelected).toString();
     if (savedVersionPath.isEmpty() || !QDir(savedVersionPath).exists()) {
         ui->versionComboBox->clear();
         ui->versionComboBox->addItem(tr("No version selected"));
         ui->versionComboBox->setCurrentIndex(0);
+        ui->versionComboBox->setSizeAdjustPolicy(QComboBox::AdjustToContents);
+        ui->versionComboBox->adjustSize();
         return;
     }
+
+    QString path = m_gui_settings->GetValue(gui::vm_versionPath).toString();
+    if (path.isEmpty() || !QDir(path).exists())
+        return;
 
     ui->versionComboBox->clear();
 
@@ -1418,4 +1425,7 @@ void MainWindow::LoadVersionComboBox() {
                 QString fullPath = ui->versionComboBox->itemData(index).toString();
                 m_gui_settings->SetValue(gui::vm_versionSelected, fullPath);
             });
+
+    ui->versionComboBox->setSizeAdjustPolicy(QComboBox::AdjustToContents);
+    ui->versionComboBox->adjustSize();
 }

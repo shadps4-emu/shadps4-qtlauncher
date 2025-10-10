@@ -4,6 +4,7 @@
 #pragma once
 
 #include <QDialog>
+#include <QTextBrowser>
 #include <QTreeWidget>
 
 #include "gui_settings.h"
@@ -19,15 +20,23 @@ public:
     explicit VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget* parent = nullptr);
     ~VersionDialog();
     void onItemChanged(QTreeWidgetItem* item, int column);
+    void checkUpdatePre(const bool showMessage);
     void DownloadListVersion();
     void InstallSelectedVersion();
 
 private:
     Ui::VersionDialog* ui;
     std::shared_ptr<gui_settings> m_gui_settings;
+    QNetworkAccessManager* networkManager;
 
     void LoadinstalledList();
     QStringList LoadDownloadCache();
     void SaveDownloadCache(const QStringList& versions);
     void PopulateDownloadTree(const QStringList& versions);
+    void showPreReleaseUpdateDialog(const QString& localHash, const QString& latestHash,
+                                    const QString& latestTag);
+    void requestChangelog(const QString& localHash, const QString& latestHash,
+                          const QString& latestTag, QTextBrowser* outputView);
+    void installPreReleaseByTag(const QString& tagName);
+    void showDownloadDialog(const QString& tagName, const QString& downloadUrl);
 };

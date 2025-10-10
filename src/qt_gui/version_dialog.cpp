@@ -13,6 +13,7 @@
 #include <QProcess>
 #include <QProgressBar>
 #include <QRegularExpression>
+#include <QTextBrowser>
 #include <QTextStream>
 #include <QTimer>
 #include <QVBoxLayout>
@@ -27,6 +28,18 @@
 VersionDialog::VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget* parent)
     : QDialog(parent), ui(new Ui::VersionDialog), m_gui_settings(std::move(gui_settings)) {
     ui->setupUi(this);
+
+    ui->checkOnStartupPreCheckBox->setChecked(
+        m_gui_settings->GetValue(gui::vm_checkOnStartup).toBool());
+    ui->updatePreCheckBox->setChecked(m_gui_settings->GetValue(gui::vm_showChangeLog).toBool());
+
+    connect(ui->checkOnStartupPreCheckBox, &QCheckBox::toggled, this,
+            [this](bool checked) { m_gui_settings->SetValue(gui::vm_checkOnStartup, checked); });
+
+    connect(ui->updatePreCheckBox, &QCheckBox::toggled, this,
+            [this](bool checked) { m_gui_settings->SetValue(gui::vm_showChangeLog, checked); });
+
+    networkManager = new QNetworkAccessManager(this);
 
     if (m_gui_settings->GetValue(gui::vm_versionPath).toString() == "") {
         QString versionDir = QString::fromStdString(
@@ -61,6 +74,7 @@ VersionDialog::VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget
         if (!folder_path.empty()) {
             ui->currentVersionPath->setText(shad_folder_path_string);
             m_gui_settings->SetValue(gui::vm_versionPath, shad_folder_path_string);
+            m_gui_settings->SetValue(gui::vm_versionSelected, "");
             LoadinstalledList();
         }
     });
@@ -159,6 +173,8 @@ VersionDialog::VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget
 
     connect(ui->installedTreeWidget, &QTreeWidget::itemChanged, this,
             &VersionDialog::onItemChanged);
+
+    connect(ui->updatePreButton, &QPushButton::clicked, this, [this]() { checkUpdatePre(true); });
 };
 
 VersionDialog::~VersionDialog() {
@@ -692,4 +708,431 @@ void VersionDialog::PopulateDownloadTree(const QStringList& versions) {
         ui->downloadTreeWidget->addTopLevelItem(item);
 
     InstallSelectedVersion();
+}
+
+void VersionDialog::checkUpdatePre(const bool showMessage) {
+    QString versionPath = m_gui_settings->GetValue(gui::vm_versionPath).toString();
+    if (versionPath.isEmpty() || !QDir(versionPath).exists()) {
+        return;
+    }
+
+    QDir dir(versionPath);
+    QStringList folders = dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot);
+
+    QString localHash;
+    QString localFolderName;
+
+    // Browse for local Pre-release folder
+    for (const QString& folder : folders) {
+        if (folder.startsWith("Pre-release-shadPS4")) {
+            QStringList parts = folder.split('-');
+            if (parts.size() >= 7) {
+                localHash = parts.last();
+                localFolderName = folder;
+            }
+            break;
+        }
+    }
+
+    QNetworkAccessManager* manager = new QNetworkAccessManager(this);
+    QNetworkRequest request(QUrl("https://api.github.com/repos/shadps4-emu/shadPS4/releases"));
+    QNetworkReply* reply = manager->get(request);
+
+    connect(reply, &QNetworkReply::finished, this,
+            [this, reply, localHash, localFolderName, showMessage]() {
+                if (reply->error() != QNetworkReply::NoError) {
+                    QMessageBox::warning(this, tr("Error"), reply->errorString());
+                    reply->deleteLater();
+                    return;
+                }
+
+                QByteArray resp = reply->readAll();
+                QJsonDocument doc = QJsonDocument::fromJson(resp);
+                if (!doc.isArray()) {
+                    QMessageBox::warning(this, tr("Error"),
+                                         "The GitHub API response is not a valid JSON array.");
+                    reply->deleteLater();
+                    return;
+                }
+
+                QJsonArray arr = doc.array();
+                QString latestHash;
+                QString latestTag;
+
+                for (const QJsonValue& val : arr) {
+                    QJsonObject obj = val.toObject();
+                    if (obj["prerelease"].toBool()) {
+                        QString tag = obj["tag_name"].toString();
+                        latestTag = tag;
+                        int idx = tag.lastIndexOf('-');
+                        if (idx != -1 && idx + 1 < tag.length()) {
+                            latestHash = tag.mid(idx + 1);
+                        }
+                        break;
+                    }
+                }
+
+                if (latestHash.isEmpty()) {
+                    QMessageBox::warning(this, tr("Error"),
+                                         tr("Unable to get hash of latest pre-release"));
+                    reply->deleteLater();
+                    return;
+                }
+
+                if (localHash.isEmpty()) {
+                    QMessageBox::StandardButton reply =
+                        QMessageBox::question(this, tr("No pre-release found"),
+                                              // clang-format off
+            tr("You don't have any pre-release installed yet. Would you like to download it now?"),
+                                              // clang-format on
+                                              QMessageBox::Yes | QMessageBox::No);
+                    if (reply == QMessageBox::Yes) {
+                        installPreReleaseByTag(latestTag);
+                    }
+                    return;
+                }
+
+                if (latestHash == localHash) {
+                    if (showMessage) {
+                        QMessageBox::information(
+                            this, tr("Auto Updater - Emulator"),
+                            tr("You already have the latest pre-release version."));
+                    }
+                } else {
+                    showPreReleaseUpdateDialog(localHash, latestHash, latestTag);
+                }
+                reply->deleteLater();
+            });
+}
+
+void VersionDialog::showPreReleaseUpdateDialog(const QString& localHash, const QString& latestHash,
+                                               const QString& latestTag) {
+    QDialog dialog(this);
+    dialog.setWindowTitle(tr("Auto Updater - Emulator"));
+
+    QVBoxLayout* mainLayout = new QVBoxLayout(&dialog);
+
+    QHBoxLayout* headerLayout = new QHBoxLayout();
+    QLabel* imageLabel = new QLabel(&dialog);
+    QPixmap pixmap(":/images/shadps4.png");
+    imageLabel->setPixmap(pixmap);
+    imageLabel->setScaledContents(true);
+    imageLabel->setFixedSize(50, 50);
+
+    QLabel* titleLabel = new QLabel("<h2>" + tr("Update Available (Emulator)") + "</h2>", &dialog);
+
+    headerLayout->addWidget(imageLabel);
+    headerLayout->addWidget(titleLabel);
+    headerLayout->addStretch(1);
+
+    mainLayout->addLayout(headerLayout);
+
+    QString labelText = QString("<table>"
+                                "<tr><td><b>%1:</b></td><td>%2</td></tr>"
+                                "<tr><td><b>%3:</b></td><td>%4</td></tr>"
+                                "</table>")
+                            .arg(tr("Current Version"), localHash.left(7), tr("Latest Version"),
+                                 latestHash.left(7));
+    QLabel* infoLabel = new QLabel(labelText, &dialog);
+    mainLayout->addWidget(infoLabel);
+
+    QHBoxLayout* btnLayout = new QHBoxLayout();
+    QLabel* questionLabel = new QLabel(tr("Do you want to update?"), &dialog);
+    QPushButton* btnUpdate = new QPushButton(tr("Update"), &dialog);
+    QPushButton* btnCancel = new QPushButton(tr("No"), &dialog);
+
+    btnLayout->addWidget(questionLabel);
+    btnLayout->addStretch(1);
+    btnLayout->addWidget(btnUpdate);
+    btnLayout->addWidget(btnCancel);
+    mainLayout->addLayout(btnLayout);
+
+    // Changelog
+    QTextBrowser* changelogView = new QTextBrowser(&dialog);
+    changelogView->setReadOnly(true);
+    changelogView->setVisible(false);
+    changelogView->setFixedWidth(500);
+    changelogView->setFixedHeight(200);
+    mainLayout->addWidget(changelogView);
+
+    QPushButton* toggleButton = new QPushButton(tr("Show Changelog"), &dialog);
+    mainLayout->addWidget(toggleButton);
+
+    connect(btnCancel, &QPushButton::clicked, &dialog, &QDialog::reject);
+
+    connect(btnUpdate, &QPushButton::clicked, this, [this, &dialog, latestTag]() {
+        installPreReleaseByTag(latestTag);
+        dialog.accept();
+    });
+
+    connect(toggleButton, &QPushButton::clicked, this,
+            [this, changelogView, toggleButton, &dialog, localHash, latestHash, latestTag]() {
+                if (!changelogView->isVisible()) {
+                    requestChangelog(localHash, latestHash, latestTag, changelogView);
+                    changelogView->setVisible(true);
+                    toggleButton->setText(tr("Hide Changelog"));
+                    dialog.adjustSize();
+                } else {
+                    changelogView->setVisible(false);
+                    toggleButton->setText(tr("Show Changelog"));
+                    dialog.adjustSize();
+                }
+            });
+    if (m_gui_settings->GetValue(gui::vm_showChangeLog).toBool()) {
+        requestChangelog(localHash, latestHash, latestTag, changelogView);
+        changelogView->setVisible(true);
+        toggleButton->setText(tr("Hide Changelog"));
+        dialog.adjustSize();
+    }
+
+    dialog.exec();
+}
+
+void VersionDialog::requestChangelog(const QString& localHash, const QString& latestHash,
+                                     const QString& latestTag, QTextBrowser* outputView) {
+    QString compareUrlString =
+        QString("https://api.github.com/repos/shadps4-emu/shadPS4/compare/%1...%2")
+            .arg(localHash, latestHash);
+
+    QUrl compareUrl(compareUrlString);
+    QNetworkRequest req(compareUrl);
+    QNetworkReply* reply = networkManager->get(req);
+
+    connect(
+        reply, &QNetworkReply::finished, this, [this, reply, localHash, latestHash, outputView]() {
+            if (reply->error() != QNetworkReply::NoError) {
+                QMessageBox::warning(this, tr("Error"),
+                                     tr("Network error while fetching changelog:") + "\n" +
+                                         reply->errorString());
+                reply->deleteLater();
+                return;
+            }
+            QByteArray resp = reply->readAll();
+            QJsonDocument doc = QJsonDocument::fromJson(resp);
+            QJsonObject obj = doc.object();
+            QJsonArray commits = obj["commits"].toArray();
+
+            QString changesHtml;
+            for (const QJsonValue& cval : commits) {
+                QJsonObject cobj = cval.toObject();
+                QString msg = cobj["commit"].toObject()["message"].toString();
+                int newlinePos = msg.indexOf('\n');
+                if (newlinePos != -1) {
+                    msg = msg.left(newlinePos);
+                }
+                if (!changesHtml.isEmpty()) {
+                    changesHtml += "<br>";
+                }
+                changesHtml += "&nbsp;&nbsp;&nbsp;&nbsp;• " + msg;
+            }
+
+            // PR number as link ( #123 )
+            QRegularExpression re("\\(\\#(\\d+)\\)");
+            QString newText;
+            int last = 0;
+            auto it = re.globalMatch(changesHtml);
+            while (it.hasNext()) {
+                QRegularExpressionMatch m = it.next();
+                newText += changesHtml.mid(last, m.capturedStart() - last);
+                QString num = m.captured(1);
+                newText +=
+                    QString("(<a href=\"https://github.com/shadps4-emu/shadPS4/pull/%1\">#%1</a>)")
+                        .arg(num);
+                last = m.capturedEnd();
+            }
+            newText += changesHtml.mid(last);
+            changesHtml = newText;
+
+            outputView->setOpenExternalLinks(true);
+            outputView->setHtml("<h3>" + tr("Changes") + ":</h3>" + changesHtml);
+            reply->deleteLater();
+        });
+}
+
+void VersionDialog::installPreReleaseByTag(const QString& tagName) {
+    QString apiUrl =
+        QString("https://api.github.com/repos/shadps4-emu/shadPS4/releases/tags/%1").arg(tagName);
+
+    QNetworkAccessManager* mgr = new QNetworkAccessManager(this);
+    QNetworkRequest req(apiUrl);
+    QNetworkReply* reply = mgr->get(req);
+
+    connect(reply, &QNetworkReply::finished, this, [this, reply, tagName]() {
+        if (reply->error() != QNetworkReply::NoError) {
+            QMessageBox::warning(this, tr("Error"), reply->errorString());
+            reply->deleteLater();
+            return;
+        }
+
+        QByteArray bytes = reply->readAll();
+        QJsonDocument doc = QJsonDocument::fromJson(bytes);
+        QJsonObject obj = doc.object();
+        QJsonArray assets = obj["assets"].toArray();
+
+        QString downloadUrl;
+        QString platformStr;
+#ifdef Q_OS_WIN
+        platformStr = "win64-sdl";
+#elif defined(Q_OS_LINUX)
+        platformStr = "linux-sdl";
+#elif defined(Q_OS_MAC)
+        platformStr = "macos-sdl";
+#endif
+        for (const QJsonValue& av : assets) {
+            QJsonObject aobj = av.toObject();
+            if (aobj["name"].toString().contains(platformStr)) {
+                downloadUrl = aobj["browser_download_url"].toString();
+                break;
+            }
+        }
+        if (downloadUrl.isEmpty()) {
+            QMessageBox::warning(this, tr("Error"),
+                                 tr("No download URL found for the specified asset."));
+            reply->deleteLater();
+            return;
+        }
+        showDownloadDialog(tagName, downloadUrl);
+
+        reply->deleteLater();
+    });
+}
+
+void VersionDialog::showDownloadDialog(const QString& tagName, const QString& downloadUrl) {
+    QDialog* dlg = new QDialog(this);
+    dlg->setWindowTitle(tr("Downloading Pre‑release, please wait..."));
+    QVBoxLayout* lay = new QVBoxLayout(dlg);
+
+    QProgressBar* progressBar = new QProgressBar(dlg);
+    progressBar->setRange(0, 100);
+    lay->addWidget(progressBar);
+
+    dlg->setLayout(lay);
+    dlg->resize(400, 80);
+    dlg->show();
+
+    QNetworkRequest req(downloadUrl);
+    QNetworkAccessManager* mgr = new QNetworkAccessManager(dlg);
+    QNetworkReply* reply = mgr->get(req);
+
+    connect(reply, &QNetworkReply::downloadProgress, this, [progressBar](qint64 rec, qint64 tot) {
+        if (tot > 0) {
+            int perc = static_cast<int>((rec * 100) / tot);
+            progressBar->setValue(perc);
+        }
+    });
+
+    connect(reply, &QNetworkReply::finished, this, [=]() {
+        if (reply->error() != QNetworkReply::NoError) {
+            QMessageBox::warning(this, tr("Error"),
+                                 tr("Network error while downloading") + ":\n" +
+                                     reply->errorString());
+            reply->deleteLater();
+            dlg->close();
+            dlg->deleteLater();
+            return;
+        }
+
+        QByteArray data = reply->readAll();
+        QString userPath = m_gui_settings->GetValue(gui::vm_versionPath).toString();
+        QString zipPath = QDir(userPath).filePath("temp_pre_release_download.zip");
+
+        // Find the old folder that starts with "Pre-release"
+        QString oldPreReleaseFolder;
+        QDir dir(userPath);
+        QStringList entries = dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot);
+        for (const QString& entry : entries) {
+            if (entry.startsWith("Pre-release")) {
+                oldPreReleaseFolder = QDir(userPath).filePath(entry);
+                break;
+            }
+        }
+
+        QFile zipFile(zipPath);
+        if (!zipFile.open(QIODevice::WriteOnly)) {
+            QMessageBox::warning(this, tr("Error"),
+                                 tr("Failed to save download file") + ":\n" + zipPath);
+            reply->deleteLater();
+            return;
+        }
+        zipFile.write(data);
+        zipFile.close();
+
+        QString destFolder = QDir(userPath).filePath(tagName);
+        QString scriptFilePath;
+        QString scriptContent;
+        QStringList args;
+        QString process;
+
+#ifdef Q_OS_WIN
+        scriptFilePath = userPath + "/extract_pre_release.ps1";
+        scriptContent = QString("Remove-Item -Recurse -Force \"%4\" -ErrorAction SilentlyContinue\n"
+                                "New-Item -ItemType Directory -Path \"%1\" -Force\n"
+                                "Expand-Archive -Path \"%2\" -DestinationPath \"%1\" -Force\n"
+                                "Remove-Item -Force \"%2\"\n"
+                                "Remove-Item -Force \"%3\"\n"
+                                "cls\n")
+                            .arg(destFolder)           // %1 - new destination folder
+                            .arg(zipPath)              // %2 - zip path
+                            .arg(scriptFilePath)       // %3 - script
+                            .arg(oldPreReleaseFolder); // %4 - old folder
+
+        process = "powershell.exe";
+        args << "-ExecutionPolicy" << "Bypass" << "-File" << scriptFilePath;
+#elif defined(Q_OS_LINUX) || defined(Q_OS_MACOS)
+        scriptFilePath = userPath + "/extract_pre_release.sh";
+        scriptContent = QString("#!/bin/bash\n"
+                                "rm -rf \"%4\"\n"
+                                "mkdir -p \"%1\"\n"
+                                "unzip -o \"%2\" -d \"%1\"\n"
+                                "rm \"%2\"\n"
+                                "rm \"%3\"\n"
+                                "clear\n")
+                            .arg(destFolder)
+                            .arg(zipPath)
+                            .arg(scriptFilePath)
+                            .arg(oldPreReleaseFolder);
+        process = "bash";
+        args << scriptFilePath;
+#endif
+
+        QFile scriptFile(scriptFilePath);
+        if (scriptFile.open(QIODevice::WriteOnly | QIODevice::Text)) {
+            QTextStream out(&scriptFile);
+#ifdef Q_OS_WIN
+            scriptFile.write("\xEF\xBB\xBF"); // BOM
+#endif
+            out << scriptContent;
+            scriptFile.close();
+
+#if defined(Q_OS_LINUX) || defined(Q_OS_MACOS)
+            scriptFile.setPermissions(QFile::ExeUser | QFile::ReadUser | QFile::WriteUser);
+#endif
+            QProcess::startDetached(process, args);
+
+            QTimer::singleShot(4000, this, [=]() {
+                progressBar->setValue(100);
+                dlg->close();
+                dlg->deleteLater();
+
+                // if (!QDir(destFolder).exists()) {
+                //     QMessageBox::critical(this, tr("Error"),
+                //                           tr("Extraction failure."));
+                //     return;
+                // }
+
+                m_gui_settings->SetValue(gui::vm_versionSelected, destFolder);
+
+                QMessageBox::information(this, tr("Complete installation"),
+                                         tr("Pre-release updated successfully:") + "\n" + tagName);
+
+                LoadinstalledList();
+            });
+        } else {
+            QMessageBox::warning(this, tr("Error"),
+                                 tr("Failed to create the update script file") + ":\n" +
+                                     scriptFilePath);
+        }
+
+        reply->deleteLater();
+    });
 }

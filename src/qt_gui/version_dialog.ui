@@ -229,21 +229,21 @@
            <item>
             <widget class="QCheckBox" name="updatePreCheckBox">
              <property name="text">
-              <string>Check for pre-release updates at startup</string>
+              <string>Check for Pre-release updates at startup</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QCheckBox" name="checkCompatibilityOnStartupPreCheckBox">
+            <widget class="QCheckBox" name="checkOnStartupPreCheckBox">
              <property name="text">
-              <string>Always show pre-release changelog</string>
+              <string>Always show Pre-release changelog</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="updateCompatibilityPreButton">
+            <widget class="QPushButton" name="updatePreButton">
              <property name="text">
-              <string>Check for pre-release Updates</string>
+              <string>Check for Pre-release Updates</string>
              </property>
             </widget>
            </item>
