@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-FileCopyrightText: Copyright 2025 shadPS4 Emulator Project
+     SPDX-License-Identifier: GPL-2.0-or-later -->
+<ui version="4.0">
+ <class>VersionDialog</class>
+ <widget class="QDialog" name="VersionDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>700</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Version Manager</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>:/images/shadps4.ico</normaloff>:/images/shadps4.ico</iconset>
+  </property>
+  <widget class="QScrollArea" name="versionTab">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>700</width>
+     <height>500</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="widgetResizable">
+    <bool>true</bool>
+   </property>
+   <widget class="QWidget" name="versionTabContents">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>698</width>
+      <height>498</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="versionTabLayout">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_path">
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QGroupBox" name="patchGroupBox">
+         <property name="title">
+          <string>Path to save versions</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_shadps4">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_patch" stretch="0,0">
+            <item>
+             <widget class="QLineEdit" name="currentVersionPath">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+              <property name="placeholderText">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="browse_versionPath">
+              <property name="text">
+               <string>Browse</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_installed_download">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_installed">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="label_installed">
+           <property name="font">
+            <font>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Installed</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTreeWidget" name="installedTreeWidget">
+           <column>
+            <property name="text">
+             <string>Selected</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Version</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Codename</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Date</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_button_installed">
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="addCustomVersionButton">
+             <property name="text">
+              <string>Add Custom</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="deleteVersionButton">
+             <property name="text">
+              <string>Delete</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="checkChangesVersionButton">
+             <property name="text">
+              <string>Refresh List</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_download">
+         <item>
+          <widget class="QLabel" name="label_download">
+           <property name="text">
+            <string>Download</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="checkVersionDownloadButton">
+           <property name="text">
+            <string>Refresh List</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTreeWidget" name="downloadTreeWidget">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <column>
+            <property name="text">
+             <string>Version</string>
+            </property>
+           </column>
+           <item>
+            <property name="text">
+             <string/>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_check_update">
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QCheckBox" name="checkOnStartupCheckBox">
+             <property name="text">
+              <string>Check for Pre-release updates at startup</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="showChangelogCheckBox">
+             <property name="text">
+              <string>Always show Pre-release changelog</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="updatePreButton">
+             <property name="text">
+              <string>Check for Pre-release Updates</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

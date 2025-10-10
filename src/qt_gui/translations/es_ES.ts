@@ -1048,19 +1048,19 @@
     </message>
     <message>
       <source>Launch...</source>
-      <translation type="unfinished">Launch...</translation>
+      <translation>Iniciar...</translation>
     </message>
     <message>
       <source>Launch with game specific configs (default)</source>
-      <translation type="unfinished">Launch with game specific configs (default)</translation>
+      <translation>Iniciar con configuración del juego (por defecto)</translation>
     </message>
     <message>
       <source>Launch with global config only</source>
-      <translation type="unfinished">Launch with global config only</translation>
+      <translation>Iniciar solo con configuración global</translation>
     </message>
     <message>
       <source>Launch with default settings</source>
-      <translation type="unfinished">Launch with default settings</translation>
+      <translation>Iniciar con configuración predeterminada</translation>
     </message>
   </context>
   <context>
@@ -1683,14 +1683,10 @@ Cambia la ruta de shadPS4 en la configuración.</translation>
       <translation>Personalizar Atajos</translation>
     </message>
     <message>
-      <source>ShadPS4</source>
-      <translation>ShadPS4</translation>
-    </message>
-    <message>
-      <source>ShadPS4 is not found!
-Please change ShadPS4 path in settings.</source>
-      <translation>¡ShadPS4 no encontrado!
-Cambia la ruta de ShadPS4 en la configuración.</translation>
+      <source>shadPS4 is not found!
+Please change shadPS4 path in settings.</source>
+      <translation>¡shadPS4 no encontrado!
+Cambia la ruta de shadPS4 en la configuración.</translation>
     </message>
   </context>
   <context>
@@ -2473,23 +2469,23 @@ Cambia la ruta de ShadPS4 en la configuración.</translation>
     </message>
     <message>
       <source>Additional DMem Allocation</source>
-      <translation type="unfinished">Additional DMem Allocation</translation>
+      <translation>Asignación adicional de DMem</translation>
     </message>
     <message>
       <source>Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</source>
-      <translation type="unfinished">Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</translation>
+      <translation>Asignación adicional de DMem:\nFuerza la asignación de la cantidad especificada de DMem adicional. Provoca cuelgues o problemas en algunos juegos.</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Folder</source>
-      <translation type="unfinished">PS4 Sysmodules Folder</translation>
+      <translation>Carpeta de sysmodules de PS4</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</source>
-      <translation type="unfinished">PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</translation>
+      <translation>Ruta de sysmodules de PS4:\nLa carpeta donde se cargarán los sysmodules de PS4.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the sysmodules path.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the sysmodules path.</translation>
+      <translation>Buscar:\nBusca una carpeta para establecer como ruta de sysmodules.</translation>
     </message>
   </context>
   <context>

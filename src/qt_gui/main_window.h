@@ -38,6 +38,7 @@ public:
     void PauseGame();
     void StopGame();
     void RestartGame();
+    void LoadVersionComboBox();
     bool showLabels;
 
 private Q_SLOTS:

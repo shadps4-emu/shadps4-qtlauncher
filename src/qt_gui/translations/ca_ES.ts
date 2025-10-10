@@ -1683,13 +1683,9 @@ Canvia, si us plau, la ruta de ShadPS4 a configuració.</translation>
       <translation>Personalitza les dreceres de teclat</translation>
     </message>
     <message>
-      <source>ShadPS4</source>
-      <translation>ShadPS4</translation>
-    </message>
-    <message>
-      <source>ShadPS4 is not found!
-Please change ShadPS4 path in settings.</source>
-      <translation>No s'ha trobat ShadPS4!
+      <source>shadPS4 is not found!
+Please change shadPS4 path in settings.</source>
+      <translation>no s'ha trobat ShadPS4!
 Canvia, si us plau, la ruta de ShadPS4 a configuració.</translation>
     </message>
   </context>
