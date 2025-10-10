@@ -341,8 +341,8 @@ tr("First you need to choose a location to save the versions in\n'Path to save v
             { // Menssage yes/no
                 QMessageBox::StandardButton reply;
                 reply = QMessageBox::question(this, tr("Download"),
-                                              tr("Do you want to download the version:") +
-                                                  QString(" %1 ?").arg(versionName),
+                                              tr("Do you want to download the version") +
+                                                  QString(": %1 ?").arg(versionName),
                                               QMessageBox::Yes | QMessageBox::No);
                 if (reply == QMessageBox::No)
                     return;
@@ -404,7 +404,8 @@ tr("First you need to choose a location to save the versions in\n'Path to save v
                 QNetworkReply* downloadReply = downloadManager->get(downloadRequest);
 
                 QDialog* progressDialog = new QDialog(this);
-                progressDialog->setWindowTitle(tr("Downloading %1").arg(versionName));
+                progressDialog->setWindowTitle(
+                    tr("Downloading %1 , please wait...").arg(versionName));
                 progressDialog->setFixedSize(400, 80);
                 QVBoxLayout* layout = new QVBoxLayout(progressDialog);
                 QProgressBar* progressBar = new QProgressBar(progressDialog);
@@ -530,8 +531,8 @@ tr("First you need to choose a location to save the versions in\n'Path to save v
 
                         } else {
                             QMessageBox::warning(this, tr("Error"),
-                                                 tr("Failed to create zip extraction script:") +
-                                                     QString("\n%1").arg(scriptFilePath));
+                                                 tr("Failed to create zip extraction script") +
+                                                     QString(":\n%1").arg(scriptFilePath));
                         }
                     });
                 reply->deleteLater();
@@ -782,7 +783,7 @@ void VersionDialog::checkUpdatePre(const bool showMessage) {
                     QMessageBox::StandardButton reply =
                         QMessageBox::question(this, tr("No pre-release found"),
                                               // clang-format off
-            tr("You don't have any pre-release installed yet. Would you like to download it now?"),
+            tr("You don't have any pre-release installed yet.\nWould you like to download it now?"),
                                               // clang-format on
                                               QMessageBox::Yes | QMessageBox::No);
                     if (reply == QMessageBox::Yes) {
@@ -901,7 +902,7 @@ void VersionDialog::requestChangelog(const QString& localHash, const QString& la
         reply, &QNetworkReply::finished, this, [this, reply, localHash, latestHash, outputView]() {
             if (reply->error() != QNetworkReply::NoError) {
                 QMessageBox::warning(this, tr("Error"),
-                                     tr("Network error while fetching changelog:") + "\n" +
+                                     tr("Network error while fetching changelog") + ":\n" +
                                          reply->errorString());
                 reply->deleteLater();
                 return;
@@ -1122,7 +1123,7 @@ void VersionDialog::showDownloadDialog(const QString& tagName, const QString& do
                 m_gui_settings->SetValue(gui::vm_versionSelected, destFolder);
 
                 QMessageBox::information(this, tr("Complete installation"),
-                                         tr("Pre-release updated successfully:") + "\n" + tagName);
+                                         tr("Pre-release updated successfully") + ":\n" + tagName);
 
                 LoadinstalledList();
             });
