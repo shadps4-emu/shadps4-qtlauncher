@@ -80,6 +80,7 @@ bool MainWindow::Init() {
     this->show();
     // load game list
     LoadGameLists();
+
 #ifdef ENABLE_UPDATER
     // Check for update
     CheckUpdateMain(true);
@@ -1258,12 +1259,12 @@ void MainWindow::StartEmulator(std::filesystem::path path, QStringList args) {
 
     QString selectedVersion = m_gui_settings->GetValue(gui::vm_versionSelected).toString();
     if (selectedVersion.isEmpty()) {
-        QMessageBox::warning(
-            this, tr("No Version Selected"),
-            // clang-format off
-tr("First, download an emulator version by selecting one from the download screen."));
+        QMessageBox::warning(this, tr("No Version Selected"),
+                             // clang-format off
+tr("No emulator version was selected.\nThe Version Manager menu will then open.\nSelect an emulator version from the right panel."));
         // clang-format on
         auto versionDialog = new VersionDialog(m_gui_settings, this);
+        connect(versionDialog, &QDialog::finished, this, [this](int) { LoadVersionComboBox(); });
         versionDialog->exec();
         return;
     }

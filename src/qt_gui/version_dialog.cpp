@@ -29,14 +29,13 @@ VersionDialog::VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget
     : QDialog(parent), ui(new Ui::VersionDialog), m_gui_settings(std::move(gui_settings)) {
     ui->setupUi(this);
 
-    ui->checkOnStartupPreCheckBox->setChecked(
+    ui->checkOnStartupCheckBox->setChecked(
         m_gui_settings->GetValue(gui::vm_checkOnStartup).toBool());
-    ui->updatePreCheckBox->setChecked(m_gui_settings->GetValue(gui::vm_showChangeLog).toBool());
+    ui->showChangelogCheckBox->setChecked(m_gui_settings->GetValue(gui::vm_showChangeLog).toBool());
 
-    connect(ui->checkOnStartupPreCheckBox, &QCheckBox::toggled, this,
+    connect(ui->checkOnStartupCheckBox, &QCheckBox::toggled, this,
             [this](bool checked) { m_gui_settings->SetValue(gui::vm_checkOnStartup, checked); });
-
-    connect(ui->updatePreCheckBox, &QCheckBox::toggled, this,
+    connect(ui->showChangelogCheckBox, &QCheckBox::toggled, this,
             [this](bool checked) { m_gui_settings->SetValue(gui::vm_showChangeLog, checked); });
 
     networkManager = new QNetworkAccessManager(this);
@@ -750,7 +749,7 @@ void VersionDialog::checkUpdatePre(const bool showMessage) {
                 QJsonDocument doc = QJsonDocument::fromJson(resp);
                 if (!doc.isArray()) {
                     QMessageBox::warning(this, tr("Error"),
-                                         "The GitHub API response is not a valid JSON array.");
+                                         tr("The GitHub API response is not a valid JSON array."));
                     reply->deleteLater();
                     return;
                 }

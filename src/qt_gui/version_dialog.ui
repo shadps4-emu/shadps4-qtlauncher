@@ -48,18 +48,18 @@
     </property>
     <layout class="QVBoxLayout" name="versionTabLayout">
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_11">
+      <layout class="QHBoxLayout" name="horizontalLayout_path">
        <property name="topMargin">
         <number>0</number>
        </property>
        <item>
-        <widget class="QGroupBox" name="shadps4GroupBox">
+        <widget class="QGroupBox" name="patchGroupBox">
          <property name="title">
           <string>Path to save versions</string>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_shadps4">
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_shadps4" stretch="0,0">
+           <layout class="QHBoxLayout" name="horizontalLayout_patch" stretch="0,0">
             <item>
              <widget class="QLineEdit" name="currentVersionPath">
               <property name="sizePolicy">
@@ -91,9 +91,9 @@
       </layout>
      </item>
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_8">
+      <layout class="QHBoxLayout" name="horizontalLayout_installed_download">
        <item>
-        <layout class="QVBoxLayout" name="verticalLayout_4">
+        <layout class="QVBoxLayout" name="verticalLayout_installed">
          <property name="leftMargin">
           <number>0</number>
          </property>
@@ -107,7 +107,7 @@
           <number>0</number>
          </property>
          <item>
-          <widget class="QLabel" name="label">
+          <widget class="QLabel" name="label_installed">
            <property name="font">
             <font>
              <bold>false</bold>
@@ -143,7 +143,7 @@
           </widget>
          </item>
          <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_14">
+          <layout class="QHBoxLayout" name="horizontalLayout_button_installed">
            <property name="topMargin">
             <number>0</number>
            </property>
@@ -173,20 +173,13 @@
         </layout>
        </item>
        <item>
-        <layout class="QVBoxLayout" name="verticalLayout_10">
+        <layout class="QVBoxLayout" name="verticalLayout_download">
          <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_13">
-           <property name="topMargin">
-            <number>0</number>
+          <widget class="QLabel" name="label_download">
+           <property name="text">
+            <string>Download</string>
            </property>
-           <item>
-            <widget class="QLabel" name="label_2">
-             <property name="text">
-              <string>Download</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
+          </widget>
          </item>
          <item>
           <widget class="QPushButton" name="checkVersionDownloadButton">
@@ -222,19 +215,19 @@
           </widget>
          </item>
          <item>
-          <layout class="QVBoxLayout" name="verticalLayout_11">
+          <layout class="QVBoxLayout" name="verticalLayout_check_update">
            <property name="topMargin">
             <number>0</number>
            </property>
            <item>
-            <widget class="QCheckBox" name="updatePreCheckBox">
+            <widget class="QCheckBox" name="checkOnStartupCheckBox">
              <property name="text">
               <string>Check for Pre-release updates at startup</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QCheckBox" name="checkOnStartupPreCheckBox">
+            <widget class="QCheckBox" name="showChangelogCheckBox">
              <property name="text">
               <string>Always show Pre-release changelog</string>
              </property>
