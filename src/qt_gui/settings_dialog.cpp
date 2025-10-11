@@ -815,9 +815,9 @@ void SettingsDialog::LoadValuesFromConfig() {
     }
     ui->chooseHomeTabComboBox->setCurrentText(translatedText);
 
-    QStringList tabNames = {tr("General"), tr("GUI"),   tr("Graphics"),
-                            tr("User"),    tr("Input"), tr("Paths"),
-                            tr("Log"),     tr("Debug"), tr("Experimental")};
+    QStringList tabNames = {tr("General"), tr("Frontend"), tr("Graphics"),
+                            tr("User"),    tr("Input"),    tr("Paths"),
+                            tr("Log"),     tr("Debug"),    tr("Experimental")};
     int indexTab = tabNames.indexOf(translatedText);
     if (indexTab == -1 || !ui->tabWidgetSettings->isTabVisible(indexTab) || is_newly_created)
         indexTab = 0;
@@ -913,7 +913,7 @@ void SettingsDialog::updateNoteTextEdit(const QString& elementName) {
         text = tr("Log Filter:\\nFilters the log to only print specific information.\\nExamples: \"Core:Trace\" \"Lib.Pad:Debug Common.Filesystem:Error\" \"*:Critical\"\\nLevels: Trace, Debug, Info, Warning, Error, Critical - in this order, a specific level silences all levels preceding it in the list and logs every level after it.");
     #ifdef ENABLE_UPDATER
     } else if (elementName == "updaterGroupBox") {
-        text = tr("Update:\\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.");
+        text = tr("Auto Updater - User Interface:\\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\\n\\n*This update applies only to the Qt user interface. To update the emulator core, please use the 'Version Manager' menu.");
 #endif
     } else if (elementName == "GUIBackgroundImageGroupBox") {
         text = tr("Background Image:\\nControl the opacity of the game background image.");

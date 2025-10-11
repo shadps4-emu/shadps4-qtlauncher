@@ -87,6 +87,7 @@ bool MainWindow::Init() {
     CheckUpdateMain(true);
 #endif
 
+    LoadVersionComboBox();
     if (m_gui_settings->GetValue(gui::vm_checkOnStartup).toBool()) {
         auto versionDialog = new VersionDialog(m_gui_settings, this);
         versionDialog->checkUpdatePre(false);
@@ -270,7 +271,6 @@ void MainWindow::AddUiWidgets() {
     versionLayout->addWidget(ui->versionManagerButton);
     ui->versionManagerButton->setText(tr("Version Manager"));
     ui->toolBar->addWidget(versionContainer);
-    LoadVersionComboBox();
 }
 
 void MainWindow::UpdateToolbarButtons() {
