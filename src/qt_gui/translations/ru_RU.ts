@@ -2757,8 +2757,8 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>You don&apos;t have any pre-release installed yet.
 Would you like to download it now?</source>
-      <translation type="unfinished">You don&apos;t have any pre-release installed yet.
-Would you like to download it now?</translation>
+      <translation>У вас ещё не&apos; установлена ​​pre-release версия.
+Желаете скачать её сейчас?</translation>
     </message>
     <message>
       <source>Auto Updater - Emulator</source>
@@ -2802,39 +2802,39 @@ Would you like to download it now?</translation>
     </message>
     <message>
       <source>Network error while fetching changelog</source>
-      <translation type="unfinished">Network error while fetching changelog</translation>
+      <translation>Сетевая ошибка при загрузке журнала изменений</translation>
     </message>
     <message>
       <source>Changes</source>
-      <translation type="unfinished">Changes</translation>
+      <translation>Изменения</translation>
     </message>
     <message>
       <source>No download URL found for the specified asset.</source>
-      <translation type="unfinished">No download URL found for the specified asset.</translation>
+      <translation>URL для загрузки указанного актива не найден.</translation>
     </message>
     <message>
       <source>Downloading Pre‑release, please wait...</source>
-      <translation type="unfinished">Downloading Pre‑release, please wait...</translation>
+      <translation>Загрузка предварительной версии, пожалуйста, подождите...</translation>
     </message>
     <message>
       <source>Network error while downloading</source>
-      <translation type="unfinished">Network error while downloading</translation>
+      <translation>Ошибка сети при загрузке</translation>
     </message>
     <message>
       <source>Failed to save download file</source>
-      <translation type="unfinished">Failed to save download file</translation>
+      <translation>Не удалось сохранить загружаемый файл</translation>
     </message>
     <message>
       <source>Complete installation</source>
-      <translation type="unfinished">Complete installation</translation>
+      <translation>Установка завершена</translation>
     </message>
     <message>
       <source>Pre-release updated successfully</source>
-      <translation type="unfinished">Pre-release updated successfully</translation>
+      <translation>Pre-release версия успешно обновлена</translation>
     </message>
     <message>
       <source>Failed to create the update script file</source>
-      <translation type="unfinished">Failed to create the update script file</translation>
+      <translation>Не удалось создать скрипт обновления</translation>
     </message>
   </context>
 </TS>
