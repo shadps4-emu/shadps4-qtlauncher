@@ -349,11 +349,11 @@
     </message>
     <message>
       <source>Auto Updater - Interface</source>
-      <translation type="unfinished">Auto Updater - Interface</translation>
+      <translation>Automatisk uppdaterare - Gränssnitt</translation>
     </message>
     <message>
       <source>Update Available (Interface)</source>
-      <translation type="unfinished">Update Available (Interface)</translation>
+      <translation>Uppdatering tillgänglig (Gränssnitt)</translation>
     </message>
   </context>
   <context>
@@ -723,7 +723,7 @@
     </message>
     <message>
       <source>Directory to install emulator versions</source>
-      <translation type="unfinished">Directory to install emulator versions</translation>
+      <translation>Katalog för att installera emulatorversioner</translation>
     </message>
   </context>
   <context>
@@ -1698,23 +1698,23 @@ Please change shadPS4 path in settings.</source>
     </message>
     <message>
       <source>Version Manager</source>
-      <translation type="unfinished">Version Manager</translation>
+      <translation>Versionshanterare</translation>
     </message>
     <message>
       <source>No Version Selected</source>
-      <translation type="unfinished">No Version Selected</translation>
+      <translation>Ingen version vald</translation>
     </message>
     <message>
       <source>No emulator version was selected.
 The Version Manager menu will then open.
 Select an emulator version from the right panel.</source>
-      <translation type="unfinished">No emulator version was selected.
-The Version Manager menu will then open.
-Select an emulator version from the right panel.</translation>
+      <translation>Ingen emulatorversion har valts.
+Menyn Versionshanterare kommer då att öppnas.
+Välj en emulatorversion från den högra panelen.</translation>
     </message>
     <message>
       <source>No version selected</source>
-      <translation type="unfinished">No version selected</translation>
+      <translation>Ingen version vald</translation>
     </message>
   </context>
   <context>
@@ -2501,35 +2501,35 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Vulkan Validation (Requires Vulkan SDK)</source>
-      <translation type="unfinished">Vulkan Validation (Requires Vulkan SDK)</translation>
+      <translation>Vulkan-validering (kräver Vulkan SDK)</translation>
     </message>
     <message>
       <source>Validation Layers</source>
-      <translation type="unfinished">Validation Layers</translation>
+      <translation>Valideringslager</translation>
     </message>
     <message>
       <source>Enable Core Validation</source>
-      <translation type="unfinished">Enable Core Validation</translation>
+      <translation>Aktivera kärnvalidering</translation>
     </message>
     <message>
       <source>Enable Sync Validation</source>
-      <translation type="unfinished">Enable Sync Validation</translation>
+      <translation>Aktivera synkroniseringsvalidering</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation</source>
-      <translation type="unfinished">Enable GPU-Assisted Validation</translation>
+      <translation>Aktivera GPU-assisterad validering</translation>
     </message>
     <message>
       <source>Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Aktivera synkroniseringsvalidering:\nAktiverar ett system som validerar tider för Vulkan-renderinguppgifter.\nDetta minskar prestandan och kan förändra emuleringens beteende.\nDu behöver Vulkan SDK för att detta ska fungera.</translation>
     </message>
     <message>
       <source>Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Aktivera kärnvalidering:\nAktiverar de viktigaste API-valideringsfunktionerna.\nDetta minskar prestandan och kan förändra emuleringens beteende.\nDu behöver Vulkan SDK för att detta ska fungera.</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Aktivera GPU-assisterad validering:\nInstrumenterar shaders med kod som validerar om de fungerar korrekt.\nDetta minskar prestandan och kan förändra emuleringens beteende.\nDu behöver Vulkan SDK för att detta ska fungera.</translation>
     </message>
   </context>
   <context>
@@ -2563,143 +2563,143 @@ Select an emulator version from the right panel.</translation>
     <name>VersionDialog</name>
     <message>
       <source>Version Manager</source>
-      <translation type="unfinished">Version Manager</translation>
+      <translation>Versionshanterare</translation>
     </message>
     <message>
       <source>Path to save versions</source>
-      <translation type="unfinished">Path to save versions</translation>
+      <translation>Sökväg för att spara versioner</translation>
     </message>
     <message>
       <source>Browse</source>
-      <translation type="unfinished">Browse</translation>
+      <translation>Bläddra</translation>
     </message>
     <message>
       <source>Installed</source>
-      <translation type="unfinished">Installed</translation>
+      <translation>Installerad</translation>
     </message>
     <message>
       <source>Selected</source>
-      <translation type="unfinished">Selected</translation>
+      <translation>Vald</translation>
     </message>
     <message>
       <source>Version</source>
-      <translation type="unfinished">Version</translation>
+      <translation>Version</translation>
     </message>
     <message>
       <source>Codename</source>
-      <translation type="unfinished">Codename</translation>
+      <translation>Kodnamn</translation>
     </message>
     <message>
       <source>Date</source>
-      <translation type="unfinished">Date</translation>
+      <translation>Datum</translation>
     </message>
     <message>
       <source>Add Custom</source>
-      <translation type="unfinished">Add Custom</translation>
+      <translation>Lägg till anpassad</translation>
     </message>
     <message>
       <source>Delete</source>
-      <translation type="unfinished">Delete</translation>
+      <translation>Ta bort</translation>
     </message>
     <message>
       <source>Refresh List</source>
-      <translation type="unfinished">Refresh List</translation>
+      <translation>Uppdatera lista</translation>
     </message>
     <message>
       <source>Download</source>
-      <translation type="unfinished">Download</translation>
+      <translation>Hämta ner</translation>
     </message>
     <message>
       <source>Check for Pre-release updates at startup</source>
-      <translation type="unfinished">Check for Pre-release updates at startup</translation>
+      <translation>Kontrollera om det finns förhandsutgivna uppdateringar vid start</translation>
     </message>
     <message>
       <source>Always show Pre-release changelog</source>
-      <translation type="unfinished">Always show Pre-release changelog</translation>
+      <translation>Visar alltid ändringslogg för förhandsutgåva</translation>
     </message>
     <message>
       <source>Check for Pre-release Updates</source>
-      <translation type="unfinished">Check for Pre-release Updates</translation>
+      <translation>Leta efter förhandsutgivna uppdateringar</translation>
     </message>
     <message>
       <source>Select the folder where the emulator versions will be installed</source>
-      <translation type="unfinished">Select the folder where the emulator versions will be installed</translation>
+      <translation>Välj den mapp där emulatorversioner ska installeras</translation>
     </message>
     <message>
       <source>Select executable</source>
-      <translation type="unfinished">Select executable</translation>
+      <translation>Välj körbar fil</translation>
     </message>
     <message>
       <source>Executable (*.exe)</source>
-      <translation type="unfinished">Executable (*.exe)</translation>
+      <translation>Körbar fil (*.exe)</translation>
     </message>
     <message>
       <source>Executable (*.AppImage)</source>
-      <translation type="unfinished">Executable (*.AppImage)</translation>
+      <translation>Körbar fil (*.AppImage)</translation>
     </message>
     <message>
       <source>Executable (*.*)</source>
-      <translation type="unfinished">Executable (*.*)</translation>
+      <translation>Alla filer (*.*)</translation>
     </message>
     <message>
       <source>Version name</source>
-      <translation type="unfinished">Version name</translation>
+      <translation>Versionsnamn</translation>
     </message>
     <message>
       <source>Enter the name of this version as it appears in the list.</source>
-      <translation type="unfinished">Enter the name of this version as it appears in the list.</translation>
+      <translation>Ange namnet för denna version som den visas i listan.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Fel</translation>
     </message>
     <message>
       <source>A folder with that name already exists.</source>
-      <translation type="unfinished">A folder with that name already exists.</translation>
+      <translation>En mapp med det namnet finns redan.</translation>
     </message>
     <message>
       <source>Failed to create folder.</source>
-      <translation type="unfinished">Failed to create folder.</translation>
+      <translation>Misslyckades med att skapa mapp.</translation>
     </message>
     <message>
       <source>Failed to copy executable.</source>
-      <translation type="unfinished">Failed to copy executable.</translation>
+      <translation>Misslyckades med att kopiera körbar fil.</translation>
     </message>
     <message>
       <source>Success</source>
-      <translation type="unfinished">Success</translation>
+      <translation>Lyckades</translation>
     </message>
     <message>
       <source>Version added successfully.</source>
-      <translation type="unfinished">Version added successfully.</translation>
+      <translation>Versionen lades till.</translation>
     </message>
     <message>
       <source>Notice</source>
-      <translation type="unfinished">Notice</translation>
+      <translation>Observera</translation>
     </message>
     <message>
       <source>No version selected from the Installed list.</source>
-      <translation type="unfinished">No version selected from the Installed list.</translation>
+      <translation>Ingen version har valts från listan över installerade versioner.</translation>
     </message>
     <message>
       <source>Failed to determine the folder path.</source>
-      <translation type="unfinished">Failed to determine the folder path.</translation>
+      <translation>Misslyckades med att fastställa mappsökvägen.</translation>
     </message>
     <message>
       <source>Delete version</source>
-      <translation type="unfinished">Delete version</translation>
+      <translation>Ta bort version</translation>
     </message>
     <message>
       <source>Do you want to delete the version</source>
-      <translation type="unfinished">Do you want to delete the version</translation>
+      <translation>Vill du ta bort versionen</translation>
     </message>
     <message>
       <source>Failed to delete folder.</source>
-      <translation type="unfinished">Failed to delete folder.</translation>
+      <translation>Misslyckades med att ta bort mappen.</translation>
     </message>
     <message>
       <source>Version list update</source>
-      <translation type="unfinished">Version list update</translation>
+      <translation>Versionslistan uppdaterad</translation>
     </message>
     <message>
       <source>No news, the version list is already updated.</source>
