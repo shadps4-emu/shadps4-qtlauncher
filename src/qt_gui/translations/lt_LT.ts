@@ -284,10 +284,6 @@
       <translation>Jūsų versija jau atnaujinta!</translation>
     </message>
     <message>
-      <source>Update Available</source>
-      <translation>Prieinama atnaujinimas</translation>
-    </message>
-    <message>
       <source>Update Channel</source>
       <translation>Atnaujinimo Kanalas</translation>
     </message>
@@ -350,6 +346,14 @@
     <message>
       <source>Failed to create the update script file</source>
       <translation>Nepavyko sukurti atnaujinimo scenarijaus failo</translation>
+    </message>
+    <message>
+      <source>Auto Updater - Interface</source>
+      <translation type="unfinished">Auto Updater - Interface</translation>
+    </message>
+    <message>
+      <source>Update Available (Interface)</source>
+      <translation type="unfinished">Update Available (Interface)</translation>
     </message>
   </context>
   <context>
@@ -716,6 +720,10 @@
     <message>
       <source>Directory to install DLC</source>
       <translation type="unfinished">Directory to install DLC</translation>
+    </message>
+    <message>
+      <source>Directory to install emulator versions</source>
+      <translation type="unfinished">Directory to install emulator versions</translation>
     </message>
   </context>
   <context>
@@ -1688,6 +1696,26 @@ Please change shadPS4 path in settings.</source>
       <translation type="unfinished">shadPS4 is not found!
 Please change shadPS4 path in settings.</translation>
     </message>
+    <message>
+      <source>Version Manager</source>
+      <translation type="unfinished">Version Manager</translation>
+    </message>
+    <message>
+      <source>No Version Selected</source>
+      <translation type="unfinished">No Version Selected</translation>
+    </message>
+    <message>
+      <source>No emulator version was selected.
+The Version Manager menu will then open.
+Select an emulator version from the right panel.</source>
+      <translation type="unfinished">No emulator version was selected.
+The Version Manager menu will then open.
+Select an emulator version from the right panel.</translation>
+    </message>
+    <message>
+      <source>No version selected</source>
+      <translation type="unfinished">No version selected</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -1850,10 +1878,6 @@ Please change shadPS4 path in settings.</translation>
     <message>
       <source>Enable Vulkan Validation Layers</source>
       <translation type="unfinished">Enable Vulkan Validation Layers</translation>
-    </message>
-    <message>
-      <source>Enable Vulkan Synchronization Validation</source>
-      <translation type="unfinished">Enable Vulkan Synchronization Validation</translation>
     </message>
     <message>
       <source>Enable RenderDoc Debugging</source>
@@ -2436,24 +2460,12 @@ Please change shadPS4 path in settings.</translation>
       <translation type="unfinished">Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
     </message>
     <message>
-      <source>Enable Vulkan Synchronization Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Vulkan Synchronization Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
-    </message>
-    <message>
       <source>Audio Device (general)</source>
       <translation type="unfinished">Audio Device (general)</translation>
     </message>
     <message>
       <source>Audio Device (DS4 speaker)</source>
       <translation type="unfinished">Audio Device (DS4 speaker)</translation>
-    </message>
-    <message>
-      <source>shadPS4 Path</source>
-      <translation type="unfinished">shadPS4 Path</translation>
-    </message>
-    <message>
-      <source>Select the shadPS4 executable</source>
-      <translation type="unfinished">Select the shadPS4 executable</translation>
     </message>
     <message>
       <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
@@ -2487,6 +2499,38 @@ Please change shadPS4 path in settings.</translation>
       <source>Browse:\nBrowse for a folder to set as the sysmodules path.</source>
       <translation type="unfinished">Browse:\nBrowse for a folder to set as the sysmodules path.</translation>
     </message>
+    <message>
+      <source>Vulkan Validation (Requires Vulkan SDK)</source>
+      <translation type="unfinished">Vulkan Validation (Requires Vulkan SDK)</translation>
+    </message>
+    <message>
+      <source>Validation Layers</source>
+      <translation type="unfinished">Validation Layers</translation>
+    </message>
+    <message>
+      <source>Enable Core Validation</source>
+      <translation type="unfinished">Enable Core Validation</translation>
+    </message>
+    <message>
+      <source>Enable Sync Validation</source>
+      <translation type="unfinished">Enable Sync Validation</translation>
+    </message>
+    <message>
+      <source>Enable GPU-Assisted Validation</source>
+      <translation type="unfinished">Enable GPU-Assisted Validation</translation>
+    </message>
+    <message>
+      <source>Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
+      <translation type="unfinished">Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+    </message>
+    <message>
+      <source>Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
+      <translation type="unfinished">Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+    </message>
+    <message>
+      <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
+      <translation type="unfinished">Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+    </message>
   </context>
   <context>
     <name>TrophyViewer</name>
@@ -2513,6 +2557,285 @@ Please change shadPS4 path in settings.</translation>
     <message>
       <source>Show Hidden Trophies</source>
       <translation type="unfinished">Show Hidden Trophies</translation>
+    </message>
+  </context>
+  <context>
+    <name>VersionDialog</name>
+    <message>
+      <source>Version Manager</source>
+      <translation type="unfinished">Version Manager</translation>
+    </message>
+    <message>
+      <source>Path to save versions</source>
+      <translation type="unfinished">Path to save versions</translation>
+    </message>
+    <message>
+      <source>Browse</source>
+      <translation type="unfinished">Browse</translation>
+    </message>
+    <message>
+      <source>Installed</source>
+      <translation type="unfinished">Installed</translation>
+    </message>
+    <message>
+      <source>Selected</source>
+      <translation type="unfinished">Selected</translation>
+    </message>
+    <message>
+      <source>Version</source>
+      <translation type="unfinished">Version</translation>
+    </message>
+    <message>
+      <source>Codename</source>
+      <translation type="unfinished">Codename</translation>
+    </message>
+    <message>
+      <source>Date</source>
+      <translation type="unfinished">Date</translation>
+    </message>
+    <message>
+      <source>Add Custom</source>
+      <translation type="unfinished">Add Custom</translation>
+    </message>
+    <message>
+      <source>Delete</source>
+      <translation type="unfinished">Delete</translation>
+    </message>
+    <message>
+      <source>Refresh List</source>
+      <translation type="unfinished">Refresh List</translation>
+    </message>
+    <message>
+      <source>Download</source>
+      <translation type="unfinished">Download</translation>
+    </message>
+    <message>
+      <source>Check for Pre-release updates at startup</source>
+      <translation type="unfinished">Check for Pre-release updates at startup</translation>
+    </message>
+    <message>
+      <source>Always show Pre-release changelog</source>
+      <translation type="unfinished">Always show Pre-release changelog</translation>
+    </message>
+    <message>
+      <source>Check for Pre-release Updates</source>
+      <translation type="unfinished">Check for Pre-release Updates</translation>
+    </message>
+    <message>
+      <source>Select the folder where the emulator versions will be installed</source>
+      <translation type="unfinished">Select the folder where the emulator versions will be installed</translation>
+    </message>
+    <message>
+      <source>Select executable</source>
+      <translation type="unfinished">Select executable</translation>
+    </message>
+    <message>
+      <source>Executable (*.exe)</source>
+      <translation type="unfinished">Executable (*.exe)</translation>
+    </message>
+    <message>
+      <source>Executable (*.AppImage)</source>
+      <translation type="unfinished">Executable (*.AppImage)</translation>
+    </message>
+    <message>
+      <source>Executable (*.*)</source>
+      <translation type="unfinished">Executable (*.*)</translation>
+    </message>
+    <message>
+      <source>Version name</source>
+      <translation type="unfinished">Version name</translation>
+    </message>
+    <message>
+      <source>Enter the name of this version as it appears in the list.</source>
+      <translation type="unfinished">Enter the name of this version as it appears in the list.</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation type="unfinished">Error</translation>
+    </message>
+    <message>
+      <source>A folder with that name already exists.</source>
+      <translation type="unfinished">A folder with that name already exists.</translation>
+    </message>
+    <message>
+      <source>Failed to create folder.</source>
+      <translation type="unfinished">Failed to create folder.</translation>
+    </message>
+    <message>
+      <source>Failed to copy executable.</source>
+      <translation type="unfinished">Failed to copy executable.</translation>
+    </message>
+    <message>
+      <source>Success</source>
+      <translation type="unfinished">Success</translation>
+    </message>
+    <message>
+      <source>Version added successfully.</source>
+      <translation type="unfinished">Version added successfully.</translation>
+    </message>
+    <message>
+      <source>Notice</source>
+      <translation type="unfinished">Notice</translation>
+    </message>
+    <message>
+      <source>No version selected from the Installed list.</source>
+      <translation type="unfinished">No version selected from the Installed list.</translation>
+    </message>
+    <message>
+      <source>Failed to determine the folder path.</source>
+      <translation type="unfinished">Failed to determine the folder path.</translation>
+    </message>
+    <message>
+      <source>Delete version</source>
+      <translation type="unfinished">Delete version</translation>
+    </message>
+    <message>
+      <source>Do you want to delete the version</source>
+      <translation type="unfinished">Do you want to delete the version</translation>
+    </message>
+    <message>
+      <source>Failed to delete folder.</source>
+      <translation type="unfinished">Failed to delete folder.</translation>
+    </message>
+    <message>
+      <source>Version list update</source>
+      <translation type="unfinished">Version list update</translation>
+    </message>
+    <message>
+      <source>No news, the version list is already updated.</source>
+      <translation type="unfinished">No news, the version list is already updated.</translation>
+    </message>
+    <message>
+      <source>The latest versions have been added to the list for download.</source>
+      <translation type="unfinished">The latest versions have been added to the list for download.</translation>
+    </message>
+    <message>
+      <source>Error accessing GitHub API</source>
+      <translation type="unfinished">Error accessing GitHub API</translation>
+    </message>
+    <message>
+      <source>First you need to choose a location to save the versions in
+&apos;Path to save versions&apos;</source>
+      <translation type="unfinished">First you need to choose a location to save the versions in
+&apos;Path to save versions&apos;</translation>
+    </message>
+    <message>
+      <source>Do you want to download the version</source>
+      <translation type="unfinished">Do you want to download the version</translation>
+    </message>
+    <message>
+      <source>No files available for this platform.</source>
+      <translation type="unfinished">No files available for this platform.</translation>
+    </message>
+    <message>
+      <source>Downloading %1 , please wait...</source>
+      <translation type="unfinished">Downloading %1 , please wait...</translation>
+    </message>
+    <message>
+      <source>Could not save file.</source>
+      <translation type="unfinished">Could not save file.</translation>
+    </message>
+    <message>
+      <source>Version %1 has been downloaded and selected.</source>
+      <translation type="unfinished">Version %1 has been downloaded and selected.</translation>
+    </message>
+    <message>
+      <source>Failed to create zip extraction script</source>
+      <translation type="unfinished">Failed to create zip extraction script</translation>
+    </message>
+    <message>
+      <source>The GitHub API response is not a valid JSON array.</source>
+      <translation type="unfinished">The GitHub API response is not a valid JSON array.</translation>
+    </message>
+    <message>
+      <source>Unable to get hash of latest pre-release</source>
+      <translation type="unfinished">Unable to get hash of latest pre-release</translation>
+    </message>
+    <message>
+      <source>No pre-release found</source>
+      <translation type="unfinished">No pre-release found</translation>
+    </message>
+    <message>
+      <source>You don&apos;t have any pre-release installed yet.
+Would you like to download it now?</source>
+      <translation type="unfinished">You don&apos;t have any pre-release installed yet.
+Would you like to download it now?</translation>
+    </message>
+    <message>
+      <source>Auto Updater - Emulator</source>
+      <translation type="unfinished">Auto Updater - Emulator</translation>
+    </message>
+    <message>
+      <source>You already have the latest pre-release version.</source>
+      <translation type="unfinished">You already have the latest pre-release version.</translation>
+    </message>
+    <message>
+      <source>Update Available (Emulator)</source>
+      <translation type="unfinished">Update Available (Emulator)</translation>
+    </message>
+    <message>
+      <source>Current Version</source>
+      <translation type="unfinished">Current Version</translation>
+    </message>
+    <message>
+      <source>Latest Version</source>
+      <translation type="unfinished">Latest Version</translation>
+    </message>
+    <message>
+      <source>Do you want to update?</source>
+      <translation type="unfinished">Do you want to update?</translation>
+    </message>
+    <message>
+      <source>Update</source>
+      <translation type="unfinished">Update</translation>
+    </message>
+    <message>
+      <source>No</source>
+      <translation type="unfinished">No</translation>
+    </message>
+    <message>
+      <source>Show Changelog</source>
+      <translation type="unfinished">Show Changelog</translation>
+    </message>
+    <message>
+      <source>Hide Changelog</source>
+      <translation type="unfinished">Hide Changelog</translation>
+    </message>
+    <message>
+      <source>Network error while fetching changelog</source>
+      <translation type="unfinished">Network error while fetching changelog</translation>
+    </message>
+    <message>
+      <source>Changes</source>
+      <translation type="unfinished">Changes</translation>
+    </message>
+    <message>
+      <source>No download URL found for the specified asset.</source>
+      <translation type="unfinished">No download URL found for the specified asset.</translation>
+    </message>
+    <message>
+      <source>Downloading Pre‑release, please wait...</source>
+      <translation type="unfinished">Downloading Pre‑release, please wait...</translation>
+    </message>
+    <message>
+      <source>Network error while downloading</source>
+      <translation type="unfinished">Network error while downloading</translation>
+    </message>
+    <message>
+      <source>Failed to save download file</source>
+      <translation type="unfinished">Failed to save download file</translation>
+    </message>
+    <message>
+      <source>Complete installation</source>
+      <translation type="unfinished">Complete installation</translation>
+    </message>
+    <message>
+      <source>Pre-release updated successfully</source>
+      <translation type="unfinished">Pre-release updated successfully</translation>
+    </message>
+    <message>
+      <source>Failed to create the update script file</source>
+      <translation type="unfinished">Failed to create the update script file</translation>
     </message>
   </context>
 </TS>

@@ -284,10 +284,6 @@
       <translation>Ihre Version ist bereits aktuell!</translation>
     </message>
     <message>
-      <source>Update Available</source>
-      <translation>Aktualisierung verfügbar</translation>
-    </message>
-    <message>
       <source>Update Channel</source>
       <translation>Update-Kanal</translation>
     </message>
@@ -350,6 +346,14 @@
     <message>
       <source>Failed to create the update script file</source>
       <translation>Fehler beim Erstellen der Aktualisierungs-Skriptdatei</translation>
+    </message>
+    <message>
+      <source>Auto Updater - Interface</source>
+      <translation>Automatische Updates - Interface</translation>
+    </message>
+    <message>
+      <source>Update Available (Interface)</source>
+      <translation>Update verfügbar (Interface)</translation>
     </message>
   </context>
   <context>
@@ -715,6 +719,10 @@ Einzigartige Inputs können nicht öfters als einmal gebunden werden. Input-Dupl
     <message>
       <source>Directory to install DLC</source>
       <translation>Verzeichnis zum Installieren von DLC</translation>
+    </message>
+    <message>
+      <source>Directory to install emulator versions</source>
+      <translation>Verzeichnis für die Installation der Emulator-Versionen</translation>
     </message>
   </context>
   <context>
@@ -1687,6 +1695,26 @@ Please change shadPS4 path in settings.</source>
       <translation>shadPS4 wurde nicht gefunden!
 Bitte ändere den shadPS4-Pfad in den Einstellungen.</translation>
     </message>
+    <message>
+      <source>Version Manager</source>
+      <translation>Versionsverwaltung</translation>
+    </message>
+    <message>
+      <source>No Version Selected</source>
+      <translation>Keine Version ausgewählt</translation>
+    </message>
+    <message>
+      <source>No emulator version was selected.
+The Version Manager menu will then open.
+Select an emulator version from the right panel.</source>
+      <translation>Es wurde keine Emulator-Version ausgewählt.
+Die Versionsverwaltung wird geöffnet.
+Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
+    </message>
+    <message>
+      <source>No version selected</source>
+      <translation>Keine Version ausgewählt</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -1849,10 +1877,6 @@ Bitte ändere den shadPS4-Pfad in den Einstellungen.</translation>
     <message>
       <source>Enable Vulkan Validation Layers</source>
       <translation>Vulkan Validations-Ebenen aktivieren</translation>
-    </message>
-    <message>
-      <source>Enable Vulkan Synchronization Validation</source>
-      <translation>Vulkan Synchronisations-Validierung aktivieren</translation>
     </message>
     <message>
       <source>Enable RenderDoc Debugging</source>
@@ -2439,24 +2463,12 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
       <translation>Aktiviere Vulkan Validation Layers:\nAktiviert ein System, welches den Status des Vulkan-Renderers überprüft und Daten über den internen Zustand sammelt.\nDiese Funktion reduziert die Leistung und beeinflusst das Verhalten des Emulators.\nVulkan SDK wird benötigt.</translation>
     </message>
     <message>
-      <source>Enable Vulkan Synchronization Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation>Aktiviere Vulkan Synchronization Validation:\nAktiviert ein System, welches das Timing der Vulkan-Renderer Aufgaben überprüft.\nDiese Funktion reduziert die Leistung und beeinflusst das Verhalten des Emulators.\nVulkan SDK wird benötigt.</translation>
-    </message>
-    <message>
       <source>Audio Device (general)</source>
       <translation>Audiogerät (Allgemein)</translation>
     </message>
     <message>
       <source>Audio Device (DS4 speaker)</source>
       <translation>Audiogerät (DS4 Lautsprecher)</translation>
-    </message>
-    <message>
-      <source>shadPS4 Path</source>
-      <translation>shadPS4-Pfad</translation>
-    </message>
-    <message>
-      <source>Select the shadPS4 executable</source>
-      <translation>Wähle eine shadPS4-Anwendungsdatei aus</translation>
     </message>
     <message>
       <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
@@ -2490,6 +2502,38 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
       <source>Browse:\nBrowse for a folder to set as the sysmodules path.</source>
       <translation>Durchsuchen:\nLege einen Ordner für sysmodules fest.</translation>
     </message>
+    <message>
+      <source>Vulkan Validation (Requires Vulkan SDK)</source>
+      <translation>Vulkan Validation (Benötigt Vulkan SDK)</translation>
+    </message>
+    <message>
+      <source>Validation Layers</source>
+      <translation>Validation Layers</translation>
+    </message>
+    <message>
+      <source>Enable Core Validation</source>
+      <translation>Aktiviere Core Validation</translation>
+    </message>
+    <message>
+      <source>Enable Sync Validation</source>
+      <translation>Aktiviere Sync Validation</translation>
+    </message>
+    <message>
+      <source>Enable GPU-Assisted Validation</source>
+      <translation>Aktiviere GPU-Assisted Validation</translation>
+    </message>
+    <message>
+      <source>Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
+      <translation>Aktiviere Sync Validation:\nAktiviert ein System, welches das Timing der Vulkan-Renderer Aufgaben überprüft.\nDiese Funktion reduziert die Leistung und beeinflusst das Verhalten des Emulators.\nVulkan SDK wird benötigt.</translation>
+    </message>
+    <message>
+      <source>Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
+      <translation>Aktiviere Core Validation:\nAktiviert die wichtigsten API-Validierungsfunktionen.\nDiese Funktion reduziert die Leistung und beeinflusst das Verhalten des Emulators.\nVulkan SDK wird benötigt.</translation>
+    </message>
+    <message>
+      <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
+      <translation>Aktiviere GPU-Assisted Validation:\nInstrumentiert Shader mit Code, um das korrekte Verhalten zu überprüfen.\nDiese Funktion reduziert die Leistung und beeinflusst das Verhalten des Emulators.\nVulkan SDK wird benötigt.</translation>
+    </message>
   </context>
   <context>
     <name>TrophyViewer</name>
@@ -2516,6 +2560,285 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
     <message>
       <source>Show Hidden Trophies</source>
       <translation>Verborgene Trophäen anzeigen</translation>
+    </message>
+  </context>
+  <context>
+    <name>VersionDialog</name>
+    <message>
+      <source>Version Manager</source>
+      <translation>Versionsverwaltung</translation>
+    </message>
+    <message>
+      <source>Path to save versions</source>
+      <translation>Pfad zum Speichern der Versionen</translation>
+    </message>
+    <message>
+      <source>Browse</source>
+      <translation>Durchsuchen</translation>
+    </message>
+    <message>
+      <source>Installed</source>
+      <translation>Installiert</translation>
+    </message>
+    <message>
+      <source>Selected</source>
+      <translation>Ausgewählt</translation>
+    </message>
+    <message>
+      <source>Version</source>
+      <translation>Version</translation>
+    </message>
+    <message>
+      <source>Codename</source>
+      <translation>Codename</translation>
+    </message>
+    <message>
+      <source>Date</source>
+      <translation>Datum</translation>
+    </message>
+    <message>
+      <source>Add Custom</source>
+      <translation>Eigene hinzufügen</translation>
+    </message>
+    <message>
+      <source>Delete</source>
+      <translation>Löschen</translation>
+    </message>
+    <message>
+      <source>Refresh List</source>
+      <translation>Liste aktualisieren</translation>
+    </message>
+    <message>
+      <source>Download</source>
+      <translation>Download</translation>
+    </message>
+    <message>
+      <source>Check for Pre-release updates at startup</source>
+      <translation>Beim Start nach Updates für Vorabversion suchen</translation>
+    </message>
+    <message>
+      <source>Always show Pre-release changelog</source>
+      <translation>Zeige immer Changelog für Vorabversion</translation>
+    </message>
+    <message>
+      <source>Check for Pre-release Updates</source>
+      <translation>Suche nach Updates für Vorabversion</translation>
+    </message>
+    <message>
+      <source>Select the folder where the emulator versions will be installed</source>
+      <translation>Wähle einen Ordner, in denen die Emulator-Versionen installiert werden</translation>
+    </message>
+    <message>
+      <source>Select executable</source>
+      <translation>Ausführbare Datei auswählen</translation>
+    </message>
+    <message>
+      <source>Executable (*.exe)</source>
+      <translation>Ausführbare Datei (*.exe)</translation>
+    </message>
+    <message>
+      <source>Executable (*.AppImage)</source>
+      <translation>Ausführbare Datei (*.AppImage)</translation>
+    </message>
+    <message>
+      <source>Executable (*.*)</source>
+      <translation>Ausführbare Datei (*.*)</translation>
+    </message>
+    <message>
+      <source>Version name</source>
+      <translation>Versionsname</translation>
+    </message>
+    <message>
+      <source>Enter the name of this version as it appears in the list.</source>
+      <translation>Gebe einen Namen für diese Version an, wie er in der Liste angezeigt werden soll.</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation>Fehler</translation>
+    </message>
+    <message>
+      <source>A folder with that name already exists.</source>
+      <translation>Ein Ordner mit diesem Namen existiert bereits.</translation>
+    </message>
+    <message>
+      <source>Failed to create folder.</source>
+      <translation>Ordner konnte nicht erstellt werden.</translation>
+    </message>
+    <message>
+      <source>Failed to copy executable.</source>
+      <translation>Fehler beim Kopieren der ausführbaren Datei.</translation>
+    </message>
+    <message>
+      <source>Success</source>
+      <translation>Erfolgreich</translation>
+    </message>
+    <message>
+      <source>Version added successfully.</source>
+      <translation>Version wurde erfolgreich hinzugefügt.</translation>
+    </message>
+    <message>
+      <source>Notice</source>
+      <translation>Hinweis</translation>
+    </message>
+    <message>
+      <source>No version selected from the Installed list.</source>
+      <translation>Keine Version aus der Installationsliste ausgewählt.</translation>
+    </message>
+    <message>
+      <source>Failed to determine the folder path.</source>
+      <translation>Ordnerpfad konnte nicht ermittelt werden.</translation>
+    </message>
+    <message>
+      <source>Delete version</source>
+      <translation>Version löschen</translation>
+    </message>
+    <message>
+      <source>Do you want to delete the version</source>
+      <translation>Soll die ausgewählte Version gelöscht werden</translation>
+    </message>
+    <message>
+      <source>Failed to delete folder.</source>
+      <translation>Ordner konnte nicht gelöscht werden.</translation>
+    </message>
+    <message>
+      <source>Version list update</source>
+      <translation>Update Versionsliste</translation>
+    </message>
+    <message>
+      <source>No news, the version list is already updated.</source>
+      <translation>Nichts Neues, die Versionsliste ist bereits aktuell.</translation>
+    </message>
+    <message>
+      <source>The latest versions have been added to the list for download.</source>
+      <translation>Die neusten Versionen wurden der Liste zum Download hinzugefügt.</translation>
+    </message>
+    <message>
+      <source>Error accessing GitHub API</source>
+      <translation>Fehler beim Zugriff auf die GitHub-API</translation>
+    </message>
+    <message>
+      <source>First you need to choose a location to save the versions in
+&apos;Path to save versions&apos;</source>
+      <translation>Es muss zuerst ein Pfad festgelegt werden zum Speichern der Versionen in
+&apos;Pfad zum Speichern der Versionen&apos;</translation>
+    </message>
+    <message>
+      <source>Do you want to download the version</source>
+      <translation>Möchten Sie diese Version downloaden</translation>
+    </message>
+    <message>
+      <source>No files available for this platform.</source>
+      <translation>Keine Dateien für diese Plattform verfügbar.</translation>
+    </message>
+    <message>
+      <source>Downloading %1 , please wait...</source>
+      <translation>Lade %1 herunter, bitte warten...</translation>
+    </message>
+    <message>
+      <source>Could not save file.</source>
+      <translation>Datei konnte nicht gespeichert werden.</translation>
+    </message>
+    <message>
+      <source>Version %1 has been downloaded and selected.</source>
+      <translation>Version %1 wurde downgeloadet und ausgewählt.</translation>
+    </message>
+    <message>
+      <source>Failed to create zip extraction script</source>
+      <translation>Fehler beim Erstellen des Zip-Extraktionsskripts</translation>
+    </message>
+    <message>
+      <source>The GitHub API response is not a valid JSON array.</source>
+      <translation>Die GitHub-API-Antwort ist kein gültiges JSON-Array.</translation>
+    </message>
+    <message>
+      <source>Unable to get hash of latest pre-release</source>
+      <translation>Hash der neuesten Vorabversion konnte nicht abgerufen werden</translation>
+    </message>
+    <message>
+      <source>No pre-release found</source>
+      <translation>Keine Vorabversion gefunden</translation>
+    </message>
+    <message>
+      <source>You don&apos;t have any pre-release installed yet.
+Would you like to download it now?</source>
+      <translation>Es sind keine Vorabversionen installiert.
+Möchten Sie sie jetzt downloaden?</translation>
+    </message>
+    <message>
+      <source>Auto Updater - Emulator</source>
+      <translation>Automatische Updates - Emulator</translation>
+    </message>
+    <message>
+      <source>You already have the latest pre-release version.</source>
+      <translation>Sie haben bereits die aktuellste Vorabversion.</translation>
+    </message>
+    <message>
+      <source>Update Available (Emulator)</source>
+      <translation>Update verfügbar (Emulator)</translation>
+    </message>
+    <message>
+      <source>Current Version</source>
+      <translation>Aktuelle Version</translation>
+    </message>
+    <message>
+      <source>Latest Version</source>
+      <translation>Neueste Version</translation>
+    </message>
+    <message>
+      <source>Do you want to update?</source>
+      <translation>Möchten Sie updaten?</translation>
+    </message>
+    <message>
+      <source>Update</source>
+      <translation>Update</translation>
+    </message>
+    <message>
+      <source>No</source>
+      <translation>Nein</translation>
+    </message>
+    <message>
+      <source>Show Changelog</source>
+      <translation>Changelog anzeigen</translation>
+    </message>
+    <message>
+      <source>Hide Changelog</source>
+      <translation>Changelog verbergen</translation>
+    </message>
+    <message>
+      <source>Network error while fetching changelog</source>
+      <translation>Netzwerkfehler beim Abrufen des Changelogs</translation>
+    </message>
+    <message>
+      <source>Changes</source>
+      <translation>Änderungen</translation>
+    </message>
+    <message>
+      <source>No download URL found for the specified asset.</source>
+      <translation>Keine Download-URL für das ausgewählte Asset gefunden.</translation>
+    </message>
+    <message>
+      <source>Downloading Pre‑release, please wait...</source>
+      <translation>Vorabversion wird downgeloadet, bitte warten...</translation>
+    </message>
+    <message>
+      <source>Network error while downloading</source>
+      <translation>Netzwerkfehler beim Download</translation>
+    </message>
+    <message>
+      <source>Failed to save download file</source>
+      <translation>Fehler beim Speichern der downgeloadeten Datei</translation>
+    </message>
+    <message>
+      <source>Complete installation</source>
+      <translation>Installation abgeschlossen</translation>
+    </message>
+    <message>
+      <source>Pre-release updated successfully</source>
+      <translation>Vorversion erfolgreich upgedatet</translation>
+    </message>
+    <message>
+      <source>Failed to create the update script file</source>
+      <translation>Fehler beim Erstellen der Update-Skript-Datei</translation>
     </message>
   </context>
 </TS>

@@ -284,10 +284,6 @@
       <translation>Ваша версия уже обновлена!</translation>
     </message>
     <message>
-      <source>Update Available</source>
-      <translation>Доступно обновление</translation>
-    </message>
-    <message>
       <source>Update Channel</source>
       <translation>Канал обновления</translation>
     </message>
@@ -350,6 +346,14 @@
     <message>
       <source>Failed to create the update script file</source>
       <translation>Не удалось создать файл скрипта обновления</translation>
+    </message>
+    <message>
+      <source>Auto Updater - Interface</source>
+      <translation>Автоматическое обновление - Интерфейс</translation>
+    </message>
+    <message>
+      <source>Update Available (Interface)</source>
+      <translation>Доступно обновление (Интерфейс)</translation>
     </message>
   </context>
   <context>
@@ -716,6 +720,10 @@
     <message>
       <source>Directory to install DLC</source>
       <translation>Каталог для установки DLC</translation>
+    </message>
+    <message>
+      <source>Directory to install emulator versions</source>
+      <translation>Каталог для установки версий эмулятора</translation>
     </message>
   </context>
   <context>
@@ -1688,6 +1696,26 @@ Please change shadPS4 path in settings.</source>
       <translation>shadPS4 не найден!
 Пожалуйста, поменяйте путь к shadPS4 в настройках.</translation>
     </message>
+    <message>
+      <source>Version Manager</source>
+      <translation>Менеджер версий</translation>
+    </message>
+    <message>
+      <source>No Version Selected</source>
+      <translation>Версия не выбрана</translation>
+    </message>
+    <message>
+      <source>No emulator version was selected.
+The Version Manager menu will then open.
+Select an emulator version from the right panel.</source>
+      <translation>Версия эмулятора не выбрана.
+Откроется меню «Менеджер версий».
+Выберите версию эмулятора на правой панели.</translation>
+    </message>
+    <message>
+      <source>No version selected</source>
+      <translation>Версия не выбрана</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -1850,10 +1878,6 @@ Please change shadPS4 path in settings.</source>
     <message>
       <source>Enable Vulkan Validation Layers</source>
       <translation>Включить слои валидации Vulkan</translation>
-    </message>
-    <message>
-      <source>Enable Vulkan Synchronization Validation</source>
-      <translation>Включить валидацию синхронизации Vulkan</translation>
     </message>
     <message>
       <source>Enable RenderDoc Debugging</source>
@@ -2436,24 +2460,12 @@ Please change shadPS4 path in settings.</source>
       <translation>Включить слои валидации Vulkan:\nВключает систему, которая проверяет состояние рендера Vulkan и логирует информацию о его внутреннем состоянии.\nЭто снизит производительность и, вероятно, изменит поведение эмуляции.\nДля этого вам нужен Vulkan SDK.</translation>
     </message>
     <message>
-      <source>Enable Vulkan Synchronization Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation>Включить валидацию синхронизации Vulkan:\nВключает систему, которая проверяет тайминг задач рендеринга Vulkan.\nЭто снизит производительность и, вероятно, изменит поведение эмуляции.\nДля этого вам нужен Vulkan SDK.</translation>
-    </message>
-    <message>
       <source>Audio Device (general)</source>
       <translation>Аудиоустройство (главное)</translation>
     </message>
     <message>
       <source>Audio Device (DS4 speaker)</source>
       <translation>Аудиоустройство (динамик DS4)</translation>
-    </message>
-    <message>
-      <source>shadPS4 Path</source>
-      <translation>Путь к shadPS4</translation>
-    </message>
-    <message>
-      <source>Select the shadPS4 executable</source>
-      <translation>Выберите исполняемый файл shadPS4</translation>
     </message>
     <message>
       <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
@@ -2487,6 +2499,38 @@ Please change shadPS4 path in settings.</source>
       <source>Browse:\nBrowse for a folder to set as the sysmodules path.</source>
       <translation>Обзор:\nНайдите папку, которую можно указать в качестве пути для системных модулей.</translation>
     </message>
+    <message>
+      <source>Vulkan Validation (Requires Vulkan SDK)</source>
+      <translation>Проверка Vulkan (требуется Vulkan SDK)</translation>
+    </message>
+    <message>
+      <source>Validation Layers</source>
+      <translation>Уровни проверки</translation>
+    </message>
+    <message>
+      <source>Enable Core Validation</source>
+      <translation>Включить основную проверку</translation>
+    </message>
+    <message>
+      <source>Enable Sync Validation</source>
+      <translation>Включить проверку синхронизации</translation>
+    </message>
+    <message>
+      <source>Enable GPU-Assisted Validation</source>
+      <translation>Включить проверку с помощью GPU</translation>
+    </message>
+    <message>
+      <source>Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
+      <translation>Включить проверку синхронизации:\nВключает систему, которая проверяет время выполнения задач рендеринга Vulkan.\nЭто снизит производительность и, вероятно, изменит поведение эмуляции.\nДля работы этого вам потребуется Vulkan SDK.</translation>
+    </message>
+    <message>
+      <source>Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
+      <translation>Включить базовую проверку:\nВключает основные функции проверки API.\nЭто снизит производительность и, вероятно, изменит поведение эмуляции.\nДля работы этого вам понадобится Vulkan SDK.</translation>
+    </message>
+    <message>
+      <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
+      <translation>Включить проверку с помощью GPU:\nИнструментирует шейдеры с кодом, который проверяет, правильно ли они себя ведут.\nЭто снизит производительность и, вероятно, изменит поведение эмуляции.\nДля работы этого вам понадобится Vulkan SDK.</translation>
+    </message>
   </context>
   <context>
     <name>TrophyViewer</name>
@@ -2513,6 +2557,284 @@ Please change shadPS4 path in settings.</source>
     <message>
       <source>Show Hidden Trophies</source>
       <translation>Показать скрытые трофеи</translation>
+    </message>
+  </context>
+  <context>
+    <name>VersionDialog</name>
+    <message>
+      <source>Version Manager</source>
+      <translation>Менеджер версий</translation>
+    </message>
+    <message>
+      <source>Path to save versions</source>
+      <translation>Путь к сохраненным версиям</translation>
+    </message>
+    <message>
+      <source>Browse</source>
+      <translation>Обзор</translation>
+    </message>
+    <message>
+      <source>Installed</source>
+      <translation>Установлено</translation>
+    </message>
+    <message>
+      <source>Selected</source>
+      <translation>Выбрано</translation>
+    </message>
+    <message>
+      <source>Version</source>
+      <translation>Версия</translation>
+    </message>
+    <message>
+      <source>Codename</source>
+      <translation>Кодовое имя</translation>
+    </message>
+    <message>
+      <source>Date</source>
+      <translation>Дата</translation>
+    </message>
+    <message>
+      <source>Add Custom</source>
+      <translation>Добавить стороннюю</translation>
+    </message>
+    <message>
+      <source>Delete</source>
+      <translation>Удалить</translation>
+    </message>
+    <message>
+      <source>Refresh List</source>
+      <translation>Обновить список</translation>
+    </message>
+    <message>
+      <source>Download</source>
+      <translation>Загрузить</translation>
+    </message>
+    <message>
+      <source>Check for Pre-release updates at startup</source>
+      <translation>Проверять обновления Pre-Release при запуске</translation>
+    </message>
+    <message>
+      <source>Always show Pre-release changelog</source>
+      <translation>Показывать журнал изменений Pre-Release</translation>
+    </message>
+    <message>
+      <source>Check for Pre-release Updates</source>
+      <translation>Проверить обновления Pre-Release</translation>
+    </message>
+    <message>
+      <source>Select the folder where the emulator versions will be installed</source>
+      <translation>Выберите папку, в которую будут установлены версии эмулятора</translation>
+    </message>
+    <message>
+      <source>Select executable</source>
+      <translation>Выберите исполняемый файл</translation>
+    </message>
+    <message>
+      <source>Executable (*.exe)</source>
+      <translation>Исполняемый файл (*.exe)</translation>
+    </message>
+    <message>
+      <source>Executable (*.AppImage)</source>
+      <translation>Исполняемый файл (*.AppImage)</translation>
+    </message>
+    <message>
+      <source>Executable (*.*)</source>
+      <translation>Исполняемый файл (*.*)</translation>
+    </message>
+    <message>
+      <source>Version name</source>
+      <translation>Название версии</translation>
+    </message>
+    <message>
+      <source>Enter the name of this version as it appears in the list.</source>
+      <translation>Введите название этой версии, как оно указано в списке.</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation>Ошибка</translation>
+    </message>
+    <message>
+      <source>A folder with that name already exists.</source>
+      <translation>Папка с таким именем уже существует.</translation>
+    </message>
+    <message>
+      <source>Failed to create folder.</source>
+      <translation>Не удалось создать папку.</translation>
+    </message>
+    <message>
+      <source>Failed to copy executable.</source>
+      <translation>Не удалось скопировать исполняемый файл.</translation>
+    </message>
+    <message>
+      <source>Success</source>
+      <translation>Успешно</translation>
+    </message>
+    <message>
+      <source>Version added successfully.</source>
+      <translation>Версия успешно добавлена.</translation>
+    </message>
+    <message>
+      <source>Notice</source>
+      <translation>Уведомление</translation>
+    </message>
+    <message>
+      <source>No version selected from the Installed list.</source>
+      <translation>В списке установленных версий не выбрано ни одной.</translation>
+    </message>
+    <message>
+      <source>Failed to determine the folder path.</source>
+      <translation>Не удалось определить путь к папке.</translation>
+    </message>
+    <message>
+      <source>Delete version</source>
+      <translation>Удалить версию</translation>
+    </message>
+    <message>
+      <source>Do you want to delete the version</source>
+      <translation>Вы хотите удалить версию</translation>
+    </message>
+    <message>
+      <source>Failed to delete folder.</source>
+      <translation>Не удалось удалить папку.</translation>
+    </message>
+    <message>
+      <source>Version list update</source>
+      <translation>Обновление списка версий</translation>
+    </message>
+    <message>
+      <source>No news, the version list is already updated.</source>
+      <translation>Новых нет, список версий уже обновлен.</translation>
+    </message>
+    <message>
+      <source>The latest versions have been added to the list for download.</source>
+      <translation>Последние версии добавлены в список для загрузки.</translation>
+    </message>
+    <message>
+      <source>Error accessing GitHub API</source>
+      <translation>Ошибка доступа к API GitHub</translation>
+    </message>
+    <message>
+      <source>First you need to choose a location to save the versions in
+&apos;Path to save versions&apos;</source>
+      <translation>Сначала вам нужно выбрать место для сохранения версий&apos;Путь для сохранения версий&apos;</translation>
+    </message>
+    <message>
+      <source>Do you want to download the version</source>
+      <translation>Желаете скачать версию</translation>
+    </message>
+    <message>
+      <source>No files available for this platform.</source>
+      <translation>Для этой платформы файлы недоступны.</translation>
+    </message>
+    <message>
+      <source>Downloading %1 , please wait...</source>
+      <translation>Загрузка %1, пожалуйста, подождите...</translation>
+    </message>
+    <message>
+      <source>Could not save file.</source>
+      <translation>Не удалось сохранить файл.</translation>
+    </message>
+    <message>
+      <source>Version %1 has been downloaded and selected.</source>
+      <translation>Версия %1 загружена и выбрана.</translation>
+    </message>
+    <message>
+      <source>Failed to create zip extraction script</source>
+      <translation>Не удалось создать скрипт извлечения zip-архива</translation>
+    </message>
+    <message>
+      <source>The GitHub API response is not a valid JSON array.</source>
+      <translation>Ответ API GitHub не является допустимым массивом JSON.</translation>
+    </message>
+    <message>
+      <source>Unable to get hash of latest pre-release</source>
+      <translation>Не удалось получить хеш последней версии Pre-release</translation>
+    </message>
+    <message>
+      <source>No pre-release found</source>
+      <translation>Версия Pre-release не найдена</translation>
+    </message>
+    <message>
+      <source>You don&apos;t have any pre-release installed yet.
+Would you like to download it now?</source>
+      <translation>У вас ещё не&apos; установлена версия Pre-release.
+Желаете скачать её сейчас?</translation>
+    </message>
+    <message>
+      <source>Auto Updater - Emulator</source>
+      <translation>Автоматическое обновление - Эмулятор</translation>
+    </message>
+    <message>
+      <source>You already have the latest pre-release version.</source>
+      <translation>У вас уже установлена ​​последняя версия Pre-release.</translation>
+    </message>
+    <message>
+      <source>Update Available (Emulator)</source>
+      <translation>Доступно обновление (Эмулятор)</translation>
+    </message>
+    <message>
+      <source>Current Version</source>
+      <translation>Текущая версия</translation>
+    </message>
+    <message>
+      <source>Latest Version</source>
+      <translation>Последняя версия</translation>
+    </message>
+    <message>
+      <source>Do you want to update?</source>
+      <translation>Желаете обновить?</translation>
+    </message>
+    <message>
+      <source>Update</source>
+      <translation>Обновить</translation>
+    </message>
+    <message>
+      <source>No</source>
+      <translation>Нет</translation>
+    </message>
+    <message>
+      <source>Show Changelog</source>
+      <translation>Показать журнал изменений</translation>
+    </message>
+    <message>
+      <source>Hide Changelog</source>
+      <translation>Скрыть журнал изменений</translation>
+    </message>
+    <message>
+      <source>Network error while fetching changelog</source>
+      <translation>Ошибка сети при загрузке журнала изменений</translation>
+    </message>
+    <message>
+      <source>Changes</source>
+      <translation>Изменения</translation>
+    </message>
+    <message>
+      <source>No download URL found for the specified asset.</source>
+      <translation>URL для загрузки указанного актива не найден.</translation>
+    </message>
+    <message>
+      <source>Downloading Pre‑release, please wait...</source>
+      <translation>Загрузка версии Pre‑release, пожалуйста, подождите...</translation>
+    </message>
+    <message>
+      <source>Network error while downloading</source>
+      <translation>Ошибка сети при загрузке</translation>
+    </message>
+    <message>
+      <source>Failed to save download file</source>
+      <translation>Не удалось сохранить загружаемый файл</translation>
+    </message>
+    <message>
+      <source>Complete installation</source>
+      <translation>Установка завершена</translation>
+    </message>
+    <message>
+      <source>Pre-release updated successfully</source>
+      <translation>Версия Pre-release успешно обновлена</translation>
+    </message>
+    <message>
+      <source>Failed to create the update script file</source>
+      <translation>Не удалось создать скрипт обновления</translation>
     </message>
   </context>
 </TS>
