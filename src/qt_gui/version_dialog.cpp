@@ -1116,11 +1116,10 @@ void VersionDialog::showDownloadDialog(const QString& tagName, const QString& do
                 dlg->close();
                 dlg->deleteLater();
 
-                 if (!QDir(destFolder).exists()) {
-                     QMessageBox::critical(this, tr("Error"),
-                                           tr("Extraction failure."));
-                     return;
-                 }
+                if (!QDir(destFolder).exists()) {
+                    QMessageBox::critical(this, tr("Error"), tr("Extraction failure."));
+                    return;
+                }
 
                 m_gui_settings->SetValue(gui::vm_versionSelected, destFolder);
 
