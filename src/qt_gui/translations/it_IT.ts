@@ -349,11 +349,11 @@
     </message>
     <message>
       <source>Auto Updater - Interface</source>
-      <translation type="unfinished">Auto Updater - Interface</translation>
+      <translation>Aggiornamento Automatico - Interfaccia</translation>
     </message>
     <message>
       <source>Update Available (Interface)</source>
-      <translation type="unfinished">Update Available (Interface)</translation>
+      <translation>Aggiornamento Disponibile (Interfaccia)</translation>
     </message>
   </context>
   <context>
@@ -723,7 +723,7 @@
     </message>
     <message>
       <source>Directory to install emulator versions</source>
-      <translation type="unfinished">Directory to install emulator versions</translation>
+      <translation>Cartella per installare le versioni dell'emulatore</translation>
     </message>
   </context>
   <context>
@@ -1698,23 +1698,23 @@ Si prega di cambiare il percorso shadPS4 nelle impostazioni.</translation>
     </message>
     <message>
       <source>Version Manager</source>
-      <translation type="unfinished">Version Manager</translation>
+      <translation>Gestore Versione</translation>
     </message>
     <message>
       <source>No Version Selected</source>
-      <translation type="unfinished">No Version Selected</translation>
+      <translation>Nessuna Versione Selezionata</translation>
     </message>
     <message>
       <source>No emulator version was selected.
 The Version Manager menu will then open.
 Select an emulator version from the right panel.</source>
-      <translation type="unfinished">No emulator version was selected.
-The Version Manager menu will then open.
-Select an emulator version from the right panel.</translation>
+      <translation>Non è stata selezionata nessuna versione di emulatore.
+Il menu Gestione Versioni verrà aperto ora.
+Seleziona una versione di emulatore dal pannello a destra.</translation>
     </message>
     <message>
       <source>No version selected</source>
-      <translation type="unfinished">No version selected</translation>
+      <translation>Nessuna versione selezionata</translation>
     </message>
   </context>
   <context>
@@ -2501,27 +2501,27 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Vulkan Validation (Requires Vulkan SDK)</source>
-      <translation type="unfinished">Vulkan Validation (Requires Vulkan SDK)</translation>
+      <translation>Validazione Vulkan (Richiede Vulkan SDK)</translation>
     </message>
     <message>
       <source>Validation Layers</source>
-      <translation type="unfinished">Validation Layers</translation>
+      <translation>Validazione Livelli</translation>
     </message>
     <message>
       <source>Enable Core Validation</source>
-      <translation type="unfinished">Enable Core Validation</translation>
+      <translation>Abilita Convalida Principale</translation>
     </message>
     <message>
       <source>Enable Sync Validation</source>
-      <translation type="unfinished">Enable Sync Validation</translation>
+      <translation>Abilita Convalida Sincronizzata</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation</source>
-      <translation type="unfinished">Enable GPU-Assisted Validation</translation>
+      <translation>Abilita Validazione Assistita dalla GPU</translation>
     </message>
     <message>
       <source>Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Abilita Validazione Sincronizzata Vulkan:\nAbilita un sistema che convalida il timing delle attività di rendering Vulkan.\n Ciò ridurrà le prestazioni e probabilmente cambierà il comportamento dell' emulazione.\n Ha bisogno dell'SDK Vulkan per funzionare.</translation>
     </message>
     <message>
       <source>Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
