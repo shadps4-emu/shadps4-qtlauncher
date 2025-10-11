@@ -349,11 +349,11 @@
     </message>
     <message>
       <source>Auto Updater - Interface</source>
-      <translation type="unfinished">Auto Updater - Interface</translation>
+      <translation>Actualització automàtica - Interfície</translation>
     </message>
     <message>
       <source>Update Available (Interface)</source>
-      <translation type="unfinished">Update Available (Interface)</translation>
+      <translation>Hi ha una actualització disponible (Interfície)</translation>
     </message>
   </context>
   <context>
@@ -1698,11 +1698,11 @@ Canvia, si us plau, la ruta de ShadPS4 a configuració.</translation>
     </message>
     <message>
       <source>Version Manager</source>
-      <translation type="unfinished">Version Manager</translation>
+      <translation>Administrador de la versió</translation>
     </message>
     <message>
       <source>No Version Selected</source>
-      <translation type="unfinished">No Version Selected</translation>
+      <translation>No hi ha cap versió seleccionada</translation>
     </message>
     <message>
       <source>No emulator version was selected.
@@ -1714,7 +1714,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>No version selected</source>
-      <translation type="unfinished">No version selected</translation>
+      <translation>No hi ha cap versió seleccionada</translation>
     </message>
   </context>
   <context>
@@ -2505,19 +2505,19 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Validation Layers</source>
-      <translation type="unfinished">Validation Layers</translation>
+      <translation>Capes de validació</translation>
     </message>
     <message>
       <source>Enable Core Validation</source>
-      <translation type="unfinished">Enable Core Validation</translation>
+      <translation>Activa la validació del nucli</translation>
     </message>
     <message>
       <source>Enable Sync Validation</source>
-      <translation type="unfinished">Enable Sync Validation</translation>
+      <translation>Activa la sincronització del nucli</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation</source>
-      <translation type="unfinished">Enable GPU-Assisted Validation</translation>
+      <translation>Activa la validació d'assistència de targeta gràfica</translation>
     </message>
     <message>
       <source>Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
@@ -2563,51 +2563,51 @@ Select an emulator version from the right panel.</translation>
     <name>VersionDialog</name>
     <message>
       <source>Version Manager</source>
-      <translation type="unfinished">Version Manager</translation>
+      <translation>Administrador de la versió</translation>
     </message>
     <message>
       <source>Path to save versions</source>
-      <translation type="unfinished">Path to save versions</translation>
+      <translation>Ruta a les versions desades</translation>
     </message>
     <message>
       <source>Browse</source>
-      <translation type="unfinished">Browse</translation>
+      <translation>Cerca</translation>
     </message>
     <message>
       <source>Installed</source>
-      <translation type="unfinished">Installed</translation>
+      <translation>Instal·lat</translation>
     </message>
     <message>
       <source>Selected</source>
-      <translation type="unfinished">Selected</translation>
+      <translation>Seleccionat</translation>
     </message>
     <message>
       <source>Version</source>
-      <translation type="unfinished">Version</translation>
+      <translation>Versió</translation>
     </message>
     <message>
       <source>Codename</source>
-      <translation type="unfinished">Codename</translation>
+      <translation>Nom en clau</translation>
     </message>
     <message>
       <source>Date</source>
-      <translation type="unfinished">Date</translation>
+      <translation>Data</translation>
     </message>
     <message>
       <source>Add Custom</source>
-      <translation type="unfinished">Add Custom</translation>
+      <translation>Afegeix personalitzat</translation>
     </message>
     <message>
       <source>Delete</source>
-      <translation type="unfinished">Delete</translation>
+      <translation>Esborra</translation>
     </message>
     <message>
       <source>Refresh List</source>
-      <translation type="unfinished">Refresh List</translation>
+      <translation>Actualitza la llista</translation>
     </message>
     <message>
       <source>Download</source>
-      <translation type="unfinished">Download</translation>
+      <translation>Descarrega</translation>
     </message>
     <message>
       <source>Check for Pre-release updates at startup</source>
@@ -2615,11 +2615,11 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Always show Pre-release changelog</source>
-      <translation type="unfinished">Always show Pre-release changelog</translation>
+      <translation>Mostra sempre el registre de canvis de les actualitzacions prèvies</translation>
     </message>
     <message>
       <source>Check for Pre-release Updates</source>
-      <translation type="unfinished">Check for Pre-release Updates</translation>
+      <translation>Comprovar si hi ha actualitzacions prèvies</translation>
     </message>
     <message>
       <source>Select the folder where the emulator versions will be installed</source>
@@ -2627,23 +2627,23 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Select executable</source>
-      <translation type="unfinished">Select executable</translation>
+      <translation>Selecciona l'executable</translation>
     </message>
     <message>
       <source>Executable (*.exe)</source>
-      <translation type="unfinished">Executable (*.exe)</translation>
+      <translation>Executable (*.*)</translation>
     </message>
     <message>
       <source>Executable (*.AppImage)</source>
-      <translation type="unfinished">Executable (*.AppImage)</translation>
+      <translation>Executable (*.AppImage)</translation>
     </message>
     <message>
       <source>Executable (*.*)</source>
-      <translation type="unfinished">Executable (*.*)</translation>
+      <translation>Executable (*.*)</translation>
     </message>
     <message>
       <source>Version name</source>
-      <translation type="unfinished">Version name</translation>
+      <translation>Nom de la versió</translation>
     </message>
     <message>
       <source>Enter the name of this version as it appears in the list.</source>
@@ -2651,7 +2651,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Error</translation>
     </message>
     <message>
       <source>A folder with that name already exists.</source>
@@ -2659,23 +2659,23 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Failed to create folder.</source>
-      <translation type="unfinished">Failed to create folder.</translation>
+      <translation>Error en crear la carpeta.</translation>
     </message>
     <message>
       <source>Failed to copy executable.</source>
-      <translation type="unfinished">Failed to copy executable.</translation>
+      <translation>Error en copiar l'executable.</translation>
     </message>
     <message>
       <source>Success</source>
-      <translation type="unfinished">Success</translation>
+      <translation>Realitzat amb èxit</translation>
     </message>
     <message>
       <source>Version added successfully.</source>
-      <translation type="unfinished">Version added successfully.</translation>
+      <translation>S'ha afegit la versió correctament.</translation>
     </message>
     <message>
       <source>Notice</source>
-      <translation type="unfinished">Notice</translation>
+      <translation>Notícia</translation>
     </message>
     <message>
       <source>No version selected from the Installed list.</source>
@@ -2687,19 +2687,19 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Delete version</source>
-      <translation type="unfinished">Delete version</translation>
+      <translation>Elimina la versió</translation>
     </message>
     <message>
       <source>Do you want to delete the version</source>
-      <translation type="unfinished">Do you want to delete the version</translation>
+      <translation>Estàs segur que vols esborrar aquesta versió</translation>
     </message>
     <message>
       <source>Failed to delete folder.</source>
-      <translation type="unfinished">Failed to delete folder.</translation>
+      <translation>Error en eliminar la carpeta.</translation>
     </message>
     <message>
       <source>Version list update</source>
-      <translation type="unfinished">Version list update</translation>
+      <translation>Actualitza la llista de versions</translation>
     </message>
     <message>
       <source>No news, the version list is already updated.</source>
@@ -2711,7 +2711,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Error accessing GitHub API</source>
-      <translation type="unfinished">Error accessing GitHub API</translation>
+      <translation>Error en accedir a la API de GitHub</translation>
     </message>
     <message>
       <source>First you need to choose a location to save the versions in
@@ -2721,7 +2721,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Do you want to download the version</source>
-      <translation type="unfinished">Do you want to download the version</translation>
+      <translation>Estàs segur que vols descarregar aquesta versió</translation>
     </message>
     <message>
       <source>No files available for this platform.</source>
@@ -2729,11 +2729,11 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Downloading %1 , please wait...</source>
-      <translation type="unfinished">Downloading %1 , please wait...</translation>
+      <translation>Descarregant %1, si us plau, espera...</translation>
     </message>
     <message>
       <source>Could not save file.</source>
-      <translation type="unfinished">Could not save file.</translation>
+      <translation>No s'ha pogut desar el fitxer.</translation>
     </message>
     <message>
       <source>Version %1 has been downloaded and selected.</source>
@@ -2753,7 +2753,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>No pre-release found</source>
-      <translation type="unfinished">No pre-release found</translation>
+      <translation>No s'han trobat llançaments previs</translation>
     </message>
     <message>
       <source>You don&apos;t have any pre-release installed yet.
@@ -2763,7 +2763,7 @@ Would you like to download it now?</translation>
     </message>
     <message>
       <source>Auto Updater - Emulator</source>
-      <translation type="unfinished">Auto Updater - Emulator</translation>
+      <translation>Actualització automàtica - Emulador</translation>
     </message>
     <message>
       <source>You already have the latest pre-release version.</source>
@@ -2771,35 +2771,35 @@ Would you like to download it now?</translation>
     </message>
     <message>
       <source>Update Available (Emulator)</source>
-      <translation type="unfinished">Update Available (Emulator)</translation>
+      <translation>Hi ha una actualització disponible (Emulador)</translation>
     </message>
     <message>
       <source>Current Version</source>
-      <translation type="unfinished">Current Version</translation>
+      <translation>Versió actual</translation>
     </message>
     <message>
       <source>Latest Version</source>
-      <translation type="unfinished">Latest Version</translation>
+      <translation>Última versió</translation>
     </message>
     <message>
       <source>Do you want to update?</source>
-      <translation type="unfinished">Do you want to update?</translation>
+      <translation>Estàs segur que vols actualitzar?</translation>
     </message>
     <message>
       <source>Update</source>
-      <translation type="unfinished">Update</translation>
+      <translation>Actualitza</translation>
     </message>
     <message>
       <source>No</source>
-      <translation type="unfinished">No</translation>
+      <translation>No</translation>
     </message>
     <message>
       <source>Show Changelog</source>
-      <translation type="unfinished">Show Changelog</translation>
+      <translation>Mostra el registre de canvis</translation>
     </message>
     <message>
       <source>Hide Changelog</source>
-      <translation type="unfinished">Hide Changelog</translation>
+      <translation>Oculta el registre de canvis</translation>
     </message>
     <message>
       <source>Network error while fetching changelog</source>
@@ -2807,7 +2807,7 @@ Would you like to download it now?</translation>
     </message>
     <message>
       <source>Changes</source>
-      <translation type="unfinished">Changes</translation>
+      <translation>Canvis</translation>
     </message>
     <message>
       <source>No download URL found for the specified asset.</source>
@@ -2819,19 +2819,19 @@ Would you like to download it now?</translation>
     </message>
     <message>
       <source>Network error while downloading</source>
-      <translation type="unfinished">Network error while downloading</translation>
+      <translation>Error de xarxa durant la descarrega</translation>
     </message>
     <message>
       <source>Failed to save download file</source>
-      <translation type="unfinished">Failed to save download file</translation>
+      <translation>Error en desar el fitxer descarregat</translation>
     </message>
     <message>
       <source>Complete installation</source>
-      <translation type="unfinished">Complete installation</translation>
+      <translation>Completa la instal·lació</translation>
     </message>
     <message>
       <source>Pre-release updated successfully</source>
-      <translation type="unfinished">Pre-release updated successfully</translation>
+      <translation>S'ha instal·lat una actualització prèvia correctament</translation>
     </message>
     <message>
       <source>Failed to create the update script file</source>
