@@ -349,11 +349,11 @@
     </message>
     <message>
       <source>Auto Updater - Interface</source>
-      <translation type="unfinished">Auto Updater - Interface</translation>
+      <translation>Auto oppdatering – grensesnitt</translation>
     </message>
     <message>
       <source>Update Available (Interface)</source>
-      <translation type="unfinished">Update Available (Interface)</translation>
+      <translation>Oppdatering tilgjengelig (grensesnitt)</translation>
     </message>
   </context>
   <context>
@@ -723,7 +723,7 @@
     </message>
     <message>
       <source>Directory to install emulator versions</source>
-      <translation type="unfinished">Directory to install emulator versions</translation>
+      <translation>Mappe for å installere emulatorversjoner</translation>
     </message>
   </context>
   <context>
@@ -1698,23 +1698,23 @@ Endre mappa til shadPS4 i innstillingene.</translation>
     </message>
     <message>
       <source>Version Manager</source>
-      <translation type="unfinished">Version Manager</translation>
+      <translation>Versjonsbehandling</translation>
     </message>
     <message>
       <source>No Version Selected</source>
-      <translation type="unfinished">No Version Selected</translation>
+      <translation>Ingen versjon valgt</translation>
     </message>
     <message>
       <source>No emulator version was selected.
 The Version Manager menu will then open.
 Select an emulator version from the right panel.</source>
-      <translation type="unfinished">No emulator version was selected.
-The Version Manager menu will then open.
-Select an emulator version from the right panel.</translation>
+      <translation>Ingen emulatorversjon ble valgt.
+Versjonsbehandling-menyen vil åpnes.
+Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>No version selected</source>
-      <translation type="unfinished">No version selected</translation>
+      <translation>Ingen versjon valgt</translation>
     </message>
   </context>
   <context>
@@ -2501,35 +2501,35 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Vulkan Validation (Requires Vulkan SDK)</source>
-      <translation type="unfinished">Vulkan Validation (Requires Vulkan SDK)</translation>
+      <translation>Vulkan-validering (krever Vulkan SDK)</translation>
     </message>
     <message>
       <source>Validation Layers</source>
-      <translation type="unfinished">Validation Layers</translation>
+      <translation>Valideringslag</translation>
     </message>
     <message>
       <source>Enable Core Validation</source>
-      <translation type="unfinished">Enable Core Validation</translation>
+      <translation>Bruk kjernevalidering</translation>
     </message>
     <message>
       <source>Enable Sync Validation</source>
-      <translation type="unfinished">Enable Sync Validation</translation>
+      <translation>Bruk synkroniseringsvalidering</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation</source>
-      <translation type="unfinished">Enable GPU-Assisted Validation</translation>
+      <translation>Bruk grafikkort assistert validering</translation>
     </message>
     <message>
       <source>Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Bruk Vulkan synkroniseringsvalidering:\nTar i bruk et system som bekrefter frekvens tiden av Vulkan-gjengivelseoppgaver.\nDette vil redusere ytelsen og sannsynligvis endre emulatorens atferd.\nDu trenger Vulkan SDK for at dette skal fungere.</translation>
     </message>
     <message>
       <source>Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Bruk kjernevalidering:\nTar i bruk hoved API validerings funksjonene.\nDette vil redusere ytelsen og sannsynligvis endre emulatorens atferd.\nDu trenger Vulkan SDK for at dette skal fungere.</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Bruk grafikkort assistert validering:\nForteller skyggeleggere gjennom kode som validerer om de gjengis riktig.\nDette vil redusere ytelsen og sannsynligvis endre emulatorens atferd.\nDu trenger Vulkan SDK for at dette skal fungere.</translation>
     </message>
   </context>
   <context>
@@ -2563,279 +2563,279 @@ Select an emulator version from the right panel.</translation>
     <name>VersionDialog</name>
     <message>
       <source>Version Manager</source>
-      <translation type="unfinished">Version Manager</translation>
+      <translation>Versjonsbehandling</translation>
     </message>
     <message>
       <source>Path to save versions</source>
-      <translation type="unfinished">Path to save versions</translation>
+      <translation>Sti for lagring av versjonene</translation>
     </message>
     <message>
       <source>Browse</source>
-      <translation type="unfinished">Browse</translation>
+      <translation>Bla gjennom</translation>
     </message>
     <message>
       <source>Installed</source>
-      <translation type="unfinished">Installed</translation>
+      <translation>Installert</translation>
     </message>
     <message>
       <source>Selected</source>
-      <translation type="unfinished">Selected</translation>
+      <translation>Valgt</translation>
     </message>
     <message>
       <source>Version</source>
-      <translation type="unfinished">Version</translation>
+      <translation>Versjon</translation>
     </message>
     <message>
       <source>Codename</source>
-      <translation type="unfinished">Codename</translation>
+      <translation>Kodenavn</translation>
     </message>
     <message>
       <source>Date</source>
-      <translation type="unfinished">Date</translation>
+      <translation>Dato</translation>
     </message>
     <message>
       <source>Add Custom</source>
-      <translation type="unfinished">Add Custom</translation>
+      <translation>Legg til tilpasset</translation>
     </message>
     <message>
       <source>Delete</source>
-      <translation type="unfinished">Delete</translation>
+      <translation>Slett</translation>
     </message>
     <message>
       <source>Refresh List</source>
-      <translation type="unfinished">Refresh List</translation>
+      <translation>Oppdater lista</translation>
     </message>
     <message>
       <source>Download</source>
-      <translation type="unfinished">Download</translation>
+      <translation>Last ned</translation>
     </message>
     <message>
       <source>Check for Pre-release updates at startup</source>
-      <translation type="unfinished">Check for Pre-release updates at startup</translation>
+      <translation>Se etter forhåndsoppdateringer ved oppstart</translation>
     </message>
     <message>
       <source>Always show Pre-release changelog</source>
-      <translation type="unfinished">Always show Pre-release changelog</translation>
+      <translation>Vis alltid endringsloggen for forhåndsutgivelse</translation>
     </message>
     <message>
       <source>Check for Pre-release Updates</source>
-      <translation type="unfinished">Check for Pre-release Updates</translation>
+      <translation>Se etter forhåndsoppdateringer</translation>
     </message>
     <message>
       <source>Select the folder where the emulator versions will be installed</source>
-      <translation type="unfinished">Select the folder where the emulator versions will be installed</translation>
+      <translation>Velg mappa hvor emulatorversjonene installeres</translation>
     </message>
     <message>
       <source>Select executable</source>
-      <translation type="unfinished">Select executable</translation>
+      <translation>Velg programfila</translation>
     </message>
     <message>
       <source>Executable (*.exe)</source>
-      <translation type="unfinished">Executable (*.exe)</translation>
+      <translation>Kjørbar (*.exe)</translation>
     </message>
     <message>
       <source>Executable (*.AppImage)</source>
-      <translation type="unfinished">Executable (*.AppImage)</translation>
+      <translation>Kjørbar (*.AppImage)</translation>
     </message>
     <message>
       <source>Executable (*.*)</source>
-      <translation type="unfinished">Executable (*.*)</translation>
+      <translation>Kjørbar (*.*)</translation>
     </message>
     <message>
       <source>Version name</source>
-      <translation type="unfinished">Version name</translation>
+      <translation>Versjonsnavn</translation>
     </message>
     <message>
       <source>Enter the name of this version as it appears in the list.</source>
-      <translation type="unfinished">Enter the name of this version as it appears in the list.</translation>
+      <translation>Skriv inn navnet på denne versjonen slik det vises i lista.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Feil</translation>
     </message>
     <message>
       <source>A folder with that name already exists.</source>
-      <translation type="unfinished">A folder with that name already exists.</translation>
+      <translation>En mappe med dette navnet finnes allerede.</translation>
     </message>
     <message>
       <source>Failed to create folder.</source>
-      <translation type="unfinished">Failed to create folder.</translation>
+      <translation>Klarte ikke opprette mappe.</translation>
     </message>
     <message>
       <source>Failed to copy executable.</source>
-      <translation type="unfinished">Failed to copy executable.</translation>
+      <translation>Klarte ikke kopiere programfila.</translation>
     </message>
     <message>
       <source>Success</source>
-      <translation type="unfinished">Success</translation>
+      <translation>Vellykket</translation>
     </message>
     <message>
       <source>Version added successfully.</source>
-      <translation type="unfinished">Version added successfully.</translation>
+      <translation>La til versjon på velykket vis.</translation>
     </message>
     <message>
       <source>Notice</source>
-      <translation type="unfinished">Notice</translation>
+      <translation>Merknad</translation>
     </message>
     <message>
       <source>No version selected from the Installed list.</source>
-      <translation type="unfinished">No version selected from the Installed list.</translation>
+      <translation>Ingen versjon valgt fra installert-lista.</translation>
     </message>
     <message>
       <source>Failed to determine the folder path.</source>
-      <translation type="unfinished">Failed to determine the folder path.</translation>
+      <translation>Fant ikke stien til mappa.</translation>
     </message>
     <message>
       <source>Delete version</source>
-      <translation type="unfinished">Delete version</translation>
+      <translation>Slett versjon</translation>
     </message>
     <message>
       <source>Do you want to delete the version</source>
-      <translation type="unfinished">Do you want to delete the version</translation>
+      <translation>Ønsker du å slette den valgte versjonen</translation>
     </message>
     <message>
       <source>Failed to delete folder.</source>
-      <translation type="unfinished">Failed to delete folder.</translation>
+      <translation>Klarte ikke slette mappa.</translation>
     </message>
     <message>
       <source>Version list update</source>
-      <translation type="unfinished">Version list update</translation>
+      <translation>Oppdatering av versjonslista</translation>
     </message>
     <message>
       <source>No news, the version list is already updated.</source>
-      <translation type="unfinished">No news, the version list is already updated.</translation>
+      <translation>Intet nytt, versjonslista er allerede oppdatert.</translation>
     </message>
     <message>
       <source>The latest versions have been added to the list for download.</source>
-      <translation type="unfinished">The latest versions have been added to the list for download.</translation>
+      <translation>De nyeste versjonene er lagt til lista for nedlasting.</translation>
     </message>
     <message>
       <source>Error accessing GitHub API</source>
-      <translation type="unfinished">Error accessing GitHub API</translation>
+      <translation>Feil ved tilgang til GitHub-API-en</translation>
     </message>
     <message>
       <source>First you need to choose a location to save the versions in
 &apos;Path to save versions&apos;</source>
-      <translation type="unfinished">First you need to choose a location to save the versions in
-&apos;Path to save versions&apos;</translation>
+      <translation>Først må du velge en plassering å lagre versjonene i
+«Sti for å lagre versjoner»</translation>
     </message>
     <message>
       <source>Do you want to download the version</source>
-      <translation type="unfinished">Do you want to download the version</translation>
+      <translation>Ønsker du å laste ned versjonen</translation>
     </message>
     <message>
       <source>No files available for this platform.</source>
-      <translation type="unfinished">No files available for this platform.</translation>
+      <translation>Ingen filer tilgjengelig for denne plattformen.</translation>
     </message>
     <message>
       <source>Downloading %1 , please wait...</source>
-      <translation type="unfinished">Downloading %1 , please wait...</translation>
+      <translation>Laster ned %1, vent litt …</translation>
     </message>
     <message>
       <source>Could not save file.</source>
-      <translation type="unfinished">Could not save file.</translation>
+      <translation>Klarte ikke lagre fila.</translation>
     </message>
     <message>
       <source>Version %1 has been downloaded and selected.</source>
-      <translation type="unfinished">Version %1 has been downloaded and selected.</translation>
+      <translation>Versjon %1 er lastet ned og valgt.</translation>
     </message>
     <message>
       <source>Failed to create zip extraction script</source>
-      <translation type="unfinished">Failed to create zip extraction script</translation>
+      <translation>Klarte ikke opprette zip-utpakkingsskript</translation>
     </message>
     <message>
       <source>The GitHub API response is not a valid JSON array.</source>
-      <translation type="unfinished">The GitHub API response is not a valid JSON array.</translation>
+      <translation>Svaret fra GitHub-API-en er ikke en gyldig JSON-matrise.</translation>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release</source>
-      <translation type="unfinished">Unable to get hash of latest pre-release</translation>
+      <translation>Klarte ikke hente nøkkelen for forhåndsutgivelsen</translation>
     </message>
     <message>
       <source>No pre-release found</source>
-      <translation type="unfinished">No pre-release found</translation>
+      <translation>Fant ingen forhåndsutgivelser</translation>
     </message>
     <message>
       <source>You don&apos;t have any pre-release installed yet.
 Would you like to download it now?</source>
-      <translation type="unfinished">You don&apos;t have any pre-release installed yet.
-Would you like to download it now?</translation>
+      <translation>Du har ingen forhåndsutgivelse installert enda.
+Ønsker du å laste den ned nå?</translation>
     </message>
     <message>
       <source>Auto Updater - Emulator</source>
-      <translation type="unfinished">Auto Updater - Emulator</translation>
+      <translation>Auto oppdatering – emulator</translation>
     </message>
     <message>
       <source>You already have the latest pre-release version.</source>
-      <translation type="unfinished">You already have the latest pre-release version.</translation>
+      <translation>Du har allerede den nyeste forhåndsutgivelsen.</translation>
     </message>
     <message>
       <source>Update Available (Emulator)</source>
-      <translation type="unfinished">Update Available (Emulator)</translation>
+      <translation>Oppdatering tilgjengelig (emulator)</translation>
     </message>
     <message>
       <source>Current Version</source>
-      <translation type="unfinished">Current Version</translation>
+      <translation>Gjeldende versjon</translation>
     </message>
     <message>
       <source>Latest Version</source>
-      <translation type="unfinished">Latest Version</translation>
+      <translation>Nyeste versjon</translation>
     </message>
     <message>
       <source>Do you want to update?</source>
-      <translation type="unfinished">Do you want to update?</translation>
+      <translation>Ønsker du å oppdatere?</translation>
     </message>
     <message>
       <source>Update</source>
-      <translation type="unfinished">Update</translation>
+      <translation>Oppdater</translation>
     </message>
     <message>
       <source>No</source>
-      <translation type="unfinished">No</translation>
+      <translation>Nei</translation>
     </message>
     <message>
       <source>Show Changelog</source>
-      <translation type="unfinished">Show Changelog</translation>
+      <translation>Vis endringslogg</translation>
     </message>
     <message>
       <source>Hide Changelog</source>
-      <translation type="unfinished">Hide Changelog</translation>
+      <translation>Skjul endringslogg</translation>
     </message>
     <message>
       <source>Network error while fetching changelog</source>
-      <translation type="unfinished">Network error while fetching changelog</translation>
+      <translation>Nettverksfeil ved henting av endringslogg</translation>
     </message>
     <message>
       <source>Changes</source>
-      <translation type="unfinished">Changes</translation>
+      <translation>Endringer</translation>
     </message>
     <message>
       <source>No download URL found for the specified asset.</source>
-      <translation type="unfinished">No download URL found for the specified asset.</translation>
+      <translation>Fant ingen nedlastings-URL for den valgte ressursen.</translation>
     </message>
     <message>
       <source>Downloading Pre‑release, please wait...</source>
-      <translation type="unfinished">Downloading Pre‑release, please wait...</translation>
+      <translation>Laster ned forhåndsutgivelsen, vent litt …</translation>
     </message>
     <message>
       <source>Network error while downloading</source>
-      <translation type="unfinished">Network error while downloading</translation>
+      <translation>Nettverksfeil ved nedlasting</translation>
     </message>
     <message>
       <source>Failed to save download file</source>
-      <translation type="unfinished">Failed to save download file</translation>
+      <translation>Klarte ikke lagre nedlastingsfila</translation>
     </message>
     <message>
       <source>Complete installation</source>
-      <translation type="unfinished">Complete installation</translation>
+      <translation>Fullfør installasjonen</translation>
     </message>
     <message>
       <source>Pre-release updated successfully</source>
-      <translation type="unfinished">Pre-release updated successfully</translation>
+      <translation>Oppdaterte forhåndsutgivelsen på vellykket vis</translation>
     </message>
     <message>
       <source>Failed to create the update script file</source>
-      <translation type="unfinished">Failed to create the update script file</translation>
+      <translation>Klarte ikke opprette oppdateringsskriptfila</translation>
     </message>
   </context>
 </TS>
