@@ -1957,35 +1957,35 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Update Compatibility Database On Startup</source>
-      <translation type="unfinished">Update Compatibility Database On Startup</translation>
+      <translation>Ažuriraj bazu kompatibilnosti pri pokretanju</translation>
     </message>
     <message>
       <source>Game Compatibility</source>
-      <translation type="unfinished">Game Compatibility</translation>
+      <translation>Kompatibilnost igre</translation>
     </message>
     <message>
       <source>Display Compatibility Data</source>
-      <translation type="unfinished">Display Compatibility Data</translation>
+      <translation>Prikaži podatke o kompatibilnosti</translation>
     </message>
     <message>
       <source>Update Compatibility Database</source>
-      <translation type="unfinished">Update Compatibility Database</translation>
+      <translation>Ažuriraj bazu kompatibilnosti</translation>
     </message>
     <message>
       <source>Volume</source>
-      <translation type="unfinished">Volume</translation>
+      <translation>Jačina zvuka</translation>
     </message>
     <message>
       <source>Save</source>
-      <translation type="unfinished">Save</translation>
+      <translation>Sačuvaj</translation>
     </message>
     <message>
       <source>Apply</source>
-      <translation type="unfinished">Apply</translation>
+      <translation>Primeni</translation>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation type="unfinished">Restore Defaults</translation>
+      <translation>Vrati podrazumevane vrednosti</translation>
     </message>
     <message>
       <source>Close</source>
@@ -2421,7 +2421,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Experimental</source>
-      <translation type="unfinished">Experimental</translation>
+      <translation>Eksperimentalni </translation>
     </message>
     <message>
       <source>Show Splash Screen When Launching Game</source>
@@ -2457,7 +2457,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Omogući Vulkan validacione slojeve:\nOmogućava sistem koji proverava stanje Vulkan renderera i beleži informacije o njegovom unutrašnjem stanju.\nOvo će smanjiti performanse i verovatno promeniti ponašanje emulacije.</translation>
     </message>
     <message>
       <source>Audio Device (general)</source>
