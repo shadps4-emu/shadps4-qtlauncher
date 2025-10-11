@@ -36,7 +36,7 @@ GameGridFrame::GameGridFrame(std::shared_ptr<gui_settings> gui_settings,
             &GameGridFrame::RefreshGridBackgroundImage);
     connect(this, &QTableWidget::customContextMenuRequested, this, [=, this](const QPoint& pos) {
         int changedFavorite = m_gui_context_menus.RequestGameMenu(
-            pos, m_game_info->m_games, m_compat_info, m_gui_settings, m_ipc_client, this, true,
+            pos, m_game_info->m_games, m_compat_info, m_gui_settings, m_ipc_client, this, false,
             [mw = QPointer<MainWindow>(qobject_cast<MainWindow*>(this->window()))](
                 const QStringList& args) {
                 if (mw)
