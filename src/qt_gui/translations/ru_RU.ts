@@ -2748,16 +2748,16 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release</source>
-      <translation>Не удалось получить хэш последней pre-release</translation>
+      <translation>Не удалось получить хеш последней версии Pre-release</translation>
     </message>
     <message>
       <source>No pre-release found</source>
-      <translation>Pre-release не найдена</translation>
+      <translation>Версия Pre-release не найдена</translation>
     </message>
     <message>
       <source>You don&apos;t have any pre-release installed yet.
 Would you like to download it now?</source>
-      <translation>У вас ещё не&apos; установлена ​​pre-release версия.
+      <translation>У вас ещё не&apos; установлена версия Pre-release.
 Желаете скачать её сейчас?</translation>
     </message>
     <message>
@@ -2766,7 +2766,7 @@ Would you like to download it now?</source>
     </message>
     <message>
       <source>You already have the latest pre-release version.</source>
-      <translation>У вас уже установлена ​​последняя pre-release версия.</translation>
+      <translation>У вас уже установлена ​​последняя версия Pre-release.</translation>
     </message>
     <message>
       <source>Update Available (Emulator)</source>
@@ -2802,7 +2802,7 @@ Would you like to download it now?</source>
     </message>
     <message>
       <source>Network error while fetching changelog</source>
-      <translation>Сетевая ошибка при загрузке журнала изменений</translation>
+      <translation>Ошибка сети при загрузке журнала изменений</translation>
     </message>
     <message>
       <source>Changes</source>
@@ -2814,7 +2814,7 @@ Would you like to download it now?</source>
     </message>
     <message>
       <source>Downloading Pre‑release, please wait...</source>
-      <translation>Загрузка предварительной версии, пожалуйста, подождите...</translation>
+      <translation>Загрузка версии Pre‑release, пожалуйста, подождите...</translation>
     </message>
     <message>
       <source>Network error while downloading</source>
@@ -2830,7 +2830,7 @@ Would you like to download it now?</source>
     </message>
     <message>
       <source>Pre-release updated successfully</source>
-      <translation>Pre-release версия успешно обновлена</translation>
+      <translation>Версия Pre-release успешно обновлена</translation>
     </message>
     <message>
       <source>Failed to create the update script file</source>
