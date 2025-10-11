@@ -24,7 +24,9 @@ public:
     void toggleFullscreen();
     void sendMemoryPatches(std::string modNameStr, std::string offsetStr, std::string valueStr,
                            std::string targetStr, std::string sizeStr, bool isOffset,
-                           bool littleEndian, MemoryPatcher::PatchMask patchMask, int maskOffset);
+                           bool littleEndian,
+                           MemoryPatcher::PatchMask patchMask = MemoryPatcher::PatchMask::None,
+                           int maskOffset = 0);
     std::function<void()> gameClosedFunc;
     std::function<void()> startGameFunc;
     std::function<void()> restartEmulatorFunc;

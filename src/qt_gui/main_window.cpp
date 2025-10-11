@@ -146,7 +146,7 @@ void MainWindow::StopGame() {
 }
 
 void MainWindow::onGameClosed() {
-    isGameRunning = false;
+    Config::setGameRunning(false);
     is_paused = false;
 }
 
@@ -158,7 +158,7 @@ void MainWindow::toggleLabelsUnderIcons() {
     bool showLabels = ui->toggleLabelsAct->isChecked();
     m_gui_settings->SetValue(gui::mw_showLabelsUnderIcons, showLabels);
     UpdateToolbarLabels();
-    if (isGameRunning) {
+    if (Config::getGameRunning()) {
         UpdateToolbarButtons();
     }
 }
@@ -317,9 +317,11 @@ void MainWindow::CreateDockWindows() {
     setCentralWidget(phCentralWidget);
 
     m_dock_widget.reset(new QDockWidget(tr("Game List"), this));
-    m_game_list_frame.reset(new GameListFrame(m_gui_settings, m_game_info, m_compat_info, this));
+    m_game_list_frame.reset(
+        new GameListFrame(m_gui_settings, m_game_info, m_compat_info, m_ipc_client, this));
     m_game_list_frame->setObjectName("gamelist");
-    m_game_grid_frame.reset(new GameGridFrame(m_gui_settings, m_game_info, m_compat_info, this));
+    m_game_grid_frame.reset(
+        new GameGridFrame(m_gui_settings, m_game_info, m_compat_info, m_ipc_client, this));
     m_game_grid_frame->setObjectName("gamegridlist");
     m_elf_viewer.reset(new ElfViewer(m_gui_settings, this));
     m_elf_viewer->setObjectName("elflist");
@@ -435,7 +437,7 @@ void MainWindow::CreateConnects() {
 
     connect(ui->configureAct, &QAction::triggered, this, [this]() {
         auto settingsDialog =
-            new SettingsDialog(m_gui_settings, m_compat_info, this, isGameRunning);
+            new SettingsDialog(m_gui_settings, m_compat_info, this, Config::getGameRunning());
 
         connect(settingsDialog, &SettingsDialog::LanguageChanged, this,
                 &MainWindow::OnLanguageChanged);
@@ -470,7 +472,7 @@ void MainWindow::CreateConnects() {
 
     connect(ui->settingsButton, &QPushButton::clicked, this, [this]() {
         auto settingsDialog =
-            new SettingsDialog(m_gui_settings, m_compat_info, this, isGameRunning);
+            new SettingsDialog(m_gui_settings, m_compat_info, this, Config::getGameRunning());
 
         connect(settingsDialog, &SettingsDialog::LanguageChanged, this,
                 &MainWindow::OnLanguageChanged);
@@ -505,12 +507,13 @@ void MainWindow::CreateConnects() {
 
     connect(ui->controllerButton, &QPushButton::clicked, this, [this]() {
         ControlSettings* remapWindow =
-            new ControlSettings(m_game_info, isGameRunning, runningGameSerial, this);
+            new ControlSettings(m_game_info, Config::getGameRunning(), runningGameSerial, this);
         remapWindow->exec();
     });
 
     connect(ui->keyboardButton, &QPushButton::clicked, this, [this]() {
-        auto kbmWindow = new KBMSettings(m_game_info, isGameRunning, runningGameSerial, this);
+        auto kbmWindow =
+            new KBMSettings(m_game_info, Config::getGameRunning(), runningGameSerial, this);
         kbmWindow->exec();
     });
 
@@ -533,7 +536,7 @@ void MainWindow::CreateConnects() {
     });
 
     connect(ui->configureHotkeys, &QAction::triggered, this, [this]() {
-        auto hotkeyDialog = new Hotkeys(isGameRunning, this);
+        auto hotkeyDialog = new Hotkeys(Config::getGameRunning(), this);
         hotkeyDialog->exec();
     });
 
@@ -675,8 +678,8 @@ void MainWindow::CreateConnects() {
                 QString gameSerial = QString::fromStdString(game.serial);
                 QString gameVersion = QString::fromStdString(game.version);
 
-                CheatsPatches* cheatsPatches =
-                    new CheatsPatches(m_gui_settings, empty, empty, empty, empty, empty, nullptr);
+                CheatsPatches* cheatsPatches = new CheatsPatches(
+                    m_gui_settings, m_ipc_client, empty, empty, empty, empty, empty, nullptr);
                 connect(cheatsPatches, &CheatsPatches::downloadFinished, onDownloadFinished);
 
                 pendingDownloads += 2;
@@ -703,8 +706,8 @@ void MainWindow::CreateConnects() {
             };
 
             QString empty = "";
-            CheatsPatches* cheatsPatches =
-                new CheatsPatches(m_gui_settings, empty, empty, empty, empty, empty, nullptr);
+            CheatsPatches* cheatsPatches = new CheatsPatches(m_gui_settings, m_ipc_client, empty,
+                                                             empty, empty, empty, empty, nullptr);
             connect(cheatsPatches, &CheatsPatches::downloadFinished, onDownloadFinished);
 
             pendingDownloads += 2;
@@ -1255,7 +1258,7 @@ bool MainWindow::eventFilter(QObject* obj, QEvent* event) {
 }
 
 void MainWindow::StartEmulator(std::filesystem::path path, QStringList args) {
-    if (isGameRunning) {
+    if (Config::getGameRunning()) {
         QMessageBox::critical(nullptr, tr("Run Game"), QString(tr("Game is already running!")));
         return;
     }
@@ -1272,7 +1275,7 @@ tr("No emulator version was selected.\nThe Version Manager menu will then open.\
         return;
     }
 
-    isGameRunning = true;
+    Config::setGameRunning(true);
     last_game_path = path;
 
     QString exeName;

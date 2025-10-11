@@ -19,6 +19,7 @@
 #include "compatibility_info.h"
 #include "game_info.h"
 #include "gui_settings.h"
+#include "ipc/ipc_client.h"
 #include "settings_dialog.h"
 #include "trophy_viewer.h"
 
@@ -36,8 +37,10 @@ class GuiContextMenus : public QObject {
 public:
     int RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_games,
                         std::shared_ptr<CompatibilityInfoClass> m_compat_info,
-                        std::shared_ptr<gui_settings> settings, QTableWidget* widget, bool isList,
+                        std::shared_ptr<gui_settings> settings,
+                        std::shared_ptr<IpcClient> m_ipc_client, QTableWidget* widget, bool isList,
                         std::function<void(QStringList)> launch_func) {
+
         QPoint global_pos = widget->viewport()->mapToGlobal(pos);
         std::shared_ptr<gui_settings> m_gui_settings = std::move(settings);
         int itemID = 0;
@@ -377,8 +380,9 @@ public:
             QString iconPath;
             Common::FS::PathToQString(iconPath, m_games[itemID].icon_path);
             QPixmap gameImage(iconPath);
-            CheatsPatches* cheatsPatches = new CheatsPatches(m_gui_settings, gameName, gameSerial,
-                                                             gameVersion, gameSize, gameImage);
+            CheatsPatches* cheatsPatches =
+                new CheatsPatches(m_gui_settings, m_ipc_client, gameName, gameSerial, gameVersion,
+                                  gameSize, gameImage);
             cheatsPatches->show();
             connect(widget->parent(), &QWidget::destroyed, cheatsPatches,
                     [cheatsPatches]() { cheatsPatches->deleteLater(); });

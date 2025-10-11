@@ -39,6 +39,7 @@ private:
     int m_last_opacity = -1; // Track last opacity to avoid unnecessary recomputation
     std::filesystem::path m_current_game_path; // Track current game path to detect changes
     std::shared_ptr<gui_settings> m_gui_settings;
+    std::shared_ptr<IpcClient> m_ipc_client;
     void SetFavoriteIcon(QWidget* parentWidget, QVector<GameInfo> m_games_, int gameCounter);
     void SetGameConfigIcon(QWidget* parentWidget, QVector<GameInfo> m_games_, int gameCounter);
     bool CompareWithFavorite(GameInfo a, GameInfo b);
@@ -47,7 +48,7 @@ public:
     explicit GameGridFrame(std::shared_ptr<gui_settings> gui_settings,
                            std::shared_ptr<GameInfoClass> game_info_get,
                            std::shared_ptr<CompatibilityInfoClass> compat_info_get,
-                           QWidget* parent = nullptr);
+                           std::shared_ptr<IpcClient> ipc_client, QWidget* parent = nullptr);
     void PopulateGameGrid(QVector<GameInfo> m_games, bool fromSearch);
     bool IsValidCellSelected();
     void SortByFavorite(QVector<GameInfo>* game_list);

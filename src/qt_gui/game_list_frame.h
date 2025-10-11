@@ -18,6 +18,7 @@
 #include "game_list_utils.h"
 #include "gui_context_menus.h"
 #include "gui_settings.h"
+#include "ipc/ipc_client.h"
 
 class GameListFrame : public QTableWidget {
     Q_OBJECT
@@ -25,7 +26,7 @@ public:
     explicit GameListFrame(std::shared_ptr<gui_settings> gui_settings,
                            std::shared_ptr<GameInfoClass> game_info_get,
                            std::shared_ptr<CompatibilityInfoClass> compat_info_get,
-                           QWidget* parent = nullptr);
+                           std::shared_ptr<IpcClient> ipc_client, QWidget* parent = nullptr);
 Q_SIGNALS:
     void GameListFrameClosed();
 
@@ -64,6 +65,7 @@ public:
     GuiContextMenus m_gui_context_menus;
     std::shared_ptr<GameInfoClass> m_game_info;
     std::shared_ptr<CompatibilityInfoClass> m_compat_info;
+    std::shared_ptr<IpcClient> m_ipc_client;
 
     int icon_size;
     std::string last_favorite;

@@ -214,9 +214,18 @@ static string trophyKey = "";
 // Config version, used to determine if a user's config file is outdated.
 static string config_version = Common::g_scm_rev;
 
-// These two entries aren't stored in the config
+// These entries aren't stored in the config
 static bool overrideControllerColor = false;
 static int controllerCustomColorRGB[3] = {0, 0, 255};
+static bool isGameRunning = false;
+
+bool getGameRunning() {
+    return isGameRunning;
+}
+
+void setGameRunning(bool running) {
+    isGameRunning = running;
+}
 
 std::filesystem::path getSysModulesPath() {
     if (sys_modules_path.empty()) {

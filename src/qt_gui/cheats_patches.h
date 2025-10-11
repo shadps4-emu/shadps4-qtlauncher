@@ -25,14 +25,15 @@
 #include <QVector>
 #include <QWidget>
 #include "gui_settings.h"
+#include "ipc/ipc_client.h"
 
 class CheatsPatches : public QWidget {
     Q_OBJECT
 
 public:
-    CheatsPatches(std::shared_ptr<gui_settings> gui_settings, const QString& gameName,
-                  const QString& gameSerial, const QString& gameVersion, const QString& gameSize,
-                  const QPixmap& gameImage, QWidget* parent = nullptr);
+    CheatsPatches(std::shared_ptr<gui_settings> gui_settings, std::shared_ptr<IpcClient> ipc_client,
+                  const QString& gameName, const QString& gameSerial, const QString& gameVersion,
+                  const QString& gameSize, const QPixmap& gameImage, QWidget* parent = nullptr);
     ~CheatsPatches();
 
     void downloadCheats(const QString& source, const QString& m_gameSerial,
@@ -102,6 +103,7 @@ private:
     QMap<QString, PatchInfo> m_patchInfos;
     QVector<QCheckBox*> m_cheatCheckBoxes;
     std::shared_ptr<gui_settings> m_gui_settings;
+    std::shared_ptr<IpcClient> m_ipc_client;
 
     // UI Elements
     QVBoxLayout* rightLayout;

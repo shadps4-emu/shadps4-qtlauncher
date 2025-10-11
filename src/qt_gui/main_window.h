@@ -82,7 +82,6 @@ private:
 
     bool isIconBlack = false;
     bool isTableList = true;
-    bool isGameRunning = false;
     bool isWhite = false;
     bool is_paused = false;
     std::string runningGameSerial = "";
