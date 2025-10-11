@@ -33,12 +33,13 @@
 #include "common/memory_patcher.h"
 #include "common/path_util.h"
 
-CheatsPatches::CheatsPatches(std::shared_ptr<gui_settings> gui_settings, const QString& gameName,
+CheatsPatches::CheatsPatches(std::shared_ptr<gui_settings> gui_settings,
+                             std::shared_ptr<IpcClient> ipc_client, const QString& gameName,
                              const QString& gameSerial, const QString& gameVersion,
                              const QString& gameSize, const QPixmap& gameImage, QWidget* parent)
     : QWidget(parent), m_gameName(gameName), m_gameSerial(gameSerial), m_gameVersion(gameVersion),
       m_gameSize(gameSize), m_gameImage(gameImage), m_gui_settings(std::move(gui_settings)),
-      manager(new QNetworkAccessManager(this)) {
+      m_ipc_client(ipc_client), manager(new QNetworkAccessManager(this)) {
     setupUI();
     resize(500, 400);
     setWindowTitle(tr("Cheats / Patches for ") + m_gameName);
@@ -1245,7 +1246,7 @@ void CheatsPatches::applyCheat(const QString& modName, bool enabled) {
     if (!m_cheats.contains(modName))
         return;
 
-    if (/* MemoryPatcher::g_eboot_address == 0 && */ enabled) {
+    if (!Config::getGameRunning() && enabled) {
         QMessageBox::critical(this, tr("Error"),
                               tr("Can't apply cheats before the game is started"));
         uncheckAllCheatCheckBoxes();
@@ -1261,13 +1262,14 @@ void CheatsPatches::applyCheat(const QString& modName, bool enabled) {
         std::string offsetStr = memoryMod.offset.toStdString();
         std::string valueStr = value.toStdString();
 
-        /* if (MemoryPatcher::g_eboot_address == 0)
+        if (!Config::getGameRunning())
             return;
 
         // Determine if the hint field is present
         bool isHintPresent = m_cheats[modName].hasHint;
-        MemoryPatcher::PatchMemory(modNameStr, offsetStr, valueStr, "", "", !isHintPresent, false);
-      */
+
+        m_ipc_client->sendMemoryPatches(modNameStr, offsetStr, valueStr, "", "", !isHintPresent,
+                                        false);
     }
 }
 
