@@ -870,7 +870,7 @@
                </size>
               </property>
               <property name="title">
-               <string>Auto Updater - User Interface</string>
+               <string>GUI Updates</string>
               </property>
               <layout class="QVBoxLayout" name="UpdateLayout" stretch="0,0,0,0">
                <property name="spacing">
