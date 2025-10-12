@@ -18,12 +18,8 @@ ControlSettings::ControlSettings(std::shared_ptr<GameInfoClass> game_info_get, b
 
     ui->setupUi(this);
 
-    if (!GameRunning) {
-        SDL_InitSubSystem(SDL_INIT_GAMEPAD);
-        SDL_InitSubSystem(SDL_INIT_EVENTS);
-    } else {
-        SDL_SetHint(SDL_HINT_JOYSTICK_ALLOW_BACKGROUND_EVENTS, "1");
-    }
+    SDL_InitSubSystem(SDL_INIT_GAMEPAD);
+    SDL_InitSubSystem(SDL_INIT_EVENTS);
 
     AddBoxItems();
     SetUIValuestoMappings();
@@ -143,9 +139,7 @@ ControlSettings::ControlSettings(std::shared_ptr<GameInfoClass> game_info_get, b
     QObject::connect(RemapWrapper, &SdlEventWrapper::Wrapper::SDLEvent, this,
                      &ControlSettings::processSDLEvents);
 
-    if (!GameRunning) {
-        Polling = QtConcurrent::run(&ControlSettings::pollSDLEvents, this);
-    }
+    Polling = QtConcurrent::run(&ControlSettings::pollSDLEvents, this);
 }
 
 void ControlSettings::SaveControllerConfig(bool CloseOnSave) {
@@ -1014,25 +1008,23 @@ void ControlSettings::Cleanup() {
         gamepad = nullptr;
     }
 
-    SDL_free(gamepads);
+    if (gamepads)
+        SDL_free(gamepads);
 
-    if (!GameRunning) {
-        SDL_Event quitLoop{};
-        quitLoop.type = SDL_EVENT_QUIT;
-        SDL_PushEvent(&quitLoop);
-        Polling.waitForFinished();
+    SDL_Event quitLoop{};
+    quitLoop.type = SDL_EVENT_QUIT;
+    SDL_PushEvent(&quitLoop);
+    Polling.waitForFinished();
 
-        SDL_QuitSubSystem(SDL_INIT_GAMEPAD);
-        SDL_QuitSubSystem(SDL_INIT_EVENTS);
-        SDL_Quit();
-    } else {
-        /* if (!Config::getBackgroundControllerInput()) {
-            SDL_SetHint(SDL_HINT_JOYSTICK_ALLOW_BACKGROUND_EVENTS, "0");
-        }
-        SDL_Event checkGamepad{};
-        checkGamepad.type = SDL_EVENT_CHANGE_CONTROLLER;
-        SDL_PushEvent(&checkGamepad); */
-    }
+    SDL_QuitSubSystem(SDL_INIT_GAMEPAD);
+    SDL_QuitSubSystem(SDL_INIT_EVENTS);
+    SDL_Quit();
+
+    /* TODO: IPC active gamepad
+    if (Config::getGameRunning()) {
+    SDL_Event checkGamepad{};
+    checkGamepad.type = SDL_EVENT_CHANGE_CONTROLLER;
+    SDL_PushEvent(&checkGamepad); */
 }
 
 ControlSettings::~ControlSettings() {}
