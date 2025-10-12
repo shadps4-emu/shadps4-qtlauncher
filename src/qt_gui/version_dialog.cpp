@@ -488,6 +488,7 @@ tr("First you need to choose a location to save the versions in\n'Path to save v
                                         "unzip -o \"%2\" -d \"%1\"\n"
                                         "rm \"%2\"\n"
                                         "rm \"%3\"\n"
+                                        "chmod +x \"%1/Shadps4-sdl.AppImage\"\n"
                                         "clear\n")
                                         .arg(destFolder)
                                         .arg(userPath + "/temp_download_update.zip")
@@ -1086,6 +1087,7 @@ void VersionDialog::showDownloadDialog(const QString& tagName, const QString& do
                                 "unzip -o \"%2\" -d \"%1\"\n"
                                 "rm \"%2\"\n"
                                 "rm \"%3\"\n"
+                                "chmod +x \"%1/Shadps4-sdl.AppImage\"\n"
                                 "clear\n")
                             .arg(destFolder)
                             .arg(zipPath)
