@@ -348,11 +348,11 @@
         <translation>Failed to create the update script file</translation>
     </message>
     <message>
-        <source>Auto Updater - Interface</source>
+        <source>Auto Updater - GUI</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Update Available (Interface)</source>
+        <source>Update Available - GUI</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1180,12 +1180,7 @@
 <context>
     <name>IpcClient</name>
     <message>
-        <source>ShadPS4</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>shadPS4 is not found!
-Please change shadPS4 path in settings.</source>
+        <source>Could not find the emulator executable</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1684,11 +1679,6 @@ Please change shadPS4 path in settings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>shadPS4 is not found!
-Please change shadPS4 path in settings.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Version Manager</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1703,7 +1693,7 @@ Select an emulator version from the right panel.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>No version selected</source>
+        <source>Could not find the emulator executable</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1724,10 +1714,6 @@ Select an emulator version from the right panel.</source>
     <message>
         <source>Console Language</source>
         <translation>Console Language</translation>
-    </message>
-    <message>
-        <source>Emulator Language</source>
-        <translation>Emulator Language</translation>
     </message>
     <message>
         <source>Default tab when opening settings</source>
@@ -1814,10 +1800,6 @@ Select an emulator version from the right panel.</source>
         <translation>Graphics</translation>
     </message>
     <message>
-        <source>GUI</source>
-        <translation>GUI</translation>
-    </message>
-    <message>
         <source>User</source>
         <translation>User</translation>
     </message>
@@ -1900,10 +1882,6 @@ Select an emulator version from the right panel.</source>
     <message>
         <source>Enable Readback Linear Images</source>
         <translation>Enable Readback Linear Images</translation>
-    </message>
-    <message>
-        <source>Update</source>
-        <translation>Update</translation>
     </message>
     <message>
         <source>Check for Updates at Startup</source>
@@ -2016,10 +1994,6 @@ Select an emulator version from the right panel.</source>
     <message>
         <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Trace&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: Trace, Debug, Info, Warning, Error, Critical - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
         <translation>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Trace&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: Trace, Debug, Info, Warning, Error, Critical - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</translation>
-    </message>
-    <message>
-        <source>Update:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.</source>
-        <translation>Update:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.</translation>
     </message>
     <message>
         <source>Background Image:\nControl the opacity of the game background image.</source>
@@ -2314,10 +2288,6 @@ Select an emulator version from the right panel.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>DLC Folder</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Select the DLC folder</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2478,10 +2448,6 @@ Select an emulator version from the right panel.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>PS4 Sysmodules Folder</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2519,6 +2485,26 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
         <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>GUI Language</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>GUI Updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>DLC Path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PS4 Sysmodules Path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2604,10 +2590,6 @@ Select an emulator version from the right panel.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Always show Pre-release changelog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Check for Pre-release Updates</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2661,14 +2643,6 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
         <source>Version added successfully.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Notice</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>No version selected from the Installed list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2824,6 +2798,22 @@ Would you like to download it now?</source>
     <message>
         <source>Failed to create the update script file</source>
         <translation type="unfinished">Failed to create the update script file</translation>
+    </message>
+    <message>
+        <source>Always Show Changelog</source>
+        <translation type="unfinished">Always Show Changelog</translation>
+    </message>
+    <message>
+        <source>No version selected. Please choose one from the list to delete.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Confirm Download</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Extraction failure.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
