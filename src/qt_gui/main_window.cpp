@@ -486,19 +486,20 @@ void MainWindow::CreateConnects() {
 
         connect(settingsDialog, &SettingsDialog::BackgroundOpacityChanged, this,
                 [this](int opacity) {
-            m_gui_settings->SetValue(gui::gl_backgroundImageOpacity, std::clamp(opacity, 0, 100));
-            if (m_game_list_frame) {
-                QTableWidgetItem* current = m_game_list_frame->GetCurrentItem();
-                if (current) {
-                    m_game_list_frame->SetListBackgroundImage(current);
-                }
-            }
-            if (m_game_grid_frame) {
-                if (m_game_grid_frame->IsValidCellSelected()) {
-                    m_game_grid_frame->SetGridBackgroundImage(m_game_grid_frame->crtRow,
-                                                              m_game_grid_frame->crtColumn);
-                }
-            }
+                    m_gui_settings->SetValue(gui::gl_backgroundImageOpacity,
+                                             std::clamp(opacity, 0, 100));
+                    if (m_game_list_frame) {
+                        QTableWidgetItem* current = m_game_list_frame->GetCurrentItem();
+                        if (current) {
+                            m_game_list_frame->SetListBackgroundImage(current);
+                        }
+                    }
+                    if (m_game_grid_frame) {
+                        if (m_game_grid_frame->IsValidCellSelected()) {
+                            m_game_grid_frame->SetGridBackgroundImage(m_game_grid_frame->crtRow,
+                                                                      m_game_grid_frame->crtColumn);
+                        }
+                    }
                 });
 
         settingsDialog->exec();
