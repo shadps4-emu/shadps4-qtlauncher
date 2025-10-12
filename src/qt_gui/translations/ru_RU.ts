@@ -348,12 +348,12 @@
       <translation>Не удалось создать файл скрипта обновления</translation>
     </message>
     <message>
-      <source>Auto Updater - Interface</source>
-      <translation>Автоматическое обновление - Интерфейс</translation>
+      <source>Auto Updater - GUI</source>
+      <translation type="unfinished">Auto Updater - GUI</translation>
     </message>
     <message>
-      <source>Update Available (Interface)</source>
-      <translation>Доступно обновление (Интерфейс)</translation>
+      <source>Update Available - GUI</source>
+      <translation type="unfinished">Update Available - GUI</translation>
     </message>
   </context>
   <context>
@@ -1184,14 +1184,8 @@
   <context>
     <name>IpcClient</name>
     <message>
-      <source>ShadPS4</source>
-      <translation>ShadPS4</translation>
-    </message>
-    <message>
-      <source>shadPS4 is not found!
-Please change shadPS4 path in settings.</source>
-      <translation>shadPS4 не найден!
-Пожалуйста, поменяйте путь к shadPS4 в настройках.</translation>
+      <source>Could not find the emulator executable</source>
+      <translation type="unfinished">Could not find the emulator executable</translation>
     </message>
   </context>
   <context>
@@ -1691,12 +1685,6 @@ Please change shadPS4 path in settings.</source>
       <translation>Настроить горячие клавиши</translation>
     </message>
     <message>
-      <source>shadPS4 is not found!
-Please change shadPS4 path in settings.</source>
-      <translation>shadPS4 не найден!
-Пожалуйста, поменяйте путь к shadPS4 в настройках.</translation>
-    </message>
-    <message>
       <source>Version Manager</source>
       <translation>Менеджер версий</translation>
     </message>
@@ -1713,8 +1701,8 @@ Select an emulator version from the right panel.</source>
 Выберите версию эмулятора на правой панели.</translation>
     </message>
     <message>
-      <source>No version selected</source>
-      <translation>Версия не выбрана</translation>
+      <source>Could not find the emulator executable</source>
+      <translation type="unfinished">Could not find the emulator executable</translation>
     </message>
   </context>
   <context>
@@ -1734,10 +1722,6 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Console Language</source>
       <translation>Язык консоли</translation>
-    </message>
-    <message>
-      <source>Emulator Language</source>
-      <translation>Язык эмулятора</translation>
     </message>
     <message>
       <source>Default tab when opening settings</source>
@@ -1824,10 +1808,6 @@ Select an emulator version from the right panel.</source>
       <translation>Графика</translation>
     </message>
     <message>
-      <source>GUI</source>
-      <translation>Интерфейс</translation>
-    </message>
-    <message>
       <source>User</source>
       <translation>Пользователь</translation>
     </message>
@@ -1910,10 +1890,6 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Enable Readback Linear Images</source>
       <translation>Включить считывание линейных изображений</translation>
-    </message>
-    <message>
-      <source>Update</source>
-      <translation>Обновление</translation>
     </message>
     <message>
       <source>Check for Updates at Startup</source>
@@ -2026,10 +2002,6 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Trace&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: Trace, Debug, Info, Warning, Error, Critical - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
       <translation>Фильтр логов:\nФильтрует логи, чтобы показывать только определенную информацию.\nПримеры: &quot;Core:Trace&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nУровни: Trace, Debug, Info, Warning, Error, Critical - в этом порядке, конкретный уровень глушит все предыдущие уровни в списке и показывает все последующие уровни.</translation>
-    </message>
-    <message>
-      <source>Update:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.</source>
-      <translation>Обновление:\nRelease: Официальные версии, которые выпускаются каждый месяц и могут быть очень старыми, но они более надежные и проверенные.\nNightly: Версии разработки, которые содержат все последние функции и исправления, но могут содержать ошибки и менее стабильны.</translation>
     </message>
     <message>
       <source>Background Image:\nControl the opacity of the game background image.</source>
@@ -2324,10 +2296,6 @@ Select an emulator version from the right panel.</source>
       <translation>Immediate (без Vsync)</translation>
     </message>
     <message>
-      <source>DLC Folder</source>
-      <translation>Папка DLC</translation>
-    </message>
-    <message>
       <source>Select the DLC folder</source>
       <translation>Выберите папку DLC</translation>
     </message>
@@ -2488,10 +2456,6 @@ Select an emulator version from the right panel.</source>
       <translation>Дополнительное распределение DMem\nЗаставляет выделить определённое количество DMem. Вызывает вылеты или проблемы в некоторых играх.</translation>
     </message>
     <message>
-      <source>PS4 Sysmodules Folder</source>
-      <translation>Папка системных модулей PS4</translation>
-    </message>
-    <message>
       <source>PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</source>
       <translation>Папка системных модулей PS4:\nПапка, из которой загружаются системные модули PS4.</translation>
     </message>
@@ -2530,6 +2494,26 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
       <translation>Включить проверку с помощью GPU:\nСнабжает шейдеры кодом, который проверяет, правильно ли они себя ведут.\nЭто снизит производительность и, вероятно, изменит поведение эмуляции.\nДля работы этого вам понадобится Vulkan SDK.</translation>
+    </message>
+    <message>
+      <source>GUI Language</source>
+      <translation type="unfinished">GUI Language</translation>
+    </message>
+    <message>
+      <source>GUI Updates</source>
+      <translation type="unfinished">GUI Updates</translation>
+    </message>
+    <message>
+      <source>DLC Path</source>
+      <translation type="unfinished">DLC Path</translation>
+    </message>
+    <message>
+      <source>PS4 Sysmodules Path</source>
+      <translation type="unfinished">PS4 Sysmodules Path</translation>
+    </message>
+    <message>
+      <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
+      <translation type="unfinished">GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</translation>
     </message>
   </context>
   <context>
@@ -2614,10 +2598,6 @@ Select an emulator version from the right panel.</source>
       <translation>Проверять обновления Pre-Release при запуске</translation>
     </message>
     <message>
-      <source>Always show Pre-release changelog</source>
-      <translation>Показывать журнал изменений Pre-Release</translation>
-    </message>
-    <message>
       <source>Check for Pre-release Updates</source>
       <translation>Проверить обновления Pre-Release</translation>
     </message>
@@ -2672,14 +2652,6 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Version added successfully.</source>
       <translation>Версия успешно добавлена.</translation>
-    </message>
-    <message>
-      <source>Notice</source>
-      <translation>Уведомление</translation>
-    </message>
-    <message>
-      <source>No version selected from the Installed list.</source>
-      <translation>В списке установленных версий не выбрано ни одной.</translation>
     </message>
     <message>
       <source>Failed to determine the folder path.</source>
@@ -2835,6 +2807,22 @@ Would you like to download it now?</source>
     <message>
       <source>Failed to create the update script file</source>
       <translation>Не удалось создать скрипт обновления</translation>
+    </message>
+    <message>
+      <source>Always Show Changelog</source>
+      <translation type="unfinished">Always Show Changelog</translation>
+    </message>
+    <message>
+      <source>No version selected. Please choose one from the list to delete.</source>
+      <translation type="unfinished">No version selected. Please choose one from the list to delete.</translation>
+    </message>
+    <message>
+      <source>Confirm Download</source>
+      <translation type="unfinished">Confirm Download</translation>
+    </message>
+    <message>
+      <source>Extraction failure.</source>
+      <translation type="unfinished">Extraction failure.</translation>
     </message>
   </context>
 </TS>
