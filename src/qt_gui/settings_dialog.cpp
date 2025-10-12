@@ -1363,6 +1363,7 @@ void SettingsDialog::getPhysicalDevices() {
     std::vector<VkPhysicalDevice> devices(deviceCount);
     vkEnumeratePhysicalDevices(instance, &deviceCount, devices.data());
 
+    m_physical_devices.clear();
     for (uint32_t i = 0; i < deviceCount; ++i) {
         VkPhysicalDeviceProperties props;
         vkGetPhysicalDeviceProperties(devices[i], &props);
