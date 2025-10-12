@@ -149,9 +149,8 @@ void IpcClient::onProcessClosed() {
 
 void IpcClient::writeLine(const QString& text) {
     if (process == nullptr) {
-        QMessageBox::critical(
-            nullptr, tr("ShadPS4"),
-            QString(tr("shadPS4 is not found!\nPlease change shadPS4 path in settings.")));
+        QMessageBox::critical(nullptr, "ShadPS4",
+                              QString(tr("Could not find the emulator executable")));
         return;
     }
 
