@@ -1289,9 +1289,8 @@ tr("No emulator version was selected.\nThe Version Manager menu will then open.\
     QString exe = selectedVersion + exeName;
     QFileInfo fileInfo(exe);
     if (!fileInfo.exists()) {
-        QMessageBox::critical(
-            nullptr, tr("shadPS4"),
-            QString(tr("shadPS4 is not found!\nPlease change shadPS4 path in settings.")));
+        QMessageBox::critical(nullptr, "shadPS4",
+                              QString(tr("Could not find the emulator executable")));
         return;
     }
 
@@ -1351,7 +1350,7 @@ void MainWindow::LoadVersionComboBox() {
     QString savedVersionPath = m_gui_settings->GetValue(gui::vm_versionSelected).toString();
     if (savedVersionPath.isEmpty() || !QDir(savedVersionPath).exists()) {
         ui->versionComboBox->clear();
-        ui->versionComboBox->addItem(tr("No version selected"));
+        ui->versionComboBox->addItem(tr("No Version Selected"));
         ui->versionComboBox->setCurrentIndex(0);
         ui->versionComboBox->setSizeAdjustPolicy(QComboBox::AdjustToContents);
         ui->versionComboBox->adjustSize();

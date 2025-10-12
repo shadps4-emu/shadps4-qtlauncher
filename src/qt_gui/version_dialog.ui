@@ -229,7 +229,7 @@
            <item>
             <widget class="QCheckBox" name="showChangelogCheckBox">
              <property name="text">
-              <string>Always show Pre-release changelog</string>
+              <string>Always Show Changelog</string>
              </property>
             </widget>
            </item>

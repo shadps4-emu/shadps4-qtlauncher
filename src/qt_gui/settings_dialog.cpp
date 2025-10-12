@@ -295,6 +295,16 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
                     }
                     emit CompatibilityChanged();
                 });
+
+        // Audio Device (general)
+        connect(
+            ui->GenAudioComboBox, &QComboBox::currentTextChanged, this,
+            [this](const QString& device) { Config::setMainOutputDevice(device.toStdString()); });
+
+        // Audio Device (DS4 speaker)
+        connect(
+            ui->DsAudioComboBox, &QComboBox::currentTextChanged, this,
+            [this](const QString& device) { Config::setPadSpkOutputDevice(device.toStdString()); });
     }
 
     // GUI TAB
@@ -595,8 +605,10 @@ void SettingsDialog::closeEvent(QCloseEvent* event) {
         Polling.waitForFinished();
 
         SDL_QuitSubSystem(SDL_INIT_EVENTS);
-        SDL_QuitSubSystem(SDL_INIT_AUDIO);
-        SDL_Quit();
+
+        // This breaks the microphone selection
+        // SDL_QuitSubSystem(SDL_INIT_AUDIO);
+        // SDL_Quit();
     }
     QDialog::closeEvent(event);
 }
@@ -702,7 +714,7 @@ void SettingsDialog::LoadValuesFromConfig() {
         languageIndexes.size());
 
     std::string micDevice =
-        toml::find_or<std::string>(data, "Input", "micDevice", "Default Device");
+        toml::find_or<std::string>(data, "Audio", "micDevice", "Default Device");
     QString micValue = QString::fromStdString(micDevice);
     int micIndex = ui->micComboBox->findData(micValue);
     if (micIndex != -1) {
@@ -803,10 +815,10 @@ void SettingsDialog::LoadValuesFromConfig() {
         toml::find_or<bool>(data, "Debug", "CollectShader", false));
     ui->enableLoggingCheckBox->setChecked(toml::find_or<bool>(data, "Debug", "logEnabled", true));
 
-    ui->GenAudioComboBox->setCurrentText(QString::fromStdString(
-        toml::find_or<std::string>(data, "General", "mainOutputDevice", "")));
+    ui->GenAudioComboBox->setCurrentText(
+        QString::fromStdString(toml::find_or<std::string>(data, "Audio", "mainOutputDevice", "")));
     ui->DsAudioComboBox->setCurrentText(QString::fromStdString(
-        toml::find_or<std::string>(data, "General", "padSpkOutputDevice", "")));
+        toml::find_or<std::string>(data, "Audio", "padSpkOutputDevice", "")));
 
     QString chooseHomeTab = m_gui_settings->GetValue(gui::gen_homeTab).toString();
     QString translatedText = chooseHomeTabMap.key(chooseHomeTab);
