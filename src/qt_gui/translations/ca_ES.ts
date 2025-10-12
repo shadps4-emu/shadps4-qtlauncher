@@ -723,7 +723,7 @@
     </message>
     <message>
       <source>Directory to install emulator versions</source>
-      <translation type="unfinished">Directory to install emulator versions</translation>
+      <translation>Carpeta per instal·lar les versions de l'emulador</translation>
     </message>
   </context>
   <context>
@@ -2501,7 +2501,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Vulkan Validation (Requires Vulkan SDK)</source>
-      <translation type="unfinished">Vulkan Validation (Requires Vulkan SDK)</translation>
+      <translation>Validació Vulkan (Requereix el SDK de Vulkan)</translation>
     </message>
     <message>
       <source>Validation Layers</source>
@@ -2655,7 +2655,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>A folder with that name already exists.</source>
-      <translation type="unfinished">A folder with that name already exists.</translation>
+      <translation>Ja existeix una carpeta amb aquest nom.</translation>
     </message>
     <message>
       <source>Failed to create folder.</source>
@@ -2683,7 +2683,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Failed to determine the folder path.</source>
-      <translation type="unfinished">Failed to determine the folder path.</translation>
+      <translation>Error en determinar la ruta de la carpeta.</translation>
     </message>
     <message>
       <source>Delete version</source>
@@ -2725,7 +2725,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>No files available for this platform.</source>
-      <translation type="unfinished">No files available for this platform.</translation>
+      <translation>No hi ha fitxers disponibles per aquesta plataforma.</translation>
     </message>
     <message>
       <source>Downloading %1 , please wait...</source>
@@ -2741,7 +2741,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Failed to create zip extraction script</source>
-      <translation type="unfinished">Failed to create zip extraction script</translation>
+      <translation>Error en extreure el fitxer zip</translation>
     </message>
     <message>
       <source>The GitHub API response is not a valid JSON array.</source>
@@ -2803,7 +2803,7 @@ Would you like to download it now?</translation>
     </message>
     <message>
       <source>Network error while fetching changelog</source>
-      <translation type="unfinished">Network error while fetching changelog</translation>
+      <translation>Error de xarxa durant la recuperació del registre de canvis</translation>
     </message>
     <message>
       <source>Changes</source>
