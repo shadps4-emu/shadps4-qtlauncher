@@ -1284,7 +1284,7 @@ tr("No emulator version was selected.\nThe Version Manager menu will then open.\
 #elif defined(Q_OS_LINUX)
     exeName = "/Shadps4-sdl.AppImage";
 #elif defined(Q_OS_MACOS)
-    exeName = "/shadPS4";
+    exeName = "/shadps4";
 #endif
     QString exe = selectedVersion + exeName;
     QFileInfo fileInfo(exe);
@@ -1326,7 +1326,7 @@ void MainWindow::RestartEmulator() {
 #elif defined(Q_OS_LINUX)
     exeName = "/Shadps4-sdl.AppImage";
 #elif defined(Q_OS_MACOS)
-    exeName = "/shadPS4";
+    exeName = "/shadps4";
 #endif
 
     QString exe = m_gui_settings->GetValue(gui::vm_versionSelected).toString() + exeName;
