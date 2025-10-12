@@ -295,6 +295,16 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
                     }
                     emit CompatibilityChanged();
                 });
+
+        // Audio Device (general)
+        connect(
+            ui->GenAudioComboBox, &QComboBox::currentTextChanged, this,
+            [this](const QString& device) { Config::setMainOutputDevice(device.toStdString()); });
+
+        // Audio Device (DS4 speaker)
+        connect(
+            ui->DsAudioComboBox, &QComboBox::currentTextChanged, this,
+            [this](const QString& device) { Config::setPadSpkOutputDevice(device.toStdString()); });
     }
 
     // GUI TAB
@@ -595,8 +605,10 @@ void SettingsDialog::closeEvent(QCloseEvent* event) {
         Polling.waitForFinished();
 
         SDL_QuitSubSystem(SDL_INIT_EVENTS);
-        SDL_QuitSubSystem(SDL_INIT_AUDIO);
-        SDL_Quit();
+
+        // This breaks the microphone selection
+        // SDL_QuitSubSystem(SDL_INIT_AUDIO);
+        // SDL_Quit();
     }
     QDialog::closeEvent(event);
 }
@@ -702,7 +714,7 @@ void SettingsDialog::LoadValuesFromConfig() {
         languageIndexes.size());
 
     std::string micDevice =
-        toml::find_or<std::string>(data, "Input", "micDevice", "Default Device");
+        toml::find_or<std::string>(data, "Audio", "micDevice", "Default Device");
     QString micValue = QString::fromStdString(micDevice);
     int micIndex = ui->micComboBox->findData(micValue);
     if (micIndex != -1) {
@@ -803,10 +815,10 @@ void SettingsDialog::LoadValuesFromConfig() {
         toml::find_or<bool>(data, "Debug", "CollectShader", false));
     ui->enableLoggingCheckBox->setChecked(toml::find_or<bool>(data, "Debug", "logEnabled", true));
 
-    ui->GenAudioComboBox->setCurrentText(QString::fromStdString(
-        toml::find_or<std::string>(data, "General", "mainOutputDevice", "")));
+    ui->GenAudioComboBox->setCurrentText(
+        QString::fromStdString(toml::find_or<std::string>(data, "Audio", "mainOutputDevice", "")));
     ui->DsAudioComboBox->setCurrentText(QString::fromStdString(
-        toml::find_or<std::string>(data, "General", "padSpkOutputDevice", "")));
+        toml::find_or<std::string>(data, "Audio", "padSpkOutputDevice", "")));
 
     QString chooseHomeTab = m_gui_settings->GetValue(gui::gen_homeTab).toString();
     QString translatedText = chooseHomeTabMap.key(chooseHomeTab);
@@ -815,9 +827,9 @@ void SettingsDialog::LoadValuesFromConfig() {
     }
     ui->chooseHomeTabComboBox->setCurrentText(translatedText);
 
-    QStringList tabNames = {tr("General"), tr("GUI"),   tr("Graphics"),
-                            tr("User"),    tr("Input"), tr("Paths"),
-                            tr("Log"),     tr("Debug"), tr("Experimental")};
+    QStringList tabNames = {tr("General"), tr("Frontend"), tr("Graphics"),
+                            tr("User"),    tr("Input"),    tr("Paths"),
+                            tr("Log"),     tr("Debug"),    tr("Experimental")};
     int indexTab = tabNames.indexOf(translatedText);
     if (indexTab == -1 || !ui->tabWidgetSettings->isTabVisible(indexTab) || is_newly_created)
         indexTab = 0;
@@ -913,7 +925,7 @@ void SettingsDialog::updateNoteTextEdit(const QString& elementName) {
         text = tr("Log Filter:\\nFilters the log to only print specific information.\\nExamples: \"Core:Trace\" \"Lib.Pad:Debug Common.Filesystem:Error\" \"*:Critical\"\\nLevels: Trace, Debug, Info, Warning, Error, Critical - in this order, a specific level silences all levels preceding it in the list and logs every level after it.");
     #ifdef ENABLE_UPDATER
     } else if (elementName == "updaterGroupBox") {
-        text = tr("Update:\\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.");
+        text = tr("GUI Updates:\\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\\n\\n*This update applies only to the Qt user interface. To update the emulator core, please use the 'Version Manager' menu.");
 #endif
     } else if (elementName == "GUIBackgroundImageGroupBox") {
         text = tr("Background Image:\\nControl the opacity of the game background image.");
@@ -1363,6 +1375,7 @@ void SettingsDialog::getPhysicalDevices() {
     std::vector<VkPhysicalDevice> devices(deviceCount);
     vkEnumeratePhysicalDevices(instance, &deviceCount, devices.data());
 
+    m_physical_devices.clear();
     for (uint32_t i = 0; i < deviceCount; ++i) {
         VkPhysicalDeviceProperties props;
         vkGetPhysicalDeviceProperties(devices[i], &props);

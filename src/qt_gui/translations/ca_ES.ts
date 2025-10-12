@@ -284,10 +284,6 @@
       <translation>La teva versió ja és la més actualitzada!</translation>
     </message>
     <message>
-      <source>Update Available</source>
-      <translation>Hi ha una actualització disponible</translation>
-    </message>
-    <message>
       <source>Update Channel</source>
       <translation>Actualitza el canal</translation>
     </message>
@@ -350,6 +346,14 @@
     <message>
       <source>Failed to create the update script file</source>
       <translation>Error en crear el fitxer de script d'actualització</translation>
+    </message>
+    <message>
+      <source>Auto Updater - Interface</source>
+      <translation>Actualització automàtica - Interfície</translation>
+    </message>
+    <message>
+      <source>Update Available (Interface)</source>
+      <translation>Hi ha una actualització disponible (Interfície)</translation>
     </message>
   </context>
   <context>
@@ -716,6 +720,10 @@
     <message>
       <source>Directory to install DLC</source>
       <translation>Carpeta per instal·lar DLC</translation>
+    </message>
+    <message>
+      <source>Directory to install emulator versions</source>
+      <translation type="unfinished">Directory to install emulator versions</translation>
     </message>
   </context>
   <context>
@@ -1688,6 +1696,26 @@ Please change shadPS4 path in settings.</source>
       <translation>no s'ha trobat ShadPS4!
 Canvia, si us plau, la ruta de ShadPS4 a configuració.</translation>
     </message>
+    <message>
+      <source>Version Manager</source>
+      <translation>Administrador de la versió</translation>
+    </message>
+    <message>
+      <source>No Version Selected</source>
+      <translation>No hi ha cap versió seleccionada</translation>
+    </message>
+    <message>
+      <source>No emulator version was selected.
+The Version Manager menu will then open.
+Select an emulator version from the right panel.</source>
+      <translation type="unfinished">No emulator version was selected.
+The Version Manager menu will then open.
+Select an emulator version from the right panel.</translation>
+    </message>
+    <message>
+      <source>No version selected</source>
+      <translation>No hi ha cap versió seleccionada</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -1850,10 +1878,6 @@ Canvia, si us plau, la ruta de ShadPS4 a configuració.</translation>
     <message>
       <source>Enable Vulkan Validation Layers</source>
       <translation>Activa les capes de validació de Vulkan</translation>
-    </message>
-    <message>
-      <source>Enable Vulkan Synchronization Validation</source>
-      <translation>Activa la validació de sincronització de Vulkan</translation>
     </message>
     <message>
       <source>Enable RenderDoc Debugging</source>
@@ -2436,24 +2460,12 @@ Canvia, si us plau, la ruta de ShadPS4 a configuració.</translation>
       <translation>Activa les capes de validació de Vulkan:\nActiva un sistema que valida l'estat del renderitzador de Vulkan i registra informació sobre el seu ús intern.\nAixò redueix el rendiment i pot canviar el comportament de l'emulador.\nCal tenir el SDK de Vulkan perquè funcioni.</translation>
     </message>
     <message>
-      <source>Enable Vulkan Synchronization Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation>Activa la validació de sincronització de Vulkan:\nActiva un sistema que valida la sincronització de Vulkan en les tasques de renderització.\nAixò pot reduir el rendiment i pot canviar el comportament de l'emulació.\nCal tenir el SDK de Vulkan perquè funcioni.</translation>
-    </message>
-    <message>
       <source>Audio Device (general)</source>
       <translation>Dispositiu d'àudio (general)</translation>
     </message>
     <message>
       <source>Audio Device (DS4 speaker)</source>
       <translation>Dispositiu d'àudio (altaveu DS4)</translation>
-    </message>
-    <message>
-      <source>shadPS4 Path</source>
-      <translation>Camí de shadPS4</translation>
-    </message>
-    <message>
-      <source>Select the shadPS4 executable</source>
-      <translation>Selecciona el fitxer executable de shadPS4</translation>
     </message>
     <message>
       <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
@@ -2487,6 +2499,38 @@ Canvia, si us plau, la ruta de ShadPS4 a configuració.</translation>
       <source>Browse:\nBrowse for a folder to set as the sysmodules path.</source>
       <translation>Cercar:\nCerca per una carpeta per establir com la ruta de sysmodules.</translation>
     </message>
+    <message>
+      <source>Vulkan Validation (Requires Vulkan SDK)</source>
+      <translation type="unfinished">Vulkan Validation (Requires Vulkan SDK)</translation>
+    </message>
+    <message>
+      <source>Validation Layers</source>
+      <translation>Capes de validació</translation>
+    </message>
+    <message>
+      <source>Enable Core Validation</source>
+      <translation>Activa la validació del nucli</translation>
+    </message>
+    <message>
+      <source>Enable Sync Validation</source>
+      <translation>Activa la sincronització del nucli</translation>
+    </message>
+    <message>
+      <source>Enable GPU-Assisted Validation</source>
+      <translation>Activa la validació d'assistència de targeta gràfica</translation>
+    </message>
+    <message>
+      <source>Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
+      <translation type="unfinished">Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+    </message>
+    <message>
+      <source>Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
+      <translation type="unfinished">Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+    </message>
+    <message>
+      <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
+      <translation type="unfinished">Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+    </message>
   </context>
   <context>
     <name>TrophyViewer</name>
@@ -2513,6 +2557,285 @@ Canvia, si us plau, la ruta de ShadPS4 a configuració.</translation>
     <message>
       <source>Show Hidden Trophies</source>
       <translation>Mostra els trofeus ocults</translation>
+    </message>
+  </context>
+  <context>
+    <name>VersionDialog</name>
+    <message>
+      <source>Version Manager</source>
+      <translation>Administrador de la versió</translation>
+    </message>
+    <message>
+      <source>Path to save versions</source>
+      <translation>Ruta a les versions desades</translation>
+    </message>
+    <message>
+      <source>Browse</source>
+      <translation>Cerca</translation>
+    </message>
+    <message>
+      <source>Installed</source>
+      <translation>Instal·lat</translation>
+    </message>
+    <message>
+      <source>Selected</source>
+      <translation>Seleccionat</translation>
+    </message>
+    <message>
+      <source>Version</source>
+      <translation>Versió</translation>
+    </message>
+    <message>
+      <source>Codename</source>
+      <translation>Nom en clau</translation>
+    </message>
+    <message>
+      <source>Date</source>
+      <translation>Data</translation>
+    </message>
+    <message>
+      <source>Add Custom</source>
+      <translation>Afegeix personalitzat</translation>
+    </message>
+    <message>
+      <source>Delete</source>
+      <translation>Esborra</translation>
+    </message>
+    <message>
+      <source>Refresh List</source>
+      <translation>Actualitza la llista</translation>
+    </message>
+    <message>
+      <source>Download</source>
+      <translation>Descarrega</translation>
+    </message>
+    <message>
+      <source>Check for Pre-release updates at startup</source>
+      <translation type="unfinished">Check for Pre-release updates at startup</translation>
+    </message>
+    <message>
+      <source>Always show Pre-release changelog</source>
+      <translation>Mostra sempre el registre de canvis de les actualitzacions prèvies</translation>
+    </message>
+    <message>
+      <source>Check for Pre-release Updates</source>
+      <translation>Comprovar si hi ha actualitzacions prèvies</translation>
+    </message>
+    <message>
+      <source>Select the folder where the emulator versions will be installed</source>
+      <translation type="unfinished">Select the folder where the emulator versions will be installed</translation>
+    </message>
+    <message>
+      <source>Select executable</source>
+      <translation>Selecciona l'executable</translation>
+    </message>
+    <message>
+      <source>Executable (*.exe)</source>
+      <translation>Executable (*.*)</translation>
+    </message>
+    <message>
+      <source>Executable (*.AppImage)</source>
+      <translation>Executable (*.AppImage)</translation>
+    </message>
+    <message>
+      <source>Executable (*.*)</source>
+      <translation>Executable (*.*)</translation>
+    </message>
+    <message>
+      <source>Version name</source>
+      <translation>Nom de la versió</translation>
+    </message>
+    <message>
+      <source>Enter the name of this version as it appears in the list.</source>
+      <translation type="unfinished">Enter the name of this version as it appears in the list.</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation>Error</translation>
+    </message>
+    <message>
+      <source>A folder with that name already exists.</source>
+      <translation type="unfinished">A folder with that name already exists.</translation>
+    </message>
+    <message>
+      <source>Failed to create folder.</source>
+      <translation>Error en crear la carpeta.</translation>
+    </message>
+    <message>
+      <source>Failed to copy executable.</source>
+      <translation>Error en copiar l'executable.</translation>
+    </message>
+    <message>
+      <source>Success</source>
+      <translation>Realitzat amb èxit</translation>
+    </message>
+    <message>
+      <source>Version added successfully.</source>
+      <translation>S'ha afegit la versió correctament.</translation>
+    </message>
+    <message>
+      <source>Notice</source>
+      <translation>Notícia</translation>
+    </message>
+    <message>
+      <source>No version selected from the Installed list.</source>
+      <translation type="unfinished">No version selected from the Installed list.</translation>
+    </message>
+    <message>
+      <source>Failed to determine the folder path.</source>
+      <translation type="unfinished">Failed to determine the folder path.</translation>
+    </message>
+    <message>
+      <source>Delete version</source>
+      <translation>Elimina la versió</translation>
+    </message>
+    <message>
+      <source>Do you want to delete the version</source>
+      <translation>Estàs segur que vols esborrar aquesta versió</translation>
+    </message>
+    <message>
+      <source>Failed to delete folder.</source>
+      <translation>Error en eliminar la carpeta.</translation>
+    </message>
+    <message>
+      <source>Version list update</source>
+      <translation>Actualitza la llista de versions</translation>
+    </message>
+    <message>
+      <source>No news, the version list is already updated.</source>
+      <translation type="unfinished">No news, the version list is already updated.</translation>
+    </message>
+    <message>
+      <source>The latest versions have been added to the list for download.</source>
+      <translation type="unfinished">The latest versions have been added to the list for download.</translation>
+    </message>
+    <message>
+      <source>Error accessing GitHub API</source>
+      <translation>Error en accedir a la API de GitHub</translation>
+    </message>
+    <message>
+      <source>First you need to choose a location to save the versions in
+&apos;Path to save versions&apos;</source>
+      <translation type="unfinished">First you need to choose a location to save the versions in
+&apos;Path to save versions&apos;</translation>
+    </message>
+    <message>
+      <source>Do you want to download the version</source>
+      <translation>Estàs segur que vols descarregar aquesta versió</translation>
+    </message>
+    <message>
+      <source>No files available for this platform.</source>
+      <translation type="unfinished">No files available for this platform.</translation>
+    </message>
+    <message>
+      <source>Downloading %1 , please wait...</source>
+      <translation>Descarregant %1, si us plau, espera...</translation>
+    </message>
+    <message>
+      <source>Could not save file.</source>
+      <translation>No s'ha pogut desar el fitxer.</translation>
+    </message>
+    <message>
+      <source>Version %1 has been downloaded and selected.</source>
+      <translation type="unfinished">Version %1 has been downloaded and selected.</translation>
+    </message>
+    <message>
+      <source>Failed to create zip extraction script</source>
+      <translation type="unfinished">Failed to create zip extraction script</translation>
+    </message>
+    <message>
+      <source>The GitHub API response is not a valid JSON array.</source>
+      <translation type="unfinished">The GitHub API response is not a valid JSON array.</translation>
+    </message>
+    <message>
+      <source>Unable to get hash of latest pre-release</source>
+      <translation type="unfinished">Unable to get hash of latest pre-release</translation>
+    </message>
+    <message>
+      <source>No pre-release found</source>
+      <translation>No s'han trobat llançaments previs</translation>
+    </message>
+    <message>
+      <source>You don&apos;t have any pre-release installed yet.
+Would you like to download it now?</source>
+      <translation type="unfinished">You don&apos;t have any pre-release installed yet.
+Would you like to download it now?</translation>
+    </message>
+    <message>
+      <source>Auto Updater - Emulator</source>
+      <translation>Actualització automàtica - Emulador</translation>
+    </message>
+    <message>
+      <source>You already have the latest pre-release version.</source>
+      <translation type="unfinished">You already have the latest pre-release version.</translation>
+    </message>
+    <message>
+      <source>Update Available (Emulator)</source>
+      <translation>Hi ha una actualització disponible (Emulador)</translation>
+    </message>
+    <message>
+      <source>Current Version</source>
+      <translation>Versió actual</translation>
+    </message>
+    <message>
+      <source>Latest Version</source>
+      <translation>Última versió</translation>
+    </message>
+    <message>
+      <source>Do you want to update?</source>
+      <translation>Estàs segur que vols actualitzar?</translation>
+    </message>
+    <message>
+      <source>Update</source>
+      <translation>Actualitza</translation>
+    </message>
+    <message>
+      <source>No</source>
+      <translation>No</translation>
+    </message>
+    <message>
+      <source>Show Changelog</source>
+      <translation>Mostra el registre de canvis</translation>
+    </message>
+    <message>
+      <source>Hide Changelog</source>
+      <translation>Oculta el registre de canvis</translation>
+    </message>
+    <message>
+      <source>Network error while fetching changelog</source>
+      <translation type="unfinished">Network error while fetching changelog</translation>
+    </message>
+    <message>
+      <source>Changes</source>
+      <translation>Canvis</translation>
+    </message>
+    <message>
+      <source>No download URL found for the specified asset.</source>
+      <translation type="unfinished">No download URL found for the specified asset.</translation>
+    </message>
+    <message>
+      <source>Downloading Pre‑release, please wait...</source>
+      <translation type="unfinished">Downloading Pre‑release, please wait...</translation>
+    </message>
+    <message>
+      <source>Network error while downloading</source>
+      <translation>Error de xarxa durant la descarrega</translation>
+    </message>
+    <message>
+      <source>Failed to save download file</source>
+      <translation>Error en desar el fitxer descarregat</translation>
+    </message>
+    <message>
+      <source>Complete installation</source>
+      <translation>Completa la instal·lació</translation>
+    </message>
+    <message>
+      <source>Pre-release updated successfully</source>
+      <translation>S'ha instal·lat una actualització prèvia correctament</translation>
+    </message>
+    <message>
+      <source>Failed to create the update script file</source>
+      <translation type="unfinished">Failed to create the update script file</translation>
     </message>
   </context>
 </TS>

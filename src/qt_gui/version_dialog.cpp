@@ -52,7 +52,7 @@ VersionDialog::VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget
 
     ui->currentVersionPath->setText(m_gui_settings->GetValue(gui::vm_versionPath).toString());
 
-    LoadinstalledList();
+    LoadInstalledList();
 
     QStringList cachedVersions = LoadDownloadCache();
     if (!cachedVersions.isEmpty()) {
@@ -74,12 +74,12 @@ VersionDialog::VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget
             ui->currentVersionPath->setText(shad_folder_path_string);
             m_gui_settings->SetValue(gui::vm_versionPath, shad_folder_path_string);
             m_gui_settings->SetValue(gui::vm_versionSelected, "");
-            LoadinstalledList();
+            LoadInstalledList();
         }
     });
 
     connect(ui->checkChangesVersionButton, &QPushButton::clicked, this,
-            [this]() { LoadinstalledList(); });
+            [this]() { LoadInstalledList(); });
 
     connect(ui->addCustomVersionButton, &QPushButton::clicked, this, [this]() {
         QString exePath;
@@ -131,14 +131,15 @@ VersionDialog::VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget
         }
 
         QMessageBox::information(this, tr("Success"), tr("Version added successfully."));
-        LoadinstalledList();
+        LoadInstalledList();
     });
 
     connect(ui->deleteVersionButton, &QPushButton::clicked, this, [this]() {
         QTreeWidgetItem* selectedItem = ui->installedTreeWidget->currentItem();
         if (!selectedItem) {
-            QMessageBox::warning(this, tr("Notice"),
-                                 tr("No version selected from the Installed list."));
+            QMessageBox::warning(
+                this, tr("Error"),
+                tr("No version selected. Please choose one from the list to delete."));
             return;
         }
 
@@ -163,7 +164,7 @@ VersionDialog::VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget
                     return;
                 }
             }
-            LoadinstalledList();
+            LoadInstalledList();
         }
     });
 
@@ -340,7 +341,7 @@ tr("First you need to choose a location to save the versions in\n'Path to save v
 
             { // Menssage yes/no
                 QMessageBox::StandardButton reply;
-                reply = QMessageBox::question(this, tr("Download"),
+                reply = QMessageBox::question(this, tr("Confirm Download"),
                                               tr("Do you want to download the version") +
                                                   QString(": %1 ?").arg(versionName),
                                               QMessageBox::Yes | QMessageBox::No);
@@ -407,6 +408,8 @@ tr("First you need to choose a location to save the versions in\n'Path to save v
                 progressDialog->setWindowTitle(
                     tr("Downloading %1 , please wait...").arg(versionName));
                 progressDialog->setFixedSize(400, 80);
+                progressDialog->setWindowFlags(progressDialog->windowFlags() &
+                                               ~Qt::WindowCloseButtonHint);
                 QVBoxLayout* layout = new QVBoxLayout(progressDialog);
                 QProgressBar* progressBar = new QProgressBar(progressDialog);
                 progressBar->setRange(0, 100);
@@ -522,13 +525,12 @@ tr("First you need to choose a location to save the versions in\n'Path to save v
                                     m_gui_settings->SetValue(gui::vm_versionSelected, fullPath);
 
                                     QMessageBox::information(
-                                        this, tr("Download"),
+                                        this, tr("Confirm Download"),
                                         tr("Version %1 has been downloaded and selected.")
                                             .arg(versionName));
 
-                                    VersionDialog::LoadinstalledList();
+                                    LoadInstalledList();
                                 });
-
                         } else {
                             QMessageBox::warning(this, tr("Error"),
                                                  tr("Failed to create zip extraction script") +
@@ -540,7 +542,7 @@ tr("First you need to choose a location to save the versions in\n'Path to save v
         });
 }
 
-void VersionDialog::LoadinstalledList() {
+void VersionDialog::LoadInstalledList() {
     QString path = m_gui_settings->GetValue(gui::vm_versionPath).toString();
     QDir dir(path);
     if (!dir.exists() || path.isEmpty())
@@ -1008,6 +1010,7 @@ void VersionDialog::showDownloadDialog(const QString& tagName, const QString& do
 
     dlg->setLayout(lay);
     dlg->resize(400, 80);
+    dlg->setWindowFlags(dlg->windowFlags() & ~Qt::WindowCloseButtonHint);
     dlg->show();
 
     QNetworkRequest req(downloadUrl);
@@ -1114,18 +1117,17 @@ void VersionDialog::showDownloadDialog(const QString& tagName, const QString& do
                 dlg->close();
                 dlg->deleteLater();
 
-                // if (!QDir(destFolder).exists()) {
-                //     QMessageBox::critical(this, tr("Error"),
-                //                           tr("Extraction failure."));
-                //     return;
-                // }
+                if (!QDir(destFolder).exists()) {
+                    QMessageBox::critical(this, tr("Error"), tr("Extraction failure."));
+                    return;
+                }
 
                 m_gui_settings->SetValue(gui::vm_versionSelected, destFolder);
 
                 QMessageBox::information(this, tr("Complete installation"),
                                          tr("Pre-release updated successfully") + ":\n" + tagName);
 
-                LoadinstalledList();
+                LoadInstalledList();
             });
         } else {
             QMessageBox::warning(this, tr("Error"),

@@ -27,6 +27,8 @@ void load(const std::filesystem::path& path, bool is_game_specific = false);
 void save(const std::filesystem::path& path, bool is_game_specific = false);
 void resetGameSpecificValue(std::string entry);
 
+bool getGameRunning();
+void setGameRunning(bool running);
 int getVolumeSlider();
 void setVolumeSlider(int volumeValue, bool is_game_specific = false);
 std::string getTrophyKey();
@@ -101,11 +103,10 @@ double getTrophyNotificationDuration();
 void setTrophyNotificationDuration(double newTrophyNotificationDuration,
                                    bool is_game_specific = false);
 int getCursorHideTimeout();
-void setCursorHideTimeout(int newcursorHideTimeout);
 std::string getMainOutputDevice();
-void setMainOutputDevice(std::string device);
+void setMainOutputDevice(std::string device, bool is_game_specific = false);
 std::string getPadSpkOutputDevice();
-void setPadSpkOutputDevice(std::string device);
+void setPadSpkOutputDevice(std::string device, bool is_game_specific = false);
 std::string getMicDevice();
 void setCursorHideTimeout(int newcursorHideTimeout, bool is_game_specific = false);
 void setMicDevice(std::string device, bool is_game_specific = false);
