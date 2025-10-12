@@ -284,10 +284,6 @@
       <translation>Din version är redan den senaste!</translation>
     </message>
     <message>
-      <source>Update Available</source>
-      <translation>Uppdatering tillgänglig</translation>
-    </message>
-    <message>
       <source>Update Channel</source>
       <translation>Uppdateringskanal</translation>
     </message>
@@ -350,6 +346,14 @@
     <message>
       <source>Failed to create the update script file</source>
       <translation>Misslyckades med att skapa uppdateringsskriptfil</translation>
+    </message>
+    <message>
+      <source>Auto Updater - Interface</source>
+      <translation>Automatisk uppdaterare - Gränssnitt</translation>
+    </message>
+    <message>
+      <source>Update Available (Interface)</source>
+      <translation>Uppdatering tillgänglig (Gränssnitt)</translation>
     </message>
   </context>
   <context>
@@ -716,6 +720,10 @@
     <message>
       <source>Directory to install DLC</source>
       <translation>Katalog för att installera DLC</translation>
+    </message>
+    <message>
+      <source>Directory to install emulator versions</source>
+      <translation>Katalog för att installera emulatorversioner</translation>
     </message>
   </context>
   <context>
@@ -1688,6 +1696,26 @@ Please change shadPS4 path in settings.</source>
       <translation>shadPS4 hittades inte!
 Ändra sökvägen till shadPS4 i inställningarna.</translation>
     </message>
+    <message>
+      <source>Version Manager</source>
+      <translation>Versionshanterare</translation>
+    </message>
+    <message>
+      <source>No Version Selected</source>
+      <translation>Ingen version vald</translation>
+    </message>
+    <message>
+      <source>No emulator version was selected.
+The Version Manager menu will then open.
+Select an emulator version from the right panel.</source>
+      <translation>Ingen emulatorversion har valts.
+Menyn Versionshanterare kommer då att öppnas.
+Välj en emulatorversion från den högra panelen.</translation>
+    </message>
+    <message>
+      <source>No version selected</source>
+      <translation>Ingen version vald</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -1850,10 +1878,6 @@ Please change shadPS4 path in settings.</source>
     <message>
       <source>Enable Vulkan Validation Layers</source>
       <translation>Aktivera Vulkan Validation Layers</translation>
-    </message>
-    <message>
-      <source>Enable Vulkan Synchronization Validation</source>
-      <translation>Aktivera Vulkan Synchronization Validation</translation>
     </message>
     <message>
       <source>Enable RenderDoc Debugging</source>
@@ -2436,24 +2460,12 @@ Please change shadPS4 path in settings.</source>
       <translation>Aktivera Vulkan-valideringslager:\nAktiverar ett system som validerar tillståndet för Vulkan-renderaren och loggar information om dess interna status.\nDetta minskar prestandan och kan förändra emuleringens beteende.\nDu behöver Vulkan SDK för att detta ska fungera.</translation>
     </message>
     <message>
-      <source>Enable Vulkan Synchronization Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation>Aktivera Vulkan-synkroniseringsvalidering:\nAktiverar ett system som validerar tidpunkten för Vulkan-renderinguppgifter.\nDetta minskar prestandan och kan förändra emuleringens beteende.\nDu behöver Vulkan SDK för att detta ska fungera.</translation>
-    </message>
-    <message>
       <source>Audio Device (general)</source>
       <translation>Ljudenhet (allmän)</translation>
     </message>
     <message>
       <source>Audio Device (DS4 speaker)</source>
       <translation>Ljudenhet (DS4-högtalare)</translation>
-    </message>
-    <message>
-      <source>shadPS4 Path</source>
-      <translation>Sökväg för shadPS4</translation>
-    </message>
-    <message>
-      <source>Select the shadPS4 executable</source>
-      <translation>Välj körbar shadPS4-fil</translation>
     </message>
     <message>
       <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
@@ -2487,6 +2499,38 @@ Please change shadPS4 path in settings.</source>
       <source>Browse:\nBrowse for a folder to set as the sysmodules path.</source>
       <translation>Bläddra:\nBläddra efter en mapp som ska anges som sökvägen för sysmodules.</translation>
     </message>
+    <message>
+      <source>Vulkan Validation (Requires Vulkan SDK)</source>
+      <translation>Vulkan-validering (kräver Vulkan SDK)</translation>
+    </message>
+    <message>
+      <source>Validation Layers</source>
+      <translation>Valideringslager</translation>
+    </message>
+    <message>
+      <source>Enable Core Validation</source>
+      <translation>Aktivera kärnvalidering</translation>
+    </message>
+    <message>
+      <source>Enable Sync Validation</source>
+      <translation>Aktivera synkroniseringsvalidering</translation>
+    </message>
+    <message>
+      <source>Enable GPU-Assisted Validation</source>
+      <translation>Aktivera GPU-assisterad validering</translation>
+    </message>
+    <message>
+      <source>Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
+      <translation>Aktivera synkroniseringsvalidering:\nAktiverar ett system som validerar tider för Vulkan-renderinguppgifter.\nDetta minskar prestandan och kan förändra emuleringens beteende.\nDu behöver Vulkan SDK för att detta ska fungera.</translation>
+    </message>
+    <message>
+      <source>Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
+      <translation>Aktivera kärnvalidering:\nAktiverar de viktigaste API-valideringsfunktionerna.\nDetta minskar prestandan och kan förändra emuleringens beteende.\nDu behöver Vulkan SDK för att detta ska fungera.</translation>
+    </message>
+    <message>
+      <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
+      <translation>Aktivera GPU-assisterad validering:\nInstrumenterar shaders med kod som validerar om de fungerar korrekt.\nDetta minskar prestandan och kan förändra emuleringens beteende.\nDu behöver Vulkan SDK för att detta ska fungera.</translation>
+    </message>
   </context>
   <context>
     <name>TrophyViewer</name>
@@ -2513,6 +2557,284 @@ Please change shadPS4 path in settings.</source>
     <message>
       <source>Show Hidden Trophies</source>
       <translation>Visa dolda troféer</translation>
+    </message>
+  </context>
+  <context>
+    <name>VersionDialog</name>
+    <message>
+      <source>Version Manager</source>
+      <translation>Versionshanterare</translation>
+    </message>
+    <message>
+      <source>Path to save versions</source>
+      <translation>Sökväg för att spara versioner</translation>
+    </message>
+    <message>
+      <source>Browse</source>
+      <translation>Bläddra</translation>
+    </message>
+    <message>
+      <source>Installed</source>
+      <translation>Installerad</translation>
+    </message>
+    <message>
+      <source>Selected</source>
+      <translation>Vald</translation>
+    </message>
+    <message>
+      <source>Version</source>
+      <translation>Version</translation>
+    </message>
+    <message>
+      <source>Codename</source>
+      <translation>Kodnamn</translation>
+    </message>
+    <message>
+      <source>Date</source>
+      <translation>Datum</translation>
+    </message>
+    <message>
+      <source>Add Custom</source>
+      <translation>Lägg till anpassad</translation>
+    </message>
+    <message>
+      <source>Delete</source>
+      <translation>Ta bort</translation>
+    </message>
+    <message>
+      <source>Refresh List</source>
+      <translation>Uppdatera lista</translation>
+    </message>
+    <message>
+      <source>Download</source>
+      <translation>Hämta ner</translation>
+    </message>
+    <message>
+      <source>Check for Pre-release updates at startup</source>
+      <translation>Kontrollera om det finns förhandsutgivna uppdateringar vid start</translation>
+    </message>
+    <message>
+      <source>Always show Pre-release changelog</source>
+      <translation>Visar alltid ändringslogg för förhandsutgåva</translation>
+    </message>
+    <message>
+      <source>Check for Pre-release Updates</source>
+      <translation>Leta efter förhandsutgivna uppdateringar</translation>
+    </message>
+    <message>
+      <source>Select the folder where the emulator versions will be installed</source>
+      <translation>Välj den mapp där emulatorversioner ska installeras</translation>
+    </message>
+    <message>
+      <source>Select executable</source>
+      <translation>Välj körbar fil</translation>
+    </message>
+    <message>
+      <source>Executable (*.exe)</source>
+      <translation>Körbar fil (*.exe)</translation>
+    </message>
+    <message>
+      <source>Executable (*.AppImage)</source>
+      <translation>Körbar fil (*.AppImage)</translation>
+    </message>
+    <message>
+      <source>Executable (*.*)</source>
+      <translation>Alla filer (*.*)</translation>
+    </message>
+    <message>
+      <source>Version name</source>
+      <translation>Versionsnamn</translation>
+    </message>
+    <message>
+      <source>Enter the name of this version as it appears in the list.</source>
+      <translation>Ange namnet för denna version som den visas i listan.</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation>Fel</translation>
+    </message>
+    <message>
+      <source>A folder with that name already exists.</source>
+      <translation>En mapp med det namnet finns redan.</translation>
+    </message>
+    <message>
+      <source>Failed to create folder.</source>
+      <translation>Misslyckades med att skapa mapp.</translation>
+    </message>
+    <message>
+      <source>Failed to copy executable.</source>
+      <translation>Misslyckades med att kopiera körbar fil.</translation>
+    </message>
+    <message>
+      <source>Success</source>
+      <translation>Lyckades</translation>
+    </message>
+    <message>
+      <source>Version added successfully.</source>
+      <translation>Versionen lades till.</translation>
+    </message>
+    <message>
+      <source>Notice</source>
+      <translation>Observera</translation>
+    </message>
+    <message>
+      <source>No version selected from the Installed list.</source>
+      <translation>Ingen version har valts från listan över installerade versioner.</translation>
+    </message>
+    <message>
+      <source>Failed to determine the folder path.</source>
+      <translation>Misslyckades med att fastställa mappsökvägen.</translation>
+    </message>
+    <message>
+      <source>Delete version</source>
+      <translation>Ta bort version</translation>
+    </message>
+    <message>
+      <source>Do you want to delete the version</source>
+      <translation>Vill du ta bort versionen</translation>
+    </message>
+    <message>
+      <source>Failed to delete folder.</source>
+      <translation>Misslyckades med att ta bort mappen.</translation>
+    </message>
+    <message>
+      <source>Version list update</source>
+      <translation>Versionslistan uppdaterad</translation>
+    </message>
+    <message>
+      <source>No news, the version list is already updated.</source>
+      <translation>Inga nyheter. Versionslistan är redan uppdaterad.</translation>
+    </message>
+    <message>
+      <source>The latest versions have been added to the list for download.</source>
+      <translation>De senaste versionerna har lagts till i listan för hämtningar.</translation>
+    </message>
+    <message>
+      <source>Error accessing GitHub API</source>
+      <translation>Fel vid åtkomst till GitHubs API</translation>
+    </message>
+    <message>
+      <source>First you need to choose a location to save the versions in
+&apos;Path to save versions&apos;</source>
+      <translation>Först måste du välja en plats att spara versionerna på &apos;Sökväg för att spara versioner&apos;</translation>
+    </message>
+    <message>
+      <source>Do you want to download the version</source>
+      <translation>Vill du hämta ner versionen</translation>
+    </message>
+    <message>
+      <source>No files available for this platform.</source>
+      <translation>Inga filer tillgängliga för denna plattform.</translation>
+    </message>
+    <message>
+      <source>Downloading %1 , please wait...</source>
+      <translation>Hämtar ner %1, vänta...</translation>
+    </message>
+    <message>
+      <source>Could not save file.</source>
+      <translation>Kunde inte spara filen.</translation>
+    </message>
+    <message>
+      <source>Version %1 has been downloaded and selected.</source>
+      <translation>Version %1 har hämtats ner och valts.</translation>
+    </message>
+    <message>
+      <source>Failed to create zip extraction script</source>
+      <translation>Misslyckades med att skapa skript för zip-extrahering</translation>
+    </message>
+    <message>
+      <source>The GitHub API response is not a valid JSON array.</source>
+      <translation>GitHub API-svaret är inte en giltig JSON-array.</translation>
+    </message>
+    <message>
+      <source>Unable to get hash of latest pre-release</source>
+      <translation>Kunde inte få kontrollsumma av senaste förutgåvan</translation>
+    </message>
+    <message>
+      <source>No pre-release found</source>
+      <translation>Inga förutgåvor hittades</translation>
+    </message>
+    <message>
+      <source>You don&apos;t have any pre-release installed yet.
+Would you like to download it now?</source>
+      <translation>Du har ingen förutgåva installerad ännu.
+Vill du hämta ner den nu?</translation>
+    </message>
+    <message>
+      <source>Auto Updater - Emulator</source>
+      <translation>Automatisk uppdaterare - Emulator</translation>
+    </message>
+    <message>
+      <source>You already have the latest pre-release version.</source>
+      <translation>Du har redan den senaste förutgåvan.</translation>
+    </message>
+    <message>
+      <source>Update Available (Emulator)</source>
+      <translation>Uppdatering tillgänglig (Emulator)</translation>
+    </message>
+    <message>
+      <source>Current Version</source>
+      <translation>Aktuell version</translation>
+    </message>
+    <message>
+      <source>Latest Version</source>
+      <translation>Senaste version</translation>
+    </message>
+    <message>
+      <source>Do you want to update?</source>
+      <translation>Vill du uppdatera?</translation>
+    </message>
+    <message>
+      <source>Update</source>
+      <translation>Uppdatera</translation>
+    </message>
+    <message>
+      <source>No</source>
+      <translation>Nej</translation>
+    </message>
+    <message>
+      <source>Show Changelog</source>
+      <translation>Visa ändringslogg</translation>
+    </message>
+    <message>
+      <source>Hide Changelog</source>
+      <translation>Dölj ändringslogg</translation>
+    </message>
+    <message>
+      <source>Network error while fetching changelog</source>
+      <translation>Nätverksfel vid hämtning av ändringslogg</translation>
+    </message>
+    <message>
+      <source>Changes</source>
+      <translation>Ändringar</translation>
+    </message>
+    <message>
+      <source>No download URL found for the specified asset.</source>
+      <translation>Ingen hämtnings-URL hittades för angiven tillgång.</translation>
+    </message>
+    <message>
+      <source>Downloading Pre‑release, please wait...</source>
+      <translation>Hämtar ner förutgåva, vänta...</translation>
+    </message>
+    <message>
+      <source>Network error while downloading</source>
+      <translation>Nätverksfel vid hämtning</translation>
+    </message>
+    <message>
+      <source>Failed to save download file</source>
+      <translation>Misslyckades med att spara hämtad fil</translation>
+    </message>
+    <message>
+      <source>Complete installation</source>
+      <translation>Installationen är färdig</translation>
+    </message>
+    <message>
+      <source>Pre-release updated successfully</source>
+      <translation>Förutgåvan uppdaterades</translation>
+    </message>
+    <message>
+      <source>Failed to create the update script file</source>
+      <translation>Misslyckades med att skapa uppdateringsskriptfil</translation>
     </message>
   </context>
 </TS>
