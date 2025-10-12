@@ -2525,11 +2525,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation>Включить базовую проверку:\nВключает основные функции проверки API.\nЭто снизит производительность и, вероятно, изменит поведение эмуляции.\nДля работы этого вам понадобится Vulkan SDK.</translation>
+      <translation>Включить основную проверку:\nВключает основные функции проверки API.\nЭто снизит производительность и, вероятно, изменит поведение эмуляции.\nДля работы этого вам понадобится Vulkan SDK.</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation>Включить проверку с помощью GPU:\nИнструментирует шейдеры с кодом, который проверяет, правильно ли они себя ведут.\nЭто снизит производительность и, вероятно, изменит поведение эмуляции.\nДля работы этого вам понадобится Vulkan SDK.</translation>
+      <translation>Включить проверку с помощью GPU:\nСнабжает шейдеры кодом, который проверяет, правильно ли они себя ведут.\nЭто снизит производительность и, вероятно, изменит поведение эмуляции.\nДля работы этого вам понадобится Vulkan SDK.</translation>
     </message>
   </context>
   <context>
@@ -2757,7 +2757,7 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>You don&apos;t have any pre-release installed yet.
 Would you like to download it now?</source>
-      <translation>У вас ещё не&apos; установлена версия Pre-release.
+      <translation>У вас ещё не установлена версия pre-release.
 Желаете скачать её сейчас?</translation>
     </message>
     <message>
