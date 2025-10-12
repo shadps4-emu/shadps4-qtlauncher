@@ -82,10 +82,11 @@ static std::vector<QString> m_physical_devices;
 
 SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
                                std::shared_ptr<CompatibilityInfoClass> m_compat_info,
-                               QWidget* parent, bool is_running, bool is_specific,
-                               std::string gsc_serial)
+                               std::shared_ptr<IpcClient> ipc_client, QWidget* parent,
+                               bool is_running, bool is_specific, std::string gsc_serial)
     : QDialog(parent), ui(new Ui::SettingsDialog), m_gui_settings(std::move(gui_settings)),
-      is_game_running(is_running), is_game_specific(is_specific), gs_serial(gsc_serial) {
+      m_ipc_client(ipc_client), is_game_running(is_running), is_game_specific(is_specific),
+      gs_serial(gsc_serial) {
 
     ui->setupUi(this);
     ui->tabWidgetSettings->setUsesScrollButtons(false);
@@ -237,8 +238,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
     {
         connect(ui->horizontalVolumeSlider, &QSlider::valueChanged, this, [this](int value) {
             VolumeSliderChange(value);
-            Config::setVolumeSlider(value, is_game_specific);
-            // Libraries::AudioOut::AdjustVol();
+            m_ipc_client->adjustVol(value);
         });
 
 #ifdef ENABLE_UPDATER

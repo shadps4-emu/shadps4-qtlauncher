@@ -58,6 +58,11 @@ void IpcClient::toggleFullscreen() {
     writeLine("TOGGLE_FULLSCREEN");
 }
 
+void IpcClient::adjustVol(int gain) {
+    writeLine("ADJUST_VOLUME");
+    writeLine(QString::number(gain));
+}
+
 void IpcClient::sendMemoryPatches(std::string modNameStr, std::string offsetStr,
                                   std::string valueStr, std::string targetStr, std::string sizeStr,
                                   bool isOffset, bool littleEndian,

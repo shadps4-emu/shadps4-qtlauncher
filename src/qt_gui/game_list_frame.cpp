@@ -15,7 +15,6 @@ GameListFrame::GameListFrame(std::shared_ptr<gui_settings> gui_settings,
                              std::shared_ptr<IpcClient> ipc_client, QWidget* parent)
     : QTableWidget(parent), m_gui_settings(std::move(gui_settings)), m_game_info(game_info_get),
       m_compat_info(compat_info_get), m_ipc_client(ipc_client) {
-
     icon_size = m_gui_settings->GetValue(gui::gl_icon_size).toInt();
     last_favorite = "";
     this->setShowGrid(false);

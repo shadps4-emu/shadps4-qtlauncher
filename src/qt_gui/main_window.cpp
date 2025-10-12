@@ -436,8 +436,8 @@ void MainWindow::CreateConnects() {
             &MainWindow::StartGame);
 
     connect(ui->configureAct, &QAction::triggered, this, [this]() {
-        auto settingsDialog =
-            new SettingsDialog(m_gui_settings, m_compat_info, this, Config::getGameRunning());
+        auto settingsDialog = new SettingsDialog(m_gui_settings, m_compat_info, m_ipc_client, this,
+                                                 Config::getGameRunning());
 
         connect(settingsDialog, &SettingsDialog::LanguageChanged, this,
                 &MainWindow::OnLanguageChanged);
@@ -472,7 +472,7 @@ void MainWindow::CreateConnects() {
 
     connect(ui->settingsButton, &QPushButton::clicked, this, [this]() {
         auto settingsDialog =
-            new SettingsDialog(m_gui_settings, m_compat_info, this, Config::getGameRunning());
+            new SettingsDialog(m_gui_settings, m_compat_info, m_ipc_client, this, Config::getGameRunning();
 
         connect(settingsDialog, &SettingsDialog::LanguageChanged, this,
                 &MainWindow::OnLanguageChanged);
@@ -486,20 +486,19 @@ void MainWindow::CreateConnects() {
 
         connect(settingsDialog, &SettingsDialog::BackgroundOpacityChanged, this,
                 [this](int opacity) {
-                    m_gui_settings->SetValue(gui::gl_backgroundImageOpacity,
-                                             std::clamp(opacity, 0, 100));
-                    if (m_game_list_frame) {
-                        QTableWidgetItem* current = m_game_list_frame->GetCurrentItem();
-                        if (current) {
-                            m_game_list_frame->SetListBackgroundImage(current);
-                        }
-                    }
-                    if (m_game_grid_frame) {
-                        if (m_game_grid_frame->IsValidCellSelected()) {
-                            m_game_grid_frame->SetGridBackgroundImage(m_game_grid_frame->crtRow,
-                                                                      m_game_grid_frame->crtColumn);
-                        }
-                    }
+            m_gui_settings->SetValue(gui::gl_backgroundImageOpacity, std::clamp(opacity, 0, 100));
+            if (m_game_list_frame) {
+                QTableWidgetItem* current = m_game_list_frame->GetCurrentItem();
+                if (current) {
+                    m_game_list_frame->SetListBackgroundImage(current);
+                }
+            }
+            if (m_game_grid_frame) {
+                if (m_game_grid_frame->IsValidCellSelected()) {
+                    m_game_grid_frame->SetGridBackgroundImage(m_game_grid_frame->crtRow,
+                                                              m_game_grid_frame->crtColumn);
+                }
+            }
                 });
 
         settingsDialog->exec();

@@ -22,6 +22,7 @@ public:
     void stopEmulator();
     void restartEmulator();
     void toggleFullscreen();
+    void adjustVol(int gain);
     void sendMemoryPatches(std::string modNameStr, std::string offsetStr, std::string valueStr,
                            std::string targetStr, std::string sizeStr, bool isOffset,
                            bool littleEndian,
