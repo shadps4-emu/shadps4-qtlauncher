@@ -58,9 +58,30 @@ void IpcClient::toggleFullscreen() {
     writeLine("TOGGLE_FULLSCREEN");
 }
 
-void IpcClient::adjustVol(int gain) {
+void IpcClient::adjustVol(int volume, bool is_game_specific) {
     writeLine("ADJUST_VOLUME");
-    writeLine(QString::number(gain));
+    writeLine(QString::number(volume));
+    writeLine(is_game_specific ? "1" : "0");
+}
+
+void IpcClient::setFsr(bool enable) {
+    writeLine("SET_FSR");
+    writeLine(enable ? "1" : "0");
+}
+
+void IpcClient::setRcas(bool enable) {
+    writeLine("SET_RCAS");
+    writeLine(enable ? "1" : "0");
+}
+
+void IpcClient::setRcasAttenuation(int value) {
+    writeLine("SET_RCAS_ATTENUATION");
+    writeLine(QString::number(value));
+}
+
+void IpcClient::reloadInputs(std::string config) {
+    writeLine("RELOAD_INPUTS");
+    writeLine(QString::fromStdString(config));
 }
 
 void IpcClient::sendMemoryPatches(std::string modNameStr, std::string offsetStr,

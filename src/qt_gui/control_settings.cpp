@@ -11,10 +11,12 @@
 #include "input/controller.h"
 #include "ui_control_settings.h"
 
-ControlSettings::ControlSettings(std::shared_ptr<GameInfoClass> game_info_get, bool isGameRunning,
+ControlSettings::ControlSettings(std::shared_ptr<GameInfoClass> game_info_get,
+                                 std::shared_ptr<IpcClient> ipc_client, bool isGameRunning,
                                  std::string GameRunningSerial, QWidget* parent)
-    : QDialog(parent), m_game_info(game_info_get), GameRunning(isGameRunning),
-      RunningGameSerial(GameRunningSerial), ui(new Ui::ControlSettings) {
+    : QDialog(parent), m_game_info(game_info_get), m_ipc_client(ipc_client),
+      GameRunning(isGameRunning), RunningGameSerial(GameRunningSerial),
+      ui(new Ui::ControlSettings) {
 
     ui->setupUi(this);
 
@@ -344,8 +346,8 @@ void ControlSettings::SaveControllerConfig(bool CloseOnSave) {
     Config::save(Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "config.toml");
 
     if (GameRunning) {
-        // Config::GetUseUnifiedInputConfig() ? Input::ParseInputConfig("default")
-        //                                    : Input::ParseInputConfig(RunningGameSerial);
+        Config::GetUseUnifiedInputConfig() ? m_ipc_client->reloadInputs("default")
+                                           : m_ipc_client->reloadInputs(RunningGameSerial);
     }
 
     if (CloseOnSave)

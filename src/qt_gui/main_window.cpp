@@ -471,8 +471,8 @@ void MainWindow::CreateConnects() {
     });
 
     connect(ui->settingsButton, &QPushButton::clicked, this, [this]() {
-        auto settingsDialog =
-            new SettingsDialog(m_gui_settings, m_compat_info, m_ipc_client, this, Config::getGameRunning();
+        auto settingsDialog = new SettingsDialog(m_gui_settings, m_compat_info, m_ipc_client, this,
+                                                 Config::getGameRunning());
 
         connect(settingsDialog, &SettingsDialog::LanguageChanged, this,
                 &MainWindow::OnLanguageChanged);
@@ -505,14 +505,14 @@ void MainWindow::CreateConnects() {
     });
 
     connect(ui->controllerButton, &QPushButton::clicked, this, [this]() {
-        ControlSettings* remapWindow =
-            new ControlSettings(m_game_info, Config::getGameRunning(), runningGameSerial, this);
+        ControlSettings* remapWindow = new ControlSettings(
+            m_game_info, m_ipc_client, Config::getGameRunning(), runningGameSerial, this);
         remapWindow->exec();
     });
 
     connect(ui->keyboardButton, &QPushButton::clicked, this, [this]() {
-        auto kbmWindow =
-            new KBMSettings(m_game_info, Config::getGameRunning(), runningGameSerial, this);
+        auto kbmWindow = new KBMSettings(m_game_info, m_ipc_client, Config::getGameRunning(),
+                                         runningGameSerial, this);
         kbmWindow->exec();
     });
 
@@ -535,7 +535,7 @@ void MainWindow::CreateConnects() {
     });
 
     connect(ui->configureHotkeys, &QAction::triggered, this, [this]() {
-        auto hotkeyDialog = new Hotkeys(Config::getGameRunning(), this);
+        auto hotkeyDialog = new Hotkeys(m_ipc_client, Config::getGameRunning(), this);
         hotkeyDialog->exec();
     });
 
