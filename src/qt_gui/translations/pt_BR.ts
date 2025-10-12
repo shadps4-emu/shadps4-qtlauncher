@@ -349,11 +349,11 @@
     </message>
     <message>
       <source>Auto Updater - GUI</source>
-      <translation type="unfinished">Auto Updater - GUI</translation>
+      <translation>Atualização Automática - Interface (GUI)</translation>
     </message>
     <message>
       <source>Update Available - GUI</source>
-      <translation type="unfinished">Update Available - GUI</translation>
+      <translation>Atualização Disponível - Interface (GUI)</translation>
     </message>
   </context>
   <context>
@@ -1185,7 +1185,7 @@
     <name>IpcClient</name>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation type="unfinished">Could not find the emulator executable</translation>
+      <translation>Não foi possível encontrar o executável do emulador</translation>
     </message>
   </context>
   <context>
@@ -1702,7 +1702,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation type="unfinished">Could not find the emulator executable</translation>
+      <translation>Não foi possível encontrar o executável do emulador</translation>
     </message>
   </context>
   <context>
@@ -2473,7 +2473,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Enable Core Validation</source>
-      <translation type="unfinished">Enable Core Validation</translation>
+      <translation>Habilitar Camadas de Validação do Vulkan</translation>
     </message>
     <message>
       <source>Enable Sync Validation</source>
@@ -2489,7 +2489,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Habilitar Camadas de Validação do Vulkan:\nAtiva um sistema que valida o estado do renderizador Vulkan e registra informações sobre seu estado interno.\nIsso diminuirá o desempenho e provavelmente mudará o comportamento da emulação.</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
@@ -2497,19 +2497,19 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>GUI Language</source>
-      <translation type="unfinished">GUI Language</translation>
+      <translation>Idioma da Interface (GUI)</translation>
     </message>
     <message>
       <source>GUI Updates</source>
-      <translation type="unfinished">GUI Updates</translation>
+      <translation>Atualizações da interface (GUI)</translation>
     </message>
     <message>
       <source>DLC Path</source>
-      <translation type="unfinished">DLC Path</translation>
+      <translation>Pasta de DLC</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path</source>
-      <translation type="unfinished">PS4 Sysmodules Path</translation>
+      <translation>Pasta Sysmodules do PS4</translation>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
@@ -2811,19 +2811,19 @@ Deseja baixá-la agora?</translation>
     </message>
     <message>
       <source>Always Show Changelog</source>
-      <translation type="unfinished">Always Show Changelog</translation>
+      <translation>Sempre Mostrar o Histórico de Mudanças</translation>
     </message>
     <message>
       <source>No version selected. Please choose one from the list to delete.</source>
-      <translation type="unfinished">No version selected. Please choose one from the list to delete.</translation>
+      <translation>Nenhuma versão selecionada. Por favor, escolha uma da lista para excluir.</translation>
     </message>
     <message>
       <source>Confirm Download</source>
-      <translation type="unfinished">Confirm Download</translation>
+      <translation>Confirmação de Download</translation>
     </message>
     <message>
       <source>Extraction failure.</source>
-      <translation type="unfinished">Extraction failure.</translation>
+      <translation>Falha na extração.</translation>
     </message>
   </context>
 </TS>
