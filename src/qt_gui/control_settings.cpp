@@ -1022,11 +1022,7 @@ void ControlSettings::Cleanup() {
     SDL_QuitSubSystem(SDL_INIT_EVENTS);
     SDL_Quit();
 
-    /* TODO: IPC active gamepad
-    if (Config::getGameRunning()) {
-    SDL_Event checkGamepad{};
-    checkGamepad.type = SDL_EVENT_CHANGE_CONTROLLER;
-    SDL_PushEvent(&checkGamepad); */
+    m_ipc_client->setActiveController(GamepadSelect::GetSelectedGamepad());
 }
 
 ControlSettings::~ControlSettings() {}

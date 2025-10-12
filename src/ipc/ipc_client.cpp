@@ -84,6 +84,11 @@ void IpcClient::reloadInputs(std::string config) {
     writeLine(QString::fromStdString(config));
 }
 
+void IpcClient::setActiveController(std::string GUID) {
+    writeLine("SET_ACTIVE_CONTROLLER");
+    writeLine(QString::fromStdString(GUID));
+}
+
 void IpcClient::sendMemoryPatches(std::string modNameStr, std::string offsetStr,
                                   std::string valueStr, std::string targetStr, std::string sizeStr,
                                   bool isOffset, bool littleEndian,
