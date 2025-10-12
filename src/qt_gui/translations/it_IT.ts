@@ -2619,7 +2619,7 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
     </message>
     <message>
       <source>Check for Pre-release Updates</source>
-      <translation>Controlla Aggiornamenti Pre-release</translation>
+      <translation>Controlla Aggiornamenti Pre-rilascio</translation>
     </message>
     <message>
       <source>Select the folder where the emulator versions will be installed</source>
@@ -2691,7 +2691,7 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
     </message>
     <message>
       <source>Do you want to delete the version</source>
-      <translation>Vuoi eliminare la versione?</translation>
+      <translation>Vuoi eliminare la versione</translation>
     </message>
     <message>
       <source>Failed to delete folder.</source>
@@ -2716,7 +2716,7 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
     <message>
       <source>First you need to choose a location to save the versions in
 &apos;Path to save versions&apos;</source>
-      <translation>Per prima cosa è necessario scegliere una posizione per salvare le versioni in
+      <translation>Per prima cosa è necessario scegliere una posizione dove salvare le versioni
 &apos;Percorso per salvare le versioni&apos;</translation>
     </message>
     <message>
@@ -2749,7 +2749,7 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release</source>
-      <translation>Impossibile ottenere l'hash dell'ultima pre-rilascio</translation>
+      <translation>Impossibile ottenere l'hash dell'ultima versione pre-rilascio</translation>
     </message>
     <message>
       <source>No pre-release found</source>
