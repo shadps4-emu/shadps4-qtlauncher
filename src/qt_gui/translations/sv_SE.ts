@@ -2703,15 +2703,15 @@ Välj en emulatorversion från den högra panelen.</translation>
     </message>
     <message>
       <source>No news, the version list is already updated.</source>
-      <translation type="unfinished">No news, the version list is already updated.</translation>
+      <translation>Inga nyheter. Versionslistan är redan uppdaterad.</translation>
     </message>
     <message>
       <source>The latest versions have been added to the list for download.</source>
-      <translation type="unfinished">The latest versions have been added to the list for download.</translation>
+      <translation>De senaste versionerna har lagts till i listan för hämtningar.</translation>
     </message>
     <message>
       <source>Error accessing GitHub API</source>
-      <translation type="unfinished">Error accessing GitHub API</translation>
+      <translation>Fel vid åtkomst till GitHubs API</translation>
     </message>
     <message>
       <source>First you need to choose a location to save the versions in
@@ -2721,19 +2721,19 @@ Välj en emulatorversion från den högra panelen.</translation>
     </message>
     <message>
       <source>Do you want to download the version</source>
-      <translation type="unfinished">Do you want to download the version</translation>
+      <translation>Vill du hämta ner versionen</translation>
     </message>
     <message>
       <source>No files available for this platform.</source>
-      <translation type="unfinished">No files available for this platform.</translation>
+      <translation>Inga filer tillgängliga för denna plattform.</translation>
     </message>
     <message>
       <source>Downloading %1 , please wait...</source>
-      <translation type="unfinished">Downloading %1 , please wait...</translation>
+      <translation>Hämtar ner %1, vänta...</translation>
     </message>
     <message>
       <source>Could not save file.</source>
-      <translation type="unfinished">Could not save file.</translation>
+      <translation>Kunde inte spara filen.</translation>
     </message>
     <message>
       <source>Version %1 has been downloaded and selected.</source>
