@@ -1298,7 +1298,7 @@ void SettingsDialog::onAudioDeviceChange(bool isAdd) {
     ui->DsAudioComboBox->clear();
 
     // prevent device list from refreshing too fast
-    if (isAdd == false)
+    if (!isAdd)
         QThread::msleep(100);
 
     int deviceCount;
