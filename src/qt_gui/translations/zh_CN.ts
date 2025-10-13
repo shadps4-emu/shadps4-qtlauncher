@@ -2665,7 +2665,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Do you want to delete the version</source>
-      <translation>确定要删除此版本吗？</translation>
+      <translation>确定要删除此版本吗</translation>
     </message>
     <message>
       <source>Failed to delete folder.</source>
