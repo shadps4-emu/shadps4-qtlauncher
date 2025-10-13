@@ -666,10 +666,11 @@ void ControlSettings::ActiveControllerChanged(int value) {
         gamepad = nullptr;
     }
 
-    gamepad = SDL_OpenGamepad(gamepads[value]);
-
-    if (!gamepad) {
-        LOG_ERROR(Input, "Failed to open gamepad: {}", SDL_GetError());
+    if (gamepads && value != -1) {
+        gamepad = SDL_OpenGamepad(gamepads[value]);
+        if (!gamepad) {
+            LOG_ERROR(Input, "Failed to open gamepad {}: {}", value, SDL_GetError());
+        }
     }
 }
 
@@ -691,21 +692,6 @@ void ControlSettings::CheckGamePad() {
     int activeIndex = GamepadSelect::GetIndexfromGUID(gamepads, gamepad_count,
                                                       GamepadSelect::GetSelectedGamepad());
 
-    if (!GameRunning) {
-        if (activeIndex != -1) {
-            gamepad = SDL_OpenGamepad(gamepads[activeIndex]);
-        } else if (defaultIndex != -1) {
-            gamepad = SDL_OpenGamepad(gamepads[defaultIndex]);
-        } else {
-            LOG_INFO(Input, "Got {} gamepads. Opening the first one.", gamepad_count);
-            gamepad = SDL_OpenGamepad(gamepads[0]);
-        }
-
-        if (!gamepad) {
-            LOG_ERROR(Input, "Failed to open gamepad: {}", SDL_GetError());
-        }
-    }
-
     if (!gamepads || gamepad_count == 0) {
         ui->ActiveGamepadBox->addItem("No gamepads detected");
         ui->ActiveGamepadBox->setCurrentIndex(0);
@@ -715,6 +701,19 @@ void ControlSettings::CheckGamePad() {
             QString name = SDL_GetGamepadNameForID(gamepads[i]);
             ui->ActiveGamepadBox->addItem(QString("%1: %2").arg(QString::number(i + 1), name));
         }
+    }
+
+    if (activeIndex != -1) {
+        gamepad = SDL_OpenGamepad(gamepads[activeIndex]);
+    } else if (defaultIndex != -1) {
+        gamepad = SDL_OpenGamepad(gamepads[defaultIndex]);
+    } else {
+        LOG_INFO(Input, "Got {} gamepads. Opening the first one.", gamepad_count);
+        gamepad = SDL_OpenGamepad(gamepads[0]);
+    }
+
+    if (!gamepad) {
+        LOG_ERROR(Input, "Failed to open gamepad: {}", SDL_GetError());
     }
 
     if (defaultIndex != -1) {
@@ -1022,7 +1021,9 @@ void ControlSettings::Cleanup() {
     SDL_QuitSubSystem(SDL_INIT_EVENTS);
     SDL_Quit();
 
-    m_ipc_client->setActiveController(GamepadSelect::GetSelectedGamepad());
+    if (GameRunning) {
+        m_ipc_client->setActiveController(GamepadSelect::GetSelectedGamepad());
+    }
 }
 
 ControlSettings::~ControlSettings() {}

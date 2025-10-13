@@ -36,7 +36,6 @@ MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent), ui(new Ui::MainWi
     ui->toggleLabelsAct->setChecked(
         m_gui_settings->GetValue(gui::mw_showLabelsUnderIcons).toBool());
 
-    m_ipc_client = std::make_shared<IpcClient>(this);
     m_ipc_client->gameClosedFunc = [this]() { onGameClosed(); };
     m_ipc_client->restartEmulatorFunc = [this]() { RestartEmulator(); };
     m_ipc_client->startGameFunc = [this]() { RunGame(); };
