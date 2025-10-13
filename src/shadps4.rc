@@ -14,8 +14,8 @@ IDI_ICON1 ICON "images/shadps4.ico"
 
 // VERSION
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION    EMULATOR_VERSION_MAJOR, EMULATOR_VERSION_MINOR, EMULATOR_VERSION_PATCH, 0
- PRODUCTVERSION EMULATOR_VERSION_MAJOR, EMULATOR_VERSION_MINOR, EMULATOR_VERSION_PATCH, 0
+ FILEVERSION    0, 0, APP_VERSION, 0
+ PRODUCTVERSION 0, 0, APP_VERSION, 0
  FILEFLAGSMASK 0x3fL
  FILEFLAGS 0x0L
  FILEOS 0x40004L
@@ -28,12 +28,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "\0"
             VALUE "FileDescription", "shadPS4 - PlayStation 4 Emulator\0"
-            VALUE "FileVersion", xstr(EMULATOR_VERSION_MAJOR) "." xstr(EMULATOR_VERSION_MINOR) "." xstr(EMULATOR_VERSION_PATCH) ".0\0"
+            VALUE "FileVersion", "0" "." "0" "." xstr(APP_VERSION) ".0\0"
             VALUE "InternalName", "shadPS4\0"
             VALUE "LegalCopyright", "Copyright 2025 shadPS4 Team\0"
-            VALUE "OriginalFilename", "shadPS4.exe\0"
+            VALUE "OriginalFilename", "shadPS4QtLauncher.exe\0"
             VALUE "ProductName", "shadPS4\0"
-            VALUE "ProductVersion", xstr(EMULATOR_VERSION_MAJOR) "." xstr(EMULATOR_VERSION_MINOR) "." xstr(EMULATOR_VERSION_PATCH) ".0\0"
+            VALUE "ProductVersion", "0" "." "0" "." xstr(APP_VERSION) ".0\0"
         END
     END
     BLOCK "VarFileInfo"

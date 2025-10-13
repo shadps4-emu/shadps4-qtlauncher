@@ -63,20 +63,12 @@ bool MainWindow::Init() {
     std::string window_title = "";
     std::string remote_url(Common::g_scm_remote_url);
     std::string remote_host = Common::GetRemoteNameFromLink();
-    if (Common::g_is_release) {
-        if (remote_host == "shadps4-emu" || remote_url.length() == 0) {
-            window_title = fmt::format("shadPS4QtLauncher v{}", Common::g_version);
-        } else {
-            window_title = fmt::format("shadPS4QtLauncher {}/v{}", remote_host, Common::g_version);
-        }
+    if (remote_host == "shadps4-emu" || remote_url.length() == 0) {
+        window_title = fmt::format("shadPS4QtLauncher v{} {} {}", Common::g_scm_app_version,
+                                   Common::g_scm_branch, Common::g_scm_desc);
     } else {
-        if (remote_host == "shadps4-emu" || remote_url.length() == 0) {
-            window_title = fmt::format("shadPS4QtLauncher v{} {} {}", Common::g_version,
-                                       Common::g_scm_branch, Common::g_scm_desc);
-        } else {
-            window_title = fmt::format("shadPS4QtLauncher v{} {}/{} {}", Common::g_version,
-                                       remote_host, Common::g_scm_branch, Common::g_scm_desc);
-        }
+        window_title = fmt::format("shadPS4QtLauncher v{} {}/{} {}", Common::g_scm_app_version,
+                                   remote_host, Common::g_scm_branch, Common::g_scm_desc);
     }
     setWindowTitle(QString::fromStdString(window_title));
     this->show();
