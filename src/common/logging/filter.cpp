@@ -52,7 +52,6 @@ bool ParseFilterRule(Filter& instance, Iterator begin, Iterator end) {
 
     const Class log_class = GetClassByName(begin, level_separator);
     if (log_class == Class::Count) {
-        LOG_ERROR(Log, "Unknown log class in filter: {}", std::string(begin, end));
         return false;
     }
 
