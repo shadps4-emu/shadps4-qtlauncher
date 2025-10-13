@@ -2509,11 +2509,11 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path</source>
-      <translation type="unfinished">PS4 Sysmodules Path</translation>
+      <translation>PS4 «sys_modules»-mappe</translation>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
-      <translation type="unfinished">GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</translation>
+      <translation>Grensesnitt oppdateringer:\nOffisiell: Stabile offisielle versjoner utgis hver måned, men kan være veldig utdaterte.\nNattlig: Ustabile utviklingsversjoner med alle de nyeste funksjonene og rettelsene, men kan inneholde feil.\n\nMerk: denne oppdateringen angår kun Qt-brukergrensesnittet. For oppdatering av selve emulatoren, bruk «Versjonsbehandling»-menyen.</translation>
     </message>
   </context>
   <context>
@@ -2811,19 +2811,19 @@ Would you like to download it now?</source>
     </message>
     <message>
       <source>Always Show Changelog</source>
-      <translation type="unfinished">Always Show Changelog</translation>
+      <translation>Vis alltid endringsloggen</translation>
     </message>
     <message>
       <source>No version selected. Please choose one from the list to delete.</source>
-      <translation type="unfinished">No version selected. Please choose one from the list to delete.</translation>
+      <translation>Ingen versjon valgt. Velg en fra lista for sletting.</translation>
     </message>
     <message>
       <source>Confirm Download</source>
-      <translation type="unfinished">Confirm Download</translation>
+      <translation>Bekreft nedlasting</translation>
     </message>
     <message>
       <source>Extraction failure.</source>
-      <translation type="unfinished">Extraction failure.</translation>
+      <translation>Feil ved utpakking.</translation>
     </message>
   </context>
 </TS>
