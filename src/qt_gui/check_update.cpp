@@ -45,17 +45,8 @@ void CheckUpdate::CheckForUpdates(const bool showMessage) {
 
     bool checkName = true;
     while (checkName) {
-        updateChannel = m_gui_settings->GetValue(gui::gen_updateChannel).toString();
-        if (updateChannel == "Nightly") {
-            url = QUrl("https://api.github.com/repos/shadps4-emu/shadps4-qtlauncher/releases");
-            checkName = false;
-        } else if (updateChannel == "Release") {
-            url =
-                QUrl("https://api.github.com/repos/shadps4-emu/shadps4-qtlauncher/releases/latest");
-            checkName = false;
-        } else {
-            m_gui_settings->SetValue(gui::gen_updateChannel, "Nightly");
-        }
+        url = QUrl("https://api.github.com/repos/shadps4-emu/shadps4-qtlauncher/releases");
+        checkName = false;
     }
 
     QNetworkRequest request(url);
@@ -156,7 +147,7 @@ tr("The Auto Updater allows up to 60 update checks per hour.\\nYou have reached 
             return;
         }
 
-        QString currentRev =  QString::fromStdString(Common::g_scm_rev);
+        QString currentRev = QString::fromStdString(Common::g_scm_rev);
         QString currentDate = Common::g_scm_date;
 
         QDateTime dateTime = QDateTime::fromString(latestDate, Qt::ISODate);
@@ -193,7 +184,7 @@ void CheckUpdate::setupUI(const QString& downloadUrl, const QString& latestDate,
     titleLayout->addWidget(titleLabel);
     layout->addLayout(titleLayout);
 
-    QString updateChannel = m_gui_settings->GetValue(gui::gen_updateChannel).toString();
+    QString updateChannel = "Nightly";
 
     QString updateText =
         QString("<p><b>" + tr("Update Channel") + ": </b>" + updateChannel +

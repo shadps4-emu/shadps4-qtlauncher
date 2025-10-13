@@ -263,14 +263,6 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
                     m_gui_settings->SetValue(gui::gen_showChangeLog, state == Qt::Checked);
                 });
 #endif
-
-        connect(ui->updateComboBox, &QComboBox::currentTextChanged, this,
-                [this](const QString& channel) {
-                    if (channelMap.contains(channel)) {
-                        m_gui_settings->SetValue(gui::gen_updateChannel, channelMap.value(channel));
-                    }
-                });
-
         connect(ui->checkUpdateButton, &QPushButton::clicked, this, [this]() {
             auto checkUpdate = new CheckUpdate(m_gui_settings, true);
             checkUpdate->exec();
@@ -684,12 +676,6 @@ void SettingsDialog::LoadValuesFromConfig() {
         ui->updateCheckBox->setChecked(m_gui_settings->GetValue(gui::gen_checkForUpdates).toBool());
         ui->changelogCheckBox->setChecked(
             m_gui_settings->GetValue(gui::gen_showChangeLog).toBool());
-
-        QString updateChannel = m_gui_settings->GetValue(gui::gen_updateChannel).toString();
-        ui->updateComboBox->setCurrentText(
-            channelMap.key(updateChannel != "Release" && updateChannel != "Nightly"
-                               ? "Nightly"
-                               : updateChannel));
 #endif
 
         SyncRealTimeWidgetstoConfig();
@@ -1167,8 +1153,6 @@ void SettingsDialog::UpdateSettings(bool is_specific) {
         m_gui_settings->SetValue(gui::gl_backgroundMusicVolume, ui->BGMVolumeSlider->value());
         m_gui_settings->SetValue(gui::gen_checkForUpdates, ui->updateCheckBox->isChecked());
         m_gui_settings->SetValue(gui::gen_showChangeLog, ui->changelogCheckBox->isChecked());
-        m_gui_settings->SetValue(gui::gen_updateChannel,
-                                 channelMap.value(ui->updateComboBox->currentText()));
         m_gui_settings->SetValue(gui::gl_showBackgroundImage,
                                  ui->showBackgroundImageCheckBox->isChecked());
         m_gui_settings->SetValue(gui::gl_backgroundImageOpacity,
@@ -1253,7 +1237,6 @@ void SettingsDialog::setDefaultValues() {
         m_gui_settings->SetValue(gui::gl_backgroundMusicVolume, 50);
         m_gui_settings->SetValue(gui::gen_checkForUpdates, false);
         m_gui_settings->SetValue(gui::gen_showChangeLog, false);
-        m_gui_settings->SetValue(gui::gen_updateChannel, "Nightly");
         m_gui_settings->SetValue(gui::gen_guiLanguage, "en_US");
         m_gui_settings->SetValue(gui::gl_showLoadGameSizeEnabled, true);
         m_gui_settings->SetValue(gui::gl_showCompatibility, false);
