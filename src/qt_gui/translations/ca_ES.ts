@@ -1185,7 +1185,7 @@
     <name>IpcClient</name>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation type="unfinished">Could not find the emulator executable</translation>
+      <translation>No s'ha pogut trobar l'executable de l'emulador</translation>
     </message>
   </context>
   <context>
@@ -1702,7 +1702,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation type="unfinished">Could not find the emulator executable</translation>
+      <translation>No s'ha pogut trobar l'executable de l'emulador</translation>
     </message>
   </context>
   <context>
