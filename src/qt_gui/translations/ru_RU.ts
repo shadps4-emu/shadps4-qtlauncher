@@ -349,11 +349,11 @@
     </message>
     <message>
       <source>Auto Updater - GUI</source>
-      <translation type="unfinished">Auto Updater - GUI</translation>
+      <translation>Автообновление - Интерфейс</translation>
     </message>
     <message>
       <source>Update Available - GUI</source>
-      <translation type="unfinished">Update Available - GUI</translation>
+      <translation>Доступно обновление - Интерфейс</translation>
     </message>
   </context>
   <context>
@@ -1185,7 +1185,7 @@
     <name>IpcClient</name>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation type="unfinished">Could not find the emulator executable</translation>
+      <translation>Не удалось найти исполняемый файл эмулятора</translation>
     </message>
   </context>
   <context>
@@ -1702,7 +1702,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation type="unfinished">Could not find the emulator executable</translation>
+      <translation>Не удалось найти исполняемый файл эмулятора</translation>
     </message>
   </context>
   <context>
@@ -2497,23 +2497,23 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>GUI Language</source>
-      <translation type="unfinished">GUI Language</translation>
+      <translation>Язык интерфейса</translation>
     </message>
     <message>
       <source>GUI Updates</source>
-      <translation type="unfinished">GUI Updates</translation>
+      <translation>Обновления интерфейса</translation>
     </message>
     <message>
       <source>DLC Path</source>
-      <translation type="unfinished">DLC Path</translation>
+      <translation>Путь DLC</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path</source>
-      <translation type="unfinished">PS4 Sysmodules Path</translation>
+      <translation>Путь системных модулей PS4</translation>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
-      <translation type="unfinished">GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</translation>
+      <translation>Обновления интерфейса:\nРелиз: Официальные версии, выпускаемые ежемесячно, которые могут быть очень устаревшими, но они более надежны и протестированы.\nNightly: Версии в разработке, имеющие все последние функции и исправления, но могут содержать ошибки и менее стабильные.\n\n*Это обновление применяется только к интерфейсу пользователя Qt. Чтобы обновить ядро эмулятора, используйте меню &apos;Менеджер версий&apos;.</translation>
     </message>
   </context>
   <context>
@@ -2810,19 +2810,19 @@ Would you like to download it now?</source>
     </message>
     <message>
       <source>Always Show Changelog</source>
-      <translation type="unfinished">Always Show Changelog</translation>
+      <translation>Всегда показывать журнал изменений</translation>
     </message>
     <message>
       <source>No version selected. Please choose one from the list to delete.</source>
-      <translation type="unfinished">No version selected. Please choose one from the list to delete.</translation>
+      <translation>Не выбрана версия. Пожалуйста, выберите одну из списка для удаления.</translation>
     </message>
     <message>
       <source>Confirm Download</source>
-      <translation type="unfinished">Confirm Download</translation>
+      <translation>Подтвердить загрузку</translation>
     </message>
     <message>
       <source>Extraction failure.</source>
-      <translation type="unfinished">Extraction failure.</translation>
+      <translation>Ошибка извлечения.</translation>
     </message>
   </context>
 </TS>
