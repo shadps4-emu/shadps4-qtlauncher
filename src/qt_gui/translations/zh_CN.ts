@@ -348,12 +348,12 @@
       <translation>无法创建更新脚本文件</translation>
     </message>
     <message>
-      <source>Auto Updater - Interface</source>
-      <translation type="unfinished">Auto Updater - Interface</translation>
+      <source>Auto Updater - GUI</source>
+      <translation type="unfinished">Auto Updater - GUI</translation>
     </message>
     <message>
-      <source>Update Available (Interface)</source>
-      <translation type="unfinished">Update Available (Interface)</translation>
+      <source>Update Available - GUI</source>
+      <translation type="unfinished">Update Available - GUI</translation>
     </message>
   </context>
   <context>
@@ -1184,14 +1184,8 @@
   <context>
     <name>IpcClient</name>
     <message>
-      <source>ShadPS4</source>
-      <translation>ShadPS4</translation>
-    </message>
-    <message>
-      <source>shadPS4 is not found!
-Please change shadPS4 path in settings.</source>
-      <translation>shadPS4未找到！
-请在设置中更改shadPS4路径。</translation>
+      <source>Could not find the emulator executable</source>
+      <translation type="unfinished">Could not find the emulator executable</translation>
     </message>
   </context>
   <context>
@@ -1691,12 +1685,6 @@ Please change shadPS4 path in settings.</source>
       <translation>自定义快捷键</translation>
     </message>
     <message>
-      <source>shadPS4 is not found!
-Please change shadPS4 path in settings.</source>
-      <translation>shadPS4未找到！
-请在设置中更改shadPS4路径。</translation>
-    </message>
-    <message>
       <source>Version Manager</source>
       <translation type="unfinished">Version Manager</translation>
     </message>
@@ -1713,8 +1701,8 @@ The Version Manager menu will then open.
 Select an emulator version from the right panel.</translation>
     </message>
     <message>
-      <source>No version selected</source>
-      <translation type="unfinished">No version selected</translation>
+      <source>Could not find the emulator executable</source>
+      <translation type="unfinished">Could not find the emulator executable</translation>
     </message>
   </context>
   <context>
@@ -1734,10 +1722,6 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Console Language</source>
       <translation>主机语言</translation>
-    </message>
-    <message>
-      <source>Emulator Language</source>
-      <translation>模拟器语言</translation>
     </message>
     <message>
       <source>Default tab when opening settings</source>
@@ -1824,10 +1808,6 @@ Select an emulator version from the right panel.</translation>
       <translation>图像</translation>
     </message>
     <message>
-      <source>GUI</source>
-      <translation>界面</translation>
-    </message>
-    <message>
       <source>User</source>
       <translation>用户</translation>
     </message>
@@ -1910,10 +1890,6 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Enable Readback Linear Images</source>
       <translation>启用Readback线性图像</translation>
-    </message>
-    <message>
-      <source>Update</source>
-      <translation>更新</translation>
     </message>
     <message>
       <source>Check for Updates at Startup</source>
@@ -2026,10 +2002,6 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Trace&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: Trace, Debug, Info, Warning, Error, Critical - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
       <translation>日志过滤器：\n过滤日志，仅打印特定信息。\n例如：&quot;Core:Trace&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot; 级别: Trace, Debug, Info, Warning, Error, Critical - 按此顺序，特定级别将静默列表中所有先前的级别，并记录所有后续级别。</translation>
-    </message>
-    <message>
-      <source>Update:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.</source>
-      <translation>更新：\nRelease：每月发布的官方版本可能非常过时，但更可靠且经过测试。\nNightly：包含所有最新功能和修复的开发版本，但可能包含错误且稳定性较低。</translation>
     </message>
     <message>
       <source>Background Image:\nControl the opacity of the game background image.</source>
@@ -2324,10 +2296,6 @@ Select an emulator version from the right panel.</translation>
       <translation>即时（关闭垂直同步）</translation>
     </message>
     <message>
-      <source>DLC Folder</source>
-      <translation>DLC 文件夹</translation>
-    </message>
-    <message>
       <source>Select the DLC folder</source>
       <translation>选择 DLC 文件夹</translation>
     </message>
@@ -2488,10 +2456,6 @@ Select an emulator version from the right panel.</translation>
       <translation>额外设备内存分配：\n强制分配指定容量的额外设备内存。注意：在某些游戏中可能导致崩溃或其他问题！</translation>
     </message>
     <message>
-      <source>PS4 Sysmodules Folder</source>
-      <translation>PS4系统模块文件夹</translation>
-    </message>
-    <message>
       <source>PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</source>
       <translation>PS4系统模块路径：\n用于加载PS4系统模块的文件夹。</translation>
     </message>
@@ -2530,6 +2494,26 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
       <translation type="unfinished">Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+    </message>
+    <message>
+      <source>GUI Language</source>
+      <translation type="unfinished">GUI Language</translation>
+    </message>
+    <message>
+      <source>GUI Updates</source>
+      <translation type="unfinished">GUI Updates</translation>
+    </message>
+    <message>
+      <source>DLC Path</source>
+      <translation type="unfinished">DLC Path</translation>
+    </message>
+    <message>
+      <source>PS4 Sysmodules Path</source>
+      <translation type="unfinished">PS4 Sysmodules Path</translation>
+    </message>
+    <message>
+      <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
+      <translation type="unfinished">GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</translation>
     </message>
   </context>
   <context>
@@ -2614,10 +2598,6 @@ Select an emulator version from the right panel.</translation>
       <translation type="unfinished">Check for Pre-release updates at startup</translation>
     </message>
     <message>
-      <source>Always show Pre-release changelog</source>
-      <translation type="unfinished">Always show Pre-release changelog</translation>
-    </message>
-    <message>
       <source>Check for Pre-release Updates</source>
       <translation type="unfinished">Check for Pre-release Updates</translation>
     </message>
@@ -2672,14 +2652,6 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Version added successfully.</source>
       <translation type="unfinished">Version added successfully.</translation>
-    </message>
-    <message>
-      <source>Notice</source>
-      <translation type="unfinished">Notice</translation>
-    </message>
-    <message>
-      <source>No version selected from the Installed list.</source>
-      <translation type="unfinished">No version selected from the Installed list.</translation>
     </message>
     <message>
       <source>Failed to determine the folder path.</source>
@@ -2836,6 +2808,22 @@ Would you like to download it now?</translation>
     <message>
       <source>Failed to create the update script file</source>
       <translation type="unfinished">Failed to create the update script file</translation>
+    </message>
+    <message>
+      <source>Always Show Changelog</source>
+      <translation type="unfinished">Always Show Changelog</translation>
+    </message>
+    <message>
+      <source>No version selected. Please choose one from the list to delete.</source>
+      <translation type="unfinished">No version selected. Please choose one from the list to delete.</translation>
+    </message>
+    <message>
+      <source>Confirm Download</source>
+      <translation type="unfinished">Confirm Download</translation>
+    </message>
+    <message>
+      <source>Extraction failure.</source>
+      <translation type="unfinished">Extraction failure.</translation>
     </message>
   </context>
 </TS>
