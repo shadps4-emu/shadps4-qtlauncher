@@ -54,11 +54,7 @@ void CheckUpdate::CheckForUpdates(const bool showMessage) {
                 QUrl("https://api.github.com/repos/shadps4-emu/shadps4-qtlauncher/releases/latest");
             checkName = false;
         } else {
-            if (Common::g_is_release) {
-                m_gui_settings->SetValue(gui::gen_updateChannel, "Release");
-            } else {
-                m_gui_settings->SetValue(gui::gen_updateChannel, "Nightly");
-            }
+            m_gui_settings->SetValue(gui::gen_updateChannel, "Nightly");
         }
     }
 
@@ -160,9 +156,7 @@ tr("The Auto Updater allows up to 60 update checks per hour.\\nYou have reached 
             return;
         }
 
-        QString currentRev = (updateChannel == "Nightly")
-                                 ? QString::fromStdString(Common::g_scm_rev)
-                                 : "v." + QString::fromStdString(Common::g_version);
+        QString currentRev =  QString::fromStdString(Common::g_scm_rev);
         QString currentDate = Common::g_scm_date;
 
         QDateTime dateTime = QDateTime::fromString(latestDate, Qt::ISODate);

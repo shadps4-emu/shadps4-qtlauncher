@@ -688,7 +688,7 @@ void SettingsDialog::LoadValuesFromConfig() {
         QString updateChannel = m_gui_settings->GetValue(gui::gen_updateChannel).toString();
         ui->updateComboBox->setCurrentText(
             channelMap.key(updateChannel != "Release" && updateChannel != "Nightly"
-                               ? (Common::g_is_release ? "Release" : "Nightly")
+                               ? "Nightly"
                                : updateChannel));
 #endif
 
