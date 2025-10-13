@@ -577,15 +577,8 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         ui->dmemGroupBox->installEventFilter(this);
     }
 
-    SdlEventWrapper::Wrapper::wrapperActive = true;
-    if (!is_game_running) {
-        SDL_InitSubSystem(SDL_INIT_EVENTS);
-        Polling = QtConcurrent::run(&SettingsDialog::pollSDLevents, this);
-    } else {
-        SdlEventWrapper::Wrapper* DeviceEventWrapper = SdlEventWrapper::Wrapper::GetInstance();
-        QObject::connect(DeviceEventWrapper, &SdlEventWrapper::Wrapper::audioDeviceChanged, this,
-                         &SettingsDialog::onAudioDeviceChange);
-    }
+    SDL_InitSubSystem(SDL_INIT_EVENTS);
+    Polling = QtConcurrent::run(&SettingsDialog::pollSDLevents, this);
 }
 
 void SettingsDialog::closeEvent(QCloseEvent* event) {
@@ -597,19 +590,17 @@ void SettingsDialog::closeEvent(QCloseEvent* event) {
         SyncRealTimeWidgetstoConfig();
     }
 
-    SdlEventWrapper::Wrapper::wrapperActive = false;
-    if (!is_game_running) {
-        SDL_Event quitLoop{};
-        quitLoop.type = SDL_EVENT_QUIT;
-        SDL_PushEvent(&quitLoop);
-        Polling.waitForFinished();
+    SDL_Event quitLoop{};
+    quitLoop.type = SDL_EVENT_QUIT;
+    SDL_PushEvent(&quitLoop);
+    Polling.waitForFinished();
 
-        SDL_QuitSubSystem(SDL_INIT_EVENTS);
+    SDL_QuitSubSystem(SDL_INIT_EVENTS);
 
-        // This breaks the microphone selection
-        // SDL_QuitSubSystem(SDL_INIT_AUDIO);
-        // SDL_Quit();
-    }
+    // This breaks the microphone selection
+    // SDL_QuitSubSystem(SDL_INIT_AUDIO);
+    // SDL_Quit();
+
     QDialog::closeEvent(event);
 }
 
@@ -1306,8 +1297,8 @@ void SettingsDialog::onAudioDeviceChange(bool isAdd) {
     ui->GenAudioComboBox->clear();
     ui->DsAudioComboBox->clear();
 
-    // prevent device list from refreshing too fast when game not running
-    if (!is_game_running && isAdd == false)
+    // prevent device list from refreshing too fast
+    if (!isAdd)
         QThread::msleep(100);
 
     int deviceCount;
