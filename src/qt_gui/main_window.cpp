@@ -22,6 +22,7 @@
 #include "control_settings.h"
 #include "game_install_dialog.h"
 #include "hotkeys.h"
+#include "input/controller.h"
 #include "ipc/ipc_client.h"
 #include "kbm_gui.h"
 #include "main_window.h"
@@ -1301,6 +1302,7 @@ tr("No emulator version was selected.\nThe Version Manager menu will then open.\
     QString workDir = fileInfo.absolutePath();
 
     m_ipc_client->startEmulator(fileInfo, final_args, workDir);
+    m_ipc_client->setActiveController(GamepadSelect::GetSelectedGamepad());
 }
 
 void MainWindow::RunGame() {
