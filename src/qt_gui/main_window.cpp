@@ -1298,7 +1298,7 @@ tr("No emulator version was selected.\nThe Version Manager menu will then open.\
 
     final_args.append(args);
 
-    QString workDir = fileInfo.absolutePath();
+    QString workDir = QDir::currentPath();
 
     m_ipc_client->startEmulator(fileInfo, final_args, workDir);
 }
