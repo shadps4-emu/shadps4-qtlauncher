@@ -31,7 +31,7 @@ BEGIN
             VALUE "FileVersion", "0" "." "0" "." xstr(APP_VERSION) ".0\0"
             VALUE "InternalName", "shadPS4\0"
             VALUE "LegalCopyright", "Copyright 2025 shadPS4 Team\0"
-            VALUE "OriginalFilename", "shadPS4.exe\0"
+            VALUE "OriginalFilename", "shadPS4QtLauncher.exe\0"
             VALUE "ProductName", "shadPS4\0"
             VALUE "ProductVersion", "0" "." "0" "." xstr(APP_VERSION) ".0\0"
         END
