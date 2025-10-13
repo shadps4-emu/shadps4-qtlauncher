@@ -349,11 +349,11 @@
     </message>
     <message>
       <source>Auto Updater - GUI</source>
-      <translation type="unfinished">Auto Updater - GUI</translation>
+      <translation>Automatische Updates - Be­nut­zer­ober­flä­che</translation>
     </message>
     <message>
       <source>Update Available - GUI</source>
-      <translation type="unfinished">Update Available - GUI</translation>
+      <translation>Update verfügbar - Be­nut­zer­ober­flä­che</translation>
     </message>
   </context>
   <context>
@@ -1184,7 +1184,7 @@ Einzigartige Inputs können nicht öfters als einmal gebunden werden. Input-Dupl
     <name>IpcClient</name>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation type="unfinished">Could not find the emulator executable</translation>
+      <translation>Konnte die Emulator-Datei nicht finden</translation>
     </message>
   </context>
   <context>
@@ -1701,7 +1701,7 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
     </message>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation type="unfinished">Could not find the emulator executable</translation>
+      <translation>Konnte die Emulator-Datei nicht finden</translation>
     </message>
   </context>
   <context>
@@ -2500,23 +2500,23 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
     </message>
     <message>
       <source>GUI Language</source>
-      <translation type="unfinished">GUI Language</translation>
+      <translation>Sprache der Be­nut­zer­ober­flä­che</translation>
     </message>
     <message>
       <source>GUI Updates</source>
-      <translation type="unfinished">GUI Updates</translation>
+      <translation>Updates für Be­nut­zer­ober­flä­che</translation>
     </message>
     <message>
       <source>DLC Path</source>
-      <translation type="unfinished">DLC Path</translation>
+      <translation>DLC-Pfad</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path</source>
-      <translation type="unfinished">PS4 Sysmodules Path</translation>
+      <translation>PS4 sysmodules-Pfad</translation>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
-      <translation type="unfinished">GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</translation>
+      <translation>Updates für Be­nut­zer­ober­flä­che:\nRelease: Offizielle Versionen, die jeden Monat veröffentlicht werden, dadurch ein wenig veraltet sein könnte, aber dafür zuverlässiger laufen und getestet wurden.\nNightly: Entwicklerversionen die neue Funktionen und Bugfixes beinhalten, können aber neue Bugs haben und laufen weniger stabil.\n\n*Diese Updates gelten nur für die Benutzeroberfläche. Um den Emulator selber zu updaten, nutze bitte die &apos;Versionsverwaltung&apos;.</translation>
     </message>
   </context>
   <context>
@@ -2806,7 +2806,7 @@ Möchten Sie sie jetzt downloaden?</translation>
     </message>
     <message>
       <source>Pre-release updated successfully</source>
-      <translation>Vorversion erfolgreich upgedatet</translation>
+      <translation>Vorabversion erfolgreich upgedatet</translation>
     </message>
     <message>
       <source>Failed to create the update script file</source>
@@ -2814,19 +2814,19 @@ Möchten Sie sie jetzt downloaden?</translation>
     </message>
     <message>
       <source>Always Show Changelog</source>
-      <translation type="unfinished">Always Show Changelog</translation>
+      <translation>Changelog immer anzeigen</translation>
     </message>
     <message>
       <source>No version selected. Please choose one from the list to delete.</source>
-      <translation type="unfinished">No version selected. Please choose one from the list to delete.</translation>
+      <translation>Keine Version ausgewählt. Bitte eine Version aus der Liste auswählen, die gelöscht werden soll.</translation>
     </message>
     <message>
       <source>Confirm Download</source>
-      <translation type="unfinished">Confirm Download</translation>
+      <translation>Download bestätigen</translation>
     </message>
     <message>
       <source>Extraction failure.</source>
-      <translation type="unfinished">Extraction failure.</translation>
+      <translation>Entpacken fehlgeschlagen.</translation>
     </message>
   </context>
 </TS>
