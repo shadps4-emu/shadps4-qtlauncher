@@ -1326,9 +1326,9 @@ void MainWindow::RestartEmulator() {
 #ifdef Q_OS_WIN
     exeName = "/shadPS4.exe";
 #elif defined(Q_OS_LINUX)
-    exeName = "/shadPS4.AppImage";
+    exeName = "/Shadps4-sdl.AppImage";
 #elif defined(Q_OS_MACOS)
-    exeName = "/shadPS4";
+    exeName = "/shadps4";
 #endif
 
     QString exe = m_gui_settings->GetValue(gui::vm_versionSelected).toString() + exeName;
