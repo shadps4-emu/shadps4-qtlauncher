@@ -64,11 +64,11 @@ bool MainWindow::Init() {
     std::string remote_url(Common::g_scm_remote_url);
     std::string remote_host = Common::GetRemoteNameFromLink();
     if (remote_host == "shadps4-emu" || remote_url.length() == 0) {
-        window_title =
-            fmt::format("shadPS4QtLauncher v{} {} {}", Common::g_scm_app_version, Common::g_scm_branch, Common::g_scm_desc);
+        window_title = fmt::format("shadPS4QtLauncher v{} {} {}", Common::g_scm_app_version,
+                                   Common::g_scm_branch, Common::g_scm_desc);
     } else {
-        window_title = fmt::format("shadPS4QtLauncher v{} {}/{} {}", Common::g_scm_app_version, remote_host, Common::g_scm_branch,
-                                   Common::g_scm_desc);
+        window_title = fmt::format("shadPS4QtLauncher v{} {}/{} {}", Common::g_scm_app_version,
+                                   remote_host, Common::g_scm_branch, Common::g_scm_desc);
     }
     setWindowTitle(QString::fromStdString(window_title));
     this->show();
