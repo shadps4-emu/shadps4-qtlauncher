@@ -207,12 +207,6 @@ execute_process(
   OUTPUT_STRIP_TRAILING_WHITESPACE
 )
 
-# Set Version
-# set(EMULATOR_VERSION_MAJOR "0")
-# set(EMULATOR_VERSION_MINOR "11")
-# set(EMULATOR_VERSION_PATCH "0")
-
-
 set(APP_VERSION "${GIT_REV_LIST_NUMBER}")
 configure_file("${CMAKE_CURRENT_SOURCE_DIR}/src/common/scm_rev.cpp.in" "${CMAKE_CURRENT_BINARY_DIR}/src/common/scm_rev.cpp" @ONLY)
 set_source_files_properties(src/shadps4.rc PROPERTIES COMPILE_DEFINITIONS "APP_VERSION=${APP_VERSION}")

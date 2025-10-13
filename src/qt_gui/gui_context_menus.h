@@ -166,9 +166,10 @@ public:
 
         compatibilityMenu->addAction(updateCompatibility);
         compatibilityMenu->addAction(viewCompatibilityReport);
-        // if (Common::g_is_release) {
-            compatibilityMenu->addAction(submitCompatibilityReport);
-        // }
+
+        // todo find a way to block or allow submissions based on the version in the latest log for
+        // the game
+        compatibilityMenu->addAction(submitCompatibilityReport);
 
         menu.addMenu(compatibilityMenu);
 
@@ -664,7 +665,6 @@ public:
                 query.addQueryItem("game-name", QString::fromStdString(m_games[itemID].name));
                 query.addQueryItem("game-serial", QString::fromStdString(m_games[itemID].serial));
                 query.addQueryItem("game-version", QString::fromStdString(m_games[itemID].version));
-                query.addQueryItem("emulator-version", /*QString(Common::g_version)*/ "todo");
                 url.setQuery(query);
 
                 QDesktopServices::openUrl(url);
