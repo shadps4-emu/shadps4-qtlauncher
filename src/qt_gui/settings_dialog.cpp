@@ -1253,11 +1253,7 @@ void SettingsDialog::setDefaultValues() {
         m_gui_settings->SetValue(gui::gl_backgroundMusicVolume, 50);
         m_gui_settings->SetValue(gui::gen_checkForUpdates, false);
         m_gui_settings->SetValue(gui::gen_showChangeLog, false);
-        if (Common::g_is_release) {
-            m_gui_settings->SetValue(gui::gen_updateChannel, "Release");
-        } else {
-            m_gui_settings->SetValue(gui::gen_updateChannel, "Nightly");
-        }
+        m_gui_settings->SetValue(gui::gen_updateChannel, "Nightly");
         m_gui_settings->SetValue(gui::gen_guiLanguage, "en_US");
         m_gui_settings->SetValue(gui::gl_showLoadGameSizeEnabled, true);
         m_gui_settings->SetValue(gui::gl_showCompatibility, false);

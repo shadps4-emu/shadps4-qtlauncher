@@ -7,9 +7,6 @@
 
 namespace Common {
 
-extern const char g_version[];
-extern const bool g_is_release;
-
 extern const char g_scm_rev[];
 extern const char g_scm_branch[];
 extern const char g_scm_desc[];
