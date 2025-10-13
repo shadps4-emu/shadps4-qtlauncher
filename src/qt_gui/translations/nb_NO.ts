@@ -349,11 +349,11 @@
     </message>
     <message>
       <source>Auto Updater - GUI</source>
-      <translation type="unfinished">Auto Updater - GUI</translation>
+      <translation>Auto oppdatering – grensesnitt</translation>
     </message>
     <message>
       <source>Update Available - GUI</source>
-      <translation type="unfinished">Update Available - GUI</translation>
+      <translation>Oppdatering tilgjengelig – grensesnitt</translation>
     </message>
   </context>
   <context>
@@ -1185,7 +1185,7 @@
     <name>IpcClient</name>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation type="unfinished">Could not find the emulator executable</translation>
+      <translation>Fant ikke emulator-programfila</translation>
     </message>
   </context>
   <context>
@@ -1702,7 +1702,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation type="unfinished">Could not find the emulator executable</translation>
+      <translation>Fant ikke emulator-programfila</translation>
     </message>
   </context>
   <context>
@@ -2497,15 +2497,15 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>GUI Language</source>
-      <translation type="unfinished">GUI Language</translation>
+      <translation>Grensesnittspråk</translation>
     </message>
     <message>
       <source>GUI Updates</source>
-      <translation type="unfinished">GUI Updates</translation>
+      <translation>Grensesnitt oppdateringer</translation>
     </message>
     <message>
       <source>DLC Path</source>
-      <translation type="unfinished">DLC Path</translation>
+      <translation>DLC-mappe</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path</source>
