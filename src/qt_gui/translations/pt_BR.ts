@@ -1056,7 +1056,7 @@
     </message>
     <message>
       <source>Launch...</source>
-      <translation>Iniciando...</translation>
+      <translation>Iniciar...</translation>
     </message>
     <message>
       <source>Launch with game specific configs (default)</source>
