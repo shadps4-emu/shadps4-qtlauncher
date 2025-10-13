@@ -2,7 +2,9 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include <QDialog>
+
 #include "game_info.h"
+#include "ipc/ipc_client.h"
 
 // macros > declaring constants
 // also, we were only using one counterpart
@@ -23,7 +25,8 @@ class KBMSettings;
 class KBMSettings : public QDialog {
     Q_OBJECT
 public:
-    explicit KBMSettings(std::shared_ptr<GameInfoClass> game_info_get, bool GameRunning,
+    explicit KBMSettings(std::shared_ptr<GameInfoClass> game_info_get,
+                         std::shared_ptr<IpcClient> ipc_client, bool GameRunning,
                          std::string GameRunningSerial, QWidget* parent = nullptr);
     ~KBMSettings();
 
@@ -40,6 +43,7 @@ private Q_SLOTS:
 private:
     std::unique_ptr<Ui::KBMSettings> ui;
     std::shared_ptr<GameInfoClass> m_game_info;
+    std::shared_ptr<IpcClient> m_ipc_client;
 
     bool eventFilter(QObject* obj, QEvent* event) override;
     void ButtonConnects();

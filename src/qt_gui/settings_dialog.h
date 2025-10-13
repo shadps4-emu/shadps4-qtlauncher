@@ -12,6 +12,7 @@
 #include "common/config.h"
 #include "common/path_util.h"
 #include "gui_settings.h"
+#include "ipc/ipc_client.h"
 #include "qt_gui/compatibility_info.h"
 
 namespace Ui {
@@ -23,8 +24,9 @@ class SettingsDialog : public QDialog {
 public:
     explicit SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
                             std::shared_ptr<CompatibilityInfoClass> m_compat_info,
-                            QWidget* parent = nullptr, bool is_game_running = false,
-                            bool is_game_specific = false, std::string gsc_serial = "");
+                            std::shared_ptr<IpcClient> ipc_client, QWidget* parent = nullptr,
+                            bool is_game_running = false, bool is_game_specific = false,
+                            std::string gsc_serial = "");
     ~SettingsDialog();
 
     bool eventFilter(QObject* obj, QEvent* event) override;
@@ -66,5 +68,6 @@ private:
     bool is_game_saving = false;
 
     std::shared_ptr<gui_settings> m_gui_settings;
+    std::shared_ptr<IpcClient> m_ipc_client;
     QFuture<void> Polling;
 };
