@@ -187,8 +187,11 @@ jobs:
     steps:
     - uses: actions/checkout@v5
       with:
-        fetch-depth: 0
         submodules: recursive
+    
+    - name: Fetch commit history
+      run:
+        git fetch --deepen=1000000 --filter=blob:none
 
     - name: Add LLVM repository
       run: |
