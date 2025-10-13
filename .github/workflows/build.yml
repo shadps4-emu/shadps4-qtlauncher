@@ -62,6 +62,7 @@ jobs:
     steps:
     - uses: actions/checkout@v5
       with:
+        fetch-depth: 0
         submodules: recursive
 
     - name: Setup Qt
@@ -123,6 +124,7 @@ jobs:
     steps:
     - uses: actions/checkout@v5
       with:
+        fetch-depth: 0
         submodules: recursive
 
     - name: Setup latest Xcode
@@ -185,6 +187,7 @@ jobs:
     steps:
     - uses: actions/checkout@v5
       with:
+        fetch-depth: 0
         submodules: recursive
 
     - name: Add LLVM repository
@@ -237,6 +240,7 @@ jobs:
     steps:
     - uses: actions/checkout@v5
       with:
+        fetch-depth: 0
         submodules: recursive
 
     - name: Install dependencies
