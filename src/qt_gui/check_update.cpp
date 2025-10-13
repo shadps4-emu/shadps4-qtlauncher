@@ -40,7 +40,6 @@ CheckUpdate::CheckUpdate(std::shared_ptr<gui_settings> gui_settings, const bool 
 CheckUpdate::~CheckUpdate() {}
 
 void CheckUpdate::CheckForUpdates(const bool showMessage) {
-    QString updateChannel;
     QUrl url;
 
     bool checkName = true;
@@ -52,7 +51,7 @@ void CheckUpdate::CheckForUpdates(const bool showMessage) {
     QNetworkRequest request(url);
     QNetworkReply* reply = networkManager->get(request);
 
-    connect(reply, &QNetworkReply::finished, this, [this, reply, showMessage, updateChannel]() {
+    connect(reply, &QNetworkReply::finished, this, [this, reply, showMessage]() {
         if (reply->error() != QNetworkReply::NoError) {
             if (reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt() == 403) {
                 QString response = reply->readAll();
@@ -99,30 +98,19 @@ tr("The Auto Updater allows up to 60 update checks per hour.\\nYou have reached 
 #endif
 
         QJsonObject jsonObj;
-        if (updateChannel == "Nightly") {
-            QJsonArray jsonArray = jsonDoc.array();
-            for (const QJsonValue& value : jsonArray) {
-                jsonObj = value.toObject();
-                if (jsonObj.contains("prerelease") && jsonObj["prerelease"].toBool()) {
-                    break;
-                }
+        QJsonArray jsonArray = jsonDoc.array();
+        for (const QJsonValue& value : jsonArray) {
+            jsonObj = value.toObject();
+            if (jsonObj.contains("prerelease") && jsonObj["prerelease"].toBool()) {
+                break;
             }
-            if (!jsonObj.isEmpty()) {
-                latestVersion = jsonObj["tag_name"].toString();
-            } else {
-                QMessageBox::warning(this, tr("Error"), tr("No pre-releases found."));
-                reply->deleteLater();
-                return;
-            }
+        }
+        if (!jsonObj.isEmpty()) {
+            latestVersion = jsonObj["tag_name"].toString();
         } else {
-            jsonObj = jsonDoc.object();
-            if (jsonObj.contains("tag_name")) {
-                latestVersion = jsonObj["tag_name"].toString();
-            } else {
-                QMessageBox::warning(this, tr("Error"), tr("Invalid release data."));
-                reply->deleteLater();
-                return;
-            }
+            QMessageBox::warning(this, tr("Error"), tr("No pre-releases found."));
+            reply->deleteLater();
+            return;
         }
 
         latestRev = latestVersion.right(40);
@@ -184,10 +172,8 @@ void CheckUpdate::setupUI(const QString& downloadUrl, const QString& latestDate,
     titleLayout->addWidget(titleLabel);
     layout->addLayout(titleLayout);
 
-    QString updateChannel = "Nightly";
-
     QString updateText =
-        QString("<p><b>" + tr("Update Channel") + ": </b>" + updateChannel +
+        QString("<p><b>" + tr("Update Channel") + ": </b>" + "what even is this string" +
                 "<br>"
                 "<table><tr>"
                 "<td><b>" +
@@ -202,8 +188,7 @@ void CheckUpdate::setupUI(const QString& downloadUrl, const QString& latestDate,
                 "<td>%3</td>"
                 "<td>(%4)</td>"
                 "</tr></table></p>")
-            .arg(updateChannel == "Nightly" ? currentRev.left(7) : currentRev.left(8), currentDate,
-                 updateChannel == "Nightly" ? latestRev.left(7) : latestRev.left(8), latestDate);
+            .arg(currentRev.left(7), currentDate, latestRev.left(7), latestDate);
 
     QLabel* updateLabel = new QLabel(updateText, this);
     layout->addWidget(updateLabel);
