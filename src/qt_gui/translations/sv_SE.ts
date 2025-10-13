@@ -349,11 +349,11 @@
     </message>
     <message>
       <source>Auto Updater - GUI</source>
-      <translation type="unfinished">Auto Updater - GUI</translation>
+      <translation>Automatisk uppdaterare - Grafiskt gränssnitt</translation>
     </message>
     <message>
       <source>Update Available - GUI</source>
-      <translation type="unfinished">Update Available - GUI</translation>
+      <translation>Uppdatering tillgänglig - Grafiskt gränssnitt</translation>
     </message>
   </context>
   <context>
@@ -1185,7 +1185,7 @@
     <name>IpcClient</name>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation type="unfinished">Could not find the emulator executable</translation>
+      <translation>Kunde inte hitta körbar emulatorfil</translation>
     </message>
   </context>
   <context>
@@ -1702,7 +1702,7 @@ Välj en emulatorversion från den högra panelen.</translation>
     </message>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation type="unfinished">Could not find the emulator executable</translation>
+      <translation>Kunde inte hitta körbar emulatorfil</translation>
     </message>
   </context>
   <context>
@@ -2497,23 +2497,23 @@ Välj en emulatorversion från den högra panelen.</translation>
     </message>
     <message>
       <source>GUI Language</source>
-      <translation type="unfinished">GUI Language</translation>
+      <translation>Språk för grafiskt gränssnitt</translation>
     </message>
     <message>
       <source>GUI Updates</source>
-      <translation type="unfinished">GUI Updates</translation>
+      <translation>Uppdateringar för grafiskt gränssnitt</translation>
     </message>
     <message>
       <source>DLC Path</source>
-      <translation type="unfinished">DLC Path</translation>
+      <translation>DLC-sökväg</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path</source>
-      <translation type="unfinished">PS4 Sysmodules Path</translation>
+      <translation>Sökväg för PS4 sysmodules</translation>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
-      <translation type="unfinished">GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</translation>
+      <translation>Uppdateringar för grafiskt gränssnitt:\nUtgåva: Officiella versioner som släpps varje månad och som kan vara mycket föråldrade, men som är mer tillförlitliga och testade.\nNightly: Utvecklingsversioner som har alla de senaste funktionerna och korrigeringarna, men som kan innehålla buggar och är mindre stabila.\n\n*Denna uppdatering gäller endast Qt-användargränssnittet. För att uppdatera emulatorkärnan, använd menyn &apos;Versionshanterare&apos;.</translation>
     </message>
   </context>
   <context>
@@ -2810,19 +2810,19 @@ Vill du hämta ner den nu?</translation>
     </message>
     <message>
       <source>Always Show Changelog</source>
-      <translation type="unfinished">Always Show Changelog</translation>
+      <translation>Visa alltid ändringslogg</translation>
     </message>
     <message>
       <source>No version selected. Please choose one from the list to delete.</source>
-      <translation type="unfinished">No version selected. Please choose one from the list to delete.</translation>
+      <translation>Ingen version vald. Välj en från listan att ta bort.</translation>
     </message>
     <message>
       <source>Confirm Download</source>
-      <translation type="unfinished">Confirm Download</translation>
+      <translation>Bekräfta hämtning</translation>
     </message>
     <message>
       <source>Extraction failure.</source>
-      <translation type="unfinished">Extraction failure.</translation>
+      <translation>Extraheringsfel.</translation>
     </message>
   </context>
 </TS>
