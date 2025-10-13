@@ -82,10 +82,11 @@ static std::vector<QString> m_physical_devices;
 
 SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
                                std::shared_ptr<CompatibilityInfoClass> m_compat_info,
-                               QWidget* parent, bool is_running, bool is_specific,
-                               std::string gsc_serial)
+                               std::shared_ptr<IpcClient> ipc_client, QWidget* parent,
+                               bool is_running, bool is_specific, std::string gsc_serial)
     : QDialog(parent), ui(new Ui::SettingsDialog), m_gui_settings(std::move(gui_settings)),
-      is_game_running(is_running), is_game_specific(is_specific), gs_serial(gsc_serial) {
+      m_ipc_client(ipc_client), is_game_running(is_running), is_game_specific(is_specific),
+      gs_serial(gsc_serial) {
 
     ui->setupUi(this);
     ui->tabWidgetSettings->setUsesScrollButtons(false);
@@ -237,8 +238,9 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
     {
         connect(ui->horizontalVolumeSlider, &QSlider::valueChanged, this, [this](int value) {
             VolumeSliderChange(value);
-            Config::setVolumeSlider(value, is_game_specific);
-            // Libraries::AudioOut::AdjustVol();
+
+            if (Config::getGameRunning())
+                m_ipc_client->adjustVol(value, is_game_specific);
         });
 
 #ifdef ENABLE_UPDATER
@@ -295,6 +297,16 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
                     }
                     emit CompatibilityChanged();
                 });
+
+        // Audio Device (general)
+        connect(
+            ui->GenAudioComboBox, &QComboBox::currentTextChanged, this,
+            [this](const QString& device) { Config::setMainOutputDevice(device.toStdString()); });
+
+        // Audio Device (DS4 speaker)
+        connect(
+            ui->DsAudioComboBox, &QComboBox::currentTextChanged, this,
+            [this](const QString& device) { Config::setPadSpkOutputDevice(device.toStdString()); });
     }
 
     // GUI TAB
@@ -455,28 +467,24 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         ui->RCASValue->setText(RCASValue);
     });
 
-    //     if (presenter) {
-    //         connect(ui->RCASSlider, &QSlider::valueChanged, this, [this](int value) {
-    //             presenter->GetFsrSettingsRef().rcas_attenuation = static_cast<float>(value /
-    //             1000.0f);
-    //         });
+    if (Config::getGameRunning()) {
+        connect(ui->RCASSlider, &QSlider::valueChanged, this,
+                [this](int value) { m_ipc_client->setRcasAttenuation(value); });
 
-    // #if (QT_VERSION < QT_VERSION_CHECK(6, 7, 0))
-    //         connect(ui->FSRCheckBox, &QCheckBox::stateChanged, this,
-    //                 [this](int state) { presenter->GetFsrSettingsRef().enable = state; });
+#if (QT_VERSION < QT_VERSION_CHECK(6, 7, 0))
+        connect(ui->FSRCheckBox, &QCheckBox::stateChanged, this,
+                [this](int state) { m_ipc_client->setFsr(state); });
 
-    //         connect(ui->RCASCheckBox, &QCheckBox::stateChanged, this,
-    //                 [this](int state) { presenter->GetFsrSettingsRef().use_rcas = state; });
-    // #else
-    //         connect(ui->FSRCheckBox, &QCheckBox::checkStateChanged, this,
-    //                 [this](Qt::CheckState state) { presenter->GetFsrSettingsRef().enable = state;
-    //                 });
+        connect(ui->RCASCheckBox, &QCheckBox::stateChanged, this,
+                [this](int state) { m_ipc_client->setRcas(state); });
+#else
+        connect(ui->FSRCheckBox, &QCheckBox::checkStateChanged, this,
+                [this](Qt::CheckState state) { m_ipc_client->setFsr(state); });
 
-    //         connect(ui->RCASCheckBox, &QCheckBox::checkStateChanged, this,
-    //                 [this](Qt::CheckState state) { presenter->GetFsrSettingsRef().use_rcas =
-    //                 state; });
-    // #endif
-    //     }
+        connect(ui->RCASCheckBox, &QCheckBox::checkStateChanged, this,
+                [this](Qt::CheckState state) { m_ipc_client->setRcas(state); });
+#endif
+    }
 
     // Descriptions
     {
@@ -567,15 +575,8 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         ui->dmemGroupBox->installEventFilter(this);
     }
 
-    SdlEventWrapper::Wrapper::wrapperActive = true;
-    if (!is_game_running) {
-        SDL_InitSubSystem(SDL_INIT_EVENTS);
-        Polling = QtConcurrent::run(&SettingsDialog::pollSDLevents, this);
-    } else {
-        SdlEventWrapper::Wrapper* DeviceEventWrapper = SdlEventWrapper::Wrapper::GetInstance();
-        QObject::connect(DeviceEventWrapper, &SdlEventWrapper::Wrapper::audioDeviceChanged, this,
-                         &SettingsDialog::onAudioDeviceChange);
-    }
+    SDL_InitSubSystem(SDL_INIT_EVENTS);
+    Polling = QtConcurrent::run(&SettingsDialog::pollSDLevents, this);
 }
 
 void SettingsDialog::closeEvent(QCloseEvent* event) {
@@ -587,17 +588,17 @@ void SettingsDialog::closeEvent(QCloseEvent* event) {
         SyncRealTimeWidgetstoConfig();
     }
 
-    SdlEventWrapper::Wrapper::wrapperActive = false;
-    if (!is_game_running) {
-        SDL_Event quitLoop{};
-        quitLoop.type = SDL_EVENT_QUIT;
-        SDL_PushEvent(&quitLoop);
-        Polling.waitForFinished();
+    SDL_Event quitLoop{};
+    quitLoop.type = SDL_EVENT_QUIT;
+    SDL_PushEvent(&quitLoop);
+    Polling.waitForFinished();
 
-        SDL_QuitSubSystem(SDL_INIT_EVENTS);
-        SDL_QuitSubSystem(SDL_INIT_AUDIO);
-        SDL_Quit();
-    }
+    SDL_QuitSubSystem(SDL_INIT_EVENTS);
+
+    // This breaks the microphone selection
+    // SDL_QuitSubSystem(SDL_INIT_AUDIO);
+    // SDL_Quit();
+
     QDialog::closeEvent(event);
 }
 
@@ -702,7 +703,7 @@ void SettingsDialog::LoadValuesFromConfig() {
         languageIndexes.size());
 
     std::string micDevice =
-        toml::find_or<std::string>(data, "Input", "micDevice", "Default Device");
+        toml::find_or<std::string>(data, "Audio", "micDevice", "Default Device");
     QString micValue = QString::fromStdString(micDevice);
     int micIndex = ui->micComboBox->findData(micValue);
     if (micIndex != -1) {
@@ -803,10 +804,10 @@ void SettingsDialog::LoadValuesFromConfig() {
         toml::find_or<bool>(data, "Debug", "CollectShader", false));
     ui->enableLoggingCheckBox->setChecked(toml::find_or<bool>(data, "Debug", "logEnabled", true));
 
-    ui->GenAudioComboBox->setCurrentText(QString::fromStdString(
-        toml::find_or<std::string>(data, "General", "mainOutputDevice", "")));
+    ui->GenAudioComboBox->setCurrentText(
+        QString::fromStdString(toml::find_or<std::string>(data, "Audio", "mainOutputDevice", "")));
     ui->DsAudioComboBox->setCurrentText(QString::fromStdString(
-        toml::find_or<std::string>(data, "General", "padSpkOutputDevice", "")));
+        toml::find_or<std::string>(data, "Audio", "padSpkOutputDevice", "")));
 
     QString chooseHomeTab = m_gui_settings->GetValue(gui::gen_homeTab).toString();
     QString translatedText = chooseHomeTabMap.key(chooseHomeTab);
@@ -1236,15 +1237,12 @@ void SettingsDialog::SyncRealTimeWidgetstoConfig() {
     is_game_specific ? Config::resetGameSpecificValue("volumeSlider")
                      : Config::setVolumeSlider(sliderValue);
 
-    // if (presenter) {
-    //     presenter->GetFsrSettingsRef().enable =
-    //         toml::find_or<bool>(gs_data, "GPU", "fsrEnabled", true);
-    //     presenter->GetFsrSettingsRef().use_rcas =
-    //         toml::find_or<bool>(gs_data, "GPU", "rcasEnabled", true);
-    //     presenter->GetFsrSettingsRef().rcas_attenuation =
-    //         static_cast<float>(toml::find_or<int>(gs_data, "GPU", "rcasAttenuation", 250) /
-    //         1000.f);
-    // }
+    if (Config::getGameRunning()) {
+        m_ipc_client->setFsr(toml::find_or<bool>(gs_data, "GPU", "fsrEnabled", true));
+        m_ipc_client->setRcas(toml::find_or<bool>(gs_data, "GPU", "rcasEnabled", true));
+        m_ipc_client->setRcasAttenuation(
+            toml::find_or<int>(gs_data, "GPU", "rcasAttenuation", 250));
+    }
 }
 
 void SettingsDialog::setDefaultValues() {
@@ -1294,8 +1292,8 @@ void SettingsDialog::onAudioDeviceChange(bool isAdd) {
     ui->GenAudioComboBox->clear();
     ui->DsAudioComboBox->clear();
 
-    // prevent device list from refreshing too fast when game not running
-    if (!is_game_running && isAdd == false)
+    // prevent device list from refreshing too fast
+    if (!isAdd)
         QThread::msleep(100);
 
     int deviceCount;

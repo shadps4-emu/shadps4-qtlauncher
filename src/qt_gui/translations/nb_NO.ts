@@ -348,12 +348,12 @@
       <translation>Klarte ikke opprette oppdateringsskriptfila</translation>
     </message>
     <message>
-      <source>Auto Updater - Interface</source>
+      <source>Auto Updater - GUI</source>
       <translation>Auto oppdatering – grensesnitt</translation>
     </message>
     <message>
-      <source>Update Available (Interface)</source>
-      <translation>Oppdatering tilgjengelig (grensesnitt)</translation>
+      <source>Update Available - GUI</source>
+      <translation>Oppdatering tilgjengelig – grensesnitt</translation>
     </message>
   </context>
   <context>
@@ -1184,14 +1184,8 @@
   <context>
     <name>IpcClient</name>
     <message>
-      <source>ShadPS4</source>
-      <translation>shadPS4</translation>
-    </message>
-    <message>
-      <source>shadPS4 is not found!
-Please change shadPS4 path in settings.</source>
-      <translation>Fant ikke shadPS4!
-Endre mappa til shadPS4 i innstillingene.</translation>
+      <source>Could not find the emulator executable</source>
+      <translation>Fant ikke emulator-programfila</translation>
     </message>
   </context>
   <context>
@@ -1691,12 +1685,6 @@ Endre mappa til shadPS4 i innstillingene.</translation>
       <translation>Tilpass hurtigtaster</translation>
     </message>
     <message>
-      <source>shadPS4 is not found!
-Please change shadPS4 path in settings.</source>
-      <translation>Fant ikke shadPS4!
-Endre mappa til shadPS4 i innstillingene.</translation>
-    </message>
-    <message>
       <source>Version Manager</source>
       <translation>Versjonsbehandling</translation>
     </message>
@@ -1713,8 +1701,8 @@ Versjonsbehandling-menyen vil åpnes.
 Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
-      <source>No version selected</source>
-      <translation>Ingen versjon valgt</translation>
+      <source>Could not find the emulator executable</source>
+      <translation>Fant ikke emulator-programfila</translation>
     </message>
   </context>
   <context>
@@ -1734,10 +1722,6 @@ Velg en emulatorversjon fra høyre panel.</translation>
     <message>
       <source>Console Language</source>
       <translation>Konsollspråk</translation>
-    </message>
-    <message>
-      <source>Emulator Language</source>
-      <translation>Emulatorspråk</translation>
     </message>
     <message>
       <source>Default tab when opening settings</source>
@@ -1824,10 +1808,6 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <translation>Grafikk</translation>
     </message>
     <message>
-      <source>GUI</source>
-      <translation>Grensesnitt</translation>
-    </message>
-    <message>
       <source>User</source>
       <translation>Bruker</translation>
     </message>
@@ -1910,10 +1890,6 @@ Velg en emulatorversjon fra høyre panel.</translation>
     <message>
       <source>Enable Readback Linear Images</source>
       <translation>Bruk tilbakelesninger av lineære bilder</translation>
-    </message>
-    <message>
-      <source>Update</source>
-      <translation>Oppdatering</translation>
     </message>
     <message>
       <source>Check for Updates at Startup</source>
@@ -2026,10 +2002,6 @@ Velg en emulatorversjon fra høyre panel.</translation>
     <message>
       <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Trace&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: Trace, Debug, Info, Warning, Error, Critical - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
       <translation>Loggfilter:\nFiltrerer loggen for å kun skrive ut spesifikk informasjon.\nEksempler: «Core:Trace» «Lib.Pad:Debug Common.Filesystem:Error» «*:Critical» \nNivåer: Trace, Debug, Info, Warning, Error, Critical - i denne rekkefølgen, et spesifikt nivå demper alle tidligere nivåer i lista og loggfører alle nivåer etter det.</translation>
-    </message>
-    <message>
-      <source>Update:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.</source>
-      <translation>Oppdatering:\nOffisiell: Offisielle versjoner utgitt hver måned som kan være veldig utdaterte, men er mer pålitelige og testet.\nNattlig: Utviklingsversjoner som har alle de nyeste funksjonene og feilrettingene, men som kan inneholde feil og er mindre stabile.</translation>
     </message>
     <message>
       <source>Background Image:\nControl the opacity of the game background image.</source>
@@ -2324,10 +2296,6 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <translation>Umiddelbart (Ingen Vsync)</translation>
     </message>
     <message>
-      <source>DLC Folder</source>
-      <translation>DLC-mappe</translation>
-    </message>
-    <message>
       <source>Select the DLC folder</source>
       <translation>Velg DLC-mappa</translation>
     </message>
@@ -2488,10 +2456,6 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <translation>Ytterligere direkte-minne tildeling:\nTvinger gjennom tildeling av ytterligere mengde direkte-minne. Forårsaker krasj eller andre feil i noen spill.</translation>
     </message>
     <message>
-      <source>PS4 Sysmodules Folder</source>
-      <translation>PS4 «Sysmodules»-mappe</translation>
-    </message>
-    <message>
       <source>PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</source>
       <translation>PS4 «Sysmodules»-mappe:\nMappa hvor PS4-systemmoduler lastes fra.</translation>
     </message>
@@ -2530,6 +2494,26 @@ Velg en emulatorversjon fra høyre panel.</translation>
     <message>
       <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
       <translation>Bruk grafikkort assistert validering:\nForteller skyggeleggere gjennom kode som validerer om de gjengis riktig.\nDette vil redusere ytelsen og sannsynligvis endre emulatorens atferd.\nDu trenger Vulkan SDK for at dette skal fungere.</translation>
+    </message>
+    <message>
+      <source>GUI Language</source>
+      <translation>Grensesnittspråk</translation>
+    </message>
+    <message>
+      <source>GUI Updates</source>
+      <translation>Grensesnitt oppdateringer</translation>
+    </message>
+    <message>
+      <source>DLC Path</source>
+      <translation>DLC-mappe</translation>
+    </message>
+    <message>
+      <source>PS4 Sysmodules Path</source>
+      <translation>PS4 «sys_modules»-mappe</translation>
+    </message>
+    <message>
+      <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
+      <translation>Grensesnitt oppdateringer:\nOffisiell: Stabile offisielle versjoner utgis hver måned, men kan være veldig utdaterte.\nNattlig: Ustabile utviklingsversjoner med alle de nyeste funksjonene og rettelsene, men kan inneholde feil.\n\nMerk: denne oppdateringen angår kun Qt-brukergrensesnittet. For oppdatering av selve emulatoren, bruk «Versjonsbehandling»-menyen.</translation>
     </message>
   </context>
   <context>
@@ -2614,10 +2598,6 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <translation>Se etter forhåndsoppdateringer ved oppstart</translation>
     </message>
     <message>
-      <source>Always show Pre-release changelog</source>
-      <translation>Vis alltid endringsloggen for forhåndsutgivelse</translation>
-    </message>
-    <message>
       <source>Check for Pre-release Updates</source>
       <translation>Se etter forhåndsoppdateringer</translation>
     </message>
@@ -2672,14 +2652,6 @@ Velg en emulatorversjon fra høyre panel.</translation>
     <message>
       <source>Version added successfully.</source>
       <translation>La til versjon på velykket vis.</translation>
-    </message>
-    <message>
-      <source>Notice</source>
-      <translation>Merknad</translation>
-    </message>
-    <message>
-      <source>No version selected from the Installed list.</source>
-      <translation>Ingen versjon valgt fra installert-lista.</translation>
     </message>
     <message>
       <source>Failed to determine the folder path.</source>
@@ -2836,6 +2808,22 @@ Would you like to download it now?</source>
     <message>
       <source>Failed to create the update script file</source>
       <translation>Klarte ikke opprette oppdateringsskriptfila</translation>
+    </message>
+    <message>
+      <source>Always Show Changelog</source>
+      <translation>Vis alltid endringsloggen</translation>
+    </message>
+    <message>
+      <source>No version selected. Please choose one from the list to delete.</source>
+      <translation>Ingen versjon valgt. Velg en fra lista for sletting.</translation>
+    </message>
+    <message>
+      <source>Confirm Download</source>
+      <translation>Bekreft nedlasting</translation>
+    </message>
+    <message>
+      <source>Extraction failure.</source>
+      <translation>Feil ved utpakking.</translation>
     </message>
   </context>
 </TS>

@@ -137,8 +137,9 @@ VersionDialog::VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget
     connect(ui->deleteVersionButton, &QPushButton::clicked, this, [this]() {
         QTreeWidgetItem* selectedItem = ui->installedTreeWidget->currentItem();
         if (!selectedItem) {
-            QMessageBox::warning(this, tr("Notice"),
-                                 tr("No version selected from the Installed list."));
+            QMessageBox::warning(
+                this, tr("Error"),
+                tr("No version selected. Please choose one from the list to delete."));
             return;
         }
 
@@ -340,7 +341,7 @@ tr("First you need to choose a location to save the versions in\n'Path to save v
 
             { // Menssage yes/no
                 QMessageBox::StandardButton reply;
-                reply = QMessageBox::question(this, tr("Download"),
+                reply = QMessageBox::question(this, tr("Confirm Download"),
                                               tr("Do you want to download the version") +
                                                   QString(": %1 ?").arg(versionName),
                                               QMessageBox::Yes | QMessageBox::No);
@@ -524,7 +525,7 @@ tr("First you need to choose a location to save the versions in\n'Path to save v
                                     m_gui_settings->SetValue(gui::vm_versionSelected, fullPath);
 
                                     QMessageBox::information(
-                                        this, tr("Download"),
+                                        this, tr("Confirm Download"),
                                         tr("Version %1 has been downloaded and selected.")
                                             .arg(versionName));
 

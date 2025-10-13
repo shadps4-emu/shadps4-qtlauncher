@@ -58,6 +58,37 @@ void IpcClient::toggleFullscreen() {
     writeLine("TOGGLE_FULLSCREEN");
 }
 
+void IpcClient::adjustVol(int volume, bool is_game_specific) {
+    writeLine("ADJUST_VOLUME");
+    writeLine(QString::number(volume));
+    writeLine(is_game_specific ? "1" : "0");
+}
+
+void IpcClient::setFsr(bool enable) {
+    writeLine("SET_FSR");
+    writeLine(enable ? "1" : "0");
+}
+
+void IpcClient::setRcas(bool enable) {
+    writeLine("SET_RCAS");
+    writeLine(enable ? "1" : "0");
+}
+
+void IpcClient::setRcasAttenuation(int value) {
+    writeLine("SET_RCAS_ATTENUATION");
+    writeLine(QString::number(value));
+}
+
+void IpcClient::reloadInputs(std::string config) {
+    writeLine("RELOAD_INPUTS");
+    writeLine(QString::fromStdString(config));
+}
+
+void IpcClient::setActiveController(std::string GUID) {
+    writeLine("SET_ACTIVE_CONTROLLER");
+    writeLine(QString::fromStdString(GUID));
+}
+
 void IpcClient::sendMemoryPatches(std::string modNameStr, std::string offsetStr,
                                   std::string valueStr, std::string targetStr, std::string sizeStr,
                                   bool isOffset, bool littleEndian,
@@ -149,9 +180,8 @@ void IpcClient::onProcessClosed() {
 
 void IpcClient::writeLine(const QString& text) {
     if (process == nullptr) {
-        QMessageBox::critical(
-            nullptr, tr("ShadPS4"),
-            QString(tr("shadPS4 is not found!\nPlease change shadPS4 path in settings.")));
+        QMessageBox::critical(nullptr, "ShadPS4",
+                              QString(tr("Could not find the emulator executable")));
         return;
     }
 

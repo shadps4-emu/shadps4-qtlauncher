@@ -22,6 +22,12 @@ public:
     void stopEmulator();
     void restartEmulator();
     void toggleFullscreen();
+    void adjustVol(int volume, bool game_specific);
+    void setFsr(bool enable);
+    void setRcas(bool enable);
+    void setRcasAttenuation(int value);
+    void reloadInputs(std::string config);
+    void setActiveController(std::string GUID);
     void sendMemoryPatches(std::string modNameStr, std::string offsetStr, std::string valueStr,
                            std::string targetStr, std::string sizeStr, bool isOffset,
                            bool littleEndian,

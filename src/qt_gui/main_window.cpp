@@ -22,6 +22,7 @@
 #include "control_settings.h"
 #include "game_install_dialog.h"
 #include "hotkeys.h"
+#include "input/controller.h"
 #include "ipc/ipc_client.h"
 #include "kbm_gui.h"
 #include "main_window.h"
@@ -436,8 +437,8 @@ void MainWindow::CreateConnects() {
             &MainWindow::StartGame);
 
     connect(ui->configureAct, &QAction::triggered, this, [this]() {
-        auto settingsDialog =
-            new SettingsDialog(m_gui_settings, m_compat_info, this, Config::getGameRunning());
+        auto settingsDialog = new SettingsDialog(m_gui_settings, m_compat_info, m_ipc_client, this,
+                                                 Config::getGameRunning());
 
         connect(settingsDialog, &SettingsDialog::LanguageChanged, this,
                 &MainWindow::OnLanguageChanged);
@@ -471,8 +472,8 @@ void MainWindow::CreateConnects() {
     });
 
     connect(ui->settingsButton, &QPushButton::clicked, this, [this]() {
-        auto settingsDialog =
-            new SettingsDialog(m_gui_settings, m_compat_info, this, Config::getGameRunning());
+        auto settingsDialog = new SettingsDialog(m_gui_settings, m_compat_info, m_ipc_client, this,
+                                                 Config::getGameRunning());
 
         connect(settingsDialog, &SettingsDialog::LanguageChanged, this,
                 &MainWindow::OnLanguageChanged);
@@ -506,14 +507,14 @@ void MainWindow::CreateConnects() {
     });
 
     connect(ui->controllerButton, &QPushButton::clicked, this, [this]() {
-        ControlSettings* remapWindow =
-            new ControlSettings(m_game_info, Config::getGameRunning(), runningGameSerial, this);
+        ControlSettings* remapWindow = new ControlSettings(
+            m_game_info, m_ipc_client, Config::getGameRunning(), runningGameSerial, this);
         remapWindow->exec();
     });
 
     connect(ui->keyboardButton, &QPushButton::clicked, this, [this]() {
-        auto kbmWindow =
-            new KBMSettings(m_game_info, Config::getGameRunning(), runningGameSerial, this);
+        auto kbmWindow = new KBMSettings(m_game_info, m_ipc_client, Config::getGameRunning(),
+                                         runningGameSerial, this);
         kbmWindow->exec();
     });
 
@@ -536,7 +537,7 @@ void MainWindow::CreateConnects() {
     });
 
     connect(ui->configureHotkeys, &QAction::triggered, this, [this]() {
-        auto hotkeyDialog = new Hotkeys(Config::getGameRunning(), this);
+        auto hotkeyDialog = new Hotkeys(m_ipc_client, Config::getGameRunning(), this);
         hotkeyDialog->exec();
     });
 
@@ -1282,16 +1283,15 @@ tr("No emulator version was selected.\nThe Version Manager menu will then open.\
 #ifdef Q_OS_WIN
     exeName = "/shadPS4.exe";
 #elif defined(Q_OS_LINUX)
-    exeName = "/shadPS4.AppImage";
+    exeName = "/Shadps4-sdl.AppImage";
 #elif defined(Q_OS_MACOS)
-    exeName = "/shadPS4";
+    exeName = "/shadps4";
 #endif
     QString exe = selectedVersion + exeName;
     QFileInfo fileInfo(exe);
     if (!fileInfo.exists()) {
-        QMessageBox::critical(
-            nullptr, tr("shadPS4"),
-            QString(tr("shadPS4 is not found!\nPlease change shadPS4 path in settings.")));
+        QMessageBox::critical(nullptr, "shadPS4",
+                              QString(tr("Could not find the emulator executable")));
         return;
     }
 
@@ -1299,9 +1299,10 @@ tr("No emulator version was selected.\nThe Version Manager menu will then open.\
 
     final_args.append(args);
 
-    QString workDir = fileInfo.absolutePath();
+    QString workDir = QDir::currentPath();
 
     m_ipc_client->startEmulator(fileInfo, final_args, workDir);
+    m_ipc_client->setActiveController(GamepadSelect::GetSelectedGamepad());
 }
 
 void MainWindow::RunGame() {
@@ -1325,9 +1326,9 @@ void MainWindow::RestartEmulator() {
 #ifdef Q_OS_WIN
     exeName = "/shadPS4.exe";
 #elif defined(Q_OS_LINUX)
-    exeName = "/shadPS4.AppImage";
+    exeName = "/Shadps4-sdl.AppImage";
 #elif defined(Q_OS_MACOS)
-    exeName = "/shadPS4";
+    exeName = "/shadps4";
 #endif
 
     QString exe = m_gui_settings->GetValue(gui::vm_versionSelected).toString() + exeName;
@@ -1351,7 +1352,7 @@ void MainWindow::LoadVersionComboBox() {
     QString savedVersionPath = m_gui_settings->GetValue(gui::vm_versionSelected).toString();
     if (savedVersionPath.isEmpty() || !QDir(savedVersionPath).exists()) {
         ui->versionComboBox->clear();
-        ui->versionComboBox->addItem(tr("No version selected"));
+        ui->versionComboBox->addItem(tr("No Version Selected"));
         ui->versionComboBox->setCurrentIndex(0);
         ui->versionComboBox->setSizeAdjustPolicy(QComboBox::AdjustToContents);
         ui->versionComboBox->adjustSize();

@@ -348,12 +348,12 @@
       <translation>Misslyckades med att skapa uppdateringsskriptfil</translation>
     </message>
     <message>
-      <source>Auto Updater - Interface</source>
-      <translation>Automatisk uppdaterare - Gränssnitt</translation>
+      <source>Auto Updater - GUI</source>
+      <translation>Automatisk uppdaterare - Grafiskt gränssnitt</translation>
     </message>
     <message>
-      <source>Update Available (Interface)</source>
-      <translation>Uppdatering tillgänglig (Gränssnitt)</translation>
+      <source>Update Available - GUI</source>
+      <translation>Uppdatering tillgänglig - Grafiskt gränssnitt</translation>
     </message>
   </context>
   <context>
@@ -1184,14 +1184,8 @@
   <context>
     <name>IpcClient</name>
     <message>
-      <source>ShadPS4</source>
-      <translation>ShadPS4</translation>
-    </message>
-    <message>
-      <source>shadPS4 is not found!
-Please change shadPS4 path in settings.</source>
-      <translation>shadPS4 hittades inte!
-Ändra sökvägen till shadPS4 i inställningarna.</translation>
+      <source>Could not find the emulator executable</source>
+      <translation>Kunde inte hitta körbar emulatorfil</translation>
     </message>
   </context>
   <context>
@@ -1691,12 +1685,6 @@ Please change shadPS4 path in settings.</source>
       <translation>Anpassa snabbtangenter</translation>
     </message>
     <message>
-      <source>shadPS4 is not found!
-Please change shadPS4 path in settings.</source>
-      <translation>shadPS4 hittades inte!
-Ändra sökvägen till shadPS4 i inställningarna.</translation>
-    </message>
-    <message>
       <source>Version Manager</source>
       <translation>Versionshanterare</translation>
     </message>
@@ -1713,8 +1701,8 @@ Menyn Versionshanterare kommer då att öppnas.
 Välj en emulatorversion från den högra panelen.</translation>
     </message>
     <message>
-      <source>No version selected</source>
-      <translation>Ingen version vald</translation>
+      <source>Could not find the emulator executable</source>
+      <translation>Kunde inte hitta körbar emulatorfil</translation>
     </message>
   </context>
   <context>
@@ -1734,10 +1722,6 @@ Välj en emulatorversion från den högra panelen.</translation>
     <message>
       <source>Console Language</source>
       <translation>Konsollspråk</translation>
-    </message>
-    <message>
-      <source>Emulator Language</source>
-      <translation>Emulatorspråk</translation>
     </message>
     <message>
       <source>Default tab when opening settings</source>
@@ -1824,10 +1808,6 @@ Välj en emulatorversion från den högra panelen.</translation>
       <translation>Grafik</translation>
     </message>
     <message>
-      <source>GUI</source>
-      <translation>Gränssnitt</translation>
-    </message>
-    <message>
       <source>User</source>
       <translation>Användare</translation>
     </message>
@@ -1910,10 +1890,6 @@ Välj en emulatorversion från den högra panelen.</translation>
     <message>
       <source>Enable Readback Linear Images</source>
       <translation>Aktivera återläsning av linjära bilder</translation>
-    </message>
-    <message>
-      <source>Update</source>
-      <translation>Uppdatera</translation>
     </message>
     <message>
       <source>Check for Updates at Startup</source>
@@ -2026,10 +2002,6 @@ Välj en emulatorversion från den högra panelen.</translation>
     <message>
       <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Trace&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: Trace, Debug, Info, Warning, Error, Critical - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
       <translation>Loggfilter:\nFiltrera loggen till att endast skriva ut specifik information.\nExempel: &quot;Core:Trace&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nNivåer: Trace, Debug, Info, Warning, Error, Critical - i den ordningen, en specifik nivå som tystar alla nivåer före den i listan och loggar allting efter den.</translation>
-    </message>
-    <message>
-      <source>Update:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.</source>
-      <translation>Uppdatering:\nRelease: Officiella versioner som släpps varje månad som kan vara mycket utdaterade, men är mer pålitliga och testade.\nNightly: Utvecklingsversioner som har de senaste funktionerna och fixarna, men kan innehålla fel och är mindre stabila.</translation>
     </message>
     <message>
       <source>Background Image:\nControl the opacity of the game background image.</source>
@@ -2324,10 +2296,6 @@ Välj en emulatorversion från den högra panelen.</translation>
       <translation>Omedelbar (Ingen Vsync)</translation>
     </message>
     <message>
-      <source>DLC Folder</source>
-      <translation>Mapp för nedladdningsbart innehåll (DLC)</translation>
-    </message>
-    <message>
       <source>Select the DLC folder</source>
       <translation>Välj DLC-mappen</translation>
     </message>
@@ -2488,10 +2456,6 @@ Välj en emulatorversion från den högra panelen.</translation>
       <translation>Ytterligare DMem-allokering:\nTvingar allokering av den angivna mängden ytterligare DMem. Kraschar eller orsakar problem i vissa spel.</translation>
     </message>
     <message>
-      <source>PS4 Sysmodules Folder</source>
-      <translation>Mapp för PS4 Sysmodules</translation>
-    </message>
-    <message>
       <source>PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</source>
       <translation>Sökväg till PS4 Sysmodules:\nMappen där PS4 sysmodules läses in från.</translation>
     </message>
@@ -2530,6 +2494,26 @@ Välj en emulatorversion från den högra panelen.</translation>
     <message>
       <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
       <translation>Aktivera GPU-assisterad validering:\nInstrumenterar shaders med kod som validerar om de fungerar korrekt.\nDetta minskar prestandan och kan förändra emuleringens beteende.\nDu behöver Vulkan SDK för att detta ska fungera.</translation>
+    </message>
+    <message>
+      <source>GUI Language</source>
+      <translation>Språk för grafiskt gränssnitt</translation>
+    </message>
+    <message>
+      <source>GUI Updates</source>
+      <translation>Uppdateringar för grafiskt gränssnitt</translation>
+    </message>
+    <message>
+      <source>DLC Path</source>
+      <translation>DLC-sökväg</translation>
+    </message>
+    <message>
+      <source>PS4 Sysmodules Path</source>
+      <translation>Sökväg för PS4 sysmodules</translation>
+    </message>
+    <message>
+      <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
+      <translation>Uppdateringar för grafiskt gränssnitt:\nUtgåva: Officiella versioner som släpps varje månad och som kan vara mycket föråldrade, men som är mer tillförlitliga och testade.\nNightly: Utvecklingsversioner som har alla de senaste funktionerna och korrigeringarna, men som kan innehålla buggar och är mindre stabila.\n\n*Denna uppdatering gäller endast Qt-användargränssnittet. För att uppdatera emulatorkärnan, använd menyn &apos;Versionshanterare&apos;.</translation>
     </message>
   </context>
   <context>
@@ -2614,10 +2598,6 @@ Välj en emulatorversion från den högra panelen.</translation>
       <translation>Kontrollera om det finns förhandsutgivna uppdateringar vid start</translation>
     </message>
     <message>
-      <source>Always show Pre-release changelog</source>
-      <translation>Visar alltid ändringslogg för förhandsutgåva</translation>
-    </message>
-    <message>
       <source>Check for Pre-release Updates</source>
       <translation>Leta efter förhandsutgivna uppdateringar</translation>
     </message>
@@ -2672,14 +2652,6 @@ Välj en emulatorversion från den högra panelen.</translation>
     <message>
       <source>Version added successfully.</source>
       <translation>Versionen lades till.</translation>
-    </message>
-    <message>
-      <source>Notice</source>
-      <translation>Observera</translation>
-    </message>
-    <message>
-      <source>No version selected from the Installed list.</source>
-      <translation>Ingen version har valts från listan över installerade versioner.</translation>
     </message>
     <message>
       <source>Failed to determine the folder path.</source>
@@ -2835,6 +2807,22 @@ Vill du hämta ner den nu?</translation>
     <message>
       <source>Failed to create the update script file</source>
       <translation>Misslyckades med att skapa uppdateringsskriptfil</translation>
+    </message>
+    <message>
+      <source>Always Show Changelog</source>
+      <translation>Visa alltid ändringslogg</translation>
+    </message>
+    <message>
+      <source>No version selected. Please choose one from the list to delete.</source>
+      <translation>Ingen version vald. Välj en från listan att ta bort.</translation>
+    </message>
+    <message>
+      <source>Confirm Download</source>
+      <translation>Bekräfta hämtning</translation>
+    </message>
+    <message>
+      <source>Extraction failure.</source>
+      <translation>Extraheringsfel.</translation>
     </message>
   </context>
 </TS>

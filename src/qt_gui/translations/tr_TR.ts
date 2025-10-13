@@ -348,12 +348,12 @@
       <translation>Güncelleme komut dosyası oluşturulamadı</translation>
     </message>
     <message>
-      <source>Auto Updater - Interface</source>
-      <translation type="unfinished">Auto Updater - Interface</translation>
+      <source>Auto Updater - GUI</source>
+      <translation type="unfinished">Auto Updater - GUI</translation>
     </message>
     <message>
-      <source>Update Available (Interface)</source>
-      <translation type="unfinished">Update Available (Interface)</translation>
+      <source>Update Available - GUI</source>
+      <translation type="unfinished">Update Available - GUI</translation>
     </message>
   </context>
   <context>
@@ -723,7 +723,7 @@
     </message>
     <message>
       <source>Directory to install emulator versions</source>
-      <translation type="unfinished">Directory to install emulator versions</translation>
+      <translation>Emülatör sürümlerini yüklemek için dizin</translation>
     </message>
   </context>
   <context>
@@ -1184,14 +1184,8 @@
   <context>
     <name>IpcClient</name>
     <message>
-      <source>ShadPS4</source>
-      <translation>ShadPS4</translation>
-    </message>
-    <message>
-      <source>shadPS4 is not found!
-Please change shadPS4 path in settings.</source>
-      <translation>shadPS4 bulunamadı!
-Lütfen ayarlardan shadPS4 yolunu değiştirin.</translation>
+      <source>Could not find the emulator executable</source>
+      <translation>Emülatör yürütülebilir dosyası bulunamadı</translation>
     </message>
   </context>
   <context>
@@ -1691,14 +1685,8 @@ Lütfen ayarlardan shadPS4 yolunu değiştirin.</translation>
       <translation>Kısayol Tuşlarını Özelleştir</translation>
     </message>
     <message>
-      <source>shadPS4 is not found!
-Please change shadPS4 path in settings.</source>
-      <translation type="unfinished">shadPS4 is not found!
-Please change shadPS4 path in settings.</translation>
-    </message>
-    <message>
       <source>Version Manager</source>
-      <translation type="unfinished">Version Manager</translation>
+      <translation>Sürüm Yöneticisi</translation>
     </message>
     <message>
       <source>No Version Selected</source>
@@ -1713,8 +1701,8 @@ The Version Manager menu will then open.
 Select an emulator version from the right panel.</translation>
     </message>
     <message>
-      <source>No version selected</source>
-      <translation type="unfinished">No version selected</translation>
+      <source>Could not find the emulator executable</source>
+      <translation>Emülatör yürütülebilir dosyası bulunamadı</translation>
     </message>
   </context>
   <context>
@@ -1734,10 +1722,6 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Console Language</source>
       <translation>Konsol Dili</translation>
-    </message>
-    <message>
-      <source>Emulator Language</source>
-      <translation>Emülatör Dili</translation>
     </message>
     <message>
       <source>Default tab when opening settings</source>
@@ -1824,10 +1808,6 @@ Select an emulator version from the right panel.</translation>
       <translation>Grafikler</translation>
     </message>
     <message>
-      <source>GUI</source>
-      <translation>Arayüz</translation>
-    </message>
-    <message>
       <source>User</source>
       <translation>Kullanıcı</translation>
     </message>
@@ -1910,10 +1890,6 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Enable Readback Linear Images</source>
       <translation>Lineer Görüntü Geri Okumayı Etkinleştir</translation>
-    </message>
-    <message>
-      <source>Update</source>
-      <translation>Güncelle</translation>
     </message>
     <message>
       <source>Check for Updates at Startup</source>
@@ -2026,10 +2002,6 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Trace&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: Trace, Debug, Info, Warning, Error, Critical - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
       <translation>Günlük Filtre:\nSadece belirli bilgileri yazdırmak için günlüğü filtreler.\nÖrnekler: &quot;Core:Trace&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot; Düzeyler: Trace, Debug, Info, Warning, Error, Critical - bu sırada, belirli bir seviye listede önceki tüm seviyeleri susturur ve sonraki tüm seviyeleri kaydeder.</translation>
-    </message>
-    <message>
-      <source>Update:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.</source>
-      <translation>Güncelleme:\nRelease: Her ay yayınlanan resmi sürümler; çok eski olabilirler, ancak daha güvenilirdir ve test edilmiştir.\nNightly: Tüm en son özellikler ve düzeltmeler ile birlikte geliştirme sürümleri; hatalar içerebilir ve daha az kararlıdırlar.</translation>
     </message>
     <message>
       <source>Background Image:\nControl the opacity of the game background image.</source>
@@ -2324,10 +2296,6 @@ Select an emulator version from the right panel.</translation>
       <translation>Anlık (Vsync yok)</translation>
     </message>
     <message>
-      <source>DLC Folder</source>
-      <translation>DLC Klasörü</translation>
-    </message>
-    <message>
       <source>Select the DLC folder</source>
       <translation>DLC klasörünü seç</translation>
     </message>
@@ -2488,10 +2456,6 @@ Select an emulator version from the right panel.</translation>
       <translation type="unfinished">Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</translation>
     </message>
     <message>
-      <source>PS4 Sysmodules Folder</source>
-      <translation type="unfinished">PS4 Sysmodules Folder</translation>
-    </message>
-    <message>
       <source>PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</source>
       <translation type="unfinished">PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</translation>
     </message>
@@ -2501,11 +2465,11 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Vulkan Validation (Requires Vulkan SDK)</source>
-      <translation type="unfinished">Vulkan Validation (Requires Vulkan SDK)</translation>
+      <translation>Vulkan Doğrulaması (Vulkan SDK'si gerektirir)</translation>
     </message>
     <message>
       <source>Validation Layers</source>
-      <translation type="unfinished">Validation Layers</translation>
+      <translation>Doğrulama Katmanları</translation>
     </message>
     <message>
       <source>Enable Core Validation</source>
@@ -2521,7 +2485,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Senkronizasyon Doğrulamasını Etkinleştir:\nVulkan renderlama görevlerinin zamanlamasını doğrulayan bir sistemi etkinleştirir.\nBu durum performansı düşürecek ve muhtemelen emülasyon davranışını değiştirecektir.\nBunun çalışması için Vulkan SDK'sine ihtiyacınız vardır.</translation>
     </message>
     <message>
       <source>Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
@@ -2530,6 +2494,26 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
       <translation type="unfinished">Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+    </message>
+    <message>
+      <source>GUI Language</source>
+      <translation type="unfinished">GUI Language</translation>
+    </message>
+    <message>
+      <source>GUI Updates</source>
+      <translation type="unfinished">GUI Updates</translation>
+    </message>
+    <message>
+      <source>DLC Path</source>
+      <translation>DLC Yolu</translation>
+    </message>
+    <message>
+      <source>PS4 Sysmodules Path</source>
+      <translation>PS4 Sistem Modülleri Yolu</translation>
+    </message>
+    <message>
+      <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
+      <translation type="unfinished">GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</translation>
     </message>
   </context>
   <context>
@@ -2563,7 +2547,7 @@ Select an emulator version from the right panel.</translation>
     <name>VersionDialog</name>
     <message>
       <source>Version Manager</source>
-      <translation type="unfinished">Version Manager</translation>
+      <translation>Sürüm Yöneticisi</translation>
     </message>
     <message>
       <source>Path to save versions</source>
@@ -2571,7 +2555,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Browse</source>
-      <translation type="unfinished">Browse</translation>
+      <translation>Gözat</translation>
     </message>
     <message>
       <source>Installed</source>
@@ -2583,7 +2567,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Version</source>
-      <translation type="unfinished">Version</translation>
+      <translation>Sürüm</translation>
     </message>
     <message>
       <source>Codename</source>
@@ -2591,7 +2575,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Date</source>
-      <translation type="unfinished">Date</translation>
+      <translation>Tarih</translation>
     </message>
     <message>
       <source>Add Custom</source>
@@ -2599,27 +2583,23 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Delete</source>
-      <translation type="unfinished">Delete</translation>
+      <translation>Sil</translation>
     </message>
     <message>
       <source>Refresh List</source>
-      <translation type="unfinished">Refresh List</translation>
+      <translation>Listeyi Yenile</translation>
     </message>
     <message>
       <source>Download</source>
-      <translation type="unfinished">Download</translation>
+      <translation>İndir</translation>
     </message>
     <message>
       <source>Check for Pre-release updates at startup</source>
-      <translation type="unfinished">Check for Pre-release updates at startup</translation>
-    </message>
-    <message>
-      <source>Always show Pre-release changelog</source>
-      <translation type="unfinished">Always show Pre-release changelog</translation>
+      <translation>Başlangıçta ön sürüm güncellemelerini kontrol et</translation>
     </message>
     <message>
       <source>Check for Pre-release Updates</source>
-      <translation type="unfinished">Check for Pre-release Updates</translation>
+      <translation>Ön Sürüm Güncellemeleri Kontrol Et</translation>
     </message>
     <message>
       <source>Select the folder where the emulator versions will be installed</source>
@@ -2627,67 +2607,59 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Select executable</source>
-      <translation type="unfinished">Select executable</translation>
+      <translation>Yürütülebilir dosya seç</translation>
     </message>
     <message>
       <source>Executable (*.exe)</source>
-      <translation type="unfinished">Executable (*.exe)</translation>
+      <translation>Yürütülebilir (*.exe)</translation>
     </message>
     <message>
       <source>Executable (*.AppImage)</source>
-      <translation type="unfinished">Executable (*.AppImage)</translation>
+      <translation>Yürütülebilir (*.AppImage)</translation>
     </message>
     <message>
       <source>Executable (*.*)</source>
-      <translation type="unfinished">Executable (*.*)</translation>
+      <translation>Yürütülebilir (*.*)</translation>
     </message>
     <message>
       <source>Version name</source>
-      <translation type="unfinished">Version name</translation>
+      <translation>Sürüm adı</translation>
     </message>
     <message>
       <source>Enter the name of this version as it appears in the list.</source>
-      <translation type="unfinished">Enter the name of this version as it appears in the list.</translation>
+      <translation>Bu sürümün adını listede göründüğü şekilde girin.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Hata</translation>
     </message>
     <message>
       <source>A folder with that name already exists.</source>
-      <translation type="unfinished">A folder with that name already exists.</translation>
+      <translation>Bu ada sahip bir klasör zaten var.</translation>
     </message>
     <message>
       <source>Failed to create folder.</source>
-      <translation type="unfinished">Failed to create folder.</translation>
+      <translation>Klasör oluşturulamadı.</translation>
     </message>
     <message>
       <source>Failed to copy executable.</source>
-      <translation type="unfinished">Failed to copy executable.</translation>
+      <translation>Yürütülebilir dosya kopyalanamadı.</translation>
     </message>
     <message>
       <source>Success</source>
-      <translation type="unfinished">Success</translation>
+      <translation>Başarılı</translation>
     </message>
     <message>
       <source>Version added successfully.</source>
-      <translation type="unfinished">Version added successfully.</translation>
-    </message>
-    <message>
-      <source>Notice</source>
-      <translation type="unfinished">Notice</translation>
-    </message>
-    <message>
-      <source>No version selected from the Installed list.</source>
-      <translation type="unfinished">No version selected from the Installed list.</translation>
+      <translation>Sürüm başarıyla eklendi.</translation>
     </message>
     <message>
       <source>Failed to determine the folder path.</source>
-      <translation type="unfinished">Failed to determine the folder path.</translation>
+      <translation>Klasör yolu belirlenemedi.</translation>
     </message>
     <message>
       <source>Delete version</source>
-      <translation type="unfinished">Delete version</translation>
+      <translation>Sürümü sil</translation>
     </message>
     <message>
       <source>Do you want to delete the version</source>
@@ -2695,7 +2667,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Failed to delete folder.</source>
-      <translation type="unfinished">Failed to delete folder.</translation>
+      <translation>Klasör silinemedi.</translation>
     </message>
     <message>
       <source>Version list update</source>
@@ -2711,7 +2683,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Error accessing GitHub API</source>
-      <translation type="unfinished">Error accessing GitHub API</translation>
+      <translation>GitHub API'sine erişim hatası</translation>
     </message>
     <message>
       <source>First you need to choose a location to save the versions in
@@ -2729,15 +2701,15 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Downloading %1 , please wait...</source>
-      <translation type="unfinished">Downloading %1 , please wait...</translation>
+      <translation>%1 indiriliyor, lütfen bekleyin...</translation>
     </message>
     <message>
       <source>Could not save file.</source>
-      <translation type="unfinished">Could not save file.</translation>
+      <translation>Dosya kaydedilemedi.</translation>
     </message>
     <message>
       <source>Version %1 has been downloaded and selected.</source>
-      <translation type="unfinished">Version %1 has been downloaded and selected.</translation>
+      <translation>%1 sürümü indirildi ve seçildi.</translation>
     </message>
     <message>
       <source>Failed to create zip extraction script</source>
@@ -2753,61 +2725,61 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>No pre-release found</source>
-      <translation type="unfinished">No pre-release found</translation>
+      <translation>Ön sürüm bulunamadı</translation>
     </message>
     <message>
       <source>You don&apos;t have any pre-release installed yet.
 Would you like to download it now?</source>
-      <translation type="unfinished">You don&apos;t have any pre-release installed yet.
-Would you like to download it now?</translation>
+      <translation>Henüz yüklü bir ön sürüm yok.
+Şimdi indirmek ister misiniz?</translation>
     </message>
     <message>
       <source>Auto Updater - Emulator</source>
-      <translation type="unfinished">Auto Updater - Emulator</translation>
+      <translation>Otomatik Güncelleyici - Emülatör</translation>
     </message>
     <message>
       <source>You already have the latest pre-release version.</source>
-      <translation type="unfinished">You already have the latest pre-release version.</translation>
+      <translation>Zaten en son ön sürüme sahipsiniz.</translation>
     </message>
     <message>
       <source>Update Available (Emulator)</source>
-      <translation type="unfinished">Update Available (Emulator)</translation>
+      <translation>Güncelleme Mevcut (Emülatör)</translation>
     </message>
     <message>
       <source>Current Version</source>
-      <translation type="unfinished">Current Version</translation>
+      <translation>Mevcut Sürüm</translation>
     </message>
     <message>
       <source>Latest Version</source>
-      <translation type="unfinished">Latest Version</translation>
+      <translation>Son Sürüm</translation>
     </message>
     <message>
       <source>Do you want to update?</source>
-      <translation type="unfinished">Do you want to update?</translation>
+      <translation>Güncellemek istiyor musunuz?</translation>
     </message>
     <message>
       <source>Update</source>
-      <translation type="unfinished">Update</translation>
+      <translation>Güncelle</translation>
     </message>
     <message>
       <source>No</source>
-      <translation type="unfinished">No</translation>
+      <translation>Hayır</translation>
     </message>
     <message>
       <source>Show Changelog</source>
-      <translation type="unfinished">Show Changelog</translation>
+      <translation>Değişiklik Günlüğünü Göster</translation>
     </message>
     <message>
       <source>Hide Changelog</source>
-      <translation type="unfinished">Hide Changelog</translation>
+      <translation>Değişiklik Günlüğünü Gizle</translation>
     </message>
     <message>
       <source>Network error while fetching changelog</source>
-      <translation type="unfinished">Network error while fetching changelog</translation>
+      <translation>Değişiklik günlüğünü alırken ağ hatası oluştu</translation>
     </message>
     <message>
       <source>Changes</source>
-      <translation type="unfinished">Changes</translation>
+      <translation>Değişiklikler</translation>
     </message>
     <message>
       <source>No download URL found for the specified asset.</source>
@@ -2815,11 +2787,11 @@ Would you like to download it now?</translation>
     </message>
     <message>
       <source>Downloading Pre‑release, please wait...</source>
-      <translation type="unfinished">Downloading Pre‑release, please wait...</translation>
+      <translation>Ön sürüm indiriliyor, lütfen bekleyin...</translation>
     </message>
     <message>
       <source>Network error while downloading</source>
-      <translation type="unfinished">Network error while downloading</translation>
+      <translation>İndirme sırasında ağ hatası oluştu</translation>
     </message>
     <message>
       <source>Failed to save download file</source>
@@ -2827,15 +2799,31 @@ Would you like to download it now?</translation>
     </message>
     <message>
       <source>Complete installation</source>
-      <translation type="unfinished">Complete installation</translation>
+      <translation>Tam kurulum</translation>
     </message>
     <message>
       <source>Pre-release updated successfully</source>
-      <translation type="unfinished">Pre-release updated successfully</translation>
+      <translation>Ön sürüm başarıyla güncellendi</translation>
     </message>
     <message>
       <source>Failed to create the update script file</source>
-      <translation type="unfinished">Failed to create the update script file</translation>
+      <translation>Güncelleme komut dosyası oluşturulamadı</translation>
+    </message>
+    <message>
+      <source>Always Show Changelog</source>
+      <translation>Her Zaman Değişiklik Günlüğünü Göster</translation>
+    </message>
+    <message>
+      <source>No version selected. Please choose one from the list to delete.</source>
+      <translation type="unfinished">No version selected. Please choose one from the list to delete.</translation>
+    </message>
+    <message>
+      <source>Confirm Download</source>
+      <translation>İndirmeyi Onayla</translation>
+    </message>
+    <message>
+      <source>Extraction failure.</source>
+      <translation>Çıkarma hatası.</translation>
     </message>
   </context>
 </TS>

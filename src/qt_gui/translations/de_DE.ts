@@ -348,12 +348,12 @@
       <translation>Fehler beim Erstellen der Aktualisierungs-Skriptdatei</translation>
     </message>
     <message>
-      <source>Auto Updater - Interface</source>
-      <translation>Automatische Updates - Interface</translation>
+      <source>Auto Updater - GUI</source>
+      <translation type="unfinished">Auto Updater - GUI</translation>
     </message>
     <message>
-      <source>Update Available (Interface)</source>
-      <translation>Update verfügbar (Interface)</translation>
+      <source>Update Available - GUI</source>
+      <translation type="unfinished">Update Available - GUI</translation>
     </message>
   </context>
   <context>
@@ -1183,14 +1183,8 @@ Einzigartige Inputs können nicht öfters als einmal gebunden werden. Input-Dupl
   <context>
     <name>IpcClient</name>
     <message>
-      <source>ShadPS4</source>
-      <translation>ShadPS4</translation>
-    </message>
-    <message>
-      <source>shadPS4 is not found!
-Please change shadPS4 path in settings.</source>
-      <translation>shadPS4 wurde nicht gefunden!
-Bitte ändere den shadPS4-Pfad in den Einstellungen.</translation>
+      <source>Could not find the emulator executable</source>
+      <translation type="unfinished">Could not find the emulator executable</translation>
     </message>
   </context>
   <context>
@@ -1690,12 +1684,6 @@ Bitte ändere den shadPS4-Pfad in den Einstellungen.</translation>
       <translation>Hotkeys anpassen</translation>
     </message>
     <message>
-      <source>shadPS4 is not found!
-Please change shadPS4 path in settings.</source>
-      <translation>shadPS4 wurde nicht gefunden!
-Bitte ändere den shadPS4-Pfad in den Einstellungen.</translation>
-    </message>
-    <message>
       <source>Version Manager</source>
       <translation>Versionsverwaltung</translation>
     </message>
@@ -1712,8 +1700,8 @@ Die Versionsverwaltung wird geöffnet.
 Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
     </message>
     <message>
-      <source>No version selected</source>
-      <translation>Keine Version ausgewählt</translation>
+      <source>Could not find the emulator executable</source>
+      <translation type="unfinished">Could not find the emulator executable</translation>
     </message>
   </context>
   <context>
@@ -1733,10 +1721,6 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
     <message>
       <source>Console Language</source>
       <translation>Konsolensprache</translation>
-    </message>
-    <message>
-      <source>Emulator Language</source>
-      <translation>Emulatorsprache</translation>
     </message>
     <message>
       <source>Default tab when opening settings</source>
@@ -1823,10 +1807,6 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
       <translation>Grafik</translation>
     </message>
     <message>
-      <source>GUI</source>
-      <translation>Benutzeroberfläche</translation>
-    </message>
-    <message>
       <source>User</source>
       <translation>Benutzer</translation>
     </message>
@@ -1909,10 +1889,6 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
     <message>
       <source>Enable Readback Linear Images</source>
       <translation>Aktiviere Readback Linear Images</translation>
-    </message>
-    <message>
-      <source>Update</source>
-      <translation>Aktualisieren</translation>
     </message>
     <message>
       <source>Check for Updates at Startup</source>
@@ -2025,10 +2001,6 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
     <message>
       <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Trace&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: Trace, Debug, Info, Warning, Error, Critical - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
       <translation>Protokollfilter:\nFiltert das Protokoll so, dass nur bestimmte Informationen ausgegeben werden.\nBeispiele: &quot;Core:Trace&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\n Ebenen: Trace, Debug, Info, Warning, Error, Critical - in dieser Reihenfolge, eine ausgewählte Ebene blendet alle vorherigen Ebenen aus und zeigt alle nachfolgenden an.</translation>
-    </message>
-    <message>
-      <source>Update:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.</source>
-      <translation>Update:\nRelease: Offizielle Builds, die monatlich veröffentlicht werden, können viel älter sein, aber stabiler und getestet.\nNightly: Entwickler-Builds, die die neuesten Funktionen und Fehlerbehebungen enthalten, aber Fehler enthalten und weniger stabil sein können.</translation>
     </message>
     <message>
       <source>Background Image:\nControl the opacity of the game background image.</source>
@@ -2327,10 +2299,6 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
       <translation>Sofort (kein Vsync)</translation>
     </message>
     <message>
-      <source>DLC Folder</source>
-      <translation>DLC-Pfad</translation>
-    </message>
-    <message>
       <source>Select the DLC folder</source>
       <translation>Wähle einen DLC-Ordner aus</translation>
     </message>
@@ -2491,10 +2459,6 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
       <translation>Zusätzliche DMem-Zuweisung:\nErzwingt eine Zuordnung zusätzlichen DMem mit der angegebenen Menge. Kann in einigen Spielen Abstürze oder sonstigen Probleme verursachen.</translation>
     </message>
     <message>
-      <source>PS4 Sysmodules Folder</source>
-      <translation>PS4 sysmodules-Pfad</translation>
-    </message>
-    <message>
       <source>PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</source>
       <translation>PS4 sysmodules-Pfad:\nDer Ordner, aus denen die sysmodules der PS4 geladen werden können.</translation>
     </message>
@@ -2533,6 +2497,26 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
     <message>
       <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
       <translation>Aktiviere GPU-Assisted Validation:\nInstrumentiert Shader mit Code, um das korrekte Verhalten zu überprüfen.\nDiese Funktion reduziert die Leistung und beeinflusst das Verhalten des Emulators.\nVulkan SDK wird benötigt.</translation>
+    </message>
+    <message>
+      <source>GUI Language</source>
+      <translation type="unfinished">GUI Language</translation>
+    </message>
+    <message>
+      <source>GUI Updates</source>
+      <translation type="unfinished">GUI Updates</translation>
+    </message>
+    <message>
+      <source>DLC Path</source>
+      <translation type="unfinished">DLC Path</translation>
+    </message>
+    <message>
+      <source>PS4 Sysmodules Path</source>
+      <translation type="unfinished">PS4 Sysmodules Path</translation>
+    </message>
+    <message>
+      <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
+      <translation type="unfinished">GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</translation>
     </message>
   </context>
   <context>
@@ -2617,10 +2601,6 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
       <translation>Beim Start nach Updates für Vorabversion suchen</translation>
     </message>
     <message>
-      <source>Always show Pre-release changelog</source>
-      <translation>Zeige immer Changelog für Vorabversion</translation>
-    </message>
-    <message>
       <source>Check for Pre-release Updates</source>
       <translation>Suche nach Updates für Vorabversion</translation>
     </message>
@@ -2675,14 +2655,6 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
     <message>
       <source>Version added successfully.</source>
       <translation>Version wurde erfolgreich hinzugefügt.</translation>
-    </message>
-    <message>
-      <source>Notice</source>
-      <translation>Hinweis</translation>
-    </message>
-    <message>
-      <source>No version selected from the Installed list.</source>
-      <translation>Keine Version aus der Installationsliste ausgewählt.</translation>
     </message>
     <message>
       <source>Failed to determine the folder path.</source>
@@ -2839,6 +2811,22 @@ Möchten Sie sie jetzt downloaden?</translation>
     <message>
       <source>Failed to create the update script file</source>
       <translation>Fehler beim Erstellen der Update-Skript-Datei</translation>
+    </message>
+    <message>
+      <source>Always Show Changelog</source>
+      <translation type="unfinished">Always Show Changelog</translation>
+    </message>
+    <message>
+      <source>No version selected. Please choose one from the list to delete.</source>
+      <translation type="unfinished">No version selected. Please choose one from the list to delete.</translation>
+    </message>
+    <message>
+      <source>Confirm Download</source>
+      <translation type="unfinished">Confirm Download</translation>
+    </message>
+    <message>
+      <source>Extraction failure.</source>
+      <translation type="unfinished">Extraction failure.</translation>
     </message>
   </context>
 </TS>

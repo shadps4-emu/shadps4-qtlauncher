@@ -348,12 +348,12 @@
       <translation>Error en crear el fitxer de script d'actualització</translation>
     </message>
     <message>
-      <source>Auto Updater - Interface</source>
-      <translation>Actualització automàtica - Interfície</translation>
+      <source>Auto Updater - GUI</source>
+      <translation>Actualització automàtica - Interfície d'usuari</translation>
     </message>
     <message>
-      <source>Update Available (Interface)</source>
-      <translation>Hi ha una actualització disponible (Interfície)</translation>
+      <source>Update Available - GUI</source>
+      <translation>Hi ha una actulització disponible - Interfície d'usuari</translation>
     </message>
   </context>
   <context>
@@ -723,7 +723,7 @@
     </message>
     <message>
       <source>Directory to install emulator versions</source>
-      <translation type="unfinished">Directory to install emulator versions</translation>
+      <translation>Carpeta per instal·lar les versions de l'emulador</translation>
     </message>
   </context>
   <context>
@@ -1184,14 +1184,8 @@
   <context>
     <name>IpcClient</name>
     <message>
-      <source>ShadPS4</source>
-      <translation>ShadPS4</translation>
-    </message>
-    <message>
-      <source>shadPS4 is not found!
-Please change shadPS4 path in settings.</source>
-      <translation>no s'ha trobat ShadPS4!
-Canvia, si us plau, la ruta de ShadPS4 a configuració.</translation>
+      <source>Could not find the emulator executable</source>
+      <translation>No s'ha pogut trobar l'executable de l'emulador</translation>
     </message>
   </context>
   <context>
@@ -1691,12 +1685,6 @@ Canvia, si us plau, la ruta de ShadPS4 a configuració.</translation>
       <translation>Personalitza les dreceres de teclat</translation>
     </message>
     <message>
-      <source>shadPS4 is not found!
-Please change shadPS4 path in settings.</source>
-      <translation>no s'ha trobat ShadPS4!
-Canvia, si us plau, la ruta de ShadPS4 a configuració.</translation>
-    </message>
-    <message>
       <source>Version Manager</source>
       <translation>Administrador de la versió</translation>
     </message>
@@ -1713,8 +1701,8 @@ The Version Manager menu will then open.
 Select an emulator version from the right panel.</translation>
     </message>
     <message>
-      <source>No version selected</source>
-      <translation>No hi ha cap versió seleccionada</translation>
+      <source>Could not find the emulator executable</source>
+      <translation>No s'ha pogut trobar l'executable de l'emulador</translation>
     </message>
   </context>
   <context>
@@ -1734,10 +1722,6 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Console Language</source>
       <translation>Idioma de la consola</translation>
-    </message>
-    <message>
-      <source>Emulator Language</source>
-      <translation>Idioma de l'emulador</translation>
     </message>
     <message>
       <source>Default tab when opening settings</source>
@@ -1824,10 +1808,6 @@ Select an emulator version from the right panel.</translation>
       <translation>Gràfics</translation>
     </message>
     <message>
-      <source>GUI</source>
-      <translation>Interfície gràfica</translation>
-    </message>
-    <message>
       <source>User</source>
       <translation>Usuari</translation>
     </message>
@@ -1910,10 +1890,6 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Enable Readback Linear Images</source>
       <translation>Activa imatges lineals de Readback</translation>
-    </message>
-    <message>
-      <source>Update</source>
-      <translation>Actualitza</translation>
     </message>
     <message>
       <source>Check for Updates at Startup</source>
@@ -2026,10 +2002,6 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Trace&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: Trace, Debug, Info, Warning, Error, Critical - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
       <translation>Filtre del registre:\nFiltra el registre per mostrar només la informació especificada.\nExemples: &quot;Core:Trace&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nNivells: Trace, Debug, Info, Warning, Error, Critical - en aquest ordre, un nivell específic silencia tots els nivells precedents de la llista i mostra només els nivells posteriors.</translation>
-    </message>
-    <message>
-      <source>Update:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.</source>
-      <translation>Actualització:\nEstables: Versions oficials llançades cada mes que poden estar desactualitzades, però que són més resistents i estan més provades.\nDiàries: Versions de desenvolupament que tenen totes les últimes funcions i correccions, però poden contenir errors i son menys estables.</translation>
     </message>
     <message>
       <source>Background Image:\nControl the opacity of the game background image.</source>
@@ -2324,10 +2296,6 @@ Select an emulator version from the right panel.</translation>
       <translation>Immediat (Sense sincronització vertical)</translation>
     </message>
     <message>
-      <source>DLC Folder</source>
-      <translation>Carpeta DLC</translation>
-    </message>
-    <message>
       <source>Select the DLC folder</source>
       <translation>Selecciona la carpeta DLC</translation>
     </message>
@@ -2488,10 +2456,6 @@ Select an emulator version from the right panel.</translation>
       <translation>Ubicació addicional DMem:\nForça la ubicació d'una determinada quantitat de DMem. Pot provocar errors en alguns jocs.</translation>
     </message>
     <message>
-      <source>PS4 Sysmodules Folder</source>
-      <translation>Carpeta de PS4 de Sysmodules</translation>
-    </message>
-    <message>
       <source>PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</source>
       <translation>Ruta de sysmodules de PS4:\nLa carpeta des de la qual sysmodules de PS4 es carrega.</translation>
     </message>
@@ -2501,7 +2465,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Vulkan Validation (Requires Vulkan SDK)</source>
-      <translation type="unfinished">Vulkan Validation (Requires Vulkan SDK)</translation>
+      <translation>Validació Vulkan (Requereix el SDK de Vulkan)</translation>
     </message>
     <message>
       <source>Validation Layers</source>
@@ -2530,6 +2494,26 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
       <translation type="unfinished">Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+    </message>
+    <message>
+      <source>GUI Language</source>
+      <translation>Idioma de la interfície d'usuari</translation>
+    </message>
+    <message>
+      <source>GUI Updates</source>
+      <translation>Actualitzacions de la interfície d'usuari</translation>
+    </message>
+    <message>
+      <source>DLC Path</source>
+      <translation>Ruta del DLC</translation>
+    </message>
+    <message>
+      <source>PS4 Sysmodules Path</source>
+      <translation>Carpeta de PS4 de Sysmodules</translation>
+    </message>
+    <message>
+      <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
+      <translation type="unfinished">GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</translation>
     </message>
   </context>
   <context>
@@ -2614,10 +2598,6 @@ Select an emulator version from the right panel.</translation>
       <translation type="unfinished">Check for Pre-release updates at startup</translation>
     </message>
     <message>
-      <source>Always show Pre-release changelog</source>
-      <translation>Mostra sempre el registre de canvis de les actualitzacions prèvies</translation>
-    </message>
-    <message>
       <source>Check for Pre-release Updates</source>
       <translation>Comprovar si hi ha actualitzacions prèvies</translation>
     </message>
@@ -2655,7 +2635,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>A folder with that name already exists.</source>
-      <translation type="unfinished">A folder with that name already exists.</translation>
+      <translation>Ja existeix una carpeta amb aquest nom.</translation>
     </message>
     <message>
       <source>Failed to create folder.</source>
@@ -2674,16 +2654,8 @@ Select an emulator version from the right panel.</translation>
       <translation>S'ha afegit la versió correctament.</translation>
     </message>
     <message>
-      <source>Notice</source>
-      <translation>Notícia</translation>
-    </message>
-    <message>
-      <source>No version selected from the Installed list.</source>
-      <translation type="unfinished">No version selected from the Installed list.</translation>
-    </message>
-    <message>
       <source>Failed to determine the folder path.</source>
-      <translation type="unfinished">Failed to determine the folder path.</translation>
+      <translation>Error en determinar la ruta de la carpeta.</translation>
     </message>
     <message>
       <source>Delete version</source>
@@ -2725,7 +2697,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>No files available for this platform.</source>
-      <translation type="unfinished">No files available for this platform.</translation>
+      <translation>No hi ha fitxers disponibles per aquesta plataforma.</translation>
     </message>
     <message>
       <source>Downloading %1 , please wait...</source>
@@ -2741,7 +2713,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Failed to create zip extraction script</source>
-      <translation type="unfinished">Failed to create zip extraction script</translation>
+      <translation>Error en extreure el fitxer zip</translation>
     </message>
     <message>
       <source>The GitHub API response is not a valid JSON array.</source>
@@ -2803,7 +2775,7 @@ Would you like to download it now?</translation>
     </message>
     <message>
       <source>Network error while fetching changelog</source>
-      <translation type="unfinished">Network error while fetching changelog</translation>
+      <translation>Error de xarxa durant la recuperació del registre de canvis</translation>
     </message>
     <message>
       <source>Changes</source>
@@ -2836,6 +2808,22 @@ Would you like to download it now?</translation>
     <message>
       <source>Failed to create the update script file</source>
       <translation type="unfinished">Failed to create the update script file</translation>
+    </message>
+    <message>
+      <source>Always Show Changelog</source>
+      <translation>Mostra sempre el registre de canvis</translation>
+    </message>
+    <message>
+      <source>No version selected. Please choose one from the list to delete.</source>
+      <translation type="unfinished">No version selected. Please choose one from the list to delete.</translation>
+    </message>
+    <message>
+      <source>Confirm Download</source>
+      <translation>Voleu confirmar la descàrrega</translation>
+    </message>
+    <message>
+      <source>Extraction failure.</source>
+      <translation>Error en l'extracció.</translation>
     </message>
   </context>
 </TS>

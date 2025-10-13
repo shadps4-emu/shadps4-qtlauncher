@@ -15,17 +15,13 @@
 #include "sdl_event_wrapper.h"
 #include "ui_hotkeys.h"
 
-Hotkeys::Hotkeys(bool isGameRunning, QWidget* parent)
-    : QDialog(parent), GameRunning(isGameRunning), ui(new Ui::Hotkeys) {
+Hotkeys::Hotkeys(std::shared_ptr<IpcClient> ipc_client, bool isGameRunning, QWidget* parent)
+    : QDialog(parent), m_ipc_client(ipc_client), GameRunning(isGameRunning), ui(new Ui::Hotkeys) {
 
     ui->setupUi(this);
 
-    if (!GameRunning) {
-        SDL_InitSubSystem(SDL_INIT_GAMEPAD);
-        SDL_InitSubSystem(SDL_INIT_EVENTS);
-    } else {
-        SDL_SetHint(SDL_HINT_JOYSTICK_ALLOW_BACKGROUND_EVENTS, "1");
-    }
+    SDL_InitSubSystem(SDL_INIT_GAMEPAD);
+    SDL_InitSubSystem(SDL_INIT_EVENTS);
 
     LoadHotkeys();
     CheckGamePad();
@@ -71,9 +67,7 @@ Hotkeys::Hotkeys(bool isGameRunning, QWidget* parent)
     QObject::connect(SdlEventWrapper::Wrapper::GetInstance(), &SdlEventWrapper::Wrapper::SDLEvent,
                      this, &Hotkeys::processSDLEvents);
 
-    if (!GameRunning) {
-        Polling = QtConcurrent::run(&Hotkeys::pollSDLEvents, this);
-    }
+    Polling = QtConcurrent::run(&Hotkeys::pollSDLEvents, this);
 }
 
 void Hotkeys::DisableMappingButtons() {
@@ -241,8 +235,8 @@ void Hotkeys::SaveHotkeys(bool CloseOnSave) {
     output_file.close();
 
     // this also parses global hotkeys
-    // if (GameRunning)
-    // Input::ParseInputConfig("default");
+    if (GameRunning)
+        m_ipc_client->reloadInputs("default");
 
     if (CloseOnSave)
         QWidget::close();
@@ -910,20 +904,14 @@ void Hotkeys::Cleanup() {
     if (h_gamepads)
         SDL_free(h_gamepads);
 
-    if (!GameRunning) {
-        SDL_Event quitLoop{};
-        quitLoop.type = SDL_EVENT_QUIT;
-        SDL_PushEvent(&quitLoop);
-        Polling.waitForFinished();
+    SDL_Event quitLoop{};
+    quitLoop.type = SDL_EVENT_QUIT;
+    SDL_PushEvent(&quitLoop);
+    Polling.waitForFinished();
 
-        SDL_QuitSubSystem(SDL_INIT_GAMEPAD);
-        SDL_QuitSubSystem(SDL_INIT_EVENTS);
-        SDL_Quit();
-    } else {
-        if (!Config::getBackgroundControllerInput()) {
-            SDL_SetHint(SDL_HINT_JOYSTICK_ALLOW_BACKGROUND_EVENTS, "0");
-        }
-    }
+    SDL_QuitSubSystem(SDL_INIT_GAMEPAD);
+    SDL_QuitSubSystem(SDL_INIT_EVENTS);
+    SDL_Quit();
 }
 
 Hotkeys::~Hotkeys() {}
