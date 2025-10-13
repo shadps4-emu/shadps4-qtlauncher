@@ -349,11 +349,11 @@
     </message>
     <message>
       <source>Auto Updater - GUI</source>
-      <translation type="unfinished">Auto Updater - GUI</translation>
+      <translation>Aggiornamento Automatico - Interfaccia</translation>
     </message>
     <message>
       <source>Update Available - GUI</source>
-      <translation type="unfinished">Update Available - GUI</translation>
+      <translation>Aggiornamento Disponibile - Interfaccia</translation>
     </message>
   </context>
   <context>
@@ -1185,7 +1185,7 @@
     <name>IpcClient</name>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation type="unfinished">Could not find the emulator executable</translation>
+      <translation>Impossibile trovare l'eseguibile dell'emulatore</translation>
     </message>
   </context>
   <context>
@@ -1702,7 +1702,7 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
     </message>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation type="unfinished">Could not find the emulator executable</translation>
+      <translation>Impossibile trovare l'eseguibile dell'emulatore</translation>
     </message>
   </context>
   <context>
@@ -2497,23 +2497,23 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
     </message>
     <message>
       <source>GUI Language</source>
-      <translation type="unfinished">GUI Language</translation>
+      <translation>Lingua Interfaccia</translation>
     </message>
     <message>
       <source>GUI Updates</source>
-      <translation type="unfinished">GUI Updates</translation>
+      <translation>Aggiornamenti Interfaccia</translation>
     </message>
     <message>
       <source>DLC Path</source>
-      <translation type="unfinished">DLC Path</translation>
+      <translation>Percorso DLC</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path</source>
-      <translation type="unfinished">PS4 Sysmodules Path</translation>
+      <translation>Percorso Moduli di Sistema PS4</translation>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
-      <translation type="unfinished">GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</translation>
+      <translation>Aggiornamenti Interfaccia:\nRilascio: Versioni ufficiali rilasciate ogni mese che possono essere molto obsolete, ma sono più affidabili e testate.\nNotturno: Le versioni di sviluppo che hanno tutte le ultime funzionalità e correzioni, ma possono contenere bug e sono meno stabili.\n\n*Questo aggiornamento si applica solo all'interfaccia utente Qt. Per aggiornare il nucleo dell'emulatore, utilizzare il menu &apos;Gestore Versione&apos;.</translation>
     </message>
   </context>
   <context>
@@ -2811,19 +2811,19 @@ Vuoi scaricarla ora?</translation>
     </message>
     <message>
       <source>Always Show Changelog</source>
-      <translation type="unfinished">Always Show Changelog</translation>
+      <translation>Mostra sempre il changelog</translation>
     </message>
     <message>
       <source>No version selected. Please choose one from the list to delete.</source>
-      <translation type="unfinished">No version selected. Please choose one from the list to delete.</translation>
+      <translation>Nessuna versione selezionata. Si prega di sceglierne una da eliminare dall'elenco.</translation>
     </message>
     <message>
       <source>Confirm Download</source>
-      <translation type="unfinished">Confirm Download</translation>
+      <translation>Conferma Download</translation>
     </message>
     <message>
       <source>Extraction failure.</source>
-      <translation type="unfinished">Extraction failure.</translation>
+      <translation>Errore di estrazione.</translation>
     </message>
   </context>
 </TS>
