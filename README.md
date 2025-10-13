@@ -27,7 +27,7 @@ SPDX-License-Identifier: GPL-2.0-or-later
 
 # General information
 
-**QtLauncher** is the official launcher for shadPS4. It was separated from the main repository and is now in development here.
+**QtLauncher** is the official launcher for [shadPS4](https://github.com/shadps4-emu/shadPS4). It was separated from the main repository and is now in development here.
 
 
 # Building
