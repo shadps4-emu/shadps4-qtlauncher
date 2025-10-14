@@ -274,10 +274,6 @@
       <translation>کوئی پری ریلیز نہیں ملی۔</translation>
     </message>
     <message>
-      <source>Invalid release data.</source>
-      <translation>ریلیز کا ڈیٹا درست نہیں ہے۔</translation>
-    </message>
-    <message>
       <source>No download URL found for the specified asset.</source>
       <translation>مخصوص کردہ اثاثے کے لیے کوئی ڈاؤن لوڈ URL نہیں ملا۔</translation>
     </message>
@@ -1902,10 +1898,6 @@ Select an emulator version from the right panel.</translation>
       <translation type="unfinished">Always Show Changelog</translation>
     </message>
     <message>
-      <source>Update Channel</source>
-      <translation type="unfinished">Update Channel</translation>
-    </message>
-    <message>
       <source>Check for Updates</source>
       <translation type="unfinished">Check for Updates</translation>
     </message>
@@ -2112,14 +2104,6 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Browse:\nBrowse for a folder to set as the save data path.</source>
       <translation type="unfinished">Browse:\nBrowse for a folder to set as the save data path.</translation>
-    </message>
-    <message>
-      <source>Release</source>
-      <translation type="unfinished">Release</translation>
-    </message>
-    <message>
-      <source>Nightly</source>
-      <translation type="unfinished">Nightly</translation>
     </message>
     <message>
       <source>Set the volume of the background music.</source>
