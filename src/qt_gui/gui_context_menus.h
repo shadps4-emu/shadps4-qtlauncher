@@ -580,7 +580,7 @@ public:
             std::string log_file_path =
                 (Common::FS::GetUserPath(Common::FS::PathType::LogDir) /
                  (Config::getSeparateLogFilesEnabled() ? m_games[itemID].serial + ".log"
-                                                       : "shad_log.txt"));
+                                                       : "shad_log.txt")).c_str();
             bool is_valid_file = LogAnalyzer::ProcessFile(log_file_path);
             auto report_result = LogAnalyzer::CheckResults(m_games[itemID].serial);
             if (!is_valid_file || report_result.has_value()) {
