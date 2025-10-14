@@ -32,7 +32,7 @@ GameListFrame::GameListFrame(std::shared_ptr<gui_settings> gui_settings,
     this->horizontalHeader()->setHighlightSections(false);
     this->horizontalHeader()->setSortIndicatorShown(true);
     this->setContextMenuPolicy(Qt::CustomContextMenu);
-    this->setColumnCount(11);
+    this->setColumnCount(12);
     this->setColumnWidth(1, 300); // Name
     this->setColumnWidth(2, 140); // Compatibility
     this->setColumnWidth(3, 120); // Serial
@@ -42,10 +42,11 @@ GameListFrame::GameListFrame(std::shared_ptr<gui_settings> gui_settings,
     this->setColumnWidth(7, 90);  // Version
     this->setColumnWidth(8, 120); // Play Time
     this->setColumnWidth(10, 90); // Favorite
+    this->setColumnWidth(11, 0);  // Empty space
     QStringList headers;
     headers << tr("Icon") << tr("Name") << tr("Compatibility") << tr("Serial") << tr("Region")
             << tr("Firmware") << tr("Size") << tr("Version") << tr("Play Time") << tr("Path")
-            << tr("Favorite");
+            << tr("Favorite") << "";
     this->setHorizontalHeaderLabels(headers);
     this->horizontalHeader()->setSortIndicatorShown(true);
     this->horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeToContents);
@@ -53,6 +54,8 @@ GameListFrame::GameListFrame(std::shared_ptr<gui_settings> gui_settings,
     this->horizontalHeader()->setSectionResizeMode(4, QHeaderView::Fixed);
     this->horizontalHeader()->setSectionResizeMode(9, QHeaderView::Stretch);
     this->horizontalHeader()->setSectionResizeMode(10, QHeaderView::Fixed);
+    this->horizontalHeader()->setSectionResizeMode(11, QHeaderView::Stretch);
+    this->setColumnHidden(11, true);
     PopulateGameList();
 
     connect(this, &QTableWidget::currentCellChanged, this, &GameListFrame::onCurrentCellChanged);
@@ -544,6 +547,12 @@ void GameListFrame::ToggleColumnVisibility() {
     this->setColumnHidden(8, !showPlayTime);      // Play Time
     this->setColumnHidden(9, !showPath);          // Path
     this->setColumnHidden(10, !showFavorite);     // Favorite
+
+    if (!showPath) {
+        this->setColumnHidden(11, false); // Empty space
+    } else {
+        this->setColumnHidden(11, true);
+    }
 }
 
 void GameListFrame::ShowHeaderContextMenu(const QPoint& pos) {
