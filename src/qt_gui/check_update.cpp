@@ -172,23 +172,21 @@ void CheckUpdate::setupUI(const QString& downloadUrl, const QString& latestDate,
     titleLayout->addWidget(titleLabel);
     layout->addLayout(titleLayout);
 
-    QString updateText =
-        QString("<p><b>" + tr("Update Channel") + ": </b>" + "what even is this string" +
-                "<br>"
-                "<table><tr>"
-                "<td><b>" +
-                tr("Current Version") +
-                ":</b></td>"
-                "<td>%1</td>"
-                "<td>(%2)</td>"
-                "</tr><tr>"
-                "<td><b>" +
-                tr("Latest Version") +
-                ":</b></td>"
-                "<td>%3</td>"
-                "<td>(%4)</td>"
-                "</tr></table></p>")
-            .arg(currentRev.left(7), currentDate, latestRev.left(7), latestDate);
+    QString updateText = QString("<p>"
+                                 "<table><tr>"
+                                 "<td><b>" +
+                                 tr("Current Version") +
+                                 ":</b></td>"
+                                 "<td>%1</td>"
+                                 "<td>(%2)</td>"
+                                 "</tr><tr>"
+                                 "<td><b>" +
+                                 tr("Latest Version") +
+                                 ":</b></td>"
+                                 "<td>%3</td>"
+                                 "<td>(%4)</td>"
+                                 "</tr></table></p>")
+                             .arg(currentRev.left(7), currentDate, latestRev.left(7), latestDate);
 
     QLabel* updateLabel = new QLabel(updateText, this);
     layout->addWidget(updateLabel);

@@ -2693,7 +2693,7 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
     </message>
     <message>
       <source>Do you want to download the version</source>
-      <translation>Vuoi eliminare la versione</translation>
+      <translation>Vuoi scaricare la versione</translation>
     </message>
     <message>
       <source>No files available for this platform.</source>

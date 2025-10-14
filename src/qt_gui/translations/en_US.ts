@@ -272,10 +272,6 @@
         <translation>No pre-releases found.</translation>
     </message>
     <message>
-        <source>Invalid release data.</source>
-        <translation>Invalid release data.</translation>
-    </message>
-    <message>
         <source>No download URL found for the specified asset.</source>
         <translation>No download URL found for the specified asset.</translation>
     </message>
@@ -1892,10 +1888,6 @@ Select an emulator version from the right panel.</source>
         <translation>Always Show Changelog</translation>
     </message>
     <message>
-        <source>Update Channel</source>
-        <translation>Update Channel</translation>
-    </message>
-    <message>
         <source>Check for Updates</source>
         <translation>Check for Updates</translation>
     </message>
@@ -2102,14 +2094,6 @@ Select an emulator version from the right panel.</source>
     <message>
         <source>Browse:\nBrowse for a folder to set as the save data path.</source>
         <translation>Browse:\nBrowse for a folder to set as the save data path.</translation>
-    </message>
-    <message>
-        <source>Release</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Nightly</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Set the volume of the background music.</source>
