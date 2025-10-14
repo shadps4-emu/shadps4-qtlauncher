@@ -553,6 +553,12 @@ void GameListFrame::ToggleColumnVisibility() {
     } else {
         this->setColumnHidden(11, true);
     }
+
+    if (showFavorite) {
+        for (int i = 0; i < m_game_info->m_games.size(); i++) {
+            SetFavoriteIcon(i, 10);
+        }
+    }
 }
 
 void GameListFrame::ShowHeaderContextMenu(const QPoint& pos) {
@@ -585,7 +591,7 @@ void GameListFrame::ShowHeaderContextMenu(const QPoint& pos) {
         action->setCheckable(true);
         action->setChecked(isChecked);
 
-        connect(action, &QAction::toggled, this, [=](bool checked) {
+        connect(action, &QAction::toggled, this, [this, col](bool checked) {
             m_gui_settings->SetValue(col.configKey, checked);
             ToggleColumnVisibility();
         });

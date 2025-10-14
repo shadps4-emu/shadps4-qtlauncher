@@ -652,14 +652,15 @@ void SettingsDialog::LoadValuesFromConfig() {
             toml::find_or<bool>(data, "General", "enableDiscordRPC", true));
 
         ui->gameSizeCheckBox->setChecked(
-            toml::find_or<bool>(data, "GUI", "loadGameSizeEnabled", true));
+            m_gui_settings->GetValue(gui::glc_showLoadGameSizeEnabled).toBool());
+
         ui->trophyKeyLineEdit->setText(
             QString::fromStdString(toml::find_or<std::string>(data, "Keys", "TrophyKey", "")));
         ui->trophyKeyLineEdit->setEchoMode(QLineEdit::Password);
         ui->enableCompatibilityCheckBox->setChecked(
-            toml::find_or<bool>(data, "General", "compatibilityEnabled", false));
+            m_gui_settings->GetValue(gui::glc_showCompatibility).toBool());
         ui->checkCompatibilityOnStartupCheckBox->setChecked(
-            toml::find_or<bool>(data, "General", "checkCompatibilityOnStartup", false));
+            m_gui_settings->GetValue(gui::gen_checkCompatibilityAtStartup).toBool());
 
         ui->removeFolderButton->setEnabled(!ui->gameFoldersListWidget->selectedItems().isEmpty());
         ui->backgroundImageOpacitySlider->setValue(
