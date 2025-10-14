@@ -272,10 +272,6 @@
       <translation>사전 릴리스가 없습니다.</translation>
     </message>
     <message>
-      <source>Invalid release data.</source>
-      <translation>잘못된 릴리스 데이터입니다.</translation>
-    </message>
-    <message>
       <source>No download URL found for the specified asset.</source>
       <translation>지정된 자산에 대한 다운로드 URL을 찾을 수 없습니다.</translation>
     </message>
@@ -1900,10 +1896,6 @@ Select an emulator version from the right panel.</translation>
       <translation>항상 변경 사항 표시</translation>
     </message>
     <message>
-      <source>Update Channel</source>
-      <translation>채널 업데이트</translation>
-    </message>
-    <message>
       <source>Check for Updates</source>
       <translation>업데이트 확인</translation>
     </message>
@@ -2110,14 +2102,6 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Browse:\nBrowse for a folder to set as the save data path.</source>
       <translation type="unfinished">Browse:\nBrowse for a folder to set as the save data path.</translation>
-    </message>
-    <message>
-      <source>Release</source>
-      <translation type="unfinished">Release</translation>
-    </message>
-    <message>
-      <source>Nightly</source>
-      <translation type="unfinished">Nightly</translation>
     </message>
     <message>
       <source>Set the volume of the background music.</source>
