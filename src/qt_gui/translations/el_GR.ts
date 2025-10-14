@@ -272,10 +272,6 @@
       <translation>Δεν βρέθηκαν προ-κυκλοφορίες.</translation>
     </message>
     <message>
-      <source>Invalid release data.</source>
-      <translation>Μη έγκυρα δεδομένα έκδοσης.</translation>
-    </message>
-    <message>
       <source>No download URL found for the specified asset.</source>
       <translation>Δεν βρέθηκε URL λήψης για το συγκεκριμένο στοιχείο.</translation>
     </message>
@@ -1900,10 +1896,6 @@ Select an emulator version from the right panel.</translation>
       <translation>Πάντα εμφάνιση ιστορικού αλλαγών</translation>
     </message>
     <message>
-      <source>Update Channel</source>
-      <translation>Κανάλι Ενημέρωσης</translation>
-    </message>
-    <message>
       <source>Check for Updates</source>
       <translation>Έλεγχος για ενημερώσεις</translation>
     </message>
@@ -2110,14 +2102,6 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Browse:\nBrowse for a folder to set as the save data path.</source>
       <translation type="unfinished">Browse:\nBrowse for a folder to set as the save data path.</translation>
-    </message>
-    <message>
-      <source>Release</source>
-      <translation type="unfinished">Release</translation>
-    </message>
-    <message>
-      <source>Nightly</source>
-      <translation type="unfinished">Nightly</translation>
     </message>
     <message>
       <source>Set the volume of the background music.</source>
