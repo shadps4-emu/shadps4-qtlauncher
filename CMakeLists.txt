@@ -275,6 +275,8 @@ set(COMMON src/common/logging/backend.cpp
            src/common/logging/text_formatter.cpp
            src/common/logging/text_formatter.h
            src/common/logging/types.h
+           src/common/log_analyzer.cpp
+           src/common/log_analyzer.h
            src/common/aes.h
            src/common/assert.cpp
            src/common/assert.h

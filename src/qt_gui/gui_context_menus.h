@@ -14,6 +14,8 @@
 #include <qt_gui/background_music_player.h>
 #include "cheats_patches.h"
 #include "common/config.h"
+#include "common/log_analyzer.h"
+#include "common/logging/log.h"
 #include "common/path_util.h"
 #include "common/scm_rev.h"
 #include "compatibility_info.h"
@@ -159,9 +161,6 @@ public:
 
         compatibilityMenu->addAction(updateCompatibility);
         compatibilityMenu->addAction(viewCompatibilityReport);
-
-        // todo find a way to block or allow submissions based on the version in the latest log for
-        // the game
         compatibilityMenu->addAction(submitCompatibilityReport);
 
         menu.addMenu(compatibilityMenu);
@@ -578,6 +577,33 @@ public:
         }
 
         if (selected == submitCompatibilityReport) {
+            std::string log_file_path =
+                (Common::FS::GetUserPath(Common::FS::PathType::LogDir) /
+                 (Config::getSeparateLogFilesEnabled() ? m_games[itemID].serial + ".log"
+                                                       : "shad_log.txt"));
+            bool is_valid_file = LogAnalyzer::ProcessFile(log_file_path);
+            auto report_result = LogAnalyzer::CheckResults(m_games[itemID].serial);
+            if (!is_valid_file || report_result.has_value()) {
+                QString error_string = QString::fromStdString(
+                    !is_valid_file ? "The log is invalid, maybe log filters were used?"
+                                   : *report_result);
+                QMessageBox msgBox(QMessageBox::Critical, tr("Error"),
+                                   tr("Couldn't submit report, because the latest log for the "
+                                      "game doesn't pass the following requirement:") +
+                                       "\n" + error_string);
+                auto okButton = msgBox.addButton(tr("Ok"), QMessageBox::AcceptRole);
+                auto infoButton = msgBox.addButton(tr("Info"), QMessageBox::ActionRole);
+                msgBox.setEscapeButton(okButton);
+                msgBox.exec();
+                // what the fuck qt in what world is this better than the old supposedly deprecated
+                // api
+                if (msgBox.clickedButton() == infoButton) {
+                    QDesktopServices::openUrl(
+                        QUrl("https://github.com/shadps4-compatibility/shadps4-game-compatibility/"
+                             "?tab=readme-ov-file#rules"));
+                }
+                return changedFavorite;
+            }
             if (m_games[itemID].compatibility.issue_number == "") {
                 QUrl url = QUrl("https://github.com/shadps4-compatibility/"
                                 "shadps4-game-compatibility/issues/new");
@@ -589,12 +615,15 @@ public:
                 query.addQueryItem("game-name", QString::fromStdString(m_games[itemID].name));
                 query.addQueryItem("game-serial", QString::fromStdString(m_games[itemID].serial));
                 query.addQueryItem("game-version", QString::fromStdString(m_games[itemID].version));
+                query.addQueryItem(
+                    "emulator-version",
+                    QString::fromStdString(*LogAnalyzer::entries[1]->GetParsedData()));
                 url.setQuery(query);
 
                 QDesktopServices::openUrl(url);
             } else {
-                auto url_issues =
-                    "https://github.com/shadps4-compatibility/shadps4-game-compatibility/issues/";
+                auto url_issues = "https://github.com/shadps4-compatibility/"
+                                  "shadps4-game-compatibility/issues/";
                 QDesktopServices::openUrl(
                     QUrl(url_issues + m_games[itemID].compatibility.issue_number));
             }
