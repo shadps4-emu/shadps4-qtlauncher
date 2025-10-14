@@ -110,7 +110,7 @@ private:
     QTranslator* translator;
     std::shared_ptr<gui_settings> m_gui_settings;
 
-    std::shared_ptr<IpcClient> m_ipc_client;
+    std::shared_ptr<IpcClient> m_ipc_client = std::make_shared<IpcClient>();
     std::filesystem::path last_game_path;
 
 protected:
