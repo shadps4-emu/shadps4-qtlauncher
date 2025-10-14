@@ -272,10 +272,6 @@
       <translation>Fant ingen forhåndsutgivelser.</translation>
     </message>
     <message>
-      <source>Invalid release data.</source>
-      <translation>Ugyldige utgivelsesdata.</translation>
-    </message>
-    <message>
       <source>No download URL found for the specified asset.</source>
       <translation>Ingen nedlastings-URL funnet for den spesifiserte ressursen.</translation>
     </message>
@@ -1900,10 +1896,6 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <translation>Vis alltid endringsloggen</translation>
     </message>
     <message>
-      <source>Update Channel</source>
-      <translation>Oppdateringskanal</translation>
-    </message>
-    <message>
       <source>Check for Updates</source>
       <translation>Se etter oppdateringer</translation>
     </message>
@@ -2110,14 +2102,6 @@ Velg en emulatorversjon fra høyre panel.</translation>
     <message>
       <source>Browse:\nBrowse for a folder to set as the save data path.</source>
       <translation>Endre mappe:\nEndrer hvilken mappe shadPS4 skal lagre data til.</translation>
-    </message>
-    <message>
-      <source>Release</source>
-      <translation>Offisiell</translation>
-    </message>
-    <message>
-      <source>Nightly</source>
-      <translation>Nattlig</translation>
     </message>
     <message>
       <source>Set the volume of the background music.</source>
