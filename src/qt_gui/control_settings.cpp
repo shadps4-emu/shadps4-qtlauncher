@@ -563,6 +563,7 @@ void ControlSettings::SetUIValuestoMappings() {
                     ui->RightDeadzoneMaxSlider->setValue(deadzone_max_value);
                     ui->RightDeadzoneMinValue->setText(QString::number(deadzone_min_value));
                     ui->RightDeadzoneMaxValue->setText(QString::number(deadzone_max_value));
+                }
             } else {
                 ui->RightDeadzoneMinSlider->setValue(2);
                 ui->RightDeadzoneMaxSlider->setValue(127);
