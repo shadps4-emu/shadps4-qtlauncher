@@ -160,8 +160,7 @@ void GameInstallDialog::Save() {
     QDir addonsDir(addonsDirectory);
     if (!addonsDir.exists()) {
         if (!addonsDir.mkpath(".")) {
-            QMessageBox::critical(this, tr("Error"),
-                                  "The DLC dump location could not be created.");
+            QMessageBox::critical(this, tr("Error"), "The DLC dump location could not be created.");
             return;
         }
     }
