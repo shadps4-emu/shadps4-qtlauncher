@@ -708,7 +708,7 @@ void ControlSettings::CheckGamePad() {
     } else if (defaultIndex != -1) {
         gamepad = SDL_OpenGamepad(gamepads[defaultIndex]);
     } else {
-        LOG_INFO(Input, "Got {} gamepads. Opening the first one.", gamepad_count);
+        LOG_TRACE(Input, "Got {} gamepads. Opening the first one.", gamepad_count);
         gamepad = SDL_OpenGamepad(gamepads[0]);
     }
 
