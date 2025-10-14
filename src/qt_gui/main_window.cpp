@@ -359,7 +359,7 @@ void MainWindow::CreateDockWindows() {
 
 void MainWindow::LoadGameLists() {
     // Load compatibility database
-    if (m_gui_settings->GetValue(gui::gl_showCompatibility).toBool())
+    if (m_gui_settings->GetValue(gui::glc_showCompatibility).toBool())
         m_compat_info->LoadCompatibilityFile();
 
     // Update compatibility database
@@ -367,7 +367,7 @@ void MainWindow::LoadGameLists() {
         m_compat_info->UpdateCompatibilityDatabase(this);
 
     // Get game info from game folders.
-    bool showSize = m_gui_settings->GetValue(gui::gl_showLoadGameSizeEnabled).toBool();
+    bool showSize = m_gui_settings->GetValue(gui::glc_showLoadGameSizeEnabled).toBool();
     m_game_info->GetGameInfo(showSize, this);
     if (isTableList) {
         m_game_list_frame->PopulateGameList();
@@ -958,7 +958,7 @@ void MainWindow::ShowGameList() {
 
 void MainWindow::RefreshGameTable() {
     // m_game_info->m_games.clear();
-    bool showSize = m_gui_settings->GetValue(gui::gl_showLoadGameSizeEnabled).toBool();
+    bool showSize = m_gui_settings->GetValue(gui::glc_showLoadGameSizeEnabled).toBool();
     m_game_info->GetGameInfo(showSize, this);
     m_game_list_frame->clearContents();
     m_game_list_frame->PopulateGameList();

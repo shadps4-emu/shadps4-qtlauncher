@@ -60,6 +60,8 @@ public:
     void ResizeIcons(int iconSize);
     void ApplyLastSorting(bool isInitialPopulation);
     QTableWidgetItem* GetCurrentItem();
+    void ToggleColumnVisibility();
+    void ShowHeaderContextMenu(const QPoint& pos);
     QImage backgroundImage;
     GameListUtils m_game_list_utils;
     GuiContextMenus m_gui_context_menus;

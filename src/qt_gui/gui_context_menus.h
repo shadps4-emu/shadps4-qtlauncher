@@ -135,7 +135,7 @@ public:
         copyMenu->addAction(copyName);
         copyMenu->addAction(copySerial);
         copyMenu->addAction(copyVersion);
-        if (m_gui_settings->GetValue(gui::gl_showLoadGameSizeEnabled).toBool()) {
+        if (m_gui_settings->GetValue(gui::glc_showLoadGameSizeEnabled).toBool()) {
             copyMenu->addAction(copySize);
         }
         copyMenu->addAction(copyNameAll);
@@ -173,7 +173,8 @@ public:
 
         menu.addMenu(compatibilityMenu);
 
-        compatibilityMenu->setEnabled(m_gui_settings->GetValue(gui::gl_showCompatibility).toBool());
+        compatibilityMenu->setEnabled(
+            m_gui_settings->GetValue(gui::glc_showCompatibility).toBool());
         viewCompatibilityReport->setEnabled(m_games[itemID].compatibility.status !=
                                             CompatibilityStatus::Unknown);
 
@@ -546,7 +547,7 @@ public:
 
         if (selected == copyNameAll) {
             QString GameSizeEnabled;
-            if (settings->GetValue(gui::gl_showLoadGameSizeEnabled).toBool()) {
+            if (settings->GetValue(gui::glc_showLoadGameSizeEnabled).toBool()) {
                 GameSizeEnabled = " | Size:" + QString::fromStdString(m_games[itemID].size);
             }
 

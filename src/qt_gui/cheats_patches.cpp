@@ -95,7 +95,7 @@ void CheatsPatches::setupUI() {
     gameVersionLabel->setAlignment(Qt::AlignLeft);
     gameInfoLayout->addWidget(gameVersionLabel);
 
-    if (m_gui_settings->GetValue(gui::gl_showLoadGameSizeEnabled).toBool()) {
+    if (m_gui_settings->GetValue(gui::glc_showLoadGameSizeEnabled).toBool()) {
         QLabel* gameSizeLabel = new QLabel(tr("Size: ") + m_gameSize);
         gameSizeLabel->setAlignment(Qt::AlignLeft);
         gameInfoLayout->addWidget(gameSizeLabel);

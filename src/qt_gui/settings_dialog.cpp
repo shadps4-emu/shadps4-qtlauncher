@@ -282,7 +282,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         connect(ui->enableCompatibilityCheckBox, &QCheckBox::checkStateChanged, this,
                 [this, m_compat_info](Qt::CheckState state) {
 #endif
-                    m_gui_settings->SetValue(gui::gl_showCompatibility, state);
+                    m_gui_settings->SetValue(gui::glc_showCompatibility, state);
                     if (state) {
                         m_compat_info->LoadCompatibilityFile();
                     }
@@ -1140,11 +1140,11 @@ void SettingsDialog::UpdateSettings(bool is_specific) {
 
         BackgroundMusicPlayer::getInstance().setVolume(ui->BGMVolumeSlider->value());
 
-        m_gui_settings->SetValue(gui::gl_showLoadGameSizeEnabled,
+        m_gui_settings->SetValue(gui::glc_showLoadGameSizeEnabled,
                                  ui->gameSizeCheckBox->isChecked());
         Config::setTrophyKey(ui->trophyKeyLineEdit->text().toStdString());
         Config::setEnableDiscordRPC(ui->discordRPCCheckbox->isChecked());
-        m_gui_settings->SetValue(gui::gl_showCompatibility,
+        m_gui_settings->SetValue(gui::glc_showCompatibility,
                                  ui->enableCompatibilityCheckBox->isChecked());
         m_gui_settings->SetValue(gui::gen_checkCompatibilityAtStartup,
                                  ui->checkCompatibilityOnStartupCheckBox->isChecked());
@@ -1237,8 +1237,8 @@ void SettingsDialog::setDefaultValues() {
         m_gui_settings->SetValue(gui::gen_checkForUpdates, false);
         m_gui_settings->SetValue(gui::gen_showChangeLog, false);
         m_gui_settings->SetValue(gui::gen_guiLanguage, "en_US");
-        m_gui_settings->SetValue(gui::gl_showLoadGameSizeEnabled, true);
-        m_gui_settings->SetValue(gui::gl_showCompatibility, false);
+        m_gui_settings->SetValue(gui::glc_showLoadGameSizeEnabled, true);
+        m_gui_settings->SetValue(gui::glc_showCompatibility, false);
         m_gui_settings->SetValue(gui::gen_checkCompatibilityAtStartup, false);
         m_gui_settings->SetValue(gui::gen_homeTab, "General");
     }
