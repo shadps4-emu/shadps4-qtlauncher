@@ -980,7 +980,7 @@ void ControlSettings::processSDLEvents(int Type, int Input, int Value) {
         }
     }
 
-    if (Type == SDL_EVENT_GAMEPAD_ADDED || SDL_EVENT_GAMEPAD_REMOVED) {
+    if (Type == SDL_EVENT_GAMEPAD_ADDED || Type == SDL_EVENT_GAMEPAD_REMOVED) {
         ui->ActiveGamepadBox->clear();
         CheckGamePad();
     }

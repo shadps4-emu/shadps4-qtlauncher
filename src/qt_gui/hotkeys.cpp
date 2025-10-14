@@ -310,6 +310,8 @@ void Hotkeys::CheckGamePad() {
     if (!h_gamepads) {
         LOG_ERROR(Input, "Cannot get gamepad list: {}", SDL_GetError());
         return;
+    } else if (gamepad_count == 0) {
+        return;
     }
 
     int defaultIndex = GamepadSelect::GetIndexfromGUID(h_gamepads, gamepad_count,
@@ -317,19 +319,17 @@ void Hotkeys::CheckGamePad() {
     int activeIndex = GamepadSelect::GetIndexfromGUID(h_gamepads, gamepad_count,
                                                       GamepadSelect::GetSelectedGamepad());
 
-    if (!GameRunning) {
-        if (activeIndex != -1) {
-            h_gamepad = SDL_OpenGamepad(h_gamepads[activeIndex]);
-        } else if (defaultIndex != -1) {
-            h_gamepad = SDL_OpenGamepad(h_gamepads[defaultIndex]);
-        } else {
-            LOG_INFO(Input, "Got {} gamepads. Opening the first one.", gamepad_count);
-            h_gamepad = SDL_OpenGamepad(h_gamepads[0]);
-        }
+    if (activeIndex != -1) {
+        h_gamepad = SDL_OpenGamepad(h_gamepads[activeIndex]);
+    } else if (defaultIndex != -1) {
+        h_gamepad = SDL_OpenGamepad(h_gamepads[defaultIndex]);
+    } else {
+        LOG_INFO(Input, "Got {} gamepads. Opening the first one.", gamepad_count);
+        h_gamepad = SDL_OpenGamepad(h_gamepads[0]);
+    }
 
-        if (!h_gamepad) {
-            LOG_ERROR(Input, "Failed to open gamepad: {}", SDL_GetError());
-        }
+    if (!h_gamepad) {
+        LOG_ERROR(Input, "Failed to open gamepad: {}", SDL_GetError());
     }
 }
 
@@ -873,7 +873,7 @@ void Hotkeys::processSDLEvents(int Type, int Input, int Value) {
             CheckMapping(MappingButton);
     }
 
-    if (Type == SDL_EVENT_GAMEPAD_ADDED || SDL_EVENT_GAMEPAD_REMOVED) {
+    if (Type == SDL_EVENT_GAMEPAD_ADDED || Type == SDL_EVENT_GAMEPAD_REMOVED) {
         CheckGamePad();
     }
 }
