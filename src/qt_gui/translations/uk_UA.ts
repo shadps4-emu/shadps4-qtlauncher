@@ -272,10 +272,6 @@
       <translation>Попередніх версій не знайдено.</translation>
     </message>
     <message>
-      <source>Invalid release data.</source>
-      <translation>Некоректні дані про випуск.</translation>
-    </message>
-    <message>
       <source>No download URL found for the specified asset.</source>
       <translation>Не знайдено URL для завантаження зазначеного ресурсу.</translation>
     </message>
@@ -1900,10 +1896,6 @@ Select an emulator version from the right panel.</translation>
       <translation>Завжди показувати журнал змін</translation>
     </message>
     <message>
-      <source>Update Channel</source>
-      <translation>Канал оновлення</translation>
-    </message>
-    <message>
       <source>Check for Updates</source>
       <translation>Перевірити оновлення</translation>
     </message>
@@ -2110,14 +2102,6 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Browse:\nBrowse for a folder to set as the save data path.</source>
       <translation>Вибрати:\nВиберіть папку для ігрових збережень.</translation>
-    </message>
-    <message>
-      <source>Release</source>
-      <translation>Релізний</translation>
-    </message>
-    <message>
-      <source>Nightly</source>
-      <translation>Тестовий</translation>
     </message>
     <message>
       <source>Set the volume of the background music.</source>
