@@ -33,7 +33,7 @@ GameInstallDialog::GameInstallDialog() : m_gamesDirectory(nullptr) {
 GameInstallDialog::~GameInstallDialog() {}
 
 void GameInstallDialog::BrowseGamesDirectory() {
-    auto path = QFileDialog::getExistingDirectory(this, tr("Directory to install games"));
+    auto path = QFileDialog::getExistingDirectory(this, tr("Directory with your dumped games"));
 
     if (!path.isEmpty()) {
         m_gamesDirectory->setText(QDir::toNativeSeparators(path));
@@ -41,7 +41,7 @@ void GameInstallDialog::BrowseGamesDirectory() {
 }
 
 void GameInstallDialog::BrowseAddonsDirectory() {
-    auto path = QFileDialog::getExistingDirectory(this, tr("Directory to install DLC"));
+    auto path = QFileDialog::getExistingDirectory(this, tr("Directory with your dumped DLC's"));
 
     if (!path.isEmpty()) {
         m_addonsDirectory->setText(QDir::toNativeSeparators(path));
@@ -58,7 +58,7 @@ void GameInstallDialog::BrowseVersionDirectory() {
 }
 
 QWidget* GameInstallDialog::SetupGamesDirectory() {
-    auto group = new QGroupBox(tr("Directory to install games"));
+    auto group = new QGroupBox(tr("Directory with games"));
     auto layout = new QHBoxLayout(group);
 
     // Input.
@@ -83,7 +83,7 @@ QWidget* GameInstallDialog::SetupGamesDirectory() {
 }
 
 QWidget* GameInstallDialog::SetupAddonsDirectory() {
-    auto group = new QGroupBox(tr("Directory to install DLC"));
+    auto group = new QGroupBox(tr("Directory with DLC's"));
     auto layout = new QHBoxLayout(group);
 
     // Input.
@@ -147,13 +147,13 @@ void GameInstallDialog::Save() {
     if (gamesDirectory.isEmpty() || !QDir(gamesDirectory).exists() ||
         !QDir::isAbsolutePath(gamesDirectory)) {
         QMessageBox::critical(this, tr("Error"),
-                              "The value for location to install games is not valid.");
+                              "The choosen location for dumped games is not valid.");
         return;
     }
 
     if (addonsDirectory.isEmpty() || !QDir::isAbsolutePath(addonsDirectory)) {
         QMessageBox::critical(this, tr("Error"),
-                              "The value for location to install DLC is not valid.");
+                              "The choosen location for dumped DLC's is not valid.");
         return;
     }
 
@@ -161,7 +161,7 @@ void GameInstallDialog::Save() {
     if (!addonsDir.exists()) {
         if (!addonsDir.mkpath(".")) {
             QMessageBox::critical(this, tr("Error"),
-                                  "The DLC install location could not be created.");
+                                  "The DLC dump location could not be created.");
             return;
         }
     }
