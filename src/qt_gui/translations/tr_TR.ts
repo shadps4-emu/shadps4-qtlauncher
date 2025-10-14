@@ -272,10 +272,6 @@
       <translation>Ön sürüm bulunamadı.</translation>
     </message>
     <message>
-      <source>Invalid release data.</source>
-      <translation>Geçersiz sürüm verisi.</translation>
-    </message>
-    <message>
       <source>No download URL found for the specified asset.</source>
       <translation>Belirtilen varlık için hiçbir indirme URL&apos;si bulunamadı.</translation>
     </message>
@@ -1900,10 +1896,6 @@ Select an emulator version from the right panel.</translation>
       <translation>Her zaman değişiklik günlüğünü göster</translation>
     </message>
     <message>
-      <source>Update Channel</source>
-      <translation>Güncelleme Kanalı</translation>
-    </message>
-    <message>
       <source>Check for Updates</source>
       <translation>Güncellemeleri Kontrol Et</translation>
     </message>
@@ -2110,14 +2102,6 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Browse:\nBrowse for a folder to set as the save data path.</source>
       <translation>Gözat:\nVerileri kaydetme yolu olarak ayarlamak için bir klasöre göz atın.</translation>
-    </message>
-    <message>
-      <source>Release</source>
-      <translation>Kararlı</translation>
-    </message>
-    <message>
-      <source>Nightly</source>
-      <translation>Günlük</translation>
     </message>
     <message>
       <source>Set the volume of the background music.</source>
