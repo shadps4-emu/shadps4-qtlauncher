@@ -272,10 +272,6 @@
       <translation>No s'han trobat llançaments previs.</translation>
     </message>
     <message>
-      <source>Invalid release data.</source>
-      <translation>Dades de la versió no vàlides.</translation>
-    </message>
-    <message>
       <source>No download URL found for the specified asset.</source>
       <translation>No s'ha trobat la direcció web de descàrrega.</translation>
     </message>
@@ -1900,10 +1896,6 @@ Select an emulator version from the right panel.</translation>
       <translation>Mostra sempre el registre de canvis</translation>
     </message>
     <message>
-      <source>Update Channel</source>
-      <translation>Actualitza el canal</translation>
-    </message>
-    <message>
       <source>Check for Updates</source>
       <translation>Comprova si hi ha actualitzacions</translation>
     </message>
@@ -2110,14 +2102,6 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Browse:\nBrowse for a folder to set as the save data path.</source>
       <translation>Navegador:\nCerca una carpeta que serà assignada com la carpeta de dades desades.</translation>
-    </message>
-    <message>
-      <source>Release</source>
-      <translation>Publicació</translation>
-    </message>
-    <message>
-      <source>Nightly</source>
-      <translation>Publicació diària</translation>
     </message>
     <message>
       <source>Set the volume of the background music.</source>
