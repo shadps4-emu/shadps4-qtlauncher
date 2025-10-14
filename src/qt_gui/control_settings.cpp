@@ -708,7 +708,7 @@ void ControlSettings::CheckGamePad() {
     } else if (defaultIndex != -1) {
         gamepad = SDL_OpenGamepad(gamepads[defaultIndex]);
     } else {
-        LOG_TRACE(Input, "Got {} gamepads. Opening the first one.", gamepad_count);
+        LOG_INFO(Input, "Got {} gamepads. Opening the first one.", gamepad_count);
         gamepad = SDL_OpenGamepad(gamepads[0]);
     }
 
@@ -980,7 +980,7 @@ void ControlSettings::processSDLEvents(int Type, int Input, int Value) {
         }
     }
 
-    if (Type == SDL_EVENT_GAMEPAD_ADDED || SDL_EVENT_GAMEPAD_REMOVED) {
+    if (Type == SDL_EVENT_GAMEPAD_ADDED || Type == SDL_EVENT_GAMEPAD_REMOVED) {
         ui->ActiveGamepadBox->clear();
         CheckGamePad();
     }
