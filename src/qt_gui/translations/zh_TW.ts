@@ -272,10 +272,6 @@
       <translation>未找到預發佈版本。</translation>
     </message>
     <message>
-      <source>Invalid release data.</source>
-      <translation>無效的發佈資料。</translation>
-    </message>
-    <message>
       <source>No download URL found for the specified asset.</source>
       <translation>未找到指定資源的下載 URL。</translation>
     </message>
@@ -1900,10 +1896,6 @@ Select an emulator version from the right panel.</translation>
       <translation>始終顯示變更紀錄</translation>
     </message>
     <message>
-      <source>Update Channel</source>
-      <translation>更新頻道</translation>
-    </message>
-    <message>
       <source>Check for Updates</source>
       <translation>檢查更新</translation>
     </message>
@@ -2110,14 +2102,6 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Browse:\nBrowse for a folder to set as the save data path.</source>
       <translation>瀏覽：\n選取要設定為存放遊戲存檔路徑的資料夾。</translation>
-    </message>
-    <message>
-      <source>Release</source>
-      <translation>正式版</translation>
-    </message>
-    <message>
-      <source>Nightly</source>
-      <translation>預覽版</translation>
     </message>
     <message>
       <source>Set the volume of the background music.</source>
