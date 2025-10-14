@@ -519,7 +519,6 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         ui->nullGpuCheckBox->installEventFilter(this);
         ui->enableHDRCheckBox->installEventFilter(this);
         ui->chooseHomeTabGroupBox->installEventFilter(this);
-        ui->gameSizeCheckBox->installEventFilter(this);
 
         // Paths
         ui->gameFoldersGroupBox->installEventFilter(this);
@@ -650,9 +649,6 @@ void SettingsDialog::LoadValuesFromConfig() {
             m_gui_settings->GetValue(gui::gl_backgroundMusicVolume).toInt());
         ui->discordRPCCheckbox->setChecked(
             toml::find_or<bool>(data, "General", "enableDiscordRPC", true));
-
-        ui->gameSizeCheckBox->setChecked(
-            m_gui_settings->GetValue(gui::glc_showLoadGameSizeEnabled).toBool());
 
         ui->trophyKeyLineEdit->setText(
             QString::fromStdString(toml::find_or<std::string>(data, "Keys", "TrophyKey", "")));
@@ -1014,8 +1010,6 @@ void SettingsDialog::updateNoteTextEdit(const QString& elementName) {
         text = tr("Volume:\\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.");
     } else if (elementName == "chooseHomeTabGroupBox") {
         text = tr("Default tab when opening settings:\\nChoose which tab will open, the default is General.");
-    } else if (elementName == "gameSizeCheckBox") {
-        text = tr("Show Game Size In List:\\nThere is the size of the game in the list.");
     } else if (elementName == "motionControlsCheckBox") {
         text = tr("Enable Motion Controls:\\nWhen enabled it will use the controller's motion control if supported.");
     } 
@@ -1141,8 +1135,6 @@ void SettingsDialog::UpdateSettings(bool is_specific) {
 
         BackgroundMusicPlayer::getInstance().setVolume(ui->BGMVolumeSlider->value());
 
-        m_gui_settings->SetValue(gui::glc_showLoadGameSizeEnabled,
-                                 ui->gameSizeCheckBox->isChecked());
         Config::setTrophyKey(ui->trophyKeyLineEdit->text().toStdString());
         Config::setEnableDiscordRPC(ui->discordRPCCheckbox->isChecked());
         m_gui_settings->SetValue(gui::glc_showCompatibility,

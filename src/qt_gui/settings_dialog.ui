@@ -59,7 +59,7 @@
       </size>
      </property>
      <property name="currentIndex">
-      <number>7</number>
+      <number>4</number>
      </property>
      <property name="usesScrollButtons">
       <bool>true</bool>
@@ -320,8 +320,8 @@
                       <rect>
                        <x>0</x>
                        <y>0</y>
-                       <width>98</width>
-                       <height>47</height>
+                       <width>408</width>
+                       <height>60</height>
                       </rect>
                      </property>
                      <layout class="QHBoxLayout" name="horizontalLayout_6">
@@ -422,8 +422,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>932</width>
-         <height>504</height>
+         <width>946</width>
+         <height>503</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -474,13 +474,6 @@
                 <widget class="QCheckBox" name="discordRPCCheckbox">
                  <property name="text">
                   <string>Enable Discord Rich Presence</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QCheckBox" name="gameSizeCheckBox">
-                 <property name="text">
-                  <string>Show Game Size In List</string>
                  </property>
                 </widget>
                </item>
@@ -872,7 +865,7 @@
               <property name="title">
                <string>GUI Updates</string>
               </property>
-              <layout class="QVBoxLayout" name="UpdateLayout" stretch="0,0,0,0">
+              <layout class="QVBoxLayout" name="UpdateLayout" stretch="0,0,0">
                <property name="spacing">
                 <number>6</number>
                </property>
@@ -1843,20 +1836,20 @@
               </layout>
              </widget>
             </item>
-            <item>
-             <spacer name="horizontalSpacer_8">
-              <property name="orientation">
-               <enum>Qt::Orientation::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
            </layout>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_8">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
           </item>
          </layout>
         </item>
@@ -2179,7 +2172,7 @@
          <x>0</x>
          <y>0</y>
          <width>946</width>
-         <height>418</height>
+         <height>426</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -2409,7 +2402,7 @@
          <x>0</x>
          <y>0</y>
          <width>946</width>
-         <height>388</height>
+         <height>395</height>
         </rect>
        </property>
        <property name="sizePolicy">
