@@ -280,10 +280,6 @@
       <translation>Din versjon er allerede oppdatert!</translation>
     </message>
     <message>
-      <source>Update Channel</source>
-      <translation>Oppdateringskanal</translation>
-    </message>
-    <message>
       <source>Current Version</source>
       <translation>Gjeldende versjon</translation>
     </message>
@@ -430,14 +426,6 @@
       <translation>Ned</translation>
     </message>
     <message>
-      <source>Left Stick Deadzone (def:2 max:127)</source>
-      <translation>Venstre analog dødsone (def:2, maks:127)</translation>
-    </message>
-    <message>
-      <source>Left Deadzone</source>
-      <translation>Venstre dødsone</translation>
-    </message>
-    <message>
       <source>Left Stick</source>
       <translation>Venstre analog</translation>
     </message>
@@ -456,14 +444,6 @@
     <message>
       <source>Face Buttons</source>
       <translation>Handlingsknapper</translation>
-    </message>
-    <message>
-      <source>Right Stick Deadzone (def:2, max:127)</source>
-      <translation>Høyre analog dødsone (def:2, maks:127)</translation>
-    </message>
-    <message>
-      <source>Right Deadzone</source>
-      <translation>Høyre dødsone</translation>
     </message>
     <message>
       <source>Right Stick</source>
@@ -624,6 +604,30 @@
     <message>
       <source>BLUE</source>
       <translation>BLÅ</translation>
+    </message>
+    <message>
+      <source>Left Stick Deadzone</source>
+      <translation type="unfinished">Left Stick Deadzone</translation>
+    </message>
+    <message>
+      <source>Min Deadzone (def:2 max:127)</source>
+      <translation type="unfinished">Min Deadzone (def:2 max:127)</translation>
+    </message>
+    <message>
+      <source>2</source>
+      <translation type="unfinished">2</translation>
+    </message>
+    <message>
+      <source>Max Deadzone (def:127 max:127)</source>
+      <translation type="unfinished">Max Deadzone (def:127 max:127)</translation>
+    </message>
+    <message>
+      <source>127</source>
+      <translation type="unfinished">127</translation>
+    </message>
+    <message>
+      <source>Right Stick Deadzone</source>
+      <translation type="unfinished">Right Stick Deadzone</translation>
     </message>
   </context>
   <context>
@@ -843,10 +847,6 @@
   <context>
     <name>GuiContextMenus</name>
     <message>
-      <source>Create Shortcut</source>
-      <translation>Lag snarvei</translation>
-    </message>
-    <message>
       <source>Cheats / Patches</source>
       <translation>Juks og programrettelser</translation>
     </message>
@@ -923,20 +923,8 @@
       <translation>Kompatibilitet …</translation>
     </message>
     <message>
-      <source>Shortcut creation</source>
-      <translation>Snarvei opprettelse</translation>
-    </message>
-    <message>
-      <source>Shortcut created successfully!</source>
-      <translation>Snarvei opprettet!</translation>
-    </message>
-    <message>
       <source>Error</source>
       <translation>Feil</translation>
-    </message>
-    <message>
-      <source>Error creating shortcut!</source>
-      <translation>Feil ved opprettelse av snarvei!</translation>
     </message>
     <message>
       <source>Game</source>
@@ -981,10 +969,6 @@
     <message>
       <source>No log file found for this game!</source>
       <translation>Fant ingen loggfil for dette spillet!</translation>
-    </message>
-    <message>
-      <source>Failed to convert icon.</source>
-      <translation>Klarte ikke konvertere ikon.</translation>
     </message>
     <message>
       <source>This game has no save data to delete!</source>
