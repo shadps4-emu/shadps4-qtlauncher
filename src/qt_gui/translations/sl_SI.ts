@@ -272,10 +272,6 @@
       <translation>Nema pronađenih pret-izdanja.</translation>
     </message>
     <message>
-      <source>Invalid release data.</source>
-      <translation>Neispravni podaci izdanja.</translation>
-    </message>
-    <message>
       <source>No download URL found for the specified asset.</source>
       <translation>Nije pronađen URL za preuzimanje za navedeni fajl.</translation>
     </message>
@@ -1900,10 +1896,6 @@ Select an emulator version from the right panel.</translation>
       <translation>Uvek prikaži zapisnik promena</translation>
     </message>
     <message>
-      <source>Update Channel</source>
-      <translation>Kanal ažuriranja</translation>
-    </message>
-    <message>
       <source>Check for Updates</source>
       <translation>Proveri ažuriranja</translation>
     </message>
@@ -2110,14 +2102,6 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Browse:\nBrowse for a folder to set as the save data path.</source>
       <translation>Pretraži:\nIzaberite folder koji će služiti za čuvanje podataka.</translation>
-    </message>
-    <message>
-      <source>Release</source>
-      <translation>Stabilna verzija</translation>
-    </message>
-    <message>
-      <source>Nightly</source>
-      <translation>Noćna verzija</translation>
     </message>
     <message>
       <source>Set the volume of the background music.</source>

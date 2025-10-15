@@ -272,10 +272,6 @@
       <translation>Inga förutgåva hittades.</translation>
     </message>
     <message>
-      <source>Invalid release data.</source>
-      <translation>Ogiltig release-data.</translation>
-    </message>
-    <message>
       <source>No download URL found for the specified asset.</source>
       <translation>Ingen hämtnings-URL hittades för angiven tillgång.</translation>
     </message>
@@ -1900,10 +1896,6 @@ Välj en emulatorversion från den högra panelen.</translation>
       <translation>Visa alltid ändringsloggen</translation>
     </message>
     <message>
-      <source>Update Channel</source>
-      <translation>Uppdateringskanal</translation>
-    </message>
-    <message>
       <source>Check for Updates</source>
       <translation>Leta efter uppdateringar</translation>
     </message>
@@ -2110,14 +2102,6 @@ Välj en emulatorversion från den högra panelen.</translation>
     <message>
       <source>Browse:\nBrowse for a folder to set as the save data path.</source>
       <translation>Bläddra:\nBläddra efter en mapp att ställa in som sökväg för sparat data.</translation>
-    </message>
-    <message>
-      <source>Release</source>
-      <translation>Release</translation>
-    </message>
-    <message>
-      <source>Nightly</source>
-      <translation>Nightly</translation>
     </message>
     <message>
       <source>Set the volume of the background music.</source>

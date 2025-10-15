@@ -272,10 +272,6 @@
       <translation>No se encontraron prelanzamientos.</translation>
     </message>
     <message>
-      <source>Invalid release data.</source>
-      <translation>Datos de versión no válidos.</translation>
-    </message>
-    <message>
       <source>No download URL found for the specified asset.</source>
       <translation>No se encontró URL de descarga para el activo especificado.</translation>
     </message>
@@ -1900,10 +1896,6 @@ Select an emulator version from the right panel.</translation>
       <translation>Mostrar Siempre el Registro de Cambios</translation>
     </message>
     <message>
-      <source>Update Channel</source>
-      <translation>Canal de Actualización</translation>
-    </message>
-    <message>
       <source>Check for Updates</source>
       <translation>Buscar Actualizaciones</translation>
     </message>
@@ -2110,14 +2102,6 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Browse:\nBrowse for a folder to set as the save data path.</source>
       <translation>Buscar:\nBusque una carpeta para establecer como ruta de datos guardados.</translation>
-    </message>
-    <message>
-      <source>Release</source>
-      <translation>Principal</translation>
-    </message>
-    <message>
-      <source>Nightly</source>
-      <translation>Nightly</translation>
     </message>
     <message>
       <source>Set the volume of the background music.</source>

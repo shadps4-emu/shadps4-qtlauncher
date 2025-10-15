@@ -272,10 +272,6 @@
       <translation>لم يتم العثور على أي إصدارات مسبقة.</translation>
     </message>
     <message>
-      <source>Invalid release data.</source>
-      <translation>بيانات الإصدار غير صالحة.</translation>
-    </message>
-    <message>
       <source>No download URL found for the specified asset.</source>
       <translation>لم يتم العثور على عنوان URL للتنزيل للأصل المحدد.</translation>
     </message>
@@ -1900,10 +1896,6 @@ Select an emulator version from the right panel.</translation>
       <translation>عرض سجل التغييرات دائمًا</translation>
     </message>
     <message>
-      <source>Update Channel</source>
-      <translation>قناة التحديث</translation>
-    </message>
-    <message>
       <source>Check for Updates</source>
       <translation>التحقق من التحديثات</translation>
     </message>
@@ -2110,14 +2102,6 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Browse:\nBrowse for a folder to set as the save data path.</source>
       <translation>تصفح:\nاختر مجلدًا لتحديده كمكان لحفظ بيانات التخزين.</translation>
-    </message>
-    <message>
-      <source>Release</source>
-      <translation>إصدار</translation>
-    </message>
-    <message>
-      <source>Nightly</source>
-      <translation>إصدار ليلي</translation>
     </message>
     <message>
       <source>Set the volume of the background music.</source>

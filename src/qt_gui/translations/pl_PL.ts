@@ -272,10 +272,6 @@
       <translation>Nie znaleziono wersji przedpremierowych.</translation>
     </message>
     <message>
-      <source>Invalid release data.</source>
-      <translation>Nieprawidłowe dane wydania.</translation>
-    </message>
-    <message>
       <source>No download URL found for the specified asset.</source>
       <translation>Nie znaleziono adresu URL do pobrania dla określonego zasobu.</translation>
     </message>
@@ -1900,10 +1896,6 @@ Select an emulator version from the right panel.</translation>
       <translation>Zawsze pokazuj dziennik zmian</translation>
     </message>
     <message>
-      <source>Update Channel</source>
-      <translation>Kanał Aktualizacji</translation>
-    </message>
-    <message>
       <source>Check for Updates</source>
       <translation>Sprawdź aktualizacje</translation>
     </message>
@@ -2110,14 +2102,6 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Browse:\nBrowse for a folder to set as the save data path.</source>
       <translation>Przeglądaj:\nPrzeglądaj folder, aby ustawić ścieżkę zapisywania danych.</translation>
-    </message>
-    <message>
-      <source>Release</source>
-      <translation>Wersja stablina</translation>
-    </message>
-    <message>
-      <source>Nightly</source>
-      <translation>Wersja rozwojowa</translation>
     </message>
     <message>
       <source>Set the volume of the background music.</source>

@@ -272,10 +272,6 @@
       <translation>プレリリースは見つかりませんでした。</translation>
     </message>
     <message>
-      <source>Invalid release data.</source>
-      <translation>リリースデータが無効です。</translation>
-    </message>
-    <message>
       <source>No download URL found for the specified asset.</source>
       <translation>指定されたアセットのダウンロードURLが見つかりませんでした。</translation>
     </message>
@@ -1900,10 +1896,6 @@ Select an emulator version from the right panel.</translation>
       <translation>常に変更履歴を表示</translation>
     </message>
     <message>
-      <source>Update Channel</source>
-      <translation>アップデートチャネル</translation>
-    </message>
-    <message>
       <source>Check for Updates</source>
       <translation>更新を確認</translation>
     </message>
@@ -2110,14 +2102,6 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Browse:\nBrowse for a folder to set as the save data path.</source>
       <translation type="unfinished">Browse:\nBrowse for a folder to set as the save data path.</translation>
-    </message>
-    <message>
-      <source>Release</source>
-      <translation>Release</translation>
-    </message>
-    <message>
-      <source>Nightly</source>
-      <translation>Nightly</translation>
     </message>
     <message>
       <source>Set the volume of the background music.</source>

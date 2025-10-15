@@ -272,10 +272,6 @@
       <translation>Nuk u gjetën botime paraprake.</translation>
     </message>
     <message>
-      <source>Invalid release data.</source>
-      <translation>Të dhënat e lëshimit janë të pavlefshme.</translation>
-    </message>
-    <message>
       <source>No download URL found for the specified asset.</source>
       <translation>Nuk u gjet URL-ja e shkarkimit për burimin e specifikuar.</translation>
     </message>
@@ -1900,10 +1896,6 @@ Select an emulator version from the right panel.</translation>
       <translation>Shfaq gjithmonë ditarin e ndryshimeve</translation>
     </message>
     <message>
-      <source>Update Channel</source>
-      <translation>Kanali i përditësimit</translation>
-    </message>
-    <message>
       <source>Check for Updates</source>
       <translation>Kontrollo për përditësime</translation>
     </message>
@@ -2110,14 +2102,6 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Browse:\nBrowse for a folder to set as the save data path.</source>
       <translation>Shfleto:\nShfleto për të vendosur një dosje si shteg të ruajtjes së të dhënave.</translation>
-    </message>
-    <message>
-      <source>Release</source>
-      <translation>Release</translation>
-    </message>
-    <message>
-      <source>Nightly</source>
-      <translation>Nightly</translation>
     </message>
     <message>
       <source>Set the volume of the background music.</source>

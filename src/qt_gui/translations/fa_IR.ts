@@ -272,10 +272,6 @@
       <translation>هیچ پیش انتشاری یافت نشد.</translation>
     </message>
     <message>
-      <source>Invalid release data.</source>
-      <translation>داده های نسخه نامعتبر است.</translation>
-    </message>
-    <message>
       <source>No download URL found for the specified asset.</source>
       <translation>هیچ URL دانلودی برای دارایی مشخص شده پیدا نشد.</translation>
     </message>
@@ -1900,10 +1896,6 @@ Select an emulator version from the right panel.</translation>
       <translation>نمایش دائم تاریخچه تغییرات</translation>
     </message>
     <message>
-      <source>Update Channel</source>
-      <translation>کانال به‌روزرسانی</translation>
-    </message>
-    <message>
       <source>Check for Updates</source>
       <translation>بررسی به‌روزرسانی‌ها</translation>
     </message>
@@ -2110,14 +2102,6 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Browse:\nBrowse for a folder to set as the save data path.</source>
       <translation type="unfinished">Browse:\nBrowse for a folder to set as the save data path.</translation>
-    </message>
-    <message>
-      <source>Release</source>
-      <translation type="unfinished">Release</translation>
-    </message>
-    <message>
-      <source>Nightly</source>
-      <translation>اخرین نسخه شبانه</translation>
     </message>
     <message>
       <source>Set the volume of the background music.</source>

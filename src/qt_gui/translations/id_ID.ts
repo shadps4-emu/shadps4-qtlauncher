@@ -272,10 +272,6 @@
       <translation>Tidak ada pra-rilis yang ditemukan.</translation>
     </message>
     <message>
-      <source>Invalid release data.</source>
-      <translation>Data rilis tidak valid.</translation>
-    </message>
-    <message>
       <source>No download URL found for the specified asset.</source>
       <translation>Tidak ada URL unduhan ditemukan untuk aset yang ditentukan.</translation>
     </message>
@@ -1900,10 +1896,6 @@ Select an emulator version from the right panel.</translation>
       <translation>Selalu Tampilkan Riwayat Perubahan</translation>
     </message>
     <message>
-      <source>Update Channel</source>
-      <translation>Saluran Pembaruan</translation>
-    </message>
-    <message>
       <source>Check for Updates</source>
       <translation>Periksa pembaruan</translation>
     </message>
@@ -2110,14 +2102,6 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Browse:\nBrowse for a folder to set as the save data path.</source>
       <translation type="unfinished">Browse:\nBrowse for a folder to set as the save data path.</translation>
-    </message>
-    <message>
-      <source>Release</source>
-      <translation type="unfinished">Release</translation>
-    </message>
-    <message>
-      <source>Nightly</source>
-      <translation type="unfinished">Nightly</translation>
     </message>
     <message>
       <source>Set the volume of the background music.</source>
