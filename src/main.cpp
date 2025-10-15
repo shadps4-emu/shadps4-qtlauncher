@@ -12,7 +12,7 @@
 #ifdef _WIN32
 #include <windows.h>
 #endif
-// #include "emulator.h"
+
 // Custom message handler to ignore Qt logs
 void customMessageHandler(QtMsgType, const QMessageLogContext&, const QString&) {}
 
@@ -29,10 +29,76 @@ int main(int argc, char* argv[]) {
     const auto user_dir = Common::FS::GetUserPath(Common::FS::PathType::UserDir);
     Config::load(user_dir / "config.toml");
 
-    bool has_command_line_argument = argc > 1;
-    bool show_gui = false, has_game_argument = false;
-    std::string game_path;
-    std::vector<std::string> game_args{};
+    const bool has_command_line_argument = argc > 1;
+    bool has_emulator_argument = false;
+    bool show_gui = false;
+    std::string emulator;
+    QStringList emulator_args{};
+
+    // Map of argument strings to lambda functions
+    std::unordered_map<std::string, std::function<void(int&)>> arg_map = {
+        {"-h",
+         [&](int&) {
+             std::cout
+                 << "Usage: shadps4 [options]\n"
+                    "Options:\n"
+                    "  No arguments: Opens the GUI.\n"
+                    "  -e, --emulator <name|path>    Specify the emulator version/path you want to "
+                    "use, or 'default' for using the version selected in the config.\n"
+                    " -- ...                         Parameters passed to the emulator core. "
+                    "Needs to be at the end of the line, and everything after '--' is an "
+                    "emulator argument.\n"
+                    "  -s, --show-gui                Show the GUI.\n"
+                    "  -h, --help                    Display this help message\n";
+             exit(0);
+         }},
+        {"--help", [&](int& i) { arg_map["-h"](i); }}, // Redirect --help to -h
+
+        {"-s", [&](int&) { show_gui = true; }},
+        {"--show-gui", [&](int& i) { arg_map["-s"](i); }},
+
+        {"-e",
+         [&](int& i) {
+             if (i + 1 < argc) {
+                 emulator = argv[++i];
+                 has_emulator_argument = true;
+             } else {
+                 std::cerr << "Error: Missing argument for -g/--game\n";
+                 exit(1);
+             }
+         }},
+        {"--emulator", [&](int& i) { arg_map["-e"](i); }},
+    };
+
+    // Parse command-line arguments using the map
+    for (int i = 1; i < argc; ++i) {
+        std::string cur_arg = argv[i];
+        auto it = arg_map.find(cur_arg);
+        if (it != arg_map.end()) {
+            it->second(i); // Call the associated lambda function
+        } else if (i == argc - 1 && !has_emulator_argument) {
+            // Assume the last argument is the game file if not specified via -g/--game
+            emulator = argv[i];
+            has_emulator_argument = true;
+        } else if (std::string(argv[i]) == "--") {
+            if (i + 1 == argc) {
+                std::cerr << "Warning: -- is set, but no game arguments are added!\n";
+                break;
+            }
+            for (int j = i + 1; j < argc; j++) {
+                emulator_args.push_back(argv[j]);
+            }
+            break;
+        } else if (i + 1 < argc && std::string(argv[i + 1]) == "--") {
+            if (!has_emulator_argument) {
+                emulator = argv[i];
+                has_emulator_argument = true;
+            }
+        } else {
+            std::cerr << "Unknown argument: " << cur_arg << ", see --help for info.\n";
+            return 1;
+        }
+    }
 
     // If no game directories are set and no command line argument, prompt for it
     if (Config::getGameInstallDirsEnabled().empty() && !has_command_line_argument) {
@@ -45,11 +111,38 @@ int main(int argc, char* argv[]) {
 
     Common::Log::Initialize("shadPS4Launcher.log");
 
+    if (has_command_line_argument && !has_emulator_argument) {
+        std::cerr << "Error: Please provide a name or path for the emulator core.\n";
+        exit(1);
+    }
+
     // Initialize the main window
     MainWindow* m_main_window = new MainWindow(nullptr);
+    if ((has_command_line_argument && show_gui) || !has_command_line_argument) {
+        m_main_window->Init();
+    }
+    if (has_emulator_argument) {
+        std::filesystem::path emulator_path;
+        if (std::filesystem::exists(emulator)) {
+            emulator_path = emulator;
+        } else {
+            std::filesystem::path version_dir = user_dir / "versions";
+            for (auto const& version : std::filesystem::directory_iterator(version_dir)) {
+                if (version.is_directory() && version.path().filename() == emulator) {
+                    emulator_path = *std::filesystem::directory_iterator(version);
+                    break;
+                }
+            }
+        }
+        if (!std::filesystem::exists(emulator_path)) {
+            std::cerr << "Error: specified emulator name or path is not found.\n";
+            return 1;
+        }
+        m_main_window->StartEmulatorExecutable(emulator_path, emulator_args);
+    }
 
-    m_main_window->Init();
-
-    m_main_window->show();
+    if (!has_emulator_argument || show_gui) {
+        m_main_window->show();
+    }
     return a.exec();
 }

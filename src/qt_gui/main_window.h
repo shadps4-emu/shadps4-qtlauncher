@@ -35,6 +35,8 @@ public:
     void InstallDirectory();
     void StartGame();
     void StartGameWithArgs(QStringList args = {});
+    void StartEmulator(std::filesystem::path path, QStringList args = {});
+    void StartEmulatorExecutable(std::filesystem::path path, QStringList args = {});
     void PauseGame();
     void StopGame();
     void RestartGame();
@@ -77,7 +79,6 @@ private:
     void LoadTranslation();
     void PlayBackgroundMusic();
     QIcon RecolorIcon(const QIcon& icon, bool isWhite);
-    void StartEmulator(std::filesystem::path, QStringList args = {});
     void RestartEmulator();
 
     bool isIconBlack = false;
