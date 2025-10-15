@@ -7,7 +7,6 @@
 
 #include <QClipboard>
 #include <QDesktopServices>
-#include <QFileDialog>
 #include <QMenu>
 #include <QMessageBox>
 #include <QTreeWidgetItem>
@@ -447,7 +446,6 @@ public:
         }
 
         if (selected == &createShortcut) {
-
             auto shortcutWindow = new ShortcutDialog(m_gui_settings, m_games, itemID);
             shortcutWindow->exec();
         }
