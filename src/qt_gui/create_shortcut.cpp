@@ -164,9 +164,16 @@ void ShortcutDialog::browseBinary() {
     QString defaultPath = versionDir.isEmpty() ? QDir::currentPath() : versionDir;
 
     QString shadBinary =
+#ifdef Q_OS_WIN
+        QFileDialog::getOpenFileName(nullptr, tr("Select shadPS4 executable for shortcut"),
+                                     defaultPath, "Exe files (*.exe)");
+#elif Q_OS_APPLE
         QFileDialog::getOpenFileName(nullptr, tr("Select shadPS4 binary for shortcut"), defaultPath,
-                                     "Binary files (*. *.exe *.AppImage)");
-
+                                     "Binary files (*)");
+#elif Q_OS_LINUX
+        QFileDialog::getOpenFileName(nullptr, tr("Select shadPS4 binary for shortcut"), defaultPath,
+                                     "AppImages (*.AppImage);; Binary files (*)");
+#endif
     binaryLineEdit->setText(shadBinary);
 }
 
