@@ -1024,7 +1024,7 @@ void VersionDialog::showDownloadDialog(const QString& tagName, const QString& do
         }
     });
 
-    connect(reply, &QNetworkReply::finished, this, [=]() {
+    connect(reply, &QNetworkReply::finished, this, [=, this]() {
         if (reply->error() != QNetworkReply::NoError) {
             QMessageBox::warning(this, tr("Error"),
                                  tr("Network error while downloading") + ":\n" +
@@ -1112,7 +1112,7 @@ void VersionDialog::showDownloadDialog(const QString& tagName, const QString& do
 #endif
             QProcess::startDetached(process, args);
 
-            QTimer::singleShot(4000, this, [=]() {
+            QTimer::singleShot(4000, this, [=, this]() {
                 progressBar->setValue(100);
                 dlg->close();
                 dlg->deleteLater();
