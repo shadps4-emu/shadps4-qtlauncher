@@ -11,6 +11,7 @@ namespace gui {
 const QString general_settings = "general_settings";
 const QString main_window = "main_window";
 const QString game_list = "game_list";
+const QString game_list_column = "game_list_column";
 const QString game_grid = "game_grid";
 const QString favorites = "favorites";
 const QString version_manager = "version_manager";
@@ -42,8 +43,19 @@ const gui_value gl_backgroundImageOpacity = gui_value(game_list, "backgroundImag
 const gui_value gl_playBackgroundMusic = gui_value(game_list, "playBackgroundMusic", true);
 const gui_value gl_backgroundMusicVolume = gui_value(game_list, "backgroundMusicVolume", 50);
 const gui_value gl_VolumeSlider = gui_value(game_list, "volumeSlider", 100);
-const gui_value gl_showLoadGameSizeEnabled = gui_value(game_list, "showLoadGameSize", true);
-const gui_value gl_showCompatibility = gui_value(game_list, "showCompatibility", false);
+
+// game list (column)
+const gui_value glc_showIconEnabled = gui_value(game_list_column, "showIcon", true);
+const gui_value glc_showNameEnabled = gui_value(game_list_column, "showName", true);
+const gui_value glc_showCompatibility = gui_value(game_list_column, "showCompatibility", false);
+const gui_value glc_showSerialEnabled = gui_value(game_list_column, "showSerial", true);
+const gui_value glc_showRegionEnabled = gui_value(game_list_column, "showRegion", true);
+const gui_value glc_showFirmwareEnabled = gui_value(game_list_column, "showFirmware", true);
+const gui_value glc_showLoadGameSizeEnabled = gui_value(game_list_column, "showLoadGameSize", true);
+const gui_value glc_showVersionEnabled = gui_value(game_list_column, "showVersion", true);
+const gui_value glc_showPlayTimeEnabled = gui_value(game_list_column, "showPlayTime", true);
+const gui_value glc_showPathEnabled = gui_value(game_list_column, "showPath", true);
+const gui_value glc_showFavoriteEnabled = gui_value(game_list_column, "showFavorite", true);
 
 // game grid settings
 const gui_value gg_icon_size = gui_value(game_grid, "icon_size", 69);

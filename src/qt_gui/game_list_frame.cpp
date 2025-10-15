@@ -32,7 +32,7 @@ GameListFrame::GameListFrame(std::shared_ptr<gui_settings> gui_settings,
     this->horizontalHeader()->setHighlightSections(false);
     this->horizontalHeader()->setSortIndicatorShown(true);
     this->setContextMenuPolicy(Qt::CustomContextMenu);
-    this->setColumnCount(11);
+    this->setColumnCount(12);
     this->setColumnWidth(1, 300); // Name
     this->setColumnWidth(2, 140); // Compatibility
     this->setColumnWidth(3, 120); // Serial
@@ -42,10 +42,11 @@ GameListFrame::GameListFrame(std::shared_ptr<gui_settings> gui_settings,
     this->setColumnWidth(7, 90);  // Version
     this->setColumnWidth(8, 120); // Play Time
     this->setColumnWidth(10, 90); // Favorite
+    this->setColumnWidth(11, 0);  // Empty space
     QStringList headers;
     headers << tr("Icon") << tr("Name") << tr("Compatibility") << tr("Serial") << tr("Region")
             << tr("Firmware") << tr("Size") << tr("Version") << tr("Play Time") << tr("Path")
-            << tr("Favorite");
+            << tr("Favorite") << "";
     this->setHorizontalHeaderLabels(headers);
     this->horizontalHeader()->setSortIndicatorShown(true);
     this->horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeToContents);
@@ -53,6 +54,8 @@ GameListFrame::GameListFrame(std::shared_ptr<gui_settings> gui_settings,
     this->horizontalHeader()->setSectionResizeMode(4, QHeaderView::Fixed);
     this->horizontalHeader()->setSectionResizeMode(9, QHeaderView::Stretch);
     this->horizontalHeader()->setSectionResizeMode(10, QHeaderView::Fixed);
+    this->horizontalHeader()->setSectionResizeMode(11, QHeaderView::Stretch);
+    this->setColumnHidden(11, true);
     PopulateGameList();
 
     connect(this, &QTableWidget::currentCellChanged, this, &GameListFrame::onCurrentCellChanged);
@@ -112,6 +115,11 @@ GameListFrame::GameListFrame(std::shared_ptr<gui_settings> gui_settings,
             PopulateGameList(false);
         }
     });
+
+    connect(this->horizontalHeader(), &QHeaderView::customContextMenuRequested, this,
+            &GameListFrame::ShowHeaderContextMenu);
+
+    ToggleColumnVisibility();
 }
 
 void GameListFrame::onCurrentCellChanged(int currentRow, int currentColumn, int previousRow,
@@ -137,9 +145,6 @@ void GameListFrame::PlayBackgroundMusic(QTableWidgetItem* item) {
 
 void GameListFrame::PopulateGameList(bool isInitialPopulation) {
     this->m_current_item = nullptr;
-    // Do not show status column if it is not enabled
-    this->setColumnHidden(2, !m_gui_settings->GetValue(gui::gl_showCompatibility).toBool());
-    this->setColumnHidden(6, !m_gui_settings->GetValue(gui::gl_showLoadGameSizeEnabled).toBool());
 
     this->setRowCount(m_game_info->m_games.size());
     ResizeIcons(icon_size);
@@ -516,4 +521,81 @@ QString GameListFrame::GetPlayTime(const std::string& serial) {
 
 QTableWidgetItem* GameListFrame::GetCurrentItem() {
     return m_current_item;
+}
+
+void GameListFrame::ToggleColumnVisibility() {
+    bool showIcon = m_gui_settings->GetValue(gui::glc_showIconEnabled).toBool();
+    bool showName = m_gui_settings->GetValue(gui::glc_showNameEnabled).toBool();
+    bool showCompatibility = m_gui_settings->GetValue(gui::glc_showCompatibility).toBool();
+    bool showSerial = m_gui_settings->GetValue(gui::glc_showSerialEnabled).toBool();
+    bool showRegion = m_gui_settings->GetValue(gui::glc_showRegionEnabled).toBool();
+    bool showFirmware = m_gui_settings->GetValue(gui::glc_showFirmwareEnabled).toBool();
+    bool showSize = m_gui_settings->GetValue(gui::glc_showLoadGameSizeEnabled).toBool();
+    bool showVersion = m_gui_settings->GetValue(gui::glc_showVersionEnabled).toBool();
+    bool showPlayTime = m_gui_settings->GetValue(gui::glc_showPlayTimeEnabled).toBool();
+    bool showPath = m_gui_settings->GetValue(gui::glc_showPathEnabled).toBool();
+    bool showFavorite = m_gui_settings->GetValue(gui::glc_showFavoriteEnabled).toBool();
+
+    this->setColumnHidden(0, !showIcon);          // Icon
+    this->setColumnHidden(1, !showName);          // Name
+    this->setColumnHidden(2, !showCompatibility); // Compatibility
+    this->setColumnHidden(3, !showSerial);        // Serial
+    this->setColumnHidden(4, !showRegion);        // Region
+    this->setColumnHidden(5, !showFirmware);      // Firmware
+    this->setColumnHidden(6, !showSize);          // Size
+    this->setColumnHidden(7, !showVersion);       // Version
+    this->setColumnHidden(8, !showPlayTime);      // Play Time
+    this->setColumnHidden(9, !showPath);          // Path
+    this->setColumnHidden(10, !showFavorite);     // Favorite
+
+    if (!showPath) {
+        this->setColumnHidden(11, false); // Empty space
+    } else {
+        this->setColumnHidden(11, true);
+    }
+
+    if (showFavorite) {
+        for (int i = 0; i < m_game_info->m_games.size(); i++) {
+            SetFavoriteIcon(i, 10);
+        }
+    }
+}
+
+void GameListFrame::ShowHeaderContextMenu(const QPoint& pos) {
+    QMenu contextMenu(this);
+
+    struct ColumnToggle {
+        QString name;
+        int column;
+        gui_value configKey;
+    };
+
+    std::vector<ColumnToggle> columns = {
+        {tr("Icon"), 0, gui::glc_showIconEnabled},
+        {tr("Name"), 1, gui::glc_showNameEnabled},
+        {tr("Compatibility"), 2, gui::glc_showCompatibility},
+        {tr("Serial"), 3, gui::glc_showSerialEnabled},
+        {tr("Region"), 4, gui::glc_showRegionEnabled},
+        {tr("Firmware"), 5, gui::glc_showFirmwareEnabled},
+        {tr("Size"), 6, gui::glc_showLoadGameSizeEnabled},
+        {tr("Version"), 7, gui::glc_showVersionEnabled},
+        {tr("Play Time"), 8, gui::glc_showPlayTimeEnabled},
+        {tr("Path"), 9, gui::glc_showPathEnabled},
+        {tr("Favorite"), 10, gui::glc_showFavoriteEnabled},
+    };
+
+    for (const auto& col : columns) {
+        bool isChecked = m_gui_settings->GetValue(col.configKey).toBool();
+
+        QAction* action = contextMenu.addAction(col.name);
+        action->setCheckable(true);
+        action->setChecked(isChecked);
+
+        connect(action, &QAction::toggled, this, [this, col](bool checked) {
+            m_gui_settings->SetValue(col.configKey, checked);
+            ToggleColumnVisibility();
+        });
+    }
+
+    contextMenu.exec(this->horizontalHeader()->mapToGlobal(pos));
 }

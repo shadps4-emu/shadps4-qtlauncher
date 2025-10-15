@@ -37,7 +37,7 @@ void ScanDirectoryRecursively(const QString& dir, QStringList& filePaths, int cu
 GameInfoClass::GameInfoClass() = default;
 GameInfoClass::~GameInfoClass() = default;
 
-void GameInfoClass::GetGameInfo(bool sizeEnabled, QWidget* parent) {
+void GameInfoClass::GetGameInfo(QWidget* parent) {
     QStringList filePaths;
     for (const auto& installLoc : Config::getGameInstallDirs()) {
         QString installDir;
@@ -59,9 +59,8 @@ void GameInfoClass::GetGameInfo(bool sizeEnabled, QWidget* parent) {
     QFutureWatcher<void> futureWatcher;
     GameListUtils game_util;
     bool finished = false;
-    futureWatcher.setFuture(QtConcurrent::map(m_games, [sizeEnabled](GameInfo& game) {
-        GameListUtils::GetFolderSize(game, sizeEnabled);
-    }));
+    futureWatcher.setFuture(
+        QtConcurrent::map(m_games, [&](GameInfo& game) { GameListUtils::GetFolderSize(game); }));
     connect(&futureWatcher, &QFutureWatcher<void>::finished, [&]() {
         dialog.reset();
         std::sort(m_games.begin(), m_games.end(), CompareStrings);

@@ -358,16 +358,14 @@ void MainWindow::CreateDockWindows() {
 
 void MainWindow::LoadGameLists() {
     // Load compatibility database
-    if (m_gui_settings->GetValue(gui::gl_showCompatibility).toBool())
-        m_compat_info->LoadCompatibilityFile();
+    m_compat_info->LoadCompatibilityFile();
 
     // Update compatibility database
     if (m_gui_settings->GetValue(gui::gen_checkCompatibilityAtStartup).toBool())
         m_compat_info->UpdateCompatibilityDatabase(this);
 
     // Get game info from game folders.
-    bool showSize = m_gui_settings->GetValue(gui::gl_showLoadGameSizeEnabled).toBool();
-    m_game_info->GetGameInfo(showSize, this);
+    m_game_info->GetGameInfo(this);
     if (isTableList) {
         m_game_list_frame->PopulateGameList();
     } else {
@@ -957,8 +955,7 @@ void MainWindow::ShowGameList() {
 
 void MainWindow::RefreshGameTable() {
     // m_game_info->m_games.clear();
-    bool showSize = m_gui_settings->GetValue(gui::gl_showLoadGameSizeEnabled).toBool();
-    m_game_info->GetGameInfo(showSize, this);
+    m_game_info->GetGameInfo(this);
     m_game_list_frame->clearContents();
     m_game_list_frame->PopulateGameList();
     m_game_grid_frame->clearContents();
@@ -967,6 +964,7 @@ void MainWindow::RefreshGameTable() {
     int numGames = m_game_info->m_games.size();
     QString statusMessage = tr("Games: ") + QString::number(numGames);
     statusBar->showMessage(statusMessage);
+    m_game_list_frame->ToggleColumnVisibility();
 }
 
 void MainWindow::ConfigureGuiFromSettings() {
