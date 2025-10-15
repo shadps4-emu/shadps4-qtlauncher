@@ -577,19 +577,24 @@ public:
         }
 
         if (selected == submitCompatibilityReport) {
-            std::string log_file_path =
+            std::filesystem::path log_file_path =
                 (Common::FS::GetUserPath(Common::FS::PathType::LogDir) /
                  (Config::getSeparateLogFilesEnabled() ? m_games[itemID].serial + ".log"
-                                                       : "shad_log.txt")).c_str();
+                                                       : "shad_log.txt"));
             bool is_valid_file = LogAnalyzer::ProcessFile(log_file_path);
-            auto report_result = LogAnalyzer::CheckResults(m_games[itemID].serial);
+            std::optional<std::string> report_result = std::nullopt;
+            if (is_valid_file) {
+                report_result = LogAnalyzer::CheckResults(m_games[itemID].serial);
+            }
             if (!is_valid_file || report_result.has_value()) {
                 QString error_string = QString::fromStdString(
-                    !is_valid_file ? "The log is invalid, maybe log filters were used?"
-                                   : *report_result);
+                    !is_valid_file
+                        ? "The log is invalid, it either doesn't exist or log filters were used."
+                        : *report_result);
                 QMessageBox msgBox(QMessageBox::Critical, tr("Error"),
                                    tr("Couldn't submit report, because the latest log for the "
-                                      "game doesn't pass the following requirement:") +
+                                      "game failed on the following check, and therefore would be "
+                                      "an invalid report:") +
                                        "\n" + error_string);
                 auto okButton = msgBox.addButton(tr("Ok"), QMessageBox::AcceptRole);
                 auto infoButton = msgBox.addButton(tr("Info"), QMessageBox::ActionRole);

@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright 2025 shadPS4 Emulator Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
+#include <filesystem>
 #include <fstream>
 #include <memory>
 #include "log_analyzer.h"
@@ -10,7 +11,7 @@ namespace LogAnalyzer {
 
 std::vector<std::unique_ptr<Entry>> entries;
 
-inline std::string trim(const std::string& str) {
+inline std::string trim(std::string const& str) {
     auto start = std::ranges::find_if_not(str.begin(), str.end(),
                                           [](unsigned char c) { return std::isspace(c); });
     auto end = std::ranges::find_if_not(str.rbegin(), str.rend(), [](unsigned char c) {
@@ -104,7 +105,7 @@ void ResetEntries() {
     }
 }
 
-bool DetectLogTypeAndSetupEntries(std::string path) {
+bool DetectLogTypeAndSetupEntries(std::filesystem::path const& path) {
     entries.clear();
     enum LogType {
         Release,
@@ -114,10 +115,9 @@ bool DetectLogTypeAndSetupEntries(std::string path) {
     LogType type;
     std::ifstream log(path);
     if (!log.is_open()) {
-        LOG_ERROR(Log, "Invalid file path!");
         return false;
     }
-    bool is_valid = false;
+    bool is_valid = true;
     std::string first_line;
     std::getline(log, first_line);
     first_line = trim(first_line);
@@ -135,27 +135,16 @@ bool DetectLogTypeAndSetupEntries(std::string path) {
         }
         type = Old;
     }
-
-    std::string suite_path;
-    switch (type) {
-    case Release:
-    case Nightly:
-        is_valid = true;
-        break;
-    case Old:
-    default:
-        // todo maybe differentiate between these?
-        break;
-    }
     if (!is_valid) {
         return false;
     }
+
     std::istringstream ds(is_valid_report_suite);
     LoadSuiteFromInput(ds);
     return true;
 }
 
-bool ProcessFile(const std::string& path) {
+bool ProcessFile(std::filesystem::path const& path) {
     bool is_valid_file = DetectLogTypeAndSetupEntries(path);
     std::ifstream log(path);
     std::string linebuf;
@@ -173,7 +162,7 @@ bool ProcessFile(const std::string& path) {
     }
 }
 
-optional<string> CheckResults(std::string game_id) {
+optional<string> CheckResults(std::string const& game_id) {
     if (!(entries[0]->GetParsedData().has_value() && *entries[0]->GetParsedData() == game_id)) {
         return entries[0]->description;
     }
@@ -183,7 +172,7 @@ optional<string> CheckResults(std::string game_id) {
     }
 
     for (int i = 2; i < entries.size(); ++i) {
-        if (!entries[1]->Passed()) {
+        if (!entries[i]->Passed()) {
             return entries[i]->description;
         }
     }

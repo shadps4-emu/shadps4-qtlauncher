@@ -4,6 +4,7 @@
 #pragma once
 
 #include <algorithm>
+#include <filesystem>
 #include <iostream>
 #include <optional>
 #include <ranges>
@@ -18,16 +19,16 @@ using std::nullopt;
 using std::optional;
 using std::string;
 
-inline constexpr const char* is_valid_report_suite = R"(
+static inline constexpr char const* const is_valid_report_suite = R"(
 #Entry
 -The game ID in the log does not match the game ID of the selected game.
 [Loader] <Info> emulator.cpp:# Run: Game id: @ Title: *
 #Entry
--The emulator version wasn't the latest release.
+-The emulator version wasn't an official release one.
 [Loader] <Info> emulator.cpp:# Run: Starting shadps4 emulator +
 
 #MatchValueEntry
--The emulator version wasn't the latest release.
+-The emulator version wasn't an official release one.
 [Loader] <Info> emulator.cpp:# Run: Remote https://github.com/@(/)*
 shadps4-emu
 #MatchValueEntry
@@ -43,10 +44,10 @@ false
 -isDevKit was turned on.
 [Kernel.Vmm] <Warning> memory.cpp:# SetupMemoryRegions: Config::isDevKitConsole is enabled! *
 #ShouldntExistEntry
--System modules are missing.
+-System modules were missing.
 [Loader] <Info> emulator.cpp:# LoadSystemModules: No HLE available for @{ module}
 #ShouldntExistEntry
--System modules are missing.
+-System modules were missing.
 [Loader] <Info> emulator.cpp:# LoadSystemModules: Can't Load @{ switching to HLE}
 #ShouldntExistEntry
 -Patches were used.
@@ -80,7 +81,7 @@ public:
                        p.size())) {}
     virtual ~Entry() = default;
 
-    virtual void ProcessLine(const std::string& line) {
+    virtual void ProcessLine(std::string const& line) {
         if ((!is_multiple_occurrence && occurrence_count != 0) ||
             line.size() < minimum_line_length) {
             return;
@@ -215,7 +216,7 @@ public:
 
 extern std::vector<std::unique_ptr<Entry>> entries;
 
-bool ProcessFile(const std::string& path);
-optional<string> CheckResults(std::string game_id);
+bool ProcessFile(std::filesystem::path const& path);
+optional<string> CheckResults(std::string const& game_id);
 
 } // namespace LogAnalyzer
