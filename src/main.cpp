@@ -16,6 +16,10 @@
 // Custom message handler to ignore Qt logs
 void customMessageHandler(QtMsgType, const QMessageLogContext&, const QString&) {}
 
+void StopProgram() {
+    exit(0);
+}
+
 int main(int argc, char* argv[]) {
 #ifdef _WIN32
     SetConsoleOutputCP(CP_UTF8);
@@ -147,6 +151,9 @@ int main(int argc, char* argv[]) {
         if (!std::filesystem::exists(emulator_path)) {
             std::cerr << "Error: specified emulator name or path is not found.\n";
             return 1;
+        }
+        if (!show_gui) {
+            m_main_window->m_ipc_client->gameClosedFunc = StopProgram;
         }
         m_main_window->StartEmulatorExecutable(emulator_path, emulator_args);
     }
