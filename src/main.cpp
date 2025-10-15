@@ -45,6 +45,7 @@ int main(int argc, char* argv[]) {
                     "  No arguments: Opens the GUI.\n"
                     "  -e, --emulator <name|path>    Specify the emulator version/path you want to "
                     "use, or 'default' for using the version selected in the config.\n"
+                    "  -d                            Alias for '-e default'.\n"
                     " -- ...                         Parameters passed to the emulator core. "
                     "Needs to be at the end of the line, and everything after '--' is an "
                     "emulator argument.\n"
@@ -68,6 +69,11 @@ int main(int argc, char* argv[]) {
              }
          }},
         {"--emulator", [&](int& i) { arg_map["-e"](i); }},
+        {"-d",
+         [&](int&) {
+             emulator = "default";
+             has_emulator_argument = true;
+         }},
     };
 
     // Parse command-line arguments using the map
@@ -125,6 +131,10 @@ int main(int argc, char* argv[]) {
         std::filesystem::path emulator_path;
         if (std::filesystem::exists(emulator)) {
             emulator_path = emulator;
+        } else if (emulator == "default") {
+            gui_settings settings{};
+            emulator_path = *std::filesystem::directory_iterator(
+                settings.GetValue(gui::vm_versionSelected).toString().toStdString());
         } else {
             std::filesystem::path version_dir = user_dir / "versions";
             for (auto const& version : std::filesystem::directory_iterator(version_dir)) {
