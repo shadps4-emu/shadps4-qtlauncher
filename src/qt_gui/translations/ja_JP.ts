@@ -280,10 +280,6 @@
       <translation>あなたのバージョンはすでに最新です！</translation>
     </message>
     <message>
-      <source>Update Channel</source>
-      <translation>アップデートチャネル</translation>
-    </message>
-    <message>
       <source>Current Version</source>
       <translation>現在のバージョン</translation>
     </message>
@@ -430,14 +426,6 @@
       <translation>下</translation>
     </message>
     <message>
-      <source>Left Stick Deadzone (def:2 max:127)</source>
-      <translation>左スティックデッドゾーン（既定:2 最大:127）</translation>
-    </message>
-    <message>
-      <source>Left Deadzone</source>
-      <translation>左デッドゾーン</translation>
-    </message>
-    <message>
       <source>Left Stick</source>
       <translation>左スティック</translation>
     </message>
@@ -456,14 +444,6 @@
     <message>
       <source>Face Buttons</source>
       <translation type="unfinished">Face Buttons</translation>
-    </message>
-    <message>
-      <source>Right Stick Deadzone (def:2, max:127)</source>
-      <translation>右スティックデッドゾーン（既定:2, 最大:127）</translation>
-    </message>
-    <message>
-      <source>Right Deadzone</source>
-      <translation>右デッドゾーン</translation>
     </message>
     <message>
       <source>Right Stick</source>
@@ -624,6 +604,30 @@
     <message>
       <source>BLUE</source>
       <translation>青</translation>
+    </message>
+    <message>
+      <source>Left Stick Deadzone</source>
+      <translation type="unfinished">Left Stick Deadzone</translation>
+    </message>
+    <message>
+      <source>Min Deadzone (def:2 max:127)</source>
+      <translation type="unfinished">Min Deadzone (def:2 max:127)</translation>
+    </message>
+    <message>
+      <source>2</source>
+      <translation type="unfinished">2</translation>
+    </message>
+    <message>
+      <source>Max Deadzone (def:127 max:127)</source>
+      <translation type="unfinished">Max Deadzone (def:127 max:127)</translation>
+    </message>
+    <message>
+      <source>127</source>
+      <translation type="unfinished">127</translation>
+    </message>
+    <message>
+      <source>Right Stick Deadzone</source>
+      <translation type="unfinished">Right Stick Deadzone</translation>
     </message>
   </context>
   <context>
@@ -843,10 +847,6 @@
   <context>
     <name>GuiContextMenus</name>
     <message>
-      <source>Create Shortcut</source>
-      <translation>ショートカットを作成</translation>
-    </message>
-    <message>
       <source>Cheats / Patches</source>
       <translation>チート / パッチ</translation>
     </message>
@@ -923,20 +923,8 @@
       <translation>互換性...</translation>
     </message>
     <message>
-      <source>Shortcut creation</source>
-      <translation>ショートカットの作成</translation>
-    </message>
-    <message>
-      <source>Shortcut created successfully!</source>
-      <translation>ショートカットが正常に作成されました!</translation>
-    </message>
-    <message>
       <source>Error</source>
       <translation>エラー</translation>
-    </message>
-    <message>
-      <source>Error creating shortcut!</source>
-      <translation>ショートカットの作成に失敗しました!</translation>
     </message>
     <message>
       <source>Game</source>
@@ -981,10 +969,6 @@
     <message>
       <source>No log file found for this game!</source>
       <translation>このゲームのログファイルが見つかりませんでした！</translation>
-    </message>
-    <message>
-      <source>Failed to convert icon.</source>
-      <translation>アイコンの変換に失敗しました。</translation>
     </message>
     <message>
       <source>This game has no save data to delete!</source>
