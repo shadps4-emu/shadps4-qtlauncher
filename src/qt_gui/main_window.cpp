@@ -1309,15 +1309,9 @@ void MainWindow::StartEmulatorExecutable(std::filesystem::path path, QStringList
         return;
     }
 
-    QStringList final_args{"--game", QString::fromStdWString(path.wstring())};
-
-    final_args.append(args);
-
     QString workDir = QDir::currentPath();
 
-    LOG_INFO(IPC, "Starting emulator {} with arg {}", path.c_str(), args[0].toStdString());
-
-    m_ipc_client->startEmulator(fileInfo, final_args, workDir);
+    m_ipc_client->startEmulator(fileInfo, args, workDir);
     m_ipc_client->setActiveController(GamepadSelect::GetSelectedGamepad());
 }
 

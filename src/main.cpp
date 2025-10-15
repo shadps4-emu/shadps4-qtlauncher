@@ -39,7 +39,7 @@ int main(int argc, char* argv[]) {
     std::unordered_map<std::string, std::function<void(int&)>> arg_map = {
         {"-h",
          [&](int&) {
-             std::cout
+             std::cerr
                  << "Usage: shadps4 [options]\n"
                     "Options:\n"
                     "  No arguments: Opens the GUI.\n"
@@ -82,7 +82,7 @@ int main(int argc, char* argv[]) {
             has_emulator_argument = true;
         } else if (std::string(argv[i]) == "--") {
             if (i + 1 == argc) {
-                std::cerr << "Warning: -- is set, but no game arguments are added!\n";
+                std::cerr << "Warning: -- is set, but no emulator arguments are added!\n";
                 break;
             }
             for (int j = i + 1; j < argc; j++) {
