@@ -280,10 +280,6 @@
       <translation>Versi Anda sudah terbaru!</translation>
     </message>
     <message>
-      <source>Update Channel</source>
-      <translation>Saluran Pembaruan</translation>
-    </message>
-    <message>
       <source>Current Version</source>
       <translation>Versi Saat Ini</translation>
     </message>
@@ -430,14 +426,6 @@
       <translation>Bawah</translation>
     </message>
     <message>
-      <source>Left Stick Deadzone (def:2 max:127)</source>
-      <translation>Zona Mati Stik Kiri (standar: 2, maksimum: 127)</translation>
-    </message>
-    <message>
-      <source>Left Deadzone</source>
-      <translation>Left Deadzone</translation>
-    </message>
-    <message>
       <source>Left Stick</source>
       <translation>Stik Kiri</translation>
     </message>
@@ -456,14 +444,6 @@
     <message>
       <source>Face Buttons</source>
       <translation>Tombol Wajah</translation>
-    </message>
-    <message>
-      <source>Right Stick Deadzone (def:2, max:127)</source>
-      <translation>Zona mati stik kanan (def:2, maks:127)</translation>
-    </message>
-    <message>
-      <source>Right Deadzone</source>
-      <translation>Zona Mati Kanan</translation>
     </message>
     <message>
       <source>Right Stick</source>
@@ -624,6 +604,30 @@
     <message>
       <source>BLUE</source>
       <translation type="unfinished">BLUE</translation>
+    </message>
+    <message>
+      <source>Left Stick Deadzone</source>
+      <translation type="unfinished">Left Stick Deadzone</translation>
+    </message>
+    <message>
+      <source>Min Deadzone (def:2 max:127)</source>
+      <translation type="unfinished">Min Deadzone (def:2 max:127)</translation>
+    </message>
+    <message>
+      <source>2</source>
+      <translation type="unfinished">2</translation>
+    </message>
+    <message>
+      <source>Max Deadzone (def:127 max:127)</source>
+      <translation type="unfinished">Max Deadzone (def:127 max:127)</translation>
+    </message>
+    <message>
+      <source>127</source>
+      <translation type="unfinished">127</translation>
+    </message>
+    <message>
+      <source>Right Stick Deadzone</source>
+      <translation type="unfinished">Right Stick Deadzone</translation>
     </message>
   </context>
   <context>
@@ -843,10 +847,6 @@
   <context>
     <name>GuiContextMenus</name>
     <message>
-      <source>Create Shortcut</source>
-      <translation type="unfinished">Create Shortcut</translation>
-    </message>
-    <message>
       <source>Cheats / Patches</source>
       <translation>Cheat / Patch</translation>
     </message>
@@ -923,20 +923,8 @@
       <translation type="unfinished">Compatibility...</translation>
     </message>
     <message>
-      <source>Shortcut creation</source>
-      <translation type="unfinished">Shortcut creation</translation>
-    </message>
-    <message>
-      <source>Shortcut created successfully!</source>
-      <translation type="unfinished">Shortcut created successfully!</translation>
-    </message>
-    <message>
       <source>Error</source>
       <translation type="unfinished">Error</translation>
-    </message>
-    <message>
-      <source>Error creating shortcut!</source>
-      <translation type="unfinished">Error creating shortcut!</translation>
     </message>
     <message>
       <source>Game</source>
@@ -981,10 +969,6 @@
     <message>
       <source>No log file found for this game!</source>
       <translation>Tidak ada berkas log yang ditemukan untuk permainan ini!</translation>
-    </message>
-    <message>
-      <source>Failed to convert icon.</source>
-      <translation>Gagal mengonversi ikon.</translation>
     </message>
     <message>
       <source>This game has no save data to delete!</source>
