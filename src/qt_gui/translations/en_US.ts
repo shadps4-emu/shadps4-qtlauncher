@@ -280,10 +280,6 @@
         <translation>Your version is already up to date!</translation>
     </message>
     <message>
-        <source>Update Channel</source>
-        <translation>Update Channel</translation>
-    </message>
-    <message>
         <source>Current Version</source>
         <translation>Current Version</translation>
     </message>
@@ -430,14 +426,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Left Stick Deadzone (def:2 max:127)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Left Deadzone</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Left Stick</source>
         <translation type="unfinished"></translation>
     </message>
@@ -455,14 +443,6 @@
     </message>
     <message>
         <source>Face Buttons</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Right Stick Deadzone (def:2, max:127)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Right Deadzone</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -621,6 +601,30 @@
     </message>
     <message>
         <source>BLUE</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Left Stick Deadzone</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Min Deadzone (def:2 max:127)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Max Deadzone (def:127 max:127)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>127</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Right Stick Deadzone</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -841,10 +845,6 @@
 <context>
     <name>GuiContextMenus</name>
     <message>
-        <source>Create Shortcut</source>
-        <translation>Create Shortcut</translation>
-    </message>
-    <message>
         <source>Cheats / Patches</source>
         <translation>Cheats / Patches</translation>
     </message>
@@ -921,20 +921,8 @@
         <translation>Compatibility...</translation>
     </message>
     <message>
-        <source>Shortcut creation</source>
-        <translation>Shortcut creation</translation>
-    </message>
-    <message>
-        <source>Shortcut created successfully!</source>
-        <translation>Shortcut created successfully!</translation>
-    </message>
-    <message>
         <source>Error</source>
         <translation>Error</translation>
-    </message>
-    <message>
-        <source>Error creating shortcut!</source>
-        <translation>Error creating shortcut!</translation>
     </message>
     <message>
         <source>Game</source>
@@ -978,10 +966,6 @@
     </message>
     <message>
         <source>No log file found for this game!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Failed to convert icon.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
