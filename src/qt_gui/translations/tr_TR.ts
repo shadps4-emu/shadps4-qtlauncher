@@ -280,10 +280,6 @@
       <translation>Sürümünüz zaten güncel!</translation>
     </message>
     <message>
-      <source>Update Channel</source>
-      <translation>Güncelleme Kanalı</translation>
-    </message>
-    <message>
       <source>Current Version</source>
       <translation>Mevcut Sürüm</translation>
     </message>
@@ -430,14 +426,6 @@
       <translation>Aşağı</translation>
     </message>
     <message>
-      <source>Left Stick Deadzone (def:2 max:127)</source>
-      <translation>Sol Analog Ölü Bölgesi (varsayılan: 2, en çok: 127)</translation>
-    </message>
-    <message>
-      <source>Left Deadzone</source>
-      <translation>Sol Ölü Bölge</translation>
-    </message>
-    <message>
       <source>Left Stick</source>
       <translation>Sol Analog</translation>
     </message>
@@ -456,14 +444,6 @@
     <message>
       <source>Face Buttons</source>
       <translation>Eylem Düğmeleri</translation>
-    </message>
-    <message>
-      <source>Right Stick Deadzone (def:2, max:127)</source>
-      <translation>Sağ Analog Ölü Bölgesi (varsayılan: 2, en çok: 127)</translation>
-    </message>
-    <message>
-      <source>Right Deadzone</source>
-      <translation>Sağ Ölü Bölge</translation>
     </message>
     <message>
       <source>Right Stick</source>
@@ -624,6 +604,30 @@
     <message>
       <source>BLUE</source>
       <translation>MAVİ</translation>
+    </message>
+    <message>
+      <source>Left Stick Deadzone</source>
+      <translation type="unfinished">Left Stick Deadzone</translation>
+    </message>
+    <message>
+      <source>Min Deadzone (def:2 max:127)</source>
+      <translation type="unfinished">Min Deadzone (def:2 max:127)</translation>
+    </message>
+    <message>
+      <source>2</source>
+      <translation type="unfinished">2</translation>
+    </message>
+    <message>
+      <source>Max Deadzone (def:127 max:127)</source>
+      <translation type="unfinished">Max Deadzone (def:127 max:127)</translation>
+    </message>
+    <message>
+      <source>127</source>
+      <translation type="unfinished">127</translation>
+    </message>
+    <message>
+      <source>Right Stick Deadzone</source>
+      <translation type="unfinished">Right Stick Deadzone</translation>
     </message>
   </context>
   <context>
@@ -843,10 +847,6 @@
   <context>
     <name>GuiContextMenus</name>
     <message>
-      <source>Create Shortcut</source>
-      <translation>Kısayol Oluştur</translation>
-    </message>
-    <message>
       <source>Cheats / Patches</source>
       <translation>Hileler / Yamalar</translation>
     </message>
@@ -923,20 +923,8 @@
       <translation>Uyumluluk...</translation>
     </message>
     <message>
-      <source>Shortcut creation</source>
-      <translation>Kısayol oluşturma</translation>
-    </message>
-    <message>
-      <source>Shortcut created successfully!</source>
-      <translation>Kısayol başarıyla oluşturuldu!</translation>
-    </message>
-    <message>
       <source>Error</source>
       <translation>Hata</translation>
-    </message>
-    <message>
-      <source>Error creating shortcut!</source>
-      <translation>Kısayol oluşturulurken hata oluştu!</translation>
     </message>
     <message>
       <source>Game</source>
@@ -981,10 +969,6 @@
     <message>
       <source>No log file found for this game!</source>
       <translation>Bu oyun için günlük dosyası bulunamadı!</translation>
-    </message>
-    <message>
-      <source>Failed to convert icon.</source>
-      <translation>Simge dönüştürülemedi.</translation>
     </message>
     <message>
       <source>This game has no save data to delete!</source>

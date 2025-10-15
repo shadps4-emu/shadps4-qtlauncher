@@ -280,10 +280,6 @@
       <translation>Ihre Version ist bereits aktuell!</translation>
     </message>
     <message>
-      <source>Update Channel</source>
-      <translation>Update-Kanal</translation>
-    </message>
-    <message>
       <source>Current Version</source>
       <translation>Aktuelle Version</translation>
     </message>
@@ -430,14 +426,6 @@
       <translation>Runter</translation>
     </message>
     <message>
-      <source>Left Stick Deadzone (def:2 max:127)</source>
-      <translation>Linker Stick tote Zone (def:2 max:127)</translation>
-    </message>
-    <message>
-      <source>Left Deadzone</source>
-      <translation>Linke Deadzone</translation>
-    </message>
-    <message>
       <source>Left Stick</source>
       <translation>Linker Analogstick</translation>
     </message>
@@ -456,14 +444,6 @@
     <message>
       <source>Face Buttons</source>
       <translation>Aktionstasten</translation>
-    </message>
-    <message>
-      <source>Right Stick Deadzone (def:2, max:127)</source>
-      <translation>Rechter Stick tote Zone (def:2, max:127)</translation>
-    </message>
-    <message>
-      <source>Right Deadzone</source>
-      <translation>Rechte tote Zone</translation>
     </message>
     <message>
       <source>Right Stick</source>
@@ -623,6 +603,30 @@ Einzigartige Inputs können nicht öfters als einmal gebunden werden. Input-Dupl
     <message>
       <source>BLUE</source>
       <translation>BLAU</translation>
+    </message>
+    <message>
+      <source>Left Stick Deadzone</source>
+      <translation type="unfinished">Left Stick Deadzone</translation>
+    </message>
+    <message>
+      <source>Min Deadzone (def:2 max:127)</source>
+      <translation type="unfinished">Min Deadzone (def:2 max:127)</translation>
+    </message>
+    <message>
+      <source>2</source>
+      <translation type="unfinished">2</translation>
+    </message>
+    <message>
+      <source>Max Deadzone (def:127 max:127)</source>
+      <translation type="unfinished">Max Deadzone (def:127 max:127)</translation>
+    </message>
+    <message>
+      <source>127</source>
+      <translation type="unfinished">127</translation>
+    </message>
+    <message>
+      <source>Right Stick Deadzone</source>
+      <translation type="unfinished">Right Stick Deadzone</translation>
     </message>
   </context>
   <context>
@@ -842,10 +846,6 @@ Einzigartige Inputs können nicht öfters als einmal gebunden werden. Input-Dupl
   <context>
     <name>GuiContextMenus</name>
     <message>
-      <source>Create Shortcut</source>
-      <translation>Verknüpfung erstellen</translation>
-    </message>
-    <message>
       <source>Cheats / Patches</source>
       <translation>Cheats / Patches</translation>
     </message>
@@ -922,20 +922,8 @@ Einzigartige Inputs können nicht öfters als einmal gebunden werden. Input-Dupl
       <translation>Kompatibilität...</translation>
     </message>
     <message>
-      <source>Shortcut creation</source>
-      <translation>Verknüpfungserstellung</translation>
-    </message>
-    <message>
-      <source>Shortcut created successfully!</source>
-      <translation>Verknüpfung erfolgreich erstellt!</translation>
-    </message>
-    <message>
       <source>Error</source>
       <translation>Fehler</translation>
-    </message>
-    <message>
-      <source>Error creating shortcut!</source>
-      <translation>Fehler beim Erstellen der Verknüpfung!</translation>
     </message>
     <message>
       <source>Game</source>
@@ -980,10 +968,6 @@ Einzigartige Inputs können nicht öfters als einmal gebunden werden. Input-Dupl
     <message>
       <source>No log file found for this game!</source>
       <translation>Keine Protokolldatei für dieses Spiel gefunden!</translation>
-    </message>
-    <message>
-      <source>Failed to convert icon.</source>
-      <translation>Fehler beim Konvertieren des Symbols.</translation>
     </message>
     <message>
       <source>This game has no save data to delete!</source>

@@ -280,10 +280,6 @@
       <translation>نسختك محدثة بالفعل!</translation>
     </message>
     <message>
-      <source>Update Channel</source>
-      <translation>قناة التحديث</translation>
-    </message>
-    <message>
       <source>Current Version</source>
       <translation>الإصدار الحالي</translation>
     </message>
@@ -430,14 +426,6 @@
       <translation>تحت</translation>
     </message>
     <message>
-      <source>Left Stick Deadzone (def:2 max:127)</source>
-      <translation>النقطة العمياء للعصا اليسرى (الافتراضي: 2، الحد الأقصى: 127)</translation>
-    </message>
-    <message>
-      <source>Left Deadzone</source>
-      <translation>النقطة العمياء لليسار</translation>
-    </message>
-    <message>
       <source>Left Stick</source>
       <translation>عصا التحكم اليسرى</translation>
     </message>
@@ -456,14 +444,6 @@
     <message>
       <source>Face Buttons</source>
       <translation>الأزرار</translation>
-    </message>
-    <message>
-      <source>Right Stick Deadzone (def:2, max:127)</source>
-      <translation>النقطة العمياء للعصا اليمنى (الافتراضي: 2، الحد الأقصى: 127)</translation>
-    </message>
-    <message>
-      <source>Right Deadzone</source>
-      <translation>النقطة العمياء اليمنى</translation>
     </message>
     <message>
       <source>Right Stick</source>
@@ -624,6 +604,30 @@
     <message>
       <source>BLUE</source>
       <translation type="unfinished">BLUE</translation>
+    </message>
+    <message>
+      <source>Left Stick Deadzone</source>
+      <translation type="unfinished">Left Stick Deadzone</translation>
+    </message>
+    <message>
+      <source>Min Deadzone (def:2 max:127)</source>
+      <translation type="unfinished">Min Deadzone (def:2 max:127)</translation>
+    </message>
+    <message>
+      <source>2</source>
+      <translation type="unfinished">2</translation>
+    </message>
+    <message>
+      <source>Max Deadzone (def:127 max:127)</source>
+      <translation type="unfinished">Max Deadzone (def:127 max:127)</translation>
+    </message>
+    <message>
+      <source>127</source>
+      <translation type="unfinished">127</translation>
+    </message>
+    <message>
+      <source>Right Stick Deadzone</source>
+      <translation type="unfinished">Right Stick Deadzone</translation>
     </message>
   </context>
   <context>
@@ -843,10 +847,6 @@
   <context>
     <name>GuiContextMenus</name>
     <message>
-      <source>Create Shortcut</source>
-      <translation>إنشاء اختصار</translation>
-    </message>
-    <message>
       <source>Cheats / Patches</source>
       <translation>الشفرات / التصحيحات</translation>
     </message>
@@ -923,20 +923,8 @@
       <translation>التوافق...</translation>
     </message>
     <message>
-      <source>Shortcut creation</source>
-      <translation>إنشاء اختصار</translation>
-    </message>
-    <message>
-      <source>Shortcut created successfully!</source>
-      <translation>تم إنشاء الاختصار بنجاح!</translation>
-    </message>
-    <message>
       <source>Error</source>
       <translation>خطأ</translation>
-    </message>
-    <message>
-      <source>Error creating shortcut!</source>
-      <translation>خطأ في إنشاء الاختصار</translation>
     </message>
     <message>
       <source>Game</source>
@@ -981,10 +969,6 @@
     <message>
       <source>No log file found for this game!</source>
       <translation>لم يتم العثور على ملف سجل لهذه اللعبة!</translation>
-    </message>
-    <message>
-      <source>Failed to convert icon.</source>
-      <translation>فشل تحويل الأيقونة.</translation>
     </message>
     <message>
       <source>This game has no save data to delete!</source>

@@ -280,10 +280,6 @@
       <translation>Jūsų versija jau atnaujinta!</translation>
     </message>
     <message>
-      <source>Update Channel</source>
-      <translation>Atnaujinimo Kanalas</translation>
-    </message>
-    <message>
       <source>Current Version</source>
       <translation>Esama versija</translation>
     </message>
@@ -430,14 +426,6 @@
       <translation type="unfinished">Down</translation>
     </message>
     <message>
-      <source>Left Stick Deadzone (def:2 max:127)</source>
-      <translation type="unfinished">Left Stick Deadzone (def:2 max:127)</translation>
-    </message>
-    <message>
-      <source>Left Deadzone</source>
-      <translation type="unfinished">Left Deadzone</translation>
-    </message>
-    <message>
       <source>Left Stick</source>
       <translation type="unfinished">Left Stick</translation>
     </message>
@@ -456,14 +444,6 @@
     <message>
       <source>Face Buttons</source>
       <translation type="unfinished">Face Buttons</translation>
-    </message>
-    <message>
-      <source>Right Stick Deadzone (def:2, max:127)</source>
-      <translation type="unfinished">Right Stick Deadzone (def:2, max:127)</translation>
-    </message>
-    <message>
-      <source>Right Deadzone</source>
-      <translation type="unfinished">Right Deadzone</translation>
     </message>
     <message>
       <source>Right Stick</source>
@@ -624,6 +604,30 @@
     <message>
       <source>BLUE</source>
       <translation type="unfinished">BLUE</translation>
+    </message>
+    <message>
+      <source>Left Stick Deadzone</source>
+      <translation type="unfinished">Left Stick Deadzone</translation>
+    </message>
+    <message>
+      <source>Min Deadzone (def:2 max:127)</source>
+      <translation type="unfinished">Min Deadzone (def:2 max:127)</translation>
+    </message>
+    <message>
+      <source>2</source>
+      <translation type="unfinished">2</translation>
+    </message>
+    <message>
+      <source>Max Deadzone (def:127 max:127)</source>
+      <translation type="unfinished">Max Deadzone (def:127 max:127)</translation>
+    </message>
+    <message>
+      <source>127</source>
+      <translation type="unfinished">127</translation>
+    </message>
+    <message>
+      <source>Right Stick Deadzone</source>
+      <translation type="unfinished">Right Stick Deadzone</translation>
     </message>
   </context>
   <context>
@@ -843,10 +847,6 @@
   <context>
     <name>GuiContextMenus</name>
     <message>
-      <source>Create Shortcut</source>
-      <translation type="unfinished">Create Shortcut</translation>
-    </message>
-    <message>
       <source>Cheats / Patches</source>
       <translation type="unfinished">Cheats / Patches</translation>
     </message>
@@ -923,20 +923,8 @@
       <translation type="unfinished">Compatibility...</translation>
     </message>
     <message>
-      <source>Shortcut creation</source>
-      <translation type="unfinished">Shortcut creation</translation>
-    </message>
-    <message>
-      <source>Shortcut created successfully!</source>
-      <translation type="unfinished">Shortcut created successfully!</translation>
-    </message>
-    <message>
       <source>Error</source>
       <translation>Klaida</translation>
-    </message>
-    <message>
-      <source>Error creating shortcut!</source>
-      <translation type="unfinished">Error creating shortcut!</translation>
     </message>
     <message>
       <source>Game</source>
@@ -981,10 +969,6 @@
     <message>
       <source>No log file found for this game!</source>
       <translation type="unfinished">No log file found for this game!</translation>
-    </message>
-    <message>
-      <source>Failed to convert icon.</source>
-      <translation type="unfinished">Failed to convert icon.</translation>
     </message>
     <message>
       <source>This game has no save data to delete!</source>

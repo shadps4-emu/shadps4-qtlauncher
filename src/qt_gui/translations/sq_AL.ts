@@ -280,10 +280,6 @@
       <translation>Versioni jotë është i përditësuar tashmë!</translation>
     </message>
     <message>
-      <source>Update Channel</source>
-      <translation>Kanali i përditësimit</translation>
-    </message>
-    <message>
       <source>Current Version</source>
       <translation>Versioni i tanishëm</translation>
     </message>
@@ -430,14 +426,6 @@
       <translation>Poshtë</translation>
     </message>
     <message>
-      <source>Left Stick Deadzone (def:2 max:127)</source>
-      <translation>Zona e vdekur e levës së majtë (def:2 max:127)</translation>
-    </message>
-    <message>
-      <source>Left Deadzone</source>
-      <translation>Zona e vdekur e majtë</translation>
-    </message>
-    <message>
       <source>Left Stick</source>
       <translation>Leva e majtë</translation>
     </message>
@@ -456,14 +444,6 @@
     <message>
       <source>Face Buttons</source>
       <translation>Butonat kryesore</translation>
-    </message>
-    <message>
-      <source>Right Stick Deadzone (def:2, max:127)</source>
-      <translation>Zona e vdekur e levës së djathtë (def:2, max:127)</translation>
-    </message>
-    <message>
-      <source>Right Deadzone</source>
-      <translation>Zona e vdekur e djathtë</translation>
     </message>
     <message>
       <source>Right Stick</source>
@@ -624,6 +604,30 @@
     <message>
       <source>BLUE</source>
       <translation>KALTËR</translation>
+    </message>
+    <message>
+      <source>Left Stick Deadzone</source>
+      <translation type="unfinished">Left Stick Deadzone</translation>
+    </message>
+    <message>
+      <source>Min Deadzone (def:2 max:127)</source>
+      <translation type="unfinished">Min Deadzone (def:2 max:127)</translation>
+    </message>
+    <message>
+      <source>2</source>
+      <translation type="unfinished">2</translation>
+    </message>
+    <message>
+      <source>Max Deadzone (def:127 max:127)</source>
+      <translation type="unfinished">Max Deadzone (def:127 max:127)</translation>
+    </message>
+    <message>
+      <source>127</source>
+      <translation type="unfinished">127</translation>
+    </message>
+    <message>
+      <source>Right Stick Deadzone</source>
+      <translation type="unfinished">Right Stick Deadzone</translation>
     </message>
   </context>
   <context>
@@ -843,10 +847,6 @@
   <context>
     <name>GuiContextMenus</name>
     <message>
-      <source>Create Shortcut</source>
-      <translation>Krijo Shkurtore</translation>
-    </message>
-    <message>
       <source>Cheats / Patches</source>
       <translation>Mashtrime / Arna</translation>
     </message>
@@ -923,20 +923,8 @@
       <translation>Përputhshmëria...</translation>
     </message>
     <message>
-      <source>Shortcut creation</source>
-      <translation>Krijimi i shkurtores</translation>
-    </message>
-    <message>
-      <source>Shortcut created successfully!</source>
-      <translation>Shkurtorja u krijua me sukses!</translation>
-    </message>
-    <message>
       <source>Error</source>
       <translation>Gabim</translation>
-    </message>
-    <message>
-      <source>Error creating shortcut!</source>
-      <translation>Gabim në krijimin e shkurtores!</translation>
     </message>
     <message>
       <source>Game</source>
@@ -981,10 +969,6 @@
     <message>
       <source>No log file found for this game!</source>
       <translation>Nuk u gjet asnjë skedar ditari për këtë lojë!</translation>
-    </message>
-    <message>
-      <source>Failed to convert icon.</source>
-      <translation>Konvertimi i ikonës dështoi.</translation>
     </message>
     <message>
       <source>This game has no save data to delete!</source>

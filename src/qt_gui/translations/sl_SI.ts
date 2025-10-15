@@ -280,10 +280,6 @@
       <translation>Vaša verzija je već ažurna!</translation>
     </message>
     <message>
-      <source>Update Channel</source>
-      <translation>Kanal ažuriranja</translation>
-    </message>
-    <message>
       <source>Current Version</source>
       <translation>Trenutna verzija</translation>
     </message>
@@ -430,14 +426,6 @@
       <translation>Dole</translation>
     </message>
     <message>
-      <source>Left Stick Deadzone (def:2 max:127)</source>
-      <translation>Mrtva zona levog džojstika (podr:2 maks:127)</translation>
-    </message>
-    <message>
-      <source>Left Deadzone</source>
-      <translation>Leva mrtva zona</translation>
-    </message>
-    <message>
       <source>Left Stick</source>
       <translation>Levi džojstik</translation>
     </message>
@@ -456,14 +444,6 @@
     <message>
       <source>Face Buttons</source>
       <translation>Glavna dugmad</translation>
-    </message>
-    <message>
-      <source>Right Stick Deadzone (def:2, max:127)</source>
-      <translation>Zona mrtvog hoda desnog džojstika (podrazumevano: 2, max: 127)</translation>
-    </message>
-    <message>
-      <source>Right Deadzone</source>
-      <translation>Zona mrtvog hoda desno</translation>
     </message>
     <message>
       <source>Right Stick</source>
@@ -624,6 +604,30 @@
     <message>
       <source>BLUE</source>
       <translation type="unfinished">BLUE</translation>
+    </message>
+    <message>
+      <source>Left Stick Deadzone</source>
+      <translation type="unfinished">Left Stick Deadzone</translation>
+    </message>
+    <message>
+      <source>Min Deadzone (def:2 max:127)</source>
+      <translation type="unfinished">Min Deadzone (def:2 max:127)</translation>
+    </message>
+    <message>
+      <source>2</source>
+      <translation type="unfinished">2</translation>
+    </message>
+    <message>
+      <source>Max Deadzone (def:127 max:127)</source>
+      <translation type="unfinished">Max Deadzone (def:127 max:127)</translation>
+    </message>
+    <message>
+      <source>127</source>
+      <translation type="unfinished">127</translation>
+    </message>
+    <message>
+      <source>Right Stick Deadzone</source>
+      <translation type="unfinished">Right Stick Deadzone</translation>
     </message>
   </context>
   <context>
@@ -843,10 +847,6 @@
   <context>
     <name>GuiContextMenus</name>
     <message>
-      <source>Create Shortcut</source>
-      <translation>Kreiraj prečicu</translation>
-    </message>
-    <message>
       <source>Cheats / Patches</source>
       <translation>Šifre / Ispravke</translation>
     </message>
@@ -923,20 +923,8 @@
       <translation>Kompatibilnost...</translation>
     </message>
     <message>
-      <source>Shortcut creation</source>
-      <translation>Kreiranje prečice</translation>
-    </message>
-    <message>
-      <source>Shortcut created successfully!</source>
-      <translation>Prečica uspešno kreirana!</translation>
-    </message>
-    <message>
       <source>Error</source>
       <translation>Greška</translation>
-    </message>
-    <message>
-      <source>Error creating shortcut!</source>
-      <translation>Greška pri kreiranju prečice!</translation>
     </message>
     <message>
       <source>Game</source>
@@ -981,10 +969,6 @@
     <message>
       <source>No log file found for this game!</source>
       <translation>Nije pronađen log fajl za ovu igru!</translation>
-    </message>
-    <message>
-      <source>Failed to convert icon.</source>
-      <translation>Konverzija ikone nije uspela.</translation>
     </message>
     <message>
       <source>This game has no save data to delete!</source>

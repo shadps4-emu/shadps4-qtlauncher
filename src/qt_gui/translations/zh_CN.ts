@@ -280,10 +280,6 @@
       <translation>您的版本已经是最新的！</translation>
     </message>
     <message>
-      <source>Update Channel</source>
-      <translation>更新频道</translation>
-    </message>
-    <message>
       <source>Current Version</source>
       <translation>当前版本</translation>
     </message>
@@ -430,14 +426,6 @@
       <translation>下</translation>
     </message>
     <message>
-      <source>Left Stick Deadzone (def:2 max:127)</source>
-      <translation>左摇杆死区（默认：2  最大：127）</translation>
-    </message>
-    <message>
-      <source>Left Deadzone</source>
-      <translation>左死区</translation>
-    </message>
-    <message>
       <source>Left Stick</source>
       <translation>左摇杆</translation>
     </message>
@@ -456,14 +444,6 @@
     <message>
       <source>Face Buttons</source>
       <translation>功能键（动作键）</translation>
-    </message>
-    <message>
-      <source>Right Stick Deadzone (def:2, max:127)</source>
-      <translation>右摇杆死区（默认：2  最大：127）</translation>
-    </message>
-    <message>
-      <source>Right Deadzone</source>
-      <translation>右死区</translation>
     </message>
     <message>
       <source>Right Stick</source>
@@ -624,6 +604,30 @@
     <message>
       <source>BLUE</source>
       <translation>蓝</translation>
+    </message>
+    <message>
+      <source>Left Stick Deadzone</source>
+      <translation type="unfinished">Left Stick Deadzone</translation>
+    </message>
+    <message>
+      <source>Min Deadzone (def:2 max:127)</source>
+      <translation type="unfinished">Min Deadzone (def:2 max:127)</translation>
+    </message>
+    <message>
+      <source>2</source>
+      <translation type="unfinished">2</translation>
+    </message>
+    <message>
+      <source>Max Deadzone (def:127 max:127)</source>
+      <translation type="unfinished">Max Deadzone (def:127 max:127)</translation>
+    </message>
+    <message>
+      <source>127</source>
+      <translation type="unfinished">127</translation>
+    </message>
+    <message>
+      <source>Right Stick Deadzone</source>
+      <translation type="unfinished">Right Stick Deadzone</translation>
     </message>
   </context>
   <context>
@@ -843,10 +847,6 @@
   <context>
     <name>GuiContextMenus</name>
     <message>
-      <source>Create Shortcut</source>
-      <translation>创建快捷方式</translation>
-    </message>
-    <message>
       <source>Cheats / Patches</source>
       <translation>作弊码/补丁</translation>
     </message>
@@ -923,20 +923,8 @@
       <translation>兼容性...</translation>
     </message>
     <message>
-      <source>Shortcut creation</source>
-      <translation>创建快捷方式</translation>
-    </message>
-    <message>
-      <source>Shortcut created successfully!</source>
-      <translation>创建快捷方式成功！</translation>
-    </message>
-    <message>
       <source>Error</source>
       <translation>错误</translation>
-    </message>
-    <message>
-      <source>Error creating shortcut!</source>
-      <translation>创建快捷方式出错！</translation>
     </message>
     <message>
       <source>Game</source>
@@ -981,10 +969,6 @@
     <message>
       <source>No log file found for this game!</source>
       <translation>没有找到这个游戏的日志文件！</translation>
-    </message>
-    <message>
-      <source>Failed to convert icon.</source>
-      <translation>转换图标失败。</translation>
     </message>
     <message>
       <source>This game has no save data to delete!</source>

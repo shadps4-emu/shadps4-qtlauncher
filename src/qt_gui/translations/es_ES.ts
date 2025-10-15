@@ -280,10 +280,6 @@
       <translation>¡Su versión ya está actualizada!</translation>
     </message>
     <message>
-      <source>Update Channel</source>
-      <translation>Canal de Actualización</translation>
-    </message>
-    <message>
       <source>Current Version</source>
       <translation>Versión actual</translation>
     </message>
@@ -430,14 +426,6 @@
       <translation>Abajo</translation>
     </message>
     <message>
-      <source>Left Stick Deadzone (def:2 max:127)</source>
-      <translation>Zona muerta del stick izquierdo (defecto: 2, máx.: 127)</translation>
-    </message>
-    <message>
-      <source>Left Deadzone</source>
-      <translation>Zona muerta del stick izquierdo</translation>
-    </message>
-    <message>
       <source>Left Stick</source>
       <translation>Stick izquierdo</translation>
     </message>
@@ -456,14 +444,6 @@
     <message>
       <source>Face Buttons</source>
       <translation>Botones de acción</translation>
-    </message>
-    <message>
-      <source>Right Stick Deadzone (def:2, max:127)</source>
-      <translation>Zona muerta del stick derecho (defecto: 2, máx.: 127)</translation>
-    </message>
-    <message>
-      <source>Right Deadzone</source>
-      <translation>Zona muerta del stick derecho</translation>
     </message>
     <message>
       <source>Right Stick</source>
@@ -624,6 +604,30 @@
     <message>
       <source>BLUE</source>
       <translation>AZUL</translation>
+    </message>
+    <message>
+      <source>Left Stick Deadzone</source>
+      <translation type="unfinished">Left Stick Deadzone</translation>
+    </message>
+    <message>
+      <source>Min Deadzone (def:2 max:127)</source>
+      <translation type="unfinished">Min Deadzone (def:2 max:127)</translation>
+    </message>
+    <message>
+      <source>2</source>
+      <translation type="unfinished">2</translation>
+    </message>
+    <message>
+      <source>Max Deadzone (def:127 max:127)</source>
+      <translation type="unfinished">Max Deadzone (def:127 max:127)</translation>
+    </message>
+    <message>
+      <source>127</source>
+      <translation type="unfinished">127</translation>
+    </message>
+    <message>
+      <source>Right Stick Deadzone</source>
+      <translation type="unfinished">Right Stick Deadzone</translation>
     </message>
   </context>
   <context>
@@ -843,10 +847,6 @@
   <context>
     <name>GuiContextMenus</name>
     <message>
-      <source>Create Shortcut</source>
-      <translation>Crear acceso directo</translation>
-    </message>
-    <message>
       <source>Cheats / Patches</source>
       <translation>Trucos / Parches</translation>
     </message>
@@ -923,20 +923,8 @@
       <translation>Compatibilidad...</translation>
     </message>
     <message>
-      <source>Shortcut creation</source>
-      <translation>Acceso directo creado</translation>
-    </message>
-    <message>
-      <source>Shortcut created successfully!</source>
-      <translation>¡Acceso directo creado con éxito!</translation>
-    </message>
-    <message>
       <source>Error</source>
       <translation>Error</translation>
-    </message>
-    <message>
-      <source>Error creating shortcut!</source>
-      <translation>¡Error al crear el acceso directo!</translation>
     </message>
     <message>
       <source>Game</source>
@@ -981,10 +969,6 @@
     <message>
       <source>No log file found for this game!</source>
       <translation>¡No se encontró un archivo de registro para este juego!</translation>
-    </message>
-    <message>
-      <source>Failed to convert icon.</source>
-      <translation>Error al convertir el icono.</translation>
     </message>
     <message>
       <source>This game has no save data to delete!</source>

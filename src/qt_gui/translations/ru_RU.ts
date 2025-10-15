@@ -280,10 +280,6 @@
       <translation>Ваша версия уже обновлена!</translation>
     </message>
     <message>
-      <source>Update Channel</source>
-      <translation>Канал обновления</translation>
-    </message>
-    <message>
       <source>Current Version</source>
       <translation>Текущая версия</translation>
     </message>
@@ -430,14 +426,6 @@
       <translation>Вниз</translation>
     </message>
     <message>
-      <source>Left Stick Deadzone (def:2 max:127)</source>
-      <translation>Мёртвая зона левого стика (по умолч:2 макс:127)</translation>
-    </message>
-    <message>
-      <source>Left Deadzone</source>
-      <translation>Левая мёртвая зона</translation>
-    </message>
-    <message>
       <source>Left Stick</source>
       <translation>Левый стик</translation>
     </message>
@@ -456,14 +444,6 @@
     <message>
       <source>Face Buttons</source>
       <translation>Кнопки действий</translation>
-    </message>
-    <message>
-      <source>Right Stick Deadzone (def:2, max:127)</source>
-      <translation>Мёртвая зона правого стика (по умолч:2 макс:127)</translation>
-    </message>
-    <message>
-      <source>Right Deadzone</source>
-      <translation>Правая мёртвая зона</translation>
     </message>
     <message>
       <source>Right Stick</source>
@@ -624,6 +604,30 @@
     <message>
       <source>BLUE</source>
       <translation>СИНИЙ</translation>
+    </message>
+    <message>
+      <source>Left Stick Deadzone</source>
+      <translation type="unfinished">Left Stick Deadzone</translation>
+    </message>
+    <message>
+      <source>Min Deadzone (def:2 max:127)</source>
+      <translation type="unfinished">Min Deadzone (def:2 max:127)</translation>
+    </message>
+    <message>
+      <source>2</source>
+      <translation type="unfinished">2</translation>
+    </message>
+    <message>
+      <source>Max Deadzone (def:127 max:127)</source>
+      <translation type="unfinished">Max Deadzone (def:127 max:127)</translation>
+    </message>
+    <message>
+      <source>127</source>
+      <translation type="unfinished">127</translation>
+    </message>
+    <message>
+      <source>Right Stick Deadzone</source>
+      <translation type="unfinished">Right Stick Deadzone</translation>
     </message>
   </context>
   <context>
@@ -843,10 +847,6 @@
   <context>
     <name>GuiContextMenus</name>
     <message>
-      <source>Create Shortcut</source>
-      <translation>Создать ярлык</translation>
-    </message>
-    <message>
       <source>Cheats / Patches</source>
       <translation>Читы и патчи</translation>
     </message>
@@ -923,20 +923,8 @@
       <translation>Совместимость...</translation>
     </message>
     <message>
-      <source>Shortcut creation</source>
-      <translation>Создание ярлыка</translation>
-    </message>
-    <message>
-      <source>Shortcut created successfully!</source>
-      <translation>Ярлык создан успешно!</translation>
-    </message>
-    <message>
       <source>Error</source>
       <translation>Ошибка</translation>
-    </message>
-    <message>
-      <source>Error creating shortcut!</source>
-      <translation>Ошибка создания ярлыка!</translation>
     </message>
     <message>
       <source>Game</source>
@@ -981,10 +969,6 @@
     <message>
       <source>No log file found for this game!</source>
       <translation>Не найден файл логов для этой игры!</translation>
-    </message>
-    <message>
-      <source>Failed to convert icon.</source>
-      <translation>Не удалось преобразовать иконку.</translation>
     </message>
     <message>
       <source>This game has no save data to delete!</source>

@@ -280,10 +280,6 @@
       <translation>نسخه شما اکنون به روز شده است!</translation>
     </message>
     <message>
-      <source>Update Channel</source>
-      <translation>کانال به‌روزرسانی</translation>
-    </message>
-    <message>
       <source>Current Version</source>
       <translation>نسخه فعلی</translation>
     </message>
@@ -430,14 +426,6 @@
       <translation>پایین</translation>
     </message>
     <message>
-      <source>Left Stick Deadzone (def:2 max:127)</source>
-      <translation>منطقه‌ی حساس به حرکت چپ  (def:2 max:127)</translation>
-    </message>
-    <message>
-      <source>Left Deadzone</source>
-      <translation>منطقه مرده چپ</translation>
-    </message>
-    <message>
       <source>Left Stick</source>
       <translation>جواستیک چپ</translation>
     </message>
@@ -456,14 +444,6 @@
     <message>
       <source>Face Buttons</source>
       <translation type="unfinished">Face Buttons</translation>
-    </message>
-    <message>
-      <source>Right Stick Deadzone (def:2, max:127)</source>
-      <translation type="unfinished">Right Stick Deadzone (def:2, max:127)</translation>
-    </message>
-    <message>
-      <source>Right Deadzone</source>
-      <translation type="unfinished">Right Deadzone</translation>
     </message>
     <message>
       <source>Right Stick</source>
@@ -624,6 +604,30 @@
     <message>
       <source>BLUE</source>
       <translation type="unfinished">BLUE</translation>
+    </message>
+    <message>
+      <source>Left Stick Deadzone</source>
+      <translation type="unfinished">Left Stick Deadzone</translation>
+    </message>
+    <message>
+      <source>Min Deadzone (def:2 max:127)</source>
+      <translation type="unfinished">Min Deadzone (def:2 max:127)</translation>
+    </message>
+    <message>
+      <source>2</source>
+      <translation type="unfinished">2</translation>
+    </message>
+    <message>
+      <source>Max Deadzone (def:127 max:127)</source>
+      <translation type="unfinished">Max Deadzone (def:127 max:127)</translation>
+    </message>
+    <message>
+      <source>127</source>
+      <translation type="unfinished">127</translation>
+    </message>
+    <message>
+      <source>Right Stick Deadzone</source>
+      <translation type="unfinished">Right Stick Deadzone</translation>
     </message>
   </context>
   <context>
@@ -843,10 +847,6 @@
   <context>
     <name>GuiContextMenus</name>
     <message>
-      <source>Create Shortcut</source>
-      <translation>ایجاد میانبر</translation>
-    </message>
-    <message>
       <source>Cheats / Patches</source>
       <translation>چیت/پچ ها</translation>
     </message>
@@ -923,20 +923,8 @@
       <translation type="unfinished">Compatibility...</translation>
     </message>
     <message>
-      <source>Shortcut creation</source>
-      <translation>ایجاد میانبر</translation>
-    </message>
-    <message>
-      <source>Shortcut created successfully!</source>
-      <translation>میانبر با موفقیت ساخته شد!</translation>
-    </message>
-    <message>
       <source>Error</source>
       <translation>ارور</translation>
-    </message>
-    <message>
-      <source>Error creating shortcut!</source>
-      <translation>مشکلی در هنگام ساخت میانبر بوجود آمد!</translation>
     </message>
     <message>
       <source>Game</source>
@@ -981,10 +969,6 @@
     <message>
       <source>No log file found for this game!</source>
       <translation type="unfinished">No log file found for this game!</translation>
-    </message>
-    <message>
-      <source>Failed to convert icon.</source>
-      <translation type="unfinished">Failed to convert icon.</translation>
     </message>
     <message>
       <source>This game has no save data to delete!</source>
