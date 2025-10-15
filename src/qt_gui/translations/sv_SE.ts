@@ -280,10 +280,6 @@
       <translation>Din version är redan den senaste!</translation>
     </message>
     <message>
-      <source>Update Channel</source>
-      <translation>Uppdateringskanal</translation>
-    </message>
-    <message>
       <source>Current Version</source>
       <translation>Aktuell version</translation>
     </message>
@@ -430,14 +426,6 @@
       <translation>Ner</translation>
     </message>
     <message>
-      <source>Left Stick Deadzone (def:2 max:127)</source>
-      <translation>Dödläge för vänster spak (standard:2 max:127)</translation>
-    </message>
-    <message>
-      <source>Left Deadzone</source>
-      <translation>Vänster dödläge</translation>
-    </message>
-    <message>
       <source>Left Stick</source>
       <translation>Vänster spak</translation>
     </message>
@@ -456,14 +444,6 @@
     <message>
       <source>Face Buttons</source>
       <translation>Handlingsknappar</translation>
-    </message>
-    <message>
-      <source>Right Stick Deadzone (def:2, max:127)</source>
-      <translation>Dödläge för höger spak (standard:2, max:127)</translation>
-    </message>
-    <message>
-      <source>Right Deadzone</source>
-      <translation>Höger dödläge</translation>
     </message>
     <message>
       <source>Right Stick</source>
@@ -624,6 +604,30 @@
     <message>
       <source>BLUE</source>
       <translation>BLÅ</translation>
+    </message>
+    <message>
+      <source>Left Stick Deadzone</source>
+      <translation type="unfinished">Left Stick Deadzone</translation>
+    </message>
+    <message>
+      <source>Min Deadzone (def:2 max:127)</source>
+      <translation type="unfinished">Min Deadzone (def:2 max:127)</translation>
+    </message>
+    <message>
+      <source>2</source>
+      <translation type="unfinished">2</translation>
+    </message>
+    <message>
+      <source>Max Deadzone (def:127 max:127)</source>
+      <translation type="unfinished">Max Deadzone (def:127 max:127)</translation>
+    </message>
+    <message>
+      <source>127</source>
+      <translation type="unfinished">127</translation>
+    </message>
+    <message>
+      <source>Right Stick Deadzone</source>
+      <translation type="unfinished">Right Stick Deadzone</translation>
     </message>
   </context>
   <context>
@@ -843,10 +847,6 @@
   <context>
     <name>GuiContextMenus</name>
     <message>
-      <source>Create Shortcut</source>
-      <translation>Skapa genväg</translation>
-    </message>
-    <message>
       <source>Cheats / Patches</source>
       <translation>Fusk / Patchar</translation>
     </message>
@@ -923,20 +923,8 @@
       <translation>Kompatibilitet...</translation>
     </message>
     <message>
-      <source>Shortcut creation</source>
-      <translation>Skapa genväg</translation>
-    </message>
-    <message>
-      <source>Shortcut created successfully!</source>
-      <translation>Genvägen skapades!</translation>
-    </message>
-    <message>
       <source>Error</source>
       <translation>Fel</translation>
-    </message>
-    <message>
-      <source>Error creating shortcut!</source>
-      <translation>Fel vid skapandet av genväg!</translation>
     </message>
     <message>
       <source>Game</source>
@@ -981,10 +969,6 @@
     <message>
       <source>No log file found for this game!</source>
       <translation>Ingen loggfil hittades för detta spel!</translation>
-    </message>
-    <message>
-      <source>Failed to convert icon.</source>
-      <translation>Misslyckades med att konvertera ikon.</translation>
     </message>
     <message>
       <source>This game has no save data to delete!</source>
