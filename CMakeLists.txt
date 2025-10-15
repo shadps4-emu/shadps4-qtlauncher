@@ -327,7 +327,7 @@ set(QT_GUI src/qt_gui/about_dialog.cpp
            src/qt_gui/cheats_patches.h
            src/qt_gui/compatibility_info.cpp
            src/qt_gui/compatibility_info.h
-	       src/qt_gui/control_settings.cpp	   
+           src/qt_gui/control_settings.cpp
            src/qt_gui/control_settings.h
            src/qt_gui/control_settings.ui
            src/qt_gui/kbm_gui.cpp	   
@@ -373,6 +373,8 @@ set(QT_GUI src/qt_gui/about_dialog.cpp
            src/qt_gui/version_dialog.cpp
            src/qt_gui/version_dialog.h
            src/qt_gui/version_dialog.ui
+           src/qt_gui/create_shortcut.cpp
+           src/qt_gui/create_shortcut.h
            ${RESOURCE_FILES}
            ${TRANSLATIONS}
            ${UPDATER}
