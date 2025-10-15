@@ -39,11 +39,14 @@ int main(int argc, char* argv[]) {
     std::string emulator;
     QStringList emulator_args{};
 
+    // Ignore Qt logs
+    qInstallMessageHandler(customMessageHandler);
+
     // Map of argument strings to lambda functions
     std::unordered_map<std::string, std::function<void(int&)>> arg_map = {
         {"-h",
          [&](int&) {
-             std::cerr
+             std::cout
                  << "Usage: shadps4 [options]\n"
                     "Options:\n"
                     "  No arguments: Opens the GUI.\n"
@@ -54,7 +57,7 @@ int main(int argc, char* argv[]) {
                     "Needs to be at the end of the line, and everything after '--' is an "
                     "emulator argument.\n"
                     "  -s, --show-gui                Show the GUI.\n"
-                    "  -h, --help                    Display this help message\n";
+                    "  -h, --help                    Display this help message.\n";
              exit(0);
          }},
         {"--help", [&](int& i) { arg_map["-h"](i); }}, // Redirect --help to -h
@@ -115,9 +118,6 @@ int main(int argc, char* argv[]) {
         GameInstallDialog dlg;
         dlg.exec();
     }
-
-    // Ignore Qt logs
-    qInstallMessageHandler(customMessageHandler);
 
     Common::Log::Initialize("shadPS4Launcher.log");
 
