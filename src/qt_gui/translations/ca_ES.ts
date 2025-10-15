@@ -280,10 +280,6 @@
       <translation>La teva versió ja és la més actualitzada!</translation>
     </message>
     <message>
-      <source>Update Channel</source>
-      <translation>Actualitza el canal</translation>
-    </message>
-    <message>
       <source>Current Version</source>
       <translation>Versió actual</translation>
     </message>
@@ -430,14 +426,6 @@
       <translation>Avall</translation>
     </message>
     <message>
-      <source>Left Stick Deadzone (def:2 max:127)</source>
-      <translation>Zona morta de la palanca esquerra (per defecte:2 màxim:127)</translation>
-    </message>
-    <message>
-      <source>Left Deadzone</source>
-      <translation>Zona morta de la palanca esquerra</translation>
-    </message>
-    <message>
       <source>Left Stick</source>
       <translation>Palanca esquerra</translation>
     </message>
@@ -456,14 +444,6 @@
     <message>
       <source>Face Buttons</source>
       <translation>Botons d'acció</translation>
-    </message>
-    <message>
-      <source>Right Stick Deadzone (def:2, max:127)</source>
-      <translation>Zona morta de la palanca dreta (per defecte:2 màxim:127)</translation>
-    </message>
-    <message>
-      <source>Right Deadzone</source>
-      <translation>Zona morta de la palanca dreta</translation>
     </message>
     <message>
       <source>Right Stick</source>
@@ -624,6 +604,30 @@
     <message>
       <source>BLUE</source>
       <translation>BLAU</translation>
+    </message>
+    <message>
+      <source>Left Stick Deadzone</source>
+      <translation type="unfinished">Left Stick Deadzone</translation>
+    </message>
+    <message>
+      <source>Min Deadzone (def:2 max:127)</source>
+      <translation type="unfinished">Min Deadzone (def:2 max:127)</translation>
+    </message>
+    <message>
+      <source>2</source>
+      <translation type="unfinished">2</translation>
+    </message>
+    <message>
+      <source>Max Deadzone (def:127 max:127)</source>
+      <translation type="unfinished">Max Deadzone (def:127 max:127)</translation>
+    </message>
+    <message>
+      <source>127</source>
+      <translation type="unfinished">127</translation>
+    </message>
+    <message>
+      <source>Right Stick Deadzone</source>
+      <translation type="unfinished">Right Stick Deadzone</translation>
     </message>
   </context>
   <context>
@@ -843,10 +847,6 @@
   <context>
     <name>GuiContextMenus</name>
     <message>
-      <source>Create Shortcut</source>
-      <translation>Crear una drecera</translation>
-    </message>
-    <message>
       <source>Cheats / Patches</source>
       <translation>Trucs / Correccions</translation>
     </message>
@@ -923,20 +923,8 @@
       <translation>Compatibilitat...</translation>
     </message>
     <message>
-      <source>Shortcut creation</source>
-      <translation>Crea una drecera</translation>
-    </message>
-    <message>
-      <source>Shortcut created successfully!</source>
-      <translation>S'ha creat la drecera correctament!</translation>
-    </message>
-    <message>
       <source>Error</source>
       <translation>Error</translation>
-    </message>
-    <message>
-      <source>Error creating shortcut!</source>
-      <translation>Error en crear la drecera!</translation>
     </message>
     <message>
       <source>Game</source>
@@ -981,10 +969,6 @@
     <message>
       <source>No log file found for this game!</source>
       <translation>No s'ha trobat fitxer de registre per aquest joc!</translation>
-    </message>
-    <message>
-      <source>Failed to convert icon.</source>
-      <translation>Error en convertir la icona.</translation>
     </message>
     <message>
       <source>This game has no save data to delete!</source>
