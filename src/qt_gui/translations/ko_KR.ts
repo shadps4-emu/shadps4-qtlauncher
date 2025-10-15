@@ -280,10 +280,6 @@
       <translation>버전이 이미 최신입니다!</translation>
     </message>
     <message>
-      <source>Update Channel</source>
-      <translation>업데이트 채널</translation>
-    </message>
-    <message>
       <source>Current Version</source>
       <translation>현재 버전</translation>
     </message>
@@ -430,14 +426,6 @@
       <translation>아래</translation>
     </message>
     <message>
-      <source>Left Stick Deadzone (def:2 max:127)</source>
-      <translation>왼쪽 스틱 데드존 (기본값:2 최대값:127)</translation>
-    </message>
-    <message>
-      <source>Left Deadzone</source>
-      <translation>왼쪽 데드존</translation>
-    </message>
-    <message>
       <source>Left Stick</source>
       <translation>왼쪽 스틱</translation>
     </message>
@@ -456,14 +444,6 @@
     <message>
       <source>Face Buttons</source>
       <translation>페이스 버튼</translation>
-    </message>
-    <message>
-      <source>Right Stick Deadzone (def:2, max:127)</source>
-      <translation>오른쪽 스틱 데드존 (기본:2, 최대:127)</translation>
-    </message>
-    <message>
-      <source>Right Deadzone</source>
-      <translation>오른쪽 데드존</translation>
     </message>
     <message>
       <source>Right Stick</source>
@@ -624,6 +604,30 @@
     <message>
       <source>BLUE</source>
       <translation type="unfinished">BLUE</translation>
+    </message>
+    <message>
+      <source>Left Stick Deadzone</source>
+      <translation type="unfinished">Left Stick Deadzone</translation>
+    </message>
+    <message>
+      <source>Min Deadzone (def:2 max:127)</source>
+      <translation type="unfinished">Min Deadzone (def:2 max:127)</translation>
+    </message>
+    <message>
+      <source>2</source>
+      <translation type="unfinished">2</translation>
+    </message>
+    <message>
+      <source>Max Deadzone (def:127 max:127)</source>
+      <translation type="unfinished">Max Deadzone (def:127 max:127)</translation>
+    </message>
+    <message>
+      <source>127</source>
+      <translation type="unfinished">127</translation>
+    </message>
+    <message>
+      <source>Right Stick Deadzone</source>
+      <translation type="unfinished">Right Stick Deadzone</translation>
     </message>
   </context>
   <context>
@@ -843,10 +847,6 @@
   <context>
     <name>GuiContextMenus</name>
     <message>
-      <source>Create Shortcut</source>
-      <translation>바로 가기 만들기</translation>
-    </message>
-    <message>
       <source>Cheats / Patches</source>
       <translation>치트 / 패치</translation>
     </message>
@@ -923,20 +923,8 @@
       <translation>호환성...</translation>
     </message>
     <message>
-      <source>Shortcut creation</source>
-      <translation type="unfinished">Shortcut creation</translation>
-    </message>
-    <message>
-      <source>Shortcut created successfully!</source>
-      <translation type="unfinished">Shortcut created successfully!</translation>
-    </message>
-    <message>
       <source>Error</source>
       <translation>오류</translation>
-    </message>
-    <message>
-      <source>Error creating shortcut!</source>
-      <translation type="unfinished">Error creating shortcut!</translation>
     </message>
     <message>
       <source>Game</source>
@@ -981,10 +969,6 @@
     <message>
       <source>No log file found for this game!</source>
       <translation>이 게임의 로그 파일이 없습니다!</translation>
-    </message>
-    <message>
-      <source>Failed to convert icon.</source>
-      <translation>아이콘 변환에 실패했습니다.</translation>
     </message>
     <message>
       <source>This game has no save data to delete!</source>
