@@ -89,7 +89,7 @@ VersionDialog::VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget
                                                tr("Executable (*.exe)"));
 #elif defined(Q_OS_LINUX)
     exePath = QFileDialog::getOpenFileName(this, tr("Select executable"), QDir::rootPath(),
-                                            tr("Executable (*.AppImage)"));
+                                            tr("Executable (*.AppImage)")+("+ Executable (*)"));
 #elif defined(Q_OS_MACOS)
     exePath = QFileDialog::getOpenFileName(this, tr("Select executable"), QDir::rootPath(),
                                             tr("Executable (*.*)"));
