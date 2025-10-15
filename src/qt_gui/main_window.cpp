@@ -1296,7 +1296,8 @@ tr("No emulator version was selected.\nThe Version Manager menu will then open.\
 
 void MainWindow::StartEmulatorExecutable(std::filesystem::path path, QStringList args) {
     if (Config::getGameRunning()) {
-        QMessageBox::critical(nullptr, tr("Run Emulator"), QString(tr("Emulator is already running!")));
+        QMessageBox::critical(nullptr, tr("Run Emulator"),
+                              QString(tr("Emulator is already running!")));
         return;
     }
 
