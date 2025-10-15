@@ -2579,7 +2579,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Check for Pre-release updates at startup</source>
-      <translation type="unfinished">Check for Pre-release updates at startup</translation>
+      <translation>Comprovar si hi ha actualitzacions prèvies a l'inici</translation>
     </message>
     <message>
       <source>Check for Pre-release Updates</source>
@@ -2659,7 +2659,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>No news, the version list is already updated.</source>
-      <translation type="unfinished">No news, the version list is already updated.</translation>
+      <translation>No hi ha novetats, la llista de versions ja està actualitzada.</translation>
     </message>
     <message>
       <source>The latest versions have been added to the list for download.</source>
@@ -2693,7 +2693,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Version %1 has been downloaded and selected.</source>
-      <translation type="unfinished">Version %1 has been downloaded and selected.</translation>
+      <translation>La versió %1 ha sigut descarregada i seleccionada.</translation>
     </message>
     <message>
       <source>Failed to create zip extraction script</source>
@@ -2705,7 +2705,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release</source>
-      <translation type="unfinished">Unable to get hash of latest pre-release</translation>
+      <translation>No es pot obtenir el hash de l'última versió prèvia</translation>
     </message>
     <message>
       <source>No pre-release found</source>
@@ -2771,7 +2771,7 @@ Would you like to download it now?</translation>
     </message>
     <message>
       <source>Downloading Pre‑release, please wait...</source>
-      <translation type="unfinished">Downloading Pre‑release, please wait...</translation>
+      <translation>Descarregant versió prèvia, si us plau, espera...</translation>
     </message>
     <message>
       <source>Network error while downloading</source>
@@ -2791,7 +2791,7 @@ Would you like to download it now?</translation>
     </message>
     <message>
       <source>Failed to create the update script file</source>
-      <translation type="unfinished">Failed to create the update script file</translation>
+      <translation>Error en crear el fitxer de script d'actualització</translation>
     </message>
     <message>
       <source>Always Show Changelog</source>
