@@ -711,19 +711,19 @@
     </message>
     <message>
       <source>Directory with your dumped games</source>
-      <translation type="unfinished">Directory with your dumped games</translation>
+      <translation>Cartella con i tuoi giochi scaricati</translation>
     </message>
     <message>
       <source>Directory with your dumped DLC&apos;s</source>
-      <translation type="unfinished">Directory with your dumped DLC&apos;s</translation>
+      <translation>Cartella con i tuoi DLC scaricati</translation>
     </message>
     <message>
       <source>Directory with games</source>
-      <translation type="unfinished">Directory with games</translation>
+      <translation>Cartella con giochi</translation>
     </message>
     <message>
       <source>Directory with DLC&apos;s</source>
-      <translation type="unfinished">Directory with DLC&apos;s</translation>
+      <translation>Cartella con DLC</translation>
     </message>
   </context>
   <context>
