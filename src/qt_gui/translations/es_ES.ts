@@ -1678,7 +1678,7 @@
     </message>
     <message>
       <source>Version Manager</source>
-      <translation>Gestor de versiones</translation>
+      <translation>Gestor de Versiones</translation>
     </message>
     <message>
       <source>No Version Selected</source>
