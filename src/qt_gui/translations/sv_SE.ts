@@ -614,16 +614,8 @@
       <translation>Min dödzon (standard:2 max:127)</translation>
     </message>
     <message>
-      <source>2</source>
-      <translation>2</translation>
-    </message>
-    <message>
       <source>Max Deadzone (def:127 max:127)</source>
       <translation>Max dödzon (standard:127 max:127)</translation>
-    </message>
-    <message>
-      <source>127</source>
-      <translation>127</translation>
     </message>
     <message>
       <source>Right Stick Deadzone</source>
@@ -706,10 +698,6 @@
       <translation>shadPS4 - Välj katalog</translation>
     </message>
     <message>
-      <source>Directory to install games</source>
-      <translation>Katalog att installera spel till</translation>
-    </message>
-    <message>
       <source>Browse</source>
       <translation>Bläddra</translation>
     </message>
@@ -718,12 +706,24 @@
       <translation>Fel</translation>
     </message>
     <message>
-      <source>Directory to install DLC</source>
-      <translation>Katalog för att installera DLC</translation>
-    </message>
-    <message>
       <source>Directory to install emulator versions</source>
       <translation>Katalog för att installera emulatorversioner</translation>
+    </message>
+    <message>
+      <source>Directory with your dumped games</source>
+      <translation type="unfinished">Directory with your dumped games</translation>
+    </message>
+    <message>
+      <source>Directory with your dumped DLC&apos;s</source>
+      <translation type="unfinished">Directory with your dumped DLC&apos;s</translation>
+    </message>
+    <message>
+      <source>Directory with games</source>
+      <translation type="unfinished">Directory with games</translation>
+    </message>
+    <message>
+      <source>Directory with DLC&apos;s</source>
+      <translation type="unfinished">Directory with DLC&apos;s</translation>
     </message>
   </context>
   <context>
@@ -1049,6 +1049,18 @@
     <message>
       <source>Launch with default settings</source>
       <translation>Starta med standardinställningar</translation>
+    </message>
+    <message>
+      <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
+      <translation type="unfinished">Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</translation>
+    </message>
+    <message>
+      <source>Ok</source>
+      <translation type="unfinished">Ok</translation>
+    </message>
+    <message>
+      <source>Info</source>
+      <translation type="unfinished">Info</translation>
     </message>
   </context>
   <context>
@@ -1708,10 +1720,6 @@ Välj en emulatorversion från den högra panelen.</translation>
       <translation>Standardflik när inställningar öppnas</translation>
     </message>
     <message>
-      <source>Show Game Size In List</source>
-      <translation>Visa spelstorlek i listan</translation>
-    </message>
-    <message>
       <source>Enable Discord Rich Presence</source>
       <translation>Aktivera Discord Rich Presence</translation>
     </message>
@@ -2314,10 +2322,6 @@ Välj en emulatorversion från den högra panelen.</translation>
     <message>
       <source>Default tab when opening settings:\nChoose which tab will open, the default is General.</source>
       <translation>Standardflik vid öppning av inställningar:\nVälj vilken flik som ska öppnas, standard är Allmänt.</translation>
-    </message>
-    <message>
-      <source>Show Game Size In List:\nThere is the size of the game in the list.</source>
-      <translation>Visa spelstorlek i listan:\nSpelets storlek visas i listan.</translation>
     </message>
     <message>
       <source>Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</source>
