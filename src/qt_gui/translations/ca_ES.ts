@@ -711,11 +711,11 @@
     </message>
     <message>
       <source>Directory with your dumped games</source>
-      <translation type="unfinished">Directory with your dumped games</translation>
+      <translation>Carpeta amb els jocs descarregats</translation>
     </message>
     <message>
       <source>Directory with your dumped DLC&apos;s</source>
-      <translation type="unfinished">Directory with your dumped DLC&apos;s</translation>
+      <translation>Carpeta amb els DLC descarregats</translation>
     </message>
     <message>
       <source>Directory with games</source>
@@ -2689,7 +2689,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>The GitHub API response is not a valid JSON array.</source>
-      <translation type="unfinished">The GitHub API response is not a valid JSON array.</translation>
+      <translation>La resposta de la API de GitHub no és un valor JSON vàlid.</translation>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release</source>
@@ -2711,7 +2711,7 @@ Would you like to download it now?</translation>
     </message>
     <message>
       <source>You already have the latest pre-release version.</source>
-      <translation type="unfinished">You already have the latest pre-release version.</translation>
+      <translation>Ja tens l'última versió prèvia.</translation>
     </message>
     <message>
       <source>Update Available (Emulator)</source>
@@ -2755,7 +2755,7 @@ Would you like to download it now?</translation>
     </message>
     <message>
       <source>No download URL found for the specified asset.</source>
-      <translation type="unfinished">No download URL found for the specified asset.</translation>
+      <translation>No s'ha trobat la direcció web de descàrrega.</translation>
     </message>
     <message>
       <source>Downloading Pre‑release, please wait...</source>
