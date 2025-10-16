@@ -607,27 +607,19 @@
     </message>
     <message>
       <source>Left Stick Deadzone</source>
-      <translation type="unfinished">Left Stick Deadzone</translation>
+      <translation>左摇杆死区</translation>
     </message>
     <message>
       <source>Min Deadzone (def:2 max:127)</source>
-      <translation type="unfinished">Min Deadzone (def:2 max:127)</translation>
-    </message>
-    <message>
-      <source>2</source>
-      <translation type="unfinished">2</translation>
+      <translation>最小死区（默认值：2，最大值：127）</translation>
     </message>
     <message>
       <source>Max Deadzone (def:127 max:127)</source>
-      <translation type="unfinished">Max Deadzone (def:127 max:127)</translation>
-    </message>
-    <message>
-      <source>127</source>
-      <translation type="unfinished">127</translation>
+      <translation>最大死区（默认值：127，最大值：127）</translation>
     </message>
     <message>
       <source>Right Stick Deadzone</source>
-      <translation type="unfinished">Right Stick Deadzone</translation>
+      <translation>右摇杆死区</translation>
     </message>
   </context>
   <context>
@@ -706,10 +698,6 @@
       <translation>shadPS4 - 选择文件目录</translation>
     </message>
     <message>
-      <source>Directory to install games</source>
-      <translation>要安装游戏的目录</translation>
-    </message>
-    <message>
       <source>Browse</source>
       <translation>浏览</translation>
     </message>
@@ -718,12 +706,26 @@
       <translation>错误</translation>
     </message>
     <message>
-      <source>Directory to install DLC</source>
-      <translation>安装 DLC 的目录</translation>
-    </message>
-    <message>
       <source>Directory to install emulator versions</source>
       <translation>安装模拟器版本的目录</translation>
+    </message>
+    <message>
+      <source>Directory with your dumped games</source>
+      <translation>你的游戏本体文件转储目录</translation>
+    </message>
+    <message>
+      <source>Directory with your dumped DLC&apos;s</source>
+      <translation>你的DLC文件转储目录</translation>
+    </message>
+    <message>
+      <source>Directory with games</source>
+      <translation>游戏目录</translation>
+    </message>
+    <message>
+      <source>Directory with DLC&apos;s</source>
+      <translation>DLC目录
+
+</translation>
     </message>
   </context>
   <context>
@@ -1049,6 +1051,18 @@
     <message>
       <source>Launch with default settings</source>
       <translation>以默认设置启动</translation>
+    </message>
+    <message>
+      <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
+      <translation>无法提交报告，因为该游戏的最新日志未通过以下检查，将构成无效报告：</translation>
+    </message>
+    <message>
+      <source>Ok</source>
+      <translation>确定</translation>
+    </message>
+    <message>
+      <source>Info</source>
+      <translation>详情</translation>
     </message>
   </context>
   <context>
@@ -1708,10 +1722,6 @@ Select an emulator version from the right panel.</source>
       <translation>打开设置时的默认选项卡</translation>
     </message>
     <message>
-      <source>Show Game Size In List</source>
-      <translation>在列表中显示游戏大小</translation>
-    </message>
-    <message>
       <source>Enable Discord Rich Presence</source>
       <translation>启用 Discord Rich Presence</translation>
     </message>
@@ -2314,10 +2324,6 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Default tab when opening settings:\nChoose which tab will open, the default is General.</source>
       <translation>打开设置时的默认标签页：\n选择设置界面打开时默认显示的标签页，默认选项为“常规”。</translation>
-    </message>
-    <message>
-      <source>Show Game Size In List:\nThere is the size of the game in the list.</source>
-      <translation>在列表中显示游戏大小：\n开启后，游戏列表将会显示每个游戏的安装容量。</translation>
     </message>
     <message>
       <source>Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</source>
