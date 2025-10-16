@@ -38,6 +38,7 @@ int main(int argc, char* argv[]) {
     bool show_gui = false;
     std::string emulator;
     QStringList emulator_args{};
+    QString game_path = "";
 
     // Ignore Qt logs
     qInstallMessageHandler(customMessageHandler);
@@ -100,6 +101,9 @@ int main(int argc, char* argv[]) {
             }
             for (int j = i + 1; j < argc; j++) {
                 emulator_args.push_back(argv[j]);
+                if (std::string(argv[j]) == "-g" || std::string(argv[j]) == "--game") {
+                    game_path = argv[j + 1];
+                }
             }
             break;
         } else if (i + 1 < argc && std::string(argv[i + 1]) == "--") {
@@ -155,7 +159,7 @@ int main(int argc, char* argv[]) {
         if (!show_gui) {
             m_main_window->m_ipc_client->gameClosedFunc = StopProgram;
         }
-        m_main_window->StartEmulatorExecutable(emulator_path, emulator_args);
+        m_main_window->StartEmulatorExecutable(emulator_path, game_path, emulator_args);
     }
 
     if (!has_emulator_argument || show_gui) {
