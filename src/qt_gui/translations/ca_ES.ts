@@ -1052,7 +1052,7 @@
     </message>
     <message>
       <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
-      <translation type="unfinished">Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</translation>
+      <translation>No s'ha pogut enviar l'informe, perquè l'últim registre del joc ha fallat en la següent comprovació, i per tant seria un informe no vàlid:</translation>
     </message>
     <message>
       <source>Ok</source>
@@ -1688,9 +1688,9 @@
       <source>No emulator version was selected.
 The Version Manager menu will then open.
 Select an emulator version from the right panel.</source>
-      <translation type="unfinished">No emulator version was selected.
-The Version Manager menu will then open.
-Select an emulator version from the right panel.</translation>
+      <translation>No hi ha cap versió de l'emulador seleccionada.
+S'obrirà l'administrador de versions.
+Selecciona una versió del panell dret.</translation>
     </message>
     <message>
       <source>Could not find the emulator executable</source>
@@ -2461,7 +2461,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Activa la validació de nucli:\nActiva les funcions principals de validació de la API.\nAixò redueix el rendiment i pot canviar el comportament de l'emulació.\nÉs necessari el SDK de Vulkan perquè funcioni.</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
@@ -2575,7 +2575,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Select the folder where the emulator versions will be installed</source>
-      <translation type="unfinished">Select the folder where the emulator versions will be installed</translation>
+      <translation>Selecciona la carpeta on s'instal·laran les versions de l'emulador</translation>
     </message>
     <message>
       <source>Select executable</source>
@@ -2599,7 +2599,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Enter the name of this version as it appears in the list.</source>
-      <translation type="unfinished">Enter the name of this version as it appears in the list.</translation>
+      <translation>Introdueix el nom de la versió tal com apareix a la llista.</translation>
     </message>
     <message>
       <source>Error</source>
@@ -2651,7 +2651,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>The latest versions have been added to the list for download.</source>
-      <translation type="unfinished">The latest versions have been added to the list for download.</translation>
+      <translation>S'han afegit les últimes versions a la llista per descarregar.</translation>
     </message>
     <message>
       <source>Error accessing GitHub API</source>
@@ -2660,8 +2660,7 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>First you need to choose a location to save the versions in
 &apos;Path to save versions&apos;</source>
-      <translation type="unfinished">First you need to choose a location to save the versions in
-&apos;Path to save versions&apos;</translation>
+      <translation>Primer has de seleccionar una ubicació per desar les versions. Carpeta on desar les versions</translation>
     </message>
     <message>
       <source>Do you want to download the version</source>
@@ -2702,8 +2701,7 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>You don&apos;t have any pre-release installed yet.
 Would you like to download it now?</source>
-      <translation type="unfinished">You don&apos;t have any pre-release installed yet.
-Would you like to download it now?</translation>
+      <translation>No tens cap versió prèvia instal·lada encara. Vols descarregar-ne una?</translation>
     </message>
     <message>
       <source>Auto Updater - Emulator</source>
@@ -2787,7 +2785,7 @@ Would you like to download it now?</translation>
     </message>
     <message>
       <source>No version selected. Please choose one from the list to delete.</source>
-      <translation type="unfinished">No version selected. Please choose one from the list to delete.</translation>
+      <translation>No s'ha seleccionat cap versió. Escull-ne una de la llista per esborrar-la.</translation>
     </message>
     <message>
       <source>Confirm Download</source>
