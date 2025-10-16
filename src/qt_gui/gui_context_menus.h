@@ -834,8 +834,8 @@ private:
             out << "Exec=" << QCoreApplication::applicationFilePath() << " -d -- -g" << " \""
                 << targetPath << "\"\n";
         } else {
-            out << "Exec=" << QCoreApplication::applicationFilePath() << " -e" << " \""
-                << targetPath << "\"" << " -- -g" << " \"" << targetPath << "\"\n";
+            out << "Exec=" << QCoreApplication::applicationFilePath() << " -e" << " \"" << emuPath
+                << "\"" << " -- -g" << " \"" << targetPath << "\"\n";
         }
         out << "Icon=" << iconPath << "\n";
         out << "Terminal=false\n";
