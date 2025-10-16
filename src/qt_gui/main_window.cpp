@@ -1298,7 +1298,7 @@ void MainWindow::StartEmulatorExecutable(std::filesystem::path emuPath, QString 
     if (gameArg.left(4) == "CUSA") {
         m_game_info->GetGameInfo(this);
         for (int i = 0; i < m_game_info->m_games.size(); i++) {
-            if (m_game_info->m_games[i].serial == gameArg) {
+            if (m_game_info->m_games[i].serial == gameArg.toStdString()) {
                 last_game_path = m_game_info->m_games[i].path / "eboot.bin";
                 break;
             }
