@@ -606,19 +606,19 @@ Einzigartige Inputs können nicht öfters als einmal gebunden werden. Input-Dupl
     </message>
     <message>
       <source>Left Stick Deadzone</source>
-      <translation type="unfinished">Left Stick Deadzone</translation>
+      <translation>Totzone linker Stick</translation>
     </message>
     <message>
       <source>Min Deadzone (def:2 max:127)</source>
-      <translation type="unfinished">Min Deadzone (def:2 max:127)</translation>
+      <translation>Min. Totzone (Standard:2 Max:127)</translation>
     </message>
     <message>
       <source>Max Deadzone (def:127 max:127)</source>
-      <translation type="unfinished">Max Deadzone (def:127 max:127)</translation>
+      <translation>Max. Totzone (Standard:127 Max:127)</translation>
     </message>
     <message>
       <source>Right Stick Deadzone</source>
-      <translation type="unfinished">Right Stick Deadzone</translation>
+      <translation>Totzone rechter Stick</translation>
     </message>
   </context>
   <context>
@@ -710,19 +710,19 @@ Einzigartige Inputs können nicht öfters als einmal gebunden werden. Input-Dupl
     </message>
     <message>
       <source>Directory with your dumped games</source>
-      <translation type="unfinished">Directory with your dumped games</translation>
+      <translation>Verzeichnis mit den gedumpten Spielen</translation>
     </message>
     <message>
       <source>Directory with your dumped DLC&apos;s</source>
-      <translation type="unfinished">Directory with your dumped DLC&apos;s</translation>
+      <translation>Verzeichnis mit den gedumpten DLCs</translation>
     </message>
     <message>
       <source>Directory with games</source>
-      <translation type="unfinished">Directory with games</translation>
+      <translation>Verzeichnis mit Spielen</translation>
     </message>
     <message>
       <source>Directory with DLC&apos;s</source>
-      <translation type="unfinished">Directory with DLC&apos;s</translation>
+      <translation>Verzeichnis mit DLCs</translation>
     </message>
   </context>
   <context>
@@ -1051,15 +1051,15 @@ Einzigartige Inputs können nicht öfters als einmal gebunden werden. Input-Dupl
     </message>
     <message>
       <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
-      <translation type="unfinished">Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</translation>
+      <translation>Dieser Bericht kann nicht eingereicht werden, da das neueste Protokoll für dieses Spiel an der folgenden Überprüfung gescheitert ist und daher der Bericht ungültig wäre:</translation>
     </message>
     <message>
       <source>Ok</source>
-      <translation type="unfinished">Ok</translation>
+      <translation>OK</translation>
     </message>
     <message>
       <source>Info</source>
-      <translation type="unfinished">Info</translation>
+      <translation>Info</translation>
     </message>
   </context>
   <context>
