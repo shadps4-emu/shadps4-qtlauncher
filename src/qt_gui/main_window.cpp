@@ -1286,7 +1286,7 @@ tr("No emulator version was selected.\nThe Version Manager menu will then open.\
     m_ipc_client->setActiveController(GamepadSelect::GetSelectedGamepad());
 }
 
-void MainWindow::StartEmulatorExecutable(std::filesystem::path emuPath, QString gamePath,
+void MainWindow::StartEmulatorExecutable(std::filesystem::path emuPath, QString gameArg,
                                          QStringList args) {
     if (Config::getGameRunning()) {
         QMessageBox::critical(nullptr, tr("Run Emulator"),
@@ -1294,9 +1294,21 @@ void MainWindow::StartEmulatorExecutable(std::filesystem::path emuPath, QString 
         return;
     }
 
+    // if game arg is serial, get path
+    if (gameArg.left(4) == "CUSA") {
+        m_game_info->GetGameInfo(this);
+        for (int i = 0; i < m_game_info->m_games.size(); i++) {
+            if (m_game_info->m_games[i].serial == gameArg) {
+                last_game_path = m_game_info->m_games[i].path / "eboot.bin";
+                break;
+            }
+        }
+    } else {
+        last_game_path = Common::FS::PathFromQString(gameArg);
+    }
+
     Config::setGameRunning(true);
     QFileInfo fileInfo(emuPath);
-    last_game_path = Common::FS::PathFromQString(gamePath);
     if (!fileInfo.exists()) {
         QMessageBox::critical(nullptr, "shadPS4",
                               QString(tr("Could not find the emulator executable")));
