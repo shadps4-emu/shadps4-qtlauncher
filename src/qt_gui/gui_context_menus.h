@@ -468,18 +468,12 @@ public:
         }
 
         if (selected == copyNameAll) {
-            QString GameSizeEnabled;
-            if (settings->GetValue(gui::glc_showLoadGameSizeEnabled).toBool()) {
-                GameSizeEnabled = " | Size:" + QString::fromStdString(m_games[itemID].size);
-            }
-
             QClipboard* clipboard = QGuiApplication::clipboard();
-            QString combinedText = QString("Name:%1 | Serial:%2 | Version:%3%4")
+            QString combinedText = QString("Name:%1 | Serial:%2 | Version:%3 | Size:%4")
                                        .arg(QString::fromStdString(m_games[itemID].name))
                                        .arg(QString::fromStdString(m_games[itemID].serial))
                                        .arg(QString::fromStdString(m_games[itemID].version))
-                                       .arg(GameSizeEnabled);
-
+                                       .arg(QString::fromStdString(m_games[itemID].size));
             clipboard->setText(combinedText);
         }
 
