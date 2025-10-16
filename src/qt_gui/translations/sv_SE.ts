@@ -607,27 +607,27 @@
     </message>
     <message>
       <source>Left Stick Deadzone</source>
-      <translation type="unfinished">Left Stick Deadzone</translation>
+      <translation>Dödzon för vänster spak</translation>
     </message>
     <message>
       <source>Min Deadzone (def:2 max:127)</source>
-      <translation type="unfinished">Min Deadzone (def:2 max:127)</translation>
+      <translation>Min dödzon (standard:2 max:127)</translation>
     </message>
     <message>
       <source>2</source>
-      <translation type="unfinished">2</translation>
+      <translation>2</translation>
     </message>
     <message>
       <source>Max Deadzone (def:127 max:127)</source>
-      <translation type="unfinished">Max Deadzone (def:127 max:127)</translation>
+      <translation>Max dödzon (standard:127 max:127)</translation>
     </message>
     <message>
       <source>127</source>
-      <translation type="unfinished">127</translation>
+      <translation>127</translation>
     </message>
     <message>
       <source>Right Stick Deadzone</source>
-      <translation type="unfinished">Right Stick Deadzone</translation>
+      <translation>Dödzon för höger spak</translation>
     </message>
   </context>
   <context>
