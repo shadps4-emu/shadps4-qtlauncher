@@ -371,6 +371,8 @@ set(QT_GUI src/qt_gui/about_dialog.cpp
            src/qt_gui/version_dialog.cpp
            src/qt_gui/version_dialog.h
            src/qt_gui/version_dialog.ui
+           src/qt_gui/create_shortcut.cpp
+           src/qt_gui/create_shortcut.h
            ${RESOURCE_FILES}
            ${TRANSLATIONS}
            ${UPDATER}
