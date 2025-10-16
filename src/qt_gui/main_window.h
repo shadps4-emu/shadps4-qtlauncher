@@ -35,11 +35,14 @@ public:
     void InstallDirectory();
     void StartGame();
     void StartGameWithArgs(QStringList args = {});
+    void StartEmulator(std::filesystem::path path, QStringList args = {});
+    void StartEmulatorExecutable(std::filesystem::path path, QStringList args = {});
     void PauseGame();
     void StopGame();
     void RestartGame();
     void LoadVersionComboBox();
     bool showLabels;
+    std::shared_ptr<IpcClient> m_ipc_client = std::make_shared<IpcClient>();
 
 private Q_SLOTS:
     void ConfigureGuiFromSettings();
@@ -77,7 +80,6 @@ private:
     void LoadTranslation();
     void PlayBackgroundMusic();
     QIcon RecolorIcon(const QIcon& icon, bool isWhite);
-    void StartEmulator(std::filesystem::path, QStringList args = {});
     void RestartEmulator();
 
     bool isIconBlack = false;
@@ -110,7 +112,6 @@ private:
     QTranslator* translator;
     std::shared_ptr<gui_settings> m_gui_settings;
 
-    std::shared_ptr<IpcClient> m_ipc_client = std::make_shared<IpcClient>();
     std::filesystem::path last_game_path;
 
 protected:
