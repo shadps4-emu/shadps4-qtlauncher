@@ -36,7 +36,8 @@ public:
     void StartGame();
     void StartGameWithArgs(QStringList args = {});
     void StartEmulator(std::filesystem::path path, QStringList args = {});
-    void StartEmulatorExecutable(std::filesystem::path path, QStringList args = {});
+    void StartEmulatorExecutable(std::filesystem::path emupath, QString gamePath,
+                                 QStringList args = {});
     void PauseGame();
     void StopGame();
     void RestartGame();
