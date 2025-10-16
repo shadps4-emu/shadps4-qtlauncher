@@ -493,8 +493,7 @@ public:
 #ifdef Q_OS_WIN
                     if (createShortcutWin(linkPath, ebootPath, icoPath, exePath)) {
 #else
-                    if (createShortcutLinux(linkPath, m_games[itemID].name, ebootPath, iconPath,
-                                            emuVersion)) {
+                    if (createShortcutLinux(linkPath, m_games[itemID].name, ebootPath, iconPath)) {
 #endif
                         QMessageBox::information(
                             nullptr, tr("Shortcut creation"),
@@ -513,8 +512,7 @@ public:
 #ifdef Q_OS_WIN
                 if (createShortcutWin(linkPath, ebootPath, iconPath, exePath)) {
 #else
-                if (createShortcutLinux(linkPath, m_games[itemID].name, ebootPath, iconPath,
-                                        emuVersion)) {
+                if (createShortcutLinux(linkPath, m_games[itemID].name, ebootPath, iconPath)) {
 #endif
                     QMessageBox::information(
                         nullptr, tr("Shortcut creation"),
@@ -775,7 +773,7 @@ private:
             // Set arguments, eboot.bin file location
 
             QString arguments;
-            arguments = QString("-d ---g \"%1\"").arg(targetPath);
+            arguments = QString("-d -- -g \"%1\"").arg(targetPath);
             pShellLink->SetArguments((LPCWSTR)arguments.utf16());
 
             // Set the icon for the shortcut
@@ -807,7 +805,7 @@ private:
         out << "[Desktop Entry]\n";
         out << "Version=1.0\n";
         out << "Name=" << QString::fromStdString(name) << "\n";
-        out << "Exec=" << QCoreApplication::applicationFilePath() << " -d ---g" << " \""
+        out << "Exec=" << QCoreApplication::applicationFilePath() << " -d -- -g" << " \""
             << targetPath << "\"\n";
         out << "Icon=" << iconPath << "\n";
         out << "Terminal=false\n";
