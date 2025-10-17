@@ -439,7 +439,7 @@
     </message>
     <message>
       <source>Use per-game configs</source>
-      <translation>使用每个游戏的配置</translation>
+      <translation>每个游戏使用独立的配置</translation>
     </message>
     <message>
       <source>Face Buttons</source>
