@@ -711,7 +711,7 @@
     </message>
     <message>
       <source>Directory with your dumped games</source>
-      <translation type="unfinished">Directory with your dumped games</translation>
+      <translation>Путь к папке с извлечёнными играми</translation>
     </message>
     <message>
       <source>Directory with your dumped DLC&apos;s</source>
