@@ -2,8 +2,8 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include "logging/log.h"
-#include "versions.h"
 #include "path_util.h"
+#include "versions.h"
 
 namespace VersionManager {
 
@@ -11,7 +11,8 @@ std::vector<Version> GetVersionList(std::filesystem::path const& path) {
     toml::ordered_value data;
     try {
         if (path.empty()) {
-            data = toml::parse(Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "versions.toml");
+            data = toml::parse(Common::FS::GetUserPath(Common::FS::PathType::UserDir) /
+                               "versions.toml");
         } else {
             data = toml::parse(path);
         }
@@ -32,6 +33,31 @@ std::vector<Version> GetVersionList(std::filesystem::path const& path) {
     }
 
     return std::move(versions);
+}
+
+void SaveVersionList(std::vector<Version> const& versions, std::filesystem::path const& path) {
+    toml::ordered_value root = toml::table();
+
+    for (size_t i = 0; i < versions.size(); ++i) {
+        const auto& v = versions[i];
+        toml::ordered_value entry = toml::table{{"name", v.name},
+                                                {"path", v.path},
+                                                {"date", v.date},
+                                                {"codename", v.codename},
+                                                {"type", static_cast<int>(v.type)}};
+        root[std::to_string(i)] = std::move(entry);
+    }
+
+    std::ofstream ofs(path.empty()
+                          ? Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "versions.toml"
+                          : path);
+    ofs << root;
+}
+
+void AddNewVersion(Version const& v, std::filesystem::path const& path) {
+    auto versions = GetVersionList(path);
+    versions.push_back(v);
+    SaveVersionList(versions, path);
 }
 
 } // namespace VersionManager
