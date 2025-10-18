@@ -17,9 +17,9 @@
 #endif
 #include "common/logging/log.h"
 #include "common/memory_patcher.h"
-#include "common/versions.h"
 #include "common/path_util.h"
 #include "common/scm_rev.h"
+#include "common/versions.h"
 #include "control_settings.h"
 #include "game_install_dialog.h"
 #include "hotkeys.h"
@@ -1361,7 +1361,8 @@ void MainWindow::LoadVersionComboBox() {
 
     auto const& versions = VersionManager::GetVersionList();
     for (auto const& v : versions) {
-        ui->versionComboBox->addItem(QString::fromStdString(v.name), QString::fromStdString(v.path));
+        ui->versionComboBox->addItem(QString::fromStdString(v.name),
+                                     QString::fromStdString(v.path));
     }
 
     int selectedIndex = ui->versionComboBox->findData(savedVersionPath);
