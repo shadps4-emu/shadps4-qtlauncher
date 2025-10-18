@@ -23,15 +23,18 @@ std::vector<Version> GetVersionList(std::filesystem::path const& path) {
 
     std::vector<Version> versions;
     for (const auto& [key, value] : data.as_table()) {
-        Version v;
-        v.name = toml::find_or<std::string>(value, "name", "no name");
-        v.path = toml::find_or<std::string>(value, "path", "");
-        v.date = toml::find_or<std::string>(value, "date", "never");
-        v.codename = toml::find_or<std::string>(value, "codename", "");
-        v.type = static_cast<VersionType>(toml::find_or<int>(value, "type", VersionType::Custom));
+        Version v = {
+            .name = toml::find_or<std::string>(value, "name", "no name"),
+            .path = toml::find_or<std::string>(value, "path", ""),
+            .date = toml::find_or<std::string>(value, "date", "never"),
+            .codename = toml::find_or<std::string>(value, "codename", ""),
+            .type =
+                static_cast<VersionType>(toml::find_or<int>(value, "type", VersionType::Custom)),
+            .id = std::stoi(key),
+        };
         versions.push_back(std::move(v));
     }
-
+    std::sort(versions.begin(), versions.end(), [](Version a, Version b) { return a.id < b.id; });
     return std::move(versions);
 }
 
@@ -57,6 +60,26 @@ void SaveVersionList(std::vector<Version> const& versions, std::filesystem::path
 void AddNewVersion(Version const& v, std::filesystem::path const& path) {
     auto versions = GetVersionList(path);
     versions.push_back(v);
+    SaveVersionList(versions, path);
+}
+
+void RemoveVersion(Version const& v, std::filesystem::path const& path) {
+    auto versions = GetVersionList(path);
+    auto it = std::find_if(versions.cbegin(), versions.cend(),
+                           [v](Version i) { return i.name == v.name; });
+    if (it != versions.cend()) {
+        versions.erase(it);
+    }
+    SaveVersionList(versions, path);
+}
+
+void RemoveVersion(std::string const& v_name, std::filesystem::path const& path) {
+    auto versions = GetVersionList(path);
+    auto it = std::find_if(versions.cbegin(), versions.cend(),
+                           [v_name](Version i) { return i.name == v_name; });
+    if (it != versions.cend()) {
+        versions.erase(it);
+    }
     SaveVersionList(versions, path);
 }
 
