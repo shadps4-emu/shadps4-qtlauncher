@@ -551,7 +551,7 @@ void VersionDialog::LoadInstalledList() {
 
     const auto path = Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "versions.toml";
     auto versions = VersionManager::GetVersionList(path);
-
+    auto const& selected_version = m_gui_settings->GetValue(gui::vm_versionSelected).toString().toStdString();
 
     ui->installedTreeWidget->clear();
     ui->installedTreeWidget->setColumnCount(5);
@@ -563,8 +563,7 @@ void VersionDialog::LoadInstalledList() {
         item->setText(2, QString::fromStdString(v.codename));
         item->setText(3, QString::fromStdString(v.date));
         item->setText(4, QString::fromStdString(v.path));
-        item->setCheckState(0, Qt::Unchecked);
-
+        item->setCheckState(0, (selected_version == v.path) ? Qt::Checked : Qt::Unchecked);
     }
 
     // QStringList folders = dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot);

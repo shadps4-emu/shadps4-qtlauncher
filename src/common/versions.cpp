@@ -1,15 +1,20 @@
 // SPDX-FileCopyrightText: Copyright 2025 shadPS4 Emulator Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
-#include "versions.h"
 #include "logging/log.h"
+#include "versions.h"
+#include "path_util.h"
 
 namespace VersionManager {
 
 std::vector<Version> GetVersionList(std::filesystem::path const& path) {
     toml::ordered_value data;
     try {
-        data = toml::parse(path);
+        if (path.empty()) {
+            data = toml::parse(Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "versions.toml");
+        } else {
+            data = toml::parse(path);
+        }
     } catch (std::exception& ex) {
         fmt::print("Got exception trying to load config file. Exception: {}\n", ex.what());
         return {};
@@ -26,10 +31,7 @@ std::vector<Version> GetVersionList(std::filesystem::path const& path) {
         versions.push_back(std::move(v));
     }
 
-    for (const auto& v : versions)
-        LOG_INFO(Core, "{} ({}): {}", v.name, (s32)v.type, v.path);
-    
     return std::move(versions);
 }
 
-}
+} // namespace VersionManager
