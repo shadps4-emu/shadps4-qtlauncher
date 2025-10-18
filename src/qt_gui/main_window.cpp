@@ -17,6 +17,7 @@
 #endif
 #include "common/logging/log.h"
 #include "common/memory_patcher.h"
+#include "common/versions.h"
 #include "common/path_util.h"
 #include "common/scm_rev.h"
 #include "control_settings.h"
@@ -1360,75 +1361,16 @@ void MainWindow::RestartEmulator() {
 }
 
 void MainWindow::LoadVersionComboBox() {
-    QString savedVersionPath = m_gui_settings->GetValue(gui::vm_versionSelected).toString();
-    if (savedVersionPath.isEmpty() || !QDir(savedVersionPath).exists()) {
-        ui->versionComboBox->clear();
-        ui->versionComboBox->addItem(tr("No Version Selected"));
-        ui->versionComboBox->setCurrentIndex(0);
-        ui->versionComboBox->setSizeAdjustPolicy(QComboBox::AdjustToContents);
-        ui->versionComboBox->adjustSize();
-        return;
-    }
-
-    QString path = m_gui_settings->GetValue(gui::vm_versionPath).toString();
-    if (path.isEmpty() || !QDir(path).exists())
-        return;
-
     ui->versionComboBox->clear();
+    ui->versionComboBox->addItem(tr("None"));
+    ui->versionComboBox->setCurrentIndex(0);
+    ui->versionComboBox->setSizeAdjustPolicy(QComboBox::AdjustToContents);
 
-    QStringList folders = QDir(path).entryList(QDir::Dirs | QDir::NoDotAndDotDot);
-    QRegularExpression versionRegex("^v(\\d+)\\.(\\d+)\\.(\\d+)$");
+    QString savedVersionPath = m_gui_settings->GetValue(gui::vm_versionSelected).toString();
 
-    QVector<QPair<QVector<int>, QString>> versionedDirs;
-    QStringList otherDirs;
-
-    for (const QString& folder : folders) {
-        if (folder == "Pre-release") {
-            otherDirs.append(folder);
-            continue;
-        }
-
-        QRegularExpressionMatch match = versionRegex.match(folder.section(" - ", 0, 0));
-        if (match.hasMatch()) {
-            QVector<int> versionParts = {match.captured(1).toInt(), match.captured(2).toInt(),
-                                         match.captured(3).toInt()};
-            versionedDirs.append({versionParts, folder});
-        } else {
-            otherDirs.append(folder);
-        }
-    }
-
-    std::sort(otherDirs.begin(), otherDirs.end());
-
-    std::sort(versionedDirs.begin(), versionedDirs.end(), [](const auto& a, const auto& b) {
-        if (a.first[0] != b.first[0])
-            return a.first[0] > b.first[0];
-        if (a.first[1] != b.first[1])
-            return a.first[1] > b.first[1];
-        return a.first[2] > b.first[2];
-    });
-
-    auto addEntry = [&](const QString& folder) {
-        QString fullPath = QDir(path).filePath(folder);
-        QString label;
-
-        if (folder.startsWith("Pre-release-shadPS4")) {
-            label = "Pre-release";
-        } else if (folder.contains(" - ")) {
-            label = folder.section(" - ", 0, 0);
-        } else {
-            label = folder;
-        }
-
-        ui->versionComboBox->addItem(label, fullPath);
-    };
-
-    for (const QString& folder : otherDirs) {
-        addEntry(folder);
-    }
-
-    for (const auto& pair : versionedDirs) {
-        addEntry(pair.second);
+    auto const& versions = VersionManager::GetVersionList();
+    for (auto const& v : versions) {
+        ui->versionComboBox->addItem(QString::fromStdString(v.name), QString::fromStdString(v.path));
     }
 
     int selectedIndex = ui->versionComboBox->findData(savedVersionPath);
