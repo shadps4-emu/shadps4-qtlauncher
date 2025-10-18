@@ -1020,7 +1020,7 @@
     </message>
     <message>
       <source>View Report</source>
-      <translation>Посмотреть отчет</translation>
+      <translation>Посмотреть отчёт</translation>
     </message>
     <message>
       <source>Submit a Report</source>
