@@ -1696,6 +1696,14 @@ Välj en emulatorversion från den högra panelen.</translation>
       <source>Could not find the emulator executable</source>
       <translation>Kunde inte hitta körbar emulatorfil</translation>
     </message>
+    <message>
+      <source>Run Emulator</source>
+      <translation type="unfinished">Run Emulator</translation>
+    </message>
+    <message>
+      <source>Emulator is already running!</source>
+      <translation type="unfinished">Emulator is already running!</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
