@@ -538,7 +538,8 @@ tr("First you need to choose a location to save the versions in\n'Path to save v
                                         .type = is_release ? VersionManager::VersionType::Release
                                                            : VersionManager::VersionType::Nightly,
                                     };
-                                    m_gui_settings->SetValue(gui::vm_versionSelected, QString(exe_path.c_str()));
+                                    m_gui_settings->SetValue(gui::vm_versionSelected,
+                                                             QString(exe_path.c_str()));
                                     VersionManager::AddNewVersion(new_version);
                                     LoadInstalledList();
                                 });

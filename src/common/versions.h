@@ -3,9 +3,9 @@
 
 #pragma once
 
+#include <filesystem>
 #include <string>
 #include <vector>
-#include <filesystem>
 #include <toml.hpp>
 #include "types.h"
 
@@ -32,4 +32,4 @@ void AddNewVersion(Version const& v, std::filesystem::path const& path = "");
 void RemoveVersion(Version const& v, std::filesystem::path const& path = "");
 void RemoveVersion(std::string const& v, std::filesystem::path const& path = "");
 
-}
+} // namespace VersionManager
