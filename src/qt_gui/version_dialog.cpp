@@ -516,7 +516,7 @@ tr("First you need to choose a location to save the versions in\n'Path to save v
                                         this, tr("Confirm Download"),
                                         tr("Version %1 has been downloaded and selected.")
                                             .arg(versionName));
-                                    bool is_release = versionName.contains("Pre-release");
+                                    bool is_release = !versionName.contains("Pre-release");
                                     auto release_name = release["name"].toString();
                                     QString code_name = "";
                                     static constexpr QStringView marker = u" - codename ";
