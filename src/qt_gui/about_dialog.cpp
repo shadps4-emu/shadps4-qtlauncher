@@ -28,6 +28,9 @@ AboutDialog::AboutDialog(std::shared_ptr<gui_settings> gui_settings, QWidget* pa
     ui->image_3->installEventFilter(this);
     ui->image_4->installEventFilter(this);
     ui->image_5->installEventFilter(this);
+
+    ui->image_2->setVisible(false);
+    ui->image_5->setVisible(false);
 }
 
 AboutDialog::~AboutDialog() {
