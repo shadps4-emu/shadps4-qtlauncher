@@ -18,6 +18,7 @@
 #include <QTimer>
 #include <QVBoxLayout>
 #include <common/path_util.h>
+#include <common/versions.h>
 
 #include "common/config.h"
 #include "gui_settings.h"
@@ -543,110 +544,125 @@ tr("First you need to choose a location to save the versions in\n'Path to save v
 }
 
 void VersionDialog::LoadInstalledList() {
-    QString path = m_gui_settings->GetValue(gui::vm_versionPath).toString();
-    QDir dir(path);
-    if (!dir.exists() || path.isEmpty())
-        return;
+    // QString path = m_gui_settings->GetValue(gui::vm_versionPath).toString();
+    // QDir dir(path);
+    // if (!dir.exists() || path.isEmpty())
+    //     return;
+
+    const auto path = Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "versions.toml";
+    auto versions = VersionManager::GetVersionList(path);
+
 
     ui->installedTreeWidget->clear();
     ui->installedTreeWidget->setColumnCount(5);
     ui->installedTreeWidget->setColumnHidden(4, true);
 
-    QStringList folders = dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot);
-
-    QRegularExpression versionRegex("^v(\\d+)\\.(\\d+)\\.(\\d+)$");
-
-    QVector<QPair<QVector<int>, QString>> versionedDirs;
-
-    QStringList otherDirs;
-    QString savedVersionPath = m_gui_settings->GetValue(gui::vm_versionSelected).toString();
-
-    for (const QString& folder : folders) {
-        if (folder == "Pre-release") {
-            otherDirs.append(folder);
-            continue;
-        }
-        QRegularExpressionMatch match = versionRegex.match(folder.section(" - ", 0, 0));
-        if (match.hasMatch()) {
-            QVector<int> versionParts = {match.captured(1).toInt(), match.captured(2).toInt(),
-                                         match.captured(3).toInt()};
-            versionedDirs.append({versionParts, folder});
-        } else {
-            otherDirs.append(folder);
-        }
-    }
-
-    std::sort(otherDirs.begin(), otherDirs.end());
-
-    std::sort(versionedDirs.begin(), versionedDirs.end(), [](const auto& a, const auto& b) {
-        if (a.first[0] != b.first[0])
-            return a.first[0] > b.first[0];
-        if (a.first[1] != b.first[1])
-            return a.first[1] > b.first[1];
-        return a.first[2] > b.first[2];
-    });
-
-    // Add (Pre-release, Test Build...)
-    for (const QString& folder : otherDirs) {
+    for (auto const& v : versions) {
         QTreeWidgetItem* item = new QTreeWidgetItem(ui->installedTreeWidget);
-        QString fullPath = QDir(path).filePath(folder);
-        item->setText(4, fullPath);
+        item->setText(1, QString::fromStdString(v.name));
+        item->setText(2, QString::fromStdString(v.codename));
+        item->setText(3, QString::fromStdString(v.date));
+        item->setText(4, QString::fromStdString(v.path));
         item->setCheckState(0, Qt::Unchecked);
 
-        if (folder.startsWith("Pre-release-shadPS4")) {
-            QStringList parts = folder.split('-');
-            item->setText(1, "Pre-release");
-            QString shortHash;
-            if (parts.size() >= 7) {
-                shortHash = parts[6].left(7);
-            } else {
-                shortHash = "";
-            }
-            item->setText(2, shortHash);
-            if (parts.size() >= 6) {
-                QString date = QString("%1-%2-%3").arg(parts[3], parts[4], parts[5]);
-                item->setText(3, date);
-            } else {
-                item->setText(3, "");
-            }
-        } else if (folder.contains(" - ")) {
-            QStringList parts = folder.split(" - ");
-            item->setText(1, parts.value(0));
-            item->setText(2, parts.value(1));
-            item->setText(3, parts.value(2));
-        } else {
-            item->setText(1, folder);
-            item->setText(2, "");
-            item->setText(3, "");
-        }
-
-        if (fullPath == savedVersionPath) {
-            item->setCheckState(0, Qt::Checked);
-        }
     }
 
-    // Add versions
-    for (const auto& pair : versionedDirs) {
-        QTreeWidgetItem* item = new QTreeWidgetItem(ui->installedTreeWidget);
-        QString fullPath = QDir(path).filePath(pair.second);
-        item->setText(4, fullPath);
-        item->setCheckState(0, Qt::Unchecked);
+    // QStringList folders = dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot);
 
-        if (pair.second.contains(" - ")) {
-            QStringList parts = pair.second.split(" - ");
-            item->setText(1, parts.value(0));
-            item->setText(2, parts.value(1));
-            item->setText(3, parts.value(2));
-        } else {
-            item->setText(1, pair.second);
-            item->setText(2, "");
-            item->setText(3, "");
-        }
+    // QRegularExpression versionRegex("^v(\\d+)\\.(\\d+)\\.(\\d+)$");
 
-        if (fullPath == savedVersionPath) {
-            item->setCheckState(0, Qt::Checked);
-        }
-    }
+    // QVector<QPair<QVector<int>, QString>> versionedDirs;
+
+    // QStringList otherDirs;
+    // QString savedVersionPath = m_gui_settings->GetValue(gui::vm_versionSelected).toString();
+
+    // for (const QString& folder : folders) {
+    //     if (folder == "Pre-release") {
+    //         otherDirs.append(folder);
+    //         continue;
+    //     }
+    //     QRegularExpressionMatch match = versionRegex.match(folder.section(" - ", 0, 0));
+    //     if (match.hasMatch()) {
+    //         QVector<int> versionParts = {match.captured(1).toInt(), match.captured(2).toInt(),
+    //                                      match.captured(3).toInt()};
+    //         versionedDirs.append({versionParts, folder});
+    //     } else {
+    //         otherDirs.append(folder);
+    //     }
+    // }
+
+    // std::sort(otherDirs.begin(), otherDirs.end());
+
+    // std::sort(versionedDirs.begin(), versionedDirs.end(), [](const auto& a, const auto& b) {
+    //     if (a.first[0] != b.first[0])
+    //         return a.first[0] > b.first[0];
+    //     if (a.first[1] != b.first[1])
+    //         return a.first[1] > b.first[1];
+    //     return a.first[2] > b.first[2];
+    // });
+
+    // // Add (Pre-release, Test Build...)
+    // for (const QString& folder : otherDirs) {
+    //     QTreeWidgetItem* item = new QTreeWidgetItem(ui->installedTreeWidget);
+    //     QString fullPath = QDir(path).filePath(folder);
+    //     item->setText(4, fullPath);
+    //     item->setCheckState(0, Qt::Unchecked);
+
+    //     if (folder.startsWith("Pre-release-shadPS4")) {
+    //         QStringList parts = folder.split('-');
+    //         item->setText(1, "Pre-release");
+    //         QString shortHash;
+    //         if (parts.size() >= 7) {
+    //             shortHash = parts[6].left(7);
+    //         } else {
+    //             shortHash = "";
+    //         }
+    //         item->setText(2, shortHash);
+    //         if (parts.size() >= 6) {
+    //             QString date = QString("%1-%2-%3").arg(parts[3], parts[4], parts[5]);
+    //             item->setText(3, date);
+    //         } else {
+    //             item->setText(3, "");
+    //         }
+    //     } else if (folder.contains(" - ")) {
+    //         QStringList parts = folder.split(" - ");
+    //         item->setText(1, parts.value(0));
+    //         item->setText(2, parts.value(1));
+    //         item->setText(3, parts.value(2));
+    //     } else {
+    //         item->setText(1, folder);
+    //         item->setText(2, "");
+    //         item->setText(3, "");
+    //     }
+
+    //     if (fullPath == savedVersionPath) {
+    //         item->setCheckState(0, Qt::Checked);
+    //     }
+    // }
+
+    // // Add versions
+    // for (const auto& pair : versionedDirs) {
+    //     QTreeWidgetItem* item = new QTreeWidgetItem(ui->installedTreeWidget);
+    //     QString fullPath = QDir(path).filePath(pair.second);
+    //     item->setText(4, fullPath);
+    //     item->setCheckState(0, Qt::Unchecked);
+
+    //     if (pair.second.contains(" - ")) {
+    //         QStringList parts = pair.second.split(" - ");
+    //         item->setText(1, parts.value(0));
+    //         item->setText(2, parts.value(1));
+    //         item->setText(3, parts.value(2));
+    //     } else {
+    //         item->setText(1, pair.second);
+    //         item->setText(2, "");
+    //         item->setText(3, "");
+    //     }
+
+    //     if (fullPath == savedVersionPath) {
+    //         item->setCheckState(0, Qt::Checked);
+    //     }
+    // }
+
     ui->installedTreeWidget->resizeColumnToContents(0);
     ui->installedTreeWidget->resizeColumnToContents(1);
     ui->installedTreeWidget->resizeColumnToContents(2);

@@ -283,6 +283,8 @@ set(COMMON src/common/logging/backend.cpp
            src/common/bounded_threadsafe_queue.h
            src/common/config.cpp
            src/common/config.h
+           src/common/versions.cpp
+           src/common/versions.h
            src/common/endian.h
            src/common/enum.h
            src/common/io_file.cpp
