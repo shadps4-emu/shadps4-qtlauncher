@@ -1294,15 +1294,58 @@ tr("No emulator version was selected.\nThe Version Manager menu will then open.\
     m_ipc_client->setActiveController(GamepadSelect::GetSelectedGamepad());
 }
 
-void MainWindow::StartEmulatorExecutable(std::filesystem::path path, QStringList args) {
+void MainWindow::StartEmulatorExecutable(std::filesystem::path emuPath, QString gameArg,
+                                         QStringList args) {
     if (Config::getGameRunning()) {
         QMessageBox::critical(nullptr, tr("Run Emulator"),
                               QString(tr("Emulator is already running!")));
         return;
     }
 
+    bool gameFound = false;
+    if (std::filesystem::exists(Common::FS::PathFromQString(gameArg))) {
+        last_game_path = Common::FS::PathFromQString(gameArg);
+        gameFound = true;
+    } else {
+        // In install folders, find game folder with same name as gameArg
+        const auto install_dir_array = Config::getGameInstallDirs();
+        std::vector<bool> install_dirs_enabled;
+
+        try {
+            install_dirs_enabled = Config::getGameInstallDirsEnabled();
+        } catch (...) {
+            // If it does not exist, assume that all are enabled.
+            install_dirs_enabled.resize(install_dir_array.size(), true);
+        }
+
+        for (size_t i = 0; i < install_dir_array.size(); i++) {
+            std::filesystem::path dir = install_dir_array[i];
+            bool enabled = install_dirs_enabled[i];
+
+            if (enabled && std::filesystem::exists(dir)) {
+                for (const auto& entry : std::filesystem::directory_iterator(dir)) {
+                    if (entry.is_directory()) {
+                        if (entry.path().filename().string() == gameArg.toStdString()) {
+                            last_game_path = entry.path() / "eboot.bin";
+                            gameFound = true;
+                            break;
+                        }
+                    }
+                }
+            }
+
+            if (gameFound)
+                break;
+        }
+    }
+
+    if (!gameFound) {
+        QMessageBox::critical(nullptr, "shadPS4", QString(tr("Invalid game argument provided")));
+        return;
+    }
+
     Config::setGameRunning(true);
-    QFileInfo fileInfo(path);
+    QFileInfo fileInfo(emuPath);
     if (!fileInfo.exists()) {
         QMessageBox::critical(nullptr, "shadPS4",
                               QString(tr("Could not find the emulator executable")));
@@ -1310,10 +1353,11 @@ void MainWindow::StartEmulatorExecutable(std::filesystem::path path, QStringList
         return;
     }
 
-    QString workDir = QDir::currentPath();
+    QStringList final_args{"--game", QString::fromStdWString(last_game_path.wstring())};
+    final_args.append(args);
 
-    m_ipc_client->startEmulator(fileInfo, args, workDir);
-    m_ipc_client->setActiveController(GamepadSelect::GetSelectedGamepad());
+    QString workDir = QDir::currentPath();
+    m_ipc_client->startEmulator(fileInfo, final_args, workDir);
 }
 
 void MainWindow::RunGame() {

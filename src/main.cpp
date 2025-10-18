@@ -38,6 +38,7 @@ int main(int argc, char* argv[]) {
     bool show_gui = false;
     std::string emulator;
     QStringList emulator_args{};
+    QString game_arg = "";
 
     // Ignore Qt logs
     qInstallMessageHandler(customMessageHandler);
@@ -52,6 +53,7 @@ int main(int argc, char* argv[]) {
                     "  No arguments: Opens the GUI.\n"
                     "  -e, --emulator <name|path>    Specify the emulator version/path you want to "
                     "use, or 'default' for using the version selected in the config.\n"
+                    "  -g, --game <ID|path>          Specify game to launch.\n"
                     "  -d                            Alias for '-e default'.\n"
                     " -- ...                         Parameters passed to the emulator core. "
                     "Needs to be at the end of the line, and everything after '--' is an "
@@ -64,14 +66,23 @@ int main(int argc, char* argv[]) {
 
         {"-s", [&](int&) { show_gui = true; }},
         {"--show-gui", [&](int& i) { arg_map["-s"](i); }},
-
+        {"-g",
+         [&](int& i) {
+             if (i + 1 < argc) {
+                 game_arg = argv[++i];
+             } else {
+                 std::cerr << "Error: Missing argument for -g/--game\n";
+                 exit(1);
+             }
+         }},
+        {"--game", [&](int& i) { arg_map["-g"](i); }},
         {"-e",
          [&](int& i) {
              if (i + 1 < argc) {
                  emulator = argv[++i];
                  has_emulator_argument = true;
              } else {
-                 std::cerr << "Error: Missing argument for -g/--game\n";
+                 std::cerr << "Error: Missing argument for -e/--emulator\n";
                  exit(1);
              }
          }},
@@ -155,7 +166,7 @@ int main(int argc, char* argv[]) {
         if (!show_gui) {
             m_main_window->m_ipc_client->gameClosedFunc = StopProgram;
         }
-        m_main_window->StartEmulatorExecutable(emulator_path, emulator_args);
+        m_main_window->StartEmulatorExecutable(emulator_path, game_arg, emulator_args);
     }
 
     if (!has_emulator_argument || show_gui) {

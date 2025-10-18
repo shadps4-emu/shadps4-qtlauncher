@@ -11,7 +11,7 @@
 #include <QMessageBox>
 #include <QTreeWidgetItem>
 
-#include <qt_gui/background_music_player.h>
+#include "background_music_player.h"
 #include "cheats_patches.h"
 #include "common/config.h"
 #include "common/log_analyzer.h"
@@ -19,6 +19,7 @@
 #include "common/path_util.h"
 #include "common/scm_rev.h"
 #include "compatibility_info.h"
+#include "create_shortcut.h"
 #include "game_info.h"
 #include "gui_settings.h"
 #include "ipc/ipc_client.h"
@@ -26,6 +27,11 @@
 #include "trophy_viewer.h"
 
 #ifdef Q_OS_WIN
+#include <ShlObj.h>
+#include <Windows.h>
+#include <objbase.h>
+#include <shlguid.h>
+#include <shobjidl.h>
 #include <wrl/client.h>
 #endif
 
@@ -113,7 +119,15 @@ public:
         QAction openCheats(tr("Cheats / Patches"), widget);
         QAction openTrophyViewer(tr("Trophy Viewer"), widget);
         QAction openSfoViewer(tr("SFO Viewer"), widget);
+        QAction createDefaultShortcut(tr("Create Shortcut for Selected Emulator Version"), widget);
+        QAction createVersionShortcut(tr("Create Shortcut for Specified Emulator Version"), widget);
 
+#ifndef Q_OS_APPLE
+        QMenu* shortcutMenu = new QMenu(tr("Create Shortcut"), widget);
+        menu.addMenu(shortcutMenu);
+        shortcutMenu->addAction(&createDefaultShortcut);
+        shortcutMenu->addAction(&createVersionShortcut);
+#endif
         menu.addAction(toggleFavorite);
         menu.addAction(&openCheats);
         menu.addAction(&openTrophyViewer);
@@ -446,6 +460,20 @@ public:
             }
         }
 
+        if (selected == &createDefaultShortcut) {
+            requestShortcut(m_games[itemID]);
+        }
+
+        if (selected == &createVersionShortcut) {
+            auto shortcutWindow = new ShortcutDialog(m_gui_settings);
+
+            QObject::connect(
+                shortcutWindow, &ShortcutDialog::shortcutRequested, this,
+                [=, this](QString version) { requestShortcut(m_games[itemID], version); });
+
+            shortcutWindow->exec();
+        }
+
         // Handle the "Copy" actions
         if (selected == copyName) {
             QClipboard* clipboard = QGuiApplication::clipboard();
@@ -651,4 +679,170 @@ public:
         }
         return -1;
     }
+
+private:
+    void requestShortcut(const GameInfo& selectedInfo, QString emuPath = "") {
+        // Path to shortcut/link
+        QString linkPath;
+
+        // Eboot path
+        QString targetPath;
+        Common::FS::PathToQString(targetPath, selectedInfo.path);
+        QString ebootPath = targetPath + "/eboot.bin";
+
+        // Get the full path to the icon
+        QString iconPath;
+        Common::FS::PathToQString(iconPath, selectedInfo.icon_path);
+        QFileInfo iconFileInfo(iconPath);
+        QString icoPath = iconFileInfo.absolutePath() + "/" + iconFileInfo.baseName() + ".ico";
+
+        QString exePath;
+#ifdef Q_OS_WIN
+        linkPath = QStandardPaths::writableLocation(QStandardPaths::DesktopLocation) + "/" +
+                   QString::fromStdString(selectedInfo.name)
+                       .remove(QRegularExpression("[\\\\/:*?\"<>|]")) +
+                   ".lnk";
+
+        exePath = QCoreApplication::applicationFilePath().replace("\\", "/");
+#else
+        linkPath = QStandardPaths::writableLocation(QStandardPaths::DesktopLocation) + "/" +
+                   QString::fromStdString(selectedInfo.name)
+                       .remove(QRegularExpression("[\\\\/:*?\"<>|]")) +
+                   ".desktop";
+#endif
+
+        // Convert the icon to .ico if necessary
+        if (iconFileInfo.suffix().toLower() == "png") {
+            // Convert icon from PNG to ICO
+            if (convertPngToIco(iconPath, icoPath)) {
+
+#ifdef Q_OS_WIN
+                if (createShortcutWin(linkPath, ebootPath, icoPath, exePath, emuPath)) {
+#else
+                if (createShortcutLinux(linkPath, selectedInfo.name, ebootPath, iconPath,
+                                        emuPath)) {
+#endif
+                    QMessageBox::information(
+                        nullptr, tr("Shortcut creation"),
+                        QString(tr("Shortcut created successfully!") + "\n%1").arg(linkPath));
+                } else {
+                    QMessageBox::critical(
+                        nullptr, tr("Error"),
+                        QString(tr("Error creating shortcut!") + "\n%1").arg(linkPath));
+                }
+            } else {
+                QMessageBox::critical(nullptr, tr("Error"), tr("Failed to convert icon."));
+            }
+
+            // If the icon is already in ICO format, we just create the shortcut
+        } else {
+#ifdef Q_OS_WIN
+            if (createShortcutWin(linkPath, ebootPath, iconPath, exePath, emuPath)) {
+#else
+            if (createShortcutLinux(linkPath, selectedInfo.name, ebootPath, iconPath, emuPath)) {
+#endif
+                QMessageBox::information(
+                    nullptr, tr("Shortcut creation"),
+                    QString(tr("Shortcut created successfully!") + "\n%1").arg(linkPath));
+            } else {
+                QMessageBox::critical(
+                    nullptr, tr("Error"),
+                    QString(tr("Error creating shortcut!") + "\n%1").arg(linkPath));
+            }
+        }
+    }
+
+    bool convertPngToIco(const QString& pngFilePath, const QString& icoFilePath) {
+        // Load the PNG image
+        QImage image(pngFilePath);
+        if (image.isNull()) {
+            return false;
+        }
+
+        // Scale the image to the default icon size (256x256 pixels)
+        QImage scaledImage =
+            image.scaled(QSize(256, 256), Qt::KeepAspectRatio, Qt::SmoothTransformation);
+
+        // Convert the image to QPixmap
+        QPixmap pixmap = QPixmap::fromImage(scaledImage);
+
+        // Save the pixmap as an ICO file
+        if (pixmap.save(icoFilePath, "ICO")) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+#ifdef Q_OS_WIN
+    bool createShortcutWin(const QString& linkPath, const QString& targetPath,
+                           const QString& iconPath, const QString& exePath, QString emuPath) {
+        CoInitializeEx(nullptr, COINIT_APARTMENTTHREADED);
+
+        // Create the ShellLink object
+        Microsoft::WRL::ComPtr<IShellLink> pShellLink;
+        HRESULT hres = CoCreateInstance(CLSID_ShellLink, nullptr, CLSCTX_INPROC_SERVER,
+                                        IID_PPV_ARGS(&pShellLink));
+        if (SUCCEEDED(hres)) {
+            // Defines the path to the program executable
+            pShellLink->SetPath((LPCWSTR)exePath.utf16());
+
+            // Sets the home directory ("Start in")
+            pShellLink->SetWorkingDirectory((LPCWSTR)QFileInfo(exePath).absolutePath().utf16());
+
+            // Set arguments, eboot.bin file location
+
+            QString arguments;
+
+            if (emuPath == "") {
+                arguments = QString("-d -g \"%1\"").arg(targetPath);
+            } else {
+                arguments = QString("-e \"%1\" -g \"%2\"").arg(emuPath, targetPath);
+            }
+            pShellLink->SetArguments((LPCWSTR)arguments.utf16());
+
+            // Set the icon for the shortcut
+            pShellLink->SetIconLocation((LPCWSTR)iconPath.utf16(), 0);
+
+            // Save the shortcut
+            Microsoft::WRL::ComPtr<IPersistFile> pPersistFile;
+            hres = pShellLink.As(&pPersistFile);
+            if (SUCCEEDED(hres)) {
+                hres = pPersistFile->Save((LPCWSTR)linkPath.utf16(), TRUE);
+            }
+        }
+
+        CoUninitialize();
+
+        return SUCCEEDED(hres);
+    }
+#else
+    bool createShortcutLinux(const QString& linkPath, const std::string& name,
+                             const QString& targetPath, const QString& iconPath, QString emuPath) {
+        QFile shortcutFile(linkPath);
+        if (!shortcutFile.open(QIODevice::WriteOnly | QIODevice::Text)) {
+            QMessageBox::critical(nullptr, "Error",
+                                  QString("Error creating shortcut!\n %1").arg(linkPath));
+            return false;
+        }
+
+        QTextStream out(&shortcutFile);
+        out << "[Desktop Entry]\n";
+        out << "Version=1.0\n";
+        out << "Name=" << QString::fromStdString(name) << "\n";
+        if (emuPath == "") {
+            out << "Exec=" << QCoreApplication::applicationFilePath() << " -d -g" << " \""
+                << targetPath << "\"\n";
+        } else {
+            out << "Exec=" << QCoreApplication::applicationFilePath() << " -e" << " \"" << emuPath
+                << "\"" << " -g" << " \"" << targetPath << "\"\n";
+        }
+        out << "Icon=" << iconPath << "\n";
+        out << "Terminal=false\n";
+        out << "Type=Application\n";
+        shortcutFile.close();
+
+        return true;
+    }
+#endif
 };
