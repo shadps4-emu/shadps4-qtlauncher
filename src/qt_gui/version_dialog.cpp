@@ -112,7 +112,7 @@ VersionDialog::VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget
         version_name = version_name.trimmed();
 
         if (std::find_if(version_list.cbegin(), version_list.cend(), [version_name](auto i) {
-                return i.name == version_name;
+                return i.name == version_name.toStdString();
             }) != version_list.cend()) {
             QMessageBox::warning(this, tr("Error"), tr("A version with that name already exists."));
             return;
