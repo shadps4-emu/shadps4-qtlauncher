@@ -26,4 +26,6 @@ struct Version {
 
 std::vector<Version> GetVersionList(std::filesystem::path const& path = "");
 
+void AddNewVersion(Version const& v, std::filesystem::path const& path = "");
+
 }

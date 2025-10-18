@@ -30,6 +30,8 @@ VersionDialog::VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget
     : QDialog(parent), ui(new Ui::VersionDialog), m_gui_settings(std::move(gui_settings)) {
     ui->setupUi(this);
 
+    auto const& version_list = VersionManager::GetVersionList();
+
     ui->checkOnStartupCheckBox->setChecked(
         m_gui_settings->GetValue(gui::vm_checkOnStartup).toBool());
     ui->showChangelogCheckBox->setChecked(m_gui_settings->GetValue(gui::vm_showChangeLog).toBool());
@@ -82,7 +84,7 @@ VersionDialog::VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget
     connect(ui->checkChangesVersionButton, &QPushButton::clicked, this,
             [this]() { LoadInstalledList(); });
 
-    connect(ui->addCustomVersionButton, &QPushButton::clicked, this, [this]() {
+    connect(ui->addCustomVersionButton, &QPushButton::clicked, this, [this, version_list]() {
         QString exePath;
 
 #ifdef Q_OS_WIN
@@ -90,46 +92,40 @@ VersionDialog::VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget
                                                tr("Executable (*.exe)"));
 #elif defined(Q_OS_LINUX)
     exePath = QFileDialog::getOpenFileName(this, tr("Select executable"), QDir::rootPath(),
-                                            tr("Executable (*.AppImage)"));
+                                            "Executable (*)");
 #elif defined(Q_OS_MACOS)
     exePath = QFileDialog::getOpenFileName(this, tr("Select executable"), QDir::rootPath(),
-                                            tr("Executable (*.*)"));
+                                            "Executable (*.*)");
 #endif
 
         if (exePath.isEmpty())
             return;
 
         bool ok;
-        QString folderName =
+        QString version_name =
             QInputDialog::getText(this, tr("Version name"),
                                   tr("Enter the name of this version as it appears in the list."),
                                   QLineEdit::Normal, "", &ok);
-        if (!ok || folderName.trimmed().isEmpty())
+        if (!ok || version_name.trimmed().isEmpty())
             return;
 
-        folderName = folderName.trimmed();
+        version_name = version_name.trimmed();
 
-        QString basePath = m_gui_settings->GetValue(gui::vm_versionPath).toString();
-        QString newFolderPath = QDir(basePath).filePath(folderName);
-
-        QDir dir;
-        if (dir.exists(newFolderPath)) {
-            QMessageBox::warning(this, tr("Error"), tr("A folder with that name already exists."));
+        if (std::find_if(version_list.cbegin(), version_list.cend(), [version_name](auto i) {
+                return i.name == version_name;
+            }) != version_list.cend()) {
+            QMessageBox::warning(this, tr("Error"), tr("A version with that name already exists."));
             return;
         }
 
-        if (!dir.mkpath(newFolderPath)) {
-            QMessageBox::critical(this, tr("Error"), tr("Failed to create folder."));
-            return;
-        }
-
-        QFileInfo exeInfo(exePath);
-        QString targetFilePath = QDir(newFolderPath).filePath(exeInfo.fileName());
-
-        if (!QFile::copy(exePath, targetFilePath)) {
-            QMessageBox::critical(this, tr("Error"), tr("Failed to copy executable."));
-            return;
-        }
+        VersionManager::Version new_version = {
+            .name = version_name.toStdString(),
+            .path = exePath.toStdString(),
+            .date = QDateTime::currentDateTime().toString("yyyy.MM.dd. HH:mm").toStdString(),
+            .codename = "",
+            .type = VersionManager::VersionType::Custom,
+        };
+        VersionManager::AddNewVersion(new_version);
 
         QMessageBox::information(this, tr("Success"), tr("Version added successfully."));
         LoadInstalledList();
@@ -551,7 +547,8 @@ void VersionDialog::LoadInstalledList() {
 
     const auto path = Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "versions.toml";
     auto versions = VersionManager::GetVersionList(path);
-    auto const& selected_version = m_gui_settings->GetValue(gui::vm_versionSelected).toString().toStdString();
+    auto const& selected_version =
+        m_gui_settings->GetValue(gui::vm_versionSelected).toString().toStdString();
 
     ui->installedTreeWidget->clear();
     ui->installedTreeWidget->setColumnCount(5);
