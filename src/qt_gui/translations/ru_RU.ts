@@ -711,19 +711,19 @@
     </message>
     <message>
       <source>Directory with your dumped games</source>
-      <translation>Путь к папке с извлечёнными играми</translation>
+      <translation>Каталог с извлечёнными играми</translation>
     </message>
     <message>
       <source>Directory with your dumped DLC&apos;s</source>
-      <translation type="unfinished">Directory with your dumped DLC&apos;s</translation>
+      <translation>Каталог с извлечёнными DLC</translation>
     </message>
     <message>
       <source>Directory with games</source>
-      <translation type="unfinished">Directory with games</translation>
+      <translation>Каталог с играми</translation>
     </message>
     <message>
       <source>Directory with DLC&apos;s</source>
-      <translation type="unfinished">Directory with DLC&apos;s</translation>
+      <translation>Каталог с DLC</translation>
     </message>
   </context>
   <context>
@@ -1052,15 +1052,15 @@
     </message>
     <message>
       <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
-      <translation type="unfinished">Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</translation>
+      <translation>Не удалось отправить отчёт, потому что последний лог игры не прошёл следующую проверку, и поэтому отчёт является неверным:</translation>
     </message>
     <message>
       <source>Ok</source>
-      <translation type="unfinished">Ok</translation>
+      <translation>Ok</translation>
     </message>
     <message>
       <source>Info</source>
-      <translation type="unfinished">Info</translation>
+      <translation>Инфо</translation>
     </message>
   </context>
   <context>
