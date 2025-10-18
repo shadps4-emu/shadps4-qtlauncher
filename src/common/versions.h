@@ -24,6 +24,6 @@ struct Version {
     VersionType type;
 };
 
-std::vector<Version> GetVersionList(std::filesystem::path const& path);
+std::vector<Version> GetVersionList(std::filesystem::path const& path = "");
 
 }
