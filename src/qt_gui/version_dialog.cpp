@@ -529,7 +529,7 @@ tr("First you need to choose a location to save the versions in\n'Path to save v
                                             fullPath.toStdString()};
                                     VersionManager::Version new_version{
                                         .name = versionName.toStdString(),
-                                        .path = exe_path,
+                                        .path = exe_path.generic_string(),
                                         .date = release["published_at"]
                                                     .toString()
                                                     .left(10)
