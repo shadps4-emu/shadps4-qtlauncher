@@ -1696,6 +1696,14 @@ Selecciona una versió del panell dret.</translation>
       <source>Could not find the emulator executable</source>
       <translation>No s'ha pogut trobar l'executable de l'emulador</translation>
     </message>
+    <message>
+      <source>Run Emulator</source>
+      <translation type="unfinished">Run Emulator</translation>
+    </message>
+    <message>
+      <source>Emulator is already running!</source>
+      <translation type="unfinished">Emulator is already running!</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
