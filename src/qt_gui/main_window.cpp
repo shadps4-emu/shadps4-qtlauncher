@@ -1269,16 +1269,7 @@ tr("No emulator version was selected.\nThe Version Manager menu will then open.\
     Config::setGameRunning(true);
     last_game_path = path;
 
-    QString exeName;
-#ifdef Q_OS_WIN
-    exeName = "/shadPS4.exe";
-#elif defined(Q_OS_LINUX)
-    exeName = "/Shadps4-sdl.AppImage";
-#elif defined(Q_OS_MACOS)
-    exeName = "/shadps4";
-#endif
-    QString exe = selectedVersion + exeName;
-    QFileInfo fileInfo(exe);
+    QFileInfo fileInfo(selectedVersion);
     if (!fileInfo.exists()) {
         QMessageBox::critical(nullptr, "shadPS4",
                               QString(tr("Could not find the emulator executable")));
