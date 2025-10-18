@@ -7,6 +7,7 @@
 #include <vector>
 #include <filesystem>
 #include <toml.hpp>
+#include "types.h"
 
 namespace VersionManager {
 
@@ -22,10 +23,13 @@ struct Version {
     std::string date;
     std::string codename;
     VersionType type;
+    s32 id;
 };
 
 std::vector<Version> GetVersionList(std::filesystem::path const& path = "");
 
 void AddNewVersion(Version const& v, std::filesystem::path const& path = "");
+void RemoveVersion(Version const& v, std::filesystem::path const& path = "");
+void RemoveVersion(std::string const& v, std::filesystem::path const& path = "");
 
 }
