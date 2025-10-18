@@ -1697,11 +1697,11 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
     </message>
     <message>
       <source>Run Emulator</source>
-      <translation type="unfinished">Run Emulator</translation>
+      <translation>Emulator starten</translation>
     </message>
     <message>
       <source>Emulator is already running!</source>
-      <translation type="unfinished">Emulator is already running!</translation>
+      <translation>Emulator läuft bereits!</translation>
     </message>
   </context>
   <context>
