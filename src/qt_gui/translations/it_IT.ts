@@ -1696,6 +1696,14 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
       <source>Could not find the emulator executable</source>
       <translation>Impossibile trovare l'eseguibile dell'emulatore</translation>
     </message>
+    <message>
+      <source>Run Emulator</source>
+      <translation>Esegui Emulatore</translation>
+    </message>
+    <message>
+      <source>Emulator is already running!</source>
+      <translation>L'emulatore è già in esecuzione!</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>

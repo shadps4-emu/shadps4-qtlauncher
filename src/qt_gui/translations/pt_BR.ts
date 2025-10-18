@@ -1696,6 +1696,14 @@ Selecione uma versão do emulador no painel direito.</translation>
       <source>Could not find the emulator executable</source>
       <translation>Não foi possível encontrar o executável do emulador</translation>
     </message>
+    <message>
+      <source>Run Emulator</source>
+      <translation type="unfinished">Run Emulator</translation>
+    </message>
+    <message>
+      <source>Emulator is already running!</source>
+      <translation type="unfinished">Emulator is already running!</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
