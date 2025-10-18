@@ -795,9 +795,9 @@ private:
             QString arguments;
 
             if (emuPath == "") {
-                arguments = QString("-d -- -g \"%1\"").arg(targetPath);
+                arguments = QString("-d -g \"%1\"").arg(targetPath);
             } else {
-                arguments = QString("-e \"%1\" -- -g \"%2\"").arg(emuPath, targetPath);
+                arguments = QString("-e \"%1\" -g \"%2\"").arg(emuPath, targetPath);
             }
             pShellLink->SetArguments((LPCWSTR)arguments.utf16());
 
@@ -831,11 +831,11 @@ private:
         out << "Version=1.0\n";
         out << "Name=" << QString::fromStdString(name) << "\n";
         if (emuPath == "") {
-            out << "Exec=" << QCoreApplication::applicationFilePath() << " -d -- -g" << " \""
+            out << "Exec=" << QCoreApplication::applicationFilePath() << " -d -g" << " \""
                 << targetPath << "\"\n";
         } else {
             out << "Exec=" << QCoreApplication::applicationFilePath() << " -e" << " \"" << emuPath
-                << "\"" << " -- -g" << " \"" << targetPath << "\"\n";
+                << "\"" << " -g" << " \"" << targetPath << "\"\n";
         }
         out << "Icon=" << iconPath << "\n";
         out << "Terminal=false\n";
