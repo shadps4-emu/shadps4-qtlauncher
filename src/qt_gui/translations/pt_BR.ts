@@ -614,16 +614,8 @@
       <translation type="unfinished">Min Deadzone (def:2 max:127)</translation>
     </message>
     <message>
-      <source>2</source>
-      <translation type="unfinished">2</translation>
-    </message>
-    <message>
       <source>Max Deadzone (def:127 max:127)</source>
       <translation type="unfinished">Max Deadzone (def:127 max:127)</translation>
-    </message>
-    <message>
-      <source>127</source>
-      <translation type="unfinished">127</translation>
     </message>
     <message>
       <source>Right Stick Deadzone</source>
@@ -706,10 +698,6 @@
       <translation>shadPS4 - Escolha de diretório</translation>
     </message>
     <message>
-      <source>Directory to install games</source>
-      <translation>Diretório onde os jogos serão instalados</translation>
-    </message>
-    <message>
       <source>Browse</source>
       <translation>Procurar</translation>
     </message>
@@ -718,12 +706,24 @@
       <translation>Erro</translation>
     </message>
     <message>
-      <source>Directory to install DLC</source>
-      <translation>Diretório para instalar DLC</translation>
-    </message>
-    <message>
       <source>Directory to install emulator versions</source>
       <translation>Diretório para instalar as versões do emulador</translation>
+    </message>
+    <message>
+      <source>Directory with your dumped games</source>
+      <translation type="unfinished">Directory with your dumped games</translation>
+    </message>
+    <message>
+      <source>Directory with your dumped DLC&apos;s</source>
+      <translation type="unfinished">Directory with your dumped DLC&apos;s</translation>
+    </message>
+    <message>
+      <source>Directory with games</source>
+      <translation type="unfinished">Directory with games</translation>
+    </message>
+    <message>
+      <source>Directory with DLC&apos;s</source>
+      <translation type="unfinished">Directory with DLC&apos;s</translation>
     </message>
   </context>
   <context>
@@ -1049,6 +1049,18 @@
     <message>
       <source>Launch with default settings</source>
       <translation>Iniciar com as configurações padrão</translation>
+    </message>
+    <message>
+      <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
+      <translation type="unfinished">Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</translation>
+    </message>
+    <message>
+      <source>Ok</source>
+      <translation type="unfinished">Ok</translation>
+    </message>
+    <message>
+      <source>Info</source>
+      <translation type="unfinished">Info</translation>
     </message>
   </context>
   <context>
@@ -1708,10 +1720,6 @@ Selecione uma versão do emulador no painel direito.</translation>
       <translation>Aba padrão ao abrir as configurações</translation>
     </message>
     <message>
-      <source>Show Game Size In List</source>
-      <translation>Mostrar Tamanho do Jogo na Lista</translation>
-    </message>
-    <message>
       <source>Enable Discord Rich Presence</source>
       <translation>Ativar Discord Rich Presence</translation>
     </message>
@@ -2314,10 +2322,6 @@ Selecione uma versão do emulador no painel direito.</translation>
     <message>
       <source>Default tab when opening settings:\nChoose which tab will open, the default is General.</source>
       <translation>Aba padrão ao abrir as configurações:\nEscolher qual aba irá abrir, o padrão é Geral.</translation>
-    </message>
-    <message>
-      <source>Show Game Size In List:\nThere is the size of the game in the list.</source>
-      <translation>Mostrar tamanho do jogo na lista:\nExibe o tamanho dos arquivos dos jogos na lista.</translation>
     </message>
     <message>
       <source>Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</source>

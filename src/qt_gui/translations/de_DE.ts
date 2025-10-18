@@ -606,27 +606,19 @@ Einzigartige Inputs können nicht öfters als einmal gebunden werden. Input-Dupl
     </message>
     <message>
       <source>Left Stick Deadzone</source>
-      <translation type="unfinished">Left Stick Deadzone</translation>
+      <translation>Totzone linker Stick</translation>
     </message>
     <message>
       <source>Min Deadzone (def:2 max:127)</source>
-      <translation type="unfinished">Min Deadzone (def:2 max:127)</translation>
-    </message>
-    <message>
-      <source>2</source>
-      <translation type="unfinished">2</translation>
+      <translation>Min. Totzone (Standard:2 Max:127)</translation>
     </message>
     <message>
       <source>Max Deadzone (def:127 max:127)</source>
-      <translation type="unfinished">Max Deadzone (def:127 max:127)</translation>
-    </message>
-    <message>
-      <source>127</source>
-      <translation type="unfinished">127</translation>
+      <translation>Max. Totzone (Standard:127 Max:127)</translation>
     </message>
     <message>
       <source>Right Stick Deadzone</source>
-      <translation type="unfinished">Right Stick Deadzone</translation>
+      <translation>Totzone rechter Stick</translation>
     </message>
   </context>
   <context>
@@ -705,10 +697,6 @@ Einzigartige Inputs können nicht öfters als einmal gebunden werden. Input-Dupl
       <translation>shadPS4 - Wähle Ordner</translation>
     </message>
     <message>
-      <source>Directory to install games</source>
-      <translation>Installationsverzeichnis für Spiele</translation>
-    </message>
-    <message>
       <source>Browse</source>
       <translation>Durchsuchen</translation>
     </message>
@@ -717,12 +705,24 @@ Einzigartige Inputs können nicht öfters als einmal gebunden werden. Input-Dupl
       <translation>Fehler</translation>
     </message>
     <message>
-      <source>Directory to install DLC</source>
-      <translation>Verzeichnis zum Installieren von DLC</translation>
-    </message>
-    <message>
       <source>Directory to install emulator versions</source>
       <translation>Verzeichnis für die Installation der Emulator-Versionen</translation>
+    </message>
+    <message>
+      <source>Directory with your dumped games</source>
+      <translation>Verzeichnis mit den gedumpten Spielen</translation>
+    </message>
+    <message>
+      <source>Directory with your dumped DLC&apos;s</source>
+      <translation>Verzeichnis mit den gedumpten DLCs</translation>
+    </message>
+    <message>
+      <source>Directory with games</source>
+      <translation>Verzeichnis mit Spielen</translation>
+    </message>
+    <message>
+      <source>Directory with DLC&apos;s</source>
+      <translation>Verzeichnis mit DLCs</translation>
     </message>
   </context>
   <context>
@@ -1048,6 +1048,18 @@ Einzigartige Inputs können nicht öfters als einmal gebunden werden. Input-Dupl
     <message>
       <source>Launch with default settings</source>
       <translation>Starte mit Standardeinstellungen</translation>
+    </message>
+    <message>
+      <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
+      <translation>Dieser Bericht kann nicht eingereicht werden, da das neueste Protokoll für dieses Spiel an der folgenden Überprüfung gescheitert ist und daher der Bericht ungültig wäre:</translation>
+    </message>
+    <message>
+      <source>Ok</source>
+      <translation>OK</translation>
+    </message>
+    <message>
+      <source>Info</source>
+      <translation>Info</translation>
     </message>
   </context>
   <context>
@@ -1707,10 +1719,6 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
       <translation>Standardregisterkarte beim Öffnen der Einstellungen</translation>
     </message>
     <message>
-      <source>Show Game Size In List</source>
-      <translation>Zeige Spielgröße in der Liste</translation>
-    </message>
-    <message>
       <source>Enable Discord Rich Presence</source>
       <translation>Discord Rich Presence aktivieren</translation>
     </message>
@@ -2317,10 +2325,6 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
     <message>
       <source>Default tab when opening settings:\nChoose which tab will open, the default is General.</source>
       <translation>Standard-Tab beim Öffnen der Einstellungen:\nWählen welcher Tab geöffnet werden soll, die Standardauswahl ist Allgemein.</translation>
-    </message>
-    <message>
-      <source>Show Game Size In List:\nThere is the size of the game in the list.</source>
-      <translation>Zeige Spielgröße in der Liste:\nÄndert die Größe der Spiele in der Liste.</translation>
     </message>
     <message>
       <source>Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</source>
