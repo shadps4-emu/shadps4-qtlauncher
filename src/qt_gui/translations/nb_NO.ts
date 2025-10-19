@@ -1696,6 +1696,14 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <source>Could not find the emulator executable</source>
       <translation>Fant ikke emulator-programfila</translation>
     </message>
+    <message>
+      <source>Run Emulator</source>
+      <translation>Start emulator</translation>
+    </message>
+    <message>
+      <source>Emulator is already running!</source>
+      <translation>Emulatoren kjører allerede!</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>

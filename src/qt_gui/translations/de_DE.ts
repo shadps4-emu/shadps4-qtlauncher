@@ -1695,6 +1695,14 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
       <source>Could not find the emulator executable</source>
       <translation>Konnte die Emulator-Datei nicht finden</translation>
     </message>
+    <message>
+      <source>Run Emulator</source>
+      <translation>Emulator starten</translation>
+    </message>
+    <message>
+      <source>Emulator is already running!</source>
+      <translation>Emulator läuft bereits!</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>

@@ -1696,6 +1696,14 @@ Selecciona una versió del panell dret.</translation>
       <source>Could not find the emulator executable</source>
       <translation>No s'ha pogut trobar l'executable de l'emulador</translation>
     </message>
+    <message>
+      <source>Run Emulator</source>
+      <translation>Executa l'emulador</translation>
+    </message>
+    <message>
+      <source>Emulator is already running!</source>
+      <translation>L'emulador ja està en funcionament!</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -2457,7 +2465,7 @@ Selecciona una versió del panell dret.</translation>
     </message>
     <message>
       <source>Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Activa la validació de sincronització:\nActiva un sistema que valida la sincronització de les tasques de renderització de Vulkan.\nAixò pot reduir el rendiment i canviar el comportament de l'emulador.\nCal tenir el SDK de Vulkan perquè funcioni.</translation>
     </message>
     <message>
       <source>Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
@@ -2465,7 +2473,7 @@ Selecciona una versió del panell dret.</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Activa la validació assistida per la targeta gràfica:\nEls shaders d'instruments amb codi que validen si s'estan comportant correctament.\nAixò pot reduir el rendiment i canviar el comportament de l'emulador.\nCal tenir el SDK de Vulkan perquè funcioni.</translation>
     </message>
     <message>
       <source>GUI Language</source>
@@ -2485,7 +2493,7 @@ Selecciona una versió del panell dret.</translation>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
-      <translation type="unfinished">GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</translation>
+      <translation>Actualitzacions de la interfície d'usuari:\nRelease: Les versions oficials publicades cada mes que potser no estan tan actualitzades, però són més estables i han estat més provades.\nNightly: Versions en desenvolupament que tenen totes les últimes novetats i correccions, però poden contenir errors i són menys estables.\n\n*Aquesta actualització s'aplica només a la interfície d'usuari Qt. Per actualitzar el nucli de l'emulador, fes servir el &apos;Administrador de versions&apos; del menú.</translation>
     </message>
   </context>
   <context>
