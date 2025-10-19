@@ -1698,11 +1698,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Run Emulator</source>
-      <translation type="unfinished">Run Emulator</translation>
+      <translation>Запустить эмулятор</translation>
     </message>
     <message>
       <source>Emulator is already running!</source>
-      <translation type="unfinished">Emulator is already running!</translation>
+      <translation>Эмулятор уже запущен!</translation>
     </message>
   </context>
   <context>
