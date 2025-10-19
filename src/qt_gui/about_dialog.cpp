@@ -156,7 +156,7 @@ bool AboutDialog::eventFilter(QObject* obj, QEvent* event) {
         }
     } else if (event->type() == QEvent::MouseButtonPress) {
         if (obj == ui->image_1) {
-            QDesktopServices::openUrl(QUrl("https://github.com/shadps4-emu/shadPS4"));
+            QDesktopServices::openUrl(QUrl("https://github.com/shadps4-emu/shadPS4-qtlauncher"));
         } else if (obj == ui->image_2) {
             QDesktopServices::openUrl(QUrl("https://discord.gg/bFJxfftGW6"));
         } else if (obj == ui->image_3) {

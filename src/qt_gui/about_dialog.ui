@@ -8,12 +8,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>826</width>
+    <width>887</width>
     <height>496</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>About shadPS4</string>
+   <string>About shadPS4QtLauncher</string>
   </property>
   <property name="windowIcon">
    <iconset>
@@ -161,7 +161,7 @@
      </item>
      <item>
       <widget class="QWidget" name="widget_2" native="true">
-       <layout class="QVBoxLayout" name="verticalLayout">
+       <layout class="QVBoxLayout" name="verticalLayout" stretch="5,4">
         <item>
          <widget class="QLabel" name="shad_text">
           <property name="font">
@@ -170,7 +170,11 @@
            </font>
           </property>
           <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14px; font-weight:700;&quot;&gt;shadPS4&lt;/span&gt;&lt;span style=&quot; font-size:14px;&quot;&gt; is an experimental open-source emulator for the PlayStation 4. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14px;&quot;&gt;This software should not be used to play games you have not legally obtained. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14px;&quot;&gt;If you want to contribute, please look at the &lt;/span&gt;&lt;a href=&quot;https://github.com/shadps4-emu/shadps4-qtlauncher/blob/main/CONTRIBUTING.md&quot;&gt;&lt;span style=&quot; font-size:14px; text-decoration: underline; color:#99ebff;&quot;&gt;CONTRIBUTING.md &lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:14px;&quot;&gt;file. Open a PR and we'll check it :) &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14px;&quot;&gt;If you want to translate shadPS4QtLauncher to your language we use &lt;/span&gt;&lt;a href=&quot;https://crowdin.com/project/shadps4-emulator&quot;&gt;&lt;span style=&quot; font-size:14px; text-decoration: underline; color:#99ebff;&quot;&gt;CrowdIn&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:14px;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string>&lt;html&gt;&lt;head/&gt;  &lt;style&gt;
+    p {
+      line-height: 1.4;
+    }
+  &lt;/style&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14px; font-weight:700;&quot;&gt;shadPS4&lt;/span&gt;&lt;span style=&quot; font-size:14px;&quot;&gt; is an experimental open-source emulator for the PlayStation 4. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14px;&quot;&gt;This software should not be used to play games you have not legally obtained. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14px;&quot;&gt;If you want to contribute, please look at the &lt;/span&gt;&lt;a href=&quot;https://github.com/shadps4-emu/shadps4-qtlauncher/blob/main/CONTRIBUTING.md&quot;&gt;&lt;span style=&quot; font-size:14px; text-decoration: underline; color:#99ebff;&quot;&gt;CONTRIBUTING.md &lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:14px;&quot;&gt;file. Open a PR and we'll check it :) &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14px;&quot;&gt;If you want to translate shadPS4QtLauncher to your language we use &lt;/span&gt;&lt;a href=&quot;https://crowdin.com/project/shadps4-emulator&quot;&gt;&lt;span style=&quot; font-size:14px; text-decoration: underline; color:#99ebff;&quot;&gt;CrowdIn&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:14px;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="textFormat">
            <enum>Qt::TextFormat::AutoText</enum>
