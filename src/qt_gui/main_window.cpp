@@ -1336,18 +1336,17 @@ void MainWindow::StartEmulatorExecutable(std::filesystem::path emuPath, QString 
         return;
     }
 
-    Config::setGameRunning(true);
     QFileInfo fileInfo(emuPath);
     if (!fileInfo.exists()) {
         QMessageBox::critical(nullptr, "shadPS4",
                               QString(tr("Could not find the emulator executable")));
-        Config::setGameRunning(false);
         return;
     }
 
     QStringList final_args{"--game", QString::fromStdWString(last_game_path.wstring())};
     final_args.append(args);
 
+    Config::setGameRunning(true);
     QString workDir = QDir::currentPath();
     m_ipc_client->startEmulator(fileInfo, final_args, workDir);
 }

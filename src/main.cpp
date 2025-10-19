@@ -148,8 +148,7 @@ int main(int argc, char* argv[]) {
             emulator_path = emulator;
         } else if (emulator == "default") {
             gui_settings settings{};
-            emulator_path = *std::filesystem::directory_iterator(
-                settings.GetValue(gui::vm_versionSelected).toString().toStdString());
+            emulator_path = settings.GetValue(gui::vm_versionSelected).toString().toStdString();
         } else {
             std::filesystem::path version_dir = user_dir / "versions";
             for (auto const& version : std::filesystem::directory_iterator(version_dir)) {
