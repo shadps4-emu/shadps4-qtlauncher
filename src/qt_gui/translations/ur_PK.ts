@@ -616,16 +616,8 @@
       <translation type="unfinished">Min Deadzone (def:2 max:127)</translation>
     </message>
     <message>
-      <source>2</source>
-      <translation type="unfinished">2</translation>
-    </message>
-    <message>
       <source>Max Deadzone (def:127 max:127)</source>
       <translation type="unfinished">Max Deadzone (def:127 max:127)</translation>
-    </message>
-    <message>
-      <source>127</source>
-      <translation type="unfinished">127</translation>
     </message>
     <message>
       <source>Right Stick Deadzone</source>
@@ -708,10 +700,6 @@
       <translation type="unfinished">shadPS4 - Choose directory</translation>
     </message>
     <message>
-      <source>Directory to install games</source>
-      <translation type="unfinished">Directory to install games</translation>
-    </message>
-    <message>
       <source>Browse</source>
       <translation type="unfinished">Browse</translation>
     </message>
@@ -720,12 +708,24 @@
       <translation type="unfinished">Error</translation>
     </message>
     <message>
-      <source>Directory to install DLC</source>
-      <translation type="unfinished">Directory to install DLC</translation>
-    </message>
-    <message>
       <source>Directory to install emulator versions</source>
       <translation type="unfinished">Directory to install emulator versions</translation>
+    </message>
+    <message>
+      <source>Directory with your dumped games</source>
+      <translation type="unfinished">Directory with your dumped games</translation>
+    </message>
+    <message>
+      <source>Directory with your dumped DLC&apos;s</source>
+      <translation type="unfinished">Directory with your dumped DLC&apos;s</translation>
+    </message>
+    <message>
+      <source>Directory with games</source>
+      <translation type="unfinished">Directory with games</translation>
+    </message>
+    <message>
+      <source>Directory with DLC&apos;s</source>
+      <translation type="unfinished">Directory with DLC&apos;s</translation>
     </message>
   </context>
   <context>
@@ -1051,6 +1051,18 @@
     <message>
       <source>Launch with default settings</source>
       <translation type="unfinished">Launch with default settings</translation>
+    </message>
+    <message>
+      <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
+      <translation type="unfinished">Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</translation>
+    </message>
+    <message>
+      <source>Ok</source>
+      <translation type="unfinished">Ok</translation>
+    </message>
+    <message>
+      <source>Info</source>
+      <translation type="unfinished">Info</translation>
     </message>
   </context>
   <context>
@@ -1710,10 +1722,6 @@ Select an emulator version from the right panel.</translation>
       <translation type="unfinished">Default tab when opening settings</translation>
     </message>
     <message>
-      <source>Show Game Size In List</source>
-      <translation type="unfinished">Show Game Size In List</translation>
-    </message>
-    <message>
       <source>Enable Discord Rich Presence</source>
       <translation type="unfinished">Enable Discord Rich Presence</translation>
     </message>
@@ -2316,10 +2324,6 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Default tab when opening settings:\nChoose which tab will open, the default is General.</source>
       <translation type="unfinished">Default tab when opening settings:\nChoose which tab will open, the default is General.</translation>
-    </message>
-    <message>
-      <source>Show Game Size In List:\nThere is the size of the game in the list.</source>
-      <translation type="unfinished">Show Game Size In List:\nThere is the size of the game in the list.</translation>
     </message>
     <message>
       <source>Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</source>

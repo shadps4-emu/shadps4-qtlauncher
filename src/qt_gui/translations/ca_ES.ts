@@ -607,27 +607,19 @@
     </message>
     <message>
       <source>Left Stick Deadzone</source>
-      <translation type="unfinished">Left Stick Deadzone</translation>
+      <translation>Zona morta de la palanca esquerra</translation>
     </message>
     <message>
       <source>Min Deadzone (def:2 max:127)</source>
-      <translation type="unfinished">Min Deadzone (def:2 max:127)</translation>
-    </message>
-    <message>
-      <source>2</source>
-      <translation type="unfinished">2</translation>
+      <translation>Valor mínim de la zona morta (definit:2 màxim:127)</translation>
     </message>
     <message>
       <source>Max Deadzone (def:127 max:127)</source>
-      <translation type="unfinished">Max Deadzone (def:127 max:127)</translation>
-    </message>
-    <message>
-      <source>127</source>
-      <translation type="unfinished">127</translation>
+      <translation>Valor màxim de la zona morta (definit:127 màxim:127)</translation>
     </message>
     <message>
       <source>Right Stick Deadzone</source>
-      <translation type="unfinished">Right Stick Deadzone</translation>
+      <translation>Zona morta de la palanca dreta</translation>
     </message>
   </context>
   <context>
@@ -706,10 +698,6 @@
       <translation>shadPS4 - Selecciona carpeta</translation>
     </message>
     <message>
-      <source>Directory to install games</source>
-      <translation>Carpeta per instal·lar jocs</translation>
-    </message>
-    <message>
       <source>Browse</source>
       <translation>Cercart</translation>
     </message>
@@ -718,12 +706,24 @@
       <translation>Error</translation>
     </message>
     <message>
-      <source>Directory to install DLC</source>
-      <translation>Carpeta per instal·lar DLC</translation>
-    </message>
-    <message>
       <source>Directory to install emulator versions</source>
       <translation>Carpeta per instal·lar les versions de l'emulador</translation>
+    </message>
+    <message>
+      <source>Directory with your dumped games</source>
+      <translation>Carpeta amb els jocs descarregats</translation>
+    </message>
+    <message>
+      <source>Directory with your dumped DLC&apos;s</source>
+      <translation>Carpeta amb els DLC descarregats</translation>
+    </message>
+    <message>
+      <source>Directory with games</source>
+      <translation>Carpeta amb jocs</translation>
+    </message>
+    <message>
+      <source>Directory with DLC&apos;s</source>
+      <translation>Carpeta amb els DLC</translation>
     </message>
   </context>
   <context>
@@ -1049,6 +1049,18 @@
     <message>
       <source>Launch with default settings</source>
       <translation>Executa amb la configuració per defecte</translation>
+    </message>
+    <message>
+      <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
+      <translation>No s'ha pogut enviar l'informe, perquè l'últim registre del joc ha fallat en la següent comprovació, i per tant seria un informe no vàlid:</translation>
+    </message>
+    <message>
+      <source>Ok</source>
+      <translation>Ok</translation>
+    </message>
+    <message>
+      <source>Info</source>
+      <translation>Informació</translation>
     </message>
   </context>
   <context>
@@ -1676,9 +1688,9 @@
       <source>No emulator version was selected.
 The Version Manager menu will then open.
 Select an emulator version from the right panel.</source>
-      <translation type="unfinished">No emulator version was selected.
-The Version Manager menu will then open.
-Select an emulator version from the right panel.</translation>
+      <translation>No hi ha cap versió de l'emulador seleccionada.
+S'obrirà l'administrador de versions.
+Selecciona una versió del panell dret.</translation>
     </message>
     <message>
       <source>Could not find the emulator executable</source>
@@ -1706,10 +1718,6 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Default tab when opening settings</source>
       <translation>Pestanya predeterminada en obrir la configuració</translation>
-    </message>
-    <message>
-      <source>Show Game Size In List</source>
-      <translation>Mostra la mida del joc a la llista</translation>
     </message>
     <message>
       <source>Enable Discord Rich Presence</source>
@@ -2316,10 +2324,6 @@ Select an emulator version from the right panel.</translation>
       <translation>Pestanya per defecte en obrir la configuració:\nSelecciona quina pestanya es veurà primer, per defecte és la pestanya General.</translation>
     </message>
     <message>
-      <source>Show Game Size In List:\nThere is the size of the game in the list.</source>
-      <translation>Mostra la mida del joc a la Llista:\nHi ha la mida del joc a la llista.</translation>
-    </message>
-    <message>
       <source>Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</source>
       <translation>Activa els controls de moviment:\nQuan està activat, farà servir els controls de moviment del controlador si en té.</translation>
     </message>
@@ -2457,7 +2461,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Activa la validació de nucli:\nActiva les funcions principals de validació de la API.\nAixò redueix el rendiment i pot canviar el comportament de l'emulació.\nÉs necessari el SDK de Vulkan perquè funcioni.</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
@@ -2571,7 +2575,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Select the folder where the emulator versions will be installed</source>
-      <translation type="unfinished">Select the folder where the emulator versions will be installed</translation>
+      <translation>Selecciona la carpeta on s'instal·laran les versions de l'emulador</translation>
     </message>
     <message>
       <source>Select executable</source>
@@ -2595,7 +2599,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Enter the name of this version as it appears in the list.</source>
-      <translation type="unfinished">Enter the name of this version as it appears in the list.</translation>
+      <translation>Introdueix el nom de la versió tal com apareix a la llista.</translation>
     </message>
     <message>
       <source>Error</source>
@@ -2647,7 +2651,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>The latest versions have been added to the list for download.</source>
-      <translation type="unfinished">The latest versions have been added to the list for download.</translation>
+      <translation>S'han afegit les últimes versions a la llista per descarregar.</translation>
     </message>
     <message>
       <source>Error accessing GitHub API</source>
@@ -2656,8 +2660,7 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>First you need to choose a location to save the versions in
 &apos;Path to save versions&apos;</source>
-      <translation type="unfinished">First you need to choose a location to save the versions in
-&apos;Path to save versions&apos;</translation>
+      <translation>Primer has de seleccionar una ubicació per desar les versions. Carpeta on desar les versions</translation>
     </message>
     <message>
       <source>Do you want to download the version</source>
@@ -2685,7 +2688,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>The GitHub API response is not a valid JSON array.</source>
-      <translation type="unfinished">The GitHub API response is not a valid JSON array.</translation>
+      <translation>La resposta de la API de GitHub no és un valor JSON vàlid.</translation>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release</source>
@@ -2698,8 +2701,7 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>You don&apos;t have any pre-release installed yet.
 Would you like to download it now?</source>
-      <translation type="unfinished">You don&apos;t have any pre-release installed yet.
-Would you like to download it now?</translation>
+      <translation>No tens cap versió prèvia instal·lada encara. Vols descarregar-ne una?</translation>
     </message>
     <message>
       <source>Auto Updater - Emulator</source>
@@ -2707,7 +2709,7 @@ Would you like to download it now?</translation>
     </message>
     <message>
       <source>You already have the latest pre-release version.</source>
-      <translation type="unfinished">You already have the latest pre-release version.</translation>
+      <translation>Ja tens l'última versió prèvia.</translation>
     </message>
     <message>
       <source>Update Available (Emulator)</source>
@@ -2751,7 +2753,7 @@ Would you like to download it now?</translation>
     </message>
     <message>
       <source>No download URL found for the specified asset.</source>
-      <translation type="unfinished">No download URL found for the specified asset.</translation>
+      <translation>No s'ha trobat la direcció web de descàrrega.</translation>
     </message>
     <message>
       <source>Downloading Pre‑release, please wait...</source>
@@ -2783,7 +2785,7 @@ Would you like to download it now?</translation>
     </message>
     <message>
       <source>No version selected. Please choose one from the list to delete.</source>
-      <translation type="unfinished">No version selected. Please choose one from the list to delete.</translation>
+      <translation>No s'ha seleccionat cap versió. Escull-ne una de la llista per esborrar-la.</translation>
     </message>
     <message>
       <source>Confirm Download</source>

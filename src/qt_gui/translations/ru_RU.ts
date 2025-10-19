@@ -614,16 +614,8 @@
       <translation>Мин. мёртвая зона (по умолч:2 макс:127)</translation>
     </message>
     <message>
-      <source>2</source>
-      <translation>2</translation>
-    </message>
-    <message>
       <source>Max Deadzone (def:127 max:127)</source>
       <translation>Макс. мёртвая зона (по умолч:127 макс 127)</translation>
-    </message>
-    <message>
-      <source>127</source>
-      <translation>127</translation>
     </message>
     <message>
       <source>Right Stick Deadzone</source>
@@ -706,10 +698,6 @@
       <translation>shadPS4 - Выберите папку</translation>
     </message>
     <message>
-      <source>Directory to install games</source>
-      <translation>Каталог для установки игр</translation>
-    </message>
-    <message>
       <source>Browse</source>
       <translation>Обзор</translation>
     </message>
@@ -718,12 +706,24 @@
       <translation>Ошибка</translation>
     </message>
     <message>
-      <source>Directory to install DLC</source>
-      <translation>Каталог для установки DLC</translation>
-    </message>
-    <message>
       <source>Directory to install emulator versions</source>
       <translation>Каталог для установки версий эмулятора</translation>
+    </message>
+    <message>
+      <source>Directory with your dumped games</source>
+      <translation>Каталог с извлечёнными играми</translation>
+    </message>
+    <message>
+      <source>Directory with your dumped DLC&apos;s</source>
+      <translation>Каталог с извлечёнными DLC</translation>
+    </message>
+    <message>
+      <source>Directory with games</source>
+      <translation>Каталог с играми</translation>
+    </message>
+    <message>
+      <source>Directory with DLC&apos;s</source>
+      <translation>Каталог с DLC</translation>
     </message>
   </context>
   <context>
@@ -1020,7 +1020,7 @@
     </message>
     <message>
       <source>View Report</source>
-      <translation>Посмотреть отчет</translation>
+      <translation>Посмотреть отчёт</translation>
     </message>
     <message>
       <source>Submit a Report</source>
@@ -1049,6 +1049,18 @@
     <message>
       <source>Launch with default settings</source>
       <translation>Запуск с настройками по умолчанию</translation>
+    </message>
+    <message>
+      <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
+      <translation>Не удалось отправить отчёт, потому что последний лог игры не прошёл следующую проверку, и поэтому отчёт является неверным:</translation>
+    </message>
+    <message>
+      <source>Ok</source>
+      <translation>Ok</translation>
+    </message>
+    <message>
+      <source>Info</source>
+      <translation>Инфо</translation>
     </message>
   </context>
   <context>
@@ -1708,10 +1720,6 @@ Select an emulator version from the right panel.</source>
       <translation>Вкладка по умолчанию при открытии настроек</translation>
     </message>
     <message>
-      <source>Show Game Size In List</source>
-      <translation>Показать размер игры в списке</translation>
-    </message>
-    <message>
       <source>Enable Discord Rich Presence</source>
       <translation>Включить Discord Rich Presence</translation>
     </message>
@@ -2314,10 +2322,6 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Default tab when opening settings:\nChoose which tab will open, the default is General.</source>
       <translation>Вкладка по умолчанию при открытии настроек:\nВыберите, какая вкладка будет открыта, по умолчанию выбрано "Общее".</translation>
-    </message>
-    <message>
-      <source>Show Game Size In List:\nThere is the size of the game in the list.</source>
-      <translation>Показать размер игры в списке:\nПоказывает размер игры в списке.</translation>
     </message>
     <message>
       <source>Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</source>
