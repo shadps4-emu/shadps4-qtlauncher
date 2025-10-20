@@ -1700,11 +1700,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Run Emulator</source>
-      <translation type="unfinished">Run Emulator</translation>
+      <translation>运行模拟器</translation>
     </message>
     <message>
       <source>Emulator is already running!</source>
-      <translation type="unfinished">Emulator is already running!</translation>
+      <translation>模拟器已在运行！</translation>
     </message>
   </context>
   <context>
