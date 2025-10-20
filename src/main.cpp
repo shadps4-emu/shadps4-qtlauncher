@@ -35,7 +35,7 @@ int main(int argc, char* argv[]) {
 
     const bool has_command_line_argument = argc > 1;
     bool has_emulator_argument = false;
-    bool show_gui = false;
+    bool show_gui = false, no_ipc = false;
     std::string emulator;
     QStringList emulator_args{};
     QString game_arg = "";
@@ -59,6 +59,7 @@ int main(int argc, char* argv[]) {
                     "Needs to be at the end of the line, and everything after '--' is an "
                     "emulator argument.\n"
                     "  -s, --show-gui                Show the GUI.\n"
+                    "  -i, --no-ipc                  Disable IPC.\n"
                     "  -h, --help                    Display this help message.\n";
              exit(0);
          }},
@@ -66,6 +67,9 @@ int main(int argc, char* argv[]) {
 
         {"-s", [&](int&) { show_gui = true; }},
         {"--show-gui", [&](int& i) { arg_map["-s"](i); }},
+        {"-i", [&](int&) { no_ipc = true; }},
+        {"--no-ipc", [&](int& i) { arg_map["-i"](i); }},
+    
         {"-g",
          [&](int& i) {
              if (i + 1 < argc) {
@@ -165,7 +169,7 @@ int main(int argc, char* argv[]) {
         if (!show_gui) {
             m_main_window->m_ipc_client->gameClosedFunc = StopProgram;
         }
-        m_main_window->StartEmulatorExecutable(emulator_path, game_arg, emulator_args);
+        m_main_window->StartEmulatorExecutable(emulator_path, game_arg, emulator_args, no_ipc);
     }
 
     if (!has_emulator_argument || show_gui) {

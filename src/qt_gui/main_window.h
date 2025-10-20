@@ -37,7 +37,7 @@ public:
     void StartGameWithArgs(QStringList args = {});
     void StartEmulator(std::filesystem::path path, QStringList args = {});
     void StartEmulatorExecutable(std::filesystem::path emupath, QString gameArg,
-                                 QStringList args = {});
+                                 QStringList args = {}, bool disable_ipc = false);
     void PauseGame();
     void StopGame();
     void RestartGame();
