@@ -1056,7 +1056,7 @@
     </message>
     <message>
       <source>Ok</source>
-      <translation type="unfinished">Ok</translation>
+      <translation>Tamam</translation>
     </message>
     <message>
       <source>Info</source>
