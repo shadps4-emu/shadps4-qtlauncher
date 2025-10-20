@@ -27,6 +27,7 @@ public:
     QAction* downloadCheatsPatchesAct;
     QAction* dumpGameListAct;
     QAction* trophyViewerAct;
+    QAction* skylanderPortalAction;
 #ifdef ENABLE_UPDATER
     QAction* updaterAct;
 #endif
@@ -146,6 +147,9 @@ public:
         trophyViewerAct = new QAction(MainWindow);
         trophyViewerAct->setObjectName("trophyViewer");
         trophyViewerAct->setIcon(QIcon(":images/trophy_icon.png"));
+        skylanderPortalAction = new QAction(MainWindow);
+        skylanderPortalAction->setObjectName("skylandermanager");
+        skylanderPortalAction->setIcon(QIcon(":images/usb_icon.png"));
 
 #ifdef ENABLE_UPDATER
         updaterAct = new QAction(MainWindow);
@@ -341,6 +345,7 @@ public:
         menuUtils->addAction(downloadCheatsPatchesAct);
         menuUtils->addAction(dumpGameListAct);
         menuUtils->addAction(trophyViewerAct);
+        menuUtils->addAction(skylanderPortalAction);
 #ifdef ENABLE_UPDATER
         menuHelp->addAction(updaterAct);
 #endif
@@ -403,6 +408,8 @@ public:
             QCoreApplication::translate("MainWindow", "Dump Game List", nullptr));
         trophyViewerAct->setText(
             QCoreApplication::translate("MainWindow", "Trophy Viewer", nullptr));
+        skylanderPortalAction->setText(
+            QCoreApplication::translate("MainWindow", "Manage Skylanders", nullptr));
         mw_searchbar->setPlaceholderText(
             QCoreApplication::translate("MainWindow", "Search...", nullptr));
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));

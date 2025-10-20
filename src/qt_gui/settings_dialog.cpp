@@ -187,6 +187,11 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         qDebug() << "Erro SDL_GetAudioRecordingDevices:" << SDL_GetError();
     }
 
+    ui->usbComboBox->addItem(tr("Real USB Device"));
+    ui->usbComboBox->addItem(tr("Skylander Portal"));
+    // ui->usbComboBox->addItem(tr("Infinity Base"));
+    // ui->usbComboBox->addItem(tr("Dimensions Toypad"));
+
     InitializeEmulatorLanguages();
     onAudioDeviceChange(true);
     LoadValuesFromConfig();
@@ -477,6 +482,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         ui->backgroundControllerCheckBox->installEventFilter(this);
         ui->motionControlsCheckBox->installEventFilter(this);
         ui->micComboBox->installEventFilter(this);
+        ui->usbComboBox->installEventFilter(this);
 
         // Graphics
         ui->graphicsAdapterGroupBox->installEventFilter(this);
@@ -697,6 +703,7 @@ void SettingsDialog::LoadValuesFromConfig() {
         toml::find_or<bool>(data, "Input", "isMotionControlsEnabled", true));
     ui->backgroundControllerCheckBox->setChecked(
         toml::find_or<bool>(data, "Input", "backgroundControllerInput", false));
+    ui->usbComboBox->setCurrentIndex(toml::find_or<int>(data, "Input", "usbDeviceBackend", 0));
 
     std::string sideTrophy = toml::find_or<std::string>(data, "General", "sideTrophy", "right");
     QString side = QString::fromStdString(sideTrophy);
@@ -979,7 +986,9 @@ void SettingsDialog::updateNoteTextEdit(const QString& elementName) {
         text = tr("Default tab when opening settings:\\nChoose which tab will open, the default is General.");
     } else if (elementName == "motionControlsCheckBox") {
         text = tr("Enable Motion Controls:\\nWhen enabled it will use the controller's motion control if supported.");
-    } 
+    } else if (elementName == "usbComboBox") {
+        text = tr("USB Device:\\nReal USB Device: Use a real USB Device attached to the system.\\nSkylander Portal: Emulate a Skylander Portal of Power.");
+    }
 
     // Experimental
     if (elementName == "dmaCheckBox") {
@@ -1064,6 +1073,7 @@ void SettingsDialog::UpdateSettings(bool is_specific) {
     Config::setCursorState(ui->hideCursorComboBox->currentIndex(), is_specific);
     Config::setCursorHideTimeout(ui->hideCursorComboBox->currentIndex(), is_specific);
     Config::setGpuId(ui->graphicsAdapterBox->currentIndex() - 1, is_specific);
+    Config::setUsbDeviceBackend(ui->usbComboBox->currentIndex(), is_specific);
     Config::setVolumeSlider(ui->horizontalVolumeSlider->value(), is_specific);
     Config::setLanguage(languageIndexes[ui->consoleLanguageComboBox->currentIndex()], is_specific);
     Config::setWindowWidth(ui->widthSpinBox->value(), is_specific);

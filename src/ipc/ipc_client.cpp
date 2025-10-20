@@ -107,6 +107,20 @@ void IpcClient::sendMemoryPatches(std::string modNameStr, std::string offsetStr,
     writeLine(QString::number(maskOffset));
 }
 
+void IpcClient::loadSkylander(std::string file_name, int slot) {
+    writeLine("USB_LOAD_FIGURE");
+    writeLine(QString::fromStdString(file_name));
+    writeLine(QString::number(slot)); // skylanders don't use pads
+    writeLine(QString::number(slot));
+}
+
+void IpcClient::removeSkylander(int slot) {
+    writeLine("USB_REMOVE_FIGURE");
+    writeLine(QString::number(slot)); // skylanders don't use pads
+    writeLine(QString::number(slot));
+    writeLine("1"); // always a full remove
+}
+
 void IpcClient::onStderr() {
     buffer.append(process->readAllStandardError());
     int idx;

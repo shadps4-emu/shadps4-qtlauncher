@@ -361,6 +361,8 @@ set(QT_GUI src/qt_gui/about_dialog.cpp
            src/qt_gui/settings.h
            src/qt_gui/sdl_event_wrapper.cpp
            src/qt_gui/sdl_event_wrapper.h
+           src/qt_gui/skylander_dialog.cpp
+           src/qt_gui/skylander_dialog.h
            src/qt_gui/hotkeys.h
            src/qt_gui/hotkeys.cpp
            src/qt_gui/hotkeys.ui
