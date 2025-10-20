@@ -7,6 +7,7 @@
 
 #include "common/config.h"
 #include "common/logging/backend.h"
+#include "common/versions.h"
 #include "qt_gui/game_install_dialog.h"
 #include "qt_gui/main_window.h"
 #ifdef _WIN32
@@ -69,7 +70,7 @@ int main(int argc, char* argv[]) {
         {"--show-gui", [&](int& i) { arg_map["-s"](i); }},
         {"-i", [&](int&) { no_ipc = true; }},
         {"--no-ipc", [&](int& i) { arg_map["-i"](i); }},
-    
+
         {"-g",
          [&](int& i) {
              if (i + 1 < argc) {
@@ -154,10 +155,10 @@ int main(int argc, char* argv[]) {
             gui_settings settings{};
             emulator_path = settings.GetValue(gui::vm_versionSelected).toString().toStdString();
         } else {
-            std::filesystem::path version_dir = user_dir / "versions";
-            for (auto const& version : std::filesystem::directory_iterator(version_dir)) {
-                if (version.is_directory() && version.path().filename() == emulator) {
-                    emulator_path = *std::filesystem::directory_iterator(version);
+            auto const& versions = VersionManager::GetVersionList();
+            for (auto const& v : versions) {
+                if (v.name == emulator) {
+                    emulator_path = v.path;
                     break;
                 }
             }
