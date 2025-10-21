@@ -273,7 +273,7 @@
     </message>
     <message>
       <source>No download URL found for the specified asset.</source>
-      <translation>Belirtilen varlık için hiçbir indirme URL&apos;si bulunamadı.</translation>
+      <translation>Belirtilen öğe için indirme bağlantısı bulunamadı.</translation>
     </message>
     <message>
       <source>Your version is already up to date!</source>
@@ -607,19 +607,19 @@
     </message>
     <message>
       <source>Left Stick Deadzone</source>
-      <translation type="unfinished">Left Stick Deadzone</translation>
+      <translation>Sol Analog Ölü Bölgesi</translation>
     </message>
     <message>
       <source>Min Deadzone (def:2 max:127)</source>
-      <translation type="unfinished">Min Deadzone (def:2 max:127)</translation>
+      <translation>En Az Ölü Bölge (varsayılan: 2, en çok: 127)</translation>
     </message>
     <message>
       <source>Max Deadzone (def:127 max:127)</source>
-      <translation type="unfinished">Max Deadzone (def:127 max:127)</translation>
+      <translation>En Çok Ölü Bölge (varsayılan: 127, en çok: 127)</translation>
     </message>
     <message>
       <source>Right Stick Deadzone</source>
-      <translation type="unfinished">Right Stick Deadzone</translation>
+      <translation>Sağ Analog Ölü Bölgesi</translation>
     </message>
   </context>
   <context>
@@ -719,11 +719,11 @@
     </message>
     <message>
       <source>Directory with games</source>
-      <translation type="unfinished">Directory with games</translation>
+      <translation>Oyun dizini</translation>
     </message>
     <message>
       <source>Directory with DLC&apos;s</source>
-      <translation type="unfinished">Directory with DLC&apos;s</translation>
+      <translation>DLC dizini</translation>
     </message>
   </context>
   <context>
@@ -1036,7 +1036,7 @@
     </message>
     <message>
       <source>Launch...</source>
-      <translation type="unfinished">Launch...</translation>
+      <translation>Başlat...</translation>
     </message>
     <message>
       <source>Launch with game specific configs (default)</source>
@@ -1048,7 +1048,7 @@
     </message>
     <message>
       <source>Launch with default settings</source>
-      <translation type="unfinished">Launch with default settings</translation>
+      <translation>Varsayılan ayarlarla başlat</translation>
     </message>
     <message>
       <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
@@ -1056,11 +1056,11 @@
     </message>
     <message>
       <source>Ok</source>
-      <translation type="unfinished">Ok</translation>
+      <translation>Tamam</translation>
     </message>
     <message>
       <source>Info</source>
-      <translation type="unfinished">Info</translation>
+      <translation>Bilgi</translation>
     </message>
   </context>
   <context>
@@ -1682,7 +1682,7 @@
     </message>
     <message>
       <source>No Version Selected</source>
-      <translation type="unfinished">No Version Selected</translation>
+      <translation>Sürüm Seçilmedi</translation>
     </message>
     <message>
       <source>No emulator version was selected.
@@ -1702,7 +1702,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Emulator is already running!</source>
-      <translation type="unfinished">Emulator is already running!</translation>
+      <translation>Emülatör zaten çalışıyor!</translation>
     </message>
   </context>
   <context>
@@ -2429,11 +2429,11 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Additional DMem Allocation</source>
-      <translation type="unfinished">Additional DMem Allocation</translation>
+      <translation>Ek Veri Belleği Ayırma</translation>
     </message>
     <message>
       <source>Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</source>
-      <translation type="unfinished">Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</translation>
+      <translation>Ek Veri Belleği Ayırma:\nBelirtilen miktarda ek veri belleği ayrılmasını zorlar. Bazı oyunlarda çökmelere veya sorunlara neden olur.</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</source>
@@ -2457,11 +2457,11 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Enable Sync Validation</source>
-      <translation type="unfinished">Enable Sync Validation</translation>
+      <translation>Senkronizasyon Doğrulamasını Etkinleştir</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation</source>
-      <translation type="unfinished">Enable GPU-Assisted Validation</translation>
+      <translation>GPU Destekli Doğrulamayı Etkinleştir</translation>
     </message>
     <message>
       <source>Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
@@ -2539,11 +2539,11 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Installed</source>
-      <translation type="unfinished">Installed</translation>
+      <translation>Yüklü</translation>
     </message>
     <message>
       <source>Selected</source>
-      <translation type="unfinished">Selected</translation>
+      <translation>Seçili</translation>
     </message>
     <message>
       <source>Version</source>
@@ -2551,7 +2551,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Codename</source>
-      <translation type="unfinished">Codename</translation>
+      <translation>Kod Adı</translation>
     </message>
     <message>
       <source>Date</source>
@@ -2579,11 +2579,11 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Check for Pre-release Updates</source>
-      <translation>Ön Sürüm Güncellemeleri Kontrol Et</translation>
+      <translation>Ön Sürüm Güncellemelerini Kontrol Et</translation>
     </message>
     <message>
       <source>Select the folder where the emulator versions will be installed</source>
-      <translation type="unfinished">Select the folder where the emulator versions will be installed</translation>
+      <translation>Emülatör sürümlerinin kurulacağı klasörü seçin</translation>
     </message>
     <message>
       <source>Select executable</source>
@@ -2655,7 +2655,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>No news, the version list is already updated.</source>
-      <translation type="unfinished">No news, the version list is already updated.</translation>
+      <translation>Herhangi bir yenilik yok, sürüm listesi zaten güncel.</translation>
     </message>
     <message>
       <source>The latest versions have been added to the list for download.</source>
@@ -2673,7 +2673,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Do you want to download the version</source>
-      <translation type="unfinished">Do you want to download the version</translation>
+      <translation>Şu sürüm indirilsin mi</translation>
     </message>
     <message>
       <source>No files available for this platform.</source>
@@ -2693,11 +2693,11 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Failed to create zip extraction script</source>
-      <translation type="unfinished">Failed to create zip extraction script</translation>
+      <translation>ZIP çıkarma komut dosyası oluşturulamadı</translation>
     </message>
     <message>
       <source>The GitHub API response is not a valid JSON array.</source>
-      <translation type="unfinished">The GitHub API response is not a valid JSON array.</translation>
+      <translation>GitHub API yanıtı geçerli bir JSON dizisi değil.</translation>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release</source>
@@ -2763,7 +2763,7 @@ Would you like to download it now?</source>
     </message>
     <message>
       <source>No download URL found for the specified asset.</source>
-      <translation type="unfinished">No download URL found for the specified asset.</translation>
+      <translation>Belirtilen öğe için indirme bağlantısı bulunamadı.</translation>
     </message>
     <message>
       <source>Downloading Pre‑release, please wait...</source>
@@ -2775,7 +2775,7 @@ Would you like to download it now?</source>
     </message>
     <message>
       <source>Failed to save download file</source>
-      <translation type="unfinished">Failed to save download file</translation>
+      <translation>İndirme dosyası kaydedilemedi</translation>
     </message>
     <message>
       <source>Complete installation</source>
