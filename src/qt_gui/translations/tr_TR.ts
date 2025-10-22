@@ -1040,7 +1040,7 @@
     </message>
     <message>
       <source>Launch with game specific configs (default)</source>
-      <translation type="unfinished">Launch with game specific configs (default)</translation>
+      <translation>Oyuna özel yapılandırmalarla başlat (varsayılan)</translation>
     </message>
     <message>
       <source>Launch with global config only</source>
@@ -1052,7 +1052,7 @@
     </message>
     <message>
       <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
-      <translation type="unfinished">Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</translation>
+      <translation>Rapor gönderilemedi, çünkü oyunun en son günlüğü aşağıdaki kontrolde başarısız oldu ve bu nedenle geçersiz olacaktır:</translation>
     </message>
     <message>
       <source>Ok</source>
@@ -2651,7 +2651,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Version list update</source>
-      <translation type="unfinished">Version list update</translation>
+      <translation>Sürüm listesi güncelleme</translation>
     </message>
     <message>
       <source>No news, the version list is already updated.</source>
@@ -2677,7 +2677,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>No files available for this platform.</source>
-      <translation type="unfinished">No files available for this platform.</translation>
+      <translation>Bu platform için kullanılabilir dosya yok.</translation>
     </message>
     <message>
       <source>Downloading %1 , please wait...</source>
@@ -2701,7 +2701,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release</source>
-      <translation type="unfinished">Unable to get hash of latest pre-release</translation>
+      <translation>En son ön sürümün hash değeri alınamadı</translation>
     </message>
     <message>
       <source>No pre-release found</source>
@@ -2795,7 +2795,7 @@ Would you like to download it now?</source>
     </message>
     <message>
       <source>No version selected. Please choose one from the list to delete.</source>
-      <translation type="unfinished">No version selected. Please choose one from the list to delete.</translation>
+      <translation>Hiçbir sürüm seçilmedi. Lütfen listeden silmek için birini seçin.</translation>
     </message>
     <message>
       <source>Confirm Download</source>
