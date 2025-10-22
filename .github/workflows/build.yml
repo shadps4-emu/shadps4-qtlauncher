@@ -207,6 +207,16 @@ jobs:
     - name: Install dependencies
       run: sudo apt-get update && sudo apt install -y libx11-dev libxext-dev libwayland-dev libdecor-0-dev libxkbcommon-dev libglfw3-dev libgles2-mesa-dev libfuse2 clang-19 mold build-essential qt6-base-dev qt6-tools-dev qt6-multimedia-dev libasound2-dev libpulse-dev libopenal-dev libudev-dev
 
+    - name: Install Qt
+      uses: jurplel/install-qt-action@v4
+      with:
+        version: 6.9.3
+        arch: linux_gcc_64
+        modules: "qtnetworkauth"
+        tools: 'tools_opensslv3_src'
+        setup-python: false
+        cache: true
+
     - name: Cache CMake Configuration
       uses: actions/cache@v4 
       env: 
