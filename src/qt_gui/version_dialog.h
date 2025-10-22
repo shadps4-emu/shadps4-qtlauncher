@@ -15,6 +15,8 @@ class VersionDialog;
 
 class VersionDialog : public QDialog {
     Q_OBJECT
+signals:
+    void WindowResized(QResizeEvent* event);
 
 public:
     explicit VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget* parent = nullptr);
@@ -23,6 +25,9 @@ public:
     void checkUpdatePre(const bool showMessage);
     void DownloadListVersion();
     void InstallSelectedVersion();
+
+private Q_SLOTS:
+    void HandleResize(QResizeEvent* event);
 
 private:
     Ui::VersionDialog* ui;
@@ -39,4 +44,7 @@ private:
                           const QString& latestTag, QTextBrowser* outputView);
     void installPreReleaseByTag(const QString& tagName);
     void showDownloadDialog(const QString& tagName, const QString& downloadUrl);
+
+protected:
+    void resizeEvent(QResizeEvent* event) override;
 };
