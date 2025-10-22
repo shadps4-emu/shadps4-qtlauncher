@@ -28,6 +28,7 @@
 VersionDialog::VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget* parent)
     : QDialog(parent), ui(new Ui::VersionDialog), m_gui_settings(std::move(gui_settings)) {
     ui->setupUi(this);
+    this->setMinimumSize(670, 350);
 
     ui->checkOnStartupCheckBox->setChecked(
         m_gui_settings->GetValue(gui::vm_checkOnStartup).toBool());
