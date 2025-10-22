@@ -2101,7 +2101,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the save data path.</source>
-      <translation>Gözat:\nVerileri kaydetme yolu olarak ayarlamak için bir klasöre göz atın.</translation>
+      <translation>Gözat:\nKayıt verileri yolu olarak ayarlamak için bir klasöre göz atın.</translation>
     </message>
     <message>
       <source>Set the volume of the background music.</source>
@@ -2437,11 +2437,11 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</source>
-      <translation type="unfinished">PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</translation>
+      <translation>PS4 Sistem Modülleri Yolu:\nPS4 sistem modüllerinin yüklendiği klasördür.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the sysmodules path.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the sysmodules path.</translation>
+      <translation>Gözat:\nSistem modülleri yolu olarak ayarlamak için bir klasöre göz atın.</translation>
     </message>
     <message>
       <source>Vulkan Validation (Requires Vulkan SDK)</source>
@@ -2559,7 +2559,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Add Custom</source>
-      <translation type="unfinished">Add Custom</translation>
+      <translation>Özel Ekle</translation>
     </message>
     <message>
       <source>Delete</source>
@@ -2643,7 +2643,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Do you want to delete the version</source>
-      <translation type="unfinished">Do you want to delete the version</translation>
+      <translation>Şu sürüm silinsin mi</translation>
     </message>
     <message>
       <source>Failed to delete folder.</source>
