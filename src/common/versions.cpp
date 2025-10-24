@@ -18,7 +18,7 @@ namespace VersionManager {
 
 std::vector<Version> GetVersionList(std::filesystem::path const& path) {
     std::filesystem::path cfg_path =
-        path.empty() ? Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "versions.json"
+        path.empty() ? Common::FS::GetUserPath(Common::FS::PathType::LauncherDir) / "versions.json"
                      : path;
 
     std::ifstream ifs(cfg_path);
@@ -71,7 +71,7 @@ std::vector<Version> GetVersionList(std::filesystem::path const& path) {
 
 void SaveVersionList(std::vector<Version> const& versions, std::filesystem::path const& path) {
     std::filesystem::path out_path =
-        path.empty() ? Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "versions.json"
+        path.empty() ? Common::FS::GetUserPath(Common::FS::PathType::LauncherDir) / "versions.json"
                      : path;
 
     json root = json::array();

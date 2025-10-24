@@ -88,7 +88,7 @@ static auto UserPaths = [] {
     }
 #endif
 
-    // Try the portable user directory first.
+    // Try the portable launcher directory first.
     auto user_dir = std::filesystem::current_path() / PORTABLE_DIR;
     if (!std::filesystem::exists(user_dir)) {
         // If it doesn't exist, use the standard path for the platform instead.
@@ -107,6 +107,29 @@ static auto UserPaths = [] {
         TCHAR appdata[MAX_PATH] = {0};
         SHGetFolderPath(NULL, CSIDL_APPDATA, NULL, 0, appdata);
         user_dir = std::filesystem::path(appdata) / "shadPS4";
+#endif
+    }
+
+    // Try the portable user directory first.
+    auto launcher_dir = std::filesystem::current_path() / PORTABLE_LAUNCHER_DIR;
+    if (!std::filesystem::exists(launcher_dir)) {
+        // If it doesn't exist, use the standard path for the platform instead.
+        // NOTE: On Windows we currently just create the portable directory instead.
+#ifdef __APPLE__
+        launcher_dir = std::filesystem::path(getenv("HOME")) / "Library" / "Application Support" /
+                       "shadPS4Launcher";
+#elif defined(__linux__)
+        const char* xdg_data_home = getenv("XDG_DATA_HOME");
+        if (xdg_data_home != nullptr && strlen(xdg_data_home) > 0) {
+            launcher_dir = std::filesystem::path(xdg_data_home) / "shadPS4Launcher";
+        } else {
+            launcher_dir =
+                std::filesystem::path(getenv("HOME")) / ".local" / "share" / "shadPS4Launcher";
+        }
+#elif _WIN32
+        TCHAR appdata[MAX_PATH] = {0};
+        SHGetFolderPath(NULL, CSIDL_APPDATA, NULL, 0, appdata);
+        launcher_dir = std::filesystem::path(appdata) / "shadPS4Launcher";
 #endif
     }
 
@@ -131,7 +154,8 @@ static auto UserPaths = [] {
     create_path(PathType::MetaDataDir, user_dir / METADATA_DIR);
     create_path(PathType::CustomTrophy, user_dir / CUSTOM_TROPHY);
     create_path(PathType::CustomConfigs, user_dir / CUSTOM_CONFIGS);
-    create_path(PathType::VersionDir, user_dir / VERSION_DIR);
+
+    create_path(PathType::LauncherDir, launcher_dir);
 
     std::ofstream notice_file(user_dir / CUSTOM_TROPHY / "Notice.txt");
     if (notice_file.is_open()) {
