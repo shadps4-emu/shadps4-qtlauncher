@@ -30,3 +30,7 @@
 	path = externals/MoltenVK/MoltenVK
 	url = https://github.com/KhronosGroup/MoltenVK
 	shallow = true
+[submodule "externals/json"]
+	path = externals/json
+	url = https://github.com/nlohmann/json.git
+	branch = develop

@@ -15,7 +15,7 @@ class IpcClient : public QObject {
 public:
     explicit IpcClient(QObject* parent = nullptr);
     void startEmulator(const QFileInfo& exe, const QStringList& args,
-                       const QString& workDir = QString());
+                       const QString& workDir = QString(), bool disable_ipc = false);
     void startGame();
     void pauseGame();
     void resumeGame();

@@ -19,6 +19,7 @@
 #include "common/memory_patcher.h"
 #include "common/path_util.h"
 #include "common/scm_rev.h"
+#include "common/versions.h"
 #include "control_settings.h"
 #include "game_install_dialog.h"
 #include "hotkeys.h"
@@ -1268,16 +1269,7 @@ tr("No emulator version was selected.\nThe Version Manager menu will then open.\
     Config::setGameRunning(true);
     last_game_path = path;
 
-    QString exeName;
-#ifdef Q_OS_WIN
-    exeName = "/shadPS4.exe";
-#elif defined(Q_OS_LINUX)
-    exeName = "/Shadps4-sdl.AppImage";
-#elif defined(Q_OS_MACOS)
-    exeName = "/shadps4";
-#endif
-    QString exe = selectedVersion + exeName;
-    QFileInfo fileInfo(exe);
+    QFileInfo fileInfo(selectedVersion);
     if (!fileInfo.exists()) {
         QMessageBox::critical(nullptr, "shadPS4",
                               QString(tr("Could not find the emulator executable")));
@@ -1294,26 +1286,71 @@ tr("No emulator version was selected.\nThe Version Manager menu will then open.\
     m_ipc_client->setActiveController(GamepadSelect::GetSelectedGamepad());
 }
 
-void MainWindow::StartEmulatorExecutable(std::filesystem::path path, QStringList args) {
+void MainWindow::StartEmulatorExecutable(std::filesystem::path emuPath, QString gameArg,
+                                         QStringList args, bool disable_ipc) {
     if (Config::getGameRunning()) {
         QMessageBox::critical(nullptr, tr("Run Emulator"),
                               QString(tr("Emulator is already running!")));
         return;
     }
 
-    Config::setGameRunning(true);
-    QFileInfo fileInfo(path);
+    bool gameFound = false;
+    if (std::filesystem::exists(Common::FS::PathFromQString(gameArg))) {
+        last_game_path = Common::FS::PathFromQString(gameArg);
+        gameFound = true;
+    } else {
+        // In install folders, find game folder with same name as gameArg
+        const auto install_dir_array = Config::getGameInstallDirs();
+        std::vector<bool> install_dirs_enabled;
+
+        try {
+            install_dirs_enabled = Config::getGameInstallDirsEnabled();
+        } catch (...) {
+            // If it does not exist, assume that all are enabled.
+            install_dirs_enabled.resize(install_dir_array.size(), true);
+        }
+
+        for (size_t i = 0; i < install_dir_array.size(); i++) {
+            std::filesystem::path dir = install_dir_array[i];
+            bool enabled = install_dirs_enabled[i];
+
+            if (enabled && std::filesystem::exists(dir)) {
+                for (const auto& entry : std::filesystem::directory_iterator(dir)) {
+                    if (entry.is_directory()) {
+                        if (entry.path().filename().string() == gameArg.toStdString()) {
+                            last_game_path = entry.path() / "eboot.bin";
+                            gameFound = true;
+                            break;
+                        }
+                    }
+                }
+            }
+
+            if (gameFound)
+                break;
+        }
+    }
+    if (!gameArg.isEmpty()) {
+        if (!gameFound) {
+            QMessageBox::critical(nullptr, "shadPS4",
+                                  QString(tr("Invalid game argument provided")));
+            quick_exit(1);
+        }
+
+        QStringList game_args{"--game", QString::fromStdWString(last_game_path.wstring())};
+        args.append(game_args);
+    }
+
+    QFileInfo fileInfo(emuPath);
     if (!fileInfo.exists()) {
         QMessageBox::critical(nullptr, "shadPS4",
                               QString(tr("Could not find the emulator executable")));
-        Config::setGameRunning(false);
         return;
     }
 
+    Config::setGameRunning(true);
     QString workDir = QDir::currentPath();
-
-    m_ipc_client->startEmulator(fileInfo, args, workDir);
-    m_ipc_client->setActiveController(GamepadSelect::GetSelectedGamepad());
+    m_ipc_client->startEmulator(fileInfo, args, workDir, disable_ipc);
 }
 
 void MainWindow::RunGame() {
@@ -1360,75 +1397,17 @@ void MainWindow::RestartEmulator() {
 }
 
 void MainWindow::LoadVersionComboBox() {
-    QString savedVersionPath = m_gui_settings->GetValue(gui::vm_versionSelected).toString();
-    if (savedVersionPath.isEmpty() || !QDir(savedVersionPath).exists()) {
-        ui->versionComboBox->clear();
-        ui->versionComboBox->addItem(tr("No Version Selected"));
-        ui->versionComboBox->setCurrentIndex(0);
-        ui->versionComboBox->setSizeAdjustPolicy(QComboBox::AdjustToContents);
-        ui->versionComboBox->adjustSize();
-        return;
-    }
-
-    QString path = m_gui_settings->GetValue(gui::vm_versionPath).toString();
-    if (path.isEmpty() || !QDir(path).exists())
-        return;
-
     ui->versionComboBox->clear();
+    ui->versionComboBox->addItem(tr("None"));
+    ui->versionComboBox->setCurrentIndex(0);
+    ui->versionComboBox->setSizeAdjustPolicy(QComboBox::AdjustToContents);
 
-    QStringList folders = QDir(path).entryList(QDir::Dirs | QDir::NoDotAndDotDot);
-    QRegularExpression versionRegex("^v(\\d+)\\.(\\d+)\\.(\\d+)$");
+    QString savedVersionPath = m_gui_settings->GetValue(gui::vm_versionSelected).toString();
 
-    QVector<QPair<QVector<int>, QString>> versionedDirs;
-    QStringList otherDirs;
-
-    for (const QString& folder : folders) {
-        if (folder == "Pre-release") {
-            otherDirs.append(folder);
-            continue;
-        }
-
-        QRegularExpressionMatch match = versionRegex.match(folder.section(" - ", 0, 0));
-        if (match.hasMatch()) {
-            QVector<int> versionParts = {match.captured(1).toInt(), match.captured(2).toInt(),
-                                         match.captured(3).toInt()};
-            versionedDirs.append({versionParts, folder});
-        } else {
-            otherDirs.append(folder);
-        }
-    }
-
-    std::sort(otherDirs.begin(), otherDirs.end());
-
-    std::sort(versionedDirs.begin(), versionedDirs.end(), [](const auto& a, const auto& b) {
-        if (a.first[0] != b.first[0])
-            return a.first[0] > b.first[0];
-        if (a.first[1] != b.first[1])
-            return a.first[1] > b.first[1];
-        return a.first[2] > b.first[2];
-    });
-
-    auto addEntry = [&](const QString& folder) {
-        QString fullPath = QDir(path).filePath(folder);
-        QString label;
-
-        if (folder.startsWith("Pre-release-shadPS4")) {
-            label = "Pre-release";
-        } else if (folder.contains(" - ")) {
-            label = folder.section(" - ", 0, 0);
-        } else {
-            label = folder;
-        }
-
-        ui->versionComboBox->addItem(label, fullPath);
-    };
-
-    for (const QString& folder : otherDirs) {
-        addEntry(folder);
-    }
-
-    for (const auto& pair : versionedDirs) {
-        addEntry(pair.second);
+    auto const& versions = VersionManager::GetVersionList();
+    for (auto const& v : versions) {
+        ui->versionComboBox->addItem(QString::fromStdString(v.name),
+                                     QString::fromStdString(v.path));
     }
 
     int selectedIndex = ui->versionComboBox->findData(savedVersionPath);

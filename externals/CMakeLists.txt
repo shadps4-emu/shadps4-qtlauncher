@@ -61,3 +61,7 @@ if (APPLE)
 endif()
 
 add_subdirectory(volk)
+
+#nlohmann json 
+set(JSON_BuildTests OFF CACHE INTERNAL "")
+add_subdirectory(json)

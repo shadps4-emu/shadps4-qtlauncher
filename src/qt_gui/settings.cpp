@@ -21,7 +21,7 @@ QString settings::GetSettingsDir() const {
 }
 
 QString settings::ComputeSettingsDir() {
-    const auto config_dir = Common::FS::GetUserPath(Common::FS::PathType::UserDir);
+    const auto config_dir = Common::FS::GetUserPath(Common::FS::PathType::LauncherDir);
     return QString::fromStdString(config_dir.string() + "/");
 }
 

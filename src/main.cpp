@@ -7,6 +7,7 @@
 
 #include "common/config.h"
 #include "common/logging/backend.h"
+#include "common/versions.h"
 #include "qt_gui/game_install_dialog.h"
 #include "qt_gui/main_window.h"
 #ifdef _WIN32
@@ -35,9 +36,10 @@ int main(int argc, char* argv[]) {
 
     const bool has_command_line_argument = argc > 1;
     bool has_emulator_argument = false;
-    bool show_gui = false;
+    bool show_gui = false, no_ipc = false;
     std::string emulator;
     QStringList emulator_args{};
+    QString game_arg = "";
 
     // Ignore Qt logs
     qInstallMessageHandler(customMessageHandler);
@@ -52,11 +54,13 @@ int main(int argc, char* argv[]) {
                     "  No arguments: Opens the GUI.\n"
                     "  -e, --emulator <name|path>    Specify the emulator version/path you want to "
                     "use, or 'default' for using the version selected in the config.\n"
+                    "  -g, --game <ID|path>          Specify game to launch.\n"
                     "  -d                            Alias for '-e default'.\n"
                     " -- ...                         Parameters passed to the emulator core. "
                     "Needs to be at the end of the line, and everything after '--' is an "
                     "emulator argument.\n"
                     "  -s, --show-gui                Show the GUI.\n"
+                    "  -i, --no-ipc                  Disable IPC.\n"
                     "  -h, --help                    Display this help message.\n";
              exit(0);
          }},
@@ -64,14 +68,26 @@ int main(int argc, char* argv[]) {
 
         {"-s", [&](int&) { show_gui = true; }},
         {"--show-gui", [&](int& i) { arg_map["-s"](i); }},
+        {"-i", [&](int&) { no_ipc = true; }},
+        {"--no-ipc", [&](int& i) { arg_map["-i"](i); }},
 
+        {"-g",
+         [&](int& i) {
+             if (i + 1 < argc) {
+                 game_arg = argv[++i];
+             } else {
+                 std::cerr << "Error: Missing argument for -g/--game\n";
+                 exit(1);
+             }
+         }},
+        {"--game", [&](int& i) { arg_map["-g"](i); }},
         {"-e",
          [&](int& i) {
              if (i + 1 < argc) {
                  emulator = argv[++i];
                  has_emulator_argument = true;
              } else {
-                 std::cerr << "Error: Missing argument for -g/--game\n";
+                 std::cerr << "Error: Missing argument for -e/--emulator\n";
                  exit(1);
              }
          }},
@@ -137,13 +153,12 @@ int main(int argc, char* argv[]) {
             emulator_path = emulator;
         } else if (emulator == "default") {
             gui_settings settings{};
-            emulator_path = *std::filesystem::directory_iterator(
-                settings.GetValue(gui::vm_versionSelected).toString().toStdString());
+            emulator_path = settings.GetValue(gui::vm_versionSelected).toString().toStdString();
         } else {
-            std::filesystem::path version_dir = user_dir / "versions";
-            for (auto const& version : std::filesystem::directory_iterator(version_dir)) {
-                if (version.is_directory() && version.path().filename() == emulator) {
-                    emulator_path = *std::filesystem::directory_iterator(version);
+            auto const& versions = VersionManager::GetVersionList();
+            for (auto const& v : versions) {
+                if (v.name == emulator) {
+                    emulator_path = v.path;
                     break;
                 }
             }
@@ -155,7 +170,7 @@ int main(int argc, char* argv[]) {
         if (!show_gui) {
             m_main_window->m_ipc_client->gameClosedFunc = StopProgram;
         }
-        m_main_window->StartEmulatorExecutable(emulator_path, emulator_args);
+        m_main_window->StartEmulatorExecutable(emulator_path, game_arg, emulator_args, no_ipc);
     }
 
     if (!has_emulator_argument || show_gui) {

@@ -328,17 +328,17 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         });
 
         connect(ui->PortableUserButton, &QPushButton::clicked, this, []() {
-            QString userDir;
-            Common::FS::PathToQString(userDir, std::filesystem::current_path() / "user");
-            if (std::filesystem::exists(std::filesystem::current_path() / "user")) {
-                QMessageBox::information(NULL, tr("Cannot create portable user folder"),
-                                         tr("%1 already exists").arg(userDir));
+            QString launcherDir;
+            Common::FS::PathToQString(launcherDir, std::filesystem::current_path() / "launcher");
+            if (std::filesystem::exists(std::filesystem::current_path() / "launcher")) {
+                QMessageBox::information(NULL, tr("Cannot create portable launcher folder"),
+                                         tr("%1 already exists").arg(launcherDir));
             } else {
-                std::filesystem::copy(Common::FS::GetUserPath(Common::FS::PathType::UserDir),
-                                      std::filesystem::current_path() / "user",
+                std::filesystem::copy(Common::FS::GetUserPath(Common::FS::PathType::LauncherDir),
+                                      std::filesystem::current_path() / "launcher",
                                       std::filesystem::copy_options::recursive);
-                QMessageBox::information(NULL, tr("Portable user folder created"),
-                                         tr("%1 successfully created.").arg(userDir));
+                QMessageBox::information(NULL, tr("Portable launcherDir folder created"),
+                                         tr("%1 successfully created.").arg(launcherDir));
             }
         });
     }
