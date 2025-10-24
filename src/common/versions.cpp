@@ -21,9 +21,14 @@ std::vector<Version> GetVersionList(std::filesystem::path const& path) {
         path.empty() ? Common::FS::GetUserPath(Common::FS::PathType::LauncherDir) / "versions.json"
                      : path;
 
-    std::ifstream ifs(cfg_path);
+    std::ifstream ifs{cfg_path};
     if (!ifs) {
         fmt::print(stderr, "VersionManager: Config file not found: {}\n", cfg_path.string());
+        std::ofstream f{cfg_path};
+        if (f.is_open()) {
+            f << nlohmann::json::array({});
+            f.close();
+        }
         return {};
     }
 
