@@ -16,7 +16,7 @@ using json = nlohmann::json;
 
 namespace VersionManager {
 
-std::vector<Version> GetVersionList(const std::filesystem::path& path) {
+std::vector<Version> GetVersionList(std::filesystem::path const& path) {
     std::filesystem::path cfg_path =
         path.empty() ? Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "versions.json"
                      : path;
@@ -69,7 +69,7 @@ std::vector<Version> GetVersionList(const std::filesystem::path& path) {
     return versions;
 }
 
-void SaveVersionList(const std::vector<Version>& versions, const std::filesystem::path& path) {
+void SaveVersionList(std::vector<Version> const& versions, std::filesystem::path const& path) {
     std::filesystem::path out_path =
         path.empty() ? Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "versions.json"
                      : path;
@@ -93,13 +93,13 @@ void SaveVersionList(const std::vector<Version>& versions, const std::filesystem
     ofs << std::setw(4) << root;
 }
 
-void AddNewVersion(const Version& v, const std::filesystem::path& path) {
+void AddNewVersion(Version const& v, std::filesystem::path const& path) {
     auto versions = GetVersionList(path);
     versions.push_back(v);
     SaveVersionList(versions, path);
 }
 
-void RemoveVersion(const std::string& v_name, const std::filesystem::path& path) {
+void RemoveVersion(std::string const& v_name, std::filesystem::path const& path) {
     auto versions = GetVersionList(path);
     auto it = std::find_if(versions.begin(), versions.end(),
                            [&](const Version& i) { return i.name == v_name; });
@@ -109,7 +109,7 @@ void RemoveVersion(const std::string& v_name, const std::filesystem::path& path)
     SaveVersionList(versions, path);
 }
 
-void RemoveVersion(const Version& v, const std::filesystem::path& path) {
+void RemoveVersion(Version const& v, std::filesystem::path const& path) {
     RemoveVersion(v.name, path);
 }
 
