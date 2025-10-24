@@ -28,6 +28,7 @@ enum class PathType {
     CustomConfigs,  // Where custom files for different games are stored.
     VersionDir,     // Where emulator versions are stored.
     LauncherDir,    // Where launcher stores its data.
+    LauncherMetaData // Where launcher stores its game metadata.
 };
 
 constexpr auto PORTABLE_DIR = "user";
@@ -47,6 +48,7 @@ constexpr auto PATCHES_DIR = "patches";
 constexpr auto METADATA_DIR = "game_data";
 constexpr auto CUSTOM_TROPHY = "custom_trophy";
 constexpr auto CUSTOM_CONFIGS = "custom_configs";
+constexpr auto VERSION_DIR = "versions";
 
 // Filenames
 constexpr auto LOG_FILE = "shad_log.txt";

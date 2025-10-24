@@ -13,7 +13,7 @@ CompatibilityInfoClass::CompatibilityInfoClass()
     : m_network_manager(new QNetworkAccessManager(this)) {
     QStringList file_paths;
     std::filesystem::path compatibility_file_path =
-        Common::FS::GetUserPath(Common::FS::PathType::MetaDataDir) / "compatibility_data.json";
+        Common::FS::GetUserPath(Common::FS::PathType::LauncherDir) / "compatibility_data.json";
     Common::FS::PathToQString(m_compatibility_filename, compatibility_file_path);
 };
 CompatibilityInfoClass::~CompatibilityInfoClass() = default;

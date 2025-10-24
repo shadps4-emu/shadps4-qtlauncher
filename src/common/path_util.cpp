@@ -117,19 +117,19 @@ static auto UserPaths = [] {
         // NOTE: On Windows we currently just create the portable directory instead.
 #ifdef __APPLE__
         launcher_dir = std::filesystem::path(getenv("HOME")) / "Library" / "Application Support" /
-                       "shadPS4Launcher";
+                       "shadPS4QtLauncher";
 #elif defined(__linux__)
         const char* xdg_data_home = getenv("XDG_DATA_HOME");
         if (xdg_data_home != nullptr && strlen(xdg_data_home) > 0) {
-            launcher_dir = std::filesystem::path(xdg_data_home) / "shadPS4Launcher";
+            launcher_dir = std::filesystem::path(xdg_data_home) / "shadPS4QtLauncher";
         } else {
             launcher_dir =
-                std::filesystem::path(getenv("HOME")) / ".local" / "share" / "shadPS4Launcher";
+                std::filesystem::path(getenv("HOME")) / ".local" / "share" / "shadPS4QtLauncher";
         }
 #elif _WIN32
         TCHAR appdata[MAX_PATH] = {0};
         SHGetFolderPath(NULL, CSIDL_APPDATA, NULL, 0, appdata);
-        launcher_dir = std::filesystem::path(appdata) / "shadPS4Launcher";
+        launcher_dir = std::filesystem::path(appdata) / "shadPS4QtLauncher";
 #endif
     }
 
@@ -156,6 +156,8 @@ static auto UserPaths = [] {
     create_path(PathType::CustomConfigs, user_dir / CUSTOM_CONFIGS);
 
     create_path(PathType::LauncherDir, launcher_dir);
+    create_path(PathType::LauncherMetaData, launcher_dir / METADATA_DIR);
+    create_path(PathType::VersionDir, launcher_dir / VERSION_DIR);
 
     std::ofstream notice_file(user_dir / CUSTOM_TROPHY / "Notice.txt");
     if (notice_file.is_open()) {
