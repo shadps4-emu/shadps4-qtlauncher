@@ -425,7 +425,7 @@ if (APPLE)
     add_dependencies(shadPS4QtLauncher CopyMoltenVK)
 endif()
 
-target_link_libraries(shadPS4QtLauncher PRIVATE Qt6::Widgets Qt6::Concurrent Qt6::Network Qt6::Multimedia)
+target_link_libraries(shadPS4QtLauncher PRIVATE Qt6::Widgets Qt6::Concurrent Qt6::Network Qt6::Multimedia nlohmann_json::nlohmann_json)
 if (ENABLE_UPDATER)
     add_definitions(-DENABLE_UPDATER)
 endif()

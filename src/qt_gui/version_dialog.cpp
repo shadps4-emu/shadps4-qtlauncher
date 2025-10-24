@@ -555,7 +555,7 @@ tr("First you need to choose a location to save the versions in\n'Path to save v
 }
 
 void VersionDialog::LoadInstalledList() {
-    const auto path = Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "versions.toml";
+    const auto path = Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "versions.json";
     auto versions = VersionManager::GetVersionList(path);
     auto const& selected_version =
         m_gui_settings->GetValue(gui::vm_versionSelected).toString().toStdString();

@@ -1,86 +1,116 @@
-// SPDX-FileCopyrightText: Copyright 2025 shadPS4 Emulator Project
+﻿// SPDX-FileCopyrightText: Copyright 2025 shadPS4 Emulator Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include "logging/log.h"
 #include "path_util.h"
 #include "versions.h"
 
+#include <algorithm>
+#include <filesystem>
+#include <fstream>
+#include <vector>
+#include <fmt/core.h>
+#include <nlohmann/json.hpp>
+
+using json = nlohmann::json;
+
 namespace VersionManager {
 
-std::vector<Version> GetVersionList(std::filesystem::path const& path) {
-    toml::ordered_value data;
+std::vector<Version> GetVersionList(const std::filesystem::path& path) {
+    std::filesystem::path cfg_path =
+        path.empty() ? Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "versions.json"
+                     : path;
+
+    std::ifstream ifs(cfg_path);
+    if (!ifs) {
+        fmt::print(stderr, "VersionManager: Config file not found: {}\n", cfg_path.string());
+        return {};
+    }
+
+    json data;
     try {
-        if (path.empty()) {
-            data = toml::parse(Common::FS::GetUserPath(Common::FS::PathType::UserDir) /
-                               "versions.toml");
-        } else {
-            data = toml::parse(path);
-        }
-    } catch (std::exception& ex) {
-        fmt::print("Got exception trying to load config file. Exception: {}\n", ex.what());
+        ifs >> data;
+    } catch (const std::exception& ex) {
+        fmt::print(stderr, "VersionManager: Failed to parse JSON: {}\n", ex.what());
+        return {};
+    }
+
+    if (!data.is_array()) {
+        fmt::print(stderr, "VersionManager: Invalid JSON format (expected array)\n");
         return {};
     }
 
     std::vector<Version> versions;
-    for (const auto& [key, value] : data.as_table()) {
-        Version v = {
-            .name = toml::find_or<std::string>(value, "name", "no name"),
-            .path = toml::find_or<std::string>(value, "path", ""),
-            .date = toml::find_or<std::string>(value, "date", "never"),
-            .codename = toml::find_or<std::string>(value, "codename", ""),
-            .type =
-                static_cast<VersionType>(toml::find_or<int>(value, "type", VersionType::Custom)),
-            .id = std::stoi(key),
+    int id = 0;
+
+    for (const auto& entry : data) {
+        if (!entry.is_object()) {
+            fmt::print(stderr, "VersionManager: Skipping invalid entry (not an object)\n");
+            continue;
+        }
+
+        Version v{
+            .name = entry.value("name", std::string("no name")),
+            .path = entry.value("path", std::string("")),
+            .date = entry.value("date", std::string("never")),
+            .codename = entry.value("codename", std::string("")),
+            .type = static_cast<VersionType>(
+                entry.value("type", static_cast<int>(VersionType::Custom))),
+            .id = id++,
         };
+
         versions.push_back(std::move(v));
     }
-    std::sort(versions.begin(), versions.end(), [](Version a, Version b) { return a.id < b.id; });
-    return std::move(versions);
+
+    // Sort by id just for consistent ordering
+    std::sort(versions.begin(), versions.end(),
+              [](const Version& a, const Version& b) { return a.id < b.id; });
+
+    return versions;
 }
 
-void SaveVersionList(std::vector<Version> const& versions, std::filesystem::path const& path) {
-    toml::ordered_value root = toml::table();
+void SaveVersionList(const std::vector<Version>& versions, const std::filesystem::path& path) {
+    std::filesystem::path out_path =
+        path.empty() ? Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "versions.json"
+                     : path;
 
-    for (size_t i = 0; i < versions.size(); ++i) {
-        const auto& v = versions[i];
-        toml::ordered_value entry = toml::table{{"name", v.name},
-                                                {"path", v.path},
-                                                {"date", v.date},
-                                                {"codename", v.codename},
-                                                {"type", static_cast<int>(v.type)}};
-        root[std::to_string(i)] = std::move(entry);
+    json root = json::array();
+
+    for (const auto& v : versions) {
+        root.push_back({{"name", v.name},
+                        {"path", v.path},
+                        {"date", v.date},
+                        {"codename", v.codename},
+                        {"type", static_cast<int>(v.type)}});
     }
 
-    std::ofstream ofs(path.empty()
-                          ? Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "versions.toml"
-                          : path);
-    ofs << root;
+    std::ofstream ofs(out_path, std::ios::trunc);
+    if (!ofs) {
+        fmt::print(stderr, "Failed to open file for writing: {}\n", out_path.string());
+        return;
+    }
+
+    ofs << std::setw(4) << root;
 }
 
-void AddNewVersion(Version const& v, std::filesystem::path const& path) {
+void AddNewVersion(const Version& v, const std::filesystem::path& path) {
     auto versions = GetVersionList(path);
     versions.push_back(v);
     SaveVersionList(versions, path);
 }
 
-void RemoveVersion(Version const& v, std::filesystem::path const& path) {
+void RemoveVersion(const std::string& v_name, const std::filesystem::path& path) {
     auto versions = GetVersionList(path);
-    auto it = std::find_if(versions.cbegin(), versions.cend(),
-                           [v](Version i) { return i.name == v.name; });
-    if (it != versions.cend()) {
+    auto it = std::find_if(versions.begin(), versions.end(),
+                           [&](const Version& i) { return i.name == v_name; });
+    if (it != versions.end()) {
         versions.erase(it);
     }
     SaveVersionList(versions, path);
 }
 
-void RemoveVersion(std::string const& v_name, std::filesystem::path const& path) {
-    auto versions = GetVersionList(path);
-    auto it = std::find_if(versions.cbegin(), versions.cend(),
-                           [v_name](Version i) { return i.name == v_name; });
-    if (it != versions.cend()) {
-        versions.erase(it);
-    }
-    SaveVersionList(versions, path);
+void RemoveVersion(const Version& v, const std::filesystem::path& path) {
+    RemoveVersion(v.name, path);
 }
 
 } // namespace VersionManager
