@@ -735,6 +735,13 @@ infinity_dialog* infinity_dialog::get_dlg(QWidget* parent, std::shared_ptr<IpcCl
     return inst;
 }
 
+void infinity_dialog::clear_all() {
+    for (uint8_t slot = 0; slot < 9; slot++) {
+        figure_slots[slot] = {};
+        m_edit_figures[slot]->setText(tr("None"));
+    }
+}
+
 void infinity_dialog::add_figure_slot(QVBoxLayout* vbox_group, QString name, u8 slot) {
     QHBoxLayout* hbox_infinity = new QHBoxLayout();
 

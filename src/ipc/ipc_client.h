@@ -37,6 +37,12 @@ public:
     void removeSkylander(int slot);
     void loadInfinityFigure(std::string file_name, int slot);
     void removeInfinityFigure(int slot);
+    void loadDimensionFigure(std::string file_name, uint8_t pad, uint8_t index);
+    void removeDimensionFigure(uint8_t pad, uint8_t index, bool fullRemove);
+    void moveDimensionFigure(uint8_t new_pad, uint8_t new_index, uint8_t old_pad,
+                             uint8_t old_index);
+    void tempRemoveDimensionFigure(uint8_t index);
+    void cancelRemoveDimensionFigure(uint8_t index);
     std::function<void()> gameClosedFunc;
     std::function<void()> startGameFunc;
     std::function<void()> restartEmulatorFunc;
