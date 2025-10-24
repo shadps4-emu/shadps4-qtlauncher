@@ -2049,7 +2049,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable HDR:\nEnables HDR in games that support it.\nYour monitor must have support for the BT2020 PQ color space and the RGB10A2 swapchain format.</source>
-      <translation>Включить HDR:\nВключает HDR в играх, которые его поддерживают.\nВаш монитор должен иметь поддержку цветового пространства BT2020 PQ и формата swapchain RGB10A2.</translation>
+      <translation>Включить HDR:\nВключает HDR в играх, которые его поддерживают.\nВаш монитор должен иметь поддержку цветового пространства BT2020 PQ и формата цепочки буферов RGB10A2.</translation>
     </message>
     <message>
       <source>Game Folders:\nThe list of folders to check for installed games.</source>

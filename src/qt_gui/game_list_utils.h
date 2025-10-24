@@ -66,7 +66,7 @@ public:
 
         // Cache path
         QDir cacheDir =
-            QDir(Common::FS::GetUserPath(Common::FS::PathType::MetaDataDir) / game.serial);
+            QDir(Common::FS::GetUserPath(Common::FS::PathType::LauncherMetaData) / game.serial);
         if (!cacheDir.exists()) {
             cacheDir.mkpath(".");
         }

@@ -18,6 +18,7 @@
 #include <QTimer>
 #include <QVBoxLayout>
 #include <common/path_util.h>
+#include <common/versions.h>
 
 #include "common/config.h"
 #include "gui_settings.h"
@@ -29,6 +30,8 @@ VersionDialog::VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget
     : QDialog(parent), ui(new Ui::VersionDialog), m_gui_settings(std::move(gui_settings)) {
     ui->setupUi(this);
     this->setMinimumSize(670, 350);
+
+    auto const& version_list = VersionManager::GetVersionList();
 
     ui->checkOnStartupCheckBox->setChecked(
         m_gui_settings->GetValue(gui::vm_checkOnStartup).toBool());
@@ -84,7 +87,7 @@ VersionDialog::VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget
     connect(ui->checkChangesVersionButton, &QPushButton::clicked, this,
             [this]() { LoadInstalledList(); });
 
-    connect(ui->addCustomVersionButton, &QPushButton::clicked, this, [this]() {
+    connect(ui->addCustomVersionButton, &QPushButton::clicked, this, [this, version_list]() {
         QString exePath;
 
 #ifdef Q_OS_WIN
@@ -92,46 +95,40 @@ VersionDialog::VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget
                                                tr("Executable (*.exe)"));
 #elif defined(Q_OS_LINUX)
     exePath = QFileDialog::getOpenFileName(this, tr("Select executable"), QDir::rootPath(),
-                                            tr("Executable (*.AppImage)"));
+                                            "Executable (*)");
 #elif defined(Q_OS_MACOS)
     exePath = QFileDialog::getOpenFileName(this, tr("Select executable"), QDir::rootPath(),
-                                            tr("Executable (*.*)"));
+                                            "Executable (*.*)");
 #endif
 
         if (exePath.isEmpty())
             return;
 
         bool ok;
-        QString folderName =
+        QString version_name =
             QInputDialog::getText(this, tr("Version name"),
                                   tr("Enter the name of this version as it appears in the list."),
                                   QLineEdit::Normal, "", &ok);
-        if (!ok || folderName.trimmed().isEmpty())
+        if (!ok || version_name.trimmed().isEmpty())
             return;
 
-        folderName = folderName.trimmed();
+        version_name = version_name.trimmed();
 
-        QString basePath = m_gui_settings->GetValue(gui::vm_versionPath).toString();
-        QString newFolderPath = QDir(basePath).filePath(folderName);
-
-        QDir dir;
-        if (dir.exists(newFolderPath)) {
-            QMessageBox::warning(this, tr("Error"), tr("A folder with that name already exists."));
+        if (std::find_if(version_list.cbegin(), version_list.cend(), [version_name](auto i) {
+                return i.name == version_name.toStdString();
+            }) != version_list.cend()) {
+            QMessageBox::warning(this, tr("Error"), tr("A version with that name already exists."));
             return;
         }
 
-        if (!dir.mkpath(newFolderPath)) {
-            QMessageBox::critical(this, tr("Error"), tr("Failed to create folder."));
-            return;
-        }
-
-        QFileInfo exeInfo(exePath);
-        QString targetFilePath = QDir(newFolderPath).filePath(exeInfo.fileName());
-
-        if (!QFile::copy(exePath, targetFilePath)) {
-            QMessageBox::critical(this, tr("Error"), tr("Failed to copy executable."));
-            return;
-        }
+        VersionManager::Version new_version = {
+            .name = version_name.toStdString(),
+            .path = exePath.toStdString(),
+            .date = QDateTime::currentDateTime().toString("yyyy.MM.dd. HH:mm").toStdString(),
+            .codename = "",
+            .type = VersionManager::VersionType::Custom,
+        };
+        VersionManager::AddNewVersion(new_version);
 
         QMessageBox::information(this, tr("Success"), tr("Version added successfully."));
         LoadInstalledList();
@@ -152,21 +149,13 @@ VersionDialog::VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget
             QMessageBox::critical(this, tr("Error"), tr("Failed to determine the folder path."));
             return;
         }
-        QString folderName = QDir(fullPath).dirName();
         auto reply = QMessageBox::question(this, tr("Delete version"),
                                            tr("Do you want to delete the version") +
-                                               QString(" \"%1\" ?").arg(folderName),
+                                               QString(" \"%1\" ?").arg(selectedItem->text(1)),
                                            QMessageBox::Yes | QMessageBox::No);
         if (reply == QMessageBox::Yes) {
-            QDir dirToRemove(fullPath);
-            if (dirToRemove.exists()) {
-                if (!dirToRemove.removeRecursively()) {
-                    QMessageBox::critical(this, tr("Error"),
-                                          tr("Failed to delete folder.") +
-                                              QString("\n \"%1\"").arg(folderName));
-                    return;
-                }
-            }
+            // not removing any files, as that might be a problem with local ones
+            VersionManager::RemoveVersion(selectedItem->text(1).toStdString());
             LoadInstalledList();
         }
     });
@@ -351,7 +340,7 @@ tr("First you need to choose a location to save the versions in\n'Path to save v
                              .arg(versionName);
             }
 
-            { // Menssage yes/no
+            { // Message yes/no
                 QMessageBox::StandardButton reply;
                 reply = QMessageBox::question(this, tr("Confirm Download"),
                                               tr("Do you want to download the version") +
@@ -526,7 +515,8 @@ tr("First you need to choose a location to save the versions in\n'Path to save v
                             QProcess::startDetached(process, args);
 
                             QTimer::singleShot(
-                                4000, this, [this, folderName, progressDialog, versionName]() {
+                                4000, this,
+                                [this, folderName, progressDialog, versionName, release]() {
                                     progressDialog->close();
                                     progressDialog->deleteLater();
 
@@ -534,13 +524,35 @@ tr("First you need to choose a location to save the versions in\n'Path to save v
                                         m_gui_settings->GetValue(gui::vm_versionPath).toString();
                                     QString fullPath = QDir(userPath).filePath(folderName);
 
-                                    m_gui_settings->SetValue(gui::vm_versionSelected, fullPath);
-
                                     QMessageBox::information(
                                         this, tr("Confirm Download"),
                                         tr("Version %1 has been downloaded and selected.")
                                             .arg(versionName));
-
+                                    bool is_release = !versionName.contains("Pre-release");
+                                    auto release_name = release["name"].toString();
+                                    QString code_name = "";
+                                    static constexpr QStringView marker = u" - codename ";
+                                    int idx = release_name.indexOf(u" - codename ");
+                                    if (idx != -1) {
+                                        code_name = release_name.mid(idx + marker.size());
+                                    }
+                                    std::filesystem::path exe_path =
+                                        *std::filesystem::directory_iterator{
+                                            fullPath.toStdString()};
+                                    VersionManager::Version new_version{
+                                        .name = versionName.toStdString(),
+                                        .path = exe_path.generic_string(),
+                                        .date = release["published_at"]
+                                                    .toString()
+                                                    .left(10)
+                                                    .toStdString(),
+                                        .codename = code_name.toStdString(),
+                                        .type = is_release ? VersionManager::VersionType::Release
+                                                           : VersionManager::VersionType::Nightly,
+                                    };
+                                    m_gui_settings->SetValue(gui::vm_versionSelected,
+                                                             QString(exe_path.c_str()));
+                                    VersionManager::AddNewVersion(new_version);
                                     LoadInstalledList();
                                 });
                         } else {
@@ -555,110 +567,24 @@ tr("First you need to choose a location to save the versions in\n'Path to save v
 }
 
 void VersionDialog::LoadInstalledList() {
-    QString path = m_gui_settings->GetValue(gui::vm_versionPath).toString();
-    QDir dir(path);
-    if (!dir.exists() || path.isEmpty())
-        return;
+    const auto path = Common::FS::GetUserPath(Common::FS::PathType::LauncherDir) / "versions.json";
+    auto versions = VersionManager::GetVersionList(path);
+    auto const& selected_version =
+        m_gui_settings->GetValue(gui::vm_versionSelected).toString().toStdString();
 
     ui->installedTreeWidget->clear();
     ui->installedTreeWidget->setColumnCount(5);
     ui->installedTreeWidget->setColumnHidden(4, true);
 
-    QStringList folders = dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot);
-
-    QRegularExpression versionRegex("^v(\\d+)\\.(\\d+)\\.(\\d+)$");
-
-    QVector<QPair<QVector<int>, QString>> versionedDirs;
-
-    QStringList otherDirs;
-    QString savedVersionPath = m_gui_settings->GetValue(gui::vm_versionSelected).toString();
-
-    for (const QString& folder : folders) {
-        if (folder == "Pre-release") {
-            otherDirs.append(folder);
-            continue;
-        }
-        QRegularExpressionMatch match = versionRegex.match(folder.section(" - ", 0, 0));
-        if (match.hasMatch()) {
-            QVector<int> versionParts = {match.captured(1).toInt(), match.captured(2).toInt(),
-                                         match.captured(3).toInt()};
-            versionedDirs.append({versionParts, folder});
-        } else {
-            otherDirs.append(folder);
-        }
-    }
-
-    std::sort(otherDirs.begin(), otherDirs.end());
-
-    std::sort(versionedDirs.begin(), versionedDirs.end(), [](const auto& a, const auto& b) {
-        if (a.first[0] != b.first[0])
-            return a.first[0] > b.first[0];
-        if (a.first[1] != b.first[1])
-            return a.first[1] > b.first[1];
-        return a.first[2] > b.first[2];
-    });
-
-    // Add (Pre-release, Test Build...)
-    for (const QString& folder : otherDirs) {
+    for (auto const& v : versions) {
         QTreeWidgetItem* item = new QTreeWidgetItem(ui->installedTreeWidget);
-        QString fullPath = QDir(path).filePath(folder);
-        item->setText(4, fullPath);
-        item->setCheckState(0, Qt::Unchecked);
-
-        if (folder.startsWith("Pre-release-shadPS4")) {
-            QStringList parts = folder.split('-');
-            item->setText(1, "Pre-release");
-            QString shortHash;
-            if (parts.size() >= 7) {
-                shortHash = parts[6].left(7);
-            } else {
-                shortHash = "";
-            }
-            item->setText(2, shortHash);
-            if (parts.size() >= 6) {
-                QString date = QString("%1-%2-%3").arg(parts[3], parts[4], parts[5]);
-                item->setText(3, date);
-            } else {
-                item->setText(3, "");
-            }
-        } else if (folder.contains(" - ")) {
-            QStringList parts = folder.split(" - ");
-            item->setText(1, parts.value(0));
-            item->setText(2, parts.value(1));
-            item->setText(3, parts.value(2));
-        } else {
-            item->setText(1, folder);
-            item->setText(2, "");
-            item->setText(3, "");
-        }
-
-        if (fullPath == savedVersionPath) {
-            item->setCheckState(0, Qt::Checked);
-        }
+        item->setText(1, QString::fromStdString(v.name));
+        item->setText(2, QString::fromStdString(v.codename));
+        item->setText(3, QString::fromStdString(v.date));
+        item->setText(4, QString::fromStdString(v.path));
+        item->setCheckState(0, (selected_version == v.path) ? Qt::Checked : Qt::Unchecked);
     }
 
-    // Add versions
-    for (const auto& pair : versionedDirs) {
-        QTreeWidgetItem* item = new QTreeWidgetItem(ui->installedTreeWidget);
-        QString fullPath = QDir(path).filePath(pair.second);
-        item->setText(4, fullPath);
-        item->setCheckState(0, Qt::Unchecked);
-
-        if (pair.second.contains(" - ")) {
-            QStringList parts = pair.second.split(" - ");
-            item->setText(1, parts.value(0));
-            item->setText(2, parts.value(1));
-            item->setText(3, parts.value(2));
-        } else {
-            item->setText(1, pair.second);
-            item->setText(2, "");
-            item->setText(3, "");
-        }
-
-        if (fullPath == savedVersionPath) {
-            item->setCheckState(0, Qt::Checked);
-        }
-    }
     ui->installedTreeWidget->resizeColumnToContents(0);
     ui->installedTreeWidget->resizeColumnToContents(1);
     ui->installedTreeWidget->resizeColumnToContents(2);

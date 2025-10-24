@@ -10,8 +10,8 @@
 
 IpcClient::IpcClient(QObject* parent) : QObject(parent) {}
 
-void IpcClient::startEmulator(const QFileInfo& exe, const QStringList& args,
-                              const QString& workDir) {
+void IpcClient::startEmulator(const QFileInfo& exe, const QStringList& args, const QString& workDir,
+                              bool disable_ipc) {
     if (process) {
         process->disconnect();
         process->deleteLater();
@@ -26,7 +26,9 @@ void IpcClient::startEmulator(const QFileInfo& exe, const QStringList& args,
     process->setProcessChannelMode(QProcess::SeparateChannels);
 
     QProcessEnvironment env = QProcessEnvironment::systemEnvironment();
-    env.insert("SHADPS4_ENABLE_IPC", "true");
+    if (!disable_ipc) {
+        env.insert("SHADPS4_ENABLE_IPC", "true");
+    }
     process->setProcessEnvironment(env);
 
     process->setWorkingDirectory(workDir.isEmpty() ? exe.absolutePath() : workDir);

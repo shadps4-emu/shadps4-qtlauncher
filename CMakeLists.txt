@@ -283,6 +283,8 @@ set(COMMON src/common/logging/backend.cpp
            src/common/bounded_threadsafe_queue.h
            src/common/config.cpp
            src/common/config.h
+           src/common/versions.cpp
+           src/common/versions.h
            src/common/endian.h
            src/common/enum.h
            src/common/io_file.cpp
@@ -325,7 +327,7 @@ set(QT_GUI src/qt_gui/about_dialog.cpp
            src/qt_gui/cheats_patches.h
            src/qt_gui/compatibility_info.cpp
            src/qt_gui/compatibility_info.h
-	       src/qt_gui/control_settings.cpp	   
+           src/qt_gui/control_settings.cpp
            src/qt_gui/control_settings.h
            src/qt_gui/control_settings.ui
            src/qt_gui/kbm_gui.cpp	   
@@ -371,6 +373,8 @@ set(QT_GUI src/qt_gui/about_dialog.cpp
            src/qt_gui/version_dialog.cpp
            src/qt_gui/version_dialog.h
            src/qt_gui/version_dialog.ui
+           src/qt_gui/create_shortcut.cpp
+           src/qt_gui/create_shortcut.h
            ${RESOURCE_FILES}
            ${TRANSLATIONS}
            ${UPDATER}
@@ -421,7 +425,7 @@ if (APPLE)
     add_dependencies(shadPS4QtLauncher CopyMoltenVK)
 endif()
 
-target_link_libraries(shadPS4QtLauncher PRIVATE Qt6::Widgets Qt6::Concurrent Qt6::Network Qt6::Multimedia)
+target_link_libraries(shadPS4QtLauncher PRIVATE Qt6::Widgets Qt6::Concurrent Qt6::Network Qt6::Multimedia nlohmann_json::nlohmann_json)
 if (ENABLE_UPDATER)
     add_definitions(-DENABLE_UPDATER)
 endif()

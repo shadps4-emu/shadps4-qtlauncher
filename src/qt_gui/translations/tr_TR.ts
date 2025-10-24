@@ -1040,7 +1040,7 @@
     </message>
     <message>
       <source>Launch with game specific configs (default)</source>
-      <translation type="unfinished">Launch with game specific configs (default)</translation>
+      <translation>Oyuna özel yapılandırmalarla başlat (varsayılan)</translation>
     </message>
     <message>
       <source>Launch with global config only</source>
@@ -1052,7 +1052,7 @@
     </message>
     <message>
       <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
-      <translation type="unfinished">Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</translation>
+      <translation>Rapor gönderilemedi, çünkü oyunun en son günlüğü aşağıdaki kontrolde başarısız oldu ve bu nedenle geçersiz olacaktır:</translation>
     </message>
     <message>
       <source>Ok</source>
@@ -2101,7 +2101,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the save data path.</source>
-      <translation>Gözat:\nVerileri kaydetme yolu olarak ayarlamak için bir klasöre göz atın.</translation>
+      <translation>Gözat:\nKayıt verileri yolu olarak ayarlamak için bir klasöre göz atın.</translation>
     </message>
     <message>
       <source>Set the volume of the background music.</source>
@@ -2437,11 +2437,11 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</source>
-      <translation type="unfinished">PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</translation>
+      <translation>PS4 Sistem Modülleri Yolu:\nPS4 sistem modüllerinin yüklendiği klasördür.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the sysmodules path.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the sysmodules path.</translation>
+      <translation>Gözat:\nSistem modülleri yolu olarak ayarlamak için bir klasöre göz atın.</translation>
     </message>
     <message>
       <source>Vulkan Validation (Requires Vulkan SDK)</source>
@@ -2559,7 +2559,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Add Custom</source>
-      <translation type="unfinished">Add Custom</translation>
+      <translation>Özel Ekle</translation>
     </message>
     <message>
       <source>Delete</source>
@@ -2643,7 +2643,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Do you want to delete the version</source>
-      <translation type="unfinished">Do you want to delete the version</translation>
+      <translation>Şu sürüm silinsin mi</translation>
     </message>
     <message>
       <source>Failed to delete folder.</source>
@@ -2651,7 +2651,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Version list update</source>
-      <translation type="unfinished">Version list update</translation>
+      <translation>Sürüm listesi güncelleme</translation>
     </message>
     <message>
       <source>No news, the version list is already updated.</source>
@@ -2677,7 +2677,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>No files available for this platform.</source>
-      <translation type="unfinished">No files available for this platform.</translation>
+      <translation>Bu platform için kullanılabilir dosya yok.</translation>
     </message>
     <message>
       <source>Downloading %1 , please wait...</source>
@@ -2701,7 +2701,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release</source>
-      <translation type="unfinished">Unable to get hash of latest pre-release</translation>
+      <translation>En son ön sürümün hash değeri alınamadı</translation>
     </message>
     <message>
       <source>No pre-release found</source>
@@ -2795,7 +2795,7 @@ Would you like to download it now?</source>
     </message>
     <message>
       <source>No version selected. Please choose one from the list to delete.</source>
-      <translation type="unfinished">No version selected. Please choose one from the list to delete.</translation>
+      <translation>Hiçbir sürüm seçilmedi. Lütfen listeden silmek için birini seçin.</translation>
     </message>
     <message>
       <source>Confirm Download</source>
