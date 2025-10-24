@@ -1696,11 +1696,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Run Emulator</source>
-      <translation type="unfinished">Run Emulator</translation>
+      <translation>Ejecutar emulador</translation>
     </message>
     <message>
       <source>Emulator is already running!</source>
-      <translation type="unfinished">Emulator is already running!</translation>
+      <translation>¡El emulador ya se está ejecutando!</translation>
     </message>
   </context>
   <context>
@@ -2471,7 +2471,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Habilitar validación asistida por GPU:\nIncluye un código adicional en los shaders para comprobar que su comportamiento sea el correcto.\nReducirá el rendimiento y, probablemente, cambiará el comportamiento de la emulación.\nNecesitas el SDK de Vulkan para que funcione.</translation>
     </message>
     <message>
       <source>GUI Language</source>
@@ -2491,7 +2491,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
-      <translation type="unfinished">GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</translation>
+      <translation>Actualizaciones de la GUI:\nPrincipal: las versiones oficiales mensuales podrían estar muy obsoletas, pero son más fiables y han sido más testadas.\n«Nightly»: versiones de desarrollo con las últimas características y correcciones, pero que pueden contener fallos y ser menos estables.\n\n* Esta actualización solo se aplica a la interfaz de usuario Qt. Para actualizar el núcleo del emulador debes utilizar el gestor de versiones.</translation>
     </message>
   </context>
   <context>
