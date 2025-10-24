@@ -227,7 +227,7 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 find_package(fmt 10.2.0 CONFIG)
 find_package(SDL3 3.1.2 CONFIG)
 find_package(toml11 4.2.0 CONFIG)
-find_package(VulkanHeaders 1.4.324 CONFIG)
+find_package(VulkanHeaders 1.4.329 CONFIG)
 find_package(pugixml 1.14 CONFIG)
 list(POP_BACK CMAKE_MODULE_PATH)
 
@@ -407,9 +407,9 @@ if (APPLE)
         OUTPUT ${MVK_DST}
         COMMAND ${CMAKE_COMMAND} -E make_directory ${MVK_DST})
 
-    set(MVK_DYLIB_SRC ${CMAKE_CURRENT_BINARY_DIR}/externals/MoltenVK/libMoltenVK.dylib)
+    set(MVK_DYLIB_SRC ${CMAKE_CURRENT_BINARY_DIR}/externals/MoltenVK/MoltenVK/libMoltenVK.dylib)
     set(MVK_DYLIB_DST ${MVK_DST}/libMoltenVK.dylib)
-    set(MVK_ICD_SRC ${CMAKE_CURRENT_SOURCE_DIR}/externals/MoltenVK/MoltenVK/MoltenVK/icd/MoltenVK_icd.json)
+    set(MVK_ICD_SRC ${CMAKE_CURRENT_SOURCE_DIR}/externals/MoltenVK/MoltenVK/icd/MoltenVK_icd.json)
     set(MVK_ICD_DST ${MVK_DST}/MoltenVK_icd.json)
 
     add_custom_command(

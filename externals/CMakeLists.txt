@@ -56,6 +56,8 @@ endif()
 if (APPLE)
     # MoltenVK
     if (NOT TARGET MoltenVK)
+        set(MVK_EXCLUDE_CEREAL ON)
+        set(MVK_EXCLUDE_SPIRV_TOOLS ON)
         add_subdirectory(MoltenVK)
     endif()
 endif()

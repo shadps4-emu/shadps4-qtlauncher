@@ -1312,6 +1312,13 @@ void SettingsDialog::getPhysicalDevices() {
     instInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
     instInfo.pApplicationInfo = &appInfo;
 
+#ifdef __APPLE__
+    const char* portabilityExtension = VK_KHR_PORTABILITY_ENUMERATION_EXTENSION_NAME;
+    instInfo.ppEnabledExtensionNames = &portabilityExtension;
+    instInfo.enabledExtensionCount = 1;
+    instInfo.flags = VK_INSTANCE_CREATE_ENUMERATE_PORTABILITY_BIT_KHR;
+#endif
+
     VkInstance instance;
     if (vkCreateInstance(&instInfo, nullptr, &instance) != VK_SUCCESS) {
         qWarning() << "Failed to create Vulkan instance.";
