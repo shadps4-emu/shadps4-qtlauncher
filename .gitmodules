@@ -22,15 +22,10 @@
 	path = externals/vulkan-headers
 	url = https://github.com/KhronosGroup/Vulkan-Headers.git
 	shallow = true
-[submodule "externals/MoltenVK/SPIRV-Cross"]
-	path = externals/MoltenVK/SPIRV-Cross
-	url = https://github.com/KhronosGroup/SPIRV-Cross
-	shallow = true
-[submodule "externals/MoltenVK/MoltenVK"]
-	path = externals/MoltenVK/MoltenVK
-	url = https://github.com/KhronosGroup/MoltenVK
-	shallow = true
 [submodule "externals/json"]
 	path = externals/json
 	url = https://github.com/nlohmann/json.git
 	branch = develop
+[submodule "externals/MoltenVK"]
+	path = externals/MoltenVK
+	url = https://github.com/KhronosGroup/MoltenVK.git
