@@ -50,18 +50,9 @@ void ShortcutDialog::createShortcut() {
         return;
     }
 
-    QString versionFolder = m_gui_settings->GetValue(gui::vm_versionPath).toString();
-    QString versionName = "/" + listWidget->currentItem()->text();
-    QString exeName;
-#ifdef Q_OS_WIN
-    exeName = "/shadPS4.exe";
-#elif defined(Q_OS_LINUX)
-    exeName = "/Shadps4-sdl.AppImage";
-#elif defined(Q_OS_MACOS)
-    exeName = "/shadps4";
-#endif
-
-    emit shortcutRequested(versionFolder + versionName + exeName);
+    const QString selectedVersion = listWidget->currentItem()->text();
+    const QString executablePath = m_gui_settings->GetVersionExecutablePath(selectedVersion);
+    emit shortcutRequested(executablePath);
     QWidget::close();
 }
 

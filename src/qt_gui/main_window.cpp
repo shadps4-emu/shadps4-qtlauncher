@@ -1266,9 +1266,6 @@ tr("No emulator version was selected.\nThe Version Manager menu will then open.\
         return;
     }
 
-    Config::setGameRunning(true);
-    last_game_path = path;
-
     QFileInfo fileInfo(selectedVersion);
     if (!fileInfo.exists()) {
         QMessageBox::critical(nullptr, "shadPS4",
@@ -1280,8 +1277,10 @@ tr("No emulator version was selected.\nThe Version Manager menu will then open.\
 
     final_args.append(args);
 
-    QString workDir = QDir::currentPath();
+    Config::setGameRunning(true);
+    last_game_path = path;
 
+    QString workDir = QDir::currentPath();
     m_ipc_client->startEmulator(fileInfo, final_args, workDir);
     m_ipc_client->setActiveController(GamepadSelect::GetSelectedGamepad());
 }
