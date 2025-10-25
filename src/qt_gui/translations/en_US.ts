@@ -1060,6 +1060,34 @@
         <source>Info</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Create Shortcut for Selected Emulator Version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Create Shortcut for Specified Emulator Version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Create Shortcut</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shortcut creation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shortcut created successfully!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error creating shortcut!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to convert icon.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>HelpDialog</name>
@@ -1696,6 +1724,14 @@ Select an emulator version from the right panel.</source>
         <source>Emulator is already running!</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Invalid game argument provided</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation type="unfinished">None</translation>
+    </message>
 </context>
 <context>
     <name>SettingsDialog</name>
@@ -2208,15 +2244,7 @@ Select an emulator version from the right panel.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Cannot create portable user folder</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>%1 already exists</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Portable user folder created</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2487,6 +2515,33 @@ Select an emulator version from the right panel.</source>
         <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Cannot create portable launcher folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Portable launcherDir folder created</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ShortcutDialog</name>
+    <message>
+        <source>Select Version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select version for shortcut creation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No Version Selected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select a version first</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>TrophyViewer</name>
@@ -2586,14 +2641,6 @@ Select an emulator version from the right panel.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Executable (*.AppImage)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Executable (*.*)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Version name</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2604,18 +2651,6 @@ Select an emulator version from the right panel.</source>
     <message>
         <source>Error</source>
         <translation type="unfinished">Error</translation>
-    </message>
-    <message>
-        <source>A folder with that name already exists.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Failed to create folder.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Failed to copy executable.</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Success</source>
@@ -2635,10 +2670,6 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
         <source>Do you want to delete the version</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Failed to delete folder.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2793,6 +2824,10 @@ Would you like to download it now?</source>
     </message>
     <message>
         <source>Extraction failure.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A version with that name already exists.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
