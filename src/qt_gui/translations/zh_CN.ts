@@ -1064,6 +1064,34 @@
       <source>Info</source>
       <translation>详情</translation>
     </message>
+    <message>
+      <source>Create Shortcut for Selected Emulator Version</source>
+      <translation type="unfinished">Create Shortcut for Selected Emulator Version</translation>
+    </message>
+    <message>
+      <source>Create Shortcut for Specified Emulator Version</source>
+      <translation type="unfinished">Create Shortcut for Specified Emulator Version</translation>
+    </message>
+    <message>
+      <source>Create Shortcut</source>
+      <translation type="unfinished">Create Shortcut</translation>
+    </message>
+    <message>
+      <source>Shortcut creation</source>
+      <translation type="unfinished">Shortcut creation</translation>
+    </message>
+    <message>
+      <source>Shortcut created successfully!</source>
+      <translation type="unfinished">Shortcut created successfully!</translation>
+    </message>
+    <message>
+      <source>Error creating shortcut!</source>
+      <translation type="unfinished">Error creating shortcut!</translation>
+    </message>
+    <message>
+      <source>Failed to convert icon.</source>
+      <translation type="unfinished">Failed to convert icon.</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -1706,6 +1734,14 @@ Select an emulator version from the right panel.</source>
       <source>Emulator is already running!</source>
       <translation>模拟器已在运行！</translation>
     </message>
+    <message>
+      <source>Invalid game argument provided</source>
+      <translation type="unfinished">Invalid game argument provided</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation type="unfinished">None</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -2218,16 +2254,8 @@ Select an emulator version from the right panel.</source>
       <translation>本地用户文件夹：\n存储 shadPS4 设置和数据，这些设置和数据仅应用于当前运行的 shadPS4。创建本地用户文件夹后，重启应用即可开始使用。</translation>
     </message>
     <message>
-      <source>Cannot create portable user folder</source>
-      <translation>无法创建本地用户文件夹</translation>
-    </message>
-    <message>
       <source>%1 already exists</source>
       <translation>%1 已存在</translation>
-    </message>
-    <message>
-      <source>Portable user folder created</source>
-      <translation>本地用户文件夹已创建</translation>
     </message>
     <message>
       <source>%1 successfully created.</source>
@@ -2499,6 +2527,33 @@ Select an emulator version from the right panel.</source>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
       <translation>图形界面更新：\n正式版：每月发布的官方版本，版本内容可能较为陈旧，但经过充分测试，更为稳定可靠。\n夜间版：包含所有最新功能和修复的开发版本，但可能存在错误且稳定性较低。\n\n此更新仅适用于 Qt 图形界面。如需更新模拟器核心，请使用“版本管理器”菜单。</translation>
     </message>
+    <message>
+      <source>Cannot create portable launcher folder</source>
+      <translation type="unfinished">Cannot create portable launcher folder</translation>
+    </message>
+    <message>
+      <source>Portable launcherDir folder created</source>
+      <translation type="unfinished">Portable launcherDir folder created</translation>
+    </message>
+  </context>
+  <context>
+    <name>ShortcutDialog</name>
+    <message>
+      <source>Select Version</source>
+      <translation type="unfinished">Select Version</translation>
+    </message>
+    <message>
+      <source>Select version for shortcut creation</source>
+      <translation type="unfinished">Select version for shortcut creation</translation>
+    </message>
+    <message>
+      <source>No Version Selected</source>
+      <translation type="unfinished">No Version Selected</translation>
+    </message>
+    <message>
+      <source>Select a version first</source>
+      <translation type="unfinished">Select a version first</translation>
+    </message>
   </context>
   <context>
     <name>TrophyViewer</name>
@@ -2598,14 +2653,6 @@ Select an emulator version from the right panel.</source>
       <translation>可执行文件 (*.exe)</translation>
     </message>
     <message>
-      <source>Executable (*.AppImage)</source>
-      <translation>可执行文件(*.AppImage)</translation>
-    </message>
-    <message>
-      <source>Executable (*.*)</source>
-      <translation>可执行文件 (*.*)</translation>
-    </message>
-    <message>
       <source>Version name</source>
       <translation>版本名称</translation>
     </message>
@@ -2616,18 +2663,6 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Error</source>
       <translation>错误</translation>
-    </message>
-    <message>
-      <source>A folder with that name already exists.</source>
-      <translation>文件夹名已存在。</translation>
-    </message>
-    <message>
-      <source>Failed to create folder.</source>
-      <translation>创建文件夹失败。</translation>
-    </message>
-    <message>
-      <source>Failed to copy executable.</source>
-      <translation>复制可执行文件失败。</translation>
     </message>
     <message>
       <source>Success</source>
@@ -2648,10 +2683,6 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Do you want to delete the version</source>
       <translation>确定要删除此版本吗</translation>
-    </message>
-    <message>
-      <source>Failed to delete folder.</source>
-      <translation>删除文件夹失败。</translation>
     </message>
     <message>
       <source>Version list update</source>
@@ -2806,6 +2837,10 @@ Would you like to download it now?</source>
     <message>
       <source>Extraction failure.</source>
       <translation>解压失败。</translation>
+    </message>
+    <message>
+      <source>A version with that name already exists.</source>
+      <translation type="unfinished">A version with that name already exists.</translation>
     </message>
   </context>
 </TS>
