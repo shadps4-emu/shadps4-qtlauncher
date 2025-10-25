@@ -1062,6 +1062,34 @@
       <source>Info</source>
       <translation>Info</translation>
     </message>
+    <message>
+      <source>Create Shortcut for Selected Emulator Version</source>
+      <translation>Lag snarvei for valgte emulatorversjon</translation>
+    </message>
+    <message>
+      <source>Create Shortcut for Specified Emulator Version</source>
+      <translation>Lag snarvei for bestemt emulatorversjon</translation>
+    </message>
+    <message>
+      <source>Create Shortcut</source>
+      <translation>Lag snarvei</translation>
+    </message>
+    <message>
+      <source>Shortcut creation</source>
+      <translation>Opprettelse av snarvei</translation>
+    </message>
+    <message>
+      <source>Shortcut created successfully!</source>
+      <translation>Snarvei opprettet på vellykket vis!</translation>
+    </message>
+    <message>
+      <source>Error creating shortcut!</source>
+      <translation>Feil ved opprettelse av snarvei!</translation>
+    </message>
+    <message>
+      <source>Failed to convert icon.</source>
+      <translation>Klarte ikke konvertere ikon.</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -1704,6 +1732,14 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <source>Emulator is already running!</source>
       <translation>Emulatoren kjører allerede!</translation>
     </message>
+    <message>
+      <source>Invalid game argument provided</source>
+      <translation>Ugyldig spillargument oppgitt</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation>Ingen</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -2216,16 +2252,8 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <translation>Separat brukermappe:\n Lagrer shadPS4-innstillinger og data som kun brukes til shadPS4 programmet i gjeldende mappe. Start programmet på nytt etter opprettelsen av mappa for å ta den i bruk.</translation>
     </message>
     <message>
-      <source>Cannot create portable user folder</source>
-      <translation>Klarte ikke opprette separat brukermappe</translation>
-    </message>
-    <message>
       <source>%1 already exists</source>
       <translation>%1 finnes allerede</translation>
-    </message>
-    <message>
-      <source>Portable user folder created</source>
-      <translation>Separat brukermappe opprettet</translation>
     </message>
     <message>
       <source>%1 successfully created.</source>
@@ -2495,6 +2523,33 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
       <translation>Grensesnitt oppdateringer:\nOffisiell: Stabile offisielle versjoner utgis hver måned, men kan være veldig utdaterte.\nNattlig: Ustabile utviklingsversjoner med alle de nyeste funksjonene og rettelsene, men kan inneholde feil.\n\nMerk: denne oppdateringen angår kun Qt-brukergrensesnittet. For oppdatering av selve emulatoren, bruk «Versjonsbehandling»-menyen.</translation>
     </message>
+    <message>
+      <source>Cannot create portable launcher folder</source>
+      <translation>Klarte ikke opprette flyttbar startprogram-mappe</translation>
+    </message>
+    <message>
+      <source>Portable launcherDir folder created</source>
+      <translation>Opprettet flyttbar startprogram-mappe</translation>
+    </message>
+  </context>
+  <context>
+    <name>ShortcutDialog</name>
+    <message>
+      <source>Select Version</source>
+      <translation>Velg versjon</translation>
+    </message>
+    <message>
+      <source>Select version for shortcut creation</source>
+      <translation>Velg versjon for opprettelse av snarvei</translation>
+    </message>
+    <message>
+      <source>No Version Selected</source>
+      <translation>Ingen versjon valgt</translation>
+    </message>
+    <message>
+      <source>Select a version first</source>
+      <translation>Velg en versjon først</translation>
+    </message>
   </context>
   <context>
     <name>TrophyViewer</name>
@@ -2594,14 +2649,6 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <translation>Kjørbar (*.exe)</translation>
     </message>
     <message>
-      <source>Executable (*.AppImage)</source>
-      <translation>Kjørbar (*.AppImage)</translation>
-    </message>
-    <message>
-      <source>Executable (*.*)</source>
-      <translation>Kjørbar (*.*)</translation>
-    </message>
-    <message>
       <source>Version name</source>
       <translation>Versjonsnavn</translation>
     </message>
@@ -2612,18 +2659,6 @@ Velg en emulatorversjon fra høyre panel.</translation>
     <message>
       <source>Error</source>
       <translation>Feil</translation>
-    </message>
-    <message>
-      <source>A folder with that name already exists.</source>
-      <translation>En mappe med dette navnet finnes allerede.</translation>
-    </message>
-    <message>
-      <source>Failed to create folder.</source>
-      <translation>Klarte ikke opprette mappe.</translation>
-    </message>
-    <message>
-      <source>Failed to copy executable.</source>
-      <translation>Klarte ikke kopiere programfila.</translation>
     </message>
     <message>
       <source>Success</source>
@@ -2644,10 +2679,6 @@ Velg en emulatorversjon fra høyre panel.</translation>
     <message>
       <source>Do you want to delete the version</source>
       <translation>Ønsker du å slette den valgte versjonen</translation>
-    </message>
-    <message>
-      <source>Failed to delete folder.</source>
-      <translation>Klarte ikke slette mappa.</translation>
     </message>
     <message>
       <source>Version list update</source>
@@ -2804,6 +2835,10 @@ Would you like to download it now?</source>
     <message>
       <source>Extraction failure.</source>
       <translation>Feil ved utpakking.</translation>
+    </message>
+    <message>
+      <source>A version with that name already exists.</source>
+      <translation>En versjon med det navnet finnes allerede.</translation>
     </message>
   </context>
 </TS>
