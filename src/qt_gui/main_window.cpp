@@ -1370,16 +1370,7 @@ void MainWindow::RunGame() {
 }
 
 void MainWindow::RestartEmulator() {
-    QString exeName;
-#ifdef Q_OS_WIN
-    exeName = "/shadPS4.exe";
-#elif defined(Q_OS_LINUX)
-    exeName = "/Shadps4-sdl.AppImage";
-#elif defined(Q_OS_MACOS)
-    exeName = "/shadps4";
-#endif
-
-    QString exe = m_gui_settings->GetValue(gui::vm_versionSelected).toString() + exeName;
+    QString exe = m_gui_settings->GetValue(gui::vm_versionSelected).toString();
     QStringList args{"--game", QString::fromStdWString(last_game_path.wstring())};
 
     if (m_ipc_client->parsedArgs.size() > 0) {
