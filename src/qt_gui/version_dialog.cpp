@@ -94,11 +94,11 @@ VersionDialog::VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget
         exePath = QFileDialog::getOpenFileName(this, tr("Select executable"), QDir::rootPath(),
                                                tr("Executable (*.exe)"));
 #elif defined(Q_OS_LINUX)
-    exePath = QFileDialog::getOpenFileName(this, tr("Select executable"), QDir::rootPath(),
-                                            "Executable (*)");
+        exePath = QFileDialog::getOpenFileName(this, tr("Select executable"), QDir::rootPath(),
+                                                "Executable (*)");
 #elif defined(Q_OS_MACOS)
-    exePath = QFileDialog::getOpenFileName(this, tr("Select executable"), QDir::rootPath(),
-                                            "Executable (*.*)");
+        exePath = QFileDialog::getOpenFileName(this, tr("Select executable"), QDir::rootPath(),
+                                                "Executable (*.*)");
 #endif
 
         if (exePath.isEmpty())
@@ -523,7 +523,8 @@ tr("First you need to choose a location to save the versions in\n'Path to save v
 
                                     QString userPath =
                                         m_gui_settings->GetValue(gui::vm_versionPath).toString();
-                                    QString fullPath = QDir(userPath).filePath(folderName);
+                                    QString executablePath =
+                                        m_gui_settings->GetVersionExecutablePath(folderName);
 
                                     QMessageBox::information(
                                         this, tr("Confirm Download"),
@@ -538,8 +539,7 @@ tr("First you need to choose a location to save the versions in\n'Path to save v
                                         code_name = release_name.mid(idx + marker.size());
                                     }
                                     std::filesystem::path exe_path =
-                                        *std::filesystem::directory_iterator{
-                                            fullPath.toStdString()};
+                                        Common::FS::PathFromQString(executablePath);
                                     VersionManager::Version new_version{
                                         .name = versionName.toStdString(),
                                         .path = exe_path.generic_string(),

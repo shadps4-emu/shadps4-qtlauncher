@@ -79,4 +79,6 @@ class gui_settings : public settings {
 public:
     explicit gui_settings(QObject* parent = nullptr);
     ~gui_settings() override = default;
+
+    QString GetVersionExecutablePath(const QString& versionName) const;
 };
