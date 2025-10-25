@@ -1062,6 +1062,34 @@
       <source>Info</source>
       <translation>Info</translation>
     </message>
+    <message>
+      <source>Create Shortcut for Selected Emulator Version</source>
+      <translation type="unfinished">Create Shortcut for Selected Emulator Version</translation>
+    </message>
+    <message>
+      <source>Create Shortcut for Specified Emulator Version</source>
+      <translation type="unfinished">Create Shortcut for Specified Emulator Version</translation>
+    </message>
+    <message>
+      <source>Create Shortcut</source>
+      <translation type="unfinished">Create Shortcut</translation>
+    </message>
+    <message>
+      <source>Shortcut creation</source>
+      <translation type="unfinished">Shortcut creation</translation>
+    </message>
+    <message>
+      <source>Shortcut created successfully!</source>
+      <translation type="unfinished">Shortcut created successfully!</translation>
+    </message>
+    <message>
+      <source>Error creating shortcut!</source>
+      <translation type="unfinished">Error creating shortcut!</translation>
+    </message>
+    <message>
+      <source>Failed to convert icon.</source>
+      <translation type="unfinished">Failed to convert icon.</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -1704,6 +1732,14 @@ Välj en emulatorversion från den högra panelen.</translation>
       <source>Emulator is already running!</source>
       <translation>Emulatorn är redan igång!</translation>
     </message>
+    <message>
+      <source>Invalid game argument provided</source>
+      <translation type="unfinished">Invalid game argument provided</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation type="unfinished">None</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -2216,16 +2252,8 @@ Välj en emulatorversion från den högra panelen.</translation>
       <translation>Portabel användarmapp:\nLagrar shadPS4-inställningar och data som endast tillämpas på den shadPS4-version som finns i den aktuella mappen. Starta om appen efter att du har skapat den portabla användarmappen för att börja använda den.</translation>
     </message>
     <message>
-      <source>Cannot create portable user folder</source>
-      <translation>Kan inte skapa portabel användarmapp</translation>
-    </message>
-    <message>
       <source>%1 already exists</source>
       <translation>%1 finns redan</translation>
-    </message>
-    <message>
-      <source>Portable user folder created</source>
-      <translation>Portabel användarmapp skapad</translation>
     </message>
     <message>
       <source>%1 successfully created.</source>
@@ -2495,6 +2523,33 @@ Välj en emulatorversion från den högra panelen.</translation>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
       <translation>Uppdateringar för grafiskt gränssnitt:\nUtgåva: Officiella versioner som släpps varje månad och som kan vara mycket föråldrade, men som är mer tillförlitliga och testade.\nNightly: Utvecklingsversioner som har alla de senaste funktionerna och korrigeringarna, men som kan innehålla buggar och är mindre stabila.\n\n*Denna uppdatering gäller endast Qt-användargränssnittet. För att uppdatera emulatorkärnan, använd menyn &apos;Versionshanterare&apos;.</translation>
     </message>
+    <message>
+      <source>Cannot create portable launcher folder</source>
+      <translation type="unfinished">Cannot create portable launcher folder</translation>
+    </message>
+    <message>
+      <source>Portable launcherDir folder created</source>
+      <translation type="unfinished">Portable launcherDir folder created</translation>
+    </message>
+  </context>
+  <context>
+    <name>ShortcutDialog</name>
+    <message>
+      <source>Select Version</source>
+      <translation type="unfinished">Select Version</translation>
+    </message>
+    <message>
+      <source>Select version for shortcut creation</source>
+      <translation type="unfinished">Select version for shortcut creation</translation>
+    </message>
+    <message>
+      <source>No Version Selected</source>
+      <translation type="unfinished">No Version Selected</translation>
+    </message>
+    <message>
+      <source>Select a version first</source>
+      <translation type="unfinished">Select a version first</translation>
+    </message>
   </context>
   <context>
     <name>TrophyViewer</name>
@@ -2594,14 +2649,6 @@ Välj en emulatorversion från den högra panelen.</translation>
       <translation>Körbar fil (*.exe)</translation>
     </message>
     <message>
-      <source>Executable (*.AppImage)</source>
-      <translation>Körbar fil (*.AppImage)</translation>
-    </message>
-    <message>
-      <source>Executable (*.*)</source>
-      <translation>Alla filer (*.*)</translation>
-    </message>
-    <message>
       <source>Version name</source>
       <translation>Versionsnamn</translation>
     </message>
@@ -2612,18 +2659,6 @@ Välj en emulatorversion från den högra panelen.</translation>
     <message>
       <source>Error</source>
       <translation>Fel</translation>
-    </message>
-    <message>
-      <source>A folder with that name already exists.</source>
-      <translation>En mapp med det namnet finns redan.</translation>
-    </message>
-    <message>
-      <source>Failed to create folder.</source>
-      <translation>Misslyckades med att skapa mapp.</translation>
-    </message>
-    <message>
-      <source>Failed to copy executable.</source>
-      <translation>Misslyckades med att kopiera körbar fil.</translation>
     </message>
     <message>
       <source>Success</source>
@@ -2644,10 +2679,6 @@ Välj en emulatorversion från den högra panelen.</translation>
     <message>
       <source>Do you want to delete the version</source>
       <translation>Vill du ta bort versionen</translation>
-    </message>
-    <message>
-      <source>Failed to delete folder.</source>
-      <translation>Misslyckades med att ta bort mappen.</translation>
     </message>
     <message>
       <source>Version list update</source>
@@ -2803,6 +2834,10 @@ Vill du hämta ner den nu?</translation>
     <message>
       <source>Extraction failure.</source>
       <translation>Extraheringsfel.</translation>
+    </message>
+    <message>
+      <source>A version with that name already exists.</source>
+      <translation type="unfinished">A version with that name already exists.</translation>
     </message>
   </context>
 </TS>
