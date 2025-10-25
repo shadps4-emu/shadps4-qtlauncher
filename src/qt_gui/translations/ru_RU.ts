@@ -1062,6 +1062,34 @@
       <source>Info</source>
       <translation>Инфо</translation>
     </message>
+    <message>
+      <source>Create Shortcut for Selected Emulator Version</source>
+      <translation>Создать ярлык для выбранной версии эмулятора</translation>
+    </message>
+    <message>
+      <source>Create Shortcut for Specified Emulator Version</source>
+      <translation>Создать ярлык для определённой версии эмулятора</translation>
+    </message>
+    <message>
+      <source>Create Shortcut</source>
+      <translation>Создать ярлык</translation>
+    </message>
+    <message>
+      <source>Shortcut creation</source>
+      <translation>Создание ярлыка</translation>
+    </message>
+    <message>
+      <source>Shortcut created successfully!</source>
+      <translation>Ярлык успешно создан!</translation>
+    </message>
+    <message>
+      <source>Error creating shortcut!</source>
+      <translation>Ошибка создания ярлыка!</translation>
+    </message>
+    <message>
+      <source>Failed to convert icon.</source>
+      <translation>Не удалось преобразовать значок.</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -1704,6 +1732,14 @@ Select an emulator version from the right panel.</source>
       <source>Emulator is already running!</source>
       <translation>Эмулятор уже запущен!</translation>
     </message>
+    <message>
+      <source>Invalid game argument provided</source>
+      <translation>Предоставлен неверный аргумент игры</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation>Нет</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -2216,16 +2252,8 @@ Select an emulator version from the right panel.</source>
       <translation>Портативная папка пользователя:\nХранит настройки и данные shadPS4, которые будут применяться только к билду shadPS4, расположенному в этой папке. Перезагрузите приложение после создания портативной папки пользователя чтобы начать использовать её.</translation>
     </message>
     <message>
-      <source>Cannot create portable user folder</source>
-      <translation>Невозможно создать папку для портативной папки пользователя</translation>
-    </message>
-    <message>
       <source>%1 already exists</source>
       <translation>%1 уже существует</translation>
-    </message>
-    <message>
-      <source>Portable user folder created</source>
-      <translation>Портативная папка пользователя создана</translation>
     </message>
     <message>
       <source>%1 successfully created.</source>
@@ -2495,6 +2523,33 @@ Select an emulator version from the right panel.</source>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
       <translation>Обновления интерфейса:\nРелиз: Официальные версии, выпускаемые ежемесячно, которые могут быть очень устаревшими, но они более надежны и протестированы.\nNightly: Версии в разработке, имеющие все последние функции и исправления, но могут содержать ошибки и менее стабильные.\n\n*Это обновление применяется только к интерфейсу пользователя Qt. Чтобы обновить ядро эмулятора, используйте меню &apos;Менеджер версий&apos;.</translation>
     </message>
+    <message>
+      <source>Cannot create portable launcher folder</source>
+      <translation>Невозможно создать портативную папку запуска</translation>
+    </message>
+    <message>
+      <source>Portable launcherDir folder created</source>
+      <translation type="unfinished">Portable launcherDir folder created</translation>
+    </message>
+  </context>
+  <context>
+    <name>ShortcutDialog</name>
+    <message>
+      <source>Select Version</source>
+      <translation>Выбор версии</translation>
+    </message>
+    <message>
+      <source>Select version for shortcut creation</source>
+      <translation>Выберите версию для создания ярлыка</translation>
+    </message>
+    <message>
+      <source>No Version Selected</source>
+      <translation>Версия не выбрана</translation>
+    </message>
+    <message>
+      <source>Select a version first</source>
+      <translation>Сначала выберите версию</translation>
+    </message>
   </context>
   <context>
     <name>TrophyViewer</name>
@@ -2594,14 +2649,6 @@ Select an emulator version from the right panel.</source>
       <translation>Исполняемый файл (*.exe)</translation>
     </message>
     <message>
-      <source>Executable (*.AppImage)</source>
-      <translation>Исполняемый файл (*.AppImage)</translation>
-    </message>
-    <message>
-      <source>Executable (*.*)</source>
-      <translation>Исполняемый файл (*.*)</translation>
-    </message>
-    <message>
       <source>Version name</source>
       <translation>Название версии</translation>
     </message>
@@ -2612,18 +2659,6 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Error</source>
       <translation>Ошибка</translation>
-    </message>
-    <message>
-      <source>A folder with that name already exists.</source>
-      <translation>Папка с таким именем уже существует.</translation>
-    </message>
-    <message>
-      <source>Failed to create folder.</source>
-      <translation>Не удалось создать папку.</translation>
-    </message>
-    <message>
-      <source>Failed to copy executable.</source>
-      <translation>Не удалось скопировать исполняемый файл.</translation>
     </message>
     <message>
       <source>Success</source>
@@ -2644,10 +2679,6 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Do you want to delete the version</source>
       <translation>Вы хотите удалить версию</translation>
-    </message>
-    <message>
-      <source>Failed to delete folder.</source>
-      <translation>Не удалось удалить папку.</translation>
     </message>
     <message>
       <source>Version list update</source>
@@ -2803,6 +2834,10 @@ Would you like to download it now?</source>
     <message>
       <source>Extraction failure.</source>
       <translation>Ошибка извлечения.</translation>
+    </message>
+    <message>
+      <source>A version with that name already exists.</source>
+      <translation>Версия с таким названием уже существует.</translation>
     </message>
   </context>
 </TS>

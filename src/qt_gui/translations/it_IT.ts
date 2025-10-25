@@ -1062,6 +1062,34 @@
       <source>Info</source>
       <translation>Info</translation>
     </message>
+    <message>
+      <source>Create Shortcut for Selected Emulator Version</source>
+      <translation>Crea Scorciatoia per la Versione dell'Emulatore Selezionato</translation>
+    </message>
+    <message>
+      <source>Create Shortcut for Specified Emulator Version</source>
+      <translation>Crea Scorciatoia per la Versione dell'Emulatore Specificato</translation>
+    </message>
+    <message>
+      <source>Create Shortcut</source>
+      <translation>Crea scorciatoia</translation>
+    </message>
+    <message>
+      <source>Shortcut creation</source>
+      <translation>Creazione scorciatoia</translation>
+    </message>
+    <message>
+      <source>Shortcut created successfully!</source>
+      <translation>Scorciatoia creata con successo!</translation>
+    </message>
+    <message>
+      <source>Error creating shortcut!</source>
+      <translation>Errore nella creazione della scorciatoia!</translation>
+    </message>
+    <message>
+      <source>Failed to convert icon.</source>
+      <translation>Impossibile convertire l'icona.</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -1704,6 +1732,14 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
       <source>Emulator is already running!</source>
       <translation>L'emulatore è già in esecuzione!</translation>
     </message>
+    <message>
+      <source>Invalid game argument provided</source>
+      <translation>Argomento di gioco fornito non valido</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation>Nessuno</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -2216,16 +2252,8 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
       <translation>Cartella utente portatile:\nMemorizza le impostazioni e i dati shadPS4 che saranno applicati solo alla build shadPS4 situata nella cartella attuale. Riavviare l'applicazione dopo aver creato la cartella utente portatile per iniziare a usarla.</translation>
     </message>
     <message>
-      <source>Cannot create portable user folder</source>
-      <translation>Impossibile creare la cartella utente portatile</translation>
-    </message>
-    <message>
       <source>%1 already exists</source>
       <translation>%1: esiste già</translation>
-    </message>
-    <message>
-      <source>Portable user folder created</source>
-      <translation>Cartella utente portatile creata</translation>
     </message>
     <message>
       <source>%1 successfully created.</source>
@@ -2495,6 +2523,33 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
       <translation>Aggiornamenti Interfaccia:\nRilascio: Versioni ufficiali rilasciate ogni mese che possono essere molto obsolete, ma sono più affidabili e testate.\nNotturno: Le versioni di sviluppo che hanno tutte le ultime funzionalità e correzioni, ma possono contenere bug e sono meno stabili.\n\n*Questo aggiornamento si applica solo all'interfaccia utente Qt. Per aggiornare il nucleo dell'emulatore, utilizzare il menu &apos;Gestore Versione&apos;.</translation>
     </message>
+    <message>
+      <source>Cannot create portable launcher folder</source>
+      <translation>Impossibile creare la cartella di lancio portatile</translation>
+    </message>
+    <message>
+      <source>Portable launcherDir folder created</source>
+      <translation>Cartella di lancio portatile creata</translation>
+    </message>
+  </context>
+  <context>
+    <name>ShortcutDialog</name>
+    <message>
+      <source>Select Version</source>
+      <translation>Seleziona Versione</translation>
+    </message>
+    <message>
+      <source>Select version for shortcut creation</source>
+      <translation>Seleziona la versione per la creazione della scorciatoia</translation>
+    </message>
+    <message>
+      <source>No Version Selected</source>
+      <translation>Nessuna Versione Selezionata</translation>
+    </message>
+    <message>
+      <source>Select a version first</source>
+      <translation>Seleziona prima una versione</translation>
+    </message>
   </context>
   <context>
     <name>TrophyViewer</name>
@@ -2594,14 +2649,6 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
       <translation>Eseguibile (*.exe)</translation>
     </message>
     <message>
-      <source>Executable (*.AppImage)</source>
-      <translation>Eseguibile (*.AppImage)</translation>
-    </message>
-    <message>
-      <source>Executable (*.*)</source>
-      <translation>Eseguibile (*.*)</translation>
-    </message>
-    <message>
       <source>Version name</source>
       <translation>Nome della versione</translation>
     </message>
@@ -2612,18 +2659,6 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
     <message>
       <source>Error</source>
       <translation>Errore</translation>
-    </message>
-    <message>
-      <source>A folder with that name already exists.</source>
-      <translation>Esiste già una cartella con questo nome.</translation>
-    </message>
-    <message>
-      <source>Failed to create folder.</source>
-      <translation>Non è stato possibile creare la cartella.</translation>
-    </message>
-    <message>
-      <source>Failed to copy executable.</source>
-      <translation>Impossibile copiare l'eseguibile.</translation>
     </message>
     <message>
       <source>Success</source>
@@ -2644,10 +2679,6 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
     <message>
       <source>Do you want to delete the version</source>
       <translation>Vuoi eliminare la versione</translation>
-    </message>
-    <message>
-      <source>Failed to delete folder.</source>
-      <translation>Impossibile eliminare la cartella.</translation>
     </message>
     <message>
       <source>Version list update</source>
@@ -2804,6 +2835,10 @@ Vuoi scaricarla ora?</translation>
     <message>
       <source>Extraction failure.</source>
       <translation>Errore di estrazione.</translation>
+    </message>
+    <message>
+      <source>A version with that name already exists.</source>
+      <translation>Esiste già una versione con questo nome.</translation>
     </message>
   </context>
 </TS>

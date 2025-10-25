@@ -1061,6 +1061,34 @@ Einzigartige Inputs können nicht öfters als einmal gebunden werden. Input-Dupl
       <source>Info</source>
       <translation>Info</translation>
     </message>
+    <message>
+      <source>Create Shortcut for Selected Emulator Version</source>
+      <translation type="unfinished">Create Shortcut for Selected Emulator Version</translation>
+    </message>
+    <message>
+      <source>Create Shortcut for Specified Emulator Version</source>
+      <translation type="unfinished">Create Shortcut for Specified Emulator Version</translation>
+    </message>
+    <message>
+      <source>Create Shortcut</source>
+      <translation type="unfinished">Create Shortcut</translation>
+    </message>
+    <message>
+      <source>Shortcut creation</source>
+      <translation type="unfinished">Shortcut creation</translation>
+    </message>
+    <message>
+      <source>Shortcut created successfully!</source>
+      <translation type="unfinished">Shortcut created successfully!</translation>
+    </message>
+    <message>
+      <source>Error creating shortcut!</source>
+      <translation type="unfinished">Error creating shortcut!</translation>
+    </message>
+    <message>
+      <source>Failed to convert icon.</source>
+      <translation type="unfinished">Failed to convert icon.</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -1703,6 +1731,14 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
       <source>Emulator is already running!</source>
       <translation>Emulator läuft bereits!</translation>
     </message>
+    <message>
+      <source>Invalid game argument provided</source>
+      <translation type="unfinished">Invalid game argument provided</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation type="unfinished">None</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -2215,16 +2251,8 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
       <translation>Portablen Benutzerordner:\nspeichert ShadPS4 Einstellungen und Daten, die nur auf den ShadPS4 Build im aktuellen Ordner angewendet werden. Starten Sie die App nach dem Erstellen des tragbaren Benutzerordners neu, um sie zu verwenden.</translation>
     </message>
     <message>
-      <source>Cannot create portable user folder</source>
-      <translation>Kann keinen portablen Benutzerordner erstellen</translation>
-    </message>
-    <message>
       <source>%1 already exists</source>
       <translation>%1 existiert bereits</translation>
-    </message>
-    <message>
-      <source>Portable user folder created</source>
-      <translation>Portablen Benutzerordner erstellt</translation>
     </message>
     <message>
       <source>%1 successfully created.</source>
@@ -2498,6 +2526,33 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
       <translation>Updates für Be­nut­zer­ober­flä­che:\nRelease: Offizielle Versionen, die jeden Monat veröffentlicht werden, dadurch ein wenig veraltet sein könnte, aber dafür zuverlässiger laufen und getestet wurden.\nNightly: Entwicklerversionen die neue Funktionen und Bugfixes beinhalten, können aber neue Bugs haben und laufen weniger stabil.\n\n*Diese Updates gelten nur für die Benutzeroberfläche. Um den Emulator selber zu updaten, nutze bitte die &apos;Versionsverwaltung&apos;.</translation>
     </message>
+    <message>
+      <source>Cannot create portable launcher folder</source>
+      <translation type="unfinished">Cannot create portable launcher folder</translation>
+    </message>
+    <message>
+      <source>Portable launcherDir folder created</source>
+      <translation type="unfinished">Portable launcherDir folder created</translation>
+    </message>
+  </context>
+  <context>
+    <name>ShortcutDialog</name>
+    <message>
+      <source>Select Version</source>
+      <translation type="unfinished">Select Version</translation>
+    </message>
+    <message>
+      <source>Select version for shortcut creation</source>
+      <translation type="unfinished">Select version for shortcut creation</translation>
+    </message>
+    <message>
+      <source>No Version Selected</source>
+      <translation type="unfinished">No Version Selected</translation>
+    </message>
+    <message>
+      <source>Select a version first</source>
+      <translation type="unfinished">Select a version first</translation>
+    </message>
   </context>
   <context>
     <name>TrophyViewer</name>
@@ -2597,14 +2652,6 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
       <translation>Ausführbare Datei (*.exe)</translation>
     </message>
     <message>
-      <source>Executable (*.AppImage)</source>
-      <translation>Ausführbare Datei (*.AppImage)</translation>
-    </message>
-    <message>
-      <source>Executable (*.*)</source>
-      <translation>Ausführbare Datei (*.*)</translation>
-    </message>
-    <message>
       <source>Version name</source>
       <translation>Versionsname</translation>
     </message>
@@ -2615,18 +2662,6 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
     <message>
       <source>Error</source>
       <translation>Fehler</translation>
-    </message>
-    <message>
-      <source>A folder with that name already exists.</source>
-      <translation>Ein Ordner mit diesem Namen existiert bereits.</translation>
-    </message>
-    <message>
-      <source>Failed to create folder.</source>
-      <translation>Ordner konnte nicht erstellt werden.</translation>
-    </message>
-    <message>
-      <source>Failed to copy executable.</source>
-      <translation>Fehler beim Kopieren der ausführbaren Datei.</translation>
     </message>
     <message>
       <source>Success</source>
@@ -2647,10 +2682,6 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
     <message>
       <source>Do you want to delete the version</source>
       <translation>Soll die ausgewählte Version gelöscht werden</translation>
-    </message>
-    <message>
-      <source>Failed to delete folder.</source>
-      <translation>Ordner konnte nicht gelöscht werden.</translation>
     </message>
     <message>
       <source>Version list update</source>
@@ -2807,6 +2838,10 @@ Möchten Sie sie jetzt downloaden?</translation>
     <message>
       <source>Extraction failure.</source>
       <translation>Entpacken fehlgeschlagen.</translation>
+    </message>
+    <message>
+      <source>A version with that name already exists.</source>
+      <translation type="unfinished">A version with that name already exists.</translation>
     </message>
   </context>
 </TS>

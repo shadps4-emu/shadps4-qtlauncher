@@ -1062,6 +1062,34 @@
       <source>Info</source>
       <translation>Información</translation>
     </message>
+    <message>
+      <source>Create Shortcut for Selected Emulator Version</source>
+      <translation type="unfinished">Create Shortcut for Selected Emulator Version</translation>
+    </message>
+    <message>
+      <source>Create Shortcut for Specified Emulator Version</source>
+      <translation type="unfinished">Create Shortcut for Specified Emulator Version</translation>
+    </message>
+    <message>
+      <source>Create Shortcut</source>
+      <translation type="unfinished">Create Shortcut</translation>
+    </message>
+    <message>
+      <source>Shortcut creation</source>
+      <translation type="unfinished">Shortcut creation</translation>
+    </message>
+    <message>
+      <source>Shortcut created successfully!</source>
+      <translation type="unfinished">Shortcut created successfully!</translation>
+    </message>
+    <message>
+      <source>Error creating shortcut!</source>
+      <translation type="unfinished">Error creating shortcut!</translation>
+    </message>
+    <message>
+      <source>Failed to convert icon.</source>
+      <translation type="unfinished">Failed to convert icon.</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -1696,11 +1724,19 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Run Emulator</source>
-      <translation type="unfinished">Run Emulator</translation>
+      <translation>Ejecutar emulador</translation>
     </message>
     <message>
       <source>Emulator is already running!</source>
-      <translation type="unfinished">Emulator is already running!</translation>
+      <translation>¡El emulador ya se está ejecutando!</translation>
+    </message>
+    <message>
+      <source>Invalid game argument provided</source>
+      <translation type="unfinished">Invalid game argument provided</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation type="unfinished">None</translation>
     </message>
   </context>
   <context>
@@ -2214,16 +2250,8 @@ Select an emulator version from the right panel.</source>
       <translation>Carpeta portable de usuario:\nAlmacena la configuración de shadPS4 y los datos que se aplicarán sólo a la compilación shadPS4 ubicada en la carpeta actual. Reinicia la aplicación después de crear la carpeta portable de usuario para empezar a usarla.</translation>
     </message>
     <message>
-      <source>Cannot create portable user folder</source>
-      <translation>No se pudo crear la carpeta portable de usuario</translation>
-    </message>
-    <message>
       <source>%1 already exists</source>
       <translation>%1 ya existe</translation>
-    </message>
-    <message>
-      <source>Portable user folder created</source>
-      <translation>Carpeta Portable de Usuario Creada</translation>
     </message>
     <message>
       <source>%1 successfully created.</source>
@@ -2471,7 +2499,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Habilitar validación asistida por GPU:\nIncluye un código adicional en los shaders para comprobar que su comportamiento sea el correcto.\nReducirá el rendimiento y, probablemente, cambiará el comportamiento de la emulación.\nNecesitas el SDK de Vulkan para que funcione.</translation>
     </message>
     <message>
       <source>GUI Language</source>
@@ -2491,7 +2519,34 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
-      <translation type="unfinished">GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</translation>
+      <translation>Actualizaciones de la GUI:\nPrincipal: las versiones oficiales mensuales podrían estar muy obsoletas, pero son más fiables y han sido más testadas.\n«Nightly»: versiones de desarrollo con las últimas características y correcciones, pero que pueden contener fallos y ser menos estables.\n\n* Esta actualización solo se aplica a la interfaz de usuario Qt. Para actualizar el núcleo del emulador debes utilizar el gestor de versiones.</translation>
+    </message>
+    <message>
+      <source>Cannot create portable launcher folder</source>
+      <translation type="unfinished">Cannot create portable launcher folder</translation>
+    </message>
+    <message>
+      <source>Portable launcherDir folder created</source>
+      <translation type="unfinished">Portable launcherDir folder created</translation>
+    </message>
+  </context>
+  <context>
+    <name>ShortcutDialog</name>
+    <message>
+      <source>Select Version</source>
+      <translation type="unfinished">Select Version</translation>
+    </message>
+    <message>
+      <source>Select version for shortcut creation</source>
+      <translation type="unfinished">Select version for shortcut creation</translation>
+    </message>
+    <message>
+      <source>No Version Selected</source>
+      <translation type="unfinished">No Version Selected</translation>
+    </message>
+    <message>
+      <source>Select a version first</source>
+      <translation type="unfinished">Select a version first</translation>
     </message>
   </context>
   <context>
@@ -2592,14 +2647,6 @@ Select an emulator version from the right panel.</source>
       <translation>Ejecutable (*.exe)</translation>
     </message>
     <message>
-      <source>Executable (*.AppImage)</source>
-      <translation>Ejecutable (*.AppImage)</translation>
-    </message>
-    <message>
-      <source>Executable (*.*)</source>
-      <translation>Ejecutable (*.*)</translation>
-    </message>
-    <message>
       <source>Version name</source>
       <translation>Nombre de la versión</translation>
     </message>
@@ -2610,18 +2657,6 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Error</source>
       <translation>Error</translation>
-    </message>
-    <message>
-      <source>A folder with that name already exists.</source>
-      <translation>Ya existe una carpeta con ese nombre.</translation>
-    </message>
-    <message>
-      <source>Failed to create folder.</source>
-      <translation>Error al crear carpeta.</translation>
-    </message>
-    <message>
-      <source>Failed to copy executable.</source>
-      <translation>Error al copiar el ejecutable.</translation>
     </message>
     <message>
       <source>Success</source>
@@ -2642,10 +2677,6 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Do you want to delete the version</source>
       <translation>¿Quieres eliminar la versión?</translation>
-    </message>
-    <message>
-      <source>Failed to delete folder.</source>
-      <translation>Error al eliminar carpeta.</translation>
     </message>
     <message>
       <source>Version list update</source>
@@ -2800,6 +2831,10 @@ Would you like to download it now?</source>
     <message>
       <source>Extraction failure.</source>
       <translation>Error de extracción.</translation>
+    </message>
+    <message>
+      <source>A version with that name already exists.</source>
+      <translation type="unfinished">A version with that name already exists.</translation>
     </message>
   </context>
 </TS>

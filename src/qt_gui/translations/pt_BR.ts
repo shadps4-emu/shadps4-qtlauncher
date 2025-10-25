@@ -1062,6 +1062,34 @@
       <source>Info</source>
       <translation type="unfinished">Info</translation>
     </message>
+    <message>
+      <source>Create Shortcut for Selected Emulator Version</source>
+      <translation type="unfinished">Create Shortcut for Selected Emulator Version</translation>
+    </message>
+    <message>
+      <source>Create Shortcut for Specified Emulator Version</source>
+      <translation type="unfinished">Create Shortcut for Specified Emulator Version</translation>
+    </message>
+    <message>
+      <source>Create Shortcut</source>
+      <translation type="unfinished">Create Shortcut</translation>
+    </message>
+    <message>
+      <source>Shortcut creation</source>
+      <translation type="unfinished">Shortcut creation</translation>
+    </message>
+    <message>
+      <source>Shortcut created successfully!</source>
+      <translation type="unfinished">Shortcut created successfully!</translation>
+    </message>
+    <message>
+      <source>Error creating shortcut!</source>
+      <translation type="unfinished">Error creating shortcut!</translation>
+    </message>
+    <message>
+      <source>Failed to convert icon.</source>
+      <translation type="unfinished">Failed to convert icon.</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -1704,6 +1732,14 @@ Selecione uma versão do emulador no painel direito.</translation>
       <source>Emulator is already running!</source>
       <translation type="unfinished">Emulator is already running!</translation>
     </message>
+    <message>
+      <source>Invalid game argument provided</source>
+      <translation type="unfinished">Invalid game argument provided</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation type="unfinished">None</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -2216,16 +2252,8 @@ Selecione uma versão do emulador no painel direito.</translation>
       <translation>Pasta Portátil do Usuário:\nArmazena as configurações e dados do shadPS4 que serão aplicados apenas à compilação do shadPS4 localizada na pasta atual. Reinicie o aplicativo após criar a pasta portátil do usuário para começar a usá-la.</translation>
     </message>
     <message>
-      <source>Cannot create portable user folder</source>
-      <translation>Não é possível criar a pasta portátil do usuário</translation>
-    </message>
-    <message>
       <source>%1 already exists</source>
       <translation>%1 já existe</translation>
-    </message>
-    <message>
-      <source>Portable user folder created</source>
-      <translation>Pasta portátil do usuário criada</translation>
     </message>
     <message>
       <source>%1 successfully created.</source>
@@ -2495,6 +2523,33 @@ Selecione uma versão do emulador no painel direito.</translation>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
       <translation type="unfinished">GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</translation>
     </message>
+    <message>
+      <source>Cannot create portable launcher folder</source>
+      <translation type="unfinished">Cannot create portable launcher folder</translation>
+    </message>
+    <message>
+      <source>Portable launcherDir folder created</source>
+      <translation type="unfinished">Portable launcherDir folder created</translation>
+    </message>
+  </context>
+  <context>
+    <name>ShortcutDialog</name>
+    <message>
+      <source>Select Version</source>
+      <translation type="unfinished">Select Version</translation>
+    </message>
+    <message>
+      <source>Select version for shortcut creation</source>
+      <translation type="unfinished">Select version for shortcut creation</translation>
+    </message>
+    <message>
+      <source>No Version Selected</source>
+      <translation type="unfinished">No Version Selected</translation>
+    </message>
+    <message>
+      <source>Select a version first</source>
+      <translation type="unfinished">Select a version first</translation>
+    </message>
   </context>
   <context>
     <name>TrophyViewer</name>
@@ -2594,14 +2649,6 @@ Selecione uma versão do emulador no painel direito.</translation>
       <translation>Executável (*.exe)</translation>
     </message>
     <message>
-      <source>Executable (*.AppImage)</source>
-      <translation>Executável (*.AppImage)</translation>
-    </message>
-    <message>
-      <source>Executable (*.*)</source>
-      <translation>Executável (*.*)</translation>
-    </message>
-    <message>
       <source>Version name</source>
       <translation>Nome da versão</translation>
     </message>
@@ -2612,18 +2659,6 @@ Selecione uma versão do emulador no painel direito.</translation>
     <message>
       <source>Error</source>
       <translation>Erro</translation>
-    </message>
-    <message>
-      <source>A folder with that name already exists.</source>
-      <translation>Já existe uma pasta com este nome.</translation>
-    </message>
-    <message>
-      <source>Failed to create folder.</source>
-      <translation>Não foi possível criar a pasta.</translation>
-    </message>
-    <message>
-      <source>Failed to copy executable.</source>
-      <translation>Não foi possível copiar o executável.</translation>
     </message>
     <message>
       <source>Success</source>
@@ -2644,10 +2679,6 @@ Selecione uma versão do emulador no painel direito.</translation>
     <message>
       <source>Do you want to delete the version</source>
       <translation>Deseja excluir a versão</translation>
-    </message>
-    <message>
-      <source>Failed to delete folder.</source>
-      <translation>Falha ao excluir pasta.</translation>
     </message>
     <message>
       <source>Version list update</source>
@@ -2804,6 +2835,10 @@ Deseja baixá-la agora?</translation>
     <message>
       <source>Extraction failure.</source>
       <translation>Falha na extração.</translation>
+    </message>
+    <message>
+      <source>A version with that name already exists.</source>
+      <translation type="unfinished">A version with that name already exists.</translation>
     </message>
   </context>
 </TS>

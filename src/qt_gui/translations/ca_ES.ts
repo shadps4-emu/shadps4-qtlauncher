@@ -1062,6 +1062,34 @@
       <source>Info</source>
       <translation>Informació</translation>
     </message>
+    <message>
+      <source>Create Shortcut for Selected Emulator Version</source>
+      <translation>Crea una drecera per la versió seleccionada de l'emulador</translation>
+    </message>
+    <message>
+      <source>Create Shortcut for Specified Emulator Version</source>
+      <translation>Crea una drecera per una versió específica de l'emulador</translation>
+    </message>
+    <message>
+      <source>Create Shortcut</source>
+      <translation>Crea una drecera</translation>
+    </message>
+    <message>
+      <source>Shortcut creation</source>
+      <translation>Drecera creada</translation>
+    </message>
+    <message>
+      <source>Shortcut created successfully!</source>
+      <translation>S'ha creat la drecera correctament!</translation>
+    </message>
+    <message>
+      <source>Error creating shortcut!</source>
+      <translation>Error en crear la drecera!</translation>
+    </message>
+    <message>
+      <source>Failed to convert icon.</source>
+      <translation>Error en convertir la icona.</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -1704,6 +1732,14 @@ Selecciona una versió del panell dret.</translation>
       <source>Emulator is already running!</source>
       <translation>L'emulador ja està en funcionament!</translation>
     </message>
+    <message>
+      <source>Invalid game argument provided</source>
+      <translation>S'ha donat un argument de joc invàlid</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation>Cap</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -2216,16 +2252,8 @@ Selecciona una versió del panell dret.</translation>
       <translation>Carpeta d'usuari portàtil:\nDesa la configuració i les dades de shadPS4 en la carpeta actual. Reinicia shadPS4 després de crear la carpeta d'usuari portàtil per començar a fer-la servir.</translation>
     </message>
     <message>
-      <source>Cannot create portable user folder</source>
-      <translation>No s'ha pogut crear la carpeta d'usuari portàtil</translation>
-    </message>
-    <message>
       <source>%1 already exists</source>
       <translation>%1 ja existeix</translation>
-    </message>
-    <message>
-      <source>Portable user folder created</source>
-      <translation>S'ha creat la carpeta d'usuari portàtil</translation>
     </message>
     <message>
       <source>%1 successfully created.</source>
@@ -2495,6 +2523,33 @@ Selecciona una versió del panell dret.</translation>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
       <translation>Actualitzacions de la interfície d'usuari:\nRelease: Les versions oficials publicades cada mes que potser no estan tan actualitzades, però són més estables i han estat més provades.\nNightly: Versions en desenvolupament que tenen totes les últimes novetats i correccions, però poden contenir errors i són menys estables.\n\n*Aquesta actualització s'aplica només a la interfície d'usuari Qt. Per actualitzar el nucli de l'emulador, fes servir el &apos;Administrador de versions&apos; del menú.</translation>
     </message>
+    <message>
+      <source>Cannot create portable launcher folder</source>
+      <translation>No s'ha pogut crear la carpeta d'usuari portàtil</translation>
+    </message>
+    <message>
+      <source>Portable launcherDir folder created</source>
+      <translation>S'ha creat la carpeta launcherDir portàtil</translation>
+    </message>
+  </context>
+  <context>
+    <name>ShortcutDialog</name>
+    <message>
+      <source>Select Version</source>
+      <translation>Selecciona la versió</translation>
+    </message>
+    <message>
+      <source>Select version for shortcut creation</source>
+      <translation>Selecciona la versió amb la qual crear una drecera</translation>
+    </message>
+    <message>
+      <source>No Version Selected</source>
+      <translation>No hi ha cap versió seleccionada</translation>
+    </message>
+    <message>
+      <source>Select a version first</source>
+      <translation>Selecciona primer una versió</translation>
+    </message>
   </context>
   <context>
     <name>TrophyViewer</name>
@@ -2594,14 +2649,6 @@ Selecciona una versió del panell dret.</translation>
       <translation>Executable (*.*)</translation>
     </message>
     <message>
-      <source>Executable (*.AppImage)</source>
-      <translation>Executable (*.AppImage)</translation>
-    </message>
-    <message>
-      <source>Executable (*.*)</source>
-      <translation>Executable (*.*)</translation>
-    </message>
-    <message>
       <source>Version name</source>
       <translation>Nom de la versió</translation>
     </message>
@@ -2612,18 +2659,6 @@ Selecciona una versió del panell dret.</translation>
     <message>
       <source>Error</source>
       <translation>Error</translation>
-    </message>
-    <message>
-      <source>A folder with that name already exists.</source>
-      <translation>Ja existeix una carpeta amb aquest nom.</translation>
-    </message>
-    <message>
-      <source>Failed to create folder.</source>
-      <translation>Error en crear la carpeta.</translation>
-    </message>
-    <message>
-      <source>Failed to copy executable.</source>
-      <translation>Error en copiar l'executable.</translation>
     </message>
     <message>
       <source>Success</source>
@@ -2644,10 +2679,6 @@ Selecciona una versió del panell dret.</translation>
     <message>
       <source>Do you want to delete the version</source>
       <translation>Estàs segur que vols esborrar aquesta versió</translation>
-    </message>
-    <message>
-      <source>Failed to delete folder.</source>
-      <translation>Error en eliminar la carpeta.</translation>
     </message>
     <message>
       <source>Version list update</source>
@@ -2802,6 +2833,10 @@ Would you like to download it now?</source>
     <message>
       <source>Extraction failure.</source>
       <translation>Error en l'extracció.</translation>
+    </message>
+    <message>
+      <source>A version with that name already exists.</source>
+      <translation>Ja existeix una versió amb aquest nom.</translation>
     </message>
   </context>
 </TS>

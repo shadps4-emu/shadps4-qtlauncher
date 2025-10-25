@@ -1062,6 +1062,34 @@
       <source>Info</source>
       <translation>Bilgi</translation>
     </message>
+    <message>
+      <source>Create Shortcut for Selected Emulator Version</source>
+      <translation type="unfinished">Create Shortcut for Selected Emulator Version</translation>
+    </message>
+    <message>
+      <source>Create Shortcut for Specified Emulator Version</source>
+      <translation type="unfinished">Create Shortcut for Specified Emulator Version</translation>
+    </message>
+    <message>
+      <source>Create Shortcut</source>
+      <translation type="unfinished">Create Shortcut</translation>
+    </message>
+    <message>
+      <source>Shortcut creation</source>
+      <translation type="unfinished">Shortcut creation</translation>
+    </message>
+    <message>
+      <source>Shortcut created successfully!</source>
+      <translation type="unfinished">Shortcut created successfully!</translation>
+    </message>
+    <message>
+      <source>Error creating shortcut!</source>
+      <translation type="unfinished">Error creating shortcut!</translation>
+    </message>
+    <message>
+      <source>Failed to convert icon.</source>
+      <translation type="unfinished">Failed to convert icon.</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -1704,6 +1732,14 @@ Select an emulator version from the right panel.</translation>
       <source>Emulator is already running!</source>
       <translation>Emülatör zaten çalışıyor!</translation>
     </message>
+    <message>
+      <source>Invalid game argument provided</source>
+      <translation type="unfinished">Invalid game argument provided</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation type="unfinished">None</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -2216,16 +2252,8 @@ Select an emulator version from the right panel.</translation>
       <translation>Taşınabilir kullanıcı klasörü:\nYalnızca geçerli klasörde bulunan shadPS4 derlemesine uygulanacak shadPS4 ayarlarını ve verilerini depolar. Kullanmaya başlamak için taşınabilir kullanıcı klasörünü oluşturduktan sonra uygulamayı yeniden başlatın.</translation>
     </message>
     <message>
-      <source>Cannot create portable user folder</source>
-      <translation>Taşınabilir kullanıcı klasörü oluşturulamıyor</translation>
-    </message>
-    <message>
       <source>%1 already exists</source>
       <translation>%1 zaten mevcut</translation>
-    </message>
-    <message>
-      <source>Portable user folder created</source>
-      <translation>Taşınabilir kullanıcı klasörü oluşturuldu</translation>
     </message>
     <message>
       <source>%1 successfully created.</source>
@@ -2495,6 +2523,33 @@ Select an emulator version from the right panel.</translation>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
       <translation type="unfinished">GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</translation>
     </message>
+    <message>
+      <source>Cannot create portable launcher folder</source>
+      <translation type="unfinished">Cannot create portable launcher folder</translation>
+    </message>
+    <message>
+      <source>Portable launcherDir folder created</source>
+      <translation type="unfinished">Portable launcherDir folder created</translation>
+    </message>
+  </context>
+  <context>
+    <name>ShortcutDialog</name>
+    <message>
+      <source>Select Version</source>
+      <translation type="unfinished">Select Version</translation>
+    </message>
+    <message>
+      <source>Select version for shortcut creation</source>
+      <translation type="unfinished">Select version for shortcut creation</translation>
+    </message>
+    <message>
+      <source>No Version Selected</source>
+      <translation type="unfinished">No Version Selected</translation>
+    </message>
+    <message>
+      <source>Select a version first</source>
+      <translation type="unfinished">Select a version first</translation>
+    </message>
   </context>
   <context>
     <name>TrophyViewer</name>
@@ -2594,14 +2649,6 @@ Select an emulator version from the right panel.</translation>
       <translation>Yürütülebilir (*.exe)</translation>
     </message>
     <message>
-      <source>Executable (*.AppImage)</source>
-      <translation>Yürütülebilir (*.AppImage)</translation>
-    </message>
-    <message>
-      <source>Executable (*.*)</source>
-      <translation>Yürütülebilir (*.*)</translation>
-    </message>
-    <message>
       <source>Version name</source>
       <translation>Sürüm adı</translation>
     </message>
@@ -2612,18 +2659,6 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Error</source>
       <translation>Hata</translation>
-    </message>
-    <message>
-      <source>A folder with that name already exists.</source>
-      <translation>Bu ada sahip bir klasör zaten var.</translation>
-    </message>
-    <message>
-      <source>Failed to create folder.</source>
-      <translation>Klasör oluşturulamadı.</translation>
-    </message>
-    <message>
-      <source>Failed to copy executable.</source>
-      <translation>Yürütülebilir dosya kopyalanamadı.</translation>
     </message>
     <message>
       <source>Success</source>
@@ -2644,10 +2679,6 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Do you want to delete the version</source>
       <translation>Şu sürüm silinsin mi</translation>
-    </message>
-    <message>
-      <source>Failed to delete folder.</source>
-      <translation>Klasör silinemedi.</translation>
     </message>
     <message>
       <source>Version list update</source>
@@ -2804,6 +2835,10 @@ Would you like to download it now?</source>
     <message>
       <source>Extraction failure.</source>
       <translation>Çıkarma hatası.</translation>
+    </message>
+    <message>
+      <source>A version with that name already exists.</source>
+      <translation type="unfinished">A version with that name already exists.</translation>
     </message>
   </context>
 </TS>
