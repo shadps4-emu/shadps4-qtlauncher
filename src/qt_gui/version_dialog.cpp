@@ -29,6 +29,7 @@
 VersionDialog::VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget* parent)
     : QDialog(parent), ui(new Ui::VersionDialog), m_gui_settings(std::move(gui_settings)) {
     ui->setupUi(this);
+    this->setMinimumSize(670, 350);
 
     auto const& version_list = VersionManager::GetVersionList();
 
@@ -40,6 +41,8 @@ VersionDialog::VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget
             [this](bool checked) { m_gui_settings->SetValue(gui::vm_checkOnStartup, checked); });
     connect(ui->showChangelogCheckBox, &QCheckBox::toggled, this,
             [this](bool checked) { m_gui_settings->SetValue(gui::vm_showChangeLog, checked); });
+
+    connect(this, &VersionDialog::WindowResized, this, &VersionDialog::HandleResize);
 
     networkManager = new QNetworkAccessManager(this);
 
@@ -169,6 +172,15 @@ VersionDialog::VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget
 
 VersionDialog::~VersionDialog() {
     delete ui;
+}
+
+void VersionDialog::resizeEvent(QResizeEvent* event) {
+    emit WindowResized(event);
+    QDialog::resizeEvent(event);
+}
+
+void VersionDialog::HandleResize(QResizeEvent* event) {
+    this->ui->versionTab->resize(this->size());
 }
 
 void VersionDialog::onItemChanged(QTreeWidgetItem* item, int column) {
