@@ -126,6 +126,7 @@ VersionDialog::VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget
             .type = VersionManager::VersionType::Custom,
         };
         VersionManager::AddNewVersion(new_version);
+        m_gui_settings->SetValue(gui::vm_versionSelected, QString::fromStdString(new_version.path));
 
         QMessageBox::information(this, tr("Success"), tr("Version added successfully."));
         LoadInstalledList();
