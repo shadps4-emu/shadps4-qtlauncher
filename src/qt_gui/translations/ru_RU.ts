@@ -2529,7 +2529,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Portable launcherDir folder created</source>
-      <translation type="unfinished">Portable launcherDir folder created</translation>
+      <translation>Портативная папка лаунчера создана</translation>
     </message>
   </context>
   <context>
