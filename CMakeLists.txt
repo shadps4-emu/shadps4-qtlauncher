@@ -51,12 +51,6 @@ else()
     message(FATAL_ERROR "Unsupported CPU architecture: ${BASE_ARCHITECTURE}")
 endif()
 
-if (ARCHITECTURE STREQUAL "x86_64")
-    # Target the same CPU architecture as the PS4, to maintain the same level of compatibility.
-    # Exclude SSE4a as it is only available on AMD CPUs.
-    add_compile_options(-march=btver2 -mtune=generic -mno-sse4a)
-endif()
-
 if (APPLE AND ARCHITECTURE STREQUAL "x86_64" AND CMAKE_HOST_SYSTEM_PROCESSOR STREQUAL "arm64")
     # Exclude ARM homebrew path to avoid conflicts when cross compiling.
     list(APPEND CMAKE_IGNORE_PREFIX_PATH "/opt/homebrew")
