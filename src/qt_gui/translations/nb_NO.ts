@@ -142,7 +142,7 @@
     </message>
     <message>
       <source>File already exists. Do you want to replace it?</source>
-      <translation>Fila eksisterer allerede. Ønsker du å erstatte den?</translation>
+      <translation>Fila finnes allerede. Ønsker du å erstatte den?</translation>
     </message>
     <message>
       <source>Failed to save file:</source>
@@ -226,7 +226,7 @@
     </message>
     <message>
       <source>Directory does not exist:</source>
-      <translation>Mappa eksisterer ikke:</translation>
+      <translation>Mappa finnes ikke:</translation>
     </message>
     <message>
       <source>Failed to open files.json for reading.</source>
