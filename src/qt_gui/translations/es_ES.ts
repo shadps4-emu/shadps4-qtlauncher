@@ -1064,31 +1064,31 @@
     </message>
     <message>
       <source>Create Shortcut for Selected Emulator Version</source>
-      <translation type="unfinished">Create Shortcut for Selected Emulator Version</translation>
+      <translation>Crear acceso directo para la versión de emulador seleccionada</translation>
     </message>
     <message>
       <source>Create Shortcut for Specified Emulator Version</source>
-      <translation type="unfinished">Create Shortcut for Specified Emulator Version</translation>
+      <translation>Crear acceso directo para la versión de emulador seleccionada</translation>
     </message>
     <message>
       <source>Create Shortcut</source>
-      <translation type="unfinished">Create Shortcut</translation>
+      <translation>Crear acceso directo</translation>
     </message>
     <message>
       <source>Shortcut creation</source>
-      <translation type="unfinished">Shortcut creation</translation>
+      <translation>Creación de accesos directos</translation>
     </message>
     <message>
       <source>Shortcut created successfully!</source>
-      <translation type="unfinished">Shortcut created successfully!</translation>
+      <translation>¡Acceso directo creado con éxito!</translation>
     </message>
     <message>
       <source>Error creating shortcut!</source>
-      <translation type="unfinished">Error creating shortcut!</translation>
+      <translation>¡Error al crear el acceso directo!</translation>
     </message>
     <message>
       <source>Failed to convert icon.</source>
-      <translation type="unfinished">Failed to convert icon.</translation>
+      <translation>Error al convertir el icono.</translation>
     </message>
   </context>
   <context>
@@ -1732,7 +1732,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Invalid game argument provided</source>
-      <translation type="unfinished">Invalid game argument provided</translation>
+      <translation>Argumento de juego proporcionado no válido</translation>
     </message>
     <message>
       <source>None</source>
@@ -2523,7 +2523,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Cannot create portable launcher folder</source>
-      <translation type="unfinished">Cannot create portable launcher folder</translation>
+      <translation>No se puede crear la carpeta portable del lanzador</translation>
     </message>
     <message>
       <source>Portable launcherDir folder created</source>
@@ -2534,19 +2534,19 @@ Select an emulator version from the right panel.</source>
     <name>ShortcutDialog</name>
     <message>
       <source>Select Version</source>
-      <translation type="unfinished">Select Version</translation>
+      <translation>Seleccionar versión</translation>
     </message>
     <message>
       <source>Select version for shortcut creation</source>
-      <translation type="unfinished">Select version for shortcut creation</translation>
+      <translation>Seleccionar versión para la creación de acceso directo</translation>
     </message>
     <message>
       <source>No Version Selected</source>
-      <translation type="unfinished">No Version Selected</translation>
+      <translation>Ninguna versión seleccionada</translation>
     </message>
     <message>
       <source>Select a version first</source>
-      <translation type="unfinished">Select a version first</translation>
+      <translation>Selecciona primero una versión</translation>
     </message>
   </context>
   <context>
@@ -2834,7 +2834,7 @@ Would you like to download it now?</source>
     </message>
     <message>
       <source>A version with that name already exists.</source>
-      <translation type="unfinished">A version with that name already exists.</translation>
+      <translation>Ya existe una versión con ese nombre.</translation>
     </message>
   </context>
 </TS>
