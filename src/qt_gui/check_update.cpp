@@ -262,11 +262,7 @@ void CheckUpdate::setupUI(const QString& downloadUrl, const QString& latestDate,
     connect(noButton, &QPushButton::clicked, this, [this]() { close(); });
 
     autoUpdateCheckBox->setChecked(m_gui_settings->GetValue(gui::gen_checkForUpdates).toBool());
-#if (QT_VERSION < QT_VERSION_CHECK(6, 7, 0))
-    connect(autoUpdateCheckBox, &QCheckBox::stateChanged, this, [this](int state) {
-#else
     connect(autoUpdateCheckBox, &QCheckBox::checkStateChanged, this, [this](Qt::CheckState state) {
-#endif
         const auto user_dir = Common::FS::GetUserPath(Common::FS::PathType::UserDir);
         m_gui_settings->SetValue(gui::gen_checkForUpdates, (state == Qt::Checked));
         Config::save(user_dir / "config.toml");

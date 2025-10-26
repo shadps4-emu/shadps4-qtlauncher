@@ -243,15 +243,6 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         });
 
 #ifdef ENABLE_UPDATER
-#if (QT_VERSION < QT_VERSION_CHECK(6, 7, 0))
-        connect(ui->updateCheckBox, &QCheckBox::stateChanged, this, [this](int state) {
-            m_gui_settings->SetValue(gui::gen_checkForUpdates, state == Qt::Checked);
-        });
-
-        connect(ui->changelogCheckBox, &QCheckBox::stateChanged, this, [this](int state) {
-            m_gui_settings->SetValue(gui::gen_showChangeLog, state == Qt::Checked);
-        });
-#else
         connect(ui->updateCheckBox, &QCheckBox::checkStateChanged, this,
                 [this](Qt::CheckState state) {
                     m_gui_settings->SetValue(gui::gen_checkForUpdates, state == Qt::Checked);
@@ -261,7 +252,6 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
                 [this](Qt::CheckState state) {
                     m_gui_settings->SetValue(gui::gen_showChangeLog, state == Qt::Checked);
                 });
-#endif
         connect(ui->checkUpdateButton, &QPushButton::clicked, this, [this]() {
             auto checkUpdate = new CheckUpdate(m_gui_settings, true);
             checkUpdate->exec();
@@ -275,13 +265,8 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
                     emit CompatibilityChanged();
                 });
 
-#if (QT_VERSION < QT_VERSION_CHECK(6, 7, 0))
-        connect(ui->enableCompatibilityCheckBox, &QCheckBox::stateChanged, this,
-                [this, m_compat_info](int state) {
-#else
         connect(ui->enableCompatibilityCheckBox, &QCheckBox::checkStateChanged, this,
                 [this, m_compat_info](Qt::CheckState state) {
-#endif
                     m_gui_settings->SetValue(gui::glc_showCompatibility, state);
                     if (state) {
                         m_compat_info->LoadCompatibilityFile();
@@ -307,15 +292,10 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
 
         connect(ui->BGMVolumeSlider, &QSlider::valueChanged, this,
                 [](int value) { BackgroundMusicPlayer::getInstance().setVolume(value); });
-
-#if (QT_VERSION < QT_VERSION_CHECK(6, 7, 0))
-        connect(ui->showBackgroundImageCheckBox, &QCheckBox::stateChanged, this, [this](int state) {
-#else
         connect(ui->showBackgroundImageCheckBox, &QCheckBox::checkStateChanged, this,
                 [this](Qt::CheckState state) {
-#endif
-            m_gui_settings->SetValue(gui::gl_showBackgroundImage, state == Qt::Checked);
-        });
+                    m_gui_settings->SetValue(gui::gl_showBackgroundImage, state == Qt::Checked);
+                });
     }
 
     // USER TAB
@@ -441,15 +421,11 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
             dlg->exec();
         });
 
-#if (QT_VERSION < QT_VERSION_CHECK(6, 7, 0))
-        connect(ui->vkValidationCheckBox, &QCheckBox::stateChanged, this, [this](int state) {
-#else
         connect(ui->vkValidationCheckBox, &QCheckBox::checkStateChanged, this,
                 [this](Qt::CheckState state) {
-#endif
-            state ? ui->vkLayersGroupBox->setVisible(true)
-                  : ui->vkLayersGroupBox->setVisible(false);
-        });
+                    state ? ui->vkLayersGroupBox->setVisible(true)
+                          : ui->vkLayersGroupBox->setVisible(false);
+                });
     }
 
     // GRAPHICS TAB
@@ -461,20 +437,11 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
     if (Config::getGameRunning()) {
         connect(ui->RCASSlider, &QSlider::valueChanged, this,
                 [this](int value) { m_ipc_client->setRcasAttenuation(value); });
-
-#if (QT_VERSION < QT_VERSION_CHECK(6, 7, 0))
-        connect(ui->FSRCheckBox, &QCheckBox::stateChanged, this,
-                [this](int state) { m_ipc_client->setFsr(state); });
-
-        connect(ui->RCASCheckBox, &QCheckBox::stateChanged, this,
-                [this](int state) { m_ipc_client->setRcas(state); });
-#else
         connect(ui->FSRCheckBox, &QCheckBox::checkStateChanged, this,
                 [this](Qt::CheckState state) { m_ipc_client->setFsr(state); });
 
         connect(ui->RCASCheckBox, &QCheckBox::checkStateChanged, this,
                 [this](Qt::CheckState state) { m_ipc_client->setRcas(state); });
-#endif
     }
 
     // Descriptions
