@@ -1736,7 +1736,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Nada</translation>
     </message>
   </context>
   <context>
@@ -2527,7 +2527,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Portable launcherDir folder created</source>
-      <translation type="unfinished">Portable launcherDir folder created</translation>
+      <translation>Carpeta portable de launcherDir creada</translation>
     </message>
   </context>
   <context>
