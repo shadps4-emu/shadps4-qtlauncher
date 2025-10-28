@@ -2320,7 +2320,7 @@ Kur kërkon ndihmë, sigurohu që ky cilësim të jetë AKTIVIZUAR.</translation
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the DLC path.</translation>
+      <translation>Shfleto:\nShfleto një dosje për ta vendosur si shtegun e DLC-ve.</translation>
     </message>
     <message>
       <source>FSR Settings</source>
