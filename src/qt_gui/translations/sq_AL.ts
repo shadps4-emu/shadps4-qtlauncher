@@ -341,11 +341,11 @@
     </message>
     <message>
       <source>Auto Updater - GUI</source>
-      <translation type="unfinished">Auto Updater - GUI</translation>
+      <translation>Përditësues Automatik - GUI</translation>
     </message>
     <message>
       <source>Update Available - GUI</source>
-      <translation type="unfinished">Update Available - GUI</translation>
+      <translation>Ofrohet Përditësim - GUI</translation>
     </message>
   </context>
   <context>
@@ -607,19 +607,19 @@
     </message>
     <message>
       <source>Left Stick Deadzone</source>
-      <translation type="unfinished">Left Stick Deadzone</translation>
+      <translation>Zona e Vdekur e Levës së Majtë</translation>
     </message>
     <message>
       <source>Min Deadzone (def:2 max:127)</source>
-      <translation type="unfinished">Min Deadzone (def:2 max:127)</translation>
+      <translation>Zona e Vdekur Minimale (def:2 max:127)</translation>
     </message>
     <message>
       <source>Max Deadzone (def:127 max:127)</source>
-      <translation type="unfinished">Max Deadzone (def:127 max:127)</translation>
+      <translation>Zona e Vdekur Maksimale (def:127 max:127)</translation>
     </message>
     <message>
       <source>Right Stick Deadzone</source>
-      <translation type="unfinished">Right Stick Deadzone</translation>
+      <translation>Zona e Vdekur e Levës së Djathtë</translation>
     </message>
   </context>
   <context>
@@ -707,23 +707,23 @@
     </message>
     <message>
       <source>Directory to install emulator versions</source>
-      <translation type="unfinished">Directory to install emulator versions</translation>
+      <translation>Dosja ku instalohen versionet e emulatorit</translation>
     </message>
     <message>
       <source>Directory with your dumped games</source>
-      <translation type="unfinished">Directory with your dumped games</translation>
+      <translation>Dosja me lojërat tuaja të kopjuara</translation>
     </message>
     <message>
       <source>Directory with your dumped DLC&apos;s</source>
-      <translation type="unfinished">Directory with your dumped DLC&apos;s</translation>
+      <translation>Dosja me DLC-të tuaja të kopjuara</translation>
     </message>
     <message>
       <source>Directory with games</source>
-      <translation type="unfinished">Directory with games</translation>
+      <translation>Dosja me lojëra</translation>
     </message>
     <message>
       <source>Directory with DLC&apos;s</source>
-      <translation type="unfinished">Directory with DLC&apos;s</translation>
+      <translation>Dosja me DLC-të</translation>
     </message>
   </context>
   <context>
@@ -1036,59 +1036,59 @@
     </message>
     <message>
       <source>Launch...</source>
-      <translation type="unfinished">Launch...</translation>
+      <translation>Nis...</translation>
     </message>
     <message>
       <source>Launch with game specific configs (default)</source>
-      <translation type="unfinished">Launch with game specific configs (default)</translation>
+      <translation>Nis me konfigurimet specifike të lojës (paracaktim)</translation>
     </message>
     <message>
       <source>Launch with global config only</source>
-      <translation type="unfinished">Launch with global config only</translation>
+      <translation>Nis vetëm me konfigurimin global</translation>
     </message>
     <message>
       <source>Launch with default settings</source>
-      <translation type="unfinished">Launch with default settings</translation>
+      <translation>Nis me cilësimet e paracaktuara</translation>
     </message>
     <message>
       <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
-      <translation type="unfinished">Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</translation>
+      <translation>S&apos;mund të dërgohej raporti, sepse ditari i fundit për lojën dështoi në kontrollin e mëposhtëm dhe rrjedhimisht raporti do të ishte i pavlefshëm:</translation>
     </message>
     <message>
       <source>Ok</source>
-      <translation type="unfinished">Ok</translation>
+      <translation>Ok</translation>
     </message>
     <message>
       <source>Info</source>
-      <translation type="unfinished">Info</translation>
+      <translation>Info</translation>
     </message>
     <message>
       <source>Create Shortcut for Selected Emulator Version</source>
-      <translation type="unfinished">Create Shortcut for Selected Emulator Version</translation>
+      <translation>Krijo Shkurtore për Versionin e Emulatorit të Përzgjedhur</translation>
     </message>
     <message>
       <source>Create Shortcut for Specified Emulator Version</source>
-      <translation type="unfinished">Create Shortcut for Specified Emulator Version</translation>
+      <translation>Krijo Shkurtore për Versionin e Emulatorit të Specifikuar</translation>
     </message>
     <message>
       <source>Create Shortcut</source>
-      <translation type="unfinished">Create Shortcut</translation>
+      <translation>Krijo Shkurtore</translation>
     </message>
     <message>
       <source>Shortcut creation</source>
-      <translation type="unfinished">Shortcut creation</translation>
+      <translation>Krijimi i shkurtores</translation>
     </message>
     <message>
       <source>Shortcut created successfully!</source>
-      <translation type="unfinished">Shortcut created successfully!</translation>
+      <translation>Shkurtorja u krijua me sukses!</translation>
     </message>
     <message>
       <source>Error creating shortcut!</source>
-      <translation type="unfinished">Error creating shortcut!</translation>
+      <translation>Gabim gjatë krijimit të shkurtorës!</translation>
     </message>
     <message>
       <source>Failed to convert icon.</source>
-      <translation type="unfinished">Failed to convert icon.</translation>
+      <translation>Konvertimi i ikonës dështoi.</translation>
     </message>
   </context>
   <context>
@@ -1138,7 +1138,7 @@
     </message>
     <message>
       <source>Reload Button Mappings</source>
-      <translation type="unfinished">Reload Button Mappings</translation>
+      <translation>Ngarko përsëri caktimet e butonave</translation>
     </message>
     <message>
       <source>Toggle Fullscreen</source>
@@ -1154,15 +1154,15 @@
     </message>
     <message>
       <source>Renderdoc Capture (for debugging only)</source>
-      <translation type="unfinished">Renderdoc Capture (for debugging only)</translation>
+      <translation>Kapje Renderdoc (vetëm për korrigjim)</translation>
     </message>
     <message>
       <source>Toggle Mouse to Joystick Emulation</source>
-      <translation type="unfinished">Toggle Mouse to Joystick Emulation</translation>
+      <translation>Kalo Miun në Emulim të Levës</translation>
     </message>
     <message>
       <source>Toggle Mouse to Gyro Emulation</source>
-      <translation type="unfinished">Toggle Mouse to Gyro Emulation</translation>
+      <translation>Kalo Miun në Emulim të Gjiroskopit</translation>
     </message>
     <message>
       <source>Tip: Up to three simultaneous inputs can be assigned for each hotkey</source>
@@ -1198,14 +1198,14 @@
     </message>
     <message>
       <source>Waiting for inputs</source>
-      <translation type="unfinished">Waiting for inputs</translation>
+      <translation>Në pritje të hyrjeve</translation>
     </message>
   </context>
   <context>
     <name>IpcClient</name>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation type="unfinished">Could not find the emulator executable</translation>
+      <translation>Nuk u gjet skedari ekzekutues i emulatorit</translation>
     </message>
   </context>
   <context>
@@ -1411,7 +1411,7 @@
     <name>LogPresetsDialog</name>
     <message>
       <source>Log Filter Presets</source>
-      <translation type="unfinished">Log Filter Presets</translation>
+      <translation>Paracaktimet e Filtrit të Ditarit</translation>
     </message>
     <message>
       <source>Comment</source>
@@ -1419,7 +1419,7 @@
     </message>
     <message>
       <source>Filter</source>
-      <translation type="unfinished">Filter</translation>
+      <translation>Filtër</translation>
     </message>
     <message>
       <source>Load</source>
@@ -1431,15 +1431,15 @@
     </message>
     <message>
       <source>Add a new preset after the selected row</source>
-      <translation type="unfinished">Add a new preset after the selected row</translation>
+      <translation>Shto një paracaktim të ri pas rreshtit të zgjedhur</translation>
     </message>
     <message>
       <source>Remove selected presets</source>
-      <translation type="unfinished">Remove selected presets</translation>
+      <translation>Hiq paracaktimet e përzgjedhura</translation>
     </message>
     <message>
       <source>Load the selected preset</source>
-      <translation type="unfinished">Load the selected preset</translation>
+      <translation>Ngarko paracaktimin e përzgjedhur</translation>
     </message>
   </context>
   <context>
@@ -1706,39 +1706,39 @@
     </message>
     <message>
       <source>Version Manager</source>
-      <translation type="unfinished">Version Manager</translation>
+      <translation>Menaxheri i versioneve</translation>
     </message>
     <message>
       <source>No Version Selected</source>
-      <translation type="unfinished">No Version Selected</translation>
+      <translation>Nuk është Përzgjedhur Asnjë Version</translation>
     </message>
     <message>
       <source>No emulator version was selected.
 The Version Manager menu will then open.
 Select an emulator version from the right panel.</source>
-      <translation type="unfinished">No emulator version was selected.
-The Version Manager menu will then open.
-Select an emulator version from the right panel.</translation>
+      <translation>Nuk u përzgjodh asnjë version i emulatorit.
+Më pas do të hapet menyja Menaxheri i versioneve.
+Përzgjidh një version të emulatorit nga paneli i djathtë.</translation>
     </message>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation type="unfinished">Could not find the emulator executable</translation>
+      <translation>Nuk u gjet skedari ekzekutues i emulatorit</translation>
     </message>
     <message>
       <source>Run Emulator</source>
-      <translation type="unfinished">Run Emulator</translation>
+      <translation>Nis Emulatorin</translation>
     </message>
     <message>
       <source>Emulator is already running!</source>
-      <translation type="unfinished">Emulator is already running!</translation>
+      <translation>Emulatori tashmë është duke u ekzekutuar!</translation>
     </message>
     <message>
       <source>Invalid game argument provided</source>
-      <translation type="unfinished">Invalid game argument provided</translation>
+      <translation>Argument i pavlefshëm i lojës i dhënë</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Asnjë</translation>
     </message>
   </context>
   <context>
@@ -2285,15 +2285,18 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Enable Logging</source>
-      <translation type="unfinished">Enable Logging</translation>
+      <translation>Aktivizo Regjistrimin</translation>
     </message>
     <message>
       <source>Enable Logging:\nEnables logging.\nDo not change this if you do not know what you&apos;re doing!\nWhen asking for help, make sure this setting is ENABLED.</source>
-      <translation type="unfinished">Enable Logging:\nEnables logging.\nDo not change this if you do not know what you&apos;re doing!\nWhen asking for help, make sure this setting is ENABLED.</translation>
+      <translation>Aktivizo Regjistrimin:
+Aktivizon regjistrimin.
+Mos e ndrysho këtë nëse s&apos;di çfarë po bën!
+Kur kërkon ndihmë, sigurohu që ky cilësim të jetë AKTIVIZUAR.</translation>
     </message>
     <message>
       <source>Present Mode</source>
-      <translation type="unfinished">Present Mode</translation>
+      <translation>Mënyra e Prezantimit</translation>
     </message>
     <message>
       <source>Mailbox (Vsync)</source>
@@ -2309,7 +2312,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Select the DLC folder</source>
-      <translation type="unfinished">Select the DLC folder</translation>
+      <translation>Zgjidh dosjen e DLC-ve</translation>
     </message>
     <message>
       <source>Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</source>
@@ -2329,23 +2332,23 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Enable RCAS (sharpening)</source>
-      <translation type="unfinished">Enable RCAS (sharpening)</translation>
+      <translation>Aktivizo RCAS (mprehje)</translation>
     </message>
     <message>
       <source>RCAS Attenuation:</source>
-      <translation type="unfinished">RCAS Attenuation:</translation>
+      <translation>Zvogëlimi i RCAS-it:</translation>
     </message>
     <message>
       <source>Load Presets...</source>
-      <translation type="unfinished">Load Presets...</translation>
+      <translation>Ngarko Paracaktimet...</translation>
     </message>
     <message>
       <source>Log</source>
-      <translation type="unfinished">Log</translation>
+      <translation>Ditar</translation>
     </message>
     <message>
       <source>Open Log Location:\nOpen the folder where the log file is saved.</source>
-      <translation type="unfinished">Open Log Location:\nOpen the folder where the log file is saved.</translation>
+      <translation>Hap Vendndodhjen e Ditarit:\nHap dosjen ku është ruajtur skedari i ditarit.</translation>
     </message>
     <message>
       <source>Microphone:\nNone: Does not use the microphone.\nDefault Device: Will use the default device defined in the system.\nOr manually choose the microphone to be used from the list.</source>
@@ -2357,7 +2360,8 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Default tab when opening settings:\nChoose which tab will open, the default is General.</source>
-      <translation type="unfinished">Default tab when opening settings:\nChoose which tab will open, the default is General.</translation>
+      <translation>Skeda e parazgjedhur kur hap cilësimet:
+Zgjidh cilën skedë do të hapet; parazgjedhja është General.</translation>
     </message>
     <message>
       <source>Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</source>
@@ -2540,15 +2544,15 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Select version for shortcut creation</source>
-      <translation type="unfinished">Select version for shortcut creation</translation>
+      <translation>Zgjidh versionin për krijimin e shkurtorës</translation>
     </message>
     <message>
       <source>No Version Selected</source>
-      <translation type="unfinished">No Version Selected</translation>
+      <translation>Nuk është Përzgjedhur Asnjë Version</translation>
     </message>
     <message>
       <source>Select a version first</source>
-      <translation type="unfinished">Select a version first</translation>
+      <translation>Zgjidh fillimisht një version</translation>
     </message>
   </context>
   <context>
@@ -2582,111 +2586,111 @@ Select an emulator version from the right panel.</translation>
     <name>VersionDialog</name>
     <message>
       <source>Version Manager</source>
-      <translation type="unfinished">Version Manager</translation>
+      <translation>Menaxheri i versioneve</translation>
     </message>
     <message>
       <source>Path to save versions</source>
-      <translation type="unfinished">Path to save versions</translation>
+      <translation>Rruga për ruajtjen e versioneve</translation>
     </message>
     <message>
       <source>Browse</source>
-      <translation type="unfinished">Browse</translation>
+      <translation>Shfleto</translation>
     </message>
     <message>
       <source>Installed</source>
-      <translation type="unfinished">Installed</translation>
+      <translation>Instaluar</translation>
     </message>
     <message>
       <source>Selected</source>
-      <translation type="unfinished">Selected</translation>
+      <translation>Përzgjedhur</translation>
     </message>
     <message>
       <source>Version</source>
-      <translation type="unfinished">Version</translation>
+      <translation>Versioni</translation>
     </message>
     <message>
       <source>Codename</source>
-      <translation type="unfinished">Codename</translation>
+      <translation>Emri i koduar</translation>
     </message>
     <message>
       <source>Date</source>
-      <translation type="unfinished">Date</translation>
+      <translation>Datë</translation>
     </message>
     <message>
       <source>Add Custom</source>
-      <translation type="unfinished">Add Custom</translation>
+      <translation>Shto të Personalizuar</translation>
     </message>
     <message>
       <source>Delete</source>
-      <translation type="unfinished">Delete</translation>
+      <translation>Fshi</translation>
     </message>
     <message>
       <source>Refresh List</source>
-      <translation type="unfinished">Refresh List</translation>
+      <translation>Rifresko Listën</translation>
     </message>
     <message>
       <source>Download</source>
-      <translation type="unfinished">Download</translation>
+      <translation>Shkarko</translation>
     </message>
     <message>
       <source>Check for Pre-release updates at startup</source>
-      <translation type="unfinished">Check for Pre-release updates at startup</translation>
+      <translation>Kontrollo për përditësime Paraprake në nisje</translation>
     </message>
     <message>
       <source>Check for Pre-release Updates</source>
-      <translation type="unfinished">Check for Pre-release Updates</translation>
+      <translation>Kontrollo për Përditësime Paraprake</translation>
     </message>
     <message>
       <source>Select the folder where the emulator versions will be installed</source>
-      <translation type="unfinished">Select the folder where the emulator versions will be installed</translation>
+      <translation>Zgjidh dosjen ku do të instalohen versionet e emulatorit</translation>
     </message>
     <message>
       <source>Select executable</source>
-      <translation type="unfinished">Select executable</translation>
+      <translation>Zgjidh ekzekutuesin</translation>
     </message>
     <message>
       <source>Executable (*.exe)</source>
-      <translation type="unfinished">Executable (*.exe)</translation>
+      <translation>Ekzekutues (*.exe)</translation>
     </message>
     <message>
       <source>Version name</source>
-      <translation type="unfinished">Version name</translation>
+      <translation>Emri i versionit</translation>
     </message>
     <message>
       <source>Enter the name of this version as it appears in the list.</source>
-      <translation type="unfinished">Enter the name of this version as it appears in the list.</translation>
+      <translation>Shkruaj emrin e këtij versioni ashtu siç shfaqet në listë.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Gabim</translation>
     </message>
     <message>
       <source>Success</source>
-      <translation type="unfinished">Success</translation>
+      <translation>Sukses</translation>
     </message>
     <message>
       <source>Version added successfully.</source>
-      <translation type="unfinished">Version added successfully.</translation>
+      <translation>Versioni u shtua me sukses.</translation>
     </message>
     <message>
       <source>Failed to determine the folder path.</source>
-      <translation type="unfinished">Failed to determine the folder path.</translation>
+      <translation>Nuk u përcakuta dot shtegu i dosjes.</translation>
     </message>
     <message>
       <source>Delete version</source>
-      <translation type="unfinished">Delete version</translation>
+      <translation>Fshi versionin</translation>
     </message>
     <message>
       <source>Do you want to delete the version</source>
-      <translation type="unfinished">Do you want to delete the version</translation>
+      <translation>Dëshiron të fshish versionin</translation>
     </message>
     <message>
       <source>Version list update</source>
-      <translation type="unfinished">Version list update</translation>
+      <translation>Përditësim i listës së versioneve</translation>
     </message>
     <message>
       <source>No news, the version list is already updated.</source>
-      <translation type="unfinished">No news, the version list is already updated.</translation>
+      <translation>Asgjë të re, lista e versioneve është tashmë e përditësuar.</translation>
     </message>
     <message>
       <source>The latest versions have been added to the list for download.</source>
@@ -2732,7 +2736,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release</source>
-      <translation type="unfinished">Unable to get hash of latest pre-release</translation>
+      <translation>Nuk mund të merret hash-i i botimit paraprak më të fundit</translation>
     </message>
     <message>
       <source>No pre-release found</source>
