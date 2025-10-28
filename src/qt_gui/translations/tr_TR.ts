@@ -1064,23 +1064,23 @@
     </message>
     <message>
       <source>Create Shortcut for Selected Emulator Version</source>
-      <translation type="unfinished">Create Shortcut for Selected Emulator Version</translation>
+      <translation>Seçili Emülatör Sürümü için Kısayol Oluştur</translation>
     </message>
     <message>
       <source>Create Shortcut for Specified Emulator Version</source>
-      <translation type="unfinished">Create Shortcut for Specified Emulator Version</translation>
+      <translation>Belirtilen Emülatör Sürümü için Kısayol Oluştur</translation>
     </message>
     <message>
       <source>Create Shortcut</source>
-      <translation type="unfinished">Create Shortcut</translation>
+      <translation>Kısayol Oluştur</translation>
     </message>
     <message>
       <source>Shortcut creation</source>
-      <translation type="unfinished">Shortcut creation</translation>
+      <translation>Kısayol oluşturma</translation>
     </message>
     <message>
       <source>Shortcut created successfully!</source>
-      <translation type="unfinished">Shortcut created successfully!</translation>
+      <translation>Kısayol başarıyla oluşturuldu!</translation>
     </message>
     <message>
       <source>Error creating shortcut!</source>
@@ -1088,7 +1088,7 @@
     </message>
     <message>
       <source>Failed to convert icon.</source>
-      <translation type="unfinished">Failed to convert icon.</translation>
+      <translation>Simge dönüştürülemedi.</translation>
     </message>
   </context>
   <context>
@@ -2548,7 +2548,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Select a version first</source>
-      <translation type="unfinished">Select a version first</translation>
+      <translation>Önce bir sürüm seçin</translation>
     </message>
   </context>
   <context>
@@ -2838,7 +2838,7 @@ Would you like to download it now?</source>
     </message>
     <message>
       <source>A version with that name already exists.</source>
-      <translation type="unfinished">A version with that name already exists.</translation>
+      <translation>Bu ada sahip bir sürüm zaten var.</translation>
     </message>
   </context>
 </TS>
