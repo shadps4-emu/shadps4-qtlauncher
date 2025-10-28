@@ -341,11 +341,11 @@
     </message>
     <message>
       <source>Auto Updater - GUI</source>
-      <translation type="unfinished">Auto Updater - GUI</translation>
+      <translation>Otomatik Güncelleyici - Grafiksel Arayüz</translation>
     </message>
     <message>
       <source>Update Available - GUI</source>
-      <translation type="unfinished">Update Available - GUI</translation>
+      <translation>Güncelleme Mevcut - Grafiksel Arayüz</translation>
     </message>
   </context>
   <context>
@@ -1084,7 +1084,7 @@
     </message>
     <message>
       <source>Error creating shortcut!</source>
-      <translation type="unfinished">Error creating shortcut!</translation>
+      <translation>Kısayol oluşturulurken hata oluştu!</translation>
     </message>
     <message>
       <source>Failed to convert icon.</source>
@@ -1716,9 +1716,9 @@
       <source>No emulator version was selected.
 The Version Manager menu will then open.
 Select an emulator version from the right panel.</source>
-      <translation type="unfinished">No emulator version was selected.
-The Version Manager menu will then open.
-Select an emulator version from the right panel.</translation>
+      <translation>Hiçbir emülatör sürümü seçilmedi.
+Sürüm Yöneticisi menüsü açılacaktır.
+Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Could not find the emulator executable</source>
@@ -1726,7 +1726,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Run Emulator</source>
-      <translation type="unfinished">Run Emulator</translation>
+      <translation>Emülatörü Çalıştır</translation>
     </message>
     <message>
       <source>Emulator is already running!</source>
@@ -1734,11 +1734,11 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Invalid game argument provided</source>
-      <translation type="unfinished">Invalid game argument provided</translation>
+      <translation>Geçersiz oyun argümanı sağlandı</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Hiçbiri</translation>
     </message>
   </context>
   <context>
@@ -1929,7 +1929,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Always Show Changelog</source>
-      <translation>Her zaman değişiklik günlüğünü göster</translation>
+      <translation>Değişiklik Günlüğünü Her Zaman Göster</translation>
     </message>
     <message>
       <source>Check for Updates</source>
@@ -2381,7 +2381,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Set &quot;PSN signed-in&quot; to True</source>
-      <translation type="unfinished">Set &quot;PSN signed-in&quot; to True</translation>
+      <translation>&quot;PSN Oturumu&quot;nu Açık Olarak Ayarla</translation>
     </message>
     <message>
       <source>Set &quot;Network Connected&quot; to True</source>
@@ -2429,7 +2429,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Set PSN Signed-in to True:\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported.</source>
-      <translation type="unfinished">Set PSN Signed-in to True:\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported.</translation>
+      <translation>PSN Oturumunu "Açık" Olarak Ayarla:\nOyunların aktif bir PSN oturumu algılamasını zorlar. Gerçek PSN özellikleri desteklenmez.</translation>
     </message>
     <message>
       <source>Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
@@ -2481,7 +2481,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Enable Core Validation</source>
-      <translation type="unfinished">Enable Core Validation</translation>
+      <translation>Çekirdek Doğrulamayı Etkinleştir</translation>
     </message>
     <message>
       <source>Enable Sync Validation</source>
@@ -2497,7 +2497,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Çekirdek Doğrulamayı Etkinleştir:\nAna API doğrulama fonksiyonlarını etkinleştirir.\nBu durum performansı düşürecek ve muhtemelen emülasyon davranışını değiştirecektir.\nBunun çalışması için Vulkan SDK'sine ihtiyacınız vardır.</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
@@ -2505,11 +2505,11 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>GUI Language</source>
-      <translation type="unfinished">GUI Language</translation>
+      <translation>Grafiksel Arayüz Dili</translation>
     </message>
     <message>
       <source>GUI Updates</source>
-      <translation type="unfinished">GUI Updates</translation>
+      <translation>Grafiksel Arayüz Güncellemeleri</translation>
     </message>
     <message>
       <source>DLC Path</source>
@@ -2521,30 +2521,30 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
-      <translation type="unfinished">GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</translation>
+      <translation>Grafiksel Arayüz Güncellemeleri:\nKararlı: Her ay yayınlanan resmi sürümlerdir, çok eski olabilirler ancak daha güvenilir ve test edilmişlerdir.\nGecelik: En son özellikleri ve düzeltmeleri içeren geliştirme sürümleridir ancak hatalar içerebilir ve daha az kararlıdır.\n\n*Bu güncelleme yalnızca Qt kullanıcı arayüzü için geçerlidir. Emülatör çekirdeğini güncellemek için lütfen &apos;Sürüm Yöneticisi&apos; menüsünü kullanın.</translation>
     </message>
     <message>
       <source>Cannot create portable launcher folder</source>
-      <translation type="unfinished">Cannot create portable launcher folder</translation>
+      <translation>Taşınabilir başlatıcı klasörü oluşturulamıyor</translation>
     </message>
     <message>
       <source>Portable launcherDir folder created</source>
-      <translation type="unfinished">Portable launcherDir folder created</translation>
+      <translation>Taşınabilir başlatıcı klasörü oluşturuldu</translation>
     </message>
   </context>
   <context>
     <name>ShortcutDialog</name>
     <message>
       <source>Select Version</source>
-      <translation type="unfinished">Select Version</translation>
+      <translation>Sürüm Seç</translation>
     </message>
     <message>
       <source>Select version for shortcut creation</source>
-      <translation type="unfinished">Select version for shortcut creation</translation>
+      <translation>Kısayol oluşturmak için sürüm seçin</translation>
     </message>
     <message>
       <source>No Version Selected</source>
-      <translation type="unfinished">No Version Selected</translation>
+      <translation>Sürüm Seçilmedi</translation>
     </message>
     <message>
       <source>Select a version first</source>
@@ -2586,7 +2586,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Path to save versions</source>
-      <translation type="unfinished">Path to save versions</translation>
+      <translation>Sürümlerin kaydedildiği yol</translation>
     </message>
     <message>
       <source>Browse</source>
@@ -2690,7 +2690,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>The latest versions have been added to the list for download.</source>
-      <translation type="unfinished">The latest versions have been added to the list for download.</translation>
+      <translation>En son sürümler indirme listesine eklendi.</translation>
     </message>
     <message>
       <source>Error accessing GitHub API</source>
@@ -2699,8 +2699,8 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>First you need to choose a location to save the versions in
 &apos;Path to save versions&apos;</source>
-      <translation type="unfinished">First you need to choose a location to save the versions in
-&apos;Path to save versions&apos;</translation>
+      <translation>Öncelikle sürümleri kaydedeceğiniz yolu seçmeniz gerekmektedir
+&apos;Sürümlerin kaydedildiği yol&apos;</translation>
     </message>
     <message>
       <source>Do you want to download the version</source>
@@ -2786,7 +2786,7 @@ Would you like to download it now?</source>
     </message>
     <message>
       <source>Network error while fetching changelog</source>
-      <translation>Değişiklik günlüğünü alırken ağ hatası oluştu</translation>
+      <translation>Değişiklik günlüğü alınırken ağ hatası oluştu</translation>
     </message>
     <message>
       <source>Changes</source>
@@ -2822,7 +2822,7 @@ Would you like to download it now?</source>
     </message>
     <message>
       <source>Always Show Changelog</source>
-      <translation>Her Zaman Değişiklik Günlüğünü Göster</translation>
+      <translation>Değişiklik Günlüğünü Her Zaman Göster</translation>
     </message>
     <message>
       <source>No version selected. Please choose one from the list to delete.</source>
