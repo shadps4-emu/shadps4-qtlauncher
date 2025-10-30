@@ -2289,10 +2289,7 @@ Përzgjidh një version të emulatorit nga paneli i djathtë.</translation>
     </message>
     <message>
       <source>Enable Logging:\nEnables logging.\nDo not change this if you do not know what you&apos;re doing!\nWhen asking for help, make sure this setting is ENABLED.</source>
-      <translation>Aktivizo Regjistrimin:
-Aktivizon regjistrimin.
-Mos e ndrysho këtë nëse s&apos;di çfarë po bën!
-Kur kërkon ndihmë, sigurohu që ky cilësim të jetë AKTIVIZUAR.</translation>
+      <translation>Aktivizo Regjistrimin:\nAktivizon regjistrimin.\nMos e ndrysho këtë nëse s&apos;di çfarë po bën!\nKur kërkon ndihmë, sigurohu që ky cilësim të jetë AKTIVIZUAR.</translation>
     </message>
     <message>
       <source>Present Mode</source>
