@@ -1061,7 +1061,16 @@ void VersionDialog::showDownloadDialog(const QString& tagName, const QString& do
                     return;
                 }
 
-                m_gui_settings->SetValue(gui::vm_versionSelected, destFolder);
+                auto const exe = m_gui_settings->GetVersionExecutablePath(destFolder);
+                VersionManager::Version new_version = {
+                    .name = "Pre-release",
+                    .path = exe.toStdString(),
+                    .date = QDateTime::currentDateTime().toString("yyyy.MM.dd. HH:mm").toStdString(),
+                    .codename = "",
+                    .type = VersionManager::VersionType::Nightly,
+                };
+                VersionManager::UpdatePrerelease(new_version);
+                m_gui_settings->SetValue(gui::vm_versionSelected, exe);
 
                 QMessageBox::information(this, tr("Complete installation"),
                                          tr("Pre-release updated successfully") + ":\n" + tagName);
