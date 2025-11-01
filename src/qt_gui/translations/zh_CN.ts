@@ -1066,31 +1066,31 @@
     </message>
     <message>
       <source>Create Shortcut for Selected Emulator Version</source>
-      <translation type="unfinished">Create Shortcut for Selected Emulator Version</translation>
+      <translation>为所选模拟器版本创建快捷方式</translation>
     </message>
     <message>
       <source>Create Shortcut for Specified Emulator Version</source>
-      <translation type="unfinished">Create Shortcut for Specified Emulator Version</translation>
+      <translation>为指定模拟器版本创建快捷方式</translation>
     </message>
     <message>
       <source>Create Shortcut</source>
-      <translation type="unfinished">Create Shortcut</translation>
+      <translation>创建快捷方式</translation>
     </message>
     <message>
       <source>Shortcut creation</source>
-      <translation type="unfinished">Shortcut creation</translation>
+      <translation>快捷方式创建</translation>
     </message>
     <message>
       <source>Shortcut created successfully!</source>
-      <translation type="unfinished">Shortcut created successfully!</translation>
+      <translation>创建快捷方式成功！</translation>
     </message>
     <message>
       <source>Error creating shortcut!</source>
-      <translation type="unfinished">Error creating shortcut!</translation>
+      <translation>创建快捷方式出错！</translation>
     </message>
     <message>
       <source>Failed to convert icon.</source>
-      <translation type="unfinished">Failed to convert icon.</translation>
+      <translation>转换图标失败。</translation>
     </message>
   </context>
   <context>
@@ -1736,11 +1736,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Invalid game argument provided</source>
-      <translation type="unfinished">Invalid game argument provided</translation>
+      <translation>提供了无效的游戏参数</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>无</translation>
     </message>
   </context>
   <context>
@@ -2529,30 +2529,30 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Cannot create portable launcher folder</source>
-      <translation type="unfinished">Cannot create portable launcher folder</translation>
+      <translation>无法创建便携版启动器文件夹</translation>
     </message>
     <message>
       <source>Portable launcherDir folder created</source>
-      <translation type="unfinished">Portable launcherDir folder created</translation>
+      <translation>便携版启动器目录文件夹已创建</translation>
     </message>
   </context>
   <context>
     <name>ShortcutDialog</name>
     <message>
       <source>Select Version</source>
-      <translation type="unfinished">Select Version</translation>
+      <translation>选择版本</translation>
     </message>
     <message>
       <source>Select version for shortcut creation</source>
-      <translation type="unfinished">Select version for shortcut creation</translation>
+      <translation>请选择要创建快捷方式的版本</translation>
     </message>
     <message>
       <source>No Version Selected</source>
-      <translation type="unfinished">No Version Selected</translation>
+      <translation>未选择任何版本</translation>
     </message>
     <message>
       <source>Select a version first</source>
-      <translation type="unfinished">Select a version first</translation>
+      <translation>请先选择一个版本</translation>
     </message>
   </context>
   <context>
@@ -2840,7 +2840,7 @@ Would you like to download it now?</source>
     </message>
     <message>
       <source>A version with that name already exists.</source>
-      <translation type="unfinished">A version with that name already exists.</translation>
+      <translation>已存在同名版本。</translation>
     </message>
   </context>
 </TS>

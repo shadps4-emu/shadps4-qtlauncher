@@ -341,11 +341,11 @@
     </message>
     <message>
       <source>Auto Updater - GUI</source>
-      <translation type="unfinished">Auto Updater - GUI</translation>
+      <translation>Përditësues Automatik - GUI</translation>
     </message>
     <message>
       <source>Update Available - GUI</source>
-      <translation type="unfinished">Update Available - GUI</translation>
+      <translation>Ofrohet Përditësim - GUI</translation>
     </message>
   </context>
   <context>
@@ -607,19 +607,19 @@
     </message>
     <message>
       <source>Left Stick Deadzone</source>
-      <translation type="unfinished">Left Stick Deadzone</translation>
+      <translation>Zona e Vdekur e Levës së Majtë</translation>
     </message>
     <message>
       <source>Min Deadzone (def:2 max:127)</source>
-      <translation type="unfinished">Min Deadzone (def:2 max:127)</translation>
+      <translation>Zona e Vdekur Minimale (def:2 max:127)</translation>
     </message>
     <message>
       <source>Max Deadzone (def:127 max:127)</source>
-      <translation type="unfinished">Max Deadzone (def:127 max:127)</translation>
+      <translation>Zona e Vdekur Maksimale (def:127 max:127)</translation>
     </message>
     <message>
       <source>Right Stick Deadzone</source>
-      <translation type="unfinished">Right Stick Deadzone</translation>
+      <translation>Zona e Vdekur e Levës së Djathtë</translation>
     </message>
   </context>
   <context>
@@ -707,23 +707,23 @@
     </message>
     <message>
       <source>Directory to install emulator versions</source>
-      <translation type="unfinished">Directory to install emulator versions</translation>
+      <translation>Dosja ku instalohen versionet e emulatorit</translation>
     </message>
     <message>
       <source>Directory with your dumped games</source>
-      <translation type="unfinished">Directory with your dumped games</translation>
+      <translation>Dosja me lojërat tuaja të kopjuara</translation>
     </message>
     <message>
       <source>Directory with your dumped DLC&apos;s</source>
-      <translation type="unfinished">Directory with your dumped DLC&apos;s</translation>
+      <translation>Dosja me DLC-të tuaja të kopjuara</translation>
     </message>
     <message>
       <source>Directory with games</source>
-      <translation type="unfinished">Directory with games</translation>
+      <translation>Dosja me lojëra</translation>
     </message>
     <message>
       <source>Directory with DLC&apos;s</source>
-      <translation type="unfinished">Directory with DLC&apos;s</translation>
+      <translation>Dosja me DLC-të</translation>
     </message>
   </context>
   <context>
@@ -1036,59 +1036,59 @@
     </message>
     <message>
       <source>Launch...</source>
-      <translation type="unfinished">Launch...</translation>
+      <translation>Nis...</translation>
     </message>
     <message>
       <source>Launch with game specific configs (default)</source>
-      <translation type="unfinished">Launch with game specific configs (default)</translation>
+      <translation>Nis me konfigurimet specifike të lojës (paracaktim)</translation>
     </message>
     <message>
       <source>Launch with global config only</source>
-      <translation type="unfinished">Launch with global config only</translation>
+      <translation>Nis vetëm me konfigurimin global</translation>
     </message>
     <message>
       <source>Launch with default settings</source>
-      <translation type="unfinished">Launch with default settings</translation>
+      <translation>Nis me cilësimet e paracaktuara</translation>
     </message>
     <message>
       <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
-      <translation type="unfinished">Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</translation>
+      <translation>S&apos;mund të dërgohej raporti, sepse ditari i fundit për lojën dështoi në kontrollin e mëposhtëm dhe rrjedhimisht raporti do të ishte i pavlefshëm:</translation>
     </message>
     <message>
       <source>Ok</source>
-      <translation type="unfinished">Ok</translation>
+      <translation>Ok</translation>
     </message>
     <message>
       <source>Info</source>
-      <translation type="unfinished">Info</translation>
+      <translation>Info</translation>
     </message>
     <message>
       <source>Create Shortcut for Selected Emulator Version</source>
-      <translation type="unfinished">Create Shortcut for Selected Emulator Version</translation>
+      <translation>Krijo Shkurtore për Versionin e Emulatorit të Përzgjedhur</translation>
     </message>
     <message>
       <source>Create Shortcut for Specified Emulator Version</source>
-      <translation type="unfinished">Create Shortcut for Specified Emulator Version</translation>
+      <translation>Krijo Shkurtore për Versionin e Emulatorit të Specifikuar</translation>
     </message>
     <message>
       <source>Create Shortcut</source>
-      <translation type="unfinished">Create Shortcut</translation>
+      <translation>Krijo Shkurtore</translation>
     </message>
     <message>
       <source>Shortcut creation</source>
-      <translation type="unfinished">Shortcut creation</translation>
+      <translation>Krijimi i shkurtores</translation>
     </message>
     <message>
       <source>Shortcut created successfully!</source>
-      <translation type="unfinished">Shortcut created successfully!</translation>
+      <translation>Shkurtorja u krijua me sukses!</translation>
     </message>
     <message>
       <source>Error creating shortcut!</source>
-      <translation type="unfinished">Error creating shortcut!</translation>
+      <translation>Gabim gjatë krijimit të shkurtorës!</translation>
     </message>
     <message>
       <source>Failed to convert icon.</source>
-      <translation type="unfinished">Failed to convert icon.</translation>
+      <translation>Konvertimi i ikonës dështoi.</translation>
     </message>
   </context>
   <context>
@@ -1138,7 +1138,7 @@
     </message>
     <message>
       <source>Reload Button Mappings</source>
-      <translation type="unfinished">Reload Button Mappings</translation>
+      <translation>Ngarko përsëri caktimet e butonave</translation>
     </message>
     <message>
       <source>Toggle Fullscreen</source>
@@ -1154,15 +1154,15 @@
     </message>
     <message>
       <source>Renderdoc Capture (for debugging only)</source>
-      <translation type="unfinished">Renderdoc Capture (for debugging only)</translation>
+      <translation>Kapje Renderdoc (vetëm për korrigjim)</translation>
     </message>
     <message>
       <source>Toggle Mouse to Joystick Emulation</source>
-      <translation type="unfinished">Toggle Mouse to Joystick Emulation</translation>
+      <translation>Kalo Miun në Emulim të Levës</translation>
     </message>
     <message>
       <source>Toggle Mouse to Gyro Emulation</source>
-      <translation type="unfinished">Toggle Mouse to Gyro Emulation</translation>
+      <translation>Kalo Miun në Emulim të Gjiroskopit</translation>
     </message>
     <message>
       <source>Tip: Up to three simultaneous inputs can be assigned for each hotkey</source>
@@ -1198,14 +1198,14 @@
     </message>
     <message>
       <source>Waiting for inputs</source>
-      <translation type="unfinished">Waiting for inputs</translation>
+      <translation>Në pritje të hyrjeve</translation>
     </message>
   </context>
   <context>
     <name>IpcClient</name>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation type="unfinished">Could not find the emulator executable</translation>
+      <translation>Nuk u gjet skedari ekzekutues i emulatorit</translation>
     </message>
   </context>
   <context>
@@ -1411,7 +1411,7 @@
     <name>LogPresetsDialog</name>
     <message>
       <source>Log Filter Presets</source>
-      <translation type="unfinished">Log Filter Presets</translation>
+      <translation>Paracaktimet e Filtrit të Ditarit</translation>
     </message>
     <message>
       <source>Comment</source>
@@ -1419,7 +1419,7 @@
     </message>
     <message>
       <source>Filter</source>
-      <translation type="unfinished">Filter</translation>
+      <translation>Filtër</translation>
     </message>
     <message>
       <source>Load</source>
@@ -1431,15 +1431,15 @@
     </message>
     <message>
       <source>Add a new preset after the selected row</source>
-      <translation type="unfinished">Add a new preset after the selected row</translation>
+      <translation>Shto një paracaktim të ri pas rreshtit të zgjedhur</translation>
     </message>
     <message>
       <source>Remove selected presets</source>
-      <translation type="unfinished">Remove selected presets</translation>
+      <translation>Hiq paracaktimet e përzgjedhura</translation>
     </message>
     <message>
       <source>Load the selected preset</source>
-      <translation type="unfinished">Load the selected preset</translation>
+      <translation>Ngarko paracaktimin e përzgjedhur</translation>
     </message>
   </context>
   <context>
@@ -1706,39 +1706,39 @@
     </message>
     <message>
       <source>Version Manager</source>
-      <translation type="unfinished">Version Manager</translation>
+      <translation>Menaxheri i versioneve</translation>
     </message>
     <message>
       <source>No Version Selected</source>
-      <translation type="unfinished">No Version Selected</translation>
+      <translation>Nuk është Përzgjedhur Asnjë Version</translation>
     </message>
     <message>
       <source>No emulator version was selected.
 The Version Manager menu will then open.
 Select an emulator version from the right panel.</source>
-      <translation type="unfinished">No emulator version was selected.
-The Version Manager menu will then open.
-Select an emulator version from the right panel.</translation>
+      <translation>Nuk u përzgjodh asnjë version i emulatorit.
+Më pas do të hapet menyja Menaxheri i versioneve.
+Përzgjidh një version të emulatorit nga paneli i djathtë.</translation>
     </message>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation type="unfinished">Could not find the emulator executable</translation>
+      <translation>Nuk u gjet skedari ekzekutues i emulatorit</translation>
     </message>
     <message>
       <source>Run Emulator</source>
-      <translation type="unfinished">Run Emulator</translation>
+      <translation>Nis Emulatorin</translation>
     </message>
     <message>
       <source>Emulator is already running!</source>
-      <translation type="unfinished">Emulator is already running!</translation>
+      <translation>Emulatori tashmë është duke u ekzekutuar!</translation>
     </message>
     <message>
       <source>Invalid game argument provided</source>
-      <translation type="unfinished">Invalid game argument provided</translation>
+      <translation>Argument i pavlefshëm i lojës i dhënë</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Asnjë</translation>
     </message>
   </context>
   <context>
@@ -2285,15 +2285,15 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Enable Logging</source>
-      <translation type="unfinished">Enable Logging</translation>
+      <translation>Aktivizo Regjistrimin</translation>
     </message>
     <message>
       <source>Enable Logging:\nEnables logging.\nDo not change this if you do not know what you&apos;re doing!\nWhen asking for help, make sure this setting is ENABLED.</source>
-      <translation type="unfinished">Enable Logging:\nEnables logging.\nDo not change this if you do not know what you&apos;re doing!\nWhen asking for help, make sure this setting is ENABLED.</translation>
+      <translation>Aktivizo Regjistrimin:\nAktivizon regjistrimin.\nMos e ndrysho këtë nëse s&apos;di çfarë po bën!\nKur kërkon ndihmë, sigurohu që ky cilësim të jetë AKTIVIZUAR.</translation>
     </message>
     <message>
       <source>Present Mode</source>
-      <translation type="unfinished">Present Mode</translation>
+      <translation>Mënyra e Prezantimit</translation>
     </message>
     <message>
       <source>Mailbox (Vsync)</source>
@@ -2309,15 +2309,15 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Select the DLC folder</source>
-      <translation type="unfinished">Select the DLC folder</translation>
+      <translation>Zgjidh dosjen e DLC-ve</translation>
     </message>
     <message>
       <source>Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</source>
-      <translation type="unfinished">Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</translation>
+      <translation>Mënyra e Prezantimit:\nKonfiguron se si dalja video do të paraqitet në ekranin tënd.\n\nMailbox: Fotografitë sinkronizohen me frekuencën e rifreskimit të ekranit tënd. Fotografitë e reja do të zëvendësojnë çdo fotografi në pritje. Ul vonesën por mund të kapërcejë fotografi nëse mbetet pas.\nFifo: Fotografitë sinkronizohen me frekuencën e rifreskimit të ekranit tënd. Fotografitë e reja do të radhiten pas fotografive në pritje. Siguron që të gjitha fotografitë të paraqiten, por mund të rrisë vonesën.\nI menjëhershëm: Fotografitë paraqiten menjëherë në ekranin tënd kur janë gati. Mund të rezultojë në shqyerje.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the DLC path.</translation>
+      <translation>Shfleto:\nShfleto një dosje për ta vendosur si shtegun e DLC-ve.</translation>
     </message>
     <message>
       <source>FSR Settings</source>
@@ -2329,119 +2329,120 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Enable RCAS (sharpening)</source>
-      <translation type="unfinished">Enable RCAS (sharpening)</translation>
+      <translation>Aktivizo RCAS (mprehje)</translation>
     </message>
     <message>
       <source>RCAS Attenuation:</source>
-      <translation type="unfinished">RCAS Attenuation:</translation>
+      <translation>Zvogëlimi i RCAS-it:</translation>
     </message>
     <message>
       <source>Load Presets...</source>
-      <translation type="unfinished">Load Presets...</translation>
+      <translation>Ngarko Paracaktimet...</translation>
     </message>
     <message>
       <source>Log</source>
-      <translation type="unfinished">Log</translation>
+      <translation>Ditar</translation>
     </message>
     <message>
       <source>Open Log Location:\nOpen the folder where the log file is saved.</source>
-      <translation type="unfinished">Open Log Location:\nOpen the folder where the log file is saved.</translation>
+      <translation>Hap Vendndodhjen e Ditarit:\nHap dosjen ku është ruajtur skedari i ditarit.</translation>
     </message>
     <message>
       <source>Microphone:\nNone: Does not use the microphone.\nDefault Device: Will use the default device defined in the system.\nOr manually choose the microphone to be used from the list.</source>
-      <translation type="unfinished">Microphone:\nNone: Does not use the microphone.\nDefault Device: Will use the default device defined in the system.\nOr manually choose the microphone to be used from the list.</translation>
+      <translation>Mikrofoni:\nAsnjë: Nuk përdor mikrofonin.\nPajisja e paracaktuar: Do të përdorë pajisjen e përcaktuar në sistem.\nOse zgjidh manualisht mikrofonin që do të përdoret nga lista.</translation>
     </message>
     <message>
       <source>Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</source>
-      <translation type="unfinished">Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</translation>
+      <translation>Vëllimi:\nRregullon vëllimin për lojërat në nivel global; diapazoni shkon nga 0-500%, me vlerën e paracaktuar 100%.</translation>
     </message>
     <message>
       <source>Default tab when opening settings:\nChoose which tab will open, the default is General.</source>
-      <translation type="unfinished">Default tab when opening settings:\nChoose which tab will open, the default is General.</translation>
+      <translation>Skeda e parazgjedhur kur hap cilësimet:
+Zgjidh cilën skedë do të hapet; parazgjedhja është General.</translation>
     </message>
     <message>
       <source>Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</source>
-      <translation type="unfinished">Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</translation>
+      <translation>Aktivizo Kontrollet e Lëvizjes:\nKur të aktivizohet, do të përdorë kontrollin e lëvizjes së dorezës nëse mbështetet.</translation>
     </message>
     <message>
       <source>Vblank Frequency</source>
-      <translation type="unfinished">Vblank Frequency</translation>
+      <translation>Frekuenca Vblank</translation>
     </message>
     <message>
       <source>Vblank Frequency:\nThe frame rate at which the emulator refreshes at (60hz is the baseline, whether the game runs at 30 or 60fps). Changing this may have adverse effects, such as increasing the game speed, or breaking critical game functionality that does not expect this to change!</source>
-      <translation type="unfinished">Vblank Frequency:\nThe frame rate at which the emulator refreshes at (60hz is the baseline, whether the game runs at 30 or 60fps). Changing this may have adverse effects, such as increasing the game speed, or breaking critical game functionality that does not expect this to change!</translation>
+      <translation>Frekuenca Vblank:\nFrekuenca pamore me të cilën përditësohet emulatori (60hz është niveli bazë, pavarësisht nëse loja ekzekutohet me 30 apo 60 fotografi në sekondë). Ndryshimi i kësaj vlere mund të ketë pasoja negative, si rritja e shpejtësisë së lojës ose prishja e funksioneve kritike të lojës që nuk e presin këtë ndryshim!</translation>
     </message>
     <message>
       <source>Enable Direct Memory Access</source>
-      <translation type="unfinished">Enable Direct Memory Access</translation>
+      <translation>Aktivizo Qasjen e Drejtpërdrejtë të Memories</translation>
     </message>
     <message>
       <source>Enable Devkit Console Mode</source>
-      <translation type="unfinished">Enable Devkit Console Mode</translation>
+      <translation>Aktivizo Mënyrën e Konsolës Devkit</translation>
     </message>
     <message>
       <source>Set &quot;PSN signed-in&quot; to True</source>
-      <translation type="unfinished">Set &quot;PSN signed-in&quot; to True</translation>
+      <translation>Vendos "Gjendjen e Hyrjes në PSN" në True</translation>
     </message>
     <message>
       <source>Set &quot;Network Connected&quot; to True</source>
-      <translation type="unfinished">Set &quot;Network Connected&quot; to True</translation>
+      <translation>Vendos "Gjendjen e Rrjetit" në "Lidhur" (True)</translation>
     </message>
     <message>
       <source>Miscellaneous</source>
-      <translation type="unfinished">Miscellaneous</translation>
+      <translation>Të ndryshme</translation>
     </message>
     <message>
       <source>Frontend</source>
-      <translation type="unfinished">Frontend</translation>
+      <translation>Ndërfaqe</translation>
     </message>
     <message>
       <source>Experimental</source>
-      <translation type="unfinished">Experimental</translation>
+      <translation>Eksperimental</translation>
     </message>
     <message>
       <source>Show Splash Screen When Launching Game</source>
-      <translation type="unfinished">Show Splash Screen When Launching Game</translation>
+      <translation>Shfaq Ekranin Hyrës Kur Nis Lojërat</translation>
     </message>
     <message>
       <source>General Frontend Settings</source>
-      <translation type="unfinished">General Frontend Settings</translation>
+      <translation>Cilësimet e Përgjithshme të Ndërfaqes</translation>
     </message>
     <message>
       <source>Enable PS4 Neo Mode</source>
-      <translation type="unfinished">Enable PS4 Neo Mode</translation>
+      <translation>Aktivizo Mënyrën PS4 Neo</translation>
     </message>
     <message>
       <source>Enable Direct Memory Access:\nEnables arbitrary memory access from the GPU to CPU memory.</source>
-      <translation type="unfinished">Enable Direct Memory Access:\nEnables arbitrary memory access from the GPU to CPU memory.</translation>
+      <translation>Aktivizo Qasjen e Drejtpërdrejtë të Memories:\nMundëson qasje të pakufizuar nga GPU-ja në memorien e CPU-së.</translation>
     </message>
     <message>
       <source>Enable PS4 Neo Mode:\nAdds support for PS4 Pro emulation and memory size. Currently causes instability in a large number of tested games.</source>
-      <translation type="unfinished">Enable PS4 Neo Mode:\nAdds support for PS4 Pro emulation and memory size. Currently causes instability in a large number of tested games.</translation>
+      <translation>Aktivizo Mënyrën PS4 Neo:\nShton mbështetje për emulimin e PS4 Pro dhe madhësinë e memories. Aktualisht shkakton paqëndrueshmëri në një numër të madh lojërash të testuara.</translation>
     </message>
     <message>
       <source>Enable Devkit Console Mode:\nAdds support for Devkit console memory size.</source>
-      <translation type="unfinished">Enable Devkit Console Mode:\nAdds support for Devkit console memory size.</translation>
+      <translation>Aktivizo Mënyrën e Konsolës Devkit:\nShton mbështetje për madhësinë e memories së konsolës Devkit.</translation>
     </message>
     <message>
       <source>Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</source>
-      <translation type="unfinished">Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</translation>
+      <translation>Vendos Gjendjen e Rrjetit në "Lidhur" (True):\nDetyron lojërat të dallojnë një lidhje rrjeti aktive. Mundësitë e vërteta në linjë nuk janë ende të mbështetura.</translation>
     </message>
     <message>
       <source>Set PSN Signed-in to True:\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported.</source>
-      <translation type="unfinished">Set PSN Signed-in to True:\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported.</translation>
+      <translation>Vendos Gjendjen e Hyrjes në PSN në True:\nDetyron lojërat të dallojnë një hyrje aktive në PSN. Mundësitë e vërteta të PSN nuk mbështeten.</translation>
     </message>
     <message>
       <source>Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Aktivizo Shtresat e Vërtetimit Vulkan:\nAktivizon një sistem që vërteton gjendjen e paraqitësit Vulkan dhe regjistron informacion rreth gjendjes së tij të brendshme.\nKjo do të ulë performancën dhe me gjasë do të ndryshojë sjelljen e emulimit.\nDuhet të kesh Vulkan SDK që kjo të funksionojë.</translation>
     </message>
     <message>
       <source>Audio Device (general)</source>
-      <translation type="unfinished">Audio Device (general)</translation>
+      <translation>Pajisja Audio (e përgjithshme)</translation>
     </message>
     <message>
       <source>Audio Device (DS4 speaker)</source>
-      <translation type="unfinished">Audio Device (DS4 speaker)</translation>
+      <translation>Pajisja Audio (folësi i DS4)</translation>
     </message>
     <message>
       <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
@@ -2453,102 +2454,102 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
-      <translation type="unfinished">DLC Path:\nThe folder where game DLC is loaded from.</translation>
+      <translation>Shtegu i DLC-ve:\nDosja nga ku ngarkohen DLC-të e lojës.</translation>
     </message>
     <message>
       <source>Additional DMem Allocation</source>
-      <translation type="unfinished">Additional DMem Allocation</translation>
+      <translation>Caktim shtesë i DMem</translation>
     </message>
     <message>
       <source>Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</source>
-      <translation type="unfinished">Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</translation>
+      <translation>Caktim shtesë i DMem:\nDetyron caktimin e sasisë së specifikuar të DMem-it shtesë. Bën që disa lojëra të rrëzohen ose të kenë probleme.</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</source>
-      <translation type="unfinished">PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</translation>
+      <translation>Shtegu i Sysmoduleve të PS4:\nDosja nga ku ngarkohen sysmodulet e PS4.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the sysmodules path.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the sysmodules path.</translation>
+      <translation>Shfleto:\nShfleto një dosje për ta vendosur si shtegun e sysmoduleve.</translation>
     </message>
     <message>
       <source>Vulkan Validation (Requires Vulkan SDK)</source>
-      <translation type="unfinished">Vulkan Validation (Requires Vulkan SDK)</translation>
+      <translation>Vërtetim Vulkan (Kërkon Vulkan SDK)</translation>
     </message>
     <message>
       <source>Validation Layers</source>
-      <translation type="unfinished">Validation Layers</translation>
+      <translation>Shtresat e Verifikimit</translation>
     </message>
     <message>
       <source>Enable Core Validation</source>
-      <translation type="unfinished">Enable Core Validation</translation>
+      <translation>Aktivizo Verifikimin e Bërthamës</translation>
     </message>
     <message>
       <source>Enable Sync Validation</source>
-      <translation type="unfinished">Enable Sync Validation</translation>
+      <translation>Aktivizo Verifikimin e Sinkronizimit</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation</source>
-      <translation type="unfinished">Enable GPU-Assisted Validation</translation>
+      <translation>Aktivizo Verifikimin e Ndihmuar nga GPU</translation>
     </message>
     <message>
       <source>Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Aktivizo Vërtetimin e Sinkronizimit:\nAktivizon një sistem që vërteton kohën e detyrave të paraqitësit Vulkan.\nKjo do të ulë performancën dhe me gjasë do të ndryshojë sjelljen e emulimit.\nDuhet të kesh Vulkan SDK që kjo të funksionojë.</translation>
     </message>
     <message>
       <source>Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Aktivizo Verifikimin e Bërthamës:\nAktivizon funksionet kryesore të verifikimit të API-së.\nKjo do të ulë performancën dhe me gjasë do të ndryshojë sjelljen e emulimit.\nDuhet të kesh Vulkan SDK që kjo të funksionojë.</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Aktivizo Verifikimin e Ndihmuar nga GPU:\nPajis Shader-at me kod që verifikon nëse po sillen siç duhet.\nKjo do të ulë performancën dhe me gjasë do të ndryshojë sjelljen e emulimit.\nDuhet të kesh Vulkan SDK që kjo të funksionojë.</translation>
     </message>
     <message>
       <source>GUI Language</source>
-      <translation type="unfinished">GUI Language</translation>
+      <translation>Gjuha e Ndërfaqes</translation>
     </message>
     <message>
       <source>GUI Updates</source>
-      <translation type="unfinished">GUI Updates</translation>
+      <translation>Përditësimet e Ndërfaqes</translation>
     </message>
     <message>
       <source>DLC Path</source>
-      <translation type="unfinished">DLC Path</translation>
+      <translation>Shtegu i DLC-ve</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path</source>
-      <translation type="unfinished">PS4 Sysmodules Path</translation>
+      <translation>Shtegu i sysmoduleve të PS4</translation>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
-      <translation type="unfinished">GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</translation>
+      <translation>Përditësimet e Ndërfaqes:\nRelease: Versione zyrtare të lëshuara çdo muaj që mund të jenë të vjetra, por janë më të besueshme dhe të testuara.\nNightly: Versione zhvillimi që përmbajnë të gjitha veçoritë dhe rregullimet më të fundit, por mund të përmbajnë gabime dhe janë më pak të qëndrueshme.\n\n*Ky përditësim vlen vetëm për ndërfaqen e përdoruesit Qt. Për të përditësuar bërthamën e emulatorit, përdor menynë &apos;Menaxheri i Versioneve&apos;.</translation>
     </message>
     <message>
       <source>Cannot create portable launcher folder</source>
-      <translation type="unfinished">Cannot create portable launcher folder</translation>
+      <translation>Dosja portative e lëshuesit nuk u krijua dot</translation>
     </message>
     <message>
       <source>Portable launcherDir folder created</source>
-      <translation type="unfinished">Portable launcherDir folder created</translation>
+      <translation>Dosja portative launcherDir u krijua</translation>
     </message>
   </context>
   <context>
     <name>ShortcutDialog</name>
     <message>
       <source>Select Version</source>
-      <translation type="unfinished">Select Version</translation>
+      <translation>Zgjidh Versionin</translation>
     </message>
     <message>
       <source>Select version for shortcut creation</source>
-      <translation type="unfinished">Select version for shortcut creation</translation>
+      <translation>Zgjidh versionin për krijimin e shkurtorës</translation>
     </message>
     <message>
       <source>No Version Selected</source>
-      <translation type="unfinished">No Version Selected</translation>
+      <translation>Nuk është Përzgjedhur Asnjë Version</translation>
     </message>
     <message>
       <source>Select a version first</source>
-      <translation type="unfinished">Select a version first</translation>
+      <translation>Zgjidh fillimisht një version</translation>
     </message>
   </context>
   <context>
@@ -2582,263 +2583,263 @@ Select an emulator version from the right panel.</translation>
     <name>VersionDialog</name>
     <message>
       <source>Version Manager</source>
-      <translation type="unfinished">Version Manager</translation>
+      <translation>Menaxheri i versioneve</translation>
     </message>
     <message>
       <source>Path to save versions</source>
-      <translation type="unfinished">Path to save versions</translation>
+      <translation>Rruga për ruajtjen e versioneve</translation>
     </message>
     <message>
       <source>Browse</source>
-      <translation type="unfinished">Browse</translation>
+      <translation>Shfleto</translation>
     </message>
     <message>
       <source>Installed</source>
-      <translation type="unfinished">Installed</translation>
+      <translation>Instaluar</translation>
     </message>
     <message>
       <source>Selected</source>
-      <translation type="unfinished">Selected</translation>
+      <translation>Përzgjedhur</translation>
     </message>
     <message>
       <source>Version</source>
-      <translation type="unfinished">Version</translation>
+      <translation>Versioni</translation>
     </message>
     <message>
       <source>Codename</source>
-      <translation type="unfinished">Codename</translation>
+      <translation>Emri i koduar</translation>
     </message>
     <message>
       <source>Date</source>
-      <translation type="unfinished">Date</translation>
+      <translation>Datë</translation>
     </message>
     <message>
       <source>Add Custom</source>
-      <translation type="unfinished">Add Custom</translation>
+      <translation>Shto të Personalizuar</translation>
     </message>
     <message>
       <source>Delete</source>
-      <translation type="unfinished">Delete</translation>
+      <translation>Fshi</translation>
     </message>
     <message>
       <source>Refresh List</source>
-      <translation type="unfinished">Refresh List</translation>
+      <translation>Rifresko Listën</translation>
     </message>
     <message>
       <source>Download</source>
-      <translation type="unfinished">Download</translation>
+      <translation>Shkarko</translation>
     </message>
     <message>
       <source>Check for Pre-release updates at startup</source>
-      <translation type="unfinished">Check for Pre-release updates at startup</translation>
+      <translation>Kontrollo për përditësime Paraprake në nisje</translation>
     </message>
     <message>
       <source>Check for Pre-release Updates</source>
-      <translation type="unfinished">Check for Pre-release Updates</translation>
+      <translation>Kontrollo për Përditësime Paraprake</translation>
     </message>
     <message>
       <source>Select the folder where the emulator versions will be installed</source>
-      <translation type="unfinished">Select the folder where the emulator versions will be installed</translation>
+      <translation>Zgjidh dosjen ku do të instalohen versionet e emulatorit</translation>
     </message>
     <message>
       <source>Select executable</source>
-      <translation type="unfinished">Select executable</translation>
+      <translation>Zgjidh ekzekutuesin</translation>
     </message>
     <message>
       <source>Executable (*.exe)</source>
-      <translation type="unfinished">Executable (*.exe)</translation>
+      <translation>Ekzekutues (*.exe)</translation>
     </message>
     <message>
       <source>Version name</source>
-      <translation type="unfinished">Version name</translation>
+      <translation>Emri i versionit</translation>
     </message>
     <message>
       <source>Enter the name of this version as it appears in the list.</source>
-      <translation type="unfinished">Enter the name of this version as it appears in the list.</translation>
+      <translation>Shkruaj emrin e këtij versioni ashtu siç shfaqet në listë.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Gabim</translation>
     </message>
     <message>
       <source>Success</source>
-      <translation type="unfinished">Success</translation>
+      <translation>Sukses</translation>
     </message>
     <message>
       <source>Version added successfully.</source>
-      <translation type="unfinished">Version added successfully.</translation>
+      <translation>Versioni u shtua me sukses.</translation>
     </message>
     <message>
       <source>Failed to determine the folder path.</source>
-      <translation type="unfinished">Failed to determine the folder path.</translation>
+      <translation>Nuk u përcakuta dot shtegu i dosjes.</translation>
     </message>
     <message>
       <source>Delete version</source>
-      <translation type="unfinished">Delete version</translation>
+      <translation>Fshi versionin</translation>
     </message>
     <message>
       <source>Do you want to delete the version</source>
-      <translation type="unfinished">Do you want to delete the version</translation>
+      <translation>Dëshiron të fshish versionin</translation>
     </message>
     <message>
       <source>Version list update</source>
-      <translation type="unfinished">Version list update</translation>
+      <translation>Përditësim i listës së versioneve</translation>
     </message>
     <message>
       <source>No news, the version list is already updated.</source>
-      <translation type="unfinished">No news, the version list is already updated.</translation>
+      <translation>Asgjë të re, lista e versioneve është tashmë e përditësuar.</translation>
     </message>
     <message>
       <source>The latest versions have been added to the list for download.</source>
-      <translation type="unfinished">The latest versions have been added to the list for download.</translation>
+      <translation>Versionet më të fundit janë shtuar në listën për shkarkim.</translation>
     </message>
     <message>
       <source>Error accessing GitHub API</source>
-      <translation type="unfinished">Error accessing GitHub API</translation>
+      <translation>Gabim gjatë hyrjes në GitHub API</translation>
     </message>
     <message>
       <source>First you need to choose a location to save the versions in
 &apos;Path to save versions&apos;</source>
-      <translation type="unfinished">First you need to choose a location to save the versions in
-&apos;Path to save versions&apos;</translation>
+      <translation>Së pari, duhet të zgjedhësh një vendndodhje për të ruajtur versionet në
+&apos;Shtegpër të ruajtur versionet&apos;</translation>
     </message>
     <message>
       <source>Do you want to download the version</source>
-      <translation type="unfinished">Do you want to download the version</translation>
+      <translation>Do të shkarkosh versionin</translation>
     </message>
     <message>
       <source>No files available for this platform.</source>
-      <translation type="unfinished">No files available for this platform.</translation>
+      <translation>Nuk ofrohen skedarë për këtë platformë.</translation>
     </message>
     <message>
       <source>Downloading %1 , please wait...</source>
-      <translation type="unfinished">Downloading %1 , please wait...</translation>
+      <translation>Po shkarkohet %1, të lutem prit...</translation>
     </message>
     <message>
       <source>Could not save file.</source>
-      <translation type="unfinished">Could not save file.</translation>
+      <translation>Ruajtja e skedarit dështoi.</translation>
     </message>
     <message>
       <source>Version %1 has been downloaded and selected.</source>
-      <translation type="unfinished">Version %1 has been downloaded and selected.</translation>
+      <translation>Versioni %1 është shkarkuar dhe është përzgjedhur.</translation>
     </message>
     <message>
       <source>Failed to create zip extraction script</source>
-      <translation type="unfinished">Failed to create zip extraction script</translation>
+      <translation>Nuk u krijua dot skripti i shpaketimit zip</translation>
     </message>
     <message>
       <source>The GitHub API response is not a valid JSON array.</source>
-      <translation type="unfinished">The GitHub API response is not a valid JSON array.</translation>
+      <translation>Përgjigjja e GitHub API-së nuk është një vektor JSON i vlefshëm.</translation>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release</source>
-      <translation type="unfinished">Unable to get hash of latest pre-release</translation>
+      <translation>Nuk mund të merret hash-i i botimit paraprak më të fundit</translation>
     </message>
     <message>
       <source>No pre-release found</source>
-      <translation type="unfinished">No pre-release found</translation>
+      <translation>Nuk u gjet një botim paraprak</translation>
     </message>
     <message>
       <source>You don&apos;t have any pre-release installed yet.
 Would you like to download it now?</source>
-      <translation type="unfinished">You don&apos;t have any pre-release installed yet.
-Would you like to download it now?</translation>
+      <translation>Nuk ke ende të instaluar asnjë version paraprak.
+Dëshiron ta shkarkosh tani?</translation>
     </message>
     <message>
       <source>Auto Updater - Emulator</source>
-      <translation type="unfinished">Auto Updater - Emulator</translation>
+      <translation>Përditësues Automatik - Emulator</translation>
     </message>
     <message>
       <source>You already have the latest pre-release version.</source>
-      <translation type="unfinished">You already have the latest pre-release version.</translation>
+      <translation>Tashmë ke të instaluar versionin më të fundit paraprak.</translation>
     </message>
     <message>
       <source>Update Available (Emulator)</source>
-      <translation type="unfinished">Update Available (Emulator)</translation>
+      <translation>Ofrohet Përditësim (Emulator)</translation>
     </message>
     <message>
       <source>Current Version</source>
-      <translation type="unfinished">Current Version</translation>
+      <translation>Versioni i Tanishëm</translation>
     </message>
     <message>
       <source>Latest Version</source>
-      <translation type="unfinished">Latest Version</translation>
+      <translation>Versioni më i Fundit</translation>
     </message>
     <message>
       <source>Do you want to update?</source>
-      <translation type="unfinished">Do you want to update?</translation>
+      <translation>Do të përditësosh?</translation>
     </message>
     <message>
       <source>Update</source>
-      <translation type="unfinished">Update</translation>
+      <translation>Përditëso</translation>
     </message>
     <message>
       <source>No</source>
-      <translation type="unfinished">No</translation>
+      <translation>Jo</translation>
     </message>
     <message>
       <source>Show Changelog</source>
-      <translation type="unfinished">Show Changelog</translation>
+      <translation>Shfaq Ditarin e Ndryshimeve</translation>
     </message>
     <message>
       <source>Hide Changelog</source>
-      <translation type="unfinished">Hide Changelog</translation>
+      <translation>Fshih Ditarin e Ndryshimeve</translation>
     </message>
     <message>
       <source>Network error while fetching changelog</source>
-      <translation type="unfinished">Network error while fetching changelog</translation>
+      <translation>Gabim rrjeti gjatë marrjes së ditarit të ndryshimeve</translation>
     </message>
     <message>
       <source>Changes</source>
-      <translation type="unfinished">Changes</translation>
+      <translation>Ndryshimet</translation>
     </message>
     <message>
       <source>No download URL found for the specified asset.</source>
-      <translation type="unfinished">No download URL found for the specified asset.</translation>
+      <translation>Nuk u gjet asnjë URL shkarkimi për asetin e specifikuar.</translation>
     </message>
     <message>
       <source>Downloading Pre‑release, please wait...</source>
-      <translation type="unfinished">Downloading Pre‑release, please wait...</translation>
+      <translation>Po Shkarkohet Versioni Paraprak, të lutem prit...</translation>
     </message>
     <message>
       <source>Network error while downloading</source>
-      <translation type="unfinished">Network error while downloading</translation>
+      <translation>Gabim rrjeti gjatë shkarkimit</translation>
     </message>
     <message>
       <source>Failed to save download file</source>
-      <translation type="unfinished">Failed to save download file</translation>
+      <translation>Nuk u ruajt dot skedari i shkarkimit</translation>
     </message>
     <message>
       <source>Complete installation</source>
-      <translation type="unfinished">Complete installation</translation>
+      <translation>Përfundo instalimin</translation>
     </message>
     <message>
       <source>Pre-release updated successfully</source>
-      <translation type="unfinished">Pre-release updated successfully</translation>
+      <translation>U përditësua me sukses versioni paraprak</translation>
     </message>
     <message>
       <source>Failed to create the update script file</source>
-      <translation type="unfinished">Failed to create the update script file</translation>
+      <translation>Nuk u krijua dot skedari i skriptit të përditësimit</translation>
     </message>
     <message>
       <source>Always Show Changelog</source>
-      <translation type="unfinished">Always Show Changelog</translation>
+      <translation>Shfaq Gjithmonë Ditarin e Ndryshimeve</translation>
     </message>
     <message>
       <source>No version selected. Please choose one from the list to delete.</source>
-      <translation type="unfinished">No version selected. Please choose one from the list to delete.</translation>
+      <translation>Nuk është zgjedhur asnjë version. Zgjidh një nga lista për ta fshirë.</translation>
     </message>
     <message>
       <source>Confirm Download</source>
-      <translation type="unfinished">Confirm Download</translation>
+      <translation>Konfirmo Shkarkimin</translation>
     </message>
     <message>
       <source>Extraction failure.</source>
-      <translation type="unfinished">Extraction failure.</translation>
+      <translation>Shpaketimi dështoi.</translation>
     </message>
     <message>
       <source>A version with that name already exists.</source>
-      <translation type="unfinished">A version with that name already exists.</translation>
+      <translation>Një version me atë emër ekziston tashmë.</translation>
     </message>
   </context>
 </TS>

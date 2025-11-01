@@ -567,7 +567,7 @@
     </message>
     <message>
       <source>Remove Default Gamepad</source>
-      <translation type="unfinished">Remove Default Gamepad</translation>
+      <translation>Hapus Gamepad Bawaan</translation>
     </message>
     <message>
       <source>R1 and R2</source>
