@@ -118,4 +118,16 @@ void RemoveVersion(Version const& v, std::filesystem::path const& path) {
     RemoveVersion(v.name, path);
 }
 
+void UpdatePrerelease(Version const& v, std::filesystem::path const& path) {
+    auto versions = GetVersionList(path);
+    auto it = std::find_if(versions.begin(), versions.end(),
+                           [&](const Version& i) { return i.type == VersionType::Nightly; });
+    if (it != versions.end()) {
+        auto const id = it->id;
+        *it = v;
+        it->id = id;
+    }
+    SaveVersionList(versions, path);
+}
+
 } // namespace VersionManager

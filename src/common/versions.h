@@ -31,5 +31,6 @@ std::vector<Version> GetVersionList(std::filesystem::path const& path = "");
 void AddNewVersion(Version const& v, std::filesystem::path const& path = "");
 void RemoveVersion(Version const& v, std::filesystem::path const& path = "");
 void RemoveVersion(std::string const& v, std::filesystem::path const& path = "");
+void UpdatePrerelease(Version const& v, std::filesystem::path const& path = "");
 
 } // namespace VersionManager
