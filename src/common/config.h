@@ -149,6 +149,10 @@ void setUserName(const std::string& name, bool is_game_specific = false);
 std::filesystem::path getSysModulesPath();
 void setSysModulesPath(const std::filesystem::path& path);
 
+enum UsbBackendType : int { Real, SkylandersPortal, InfinityBase, DimensionsToypad };
+int getUsbDeviceBackend();
+void setUsbDeviceBackend(int value, bool is_game_specific = false);
+
 // TODO
 std::filesystem::path GetSaveDataPath();
 std::string getUserName();

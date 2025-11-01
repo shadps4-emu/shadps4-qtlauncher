@@ -28,6 +28,7 @@
 #include "kbm_gui.h"
 #include "main_window.h"
 #include "settings_dialog.h"
+#include "skylander_dialog.h"
 
 MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
@@ -807,6 +808,14 @@ void MainWindow::CreateConnects() {
         trophyViewer->show();
     });
 
+    // Manage Skylanders
+    connect(ui->skylanderPortalAction, &QAction::triggered, this, [this]() {
+        if (Config::getUsbDeviceBackend() == Config::UsbBackendType::SkylandersPortal) {
+            skylander_dialog* sky_diag = skylander_dialog::get_dlg(this, m_ipc_client);
+            sky_diag->show();
+        }
+    });
+
     // Themes
     connect(ui->setThemeDark, &QAction::triggered, &m_window_themes, [this]() {
         m_window_themes.SetWindowTheme(Theme::Dark, ui->mw_searchbar);
@@ -1141,6 +1150,7 @@ void MainWindow::SetUiIcons(bool isWhite) {
     ui->refreshGameListAct->setIcon(RecolorIcon(ui->refreshGameListAct->icon(), isWhite));
     ui->menuGame_List_Mode->setIcon(RecolorIcon(ui->menuGame_List_Mode->icon(), isWhite));
     ui->trophyViewerAct->setIcon(RecolorIcon(ui->trophyViewerAct->icon(), isWhite));
+    ui->skylanderPortalAction->setIcon(RecolorIcon(ui->skylanderPortalAction->icon(), isWhite));
     ui->configureAct->setIcon(RecolorIcon(ui->configureAct->icon(), isWhite));
     ui->addElfFolderAct->setIcon(RecolorIcon(ui->addElfFolderAct->icon(), isWhite));
 }
