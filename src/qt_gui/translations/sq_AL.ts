@@ -2313,7 +2313,7 @@ Përzgjidh një version të emulatorit nga paneli i djathtë.</translation>
     </message>
     <message>
       <source>Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</source>
-      <translation type="unfinished">Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</translation>
+      <translation>Mënyra e Prezantimit:\nKonfiguron se si dalja video do të paraqitet në ekranin tënd.\n\nMailbox: Fotografitë sinkronizohen me frekuencën e rifreskimit të ekranit tënd. Fotografitë e reja do të zëvendësojnë çdo fotografi në pritje. Ul vonesën por mund të kapërcejë fotografi nëse mbetet pas.\nFifo: Fotografitë sinkronizohen me frekuencën e rifreskimit të ekranit tënd. Fotografitë e reja do të radhiten pas fotografive në pritje. Siguron që të gjitha fotografitë të paraqiten, por mund të rrisë vonesën.\nI menjëhershëm: Fotografitë paraqiten menjëherë në ekranin tënd kur janë gati. Mund të rezultojë në shqyerje.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
@@ -2349,11 +2349,11 @@ Përzgjidh një version të emulatorit nga paneli i djathtë.</translation>
     </message>
     <message>
       <source>Microphone:\nNone: Does not use the microphone.\nDefault Device: Will use the default device defined in the system.\nOr manually choose the microphone to be used from the list.</source>
-      <translation type="unfinished">Microphone:\nNone: Does not use the microphone.\nDefault Device: Will use the default device defined in the system.\nOr manually choose the microphone to be used from the list.</translation>
+      <translation>Mikrofoni:\nAsnjë: Nuk përdor mikrofonin.\nPajisja e paracaktuar: Do të përdorë pajisjen e përcaktuar në sistem.\nOse zgjidh manualisht mikrofonin që do të përdoret nga lista.</translation>
     </message>
     <message>
       <source>Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</source>
-      <translation type="unfinished">Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</translation>
+      <translation>Vëllimi:\nRregullon vëllimin për lojërat në nivel global; diapazoni shkon nga 0-500%, me vlerën e paracaktuar 100%.</translation>
     </message>
     <message>
       <source>Default tab when opening settings:\nChoose which tab will open, the default is General.</source>
@@ -2362,87 +2362,87 @@ Zgjidh cilën skedë do të hapet; parazgjedhja është General.</translation>
     </message>
     <message>
       <source>Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</source>
-      <translation type="unfinished">Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</translation>
+      <translation>Aktivizo Kontrollet e Lëvizjes:\nKur të aktivizohet, do të përdorë kontrollin e lëvizjes së dorezës nëse mbështetet.</translation>
     </message>
     <message>
       <source>Vblank Frequency</source>
-      <translation type="unfinished">Vblank Frequency</translation>
+      <translation>Frekuenca Vblank</translation>
     </message>
     <message>
       <source>Vblank Frequency:\nThe frame rate at which the emulator refreshes at (60hz is the baseline, whether the game runs at 30 or 60fps). Changing this may have adverse effects, such as increasing the game speed, or breaking critical game functionality that does not expect this to change!</source>
-      <translation type="unfinished">Vblank Frequency:\nThe frame rate at which the emulator refreshes at (60hz is the baseline, whether the game runs at 30 or 60fps). Changing this may have adverse effects, such as increasing the game speed, or breaking critical game functionality that does not expect this to change!</translation>
+      <translation>Frekuenca Vblank:\nFrekuenca pamore me të cilën përditësohet emulatori (60hz është niveli bazë, pavarësisht nëse loja ekzekutohet me 30 apo 60 fotografi në sekondë). Ndryshimi i kësaj vlere mund të ketë pasoja negative, si rritja e shpejtësisë së lojës ose prishja e funksioneve kritike të lojës që nuk e presin këtë ndryshim!</translation>
     </message>
     <message>
       <source>Enable Direct Memory Access</source>
-      <translation type="unfinished">Enable Direct Memory Access</translation>
+      <translation>Aktivizo Qasjen e Drejtpërdrejtë të Memories</translation>
     </message>
     <message>
       <source>Enable Devkit Console Mode</source>
-      <translation type="unfinished">Enable Devkit Console Mode</translation>
+      <translation>Aktivizo Mënyrën e Konsolës Devkit</translation>
     </message>
     <message>
       <source>Set &quot;PSN signed-in&quot; to True</source>
-      <translation type="unfinished">Set &quot;PSN signed-in&quot; to True</translation>
+      <translation>Vendos "Gjendjen e Hyrjes në PSN" në True</translation>
     </message>
     <message>
       <source>Set &quot;Network Connected&quot; to True</source>
-      <translation type="unfinished">Set &quot;Network Connected&quot; to True</translation>
+      <translation>Vendos "Gjendjen e Rrjetit" në "Lidhur" (True)</translation>
     </message>
     <message>
       <source>Miscellaneous</source>
-      <translation type="unfinished">Miscellaneous</translation>
+      <translation>Të ndryshme</translation>
     </message>
     <message>
       <source>Frontend</source>
-      <translation type="unfinished">Frontend</translation>
+      <translation>Ndërfaqe</translation>
     </message>
     <message>
       <source>Experimental</source>
-      <translation type="unfinished">Experimental</translation>
+      <translation>Eksperimental</translation>
     </message>
     <message>
       <source>Show Splash Screen When Launching Game</source>
-      <translation type="unfinished">Show Splash Screen When Launching Game</translation>
+      <translation>Shfaq Ekranin Hyrës Kur Nis Lojërat</translation>
     </message>
     <message>
       <source>General Frontend Settings</source>
-      <translation type="unfinished">General Frontend Settings</translation>
+      <translation>Cilësimet e Përgjithshme të Ndërfaqes</translation>
     </message>
     <message>
       <source>Enable PS4 Neo Mode</source>
-      <translation type="unfinished">Enable PS4 Neo Mode</translation>
+      <translation>Aktivizo Mënyrën PS4 Neo</translation>
     </message>
     <message>
       <source>Enable Direct Memory Access:\nEnables arbitrary memory access from the GPU to CPU memory.</source>
-      <translation type="unfinished">Enable Direct Memory Access:\nEnables arbitrary memory access from the GPU to CPU memory.</translation>
+      <translation>Aktivizo Qasjen e Drejtpërdrejtë të Memories:\nMundëson qasje të pakufizuar nga GPU-ja në memorien e CPU-së.</translation>
     </message>
     <message>
       <source>Enable PS4 Neo Mode:\nAdds support for PS4 Pro emulation and memory size. Currently causes instability in a large number of tested games.</source>
-      <translation type="unfinished">Enable PS4 Neo Mode:\nAdds support for PS4 Pro emulation and memory size. Currently causes instability in a large number of tested games.</translation>
+      <translation>Aktivizo Mënyrën PS4 Neo:\nShton mbështetje për emulimin e PS4 Pro dhe madhësinë e memories. Aktualisht shkakton paqëndrueshmëri në një numër të madh lojërash të testuara.</translation>
     </message>
     <message>
       <source>Enable Devkit Console Mode:\nAdds support for Devkit console memory size.</source>
-      <translation type="unfinished">Enable Devkit Console Mode:\nAdds support for Devkit console memory size.</translation>
+      <translation>Aktivizo Mënyrën e Konsolës Devkit:\nShton mbështetje për madhësinë e memories së konsolës Devkit.</translation>
     </message>
     <message>
       <source>Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</source>
-      <translation type="unfinished">Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</translation>
+      <translation>Vendos Gjendjen e Rrjetit në "Lidhur" (True):\nDetyron lojërat të dallojnë një lidhje rrjeti aktive. Mundësitë e vërteta në linjë nuk janë ende të mbështetura.</translation>
     </message>
     <message>
       <source>Set PSN Signed-in to True:\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported.</source>
-      <translation type="unfinished">Set PSN Signed-in to True:\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported.</translation>
+      <translation>Vendos Gjendjen e Hyrjes në PSN në True:\nDetyron lojërat të dallojnë një hyrje aktive në PSN. Mundësitë e vërteta të PSN nuk mbështeten.</translation>
     </message>
     <message>
       <source>Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Aktivizo Shtresat e Vërtetimit Vulkan:\nAktivizon një sistem që vërteton gjendjen e paraqitësit Vulkan dhe regjistron informacion rreth gjendjes së tij të brendshme.\nKjo do të ulë performancën dhe me gjasë do të ndryshojë sjelljen e emulimit.\nDuhet të kesh Vulkan SDK që kjo të funksionojë.</translation>
     </message>
     <message>
       <source>Audio Device (general)</source>
-      <translation type="unfinished">Audio Device (general)</translation>
+      <translation>Pajisja Audio (e përgjithshme)</translation>
     </message>
     <message>
       <source>Audio Device (DS4 speaker)</source>
-      <translation type="unfinished">Audio Device (DS4 speaker)</translation>
+      <translation>Pajisja Audio (folësi i DS4)</translation>
     </message>
     <message>
       <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
@@ -2454,51 +2454,51 @@ Zgjidh cilën skedë do të hapet; parazgjedhja është General.</translation>
     </message>
     <message>
       <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
-      <translation type="unfinished">DLC Path:\nThe folder where game DLC is loaded from.</translation>
+      <translation>Shtegu i DLC-ve:\nDosja nga ku ngarkohen DLC-të e lojës.</translation>
     </message>
     <message>
       <source>Additional DMem Allocation</source>
-      <translation type="unfinished">Additional DMem Allocation</translation>
+      <translation>Caktim shtesë i DMem</translation>
     </message>
     <message>
       <source>Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</source>
-      <translation type="unfinished">Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</translation>
+      <translation>Caktim shtesë i DMem:\nDetyron caktimin e sasisë së specifikuar të DMem-it shtesë. Bën që disa lojëra të rrëzohen ose të kenë probleme.</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</source>
-      <translation type="unfinished">PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</translation>
+      <translation>Shtegu i Sysmoduleve të PS4:\nDosja nga ku ngarkohen sysmodulet e PS4.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the sysmodules path.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the sysmodules path.</translation>
+      <translation>Shfleto:\nShfleto një dosje për ta vendosur si shtegun e sysmoduleve.</translation>
     </message>
     <message>
       <source>Vulkan Validation (Requires Vulkan SDK)</source>
-      <translation type="unfinished">Vulkan Validation (Requires Vulkan SDK)</translation>
+      <translation>Vërtetim Vulkan (Kërkon Vulkan SDK)</translation>
     </message>
     <message>
       <source>Validation Layers</source>
-      <translation type="unfinished">Validation Layers</translation>
+      <translation>Shtresat e Verifikimit</translation>
     </message>
     <message>
       <source>Enable Core Validation</source>
-      <translation type="unfinished">Enable Core Validation</translation>
+      <translation>Aktivizo Verifikimin e Bërthamës</translation>
     </message>
     <message>
       <source>Enable Sync Validation</source>
-      <translation type="unfinished">Enable Sync Validation</translation>
+      <translation>Aktivizo Verifikimin e Sinkronizimit</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation</source>
-      <translation type="unfinished">Enable GPU-Assisted Validation</translation>
+      <translation>Aktivizo Verifikimin e Ndihmuar nga GPU</translation>
     </message>
     <message>
       <source>Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Aktivizo Vërtetimin e Sinkronizimit:\nAktivizon një sistem që vërteton kohën e detyrave të paraqitësit Vulkan.\nKjo do të ulë performancën dhe me gjasë do të ndryshojë sjelljen e emulimit.\nDuhet të kesh Vulkan SDK që kjo të funksionojë.</translation>
     </message>
     <message>
       <source>Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Aktivizo Verifikimin e Bërthamës:\nAktivizon funksionet kryesore të verifikimit të API-së.\nKjo do të ulë performancën dhe me gjasë do të ndryshojë sjelljen e emulimit.\nDuhet të kesh Vulkan SDK që kjo të funksionojë.</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
@@ -2506,38 +2506,38 @@ Zgjidh cilën skedë do të hapet; parazgjedhja është General.</translation>
     </message>
     <message>
       <source>GUI Language</source>
-      <translation type="unfinished">GUI Language</translation>
+      <translation>Gjuha e Ndërfaqes</translation>
     </message>
     <message>
       <source>GUI Updates</source>
-      <translation type="unfinished">GUI Updates</translation>
+      <translation>Përditësimet e Ndërfaqes</translation>
     </message>
     <message>
       <source>DLC Path</source>
-      <translation type="unfinished">DLC Path</translation>
+      <translation>Shtegu i DLC-ve</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path</source>
-      <translation type="unfinished">PS4 Sysmodules Path</translation>
+      <translation>Shtegu i sysmoduleve të PS4</translation>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
-      <translation type="unfinished">GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</translation>
+      <translation>Përditësimet e Ndërfaqes:\nRelease: Versione zyrtare të lëshuara çdo muaj që mund të jenë të vjetra, por janë më të besueshme dhe të testuara.\nNightly: Versione zhvillimi që përmbajnë të gjitha veçoritë dhe rregullimet më të fundit, por mund të përmbajnë gabime dhe janë më pak të qëndrueshme.\n\n*Ky përditësim vlen vetëm për ndërfaqen e përdoruesit Qt. Për të përditësuar bërthamën e emulatorit, përdor menynë &apos;Menaxheri i Versioneve&apos;.</translation>
     </message>
     <message>
       <source>Cannot create portable launcher folder</source>
-      <translation type="unfinished">Cannot create portable launcher folder</translation>
+      <translation>Dosja portative e lëshuesit nuk u krijua dot</translation>
     </message>
     <message>
       <source>Portable launcherDir folder created</source>
-      <translation type="unfinished">Portable launcherDir folder created</translation>
+      <translation>Dosja portative launcherDir u krijua</translation>
     </message>
   </context>
   <context>
     <name>ShortcutDialog</name>
     <message>
       <source>Select Version</source>
-      <translation type="unfinished">Select Version</translation>
+      <translation>Zgjidh Versionin</translation>
     </message>
     <message>
       <source>Select version for shortcut creation</source>
@@ -2691,7 +2691,7 @@ Zgjidh cilën skedë do të hapet; parazgjedhja është General.</translation>
     </message>
     <message>
       <source>The latest versions have been added to the list for download.</source>
-      <translation type="unfinished">The latest versions have been added to the list for download.</translation>
+      <translation>Versionet më të fundit janë shtuar në listën për shkarkim.</translation>
     </message>
     <message>
       <source>Error accessing GitHub API</source>
@@ -2709,7 +2709,7 @@ Zgjidh cilën skedë do të hapet; parazgjedhja është General.</translation>
     </message>
     <message>
       <source>No files available for this platform.</source>
-      <translation type="unfinished">No files available for this platform.</translation>
+      <translation>Nuk ka skedarë në dispozicion për këtë platformë.</translation>
     </message>
     <message>
       <source>Downloading %1 , please wait...</source>
