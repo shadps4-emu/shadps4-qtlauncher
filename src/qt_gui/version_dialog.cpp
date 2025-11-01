@@ -1065,7 +1065,8 @@ void VersionDialog::showDownloadDialog(const QString& tagName, const QString& do
                 VersionManager::Version new_version = {
                     .name = "Pre-release",
                     .path = exe.toStdString(),
-                    .date = QDateTime::currentDateTime().toString("yyyy.MM.dd. HH:mm").toStdString(),
+                    .date =
+                        QDateTime::currentDateTime().toString("yyyy.MM.dd. HH:mm").toStdString(),
                     .codename = "",
                     .type = VersionManager::VersionType::Nightly,
                 };
