@@ -4,6 +4,7 @@
 #include <QDir>
 #include <QMessageBox>
 #include <QProcessEnvironment>
+#include <QTextStream>
 
 #include "common/logging/log.h"
 #include "ipc_client.h"
@@ -178,7 +179,23 @@ void IpcClient::onStderr() {
 }
 
 void IpcClient::onStdout() {
-    printf("%s", process->readAllStandardOutput().toStdString().c_str());
+    QColor color;
+    QString entry;
+
+    while (process->canReadLine()) {
+        entry = process->readLine().trimmed();
+    }
+
+    // set log text color based on class
+    if (entry.contains("<Warning>")) {
+        color = Qt::yellow;
+    } else if (entry.contains("<Critical>") || entry.contains("<Error>")) {
+        color = Qt::red;
+    } else {
+        color = Qt::white;
+    }
+
+    emit LogEntrySent(entry, color);
 }
 
 void IpcClient::onProcessClosed() {

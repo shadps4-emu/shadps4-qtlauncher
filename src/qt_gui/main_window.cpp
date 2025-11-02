@@ -1,12 +1,11 @@
 // SPDX-FileCopyrightText: Copyright 2025 shadPS4 Emulator Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
-#include "SDL3/SDL_events.h"
-
 #include <QDockWidget>
 #include <QKeyEvent>
 #include <QPlainTextEdit>
 #include <QProgressDialog>
+#include <QSplitter>
 #include <QStatusBar>
 
 #include "about_dialog.h"
@@ -15,7 +14,6 @@
 #ifdef ENABLE_UPDATER
 #include "check_update.h"
 #endif
-#include "common/logging/log.h"
 #include "common/memory_patcher.h"
 #include "common/path_util.h"
 #include "common/scm_rev.h"
@@ -310,6 +308,10 @@ void MainWindow::CreateDockWindows() {
     QWidget* phCentralWidget = new QWidget(this);
     setCentralWidget(phCentralWidget);
 
+    QWidget* dockContents = new QWidget(this);
+    QVBoxLayout* dockLayout = new QVBoxLayout(this);
+    QSplitter* splitter = new QSplitter(Qt::Vertical);
+
     m_dock_widget.reset(new QDockWidget(tr("Game List"), this));
     m_game_list_frame.reset(
         new GameListFrame(m_gui_settings, m_game_info, m_compat_info, m_ipc_client, this));
@@ -326,7 +328,7 @@ void MainWindow::CreateDockWindows() {
         m_game_grid_frame->hide();
         m_elf_viewer->hide();
         m_game_list_frame->show();
-        m_dock_widget->setWidget(m_game_list_frame.data());
+        splitter->addWidget(m_game_list_frame.data());
         slider_pos = m_gui_settings->GetValue(gui::gl_slider_pos).toInt();
         ui->sizeSlider->setSliderPosition(slider_pos); // set slider pos at start;
         isTableList = true;
@@ -334,7 +336,7 @@ void MainWindow::CreateDockWindows() {
         m_game_list_frame->hide();
         m_elf_viewer->hide();
         m_game_grid_frame->show();
-        m_dock_widget->setWidget(m_game_grid_frame.data());
+        splitter->addWidget(m_game_grid_frame.data());
         slider_pos = m_gui_settings->GetValue(gui::gg_slider_pos).toInt();
         ui->sizeSlider->setSliderPosition(slider_pos); // set slider pos at start;
         isTableList = false;
@@ -342,13 +344,28 @@ void MainWindow::CreateDockWindows() {
         m_game_list_frame->hide();
         m_game_grid_frame->hide();
         m_elf_viewer->show();
-        m_dock_widget->setWidget(m_elf_viewer.data());
+        splitter->addWidget(m_elf_viewer.data());
         isTableList = false;
     }
+
+    ui->logDisplay->setStyleSheet("QTextEdit {background-color: black;}");
+    ui->logDisplay->setMinimumHeight(0);
+
+    splitter->addWidget(ui->logDisplay);
+    splitter->addWidget(ui->toggleLogButton);
+    ui->toggleLogButton->setText(tr("Hide Log")); // TODO MAKE TOGGLE STATE SAVABLE
+
+    splitter->setSizes({400, 200, 25}); // TODO make savable
+    // TODO show or hide the log this based on toggle state
+
+    dockLayout->addWidget(splitter);
+    dockContents->setLayout(dockLayout);
+    m_dock_widget->setWidget(dockContents);
 
     m_dock_widget->setAllowedAreas(Qt::AllDockWidgetAreas);
     m_dock_widget->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
     m_dock_widget->resize(this->width(), this->height());
+
     addDockWidget(Qt::LeftDockWidgetArea, m_dock_widget.data());
     this->setDockNestingEnabled(true);
 
@@ -881,6 +898,25 @@ void MainWindow::CreateConnects() {
             isIconBlack = false;
         }
     });
+
+    connect(ui->toggleLogButton, &QPushButton::clicked, this, [this]() {
+        if (ui->logDisplay->isVisible()) {
+            ui->logDisplay->hide();
+            ui->toggleLogButton->setText(tr("Show Log"));
+        } else {
+            ui->logDisplay->show();
+            ui->toggleLogButton->setText(tr("Hide Log"));
+        }
+    });
+
+    QObject::connect(m_ipc_client.get(), &IpcClient::LogEntrySent, this, &MainWindow::PrintLog);
+}
+
+void MainWindow::PrintLog(QString entry, QColor textColor) {
+    ui->logDisplay->setTextColor(textColor);
+    ui->logDisplay->append(entry);
+    QScrollBar* sb = ui->logDisplay->verticalScrollBar();
+    sb->setValue(sb->maximum());
 }
 
 void MainWindow::StartGameWithArgs(QStringList args) {

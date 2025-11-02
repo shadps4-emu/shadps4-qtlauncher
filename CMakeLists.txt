@@ -483,7 +483,7 @@ cmrc_add_resource_library(embedded-resources
 target_link_libraries(shadPS4QtLauncher PRIVATE res::embedded)
 
 set_target_properties(shadPS4QtLauncher PROPERTIES
-#       WIN32_EXECUTABLE ON
+    WIN32_EXECUTABLE ON
     MACOSX_BUNDLE ON
     MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/dist/MacOSBundleInfo.plist.in"
     MACOSX_BUNDLE_ICON_FILE "shadPS4.icns"
