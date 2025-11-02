@@ -10,6 +10,9 @@
 
 class Ui_MainWindow {
 public:
+    QTextEdit* logDisplay = new QTextEdit();
+    QPushButton* toggleLogButton = new QPushButton();
+
     QAction* bootGameAct;
     QAction* addElfFolderAct;
     QAction* shadFolderAct;
@@ -71,9 +74,6 @@ public:
     QMenu* menuThemes;
     QMenu* menuHelp;
     QToolBar* toolBar;
-
-    QTextEdit* logDisplay;
-    QPushButton* toggleLogButton;
 
     void setupUi(QMainWindow* MainWindow) {
         if (MainWindow->objectName().isEmpty())
@@ -359,9 +359,6 @@ public:
         versionComboBox->setObjectName("versionComboBox");
         versionComboBox->setMinimumWidth(100);
         versionManagerButton = new QPushButton(centralWidget);
-
-        logDisplay = new QTextEdit();
-        toggleLogButton = new QPushButton();
 
         retranslateUi(MainWindow);
 

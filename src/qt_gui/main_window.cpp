@@ -308,9 +308,9 @@ void MainWindow::CreateDockWindows() {
     QWidget* phCentralWidget = new QWidget(this);
     setCentralWidget(phCentralWidget);
 
+    QSplitter* splitter = new QSplitter(Qt::Vertical);
     QWidget* dockContents = new QWidget(this);
     QVBoxLayout* dockLayout = new QVBoxLayout(this);
-    QSplitter* splitter = new QSplitter(Qt::Vertical);
 
     m_dock_widget.reset(new QDockWidget(tr("Game List"), this));
     m_game_list_frame.reset(
@@ -354,19 +354,14 @@ void MainWindow::CreateDockWindows() {
     splitter->addWidget(ui->logDisplay);
     splitter->addWidget(ui->toggleLogButton);
 
-    QList<int> sizes = {400, 200, 50};
-    sizes = gui_settings::Var2IntList(m_gui_settings->GetValue(gui::mw_dockWidgetSizes));
-    splitter->setSizes({sizes});
-
-    bool showLog = m_gui_settings->GetValue(gui::mw_showLog).toBool();
-    if (showLog) {
-        ui->toggleLogButton->setText(tr("Hide Log"));
-        ui->logDisplay->show();
-    } else {
-        ui->toggleLogButton->setText(tr("Show Log"));
-        ui->logDisplay->hide();
+    QList<int> defaultSizes = {800, 200, 50}; // these are proportionally adjusted by qt
+    QList<int> sizes = gui_settings::Var2IntList(m_gui_settings->GetValue(
+        gui::main_window, "dockWidgetSizes", QVariant::fromValue(defaultSizes)));
+    if (sizes[1] == 0) { // This happens if log is hidden when settings are saved
+        sizes = defaultSizes;
     }
 
+    splitter->setSizes({sizes});
     dockLayout->addWidget(splitter);
     dockContents->setLayout(dockLayout);
     m_dock_widget->setWidget(dockContents);
@@ -377,6 +372,15 @@ void MainWindow::CreateDockWindows() {
 
     addDockWidget(Qt::LeftDockWidgetArea, m_dock_widget.data());
     this->setDockNestingEnabled(true);
+
+    bool showLog = m_gui_settings->GetValue(gui::mw_showLog).toBool();
+    if (showLog) {
+        ui->toggleLogButton->setText(tr("Hide Log"));
+        ui->logDisplay->show();
+    } else {
+        ui->toggleLogButton->setText(tr("Show Log"));
+        ui->logDisplay->hide();
+    }
 
     // handle resize like this for now, we deal with it when we add more docks
     connect(this, &MainWindow::WindowResized, this, [&]() {
