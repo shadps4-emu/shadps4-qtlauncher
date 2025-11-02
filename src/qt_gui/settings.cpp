@@ -89,3 +89,15 @@ QList<QString> settings::Var2List(const QVariant& var) {
     stream >> list;
     return list;
 }
+
+QList<int> settings::Var2IntList(const QVariant& var) {
+    QList<int> intList;
+    QList<QVariant> qVariantList = var.toList();
+    for (const QVariant& item : qVariantList) {
+        if (item.canConvert<int>()) {
+            intList.append(item.toInt());
+        }
+    }
+
+    return intList;
+}

@@ -353,10 +353,19 @@ void MainWindow::CreateDockWindows() {
 
     splitter->addWidget(ui->logDisplay);
     splitter->addWidget(ui->toggleLogButton);
-    ui->toggleLogButton->setText(tr("Hide Log")); // TODO MAKE TOGGLE STATE SAVABLE
 
-    splitter->setSizes({400, 200, 25}); // TODO make savable
-    // TODO show or hide the log this based on toggle state
+    QList<int> sizes = {400, 200, 50};
+    sizes = gui_settings::Var2IntList(m_gui_settings->GetValue(gui::mw_dockWidgetSizes));
+    splitter->setSizes({sizes});
+
+    bool showLog = m_gui_settings->GetValue(gui::mw_showLog).toBool();
+    if (showLog) {
+        ui->toggleLogButton->setText(tr("Hide Log"));
+        ui->logDisplay->show();
+    } else {
+        ui->toggleLogButton->setText(tr("Show Log"));
+        ui->logDisplay->hide();
+    }
 
     dockLayout->addWidget(splitter);
     dockContents->setLayout(dockLayout);
@@ -903,9 +912,11 @@ void MainWindow::CreateConnects() {
         if (ui->logDisplay->isVisible()) {
             ui->logDisplay->hide();
             ui->toggleLogButton->setText(tr("Show Log"));
+            m_gui_settings->SetValue(gui::mw_showLog, false);
         } else {
             ui->logDisplay->show();
             ui->toggleLogButton->setText(tr("Hide Log"));
+            m_gui_settings->SetValue(gui::mw_showLog, true);
         }
     });
 
@@ -1033,6 +1044,18 @@ void MainWindow::ConfigureGuiFromSettings() {
 
 void MainWindow::SaveWindowState() {
     m_gui_settings->SetValue(gui::mw_geometry, saveGeometry(), false);
+
+    int listHeight;
+    if (!m_elf_viewer->isHidden()) {
+        listHeight = m_elf_viewer->height();
+    } else if (!m_game_list_frame->isHidden()) {
+        listHeight = m_game_list_frame->height();
+    } else if (!m_game_grid_frame->isHidden()) {
+        listHeight = m_game_grid_frame->height();
+    }
+
+    QList<int> sizes = {listHeight, ui->logDisplay->height(), ui->toggleLogButton->height()};
+    m_gui_settings->SetValue(gui::mw_dockWidgetSizes, QVariant::fromValue(sizes));
 }
 
 void MainWindow::BootGame() {
