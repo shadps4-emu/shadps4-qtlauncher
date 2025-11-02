@@ -1732,6 +1732,10 @@ Select an emulator version from the right panel.</source>
         <source>None</source>
         <translation type="unfinished">None</translation>
     </message>
+    <message>
+        <source>Manage Skylanders</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SettingsDialog</name>
@@ -2523,6 +2527,22 @@ Select an emulator version from the right panel.</source>
         <source>Portable launcherDir folder created</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>USB Device</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Real USB Device</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Skylander Portal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ShortcutDialog</name>
@@ -2829,6 +2849,123 @@ Would you like to download it now?</source>
     <message>
         <source>A version with that name already exists.</source>
         <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>skylander_creator_dialog</name>
+    <message>
+        <source>Skylander Creator</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>--Unknown--</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ID:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Variant:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Create</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="unfinished">Cancel</translation>
+    </message>
+    <message>
+        <source>Error converting value</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ID entered is invalid!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Variant entered is invalid!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Create Skylander File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Skylander Object (*.sky);;All Files (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to create skylander file!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to create skylander file:
+%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>skylander_dialog</name>
+    <message>
+        <source>Skylanders Manager</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Active Portal Skylanders:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Skylander %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Clear</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Create</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Load</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select Skylander File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Skylander (*.sky *.bin *.dmp *.dump);;All Files (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to open the skylander file!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to open the skylander file(%1)!
+File may already be in use on the portal.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to read the skylander file!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to read the skylander file(%1)!
+File was too small.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unknown (Id:%1 Var:%2)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation type="unfinished">None</translation>
     </message>
 </context>
 </TS>
