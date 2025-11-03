@@ -310,9 +310,9 @@ void MainWindow::CreateDockWindows(bool newDock) {
 
     QWidget* dockContents = new QWidget(this);
     QVBoxLayout* dockLayout = new QVBoxLayout(this);
+
     ui->splitter = new QSplitter(Qt::Vertical);
-    ui->logDisplay = new QTextEdit();
-    ui->toggleLogButton = new QPushButton();
+    ui->logDisplay = new QTextEdit(ui->splitter);
 
     if (newDock) {
         m_dock_widget.reset(new QDockWidget(tr("Game List"), this));
@@ -916,14 +916,14 @@ void MainWindow::CreateConnects() {
     });
 
     connect(ui->toggleLogButton, &QPushButton::clicked, this, [this]() {
-        if (ui->logDisplay->isVisible()) {
-            ui->logDisplay->hide();
-            ui->toggleLogButton->setText(tr("Show Log"));
-            m_gui_settings->SetValue(gui::mw_showLog, false);
-        } else {
+        if (ui->logDisplay->isHidden()) {
             ui->logDisplay->show();
             ui->toggleLogButton->setText(tr("Hide Log"));
             m_gui_settings->SetValue(gui::mw_showLog, true);
+        } else {
+            ui->logDisplay->hide();
+            ui->toggleLogButton->setText(tr("Show Log"));
+            m_gui_settings->SetValue(gui::mw_showLog, false);
         }
     });
 

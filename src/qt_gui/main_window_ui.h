@@ -11,9 +11,9 @@
 
 class Ui_MainWindow {
 public:
-    QTextEdit* logDisplay;
-    QPushButton* toggleLogButton;
+    QPushButton* toggleLogButton = new QPushButton();
     QSplitter* splitter;
+    QTextEdit* logDisplay;
 
     QAction* bootGameAct;
     QAction* addElfFolderAct;
