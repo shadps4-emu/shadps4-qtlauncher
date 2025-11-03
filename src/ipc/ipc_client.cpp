@@ -4,7 +4,7 @@
 #include <QDir>
 #include <QMessageBox>
 #include <QProcessEnvironment>
-#include <QTextStream>
+#include <QRegularExpression>
 
 #include "common/logging/log.h"
 #include "ipc_client.h"
@@ -195,7 +195,8 @@ void IpcClient::onStdout() {
         color = Qt::white;
     }
 
-    emit LogEntrySent(entry, color);
+    QRegularExpression ansiRegex(R"(\x1B\[[0-9;]*[mK])"); // ANSI escape codes from UNIX terminals
+    emit LogEntrySent(entry.replace(ansiRegex, ""), color);
 }
 
 void IpcClient::onProcessClosed() {
