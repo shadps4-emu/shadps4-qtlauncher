@@ -1742,7 +1742,7 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
     </message>
     <message>
       <source>Manage Skylanders</source>
-      <translation type="unfinished">Manage Skylanders</translation>
+      <translation>Gestisci Skylanders</translation>
     </message>
   </context>
   <context>
@@ -2537,19 +2537,19 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
     </message>
     <message>
       <source>USB Device</source>
-      <translation type="unfinished">USB Device</translation>
+      <translation>Dispositivo USB</translation>
     </message>
     <message>
       <source>Real USB Device</source>
-      <translation type="unfinished">Real USB Device</translation>
+      <translation>Dispositivo Usb Reale</translation>
     </message>
     <message>
       <source>Skylander Portal</source>
-      <translation type="unfinished">Skylander Portal</translation>
+      <translation>Portale Skylander</translation>
     </message>
     <message>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.</source>
-      <translation type="unfinished">USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.</translation>
+      <translation>Dispositivo USB:\nDispositivo USB reale: Usa un vero Dispositivo USB collegato al sistema.\nPortale Skylander: Emula un Portale del Potere di Skylander.</translation>
     </message>
   </context>
   <context>
@@ -2865,56 +2865,56 @@ Vuoi scaricarla ora?</translation>
     <name>skylander_creator_dialog</name>
     <message>
       <source>Skylander Creator</source>
-      <translation type="unfinished">Skylander Creator</translation>
+      <translation>Creatore Skylander</translation>
     </message>
     <message>
       <source>--Unknown--</source>
-      <translation type="unfinished">--Unknown--</translation>
+      <translation>--Sconosciuto--</translation>
     </message>
     <message>
       <source>ID:</source>
-      <translation type="unfinished">ID:</translation>
+      <translation>ID:</translation>
     </message>
     <message>
       <source>Variant:</source>
-      <translation type="unfinished">Variant:</translation>
+      <translation>Variante:</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Crea</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Annulla</translation>
     </message>
     <message>
       <source>Error converting value</source>
-      <translation type="unfinished">Error converting value</translation>
+      <translation>Errore nella conversione del valore</translation>
     </message>
     <message>
       <source>ID entered is invalid!</source>
-      <translation type="unfinished">ID entered is invalid!</translation>
+      <translation>ID inserito non valido!</translation>
     </message>
     <message>
       <source>Variant entered is invalid!</source>
-      <translation type="unfinished">Variant entered is invalid!</translation>
+      <translation>La variante inserita non è valida!</translation>
     </message>
     <message>
       <source>Create Skylander File</source>
-      <translation type="unfinished">Create Skylander File</translation>
+      <translation>Crea File Skylander</translation>
     </message>
     <message>
       <source>Skylander Object (*.sky);;All Files (*)</source>
-      <translation type="unfinished">Skylander Object (*.sky);;All Files (*)</translation>
+      <translation>Oggetto Skylander (*.sky);;Tutti i File (*)</translation>
     </message>
     <message>
       <source>Failed to create skylander file!</source>
-      <translation type="unfinished">Failed to create skylander file!</translation>
+      <translation>Creazione del file skylander fallita!</translation>
     </message>
     <message>
       <source>Failed to create skylander file:
 %1</source>
-      <translation type="unfinished">Failed to create skylander file:
+      <translation>Creazione del file skylander non riuscita:
 %1</translation>
     </message>
   </context>
@@ -2922,63 +2922,63 @@ Vuoi scaricarla ora?</translation>
     <name>skylander_dialog</name>
     <message>
       <source>Skylanders Manager</source>
-      <translation type="unfinished">Skylanders Manager</translation>
+      <translation>Gestore Skylanders</translation>
     </message>
     <message>
       <source>Active Portal Skylanders:</source>
-      <translation type="unfinished">Active Portal Skylanders:</translation>
+      <translation>Portali Skylanders Attivo:</translation>
     </message>
     <message>
       <source>Skylander %1</source>
-      <translation type="unfinished">Skylander %1</translation>
+      <translation>Skylander %1</translation>
     </message>
     <message>
       <source>Clear</source>
-      <translation type="unfinished">Clear</translation>
+      <translation>Cancella</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Crea</translation>
     </message>
     <message>
       <source>Load</source>
-      <translation type="unfinished">Load</translation>
+      <translation>Carica</translation>
     </message>
     <message>
       <source>Select Skylander File</source>
-      <translation type="unfinished">Select Skylander File</translation>
+      <translation>Seleziona File Skylander</translation>
     </message>
     <message>
       <source>Skylander (*.sky *.bin *.dmp *.dump);;All Files (*)</source>
-      <translation type="unfinished">Skylander (*.sky *.bin *.dmp *.dump);;All Files (*)</translation>
+      <translation>Skylander (*.sky *.bin *.dmp *.dump);;Tutti i File (*)</translation>
     </message>
     <message>
       <source>Failed to open the skylander file!</source>
-      <translation type="unfinished">Failed to open the skylander file!</translation>
+      <translation>Impossibile aprire il file skylander!</translation>
     </message>
     <message>
       <source>Failed to open the skylander file(%1)!
 File may already be in use on the portal.</source>
-      <translation type="unfinished">Failed to open the skylander file(%1)!
-File may already be in use on the portal.</translation>
+      <translation>Apertura del file Skylander (%1) non riuscita!
+Il file potrebbe essere già in uso sul portale.</translation>
     </message>
     <message>
       <source>Failed to read the skylander file!</source>
-      <translation type="unfinished">Failed to read the skylander file!</translation>
+      <translation>Lettura del file skylander fallita!</translation>
     </message>
     <message>
       <source>Failed to read the skylander file(%1)!
 File was too small.</source>
-      <translation type="unfinished">Failed to read the skylander file(%1)!
-File was too small.</translation>
+      <translation>Lettura del file Skylander (%1) non riuscita!
+Il file è troppo piccolo.</translation>
     </message>
     <message>
       <source>Unknown (Id:%1 Var:%2)</source>
-      <translation type="unfinished">Unknown (Id:%1 Var:%2)</translation>
+      <translation>Sconosciuto (Id:%1 Var:%2)</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Nessuno</translation>
     </message>
   </context>
 </TS>
