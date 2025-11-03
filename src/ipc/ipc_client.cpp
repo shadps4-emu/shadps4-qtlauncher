@@ -182,27 +182,31 @@ void IpcClient::onStdout() {
     QColor color;
     QString entry;
 
-    while (process->canReadLine()) {
-        entry = process->readLine().trimmed();
-    }
+    QByteArray data = process->readAllStandardOutput();
+    QString dataString = QString::fromUtf8(data);
+    QStringList lines = dataString.split('\n');
 
-    // set log text color based on class
-    if (entry.contains("<Warning>")) {
-        color = Qt::yellow;
-    } else if (entry.contains("<Error>")) {
-        color = Qt::red;
-    } else if (entry.contains("<Critical>")) {
-        color = Qt::magenta;
-    } else if (entry.contains("<Trace>")) {
-        color = Qt::gray;
-    } else if (entry.contains("<Debug>")) {
-        color = Qt::cyan;
-    } else {
-        color = Qt::white;
-    }
+    for (QString& entry : lines) {
+        if (entry.contains("<Warning>")) {
+            color = Qt::yellow;
+        } else if (entry.contains("<Error>")) {
+            color = Qt::red;
+        } else if (entry.contains("<Critical>")) {
+            color = Qt::magenta;
+        } else if (entry.contains("<Trace>")) {
+            color = Qt::gray;
+        } else if (entry.contains("<Debug>")) {
+            color = Qt::cyan;
+        } else {
+            color = Qt::white;
+        }
 
-    QRegularExpression ansiRegex(R"(\x1B\[[0-9;]*[mK])"); // ANSI escape codes from UNIX terminals
-    emit LogEntrySent(entry.replace(ansiRegex, ""), color);
+        QRegularExpression ansiRegex(
+            R"(\x1B\[[0-9;]*[mK])"); // ANSI escape codes from UNIX terminals
+
+        if (!entry.isEmpty())
+            emit LogEntrySent(entry.replace(ansiRegex, "").trimmed(), color);
+    }
 }
 
 void IpcClient::onProcessClosed() {
