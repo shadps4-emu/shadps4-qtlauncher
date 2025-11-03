@@ -5,13 +5,15 @@
 
 #include <QMenuBar>
 #include <QPushButton>
+#include <QSplitter>
 #include <QTextEdit>
 #include <QToolBar>
 
 class Ui_MainWindow {
 public:
-    QTextEdit* logDisplay = new QTextEdit();
-    QPushButton* toggleLogButton = new QPushButton();
+    QTextEdit* logDisplay;
+    QPushButton* toggleLogButton;
+    QSplitter* splitter;
 
     QAction* bootGameAct;
     QAction* addElfFolderAct;

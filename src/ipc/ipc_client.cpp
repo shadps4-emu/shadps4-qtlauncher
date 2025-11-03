@@ -189,8 +189,14 @@ void IpcClient::onStdout() {
     // set log text color based on class
     if (entry.contains("<Warning>")) {
         color = Qt::yellow;
-    } else if (entry.contains("<Critical>") || entry.contains("<Error>")) {
+    } else if (entry.contains("<Error>")) {
         color = Qt::red;
+    } else if (entry.contains("<Critical>")) {
+        color = Qt::magenta;
+    } else if (entry.contains("<Trace>")) {
+        color = Qt::gray;
+    } else if (entry.contains("<Debug>")) {
+        color = Qt::cyan;
     } else {
         color = Qt::white;
     }

@@ -64,7 +64,7 @@ private:
     void CreateActions();
     void toggleFullscreen();
     void CreateRecentGameActions();
-    void CreateDockWindows();
+    void CreateDockWindows(bool newDock);
     void LoadGameLists();
     void onGameClosed();
     void RunGame();

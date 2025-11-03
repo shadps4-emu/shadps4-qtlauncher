@@ -53,7 +53,7 @@ bool MainWindow::Init() {
     CreateActions();
     CreateRecentGameActions();
     ConfigureGuiFromSettings();
-    CreateDockWindows();
+    CreateDockWindows(true);
     CreateConnects();
     SetLastUsedTheme();
     SetLastIconSizeBullet();
@@ -303,24 +303,28 @@ void MainWindow::UpdateToolbarLabels() {
     AddUiWidgets();
 }
 
-void MainWindow::CreateDockWindows() {
+void MainWindow::CreateDockWindows(bool newDock) {
     // place holder widget is needed for good health they say :)
     QWidget* phCentralWidget = new QWidget(this);
     setCentralWidget(phCentralWidget);
 
-    QSplitter* splitter = new QSplitter(Qt::Vertical);
     QWidget* dockContents = new QWidget(this);
     QVBoxLayout* dockLayout = new QVBoxLayout(this);
+    ui->splitter = new QSplitter(Qt::Vertical);
+    ui->logDisplay = new QTextEdit();
+    ui->toggleLogButton = new QPushButton();
 
-    m_dock_widget.reset(new QDockWidget(tr("Game List"), this));
-    m_game_list_frame.reset(
-        new GameListFrame(m_gui_settings, m_game_info, m_compat_info, m_ipc_client, this));
-    m_game_list_frame->setObjectName("gamelist");
-    m_game_grid_frame.reset(
-        new GameGridFrame(m_gui_settings, m_game_info, m_compat_info, m_ipc_client, this));
-    m_game_grid_frame->setObjectName("gamegridlist");
-    m_elf_viewer.reset(new ElfViewer(m_gui_settings, this));
-    m_elf_viewer->setObjectName("elflist");
+    if (newDock) {
+        m_dock_widget.reset(new QDockWidget(tr("Game List"), this));
+        m_game_list_frame.reset(
+            new GameListFrame(m_gui_settings, m_game_info, m_compat_info, m_ipc_client, this));
+        m_game_list_frame->setObjectName("gamelist");
+        m_game_grid_frame.reset(
+            new GameGridFrame(m_gui_settings, m_game_info, m_compat_info, m_ipc_client, this));
+        m_game_grid_frame->setObjectName("gamegridlist");
+        m_elf_viewer.reset(new ElfViewer(m_gui_settings, this));
+        m_elf_viewer->setObjectName("elflist");
+    }
 
     int table_mode = m_gui_settings->GetValue(gui::gl_mode).toInt();
     int slider_pos = 0;
@@ -328,7 +332,11 @@ void MainWindow::CreateDockWindows() {
         m_game_grid_frame->hide();
         m_elf_viewer->hide();
         m_game_list_frame->show();
-        splitter->addWidget(m_game_list_frame.data());
+        if (!newDock) {
+            m_game_list_frame->clearContents();
+            m_game_list_frame->PopulateGameList();
+        }
+        ui->splitter->addWidget(m_game_list_frame.data());
         slider_pos = m_gui_settings->GetValue(gui::gl_slider_pos).toInt();
         ui->sizeSlider->setSliderPosition(slider_pos); // set slider pos at start;
         isTableList = true;
@@ -336,7 +344,13 @@ void MainWindow::CreateDockWindows() {
         m_game_list_frame->hide();
         m_elf_viewer->hide();
         m_game_grid_frame->show();
-        splitter->addWidget(m_game_grid_frame.data());
+        if (!newDock) {
+            if (m_game_grid_frame->item(0, 0) == nullptr) {
+                m_game_grid_frame->clearContents();
+                m_game_grid_frame->PopulateGameGrid(m_game_info->m_games, false);
+            }
+        }
+        ui->splitter->addWidget(m_game_grid_frame.data());
         slider_pos = m_gui_settings->GetValue(gui::gg_slider_pos).toInt();
         ui->sizeSlider->setSliderPosition(slider_pos); // set slider pos at start;
         isTableList = false;
@@ -344,15 +358,15 @@ void MainWindow::CreateDockWindows() {
         m_game_list_frame->hide();
         m_game_grid_frame->hide();
         m_elf_viewer->show();
-        splitter->addWidget(m_elf_viewer.data());
+        ui->splitter->addWidget(m_elf_viewer.data());
         isTableList = false;
     }
 
     ui->logDisplay->setStyleSheet("QTextEdit {background-color: black;}");
     ui->logDisplay->setMinimumHeight(0);
 
-    splitter->addWidget(ui->logDisplay);
-    splitter->addWidget(ui->toggleLogButton);
+    ui->splitter->addWidget(ui->logDisplay);
+    ui->splitter->addWidget(ui->toggleLogButton);
 
     QList<int> defaultSizes = {800, 200, 50}; // these are proportionally adjusted by qt
     QList<int> sizes = gui_settings::Var2IntList(m_gui_settings->GetValue(
@@ -361,8 +375,8 @@ void MainWindow::CreateDockWindows() {
         sizes = defaultSizes;
     }
 
-    splitter->setSizes({sizes});
-    dockLayout->addWidget(splitter);
+    ui->splitter->setSizes({sizes});
+    dockLayout->addWidget(ui->splitter);
     dockContents->setLayout(dockLayout);
     m_dock_widget->setWidget(dockContents);
 
@@ -381,11 +395,6 @@ void MainWindow::CreateDockWindows() {
         ui->toggleLogButton->setText(tr("Show Log"));
         ui->logDisplay->hide();
     }
-
-    // handle resize like this for now, we deal with it when we add more docks
-    connect(this, &MainWindow::WindowResized, this, [&]() {
-        this->resizeDocks({m_dock_widget.data()}, {this->width()}, Qt::Orientation::Horizontal);
-    });
 }
 
 void MainWindow::LoadGameLists() {
@@ -622,52 +631,42 @@ void MainWindow::CreateConnects() {
             m_game_grid_frame->PopulateGameGrid(m_game_info->m_games, false);
         }
     });
+
+    // handle resize like this for now, we deal with it when we add more docks
+    connect(this, &MainWindow::WindowResized, this, [&]() {
+        this->resizeDocks({m_dock_widget.data()}, {this->width()}, Qt::Orientation::Horizontal);
+    });
+
     // List
     connect(ui->setlistModeListAct, &QAction::triggered, m_dock_widget.data(), [this]() {
-        BackgroundMusicPlayer::getInstance().stopMusic();
-        m_dock_widget->setWidget(m_game_list_frame.data());
-        m_game_grid_frame->hide();
-        m_elf_viewer->hide();
-        m_game_list_frame->show();
-        m_game_list_frame->clearContents();
-        m_game_list_frame->PopulateGameList();
-        isTableList = true;
-        m_gui_settings->SetValue(gui::gl_mode, 0);
-        int slider_pos = m_gui_settings->GetValue(gui::gl_slider_pos).toInt();
         ui->sizeSlider->setEnabled(true);
-        ui->sizeSlider->setSliderPosition(slider_pos);
+        BackgroundMusicPlayer::getInstance().stopMusic();
+        QList<int> sizes = {ui->splitter->sizes()};
+        m_gui_settings->SetValue(gui::mw_dockWidgetSizes, QVariant::fromValue(sizes));
+        m_gui_settings->SetValue(gui::gl_mode, 0);
+        CreateDockWindows(false);
         ui->mw_searchbar->setText("");
         SetLastIconSizeBullet();
     });
     // Grid
     connect(ui->setlistModeGridAct, &QAction::triggered, m_dock_widget.data(), [this]() {
-        BackgroundMusicPlayer::getInstance().stopMusic();
-        m_dock_widget->setWidget(m_game_grid_frame.data());
-        m_game_grid_frame->show();
-        m_game_list_frame->hide();
-        m_elf_viewer->hide();
-        if (m_game_grid_frame->item(0, 0) == nullptr) {
-            m_game_grid_frame->clearContents();
-            m_game_grid_frame->PopulateGameGrid(m_game_info->m_games, false);
-        }
-        isTableList = false;
-        m_gui_settings->SetValue(gui::gl_mode, 1);
-        int slider_pos_grid = m_gui_settings->GetValue(gui::gg_slider_pos).toInt();
         ui->sizeSlider->setEnabled(true);
-        ui->sizeSlider->setSliderPosition(slider_pos_grid);
+        BackgroundMusicPlayer::getInstance().stopMusic();
+        QList<int> sizes = {ui->splitter->sizes()};
+        m_gui_settings->SetValue(gui::mw_dockWidgetSizes, QVariant::fromValue(sizes));
+        m_gui_settings->SetValue(gui::gl_mode, 1);
+        CreateDockWindows(false);
         ui->mw_searchbar->setText("");
         SetLastIconSizeBullet();
     });
     // Elf Viewer
     connect(ui->setlistElfAct, &QAction::triggered, m_dock_widget.data(), [this]() {
+        ui->sizeSlider->setEnabled(false);
         BackgroundMusicPlayer::getInstance().stopMusic();
-        m_dock_widget->setWidget(m_elf_viewer.data());
-        m_game_grid_frame->hide();
-        m_game_list_frame->hide();
-        m_elf_viewer->show();
-        isTableList = false;
-        ui->sizeSlider->setDisabled(true);
+        QList<int> sizes = {ui->splitter->sizes()};
+        m_gui_settings->SetValue(gui::mw_dockWidgetSizes, QVariant::fromValue(sizes));
         m_gui_settings->SetValue(gui::gl_mode, 2);
+        CreateDockWindows(false);
         SetLastIconSizeBullet();
     });
 
@@ -1048,17 +1047,7 @@ void MainWindow::ConfigureGuiFromSettings() {
 
 void MainWindow::SaveWindowState() {
     m_gui_settings->SetValue(gui::mw_geometry, saveGeometry(), false);
-
-    int listHeight;
-    if (!m_elf_viewer->isHidden()) {
-        listHeight = m_elf_viewer->height();
-    } else if (!m_game_list_frame->isHidden()) {
-        listHeight = m_game_list_frame->height();
-    } else if (!m_game_grid_frame->isHidden()) {
-        listHeight = m_game_grid_frame->height();
-    }
-
-    QList<int> sizes = {listHeight, ui->logDisplay->height(), ui->toggleLogButton->height()};
+    QList<int> sizes = {ui->splitter->sizes()};
     m_gui_settings->SetValue(gui::mw_dockWidgetSizes, QVariant::fromValue(sizes));
 }
 
