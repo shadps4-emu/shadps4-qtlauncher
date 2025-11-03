@@ -2865,7 +2865,7 @@ Would you like to download it now?</source>
     <name>skylander_creator_dialog</name>
     <message>
       <source>Skylander Creator</source>
-      <translation type="unfinished">Skylander Creator</translation>
+      <translation>Opprettelse av Skylander</translation>
     </message>
     <message>
       <source>--Unknown--</source>
@@ -2901,20 +2901,20 @@ Would you like to download it now?</source>
     </message>
     <message>
       <source>Create Skylander File</source>
-      <translation>Opprett Skylanders-fil</translation>
+      <translation>Opprett Skylander-fil</translation>
     </message>
     <message>
       <source>Skylander Object (*.sky);;All Files (*)</source>
-      <translation>Skylanders-objekt (*.sky);;Alle filer (*)</translation>
+      <translation>Skylander-objekt (*.sky);;Alle filer (*)</translation>
     </message>
     <message>
       <source>Failed to create skylander file!</source>
-      <translation>Klarte ikke opprette Skylanders-fil!</translation>
+      <translation>Klarte ikke opprette Skylander-fil!</translation>
     </message>
     <message>
       <source>Failed to create skylander file:
 %1</source>
-      <translation>Klarte ikke opprette Skylanders-fil:
+      <translation>Klarte ikke opprette Skylander-fil:
 %1</translation>
     </message>
   </context>
@@ -2954,31 +2954,31 @@ Would you like to download it now?</source>
     </message>
     <message>
       <source>Failed to open the skylander file!</source>
-      <translation type="unfinished">Failed to open the skylander file!</translation>
+      <translation>Klarte ikke åpne Skylander-fila!</translation>
     </message>
     <message>
       <source>Failed to open the skylander file(%1)!
 File may already be in use on the portal.</source>
-      <translation type="unfinished">Failed to open the skylander file(%1)!
-File may already be in use on the portal.</translation>
+      <translation>Klarte ikke åpne Skylander-fila: %1!
+Fila kan allerede være i bruk på portalen.</translation>
     </message>
     <message>
       <source>Failed to read the skylander file!</source>
-      <translation type="unfinished">Failed to read the skylander file!</translation>
+      <translation>Klarte ikke lese Skylander-fila!</translation>
     </message>
     <message>
       <source>Failed to read the skylander file(%1)!
 File was too small.</source>
-      <translation type="unfinished">Failed to read the skylander file(%1)!
-File was too small.</translation>
+      <translation>Klarte ikke lese Skylander-fila: %1!
+Fila var for liten.</translation>
     </message>
     <message>
       <source>Unknown (Id:%1 Var:%2)</source>
-      <translation type="unfinished">Unknown (Id:%1 Var:%2)</translation>
+      <translation>Ukjent (ID: %1 Variant: %2)</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Ingen</translation>
     </message>
   </context>
 </TS>
