@@ -180,13 +180,11 @@ void IpcClient::onStderr() {
 
 void IpcClient::onStdout() {
     QColor color;
-    QString entry;
-
     QByteArray data = process->readAllStandardOutput();
     QString dataString = QString::fromUtf8(data);
-    QStringList lines = dataString.split('\n');
+    QStringList entries = dataString.split('\n');
 
-    for (QString& entry : lines) {
+    for (QString& entry : entries) {
         if (entry.contains("<Warning>")) {
             color = Qt::yellow;
         } else if (entry.contains("<Error>")) {
