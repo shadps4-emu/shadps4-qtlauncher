@@ -362,8 +362,9 @@ void MainWindow::CreateDockWindows(bool newDock) {
         isTableList = false;
     }
 
-    ui->logDisplay->setStyleSheet("QTextEdit {background-color: black;}");
-    ui->logDisplay->setMinimumHeight(0);
+    QPalette logPalette = ui->logDisplay->palette();
+    logPalette.setColor(QPalette::Base, Qt::black);
+    ui->logDisplay->setPalette(logPalette);
 
     ui->splitter->addWidget(ui->logDisplay);
     ui->splitter->addWidget(ui->toggleLogButton);
