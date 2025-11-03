@@ -376,6 +376,10 @@ void MainWindow::CreateDockWindows(bool newDock) {
     }
 
     ui->splitter->setSizes({sizes});
+    ui->splitter->setCollapsible(0, false);
+    ui->splitter->setCollapsible(1, false);
+    ui->splitter->setCollapsible(2, false);
+
     dockLayout->addWidget(ui->splitter);
     dockContents->setLayout(dockLayout);
     m_dock_widget->setWidget(dockContents);
