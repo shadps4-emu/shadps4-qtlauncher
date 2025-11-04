@@ -539,7 +539,7 @@
     </message>
     <message>
       <source>L1 and L2</source>
-      <translation type="unfinished">L1 and L2</translation>
+      <translation>L1 et L2</translation>
     </message>
     <message>
       <source>Active Gamepad</source>
@@ -547,79 +547,79 @@
     </message>
     <message>
       <source>Gamepad ID</source>
-      <translation type="unfinished">Gamepad ID</translation>
+      <translation>Gamepad ID</translation>
     </message>
     <message>
       <source>Default Gamepad</source>
-      <translation type="unfinished">Default Gamepad</translation>
+      <translation>Manette par défaut</translation>
     </message>
     <message>
       <source>No default selected</source>
-      <translation type="unfinished">No default selected</translation>
+      <translation>Aucune valeur par défaut</translation>
     </message>
     <message>
       <source>n/a</source>
-      <translation type="unfinished">n/a</translation>
+      <translation>n/d</translation>
     </message>
     <message>
       <source>Set Active Gamepad as Default</source>
-      <translation type="unfinished">Set Active Gamepad as Default</translation>
+      <translation>Définir la manette active par défaut</translation>
     </message>
     <message>
       <source>Remove Default Gamepad</source>
-      <translation type="unfinished">Remove Default Gamepad</translation>
+      <translation>Supprimer la manette par défaut</translation>
     </message>
     <message>
       <source>R1 and R2</source>
-      <translation type="unfinished">R1 and R2</translation>
+      <translation>R1 et R2</translation>
     </message>
     <message>
       <source>ID: </source>
-      <translation type="unfinished">ID: </translation>
+      <translation>ID : </translation>
     </message>
     <message>
       <source>Default Controller Selected</source>
-      <translation type="unfinished">Default Controller Selected</translation>
+      <translation>Contrôleur par défaut sélectionné</translation>
     </message>
     <message>
       <source>Active controller set as default</source>
-      <translation type="unfinished">Active controller set as default</translation>
+      <translation>Réglage par défaut du contrôleur actif</translation>
     </message>
     <message>
       <source>Default Controller Removed</source>
-      <translation type="unfinished">Default Controller Removed</translation>
+      <translation>Contrôleur par défaut supprimé</translation>
     </message>
     <message>
       <source>Default controller setting removed</source>
-      <translation type="unfinished">Default controller setting removed</translation>
+      <translation>Réglage du contrôleur par défaut supprimé</translation>
     </message>
     <message>
       <source>RED</source>
-      <translation type="unfinished">RED</translation>
+      <translation>ROUGE</translation>
     </message>
     <message>
       <source>GREEN</source>
-      <translation type="unfinished">GREEN</translation>
+      <translation>VERT</translation>
     </message>
     <message>
       <source>BLUE</source>
-      <translation type="unfinished">BLUE</translation>
+      <translation>BLEU</translation>
     </message>
     <message>
       <source>Left Stick Deadzone</source>
-      <translation type="unfinished">Left Stick Deadzone</translation>
+      <translation>Deadzone du joystick gauche</translation>
     </message>
     <message>
       <source>Min Deadzone (def:2 max:127)</source>
-      <translation type="unfinished">Min Deadzone (def:2 max:127)</translation>
+      <translation>Joystick Gauche Deadzone (def:2 max:127)</translation>
     </message>
     <message>
       <source>Max Deadzone (def:127 max:127)</source>
-      <translation type="unfinished">Max Deadzone (def:127 max:127)</translation>
+      <translation>Max Deadzone (def:127 max:127)</translation>
     </message>
     <message>
       <source>Right Stick Deadzone</source>
-      <translation type="unfinished">Right Stick Deadzone</translation>
+      <translation>Deadzone du joystick droit</translation>
     </message>
   </context>
   <context>
@@ -707,23 +707,23 @@
     </message>
     <message>
       <source>Directory to install emulator versions</source>
-      <translation type="unfinished">Directory to install emulator versions</translation>
+      <translation>Dossier pour installer les versions d'émulateur</translation>
     </message>
     <message>
       <source>Directory with your dumped games</source>
-      <translation type="unfinished">Directory with your dumped games</translation>
+      <translation>Dossier avec vos jeux dumpés</translation>
     </message>
     <message>
       <source>Directory with your dumped DLC&apos;s</source>
-      <translation type="unfinished">Directory with your dumped DLC&apos;s</translation>
+      <translation>Dossier avec vos DLC&apos;s</translation>
     </message>
     <message>
       <source>Directory with games</source>
-      <translation type="unfinished">Directory with games</translation>
+      <translation>Dossier avec jeux</translation>
     </message>
     <message>
       <source>Directory with DLC&apos;s</source>
-      <translation type="unfinished">Directory with DLC&apos;s</translation>
+      <translation>Dossier des DLC&apos;s</translation>
     </message>
   </context>
   <context>
@@ -1000,11 +1000,11 @@
     </message>
     <message>
       <source>Game-specific Settings...</source>
-      <translation type="unfinished">Game-specific Settings...</translation>
+      <translation>Paramètres spécifiques du jeu...</translation>
     </message>
     <message>
       <source>Configure Game-specific Settings</source>
-      <translation type="unfinished">Configure Game-specific Settings</translation>
+      <translation>Configurer les paramètres spécifiques du jeu</translation>
     </message>
     <message>
       <source>Create Game-specific Settings from Global Settings</source>
