@@ -5,7 +5,6 @@
 #include <QKeyEvent>
 #include <QPlainTextEdit>
 #include <QProgressDialog>
-#include <QSplitter>
 #include <QStatusBar>
 
 #include "about_dialog.h"
@@ -924,7 +923,7 @@ void MainWindow::CreateConnects() {
 
 void MainWindow::PrintLog(QString entry, QColor textColor) {
     ui->logDisplay->setTextColor(textColor);
-    ui->logDisplay->append(entry.trimmed());
+    ui->logDisplay->append(entry);
     QScrollBar* sb = ui->logDisplay->verticalScrollBar();
     sb->setValue(sb->maximum());
 }
