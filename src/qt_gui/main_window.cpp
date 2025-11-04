@@ -313,6 +313,8 @@ void MainWindow::CreateDockWindows(bool newDock) {
 
     ui->splitter = new QSplitter(Qt::Vertical);
     ui->logDisplay = new QTextEdit(ui->splitter);
+    ui->logDisplay->setText(tr("Game Log"));
+    ui->logDisplay->setReadOnly(true);
 
     if (newDock) {
         m_dock_widget.reset(new QDockWidget(tr("Game List"), this));
@@ -365,11 +367,9 @@ void MainWindow::CreateDockWindows(bool newDock) {
     QPalette logPalette = ui->logDisplay->palette();
     logPalette.setColor(QPalette::Base, Qt::black);
     ui->logDisplay->setPalette(logPalette);
-
     ui->splitter->addWidget(ui->logDisplay);
-    ui->splitter->addWidget(ui->toggleLogButton);
 
-    QList<int> defaultSizes = {800, 200, 50}; // these are proportionally adjusted by qt
+    QList<int> defaultSizes = {800, 200}; // these are proportionally adjusted by qt
     QList<int> sizes = gui_settings::Var2IntList(m_gui_settings->GetValue(
         gui::main_window, "dockWidgetSizes", QVariant::fromValue(defaultSizes)));
     if (sizes[1] == 0) { // This happens if log is hidden when settings are saved
@@ -379,7 +379,9 @@ void MainWindow::CreateDockWindows(bool newDock) {
     ui->splitter->setSizes({sizes});
     ui->splitter->setCollapsible(0, false);
     ui->splitter->setCollapsible(1, false);
-    ui->splitter->setCollapsible(2, false);
+
+    bool showLog = ui->showLogAct->isChecked();
+    showLog ? ui->logDisplay->show() : ui->logDisplay->hide();
 
     dockLayout->addWidget(ui->splitter);
     dockContents->setLayout(dockLayout);
@@ -391,15 +393,6 @@ void MainWindow::CreateDockWindows(bool newDock) {
 
     addDockWidget(Qt::LeftDockWidgetArea, m_dock_widget.data());
     this->setDockNestingEnabled(true);
-
-    bool showLog = m_gui_settings->GetValue(gui::mw_showLog).toBool();
-    if (showLog) {
-        ui->toggleLogButton->setText(tr("Hide Log"));
-        ui->logDisplay->show();
-    } else {
-        ui->toggleLogButton->setText(tr("Show Log"));
-        ui->logDisplay->hide();
-    }
 }
 
 void MainWindow::LoadGameLists() {
@@ -440,6 +433,16 @@ void MainWindow::CreateConnects() {
     connect(ui->showGameListAct, &QAction::triggered, this, &MainWindow::ShowGameList);
     connect(ui->toggleLabelsAct, &QAction::toggled, this, &MainWindow::toggleLabelsUnderIcons);
     connect(ui->fullscreenButton, &QPushButton::clicked, this, &MainWindow::toggleFullscreen);
+
+    connect(ui->showLogAct, &QAction::triggered, this, [this](bool state) {
+        if (state) {
+            ui->logDisplay->show();
+            m_gui_settings->SetValue(gui::mw_showLog, true);
+        } else {
+            ui->logDisplay->hide();
+            m_gui_settings->SetValue(gui::mw_showLog, false);
+        }
+    });
 
     connect(ui->sizeSlider, &QSlider::valueChanged, this, [this](int value) {
         if (isTableList) {
@@ -916,24 +919,12 @@ void MainWindow::CreateConnects() {
         }
     });
 
-    connect(ui->toggleLogButton, &QPushButton::clicked, this, [this]() {
-        if (ui->logDisplay->isHidden()) {
-            ui->logDisplay->show();
-            ui->toggleLogButton->setText(tr("Hide Log"));
-            m_gui_settings->SetValue(gui::mw_showLog, true);
-        } else {
-            ui->logDisplay->hide();
-            ui->toggleLogButton->setText(tr("Show Log"));
-            m_gui_settings->SetValue(gui::mw_showLog, false);
-        }
-    });
-
     QObject::connect(m_ipc_client.get(), &IpcClient::LogEntrySent, this, &MainWindow::PrintLog);
 }
 
 void MainWindow::PrintLog(QString entry, QColor textColor) {
     ui->logDisplay->setTextColor(textColor);
-    ui->logDisplay->append(entry);
+    ui->logDisplay->append(entry.trimmed());
     QScrollBar* sb = ui->logDisplay->verticalScrollBar();
     sb->setValue(sb->maximum());
 }
@@ -1046,6 +1037,10 @@ void MainWindow::ConfigureGuiFromSettings() {
     } else if (table_mode == 2) {
         ui->setlistElfAct->setChecked(true);
     }
+
+    bool showLog = m_gui_settings->GetValue(gui::mw_showLog).toBool();
+    ui->showLogAct->setChecked(showLog);
+
     BackgroundMusicPlayer::getInstance().setVolume(
         m_gui_settings->GetValue(gui::gl_backgroundMusicVolume).toInt());
 }

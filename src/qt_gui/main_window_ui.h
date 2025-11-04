@@ -11,15 +11,14 @@
 
 class Ui_MainWindow {
 public:
-    QPushButton* toggleLogButton = new QPushButton();
     QSplitter* splitter;
     QTextEdit* logDisplay;
-
     QAction* bootGameAct;
     QAction* addElfFolderAct;
     QAction* shadFolderAct;
     QAction* exitAct;
     QAction* showGameListAct;
+    QAction* showLogAct;
     QAction* refreshGameListAct;
     QAction* setIconSizeTinyAct;
     QAction* setIconSizeSmallAct;
@@ -110,6 +109,9 @@ public:
         showGameListAct = new QAction(MainWindow);
         showGameListAct->setObjectName("showGameListAct");
         showGameListAct->setCheckable(true);
+        showLogAct = new QAction(MainWindow);
+        showLogAct->setObjectName("showLogAct");
+        showLogAct->setCheckable(true);
         refreshGameListAct = new QAction(MainWindow);
         refreshGameListAct->setObjectName("refreshGameListAct");
         refreshGameListAct->setIcon(QIcon(":images/refreshlist_icon.png"));
@@ -323,6 +325,7 @@ public:
         menuFile->addSeparator();
         menuFile->addAction(exitAct);
         menuView->addAction(showGameListAct);
+        menuView->addAction(showLogAct);
         menuView->addSeparator();
         menuView->addAction(refreshGameListAct);
         menuView->addAction(menuGame_List_Mode->menuAction());
@@ -395,6 +398,7 @@ public:
 #endif // QT_CONFIG(statustip)
         showGameListAct->setText(
             QCoreApplication::translate("MainWindow", "Show Game List", nullptr));
+        showLogAct->setText(QCoreApplication::translate("MainWindow", "Show Game Log", nullptr));
         refreshGameListAct->setText(
             QCoreApplication::translate("MainWindow", "Game List Refresh", nullptr));
         setIconSizeTinyAct->setText(QCoreApplication::translate("MainWindow", "Tiny", nullptr));

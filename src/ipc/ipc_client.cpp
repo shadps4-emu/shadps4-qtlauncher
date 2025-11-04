@@ -201,9 +201,10 @@ void IpcClient::onStdout() {
 
         QRegularExpression ansiRegex(
             R"(\x1B\[[0-9;]*[mK])"); // ANSI escape codes from UNIX terminals
+        entry = entry.replace(ansiRegex, "");
 
         if (!entry.isEmpty())
-            emit LogEntrySent(entry.replace(ansiRegex, "").trimmed(), color);
+            emit LogEntrySent(entry.trimmed(), color);
     }
 }
 
