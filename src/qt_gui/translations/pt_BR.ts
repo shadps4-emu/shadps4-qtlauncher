@@ -2858,7 +2858,7 @@ Deseja baixá-la agora?</translation>
     </message>
     <message>
       <source>A version with that name already exists.</source>
-      <translation type="unfinished">A version with that name already exists.</translation>
+      <translation>Já existe uma versão com esse nome.</translation>
     </message>
   </context>
   <context>
