@@ -711,19 +711,19 @@
     </message>
     <message>
       <source>Directory with your dumped games</source>
-      <translation type="unfinished">Directory with your dumped games</translation>
+      <translation>Diretório com seus jogos extraídos</translation>
     </message>
     <message>
       <source>Directory with your dumped DLC&apos;s</source>
-      <translation type="unfinished">Directory with your dumped DLC&apos;s</translation>
+      <translation>Diretório com suas DLC&apos;s extraídas</translation>
     </message>
     <message>
       <source>Directory with games</source>
-      <translation type="unfinished">Directory with games</translation>
+      <translation>Diretório com jogos</translation>
     </message>
     <message>
       <source>Directory with DLC&apos;s</source>
-      <translation type="unfinished">Directory with DLC&apos;s</translation>
+      <translation>Diretório com DLC&apos;s</translation>
     </message>
   </context>
   <context>
@@ -1052,7 +1052,7 @@
     </message>
     <message>
       <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
-      <translation type="unfinished">Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</translation>
+      <translation>Não foi possível enviar o relatório, pois o log mais recente do jogo falhou na seguinte verificação e, portanto, seria um relatório inválido:</translation>
     </message>
     <message>
       <source>Ok</source>
@@ -1060,7 +1060,7 @@
     </message>
     <message>
       <source>Info</source>
-      <translation type="unfinished">Info</translation>
+      <translation>Informações</translation>
     </message>
     <message>
       <source>Create Shortcut for Selected Emulator Version</source>
@@ -2477,11 +2477,11 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Vulkan Validation (Requires Vulkan SDK)</source>
-      <translation type="unfinished">Vulkan Validation (Requires Vulkan SDK)</translation>
+      <translation>Validação Vulkan (Requer Vulkan SDK)</translation>
     </message>
     <message>
       <source>Validation Layers</source>
-      <translation type="unfinished">Validation Layers</translation>
+      <translation>Camadas de Validação</translation>
     </message>
     <message>
       <source>Enable Core Validation</source>
@@ -2493,7 +2493,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation</source>
-      <translation type="unfinished">Enable GPU-Assisted Validation</translation>
+      <translation>Habilitar Validação Assistida por GPU</translation>
     </message>
     <message>
       <source>Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
@@ -2556,11 +2556,11 @@ Selecione uma versão do emulador no painel direito.</translation>
     <name>ShortcutDialog</name>
     <message>
       <source>Select Version</source>
-      <translation type="unfinished">Select Version</translation>
+      <translation>Selecionar Versão</translation>
     </message>
     <message>
       <source>Select version for shortcut creation</source>
-      <translation type="unfinished">Select version for shortcut creation</translation>
+      <translation>Selecione a versão para criação do atalho</translation>
     </message>
     <message>
       <source>No Version Selected</source>
@@ -2568,7 +2568,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Select a version first</source>
-      <translation type="unfinished">Select a version first</translation>
+      <translation>Primeiro selecione uma versão</translation>
     </message>
   </context>
   <context>
@@ -2869,11 +2869,11 @@ Deseja baixá-la agora?</translation>
     </message>
     <message>
       <source>--Unknown--</source>
-      <translation type="unfinished">--Unknown--</translation>
+      <translation>--Desconhecido--</translation>
     </message>
     <message>
       <source>ID:</source>
-      <translation type="unfinished">ID:</translation>
+      <translation>ID:</translation>
     </message>
     <message>
       <source>Variant:</source>
