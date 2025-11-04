@@ -2493,7 +2493,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation</source>
-      <translation>Habilitar Validação Assistida por GPU</translation>
+      <translation>Ativar Validação Assistida por GPU</translation>
     </message>
     <message>
       <source>Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
