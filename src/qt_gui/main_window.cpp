@@ -23,6 +23,7 @@
 #include "control_settings.h"
 #include "game_install_dialog.h"
 #include "hotkeys.h"
+#include "infinity_dialog.h"
 #include "input/controller.h"
 #include "ipc/ipc_client.h"
 #include "kbm_gui.h"
@@ -816,6 +817,14 @@ void MainWindow::CreateConnects() {
         }
     });
 
+    // Manage Infinity Figures
+    connect(ui->infinityFiguresAction, &QAction::triggered, this, [this]() {
+        if (Config::getUsbDeviceBackend() == Config::UsbBackendType::InfinityBase) {
+            infinity_dialog* inf_diag = infinity_dialog::get_dlg(this, m_ipc_client);
+            inf_diag->show();
+        }
+    });
+
     // Themes
     connect(ui->setThemeDark, &QAction::triggered, &m_window_themes, [this]() {
         m_window_themes.SetWindowTheme(Theme::Dark, ui->mw_searchbar);
@@ -1151,6 +1160,7 @@ void MainWindow::SetUiIcons(bool isWhite) {
     ui->menuGame_List_Mode->setIcon(RecolorIcon(ui->menuGame_List_Mode->icon(), isWhite));
     ui->trophyViewerAct->setIcon(RecolorIcon(ui->trophyViewerAct->icon(), isWhite));
     ui->skylanderPortalAction->setIcon(RecolorIcon(ui->skylanderPortalAction->icon(), isWhite));
+    ui->infinityFiguresAction->setIcon(RecolorIcon(ui->infinityFiguresAction->icon(), isWhite));
     ui->configureAct->setIcon(RecolorIcon(ui->configureAct->icon(), isWhite));
     ui->addElfFolderAct->setIcon(RecolorIcon(ui->addElfFolderAct->icon(), isWhite));
 }

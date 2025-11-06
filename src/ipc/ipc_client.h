@@ -35,6 +35,8 @@ public:
                            int maskOffset = 0);
     void loadSkylander(std::string file_name, int slot);
     void removeSkylander(int slot);
+    void loadInfinityFigure(std::string file_name, int slot);
+    void removeInfinityFigure(int slot);
     std::function<void()> gameClosedFunc;
     std::function<void()> startGameFunc;
     std::function<void()> restartEmulatorFunc;

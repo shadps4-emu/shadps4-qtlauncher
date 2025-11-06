@@ -189,7 +189,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
 
     ui->usbComboBox->addItem(tr("Real USB Device"));
     ui->usbComboBox->addItem(tr("Skylander Portal"));
-    // ui->usbComboBox->addItem(tr("Infinity Base"));
+    ui->usbComboBox->addItem(tr("Infinity Base"));
     // ui->usbComboBox->addItem(tr("Dimensions Toypad"));
 
     InitializeEmulatorLanguages();
@@ -987,7 +987,7 @@ void SettingsDialog::updateNoteTextEdit(const QString& elementName) {
     } else if (elementName == "motionControlsCheckBox") {
         text = tr("Enable Motion Controls:\\nWhen enabled it will use the controller's motion control if supported.");
     } else if (elementName == "usbComboBox") {
-        text = tr("USB Device:\\nReal USB Device: Use a real USB Device attached to the system.\\nSkylander Portal: Emulate a Skylander Portal of Power.");
+        text = tr("USB Device:\\nReal USB Device: Use a real USB Device attached to the system.\\nSkylander Portal: Emulate a Skylander Portal of Power.\\nInfinity Base: Emulate a Disney Infinity Base.");
     }
 
     // Experimental
