@@ -121,6 +121,20 @@ void IpcClient::removeSkylander(int slot) {
     writeLine("1"); // always a full remove
 }
 
+void IpcClient::loadInfinityFigure(std::string file_name, int slot) {
+    writeLine("USB_LOAD_FIGURE");
+    writeLine(QString::fromStdString(file_name));
+    writeLine(QString::number(slot)); // infinity figures don't use pads
+    writeLine(QString::number(slot));
+}
+
+void IpcClient::removeInfinityFigure(int slot) {
+    writeLine("USB_REMOVE_FIGURE");
+    writeLine(QString::number(slot)); // infinity figures don't use pads
+    writeLine(QString::number(slot));
+    writeLine("1"); // always a full remove
+}
+
 void IpcClient::onStderr() {
     buffer.append(process->readAllStandardError());
     int idx;

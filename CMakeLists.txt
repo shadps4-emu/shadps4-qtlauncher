@@ -285,6 +285,7 @@ set(COMMON src/common/logging/backend.cpp
            src/common/io_file.h
            src/common/path_util.cpp
            src/common/path_util.h
+           src/common/sha1.h
            src/common/types.h
            src/common/memory_patcher.h
            src/common/memory_patcher.cpp
@@ -363,6 +364,8 @@ set(QT_GUI src/qt_gui/about_dialog.cpp
            src/qt_gui/sdl_event_wrapper.h
            src/qt_gui/skylander_dialog.cpp
            src/qt_gui/skylander_dialog.h
+           src/qt_gui/infinity_dialog.cpp
+           src/qt_gui/infinity_dialog.h
            src/qt_gui/hotkeys.h
            src/qt_gui/hotkeys.cpp
            src/qt_gui/hotkeys.ui
