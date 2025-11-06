@@ -29,6 +29,7 @@ public:
     QAction* trophyViewerAct;
     QAction* skylanderPortalAction;
     QAction* infinityFiguresAction;
+    QAction* dimensionsToypadAction;
 #ifdef ENABLE_UPDATER
     QAction* updaterAct;
 #endif
@@ -154,6 +155,9 @@ public:
         infinityFiguresAction = new QAction(MainWindow);
         infinityFiguresAction->setObjectName("infinitymanager");
         infinityFiguresAction->setIcon(QIcon(":images/usb_icon.png"));
+        dimensionsToypadAction = new QAction(MainWindow);
+        dimensionsToypadAction->setObjectName("dimensionsmanager");
+        dimensionsToypadAction->setIcon(QIcon(":images/usb_icon.png"));
 
 #ifdef ENABLE_UPDATER
         updaterAct = new QAction(MainWindow);
@@ -351,6 +355,7 @@ public:
         menuUtils->addAction(trophyViewerAct);
         menuUtils->addAction(skylanderPortalAction);
         menuUtils->addAction(infinityFiguresAction);
+        menuUtils->addAction(dimensionsToypadAction);
 #ifdef ENABLE_UPDATER
         menuHelp->addAction(updaterAct);
 #endif
@@ -417,6 +422,8 @@ public:
             QCoreApplication::translate("MainWindow", "Manage Skylanders", nullptr));
         infinityFiguresAction->setText(
             QCoreApplication::translate("MainWindow", "Manage Infinity Figures", nullptr));
+        dimensionsToypadAction->setText(
+            QCoreApplication::translate("MainWindow", "Manage Dimensions Toypad", nullptr));
         mw_searchbar->setPlaceholderText(
             QCoreApplication::translate("MainWindow", "Search...", nullptr));
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));

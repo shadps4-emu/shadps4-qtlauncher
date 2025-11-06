@@ -32,6 +32,7 @@ public:
     explicit infinity_dialog(QWidget* parent, std::shared_ptr<IpcClient> ipc_client);
     ~infinity_dialog();
     static infinity_dialog* get_dlg(QWidget* parent, std::shared_ptr<IpcClient> ipc_client);
+    void clear_all();
 
     infinity_dialog(infinity_dialog const&) = delete;
     void operator=(infinity_dialog const&) = delete;

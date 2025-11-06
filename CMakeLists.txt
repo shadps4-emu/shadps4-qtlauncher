@@ -366,6 +366,8 @@ set(QT_GUI src/qt_gui/about_dialog.cpp
            src/qt_gui/skylander_dialog.h
            src/qt_gui/infinity_dialog.cpp
            src/qt_gui/infinity_dialog.h
+           src/qt_gui/dimensions_dialog.cpp
+           src/qt_gui/dimensions_dialog.h
            src/qt_gui/hotkeys.h
            src/qt_gui/hotkeys.cpp
            src/qt_gui/hotkeys.ui

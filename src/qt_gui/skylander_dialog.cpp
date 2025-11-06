@@ -759,6 +759,13 @@ skylander_dialog* skylander_dialog::get_dlg(QWidget* parent,
     return inst;
 }
 
+void skylander_dialog::clear_all() {
+    for (uint8_t slot = 0; slot < UI_SKY_NUM; slot++) {
+        sky_slots[slot] = {};
+    }
+    update_edits();
+}
+
 void skylander_dialog::clear_skylander(u8 slot) {
     if (const auto& slot_infos = sky_slots[slot]) {
         const auto& [cur_slot, id, var] = slot_infos.value();

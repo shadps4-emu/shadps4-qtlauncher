@@ -29,6 +29,7 @@ public:
     explicit skylander_dialog(QWidget* parent, std::shared_ptr<IpcClient> ipc_client);
     ~skylander_dialog();
     static skylander_dialog* get_dlg(QWidget* parent, std::shared_ptr<IpcClient> ipc_client);
+    void clear_all();
 
     skylander_dialog(skylander_dialog const&) = delete;
     void operator=(skylander_dialog const&) = delete;

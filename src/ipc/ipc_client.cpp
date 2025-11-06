@@ -135,6 +135,39 @@ void IpcClient::removeInfinityFigure(int slot) {
     writeLine("1"); // always a full remove
 }
 
+void IpcClient::loadDimensionFigure(std::string file_name, uint8_t pad, uint8_t index) {
+    writeLine("USB_LOAD_FIGURE");
+    writeLine(QString::fromStdString(file_name));
+    writeLine(QString::number(pad));
+    writeLine(QString::number(index));
+}
+
+void IpcClient::removeDimensionFigure(uint8_t pad, uint8_t index, bool fullRemove) {
+    writeLine("USB_REMOVE_FIGURE");
+    writeLine(QString::number(pad));
+    writeLine(QString::number(index));
+    writeLine(fullRemove ? "1" : "0");
+}
+
+void IpcClient::moveDimensionFigure(uint8_t new_pad, uint8_t new_index, uint8_t old_pad,
+                                    uint8_t old_index) {
+    writeLine("USB_MOVE_FIGURE");
+    writeLine(QString::number(new_pad));
+    writeLine(QString::number(new_index));
+    writeLine(QString::number(old_pad));
+    writeLine(QString::number(old_index));
+}
+
+void IpcClient::tempRemoveDimensionFigure(uint8_t index) {
+    writeLine("USB_TEMP_REMOVE_FIGURE");
+    writeLine(QString::number(index));
+}
+
+void IpcClient::cancelRemoveDimensionFigure(uint8_t index) {
+    writeLine("USB_CANCEL_REMOVE_FIGURE");
+    writeLine(QString::number(index));
+}
+
 void IpcClient::onStderr() {
     buffer.append(process->readAllStandardError());
     int idx;
