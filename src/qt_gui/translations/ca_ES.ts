@@ -1740,6 +1740,10 @@ Selecciona una versió del panell dret.</translation>
       <source>None</source>
       <translation>Cap</translation>
     </message>
+    <message>
+      <source>Manage Skylanders</source>
+      <translation>Administra Skylanders</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -2531,6 +2535,22 @@ Selecciona una versió del panell dret.</translation>
       <source>Portable launcherDir folder created</source>
       <translation>S'ha creat la carpeta launcherDir portàtil</translation>
     </message>
+    <message>
+      <source>USB Device</source>
+      <translation>Dispositiu USB</translation>
+    </message>
+    <message>
+      <source>Real USB Device</source>
+      <translation>Dispositiu USB real</translation>
+    </message>
+    <message>
+      <source>Skylander Portal</source>
+      <translation>Portal de Skylanders</translation>
+    </message>
+    <message>
+      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.</source>
+      <translation>Dispositiu USB:\nDispositiu USB real: Fes servir un dispositiu USB real connectat al sistema.\nPortal Skylander: Emula un portal de Skylander.</translation>
+    </message>
   </context>
   <context>
     <name>ShortcutDialog</name>
@@ -2837,6 +2857,126 @@ Would you like to download it now?</source>
     <message>
       <source>A version with that name already exists.</source>
       <translation>Ja existeix una versió amb aquest nom.</translation>
+    </message>
+  </context>
+  <context>
+    <name>skylander_creator_dialog</name>
+    <message>
+      <source>Skylander Creator</source>
+      <translation>Creador de Skylanders</translation>
+    </message>
+    <message>
+      <source>--Unknown--</source>
+      <translation>--Desconegut--</translation>
+    </message>
+    <message>
+      <source>ID:</source>
+      <translation>ID:</translation>
+    </message>
+    <message>
+      <source>Variant:</source>
+      <translation>Variant:</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation>Crea</translation>
+    </message>
+    <message>
+      <source>Cancel</source>
+      <translation>Cancel·la</translation>
+    </message>
+    <message>
+      <source>Error converting value</source>
+      <translation>Error en convertir el valor</translation>
+    </message>
+    <message>
+      <source>ID entered is invalid!</source>
+      <translation>La ID no és vàlida!</translation>
+    </message>
+    <message>
+      <source>Variant entered is invalid!</source>
+      <translation>La variant introduïda no és vàlida!</translation>
+    </message>
+    <message>
+      <source>Create Skylander File</source>
+      <translation>Crea fitxer de Skylander</translation>
+    </message>
+    <message>
+      <source>Skylander Object (*.sky);;All Files (*)</source>
+      <translation>Objecte de Skylander (*.sky);;Tots els fitxers(*)</translation>
+    </message>
+    <message>
+      <source>Failed to create skylander file!</source>
+      <translation>Error en crear el fitxer de Skylander!</translation>
+    </message>
+    <message>
+      <source>Failed to create skylander file:
+%1</source>
+      <translation>Error en crear el fitxer de Skylander:
+%1</translation>
+    </message>
+  </context>
+  <context>
+    <name>skylander_dialog</name>
+    <message>
+      <source>Skylanders Manager</source>
+      <translation>Administrador de Skylanders</translation>
+    </message>
+    <message>
+      <source>Active Portal Skylanders:</source>
+      <translation>Activa el Portal Skylanders:</translation>
+    </message>
+    <message>
+      <source>Skylander %1</source>
+      <translation>Skylander %1</translation>
+    </message>
+    <message>
+      <source>Clear</source>
+      <translation>Netejar</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation>Crea</translation>
+    </message>
+    <message>
+      <source>Load</source>
+      <translation>Carrega</translation>
+    </message>
+    <message>
+      <source>Select Skylander File</source>
+      <translation>Selecciona fitxer de Skylander</translation>
+    </message>
+    <message>
+      <source>Skylander (*.sky *.bin *.dmp *.dump);;All Files (*)</source>
+      <translation>Skylander (*.sky *.bin *.dmp *.dump);;Tots els fitxers (*)</translation>
+    </message>
+    <message>
+      <source>Failed to open the skylander file!</source>
+      <translation>Error en obrir el fitxer Skylander!</translation>
+    </message>
+    <message>
+      <source>Failed to open the skylander file(%1)!
+File may already be in use on the portal.</source>
+      <translation>Error en obrir el fitxer de Skylander(%1)!
+El fitxer ja estaria en ús en el portal.</translation>
+    </message>
+    <message>
+      <source>Failed to read the skylander file!</source>
+      <translation>Error en llegir el fitxer Skylander!</translation>
+    </message>
+    <message>
+      <source>Failed to read the skylander file(%1)!
+File was too small.</source>
+      <translation>Error en llegir el fitxer skylander(%1)!
+El fitxer és massa petit.</translation>
+    </message>
+    <message>
+      <source>Unknown (Id:%1 Var:%2)</source>
+      <translation>Desconegut (Id:%1 Var:%2)</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation>Cap</translation>
     </message>
   </context>
 </TS>

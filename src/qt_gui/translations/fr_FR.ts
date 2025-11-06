@@ -539,7 +539,7 @@
     </message>
     <message>
       <source>L1 and L2</source>
-      <translation type="unfinished">L1 and L2</translation>
+      <translation>L1 et L2</translation>
     </message>
     <message>
       <source>Active Gamepad</source>
@@ -547,79 +547,79 @@
     </message>
     <message>
       <source>Gamepad ID</source>
-      <translation type="unfinished">Gamepad ID</translation>
+      <translation>Gamepad ID</translation>
     </message>
     <message>
       <source>Default Gamepad</source>
-      <translation type="unfinished">Default Gamepad</translation>
+      <translation>Manette par défaut</translation>
     </message>
     <message>
       <source>No default selected</source>
-      <translation type="unfinished">No default selected</translation>
+      <translation>Aucune valeur par défaut</translation>
     </message>
     <message>
       <source>n/a</source>
-      <translation type="unfinished">n/a</translation>
+      <translation>n/d</translation>
     </message>
     <message>
       <source>Set Active Gamepad as Default</source>
-      <translation type="unfinished">Set Active Gamepad as Default</translation>
+      <translation>Définir la manette active par défaut</translation>
     </message>
     <message>
       <source>Remove Default Gamepad</source>
-      <translation type="unfinished">Remove Default Gamepad</translation>
+      <translation>Supprimer la manette par défaut</translation>
     </message>
     <message>
       <source>R1 and R2</source>
-      <translation type="unfinished">R1 and R2</translation>
+      <translation>R1 et R2</translation>
     </message>
     <message>
       <source>ID: </source>
-      <translation type="unfinished">ID: </translation>
+      <translation>ID : </translation>
     </message>
     <message>
       <source>Default Controller Selected</source>
-      <translation type="unfinished">Default Controller Selected</translation>
+      <translation>Contrôleur par défaut sélectionné</translation>
     </message>
     <message>
       <source>Active controller set as default</source>
-      <translation type="unfinished">Active controller set as default</translation>
+      <translation>Réglage par défaut du contrôleur actif</translation>
     </message>
     <message>
       <source>Default Controller Removed</source>
-      <translation type="unfinished">Default Controller Removed</translation>
+      <translation>Contrôleur par défaut supprimé</translation>
     </message>
     <message>
       <source>Default controller setting removed</source>
-      <translation type="unfinished">Default controller setting removed</translation>
+      <translation>Réglage du contrôleur par défaut supprimé</translation>
     </message>
     <message>
       <source>RED</source>
-      <translation type="unfinished">RED</translation>
+      <translation>ROUGE</translation>
     </message>
     <message>
       <source>GREEN</source>
-      <translation type="unfinished">GREEN</translation>
+      <translation>VERT</translation>
     </message>
     <message>
       <source>BLUE</source>
-      <translation type="unfinished">BLUE</translation>
+      <translation>BLEU</translation>
     </message>
     <message>
       <source>Left Stick Deadzone</source>
-      <translation type="unfinished">Left Stick Deadzone</translation>
+      <translation>Deadzone du joystick gauche</translation>
     </message>
     <message>
       <source>Min Deadzone (def:2 max:127)</source>
-      <translation type="unfinished">Min Deadzone (def:2 max:127)</translation>
+      <translation>Joystick Gauche Deadzone (def:2 max:127)</translation>
     </message>
     <message>
       <source>Max Deadzone (def:127 max:127)</source>
-      <translation type="unfinished">Max Deadzone (def:127 max:127)</translation>
+      <translation>Max Deadzone (def:127 max:127)</translation>
     </message>
     <message>
       <source>Right Stick Deadzone</source>
-      <translation type="unfinished">Right Stick Deadzone</translation>
+      <translation>Deadzone du joystick droit</translation>
     </message>
   </context>
   <context>
@@ -707,23 +707,23 @@
     </message>
     <message>
       <source>Directory to install emulator versions</source>
-      <translation type="unfinished">Directory to install emulator versions</translation>
+      <translation>Dossier pour installer les versions d'émulateur</translation>
     </message>
     <message>
       <source>Directory with your dumped games</source>
-      <translation type="unfinished">Directory with your dumped games</translation>
+      <translation>Dossier avec vos jeux dumpés</translation>
     </message>
     <message>
       <source>Directory with your dumped DLC&apos;s</source>
-      <translation type="unfinished">Directory with your dumped DLC&apos;s</translation>
+      <translation>Dossier avec vos DLC&apos;s</translation>
     </message>
     <message>
       <source>Directory with games</source>
-      <translation type="unfinished">Directory with games</translation>
+      <translation>Dossier avec jeux</translation>
     </message>
     <message>
       <source>Directory with DLC&apos;s</source>
-      <translation type="unfinished">Directory with DLC&apos;s</translation>
+      <translation>Dossier des DLC&apos;s</translation>
     </message>
   </context>
   <context>
@@ -1000,11 +1000,11 @@
     </message>
     <message>
       <source>Game-specific Settings...</source>
-      <translation type="unfinished">Game-specific Settings...</translation>
+      <translation>Paramètres spécifiques du jeu...</translation>
     </message>
     <message>
       <source>Configure Game-specific Settings</source>
-      <translation type="unfinished">Configure Game-specific Settings</translation>
+      <translation>Configurer les paramètres spécifiques du jeu</translation>
     </message>
     <message>
       <source>Create Game-specific Settings from Global Settings</source>
@@ -1739,6 +1739,10 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>None</source>
       <translation type="unfinished">None</translation>
+    </message>
+    <message>
+      <source>Manage Skylanders</source>
+      <translation type="unfinished">Manage Skylanders</translation>
     </message>
   </context>
   <context>
@@ -2531,6 +2535,22 @@ Select an emulator version from the right panel.</translation>
       <source>Portable launcherDir folder created</source>
       <translation type="unfinished">Portable launcherDir folder created</translation>
     </message>
+    <message>
+      <source>USB Device</source>
+      <translation type="unfinished">USB Device</translation>
+    </message>
+    <message>
+      <source>Real USB Device</source>
+      <translation type="unfinished">Real USB Device</translation>
+    </message>
+    <message>
+      <source>Skylander Portal</source>
+      <translation type="unfinished">Skylander Portal</translation>
+    </message>
+    <message>
+      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.</source>
+      <translation type="unfinished">USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.</translation>
+    </message>
   </context>
   <context>
     <name>ShortcutDialog</name>
@@ -2839,6 +2859,126 @@ Would you like to download it now?</translation>
     <message>
       <source>A version with that name already exists.</source>
       <translation type="unfinished">A version with that name already exists.</translation>
+    </message>
+  </context>
+  <context>
+    <name>skylander_creator_dialog</name>
+    <message>
+      <source>Skylander Creator</source>
+      <translation type="unfinished">Skylander Creator</translation>
+    </message>
+    <message>
+      <source>--Unknown--</source>
+      <translation type="unfinished">--Unknown--</translation>
+    </message>
+    <message>
+      <source>ID:</source>
+      <translation type="unfinished">ID:</translation>
+    </message>
+    <message>
+      <source>Variant:</source>
+      <translation type="unfinished">Variant:</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation type="unfinished">Create</translation>
+    </message>
+    <message>
+      <source>Cancel</source>
+      <translation type="unfinished">Cancel</translation>
+    </message>
+    <message>
+      <source>Error converting value</source>
+      <translation type="unfinished">Error converting value</translation>
+    </message>
+    <message>
+      <source>ID entered is invalid!</source>
+      <translation type="unfinished">ID entered is invalid!</translation>
+    </message>
+    <message>
+      <source>Variant entered is invalid!</source>
+      <translation type="unfinished">Variant entered is invalid!</translation>
+    </message>
+    <message>
+      <source>Create Skylander File</source>
+      <translation type="unfinished">Create Skylander File</translation>
+    </message>
+    <message>
+      <source>Skylander Object (*.sky);;All Files (*)</source>
+      <translation type="unfinished">Skylander Object (*.sky);;All Files (*)</translation>
+    </message>
+    <message>
+      <source>Failed to create skylander file!</source>
+      <translation type="unfinished">Failed to create skylander file!</translation>
+    </message>
+    <message>
+      <source>Failed to create skylander file:
+%1</source>
+      <translation type="unfinished">Failed to create skylander file:
+%1</translation>
+    </message>
+  </context>
+  <context>
+    <name>skylander_dialog</name>
+    <message>
+      <source>Skylanders Manager</source>
+      <translation type="unfinished">Skylanders Manager</translation>
+    </message>
+    <message>
+      <source>Active Portal Skylanders:</source>
+      <translation type="unfinished">Active Portal Skylanders:</translation>
+    </message>
+    <message>
+      <source>Skylander %1</source>
+      <translation type="unfinished">Skylander %1</translation>
+    </message>
+    <message>
+      <source>Clear</source>
+      <translation type="unfinished">Clear</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation type="unfinished">Create</translation>
+    </message>
+    <message>
+      <source>Load</source>
+      <translation type="unfinished">Load</translation>
+    </message>
+    <message>
+      <source>Select Skylander File</source>
+      <translation type="unfinished">Select Skylander File</translation>
+    </message>
+    <message>
+      <source>Skylander (*.sky *.bin *.dmp *.dump);;All Files (*)</source>
+      <translation type="unfinished">Skylander (*.sky *.bin *.dmp *.dump);;All Files (*)</translation>
+    </message>
+    <message>
+      <source>Failed to open the skylander file!</source>
+      <translation type="unfinished">Failed to open the skylander file!</translation>
+    </message>
+    <message>
+      <source>Failed to open the skylander file(%1)!
+File may already be in use on the portal.</source>
+      <translation type="unfinished">Failed to open the skylander file(%1)!
+File may already be in use on the portal.</translation>
+    </message>
+    <message>
+      <source>Failed to read the skylander file!</source>
+      <translation type="unfinished">Failed to read the skylander file!</translation>
+    </message>
+    <message>
+      <source>Failed to read the skylander file(%1)!
+File was too small.</source>
+      <translation type="unfinished">Failed to read the skylander file(%1)!
+File was too small.</translation>
+    </message>
+    <message>
+      <source>Unknown (Id:%1 Var:%2)</source>
+      <translation type="unfinished">Unknown (Id:%1 Var:%2)</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation type="unfinished">None</translation>
     </message>
   </context>
 </TS>

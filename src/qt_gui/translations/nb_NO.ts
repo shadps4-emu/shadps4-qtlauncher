@@ -1740,6 +1740,10 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <source>None</source>
       <translation>Ingen</translation>
     </message>
+    <message>
+      <source>Manage Skylanders</source>
+      <translation>Håndter Skylanders</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -2531,6 +2535,22 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <source>Portable launcherDir folder created</source>
       <translation>Opprettet flyttbar startprogram-mappe</translation>
     </message>
+    <message>
+      <source>USB Device</source>
+      <translation>USB-enhet</translation>
+    </message>
+    <message>
+      <source>Real USB Device</source>
+      <translation>Ekte USB-enhet</translation>
+    </message>
+    <message>
+      <source>Skylander Portal</source>
+      <translation>Skylanders portal</translation>
+    </message>
+    <message>
+      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.</source>
+      <translation>USB-enhet:\nEkte USB-enhet: Bruk en ekte USB-enhet tilkoblet systemet.\nSkylanders portal: Emuler en «Skylanders Portal of Power».</translation>
+    </message>
   </context>
   <context>
     <name>ShortcutDialog</name>
@@ -2839,6 +2859,126 @@ Would you like to download it now?</source>
     <message>
       <source>A version with that name already exists.</source>
       <translation>En versjon med det navnet finnes allerede.</translation>
+    </message>
+  </context>
+  <context>
+    <name>skylander_creator_dialog</name>
+    <message>
+      <source>Skylander Creator</source>
+      <translation>Opprettelse av Skylander</translation>
+    </message>
+    <message>
+      <source>--Unknown--</source>
+      <translation>–Ukjent–</translation>
+    </message>
+    <message>
+      <source>ID:</source>
+      <translation>ID:</translation>
+    </message>
+    <message>
+      <source>Variant:</source>
+      <translation>Variant:</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation>Opprett</translation>
+    </message>
+    <message>
+      <source>Cancel</source>
+      <translation>Avbryt</translation>
+    </message>
+    <message>
+      <source>Error converting value</source>
+      <translation>Feil ved konvertering av verdi</translation>
+    </message>
+    <message>
+      <source>ID entered is invalid!</source>
+      <translation>ID-en er ugyldig!</translation>
+    </message>
+    <message>
+      <source>Variant entered is invalid!</source>
+      <translation>Varianten er ugyldig!</translation>
+    </message>
+    <message>
+      <source>Create Skylander File</source>
+      <translation>Opprett Skylander-fil</translation>
+    </message>
+    <message>
+      <source>Skylander Object (*.sky);;All Files (*)</source>
+      <translation>Skylander-objekt (*.sky);;Alle filer (*)</translation>
+    </message>
+    <message>
+      <source>Failed to create skylander file!</source>
+      <translation>Klarte ikke opprette Skylander-fil!</translation>
+    </message>
+    <message>
+      <source>Failed to create skylander file:
+%1</source>
+      <translation>Klarte ikke opprette Skylander-fil:
+%1</translation>
+    </message>
+  </context>
+  <context>
+    <name>skylander_dialog</name>
+    <message>
+      <source>Skylanders Manager</source>
+      <translation>Behandling av Skylanders</translation>
+    </message>
+    <message>
+      <source>Active Portal Skylanders:</source>
+      <translation>Portal Skylanders i bruk:</translation>
+    </message>
+    <message>
+      <source>Skylander %1</source>
+      <translation>Skylander %1</translation>
+    </message>
+    <message>
+      <source>Clear</source>
+      <translation>Tøm</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation>Opprett</translation>
+    </message>
+    <message>
+      <source>Load</source>
+      <translation>Last</translation>
+    </message>
+    <message>
+      <source>Select Skylander File</source>
+      <translation>Velg Skylander-fil</translation>
+    </message>
+    <message>
+      <source>Skylander (*.sky *.bin *.dmp *.dump);;All Files (*)</source>
+      <translation>Skylander (*.sky *.bin *.dmp *.dump);;Alle filer (*)</translation>
+    </message>
+    <message>
+      <source>Failed to open the skylander file!</source>
+      <translation>Klarte ikke åpne Skylander-fila!</translation>
+    </message>
+    <message>
+      <source>Failed to open the skylander file(%1)!
+File may already be in use on the portal.</source>
+      <translation>Klarte ikke åpne Skylander-fila: %1!
+Fila kan allerede være i bruk på portalen.</translation>
+    </message>
+    <message>
+      <source>Failed to read the skylander file!</source>
+      <translation>Klarte ikke lese Skylander-fila!</translation>
+    </message>
+    <message>
+      <source>Failed to read the skylander file(%1)!
+File was too small.</source>
+      <translation>Klarte ikke lese Skylander-fila: %1!
+Fila var for liten.</translation>
+    </message>
+    <message>
+      <source>Unknown (Id:%1 Var:%2)</source>
+      <translation>Ukjent (ID: %1 Variant: %2)</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation>Ingen</translation>
     </message>
   </context>
 </TS>

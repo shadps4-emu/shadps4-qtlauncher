@@ -711,19 +711,19 @@
     </message>
     <message>
       <source>Directory with your dumped games</source>
-      <translation type="unfinished">Directory with your dumped games</translation>
+      <translation>Diretório com seus jogos extraídos</translation>
     </message>
     <message>
       <source>Directory with your dumped DLC&apos;s</source>
-      <translation type="unfinished">Directory with your dumped DLC&apos;s</translation>
+      <translation>Diretório com suas DLC&apos;s extraídas</translation>
     </message>
     <message>
       <source>Directory with games</source>
-      <translation type="unfinished">Directory with games</translation>
+      <translation>Diretório com jogos</translation>
     </message>
     <message>
       <source>Directory with DLC&apos;s</source>
-      <translation type="unfinished">Directory with DLC&apos;s</translation>
+      <translation>Diretório com DLC&apos;s</translation>
     </message>
   </context>
   <context>
@@ -1052,15 +1052,15 @@
     </message>
     <message>
       <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
-      <translation type="unfinished">Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</translation>
+      <translation>Não foi possível enviar o relatório, pois o log mais recente do jogo falhou na seguinte verificação e, portanto, seria um relatório inválido:</translation>
     </message>
     <message>
       <source>Ok</source>
-      <translation type="unfinished">Ok</translation>
+      <translation>Ok</translation>
     </message>
     <message>
       <source>Info</source>
-      <translation type="unfinished">Info</translation>
+      <translation>Informações</translation>
     </message>
     <message>
       <source>Create Shortcut for Selected Emulator Version</source>
@@ -1072,23 +1072,23 @@
     </message>
     <message>
       <source>Create Shortcut</source>
-      <translation type="unfinished">Create Shortcut</translation>
+      <translation>Criar Atalho</translation>
     </message>
     <message>
       <source>Shortcut creation</source>
-      <translation type="unfinished">Shortcut creation</translation>
+      <translation>Criação de atalho</translation>
     </message>
     <message>
       <source>Shortcut created successfully!</source>
-      <translation type="unfinished">Shortcut created successfully!</translation>
+      <translation>Atalho criado com sucesso!</translation>
     </message>
     <message>
       <source>Error creating shortcut!</source>
-      <translation type="unfinished">Error creating shortcut!</translation>
+      <translation>Erro ao criar atalho!</translation>
     </message>
     <message>
       <source>Failed to convert icon.</source>
-      <translation type="unfinished">Failed to convert icon.</translation>
+      <translation>Falha ao converter o ícone.</translation>
     </message>
   </context>
   <context>
@@ -1726,11 +1726,11 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Run Emulator</source>
-      <translation type="unfinished">Run Emulator</translation>
+      <translation>Executar emulador</translation>
     </message>
     <message>
       <source>Emulator is already running!</source>
-      <translation type="unfinished">Emulator is already running!</translation>
+      <translation>O jogo já está executando!</translation>
     </message>
     <message>
       <source>Invalid game argument provided</source>
@@ -1738,7 +1738,11 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Nenhum</translation>
+    </message>
+    <message>
+      <source>Manage Skylanders</source>
+      <translation type="unfinished">Manage Skylanders</translation>
     </message>
   </context>
   <context>
@@ -2473,11 +2477,11 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Vulkan Validation (Requires Vulkan SDK)</source>
-      <translation type="unfinished">Vulkan Validation (Requires Vulkan SDK)</translation>
+      <translation>Validação Vulkan (Requer Vulkan SDK)</translation>
     </message>
     <message>
       <source>Validation Layers</source>
-      <translation type="unfinished">Validation Layers</translation>
+      <translation>Camadas de Validação</translation>
     </message>
     <message>
       <source>Enable Core Validation</source>
@@ -2489,7 +2493,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation</source>
-      <translation type="unfinished">Enable GPU-Assisted Validation</translation>
+      <translation>Ativar Validação Assistida por GPU</translation>
     </message>
     <message>
       <source>Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
@@ -2531,24 +2535,40 @@ Selecione uma versão do emulador no painel direito.</translation>
       <source>Portable launcherDir folder created</source>
       <translation type="unfinished">Portable launcherDir folder created</translation>
     </message>
+    <message>
+      <source>USB Device</source>
+      <translation>Dispositivo USB</translation>
+    </message>
+    <message>
+      <source>Real USB Device</source>
+      <translation>Dispositivo USB real</translation>
+    </message>
+    <message>
+      <source>Skylander Portal</source>
+      <translation type="unfinished">Skylander Portal</translation>
+    </message>
+    <message>
+      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.</source>
+      <translation type="unfinished">USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.</translation>
+    </message>
   </context>
   <context>
     <name>ShortcutDialog</name>
     <message>
       <source>Select Version</source>
-      <translation type="unfinished">Select Version</translation>
+      <translation>Selecionar Versão</translation>
     </message>
     <message>
       <source>Select version for shortcut creation</source>
-      <translation type="unfinished">Select version for shortcut creation</translation>
+      <translation>Selecione a versão para criação do atalho</translation>
     </message>
     <message>
       <source>No Version Selected</source>
-      <translation type="unfinished">No Version Selected</translation>
+      <translation>Nenhuma Versão Selecionada</translation>
     </message>
     <message>
       <source>Select a version first</source>
-      <translation type="unfinished">Select a version first</translation>
+      <translation>Primeiro selecione uma versão</translation>
     </message>
   </context>
   <context>
@@ -2838,7 +2858,127 @@ Deseja baixá-la agora?</translation>
     </message>
     <message>
       <source>A version with that name already exists.</source>
-      <translation type="unfinished">A version with that name already exists.</translation>
+      <translation>Já existe uma versão com esse nome.</translation>
+    </message>
+  </context>
+  <context>
+    <name>skylander_creator_dialog</name>
+    <message>
+      <source>Skylander Creator</source>
+      <translation type="unfinished">Skylander Creator</translation>
+    </message>
+    <message>
+      <source>--Unknown--</source>
+      <translation>--Desconhecido--</translation>
+    </message>
+    <message>
+      <source>ID:</source>
+      <translation>ID:</translation>
+    </message>
+    <message>
+      <source>Variant:</source>
+      <translation type="unfinished">Variant:</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation>Criar</translation>
+    </message>
+    <message>
+      <source>Cancel</source>
+      <translation>Cancelar</translation>
+    </message>
+    <message>
+      <source>Error converting value</source>
+      <translation type="unfinished">Error converting value</translation>
+    </message>
+    <message>
+      <source>ID entered is invalid!</source>
+      <translation type="unfinished">ID entered is invalid!</translation>
+    </message>
+    <message>
+      <source>Variant entered is invalid!</source>
+      <translation type="unfinished">Variant entered is invalid!</translation>
+    </message>
+    <message>
+      <source>Create Skylander File</source>
+      <translation type="unfinished">Create Skylander File</translation>
+    </message>
+    <message>
+      <source>Skylander Object (*.sky);;All Files (*)</source>
+      <translation type="unfinished">Skylander Object (*.sky);;All Files (*)</translation>
+    </message>
+    <message>
+      <source>Failed to create skylander file!</source>
+      <translation type="unfinished">Failed to create skylander file!</translation>
+    </message>
+    <message>
+      <source>Failed to create skylander file:
+%1</source>
+      <translation type="unfinished">Failed to create skylander file:
+%1</translation>
+    </message>
+  </context>
+  <context>
+    <name>skylander_dialog</name>
+    <message>
+      <source>Skylanders Manager</source>
+      <translation type="unfinished">Skylanders Manager</translation>
+    </message>
+    <message>
+      <source>Active Portal Skylanders:</source>
+      <translation type="unfinished">Active Portal Skylanders:</translation>
+    </message>
+    <message>
+      <source>Skylander %1</source>
+      <translation type="unfinished">Skylander %1</translation>
+    </message>
+    <message>
+      <source>Clear</source>
+      <translation>Limpar</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation>Criar</translation>
+    </message>
+    <message>
+      <source>Load</source>
+      <translation>Carregar</translation>
+    </message>
+    <message>
+      <source>Select Skylander File</source>
+      <translation type="unfinished">Select Skylander File</translation>
+    </message>
+    <message>
+      <source>Skylander (*.sky *.bin *.dmp *.dump);;All Files (*)</source>
+      <translation type="unfinished">Skylander (*.sky *.bin *.dmp *.dump);;All Files (*)</translation>
+    </message>
+    <message>
+      <source>Failed to open the skylander file!</source>
+      <translation type="unfinished">Failed to open the skylander file!</translation>
+    </message>
+    <message>
+      <source>Failed to open the skylander file(%1)!
+File may already be in use on the portal.</source>
+      <translation type="unfinished">Failed to open the skylander file(%1)!
+File may already be in use on the portal.</translation>
+    </message>
+    <message>
+      <source>Failed to read the skylander file!</source>
+      <translation type="unfinished">Failed to read the skylander file!</translation>
+    </message>
+    <message>
+      <source>Failed to read the skylander file(%1)!
+File was too small.</source>
+      <translation type="unfinished">Failed to read the skylander file(%1)!
+File was too small.</translation>
+    </message>
+    <message>
+      <source>Unknown (Id:%1 Var:%2)</source>
+      <translation type="unfinished">Unknown (Id:%1 Var:%2)</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation type="unfinished">None</translation>
     </message>
   </context>
 </TS>

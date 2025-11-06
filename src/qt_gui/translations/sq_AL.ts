@@ -1740,6 +1740,10 @@ Përzgjidh një version të emulatorit nga paneli i djathtë.</translation>
       <source>None</source>
       <translation>Asnjë</translation>
     </message>
+    <message>
+      <source>Manage Skylanders</source>
+      <translation type="unfinished">Manage Skylanders</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -2532,6 +2536,22 @@ Zgjidh cilën skedë do të hapet; parazgjedhja është General.</translation>
       <source>Portable launcherDir folder created</source>
       <translation>Dosja portative launcherDir u krijua</translation>
     </message>
+    <message>
+      <source>USB Device</source>
+      <translation type="unfinished">USB Device</translation>
+    </message>
+    <message>
+      <source>Real USB Device</source>
+      <translation type="unfinished">Real USB Device</translation>
+    </message>
+    <message>
+      <source>Skylander Portal</source>
+      <translation type="unfinished">Skylander Portal</translation>
+    </message>
+    <message>
+      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.</source>
+      <translation type="unfinished">USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.</translation>
+    </message>
   </context>
   <context>
     <name>ShortcutDialog</name>
@@ -2840,6 +2860,126 @@ Dëshiron ta shkarkosh tani?</translation>
     <message>
       <source>A version with that name already exists.</source>
       <translation>Një version me atë emër ekziston tashmë.</translation>
+    </message>
+  </context>
+  <context>
+    <name>skylander_creator_dialog</name>
+    <message>
+      <source>Skylander Creator</source>
+      <translation type="unfinished">Skylander Creator</translation>
+    </message>
+    <message>
+      <source>--Unknown--</source>
+      <translation type="unfinished">--Unknown--</translation>
+    </message>
+    <message>
+      <source>ID:</source>
+      <translation type="unfinished">ID:</translation>
+    </message>
+    <message>
+      <source>Variant:</source>
+      <translation type="unfinished">Variant:</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation type="unfinished">Create</translation>
+    </message>
+    <message>
+      <source>Cancel</source>
+      <translation type="unfinished">Cancel</translation>
+    </message>
+    <message>
+      <source>Error converting value</source>
+      <translation type="unfinished">Error converting value</translation>
+    </message>
+    <message>
+      <source>ID entered is invalid!</source>
+      <translation type="unfinished">ID entered is invalid!</translation>
+    </message>
+    <message>
+      <source>Variant entered is invalid!</source>
+      <translation type="unfinished">Variant entered is invalid!</translation>
+    </message>
+    <message>
+      <source>Create Skylander File</source>
+      <translation type="unfinished">Create Skylander File</translation>
+    </message>
+    <message>
+      <source>Skylander Object (*.sky);;All Files (*)</source>
+      <translation type="unfinished">Skylander Object (*.sky);;All Files (*)</translation>
+    </message>
+    <message>
+      <source>Failed to create skylander file!</source>
+      <translation type="unfinished">Failed to create skylander file!</translation>
+    </message>
+    <message>
+      <source>Failed to create skylander file:
+%1</source>
+      <translation type="unfinished">Failed to create skylander file:
+%1</translation>
+    </message>
+  </context>
+  <context>
+    <name>skylander_dialog</name>
+    <message>
+      <source>Skylanders Manager</source>
+      <translation type="unfinished">Skylanders Manager</translation>
+    </message>
+    <message>
+      <source>Active Portal Skylanders:</source>
+      <translation>Skylanders Aktivë në Portal:</translation>
+    </message>
+    <message>
+      <source>Skylander %1</source>
+      <translation>Skylander %1</translation>
+    </message>
+    <message>
+      <source>Clear</source>
+      <translation>Pastro</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation>Krijo</translation>
+    </message>
+    <message>
+      <source>Load</source>
+      <translation>Ngarko</translation>
+    </message>
+    <message>
+      <source>Select Skylander File</source>
+      <translation>Përzgjidh Skedarin e Skylander-it</translation>
+    </message>
+    <message>
+      <source>Skylander (*.sky *.bin *.dmp *.dump);;All Files (*)</source>
+      <translation>Skylander (*.sky *.bin *.dmp *.dump);;Çdo Skedarë (*)</translation>
+    </message>
+    <message>
+      <source>Failed to open the skylander file!</source>
+      <translation>Nuk u hap dot skedari i skylander-it!</translation>
+    </message>
+    <message>
+      <source>Failed to open the skylander file(%1)!
+File may already be in use on the portal.</source>
+      <translation>Nuk u hapdot skedari i skylander-it (%1)!
+Skedari mund të jetë tashmë në përdorim në portal.</translation>
+    </message>
+    <message>
+      <source>Failed to read the skylander file!</source>
+      <translation>Nuk u lexua dot skedari i skylander-it!</translation>
+    </message>
+    <message>
+      <source>Failed to read the skylander file(%1)!
+File was too small.</source>
+      <translation>Nuk u lexua dot skedari i skylander-it (%1)!
+Skedari ishte shumë i vogël.</translation>
+    </message>
+    <message>
+      <source>Unknown (Id:%1 Var:%2)</source>
+      <translation>I panjohur (Id:%1 Var:%2)</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation>Asnjë</translation>
     </message>
   </context>
 </TS>
