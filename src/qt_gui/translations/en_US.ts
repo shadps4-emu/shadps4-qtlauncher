@@ -1736,6 +1736,14 @@ Select an emulator version from the right panel.</source>
         <source>Manage Skylanders</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Manage Infinity Figures</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Manage Dimensions Toypad</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SettingsDialog</name>
@@ -2540,7 +2548,15 @@ Select an emulator version from the right panel.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.</source>
+        <source>Infinity Base</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dimensions Toypad</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\Dimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2848,6 +2864,303 @@ Would you like to download it now?</source>
     </message>
     <message>
         <source>A version with that name already exists.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>dimensions_dialog</name>
+    <message>
+        <source>Dimensions Manager</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Active Dimensions Figures:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation type="unfinished">None</translation>
+    </message>
+    <message>
+        <source>Clear</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Create</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Load</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Move</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unknown Figure</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select Dimensions File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dimensions Figure (*.bin);;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to open the figure file!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to open the figure file(%1)!
+File may already be in use on the base.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to read the figure file!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to read the figure file(%1)!
+File was too small.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>figure_creator_dialog</name>
+    <message>
+        <source>Figure Creator</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Filter by Series:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>1.0</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>2.0</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>3.0</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>--Unknown--</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Figure Number:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Series:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Create</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="unfinished">Cancel</translation>
+    </message>
+    <message>
+        <source>Error converting value</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Figure number entered is invalid!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Series number entered is invalid!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Create Figure File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Infinity Figure (*.bin);;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to create figure file!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to create figure file:
+%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>infinity_dialog</name>
+    <message>
+        <source>Infinity Manager</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Active Infinity Figures:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Play Set/Power Disc</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Power Disc Two</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Power Disc Three</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Player One</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Player One Ability One</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Player One Ability Two</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Player Two</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Player Two Ability One</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Player Two Ability Two</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation type="unfinished">None</translation>
+    </message>
+    <message>
+        <source>Clear</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Create</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Load</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unknown Figure</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select Infinity File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Infinity Figure (*.bin);;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to open the figure file!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to open the figure file(%1)!
+File may already be in use on the base.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to read the figure file!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to read the figure file(%1)!
+File was too small.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>minifig_creator_dialog</name>
+    <message>
+        <source>Figure Creator</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>--Unknown--</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Figure Number:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Create</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="unfinished">Cancel</translation>
+    </message>
+    <message>
+        <source>Error converting value</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Figure number entered is invalid!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Create Figure File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dimensions Figure (*.bin);;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to create minifig file!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to create minifig file:
+%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>minifig_move_dialog</name>
+    <message>
+        <source>Figure Mover</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation type="unfinished">None</translation>
+    </message>
+    <message>
+        <source>Move Here</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pick up and Place</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
