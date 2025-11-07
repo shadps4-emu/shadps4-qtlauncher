@@ -3157,7 +3157,7 @@ Il file è troppo piccolo.</translation>
     <message>
       <source>Failed to create minifig file:
 %1</source>
-      <translation type="unfinished">Failed to create minifig file:
+      <translation>Impossibile Creare file minifig:
 %1</translation>
     </message>
   </context>
@@ -3165,19 +3165,19 @@ Il file è troppo piccolo.</translation>
     <name>minifig_move_dialog</name>
     <message>
       <source>Figure Mover</source>
-      <translation type="unfinished">Figure Mover</translation>
+      <translation>Spostamento Statuetta</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Nessuno</translation>
     </message>
     <message>
       <source>Move Here</source>
-      <translation type="unfinished">Move Here</translation>
+      <translation>Sposta qui</translation>
     </message>
     <message>
       <source>Pick up and Place</source>
-      <translation type="unfinished">Pick up and Place</translation>
+      <translation>Prendi e Posiziona</translation>
     </message>
   </context>
   <context>
