@@ -2545,11 +2545,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>USB Device</source>
-      <translation>Устройство USB</translation>
+      <translation type="unfinished">USB Device</translation>
     </message>
     <message>
       <source>Real USB Device</source>
-      <translation>Настоящее устройство USB</translation>
+      <translation type="unfinished">Real USB Device</translation>
     </message>
     <message>
       <source>Skylander Portal</source>
