@@ -1746,11 +1746,11 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
     </message>
     <message>
       <source>Manage Infinity Figures</source>
-      <translation type="unfinished">Manage Infinity Figures</translation>
+      <translation>Gestisci Statuette Infinity</translation>
     </message>
     <message>
       <source>Manage Dimensions Toypad</source>
-      <translation type="unfinished">Manage Dimensions Toypad</translation>
+      <translation>Gestire Toypad Dimensions</translation>
     </message>
   </context>
   <context>
@@ -2557,15 +2557,15 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
     </message>
     <message>
       <source>Infinity Base</source>
-      <translation type="unfinished">Infinity Base</translation>
+      <translation>Base Infinity</translation>
     </message>
     <message>
       <source>Dimensions Toypad</source>
-      <translation type="unfinished">Dimensions Toypad</translation>
+      <translation>Toypad Dimensions</translation>
     </message>
     <message>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\Dimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
-      <translation type="unfinished">USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\Dimensions Toypad: Emulate a Lego Dimensions Toypad.</translation>
+      <translation>Dispositivo USB:\nDispositivo USB reale: Usa un vero Dispositivo USB collegato al sistema.\nPortale Skylander: Emula un Portale del Potere Skylander.\n Base Infinity: Emula una Base Disney Infinity.\Toypad Dimensions: Emula un Toypad Lego Dimensions.</translation>
     </message>
   </context>
   <context>
@@ -2881,139 +2881,139 @@ Vuoi scaricarla ora?</translation>
     <name>dimensions_dialog</name>
     <message>
       <source>Dimensions Manager</source>
-      <translation type="unfinished">Dimensions Manager</translation>
+      <translation>Gestore Dimensions</translation>
     </message>
     <message>
       <source>Active Dimensions Figures:</source>
-      <translation type="unfinished">Active Dimensions Figures:</translation>
+      <translation>Statuette Dimensions Attive:</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Nessuno</translation>
     </message>
     <message>
       <source>Clear</source>
-      <translation type="unfinished">Clear</translation>
+      <translation>Cancella</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Crea</translation>
     </message>
     <message>
       <source>Load</source>
-      <translation type="unfinished">Load</translation>
+      <translation>Carica</translation>
     </message>
     <message>
       <source>Move</source>
-      <translation type="unfinished">Move</translation>
+      <translation>Sposta</translation>
     </message>
     <message>
       <source>Unknown Figure</source>
-      <translation type="unfinished">Unknown Figure</translation>
+      <translation>Statuetta Sconosciuta</translation>
     </message>
     <message>
       <source>Select Dimensions File</source>
-      <translation type="unfinished">Select Dimensions File</translation>
+      <translation>Seleziona File Dimensions</translation>
     </message>
     <message>
       <source>Dimensions Figure (*.bin);;</source>
-      <translation type="unfinished">Dimensions Figure (*.bin);;</translation>
+      <translation>Statuetta Dimensions (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to open the figure file!</source>
-      <translation type="unfinished">Failed to open the figure file!</translation>
+      <translation>Impossibile aprire il file statuetta!</translation>
     </message>
     <message>
       <source>Failed to open the figure file(%1)!
 File may already be in use on the base.</source>
-      <translation type="unfinished">Failed to open the figure file(%1)!
-File may already be in use on the base.</translation>
+      <translation>Apertura del file statuetta (%1) non riuscita!
+Il file potrebbe essere già in uso sulla base.</translation>
     </message>
     <message>
       <source>Failed to read the figure file!</source>
-      <translation type="unfinished">Failed to read the figure file!</translation>
+      <translation>Lettura del file statuetta non riuscita!</translation>
     </message>
     <message>
       <source>Failed to read the figure file(%1)!
 File was too small.</source>
-      <translation type="unfinished">Failed to read the figure file(%1)!
-File was too small.</translation>
+      <translation>Lettura del file statuetta (%1) non riuscita!
+Il file è troppo piccolo.</translation>
     </message>
   </context>
   <context>
     <name>figure_creator_dialog</name>
     <message>
       <source>Figure Creator</source>
-      <translation type="unfinished">Figure Creator</translation>
+      <translation>Creatore Statuette</translation>
     </message>
     <message>
       <source>Filter by Series:</source>
-      <translation type="unfinished">Filter by Series:</translation>
+      <translation>Filtra per Serie:</translation>
     </message>
     <message>
       <source>All</source>
-      <translation type="unfinished">All</translation>
+      <translation>Tutti</translation>
     </message>
     <message>
       <source>1.0</source>
-      <translation type="unfinished">1.0</translation>
+      <translation>1.0</translation>
     </message>
     <message>
       <source>2.0</source>
-      <translation type="unfinished">2.0</translation>
+      <translation>2.0</translation>
     </message>
     <message>
       <source>3.0</source>
-      <translation type="unfinished">3.0</translation>
+      <translation>3.0</translation>
     </message>
     <message>
       <source>--Unknown--</source>
-      <translation type="unfinished">--Unknown--</translation>
+      <translation>--Sconosciuto--</translation>
     </message>
     <message>
       <source>Figure Number:</source>
-      <translation type="unfinished">Figure Number:</translation>
+      <translation>Numero Statuetta:</translation>
     </message>
     <message>
       <source>Series:</source>
-      <translation type="unfinished">Series:</translation>
+      <translation>Serie:</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Crea</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Annulla</translation>
     </message>
     <message>
       <source>Error converting value</source>
-      <translation type="unfinished">Error converting value</translation>
+      <translation>Errore nella conversione del valore</translation>
     </message>
     <message>
       <source>Figure number entered is invalid!</source>
-      <translation type="unfinished">Figure number entered is invalid!</translation>
+      <translation>Il numero della statuetta inserito non è valido!</translation>
     </message>
     <message>
       <source>Series number entered is invalid!</source>
-      <translation type="unfinished">Series number entered is invalid!</translation>
+      <translation>Il numero di serie inserito non è valido!</translation>
     </message>
     <message>
       <source>Create Figure File</source>
-      <translation type="unfinished">Create Figure File</translation>
+      <translation>Crea File Statuetta</translation>
     </message>
     <message>
       <source>Infinity Figure (*.bin);;</source>
-      <translation type="unfinished">Infinity Figure (*.bin);;</translation>
+      <translation>Statuetta Infinity (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to create figure file!</source>
-      <translation type="unfinished">Failed to create figure file!</translation>
+      <translation>Creazione del file statuetta non riuscita!</translation>
     </message>
     <message>
       <source>Failed to create figure file:
 %1</source>
-      <translation type="unfinished">Failed to create figure file:
+      <translation>Creazione del file statuetta non riuscita:
 %1</translation>
     </message>
   </context>
@@ -3021,138 +3021,138 @@ File was too small.</translation>
     <name>infinity_dialog</name>
     <message>
       <source>Infinity Manager</source>
-      <translation type="unfinished">Infinity Manager</translation>
+      <translation>Gestore Infinity</translation>
     </message>
     <message>
       <source>Active Infinity Figures:</source>
-      <translation type="unfinished">Active Infinity Figures:</translation>
+      <translation>Statuette Infinity Attive:</translation>
     </message>
     <message>
       <source>Play Set/Power Disc</source>
-      <translation type="unfinished">Play Set/Power Disc</translation>
+      <translation>Riproduci Set/Power Disc</translation>
     </message>
     <message>
       <source>Power Disc Two</source>
-      <translation type="unfinished">Power Disc Two</translation>
+      <translation>Power Disc Due</translation>
     </message>
     <message>
       <source>Power Disc Three</source>
-      <translation type="unfinished">Power Disc Three</translation>
+      <translation>Power Disc Tre</translation>
     </message>
     <message>
       <source>Player One</source>
-      <translation type="unfinished">Player One</translation>
+      <translation>Giocatore Uno</translation>
     </message>
     <message>
       <source>Player One Ability One</source>
-      <translation type="unfinished">Player One Ability One</translation>
+      <translation>Giocatore Uno Abilità Uno</translation>
     </message>
     <message>
       <source>Player One Ability Two</source>
-      <translation type="unfinished">Player One Ability Two</translation>
+      <translation>Giocatore Uno Abilità Due</translation>
     </message>
     <message>
       <source>Player Two</source>
-      <translation type="unfinished">Player Two</translation>
+      <translation>Giocatore Due</translation>
     </message>
     <message>
       <source>Player Two Ability One</source>
-      <translation type="unfinished">Player Two Ability One</translation>
+      <translation>Giocatore Due Abilità Uno</translation>
     </message>
     <message>
       <source>Player Two Ability Two</source>
-      <translation type="unfinished">Player Two Ability Two</translation>
+      <translation>Giocatore Due Abilità Due</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Nessuno</translation>
     </message>
     <message>
       <source>Clear</source>
-      <translation type="unfinished">Clear</translation>
+      <translation>Cancella</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Crea</translation>
     </message>
     <message>
       <source>Load</source>
-      <translation type="unfinished">Load</translation>
+      <translation>Carica</translation>
     </message>
     <message>
       <source>Unknown Figure</source>
-      <translation type="unfinished">Unknown Figure</translation>
+      <translation>Statuetta Sconosciuta</translation>
     </message>
     <message>
       <source>Select Infinity File</source>
-      <translation type="unfinished">Select Infinity File</translation>
+      <translation>Seleziona File Infinity</translation>
     </message>
     <message>
       <source>Infinity Figure (*.bin);;</source>
-      <translation type="unfinished">Infinity Figure (*.bin);;</translation>
+      <translation>Statuetta Infinity (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to open the figure file!</source>
-      <translation type="unfinished">Failed to open the figure file!</translation>
+      <translation>Impossibile aprire il file statuetta!</translation>
     </message>
     <message>
       <source>Failed to open the figure file(%1)!
 File may already be in use on the base.</source>
-      <translation type="unfinished">Failed to open the figure file(%1)!
-File may already be in use on the base.</translation>
+      <translation>Apertura del file statuetta (%1) non riuscita!
+Il file potrebbe essere già in uso sulla base.</translation>
     </message>
     <message>
       <source>Failed to read the figure file!</source>
-      <translation type="unfinished">Failed to read the figure file!</translation>
+      <translation>Lettura del file statuetta non riuscita!</translation>
     </message>
     <message>
       <source>Failed to read the figure file(%1)!
 File was too small.</source>
-      <translation type="unfinished">Failed to read the figure file(%1)!
-File was too small.</translation>
+      <translation>Lettura del file statuetta (%1) non riuscita!
+Il file è troppo piccolo.</translation>
     </message>
   </context>
   <context>
     <name>minifig_creator_dialog</name>
     <message>
       <source>Figure Creator</source>
-      <translation type="unfinished">Figure Creator</translation>
+      <translation>Creatore Statuette</translation>
     </message>
     <message>
       <source>--Unknown--</source>
-      <translation type="unfinished">--Unknown--</translation>
+      <translation>--Sconosciuto--</translation>
     </message>
     <message>
       <source>Figure Number:</source>
-      <translation type="unfinished">Figure Number:</translation>
+      <translation>Numero Statuetta:</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Crea</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Annulla</translation>
     </message>
     <message>
       <source>Error converting value</source>
-      <translation type="unfinished">Error converting value</translation>
+      <translation>Errore nella conversione del valore</translation>
     </message>
     <message>
       <source>Figure number entered is invalid!</source>
-      <translation type="unfinished">Figure number entered is invalid!</translation>
+      <translation>Il numero della statuetta inserito non è valido!</translation>
     </message>
     <message>
       <source>Create Figure File</source>
-      <translation type="unfinished">Create Figure File</translation>
+      <translation>Crea File Statuetta</translation>
     </message>
     <message>
       <source>Dimensions Figure (*.bin);;</source>
-      <translation type="unfinished">Dimensions Figure (*.bin);;</translation>
+      <translation>Statuetta Dimensions (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to create minifig file!</source>
-      <translation type="unfinished">Failed to create minifig file!</translation>
+      <translation>Creazione file minifig non riuscita!</translation>
     </message>
     <message>
       <source>Failed to create minifig file:
