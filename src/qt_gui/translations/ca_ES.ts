@@ -1746,11 +1746,11 @@ Selecciona una versió del panell dret.</translation>
     </message>
     <message>
       <source>Manage Infinity Figures</source>
-      <translation type="unfinished">Manage Infinity Figures</translation>
+      <translation>Administrador de figures de Infinity</translation>
     </message>
     <message>
       <source>Manage Dimensions Toypad</source>
-      <translation type="unfinished">Manage Dimensions Toypad</translation>
+      <translation>Administrador del Toypad de Dimensions</translation>
     </message>
   </context>
   <context>
@@ -2557,15 +2557,15 @@ Selecciona una versió del panell dret.</translation>
     </message>
     <message>
       <source>Infinity Base</source>
-      <translation type="unfinished">Infinity Base</translation>
+      <translation>Base de Infinity</translation>
     </message>
     <message>
       <source>Dimensions Toypad</source>
-      <translation type="unfinished">Dimensions Toypad</translation>
+      <translation>Toypad de Dimensions</translation>
     </message>
     <message>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\Dimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
-      <translation type="unfinished">USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\Dimensions Toypad: Emulate a Lego Dimensions Toypad.</translation>
+      <translation>Dispositiu USB:\nDispositiu USB real: Fes servir un dispositiu USB enllaçat al sistema.\nPortal Skylander: Emula un portal Skylander.\nBase Infinity: Emula una base de Disney Infinity.\Dimensions Toypad: Emula un Toypad de Lego Dimensions.</translation>
     </message>
   </context>
   <context>
@@ -2879,139 +2879,139 @@ Would you like to download it now?</source>
     <name>dimensions_dialog</name>
     <message>
       <source>Dimensions Manager</source>
-      <translation type="unfinished">Dimensions Manager</translation>
+      <translation>Administrador de Dimensions</translation>
     </message>
     <message>
       <source>Active Dimensions Figures:</source>
-      <translation type="unfinished">Active Dimensions Figures:</translation>
+      <translation>Figures de Dimensions actives:</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Cap</translation>
     </message>
     <message>
       <source>Clear</source>
-      <translation type="unfinished">Clear</translation>
+      <translation>Netejar</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Crea</translation>
     </message>
     <message>
       <source>Load</source>
-      <translation type="unfinished">Load</translation>
+      <translation>Carrega</translation>
     </message>
     <message>
       <source>Move</source>
-      <translation type="unfinished">Move</translation>
+      <translation>Mou</translation>
     </message>
     <message>
       <source>Unknown Figure</source>
-      <translation type="unfinished">Unknown Figure</translation>
+      <translation>Figura desconeguda</translation>
     </message>
     <message>
       <source>Select Dimensions File</source>
-      <translation type="unfinished">Select Dimensions File</translation>
+      <translation>Selecciona el fitxer de Dimensions</translation>
     </message>
     <message>
       <source>Dimensions Figure (*.bin);;</source>
-      <translation type="unfinished">Dimensions Figure (*.bin);;</translation>
+      <translation>Figura de Dimensions (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to open the figure file!</source>
-      <translation type="unfinished">Failed to open the figure file!</translation>
+      <translation>Error en obrir el fitxer de figura!</translation>
     </message>
     <message>
       <source>Failed to open the figure file(%1)!
 File may already be in use on the base.</source>
-      <translation type="unfinished">Failed to open the figure file(%1)!
-File may already be in use on the base.</translation>
+      <translation>Error en obrir el fitxer de figura(%1)!
+El fitxer podria estar en ús per la base.</translation>
     </message>
     <message>
       <source>Failed to read the figure file!</source>
-      <translation type="unfinished">Failed to read the figure file!</translation>
+      <translation>Error en llegir el fitxer de figura!</translation>
     </message>
     <message>
       <source>Failed to read the figure file(%1)!
 File was too small.</source>
-      <translation type="unfinished">Failed to read the figure file(%1)!
-File was too small.</translation>
+      <translation>Error en llegir el fitxer de la figura (%1)!
+El fitxer és massa petit.</translation>
     </message>
   </context>
   <context>
     <name>figure_creator_dialog</name>
     <message>
       <source>Figure Creator</source>
-      <translation type="unfinished">Figure Creator</translation>
+      <translation>Creador de figures</translation>
     </message>
     <message>
       <source>Filter by Series:</source>
-      <translation type="unfinished">Filter by Series:</translation>
+      <translation>Filtra per sèries:</translation>
     </message>
     <message>
       <source>All</source>
-      <translation type="unfinished">All</translation>
+      <translation>Tot</translation>
     </message>
     <message>
       <source>1.0</source>
-      <translation type="unfinished">1.0</translation>
+      <translation>1.0</translation>
     </message>
     <message>
       <source>2.0</source>
-      <translation type="unfinished">2.0</translation>
+      <translation>2.0</translation>
     </message>
     <message>
       <source>3.0</source>
-      <translation type="unfinished">3.0</translation>
+      <translation>3.0</translation>
     </message>
     <message>
       <source>--Unknown--</source>
-      <translation type="unfinished">--Unknown--</translation>
+      <translation>--Desconegut--</translation>
     </message>
     <message>
       <source>Figure Number:</source>
-      <translation type="unfinished">Figure Number:</translation>
+      <translation>Nombre de figura:</translation>
     </message>
     <message>
       <source>Series:</source>
-      <translation type="unfinished">Series:</translation>
+      <translation>Sèries:</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Crea</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Cancel·lar</translation>
     </message>
     <message>
       <source>Error converting value</source>
-      <translation type="unfinished">Error converting value</translation>
+      <translation>Error en convertir el valor</translation>
     </message>
     <message>
       <source>Figure number entered is invalid!</source>
-      <translation type="unfinished">Figure number entered is invalid!</translation>
+      <translation>El nombre de la figura no és vàlid!</translation>
     </message>
     <message>
       <source>Series number entered is invalid!</source>
-      <translation type="unfinished">Series number entered is invalid!</translation>
+      <translation>El nombre de sèrie no és vàlid!</translation>
     </message>
     <message>
       <source>Create Figure File</source>
-      <translation type="unfinished">Create Figure File</translation>
+      <translation>Crear un fitxer de figura</translation>
     </message>
     <message>
       <source>Infinity Figure (*.bin);;</source>
-      <translation type="unfinished">Infinity Figure (*.bin);;</translation>
+      <translation>Figura de Infinity (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to create figure file!</source>
-      <translation type="unfinished">Failed to create figure file!</translation>
+      <translation>Error en crear el fitxer de figura!</translation>
     </message>
     <message>
       <source>Failed to create figure file:
 %1</source>
-      <translation type="unfinished">Failed to create figure file:
+      <translation>Error en crear el fitxer de figura:
 %1</translation>
     </message>
   </context>
@@ -3019,143 +3019,143 @@ File was too small.</translation>
     <name>infinity_dialog</name>
     <message>
       <source>Infinity Manager</source>
-      <translation type="unfinished">Infinity Manager</translation>
+      <translation>Administrador de Infinity</translation>
     </message>
     <message>
       <source>Active Infinity Figures:</source>
-      <translation type="unfinished">Active Infinity Figures:</translation>
+      <translation>Figures de Infinity actives:</translation>
     </message>
     <message>
       <source>Play Set/Power Disc</source>
-      <translation type="unfinished">Play Set/Power Disc</translation>
+      <translation>Set de joc/Disc de poder</translation>
     </message>
     <message>
       <source>Power Disc Two</source>
-      <translation type="unfinished">Power Disc Two</translation>
+      <translation>Disc de poder 2</translation>
     </message>
     <message>
       <source>Power Disc Three</source>
-      <translation type="unfinished">Power Disc Three</translation>
+      <translation>Disc de poder 3</translation>
     </message>
     <message>
       <source>Player One</source>
-      <translation type="unfinished">Player One</translation>
+      <translation>Jugador 1</translation>
     </message>
     <message>
       <source>Player One Ability One</source>
-      <translation type="unfinished">Player One Ability One</translation>
+      <translation>Habilitat 1 del jugador 1</translation>
     </message>
     <message>
       <source>Player One Ability Two</source>
-      <translation type="unfinished">Player One Ability Two</translation>
+      <translation>Habilitat 2 del jugador 1</translation>
     </message>
     <message>
       <source>Player Two</source>
-      <translation type="unfinished">Player Two</translation>
+      <translation>Jugador 2</translation>
     </message>
     <message>
       <source>Player Two Ability One</source>
-      <translation type="unfinished">Player Two Ability One</translation>
+      <translation>Habilitat 1 del jugador 2</translation>
     </message>
     <message>
       <source>Player Two Ability Two</source>
-      <translation type="unfinished">Player Two Ability Two</translation>
+      <translation>Habilitat 2 del jugador 2</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Cap</translation>
     </message>
     <message>
       <source>Clear</source>
-      <translation type="unfinished">Clear</translation>
+      <translation>Netejar</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Crea</translation>
     </message>
     <message>
       <source>Load</source>
-      <translation type="unfinished">Load</translation>
+      <translation>Carrega</translation>
     </message>
     <message>
       <source>Unknown Figure</source>
-      <translation type="unfinished">Unknown Figure</translation>
+      <translation>Figura desconeguda</translation>
     </message>
     <message>
       <source>Select Infinity File</source>
-      <translation type="unfinished">Select Infinity File</translation>
+      <translation>Selecciona el fitxer de Infinity</translation>
     </message>
     <message>
       <source>Infinity Figure (*.bin);;</source>
-      <translation type="unfinished">Infinity Figure (*.bin);;</translation>
+      <translation>Figura de Infinity (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to open the figure file!</source>
-      <translation type="unfinished">Failed to open the figure file!</translation>
+      <translation>Error en obrir el fitxer de figura!</translation>
     </message>
     <message>
       <source>Failed to open the figure file(%1)!
 File may already be in use on the base.</source>
-      <translation type="unfinished">Failed to open the figure file(%1)!
-File may already be in use on the base.</translation>
+      <translation>Error en obrir el fitxer de figura(%1)!
+El fitxer podria estar en ús per la base.</translation>
     </message>
     <message>
       <source>Failed to read the figure file!</source>
-      <translation type="unfinished">Failed to read the figure file!</translation>
+      <translation>Error en llegir el fitxer de figura!</translation>
     </message>
     <message>
       <source>Failed to read the figure file(%1)!
 File was too small.</source>
-      <translation type="unfinished">Failed to read the figure file(%1)!
-File was too small.</translation>
+      <translation>Error en llegir el fitxer de la figura (%1)!
+El fitxer és massa petit.</translation>
     </message>
   </context>
   <context>
     <name>minifig_creator_dialog</name>
     <message>
       <source>Figure Creator</source>
-      <translation type="unfinished">Figure Creator</translation>
+      <translation>Creador de figures</translation>
     </message>
     <message>
       <source>--Unknown--</source>
-      <translation type="unfinished">--Unknown--</translation>
+      <translation>--Desconegut--</translation>
     </message>
     <message>
       <source>Figure Number:</source>
-      <translation type="unfinished">Figure Number:</translation>
+      <translation>Nombre de figura:</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Crea</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Cancel·lar</translation>
     </message>
     <message>
       <source>Error converting value</source>
-      <translation type="unfinished">Error converting value</translation>
+      <translation>Error en convertir el valor</translation>
     </message>
     <message>
       <source>Figure number entered is invalid!</source>
-      <translation type="unfinished">Figure number entered is invalid!</translation>
+      <translation>El nombre de la figura no és vàlid!</translation>
     </message>
     <message>
       <source>Create Figure File</source>
-      <translation type="unfinished">Create Figure File</translation>
+      <translation>Crear un fitxer de figura</translation>
     </message>
     <message>
       <source>Dimensions Figure (*.bin);;</source>
-      <translation type="unfinished">Dimensions Figure (*.bin);;</translation>
+      <translation>Figura de Dimensions (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to create minifig file!</source>
-      <translation type="unfinished">Failed to create minifig file!</translation>
+      <translation>Error en crear el fitxer minifig!</translation>
     </message>
     <message>
       <source>Failed to create minifig file:
 %1</source>
-      <translation type="unfinished">Failed to create minifig file:
+      <translation>Error en crear el fitxer minifig:
 %1</translation>
     </message>
   </context>
@@ -3163,19 +3163,19 @@ File was too small.</translation>
     <name>minifig_move_dialog</name>
     <message>
       <source>Figure Mover</source>
-      <translation type="unfinished">Figure Mover</translation>
+      <translation>Trasllada la figura</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Cap</translation>
     </message>
     <message>
       <source>Move Here</source>
-      <translation type="unfinished">Move Here</translation>
+      <translation>Mou aquí</translation>
     </message>
     <message>
       <source>Pick up and Place</source>
-      <translation type="unfinished">Pick up and Place</translation>
+      <translation>Recollir i col·locar</translation>
     </message>
   </context>
   <context>
