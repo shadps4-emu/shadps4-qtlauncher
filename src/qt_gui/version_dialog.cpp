@@ -114,11 +114,11 @@ VersionDialog::VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget
 
         version_name = version_name.trimmed();
 
-        if (version_name.compare("Pre-release", Qt::CaseInsensitive) == 0 ||
-            version_name.compare("Pre-release-shadPS4", Qt::CaseInsensitive) == 0) {
+        if (version_name.startsWith("Pre-release", Qt::CaseInsensitive) ||
+            version_name.startsWith("Pre-release-shadPS4", Qt::CaseInsensitive)) {
             QMessageBox::warning(this, tr("Error"),
                                  // clang-format off
-tr("It is not possible to create a version with the name:\n'Pre-release' or 'Pre-release-shadPS4'."));
+tr("It is not possible to create a version with a name that starts with:\n'Pre-release' or 'Pre-release-shadPS4'."));
             // clang-format on
             return;
         }
