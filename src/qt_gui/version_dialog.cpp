@@ -178,10 +178,6 @@ tr("It is not possible to create a version with the name:\n'Pre-release' or 'Pre
         }
 
         if (versionType == 2) {
-            QMessageBox::information(this, tr("Local version"),
-                                     // clang-format off
-tr("Local versions cannot be deleted from disk.\nIt will only be removed from the list."));
-            // clang-format on
             VersionManager::RemoveVersion(versionName.toStdString());
             LoadInstalledList();
             return;
@@ -842,7 +838,20 @@ void VersionDialog::checkUpdatePre(const bool showMessage) {
                                               // clang-format on
                                               QMessageBox::Yes | QMessageBox::No);
                     if (reply == QMessageBox::Yes) {
-                        installPreReleaseByTag(latestTag);
+                        auto* tree = ui->downloadTreeWidget;
+                        int topCount = tree->topLevelItemCount();
+
+                        for (int i = 0; i < topCount; ++i) {
+                            QTreeWidgetItem* item = tree->topLevelItem(i);
+                            if (item &&
+                                item->text(0).contains("Pre-release", Qt::CaseInsensitive)) {
+                                tree->setCurrentItem(item);
+                                tree->scrollToItem(item);
+                                tree->setFocus();
+                                emit tree->itemClicked(item, 0);
+                                break;
+                            }
+                        }
                     }
                     return;
                 }
