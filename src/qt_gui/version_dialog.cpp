@@ -831,29 +831,19 @@ void VersionDialog::checkUpdatePre(const bool showMessage) {
                 }
 
                 if (localHash.isEmpty()) {
-                    QMessageBox::StandardButton reply =
-                        QMessageBox::question(this, tr("No pre-release found"),
-                                              // clang-format off
-            tr("You don't have any pre-release installed yet.\nWould you like to download it now?"),
-                                              // clang-format on
-                                              QMessageBox::Yes | QMessageBox::No);
-                    if (reply == QMessageBox::Yes) {
-                        auto* tree = ui->downloadTreeWidget;
-                        int topCount = tree->topLevelItemCount();
+                    auto* tree = ui->downloadTreeWidget;
+                    int topCount = tree->topLevelItemCount();
 
-                        for (int i = 0; i < topCount; ++i) {
-                            QTreeWidgetItem* item = tree->topLevelItem(i);
-                            if (item &&
-                                item->text(0).contains("Pre-release", Qt::CaseInsensitive)) {
-                                tree->setCurrentItem(item);
-                                tree->scrollToItem(item);
-                                tree->setFocus();
-                                emit tree->itemClicked(item, 0);
-                                break;
-                            }
+                    for (int i = 0; i < topCount; ++i) {
+                        QTreeWidgetItem* item = tree->topLevelItem(i);
+                        if (item && item->text(0).contains("Pre-release", Qt::CaseInsensitive)) {
+                            tree->setCurrentItem(item);
+                            tree->scrollToItem(item);
+                            tree->setFocus();
+                            emit tree->itemClicked(item, 0);
+                            break;
                         }
                     }
-                    return;
                 }
 
                 if (latestHash == localHash) {
@@ -871,6 +861,9 @@ void VersionDialog::checkUpdatePre(const bool showMessage) {
 
 void VersionDialog::showPreReleaseUpdateDialog(const QString& localHash, const QString& latestHash,
                                                const QString& latestTag) {
+    if (localHash == "") {
+        return;
+    }
     QDialog dialog(this);
     dialog.setWindowTitle(tr("Auto Updater - Emulator"));
 
