@@ -1744,7 +1744,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Manage Infinity Figures</source>
-      <translation type="unfinished">Manage Infinity Figures</translation>
+      <translation>Gestionar figuras de Infinity</translation>
     </message>
     <message>
       <source>Manage Dimensions Toypad</source>
