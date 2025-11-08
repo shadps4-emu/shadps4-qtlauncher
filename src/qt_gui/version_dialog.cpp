@@ -639,14 +639,59 @@ tr("First you need to choose a location to save the versions in\n'Path to save v
 void VersionDialog::LoadInstalledList() {
     const auto path = Common::FS::GetUserPath(Common::FS::PathType::LauncherDir) / "versions.json";
     auto versions = VersionManager::GetVersionList(path);
-    auto const& selected_version =
+    const auto& selected_version =
         m_gui_settings->GetValue(gui::vm_versionSelected).toString().toStdString();
+
+    std::sort(versions.begin(), versions.end(), [](const auto& a, const auto& b) {
+        auto getOrder = [](int type) {
+            switch (type) {
+            case 1: // Pre-release
+                return 0;
+            case 0: // Release
+                return 1;
+            case 2: // Local
+                return 2;
+            default:
+                return 3;
+            }
+        };
+
+        int orderA = getOrder(static_cast<int>(a.type));
+        int orderB = getOrder(static_cast<int>(b.type));
+
+        if (orderA != orderB)
+            return orderA < orderB;
+
+        if (a.type == VersionManager::VersionType::Release) {
+            static QRegularExpression versionRegex("^v\\.([0-9]+)\\.([0-9]+)\\.([0-9]+)$");
+            QRegularExpressionMatch matchA = versionRegex.match(QString::fromStdString(a.name));
+            QRegularExpressionMatch matchB = versionRegex.match(QString::fromStdString(b.name));
+
+            if (matchA.hasMatch() && matchB.hasMatch()) {
+                int majorA = matchA.captured(1).toInt();
+                int minorA = matchA.captured(2).toInt();
+                int patchA = matchA.captured(3).toInt();
+                int majorB = matchB.captured(1).toInt();
+                int minorB = matchB.captured(2).toInt();
+                int patchB = matchB.captured(3).toInt();
+
+                if (majorA != majorB)
+                    return majorA > majorB;
+                if (minorA != minorB)
+                    return minorA > minorB;
+                return patchA > patchB;
+            }
+        }
+
+        return QString::fromStdString(a.name).compare(QString::fromStdString(b.name),
+                                                      Qt::CaseInsensitive) < 0;
+    });
 
     ui->installedTreeWidget->clear();
     ui->installedTreeWidget->setColumnCount(5);
     ui->installedTreeWidget->setColumnHidden(4, true);
 
-    for (auto const& v : versions) {
+    for (const auto& v : versions) {
         QTreeWidgetItem* item = new QTreeWidgetItem(ui->installedTreeWidget);
         item->setText(1, QString::fromStdString(v.name));
         item->setText(2, QString::fromStdString(v.codename));
