@@ -1426,25 +1426,72 @@ void MainWindow::RestartEmulator() {
 
 void MainWindow::LoadVersionComboBox() {
     ui->versionComboBox->clear();
-    ui->versionComboBox->addItem(tr("None"));
-    ui->versionComboBox->setCurrentIndex(0);
     ui->versionComboBox->setSizeAdjustPolicy(QComboBox::AdjustToContents);
 
     QString savedVersionPath = m_gui_settings->GetValue(gui::vm_versionSelected).toString();
+    auto versions = VersionManager::GetVersionList();
 
-    auto const& versions = VersionManager::GetVersionList();
-    for (auto const& v : versions) {
+    std::sort(versions.begin(), versions.end(), [](const auto& a, const auto& b) {
+        auto getOrder = [](int type) {
+            switch (type) {
+            case 1: // Pre-release
+                return 0;
+            case 0: // Release
+                return 1;
+            case 2: // Local
+                return 2;
+            default:
+                return 3;
+            }
+        };
+
+        int orderA = getOrder(static_cast<int>(a.type));
+        int orderB = getOrder(static_cast<int>(b.type));
+
+        if (orderA != orderB)
+            return orderA < orderB;
+
+        if (a.type == VersionManager::VersionType::Release) {
+            static QRegularExpression versionRegex("^v\\.([0-9]+)\\.([0-9]+)\\.([0-9]+)$");
+            QRegularExpressionMatch matchA = versionRegex.match(QString::fromStdString(a.name));
+            QRegularExpressionMatch matchB = versionRegex.match(QString::fromStdString(b.name));
+
+            if (matchA.hasMatch() && matchB.hasMatch()) {
+                int majorA = matchA.captured(1).toInt();
+                int minorA = matchA.captured(2).toInt();
+                int patchA = matchA.captured(3).toInt();
+                int majorB = matchB.captured(1).toInt();
+                int minorB = matchB.captured(2).toInt();
+                int patchB = matchB.captured(3).toInt();
+
+                if (majorA != majorB)
+                    return majorA > majorB;
+                if (minorA != minorB)
+                    return minorA > minorB;
+                return patchA > patchB;
+            }
+        }
+
+        return QString::fromStdString(a.name).compare(QString::fromStdString(b.name),
+                                                      Qt::CaseInsensitive) < 0;
+    });
+
+    if (versions.empty()) {
+        ui->versionComboBox->addItem(tr("None"));
+        ui->versionComboBox->setCurrentIndex(0);
+        return;
+    }
+
+    for (const auto& v : versions) {
         ui->versionComboBox->addItem(QString::fromStdString(v.name),
                                      QString::fromStdString(v.path));
     }
 
     int selectedIndex = ui->versionComboBox->findData(savedVersionPath);
-
     if (selectedIndex >= 0) {
         ui->versionComboBox->setCurrentIndex(selectedIndex);
-    } else if (ui->versionComboBox->count() > 0) {
+    } else {
         ui->versionComboBox->setCurrentIndex(0);
-        selectedIndex = 0;
     }
 
     connect(ui->versionComboBox, QOverload<int>::of(&QComboBox::activated), this,
@@ -1453,6 +1500,5 @@ void MainWindow::LoadVersionComboBox() {
                 m_gui_settings->SetValue(gui::vm_versionSelected, fullPath);
             });
 
-    ui->versionComboBox->setSizeAdjustPolicy(QComboBox::AdjustToContents);
     ui->versionComboBox->adjustSize();
 }
