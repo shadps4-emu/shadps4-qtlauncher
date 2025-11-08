@@ -100,6 +100,11 @@ void SaveVersionList(std::vector<Version> const& versions, std::filesystem::path
 
 void AddNewVersion(Version const& v, std::filesystem::path const& path) {
     auto versions = GetVersionList(path);
+    auto it = std::remove_if(versions.begin(), versions.end(),
+                             [&](const Version& existing) { return existing.name == v.name; });
+    if (it != versions.end())
+        versions.erase(it, versions.end());
+
     versions.push_back(v);
     SaveVersionList(versions, path);
 }

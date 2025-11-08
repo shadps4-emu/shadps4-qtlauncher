@@ -413,9 +413,9 @@ figure_creator_dialog::figure_creator_dialog(QWidget* parent, u8 slot) : QDialog
     QHBoxLayout* hbox_filters = new QHBoxLayout();
     QLabel* filter_label = new QLabel(tr("Filter by Series:"));
     QPushButton* btn_all = new QPushButton(tr("All"));
-    QPushButton* btn_series1 = new QPushButton(tr("1.0"));
-    QPushButton* btn_series2 = new QPushButton(tr("2.0"));
-    QPushButton* btn_series3 = new QPushButton(tr("3.0"));
+    QPushButton* btn_series1 = new QPushButton("1.0");
+    QPushButton* btn_series2 = new QPushButton("2.0");
+    QPushButton* btn_series3 = new QPushButton("3.0");
 
     // Style the active filter button
     btn_all->setCheckable(true);
