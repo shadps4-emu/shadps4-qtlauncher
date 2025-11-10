@@ -2920,23 +2920,23 @@ Vill du hämta ner den nu?</translation>
     </message>
     <message>
       <source>Failed to open the figure file!</source>
-      <translation type="unfinished">Failed to open the figure file!</translation>
+      <translation>Misslyckades med att öppna figurfilen!</translation>
     </message>
     <message>
       <source>Failed to open the figure file(%1)!
 File may already be in use on the base.</source>
-      <translation type="unfinished">Failed to open the figure file(%1)!
-File may already be in use on the base.</translation>
+      <translation>Misslyckades med att öppna figurfilen(%1)!
+Filen kanske redan används på plattan.</translation>
     </message>
     <message>
       <source>Failed to read the figure file!</source>
-      <translation type="unfinished">Failed to read the figure file!</translation>
+      <translation>Misslyckades med att läsa figurfilen!</translation>
     </message>
     <message>
       <source>Failed to read the figure file(%1)!
 File was too small.</source>
-      <translation type="unfinished">Failed to read the figure file(%1)!
-File was too small.</translation>
+      <translation>Misslyckades med att läsa figurfilen(%1)!
+Filen är för liten.</translation>
     </message>
   </context>
   <context>
@@ -2987,15 +2987,15 @@ File was too small.</translation>
     </message>
     <message>
       <source>Error converting value</source>
-      <translation type="unfinished">Error converting value</translation>
+      <translation>Fel vid konvertering av värde</translation>
     </message>
     <message>
       <source>Figure number entered is invalid!</source>
-      <translation type="unfinished">Figure number entered is invalid!</translation>
+      <translation>Figurnumret som angavs är ogiltigt!</translation>
     </message>
     <message>
       <source>Series number entered is invalid!</source>
-      <translation type="unfinished">Series number entered is invalid!</translation>
+      <translation>Serienumret som angavs är ogiltigt!</translation>
     </message>
     <message>
       <source>Create Figure File</source>
@@ -3007,12 +3007,12 @@ File was too small.</translation>
     </message>
     <message>
       <source>Failed to create figure file!</source>
-      <translation type="unfinished">Failed to create figure file!</translation>
+      <translation>Misslyckades med att skapa figurfil!</translation>
     </message>
     <message>
       <source>Failed to create figure file:
 %1</source>
-      <translation type="unfinished">Failed to create figure file:
+      <translation>Misslyckades med att skapa figurfilen:
 %1</translation>
     </message>
   </context>
@@ -3028,15 +3028,15 @@ File was too small.</translation>
     </message>
     <message>
       <source>Play Set/Power Disc</source>
-      <translation type="unfinished">Play Set/Power Disc</translation>
+      <translation>Speluppsättning/Power Disc</translation>
     </message>
     <message>
       <source>Power Disc Two</source>
-      <translation type="unfinished">Power Disc Two</translation>
+      <translation>Power Disc Two</translation>
     </message>
     <message>
       <source>Power Disc Three</source>
-      <translation type="unfinished">Power Disc Three</translation>
+      <translation>Power Disc Three</translation>
     </message>
     <message>
       <source>Player One</source>
@@ -3044,11 +3044,11 @@ File was too small.</translation>
     </message>
     <message>
       <source>Player One Ability One</source>
-      <translation type="unfinished">Player One Ability One</translation>
+      <translation>Spelare ett förmåga ett</translation>
     </message>
     <message>
       <source>Player One Ability Two</source>
-      <translation type="unfinished">Player One Ability Two</translation>
+      <translation>Spelare ett förmåga två</translation>
     </message>
     <message>
       <source>Player Two</source>
@@ -3056,11 +3056,11 @@ File was too small.</translation>
     </message>
     <message>
       <source>Player Two Ability One</source>
-      <translation type="unfinished">Player Two Ability One</translation>
+      <translation>Spelare två förmåga ett</translation>
     </message>
     <message>
       <source>Player Two Ability Two</source>
-      <translation type="unfinished">Player Two Ability Two</translation>
+      <translation>Spelare två förmåga två</translation>
     </message>
     <message>
       <source>None</source>
@@ -3092,23 +3092,23 @@ File was too small.</translation>
     </message>
     <message>
       <source>Failed to open the figure file!</source>
-      <translation type="unfinished">Failed to open the figure file!</translation>
+      <translation>Misslyckades med att öppna figurfilen!</translation>
     </message>
     <message>
       <source>Failed to open the figure file(%1)!
 File may already be in use on the base.</source>
-      <translation type="unfinished">Failed to open the figure file(%1)!
-File may already be in use on the base.</translation>
+      <translation>Misslyckades med att öppna figurfilen(%1)!
+Filen kanske redan används på plattan.</translation>
     </message>
     <message>
       <source>Failed to read the figure file!</source>
-      <translation type="unfinished">Failed to read the figure file!</translation>
+      <translation>Misslyckades med att läsa figurfilen!</translation>
     </message>
     <message>
       <source>Failed to read the figure file(%1)!
 File was too small.</source>
-      <translation type="unfinished">Failed to read the figure file(%1)!
-File was too small.</translation>
+      <translation>Misslyckades med att läsa figurfilen(%1)!
+Filen är för liten.</translation>
     </message>
   </context>
   <context>
@@ -3135,11 +3135,11 @@ File was too small.</translation>
     </message>
     <message>
       <source>Error converting value</source>
-      <translation type="unfinished">Error converting value</translation>
+      <translation>Fel vid konvertering av värde</translation>
     </message>
     <message>
       <source>Figure number entered is invalid!</source>
-      <translation type="unfinished">Figure number entered is invalid!</translation>
+      <translation>Figurnumret som angavs är ogiltigt!</translation>
     </message>
     <message>
       <source>Create Figure File</source>
@@ -3151,12 +3151,12 @@ File was too small.</translation>
     </message>
     <message>
       <source>Failed to create minifig file!</source>
-      <translation type="unfinished">Failed to create minifig file!</translation>
+      <translation>Misslyckades med att skapa minifig-fil!</translation>
     </message>
     <message>
       <source>Failed to create minifig file:
 %1</source>
-      <translation type="unfinished">Failed to create minifig file:
+      <translation>Misslyckades med att skapa minifig-fil:
 %1</translation>
     </message>
   </context>
