@@ -2904,7 +2904,7 @@ Would you like to download it now?</source>
     </message>
     <message>
       <source>Move</source>
-      <translation>Flytt</translation>
+      <translation>Переместить</translation>
     </message>
     <message>
       <source>Unknown Figure</source>
