@@ -33,6 +33,9 @@ const gui_value gen_homeTab = gui_value(general_settings, "homeTab", "General");
 // main window settings
 const gui_value mw_geometry = gui_value(main_window, "geometry", QByteArray());
 const gui_value mw_showLabelsUnderIcons = gui_value(main_window, "showLabelsUnderIcons", true);
+const gui_value mw_showLog = gui_value(main_window, "showLog", true);
+const gui_value mw_dockWidgetSizes =
+    gui_value(main_window, "dockWidgetSizes", QVariant::fromValue(QList<int>()));
 
 // game list settings
 const gui_value gl_mode = gui_value(game_list, "tableMode", 0);
