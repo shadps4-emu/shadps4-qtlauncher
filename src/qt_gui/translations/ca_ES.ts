@@ -1744,6 +1744,14 @@ Selecciona una versió del panell dret.</translation>
       <source>Manage Skylanders</source>
       <translation>Administra Skylanders</translation>
     </message>
+    <message>
+      <source>Manage Infinity Figures</source>
+      <translation>Administrador de figures de Infinity</translation>
+    </message>
+    <message>
+      <source>Manage Dimensions Toypad</source>
+      <translation>Administrador del Toypad de Dimensions</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -2548,8 +2556,16 @@ Selecciona una versió del panell dret.</translation>
       <translation>Portal de Skylanders</translation>
     </message>
     <message>
-      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.</source>
-      <translation>Dispositiu USB:\nDispositiu USB real: Fes servir un dispositiu USB real connectat al sistema.\nPortal Skylander: Emula un portal de Skylander.</translation>
+      <source>Infinity Base</source>
+      <translation>Base de Infinity</translation>
+    </message>
+    <message>
+      <source>Dimensions Toypad</source>
+      <translation>Toypad de Dimensions</translation>
+    </message>
+    <message>
+      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\Dimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
+      <translation>Dispositiu USB:\nDispositiu USB real: Fes servir un dispositiu USB enllaçat al sistema.\nPortal Skylander: Emula un portal Skylander.\nBase Infinity: Emula una base de Disney Infinity.\Dimensions Toypad: Emula un Toypad de Lego Dimensions.</translation>
     </message>
   </context>
   <context>
@@ -2857,6 +2873,309 @@ Would you like to download it now?</source>
     <message>
       <source>A version with that name already exists.</source>
       <translation>Ja existeix una versió amb aquest nom.</translation>
+    </message>
+  </context>
+  <context>
+    <name>dimensions_dialog</name>
+    <message>
+      <source>Dimensions Manager</source>
+      <translation>Administrador de Dimensions</translation>
+    </message>
+    <message>
+      <source>Active Dimensions Figures:</source>
+      <translation>Figures de Dimensions actives:</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation>Cap</translation>
+    </message>
+    <message>
+      <source>Clear</source>
+      <translation>Netejar</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation>Crea</translation>
+    </message>
+    <message>
+      <source>Load</source>
+      <translation>Carrega</translation>
+    </message>
+    <message>
+      <source>Move</source>
+      <translation>Mou</translation>
+    </message>
+    <message>
+      <source>Unknown Figure</source>
+      <translation>Figura desconeguda</translation>
+    </message>
+    <message>
+      <source>Select Dimensions File</source>
+      <translation>Selecciona el fitxer de Dimensions</translation>
+    </message>
+    <message>
+      <source>Dimensions Figure (*.bin);;</source>
+      <translation>Figura de Dimensions (*.bin);;</translation>
+    </message>
+    <message>
+      <source>Failed to open the figure file!</source>
+      <translation>Error en obrir el fitxer de figura!</translation>
+    </message>
+    <message>
+      <source>Failed to open the figure file(%1)!
+File may already be in use on the base.</source>
+      <translation>Error en obrir el fitxer de figura(%1)!
+El fitxer podria estar en ús per la base.</translation>
+    </message>
+    <message>
+      <source>Failed to read the figure file!</source>
+      <translation>Error en llegir el fitxer de figura!</translation>
+    </message>
+    <message>
+      <source>Failed to read the figure file(%1)!
+File was too small.</source>
+      <translation>Error en llegir el fitxer de la figura (%1)!
+El fitxer és massa petit.</translation>
+    </message>
+  </context>
+  <context>
+    <name>figure_creator_dialog</name>
+    <message>
+      <source>Figure Creator</source>
+      <translation>Creador de figures</translation>
+    </message>
+    <message>
+      <source>Filter by Series:</source>
+      <translation>Filtra per sèries:</translation>
+    </message>
+    <message>
+      <source>All</source>
+      <translation>Tot</translation>
+    </message>
+    <message>
+      <source>1.0</source>
+      <translation>1.0</translation>
+    </message>
+    <message>
+      <source>2.0</source>
+      <translation>2.0</translation>
+    </message>
+    <message>
+      <source>3.0</source>
+      <translation>3.0</translation>
+    </message>
+    <message>
+      <source>--Unknown--</source>
+      <translation>--Desconegut--</translation>
+    </message>
+    <message>
+      <source>Figure Number:</source>
+      <translation>Nombre de figura:</translation>
+    </message>
+    <message>
+      <source>Series:</source>
+      <translation>Sèries:</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation>Crea</translation>
+    </message>
+    <message>
+      <source>Cancel</source>
+      <translation>Cancel·lar</translation>
+    </message>
+    <message>
+      <source>Error converting value</source>
+      <translation>Error en convertir el valor</translation>
+    </message>
+    <message>
+      <source>Figure number entered is invalid!</source>
+      <translation>El nombre de la figura no és vàlid!</translation>
+    </message>
+    <message>
+      <source>Series number entered is invalid!</source>
+      <translation>El nombre de sèrie no és vàlid!</translation>
+    </message>
+    <message>
+      <source>Create Figure File</source>
+      <translation>Crear un fitxer de figura</translation>
+    </message>
+    <message>
+      <source>Infinity Figure (*.bin);;</source>
+      <translation>Figura de Infinity (*.bin);;</translation>
+    </message>
+    <message>
+      <source>Failed to create figure file!</source>
+      <translation>Error en crear el fitxer de figura!</translation>
+    </message>
+    <message>
+      <source>Failed to create figure file:
+%1</source>
+      <translation>Error en crear el fitxer de figura:
+%1</translation>
+    </message>
+  </context>
+  <context>
+    <name>infinity_dialog</name>
+    <message>
+      <source>Infinity Manager</source>
+      <translation>Administrador de Infinity</translation>
+    </message>
+    <message>
+      <source>Active Infinity Figures:</source>
+      <translation>Figures de Infinity actives:</translation>
+    </message>
+    <message>
+      <source>Play Set/Power Disc</source>
+      <translation>Set de joc/Disc de poder</translation>
+    </message>
+    <message>
+      <source>Power Disc Two</source>
+      <translation>Disc de poder 2</translation>
+    </message>
+    <message>
+      <source>Power Disc Three</source>
+      <translation>Disc de poder 3</translation>
+    </message>
+    <message>
+      <source>Player One</source>
+      <translation>Jugador 1</translation>
+    </message>
+    <message>
+      <source>Player One Ability One</source>
+      <translation>Habilitat 1 del jugador 1</translation>
+    </message>
+    <message>
+      <source>Player One Ability Two</source>
+      <translation>Habilitat 2 del jugador 1</translation>
+    </message>
+    <message>
+      <source>Player Two</source>
+      <translation>Jugador 2</translation>
+    </message>
+    <message>
+      <source>Player Two Ability One</source>
+      <translation>Habilitat 1 del jugador 2</translation>
+    </message>
+    <message>
+      <source>Player Two Ability Two</source>
+      <translation>Habilitat 2 del jugador 2</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation>Cap</translation>
+    </message>
+    <message>
+      <source>Clear</source>
+      <translation>Netejar</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation>Crea</translation>
+    </message>
+    <message>
+      <source>Load</source>
+      <translation>Carrega</translation>
+    </message>
+    <message>
+      <source>Unknown Figure</source>
+      <translation>Figura desconeguda</translation>
+    </message>
+    <message>
+      <source>Select Infinity File</source>
+      <translation>Selecciona el fitxer de Infinity</translation>
+    </message>
+    <message>
+      <source>Infinity Figure (*.bin);;</source>
+      <translation>Figura de Infinity (*.bin);;</translation>
+    </message>
+    <message>
+      <source>Failed to open the figure file!</source>
+      <translation>Error en obrir el fitxer de figura!</translation>
+    </message>
+    <message>
+      <source>Failed to open the figure file(%1)!
+File may already be in use on the base.</source>
+      <translation>Error en obrir el fitxer de figura(%1)!
+El fitxer podria estar en ús per la base.</translation>
+    </message>
+    <message>
+      <source>Failed to read the figure file!</source>
+      <translation>Error en llegir el fitxer de figura!</translation>
+    </message>
+    <message>
+      <source>Failed to read the figure file(%1)!
+File was too small.</source>
+      <translation>Error en llegir el fitxer de la figura (%1)!
+El fitxer és massa petit.</translation>
+    </message>
+  </context>
+  <context>
+    <name>minifig_creator_dialog</name>
+    <message>
+      <source>Figure Creator</source>
+      <translation>Creador de figures</translation>
+    </message>
+    <message>
+      <source>--Unknown--</source>
+      <translation>--Desconegut--</translation>
+    </message>
+    <message>
+      <source>Figure Number:</source>
+      <translation>Nombre de figura:</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation>Crea</translation>
+    </message>
+    <message>
+      <source>Cancel</source>
+      <translation>Cancel·lar</translation>
+    </message>
+    <message>
+      <source>Error converting value</source>
+      <translation>Error en convertir el valor</translation>
+    </message>
+    <message>
+      <source>Figure number entered is invalid!</source>
+      <translation>El nombre de la figura no és vàlid!</translation>
+    </message>
+    <message>
+      <source>Create Figure File</source>
+      <translation>Crear un fitxer de figura</translation>
+    </message>
+    <message>
+      <source>Dimensions Figure (*.bin);;</source>
+      <translation>Figura de Dimensions (*.bin);;</translation>
+    </message>
+    <message>
+      <source>Failed to create minifig file!</source>
+      <translation>Error en crear el fitxer minifig!</translation>
+    </message>
+    <message>
+      <source>Failed to create minifig file:
+%1</source>
+      <translation>Error en crear el fitxer minifig:
+%1</translation>
+    </message>
+  </context>
+  <context>
+    <name>minifig_move_dialog</name>
+    <message>
+      <source>Figure Mover</source>
+      <translation>Trasllada la figura</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation>Cap</translation>
+    </message>
+    <message>
+      <source>Move Here</source>
+      <translation>Mou aquí</translation>
+    </message>
+    <message>
+      <source>Pick up and Place</source>
+      <translation>Recollir i col·locar</translation>
     </message>
   </context>
   <context>

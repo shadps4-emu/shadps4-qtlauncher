@@ -1744,6 +1744,14 @@ Välj en emulatorversion från den högra panelen.</translation>
       <source>Manage Skylanders</source>
       <translation>Hantera Skylanders</translation>
     </message>
+    <message>
+      <source>Manage Infinity Figures</source>
+      <translation>Hantera Infinity-figurer</translation>
+    </message>
+    <message>
+      <source>Manage Dimensions Toypad</source>
+      <translation>Hantera Dimensions Toypad</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -2548,8 +2556,16 @@ Välj en emulatorversion från den högra panelen.</translation>
       <translation>Skylander-portal</translation>
     </message>
     <message>
-      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.</source>
-      <translation>USB-enhet:\nRiktig USB-enhet: Använd en riktig USB-enhet som är ansluten till systemet.\nSkylander-portal: Emulera en Skylander Portal of Power.</translation>
+      <source>Infinity Base</source>
+      <translation>Infinity Base</translation>
+    </message>
+    <message>
+      <source>Dimensions Toypad</source>
+      <translation>Dimensions Toypad</translation>
+    </message>
+    <message>
+      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\Dimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
+      <translation>USB-enhet:\nRiktig USB-enhet: Använd en riktig USB-enhet som är ansluten till systemet.\nSkylander Portal: Emulera en Skylander Portal of Power.\nInfinity Base: Emulera en Disney Infinity Base.\nDimensions Toypad: Emulera en Lego Dimensions Toypad.</translation>
     </message>
   </context>
   <context>
@@ -2858,6 +2874,309 @@ Vill du hämta ner den nu?</translation>
     <message>
       <source>A version with that name already exists.</source>
       <translation>En version med det namnet finns redan.</translation>
+    </message>
+  </context>
+  <context>
+    <name>dimensions_dialog</name>
+    <message>
+      <source>Dimensions Manager</source>
+      <translation>Hantera Dimensions</translation>
+    </message>
+    <message>
+      <source>Active Dimensions Figures:</source>
+      <translation>Aktiva Dimensions-figurer:</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation>Ingen</translation>
+    </message>
+    <message>
+      <source>Clear</source>
+      <translation>Töm</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation>Skapa</translation>
+    </message>
+    <message>
+      <source>Load</source>
+      <translation>Läs in</translation>
+    </message>
+    <message>
+      <source>Move</source>
+      <translation>Flytta</translation>
+    </message>
+    <message>
+      <source>Unknown Figure</source>
+      <translation>Okänd figur</translation>
+    </message>
+    <message>
+      <source>Select Dimensions File</source>
+      <translation>Välj Dimensions-fil</translation>
+    </message>
+    <message>
+      <source>Dimensions Figure (*.bin);;</source>
+      <translation>Dimensions-figur (*.bin);;</translation>
+    </message>
+    <message>
+      <source>Failed to open the figure file!</source>
+      <translation>Misslyckades med att öppna figurfilen!</translation>
+    </message>
+    <message>
+      <source>Failed to open the figure file(%1)!
+File may already be in use on the base.</source>
+      <translation>Misslyckades med att öppna figurfilen(%1)!
+Filen kanske redan används på plattan.</translation>
+    </message>
+    <message>
+      <source>Failed to read the figure file!</source>
+      <translation>Misslyckades med att läsa figurfilen!</translation>
+    </message>
+    <message>
+      <source>Failed to read the figure file(%1)!
+File was too small.</source>
+      <translation>Misslyckades med att läsa figurfilen(%1)!
+Filen är för liten.</translation>
+    </message>
+  </context>
+  <context>
+    <name>figure_creator_dialog</name>
+    <message>
+      <source>Figure Creator</source>
+      <translation>Figurskapare</translation>
+    </message>
+    <message>
+      <source>Filter by Series:</source>
+      <translation>Filtrera efter serie:</translation>
+    </message>
+    <message>
+      <source>All</source>
+      <translation>Alla</translation>
+    </message>
+    <message>
+      <source>1.0</source>
+      <translation>1.0</translation>
+    </message>
+    <message>
+      <source>2.0</source>
+      <translation>2.0</translation>
+    </message>
+    <message>
+      <source>3.0</source>
+      <translation>3.0</translation>
+    </message>
+    <message>
+      <source>--Unknown--</source>
+      <translation>--Okänd--</translation>
+    </message>
+    <message>
+      <source>Figure Number:</source>
+      <translation>Figurnummer:</translation>
+    </message>
+    <message>
+      <source>Series:</source>
+      <translation>Serie:</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation>Skapa</translation>
+    </message>
+    <message>
+      <source>Cancel</source>
+      <translation>Avbryt</translation>
+    </message>
+    <message>
+      <source>Error converting value</source>
+      <translation>Fel vid konvertering av värde</translation>
+    </message>
+    <message>
+      <source>Figure number entered is invalid!</source>
+      <translation>Figurnumret som angavs är ogiltigt!</translation>
+    </message>
+    <message>
+      <source>Series number entered is invalid!</source>
+      <translation>Serienumret som angavs är ogiltigt!</translation>
+    </message>
+    <message>
+      <source>Create Figure File</source>
+      <translation>Skapa figurfil</translation>
+    </message>
+    <message>
+      <source>Infinity Figure (*.bin);;</source>
+      <translation>Infinity-figur (*.bin);;</translation>
+    </message>
+    <message>
+      <source>Failed to create figure file!</source>
+      <translation>Misslyckades med att skapa figurfil!</translation>
+    </message>
+    <message>
+      <source>Failed to create figure file:
+%1</source>
+      <translation>Misslyckades med att skapa figurfilen:
+%1</translation>
+    </message>
+  </context>
+  <context>
+    <name>infinity_dialog</name>
+    <message>
+      <source>Infinity Manager</source>
+      <translation>Hantera Infinity</translation>
+    </message>
+    <message>
+      <source>Active Infinity Figures:</source>
+      <translation>Aktiva Infinity-figurer:</translation>
+    </message>
+    <message>
+      <source>Play Set/Power Disc</source>
+      <translation>Speluppsättning/Power Disc</translation>
+    </message>
+    <message>
+      <source>Power Disc Two</source>
+      <translation>Power Disc Two</translation>
+    </message>
+    <message>
+      <source>Power Disc Three</source>
+      <translation>Power Disc Three</translation>
+    </message>
+    <message>
+      <source>Player One</source>
+      <translation>Spelare ett</translation>
+    </message>
+    <message>
+      <source>Player One Ability One</source>
+      <translation>Spelare ett förmåga ett</translation>
+    </message>
+    <message>
+      <source>Player One Ability Two</source>
+      <translation>Spelare ett förmåga två</translation>
+    </message>
+    <message>
+      <source>Player Two</source>
+      <translation>Spelare två</translation>
+    </message>
+    <message>
+      <source>Player Two Ability One</source>
+      <translation>Spelare två förmåga ett</translation>
+    </message>
+    <message>
+      <source>Player Two Ability Two</source>
+      <translation>Spelare två förmåga två</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation>Ingen</translation>
+    </message>
+    <message>
+      <source>Clear</source>
+      <translation>Töm</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation>Skapa</translation>
+    </message>
+    <message>
+      <source>Load</source>
+      <translation>Läs in</translation>
+    </message>
+    <message>
+      <source>Unknown Figure</source>
+      <translation>Okänd figur</translation>
+    </message>
+    <message>
+      <source>Select Infinity File</source>
+      <translation>Välj Infinity-fil</translation>
+    </message>
+    <message>
+      <source>Infinity Figure (*.bin);;</source>
+      <translation>Infinity-figur (*.bin);;</translation>
+    </message>
+    <message>
+      <source>Failed to open the figure file!</source>
+      <translation>Misslyckades med att öppna figurfilen!</translation>
+    </message>
+    <message>
+      <source>Failed to open the figure file(%1)!
+File may already be in use on the base.</source>
+      <translation>Misslyckades med att öppna figurfilen(%1)!
+Filen kanske redan används på plattan.</translation>
+    </message>
+    <message>
+      <source>Failed to read the figure file!</source>
+      <translation>Misslyckades med att läsa figurfilen!</translation>
+    </message>
+    <message>
+      <source>Failed to read the figure file(%1)!
+File was too small.</source>
+      <translation>Misslyckades med att läsa figurfilen(%1)!
+Filen är för liten.</translation>
+    </message>
+  </context>
+  <context>
+    <name>minifig_creator_dialog</name>
+    <message>
+      <source>Figure Creator</source>
+      <translation>Figurskapare</translation>
+    </message>
+    <message>
+      <source>--Unknown--</source>
+      <translation>--Okänd--</translation>
+    </message>
+    <message>
+      <source>Figure Number:</source>
+      <translation>Figurnummer:</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation>Skapa</translation>
+    </message>
+    <message>
+      <source>Cancel</source>
+      <translation>Avbryt</translation>
+    </message>
+    <message>
+      <source>Error converting value</source>
+      <translation>Fel vid konvertering av värde</translation>
+    </message>
+    <message>
+      <source>Figure number entered is invalid!</source>
+      <translation>Figurnumret som angavs är ogiltigt!</translation>
+    </message>
+    <message>
+      <source>Create Figure File</source>
+      <translation>Skapa figurfil</translation>
+    </message>
+    <message>
+      <source>Dimensions Figure (*.bin);;</source>
+      <translation>Dimensions-figur (*.bin);;</translation>
+    </message>
+    <message>
+      <source>Failed to create minifig file!</source>
+      <translation>Misslyckades med att skapa minifig-fil!</translation>
+    </message>
+    <message>
+      <source>Failed to create minifig file:
+%1</source>
+      <translation>Misslyckades med att skapa minifig-fil:
+%1</translation>
+    </message>
+  </context>
+  <context>
+    <name>minifig_move_dialog</name>
+    <message>
+      <source>Figure Mover</source>
+      <translation>Figurflyttare</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation>Ingen</translation>
+    </message>
+    <message>
+      <source>Move Here</source>
+      <translation>Flytta hit</translation>
+    </message>
+    <message>
+      <source>Pick up and Place</source>
+      <translation>Ta upp och placera</translation>
     </message>
   </context>
   <context>

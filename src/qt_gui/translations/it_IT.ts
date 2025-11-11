@@ -1744,6 +1744,14 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
       <source>Manage Skylanders</source>
       <translation>Gestisci Skylanders</translation>
     </message>
+    <message>
+      <source>Manage Infinity Figures</source>
+      <translation>Gestisci Statuette Infinity</translation>
+    </message>
+    <message>
+      <source>Manage Dimensions Toypad</source>
+      <translation>Gestire Toypad Dimensions</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -2548,8 +2556,16 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
       <translation>Portale Skylander</translation>
     </message>
     <message>
-      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.</source>
-      <translation>Dispositivo USB:\nDispositivo USB reale: Usa un vero Dispositivo USB collegato al sistema.\nPortale Skylander: Emula un Portale del Potere di Skylander.</translation>
+      <source>Infinity Base</source>
+      <translation>Base Infinity</translation>
+    </message>
+    <message>
+      <source>Dimensions Toypad</source>
+      <translation>Toypad Dimensions</translation>
+    </message>
+    <message>
+      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\Dimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
+      <translation>Dispositivo USB:\nDispositivo USB reale: Usa un vero Dispositivo USB collegato al sistema.\nPortale Skylander: Emula un Portale del Potere Skylander.\n Base Infinity: Emula una Base Disney Infinity.\Toypad Dimensions: Emula un Toypad Lego Dimensions.</translation>
     </message>
   </context>
   <context>
@@ -2859,6 +2875,309 @@ Vuoi scaricarla ora?</translation>
     <message>
       <source>A version with that name already exists.</source>
       <translation>Esiste già una versione con questo nome.</translation>
+    </message>
+  </context>
+  <context>
+    <name>dimensions_dialog</name>
+    <message>
+      <source>Dimensions Manager</source>
+      <translation>Gestore Dimensions</translation>
+    </message>
+    <message>
+      <source>Active Dimensions Figures:</source>
+      <translation>Statuette Dimensions Attive:</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation>Nessuno</translation>
+    </message>
+    <message>
+      <source>Clear</source>
+      <translation>Cancella</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation>Crea</translation>
+    </message>
+    <message>
+      <source>Load</source>
+      <translation>Carica</translation>
+    </message>
+    <message>
+      <source>Move</source>
+      <translation>Sposta</translation>
+    </message>
+    <message>
+      <source>Unknown Figure</source>
+      <translation>Statuetta Sconosciuta</translation>
+    </message>
+    <message>
+      <source>Select Dimensions File</source>
+      <translation>Seleziona File Dimensions</translation>
+    </message>
+    <message>
+      <source>Dimensions Figure (*.bin);;</source>
+      <translation>Statuetta Dimensions (*.bin);;</translation>
+    </message>
+    <message>
+      <source>Failed to open the figure file!</source>
+      <translation>Impossibile aprire il file statuetta!</translation>
+    </message>
+    <message>
+      <source>Failed to open the figure file(%1)!
+File may already be in use on the base.</source>
+      <translation>Apertura del file statuetta (%1) non riuscita!
+Il file potrebbe essere già in uso sulla base.</translation>
+    </message>
+    <message>
+      <source>Failed to read the figure file!</source>
+      <translation>Lettura del file statuetta non riuscita!</translation>
+    </message>
+    <message>
+      <source>Failed to read the figure file(%1)!
+File was too small.</source>
+      <translation>Lettura del file statuetta (%1) non riuscita!
+Il file è troppo piccolo.</translation>
+    </message>
+  </context>
+  <context>
+    <name>figure_creator_dialog</name>
+    <message>
+      <source>Figure Creator</source>
+      <translation>Creatore Statuette</translation>
+    </message>
+    <message>
+      <source>Filter by Series:</source>
+      <translation>Filtra per Serie:</translation>
+    </message>
+    <message>
+      <source>All</source>
+      <translation>Tutti</translation>
+    </message>
+    <message>
+      <source>1.0</source>
+      <translation>1.0</translation>
+    </message>
+    <message>
+      <source>2.0</source>
+      <translation>2.0</translation>
+    </message>
+    <message>
+      <source>3.0</source>
+      <translation>3.0</translation>
+    </message>
+    <message>
+      <source>--Unknown--</source>
+      <translation>--Sconosciuto--</translation>
+    </message>
+    <message>
+      <source>Figure Number:</source>
+      <translation>Numero Statuetta:</translation>
+    </message>
+    <message>
+      <source>Series:</source>
+      <translation>Serie:</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation>Crea</translation>
+    </message>
+    <message>
+      <source>Cancel</source>
+      <translation>Annulla</translation>
+    </message>
+    <message>
+      <source>Error converting value</source>
+      <translation>Errore nella conversione del valore</translation>
+    </message>
+    <message>
+      <source>Figure number entered is invalid!</source>
+      <translation>Il numero della statuetta inserito non è valido!</translation>
+    </message>
+    <message>
+      <source>Series number entered is invalid!</source>
+      <translation>Il numero di serie inserito non è valido!</translation>
+    </message>
+    <message>
+      <source>Create Figure File</source>
+      <translation>Crea File Statuetta</translation>
+    </message>
+    <message>
+      <source>Infinity Figure (*.bin);;</source>
+      <translation>Statuetta Infinity (*.bin);;</translation>
+    </message>
+    <message>
+      <source>Failed to create figure file!</source>
+      <translation>Creazione del file statuetta non riuscita!</translation>
+    </message>
+    <message>
+      <source>Failed to create figure file:
+%1</source>
+      <translation>Creazione del file statuetta non riuscita:
+%1</translation>
+    </message>
+  </context>
+  <context>
+    <name>infinity_dialog</name>
+    <message>
+      <source>Infinity Manager</source>
+      <translation>Gestore Infinity</translation>
+    </message>
+    <message>
+      <source>Active Infinity Figures:</source>
+      <translation>Statuette Infinity Attive:</translation>
+    </message>
+    <message>
+      <source>Play Set/Power Disc</source>
+      <translation>Riproduci Set/Power Disc</translation>
+    </message>
+    <message>
+      <source>Power Disc Two</source>
+      <translation>Power Disc Due</translation>
+    </message>
+    <message>
+      <source>Power Disc Three</source>
+      <translation>Power Disc Tre</translation>
+    </message>
+    <message>
+      <source>Player One</source>
+      <translation>Giocatore Uno</translation>
+    </message>
+    <message>
+      <source>Player One Ability One</source>
+      <translation>Giocatore Uno Abilità Uno</translation>
+    </message>
+    <message>
+      <source>Player One Ability Two</source>
+      <translation>Giocatore Uno Abilità Due</translation>
+    </message>
+    <message>
+      <source>Player Two</source>
+      <translation>Giocatore Due</translation>
+    </message>
+    <message>
+      <source>Player Two Ability One</source>
+      <translation>Giocatore Due Abilità Uno</translation>
+    </message>
+    <message>
+      <source>Player Two Ability Two</source>
+      <translation>Giocatore Due Abilità Due</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation>Nessuno</translation>
+    </message>
+    <message>
+      <source>Clear</source>
+      <translation>Cancella</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation>Crea</translation>
+    </message>
+    <message>
+      <source>Load</source>
+      <translation>Carica</translation>
+    </message>
+    <message>
+      <source>Unknown Figure</source>
+      <translation>Statuetta Sconosciuta</translation>
+    </message>
+    <message>
+      <source>Select Infinity File</source>
+      <translation>Seleziona File Infinity</translation>
+    </message>
+    <message>
+      <source>Infinity Figure (*.bin);;</source>
+      <translation>Statuetta Infinity (*.bin);;</translation>
+    </message>
+    <message>
+      <source>Failed to open the figure file!</source>
+      <translation>Impossibile aprire il file statuetta!</translation>
+    </message>
+    <message>
+      <source>Failed to open the figure file(%1)!
+File may already be in use on the base.</source>
+      <translation>Apertura del file statuetta (%1) non riuscita!
+Il file potrebbe essere già in uso sulla base.</translation>
+    </message>
+    <message>
+      <source>Failed to read the figure file!</source>
+      <translation>Lettura del file statuetta non riuscita!</translation>
+    </message>
+    <message>
+      <source>Failed to read the figure file(%1)!
+File was too small.</source>
+      <translation>Lettura del file statuetta (%1) non riuscita!
+Il file è troppo piccolo.</translation>
+    </message>
+  </context>
+  <context>
+    <name>minifig_creator_dialog</name>
+    <message>
+      <source>Figure Creator</source>
+      <translation>Creatore Statuette</translation>
+    </message>
+    <message>
+      <source>--Unknown--</source>
+      <translation>--Sconosciuto--</translation>
+    </message>
+    <message>
+      <source>Figure Number:</source>
+      <translation>Numero Statuetta:</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation>Crea</translation>
+    </message>
+    <message>
+      <source>Cancel</source>
+      <translation>Annulla</translation>
+    </message>
+    <message>
+      <source>Error converting value</source>
+      <translation>Errore nella conversione del valore</translation>
+    </message>
+    <message>
+      <source>Figure number entered is invalid!</source>
+      <translation>Il numero della statuetta inserito non è valido!</translation>
+    </message>
+    <message>
+      <source>Create Figure File</source>
+      <translation>Crea File Statuetta</translation>
+    </message>
+    <message>
+      <source>Dimensions Figure (*.bin);;</source>
+      <translation>Statuetta Dimensions (*.bin);;</translation>
+    </message>
+    <message>
+      <source>Failed to create minifig file!</source>
+      <translation>Creazione file minifig non riuscita!</translation>
+    </message>
+    <message>
+      <source>Failed to create minifig file:
+%1</source>
+      <translation>Impossibile Creare file minifig:
+%1</translation>
+    </message>
+  </context>
+  <context>
+    <name>minifig_move_dialog</name>
+    <message>
+      <source>Figure Mover</source>
+      <translation>Spostamento Statuetta</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation>Nessuno</translation>
+    </message>
+    <message>
+      <source>Move Here</source>
+      <translation>Sposta qui</translation>
+    </message>
+    <message>
+      <source>Pick up and Place</source>
+      <translation>Prendi e Posiziona</translation>
     </message>
   </context>
   <context>

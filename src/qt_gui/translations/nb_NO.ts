@@ -1744,6 +1744,14 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <source>Manage Skylanders</source>
       <translation>Håndter Skylanders</translation>
     </message>
+    <message>
+      <source>Manage Infinity Figures</source>
+      <translation>Håndter Infinity-figurer</translation>
+    </message>
+    <message>
+      <source>Manage Dimensions Toypad</source>
+      <translation>Håndter Dimensions-lekebase</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -2548,8 +2556,16 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <translation>Skylanders portal</translation>
     </message>
     <message>
-      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.</source>
-      <translation>USB-enhet:\nEkte USB-enhet: Bruk en ekte USB-enhet tilkoblet systemet.\nSkylanders portal: Emuler en «Skylanders Portal of Power».</translation>
+      <source>Infinity Base</source>
+      <translation>Infinity-base</translation>
+    </message>
+    <message>
+      <source>Dimensions Toypad</source>
+      <translation>Dimensions-lekebase</translation>
+    </message>
+    <message>
+      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\Dimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
+      <translation>USB-enhet:\nEkte USB-enhet: Bruk en ekte USB-enhet tilkoblet systemet.\nSkylanders portal: Emuler en «Skylanders Portal of Power».\nInfinity-base: Emuler en Disney Infinity-base.\nDimensions-lekebase: Emuler en Lego Dimensions lekebase.</translation>
     </message>
   </context>
   <context>
@@ -2859,6 +2875,309 @@ Would you like to download it now?</source>
     <message>
       <source>A version with that name already exists.</source>
       <translation>En versjon med det navnet finnes allerede.</translation>
+    </message>
+  </context>
+  <context>
+    <name>dimensions_dialog</name>
+    <message>
+      <source>Dimensions Manager</source>
+      <translation>Behandling av Dimensions</translation>
+    </message>
+    <message>
+      <source>Active Dimensions Figures:</source>
+      <translation>Dimensions-figurer i bruk:</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation>Ingen</translation>
+    </message>
+    <message>
+      <source>Clear</source>
+      <translation>Tøm</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation>Opprett</translation>
+    </message>
+    <message>
+      <source>Load</source>
+      <translation>Last</translation>
+    </message>
+    <message>
+      <source>Move</source>
+      <translation>Flytt</translation>
+    </message>
+    <message>
+      <source>Unknown Figure</source>
+      <translation>Ukjent figur</translation>
+    </message>
+    <message>
+      <source>Select Dimensions File</source>
+      <translation>Velg Dimensions-fil</translation>
+    </message>
+    <message>
+      <source>Dimensions Figure (*.bin);;</source>
+      <translation>Dimensions-figur (*.bin);;</translation>
+    </message>
+    <message>
+      <source>Failed to open the figure file!</source>
+      <translation>Klarte ikke åpne figurfila!</translation>
+    </message>
+    <message>
+      <source>Failed to open the figure file(%1)!
+File may already be in use on the base.</source>
+      <translation>Klarte ikke åpne figurfila: %1!
+Fila kan allerede være i bruk på basen.</translation>
+    </message>
+    <message>
+      <source>Failed to read the figure file!</source>
+      <translation>Klarte ikke lese figurfila!</translation>
+    </message>
+    <message>
+      <source>Failed to read the figure file(%1)!
+File was too small.</source>
+      <translation>Klarte ikke lese figurfila: %1!
+Fila var for liten.</translation>
+    </message>
+  </context>
+  <context>
+    <name>figure_creator_dialog</name>
+    <message>
+      <source>Figure Creator</source>
+      <translation>Opprettelse av figurer</translation>
+    </message>
+    <message>
+      <source>Filter by Series:</source>
+      <translation>Filtrer etter serier:</translation>
+    </message>
+    <message>
+      <source>All</source>
+      <translation>Alle</translation>
+    </message>
+    <message>
+      <source>1.0</source>
+      <translation>1.0</translation>
+    </message>
+    <message>
+      <source>2.0</source>
+      <translation>2.0</translation>
+    </message>
+    <message>
+      <source>3.0</source>
+      <translation>3.0</translation>
+    </message>
+    <message>
+      <source>--Unknown--</source>
+      <translation>–Ukjent–</translation>
+    </message>
+    <message>
+      <source>Figure Number:</source>
+      <translation>Figurnummer:</translation>
+    </message>
+    <message>
+      <source>Series:</source>
+      <translation>Serier:</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation>Opprett</translation>
+    </message>
+    <message>
+      <source>Cancel</source>
+      <translation>Avbryt</translation>
+    </message>
+    <message>
+      <source>Error converting value</source>
+      <translation>Feil ved konvertering av verdi</translation>
+    </message>
+    <message>
+      <source>Figure number entered is invalid!</source>
+      <translation>Det angitte figurnummeret er ugyldig!</translation>
+    </message>
+    <message>
+      <source>Series number entered is invalid!</source>
+      <translation>Det angitte serienummeret er ugyldig!</translation>
+    </message>
+    <message>
+      <source>Create Figure File</source>
+      <translation>Opprett figurfil</translation>
+    </message>
+    <message>
+      <source>Infinity Figure (*.bin);;</source>
+      <translation>Infinity-figur (*.bin);;</translation>
+    </message>
+    <message>
+      <source>Failed to create figure file!</source>
+      <translation>Klarte ikke opprette figurfil!</translation>
+    </message>
+    <message>
+      <source>Failed to create figure file:
+%1</source>
+      <translation>Klarte ikke opprette figurfil:
+%1</translation>
+    </message>
+  </context>
+  <context>
+    <name>infinity_dialog</name>
+    <message>
+      <source>Infinity Manager</source>
+      <translation>Behandling av Infinity</translation>
+    </message>
+    <message>
+      <source>Active Infinity Figures:</source>
+      <translation>Infinity-figurer i bruk:</translation>
+    </message>
+    <message>
+      <source>Play Set/Power Disc</source>
+      <translation>«Play Set»/«Power Disc»</translation>
+    </message>
+    <message>
+      <source>Power Disc Two</source>
+      <translation>«Power Disc» to</translation>
+    </message>
+    <message>
+      <source>Power Disc Three</source>
+      <translation>«Power Disc» tre</translation>
+    </message>
+    <message>
+      <source>Player One</source>
+      <translation>Spiller én</translation>
+    </message>
+    <message>
+      <source>Player One Ability One</source>
+      <translation>Spiller én, egenskap en</translation>
+    </message>
+    <message>
+      <source>Player One Ability Two</source>
+      <translation>Spiller én, egenskap to</translation>
+    </message>
+    <message>
+      <source>Player Two</source>
+      <translation>Spiller to</translation>
+    </message>
+    <message>
+      <source>Player Two Ability One</source>
+      <translation>Spiller to, egenskap én</translation>
+    </message>
+    <message>
+      <source>Player Two Ability Two</source>
+      <translation>Spiller to, egenskap to</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation>Ingen</translation>
+    </message>
+    <message>
+      <source>Clear</source>
+      <translation>Tøm</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation>Opprett</translation>
+    </message>
+    <message>
+      <source>Load</source>
+      <translation>Last</translation>
+    </message>
+    <message>
+      <source>Unknown Figure</source>
+      <translation>Ukjent figur</translation>
+    </message>
+    <message>
+      <source>Select Infinity File</source>
+      <translation>Velg Infinity-fil</translation>
+    </message>
+    <message>
+      <source>Infinity Figure (*.bin);;</source>
+      <translation>Infinity-figur (*.bin);;</translation>
+    </message>
+    <message>
+      <source>Failed to open the figure file!</source>
+      <translation>Klarte ikke åpne figurfila!</translation>
+    </message>
+    <message>
+      <source>Failed to open the figure file(%1)!
+File may already be in use on the base.</source>
+      <translation>Klarte ikke åpne figurfila: %1!
+Fila kan allerede være i bruk på basen.</translation>
+    </message>
+    <message>
+      <source>Failed to read the figure file!</source>
+      <translation>Klarte ikke lese figurfila!</translation>
+    </message>
+    <message>
+      <source>Failed to read the figure file(%1)!
+File was too small.</source>
+      <translation>Klarte ikke lese figurfila: %1!
+Fila var for liten.</translation>
+    </message>
+  </context>
+  <context>
+    <name>minifig_creator_dialog</name>
+    <message>
+      <source>Figure Creator</source>
+      <translation>Opprettelse av figurer</translation>
+    </message>
+    <message>
+      <source>--Unknown--</source>
+      <translation>–Ukjent–</translation>
+    </message>
+    <message>
+      <source>Figure Number:</source>
+      <translation>Figurnummer:</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation>Opprett</translation>
+    </message>
+    <message>
+      <source>Cancel</source>
+      <translation>Avbryt</translation>
+    </message>
+    <message>
+      <source>Error converting value</source>
+      <translation>Feil ved konvertering av verdi</translation>
+    </message>
+    <message>
+      <source>Figure number entered is invalid!</source>
+      <translation>Det angitte figurnummeret er ugyldig!</translation>
+    </message>
+    <message>
+      <source>Create Figure File</source>
+      <translation>Opprett figurfil</translation>
+    </message>
+    <message>
+      <source>Dimensions Figure (*.bin);;</source>
+      <translation>Dimensions-figur (*.bin);;</translation>
+    </message>
+    <message>
+      <source>Failed to create minifig file!</source>
+      <translation>Klarte ikke opprette minifigurfil!</translation>
+    </message>
+    <message>
+      <source>Failed to create minifig file:
+%1</source>
+      <translation>Klarte ikke opprette minifigurfil:
+%1</translation>
+    </message>
+  </context>
+  <context>
+    <name>minifig_move_dialog</name>
+    <message>
+      <source>Figure Mover</source>
+      <translation>Flytting av figur</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation>Ingen</translation>
+    </message>
+    <message>
+      <source>Move Here</source>
+      <translation>Flytt her</translation>
+    </message>
+    <message>
+      <source>Pick up and Place</source>
+      <translation>Plukk opp og plasser</translation>
     </message>
   </context>
   <context>

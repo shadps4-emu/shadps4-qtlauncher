@@ -1746,6 +1746,14 @@ Select an emulator version from the right panel.</source>
       <source>Manage Skylanders</source>
       <translation>管理Skylanders</translation>
     </message>
+    <message>
+      <source>Manage Infinity Figures</source>
+      <translation>管理《迪士尼无限》角色手办</translation>
+    </message>
+    <message>
+      <source>Manage Dimensions Toypad</source>
+      <translation>管理《乐高次元》控制基座</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -2552,8 +2560,16 @@ Select an emulator version from the right panel.</source>
       <translation>Skylander 传送门</translation>
     </message>
     <message>
-      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.</source>
-      <translation>USB设备类型：\n真实USB设备：使用连接到系统的真实USB设备。\nSkylander 传送门：模拟 Skylander 传送门设备。</translation>
+      <source>Infinity Base</source>
+      <translation>《迪士尼无限》基础台</translation>
+    </message>
+    <message>
+      <source>Dimensions Toypad</source>
+      <translation>《乐高次元》控制基座</translation>
+    </message>
+    <message>
+      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\Dimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
+      <translation>USB设备类型：\n真实USB设备：使用连接到系统的真实USB设备。\n《小龙斯派罗》传送门：模拟《小龙斯派罗》能量传送门设备。\n《迪士尼无限》基础台：模拟《迪士尼无限》基础台设备。\n《乐高次元》控制板：模拟《乐高次元》玩具控制板设备。</translation>
     </message>
   </context>
   <context>
@@ -2861,6 +2877,307 @@ Would you like to download it now?</source>
     <message>
       <source>A version with that name already exists.</source>
       <translation>已存在同名版本。</translation>
+    </message>
+  </context>
+  <context>
+    <name>dimensions_dialog</name>
+    <message>
+      <source>Dimensions Manager</source>
+      <translation>《乐高次元》管理器</translation>
+    </message>
+    <message>
+      <source>Active Dimensions Figures:</source>
+      <translation>当前激活的《乐高次元》角色：</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation>无</translation>
+    </message>
+    <message>
+      <source>Clear</source>
+      <translation>清除</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation>创建</translation>
+    </message>
+    <message>
+      <source>Load</source>
+      <translation>加载</translation>
+    </message>
+    <message>
+      <source>Move</source>
+      <translation>移动</translation>
+    </message>
+    <message>
+      <source>Unknown Figure</source>
+      <translation>未知角色</translation>
+    </message>
+    <message>
+      <source>Select Dimensions File</source>
+      <translation>选择《乐高次元》文件</translation>
+    </message>
+    <message>
+      <source>Dimensions Figure (*.bin);;</source>
+      <translation>《乐高次元》角色文件 (*.bin)；；</translation>
+    </message>
+    <message>
+      <source>Failed to open the figure file!</source>
+      <translation>打开角色文件失败！</translation>
+    </message>
+    <message>
+      <source>Failed to open the figure file(%1)!
+File may already be in use on the base.</source>
+      <translation>打开角色文件(%1)失败！
+文件可能已被基座设备占用。</translation>
+    </message>
+    <message>
+      <source>Failed to read the figure file!</source>
+      <translation>读取角色文件失败！</translation>
+    </message>
+    <message>
+      <source>Failed to read the figure file(%1)!
+File was too small.</source>
+      <translation>读取角色文件(%1)失败！
+文件体积过小。</translation>
+    </message>
+  </context>
+  <context>
+    <name>figure_creator_dialog</name>
+    <message>
+      <source>Figure Creator</source>
+      <translation>角色创造器</translation>
+    </message>
+    <message>
+      <source>Filter by Series:</source>
+      <translation>按系列筛选：</translation>
+    </message>
+    <message>
+      <source>All</source>
+      <translation>全部</translation>
+    </message>
+    <message>
+      <source>1.0</source>
+      <translation>1.0</translation>
+    </message>
+    <message>
+      <source>2.0</source>
+      <translation>2.0</translation>
+    </message>
+    <message>
+      <source>3.0</source>
+      <translation>3.0</translation>
+    </message>
+    <message>
+      <source>--Unknown--</source>
+      <translation>--未知--</translation>
+    </message>
+    <message>
+      <source>Figure Number:</source>
+      <translation>角色编号：</translation>
+    </message>
+    <message>
+      <source>Series:</source>
+      <translation>系列：</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation>创建</translation>
+    </message>
+    <message>
+      <source>Cancel</source>
+      <translation>取消</translation>
+    </message>
+    <message>
+      <source>Error converting value</source>
+      <translation>值转换失败</translation>
+    </message>
+    <message>
+      <source>Figure number entered is invalid!</source>
+      <translation>输入的角色编号无效！</translation>
+    </message>
+    <message>
+      <source>Series number entered is invalid!</source>
+      <translation>输入的系列编号无效！</translation>
+    </message>
+    <message>
+      <source>Create Figure File</source>
+      <translation>创建角色文件</translation>
+    </message>
+    <message>
+      <source>Infinity Figure (*.bin);;</source>
+      <translation>《迪士尼无限》角色文件 (*.bin)；；</translation>
+    </message>
+    <message>
+      <source>Failed to create figure file!</source>
+      <translation>创建角色文件失败！</translation>
+    </message>
+    <message>
+      <source>Failed to create figure file:
+%1</source>
+      <translation>创建角色文件失败：%1</translation>
+    </message>
+  </context>
+  <context>
+    <name>infinity_dialog</name>
+    <message>
+      <source>Infinity Manager</source>
+      <translation>《迪士尼无限》管理器</translation>
+    </message>
+    <message>
+      <source>Active Infinity Figures:</source>
+      <translation>当前激活的《迪士尼无限》角色：</translation>
+    </message>
+    <message>
+      <source>Play Set/Power Disc</source>
+      <translation>《迪士尼无限》冒险套装/能量碟</translation>
+    </message>
+    <message>
+      <source>Power Disc Two</source>
+      <translation>能量碟二号</translation>
+    </message>
+    <message>
+      <source>Power Disc Three</source>
+      <translation>能量碟三号</translation>
+    </message>
+    <message>
+      <source>Player One</source>
+      <translation>玩家一号</translation>
+    </message>
+    <message>
+      <source>Player One Ability One</source>
+      <translation>玩家一号技能一</translation>
+    </message>
+    <message>
+      <source>Player One Ability Two</source>
+      <translation>玩家一号技能二</translation>
+    </message>
+    <message>
+      <source>Player Two</source>
+      <translation>玩家二号</translation>
+    </message>
+    <message>
+      <source>Player Two Ability One</source>
+      <translation>玩家二号技能一</translation>
+    </message>
+    <message>
+      <source>Player Two Ability Two</source>
+      <translation>玩家二号技能二</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation>无</translation>
+    </message>
+    <message>
+      <source>Clear</source>
+      <translation>清除</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation>创建</translation>
+    </message>
+    <message>
+      <source>Load</source>
+      <translation>加载</translation>
+    </message>
+    <message>
+      <source>Unknown Figure</source>
+      <translation>未知角色</translation>
+    </message>
+    <message>
+      <source>Select Infinity File</source>
+      <translation>选择《迪士尼无限》文件</translation>
+    </message>
+    <message>
+      <source>Infinity Figure (*.bin);;</source>
+      <translation>《迪士尼无限》角色文件 (*.bin)；；</translation>
+    </message>
+    <message>
+      <source>Failed to open the figure file!</source>
+      <translation>打开角色文件失败！</translation>
+    </message>
+    <message>
+      <source>Failed to open the figure file(%1)!
+File may already be in use on the base.</source>
+      <translation>打开角色文件(%1)失败！
+文件可能已被基座设备占用。</translation>
+    </message>
+    <message>
+      <source>Failed to read the figure file!</source>
+      <translation>读取角色文件失败！</translation>
+    </message>
+    <message>
+      <source>Failed to read the figure file(%1)!
+File was too small.</source>
+      <translation>读取角色文件(%1)失败！
+文件体积过小。</translation>
+    </message>
+  </context>
+  <context>
+    <name>minifig_creator_dialog</name>
+    <message>
+      <source>Figure Creator</source>
+      <translation>角色创造器</translation>
+    </message>
+    <message>
+      <source>--Unknown--</source>
+      <translation>--未知--</translation>
+    </message>
+    <message>
+      <source>Figure Number:</source>
+      <translation>角色编号：</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation>创建</translation>
+    </message>
+    <message>
+      <source>Cancel</source>
+      <translation>取消</translation>
+    </message>
+    <message>
+      <source>Error converting value</source>
+      <translation>值转换失败</translation>
+    </message>
+    <message>
+      <source>Figure number entered is invalid!</source>
+      <translation>输入的角色编号无效！</translation>
+    </message>
+    <message>
+      <source>Create Figure File</source>
+      <translation>创建角色文件</translation>
+    </message>
+    <message>
+      <source>Dimensions Figure (*.bin);;</source>
+      <translation>《乐高次元》角色文件 (*.bin)；；</translation>
+    </message>
+    <message>
+      <source>Failed to create minifig file!</source>
+      <translation>创建乐高人仔文件失败！</translation>
+    </message>
+    <message>
+      <source>Failed to create minifig file:
+%1</source>
+      <translation>创建乐高人仔文件失败%1</translation>
+    </message>
+  </context>
+  <context>
+    <name>minifig_move_dialog</name>
+    <message>
+      <source>Figure Mover</source>
+      <translation>角色迁移器</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation>无</translation>
+    </message>
+    <message>
+      <source>Move Here</source>
+      <translation>移至此处</translation>
+    </message>
+    <message>
+      <source>Pick up and Place</source>
+      <translation>拿起并放置</translation>
     </message>
   </context>
   <context>

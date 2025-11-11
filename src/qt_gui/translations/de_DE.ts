@@ -1743,6 +1743,14 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
       <source>Manage Skylanders</source>
       <translation>Skylanders verwalten</translation>
     </message>
+    <message>
+      <source>Manage Infinity Figures</source>
+      <translation>Infinity Figuren verwalten</translation>
+    </message>
+    <message>
+      <source>Manage Dimensions Toypad</source>
+      <translation>Dimensions ToyPad verwalten</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -2551,8 +2559,16 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
       <translation>Skylander Portal</translation>
     </message>
     <message>
-      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.</source>
-      <translation>USB-Gerät:\nEchtes USB-Gerät: Verwende ein echtes USB-Gerät, das an das System angeschlossen ist.\nSkylander Portal: Emuliert ein Skylander Portal of Power.</translation>
+      <source>Infinity Base</source>
+      <translation>Infinity Base</translation>
+    </message>
+    <message>
+      <source>Dimensions Toypad</source>
+      <translation>Dimensions ToyPad</translation>
+    </message>
+    <message>
+      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\Dimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
+      <translation>USB-Gerät:\nEchtes USB-Gerät: Verwendet das echte USB-Gerät, das an das System angeschlossen ist.\nSkylander Portal: Emuliert ein Skylander Portal of Power.\nInfinity Base: Emuliert ein Disney Infinity Base.\nDimensions ToyPad: Emuliert ein Lego Dimensions ToyPad.</translation>
     </message>
   </context>
   <context>
@@ -2862,6 +2878,309 @@ Möchten Sie sie jetzt downloaden?</translation>
     <message>
       <source>A version with that name already exists.</source>
       <translation>Eine Version mit diesem Namen existiert bereits.</translation>
+    </message>
+  </context>
+  <context>
+    <name>dimensions_dialog</name>
+    <message>
+      <source>Dimensions Manager</source>
+      <translation>Dimensions Verwaltung</translation>
+    </message>
+    <message>
+      <source>Active Dimensions Figures:</source>
+      <translation>Aktive Dimensions Figuren:</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation>Keine</translation>
+    </message>
+    <message>
+      <source>Clear</source>
+      <translation>Leeren</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation>Erstellen</translation>
+    </message>
+    <message>
+      <source>Load</source>
+      <translation>Laden</translation>
+    </message>
+    <message>
+      <source>Move</source>
+      <translation>Verschieben</translation>
+    </message>
+    <message>
+      <source>Unknown Figure</source>
+      <translation>Unbekannte Figur</translation>
+    </message>
+    <message>
+      <source>Select Dimensions File</source>
+      <translation>Dimensions-Datei auswählen</translation>
+    </message>
+    <message>
+      <source>Dimensions Figure (*.bin);;</source>
+      <translation>Dimensions Figur (*.bin);;</translation>
+    </message>
+    <message>
+      <source>Failed to open the figure file!</source>
+      <translation>Fehler beim Öffnen der Figur-Datei!</translation>
+    </message>
+    <message>
+      <source>Failed to open the figure file(%1)!
+File may already be in use on the base.</source>
+      <translation>Fehler beim Öffnen der Figur-Datei (%1)!
+Datei wird möglicherweise bereits auf der Base verwendet.</translation>
+    </message>
+    <message>
+      <source>Failed to read the figure file!</source>
+      <translation>Fehler beim Lesen der Figur-Datei!</translation>
+    </message>
+    <message>
+      <source>Failed to read the figure file(%1)!
+File was too small.</source>
+      <translation>Fehler beim Lesen der Figur-Datei (%1)!
+Datei war zu klein.</translation>
+    </message>
+  </context>
+  <context>
+    <name>figure_creator_dialog</name>
+    <message>
+      <source>Figure Creator</source>
+      <translation>Figuren erstellen</translation>
+    </message>
+    <message>
+      <source>Filter by Series:</source>
+      <translation>Nach Serie filtern:</translation>
+    </message>
+    <message>
+      <source>All</source>
+      <translation>Alle</translation>
+    </message>
+    <message>
+      <source>1.0</source>
+      <translation>1.0</translation>
+    </message>
+    <message>
+      <source>2.0</source>
+      <translation>2.0</translation>
+    </message>
+    <message>
+      <source>3.0</source>
+      <translation>3.0</translation>
+    </message>
+    <message>
+      <source>--Unknown--</source>
+      <translation>--Unbekannt--</translation>
+    </message>
+    <message>
+      <source>Figure Number:</source>
+      <translation>Figurnummer:</translation>
+    </message>
+    <message>
+      <source>Series:</source>
+      <translation>Serie:</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation>Erstellen</translation>
+    </message>
+    <message>
+      <source>Cancel</source>
+      <translation>Abbrechen</translation>
+    </message>
+    <message>
+      <source>Error converting value</source>
+      <translation>Fehler beim Konvertieren der Werte</translation>
+    </message>
+    <message>
+      <source>Figure number entered is invalid!</source>
+      <translation>Die eingegebene Figurnummer ist ungültig!</translation>
+    </message>
+    <message>
+      <source>Series number entered is invalid!</source>
+      <translation>Die angegebene Nummer der Serie ist ungültig!</translation>
+    </message>
+    <message>
+      <source>Create Figure File</source>
+      <translation>Figur-Datei erstellen</translation>
+    </message>
+    <message>
+      <source>Infinity Figure (*.bin);;</source>
+      <translation>Infinity-Figur (*.bin);;</translation>
+    </message>
+    <message>
+      <source>Failed to create figure file!</source>
+      <translation>Fehler beim Erstellen der Figur-Datei!</translation>
+    </message>
+    <message>
+      <source>Failed to create figure file:
+%1</source>
+      <translation>Fehler beim Erstellen der Figur-Datei:
+%1</translation>
+    </message>
+  </context>
+  <context>
+    <name>infinity_dialog</name>
+    <message>
+      <source>Infinity Manager</source>
+      <translation>Infinity Verwaltung</translation>
+    </message>
+    <message>
+      <source>Active Infinity Figures:</source>
+      <translation>Aktive Infinity Figuren:</translation>
+    </message>
+    <message>
+      <source>Play Set/Power Disc</source>
+      <translation>Spiele Set/Power Disc</translation>
+    </message>
+    <message>
+      <source>Power Disc Two</source>
+      <translation>Power Disc 2</translation>
+    </message>
+    <message>
+      <source>Power Disc Three</source>
+      <translation>Power Disc 3</translation>
+    </message>
+    <message>
+      <source>Player One</source>
+      <translation>Spieler 1</translation>
+    </message>
+    <message>
+      <source>Player One Ability One</source>
+      <translation>Spieler 1 Fähigkeit 1</translation>
+    </message>
+    <message>
+      <source>Player One Ability Two</source>
+      <translation>Spieler 1 Fähigkeit 2</translation>
+    </message>
+    <message>
+      <source>Player Two</source>
+      <translation>Spieler 2</translation>
+    </message>
+    <message>
+      <source>Player Two Ability One</source>
+      <translation>Spieler 2 Fähigkeit 1</translation>
+    </message>
+    <message>
+      <source>Player Two Ability Two</source>
+      <translation>Spieler 2 Fähigkeit 2</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation>Keine</translation>
+    </message>
+    <message>
+      <source>Clear</source>
+      <translation>Leeren</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation>Erstellen</translation>
+    </message>
+    <message>
+      <source>Load</source>
+      <translation>Laden</translation>
+    </message>
+    <message>
+      <source>Unknown Figure</source>
+      <translation>Unbekannte Figur</translation>
+    </message>
+    <message>
+      <source>Select Infinity File</source>
+      <translation>Infinity-Datei auswählen</translation>
+    </message>
+    <message>
+      <source>Infinity Figure (*.bin);;</source>
+      <translation>Infinity-Figur (*.bin);;</translation>
+    </message>
+    <message>
+      <source>Failed to open the figure file!</source>
+      <translation>Fehler beim Öffnen der Figur-Datei!</translation>
+    </message>
+    <message>
+      <source>Failed to open the figure file(%1)!
+File may already be in use on the base.</source>
+      <translation>Fehler beim Öffnen der Figur-Datei (%1)!
+Datei wird möglicherweise bereits auf der Base verwendet.</translation>
+    </message>
+    <message>
+      <source>Failed to read the figure file!</source>
+      <translation>Fehler beim Lesen der Figur-Datei!</translation>
+    </message>
+    <message>
+      <source>Failed to read the figure file(%1)!
+File was too small.</source>
+      <translation>Fehler beim Lesen der Figur-Datei (%1)!
+Datei war zu klein.</translation>
+    </message>
+  </context>
+  <context>
+    <name>minifig_creator_dialog</name>
+    <message>
+      <source>Figure Creator</source>
+      <translation>Figuren erstellen</translation>
+    </message>
+    <message>
+      <source>--Unknown--</source>
+      <translation>--Unbekannt--</translation>
+    </message>
+    <message>
+      <source>Figure Number:</source>
+      <translation>Figurnummer:</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation>Erstellen</translation>
+    </message>
+    <message>
+      <source>Cancel</source>
+      <translation>Abbrechen</translation>
+    </message>
+    <message>
+      <source>Error converting value</source>
+      <translation>Fehler beim Konvertieren der Werte</translation>
+    </message>
+    <message>
+      <source>Figure number entered is invalid!</source>
+      <translation>Die eingegebene Figurnummer ist ungültig!</translation>
+    </message>
+    <message>
+      <source>Create Figure File</source>
+      <translation>Figur-Datei erstellen</translation>
+    </message>
+    <message>
+      <source>Dimensions Figure (*.bin);;</source>
+      <translation>Dimensions Figur (*.bin);;</translation>
+    </message>
+    <message>
+      <source>Failed to create minifig file!</source>
+      <translation>Fehler beim Erstellen der Minifig-Datei!</translation>
+    </message>
+    <message>
+      <source>Failed to create minifig file:
+%1</source>
+      <translation>Fehler beim Erstellen der Minifig-Datei:
+%1</translation>
+    </message>
+  </context>
+  <context>
+    <name>minifig_move_dialog</name>
+    <message>
+      <source>Figure Mover</source>
+      <translation>Figuren verschieben</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation>Keine</translation>
+    </message>
+    <message>
+      <source>Move Here</source>
+      <translation>Hierhin verschieben</translation>
+    </message>
+    <message>
+      <source>Pick up and Place</source>
+      <translation>Aufheben und platzieren</translation>
     </message>
   </context>
   <context>

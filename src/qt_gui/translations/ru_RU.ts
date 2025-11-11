@@ -1744,6 +1744,14 @@ Select an emulator version from the right panel.</source>
       <source>Manage Skylanders</source>
       <translation>Управление Skylanders</translation>
     </message>
+    <message>
+      <source>Manage Infinity Figures</source>
+      <translation>Управление фигурами Infinity</translation>
+    </message>
+    <message>
+      <source>Manage Dimensions Toypad</source>
+      <translation>Управление Dimensions Toypad</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -2537,19 +2545,27 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>USB Device</source>
-      <translation>Устройство USB</translation>
+      <translation>USB-устройство</translation>
     </message>
     <message>
       <source>Real USB Device</source>
-      <translation>Настоящее устройство USB</translation>
+      <translation>Настоящее USB-устройство</translation>
     </message>
     <message>
       <source>Skylander Portal</source>
       <translation>Skylander Portal</translation>
     </message>
     <message>
-      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.</source>
-      <translation>Устройство USB:\nНастоящее устройство USB: Использовать настоящее устройство USB, подключённое к системе.\nSkylander Portal: Эмулировать Skylander Portal of Power</translation>
+      <source>Infinity Base</source>
+      <translation>Infinity Base</translation>
+    </message>
+    <message>
+      <source>Dimensions Toypad</source>
+      <translation>Dimensions Toypad</translation>
+    </message>
+    <message>
+      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\Dimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
+      <translation>Устройство USB:\nНастоящее USB-устройство: Используйте настоящее USB-устройство, подключённое к системе.\nSkylander Portal: Эмулируйте Skylander Portal of Power.\nInfinity Base: Эмулируйте Disney Infinity Base.\nDimensions Toypad: Эмулируйте Lego Dimensions Toypad.</translation>
     </message>
   </context>
   <context>
@@ -2858,6 +2874,309 @@ Would you like to download it now?</source>
     <message>
       <source>A version with that name already exists.</source>
       <translation>Версия с таким названием уже существует.</translation>
+    </message>
+  </context>
+  <context>
+    <name>dimensions_dialog</name>
+    <message>
+      <source>Dimensions Manager</source>
+      <translation>Менеджер Dimensions</translation>
+    </message>
+    <message>
+      <source>Active Dimensions Figures:</source>
+      <translation>Активные фигурки Dimensions:</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation>Нет</translation>
+    </message>
+    <message>
+      <source>Clear</source>
+      <translation>Очистить</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation>Создать</translation>
+    </message>
+    <message>
+      <source>Load</source>
+      <translation>Загрузить</translation>
+    </message>
+    <message>
+      <source>Move</source>
+      <translation>Переместить</translation>
+    </message>
+    <message>
+      <source>Unknown Figure</source>
+      <translation>Неизвестная фигурка</translation>
+    </message>
+    <message>
+      <source>Select Dimensions File</source>
+      <translation>Выбрать файл Dimensions</translation>
+    </message>
+    <message>
+      <source>Dimensions Figure (*.bin);;</source>
+      <translation>Фигурка Dimensions (*.bin);;</translation>
+    </message>
+    <message>
+      <source>Failed to open the figure file!</source>
+      <translation>Не удалось открыть файл фигурки!</translation>
+    </message>
+    <message>
+      <source>Failed to open the figure file(%1)!
+File may already be in use on the base.</source>
+      <translation>Не удалось открыть файл фигурки(%1)!
+Файл может уже использоваться на базе.</translation>
+    </message>
+    <message>
+      <source>Failed to read the figure file!</source>
+      <translation>Не удалось прочитать файл фигурки!</translation>
+    </message>
+    <message>
+      <source>Failed to read the figure file(%1)!
+File was too small.</source>
+      <translation>Не удалось прочитать файл фигурки(%1)!
+Файл был слишком маленьким.</translation>
+    </message>
+  </context>
+  <context>
+    <name>figure_creator_dialog</name>
+    <message>
+      <source>Figure Creator</source>
+      <translation>Создатель фигурок</translation>
+    </message>
+    <message>
+      <source>Filter by Series:</source>
+      <translation>Фильтр по серии:</translation>
+    </message>
+    <message>
+      <source>All</source>
+      <translation>Все</translation>
+    </message>
+    <message>
+      <source>1.0</source>
+      <translation>1.0</translation>
+    </message>
+    <message>
+      <source>2.0</source>
+      <translation>2.0</translation>
+    </message>
+    <message>
+      <source>3.0</source>
+      <translation>3.0</translation>
+    </message>
+    <message>
+      <source>--Unknown--</source>
+      <translation>--Неизвестно--</translation>
+    </message>
+    <message>
+      <source>Figure Number:</source>
+      <translation>Номер фигурки:</translation>
+    </message>
+    <message>
+      <source>Series:</source>
+      <translation>Серия:</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation>Создать</translation>
+    </message>
+    <message>
+      <source>Cancel</source>
+      <translation>Отмена</translation>
+    </message>
+    <message>
+      <source>Error converting value</source>
+      <translation>Ошибка конвертации значения</translation>
+    </message>
+    <message>
+      <source>Figure number entered is invalid!</source>
+      <translation>Введенный номер фигурки неверен!</translation>
+    </message>
+    <message>
+      <source>Series number entered is invalid!</source>
+      <translation>Введённый номер серии неверен!</translation>
+    </message>
+    <message>
+      <source>Create Figure File</source>
+      <translation>Создать файл фигурки</translation>
+    </message>
+    <message>
+      <source>Infinity Figure (*.bin);;</source>
+      <translation>Фигурка Infinity (*.bin);;</translation>
+    </message>
+    <message>
+      <source>Failed to create figure file!</source>
+      <translation>Не удалось создать файл фигурки!</translation>
+    </message>
+    <message>
+      <source>Failed to create figure file:
+%1</source>
+      <translation>Не удалось создать файл фигурки:
+%1</translation>
+    </message>
+  </context>
+  <context>
+    <name>infinity_dialog</name>
+    <message>
+      <source>Infinity Manager</source>
+      <translation>Менеджер Infinity</translation>
+    </message>
+    <message>
+      <source>Active Infinity Figures:</source>
+      <translation>Активные фигурки Infinity:</translation>
+    </message>
+    <message>
+      <source>Play Set/Power Disc</source>
+      <translation>Игровой набор/Power Disc</translation>
+    </message>
+    <message>
+      <source>Power Disc Two</source>
+      <translation>Power Disc 2</translation>
+    </message>
+    <message>
+      <source>Power Disc Three</source>
+      <translation>Power Disc 3</translation>
+    </message>
+    <message>
+      <source>Player One</source>
+      <translation>Первый игрок</translation>
+    </message>
+    <message>
+      <source>Player One Ability One</source>
+      <translation>Способность первого игрока 1</translation>
+    </message>
+    <message>
+      <source>Player One Ability Two</source>
+      <translation>Способность первого игрока 2</translation>
+    </message>
+    <message>
+      <source>Player Two</source>
+      <translation>Второй игрок</translation>
+    </message>
+    <message>
+      <source>Player Two Ability One</source>
+      <translation>Способность второго игрока 1</translation>
+    </message>
+    <message>
+      <source>Player Two Ability Two</source>
+      <translation>Способность 2 игрока 2</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation>Нет</translation>
+    </message>
+    <message>
+      <source>Clear</source>
+      <translation>Очистить</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation>Создать</translation>
+    </message>
+    <message>
+      <source>Load</source>
+      <translation>Загрузить</translation>
+    </message>
+    <message>
+      <source>Unknown Figure</source>
+      <translation>Неизвестная фигурка</translation>
+    </message>
+    <message>
+      <source>Select Infinity File</source>
+      <translation>Выберите файл Infinity</translation>
+    </message>
+    <message>
+      <source>Infinity Figure (*.bin);;</source>
+      <translation>Фигурка Infinity (*.bin);;</translation>
+    </message>
+    <message>
+      <source>Failed to open the figure file!</source>
+      <translation>Не удалось открыть файл фигурки!</translation>
+    </message>
+    <message>
+      <source>Failed to open the figure file(%1)!
+File may already be in use on the base.</source>
+      <translation>Не удалось открыть файл фигурки(%1)!
+Файл может уже использоваться на базе.</translation>
+    </message>
+    <message>
+      <source>Failed to read the figure file!</source>
+      <translation>Не удалось прочитать файл фигурки!</translation>
+    </message>
+    <message>
+      <source>Failed to read the figure file(%1)!
+File was too small.</source>
+      <translation>Не удалось прочитать файл фигурки(%1)!
+Файл был слишком маленьким.</translation>
+    </message>
+  </context>
+  <context>
+    <name>minifig_creator_dialog</name>
+    <message>
+      <source>Figure Creator</source>
+      <translation>Создатель фигурок</translation>
+    </message>
+    <message>
+      <source>--Unknown--</source>
+      <translation>--Неизвестно--</translation>
+    </message>
+    <message>
+      <source>Figure Number:</source>
+      <translation>Номер фигурки:</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation>Создать</translation>
+    </message>
+    <message>
+      <source>Cancel</source>
+      <translation>Отмена</translation>
+    </message>
+    <message>
+      <source>Error converting value</source>
+      <translation>Ошибка конвертации значения</translation>
+    </message>
+    <message>
+      <source>Figure number entered is invalid!</source>
+      <translation>Введённый номер фигурки неверен!</translation>
+    </message>
+    <message>
+      <source>Create Figure File</source>
+      <translation>Создать файл фигурки</translation>
+    </message>
+    <message>
+      <source>Dimensions Figure (*.bin);;</source>
+      <translation>Фигурка Dimensions (*.bin);;</translation>
+    </message>
+    <message>
+      <source>Failed to create minifig file!</source>
+      <translation>Не удалось создать файл минифигурки!</translation>
+    </message>
+    <message>
+      <source>Failed to create minifig file:
+%1</source>
+      <translation>Не удалось создать файл минифигурки:
+%1</translation>
+    </message>
+  </context>
+  <context>
+    <name>minifig_move_dialog</name>
+    <message>
+      <source>Figure Mover</source>
+      <translation>Перемещение фигурки</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation>Нет</translation>
+    </message>
+    <message>
+      <source>Move Here</source>
+      <translation>Перейти сюда</translation>
+    </message>
+    <message>
+      <source>Pick up and Place</source>
+      <translation>Поднять и поставить</translation>
     </message>
   </context>
   <context>
