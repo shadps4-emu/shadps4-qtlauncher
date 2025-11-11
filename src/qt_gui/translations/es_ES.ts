@@ -2768,15 +2768,6 @@ Select an emulator version from the right panel.</source>
       <translation>No se pudo obtener el hash de la última versión de prelanzamiento</translation>
     </message>
     <message>
-      <source>No pre-release found</source>
-      <translation>No se encontró ningun prelanzamiento</translation>
-    </message>
-    <message>
-      <source>You don&apos;t have any pre-release installed yet.
-Would you like to download it now?</source>
-      <translation>No tienes ninguna versión de prelanzamiento instalada todavía. ¿Te gustaría descargarla ahora?</translation>
-    </message>
-    <message>
       <source>Auto Updater - Emulator</source>
       <translation>Actualizador automático - Emulador</translation>
     </message>
@@ -2872,6 +2863,24 @@ Would you like to download it now?</source>
       <source>A version with that name already exists.</source>
       <translation>Ya existe una versión con ese nombre.</translation>
     </message>
+    <message>
+      <source>It is not possible to create a version with a name that starts with:
+&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</source>
+      <translation type="unfinished">It is not possible to create a version with a name that starts with:
+&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</translation>
+    </message>
+    <message>
+      <source>Local</source>
+      <translation type="unfinished">Local</translation>
+    </message>
+    <message>
+      <source>Failed to determine the folder to remove.</source>
+      <translation type="unfinished">Failed to determine the folder to remove.</translation>
+    </message>
+    <message>
+      <source>Failed to delete folder.</source>
+      <translation type="unfinished">Failed to delete folder.</translation>
+    </message>
   </context>
   <context>
     <name>dimensions_dialog</name>
@@ -2949,18 +2958,6 @@ El archivo es demasiado pequeño.</translation>
     <message>
       <source>All</source>
       <translation>Todas</translation>
-    </message>
-    <message>
-      <source>1.0</source>
-      <translation>1.0</translation>
-    </message>
-    <message>
-      <source>2.0</source>
-      <translation>2.0</translation>
-    </message>
-    <message>
-      <source>3.0</source>
-      <translation>3.0</translation>
     </message>
     <message>
       <source>--Unknown--</source>
