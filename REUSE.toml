@@ -78,7 +78,7 @@ path = [
     "src/images/trophy.wav",
     "src/images/hotkey.png",
     "src/images/game_settings.png",
-    "src/images/users_icon.png"
+    "src/images/users_icon.png",
     "src/shadps4.qrc",
     "src/shadps4.rc",
     "src/qt_gui/translations/update_translation.sh",
