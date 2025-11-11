@@ -8,6 +8,7 @@
 #include "common/config.h"
 #include "common/logging/backend.h"
 #include "common/versions.h"
+#include "core/emulator_settings.h"
 #include "qt_gui/game_install_dialog.h"
 #include "qt_gui/main_window.h"
 #ifdef _WIN32
@@ -40,6 +41,7 @@ int main(int argc, char* argv[]) {
     std::string emulator;
     QStringList emulator_args{};
     QString game_arg = "";
+    std::shared_ptr<EmulatorSettings> emu_settings = std::make_shared<EmulatorSettings>();
 
     // Ignore Qt logs
     qInstallMessageHandler(customMessageHandler);
@@ -143,7 +145,7 @@ int main(int argc, char* argv[]) {
     }
 
     // Initialize the main window
-    MainWindow* m_main_window = new MainWindow(nullptr);
+    MainWindow* m_main_window = new MainWindow(emu_settings,nullptr);
     if ((has_command_line_argument && show_gui) || !has_command_line_argument) {
         m_main_window->Init();
     }

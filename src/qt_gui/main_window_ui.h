@@ -40,6 +40,7 @@ public:
 #endif
     QAction* aboutAct;
     QAction* configureAct;
+    QAction* userManagement;
     QAction* configureHotkeys;
     QAction* setThemeDark;
     QAction* setThemeLight;
@@ -178,6 +179,8 @@ public:
         configureAct = new QAction(MainWindow);
         configureAct->setObjectName("configureAct");
         configureAct->setIcon(QIcon(":images/settings_icon.png"));
+        userManagement = new QAction(MainWindow);
+        userManagement->setObjectName("userManagement");
         configureHotkeys = new QAction(MainWindow);
         configureHotkeys->setObjectName("configureHotkeys");
         configureHotkeys->setIcon(QIcon(":images/hotkey.png"));
@@ -356,6 +359,7 @@ public:
         menuGame_List_Mode->addAction(setlistModeGridAct);
         menuGame_List_Mode->addAction(setlistElfAct);
         menuSettings->addAction(configureAct);
+        menuSettings->addAction(userManagement);
         menuSettings->addAction(gameInstallPathAct);
         menuSettings->addAction(configureHotkeys);
         menuSettings->addAction(menuUtils->menuAction());
@@ -391,6 +395,8 @@ public:
 #endif
         aboutAct->setText(QCoreApplication::translate("MainWindow", "About shadPS4", nullptr));
         configureAct->setText(QCoreApplication::translate("MainWindow", "Configure...", nullptr));
+        userManagement->setText(
+            QCoreApplication::translate("MainWindow", "User Management", nullptr));
         configureHotkeys->setText(
             QCoreApplication::translate("MainWindow", "Customize Hotkeys", nullptr));
 #if QT_CONFIG(tooltip)

@@ -12,23 +12,24 @@ class QString; // to avoid including <QString> in this header
 namespace Common::FS {
 
 enum class PathType {
-    UserDir,         // Where shadPS4 stores its data.
-    LogDir,          // Where log files are stored.
-    ScreenshotsDir,  // Where screenshots are stored.
-    ShaderDir,       // Where shaders are stored.
-    TempDataDir,     // Where game temp data is stored.
-    GameDataDir,     // Where game data is stored.
-    SysModuleDir,    // Where system modules are stored.
-    DownloadDir,     // Where downloads/temp files are stored.
-    CapturesDir,     // Where rdoc captures are stored.
-    CheatsDir,       // Where cheats are stored.
-    PatchesDir,      // Where patches are stored.
-    MetaDataDir,     // Where game metadata (e.g. trophies and menu backgrounds) is stored.
-    CustomTrophy,    // Where custom files for trophies are stored.
-    CustomConfigs,   // Where custom files for different games are stored.
-    VersionDir,      // Where emulator versions are stored.
-    LauncherDir,     // Where launcher stores its data.
-    LauncherMetaData // Where launcher stores its game metadata.
+    UserDir,          // Where shadPS4 stores its data.
+    LogDir,           // Where log files are stored.
+    ScreenshotsDir,   // Where screenshots are stored.
+    ShaderDir,        // Where shaders are stored.
+    TempDataDir,      // Where game temp data is stored.
+    GameDataDir,      // Where game data is stored.
+    SysModuleDir,     // Where system modules are stored.
+    DownloadDir,      // Where downloads/temp files are stored.
+    CapturesDir,      // Where rdoc captures are stored.
+    CheatsDir,        // Where cheats are stored.
+    PatchesDir,       // Where patches are stored.
+    MetaDataDir,      // Where game metadata (e.g. trophies and menu backgrounds) is stored.
+    CustomTrophy,     // Where custom files for trophies are stored.
+    CustomConfigs,    // Where custom files for different games are stored.
+    VersionDir,       // Where emulator versions are stored.
+    LauncherDir,      // Where launcher stores its data.
+    LauncherMetaData, // Where launcher stores its game metadata.
+    HomeDir,          // PS4 home directory
 };
 
 constexpr auto PORTABLE_DIR = "user";
@@ -49,6 +50,7 @@ constexpr auto METADATA_DIR = "game_data";
 constexpr auto CUSTOM_TROPHY = "custom_trophy";
 constexpr auto CUSTOM_CONFIGS = "custom_configs";
 constexpr auto VERSION_DIR = "versions";
+constexpr auto HOME_DIR = "home";
 
 // Filenames
 constexpr auto LOG_FILE = "shad_log.txt";

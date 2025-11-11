@@ -28,8 +28,10 @@
 #include "main_window.h"
 #include "settings_dialog.h"
 #include "skylander_dialog.h"
+#include "user_manager_dialog.h"
 
-MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
+MainWindow::MainWindow(std::shared_ptr<EmulatorSettings> emu_settings,QWidget* parent)
+    : QMainWindow(parent), ui(new Ui::MainWindow), m_emu_settings(std::move(emu_settings)) {
     ui->setupUi(this);
     installEventFilter(this);
     setAttribute(Qt::WA_DeleteOnClose);
@@ -516,6 +518,10 @@ void MainWindow::CreateConnects() {
                 });
 
         settingsDialog->exec();
+    });
+    connect(ui->userManagement, &QAction::triggered, this, [this]() {
+        UserManagerDialog user_manager(m_gui_settings, m_emu_settings, this);
+        user_manager.exec();
     });
 
     connect(ui->settingsButton, &QPushButton::clicked, this, [this]() {
@@ -1231,6 +1237,7 @@ void MainWindow::SetUiIcons(bool isWhite) {
     ui->infinityFiguresAction->setIcon(RecolorIcon(ui->infinityFiguresAction->icon(), isWhite));
     ui->dimensionsToypadAction->setIcon(RecolorIcon(ui->dimensionsToypadAction->icon(), isWhite));
     ui->configureAct->setIcon(RecolorIcon(ui->configureAct->icon(), isWhite));
+    ui->userManagement->setIcon(RecolorIcon(ui->userManagement->icon(), isWhite));
     ui->addElfFolderAct->setIcon(RecolorIcon(ui->addElfFolderAct->icon(), isWhite));
 }
 
