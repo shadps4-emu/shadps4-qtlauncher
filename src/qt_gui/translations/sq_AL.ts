@@ -2772,16 +2772,6 @@ Zgjidh cilën skedë do të hapet; parazgjedhja është General.</translation>
       <translation>Nuk mund të merret hash-i i botimit paraprak më të fundit</translation>
     </message>
     <message>
-      <source>No pre-release found</source>
-      <translation>Nuk u gjet një botim paraprak</translation>
-    </message>
-    <message>
-      <source>You don&apos;t have any pre-release installed yet.
-Would you like to download it now?</source>
-      <translation>Nuk ke ende të instaluar asnjë version paraprak.
-Dëshiron ta shkarkosh tani?</translation>
-    </message>
-    <message>
       <source>Auto Updater - Emulator</source>
       <translation>Përditësues Automatik - Emulator</translation>
     </message>
@@ -2877,6 +2867,24 @@ Dëshiron ta shkarkosh tani?</translation>
       <source>A version with that name already exists.</source>
       <translation>Një version me atë emër ekziston tashmë.</translation>
     </message>
+    <message>
+      <source>It is not possible to create a version with a name that starts with:
+&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</source>
+      <translation type="unfinished">It is not possible to create a version with a name that starts with:
+&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</translation>
+    </message>
+    <message>
+      <source>Local</source>
+      <translation type="unfinished">Local</translation>
+    </message>
+    <message>
+      <source>Failed to determine the folder to remove.</source>
+      <translation type="unfinished">Failed to determine the folder to remove.</translation>
+    </message>
+    <message>
+      <source>Failed to delete folder.</source>
+      <translation type="unfinished">Failed to delete folder.</translation>
+    </message>
   </context>
   <context>
     <name>dimensions_dialog</name>
@@ -2954,18 +2962,6 @@ File was too small.</translation>
     <message>
       <source>All</source>
       <translation type="unfinished">All</translation>
-    </message>
-    <message>
-      <source>1.0</source>
-      <translation type="unfinished">1.0</translation>
-    </message>
-    <message>
-      <source>2.0</source>
-      <translation type="unfinished">2.0</translation>
-    </message>
-    <message>
-      <source>3.0</source>
-      <translation type="unfinished">3.0</translation>
     </message>
     <message>
       <source>--Unknown--</source>
