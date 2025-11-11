@@ -2774,16 +2774,6 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
       <translation>Hash der neuesten Vorabversion konnte nicht abgerufen werden</translation>
     </message>
     <message>
-      <source>No pre-release found</source>
-      <translation>Keine Vorabversion gefunden</translation>
-    </message>
-    <message>
-      <source>You don&apos;t have any pre-release installed yet.
-Would you like to download it now?</source>
-      <translation>Es sind keine Vorabversionen installiert.
-Möchten Sie sie jetzt downloaden?</translation>
-    </message>
-    <message>
       <source>Auto Updater - Emulator</source>
       <translation>Automatische Updates - Emulator</translation>
     </message>
@@ -2879,6 +2869,24 @@ Möchten Sie sie jetzt downloaden?</translation>
       <source>A version with that name already exists.</source>
       <translation>Eine Version mit diesem Namen existiert bereits.</translation>
     </message>
+    <message>
+      <source>It is not possible to create a version with a name that starts with:
+&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</source>
+      <translation type="unfinished">It is not possible to create a version with a name that starts with:
+&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</translation>
+    </message>
+    <message>
+      <source>Local</source>
+      <translation type="unfinished">Local</translation>
+    </message>
+    <message>
+      <source>Failed to determine the folder to remove.</source>
+      <translation type="unfinished">Failed to determine the folder to remove.</translation>
+    </message>
+    <message>
+      <source>Failed to delete folder.</source>
+      <translation type="unfinished">Failed to delete folder.</translation>
+    </message>
   </context>
   <context>
     <name>dimensions_dialog</name>
@@ -2956,18 +2964,6 @@ Datei war zu klein.</translation>
     <message>
       <source>All</source>
       <translation>Alle</translation>
-    </message>
-    <message>
-      <source>1.0</source>
-      <translation>1.0</translation>
-    </message>
-    <message>
-      <source>2.0</source>
-      <translation>2.0</translation>
-    </message>
-    <message>
-      <source>3.0</source>
-      <translation>3.0</translation>
     </message>
     <message>
       <source>--Unknown--</source>
