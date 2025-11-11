@@ -2771,16 +2771,6 @@ Selecione uma versão do emulador no painel direito.</translation>
       <translation>Não foi possível obter o hash do pre-release mais recente</translation>
     </message>
     <message>
-      <source>No pre-release found</source>
-      <translation>Nenhum Pre-release encontrado</translation>
-    </message>
-    <message>
-      <source>You don&apos;t have any pre-release installed yet.
-Would you like to download it now?</source>
-      <translation>Você ainda não tem nenhuma versão de Pre-release instalada.
-Deseja baixá-la agora?</translation>
-    </message>
-    <message>
       <source>Auto Updater - Emulator</source>
       <translation>Atualização Automática - Emulador</translation>
     </message>
@@ -2876,6 +2866,24 @@ Deseja baixá-la agora?</translation>
       <source>A version with that name already exists.</source>
       <translation>Já existe uma versão com esse nome.</translation>
     </message>
+    <message>
+      <source>It is not possible to create a version with a name that starts with:
+&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</source>
+      <translation type="unfinished">It is not possible to create a version with a name that starts with:
+&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</translation>
+    </message>
+    <message>
+      <source>Local</source>
+      <translation type="unfinished">Local</translation>
+    </message>
+    <message>
+      <source>Failed to determine the folder to remove.</source>
+      <translation type="unfinished">Failed to determine the folder to remove.</translation>
+    </message>
+    <message>
+      <source>Failed to delete folder.</source>
+      <translation type="unfinished">Failed to delete folder.</translation>
+    </message>
   </context>
   <context>
     <name>dimensions_dialog</name>
@@ -2953,18 +2961,6 @@ File was too small.</translation>
     <message>
       <source>All</source>
       <translation type="unfinished">All</translation>
-    </message>
-    <message>
-      <source>1.0</source>
-      <translation type="unfinished">1.0</translation>
-    </message>
-    <message>
-      <source>2.0</source>
-      <translation type="unfinished">2.0</translation>
-    </message>
-    <message>
-      <source>3.0</source>
-      <translation type="unfinished">3.0</translation>
     </message>
     <message>
       <source>--Unknown--</source>
