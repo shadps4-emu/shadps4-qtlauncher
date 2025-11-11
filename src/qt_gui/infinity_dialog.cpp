@@ -585,7 +585,7 @@ figure_creator_dialog::figure_creator_dialog(QWidget* parent, u8 slot) : QDialog
 }
 
 bool figure_creator_dialog::create_blank_figure(u32 character, u8 series) {
-    Common::FS::IOFile inf_file(m_file_path.toStdString(), Common::FS::FileAccessMode::ReadWrite);
+    Common::FS::IOFile inf_file(m_file_path.toStdString(), Common::FS::FileAccessMode::Write);
     if (!inf_file.IsOpen()) {
         return false;
     }

@@ -465,8 +465,7 @@ minifig_creator_dialog::minifig_creator_dialog(QWidget* parent) : QDialog(parent
             return;
         }
 
-        Common::FS::IOFile dim_file(m_file_path.toStdString(),
-                                    Common::FS::FileAccessMode::ReadWrite);
+        Common::FS::IOFile dim_file(m_file_path.toStdString(), Common::FS::FileAccessMode::Write);
         if (!dim_file.IsOpen()) {
             QMessageBox::warning(this, tr("Failed to create minifig file!"),
                                  tr("Failed to create minifig file:\n%1").arg(m_file_path),

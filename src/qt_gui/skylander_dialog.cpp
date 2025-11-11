@@ -639,7 +639,7 @@ skylander_creator_dialog::skylander_creator_dialog(QWidget* parent) : QDialog(pa
             return;
         }
 
-        Common::FS::IOFile sky_file(file_path.toStdString(), Common::FS::FileAccessMode::ReadWrite);
+        Common::FS::IOFile sky_file(file_path.toStdString(), Common::FS::FileAccessMode::Write);
         if (!sky_file.IsOpen()) {
             QMessageBox::warning(this, tr("Failed to create skylander file!"),
                                  tr("Failed to create skylander file:\n%1").arg(file_path),
