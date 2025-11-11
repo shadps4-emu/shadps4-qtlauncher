@@ -226,6 +226,7 @@ void UserManagerDialog::OnUserCreate() {
         u.controller_port = -1;
         manager.AddUser(u);
         UpdateTable();
+        m_emu_settings->Save();
         dialog.accept();
     });
     connect(&buttons, &QDialogButtonBox::rejected, &dialog, &QDialog::reject);
@@ -242,6 +243,7 @@ void UserManagerDialog::OnUserRemove() {
                               QMessageBox::No) == QMessageBox::Yes) {
         manager.RemoveUser(id);
         UpdateTable();
+        m_emu_settings->Save();
     }
 }
 
@@ -277,6 +279,7 @@ void UserManagerDialog::OnUserRename() {
     if (dialog.exec() == QDialog::Accepted) {
         manager.RenameUser(id, edit.text().trimmed().toStdString());
         UpdateTable();
+        m_emu_settings->Save();
     }
 }
 
@@ -288,6 +291,7 @@ void UserManagerDialog::OnUserSetDefault() {
     manager.SetDefaultUser(id);
     m_active_user = id;
     UpdateTable();
+    m_emu_settings->Save();
 }
 
 void UserManagerDialog::OnUserSetColor() {
@@ -306,6 +310,7 @@ void UserManagerDialog::OnUserSetColor() {
     if (ok) {
         user->user_color = colors.indexOf(color);
         UpdateTable();
+        m_emu_settings->Save();
     }
 }
 
@@ -330,6 +335,7 @@ void UserManagerDialog::OnUserSetControllerPort() {
     if (ok) {
         manager.SetControllerPort(user_id, new_port);
         UpdateTable();
+        m_emu_settings->Save();
     }
 }
 

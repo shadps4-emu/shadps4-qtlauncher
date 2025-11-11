@@ -181,6 +181,7 @@ public:
         configureAct->setIcon(QIcon(":images/settings_icon.png"));
         userManagement = new QAction(MainWindow);
         userManagement->setObjectName("userManagement");
+        userManagement->setIcon(QIcon(":images/users_icon.png"));
         configureHotkeys = new QAction(MainWindow);
         configureHotkeys->setObjectName("configureHotkeys");
         configureHotkeys->setIcon(QIcon(":images/hotkey.png"));
