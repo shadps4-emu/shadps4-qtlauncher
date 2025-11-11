@@ -114,7 +114,7 @@
     </message>
     <message>
       <source>Unable to open the file for writing.</source>
-      <translation type="unfinished">Unable to open the file for writing.</translation>
+      <translation>لکھنے کے لیے فائل کھولی نہیں جا سکی۔</translation>
     </message>
     <message>
       <source>Failed to parse XML: </source>
