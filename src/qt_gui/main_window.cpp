@@ -30,7 +30,7 @@
 #include "skylander_dialog.h"
 #include "user_manager_dialog.h"
 
-MainWindow::MainWindow(std::shared_ptr<EmulatorSettings> emu_settings,QWidget* parent)
+MainWindow::MainWindow(std::shared_ptr<EmulatorSettings> emu_settings, QWidget* parent)
     : QMainWindow(parent), ui(new Ui::MainWindow), m_emu_settings(std::move(emu_settings)) {
     ui->setupUi(this);
     installEventFilter(this);
