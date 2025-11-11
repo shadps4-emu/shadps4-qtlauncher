@@ -2869,20 +2869,20 @@ Velg en emulatorversjon fra høyre panel.</translation>
     <message>
       <source>It is not possible to create a version with a name that starts with:
 &apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</source>
-      <translation type="unfinished">It is not possible to create a version with a name that starts with:
-&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</translation>
+      <translation>Det er ikke mulig å opprette en versjon med et navn som begynner med:
+«Pre-release» eller «Pre-release-shadPS4».</translation>
     </message>
     <message>
       <source>Local</source>
-      <translation type="unfinished">Local</translation>
+      <translation>Lokal</translation>
     </message>
     <message>
       <source>Failed to determine the folder to remove.</source>
-      <translation type="unfinished">Failed to determine the folder to remove.</translation>
+      <translation>Klarte ikke bestemme mappa som skulle fjernes.</translation>
     </message>
     <message>
       <source>Failed to delete folder.</source>
-      <translation type="unfinished">Failed to delete folder.</translation>
+      <translation>Klarte ikke slette mappa.</translation>
     </message>
   </context>
   <context>
