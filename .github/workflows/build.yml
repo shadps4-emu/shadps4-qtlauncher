@@ -121,9 +121,6 @@ jobs:
   macos-qt:
     runs-on: macos-latest
     needs: get-info
-    strategy:
-      matrix:
-        arch: [ "arm64", "x86_64" ]
     steps:
     - uses: actions/checkout@v5
       with:
@@ -151,7 +148,7 @@ jobs:
     - name: Cache CMake Configuration
       uses: actions/cache@v4 
       env: 
-          cache-name: ${{ runner.os }}-${{ matrix.arch }}-qt-cache-cmake-configuration
+          cache-name: ${{ runner.os }}-qt-cache-cmake-configuration
       with: 
           path: |  
             ${{github.workspace}}/build 
@@ -162,7 +159,7 @@ jobs:
     - name: Cache CMake Build
       uses: hendrikmuhs/ccache-action@v1.2.19
       env:
-          cache-name: ${{ runner.os }}-${{ matrix.arch }}-qt-cache-cmake-build
+          cache-name: ${{ runner.os }}-qt-cache-cmake-build
       with:
         append-timestamp: false
         create-symlink: true
@@ -170,7 +167,7 @@ jobs:
         variant: sccache
 
     - name: Configure CMake
-      run: cmake --fresh -B ${{ github.workspace }}/build -DCMAKE_BUILD_TYPE=${{ env.BUILD_TYPE }} -DCMAKE_OSX_ARCHITECTURES=${{ matrix.arch }} -DENABLE_UPDATER=ON -DCMAKE_INTERPROCEDURAL_OPTIMIZATION_RELEASE=ON -DCMAKE_C_COMPILER_LAUNCHER=sccache -DCMAKE_CXX_COMPILER_LAUNCHER=sccache
+      run: cmake --fresh -B ${{ github.workspace }}/build -DCMAKE_BUILD_TYPE=${{ env.BUILD_TYPE }} -DCMAKE_OSX_ARCHITECTURES="x86_64;arm64" -DENABLE_UPDATER=ON -DCMAKE_INTERPROCEDURAL_OPTIMIZATION_RELEASE=ON -DCMAKE_C_COMPILER_LAUNCHER=sccache -DCMAKE_CXX_COMPILER_LAUNCHER=sccache
 
     - name: Build
       run: cmake --build ${{ github.workspace }}/build --config ${{ env.BUILD_TYPE }} --parallel $(sysctl -n hw.ncpu)
@@ -181,11 +178,11 @@ jobs:
         mv ${{ github.workspace }}/build/shadPS4QtLauncher.app upload
         macdeployqt upload/shadPS4QtLauncher.app
         codesign --deep -fs - upload/shadPS4QtLauncher.app
-        tar cf shadPS4QtLauncher-macos-${{ matrix.arch }}-qt.tar.gz -C upload .
+        tar cf shadPS4QtLauncher-macos-qt.tar.gz -C upload .
     - uses: actions/upload-artifact@v4
       with:
-        name: shadPS4QtLauncher-macos-${{ matrix.arch }}-qt-${{ needs.get-info.outputs.date }}-${{ needs.get-info.outputs.shorthash }}
-        path: shadPS4QtLauncher-macos-${{ matrix.arch }}-qt.tar.gz
+        name: shadPS4QtLauncher-macos-qt-${{ needs.get-info.outputs.date }}-${{ needs.get-info.outputs.shorthash }}
+        path: shadPS4QtLauncher-macos-qt.tar.gz
 
   linux-qt:
     runs-on: ubuntu-24.04
