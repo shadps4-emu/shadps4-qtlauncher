@@ -2774,15 +2774,6 @@ Select an emulator version from the right panel.</source>
       <translation>无法获取最新预发布版本的哈希值</translation>
     </message>
     <message>
-      <source>No pre-release found</source>
-      <translation>未找到预发布版本</translation>
-    </message>
-    <message>
-      <source>You don&apos;t have any pre-release installed yet.
-Would you like to download it now?</source>
-      <translation>您尚未安装任何预发布版本。\n是否立即下载？</translation>
-    </message>
-    <message>
       <source>Auto Updater - Emulator</source>
       <translation>自动更新器 - 模拟器</translation>
     </message>
@@ -2878,6 +2869,24 @@ Would you like to download it now?</source>
       <source>A version with that name already exists.</source>
       <translation>已存在同名版本。</translation>
     </message>
+    <message>
+      <source>It is not possible to create a version with a name that starts with:
+&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</source>
+      <translation type="unfinished">It is not possible to create a version with a name that starts with:
+&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</translation>
+    </message>
+    <message>
+      <source>Local</source>
+      <translation type="unfinished">Local</translation>
+    </message>
+    <message>
+      <source>Failed to determine the folder to remove.</source>
+      <translation type="unfinished">Failed to determine the folder to remove.</translation>
+    </message>
+    <message>
+      <source>Failed to delete folder.</source>
+      <translation type="unfinished">Failed to delete folder.</translation>
+    </message>
   </context>
   <context>
     <name>dimensions_dialog</name>
@@ -2955,18 +2964,6 @@ File was too small.</source>
     <message>
       <source>All</source>
       <translation>全部</translation>
-    </message>
-    <message>
-      <source>1.0</source>
-      <translation>1.0</translation>
-    </message>
-    <message>
-      <source>2.0</source>
-      <translation>2.0</translation>
-    </message>
-    <message>
-      <source>3.0</source>
-      <translation>3.0</translation>
     </message>
     <message>
       <source>--Unknown--</source>
