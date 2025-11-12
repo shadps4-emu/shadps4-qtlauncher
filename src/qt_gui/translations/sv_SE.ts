@@ -1752,6 +1752,14 @@ Välj en emulatorversion från den högra panelen.</translation>
       <source>Manage Dimensions Toypad</source>
       <translation>Hantera Dimensions Toypad</translation>
     </message>
+    <message>
+      <source>Game Log</source>
+      <translation type="unfinished">Game Log</translation>
+    </message>
+    <message>
+      <source>Show Game Log</source>
+      <translation type="unfinished">Show Game Log</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -2564,8 +2572,8 @@ Välj en emulatorversion från den högra panelen.</translation>
       <translation>Dimensions Toypad</translation>
     </message>
     <message>
-      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\Dimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
-      <translation>USB-enhet:\nRiktig USB-enhet: Använd en riktig USB-enhet som är ansluten till systemet.\nSkylander Portal: Emulera en Skylander Portal of Power.\nInfinity Base: Emulera en Disney Infinity Base.\nDimensions Toypad: Emulera en Lego Dimensions Toypad.</translation>
+      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
+      <translation type="unfinished">USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</translation>
     </message>
   </context>
   <context>
