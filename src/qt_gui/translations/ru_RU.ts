@@ -1754,11 +1754,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Game Log</source>
-      <translation type="unfinished">Game Log</translation>
+      <translation>Журнал игры</translation>
     </message>
     <message>
       <source>Show Game Log</source>
-      <translation type="unfinished">Show Game Log</translation>
+      <translation>Показать журнал игры</translation>
     </message>
   </context>
   <context>
@@ -2573,7 +2573,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
-      <translation type="unfinished">USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</translation>
+      <translation>Устройство USB:\nНастоящее USB-устройство: Используйте настоящее USB-устройство, подключённое к системе.\nSkylander Portal: Эмулируйте Skylander Portal of Power.\nInfinity Base: Эмулируйте Disney Infinity Base.\nDimensions Toypad: Эмулируйте Lego Dimensions Toypad.</translation>
     </message>
   </context>
   <context>
@@ -2876,20 +2876,20 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>It is not possible to create a version with a name that starts with:
 &apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</source>
-      <translation type="unfinished">It is not possible to create a version with a name that starts with:
-&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</translation>
+      <translation>Невозможно создать версию с именем, начинающимся с:
+&apos;Pre-release&apos; или &apos;Pre-release-shadPS4&apos;.</translation>
     </message>
     <message>
       <source>Local</source>
-      <translation type="unfinished">Local</translation>
+      <translation>Локальная</translation>
     </message>
     <message>
       <source>Failed to determine the folder to remove.</source>
-      <translation type="unfinished">Failed to determine the folder to remove.</translation>
+      <translation>Не удалось определить папку для удаления.</translation>
     </message>
     <message>
       <source>Failed to delete folder.</source>
-      <translation type="unfinished">Failed to delete folder.</translation>
+      <translation>Не удалось удалить папку.</translation>
     </message>
   </context>
   <context>
