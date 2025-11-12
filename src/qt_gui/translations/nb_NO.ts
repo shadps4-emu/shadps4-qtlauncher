@@ -1754,11 +1754,11 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Game Log</source>
-      <translation type="unfinished">Game Log</translation>
+      <translation>Spillogg</translation>
     </message>
     <message>
       <source>Show Game Log</source>
-      <translation type="unfinished">Show Game Log</translation>
+      <translation>Vis spillogg</translation>
     </message>
   </context>
   <context>
@@ -2573,7 +2573,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
-      <translation type="unfinished">USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</translation>
+      <translation>USB-enhet:\nEkte USB-enhet: Bruk en ekte USB-enhet tilkoblet systemet.\nSkylanders portal: Emuler en «Skylanders Portal of Power».\nInfinity-base: Emuler en Disney Infinity-base.\nDimensions-lekebase: Emuler en Lego Dimensions lekebase.</translation>
     </message>
   </context>
   <context>
