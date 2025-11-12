@@ -968,7 +968,7 @@
     </message>
     <message>
       <source>No log file found for this game!</source>
-      <translation>Не найден файл логов для этой игры!</translation>
+      <translation>Не найден файл журнала для этой игры!</translation>
     </message>
     <message>
       <source>This game has no save data to delete!</source>
@@ -1817,7 +1817,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Open Log Location</source>
-      <translation>Открыть местоположение логов</translation>
+      <translation>Открыть местоположение журнала</translation>
     </message>
     <message>
       <source>Input</source>
