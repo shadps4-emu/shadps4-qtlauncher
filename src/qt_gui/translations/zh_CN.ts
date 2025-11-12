@@ -1754,6 +1754,14 @@ Select an emulator version from the right panel.</source>
       <source>Manage Dimensions Toypad</source>
       <translation>管理《乐高次元》控制基座</translation>
     </message>
+    <message>
+      <source>Game Log</source>
+      <translation type="unfinished">Game Log</translation>
+    </message>
+    <message>
+      <source>Show Game Log</source>
+      <translation type="unfinished">Show Game Log</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -2568,8 +2576,8 @@ Select an emulator version from the right panel.</source>
       <translation>《乐高次元》控制基座</translation>
     </message>
     <message>
-      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\Dimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
-      <translation>USB设备类型：\n真实USB设备：使用连接到系统的真实USB设备。\n《小龙斯派罗》传送门：模拟《小龙斯派罗》能量传送门设备。\n《迪士尼无限》基础台：模拟《迪士尼无限》基础台设备。\n《乐高次元》控制板：模拟《乐高次元》玩具控制板设备。</translation>
+      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
+      <translation type="unfinished">USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</translation>
     </message>
   </context>
   <context>
