@@ -721,7 +721,7 @@
     </message>
     <message>
       <source>Directory with DLC&apos;s</source>
-      <translation>存放DLC(&apos;)的目錄</translation>
+      <translation>存放DLC的目錄</translation>
     </message>
   </context>
   <context>
@@ -2395,11 +2395,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Set &quot;PSN signed-in&quot; to True</source>
-      <translation>將&quot;PSN 登入狀態&quot;設定為 已登入</translation>
+      <translation>將「PSN 登入狀態」設定為「已登入」</translation>
     </message>
     <message>
       <source>Set &quot;Network Connected&quot; to True</source>
-      <translation>將&quot;網路連線狀態&quot;設定為 已連線</translation>
+      <translation>將「網路連線狀態」設定為「已連線」</translation>
     </message>
     <message>
       <source>Miscellaneous</source>
@@ -2411,7 +2411,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Experimental</source>
-      <translation>實驗性質</translation>
+      <translation>試驗性質</translation>
     </message>
     <message>
       <source>Show Splash Screen When Launching Game</source>
@@ -2439,15 +2439,15 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</source>
-      <translation type="unfinished">Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</translation>
+      <translation>將「網路連線狀態」設定為「已連線」：\n強制遊戲偵測到網路處於連線的狀態。實際上尚未支援線上功能。</translation>
     </message>
     <message>
       <source>Set PSN Signed-in to True:\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported.</source>
-      <translation type="unfinished">Set PSN Signed-in to True:\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported.</translation>
+      <translation>將「PSN 登入狀態」設定為「已登入」：強制遊戲偵測到 PSN 處於已登入的狀態。實際上尚未支援 PSN 功能。</translation>
     </message>
     <message>
       <source>Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>啟用Vulkan驗證層：\n啟用一個系統來驗證Vulkan渲染器的狀態並記錄其內部狀態的資訊。\n這樣將會降低效能並可能改變模擬行為。 \n你需要安裝 Vulkan SDK 才能使此項功能如常運作。</translation>
     </message>
     <message>
       <source>Audio Device (general)</source>
@@ -2459,11 +2459,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
-      <translation type="unfinished">Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</translation>
+      <translation>啟用著色器傾印：\n作為技術偵錯用途，將遊戲的著色器在渲染時儲存到資料夾中。</translation>
     </message>
     <message>
       <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</source>
-      <translation type="unfinished">Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</translation>
+      <translation>啟用空值GPU：\n作為技術偵錯用途，停用遊戲渲染，彷如沒有顯示卡。將會顯示黑畫面。</translation>
     </message>
     <message>
       <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
@@ -2471,19 +2471,19 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Additional DMem Allocation</source>
-      <translation type="unfinished">Additional DMem Allocation</translation>
+      <translation>額外裝置記憶體分配</translation>
     </message>
     <message>
       <source>Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</source>
-      <translation type="unfinished">Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</translation>
+      <translation>額外裝置記憶體分配：\n強制分配指定容量的額外裝置記憶體。會導致某些遊戲當機或者出現問題。</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</source>
-      <translation type="unfinished">PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</translation>
+      <translation>PS4系統模組路徑：\n載入PS4系統模組的資料夾。</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the sysmodules path.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the sysmodules path.</translation>
+      <translation>瀏覽：\n選取要設定為存放系統模組路徑的資料夾。</translation>
     </message>
     <message>
       <source>Vulkan Validation (Requires Vulkan SDK)</source>
@@ -2507,15 +2507,15 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>啟用同步驗證：\n啟用一個系統來驗證Vulkan渲染工作的時間。\n這樣將會降低效能並可能改變模擬行為。 \n你需要安裝 Vulkan SDK 才能使此項功能如常運作。</translation>
     </message>
     <message>
       <source>Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>啟用核心驗證：\n啟用一個系統來驗證主要 API 的驗證功能。\n這樣將會降低效能並可能改變模擬行為。 \n你需要安裝 Vulkan SDK 才能使此項功能如常運作。</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>啟用 GPU 輔助驗證：\n加插程式碼來驗證著色器的運作行為是否正常。 \n這樣將會降低效能並可能改變模擬行為。 \n你需要安裝 Vulkan SDK 才能使此項功能如常運作。</translation>
     </message>
     <message>
       <source>GUI Language</source>
@@ -2535,7 +2535,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
-      <translation type="unfinished">GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</translation>
+      <translation>圖形介面更新：\n正式版：每月發佈的官方版本，可能已過時，但更可靠且經過充份測試。 \n每日建置版：包含所有最新功能和修復的開發版本，但可能存在一些錯誤且穩定性較差。 \n\n*此更新僅適用於 Qt 使用者介面。若要更新模擬器核心，請使用「版本管理器」功能表。</translation>
     </message>
     <message>
       <source>Cannot create portable launcher folder</source>
@@ -2555,15 +2555,15 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Skylander Portal</source>
-      <translation type="unfinished">Skylander Portal</translation>
+      <translation>Skylander Portal</translation>
     </message>
     <message>
       <source>Infinity Base</source>
-      <translation type="unfinished">Infinity Base</translation>
+      <translation>Infinity Base</translation>
     </message>
     <message>
       <source>Dimensions Toypad</source>
-      <translation type="unfinished">Dimensions Toypad</translation>
+      <translation>Dimensions Toypad</translation>
     </message>
     <message>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
@@ -2692,7 +2692,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enter the name of this version as it appears in the list.</source>
-      <translation type="unfinished">Enter the name of this version as it appears in the list.</translation>
+      <translation>請輸入列表中顯示的版本名稱。</translation>
     </message>
     <message>
       <source>Error</source>
@@ -2737,8 +2737,7 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>First you need to choose a location to save the versions in
 &apos;Path to save versions&apos;</source>
-      <translation type="unfinished">First you need to choose a location to save the versions in
-&apos;Path to save versions&apos;</translation>
+      <translation>首先，你需要在「版本儲存的路徑」中選取一個儲存位置</translation>
     </message>
     <message>
       <source>Do you want to download the version</source>
@@ -2871,8 +2870,8 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>It is not possible to create a version with a name that starts with:
 &apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</source>
-      <translation type="unfinished">It is not possible to create a version with a name that starts with:
-&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</translation>
+      <translation>無法建立名稱開頭為以下形式的版本：
+Pre-release 或 Pre-release-shadPS4</translation>
     </message>
     <message>
       <source>Local</source>
@@ -2891,11 +2890,11 @@ Select an emulator version from the right panel.</source>
     <name>dimensions_dialog</name>
     <message>
       <source>Dimensions Manager</source>
-      <translation type="unfinished">Dimensions Manager</translation>
+      <translation>Dimensions 管理器</translation>
     </message>
     <message>
       <source>Active Dimensions Figures:</source>
-      <translation type="unfinished">Active Dimensions Figures:</translation>
+      <translation>使用中的 Dimensions Figures：</translation>
     </message>
     <message>
       <source>None</source>
@@ -2919,46 +2918,46 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Unknown Figure</source>
-      <translation type="unfinished">Unknown Figure</translation>
+      <translation>不明的 Figure</translation>
     </message>
     <message>
       <source>Select Dimensions File</source>
-      <translation type="unfinished">Select Dimensions File</translation>
+      <translation>選取 Dimensions 檔案</translation>
     </message>
     <message>
       <source>Dimensions Figure (*.bin);;</source>
-      <translation type="unfinished">Dimensions Figure (*.bin);;</translation>
+      <translation>Dimensions Figure (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to open the figure file!</source>
-      <translation type="unfinished">Failed to open the figure file!</translation>
+      <translation>無法開啟 figure 檔案！</translation>
     </message>
     <message>
       <source>Failed to open the figure file(%1)!
 File may already be in use on the base.</source>
-      <translation type="unfinished">Failed to open the figure file(%1)!
-File may already be in use on the base.</translation>
+      <translation>無法開啟 figure 檔案(%1)！
+該檔案可能已被 base 佔用。</translation>
     </message>
     <message>
       <source>Failed to read the figure file!</source>
-      <translation type="unfinished">Failed to read the figure file!</translation>
+      <translation>無法讀取 figure 檔案！</translation>
     </message>
     <message>
       <source>Failed to read the figure file(%1)!
 File was too small.</source>
-      <translation type="unfinished">Failed to read the figure file(%1)!
-File was too small.</translation>
+      <translation>無法讀取 figure 檔案(%1)！
+檔案太小。</translation>
     </message>
   </context>
   <context>
     <name>figure_creator_dialog</name>
     <message>
       <source>Figure Creator</source>
-      <translation type="unfinished">Figure Creator</translation>
+      <translation>Figure 製作器</translation>
     </message>
     <message>
       <source>Filter by Series:</source>
-      <translation type="unfinished">Filter by Series:</translation>
+      <translation>按系列篩選：</translation>
     </message>
     <message>
       <source>All</source>
@@ -2970,7 +2969,7 @@ File was too small.</translation>
     </message>
     <message>
       <source>Figure Number:</source>
-      <translation type="unfinished">Figure Number:</translation>
+      <translation>Figure 編號：</translation>
     </message>
     <message>
       <source>Series:</source>
@@ -2986,32 +2985,32 @@ File was too small.</translation>
     </message>
     <message>
       <source>Error converting value</source>
-      <translation type="unfinished">Error converting value</translation>
+      <translation>轉換值時發生錯誤</translation>
     </message>
     <message>
       <source>Figure number entered is invalid!</source>
-      <translation type="unfinished">Figure number entered is invalid!</translation>
+      <translation>輸入的 Figure 編號無效！</translation>
     </message>
     <message>
       <source>Series number entered is invalid!</source>
-      <translation type="unfinished">Series number entered is invalid!</translation>
+      <translation>輸入的系列編號無效！</translation>
     </message>
     <message>
       <source>Create Figure File</source>
-      <translation type="unfinished">Create Figure File</translation>
+      <translation>建立 Figure 檔案</translation>
     </message>
     <message>
       <source>Infinity Figure (*.bin);;</source>
-      <translation type="unfinished">Infinity Figure (*.bin);;</translation>
+      <translation>Infinity Figure (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to create figure file!</source>
-      <translation type="unfinished">Failed to create figure file!</translation>
+      <translation>無法建立 figure 檔案！</translation>
     </message>
     <message>
       <source>Failed to create figure file:
 %1</source>
-      <translation type="unfinished">Failed to create figure file:
+      <translation>無法建立 figure 檔案：
 %1</translation>
     </message>
   </context>
@@ -3019,23 +3018,23 @@ File was too small.</translation>
     <name>infinity_dialog</name>
     <message>
       <source>Infinity Manager</source>
-      <translation type="unfinished">Infinity Manager</translation>
+      <translation>Infinity 管理器</translation>
     </message>
     <message>
       <source>Active Infinity Figures:</source>
-      <translation type="unfinished">Active Infinity Figures:</translation>
+      <translation>使用中的 Infinity Figures：</translation>
     </message>
     <message>
       <source>Play Set/Power Disc</source>
-      <translation type="unfinished">Play Set/Power Disc</translation>
+      <translation>Play Set/Power Disc</translation>
     </message>
     <message>
       <source>Power Disc Two</source>
-      <translation type="unfinished">Power Disc Two</translation>
+      <translation>Power Disc 2</translation>
     </message>
     <message>
       <source>Power Disc Three</source>
-      <translation type="unfinished">Power Disc Three</translation>
+      <translation>Power Disc 3</translation>
     </message>
     <message>
       <source>Player One</source>
@@ -3079,42 +3078,42 @@ File was too small.</translation>
     </message>
     <message>
       <source>Unknown Figure</source>
-      <translation type="unfinished">Unknown Figure</translation>
+      <translation>不明的 Figure</translation>
     </message>
     <message>
       <source>Select Infinity File</source>
-      <translation type="unfinished">Select Infinity File</translation>
+      <translation>選取 Infinity 檔案</translation>
     </message>
     <message>
       <source>Infinity Figure (*.bin);;</source>
-      <translation type="unfinished">Infinity Figure (*.bin);;</translation>
+      <translation>Infinity Figure (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to open the figure file!</source>
-      <translation type="unfinished">Failed to open the figure file!</translation>
+      <translation>無法開啟 figure 檔案！</translation>
     </message>
     <message>
       <source>Failed to open the figure file(%1)!
 File may already be in use on the base.</source>
-      <translation type="unfinished">Failed to open the figure file(%1)!
-File may already be in use on the base.</translation>
+      <translation>無法開啟 figure 檔案(%1)！
+該檔案可能已被 base 佔用。</translation>
     </message>
     <message>
       <source>Failed to read the figure file!</source>
-      <translation type="unfinished">Failed to read the figure file!</translation>
+      <translation>無法讀取 figure 檔案！</translation>
     </message>
     <message>
       <source>Failed to read the figure file(%1)!
 File was too small.</source>
-      <translation type="unfinished">Failed to read the figure file(%1)!
-File was too small.</translation>
+      <translation>無法讀取 figure 檔案(%1)！
+檔案太小。</translation>
     </message>
   </context>
   <context>
     <name>minifig_creator_dialog</name>
     <message>
       <source>Figure Creator</source>
-      <translation type="unfinished">Figure Creator</translation>
+      <translation>Figure 製作器</translation>
     </message>
     <message>
       <source>--Unknown--</source>
@@ -3122,7 +3121,7 @@ File was too small.</translation>
     </message>
     <message>
       <source>Figure Number:</source>
-      <translation type="unfinished">Figure Number:</translation>
+      <translation>Figure 編號：</translation>
     </message>
     <message>
       <source>Create</source>
@@ -3138,24 +3137,24 @@ File was too small.</translation>
     </message>
     <message>
       <source>Figure number entered is invalid!</source>
-      <translation type="unfinished">Figure number entered is invalid!</translation>
+      <translation>輸入的 Figure 編號無效！</translation>
     </message>
     <message>
       <source>Create Figure File</source>
-      <translation type="unfinished">Create Figure File</translation>
+      <translation>建立 Figure 檔案</translation>
     </message>
     <message>
       <source>Dimensions Figure (*.bin);;</source>
-      <translation type="unfinished">Dimensions Figure (*.bin);;</translation>
+      <translation>Dimensions Figure (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to create minifig file!</source>
-      <translation type="unfinished">Failed to create minifig file!</translation>
+      <translation>無法建立 minifig 檔案！</translation>
     </message>
     <message>
       <source>Failed to create minifig file:
 %1</source>
-      <translation type="unfinished">Failed to create minifig file:
+      <translation>無法建立 minifig 檔案：
 %1</translation>
     </message>
   </context>
@@ -3163,7 +3162,7 @@ File was too small.</translation>
     <name>minifig_move_dialog</name>
     <message>
       <source>Figure Mover</source>
-      <translation type="unfinished">Figure Mover</translation>
+      <translation>Figure 遷移器</translation>
     </message>
     <message>
       <source>None</source>
@@ -3175,14 +3174,14 @@ File was too small.</translation>
     </message>
     <message>
       <source>Pick up and Place</source>
-      <translation type="unfinished">Pick up and Place</translation>
+      <translation>拿起及放置</translation>
     </message>
   </context>
   <context>
     <name>skylander_creator_dialog</name>
     <message>
       <source>Skylander Creator</source>
-      <translation type="unfinished">Skylander Creator</translation>
+      <translation>Skylander 製作器</translation>
     </message>
     <message>
       <source>--Unknown--</source>
@@ -3206,32 +3205,32 @@ File was too small.</translation>
     </message>
     <message>
       <source>Error converting value</source>
-      <translation type="unfinished">Error converting value</translation>
+      <translation>轉換值時發生錯誤</translation>
     </message>
     <message>
       <source>ID entered is invalid!</source>
-      <translation type="unfinished">ID entered is invalid!</translation>
+      <translation>輸入的ID無效！</translation>
     </message>
     <message>
       <source>Variant entered is invalid!</source>
-      <translation type="unfinished">Variant entered is invalid!</translation>
+      <translation>輸入的變體無效！</translation>
     </message>
     <message>
       <source>Create Skylander File</source>
-      <translation type="unfinished">Create Skylander File</translation>
+      <translation>建立 skylander 檔案</translation>
     </message>
     <message>
       <source>Skylander Object (*.sky);;All Files (*)</source>
-      <translation type="unfinished">Skylander Object (*.sky);;All Files (*)</translation>
+      <translation>Skylander 物件 (*.sky);;所有檔案 (*)</translation>
     </message>
     <message>
       <source>Failed to create skylander file!</source>
-      <translation type="unfinished">Failed to create skylander file!</translation>
+      <translation>無法建立 skylander 檔案！</translation>
     </message>
     <message>
       <source>Failed to create skylander file:
 %1</source>
-      <translation type="unfinished">Failed to create skylander file:
+      <translation>無法建立 skylander 檔案：
 %1</translation>
     </message>
   </context>
@@ -3243,7 +3242,7 @@ File was too small.</translation>
     </message>
     <message>
       <source>Active Portal Skylanders:</source>
-      <translation type="unfinished">Active Portal Skylanders:</translation>
+      <translation>使用中的 Portal Skylanders：</translation>
     </message>
     <message>
       <source>Skylander %1</source>
@@ -3263,31 +3262,31 @@ File was too small.</translation>
     </message>
     <message>
       <source>Select Skylander File</source>
-      <translation type="unfinished">Select Skylander File</translation>
+      <translation>選取 skylander 檔案</translation>
     </message>
     <message>
       <source>Skylander (*.sky *.bin *.dmp *.dump);;All Files (*)</source>
-      <translation type="unfinished">Skylander (*.sky *.bin *.dmp *.dump);;All Files (*)</translation>
+      <translation>Skylander (*.sky *.bin *.dmp *.dump);;所有檔案 (*)</translation>
     </message>
     <message>
       <source>Failed to open the skylander file!</source>
-      <translation type="unfinished">Failed to open the skylander file!</translation>
+      <translation>無法開啟 skylander 檔案！</translation>
     </message>
     <message>
       <source>Failed to open the skylander file(%1)!
 File may already be in use on the portal.</source>
-      <translation type="unfinished">Failed to open the skylander file(%1)!
-File may already be in use on the portal.</translation>
+      <translation>無法開啟 skylander 檔案(%1)！
+該檔案可能已被 portal 佔用。</translation>
     </message>
     <message>
       <source>Failed to read the skylander file!</source>
-      <translation type="unfinished">Failed to read the skylander file!</translation>
+      <translation>無法讀取 skylander 檔案！</translation>
     </message>
     <message>
       <source>Failed to read the skylander file(%1)!
 File was too small.</source>
-      <translation type="unfinished">Failed to read the skylander file(%1)!
-File was too small.</translation>
+      <translation>無法讀取 skylander 檔案(%1)！
+檔案太小。</translation>
     </message>
     <message>
       <source>Unknown (Id:%1 Var:%2)</source>
