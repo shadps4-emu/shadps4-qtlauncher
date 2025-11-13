@@ -341,11 +341,11 @@
     </message>
     <message>
       <source>Auto Updater - GUI</source>
-      <translation>自動更新程式 - GUI</translation>
+      <translation>自動更新程式 - 圖形介面</translation>
     </message>
     <message>
       <source>Update Available - GUI</source>
-      <translation>有可用更新 - GUI</translation>
+      <translation>有可用更新 - 圖形介面</translation>
     </message>
   </context>
   <context>
