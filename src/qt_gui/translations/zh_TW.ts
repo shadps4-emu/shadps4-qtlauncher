@@ -1425,7 +1425,7 @@
     </message>
     <message>
       <source>Add a new preset after the selected row</source>
-      <translation type="unfinished">Add a new preset after the selected row</translation>
+      <translation>在選取的行之後新增一個新的設定檔</translation>
     </message>
     <message>
       <source>Remove selected presets</source>
@@ -1736,15 +1736,15 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Manage Skylanders</source>
-      <translation type="unfinished">Manage Skylanders</translation>
+      <translation>管理 Skylanders</translation>
     </message>
     <message>
       <source>Manage Infinity Figures</source>
-      <translation type="unfinished">Manage Infinity Figures</translation>
+      <translation>管理 Infinity Figures</translation>
     </message>
     <message>
       <source>Manage Dimensions Toypad</source>
-      <translation type="unfinished">Manage Dimensions Toypad</translation>
+      <translation>管理 Dimensions Toypad</translation>
     </message>
     <message>
       <source>Game Log</source>
@@ -2327,7 +2327,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</source>
-      <translation type="unfinished">Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</translation>
+      <translation>呈現模式：\n設定視訊輸出到螢幕上的呈現方式。 \n\nMailbox模式：畫格與螢幕更新率同步。新的畫格將取代任何待處理的畫格。降低延遲，但如果執行速度太慢，可能會丟失畫格。 \nFIFO模式：畫格與螢幕更新率同步。新畫格將排在待處理畫格之後。確保所有畫格都呈現，但可能會增加延遲。 \n立即模式：畫格準備就緒後立即呈現在螢幕上。可能會導致畫面撕裂。</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
@@ -2379,11 +2379,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Vblank Frequency</source>
-      <translation type="unfinished">Vblank Frequency</translation>
+      <translation>Vblank 頻率</translation>
     </message>
     <message>
       <source>Vblank Frequency:\nThe frame rate at which the emulator refreshes at (60hz is the baseline, whether the game runs at 30 or 60fps). Changing this may have adverse effects, such as increasing the game speed, or breaking critical game functionality that does not expect this to change!</source>
-      <translation type="unfinished">Vblank Frequency:\nThe frame rate at which the emulator refreshes at (60hz is the baseline, whether the game runs at 30 or 60fps). Changing this may have adverse effects, such as increasing the game speed, or breaking critical game functionality that does not expect this to change!</translation>
+      <translation>Vblank 頻率：\n模擬器的畫格更新速率（60Hz 為基準，無論遊戲以 30fps 或 60fps 運行）。變更此項設定可能會產生負面影響，例如加快遊戲速度，或者破壞一些關鍵的遊戲功能（這些功能原本並不會預期此項設定發生變化）！</translation>
     </message>
     <message>
       <source>Enable Direct Memory Access</source>
@@ -2395,11 +2395,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Set &quot;PSN signed-in&quot; to True</source>
-      <translation type="unfinished">Set &quot;PSN signed-in&quot; to True</translation>
+      <translation>將&quot;PSN 登入狀態&quot;設定為 已登入</translation>
     </message>
     <message>
       <source>Set &quot;Network Connected&quot; to True</source>
-      <translation type="unfinished">Set &quot;Network Connected&quot; to True</translation>
+      <translation>將&quot;網路連線狀態&quot;設定為 已連線</translation>
     </message>
     <message>
       <source>Miscellaneous</source>
@@ -2431,11 +2431,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable PS4 Neo Mode:\nAdds support for PS4 Pro emulation and memory size. Currently causes instability in a large number of tested games.</source>
-      <translation type="unfinished">Enable PS4 Neo Mode:\nAdds support for PS4 Pro emulation and memory size. Currently causes instability in a large number of tested games.</translation>
+      <translation>啟用 PS4 Neo(Pro) 模式：新增對 PS4 Pro 模擬的支援和記憶體容量。目前會導致大量已測試的遊戲不穩定。</translation>
     </message>
     <message>
       <source>Enable Devkit Console Mode:\nAdds support for Devkit console memory size.</source>
-      <translation type="unfinished">Enable Devkit Console Mode:\nAdds support for Devkit console memory size.</translation>
+      <translation>啟用開發者主機模式：\n新增對開發者主機記憶體容量的支援。</translation>
     </message>
     <message>
       <source>Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</source>
@@ -2467,7 +2467,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
-      <translation type="unfinished">DLC Path:\nThe folder where game DLC is loaded from.</translation>
+      <translation>DLC 路徑：\n載入遊戲 DLC 的資料夾。</translation>
     </message>
     <message>
       <source>Additional DMem Allocation</source>
@@ -2495,15 +2495,15 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable Core Validation</source>
-      <translation type="unfinished">Enable Core Validation</translation>
+      <translation>啟用核心驗證</translation>
     </message>
     <message>
       <source>Enable Sync Validation</source>
-      <translation type="unfinished">Enable Sync Validation</translation>
+      <translation>啟用同步驗證</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation</source>
-      <translation type="unfinished">Enable GPU-Assisted Validation</translation>
+      <translation>啟用 GPU 輔助驗證</translation>
     </message>
     <message>
       <source>Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
@@ -2567,7 +2567,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
-      <translation type="unfinished">USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</translation>
+      <translation>USB 裝置：\n實體 USB 裝置：使用連接到系統的實體 USB 裝置。 \nSkylander Portal：模擬 Skylander 能量傳送門。 \nInfinity Base：模擬 Disney Infinity 底座。 \nDimensions Toypad：模擬 Lego Dimensions Toypad。</translation>
     </message>
   </context>
   <context>
@@ -2676,7 +2676,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Select the folder where the emulator versions will be installed</source>
-      <translation type="unfinished">Select the folder where the emulator versions will be installed</translation>
+      <translation>選取將要安裝模擬器版本的資料夾</translation>
     </message>
     <message>
       <source>Select executable</source>
@@ -2758,19 +2758,19 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Version %1 has been downloaded and selected.</source>
-      <translation type="unfinished">Version %1 has been downloaded and selected.</translation>
+      <translation>版本 %1 已下載並選取。</translation>
     </message>
     <message>
       <source>Failed to create zip extraction script</source>
-      <translation type="unfinished">Failed to create zip extraction script</translation>
+      <translation>無法建立 zip 解壓縮程式碼</translation>
     </message>
     <message>
       <source>The GitHub API response is not a valid JSON array.</source>
-      <translation type="unfinished">The GitHub API response is not a valid JSON array.</translation>
+      <translation>GitHub API 傳回的數列不是有效的 JSON 數列。</translation>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release</source>
-      <translation type="unfinished">Unable to get hash of latest pre-release</translation>
+      <translation>無法取得最新預覽版的雜湊值</translation>
     </message>
     <message>
       <source>Auto Updater - Emulator</source>
@@ -2866,7 +2866,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>A version with that name already exists.</source>
-      <translation type="unfinished">A version with that name already exists.</translation>
+      <translation>已存在同名的版本。</translation>
     </message>
     <message>
       <source>It is not possible to create a version with a name that starts with:
@@ -2974,7 +2974,7 @@ File was too small.</translation>
     </message>
     <message>
       <source>Series:</source>
-      <translation type="unfinished">Series:</translation>
+      <translation>系列：</translation>
     </message>
     <message>
       <source>Create</source>
@@ -3239,7 +3239,7 @@ File was too small.</translation>
     <name>skylander_dialog</name>
     <message>
       <source>Skylanders Manager</source>
-      <translation type="unfinished">Skylanders Manager</translation>
+      <translation>Skylanders 管理器</translation>
     </message>
     <message>
       <source>Active Portal Skylanders:</source>
@@ -3247,7 +3247,7 @@ File was too small.</translation>
     </message>
     <message>
       <source>Skylander %1</source>
-      <translation type="unfinished">Skylander %1</translation>
+      <translation>Skylander %1</translation>
     </message>
     <message>
       <source>Clear</source>
@@ -3291,7 +3291,7 @@ File was too small.</translation>
     </message>
     <message>
       <source>Unknown (Id:%1 Var:%2)</source>
-      <translation type="unfinished">Unknown (Id:%1 Var:%2)</translation>
+      <translation>未知 (Id:%1 Var:%2)</translation>
     </message>
     <message>
       <source>None</source>
