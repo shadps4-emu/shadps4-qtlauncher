@@ -1754,11 +1754,11 @@ Välj en emulatorversion från den högra panelen.</translation>
     </message>
     <message>
       <source>Game Log</source>
-      <translation type="unfinished">Game Log</translation>
+      <translation>Spellogg</translation>
     </message>
     <message>
       <source>Show Game Log</source>
-      <translation type="unfinished">Show Game Log</translation>
+      <translation>Visa spellogg</translation>
     </message>
   </context>
   <context>
@@ -2561,7 +2561,7 @@ Välj en emulatorversion från den högra panelen.</translation>
     </message>
     <message>
       <source>Skylander Portal</source>
-      <translation>Skylander-portal</translation>
+      <translation>Skylander Portal</translation>
     </message>
     <message>
       <source>Infinity Base</source>
@@ -2573,7 +2573,7 @@ Välj en emulatorversion från den högra panelen.</translation>
     </message>
     <message>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
-      <translation type="unfinished">USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</translation>
+      <translation>USB-enhet:\nRiktig USB-enhet: Använd en riktig USB-enhet som är ansluten till systemet.\nSkylander Portal: Emulera en Skylander Portal of Power.\nInfinity Base: Emulera en Disney Infinity Base.\nDimensions Toypad: Emulera en Lego Dimensions Toypad.</translation>
     </message>
   </context>
   <context>
@@ -2876,20 +2876,20 @@ Välj en emulatorversion från den högra panelen.</translation>
     <message>
       <source>It is not possible to create a version with a name that starts with:
 &apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</source>
-      <translation type="unfinished">It is not possible to create a version with a name that starts with:
-&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</translation>
+      <translation>Det är inte möjligt att skapa en version med ett namn som börjar med:
+&apos;Pre-release&apos; eller &apos;Pre-release-shadPS4&apos;.</translation>
     </message>
     <message>
       <source>Local</source>
-      <translation type="unfinished">Local</translation>
+      <translation>Lokal</translation>
     </message>
     <message>
       <source>Failed to determine the folder to remove.</source>
-      <translation type="unfinished">Failed to determine the folder to remove.</translation>
+      <translation>Det gick inte att fastställa vilken mapp som skulle tas bort.</translation>
     </message>
     <message>
       <source>Failed to delete folder.</source>
-      <translation type="unfinished">Failed to delete folder.</translation>
+      <translation>Det gick inte att ta bort mappen.</translation>
     </message>
   </context>
   <context>
