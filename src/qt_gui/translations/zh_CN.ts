@@ -1754,6 +1754,14 @@ Select an emulator version from the right panel.</source>
       <source>Manage Dimensions Toypad</source>
       <translation>管理《乐高次元》控制基座</translation>
     </message>
+    <message>
+      <source>Game Log</source>
+      <translation>游戏日志</translation>
+    </message>
+    <message>
+      <source>Show Game Log</source>
+      <translation>显示游戏日志</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -2568,7 +2576,7 @@ Select an emulator version from the right panel.</source>
       <translation>《乐高次元》控制基座</translation>
     </message>
     <message>
-      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\Dimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
+      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
       <translation>USB设备类型：\n真实USB设备：使用连接到系统的真实USB设备。\n《小龙斯派罗》传送门：模拟《小龙斯派罗》能量传送门设备。\n《迪士尼无限》基础台：模拟《迪士尼无限》基础台设备。\n《乐高次元》控制板：模拟《乐高次元》玩具控制板设备。</translation>
     </message>
   </context>
@@ -2774,15 +2782,6 @@ Select an emulator version from the right panel.</source>
       <translation>无法获取最新预发布版本的哈希值</translation>
     </message>
     <message>
-      <source>No pre-release found</source>
-      <translation>未找到预发布版本</translation>
-    </message>
-    <message>
-      <source>You don&apos;t have any pre-release installed yet.
-Would you like to download it now?</source>
-      <translation>您尚未安装任何预发布版本。\n是否立即下载？</translation>
-    </message>
-    <message>
       <source>Auto Updater - Emulator</source>
       <translation>自动更新器 - 模拟器</translation>
     </message>
@@ -2878,6 +2877,24 @@ Would you like to download it now?</source>
       <source>A version with that name already exists.</source>
       <translation>已存在同名版本。</translation>
     </message>
+    <message>
+      <source>It is not possible to create a version with a name that starts with:
+&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</source>
+      <translation>无法创建以以下字符串开头的版本名称：
+'预发布版本' 或 '预发布版本-shadPS4'；。</translation>
+    </message>
+    <message>
+      <source>Local</source>
+      <translation>本地</translation>
+    </message>
+    <message>
+      <source>Failed to determine the folder to remove.</source>
+      <translation>无法确定要删除的文件夹。</translation>
+    </message>
+    <message>
+      <source>Failed to delete folder.</source>
+      <translation>删除文件夹失败。</translation>
+    </message>
   </context>
   <context>
     <name>dimensions_dialog</name>
@@ -2955,18 +2972,6 @@ File was too small.</source>
     <message>
       <source>All</source>
       <translation>全部</translation>
-    </message>
-    <message>
-      <source>1.0</source>
-      <translation>1.0</translation>
-    </message>
-    <message>
-      <source>2.0</source>
-      <translation>2.0</translation>
-    </message>
-    <message>
-      <source>3.0</source>
-      <translation>3.0</translation>
     </message>
     <message>
       <source>--Unknown--</source>

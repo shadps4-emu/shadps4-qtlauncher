@@ -1751,6 +1751,14 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
       <source>Manage Dimensions Toypad</source>
       <translation>Dimensions ToyPad verwalten</translation>
     </message>
+    <message>
+      <source>Game Log</source>
+      <translation>Spielprotokoll</translation>
+    </message>
+    <message>
+      <source>Show Game Log</source>
+      <translation>Spielprotokoll anzeigen</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -2567,7 +2575,7 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
       <translation>Dimensions ToyPad</translation>
     </message>
     <message>
-      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\Dimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
+      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
       <translation>USB-Gerät:\nEchtes USB-Gerät: Verwendet das echte USB-Gerät, das an das System angeschlossen ist.\nSkylander Portal: Emuliert ein Skylander Portal of Power.\nInfinity Base: Emuliert ein Disney Infinity Base.\nDimensions ToyPad: Emuliert ein Lego Dimensions ToyPad.</translation>
     </message>
   </context>
@@ -2774,16 +2782,6 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
       <translation>Hash der neuesten Vorabversion konnte nicht abgerufen werden</translation>
     </message>
     <message>
-      <source>No pre-release found</source>
-      <translation>Keine Vorabversion gefunden</translation>
-    </message>
-    <message>
-      <source>You don&apos;t have any pre-release installed yet.
-Would you like to download it now?</source>
-      <translation>Es sind keine Vorabversionen installiert.
-Möchten Sie sie jetzt downloaden?</translation>
-    </message>
-    <message>
       <source>Auto Updater - Emulator</source>
       <translation>Automatische Updates - Emulator</translation>
     </message>
@@ -2879,6 +2877,24 @@ Möchten Sie sie jetzt downloaden?</translation>
       <source>A version with that name already exists.</source>
       <translation>Eine Version mit diesem Namen existiert bereits.</translation>
     </message>
+    <message>
+      <source>It is not possible to create a version with a name that starts with:
+&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</source>
+      <translation>Es ist nicht möglich, eine Version zu erstellen, der mit einem der nachfolgenden Namen beginnt:
+&apos;Pre-release&apos; oder &apos;Pre-release-shadPS4&apos;.</translation>
+    </message>
+    <message>
+      <source>Local</source>
+      <translation>Lokal</translation>
+    </message>
+    <message>
+      <source>Failed to determine the folder to remove.</source>
+      <translation>Der zu löschende Ordner konnte nicht ermittelt werden.</translation>
+    </message>
+    <message>
+      <source>Failed to delete folder.</source>
+      <translation>Ordner konnte nicht gelöscht werden.</translation>
+    </message>
   </context>
   <context>
     <name>dimensions_dialog</name>
@@ -2956,18 +2972,6 @@ Datei war zu klein.</translation>
     <message>
       <source>All</source>
       <translation>Alle</translation>
-    </message>
-    <message>
-      <source>1.0</source>
-      <translation>1.0</translation>
-    </message>
-    <message>
-      <source>2.0</source>
-      <translation>2.0</translation>
-    </message>
-    <message>
-      <source>3.0</source>
-      <translation>3.0</translation>
     </message>
     <message>
       <source>--Unknown--</source>

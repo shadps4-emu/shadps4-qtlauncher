@@ -1752,6 +1752,14 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <source>Manage Dimensions Toypad</source>
       <translation>Håndter Dimensions-lekebase</translation>
     </message>
+    <message>
+      <source>Game Log</source>
+      <translation>Spillogg</translation>
+    </message>
+    <message>
+      <source>Show Game Log</source>
+      <translation>Vis spillogg</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -2564,7 +2572,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <translation>Dimensions-lekebase</translation>
     </message>
     <message>
-      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\Dimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
+      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
       <translation>USB-enhet:\nEkte USB-enhet: Bruk en ekte USB-enhet tilkoblet systemet.\nSkylanders portal: Emuler en «Skylanders Portal of Power».\nInfinity-base: Emuler en Disney Infinity-base.\nDimensions-lekebase: Emuler en Lego Dimensions lekebase.</translation>
     </message>
   </context>
@@ -2771,16 +2779,6 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <translation>Klarte ikke hente nøkkelen for forhåndsutgivelsen</translation>
     </message>
     <message>
-      <source>No pre-release found</source>
-      <translation>Fant ingen forhåndsutgivelser</translation>
-    </message>
-    <message>
-      <source>You don&apos;t have any pre-release installed yet.
-Would you like to download it now?</source>
-      <translation>Du har ingen forhåndsutgivelse installert enda.
-Ønsker du å laste den ned nå?</translation>
-    </message>
-    <message>
       <source>Auto Updater - Emulator</source>
       <translation>Auto oppdatering – emulator</translation>
     </message>
@@ -2876,6 +2874,24 @@ Would you like to download it now?</source>
       <source>A version with that name already exists.</source>
       <translation>En versjon med det navnet finnes allerede.</translation>
     </message>
+    <message>
+      <source>It is not possible to create a version with a name that starts with:
+&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</source>
+      <translation>Det er ikke mulig å opprette en versjon med et navn som begynner med:
+«Pre-release» eller «Pre-release-shadPS4».</translation>
+    </message>
+    <message>
+      <source>Local</source>
+      <translation>Lokal</translation>
+    </message>
+    <message>
+      <source>Failed to determine the folder to remove.</source>
+      <translation>Klarte ikke bestemme mappa som skulle fjernes.</translation>
+    </message>
+    <message>
+      <source>Failed to delete folder.</source>
+      <translation>Klarte ikke slette mappa.</translation>
+    </message>
   </context>
   <context>
     <name>dimensions_dialog</name>
@@ -2953,18 +2969,6 @@ Fila var for liten.</translation>
     <message>
       <source>All</source>
       <translation>Alle</translation>
-    </message>
-    <message>
-      <source>1.0</source>
-      <translation>1.0</translation>
-    </message>
-    <message>
-      <source>2.0</source>
-      <translation>2.0</translation>
-    </message>
-    <message>
-      <source>3.0</source>
-      <translation>3.0</translation>
     </message>
     <message>
       <source>--Unknown--</source>

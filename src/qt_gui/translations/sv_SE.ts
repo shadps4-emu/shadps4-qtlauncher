@@ -1752,6 +1752,14 @@ Välj en emulatorversion från den högra panelen.</translation>
       <source>Manage Dimensions Toypad</source>
       <translation>Hantera Dimensions Toypad</translation>
     </message>
+    <message>
+      <source>Game Log</source>
+      <translation>Spellogg</translation>
+    </message>
+    <message>
+      <source>Show Game Log</source>
+      <translation>Visa spellogg</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -2553,7 +2561,7 @@ Välj en emulatorversion från den högra panelen.</translation>
     </message>
     <message>
       <source>Skylander Portal</source>
-      <translation>Skylander-portal</translation>
+      <translation>Skylander Portal</translation>
     </message>
     <message>
       <source>Infinity Base</source>
@@ -2564,7 +2572,7 @@ Välj en emulatorversion från den högra panelen.</translation>
       <translation>Dimensions Toypad</translation>
     </message>
     <message>
-      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\Dimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
+      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
       <translation>USB-enhet:\nRiktig USB-enhet: Använd en riktig USB-enhet som är ansluten till systemet.\nSkylander Portal: Emulera en Skylander Portal of Power.\nInfinity Base: Emulera en Disney Infinity Base.\nDimensions Toypad: Emulera en Lego Dimensions Toypad.</translation>
     </message>
   </context>
@@ -2770,16 +2778,6 @@ Välj en emulatorversion från den högra panelen.</translation>
       <translation>Kunde inte få kontrollsumma av senaste förutgåvan</translation>
     </message>
     <message>
-      <source>No pre-release found</source>
-      <translation>Inga förutgåvor hittades</translation>
-    </message>
-    <message>
-      <source>You don&apos;t have any pre-release installed yet.
-Would you like to download it now?</source>
-      <translation>Du har ingen förutgåva installerad ännu.
-Vill du hämta ner den nu?</translation>
-    </message>
-    <message>
       <source>Auto Updater - Emulator</source>
       <translation>Automatisk uppdaterare - Emulator</translation>
     </message>
@@ -2875,6 +2873,24 @@ Vill du hämta ner den nu?</translation>
       <source>A version with that name already exists.</source>
       <translation>En version med det namnet finns redan.</translation>
     </message>
+    <message>
+      <source>It is not possible to create a version with a name that starts with:
+&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</source>
+      <translation>Det är inte möjligt att skapa en version med ett namn som börjar med:
+&apos;Pre-release&apos; eller &apos;Pre-release-shadPS4&apos;.</translation>
+    </message>
+    <message>
+      <source>Local</source>
+      <translation>Lokal</translation>
+    </message>
+    <message>
+      <source>Failed to determine the folder to remove.</source>
+      <translation>Det gick inte att fastställa vilken mapp som skulle tas bort.</translation>
+    </message>
+    <message>
+      <source>Failed to delete folder.</source>
+      <translation>Det gick inte att ta bort mappen.</translation>
+    </message>
   </context>
   <context>
     <name>dimensions_dialog</name>
@@ -2952,18 +2968,6 @@ Filen är för liten.</translation>
     <message>
       <source>All</source>
       <translation>Alla</translation>
-    </message>
-    <message>
-      <source>1.0</source>
-      <translation>1.0</translation>
-    </message>
-    <message>
-      <source>2.0</source>
-      <translation>2.0</translation>
-    </message>
-    <message>
-      <source>3.0</source>
-      <translation>3.0</translation>
     </message>
     <message>
       <source>--Unknown--</source>

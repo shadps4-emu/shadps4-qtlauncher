@@ -1752,6 +1752,14 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
       <source>Manage Dimensions Toypad</source>
       <translation>Gestire Toypad Dimensions</translation>
     </message>
+    <message>
+      <source>Game Log</source>
+      <translation type="unfinished">Game Log</translation>
+    </message>
+    <message>
+      <source>Show Game Log</source>
+      <translation type="unfinished">Show Game Log</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -2564,8 +2572,8 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
       <translation>Toypad Dimensions</translation>
     </message>
     <message>
-      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\Dimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
-      <translation>Dispositivo USB:\nDispositivo USB reale: Usa un vero Dispositivo USB collegato al sistema.\nPortale Skylander: Emula un Portale del Potere Skylander.\n Base Infinity: Emula una Base Disney Infinity.\Toypad Dimensions: Emula un Toypad Lego Dimensions.</translation>
+      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
+      <translation type="unfinished">USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</translation>
     </message>
   </context>
   <context>
@@ -2771,16 +2779,6 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
       <translation>Impossibile ottenere l'hash dell'ultima versione pre-rilascio</translation>
     </message>
     <message>
-      <source>No pre-release found</source>
-      <translation>Nessuna pre-release trovata</translation>
-    </message>
-    <message>
-      <source>You don&apos;t have any pre-release installed yet.
-Would you like to download it now?</source>
-      <translation>Non hai ancora nessuna versione pre-release installata.
-Vuoi scaricarla ora?</translation>
-    </message>
-    <message>
       <source>Auto Updater - Emulator</source>
       <translation>Aggiornamento Automatico - Emulatore</translation>
     </message>
@@ -2876,6 +2874,24 @@ Vuoi scaricarla ora?</translation>
       <source>A version with that name already exists.</source>
       <translation>Esiste già una versione con questo nome.</translation>
     </message>
+    <message>
+      <source>It is not possible to create a version with a name that starts with:
+&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</source>
+      <translation type="unfinished">It is not possible to create a version with a name that starts with:
+&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</translation>
+    </message>
+    <message>
+      <source>Local</source>
+      <translation type="unfinished">Local</translation>
+    </message>
+    <message>
+      <source>Failed to determine the folder to remove.</source>
+      <translation type="unfinished">Failed to determine the folder to remove.</translation>
+    </message>
+    <message>
+      <source>Failed to delete folder.</source>
+      <translation type="unfinished">Failed to delete folder.</translation>
+    </message>
   </context>
   <context>
     <name>dimensions_dialog</name>
@@ -2953,18 +2969,6 @@ Il file è troppo piccolo.</translation>
     <message>
       <source>All</source>
       <translation>Tutti</translation>
-    </message>
-    <message>
-      <source>1.0</source>
-      <translation>1.0</translation>
-    </message>
-    <message>
-      <source>2.0</source>
-      <translation>2.0</translation>
-    </message>
-    <message>
-      <source>3.0</source>
-      <translation>3.0</translation>
     </message>
     <message>
       <source>--Unknown--</source>
