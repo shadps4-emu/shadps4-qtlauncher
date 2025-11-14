@@ -1754,11 +1754,11 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
     </message>
     <message>
       <source>Game Log</source>
-      <translation type="unfinished">Game Log</translation>
+      <translation>Registro di gioco</translation>
     </message>
     <message>
       <source>Show Game Log</source>
-      <translation type="unfinished">Show Game Log</translation>
+      <translation>Mostra Registro Di Gioco</translation>
     </message>
   </context>
   <context>
@@ -2573,7 +2573,7 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
     </message>
     <message>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
-      <translation type="unfinished">USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</translation>
+      <translation>Dispositivo USB:\nDispositivo USB reale: Usa un vero Dispositivo USB collegato al sistema.\nPortale Skylander: Emula un Portale del Potere Skylander.\n Base Infinity: Emula una Base Disney Infinity.\nToy Pad Dimensions: Emula un Toy Pad Lego Dimensions.</translation>
     </message>
   </context>
   <context>
@@ -2877,20 +2877,20 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
     <message>
       <source>It is not possible to create a version with a name that starts with:
 &apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</source>
-      <translation type="unfinished">It is not possible to create a version with a name that starts with:
-&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</translation>
+      <translation>Non è possibile creare una versione con un nome che inizia con:
+&apos;Pre-release&apos; o &apos;Pre-release-shadPS4&apos;.</translation>
     </message>
     <message>
       <source>Local</source>
-      <translation type="unfinished">Local</translation>
+      <translation>Locale</translation>
     </message>
     <message>
       <source>Failed to determine the folder to remove.</source>
-      <translation type="unfinished">Failed to determine the folder to remove.</translation>
+      <translation>Impossibile determinare la cartella da rimuovere.</translation>
     </message>
     <message>
       <source>Failed to delete folder.</source>
-      <translation type="unfinished">Failed to delete folder.</translation>
+      <translation>Impossibile eliminare la cartella.</translation>
     </message>
   </context>
   <context>
