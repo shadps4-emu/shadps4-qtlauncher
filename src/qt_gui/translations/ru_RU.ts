@@ -968,7 +968,7 @@
     </message>
     <message>
       <source>No log file found for this game!</source>
-      <translation>Не найден файл логов для этой игры!</translation>
+      <translation>Не найден файл журнала для этой игры!</translation>
     </message>
     <message>
       <source>This game has no save data to delete!</source>
@@ -1752,6 +1752,14 @@ Select an emulator version from the right panel.</source>
       <source>Manage Dimensions Toypad</source>
       <translation>Управление Dimensions Toypad</translation>
     </message>
+    <message>
+      <source>Game Log</source>
+      <translation>Журнал игры</translation>
+    </message>
+    <message>
+      <source>Show Game Log</source>
+      <translation>Показать журнал игры</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -1809,7 +1817,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Open Log Location</source>
-      <translation>Открыть местоположение логов</translation>
+      <translation>Открыть местоположение журнала</translation>
     </message>
     <message>
       <source>Input</source>
@@ -2564,7 +2572,7 @@ Select an emulator version from the right panel.</source>
       <translation>Dimensions Toypad</translation>
     </message>
     <message>
-      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\Dimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
+      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
       <translation>Устройство USB:\nНастоящее USB-устройство: Используйте настоящее USB-устройство, подключённое к системе.\nSkylander Portal: Эмулируйте Skylander Portal of Power.\nInfinity Base: Эмулируйте Disney Infinity Base.\nDimensions Toypad: Эмулируйте Lego Dimensions Toypad.</translation>
     </message>
   </context>
@@ -2868,20 +2876,20 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>It is not possible to create a version with a name that starts with:
 &apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</source>
-      <translation type="unfinished">It is not possible to create a version with a name that starts with:
-&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</translation>
+      <translation>Невозможно создать версию с именем, начинающимся с:
+&apos;Pre-release&apos; или &apos;Pre-release-shadPS4&apos;.</translation>
     </message>
     <message>
       <source>Local</source>
-      <translation type="unfinished">Local</translation>
+      <translation>Локальная</translation>
     </message>
     <message>
       <source>Failed to determine the folder to remove.</source>
-      <translation type="unfinished">Failed to determine the folder to remove.</translation>
+      <translation>Не удалось определить папку для удаления.</translation>
     </message>
     <message>
       <source>Failed to delete folder.</source>
-      <translation type="unfinished">Failed to delete folder.</translation>
+      <translation>Не удалось удалить папку.</translation>
     </message>
   </context>
   <context>

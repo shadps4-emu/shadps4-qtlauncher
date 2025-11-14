@@ -1751,6 +1751,14 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
       <source>Manage Dimensions Toypad</source>
       <translation>Dimensions ToyPad verwalten</translation>
     </message>
+    <message>
+      <source>Game Log</source>
+      <translation>Spielprotokoll</translation>
+    </message>
+    <message>
+      <source>Show Game Log</source>
+      <translation>Spielprotokoll anzeigen</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -2567,7 +2575,7 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
       <translation>Dimensions ToyPad</translation>
     </message>
     <message>
-      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\Dimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
+      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
       <translation>USB-Gerät:\nEchtes USB-Gerät: Verwendet das echte USB-Gerät, das an das System angeschlossen ist.\nSkylander Portal: Emuliert ein Skylander Portal of Power.\nInfinity Base: Emuliert ein Disney Infinity Base.\nDimensions ToyPad: Emuliert ein Lego Dimensions ToyPad.</translation>
     </message>
   </context>

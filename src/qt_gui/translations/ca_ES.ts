@@ -1752,6 +1752,14 @@ Selecciona una versió del panell dret.</translation>
       <source>Manage Dimensions Toypad</source>
       <translation>Administrador del Toypad de Dimensions</translation>
     </message>
+    <message>
+      <source>Game Log</source>
+      <translation>Registre de jocs</translation>
+    </message>
+    <message>
+      <source>Show Game Log</source>
+      <translation>Registre de la llista de jocs</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -2564,8 +2572,8 @@ Selecciona una versió del panell dret.</translation>
       <translation>Toypad de Dimensions</translation>
     </message>
     <message>
-      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\Dimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
-      <translation>Dispositiu USB:\nDispositiu USB real: Fes servir un dispositiu USB enllaçat al sistema.\nPortal Skylander: Emula un portal Skylander.\nBase Infinity: Emula una base de Disney Infinity.\Dimensions Toypad: Emula un Toypad de Lego Dimensions.</translation>
+      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
+      <translation>Dispositiu USB:\nDispositiu USB real: Fes servir un dispositiu USB enllaçat al sistema.\nPortal Skylander: Emula un portal Skylander.\nBase Infinity: Emula una base de Disney Infinity.\nDimensions Toypad: Emula un Toypad de Lego Dimensions.</translation>
     </message>
   </context>
   <context>

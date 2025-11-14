@@ -1754,6 +1754,14 @@ Select an emulator version from the right panel.</source>
       <source>Manage Dimensions Toypad</source>
       <translation>管理《乐高次元》控制基座</translation>
     </message>
+    <message>
+      <source>Game Log</source>
+      <translation>游戏日志</translation>
+    </message>
+    <message>
+      <source>Show Game Log</source>
+      <translation>显示游戏日志</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -2568,7 +2576,7 @@ Select an emulator version from the right panel.</source>
       <translation>《乐高次元》控制基座</translation>
     </message>
     <message>
-      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\Dimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
+      <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
       <translation>USB设备类型：\n真实USB设备：使用连接到系统的真实USB设备。\n《小龙斯派罗》传送门：模拟《小龙斯派罗》能量传送门设备。\n《迪士尼无限》基础台：模拟《迪士尼无限》基础台设备。\n《乐高次元》控制板：模拟《乐高次元》玩具控制板设备。</translation>
     </message>
   </context>
@@ -2872,20 +2880,20 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>It is not possible to create a version with a name that starts with:
 &apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</source>
-      <translation type="unfinished">It is not possible to create a version with a name that starts with:
-&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</translation>
+      <translation>无法创建以以下字符串开头的版本名称：
+'预发布版本' 或 '预发布版本-shadPS4'；。</translation>
     </message>
     <message>
       <source>Local</source>
-      <translation type="unfinished">Local</translation>
+      <translation>本地</translation>
     </message>
     <message>
       <source>Failed to determine the folder to remove.</source>
-      <translation type="unfinished">Failed to determine the folder to remove.</translation>
+      <translation>无法确定要删除的文件夹。</translation>
     </message>
     <message>
       <source>Failed to delete folder.</source>
-      <translation type="unfinished">Failed to delete folder.</translation>
+      <translation>删除文件夹失败。</translation>
     </message>
   </context>
   <context>
