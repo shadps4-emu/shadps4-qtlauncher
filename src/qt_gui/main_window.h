@@ -23,13 +23,15 @@
 #include "main_window_themes.h"
 #include "main_window_ui.h"
 
+class EmulatorSettings;
+
 class MainWindow : public QMainWindow {
     Q_OBJECT
 signals:
     void WindowResized(QResizeEvent* event);
 
 public:
-    explicit MainWindow(QWidget* parent = nullptr);
+    explicit MainWindow(std::shared_ptr<EmulatorSettings> emu_settings, QWidget* parent = nullptr);
     ~MainWindow();
     bool Init();
     void InstallDirectory();
@@ -113,7 +115,7 @@ private:
 
     QTranslator* translator;
     std::shared_ptr<gui_settings> m_gui_settings;
-
+    std::shared_ptr<EmulatorSettings> m_emu_settings;
     std::filesystem::path last_game_path;
 
 protected:
