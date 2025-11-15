@@ -1750,7 +1750,7 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
     </message>
     <message>
       <source>Manage Dimensions Toypad</source>
-      <translation>Gestire Toypad Dimensions</translation>
+      <translation>Gestisci Toy Pad Dimensions</translation>
     </message>
     <message>
       <source>Game Log</source>
@@ -2569,7 +2569,7 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
     </message>
     <message>
       <source>Dimensions Toypad</source>
-      <translation>Toypad Dimensions</translation>
+      <translation>Toy Pad Dimensions</translation>
     </message>
     <message>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
