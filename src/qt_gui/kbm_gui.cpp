@@ -23,6 +23,7 @@ KBMSettings::KBMSettings(std::shared_ptr<GameInfoClass> game_info_get,
       GameRunning(isGameRunning), RunningGameSerial(GameRunningSerial), ui(new Ui::KBMSettings) {
 
     ui->setupUi(this);
+    this->setFixedWidth(this->width());
     ui->PerGameCheckBox->setChecked(!Config::GetUseUnifiedInputConfig());
     ui->TextEditorButton->setFocus();
     this->setFocusPolicy(Qt::StrongFocus);
