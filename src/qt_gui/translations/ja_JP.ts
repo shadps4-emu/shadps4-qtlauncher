@@ -555,7 +555,7 @@
     </message>
     <message>
       <source>No default selected</source>
-      <translation type="unfinished">No default selected</translation>
+      <translation>デフォルトが選択されていません</translation>
     </message>
     <message>
       <source>n/a</source>
@@ -579,7 +579,7 @@
     </message>
     <message>
       <source>Default Controller Selected</source>
-      <translation type="unfinished">Default Controller Selected</translation>
+      <translation>デフォルトのコントローラーを選択しました</translation>
     </message>
     <message>
       <source>Active controller set as default</source>
@@ -607,7 +607,7 @@
     </message>
     <message>
       <source>Left Stick Deadzone</source>
-      <translation type="unfinished">Left Stick Deadzone</translation>
+      <translation>左スティックデッドゾーン</translation>
     </message>
     <message>
       <source>Min Deadzone (def:2 max:127)</source>
@@ -619,7 +619,7 @@
     </message>
     <message>
       <source>Right Stick Deadzone</source>
-      <translation type="unfinished">Right Stick Deadzone</translation>
+      <translation>右スティックデッドゾーン</translation>
     </message>
   </context>
   <context>
