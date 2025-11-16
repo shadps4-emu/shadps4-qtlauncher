@@ -1742,11 +1742,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Manage Skylanders</source>
-      <translation type="unfinished">Manage Skylanders</translation>
+      <translation>مدير Skylanders</translation>
     </message>
     <message>
       <source>Manage Infinity Figures</source>
-      <translation type="unfinished">Manage Infinity Figures</translation>
+      <translation>مدير Infinity Figures</translation>
     </message>
     <message>
       <source>Manage Dimensions Toypad</source>
@@ -2414,7 +2414,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Frontend</source>
-      <translation>واجهة المستخدم الأمامية</translation>
+      <translation>الواجهة</translation>
     </message>
     <message>
       <source>Experimental</source>
@@ -3246,7 +3246,7 @@ File was too small.</translation>
     <name>skylander_dialog</name>
     <message>
       <source>Skylanders Manager</source>
-      <translation type="unfinished">Skylanders Manager</translation>
+      <translation>مدير Skylanders</translation>
     </message>
     <message>
       <source>Active Portal Skylanders:</source>
