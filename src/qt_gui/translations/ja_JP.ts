@@ -1040,15 +1040,15 @@
     </message>
     <message>
       <source>Launch with game specific configs (default)</source>
-      <translation type="unfinished">Launch with game specific configs (default)</translation>
+      <translation>ゲーム固有の設定で起動する（デフォルト）</translation>
     </message>
     <message>
       <source>Launch with global config only</source>
-      <translation type="unfinished">Launch with global config only</translation>
+      <translation>グローバル設定でのみ起動する</translation>
     </message>
     <message>
       <source>Launch with default settings</source>
-      <translation type="unfinished">Launch with default settings</translation>
+      <translation>デフォルト設定で起動</translation>
     </message>
     <message>
       <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
@@ -1064,7 +1064,7 @@
     </message>
     <message>
       <source>Create Shortcut for Selected Emulator Version</source>
-      <translation type="unfinished">Create Shortcut for Selected Emulator Version</translation>
+      <translation>選択したエミュレータバージョン用のショートカットを作成</translation>
     </message>
     <message>
       <source>Create Shortcut for Specified Emulator Version</source>
@@ -1146,7 +1146,7 @@
     </message>
     <message>
       <source>Toggle Pause</source>
-      <translation type="unfinished">Toggle Pause</translation>
+      <translation>一時停止 / 再開</translation>
     </message>
     <message>
       <source>Keyboard Hotkeys</source>
@@ -1710,7 +1710,7 @@
     </message>
     <message>
       <source>No Version Selected</source>
-      <translation type="unfinished">No Version Selected</translation>
+      <translation>バージョンが選択されていません</translation>
     </message>
     <message>
       <source>No emulator version was selected.
@@ -1726,15 +1726,15 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Run Emulator</source>
-      <translation type="unfinished">Run Emulator</translation>
+      <translation>エミュレータを実行</translation>
     </message>
     <message>
       <source>Emulator is already running!</source>
-      <translation type="unfinished">Emulator is already running!</translation>
+      <translation>エミュレータはすでに実行中です!</translation>
     </message>
     <message>
       <source>Invalid game argument provided</source>
-      <translation type="unfinished">Invalid game argument provided</translation>
+      <translation>無効なゲーム引数が指定されました</translation>
     </message>
     <message>
       <source>None</source>
@@ -1754,11 +1754,11 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Game Log</source>
-      <translation type="unfinished">Game Log</translation>
+      <translation>ゲームログ</translation>
     </message>
     <message>
       <source>Show Game Log</source>
-      <translation type="unfinished">Show Game Log</translation>
+      <translation>ゲームログを表示</translation>
     </message>
   </context>
   <context>
@@ -1801,7 +1801,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Open the custom trophy images/sounds folder</source>
-      <translation type="unfinished">Open the custom trophy images/sounds folder</translation>
+      <translation>カスタムトロフィー画像/サウンドフォルダを開く</translation>
     </message>
     <message>
       <source>Logger</source>
@@ -2409,7 +2409,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Miscellaneous</source>
-      <translation type="unfinished">Miscellaneous</translation>
+      <translation>その他</translation>
     </message>
     <message>
       <source>Frontend</source>
@@ -2553,7 +2553,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>USB Device</source>
-      <translation type="unfinished">USB Device</translation>
+      <translation>USBデバイス</translation>
     </message>
     <message>
       <source>Real USB Device</source>
@@ -2580,7 +2580,7 @@ Select an emulator version from the right panel.</translation>
     <name>ShortcutDialog</name>
     <message>
       <source>Select Version</source>
-      <translation type="unfinished">Select Version</translation>
+      <translation>バージョン選択</translation>
     </message>
     <message>
       <source>Select version for shortcut creation</source>
@@ -2588,11 +2588,11 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>No Version Selected</source>
-      <translation type="unfinished">No Version Selected</translation>
+      <translation>バージョンが選択されていません</translation>
     </message>
     <message>
       <source>Select a version first</source>
-      <translation type="unfinished">Select a version first</translation>
+      <translation>最初にバージョンを選択してください</translation>
     </message>
   </context>
   <context>
@@ -2626,7 +2626,7 @@ Select an emulator version from the right panel.</translation>
     <name>VersionDialog</name>
     <message>
       <source>Version Manager</source>
-      <translation type="unfinished">Version Manager</translation>
+      <translation>バージョンマネージャー</translation>
     </message>
     <message>
       <source>Path to save versions</source>
@@ -2634,7 +2634,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Browse</source>
-      <translation type="unfinished">Browse</translation>
+      <translation>参照</translation>
     </message>
     <message>
       <source>Installed</source>
@@ -2984,11 +2984,11 @@ File was too small.</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>作成</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>キャンセル</translation>
     </message>
     <message>
       <source>Error converting value</source>
@@ -3045,7 +3045,7 @@ File was too small.</translation>
     </message>
     <message>
       <source>Player One</source>
-      <translation type="unfinished">Player One</translation>
+      <translation>プレイヤー1</translation>
     </message>
     <message>
       <source>Player One Ability One</source>
@@ -3057,7 +3057,7 @@ File was too small.</translation>
     </message>
     <message>
       <source>Player Two</source>
-      <translation type="unfinished">Player Two</translation>
+      <translation>プレイヤー 2</translation>
     </message>
     <message>
       <source>Player Two Ability One</source>
@@ -3077,7 +3077,7 @@ File was too small.</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>作成</translation>
     </message>
     <message>
       <source>Load</source>
