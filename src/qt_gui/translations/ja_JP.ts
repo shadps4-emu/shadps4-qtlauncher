@@ -2756,7 +2756,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Downloading %1 , please wait...</source>
-      <translation type="unfinished">Downloading %1 , please wait...</translation>
+      <translation>%1 をダウンロード中、お待ちください...</translation>
     </message>
     <message>
       <source>Could not save file.</source>
@@ -2856,7 +2856,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Always Show Changelog</source>
-      <translation type="unfinished">Always Show Changelog</translation>
+      <translation>常に変更履歴を表示</translation>
     </message>
     <message>
       <source>No version selected. Please choose one from the list to delete.</source>
@@ -2890,7 +2890,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Failed to delete folder.</source>
-      <translation type="unfinished">Failed to delete folder.</translation>
+      <translation>フォルダの削除に失敗しました。</translation>
     </message>
   </context>
   <context>
