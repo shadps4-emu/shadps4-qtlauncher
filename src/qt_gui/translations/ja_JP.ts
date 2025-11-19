@@ -1961,7 +1961,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Disable Trophy Notification</source>
-      <translation type="unfinished">Disable Trophy Notification</translation>
+      <translation>トロフィー通知を無効化</translation>
     </message>
     <message>
       <source>Background Image</source>
