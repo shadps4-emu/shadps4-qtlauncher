@@ -4,6 +4,7 @@
 #include <filesystem>
 #include <iostream>
 #include <common/path_util.h>
+#include "emulator_settings.h"
 #include "user_manager.h"
 
 bool UserManager::AddUser(const User& user) {
@@ -16,7 +17,7 @@ bool UserManager::AddUser(const User& user) {
 
     // Create user home directory and subfolders
     const auto user_dir =
-        Common::FS::GetUserPath(Common::FS::PathType::HomeDir) / std::to_string(user.user_id);
+        EmulatorSettings::GetInstance()->GetHomeDir() / std::to_string(user.user_id);
 
     std::error_code ec;
     if (!std::filesystem::exists(user_dir)) {
@@ -34,8 +35,7 @@ bool UserManager::RemoveUser(s32 user_id) {
     if (it == m_users.user.end())
         return false; // not found
 
-    const auto user_dir =
-        Common::FS::GetUserPath(Common::FS::PathType::HomeDir) / std::to_string(user_id);
+    const auto user_dir = EmulatorSettings::GetInstance()->GetHomeDir() / std::to_string(user_id);
 
     if (std::filesystem::exists(user_dir)) {
         std::error_code ec;
@@ -79,8 +79,8 @@ std::vector<User> UserManager::CreateDefaultUser() {
     default_user.user_name = "shadPS4";
     default_user.controller_port = 1;
 
-    const auto user_dir = Common::FS::GetUserPath(Common::FS::PathType::HomeDir) /
-                          std::to_string(default_user.user_id);
+    const auto user_dir =
+        EmulatorSettings::GetInstance()->GetHomeDir() / std::to_string(default_user.user_id);
 
     if (!std::filesystem::exists(user_dir)) {
         std::filesystem::create_directory(user_dir);
@@ -98,6 +98,7 @@ bool UserManager::SetDefaultUser(u32 user_id) {
         return false;
 
     m_users.default_user_id = user_id;
+    SetControllerPort(user_id, 1); // Set default user to port 1
     return true;
 }
 

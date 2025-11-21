@@ -42,6 +42,7 @@ int main(int argc, char* argv[]) {
     QStringList emulator_args{};
     QString game_arg = "";
     std::shared_ptr<EmulatorSettings> emu_settings = std::make_shared<EmulatorSettings>();
+    EmulatorSettings::SetInstance(emu_settings);
 
     // Ignore Qt logs
     qInstallMessageHandler(customMessageHandler);

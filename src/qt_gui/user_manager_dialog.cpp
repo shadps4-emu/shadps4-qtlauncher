@@ -3,6 +3,7 @@
 
 #include <QHeaderView>
 #include <QtWidgets>
+#include <common/path_util.h>
 #include "core/emulator_settings.h"
 #include "gui_settings.h"
 #include "user_manager_dialog.h"
@@ -98,6 +99,10 @@ UserManagerDialog::UserManagerDialog(std::shared_ptr<gui_settings> gui_settings,
 
     connect(push_close, &QAbstractButton::clicked, this, &QDialog::accept);
     connect(m_table, &QTableWidget::itemSelectionChanged, this, enable_buttons);
+    connect(m_table->horizontalHeader(), &QHeaderView::sectionClicked, this,
+            &UserManagerDialog::OnSort);
+    connect(m_table, &QTableWidget::customContextMenuRequested, this,
+            &UserManagerDialog::ShowContextMenu);
 }
 
 void UserManagerDialog::UpdateTable(bool mark_only) {
@@ -226,7 +231,6 @@ void UserManagerDialog::OnUserCreate() {
         u.controller_port = -1;
         manager.AddUser(u);
         UpdateTable();
-        m_emu_settings->Save();
         dialog.accept();
     });
     connect(&buttons, &QDialogButtonBox::rejected, &dialog, &QDialog::reject);
@@ -243,7 +247,6 @@ void UserManagerDialog::OnUserRemove() {
                               QMessageBox::No) == QMessageBox::Yes) {
         manager.RemoveUser(id);
         UpdateTable();
-        m_emu_settings->Save();
     }
 }
 
@@ -279,7 +282,6 @@ void UserManagerDialog::OnUserRename() {
     if (dialog.exec() == QDialog::Accepted) {
         manager.RenameUser(id, edit.text().trimmed().toStdString());
         UpdateTable();
-        m_emu_settings->Save();
     }
 }
 
@@ -291,7 +293,6 @@ void UserManagerDialog::OnUserSetDefault() {
     manager.SetDefaultUser(id);
     m_active_user = id;
     UpdateTable();
-    m_emu_settings->Save();
 }
 
 void UserManagerDialog::OnUserSetColor() {
@@ -310,7 +311,6 @@ void UserManagerDialog::OnUserSetColor() {
     if (ok) {
         user->user_color = colors.indexOf(color);
         UpdateTable();
-        m_emu_settings->Save();
     }
 }
 
@@ -335,11 +335,61 @@ void UserManagerDialog::OnUserSetControllerPort() {
     if (ok) {
         manager.SetControllerPort(user_id, new_port);
         UpdateTable();
-        m_emu_settings->Save();
     }
 }
 
+void UserManagerDialog::OnSort(int logicalIndex) {
+    if (logicalIndex < 0) {
+        return;
+    } else if (logicalIndex == m_sort_column) {
+        m_sort_ascending ^= true;
+    } else {
+        m_sort_ascending = true;
+    }
+    m_sort_column = logicalIndex;
+    m_table->sortByColumn(m_sort_column,
+                          m_sort_ascending ? Qt::AscendingOrder : Qt::DescendingOrder);
+}
+
 void UserManagerDialog::closeEvent(QCloseEvent* event) {
+    m_emu_settings->Save(); // Save any changes to users before exiting
     m_gui_settings->SetValue(gui::user_manager_geometry, saveGeometry());
     QDialog::closeEvent(event);
+}
+
+void UserManagerDialog::ShowContextMenu(const QPoint& pos) {
+    const u32 key = GetUserKey();
+    if (key == 0) {
+        return;
+    }
+
+    QMenu* context_menu = new QMenu();
+
+    QAction* remove_act = context_menu->addAction(tr("&Delete User"));
+    QAction* rename_act = context_menu->addAction(tr("&Rename User"));
+    QAction* default_user_act = context_menu->addAction(tr("&Set Default User"));
+    QAction* color_act = context_menu->addAction(tr("&Set Color"));
+    QAction* port_act = context_menu->addAction(tr("&Set Controller Port"));
+    QAction* show_dir_act = context_menu->addAction(tr("&Open User Directory"));
+
+    bool enabled = key != m_active_user; // don't allow removing or setting default on active user
+
+    remove_act->setEnabled(enabled);
+    rename_act->setEnabled(enabled);
+
+    // Connects and Events
+    connect(remove_act, &QAction::triggered, this, &UserManagerDialog::OnUserRemove);
+    connect(rename_act, &QAction::triggered, this, &UserManagerDialog::OnUserRename);
+    connect(default_user_act, &QAction::triggered, this, &UserManagerDialog::OnUserSetDefault);
+    connect(color_act, &QAction::triggered, this, &UserManagerDialog::OnUserSetColor);
+    connect(port_act, &QAction::triggered, this, &UserManagerDialog::OnUserSetControllerPort);
+
+    connect(show_dir_act, &QAction::triggered, this, [this, key]() {
+        QString userDirPath;
+        Common::FS::PathToQString(userDirPath, EmulatorSettings::GetInstance()->GetHomeDir() /
+                                                   std::to_string(key));
+        QDesktopServices::openUrl(QUrl::fromLocalFile(userDirPath));
+    });
+
+    context_menu->exec(m_table->viewport()->mapToGlobal(pos));
 }

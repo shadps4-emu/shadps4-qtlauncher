@@ -27,6 +27,7 @@ private Q_SLOTS:
     void OnUserSetDefault();
     void OnUserSetColor();
     void OnUserSetControllerPort();
+    void OnSort(int logicalIndex);
 
 private:
     QColor GetQColorFromIndex(int index) {
@@ -59,7 +60,7 @@ private:
     }
     void UpdateTable(bool mark_only = false);
     u32 GetUserKey() const;
-
+    void ShowContextMenu(const QPoint& pos);
     void closeEvent(QCloseEvent* event) override;
 
     QTableWidget* m_table = nullptr;
@@ -74,4 +75,7 @@ private:
     QPushButton* push_set_color;
     QPushButton* push_set_controller;
     QPushButton* push_close;
+
+    int m_sort_column = 1;
+    bool m_sort_ascending = true;
 };
