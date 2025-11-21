@@ -2051,7 +2051,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Trace&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: Trace, Debug, Info, Warning, Error, Critical - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
-      <translation>日志过滤器：\n过滤日志，仅打印特定信息。\n例如：&quot;Core:Trace&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot; 级别: Trace, Debug, Info, Warning, Error, Critical - 按此顺序，特定级别将静默列表中所有先前的级别，并记录所有后续级别。</translation>
+      <translation>日志过滤器：\n用于筛选日志内容，仅输出特定信息。\n示例："Core:Trace" "Lib.Pad:Debug Common.Filesystem:Error" "*:Critical"\n级别顺序：Trace、Debug、Info、Warning、Error、Critical - 指定某个级别将屏蔽列表中该级别之前的所有级别，并记录该级别之后的所有级别。</translation>
     </message>
     <message>
       <source>Background Image:\nControl the opacity of the game background image.</source>
