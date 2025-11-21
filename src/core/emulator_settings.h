@@ -2,15 +2,23 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #pragma once
+
 #include <filesystem>
+#include <memory>
 #include <mutex>
+#include <string>
+#include <vector>
+
 #include <nlohmann/json.hpp>
+
 #include "common/types.h"
 #include "core/user_manager.h"
 
+using json = nlohmann::json;
+
 struct GameInstallDir {
     std::filesystem::path path;
-    bool enabled;
+    bool enabled = true;
 };
 NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(GameInstallDir, path, enabled)
 
@@ -28,65 +36,55 @@ struct Debug {
 };
 NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(Debug, separate_logging_enabled)
 
-// Keep JSON type definitions for User and Users centralized here
 NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(User, user_id, user_color, user_name, controller_port)
 NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(Users, default_user_id, user)
 
 class EmulatorSettings {
 public:
+    static std::shared_ptr<EmulatorSettings> GetInstance();
+    static void SetInstance(std::shared_ptr<EmulatorSettings> instance);
+
+    EmulatorSettings(const EmulatorSettings&) = delete;
+    EmulatorSettings& operator=(const EmulatorSettings&) = delete;
+    EmulatorSettings(EmulatorSettings&&) = delete;
+    EmulatorSettings& operator=(EmulatorSettings&&) = delete;
+
     EmulatorSettings();
     ~EmulatorSettings();
-
-    // --- Singleton access ---
-    static std::shared_ptr<EmulatorSettings> GetInstance() {
-        std::lock_guard<std::mutex> lock(s_mutex);
-
-        if (!s_instance) {
-            // Lazy initialization if no existing instance
-            s_instance = std::shared_ptr<EmulatorSettings>(new EmulatorSettings());
-        }
-        return s_instance;
-    }
-
-    // set an existing in-memory object as the singleton
-    static void SetInstance(std::shared_ptr<EmulatorSettings> instance) {
-        std::lock_guard<std::mutex> lock(s_mutex);
-        s_instance = instance;
-    }
 
     // General Settings
     bool AddGameInstallDir(const std::filesystem::path& dir, bool enabled = true);
     void RemoveGameInstallDir(const std::filesystem::path& dir);
-    const std::vector<std::filesystem::path> GetGameInstallDirs();
+    std::vector<std::filesystem::path> GetGameInstallDirs() const;
     void SetAllGameInstallDirs(const std::vector<GameInstallDir>& dirs_config);
-    std::filesystem::path GetAddonInstallDir();
+    std::filesystem::path GetAddonInstallDir() const;
     void SetAddonInstallDir(const std::filesystem::path& dir);
-    std::filesystem::path GetHomeDir();
+    std::filesystem::path GetHomeDir() const;
     void SetHomeDir(const std::filesystem::path& dir);
-    std::filesystem::path GetSysModulesDir();
+    std::filesystem::path GetSysModulesDir() const;
     void SetSysModulesDir(const std::filesystem::path& dir);
-    // Debug Settings
-    bool IsSeparateLoggingEnabled() const {
-        return m_debug.separate_logging_enabled;
-    }
-    void SetSeparateLoggingEnabled(bool enabled) {
-        m_debug.separate_logging_enabled = enabled;
-    }
 
+    // Debug
+    bool IsSeparateLoggingEnabled() const;
+    void SetSeparateLoggingEnabled(bool enabled);
+
+    // Persistence
     bool Save() const;
     bool Load();
 
-    UserManager& GetUserManager() {
-        return m_userManager;
-    }
-    const UserManager& GetUserManager() const {
-        return m_userManager;
-    }
+    // Users
+    UserManager& GetUserManager();
+    const UserManager& GetUserManager() const;
 
 private:
-    GeneralSettings m_general = {};
-    Debug m_debug = {};
-    UserManager m_userManager;
+    void ResetToDefaults();
+
+    GeneralSettings m_general{};
+    Debug m_debug{};
+    UserManager m_userManager{};
+
     static std::shared_ptr<EmulatorSettings> s_instance;
     static std::mutex s_mutex;
+
+    std::filesystem::path GetConfigPath() const;
 };
