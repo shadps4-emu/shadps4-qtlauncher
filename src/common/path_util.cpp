@@ -154,6 +154,7 @@ static auto UserPaths = [] {
     create_path(PathType::MetaDataDir, user_dir / METADATA_DIR);
     create_path(PathType::CustomTrophy, user_dir / CUSTOM_TROPHY);
     create_path(PathType::CustomConfigs, user_dir / CUSTOM_CONFIGS);
+    create_path(PathType::CacheDir, user_dir / CACHE_DIR);
 
     create_path(PathType::LauncherDir, launcher_dir);
     create_path(PathType::LauncherMetaData, launcher_dir / METADATA_DIR);

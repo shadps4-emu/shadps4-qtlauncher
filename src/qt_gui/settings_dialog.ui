@@ -1587,7 +1587,7 @@
          <height>505</height>
         </rect>
        </property>
-       <layout class="QVBoxLayout" name="inputTabVLayout" stretch="0,0,0">
+       <layout class="QVBoxLayout" name="inputTabVLayout" stretch="0,0,0,0">
         <item>
          <layout class="QHBoxLayout" name="inputTabHLayoutTop" stretch="1,1">
           <item>
@@ -1842,27 +1842,27 @@
          </layout>
         </item>
         <item>
-           <layout class="QVBoxLayout" name="USBDeviceLayout">
-            <item>
-             <widget class="QGroupBox" name="USBDeviceGroupBox">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="title">
-               <string>USB Device</string>
-              </property>
-              <layout class="QHBoxLayout" name="horizontalLayout_7_1">
-               <item>
-                <widget class="QComboBox" name="usbComboBox"/>
-               </item>
-              </layout>
-             </widget>
-            </item>
-           </layout>
+         <layout class="QVBoxLayout" name="USBDeviceLayout">
+          <item>
+           <widget class="QGroupBox" name="USBDeviceGroupBox">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="title">
+             <string>USB Device</string>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_7_1">
+             <item>
+              <widget class="QComboBox" name="usbComboBox"/>
+             </item>
+            </layout>
+           </widget>
           </item>
+         </layout>
+        </item>
         <item>
          <spacer name="verticalSpacer_11">
           <property name="orientation">
@@ -2412,7 +2412,7 @@
          <x>0</x>
          <y>0</y>
          <width>946</width>
-         <height>395</height>
+         <height>427</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -2499,6 +2499,13 @@
                 <widget class="QCheckBox" name="networkConnectedCheckBox">
                  <property name="text">
                   <string>Set &quot;Network Connected&quot; to True</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QCheckBox" name="shaderCaheCheckBox">
+                 <property name="text">
+                  <string>Enable Shader Cache</string>
                  </property>
                 </widget>
                </item>

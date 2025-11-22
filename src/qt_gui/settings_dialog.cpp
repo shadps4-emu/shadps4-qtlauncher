@@ -534,6 +534,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         ui->devkitCheckBox->installEventFilter(this);
         ui->neoCheckBox->installEventFilter(this);
         ui->networkConnectedCheckBox->installEventFilter(this);
+        ui->shaderCaheCheckBox->installEventFilter(this);
         ui->psnSignInCheckBox->installEventFilter(this);
         ui->dmemGroupBox->installEventFilter(this);
     }
@@ -675,6 +676,8 @@ void SettingsDialog::LoadValuesFromConfig() {
     ui->devkitCheckBox->setChecked(toml::find_or<bool>(data, "General", "isDevKit", false));
     ui->networkConnectedCheckBox->setChecked(
         toml::find_or<bool>(data, "General", "isConnectedToNetwork", false));
+    ui->shaderCaheCheckBox->setChecked(
+        toml::find_or<bool>(data, "Vulkan", "pipelineCacheEnable", false));
     ui->psnSignInCheckBox->setChecked(toml::find_or<bool>(data, "General", "isPSNSignedIn", false));
     ui->vblankSpinBox->setValue(toml::find_or<int>(data, "GPU", "vblankFrequency", 60));
     ui->dmemSpinBox->setValue(toml::find_or<int>(data, "General", "extraDmemInMbytes", 0));
@@ -999,6 +1002,8 @@ void SettingsDialog::updateNoteTextEdit(const QString& elementName) {
         text = tr("Enable Devkit Console Mode:\\nAdds support for Devkit console memory size.");
     } else if (elementName == "networkConnectedCheckBox") {
         text = tr("Set Network Connected to True:\\nForces games to detect an active network connection. Actual online capabilities are not yet supported.");
+    } else if (elementName == "shaderCaheCheckBox") {
+        text = tr("Enable Shader Cache:\\nStoring compiled shaders to avoid recompilations, reduce stuttering.");
     } else if (elementName == "psnSignInCheckBox") {
         text = tr("Set PSN Signed-in to True:\\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported.");
     } else if (elementName == "readbacksCheckBox") {
@@ -1037,6 +1042,7 @@ void SettingsDialog::UpdateSettings(bool is_specific) {
     Config::setDevKitConsole(ui->devkitCheckBox->isChecked(), is_specific);
     Config::setNeoMode(ui->neoCheckBox->isChecked(), is_specific);
     Config::setConnectedToNetwork(ui->networkConnectedCheckBox->isChecked(), is_specific);
+    Config::setPipelineCacheEnabled(ui->shaderCaheCheckBox->isChecked(), is_specific);
     Config::setPSNSignedIn(ui->psnSignInCheckBox->isChecked(), is_specific);
     Config::setVblankFreq(ui->vblankSpinBox->value(), is_specific);
     Config::setExtraDmemInMbytes(ui->dmemSpinBox->value(), is_specific);
