@@ -2412,7 +2412,7 @@
          <x>0</x>
          <y>0</y>
          <width>946</width>
-         <height>427</height>
+         <height>459</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -2506,6 +2506,13 @@
                 <widget class="QCheckBox" name="shaderCaheCheckBox">
                  <property name="text">
                   <string>Enable Shader Cache</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QCheckBox" name="shaderCacheArchiveCheckBox">
+                 <property name="text">
+                  <string>Compress the Shader Cache files into a zip file</string>
                  </property>
                 </widget>
                </item>

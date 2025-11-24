@@ -192,6 +192,7 @@ static ConfigEntry<bool> vkHostMarkers(false);
 static ConfigEntry<bool> vkGuestMarkers(false);
 static ConfigEntry<bool> rdocEnable(false);
 static ConfigEntry<bool> pipelineCacheEnable(false);
+static ConfigEntry<bool> pipelineCacheArchive(false);
 
 // Debug
 static ConfigEntry<bool> isDebugDump(false);
@@ -456,6 +457,10 @@ bool isPipelineCacheEnabled() {
     return pipelineCacheEnable.get();
 }
 
+bool isPipelineCacheArchived() {
+    return pipelineCacheArchive.get();
+}
+
 bool fpsColor() {
     return isFpsColor.get();
 }
@@ -609,6 +614,10 @@ void setRdocEnabled(bool enable, bool is_game_specific) {
 
 void setPipelineCacheEnabled(bool enable, bool is_game_specific) {
     pipelineCacheEnable.set(enable, is_game_specific);
+}
+
+void setPipelineCacheArchived(bool enable, bool is_game_specific) {
+    pipelineCacheArchive.set(enable, is_game_specific);
 }
 
 void setVblankFreq(u32 value, bool is_game_specific) {
@@ -941,6 +950,7 @@ void load(const std::filesystem::path& path, bool is_game_specific) {
         vkGuestMarkers.setFromToml(vk, "guestMarkers", is_game_specific);
         rdocEnable.setFromToml(vk, "rdocEnable", is_game_specific);
         pipelineCacheEnable.setFromToml(vk, "pipelineCacheEnable", is_game_specific);
+        pipelineCacheArchive.setFromToml(vk, "pipelineCacheArchive", is_game_specific);
     }
 
     string current_version = {};
@@ -1110,6 +1120,7 @@ void save(const std::filesystem::path& path, bool is_game_specific) {
     vkGuestMarkers.setTomlValue(data, "Vulkan", "guestMarkers", is_game_specific);
     rdocEnable.setTomlValue(data, "Vulkan", "rdocEnable", is_game_specific);
     pipelineCacheEnable.setTomlValue(data, "Vulkan", "pipelineCacheEnable", is_game_specific);
+    pipelineCacheArchive.setTomlValue(data, "Vulkan", "pipelineCacheArchive", is_game_specific);
 
     isDebugDump.setTomlValue(data, "Debug", "DebugDump", is_game_specific);
     isShaderDebug.setTomlValue(data, "Debug", "CollectShader", is_game_specific);
@@ -1193,6 +1204,7 @@ void setDefaultValues(bool is_game_specific) {
         directMemoryAccessEnabled.set(false, is_game_specific);
         extraDmemInMbytes.set(0, is_game_specific);
         pipelineCacheEnable.set(false, is_game_specific);
+        pipelineCacheArchive.set(false, is_game_specific);
     }
 
     // Entries with game-specific settings that are in both the game-specific and global GUI
