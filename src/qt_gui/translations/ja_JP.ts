@@ -611,11 +611,11 @@
     </message>
     <message>
       <source>Min Deadzone (def:2 max:127)</source>
-      <translation type="unfinished">Min Deadzone (def:2 max:127)</translation>
+      <translation>最小デッドゾーン（既定:2 最大:127）</translation>
     </message>
     <message>
       <source>Max Deadzone (def:127 max:127)</source>
-      <translation type="unfinished">Max Deadzone (def:127 max:127)</translation>
+      <translation>最大デッドゾーン（既定:127 最大:127）</translation>
     </message>
     <message>
       <source>Right Stick Deadzone</source>
@@ -638,11 +638,11 @@
     </message>
     <message>
       <source>Could not open the file for reading</source>
-      <translation type="unfinished">Could not open the file for reading</translation>
+      <translation>読み込み用にファイルを開けませんでした</translation>
     </message>
     <message>
       <source>Could not open the file for writing</source>
-      <translation type="unfinished">Could not open the file for writing</translation>
+      <translation>書き込み用のファイルを開けませんでした</translation>
     </message>
     <message>
       <source>Save Changes</source>
@@ -1961,7 +1961,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Disable Trophy Notification</source>
-      <translation type="unfinished">Disable Trophy Notification</translation>
+      <translation>トロフィー通知を無効化</translation>
     </message>
     <message>
       <source>Background Image</source>
