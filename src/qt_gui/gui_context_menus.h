@@ -512,7 +512,7 @@ public:
             selected == deleteShaderCache) {
             bool error = false;
             QString folder_path, game_update_path, dlc_path, save_data_path, trophy_data_path,
-                shader_cache_path;
+                shader_cache_path, shader_cache_zip_path;
             Common::FS::PathToQString(folder_path, m_games[itemID].path);
             game_update_path = folder_path + "-UPDATE";
             if (!std::filesystem::exists(Common::FS::PathFromQString(game_update_path))) {
@@ -529,6 +529,9 @@ public:
             Common::FS::PathToQString(shader_cache_path,
                                       Common::FS::GetUserPath(Common::FS::PathType::CacheDir) /
                                           m_games[itemID].serial);
+            Common::FS::PathToQString(shader_cache_zip_path,
+                                      Common::FS::GetUserPath(Common::FS::PathType::CacheDir) /
+                                          (m_games[itemID].serial + ".zip"));
             QString message_type;
 
             if (selected == deleteGame) {
@@ -572,12 +575,22 @@ public:
                     message_type = tr("Trophy");
                 }
             } else if (selected == deleteShaderCache) {
-                if (!std::filesystem::exists(Common::FS::PathFromQString(shader_cache_path))) {
+                const auto dir_path = Common::FS::PathFromQString(shader_cache_path);
+                const auto zip_path = Common::FS::PathFromQString(shader_cache_zip_path);
+
+                bool has_dir = std::filesystem::exists(dir_path);
+                bool has_zip = std::filesystem::exists(zip_path);
+
+                if (!has_dir && !has_zip) {
                     QMessageBox::critical(
                         nullptr, tr("Error"),
-                        QString(tr("This game does not have any saved Shader Cache to delete!")));
+                        tr("This game does not have any saved Shader Cache to delete!"));
                     error = true;
                 } else {
+                    if (has_dir)
+                        std::filesystem::remove_all(dir_path);
+                    if (has_zip)
+                        std::filesystem::remove(zip_path);
                     folder_path = shader_cache_path;
                     message_type = tr("Shader Cache");
                 }
