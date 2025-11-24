@@ -12,6 +12,15 @@
 #include "qt_gui/main_window.h"
 #ifdef _WIN32
 #include <windows.h>
+int __ = []() {
+    if (AttachConsole(ATTACH_PARENT_PROCESS)) {
+        FILE* f;
+        freopen_s(&f, "CONOUT$", "w", stdout);
+        freopen_s(&f, "CONOUT$", "w", stderr);
+        SetConsoleOutputCP(CP_UTF8);
+    }
+    return 0;
+}();
 #endif
 
 // Custom message handler to ignore Qt logs
@@ -22,9 +31,6 @@ void StopProgram() {
 }
 
 int main(int argc, char* argv[]) {
-#ifdef _WIN32
-    SetConsoleOutputCP(CP_UTF8);
-#endif
 
     QApplication a(argc, argv);
 
