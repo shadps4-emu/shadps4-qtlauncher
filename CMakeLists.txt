@@ -299,6 +299,10 @@ set(CORE src/core/file_format/elf.cpp
          src/core/file_format/psf.h
          src/core/file_format/trp.cpp
          src/core/file_format/trp.h
+         src/core/user_manager.cpp
+         src/core/user_manager.h
+         src/core/emulator_settings.cpp
+         src/core/emulator_settings.h
 )
 
 set(INPUT src/input/controller.cpp
@@ -376,6 +380,8 @@ set(QT_GUI src/qt_gui/about_dialog.cpp
            src/qt_gui/version_dialog.ui
            src/qt_gui/create_shortcut.cpp
            src/qt_gui/create_shortcut.h
+           src/qt_gui/user_manager_dialog.cpp
+           src/qt_gui/user_manager_dialog.h
            ${RESOURCE_FILES}
            ${TRANSLATIONS}
            ${UPDATER}
