@@ -114,13 +114,6 @@ VersionDialog::VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget
 
         version_name = version_name.trimmed();
 
-        if (version_name.compare("Pre-release", Qt::CaseInsensitive) == 0) {
-            QMessageBox::warning(
-                this, tr("Error"),
-                tr("It is not possible to create a version named exactly 'Pre-release'."));
-            return;
-        }
-
         if (std::find_if(version_list.cbegin(), version_list.cend(), [version_name](auto i) {
                 return i.name == version_name.toStdString();
             }) != version_list.cend()) {
