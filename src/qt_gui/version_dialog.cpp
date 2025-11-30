@@ -114,12 +114,10 @@ VersionDialog::VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget
 
         version_name = version_name.trimmed();
 
-        if (version_name.startsWith("Pre-release", Qt::CaseInsensitive) ||
-            version_name.startsWith("Pre-release-shadPS4", Qt::CaseInsensitive)) {
-            QMessageBox::warning(this, tr("Error"),
-                                 // clang-format off
-tr("It is not possible to create a version with a name that starts with:\n'Pre-release' or 'Pre-release-shadPS4'."));
-            // clang-format on
+        if (version_name.compare("Pre-release", Qt::CaseInsensitive) == 0) {
+            QMessageBox::warning(
+                this, tr("Error"),
+                tr("It is not possible to create a version named exactly 'Pre-release'."));
             return;
         }
 
@@ -509,7 +507,7 @@ tr("First you need to choose a location to save the versions in\n'Path to save v
 
                         QString folderName;
                         if (versionName == "Pre-release") {
-                            folderName = release["tag_name"].toString();
+                            folderName = "Pre-release";
                         } else {
                             QString datePart = release["published_at"].toString().left(10);
                             folderName = QString("%1 - %2").arg(releaseName, datePart);
@@ -594,10 +592,10 @@ tr("First you need to choose a location to save the versions in\n'Path to save v
                                             code_name = release_name.mid(idx + marker.size());
                                     } else {
                                         QRegularExpression re("-([a-fA-F0-9]{7,})$");
-                                        QRegularExpressionMatch match = re.match(folderName);
+                                        QRegularExpressionMatch match =
+                                            re.match(release["tag_name"].toString());
                                         if (match.hasMatch()) {
-                                            QString fullHash = match.captured(1);
-                                            code_name = fullHash.left(7);
+                                            code_name = match.captured(1);
                                         } else {
                                             code_name = "unknown";
                                         }
@@ -690,7 +688,15 @@ void VersionDialog::LoadInstalledList() {
     for (const auto& v : versions) {
         QTreeWidgetItem* item = new QTreeWidgetItem(ui->installedTreeWidget);
         item->setText(1, QString::fromStdString(v.name));
-        item->setText(2, QString::fromStdString(v.codename));
+
+        QString codename = QString::fromStdString(v.codename);
+        if (v.type == VersionManager::VersionType::Nightly) {
+            if (codename.length() > 7) {
+                codename = codename.left(7);
+            }
+        }
+        item->setText(2, codename);
+
         item->setText(3, QString::fromStdString(v.date));
         item->setText(4, QString::fromStdString(v.path));
         item->setCheckState(0, (selected_version == v.path) ? Qt::Checked : Qt::Unchecked);
@@ -767,96 +773,96 @@ void VersionDialog::checkUpdatePre(const bool showMessage) {
         return;
     }
 
-    QDir dir(versionPath);
-    QStringList folders = dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot);
+    auto versions = VersionManager::GetVersionList({});
 
     QString localHash;
-    QString localFolderName;
+    QString localFolderPath;
+    QString localTag;
 
-    // Browse for local Pre-release folder
-    for (const QString& folder : folders) {
-        if (folder.startsWith("Pre-release-shadPS4")) {
-            QStringList parts = folder.split('-');
-            if (parts.size() >= 7) {
-                localHash = parts.last();
-                localFolderName = folder;
-            }
+    for (const auto& v : versions) {
+        if (v.type == VersionManager::VersionType::Nightly) {
+            localHash = QString::fromStdString(v.codename);
+            localFolderPath = QString::fromStdString(v.path);
+            localTag = QString::fromStdString(v.name);
             break;
         }
+    }
+
+    if (localHash.isEmpty()) {
+        auto* tree = ui->downloadTreeWidget;
+        int topCount = tree->topLevelItemCount();
+
+        for (int i = 0; i < topCount; ++i) {
+            QTreeWidgetItem* item = tree->topLevelItem(i);
+            if (item && item->text(0).contains("Pre-release", Qt::CaseInsensitive)) {
+                tree->setCurrentItem(item);
+                tree->scrollToItem(item);
+                tree->setFocus();
+                emit tree->itemClicked(item, 0);
+                break;
+            }
+        }
+        return;
     }
 
     QNetworkAccessManager* manager = new QNetworkAccessManager(this);
     QNetworkRequest request(QUrl("https://api.github.com/repos/shadps4-emu/shadPS4/releases"));
     QNetworkReply* reply = manager->get(request);
 
-    connect(reply, &QNetworkReply::finished, this,
-            [this, reply, localHash, localFolderName, showMessage]() {
-                if (reply->error() != QNetworkReply::NoError) {
-                    QMessageBox::warning(this, tr("Error"), reply->errorString());
-                    reply->deleteLater();
-                    return;
+    connect(reply, &QNetworkReply::finished, this, [this, reply, localHash, showMessage]() {
+        if (reply->error() != QNetworkReply::NoError) {
+            QMessageBox::warning(this, tr("Error"), reply->errorString());
+            reply->deleteLater();
+            return;
+        }
+
+        QByteArray resp = reply->readAll();
+        QJsonDocument doc = QJsonDocument::fromJson(resp);
+
+        if (!doc.isArray()) {
+            QMessageBox::warning(this, tr("Error"),
+                                 tr("The GitHub API response is not a valid JSON array."));
+            reply->deleteLater();
+            return;
+        }
+
+        QJsonArray arr = doc.array();
+        QString latestHash;
+        QString latestTag;
+
+        for (const QJsonValue& val : arr) {
+            QJsonObject obj = val.toObject();
+            if (obj["prerelease"].toBool()) {
+
+                latestTag = obj["tag_name"].toString();
+
+                int idx = latestTag.lastIndexOf('-');
+                if (idx != -1 && idx + 1 < latestTag.length()) {
+                    latestHash = latestTag.mid(idx + 1);
                 }
 
-                QByteArray resp = reply->readAll();
-                QJsonDocument doc = QJsonDocument::fromJson(resp);
-                if (!doc.isArray()) {
-                    QMessageBox::warning(this, tr("Error"),
-                                         tr("The GitHub API response is not a valid JSON array."));
-                    reply->deleteLater();
-                    return;
-                }
+                break;
+            }
+        }
 
-                QJsonArray arr = doc.array();
-                QString latestHash;
-                QString latestTag;
+        if (latestHash.isEmpty()) {
+            QMessageBox::warning(this, tr("Error"),
+                                 tr("Unable to get hash of latest pre-release."));
+            reply->deleteLater();
+            return;
+        }
 
-                for (const QJsonValue& val : arr) {
-                    QJsonObject obj = val.toObject();
-                    if (obj["prerelease"].toBool()) {
-                        QString tag = obj["tag_name"].toString();
-                        latestTag = tag;
-                        int idx = tag.lastIndexOf('-');
-                        if (idx != -1 && idx + 1 < tag.length()) {
-                            latestHash = tag.mid(idx + 1);
-                        }
-                        break;
-                    }
-                }
+        if (latestHash == localHash) {
+            if (showMessage) {
+                QMessageBox::information(this, tr("Auto Updater - Emulator"),
+                                         tr("You already have the latest pre-release version."));
+            }
+        } else {
+            showPreReleaseUpdateDialog(localHash, latestHash, latestTag);
+        }
 
-                if (latestHash.isEmpty()) {
-                    QMessageBox::warning(this, tr("Error"),
-                                         tr("Unable to get hash of latest pre-release"));
-                    reply->deleteLater();
-                    return;
-                }
-
-                if (localHash.isEmpty()) {
-                    auto* tree = ui->downloadTreeWidget;
-                    int topCount = tree->topLevelItemCount();
-
-                    for (int i = 0; i < topCount; ++i) {
-                        QTreeWidgetItem* item = tree->topLevelItem(i);
-                        if (item && item->text(0).contains("Pre-release", Qt::CaseInsensitive)) {
-                            tree->setCurrentItem(item);
-                            tree->scrollToItem(item);
-                            tree->setFocus();
-                            emit tree->itemClicked(item, 0);
-                            break;
-                        }
-                    }
-                }
-
-                if (latestHash == localHash) {
-                    if (showMessage) {
-                        QMessageBox::information(
-                            this, tr("Auto Updater - Emulator"),
-                            tr("You already have the latest pre-release version."));
-                    }
-                } else {
-                    showPreReleaseUpdateDialog(localHash, latestHash, latestTag);
-                }
-                reply->deleteLater();
-            });
+        reply->deleteLater();
+    });
 }
 
 void VersionDialog::showPreReleaseUpdateDialog(const QString& localHash, const QString& latestHash,
@@ -1094,16 +1100,8 @@ void VersionDialog::showDownloadDialog(const QString& tagName, const QString& do
         QString userPath = m_gui_settings->GetValue(gui::vm_versionPath).toString();
         QString zipPath = QDir(userPath).filePath("temp_pre_release_download.zip");
 
-        // Find the old folder that starts with "Pre-release"
-        QString oldPreReleaseFolder;
         QDir dir(userPath);
         QStringList entries = dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot);
-        for (const QString& entry : entries) {
-            if (entry.startsWith("Pre-release")) {
-                oldPreReleaseFolder = QDir(userPath).filePath(entry);
-                break;
-            }
-        }
 
         QFile zipFile(zipPath);
         if (!zipFile.open(QIODevice::WriteOnly)) {
@@ -1115,7 +1113,7 @@ void VersionDialog::showDownloadDialog(const QString& tagName, const QString& do
         zipFile.write(data);
         zipFile.close();
 
-        QString destFolder = QDir(userPath).filePath(tagName);
+        QString destFolder = QDir(userPath).filePath("Pre-release");
         QString scriptFilePath;
         QString scriptContent;
         QStringList args;
@@ -1123,23 +1121,19 @@ void VersionDialog::showDownloadDialog(const QString& tagName, const QString& do
 
 #ifdef Q_OS_WIN
         scriptFilePath = userPath + "/extract_pre_release.ps1";
-        scriptContent = QString("Remove-Item -Recurse -Force \"%4\" -ErrorAction SilentlyContinue\n"
-                                "New-Item -ItemType Directory -Path \"%1\" -Force\n"
+        scriptContent = QString("New-Item -ItemType Directory -Path \"%1\" -Force\n"
                                 "Expand-Archive -Path \"%2\" -DestinationPath \"%1\" -Force\n"
                                 "Remove-Item -Force \"%2\"\n"
                                 "Remove-Item -Force \"%3\"\n"
                                 "cls\n")
-                            .arg(destFolder)           // %1 - new destination folder
-                            .arg(zipPath)              // %2 - zip path
-                            .arg(scriptFilePath)       // %3 - script
-                            .arg(oldPreReleaseFolder); // %4 - old folder
-
+                            .arg(destFolder)      // %1 - new destination folder
+                            .arg(zipPath)         // %2 - zip path
+                            .arg(scriptFilePath); // %3 - script
         process = "powershell.exe";
         args << "-ExecutionPolicy" << "Bypass" << "-File" << scriptFilePath;
 #elif defined(Q_OS_LINUX) || defined(Q_OS_MACOS)
         scriptFilePath = userPath + "/extract_pre_release.sh";
         scriptContent = QString("#!/bin/bash\n"
-                                "rm -rf \"%4\"\n"
                                 "mkdir -p \"%1\"\n"
                                 "unzip -o \"%2\" -d \"%1\"\n"
                                 "rm \"%2\"\n"
@@ -1147,8 +1141,7 @@ void VersionDialog::showDownloadDialog(const QString& tagName, const QString& do
                                 "clear\n")
                             .arg(destFolder)
                             .arg(zipPath)
-                            .arg(scriptFilePath)
-                            .arg(oldPreReleaseFolder);
+                            .arg(scriptFilePath);
         process = "bash";
         args << scriptFilePath;
 #endif
@@ -1181,8 +1174,7 @@ void VersionDialog::showDownloadDialog(const QString& tagName, const QString& do
                 QRegularExpression re("-([a-fA-F0-9]{7,})$");
                 QRegularExpressionMatch match = re.match(tagName);
                 if (match.hasMatch()) {
-                    QString fullHash = match.captured(1);
-                    codename = fullHash.left(7);
+                    codename = match.captured(1);
                 } else {
                     codename = "unknown";
                 }
