@@ -1088,6 +1088,18 @@
         <source>Failed to convert icon.</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Delete Shader Cache</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This game does not have any saved Shader Cache to delete!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shader Cache</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>HelpDialog</name>
@@ -2565,6 +2577,22 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
         <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable Shader Cache</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Compress the Shader Cache files into a zip file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
