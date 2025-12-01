@@ -1000,15 +1000,15 @@
     </message>
     <message>
       <source>Game-specific Settings...</source>
-      <translation type="unfinished">Game-specific Settings...</translation>
+      <translation>Ustawienia specyficzne dla gry...</translation>
     </message>
     <message>
       <source>Configure Game-specific Settings</source>
-      <translation type="unfinished">Configure Game-specific Settings</translation>
+      <translation>Konfiguruj ustawienia specyficzne dla gry</translation>
     </message>
     <message>
       <source>Create Game-specific Settings from Global Settings</source>
-      <translation type="unfinished">Create Game-specific Settings from Global Settings</translation>
+      <translation>Utwórz ustawienia specyficzne dla gry z ustawień globalnych</translation>
     </message>
     <message>
       <source>Delete Game-specific Settings</source>
@@ -1064,7 +1064,7 @@
     </message>
     <message>
       <source>Create Shortcut for Selected Emulator Version</source>
-      <translation type="unfinished">Create Shortcut for Selected Emulator Version</translation>
+      <translation>Utwórz skrót dla wybranej wersji emulatora</translation>
     </message>
     <message>
       <source>Create Shortcut for Specified Emulator Version</source>
@@ -2357,7 +2357,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Enable FSR</source>
-      <translation type="unfinished">Enable FSR</translation>
+      <translation>Włącz FSR</translation>
     </message>
     <message>
       <source>Enable RCAS (sharpening)</source>
@@ -2373,7 +2373,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Log</source>
-      <translation type="unfinished">Log</translation>
+      <translation>Dzienniki zdarzeń</translation>
     </message>
     <message>
       <source>Open Log Location:\nOpen the folder where the log file is saved.</source>
@@ -2421,11 +2421,11 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Miscellaneous</source>
-      <translation type="unfinished">Miscellaneous</translation>
+      <translation>Pozostałe</translation>
     </message>
     <message>
       <source>Frontend</source>
-      <translation type="unfinished">Frontend</translation>
+      <translation>Interfejs</translation>
     </message>
     <message>
       <source>Experimental</source>
@@ -2437,7 +2437,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>General Frontend Settings</source>
-      <translation type="unfinished">General Frontend Settings</translation>
+      <translation>Ogólne ustawienia interfejsu</translation>
     </message>
     <message>
       <source>Enable PS4 Neo Mode</source>
@@ -2537,11 +2537,11 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>GUI Language</source>
-      <translation type="unfinished">GUI Language</translation>
+      <translation>Język interfejsu graficznego</translation>
     </message>
     <message>
       <source>GUI Updates</source>
-      <translation type="unfinished">GUI Updates</translation>
+      <translation>Aktualizacje interfejsu użytkownika</translation>
     </message>
     <message>
       <source>DLC Path</source>
@@ -2565,7 +2565,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>USB Device</source>
-      <translation type="unfinished">USB Device</translation>
+      <translation>Urządzenie USB</translation>
     </message>
     <message>
       <source>Real USB Device</source>
