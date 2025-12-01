@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id translate="no">net.shadps4.shadps4-qtlauncher</id>
+  <name translate="no">shadPS4 Qt Launcher</name>
+  <developer id="net.shadps4.shadPS4">
+    <name>shadPS4 Contributors</name>
+    <url translate="no">https://github.com/shadps4-emu/shadps4-qtlauncher/graphs/contributors</url>
+  </developer>
+  <summary>Graphical frontend for shadPS4 emulator</summary>
+  <metadata_license translate="no">CC0-1.0</metadata_license>
+  <project_license translate="no">GPL-2.0</project_license>
+  <launchable type="desktop-id" translate="no">net.shadps4.shadPS4.shadps4-qtlauncher.desktop</launchable>
+  <url type="homepage" translate="no">https://shadps4.net/</url>
+  <description>
+    <p>The official Qt-based graphical frontend for the shadPS4 emulator, allowing convenient
+      access to configuration and launching games.</p>
+    <p>The emulator and frontend are still early in development, so don't expect a flawless
+      experience. Nonetheless, the emulator can already run a number of commercial games.</p>
+  </description>
+  <screenshots>
+    <screenshot type="default">
+      <image type="source" translate="no" >https://cdn.jsdelivr.net/gh/shadps4-emu/shadps4-qtlauncher@main/documents/Screenshots/main-window.png</image>
+      <caption>The GUI main window</caption>
+    </screenshot>
+    <screenshot>
+      <image type="source" translate="no">https://cdn.jsdelivr.net/gh/shadps4-emu/shadps4-qtlauncher@main/documents/Screenshots/settings-frontend.png</image>
+      <caption>Frontend options for configuring Discord Rich Presence, launcher behaviour etc.</caption>
+    </screenshot>
+    <screenshot>
+      <image type="source" translate="no">https://cdn.jsdelivr.net/gh/shadps4-emu/shadps4-qtlauncher@main/documents/Screenshots/settings-graphics.png</image>
+      <caption>Graphics options, including rendering resolution and AMD FSR configuration</caption>
+    </screenshot>
+    <screenshot>
+      <image type="source" translate="no">https://cdn.jsdelivr.net/gh/shadps4-emu/shadps4-qtlauncher@main/documents/Screenshots/settings-controllers.png</image>
+      <caption>Exhaustive controller configuration options</caption>
+    </screenshot>
+  </screenshots>
+  <categories>
+    <category translate="no">Game</category>
+  </categories>
+  <releases>
+    <release version="2025.11.29" date="2025-11-29">
+      <url>https://github.com/shadps4-emu/shadps4-qtlauncher/releases/tag/shadPS4QtLauncher-2025-11-29-c60eb15271c947726c98a82c0409be47523c9bf4</url>
+    </release>
+    <release version="2025.11.27" date="2025-11-27">
+      <url>https://github.com/shadps4-emu/shadps4-qtlauncher/releases/tag/shadPS4QtLauncher-2025-11-27-ec3e5912c176e609c3ca81d619eb1523c8484c5e</url>
+    </release>
+    <release version="2025.11.06" date="2025-11-06">
+      <url>https://github.com/shadps4-emu/shadps4-qtlauncher/releases/tag/shadPS4QtLauncher-2025-11-06-d0c3bd6491f07d11b5b6a334ed540b57d767d1c2</url>
+    </release>
+  </releases>
+  <content_rating type="oars-1.1"/>
+  <supports>
+    <control translate="no">keyboard</control>
+  </supports>
+  <recommends>
+    <control translate="no">gamepad</control>
+  </recommends>
+  <requires>
+    <internet translate="no">offline-only</internet>
+  </requires>
+  <provides>
+    <binary translate="no">shadPS4QtLauncher</binary>
+  </provides>
+  <keywords>
+    <keyword>emulator</keyword>
+    <keyword>emulation</keyword>
+    <keyword translate="no">playstation</keyword>
+    <keyword translate="no">ps4</keyword>
+  </keywords>
+</component>
