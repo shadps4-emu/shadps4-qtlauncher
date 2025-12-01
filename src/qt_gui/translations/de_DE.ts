@@ -1089,6 +1089,18 @@ Einzigartige Inputs können nicht öfters als einmal gebunden werden. Input-Dupl
       <source>Failed to convert icon.</source>
       <translation>Fehler beim Konvertieren des Icons.</translation>
     </message>
+    <message>
+      <source>Delete Shader Cache</source>
+      <translation type="unfinished">Delete Shader Cache</translation>
+    </message>
+    <message>
+      <source>This game does not have any saved Shader Cache to delete!</source>
+      <translation type="unfinished">This game does not have any saved Shader Cache to delete!</translation>
+    </message>
+    <message>
+      <source>Shader Cache</source>
+      <translation type="unfinished">Shader Cache</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -2577,6 +2589,22 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
     <message>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
       <translation>USB-Gerät:\nEchtes USB-Gerät: Verwendet das echte USB-Gerät, das an das System angeschlossen ist.\nSkylander Portal: Emuliert ein Skylander Portal of Power.\nInfinity Base: Emuliert ein Disney Infinity Base.\nDimensions ToyPad: Emuliert ein Lego Dimensions ToyPad.</translation>
+    </message>
+    <message>
+      <source>Enable Shader Cache</source>
+      <translation type="unfinished">Enable Shader Cache</translation>
+    </message>
+    <message>
+      <source>Compress the Shader Cache files into a zip file</source>
+      <translation type="unfinished">Compress the Shader Cache files into a zip file</translation>
+    </message>
+    <message>
+      <source>Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</source>
+      <translation type="unfinished">Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</translation>
+    </message>
+    <message>
+      <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
+      <translation type="unfinished">Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</translation>
     </message>
   </context>
   <context>
