@@ -1092,15 +1092,15 @@
     </message>
     <message>
       <source>Delete Shader Cache</source>
-      <translation type="unfinished">Delete Shader Cache</translation>
+      <translation>Slett skyggelegger hurtiglager</translation>
     </message>
     <message>
       <source>This game does not have any saved Shader Cache to delete!</source>
-      <translation type="unfinished">This game does not have any saved Shader Cache to delete!</translation>
+      <translation>Dette spillet har ingen lagret skyggelegger hurtiglager å slette!</translation>
     </message>
     <message>
       <source>Shader Cache</source>
-      <translation type="unfinished">Shader Cache</translation>
+      <translation>Skyggelegger hurtiglager</translation>
     </message>
   </context>
   <context>
@@ -2589,19 +2589,19 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Enable Shader Cache</source>
-      <translation type="unfinished">Enable Shader Cache</translation>
+      <translation>Bruk skyggelegger hurtiglager</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file</source>
-      <translation type="unfinished">Compress the Shader Cache files into a zip file</translation>
+      <translation>Komprimer skyggelegger hurtiglager-filer til en zip-fil</translation>
     </message>
     <message>
       <source>Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</source>
-      <translation type="unfinished">Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</translation>
+      <translation>Bruk skyggelegger hurtiglager:\nLagrer kompilerte skyggeleggere for å unngå gjenkompilasjoner, reduserer hakking.</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
-      <translation type="unfinished">Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</translation>
+      <translation>Komprimer skyggelegger hurtiglager-filer til en zip-fil:\nskyggeleggerhurtiglager filene lagres i en zip-fil i stedet for flere separate filer.</translation>
     </message>
   </context>
   <context>
