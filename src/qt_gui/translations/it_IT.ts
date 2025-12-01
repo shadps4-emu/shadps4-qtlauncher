@@ -1240,7 +1240,7 @@
     </message>
     <message>
       <source>Left Analog Halfmode</source>
-      <translation>Mezza Modalità Analogico Sinistra</translation>
+      <translation>Modalità Mezzo Analogico Sinistra</translation>
     </message>
     <message>
       <source>hold to move left stick at half-speed</source>
@@ -1312,7 +1312,7 @@
     </message>
     <message>
       <source>Right Analog Halfmode</source>
-      <translation>Mezza Modalità Analogico Destra</translation>
+      <translation>Modalità Mezzo Analogico Destra</translation>
     </message>
     <message>
       <source>hold to move right stick at half-speed</source>
