@@ -1091,15 +1091,15 @@ Einzigartige Inputs können nicht öfters als einmal gebunden werden. Input-Dupl
     </message>
     <message>
       <source>Delete Shader Cache</source>
-      <translation type="unfinished">Delete Shader Cache</translation>
+      <translation>Shader Cache löschen</translation>
     </message>
     <message>
       <source>This game does not have any saved Shader Cache to delete!</source>
-      <translation type="unfinished">This game does not have any saved Shader Cache to delete!</translation>
+      <translation>Dieses Spiel hat keinen Shader Cache gespeichert, die gelöscht werden können!</translation>
     </message>
     <message>
       <source>Shader Cache</source>
-      <translation type="unfinished">Shader Cache</translation>
+      <translation>Shader Cache</translation>
     </message>
   </context>
   <context>
@@ -2592,19 +2592,19 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
     </message>
     <message>
       <source>Enable Shader Cache</source>
-      <translation type="unfinished">Enable Shader Cache</translation>
+      <translation>Shader Cache aktivieren</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file</source>
-      <translation type="unfinished">Compress the Shader Cache files into a zip file</translation>
+      <translation>Komprimiere Shader Cache-Dateien in eine Zip-Datei</translation>
     </message>
     <message>
       <source>Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</source>
-      <translation type="unfinished">Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</translation>
+      <translation>Shader Cache aktivieren:\nSpeichert kompilierte Shaders um Neukompilierung zu vermeiden und Stottern zu reduzieren.</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
-      <translation type="unfinished">Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</translation>
+      <translation>Komprimiere Shader Cache-Dateien in eine Zip-Datei:\nDie Shader Cache-Dateien werden in eine einzige Zip-Datei gespeichert anstatt in mehreren separaten Dateien.</translation>
     </message>
   </context>
   <context>
