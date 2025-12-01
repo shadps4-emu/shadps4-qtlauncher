@@ -1090,6 +1090,18 @@
       <source>Failed to convert icon.</source>
       <translation>Error al convertir el icono.</translation>
     </message>
+    <message>
+      <source>Delete Shader Cache</source>
+      <translation type="unfinished">Delete Shader Cache</translation>
+    </message>
+    <message>
+      <source>This game does not have any saved Shader Cache to delete!</source>
+      <translation type="unfinished">This game does not have any saved Shader Cache to delete!</translation>
+    </message>
+    <message>
+      <source>Shader Cache</source>
+      <translation type="unfinished">Shader Cache</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -2572,6 +2584,22 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
       <translation>Dispositivo USB:\nDispositivo USB real: Utiliza un dispositivo USB real que esté conectado al sistema.\nPortal de Skylanders: Emula un Portal de Poder de Skylanders.\nBase de Infinity: Emula una base de Disney Infinity.\nToy Pad de Dimensions: Emula un Toy Pad de LEGO Dimensions.</translation>
+    </message>
+    <message>
+      <source>Enable Shader Cache</source>
+      <translation type="unfinished">Enable Shader Cache</translation>
+    </message>
+    <message>
+      <source>Compress the Shader Cache files into a zip file</source>
+      <translation type="unfinished">Compress the Shader Cache files into a zip file</translation>
+    </message>
+    <message>
+      <source>Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</source>
+      <translation type="unfinished">Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</translation>
+    </message>
+    <message>
+      <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
+      <translation type="unfinished">Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</translation>
     </message>
   </context>
   <context>
