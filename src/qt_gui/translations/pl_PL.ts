@@ -1718,7 +1718,7 @@
     </message>
     <message>
       <source>Version Manager</source>
-      <translation type="unfinished">Version Manager</translation>
+      <translation>Menedżer wersji</translation>
     </message>
     <message>
       <source>No Version Selected</source>
@@ -2353,7 +2353,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>FSR Settings</source>
-      <translation type="unfinished">FSR Settings</translation>
+      <translation>Ustawienia FSR</translation>
     </message>
     <message>
       <source>Enable FSR</source>
@@ -2553,7 +2553,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
-      <translation type="unfinished">GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</translation>
+      <translation>Aktualizacje GUI:\nWydanie: Oficjalne wersje wydawane każdego miesiąca, które mogą być bardzo nieaktualne, ale są bardziej wiarygodne i przetestowane.\nR: Wersje programistyczne, które mają wszystkie najnowsze funkcje i poprawki, ale mogą zawierać błędy i są mniej stabilne.\n\n*Ta aktualizacja dotyczy tylko interfejsu użytkownika Qt. Aby zaktualizować rdzeń emulatora, użyj menedżera wersji.</translation>
     </message>
     <message>
       <source>Cannot create portable launcher folder</source>
@@ -2654,7 +2654,7 @@ Select an emulator version from the right panel.</translation>
     <name>VersionDialog</name>
     <message>
       <source>Version Manager</source>
-      <translation type="unfinished">Version Manager</translation>
+      <translation>Menedżer wersji</translation>
     </message>
     <message>
       <source>Path to save versions</source>
@@ -2698,7 +2698,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Download</source>
-      <translation type="unfinished">Download</translation>
+      <translation>Pobierz</translation>
     </message>
     <message>
       <source>Check for Pre-release updates at startup</source>
@@ -2730,7 +2730,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Błąd</translation>
     </message>
     <message>
       <source>Success</source>
@@ -2892,7 +2892,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Confirm Download</source>
-      <translation type="unfinished">Confirm Download</translation>
+      <translation>Potwierdź pobieranie</translation>
     </message>
     <message>
       <source>Extraction failure.</source>
