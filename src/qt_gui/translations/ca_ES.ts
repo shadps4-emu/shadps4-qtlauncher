@@ -1092,15 +1092,15 @@
     </message>
     <message>
       <source>Delete Shader Cache</source>
-      <translation type="unfinished">Delete Shader Cache</translation>
+      <translation>Esborra la memòria cau de shaders</translation>
     </message>
     <message>
       <source>This game does not have any saved Shader Cache to delete!</source>
-      <translation type="unfinished">This game does not have any saved Shader Cache to delete!</translation>
+      <translation>Aquest joc no té memòria cau que es pugui esborrar!</translation>
     </message>
     <message>
       <source>Shader Cache</source>
-      <translation type="unfinished">Shader Cache</translation>
+      <translation>Memòria cau de shaders</translation>
     </message>
   </context>
   <context>
@@ -2589,19 +2589,19 @@ Selecciona una versió del panell dret.</translation>
     </message>
     <message>
       <source>Enable Shader Cache</source>
-      <translation type="unfinished">Enable Shader Cache</translation>
+      <translation>Activa la memòria cau de shaders</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file</source>
-      <translation type="unfinished">Compress the Shader Cache files into a zip file</translation>
+      <translation>Comprimeix la memòria cau de shaders en un fitxer zip</translation>
     </message>
     <message>
       <source>Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</source>
-      <translation type="unfinished">Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</translation>
+      <translation>Activa la memòria cau de shaders:\nEmmagatzemar la memòria cau de shaders per evitar recompilacions, reduint les estrebades.</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
-      <translation type="unfinished">Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</translation>
+      <translation>Comprimeix els fitxers de la memòria cau de shaders en un fitxer zip:\nEls fitxers de la memòria cau de shaders s'emmagatzemen en un sol fitxer zip en compte de fer-ho en diferents fitxers separats.</translation>
     </message>
   </context>
   <context>
