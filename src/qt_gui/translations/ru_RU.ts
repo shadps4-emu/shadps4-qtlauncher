@@ -1092,15 +1092,15 @@
     </message>
     <message>
       <source>Delete Shader Cache</source>
-      <translation type="unfinished">Delete Shader Cache</translation>
+      <translation>Удалить кэш шейдеров</translation>
     </message>
     <message>
       <source>This game does not have any saved Shader Cache to delete!</source>
-      <translation type="unfinished">This game does not have any saved Shader Cache to delete!</translation>
+      <translation>В этой игре нет сохраненного кэша шейдеров для удаления!</translation>
     </message>
     <message>
       <source>Shader Cache</source>
-      <translation type="unfinished">Shader Cache</translation>
+      <translation>Кэш шейдеров</translation>
     </message>
   </context>
   <context>
@@ -2589,19 +2589,19 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable Shader Cache</source>
-      <translation type="unfinished">Enable Shader Cache</translation>
+      <translation>Включить кэш шейдеров</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file</source>
-      <translation type="unfinished">Compress the Shader Cache files into a zip file</translation>
+      <translation>Сжать файлы кэша шейдеров в zip-файл</translation>
     </message>
     <message>
       <source>Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</source>
-      <translation type="unfinished">Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</translation>
+      <translation>Включить кэш шейдеров:\nХранить скомпилированные шейдеры, чтобы избежать перекомпиляции, уменьшить заглушение.</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
-      <translation type="unfinished">Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</translation>
+      <translation>Сжать файлы кэша шейдеров в zip-файл:\nФайлы кэша шейдеров хранятся в одном zip-файле вместо нескольких отдельных файлов.</translation>
     </message>
   </context>
   <context>
