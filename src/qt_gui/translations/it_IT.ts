@@ -1092,15 +1092,15 @@
     </message>
     <message>
       <source>Delete Shader Cache</source>
-      <translation type="unfinished">Delete Shader Cache</translation>
+      <translation>Elimina Cache Shader</translation>
     </message>
     <message>
       <source>This game does not have any saved Shader Cache to delete!</source>
-      <translation type="unfinished">This game does not have any saved Shader Cache to delete!</translation>
+      <translation>Questo gioco non ha alcuna Cache Shader salvata da eliminare!</translation>
     </message>
     <message>
       <source>Shader Cache</source>
-      <translation type="unfinished">Shader Cache</translation>
+      <translation>Cache Shader</translation>
     </message>
   </context>
   <context>
@@ -2589,7 +2589,7 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
     </message>
     <message>
       <source>Enable Shader Cache</source>
-      <translation type="unfinished">Enable Shader Cache</translation>
+      <translation>Abilita Cache Shader</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file</source>
