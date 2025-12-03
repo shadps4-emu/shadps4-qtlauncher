@@ -56,11 +56,17 @@ Hotkeys::Hotkeys(std::shared_ptr<IpcClient> ipc_client, bool isGameRunning, QWid
     for (auto& button : PadButtonsList) {
         connect(button, &QPushButton::clicked, this,
                 [this, &button]() { StartTimer(button, true); });
+
+        connect(button, &QRightClickButton::rightClicked, this,
+                [this, &button]() { button->setText("unmapped"); });
     }
 
     for (auto& button : KBButtonsList) {
         connect(button, &QPushButton::clicked, this,
                 [this, &button]() { StartTimer(button, false); });
+
+        connect(button, &QRightClickButton::rightClicked, this,
+                [this, &button]() { button->setText("unmapped"); });
     }
 
     SdlEventWrapper::Wrapper::wrapperActive = true;
@@ -333,7 +339,7 @@ void Hotkeys::CheckGamePad() {
     }
 }
 
-void Hotkeys::StartTimer(QPushButton*& button, bool isButton) {
+void Hotkeys::StartTimer(QRightClickButton*& button, bool isButton) {
     MappingTimer = 3;
     MappingCompleted = false;
     mapping = button->text();
@@ -348,7 +354,7 @@ void Hotkeys::StartTimer(QPushButton*& button, bool isButton) {
     connect(timer, &QTimer::timeout, this, [this]() { CheckMapping(MappingButton); });
 }
 
-void Hotkeys::CheckMapping(QPushButton*& button) {
+void Hotkeys::CheckMapping(QRightClickButton*& button) {
     MappingTimer -= 1;
     button->setText(tr("Waiting for inputs") + " [" + QString::number(MappingTimer) + "]");
 
@@ -385,43 +391,36 @@ void Hotkeys::SetMapping(QString input) {
 bool Hotkeys::eventFilter(QObject* obj, QEvent* event) {
     if (event->type() == QEvent::KeyPress) {
         QKeyEvent* keyEvent = static_cast<QKeyEvent*>(event);
-        if (keyEvent->key() == Qt::Key_Escape) {
-            if (EnableKBMapping || EnablePadMapping) {
-                SetMapping("unmapped");
-                CheckMapping(MappingButton);
+        if (EnableKBMapping) {
+
+            if (pressedButtons.size() >= 3) {
+                return true;
             }
-            return true;
-        } else {
-            if (EnableKBMapping) {
 
-                if (pressedButtons.size() >= 3) {
-                    return true;
+            switch (keyEvent->key()) {
+            // modifiers
+            case Qt::Key_Shift:
+                if (keyEvent->nativeScanCode() == LSHIFT_KEY) {
+                    pressedButtons.insert(1, "lshift");
+                } else {
+                    pressedButtons.insert(2, "rshift");
                 }
-
-                switch (keyEvent->key()) {
-                // modifiers
-                case Qt::Key_Shift:
-                    if (keyEvent->nativeScanCode() == LSHIFT_KEY) {
-                        pressedButtons.insert(1, "lshift");
-                    } else {
-                        pressedButtons.insert(2, "rshift");
-                    }
-                    break;
-                case Qt::Key_Alt:
-                    if (keyEvent->nativeScanCode() == LALT_KEY) {
-                        pressedButtons.insert(3, "lalt");
-                    } else {
-                        pressedButtons.insert(4, "ralt");
-                    }
-                    break;
-                case Qt::Key_Control:
-                    if (keyEvent->nativeScanCode() == LCTRL_KEY) {
-                        pressedButtons.insert(5, "lctrl");
-                    } else {
-                        pressedButtons.insert(6, "rctrl");
-                    }
-                    break;
-                case Qt::Key_Meta:
+                break;
+            case Qt::Key_Alt:
+                if (keyEvent->nativeScanCode() == LALT_KEY) {
+                    pressedButtons.insert(3, "lalt");
+                } else {
+                    pressedButtons.insert(4, "ralt");
+                }
+                break;
+            case Qt::Key_Control:
+                if (keyEvent->nativeScanCode() == LCTRL_KEY) {
+                    pressedButtons.insert(5, "lctrl");
+                } else {
+                    pressedButtons.insert(6, "rctrl");
+                }
+                break;
+            case Qt::Key_Meta:
 #ifdef _WIN32
                     pressedButtons.insert(7, "lwin");
 #else
@@ -770,11 +769,14 @@ bool Hotkeys::eventFilter(QObject* obj, QEvent* event) {
                 case Qt::Key_Right:
                     pressedButtons.insert(124, "right");
                     break;
+                case Qt::Key_Escape:
+                    pressedButtons.insert(125, "escape");
+                    break;
+
                 default:
                     break;
                 }
                 return true;
-            }
         }
     }
 
