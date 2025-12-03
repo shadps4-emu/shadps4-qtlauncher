@@ -5,6 +5,7 @@
 
 #include "game_info.h"
 #include "ipc/ipc_client.h"
+#include "right_click_button.h"
 
 // macros > declaring constants
 // also, we were only using one counterpart
@@ -36,8 +37,8 @@ signals:
 private Q_SLOTS:
     void SaveKBMConfig(bool CloseOnSave);
     void SetDefault();
-    void CheckMapping(QPushButton*& button);
-    void StartTimer(QPushButton*& button);
+    void CheckMapping(QRightClickButton*& button);
+    void StartTimer(QRightClickButton*& button);
     void onHelpClicked();
 
 private:
@@ -63,8 +64,8 @@ private:
     QString mapping;
     int MappingTimer;
     QTimer* timer;
-    QPushButton* MappingButton;
-    QList<QPushButton*> ButtonsList;
+    QRightClickButton* MappingButton;
+    QList<QRightClickButton*> ButtonsList;
     std::string config_id;
     const std::vector<std::string> ControllerInputs = {
         "cross",        "circle",    "square",      "triangle",    "l1",

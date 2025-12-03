@@ -4,8 +4,10 @@
 #include <QDialog>
 #include <SDL3/SDL.h>
 #include <SDL3/SDL_gamepad.h>
+
 #include "game_info.h"
 #include "ipc/ipc_client.h"
+#include "right_click_button.h"
 #include "sdl_event_wrapper.h"
 
 namespace Ui {
@@ -28,9 +30,9 @@ private Q_SLOTS:
     void SaveControllerConfig(bool CloseOnSave);
     void SetDefault();
     void UpdateLightbarColor();
-    void CheckMapping(QPushButton*& button);
-    void StartTimer(QPushButton*& button, bool isButton);
-    void ConnectAxisInputs(QPushButton*& button);
+    void CheckMapping(QRightClickButton*& button);
+    void StartTimer(QRightClickButton*& button, bool isButton);
+    void ConnectAxisInputs(QRightClickButton*& button);
     void ActiveControllerChanged(int value);
 
 private:
@@ -52,8 +54,8 @@ private:
 
     // use QMap instead of QSet to maintain order of inserted strings
     QMap<int, QString> pressedButtons;
-    QList<QPushButton*> ButtonsList;
-    QList<QPushButton*> AxisList;
+    QList<QRightClickButton*> ButtonsList;
+    QList<QRightClickButton*> AxisList;
 
     std::string RunningGameSerial;
     bool GameRunning;
@@ -66,7 +68,7 @@ private:
     int MappingTimer;
     int gamepad_count;
     QTimer* timer;
-    QPushButton* MappingButton;
+    QRightClickButton* MappingButton;
     SDL_Gamepad* gamepad = nullptr;
     SDL_JoystickID* gamepads;
     SdlEventWrapper::Wrapper* RemapWrapper;

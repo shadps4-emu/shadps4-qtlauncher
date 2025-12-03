@@ -7,6 +7,7 @@
 #include <SDL3/SDL_gamepad.h>
 
 #include "ipc/ipc_client.h"
+#include "right_click_button.h"
 
 #ifdef _WIN32
 #define LCTRL_KEY 29
@@ -32,13 +33,13 @@ public:
 
 private Q_SLOTS:
     void processSDLEvents(int Type, int Input, int Value);
-    void StartTimer(QPushButton*& button, bool isPad);
+    void StartTimer(QRightClickButton*& button, bool isPad);
     void SaveHotkeys(bool CloseOnSave);
     void SetDefault();
 
 private:
     bool eventFilter(QObject* obj, QEvent* event) override;
-    void CheckMapping(QPushButton*& button);
+    void CheckMapping(QRightClickButton*& button);
     void DisableMappingButtons();
     void EnableMappingButtons();
     void LoadHotkeys();
@@ -59,14 +60,14 @@ private:
     int gamepad_count;
     QString mapping;
     QTimer* timer;
-    QPushButton* MappingButton;
+    QRightClickButton* MappingButton;
     SDL_Gamepad* h_gamepad = nullptr;
     SDL_JoystickID* h_gamepads;
 
     // use QMap instead of QSet to maintain order of inserted strings
     QMap<int, QString> pressedButtons;
-    QList<QPushButton*> PadButtonsList;
-    QList<QPushButton*> KBButtonsList;
+    QList<QRightClickButton*> PadButtonsList;
+    QList<QRightClickButton*> KBButtonsList;
     QFuture<void> Polling;
 
     Ui::Hotkeys* ui;

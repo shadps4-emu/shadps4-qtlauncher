@@ -12,7 +12,7 @@
     <x>0</x>
     <y>0</y>
     <width>1124</width>
-    <height>857</height>
+    <height>904</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -46,7 +46,7 @@
         <x>0</x>
         <y>0</y>
         <width>1110</width>
-        <height>819</height>
+        <height>862</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -145,7 +145,7 @@
                    </property>
                    <layout class="QHBoxLayout" name="horizontalLayout_4">
                     <item>
-                     <widget class="QPushButton" name="DpadUpButton">
+                     <widget class="QRightClickButton" name="DpadUpButton">
                       <property name="text">
                        <string>unmapped</string>
                       </property>
@@ -181,7 +181,7 @@
                     <number>5</number>
                    </property>
                    <item>
-                    <widget class="QPushButton" name="DpadLeftButton">
+                    <widget class="QRightClickButton" name="DpadLeftButton">
                      <property name="text">
                       <string>unmapped</string>
                      </property>
@@ -212,7 +212,7 @@
                     <number>5</number>
                    </property>
                    <item>
-                    <widget class="QPushButton" name="DpadRightButton">
+                    <widget class="QRightClickButton" name="DpadRightButton">
                      <property name="text">
                       <string>unmapped</string>
                      </property>
@@ -260,7 +260,7 @@
                    </property>
                    <layout class="QHBoxLayout" name="horizontalLayout_3">
                     <item>
-                     <widget class="QPushButton" name="DpadDownButton">
+                     <widget class="QRightClickButton" name="DpadDownButton">
                       <property name="text">
                        <string>unmapped</string>
                       </property>
@@ -309,7 +309,7 @@
                   <number>5</number>
                  </property>
                  <item>
-                  <widget class="QPushButton" name="L1Button">
+                  <widget class="QRightClickButton" name="L1Button">
                    <property name="text">
                     <string>unmapped</string>
                    </property>
@@ -340,7 +340,7 @@
                   <number>5</number>
                  </property>
                  <item>
-                  <widget class="QPushButton" name="L2Button">
+                  <widget class="QRightClickButton" name="L2Button">
                    <property name="text">
                     <string>unmapped</string>
                    </property>
@@ -549,7 +549,7 @@
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_10">
                     <item>
-                     <widget class="QPushButton" name="LStickUpButton">
+                     <widget class="QRightClickButton" name="LStickUpButton">
                       <property name="text">
                        <string>unmapped</string>
                       </property>
@@ -585,7 +585,7 @@
                     <number>5</number>
                    </property>
                    <item>
-                    <widget class="QPushButton" name="LStickLeftButton">
+                    <widget class="QRightClickButton" name="LStickLeftButton">
                      <property name="text">
                       <string>unmapped</string>
                      </property>
@@ -598,7 +598,7 @@
                  <widget class="QGroupBox" name="gb_left_stick_right">
                   <property name="maximumSize">
                    <size>
-                    <width>179</width>
+                    <width>16777215</width>
                     <height>16777215</height>
                    </size>
                   </property>
@@ -622,7 +622,7 @@
                     <number>5</number>
                    </property>
                    <item>
-                    <widget class="QPushButton" name="LStickRightButton">
+                    <widget class="QRightClickButton" name="LStickRightButton">
                      <property name="text">
                       <string>unmapped</string>
                      </property>
@@ -670,7 +670,7 @@
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_8">
                     <item>
-                     <widget class="QPushButton" name="LStickDownButton">
+                     <widget class="QRightClickButton" name="LStickDownButton">
                       <property name="text">
                        <string>unmapped</string>
                       </property>
@@ -967,7 +967,7 @@
                    <number>5</number>
                   </property>
                   <item>
-                   <widget class="QPushButton" name="L3Button">
+                   <widget class="QRightClickButton" name="L3Button">
                     <property name="text">
                      <string>unmapped</string>
                     </property>
@@ -998,7 +998,7 @@
                    <number>5</number>
                   </property>
                   <item>
-                   <widget class="QPushButton" name="OptionsButton">
+                   <widget class="QRightClickButton" name="OptionsButton">
                     <property name="text">
                      <string>unmapped</string>
                     </property>
@@ -1035,7 +1035,7 @@
                    <number>5</number>
                   </property>
                   <item>
-                   <widget class="QPushButton" name="R3Button">
+                   <widget class="QRightClickButton" name="R3Button">
                     <property name="text">
                      <string>unmapped</string>
                     </property>
@@ -1058,7 +1058,7 @@
                  </property>
                  <layout class="QHBoxLayout" name="horizontalLayout_5">
                   <item>
-                   <widget class="QPushButton" name="TouchpadLeftButton">
+                   <widget class="QRightClickButton" name="TouchpadLeftButton">
                     <property name="text">
                      <string>unmapped</string>
                     </property>
@@ -1077,7 +1077,7 @@
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_11">
                   <item>
-                   <widget class="QPushButton" name="TouchpadCenterButton">
+                   <widget class="QRightClickButton" name="TouchpadCenterButton">
                     <property name="text">
                      <string>unmapped</string>
                     </property>
@@ -1096,7 +1096,7 @@
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_12">
                   <item>
-                   <widget class="QPushButton" name="TouchpadRightButton">
+                   <widget class="QRightClickButton" name="TouchpadRightButton">
                     <property name="text">
                      <string>unmapped</string>
                     </property>
@@ -1167,7 +1167,7 @@
                      <widget class="QLabel" name="RLabel">
                       <property name="maximumSize">
                        <size>
-                        <width>20</width>
+                        <width>25</width>
                         <height>16777215</height>
                        </size>
                       </property>
@@ -1212,7 +1212,7 @@
                      <widget class="QLabel" name="GLabel">
                       <property name="maximumSize">
                        <size>
-                        <width>20</width>
+                        <width>25</width>
                         <height>16777215</height>
                        </size>
                       </property>
@@ -1260,7 +1260,7 @@
                      <widget class="QLabel" name="BLabel">
                       <property name="maximumSize">
                        <size>
-                        <width>20</width>
+                        <width>25</width>
                         <height>16777215</height>
                        </size>
                       </property>
@@ -1392,7 +1392,7 @@
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_3">
                     <item>
-                     <widget class="QPushButton" name="TriangleButton">
+                     <widget class="QRightClickButton" name="TriangleButton">
                       <property name="text">
                        <string>unmapped</string>
                       </property>
@@ -1428,7 +1428,7 @@
                     <number>5</number>
                    </property>
                    <item>
-                    <widget class="QPushButton" name="SquareButton">
+                    <widget class="QRightClickButton" name="SquareButton">
                      <property name="text">
                       <string>unmapped</string>
                      </property>
@@ -1459,7 +1459,7 @@
                     <number>5</number>
                    </property>
                    <item>
-                    <widget class="QPushButton" name="CircleButton">
+                    <widget class="QRightClickButton" name="CircleButton">
                      <property name="text">
                       <string>unmapped</string>
                      </property>
@@ -1507,7 +1507,7 @@
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_5">
                     <item>
-                     <widget class="QPushButton" name="CrossButton">
+                     <widget class="QRightClickButton" name="CrossButton">
                       <property name="text">
                        <string>unmapped</string>
                       </property>
@@ -1556,7 +1556,7 @@
                   <number>5</number>
                  </property>
                  <item>
-                  <widget class="QPushButton" name="R1Button">
+                  <widget class="QRightClickButton" name="R1Button">
                    <property name="text">
                     <string>unmapped</string>
                    </property>
@@ -1587,7 +1587,7 @@
                   <number>5</number>
                  </property>
                  <item>
-                  <widget class="QPushButton" name="R2Button">
+                  <widget class="QRightClickButton" name="R2Button">
                    <property name="text">
                     <string>unmapped</string>
                    </property>
@@ -1799,7 +1799,7 @@
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_7">
                     <item>
-                     <widget class="QPushButton" name="RStickUpButton">
+                     <widget class="QRightClickButton" name="RStickUpButton">
                       <property name="text">
                        <string>unmapped</string>
                       </property>
@@ -1835,7 +1835,7 @@
                     <number>5</number>
                    </property>
                    <item>
-                    <widget class="QPushButton" name="RStickLeftButton">
+                    <widget class="QRightClickButton" name="RStickLeftButton">
                      <property name="text">
                       <string>unmapped</string>
                      </property>
@@ -1866,7 +1866,7 @@
                     <number>5</number>
                    </property>
                    <item>
-                    <widget class="QPushButton" name="RStickRightButton">
+                    <widget class="QRightClickButton" name="RStickRightButton">
                      <property name="text">
                       <string>unmapped</string>
                      </property>
@@ -1914,7 +1914,7 @@
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_6">
                     <item>
-                     <widget class="QPushButton" name="RStickDownButton">
+                     <widget class="QRightClickButton" name="RStickDownButton">
                       <property name="text">
                        <string>unmapped</string>
                       </property>
@@ -1938,17 +1938,52 @@
     </widget>
    </item>
    <item>
-    <widget class="QDialogButtonBox" name="buttonBox">
-     <property name="standardButtons">
-      <set>QDialogButtonBox::StandardButton::Apply|QDialogButtonBox::StandardButton::Cancel|QDialogButtonBox::StandardButton::RestoreDefaults|QDialogButtonBox::StandardButton::Save</set>
-     </property>
-     <property name="centerButtons">
-      <bool>false</bool>
-     </property>
-    </widget>
+    <layout class="QHBoxLayout" name="horizontalLayout_23">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="font">
+        <font>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Tip: Unmap inputs with right-click</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDialogButtonBox" name="buttonBox">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LayoutDirection::LeftToRight</enum>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="standardButtons">
+        <set>QDialogButtonBox::StandardButton::Apply|QDialogButtonBox::StandardButton::Cancel|QDialogButtonBox::StandardButton::RestoreDefaults|QDialogButtonBox::StandardButton::Save</set>
+       </property>
+       <property name="centerButtons">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QRightClickButton</class>
+   <extends>QPushButton</extends>
+   <header>src/qt_gui/right_click_button.h</header>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="../shadps4.qrc"/>
  </resources>

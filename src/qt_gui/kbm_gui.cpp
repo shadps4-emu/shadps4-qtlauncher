@@ -23,7 +23,6 @@ KBMSettings::KBMSettings(std::shared_ptr<GameInfoClass> game_info_get,
       GameRunning(isGameRunning), RunningGameSerial(GameRunningSerial), ui(new Ui::KBMSettings) {
 
     ui->setupUi(this);
-    this->setFixedWidth(this->width());
     ui->PerGameCheckBox->setChecked(!Config::GetUseUnifiedInputConfig());
     ui->TextEditorButton->setFocus();
     this->setFocusPolicy(Qt::StrongFocus);
@@ -68,7 +67,7 @@ KBMSettings::KBMSettings(std::shared_ptr<GameInfoClass> game_info_get,
 
     ButtonConnects();
     SetUIValuestoMappings("default");
-    installEventFilter(this);
+    qApp->installEventFilter(this);
 
     ui->ProfileComboBox->setCurrentText(tr("Common Config"));
     ui->TitleLabel->setText(tr("Common Config"));
@@ -153,6 +152,9 @@ tr("Do you want to overwrite existing mappings with the mappings from the Common
 void KBMSettings::ButtonConnects() {
     for (auto& button : ButtonsList) {
         connect(button, &QPushButton::clicked, this, [this, &button]() { StartTimer(button); });
+
+        connect(button, &QRightClickButton::rightClicked, this,
+                [this, &button]() { button->setText("unmapped"); });
     }
 }
 
@@ -544,7 +546,7 @@ void KBMSettings::onHelpClicked() {
     }
 }
 
-void KBMSettings::StartTimer(QPushButton*& button) {
+void KBMSettings::StartTimer(QRightClickButton*& button) {
     MappingTimer = 3;
     EnableMapping = true;
     MappingCompleted = false;
@@ -558,7 +560,7 @@ void KBMSettings::StartTimer(QPushButton*& button) {
     timer->start(1000);
 }
 
-void KBMSettings::CheckMapping(QPushButton*& button) {
+void KBMSettings::CheckMapping(QRightClickButton*& button) {
     MappingTimer -= 1;
     button->setText(tr("Press a key") + " [" + QString::number(MappingTimer) + "]");
 
@@ -955,7 +957,7 @@ bool KBMSettings::eventFilter(QObject* obj, QEvent* event) {
 
                 // cancel mapping
             case Qt::Key_Escape:
-                SetMapping("unmapped");
+                pressedKeys.insert(125, "escape");
                 break;
             default:
                 break;
@@ -968,19 +970,19 @@ bool KBMSettings::eventFilter(QObject* obj, QEvent* event) {
             if (pressedKeys.size() < 3) {
                 switch (mouseEvent->button()) {
                 case Qt::LeftButton:
-                    pressedKeys.insert(125, "leftbutton");
+                    pressedKeys.insert(126, "leftbutton");
                     break;
                 case Qt::RightButton:
-                    pressedKeys.insert(127, "rightbutton");
+                    pressedKeys.insert(128, "rightbutton");
                     break;
                 case Qt::MiddleButton:
-                    pressedKeys.insert(126, "middlebutton");
+                    pressedKeys.insert(127, "middlebutton");
                     break;
                 case Qt::XButton1:
-                    pressedKeys.insert(128, "sidebuttonback");
+                    pressedKeys.insert(129, "sidebuttonback");
                     break;
                 case Qt::XButton2:
-                    pressedKeys.insert(129, "sidebuttonforward");
+                    pressedKeys.insert(130, "sidebuttonforward");
                     break;
 
                     // default case
@@ -1002,7 +1004,7 @@ bool KBMSettings::eventFilter(QObject* obj, QEvent* event) {
                 if (wheelEvent->angleDelta().y() > 5) {
                     if (std::find(AxisList.begin(), AxisList.end(), MappingButton) ==
                         AxisList.end()) {
-                        pressedKeys.insert(130, "mousewheelup");
+                        pressedKeys.insert(131, "mousewheelup");
                         if (QApplication::keyboardModifiers() == Qt::NoModifier)
                             emit PushKBMEvent();
                     } else {
@@ -1013,7 +1015,7 @@ bool KBMSettings::eventFilter(QObject* obj, QEvent* event) {
                 } else if (wheelEvent->angleDelta().y() < -5) {
                     if (std::find(AxisList.begin(), AxisList.end(), MappingButton) ==
                         AxisList.end()) {
-                        pressedKeys.insert(131, "mousewheeldown");
+                        pressedKeys.insert(132, "mousewheeldown");
                         if (QApplication::keyboardModifiers() == Qt::NoModifier)
                             emit PushKBMEvent();
                     } else {
@@ -1027,8 +1029,8 @@ bool KBMSettings::eventFilter(QObject* obj, QEvent* event) {
                         AxisList.end()) {
                         // QT changes scrolling to horizontal for all widgets with the alt modifier
                         QApplication::keyboardModifiers() & Qt::AltModifier
-                            ? pressedKeys.insert(130, "mousewheelup")
-                            : pressedKeys.insert(133, "mousewheelright");
+                            ? pressedKeys.insert(131, "mousewheelup")
+                            : pressedKeys.insert(134, "mousewheelright");
                         if (QApplication::keyboardModifiers() == Qt::NoModifier)
                             emit PushKBMEvent();
                     } else {
@@ -1040,8 +1042,8 @@ bool KBMSettings::eventFilter(QObject* obj, QEvent* event) {
                     if (std::find(AxisList.begin(), AxisList.end(), MappingButton) ==
                         AxisList.end()) {
                         QApplication::keyboardModifiers() & Qt::AltModifier
-                            ? pressedKeys.insert(131, "mousewheeldown")
-                            : pressedKeys.insert(132, "mousewheelleft");
+                            ? pressedKeys.insert(132, "mousewheeldown")
+                            : pressedKeys.insert(133, "mousewheelleft");
                         if (QApplication::keyboardModifiers() == Qt::NoModifier)
                             emit PushKBMEvent();
                     } else {
@@ -1059,4 +1061,6 @@ bool KBMSettings::eventFilter(QObject* obj, QEvent* event) {
     return QDialog::eventFilter(obj, event);
 }
 
-KBMSettings::~KBMSettings() {}
+KBMSettings::~KBMSettings() {
+    qApp->removeEventFilter(this);
+}
