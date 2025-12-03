@@ -2591,15 +2591,15 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file</source>
-      <translation type="unfinished">Compress the Shader Cache files into a zip file</translation>
+      <translation>Comprimir caché de shaders en un archivo .zip</translation>
     </message>
     <message>
       <source>Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</source>
-      <translation type="unfinished">Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</translation>
+      <translation>Habilitar caché de shaders:\nAlmacena los shaders compilados para no tener que recompilarlos, reduce los tirones.</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
-      <translation type="unfinished">Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</translation>
+      <translation>Comprimir caché de shaders en un archivo .zip:\nAlmacena los archivos de la caché de shaders en un archivo .zip en vez de hacerlo en muchos archivos sueltos.</translation>
     </message>
   </context>
   <context>
