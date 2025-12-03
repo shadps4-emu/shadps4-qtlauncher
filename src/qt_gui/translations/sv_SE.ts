@@ -1090,6 +1090,18 @@
       <source>Failed to convert icon.</source>
       <translation>Misslyckades med att konvertera ikon.</translation>
     </message>
+    <message>
+      <source>Delete Shader Cache</source>
+      <translation>Ta bort shadercache</translation>
+    </message>
+    <message>
+      <source>This game does not have any saved Shader Cache to delete!</source>
+      <translation>Detta spel har inte någon sparad shadercache att ta bort!</translation>
+    </message>
+    <message>
+      <source>Shader Cache</source>
+      <translation>Shadercache</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -2574,6 +2586,22 @@ Välj en emulatorversion från den högra panelen.</translation>
     <message>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
       <translation>USB-enhet:\nRiktig USB-enhet: Använd en riktig USB-enhet som är ansluten till systemet.\nSkylander Portal: Emulera en Skylander Portal of Power.\nInfinity Base: Emulera en Disney Infinity Base.\nDimensions Toypad: Emulera en Lego Dimensions Toypad.</translation>
+    </message>
+    <message>
+      <source>Enable Shader Cache</source>
+      <translation>Aktivera shadercache</translation>
+    </message>
+    <message>
+      <source>Compress the Shader Cache files into a zip file</source>
+      <translation>Komprimera shadercachefilerna till en zip-fil</translation>
+    </message>
+    <message>
+      <source>Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</source>
+      <translation>Aktivera shadercache:\nLagra kompilerade shaders för att undvika omkompileringar och minska hackighet.</translation>
+    </message>
+    <message>
+      <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
+      <translation>Komprimera shadercachefilerna till en zip-fil:\nShadercachefilerna lagras i en enda zip-fil istället för i flera separata filer.</translation>
     </message>
   </context>
   <context>
