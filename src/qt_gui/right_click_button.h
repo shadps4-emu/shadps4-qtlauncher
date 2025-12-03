@@ -10,10 +10,10 @@ class QRightClickButton : public QPushButton {
     Q_OBJECT
 
 public:
-    explicit QRightClickButton(QWidget *parent = 0);
+    explicit QRightClickButton(QWidget* parent = 0);
 
 public slots:
-    void mousePressEvent(QMouseEvent *e);
+    void mousePressEvent(QMouseEvent* e);
 
 signals:
     void rightClicked();
