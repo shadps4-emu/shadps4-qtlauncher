@@ -289,7 +289,7 @@ void VersionDialog::DownloadListVersion() {
                     if (tagName.startsWith("Pre-release", Qt::CaseInsensitive)) {
                         if (!foundPreRelease) {
                             preReleaseItem = new QTreeWidgetItem();
-                            preReleaseItem->setText(0, "Pre-release");
+                            preReleaseItem->setText(0, "Pre-release (Nightly)");
                             foundPreRelease = true;
                         }
                         continue;
@@ -306,7 +306,7 @@ void VersionDialog::DownloadListVersion() {
                 // If you didn't find Pre-release, add it manually
                 if (!foundPreRelease) {
                     preReleaseItem = new QTreeWidgetItem();
-                    preReleaseItem->setText(0, "Pre-release");
+                    preReleaseItem->setText(0, "Pre-release (Nightly)");
                 }
 
                 // Add Pre-release first
@@ -376,7 +376,7 @@ tr("First you need to choose a location to save the versions in\n'Path to save v
 #elif defined(Q_OS_MAC)
             platform = "macos-sdl";
 #endif
-            if (versionName == "Pre-release") {
+            if (versionName.contains("Pre-release", Qt::CaseInsensitive)) {
                 apiUrl = "https://api.github.com/repos/shadps4-emu/shadPS4/releases";
             } else {
                 apiUrl = QString("https://api.github.com/repos/shadps4-emu/"
@@ -410,7 +410,7 @@ tr("First you need to choose a location to save the versions in\n'Path to save v
                 QJsonArray assets;
                 QJsonObject release;
 
-                if (versionName == "Pre-release") {
+                if (versionName.contains("Pre-release", Qt::CaseInsensitive)) {
                     QJsonArray releases = doc.array();
                     for (const QJsonValue& val : releases) {
                         QJsonObject obj = val.toObject();
@@ -499,7 +499,7 @@ tr("First you need to choose a location to save the versions in\n'Path to save v
                         releaseName.replace(QRegularExpression("\\b[Cc]odename\\s+"), "");
 
                         QString folderName;
-                        if (versionName == "Pre-release") {
+                        if (versionName.contains("Pre-release", Qt::CaseInsensitive)) {
                             folderName = "Pre-release";
                         } else {
                             QString datePart = release["published_at"].toString().left(10);
@@ -595,8 +595,10 @@ tr("First you need to choose a location to save the versions in\n'Path to save v
                                     }
                                     std::filesystem::path exe_path =
                                         Common::FS::PathFromQString(executablePath);
+
                                     VersionManager::Version new_version{
-                                        .name = versionName.toStdString(),
+                                        .name = (is_release ? versionName.toStdString()
+                                                            : std::string("Pre-release (Nightly)")),
                                         .path = exe_path.generic_string(),
                                         .date = release["published_at"]
                                                     .toString()
@@ -606,10 +608,26 @@ tr("First you need to choose a location to save the versions in\n'Path to save v
                                         .type = is_release ? VersionManager::VersionType::Release
                                                            : VersionManager::VersionType::Nightly,
                                     };
+
+                                    if (!is_release) {
+                                        auto version_list = VersionManager::GetVersionList({});
+                                        for (const auto& installedVersion : version_list) {
+                                            if (installedVersion.type ==
+                                                    VersionManager::VersionType::Nightly ||
+                                                QString::fromStdString(installedVersion.name)
+                                                    .contains("Pre-release", Qt::CaseInsensitive)) {
+                                                VersionManager::RemoveVersion(
+                                                    installedVersion.name);
+                                            }
+                                        }
+                                        VersionManager::AddNewVersion(new_version);
+                                    } else {
+                                        VersionManager::AddNewVersion(new_version);
+                                    }
+
                                     m_gui_settings->SetValue(
                                         gui::vm_versionSelected,
                                         QString::fromStdString(new_version.path));
-                                    VersionManager::AddNewVersion(new_version);
                                     LoadInstalledList();
                                 });
                         } else {
@@ -737,7 +755,7 @@ void VersionDialog::PopulateDownloadTree(const QStringList& versions) {
         if (tagName.startsWith("Pre-release", Qt::CaseInsensitive)) {
             if (!foundPreRelease) {
                 preReleaseItem = new QTreeWidgetItem();
-                preReleaseItem->setText(0, "Pre-release");
+                preReleaseItem->setText(0, "Pre-release (Nightly)");
                 foundPreRelease = true;
             }
             continue;
@@ -749,7 +767,7 @@ void VersionDialog::PopulateDownloadTree(const QStringList& versions) {
 
     if (!foundPreRelease) {
         preReleaseItem = new QTreeWidgetItem();
-        preReleaseItem->setText(0, "Pre-release");
+        preReleaseItem->setText(0, "Pre-release (Nightly)");
     }
 
     if (preReleaseItem)
@@ -1055,7 +1073,8 @@ void VersionDialog::installPreReleaseByTag(const QString& tagName) {
 
 void VersionDialog::showDownloadDialog(const QString& tagName, const QString& downloadUrl) {
     QDialog* dlg = new QDialog(this);
-    dlg->setWindowTitle(tr("Downloading Pre‑release, please wait..."));
+    dlg->setWindowTitle(tr("Downloading Pre-release (Nightly), please wait..."));
+
     QVBoxLayout* lay = new QVBoxLayout(dlg);
 
     QProgressBar* progressBar = new QProgressBar(dlg);
@@ -1174,7 +1193,7 @@ void VersionDialog::showDownloadDialog(const QString& tagName, const QString& do
 
                 auto const exe = m_gui_settings->GetVersionExecutablePath(destFolder);
                 VersionManager::Version new_version = {
-                    .name = "Pre-release",
+                    .name = "Pre-release (Nightly)",
                     .path = exe.toStdString(),
                     .date = QDateTime::currentDateTime().toString("yyyy-MM-dd").toStdString(),
                     .codename = codename.toStdString(),
