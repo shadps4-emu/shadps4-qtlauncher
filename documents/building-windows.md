@@ -52,19 +52,19 @@ Go through the Git for Windows installation as normal
 1. Open up Visual Studio, select `Open a local folder` and select the folder with the shadPS4 source code. The folder should contain `CMakeLists.txt`
 2. Change Clang x64 Debug to Clang x64 Release if you want a regular, non-debug build.
 3. If you want to build shadPS4 with the Qt Gui, simply select Clang x64 Release with Qt instead.
-4. Change the project to build to shadps4.exe
+4. Change the project to build to shadPS4QtLauncher.exe
 5. Build -> Build All
 
-Your shadps4.exe will be in `C:\path\to\source\Build\x64-Clang-Release\`
+Your shadPS4QtLauncher.exe will be in `C:\path\to\source\Build\x64-Clang-Release\`
 
-To automatically populate the necessary files to run shadPS4.exe, run in a command prompt or terminal:  
-`C:\Qt\<QtVersion>\msvc2022_64\bin\windeployqt6.exe "C:\path\to\shadps4.exe"`  
+To automatically populate the necessary files to run shadPS4QtLauncher.exe, run in a command prompt or terminal:  
+`C:\Qt\<QtVersion>\msvc2022_64\bin\windeployqt6.exe "C:\path\to\shadPS4QtLauncher.exe"`  
 (Change Qt path if you've installed it to non-default path)
 
 ## Option 2: MSYS2/MinGW
 
 > [!IMPORTANT]
-> Building with MSYS2 is broken as of right now, the only way to build on Windows is to use [Option 1: Visual Studio 2022](https://github.com/shadps4-emu/shadPS4/blob/main/documents/building-windows.md#option-1-visual-studio-2022).
+> Building with MSYS2 is broken as of right now, the only way to build on Windows is to use [Option 1: Visual Studio 2022](https://github.com/shadps4-emu/shadPS4-qtlauncher/blob/main/documents/building-windows.md#option-1-visual-studio-2022).
 
 ### (Prerequisite) Download [**MSYS2**](https://www.msys2.org/)
 
@@ -83,8 +83,8 @@ Normal x86-based computers, follow:
 6. Run `cmake -S . -B build -DCMAKE_C_COMPILER="clang.exe" -DCMAKE_CXX_COMPILER="clang++.exe" -DCMAKE_CXX_FLAGS="-O2 -march=native"`
    1. Optional (Qt only): add `-DENABLE_QT_GUI=ON`
 7. Run `cmake --build build`
-   1. Optional (Qt only): run `windeployqt6 build/shadps4.exe`
-8. To run the finished product, run `./build/shadPS4.exe`
+   1. Optional (Qt only): run `windeployqt6 build/shadPS4QtLauncher.exe`
+8. To run the finished product, run `./build/shadPS4QtLauncher.exe`
 
 ARM64-based computers, follow:
 
@@ -97,8 +97,8 @@ ARM64-based computers, follow:
 6. Run `cmake -S . -B build -DCMAKE_C_COMPILER="clang.exe" -DCMAKE_CXX_COMPILER="clang++.exe" -DCMAKE_CXX_FLAGS="-O2 -march=native"`
    1. Optional (Qt only): add `-DENABLE_QT_GUI=ON`
 7. Run `cmake --build build`
-   1. Optional (Qt only): run `windeployqt6 build/shadps4.exe`
-8. To run the finished product, run `./build/shadPS4.exe`
+   1. Optional (Qt only): run `windeployqt6 build/shadPS4QtLauncher.exe`
+8. To run the finished product, run `./build/shadPS4QtLauncher.exe`
 
 ## Note on MSYS2 builds
 
