@@ -5,7 +5,7 @@ SPDX-License-Identifier: GPL-2.0-or-later
 
 <h1 align="center">
   <br>
-  <a href="https://shadps4.net/"><img src="https://github.com/shadps4-emu/shadPS4/blob/main/.github/shadps4.png" width="220"></a>
+  <a href="https://shadps4.net/"><img src="https://github.com/shadps4-emu/shadPS4-qtlauncher/blob/main/.github/shadps4.png" width="220"></a>
   <br>
   <b>QtLauncher</b>
   <br>
@@ -14,13 +14,13 @@ SPDX-License-Identifier: GPL-2.0-or-later
 <h1 align="center">
  <a href="https://discord.gg/bFJxfftGW6">
         <img src="https://img.shields.io/discord/1080089157554155590?color=5865F2&label=shadPS4%20Discord&logo=Discord&logoColor=white" width="275">
- <a href="https://github.com/shadps4-emu/shadPS4/releases/latest">
+ <a href="https://github.com/shadps4-emu/shadPS4-qtlauncher/releases/latest">
         <img src="https://img.shields.io/github/downloads/shadps4-emu/shadPS4-qtlauncher/total.svg" width="140">
  <a href="https://shadps4.net/">
         <img src="https://img.shields.io/badge/shadPS4-website-8A2BE2" width="150">
  <a href="https://x.com/shadps4">
         <img src="https://img.shields.io/badge/-Join%20us-black?logo=X&logoColor=white" width="100">
- <a href="https://github.com/shadps4-emu/shadPS4/stargazers">
+ <a href="https://github.com/shadps4-emu/shadPS4-qtlauncher/stargazers">
         <img src="https://img.shields.io/github/stars/shadps4-emu/shadPS4-qtlauncher" width="120">
 </h1>
 
@@ -37,15 +37,15 @@ SPDX-License-Identifier: GPL-2.0-or-later
 
 ## Windows
 
-Check the build instructions for [**Windows**](https://github.com/shadps4-emu/shadPS4/blob/main/documents/building-windows.md).
+Check the build instructions for [**Windows**](https://github.com/shadps4-emu/shadPS4-qtlauncher/blob/main/documents/building-windows.md).
 
 ## Linux
 
-Check the build instructions for [**Linux**](https://github.com/shadps4-emu/shadPS4/blob/main/documents/building-linux.md).
+Check the build instructions for [**Linux**](https://github.com/shadps4-emu/shadPS4-qtlauncher/blob/main/documents/building-linux.md).
 
 ## macOS
 
-Check the build instructions for [**macOS**](https://github.com/shadps4-emu/shadPS4/blob/main/documents/building-macos.md).
+Check the build instructions for [**macOS**](https://github.com/shadps4-emu/shadPS4-qtlauncher/blob/main/documents/building-macos.md).
 
 # Keyboard and Mouse Mappings
 
@@ -95,7 +95,7 @@ Logo is done by [**Xphalnos**](https://github.com/Xphalnos)
 
 # Contributing
 
-If you want to contribute, please read the [**CONTRIBUTING.md**](https://github.com/shadps4-emu/shadPS4/blob/main/CONTRIBUTING.md) file.\
+If you want to contribute, please read the [**CONTRIBUTING.md**](https://github.com/shadps4-emu/shadPS4-qtlauncher/blob/main/CONTRIBUTING.md) file.\
 Open a PR and we'll check it :)
 
 # Translations
@@ -109,4 +109,4 @@ If you want to translate shadPS4 to your language we use [**Crowdin**](https://c
 
 # License
 
-- [**GPL-2.0 license**](https://github.com/shadps4-emu/shadPS4/blob/main/LICENSE)
+- [**GPL-2.0 license**](https://github.com/shadps4-emu/shadPS4-qtlauncher/blob/main/LICENSE)
