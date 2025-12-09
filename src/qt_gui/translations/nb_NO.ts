@@ -2803,10 +2803,6 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <translation>Svaret fra GitHub-API-en er ikke en gyldig JSON-matrise.</translation>
     </message>
     <message>
-      <source>Unable to get hash of latest pre-release</source>
-      <translation>Klarte ikke hente nøkkelen for forhåndsutgivelsen</translation>
-    </message>
-    <message>
       <source>Auto Updater - Emulator</source>
       <translation>Auto oppdatering – emulator</translation>
     </message>
@@ -2903,12 +2899,6 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <translation>En versjon med det navnet finnes allerede.</translation>
     </message>
     <message>
-      <source>It is not possible to create a version with a name that starts with:
-&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</source>
-      <translation>Det er ikke mulig å opprette en versjon med et navn som begynner med:
-«Pre-release» eller «Pre-release-shadPS4».</translation>
-    </message>
-    <message>
       <source>Local</source>
       <translation>Lokal</translation>
     </message>
@@ -2919,6 +2909,10 @@ Velg en emulatorversjon fra høyre panel.</translation>
     <message>
       <source>Failed to delete folder.</source>
       <translation>Klarte ikke slette mappa.</translation>
+    </message>
+    <message>
+      <source>Unable to get hash of latest pre-release.</source>
+      <translation type="unfinished">Unable to get hash of latest pre-release.</translation>
     </message>
   </context>
   <context>
