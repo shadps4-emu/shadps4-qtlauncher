@@ -2912,7 +2912,7 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release.</source>
-      <translation type="unfinished">Unable to get hash of latest pre-release.</translation>
+      <translation>Impossibile ottenere l'hash dell'ultima versione pre-rilascio.</translation>
     </message>
   </context>
   <context>
