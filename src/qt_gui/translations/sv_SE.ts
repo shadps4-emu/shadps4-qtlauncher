@@ -2802,10 +2802,6 @@ Välj en emulatorversion från den högra panelen.</translation>
       <translation>GitHub API-svaret är inte en giltig JSON-array.</translation>
     </message>
     <message>
-      <source>Unable to get hash of latest pre-release</source>
-      <translation>Kunde inte få kontrollsumma av senaste förutgåvan</translation>
-    </message>
-    <message>
       <source>Auto Updater - Emulator</source>
       <translation>Automatisk uppdaterare - Emulator</translation>
     </message>
@@ -2902,12 +2898,6 @@ Välj en emulatorversion från den högra panelen.</translation>
       <translation>En version med det namnet finns redan.</translation>
     </message>
     <message>
-      <source>It is not possible to create a version with a name that starts with:
-&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</source>
-      <translation>Det är inte möjligt att skapa en version med ett namn som börjar med:
-&apos;Pre-release&apos; eller &apos;Pre-release-shadPS4&apos;.</translation>
-    </message>
-    <message>
       <source>Local</source>
       <translation>Lokal</translation>
     </message>
@@ -2918,6 +2908,10 @@ Välj en emulatorversion från den högra panelen.</translation>
     <message>
       <source>Failed to delete folder.</source>
       <translation>Det gick inte att ta bort mappen.</translation>
+    </message>
+    <message>
+      <source>Unable to get hash of latest pre-release.</source>
+      <translation type="unfinished">Unable to get hash of latest pre-release.</translation>
     </message>
   </context>
   <context>
