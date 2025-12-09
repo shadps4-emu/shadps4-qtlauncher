@@ -3,9 +3,9 @@ SPDX-FileCopyrightText: 2024 shadPS4 Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
 -->
 
-## Build shadPS4 for macOS
+## Build shadPS4QtLauncher for macOS
 
-### Install the necessary tools to build shadPS4:
+### Install the necessary tools to build shadPS4QtLauncher:
 
 First, make sure you have **Xcode 16.0 or newer** installed.
 
@@ -43,11 +43,11 @@ brew install qt@6
 
 Clone the repository recursively:
 ```
-git clone --recursive https://github.com/shadps4-emu/shadPS4.git
-cd shadPS4
+git clone --recursive https://github.com/shadps4-emu/shadPS4QtLauncher.git
+cd shadPS4QtLauncher
 ```
 
-Generate the build directory in the shadPS4 directory:
+Generate the build directory in the shadPS4QtLauncher directory:
 ```
 cmake -S . -B build/ -DCMAKE_OSX_ARCHITECTURES=x86_64
 ```

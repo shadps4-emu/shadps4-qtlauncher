@@ -15,7 +15,7 @@ This section will guide you through setting up tools for debugging the emulator.
 <summary>Windows and Visual Studio</summary>
 
 Make sure you have the project set up for building on Windows with Visual Studio and CMake: [Build shadPS4 for Windows
-](https://github.com/shadps4-emu/shadPS4/blob/main/documents/building-windows.md)
+](https://github.com/shadps4-emu/shadPS4-qtlauncher/blob/main/documents/building-windows.md)
 
 1. Open the project folder in Visual Studio **as a folder**. _Do not run `cmake ..` or other commands that set up the project._
    
@@ -25,10 +25,10 @@ Make sure you have the project set up for building on Windows with Visual Studio
 3. Double-click on **CMake Targets View**.\
   ![image](https://github.com/user-attachments/assets/5ce7cf90-cd61-4cfa-bef5-645909827290)
 
-4. Under **shadPS4 Project**, right-click on the **shadps4 (executable)** solution and click **Set as Startup Item**. This will let you start and debug shadPS4 using the VS debug buttons, as well as the default F5 shortcut.\
+4. Under **shadPS4QtLauncher Project**, right-click on the **shadPS4QtLauncher (executable)** solution and click **Set as Startup Item**. This will let you start and debug shadPS4QtLauncher using the VS debug buttons, as well as the default F5 shortcut.\
    ![image](https://github.com/user-attachments/assets/34c7c047-28a3-499f-be8f-df781134d104)
 
-5. Right-click the **shadps4 (executable)** solution once more and click **Add debug configuration**.
+5. Right-click the **shadPS4QtLauncher (executable)** solution once more and click **Add debug configuration**.
 
 6. Add an `"args: []"` section into the first `configurations` entry.\
    List your game path as an argument, as if you were launching the non-GUI emulator from the command line.
