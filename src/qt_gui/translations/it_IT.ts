@@ -2803,10 +2803,6 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
       <translation>La risposta dell'API GitHub non è un array JSON valido.</translation>
     </message>
     <message>
-      <source>Unable to get hash of latest pre-release</source>
-      <translation>Impossibile ottenere l'hash dell'ultima versione pre-rilascio</translation>
-    </message>
-    <message>
       <source>Auto Updater - Emulator</source>
       <translation>Aggiornamento Automatico - Emulatore</translation>
     </message>
@@ -2903,12 +2899,6 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
       <translation>Esiste già una versione con questo nome.</translation>
     </message>
     <message>
-      <source>It is not possible to create a version with a name that starts with:
-&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</source>
-      <translation>Non è possibile creare una versione con un nome che inizia con:
-&apos;Pre-release&apos; o &apos;Pre-release-shadPS4&apos;.</translation>
-    </message>
-    <message>
       <source>Local</source>
       <translation>Locale</translation>
     </message>
@@ -2919,6 +2909,10 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
     <message>
       <source>Failed to delete folder.</source>
       <translation>Impossibile eliminare la cartella.</translation>
+    </message>
+    <message>
+      <source>Unable to get hash of latest pre-release.</source>
+      <translation type="unfinished">Unable to get hash of latest pre-release.</translation>
     </message>
   </context>
   <context>
