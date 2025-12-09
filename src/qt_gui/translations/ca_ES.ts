@@ -2802,10 +2802,6 @@ Selecciona una versió del panell dret.</translation>
       <translation>La resposta de la API de GitHub no és un valor JSON vàlid.</translation>
     </message>
     <message>
-      <source>Unable to get hash of latest pre-release</source>
-      <translation>No es pot obtenir el hash de l'última versió prèvia</translation>
-    </message>
-    <message>
       <source>Auto Updater - Emulator</source>
       <translation>Actualització automàtica - Emulador</translation>
     </message>
@@ -2902,11 +2898,6 @@ Selecciona una versió del panell dret.</translation>
       <translation>Ja existeix una versió amb aquest nom.</translation>
     </message>
     <message>
-      <source>It is not possible to create a version with a name that starts with:
-&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</source>
-      <translation>No és possible crear una versió amb el nom que començar per:&apos;Pre-release&apos; o &apos;Pre-release-shadPS4&apos;</translation>
-    </message>
-    <message>
       <source>Local</source>
       <translation>Local</translation>
     </message>
@@ -2917,6 +2908,10 @@ Selecciona una versió del panell dret.</translation>
     <message>
       <source>Failed to delete folder.</source>
       <translation>Error en eliminar la carpeta.</translation>
+    </message>
+    <message>
+      <source>Unable to get hash of latest pre-release.</source>
+      <translation type="unfinished">Unable to get hash of latest pre-release.</translation>
     </message>
   </context>
   <context>
