@@ -2915,7 +2915,7 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release.</source>
-      <translation type="unfinished">Unable to get hash of latest pre-release.</translation>
+      <translation>Hash der neuesten Vorabversion konnte nicht abgerufen werden.</translation>
     </message>
   </context>
   <context>
