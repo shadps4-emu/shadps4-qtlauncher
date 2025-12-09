@@ -2806,10 +2806,6 @@ Select an emulator version from the right panel.</source>
       <translation>GitHub API 返回的数据不是有效的 JSON 数组。</translation>
     </message>
     <message>
-      <source>Unable to get hash of latest pre-release</source>
-      <translation>无法获取最新预发布版本的哈希值</translation>
-    </message>
-    <message>
       <source>Auto Updater - Emulator</source>
       <translation>自动更新器 - 模拟器</translation>
     </message>
@@ -2906,12 +2902,6 @@ Select an emulator version from the right panel.</source>
       <translation>已存在同名版本。</translation>
     </message>
     <message>
-      <source>It is not possible to create a version with a name that starts with:
-&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</source>
-      <translation>无法创建以以下字符串开头的版本名称：
-'预发布版本' 或 '预发布版本-shadPS4'；。</translation>
-    </message>
-    <message>
       <source>Local</source>
       <translation>本地</translation>
     </message>
@@ -2922,6 +2912,10 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Failed to delete folder.</source>
       <translation>删除文件夹失败。</translation>
+    </message>
+    <message>
+      <source>Unable to get hash of latest pre-release.</source>
+      <translation type="unfinished">Unable to get hash of latest pre-release.</translation>
     </message>
   </context>
   <context>
