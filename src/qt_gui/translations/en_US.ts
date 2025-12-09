@@ -2794,10 +2794,6 @@ Select an emulator version from the right panel.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Unable to get hash of latest pre-release</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Auto Updater - Emulator</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2894,11 +2890,6 @@ Select an emulator version from the right panel.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>It is not possible to create a version with a name that starts with:
-&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Local</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2908,6 +2899,10 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
         <source>Failed to delete folder.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to get hash of latest pre-release.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
