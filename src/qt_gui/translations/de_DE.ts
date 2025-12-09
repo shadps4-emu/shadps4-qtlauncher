@@ -2806,10 +2806,6 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
       <translation>Die GitHub-API-Antwort ist kein gültiges JSON-Array.</translation>
     </message>
     <message>
-      <source>Unable to get hash of latest pre-release</source>
-      <translation>Hash der neuesten Vorabversion konnte nicht abgerufen werden</translation>
-    </message>
-    <message>
       <source>Auto Updater - Emulator</source>
       <translation>Automatische Updates - Emulator</translation>
     </message>
@@ -2906,12 +2902,6 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
       <translation>Eine Version mit diesem Namen existiert bereits.</translation>
     </message>
     <message>
-      <source>It is not possible to create a version with a name that starts with:
-&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</source>
-      <translation>Es ist nicht möglich, eine Version zu erstellen, der mit einem der nachfolgenden Namen beginnt:
-&apos;Pre-release&apos; oder &apos;Pre-release-shadPS4&apos;.</translation>
-    </message>
-    <message>
       <source>Local</source>
       <translation>Lokal</translation>
     </message>
@@ -2922,6 +2912,10 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
     <message>
       <source>Failed to delete folder.</source>
       <translation>Ordner konnte nicht gelöscht werden.</translation>
+    </message>
+    <message>
+      <source>Unable to get hash of latest pre-release.</source>
+      <translation type="unfinished">Unable to get hash of latest pre-release.</translation>
     </message>
   </context>
   <context>
