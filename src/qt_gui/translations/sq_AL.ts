@@ -2804,10 +2804,6 @@ Zgjidh cilën skedë do të hapet; parazgjedhja është General.</translation>
       <translation>Përgjigjja e GitHub API-së nuk është një vektor JSON i vlefshëm.</translation>
     </message>
     <message>
-      <source>Unable to get hash of latest pre-release</source>
-      <translation>Nuk mund të merret hash-i i botimit paraprak më të fundit</translation>
-    </message>
-    <message>
       <source>Auto Updater - Emulator</source>
       <translation>Përditësues Automatik - Emulator</translation>
     </message>
@@ -2904,12 +2900,6 @@ Zgjidh cilën skedë do të hapet; parazgjedhja është General.</translation>
       <translation>Një version me atë emër ekziston tashmë.</translation>
     </message>
     <message>
-      <source>It is not possible to create a version with a name that starts with:
-&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</source>
-      <translation type="unfinished">It is not possible to create a version with a name that starts with:
-&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</translation>
-    </message>
-    <message>
       <source>Local</source>
       <translation type="unfinished">Local</translation>
     </message>
@@ -2920,6 +2910,10 @@ Zgjidh cilën skedë do të hapet; parazgjedhja është General.</translation>
     <message>
       <source>Failed to delete folder.</source>
       <translation type="unfinished">Failed to delete folder.</translation>
+    </message>
+    <message>
+      <source>Unable to get hash of latest pre-release.</source>
+      <translation type="unfinished">Unable to get hash of latest pre-release.</translation>
     </message>
   </context>
   <context>
