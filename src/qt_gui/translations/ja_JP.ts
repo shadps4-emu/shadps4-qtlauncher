@@ -2803,10 +2803,6 @@ Select an emulator version from the right panel.</translation>
       <translation type="unfinished">The GitHub API response is not a valid JSON array.</translation>
     </message>
     <message>
-      <source>Unable to get hash of latest pre-release</source>
-      <translation type="unfinished">Unable to get hash of latest pre-release</translation>
-    </message>
-    <message>
       <source>Auto Updater - Emulator</source>
       <translation type="unfinished">Auto Updater - Emulator</translation>
     </message>
@@ -2903,12 +2899,6 @@ Select an emulator version from the right panel.</translation>
       <translation type="unfinished">A version with that name already exists.</translation>
     </message>
     <message>
-      <source>It is not possible to create a version with a name that starts with:
-&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</source>
-      <translation type="unfinished">It is not possible to create a version with a name that starts with:
-&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</translation>
-    </message>
-    <message>
       <source>Local</source>
       <translation type="unfinished">Local</translation>
     </message>
@@ -2919,6 +2909,10 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Failed to delete folder.</source>
       <translation>フォルダの削除に失敗しました。</translation>
+    </message>
+    <message>
+      <source>Unable to get hash of latest pre-release.</source>
+      <translation type="unfinished">Unable to get hash of latest pre-release.</translation>
     </message>
   </context>
   <context>
