@@ -2803,10 +2803,6 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
       <translation>GitHub API yanıtı geçerli bir JSON dizisi değil.</translation>
     </message>
     <message>
-      <source>Unable to get hash of latest pre-release</source>
-      <translation>En son ön sürümün hash değeri alınamadı</translation>
-    </message>
-    <message>
       <source>Auto Updater - Emulator</source>
       <translation>Otomatik Güncelleyici - Emülatör</translation>
     </message>
@@ -2903,12 +2899,6 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
       <translation>Bu ada sahip bir sürüm zaten var.</translation>
     </message>
     <message>
-      <source>It is not possible to create a version with a name that starts with:
-&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</source>
-      <translation type="unfinished">It is not possible to create a version with a name that starts with:
-&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</translation>
-    </message>
-    <message>
       <source>Local</source>
       <translation type="unfinished">Local</translation>
     </message>
@@ -2919,6 +2909,10 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     <message>
       <source>Failed to delete folder.</source>
       <translation type="unfinished">Failed to delete folder.</translation>
+    </message>
+    <message>
+      <source>Unable to get hash of latest pre-release.</source>
+      <translation type="unfinished">Unable to get hash of latest pre-release.</translation>
     </message>
   </context>
   <context>
