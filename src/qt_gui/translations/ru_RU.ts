@@ -2911,7 +2911,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release.</source>
-      <translation type="unfinished">Unable to get hash of latest pre-release.</translation>
+      <translation>Не удалось получить хеш последней версии Pre-release.</translation>
     </message>
   </context>
   <context>
