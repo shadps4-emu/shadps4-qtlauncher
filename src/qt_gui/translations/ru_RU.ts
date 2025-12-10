@@ -621,6 +621,10 @@
       <source>Right Stick Deadzone</source>
       <translation>Мертвая зона правого джойстика</translation>
     </message>
+    <message>
+      <source>Tip: Unmap inputs with right-click</source>
+      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+    </message>
   </context>
   <context>
     <name>EditorDialog</name>
@@ -1212,6 +1216,10 @@
       <source>Waiting for inputs</source>
       <translation>Ожидание ввода</translation>
     </message>
+    <message>
+      <source>Tip: Unmap inputs with right-click</source>
+      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+    </message>
   </context>
   <context>
     <name>IpcClient</name>
@@ -1417,6 +1425,10 @@
     <message>
       <source>Touchpad Right</source>
       <translation>Тачпад справа</translation>
+    </message>
+    <message>
+      <source>Tip: Unmap inputs with right-click</source>
+      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
     </message>
   </context>
   <context>
@@ -2854,10 +2866,6 @@ Select an emulator version from the right panel.</source>
       <translation>URL для загрузки указанного актива не найден.</translation>
     </message>
     <message>
-      <source>Downloading Pre‑release, please wait...</source>
-      <translation>Загрузка версии Pre‑release, пожалуйста, подождите...</translation>
-    </message>
-    <message>
       <source>Network error while downloading</source>
       <translation>Ошибка сети при загрузке</translation>
     </message>
@@ -2912,6 +2920,10 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Unable to get hash of latest pre-release.</source>
       <translation>Не удалось получить хеш последней версии Pre-release.</translation>
+    </message>
+    <message>
+      <source>Downloading Pre-release (Nightly), please wait...</source>
+      <translation type="unfinished">Downloading Pre-release (Nightly), please wait...</translation>
     </message>
   </context>
   <context>
