@@ -1313,10 +1313,30 @@ void SettingsDialog::getPhysicalDevices() {
     instInfo.pApplicationInfo = &appInfo;
 
 #ifdef __APPLE__
-    const char* portabilityExtension = VK_KHR_PORTABILITY_ENUMERATION_EXTENSION_NAME;
-    instInfo.ppEnabledExtensionNames = &portabilityExtension;
-    instInfo.enabledExtensionCount = 1;
-    instInfo.flags = VK_INSTANCE_CREATE_ENUMERATE_PORTABILITY_BIT_KHR;
+    const char* portabilityExtensionName = VK_KHR_PORTABILITY_ENUMERATION_EXTENSION_NAME;
+    const size_t portabilityExtensionNameLength = strlen(portabilityExtensionName);
+
+    uint32_t instanceExtensionCount = 0;
+    vkEnumerateInstanceExtensionProperties(nullptr, &instanceExtensionCount, nullptr);
+
+    if (instanceExtensionCount != 0) {
+        std::vector<VkExtensionProperties> instanceExtensions(instanceExtensionCount);
+        vkEnumerateInstanceExtensionProperties(nullptr, &instanceExtensionCount,
+                                               instanceExtensions.data());
+
+        const auto portabilityExtension = std::ranges::find_if(
+            instanceExtensions, [&portabilityExtensionName, &portabilityExtensionNameLength](
+                                    const VkExtensionProperties& ext) {
+                return strncmp(ext.extensionName, portabilityExtensionName,
+                               portabilityExtensionNameLength) == 0;
+            });
+
+        if (portabilityExtension != instanceExtensions.end()) {
+            instInfo.ppEnabledExtensionNames = &portabilityExtensionName;
+            instInfo.enabledExtensionCount = 1;
+            instInfo.flags = VK_INSTANCE_CREATE_ENUMERATE_PORTABILITY_BIT_KHR;
+        }
+    }
 #endif
 
     VkInstance instance;
