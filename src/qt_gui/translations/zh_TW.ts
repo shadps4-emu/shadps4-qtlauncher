@@ -619,6 +619,10 @@
       <source>Right Stick Deadzone</source>
       <translation>右搖桿無效區域</translation>
     </message>
+    <message>
+      <source>Tip: Unmap inputs with right-click</source>
+      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+    </message>
   </context>
   <context>
     <name>EditorDialog</name>
@@ -1208,6 +1212,10 @@
       <source>Waiting for inputs</source>
       <translation>等待輸入</translation>
     </message>
+    <message>
+      <source>Tip: Unmap inputs with right-click</source>
+      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+    </message>
   </context>
   <context>
     <name>IpcClient</name>
@@ -1411,6 +1419,10 @@
     <message>
       <source>Touchpad Right</source>
       <translation>觸控板右側</translation>
+    </message>
+    <message>
+      <source>Tip: Unmap inputs with right-click</source>
+      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
     </message>
   </context>
   <context>
@@ -2848,10 +2860,6 @@ Select an emulator version from the right panel.</source>
       <translation>找不到指定資源的下載 URL。</translation>
     </message>
     <message>
-      <source>Downloading Pre‑release, please wait...</source>
-      <translation>正在下載預覽版，請稍候…</translation>
-    </message>
-    <message>
       <source>Network error while downloading</source>
       <translation>下載時發生網路錯誤</translation>
     </message>
@@ -2906,6 +2914,10 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Unable to get hash of latest pre-release.</source>
       <translation type="unfinished">Unable to get hash of latest pre-release.</translation>
+    </message>
+    <message>
+      <source>Downloading Pre-release (Nightly), please wait...</source>
+      <translation type="unfinished">Downloading Pre-release (Nightly), please wait...</translation>
     </message>
   </context>
   <context>
