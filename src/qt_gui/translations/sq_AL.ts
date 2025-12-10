@@ -621,6 +621,10 @@
       <source>Right Stick Deadzone</source>
       <translation>Zona e Vdekur e Levës së Djathtë</translation>
     </message>
+    <message>
+      <source>Tip: Unmap inputs with right-click</source>
+      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+    </message>
   </context>
   <context>
     <name>EditorDialog</name>
@@ -1212,6 +1216,10 @@
       <source>Waiting for inputs</source>
       <translation>Në pritje të hyrjeve</translation>
     </message>
+    <message>
+      <source>Tip: Unmap inputs with right-click</source>
+      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+    </message>
   </context>
   <context>
     <name>IpcClient</name>
@@ -1417,6 +1425,10 @@
     <message>
       <source>Touchpad Right</source>
       <translation>Paneli me Prekje Djathtas</translation>
+    </message>
+    <message>
+      <source>Tip: Unmap inputs with right-click</source>
+      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
     </message>
   </context>
   <context>
@@ -2856,10 +2868,6 @@ Zgjidh cilën skedë do të hapet; parazgjedhja është General.</translation>
       <translation>Nuk u gjet asnjë URL shkarkimi për asetin e specifikuar.</translation>
     </message>
     <message>
-      <source>Downloading Pre‑release, please wait...</source>
-      <translation>Po Shkarkohet Versioni Paraprak, të lutem prit...</translation>
-    </message>
-    <message>
       <source>Network error while downloading</source>
       <translation>Gabim rrjeti gjatë shkarkimit</translation>
     </message>
@@ -2914,6 +2922,10 @@ Zgjidh cilën skedë do të hapet; parazgjedhja është General.</translation>
     <message>
       <source>Unable to get hash of latest pre-release.</source>
       <translation type="unfinished">Unable to get hash of latest pre-release.</translation>
+    </message>
+    <message>
+      <source>Downloading Pre-release (Nightly), please wait...</source>
+      <translation type="unfinished">Downloading Pre-release (Nightly), please wait...</translation>
     </message>
   </context>
   <context>
