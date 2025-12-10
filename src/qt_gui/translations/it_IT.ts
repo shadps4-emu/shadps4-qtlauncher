@@ -621,6 +621,10 @@
       <source>Right Stick Deadzone</source>
       <translation>Zona Morta Levetta Destra</translation>
     </message>
+    <message>
+      <source>Tip: Unmap inputs with right-click</source>
+      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+    </message>
   </context>
   <context>
     <name>EditorDialog</name>
@@ -1212,6 +1216,10 @@
       <source>Waiting for inputs</source>
       <translation>In attesa di input</translation>
     </message>
+    <message>
+      <source>Tip: Unmap inputs with right-click</source>
+      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+    </message>
   </context>
   <context>
     <name>IpcClient</name>
@@ -1417,6 +1425,10 @@
     <message>
       <source>Touchpad Right</source>
       <translation>Touchpad Destra</translation>
+    </message>
+    <message>
+      <source>Tip: Unmap inputs with right-click</source>
+      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
     </message>
   </context>
   <context>
@@ -2855,10 +2867,6 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
       <translation>Nessun URL di download trovato per l'asset specificato.</translation>
     </message>
     <message>
-      <source>Downloading Pre‑release, please wait...</source>
-      <translation>Scaricamento versione Pre-rilascio, attendere prego...</translation>
-    </message>
-    <message>
       <source>Network error while downloading</source>
       <translation>Errore di rete durante il download</translation>
     </message>
@@ -2913,6 +2921,10 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
     <message>
       <source>Unable to get hash of latest pre-release.</source>
       <translation>Impossibile ottenere l'hash dell'ultima versione pre-rilascio.</translation>
+    </message>
+    <message>
+      <source>Downloading Pre-release (Nightly), please wait...</source>
+      <translation type="unfinished">Downloading Pre-release (Nightly), please wait...</translation>
     </message>
   </context>
   <context>
