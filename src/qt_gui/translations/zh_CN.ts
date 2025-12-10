@@ -621,6 +621,10 @@
       <source>Right Stick Deadzone</source>
       <translation>右摇杆死区</translation>
     </message>
+    <message>
+      <source>Tip: Unmap inputs with right-click</source>
+      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+    </message>
   </context>
   <context>
     <name>EditorDialog</name>
@@ -1092,6 +1096,18 @@
       <source>Failed to convert icon.</source>
       <translation>转换图标失败。</translation>
     </message>
+    <message>
+      <source>Delete Shader Cache</source>
+      <translation>删除着色器缓存</translation>
+    </message>
+    <message>
+      <source>This game does not have any saved Shader Cache to delete!</source>
+      <translation>该游戏没有任何可供删除的着色器缓存！</translation>
+    </message>
+    <message>
+      <source>Shader Cache</source>
+      <translation>着色器缓存</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -1201,6 +1217,10 @@
     <message>
       <source>Waiting for inputs</source>
       <translation>正在等待输入</translation>
+    </message>
+    <message>
+      <source>Tip: Unmap inputs with right-click</source>
+      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
     </message>
   </context>
   <context>
@@ -1407,6 +1427,10 @@
     <message>
       <source>Touchpad Right</source>
       <translation>触摸板右侧</translation>
+    </message>
+    <message>
+      <source>Tip: Unmap inputs with right-click</source>
+      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
     </message>
   </context>
   <context>
@@ -2579,6 +2603,22 @@ Select an emulator version from the right panel.</source>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
       <translation>USB设备类型：\n真实USB设备：使用连接到系统的真实USB设备。\n《小龙斯派罗》传送门：模拟《小龙斯派罗》能量传送门设备。\n《迪士尼无限》基础台：模拟《迪士尼无限》基础台设备。\n《乐高次元》控制板：模拟《乐高次元》玩具控制板设备。</translation>
     </message>
+    <message>
+      <source>Enable Shader Cache</source>
+      <translation>启用着色器缓存</translation>
+    </message>
+    <message>
+      <source>Compress the Shader Cache files into a zip file</source>
+      <translation>将着色器缓存文件压缩为ZIP文件</translation>
+    </message>
+    <message>
+      <source>Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</source>
+      <translation>启用着色器缓存：\n存储已编译的着色器数据，避免重复编译以减少游戏卡顿。</translation>
+    </message>
+    <message>
+      <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
+      <translation>将着色器缓存文件压缩为ZIP文件：\n着色器缓存将以单个ZIP文件存储，而非多个独立文件。</translation>
+    </message>
   </context>
   <context>
     <name>ShortcutDialog</name>
@@ -2778,10 +2818,6 @@ Select an emulator version from the right panel.</source>
       <translation>GitHub API 返回的数据不是有效的 JSON 数组。</translation>
     </message>
     <message>
-      <source>Unable to get hash of latest pre-release</source>
-      <translation>无法获取最新预发布版本的哈希值</translation>
-    </message>
-    <message>
       <source>Auto Updater - Emulator</source>
       <translation>自动更新器 - 模拟器</translation>
     </message>
@@ -2834,10 +2870,6 @@ Select an emulator version from the right panel.</source>
       <translation>未找到指定资源的下载地址。</translation>
     </message>
     <message>
-      <source>Downloading Pre‑release, please wait...</source>
-      <translation>正在下载预发布版本，请稍等……</translation>
-    </message>
-    <message>
       <source>Network error while downloading</source>
       <translation>下载时发生网络错误</translation>
     </message>
@@ -2878,12 +2910,6 @@ Select an emulator version from the right panel.</source>
       <translation>已存在同名版本。</translation>
     </message>
     <message>
-      <source>It is not possible to create a version with a name that starts with:
-&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</source>
-      <translation>无法创建以以下字符串开头的版本名称：
-'预发布版本' 或 '预发布版本-shadPS4'；。</translation>
-    </message>
-    <message>
       <source>Local</source>
       <translation>本地</translation>
     </message>
@@ -2894,6 +2920,14 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Failed to delete folder.</source>
       <translation>删除文件夹失败。</translation>
+    </message>
+    <message>
+      <source>Unable to get hash of latest pre-release.</source>
+      <translation type="unfinished">Unable to get hash of latest pre-release.</translation>
+    </message>
+    <message>
+      <source>Downloading Pre-release (Nightly), please wait...</source>
+      <translation type="unfinished">Downloading Pre-release (Nightly), please wait...</translation>
     </message>
   </context>
   <context>

@@ -621,6 +621,10 @@
       <source>Right Stick Deadzone</source>
       <translation>Мертвая зона правого джойстика</translation>
     </message>
+    <message>
+      <source>Tip: Unmap inputs with right-click</source>
+      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+    </message>
   </context>
   <context>
     <name>EditorDialog</name>
@@ -1090,6 +1094,18 @@
       <source>Failed to convert icon.</source>
       <translation>Не удалось преобразовать значок.</translation>
     </message>
+    <message>
+      <source>Delete Shader Cache</source>
+      <translation>Удалить кэш шейдеров</translation>
+    </message>
+    <message>
+      <source>This game does not have any saved Shader Cache to delete!</source>
+      <translation>В этой игре нет сохраненного кэша шейдеров для удаления!</translation>
+    </message>
+    <message>
+      <source>Shader Cache</source>
+      <translation>Кэш шейдеров</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -1199,6 +1215,10 @@
     <message>
       <source>Waiting for inputs</source>
       <translation>Ожидание ввода</translation>
+    </message>
+    <message>
+      <source>Tip: Unmap inputs with right-click</source>
+      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
     </message>
   </context>
   <context>
@@ -1405,6 +1425,10 @@
     <message>
       <source>Touchpad Right</source>
       <translation>Тачпад справа</translation>
+    </message>
+    <message>
+      <source>Tip: Unmap inputs with right-click</source>
+      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
     </message>
   </context>
   <context>
@@ -2575,6 +2599,22 @@ Select an emulator version from the right panel.</source>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
       <translation>Устройство USB:\nНастоящее USB-устройство: Используйте настоящее USB-устройство, подключённое к системе.\nSkylander Portal: Эмулируйте Skylander Portal of Power.\nInfinity Base: Эмулируйте Disney Infinity Base.\nDimensions Toypad: Эмулируйте Lego Dimensions Toypad.</translation>
     </message>
+    <message>
+      <source>Enable Shader Cache</source>
+      <translation>Включить кэш шейдеров</translation>
+    </message>
+    <message>
+      <source>Compress the Shader Cache files into a zip file</source>
+      <translation>Сжать файлы кэша шейдеров в zip-файл</translation>
+    </message>
+    <message>
+      <source>Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</source>
+      <translation>Включить кэш шейдеров:\nХранить скомпилированные шейдеры, чтобы избежать перекомпиляции, уменьшить заглушение.</translation>
+    </message>
+    <message>
+      <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
+      <translation>Сжать файлы кэша шейдеров в zip-файл:\nФайлы кэша шейдеров хранятся в одном zip-файле вместо нескольких отдельных файлов.</translation>
+    </message>
   </context>
   <context>
     <name>ShortcutDialog</name>
@@ -2774,10 +2814,6 @@ Select an emulator version from the right panel.</source>
       <translation>Ответ API GitHub не является допустимым массивом JSON.</translation>
     </message>
     <message>
-      <source>Unable to get hash of latest pre-release</source>
-      <translation>Не удалось получить хеш последней версии Pre-release</translation>
-    </message>
-    <message>
       <source>Auto Updater - Emulator</source>
       <translation>Автоматическое обновление - Эмулятор</translation>
     </message>
@@ -2830,10 +2866,6 @@ Select an emulator version from the right panel.</source>
       <translation>URL для загрузки указанного актива не найден.</translation>
     </message>
     <message>
-      <source>Downloading Pre‑release, please wait...</source>
-      <translation>Загрузка версии Pre‑release, пожалуйста, подождите...</translation>
-    </message>
-    <message>
       <source>Network error while downloading</source>
       <translation>Ошибка сети при загрузке</translation>
     </message>
@@ -2874,12 +2906,6 @@ Select an emulator version from the right panel.</source>
       <translation>Версия с таким названием уже существует.</translation>
     </message>
     <message>
-      <source>It is not possible to create a version with a name that starts with:
-&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</source>
-      <translation>Невозможно создать версию с именем, начинающимся с:
-&apos;Pre-release&apos; или &apos;Pre-release-shadPS4&apos;.</translation>
-    </message>
-    <message>
       <source>Local</source>
       <translation>Локальная</translation>
     </message>
@@ -2890,6 +2916,14 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Failed to delete folder.</source>
       <translation>Не удалось удалить папку.</translation>
+    </message>
+    <message>
+      <source>Unable to get hash of latest pre-release.</source>
+      <translation>Не удалось получить хеш последней версии Pre-release.</translation>
+    </message>
+    <message>
+      <source>Downloading Pre-release (Nightly), please wait...</source>
+      <translation type="unfinished">Downloading Pre-release (Nightly), please wait...</translation>
     </message>
   </context>
   <context>

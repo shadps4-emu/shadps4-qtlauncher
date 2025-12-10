@@ -621,6 +621,10 @@
       <source>Right Stick Deadzone</source>
       <translation>Zona morta de la palanca dreta</translation>
     </message>
+    <message>
+      <source>Tip: Unmap inputs with right-click</source>
+      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+    </message>
   </context>
   <context>
     <name>EditorDialog</name>
@@ -1090,6 +1094,18 @@
       <source>Failed to convert icon.</source>
       <translation>Error en convertir la icona.</translation>
     </message>
+    <message>
+      <source>Delete Shader Cache</source>
+      <translation>Esborra la memòria cau de shaders</translation>
+    </message>
+    <message>
+      <source>This game does not have any saved Shader Cache to delete!</source>
+      <translation>Aquest joc no té memòria cau que es pugui esborrar!</translation>
+    </message>
+    <message>
+      <source>Shader Cache</source>
+      <translation>Memòria cau de shaders</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -1199,6 +1215,10 @@
     <message>
       <source>Waiting for inputs</source>
       <translation>Esperant per alguna entrada</translation>
+    </message>
+    <message>
+      <source>Tip: Unmap inputs with right-click</source>
+      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
     </message>
   </context>
   <context>
@@ -1405,6 +1425,10 @@
     <message>
       <source>Touchpad Right</source>
       <translation>Touchpad dreta</translation>
+    </message>
+    <message>
+      <source>Tip: Unmap inputs with right-click</source>
+      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
     </message>
   </context>
   <context>
@@ -2575,6 +2599,22 @@ Selecciona una versió del panell dret.</translation>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
       <translation>Dispositiu USB:\nDispositiu USB real: Fes servir un dispositiu USB enllaçat al sistema.\nPortal Skylander: Emula un portal Skylander.\nBase Infinity: Emula una base de Disney Infinity.\nDimensions Toypad: Emula un Toypad de Lego Dimensions.</translation>
     </message>
+    <message>
+      <source>Enable Shader Cache</source>
+      <translation>Activa la memòria cau de shaders</translation>
+    </message>
+    <message>
+      <source>Compress the Shader Cache files into a zip file</source>
+      <translation>Comprimeix la memòria cau de shaders en un fitxer zip</translation>
+    </message>
+    <message>
+      <source>Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</source>
+      <translation>Activa la memòria cau de shaders:\nEmmagatzemar la memòria cau de shaders per evitar recompilacions, reduint les estrebades.</translation>
+    </message>
+    <message>
+      <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
+      <translation>Comprimeix els fitxers de la memòria cau de shaders en un fitxer zip:\nEls fitxers de la memòria cau de shaders s'emmagatzemen en un sol fitxer zip en compte de fer-ho en diferents fitxers separats.</translation>
+    </message>
   </context>
   <context>
     <name>ShortcutDialog</name>
@@ -2774,10 +2814,6 @@ Selecciona una versió del panell dret.</translation>
       <translation>La resposta de la API de GitHub no és un valor JSON vàlid.</translation>
     </message>
     <message>
-      <source>Unable to get hash of latest pre-release</source>
-      <translation>No es pot obtenir el hash de l'última versió prèvia</translation>
-    </message>
-    <message>
       <source>Auto Updater - Emulator</source>
       <translation>Actualització automàtica - Emulador</translation>
     </message>
@@ -2830,10 +2866,6 @@ Selecciona una versió del panell dret.</translation>
       <translation>No s'ha trobat la direcció web de descàrrega.</translation>
     </message>
     <message>
-      <source>Downloading Pre‑release, please wait...</source>
-      <translation>Descarregant versió prèvia, si us plau, espera...</translation>
-    </message>
-    <message>
       <source>Network error while downloading</source>
       <translation>Error de xarxa durant la descarrega</translation>
     </message>
@@ -2874,11 +2906,6 @@ Selecciona una versió del panell dret.</translation>
       <translation>Ja existeix una versió amb aquest nom.</translation>
     </message>
     <message>
-      <source>It is not possible to create a version with a name that starts with:
-&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</source>
-      <translation>No és possible crear una versió amb el nom que començar per:&apos;Pre-release&apos; o &apos;Pre-release-shadPS4&apos;</translation>
-    </message>
-    <message>
       <source>Local</source>
       <translation>Local</translation>
     </message>
@@ -2889,6 +2916,14 @@ Selecciona una versió del panell dret.</translation>
     <message>
       <source>Failed to delete folder.</source>
       <translation>Error en eliminar la carpeta.</translation>
+    </message>
+    <message>
+      <source>Unable to get hash of latest pre-release.</source>
+      <translation type="unfinished">Unable to get hash of latest pre-release.</translation>
+    </message>
+    <message>
+      <source>Downloading Pre-release (Nightly), please wait...</source>
+      <translation type="unfinished">Downloading Pre-release (Nightly), please wait...</translation>
     </message>
   </context>
   <context>

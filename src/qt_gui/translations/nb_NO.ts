@@ -621,6 +621,10 @@
       <source>Right Stick Deadzone</source>
       <translation>Høyre analog dødsone</translation>
     </message>
+    <message>
+      <source>Tip: Unmap inputs with right-click</source>
+      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+    </message>
   </context>
   <context>
     <name>EditorDialog</name>
@@ -1090,6 +1094,18 @@
       <source>Failed to convert icon.</source>
       <translation>Klarte ikke konvertere ikon.</translation>
     </message>
+    <message>
+      <source>Delete Shader Cache</source>
+      <translation>Slett skyggelegger hurtiglager</translation>
+    </message>
+    <message>
+      <source>This game does not have any saved Shader Cache to delete!</source>
+      <translation>Dette spillet har ingen lagret skyggelegger hurtiglager å slette!</translation>
+    </message>
+    <message>
+      <source>Shader Cache</source>
+      <translation>Skyggelegger hurtiglager</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -1199,6 +1215,10 @@
     <message>
       <source>Waiting for inputs</source>
       <translation>Venter på inndata</translation>
+    </message>
+    <message>
+      <source>Tip: Unmap inputs with right-click</source>
+      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
     </message>
   </context>
   <context>
@@ -1405,6 +1425,10 @@
     <message>
       <source>Touchpad Right</source>
       <translation>Høyre berøringsplate</translation>
+    </message>
+    <message>
+      <source>Tip: Unmap inputs with right-click</source>
+      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
     </message>
   </context>
   <context>
@@ -2575,6 +2599,22 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
       <translation>USB-enhet:\nEkte USB-enhet: Bruk en ekte USB-enhet tilkoblet systemet.\nSkylanders portal: Emuler en «Skylanders Portal of Power».\nInfinity-base: Emuler en Disney Infinity-base.\nDimensions-lekebase: Emuler en Lego Dimensions lekebase.</translation>
     </message>
+    <message>
+      <source>Enable Shader Cache</source>
+      <translation>Bruk skyggelegger hurtiglager</translation>
+    </message>
+    <message>
+      <source>Compress the Shader Cache files into a zip file</source>
+      <translation>Komprimer skyggelegger hurtiglager-filer til en zip-fil</translation>
+    </message>
+    <message>
+      <source>Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</source>
+      <translation>Bruk skyggelegger hurtiglager:\nLagrer kompilerte skyggeleggere for å unngå gjenkompilasjoner, reduserer hakking.</translation>
+    </message>
+    <message>
+      <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
+      <translation>Komprimer skyggelegger hurtiglager-filer til en zip-fil:\nskyggeleggerhurtiglager filene lagres i en zip-fil i stedet for flere separate filer.</translation>
+    </message>
   </context>
   <context>
     <name>ShortcutDialog</name>
@@ -2775,10 +2815,6 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <translation>Svaret fra GitHub-API-en er ikke en gyldig JSON-matrise.</translation>
     </message>
     <message>
-      <source>Unable to get hash of latest pre-release</source>
-      <translation>Klarte ikke hente nøkkelen for forhåndsutgivelsen</translation>
-    </message>
-    <message>
       <source>Auto Updater - Emulator</source>
       <translation>Auto oppdatering – emulator</translation>
     </message>
@@ -2831,10 +2867,6 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <translation>Fant ingen nedlastings-URL for den valgte ressursen.</translation>
     </message>
     <message>
-      <source>Downloading Pre‑release, please wait...</source>
-      <translation>Laster ned forhåndsutgivelsen, vent litt …</translation>
-    </message>
-    <message>
       <source>Network error while downloading</source>
       <translation>Nettverksfeil ved nedlasting</translation>
     </message>
@@ -2875,12 +2907,6 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <translation>En versjon med det navnet finnes allerede.</translation>
     </message>
     <message>
-      <source>It is not possible to create a version with a name that starts with:
-&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</source>
-      <translation>Det er ikke mulig å opprette en versjon med et navn som begynner med:
-«Pre-release» eller «Pre-release-shadPS4».</translation>
-    </message>
-    <message>
       <source>Local</source>
       <translation>Lokal</translation>
     </message>
@@ -2891,6 +2917,14 @@ Velg en emulatorversjon fra høyre panel.</translation>
     <message>
       <source>Failed to delete folder.</source>
       <translation>Klarte ikke slette mappa.</translation>
+    </message>
+    <message>
+      <source>Unable to get hash of latest pre-release.</source>
+      <translation type="unfinished">Unable to get hash of latest pre-release.</translation>
+    </message>
+    <message>
+      <source>Downloading Pre-release (Nightly), please wait...</source>
+      <translation type="unfinished">Downloading Pre-release (Nightly), please wait...</translation>
     </message>
   </context>
   <context>

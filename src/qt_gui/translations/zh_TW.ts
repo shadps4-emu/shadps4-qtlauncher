@@ -619,6 +619,10 @@
       <source>Right Stick Deadzone</source>
       <translation>右搖桿無效區域</translation>
     </message>
+    <message>
+      <source>Tip: Unmap inputs with right-click</source>
+      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+    </message>
   </context>
   <context>
     <name>EditorDialog</name>
@@ -1088,6 +1092,18 @@
       <source>Failed to convert icon.</source>
       <translation>無法轉換圖示。</translation>
     </message>
+    <message>
+      <source>Delete Shader Cache</source>
+      <translation type="unfinished">Delete Shader Cache</translation>
+    </message>
+    <message>
+      <source>This game does not have any saved Shader Cache to delete!</source>
+      <translation type="unfinished">This game does not have any saved Shader Cache to delete!</translation>
+    </message>
+    <message>
+      <source>Shader Cache</source>
+      <translation type="unfinished">Shader Cache</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -1195,6 +1211,10 @@
     <message>
       <source>Waiting for inputs</source>
       <translation>等待輸入</translation>
+    </message>
+    <message>
+      <source>Tip: Unmap inputs with right-click</source>
+      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
     </message>
   </context>
   <context>
@@ -1399,6 +1419,10 @@
     <message>
       <source>Touchpad Right</source>
       <translation>觸控板右側</translation>
+    </message>
+    <message>
+      <source>Tip: Unmap inputs with right-click</source>
+      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
     </message>
   </context>
   <context>
@@ -2569,6 +2593,22 @@ Select an emulator version from the right panel.</source>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
       <translation>USB 裝置：\n實體 USB 裝置：使用連接到系統的實體 USB 裝置。 \nSkylander Portal：模擬 Skylander 能量傳送門。 \nInfinity Base：模擬 Disney Infinity 底座。 \nDimensions Toypad：模擬 Lego Dimensions Toypad。</translation>
     </message>
+    <message>
+      <source>Enable Shader Cache</source>
+      <translation type="unfinished">Enable Shader Cache</translation>
+    </message>
+    <message>
+      <source>Compress the Shader Cache files into a zip file</source>
+      <translation type="unfinished">Compress the Shader Cache files into a zip file</translation>
+    </message>
+    <message>
+      <source>Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</source>
+      <translation type="unfinished">Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</translation>
+    </message>
+    <message>
+      <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
+      <translation type="unfinished">Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</translation>
+    </message>
   </context>
   <context>
     <name>ShortcutDialog</name>
@@ -2768,10 +2808,6 @@ Select an emulator version from the right panel.</source>
       <translation>GitHub API 傳回的數列不是有效的 JSON 數列。</translation>
     </message>
     <message>
-      <source>Unable to get hash of latest pre-release</source>
-      <translation>無法取得最新預覽版的雜湊值</translation>
-    </message>
-    <message>
       <source>Auto Updater - Emulator</source>
       <translation>自動更新程式 - 模擬器</translation>
     </message>
@@ -2824,10 +2860,6 @@ Select an emulator version from the right panel.</source>
       <translation>找不到指定資源的下載 URL。</translation>
     </message>
     <message>
-      <source>Downloading Pre‑release, please wait...</source>
-      <translation>正在下載預覽版，請稍候…</translation>
-    </message>
-    <message>
       <source>Network error while downloading</source>
       <translation>下載時發生網路錯誤</translation>
     </message>
@@ -2868,12 +2900,6 @@ Select an emulator version from the right panel.</source>
       <translation>已存在同名的版本。</translation>
     </message>
     <message>
-      <source>It is not possible to create a version with a name that starts with:
-&apos;Pre-release&apos; or &apos;Pre-release-shadPS4&apos;.</source>
-      <translation>無法建立名稱開頭為以下形式的版本：
-Pre-release 或 Pre-release-shadPS4</translation>
-    </message>
-    <message>
       <source>Local</source>
       <translation>本機</translation>
     </message>
@@ -2884,6 +2910,14 @@ Pre-release 或 Pre-release-shadPS4</translation>
     <message>
       <source>Failed to delete folder.</source>
       <translation>刪除資料夾失敗。</translation>
+    </message>
+    <message>
+      <source>Unable to get hash of latest pre-release.</source>
+      <translation type="unfinished">Unable to get hash of latest pre-release.</translation>
+    </message>
+    <message>
+      <source>Downloading Pre-release (Nightly), please wait...</source>
+      <translation type="unfinished">Downloading Pre-release (Nightly), please wait...</translation>
     </message>
   </context>
   <context>
