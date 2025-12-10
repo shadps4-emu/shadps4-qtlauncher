@@ -621,6 +621,10 @@
       <source>Right Stick Deadzone</source>
       <translation>Zona morta de la palanca dreta</translation>
     </message>
+    <message>
+      <source>Tip: Unmap inputs with right-click</source>
+      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+    </message>
   </context>
   <context>
     <name>EditorDialog</name>
@@ -1212,6 +1216,10 @@
       <source>Waiting for inputs</source>
       <translation>Esperant per alguna entrada</translation>
     </message>
+    <message>
+      <source>Tip: Unmap inputs with right-click</source>
+      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+    </message>
   </context>
   <context>
     <name>IpcClient</name>
@@ -1417,6 +1425,10 @@
     <message>
       <source>Touchpad Right</source>
       <translation>Touchpad dreta</translation>
+    </message>
+    <message>
+      <source>Tip: Unmap inputs with right-click</source>
+      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
     </message>
   </context>
   <context>
@@ -2854,10 +2866,6 @@ Selecciona una versió del panell dret.</translation>
       <translation>No s'ha trobat la direcció web de descàrrega.</translation>
     </message>
     <message>
-      <source>Downloading Pre‑release, please wait...</source>
-      <translation>Descarregant versió prèvia, si us plau, espera...</translation>
-    </message>
-    <message>
       <source>Network error while downloading</source>
       <translation>Error de xarxa durant la descarrega</translation>
     </message>
@@ -2912,6 +2920,10 @@ Selecciona una versió del panell dret.</translation>
     <message>
       <source>Unable to get hash of latest pre-release.</source>
       <translation type="unfinished">Unable to get hash of latest pre-release.</translation>
+    </message>
+    <message>
+      <source>Downloading Pre-release (Nightly), please wait...</source>
+      <translation type="unfinished">Downloading Pre-release (Nightly), please wait...</translation>
     </message>
   </context>
   <context>
