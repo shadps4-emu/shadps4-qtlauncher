@@ -2731,7 +2731,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Executable (*.exe)</source>
-      <translation type="unfinished">Executable (*.exe)</translation>
+      <translation>قابل للتنفيذ (*.exe)</translation>
     </message>
     <message>
       <source>Version name</source>
