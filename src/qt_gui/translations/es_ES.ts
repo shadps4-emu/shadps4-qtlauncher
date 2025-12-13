@@ -623,7 +623,7 @@
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Consejo: puedes desasignar acciones de entrada haciendo clic derecho</translation>
     </message>
   </context>
   <context>
@@ -1218,7 +1218,7 @@
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Consejo: puedes desasignar acciones de entrada haciendo clic derecho</translation>
     </message>
   </context>
   <context>
@@ -1428,7 +1428,7 @@
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Consejo: puedes desasignar acciones de entrada haciendo clic derecho</translation>
     </message>
   </context>
   <context>
@@ -2917,11 +2917,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release.</source>
-      <translation type="unfinished">Unable to get hash of latest pre-release.</translation>
+      <translation>No se ha podido obtener el hash de la última versión prelanzamiento.</translation>
     </message>
     <message>
       <source>Downloading Pre-release (Nightly), please wait...</source>
-      <translation type="unfinished">Downloading Pre-release (Nightly), please wait...</translation>
+      <translation>Descargando versión prelanzamiento («nightly»), espera...</translation>
     </message>
   </context>
   <context>
