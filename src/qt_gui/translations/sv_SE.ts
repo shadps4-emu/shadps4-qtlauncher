@@ -623,7 +623,7 @@
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Tips: Avmappa inmatningar med högerklick</translation>
     </message>
   </context>
   <context>
@@ -1218,7 +1218,7 @@
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Tips: Avmappa inmatningar med högerklick</translation>
     </message>
   </context>
   <context>
@@ -1428,7 +1428,7 @@
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Tips: Avmappa inmatningar med högerklick</translation>
     </message>
   </context>
   <context>
@@ -2919,11 +2919,11 @@ Välj en emulatorversion från den högra panelen.</translation>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release.</source>
-      <translation type="unfinished">Unable to get hash of latest pre-release.</translation>
+      <translation>Kunde inte få hash för senaste förutgåvan.</translation>
     </message>
     <message>
       <source>Downloading Pre-release (Nightly), please wait...</source>
-      <translation type="unfinished">Downloading Pre-release (Nightly), please wait...</translation>
+      <translation>Hämtar ner förutgåva (Nightly), vänta...</translation>
     </message>
   </context>
   <context>

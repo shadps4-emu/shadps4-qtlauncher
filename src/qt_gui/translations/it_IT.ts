@@ -623,7 +623,7 @@
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Suggerimento: Rimuovi le mappature con il tasto destro del mouse</translation>
     </message>
   </context>
   <context>
@@ -1218,7 +1218,7 @@
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Suggerimento: Rimuovi le mappature con il tasto destro del mouse</translation>
     </message>
   </context>
   <context>
@@ -1428,7 +1428,7 @@
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Suggerimento: Rimuovi le mappature con il tasto destro del mouse</translation>
     </message>
   </context>
   <context>
@@ -2924,7 +2924,7 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
     </message>
     <message>
       <source>Downloading Pre-release (Nightly), please wait...</source>
-      <translation type="unfinished">Downloading Pre-release (Nightly), please wait...</translation>
+      <translation>Scaricamento versione Pre-rilascio (Nightly), attendere prego...</translation>
     </message>
   </context>
   <context>

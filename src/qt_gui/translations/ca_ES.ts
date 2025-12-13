@@ -623,7 +623,7 @@
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Ajuda: Desassigna les entrades amb el clic dret</translation>
     </message>
   </context>
   <context>
@@ -1218,7 +1218,7 @@
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Ajuda: Desassigna les entrades amb el clic dret</translation>
     </message>
   </context>
   <context>
@@ -1428,7 +1428,7 @@
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Ajuda: Desassigna les entrades amb el clic dret</translation>
     </message>
   </context>
   <context>
@@ -2919,11 +2919,11 @@ Selecciona una versió del panell dret.</translation>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release.</source>
-      <translation type="unfinished">Unable to get hash of latest pre-release.</translation>
+      <translation>No es pot obtenir el hash de l'última versió prèvia.</translation>
     </message>
     <message>
       <source>Downloading Pre-release (Nightly), please wait...</source>
-      <translation type="unfinished">Downloading Pre-release (Nightly), please wait...</translation>
+      <translation>Descarregant versió prèvia, si us plau, espera...</translation>
     </message>
   </context>
   <context>
