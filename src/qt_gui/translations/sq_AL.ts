@@ -623,7 +623,7 @@
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Këshillë: Shkëput hyrjet me klikim të djathtë</translation>
     </message>
   </context>
   <context>
@@ -1096,15 +1096,15 @@
     </message>
     <message>
       <source>Delete Shader Cache</source>
-      <translation type="unfinished">Delete Shader Cache</translation>
+      <translation>Fshi Kesh-in e Shader-ave</translation>
     </message>
     <message>
       <source>This game does not have any saved Shader Cache to delete!</source>
-      <translation type="unfinished">This game does not have any saved Shader Cache to delete!</translation>
+      <translation>Kjo lojë nuk ka asnjë Kesh të Shadera-ave të ruajtur për ta fshirë!</translation>
     </message>
     <message>
       <source>Shader Cache</source>
-      <translation type="unfinished">Shader Cache</translation>
+      <translation>Kesh-i i Shader-ave</translation>
     </message>
   </context>
   <context>
@@ -1218,7 +1218,7 @@
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Këshillë: Shkëput hyrjet me klikim të djathtë</translation>
     </message>
   </context>
   <context>
@@ -1428,7 +1428,7 @@
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Këshillë: Shkëput hyrjet me klikim të djathtë</translation>
     </message>
   </context>
   <context>
@@ -1766,23 +1766,23 @@ Përzgjidh një version të emulatorit nga paneli i djathtë.</translation>
     </message>
     <message>
       <source>Manage Skylanders</source>
-      <translation type="unfinished">Manage Skylanders</translation>
+      <translation>Menaxho Skylanders</translation>
     </message>
     <message>
       <source>Manage Infinity Figures</source>
-      <translation type="unfinished">Manage Infinity Figures</translation>
+      <translation>Menaxho Figurat Infinity</translation>
     </message>
     <message>
       <source>Manage Dimensions Toypad</source>
-      <translation type="unfinished">Manage Dimensions Toypad</translation>
+      <translation>Menaxho Toypad-in e Dimensions</translation>
     </message>
     <message>
       <source>Game Log</source>
-      <translation type="unfinished">Game Log</translation>
+      <translation>Ditar i Lojës</translation>
     </message>
     <message>
       <source>Show Game Log</source>
-      <translation type="unfinished">Show Game Log</translation>
+      <translation>Shfaq Ditarin e Lojës</translation>
     </message>
   </context>
   <context>
@@ -2578,43 +2578,43 @@ Zgjidh cilën skedë do të hapet; parazgjedhja është General.</translation>
     </message>
     <message>
       <source>USB Device</source>
-      <translation type="unfinished">USB Device</translation>
+      <translation>Pajisje USB</translation>
     </message>
     <message>
       <source>Real USB Device</source>
-      <translation type="unfinished">Real USB Device</translation>
+      <translation>Pajisje USB Reale</translation>
     </message>
     <message>
       <source>Skylander Portal</source>
-      <translation type="unfinished">Skylander Portal</translation>
+      <translation>Portali Skylander</translation>
     </message>
     <message>
       <source>Infinity Base</source>
-      <translation type="unfinished">Infinity Base</translation>
+      <translation>Baza Infinity</translation>
     </message>
     <message>
       <source>Dimensions Toypad</source>
-      <translation type="unfinished">Dimensions Toypad</translation>
+      <translation>Toypad-i i Dimensions</translation>
     </message>
     <message>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
-      <translation type="unfinished">USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</translation>
+      <translation>Pajisje USB:\nPajisje USB Reale: Përdor një pajisje USB reale të lidhur me sistemin.\nPortali Skylander: Emulo një Portë Skylander të Fuqisë.\nBaza Infinity: Emulo një Bazë Disney Infinity.\nToypad-i i Dimensions: Emulo një Toypad Lego Dimensions.</translation>
     </message>
     <message>
       <source>Enable Shader Cache</source>
-      <translation type="unfinished">Enable Shader Cache</translation>
+      <translation>Aktivizo Kesh-in e Shader-ave</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file</source>
-      <translation type="unfinished">Compress the Shader Cache files into a zip file</translation>
+      <translation>Paketo skedarët e Kesh-it të Shader-ave në një skedar zip</translation>
     </message>
     <message>
       <source>Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</source>
-      <translation type="unfinished">Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</translation>
+      <translation>Aktivizo Kesh-it të Shader-ave:\nRuajtja e shader-ave të përpiluar shmang ripërpilimet dhe ul ngecjet.</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
-      <translation type="unfinished">Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</translation>
+      <translation>Paketo skedarët e Kesh-it të Shader-ave në një skedar zip:\nSkedarët e Kesh-it të Shader-ave ruhen në një skedar zip të vetëm në vend të shumë skedarëve të veçantë.</translation>
     </message>
   </context>
   <context>
@@ -2909,15 +2909,15 @@ Zgjidh cilën skedë do të hapet; parazgjedhja është General.</translation>
     </message>
     <message>
       <source>Local</source>
-      <translation type="unfinished">Local</translation>
+      <translation>Lokal</translation>
     </message>
     <message>
       <source>Failed to determine the folder to remove.</source>
-      <translation type="unfinished">Failed to determine the folder to remove.</translation>
+      <translation>Dështoi përcaktimi i dosjes për t'u hequr.</translation>
     </message>
     <message>
       <source>Failed to delete folder.</source>
-      <translation type="unfinished">Failed to delete folder.</translation>
+      <translation>Dështoi fshirja e dosjes.</translation>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release.</source>
@@ -2925,64 +2925,64 @@ Zgjidh cilën skedë do të hapet; parazgjedhja është General.</translation>
     </message>
     <message>
       <source>Downloading Pre-release (Nightly), please wait...</source>
-      <translation type="unfinished">Downloading Pre-release (Nightly), please wait...</translation>
+      <translation>Po shkarkohet versioni Paraprak (Nightly), prit...</translation>
     </message>
   </context>
   <context>
     <name>dimensions_dialog</name>
     <message>
       <source>Dimensions Manager</source>
-      <translation type="unfinished">Dimensions Manager</translation>
+      <translation>Menaxheri i Dimensions</translation>
     </message>
     <message>
       <source>Active Dimensions Figures:</source>
-      <translation type="unfinished">Active Dimensions Figures:</translation>
+      <translation>Figurat Aktive të Dimensions:</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Asnjë</translation>
     </message>
     <message>
       <source>Clear</source>
-      <translation type="unfinished">Clear</translation>
+      <translation>Pastro</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Krijo</translation>
     </message>
     <message>
       <source>Load</source>
-      <translation type="unfinished">Load</translation>
+      <translation>Ngarko</translation>
     </message>
     <message>
       <source>Move</source>
-      <translation type="unfinished">Move</translation>
+      <translation>Lëviz</translation>
     </message>
     <message>
       <source>Unknown Figure</source>
-      <translation type="unfinished">Unknown Figure</translation>
+      <translation>Figurë e Panjohur</translation>
     </message>
     <message>
       <source>Select Dimensions File</source>
-      <translation type="unfinished">Select Dimensions File</translation>
+      <translation>Zgjidh Skedarin Dimensions</translation>
     </message>
     <message>
       <source>Dimensions Figure (*.bin);;</source>
-      <translation type="unfinished">Dimensions Figure (*.bin);;</translation>
+      <translation>Figurë Dimensions (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to open the figure file!</source>
-      <translation type="unfinished">Failed to open the figure file!</translation>
+      <translation>Nuk u hap dot skedari i figurës!</translation>
     </message>
     <message>
       <source>Failed to open the figure file(%1)!
 File may already be in use on the base.</source>
-      <translation type="unfinished">Failed to open the figure file(%1)!
-File may already be in use on the base.</translation>
+      <translation>Nuk u hap dot skedari i figurës (%1)! 
+Skedari mund të jetë tashmë në përdorim në bazë.</translation>
     </message>
     <message>
       <source>Failed to read the figure file!</source>
-      <translation type="unfinished">Failed to read the figure file!</translation>
+      <translation>Dështoi leximi i skedarit të figurës!</translation>
     </message>
     <message>
       <source>Failed to read the figure file(%1)!
@@ -2995,15 +2995,15 @@ File was too small.</translation>
     <name>figure_creator_dialog</name>
     <message>
       <source>Figure Creator</source>
-      <translation type="unfinished">Figure Creator</translation>
+      <translation>Krijuesi i Figurave</translation>
     </message>
     <message>
       <source>Filter by Series:</source>
-      <translation type="unfinished">Filter by Series:</translation>
+      <translation>Filtro sipas Serive:</translation>
     </message>
     <message>
       <source>All</source>
-      <translation type="unfinished">All</translation>
+      <translation>Të gjitha</translation>
     </message>
     <message>
       <source>--Unknown--</source>
@@ -3015,39 +3015,39 @@ File was too small.</translation>
     </message>
     <message>
       <source>Series:</source>
-      <translation type="unfinished">Series:</translation>
+      <translation>Seri:</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Krijo</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Anulo</translation>
     </message>
     <message>
       <source>Error converting value</source>
-      <translation type="unfinished">Error converting value</translation>
+      <translation>Gabim gjatë konvertimit të vlerës</translation>
     </message>
     <message>
       <source>Figure number entered is invalid!</source>
-      <translation type="unfinished">Figure number entered is invalid!</translation>
+      <translation>Numri i figurës i futur është i pavlefshëm!</translation>
     </message>
     <message>
       <source>Series number entered is invalid!</source>
-      <translation type="unfinished">Series number entered is invalid!</translation>
+      <translation>Numri i serisë i futur është i pavlefshëm!</translation>
     </message>
     <message>
       <source>Create Figure File</source>
-      <translation type="unfinished">Create Figure File</translation>
+      <translation>Krijo Skedarin e Figurës</translation>
     </message>
     <message>
       <source>Infinity Figure (*.bin);;</source>
-      <translation type="unfinished">Infinity Figure (*.bin);;</translation>
+      <translation>Figurë Infinity (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to create figure file!</source>
-      <translation type="unfinished">Failed to create figure file!</translation>
+      <translation>Nuk u krijua dot skedari i figurës!</translation>
     </message>
     <message>
       <source>Failed to create figure file:
