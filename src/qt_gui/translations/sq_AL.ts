@@ -2921,7 +2921,7 @@ Zgjidh cilën skedë do të hapet; parazgjedhja është General.</translation>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release.</source>
-      <translation type="unfinished">Unable to get hash of latest pre-release.</translation>
+      <translation>Nuk mund të merret hash-i i botimit paraprak më të fundit.</translation>
     </message>
     <message>
       <source>Downloading Pre-release (Nightly), please wait...</source>
@@ -3060,102 +3060,100 @@ File was too small.</translation>
     <name>infinity_dialog</name>
     <message>
       <source>Infinity Manager</source>
-      <translation type="unfinished">Infinity Manager</translation>
+      <translation>Menaxheri i Infinity</translation>
     </message>
     <message>
       <source>Active Infinity Figures:</source>
-      <translation type="unfinished">Active Infinity Figures:</translation>
+      <translation>Figurat aktive të Infinity:</translation>
     </message>
     <message>
       <source>Play Set/Power Disc</source>
-      <translation type="unfinished">Play Set/Power Disc</translation>
+      <translation>Set Lojërash/Disk Fuqie</translation>
     </message>
     <message>
       <source>Power Disc Two</source>
-      <translation type="unfinished">Power Disc Two</translation>
+      <translation>Disk Fuqie Dy</translation>
     </message>
     <message>
       <source>Power Disc Three</source>
-      <translation type="unfinished">Power Disc Three</translation>
+      <translation>Disk Fuqie Tre</translation>
     </message>
     <message>
       <source>Player One</source>
-      <translation type="unfinished">Player One</translation>
+      <translation>Lojtari Një</translation>
     </message>
     <message>
       <source>Player One Ability One</source>
-      <translation type="unfinished">Player One Ability One</translation>
+      <translation>Aftësia e Parë e Lojtarit Një</translation>
     </message>
     <message>
       <source>Player One Ability Two</source>
-      <translation type="unfinished">Player One Ability Two</translation>
+      <translation>Aftësia e Dytë e Lojtarit Një</translation>
     </message>
     <message>
       <source>Player Two</source>
-      <translation type="unfinished">Player Two</translation>
+      <translation>Lojtari Dy</translation>
     </message>
     <message>
       <source>Player Two Ability One</source>
-      <translation type="unfinished">Player Two Ability One</translation>
+      <translation>Aftësia e Parë e Lojtarit Dy</translation>
     </message>
     <message>
       <source>Player Two Ability Two</source>
-      <translation type="unfinished">Player Two Ability Two</translation>
+      <translation>Aftësia e Dytë e Lojtarit Dy</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Asnjë</translation>
     </message>
     <message>
       <source>Clear</source>
-      <translation type="unfinished">Clear</translation>
+      <translation>Pastro</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Krijo</translation>
     </message>
     <message>
       <source>Load</source>
-      <translation type="unfinished">Load</translation>
+      <translation>Ngarko</translation>
     </message>
     <message>
       <source>Unknown Figure</source>
-      <translation type="unfinished">Unknown Figure</translation>
+      <translation>Figurë e panjohur</translation>
     </message>
     <message>
       <source>Select Infinity File</source>
-      <translation type="unfinished">Select Infinity File</translation>
+      <translation>Zgjidh Skedarin Infinity</translation>
     </message>
     <message>
       <source>Infinity Figure (*.bin);;</source>
-      <translation type="unfinished">Infinity Figure (*.bin);;</translation>
+      <translation>Figurë Infinity (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to open the figure file!</source>
-      <translation type="unfinished">Failed to open the figure file!</translation>
+      <translation>Nuk u hap dot skedari i figurës!</translation>
     </message>
     <message>
       <source>Failed to open the figure file(%1)!
 File may already be in use on the base.</source>
-      <translation type="unfinished">Failed to open the figure file(%1)!
-File may already be in use on the base.</translation>
+      <translation>Nuk u hap dot skedari i figurës (%1)! Skedari mund të jetë tashmë në përdorim në bazë.</translation>
     </message>
     <message>
       <source>Failed to read the figure file!</source>
-      <translation type="unfinished">Failed to read the figure file!</translation>
+      <translation>Dështoi leximi i skedarit të figurës!</translation>
     </message>
     <message>
       <source>Failed to read the figure file(%1)!
 File was too small.</source>
-      <translation type="unfinished">Failed to read the figure file(%1)!
-File was too small.</translation>
+      <translation>Nuk u lexua dot skedari i figurës (%1)! Skedari ishte shumë i vogël.</translation>
     </message>
   </context>
   <context>
     <name>minifig_creator_dialog</name>
     <message>
       <source>Figure Creator</source>
-      <translation type="unfinished">Figure Creator</translation>
+      <translation>Krijuesi i Figurave</translation>
     </message>
     <message>
       <source>--Unknown--</source>
@@ -3171,87 +3169,86 @@ File was too small.</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Anulo</translation>
     </message>
     <message>
       <source>Error converting value</source>
-      <translation type="unfinished">Error converting value</translation>
+      <translation>Gabim gjatë konvertimit të vlerës</translation>
     </message>
     <message>
       <source>Figure number entered is invalid!</source>
-      <translation type="unfinished">Figure number entered is invalid!</translation>
+      <translation>Numri i figurës i futur është i pavlefshëm!</translation>
     </message>
     <message>
       <source>Create Figure File</source>
-      <translation type="unfinished">Create Figure File</translation>
+      <translation>Krijo skedarin e figurës</translation>
     </message>
     <message>
       <source>Dimensions Figure (*.bin);;</source>
-      <translation type="unfinished">Dimensions Figure (*.bin);;</translation>
+      <translation>Figurë Nuk u krijua dot skedari i minifig-it!Dimensions (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to create minifig file!</source>
-      <translation type="unfinished">Failed to create minifig file!</translation>
+      <translation>Nuk u krijua dot skedari i minifig-it!</translation>
     </message>
     <message>
       <source>Failed to create minifig file:
 %1</source>
-      <translation type="unfinished">Failed to create minifig file:
-%1</translation>
+      <translation>Nuk u krijua dot skedari i minifig-it: %1</translation>
     </message>
   </context>
   <context>
     <name>minifig_move_dialog</name>
     <message>
       <source>Figure Mover</source>
-      <translation type="unfinished">Figure Mover</translation>
+      <translation>Zhvendosësi i Figurave</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Asnjë</translation>
     </message>
     <message>
       <source>Move Here</source>
-      <translation type="unfinished">Move Here</translation>
+      <translation>Zhvendos Këtu</translation>
     </message>
     <message>
       <source>Pick up and Place</source>
-      <translation type="unfinished">Pick up and Place</translation>
+      <translation>Merr dhe VendosKrijuesi Skylander</translation>
     </message>
   </context>
   <context>
     <name>skylander_creator_dialog</name>
     <message>
       <source>Skylander Creator</source>
-      <translation type="unfinished">Skylander Creator</translation>
+      <translation>Krijuesi Skylander</translation>
     </message>
     <message>
       <source>--Unknown--</source>
-      <translation type="unfinished">--Unknown--</translation>
+      <translation>--E panjohur--</translation>
     </message>
     <message>
       <source>ID:</source>
-      <translation type="unfinished">ID:</translation>
+      <translation>ID:</translation>
     </message>
     <message>
       <source>Variant:</source>
-      <translation type="unfinished">Variant:</translation>
+      <translation>Varianti:</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>KrijoAnulo</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Anulo</translation>
     </message>
     <message>
       <source>Error converting value</source>
-      <translation type="unfinished">Error converting value</translation>
+      <translation>Gabim gjatë konvertimit të vlerës</translation>
     </message>
     <message>
       <source>ID entered is invalid!</source>
-      <translation type="unfinished">ID entered is invalid!</translation>
+      <translation>ID-ja e futur është e pavlefshme!</translation>
     </message>
     <message>
       <source>Variant entered is invalid!</source>
