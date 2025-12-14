@@ -1104,7 +1104,7 @@
     </message>
     <message>
       <source>Shader Cache</source>
-      <translation>Kesh-i i Shader-ave</translation>
+      <translation>Kesh-i Shader-ave</translation>
     </message>
   </context>
   <context>
@@ -3157,15 +3157,15 @@ File was too small.</source>
     </message>
     <message>
       <source>--Unknown--</source>
-      <translation type="unfinished">--Unknown--</translation>
+      <translation>--E panjohur--</translation>
     </message>
     <message>
       <source>Figure Number:</source>
-      <translation type="unfinished">Figure Number:</translation>
+      <translation>Numri i figurës:</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Krijo</translation>
     </message>
     <message>
       <source>Cancel</source>
@@ -3252,19 +3252,19 @@ File was too small.</source>
     </message>
     <message>
       <source>Variant entered is invalid!</source>
-      <translation type="unfinished">Variant entered is invalid!</translation>
+      <translation>Varianti i futur është i pavlefshëm!</translation>
     </message>
     <message>
       <source>Create Skylander File</source>
-      <translation type="unfinished">Create Skylander File</translation>
+      <translation>Krijo skedarin e Skylander-it</translation>
     </message>
     <message>
       <source>Skylander Object (*.sky);;All Files (*)</source>
-      <translation type="unfinished">Skylander Object (*.sky);;All Files (*)</translation>
+      <translation>Objekt Skylander (*.sky);;Të Gjithë Skedarët (*)</translation>
     </message>
     <message>
       <source>Failed to create skylander file!</source>
-      <translation type="unfinished">Failed to create skylander file!</translation>
+      <translation>Nuk u krijua dot skedari i skylander-it!</translation>
     </message>
     <message>
       <source>Failed to create skylander file:
@@ -3277,7 +3277,7 @@ File was too small.</source>
     <name>skylander_dialog</name>
     <message>
       <source>Skylanders Manager</source>
-      <translation type="unfinished">Skylanders Manager</translation>
+      <translation>Menaxheri i Skylanders</translation>
     </message>
     <message>
       <source>Active Portal Skylanders:</source>
