@@ -249,7 +249,7 @@
     <name>CheckUpdate</name>
     <message>
       <source>Auto Updater</source>
-      <translation>Actualizador Automático</translation>
+      <translation>Actualizador automático</translation>
     </message>
     <message>
       <source>Error</source>
@@ -403,7 +403,7 @@
     <name>ControlSettings</name>
     <message>
       <source>Configure Controls</source>
-      <translation>Configurar Controles</translation>
+      <translation>Configurar controles</translation>
     </message>
     <message>
       <source>D-Pad</source>
@@ -431,11 +431,11 @@
     </message>
     <message>
       <source>Config Selection</source>
-      <translation>Selección de Configuraciones</translation>
+      <translation>Selección de configuraciones</translation>
     </message>
     <message>
       <source>Common Config</source>
-      <translation>Configuración Estándar</translation>
+      <translation>Configuración estándar</translation>
     </message>
     <message>
       <source>Use per-game configs</source>
@@ -455,11 +455,11 @@
     </message>
     <message>
       <source>Override Lightbar Color</source>
-      <translation>Reemplazar el Color de la Barra de Luz</translation>
+      <translation>Reemplazar el color de la barra de luz</translation>
     </message>
     <message>
       <source>Override Color</source>
-      <translation>Reemplazar Color</translation>
+      <translation>Reemplazar color</translation>
     </message>
     <message>
       <source>Unable to Save</source>
