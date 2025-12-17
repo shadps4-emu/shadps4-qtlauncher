@@ -623,7 +623,7 @@
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>提示：右键点击可解除输入映射</translation>
     </message>
   </context>
   <context>
@@ -1220,7 +1220,7 @@
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>提示：右键点击可解除输入映射</translation>
     </message>
   </context>
   <context>
@@ -1430,7 +1430,7 @@
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>提示：右键点击可解除输入映射</translation>
     </message>
   </context>
   <context>
@@ -2923,11 +2923,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release.</source>
-      <translation type="unfinished">Unable to get hash of latest pre-release.</translation>
+      <translation>无法获取最新预发布版本的哈希值。</translation>
     </message>
     <message>
       <source>Downloading Pre-release (Nightly), please wait...</source>
-      <translation type="unfinished">Downloading Pre-release (Nightly), please wait...</translation>
+      <translation>正在下载预发布版本（夜间版），请稍候……</translation>
     </message>
   </context>
   <context>
