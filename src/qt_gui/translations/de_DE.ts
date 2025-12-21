@@ -622,7 +622,7 @@ Einzigartige Inputs können nicht öfters als einmal gebunden werden. Input-Dupl
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Tipp: Mit Rechtsklick kann die Zuordnung einer Eingabe entfernt werden</translation>
     </message>
   </context>
   <context>
@@ -1217,7 +1217,7 @@ Einzigartige Inputs können nicht öfters als einmal gebunden werden. Input-Dupl
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Tipp: Mit Rechtsklick kann die Zuordnung einer Eingabe entfernt werden</translation>
     </message>
   </context>
   <context>
@@ -1427,7 +1427,7 @@ Einzigartige Inputs können nicht öfters als einmal gebunden werden. Input-Dupl
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Tipp: Mit Rechtsklick kann die Zuordnung einer Eingabe entfernt werden</translation>
     </message>
   </context>
   <context>
@@ -2927,7 +2927,7 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
     </message>
     <message>
       <source>Downloading Pre-release (Nightly), please wait...</source>
-      <translation type="unfinished">Downloading Pre-release (Nightly), please wait...</translation>
+      <translation>Vorabversion (Nightly) wird downgeloadet, bitte warten...</translation>
     </message>
   </context>
   <context>

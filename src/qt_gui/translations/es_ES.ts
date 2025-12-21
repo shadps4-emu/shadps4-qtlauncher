@@ -249,7 +249,7 @@
     <name>CheckUpdate</name>
     <message>
       <source>Auto Updater</source>
-      <translation>Actualizador Automático</translation>
+      <translation>Actualizador automático</translation>
     </message>
     <message>
       <source>Error</source>
@@ -403,7 +403,7 @@
     <name>ControlSettings</name>
     <message>
       <source>Configure Controls</source>
-      <translation>Configurar Controles</translation>
+      <translation>Configurar controles</translation>
     </message>
     <message>
       <source>D-Pad</source>
@@ -431,11 +431,11 @@
     </message>
     <message>
       <source>Config Selection</source>
-      <translation>Selección de Configuraciones</translation>
+      <translation>Selección de configuraciones</translation>
     </message>
     <message>
       <source>Common Config</source>
-      <translation>Configuración Estándar</translation>
+      <translation>Configuración estándar</translation>
     </message>
     <message>
       <source>Use per-game configs</source>
@@ -455,11 +455,11 @@
     </message>
     <message>
       <source>Override Lightbar Color</source>
-      <translation>Reemplazar el Color de la Barra de Luz</translation>
+      <translation>Reemplazar el color de la barra de luz</translation>
     </message>
     <message>
       <source>Override Color</source>
-      <translation>Reemplazar Color</translation>
+      <translation>Reemplazar color</translation>
     </message>
     <message>
       <source>Unable to Save</source>
@@ -623,7 +623,7 @@
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Consejo: puedes desasignar acciones de entrada haciendo clic derecho</translation>
     </message>
   </context>
   <context>
@@ -1218,7 +1218,7 @@
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Consejo: puedes desasignar acciones de entrada haciendo clic derecho</translation>
     </message>
   </context>
   <context>
@@ -1428,7 +1428,7 @@
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Consejo: puedes desasignar acciones de entrada haciendo clic derecho</translation>
     </message>
   </context>
   <context>
@@ -2917,11 +2917,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release.</source>
-      <translation type="unfinished">Unable to get hash of latest pre-release.</translation>
+      <translation>No se ha podido obtener el hash de la última versión prelanzamiento.</translation>
     </message>
     <message>
       <source>Downloading Pre-release (Nightly), please wait...</source>
-      <translation type="unfinished">Downloading Pre-release (Nightly), please wait...</translation>
+      <translation>Descargando versión prelanzamiento («nightly»), espera...</translation>
     </message>
   </context>
   <context>
