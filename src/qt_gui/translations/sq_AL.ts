@@ -2987,8 +2987,7 @@ Skedari mund të jetë tashmë në përdorim në bazë.</translation>
     <message>
       <source>Failed to read the figure file(%1)!
 File was too small.</source>
-      <translation type="unfinished">Failed to read the figure file(%1)!
-File was too small.</translation>
+      <translation>Nuk u lexua dot skedari i figurës (%1)! Skedari ishte shumë i vogël.</translation>
     </message>
   </context>
   <context>
@@ -3007,11 +3006,11 @@ File was too small.</translation>
     </message>
     <message>
       <source>--Unknown--</source>
-      <translation type="unfinished">--Unknown--</translation>
+      <translation>--I panjohur--</translation>
     </message>
     <message>
       <source>Figure Number:</source>
-      <translation type="unfinished">Figure Number:</translation>
+      <translation>Numri i Figurës:</translation>
     </message>
     <message>
       <source>Series:</source>
@@ -3052,7 +3051,7 @@ File was too small.</translation>
     <message>
       <source>Failed to create figure file:
 %1</source>
-      <translation type="unfinished">Failed to create figure file:
+      <translation>Nuk u krijua dot skedari i figurës:
 %1</translation>
     </message>
   </context>
@@ -3269,7 +3268,7 @@ File was too small.</source>
     <message>
       <source>Failed to create skylander file:
 %1</source>
-      <translation type="unfinished">Failed to create skylander file:
+      <translation>Nuk u krijua dot skedari i skylander-it:
 %1</translation>
     </message>
   </context>
