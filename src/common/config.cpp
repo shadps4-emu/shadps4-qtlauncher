@@ -222,15 +222,6 @@ static string config_version = Common::g_scm_rev;
 // These entries aren't stored in the config
 static bool overrideControllerColor = false;
 static int controllerCustomColorRGB[3] = {0, 0, 255};
-static bool isGameRunning = false;
-
-bool getGameRunning() {
-    return isGameRunning;
-}
-
-void setGameRunning(bool running) {
-    isGameRunning = running;
-}
 
 std::filesystem::path getSysModulesPath() {
     if (sys_modules_path.empty()) {

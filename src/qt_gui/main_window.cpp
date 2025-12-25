@@ -18,6 +18,7 @@
 #include "common/scm_rev.h"
 #include "common/versions.h"
 #include "control_settings.h"
+#include "core/emulator_state.h"
 #include "dimensions_dialog.h"
 #include "game_install_dialog.h"
 #include "hotkeys.h"
@@ -140,7 +141,7 @@ void MainWindow::StopGame() {
 }
 
 void MainWindow::onGameClosed() {
-    Config::setGameRunning(false);
+    EmulatorState::GetInstance()->SetGameRunning(false);
     is_paused = false;
 
     // clear dialogs when game closed
@@ -160,7 +161,7 @@ void MainWindow::toggleLabelsUnderIcons() {
     bool showLabels = ui->toggleLabelsAct->isChecked();
     m_gui_settings->SetValue(gui::mw_showLabelsUnderIcons, showLabels);
     UpdateToolbarLabels();
-    if (Config::getGameRunning()) {
+    if (EmulatorState::GetInstance()->IsGameRunning()) {
         UpdateToolbarButtons();
     }
 }
@@ -485,7 +486,7 @@ void MainWindow::CreateConnects() {
 
     connect(ui->configureAct, &QAction::triggered, this, [this]() {
         auto settingsDialog = new SettingsDialog(m_gui_settings, m_compat_info, m_ipc_client, this,
-                                                 Config::getGameRunning());
+                                                 EmulatorState::GetInstance()->IsGameRunning());
 
         connect(settingsDialog, &SettingsDialog::LanguageChanged, this,
                 &MainWindow::OnLanguageChanged);
@@ -520,7 +521,7 @@ void MainWindow::CreateConnects() {
 
     connect(ui->settingsButton, &QPushButton::clicked, this, [this]() {
         auto settingsDialog = new SettingsDialog(m_gui_settings, m_compat_info, m_ipc_client, this,
-                                                 Config::getGameRunning());
+                                                 EmulatorState::GetInstance()->IsGameRunning());
 
         connect(settingsDialog, &SettingsDialog::LanguageChanged, this,
                 &MainWindow::OnLanguageChanged);
@@ -555,13 +556,15 @@ void MainWindow::CreateConnects() {
 
     connect(ui->controllerButton, &QPushButton::clicked, this, [this]() {
         ControlSettings* remapWindow = new ControlSettings(
-            m_game_info, m_ipc_client, Config::getGameRunning(), runningGameSerial, this);
+            m_game_info, m_ipc_client, EmulatorState::GetInstance()->IsGameRunning(),
+            runningGameSerial, this);
         remapWindow->exec();
     });
 
     connect(ui->keyboardButton, &QPushButton::clicked, this, [this]() {
-        auto kbmWindow = new KBMSettings(m_game_info, m_ipc_client, Config::getGameRunning(),
-                                         runningGameSerial, this);
+        auto kbmWindow =
+            new KBMSettings(m_game_info, m_ipc_client,
+                            EmulatorState::GetInstance()->IsGameRunning(), runningGameSerial, this);
         kbmWindow->exec();
     });
 
@@ -584,7 +587,8 @@ void MainWindow::CreateConnects() {
     });
 
     connect(ui->configureHotkeys, &QAction::triggered, this, [this]() {
-        auto hotkeyDialog = new Hotkeys(m_ipc_client, Config::getGameRunning(), this);
+        auto hotkeyDialog =
+            new Hotkeys(m_ipc_client, EmulatorState::GetInstance()->IsGameRunning(), this);
         hotkeyDialog->exec();
     });
 
@@ -1338,7 +1342,7 @@ bool MainWindow::eventFilter(QObject* obj, QEvent* event) {
 }
 
 void MainWindow::StartEmulator(std::filesystem::path path, QStringList args) {
-    if (Config::getGameRunning()) {
+    if (EmulatorState::GetInstance()->IsGameRunning()) {
         QMessageBox::critical(nullptr, tr("Run Game"), QString(tr("Game is already running!")));
         return;
     }
@@ -1366,7 +1370,7 @@ tr("No emulator version was selected.\nThe Version Manager menu will then open.\
 
     final_args.append(args);
 
-    Config::setGameRunning(true);
+    EmulatorState::GetInstance()->SetGameRunning(true);
     last_game_path = path;
 
     QString workDir = QDir::currentPath();
@@ -1376,7 +1380,7 @@ tr("No emulator version was selected.\nThe Version Manager menu will then open.\
 
 void MainWindow::StartEmulatorExecutable(std::filesystem::path emuPath, QString gameArg,
                                          QStringList args, bool disable_ipc) {
-    if (Config::getGameRunning()) {
+    if (EmulatorState::GetInstance()->IsGameRunning()) {
         QMessageBox::critical(nullptr, tr("Run Emulator"),
                               QString(tr("Emulator is already running!")));
         return;
@@ -1436,7 +1440,7 @@ void MainWindow::StartEmulatorExecutable(std::filesystem::path emuPath, QString 
         return;
     }
 
-    Config::setGameRunning(true);
+    EmulatorState::GetInstance()->SetGameRunning(true);
     QString workDir = QDir::currentPath();
     m_ipc_client->startEmulator(fileInfo, args, workDir, disable_ipc);
 }

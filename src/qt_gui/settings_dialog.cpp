@@ -22,6 +22,7 @@
 #include "background_music_player.h"
 #include "common/logging/backend.h"
 #include "common/logging/filter.h"
+#include "core/emulator_state.h"
 #include "log_presets_dialog.h"
 #include "sdl_event_wrapper.h"
 #include "settings_dialog.h"
@@ -243,7 +244,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         connect(ui->horizontalVolumeSlider, &QSlider::valueChanged, this, [this](int value) {
             VolumeSliderChange(value);
 
-            if (Config::getGameRunning())
+            if (EmulatorState::GetInstance()->IsGameRunning())
                 m_ipc_client->adjustVol(value, is_game_specific);
         });
 
@@ -448,7 +449,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         ui->RCASValue->setText(RCASValue);
     });
 
-    if (Config::getGameRunning()) {
+    if (EmulatorState::GetInstance()->IsGameRunning()) {
         connect(ui->RCASSlider, &QSlider::valueChanged, this,
                 [this](int value) { m_ipc_client->setRcasAttenuation(value); });
         connect(ui->FSRCheckBox, &QCheckBox::checkStateChanged, this,
@@ -1213,7 +1214,7 @@ void SettingsDialog::SyncRealTimeWidgetstoConfig() {
     is_game_specific ? Config::resetGameSpecificValue("volumeSlider")
                      : Config::setVolumeSlider(sliderValue);
 
-    if (Config::getGameRunning()) {
+    if (EmulatorState::GetInstance()->IsGameRunning()) {
         m_ipc_client->setFsr(toml::find_or<bool>(gs_data, "GPU", "fsrEnabled", true));
         m_ipc_client->setRcas(toml::find_or<bool>(gs_data, "GPU", "rcasEnabled", true));
         m_ipc_client->setRcasAttenuation(

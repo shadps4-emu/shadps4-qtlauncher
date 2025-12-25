@@ -32,6 +32,7 @@
 #include "common/logging/log.h"
 #include "common/memory_patcher.h"
 #include "common/path_util.h"
+#include "core/emulator_state.h"
 
 CheatsPatches::CheatsPatches(std::shared_ptr<gui_settings> gui_settings,
                              std::shared_ptr<IpcClient> ipc_client, const QString& gameName,
@@ -1246,7 +1247,7 @@ void CheatsPatches::applyCheat(const QString& modName, bool enabled) {
     if (!m_cheats.contains(modName))
         return;
 
-    if (!Config::getGameRunning() && enabled) {
+    if (!EmulatorState::GetInstance()->IsGameRunning() && enabled) {
         QMessageBox::critical(this, tr("Error"),
                               tr("Can't apply cheats before the game is started"));
         uncheckAllCheatCheckBoxes();
@@ -1262,7 +1263,7 @@ void CheatsPatches::applyCheat(const QString& modName, bool enabled) {
         std::string offsetStr = memoryMod.offset.toStdString();
         std::string valueStr = value.toStdString();
 
-        if (!Config::getGameRunning())
+        if (!EmulatorState::GetInstance()->IsGameRunning())
             return;
 
         // Determine if the hint field is present

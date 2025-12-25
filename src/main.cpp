@@ -13,6 +13,7 @@
 #ifdef _WIN32
 #include <windows.h>
 #endif
+#include <core/emulator_state.h>
 
 // Custom message handler to ignore Qt logs
 void customMessageHandler(QtMsgType, const QMessageLogContext&, const QString&) {}
@@ -29,6 +30,8 @@ int main(int argc, char* argv[]) {
     QApplication a(argc, argv);
 
     QApplication::setDesktopFileName("net.shadps4.qtlauncher");
+    std::shared_ptr<EmulatorState> m_emu_state = std::make_shared<EmulatorState>();
+    EmulatorState::SetInstance(m_emu_state);
 
     // Load configurations and initialize Qt application
     const auto user_dir = Common::FS::GetUserPath(Common::FS::PathType::UserDir);
