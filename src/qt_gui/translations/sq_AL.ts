@@ -2881,7 +2881,7 @@ Zgjidh cilën skedë do të hapet; parazgjedhja është General.</translation>
     </message>
     <message>
       <source>Pre-release updated successfully</source>
-      <translation>U përditësua me sukses versioni paraprak</translation>
+      <translation>Versioni paraprak u përditësua me sukses</translation>
     </message>
     <message>
       <source>Failed to create the update script file</source>
