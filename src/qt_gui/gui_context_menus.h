@@ -19,6 +19,7 @@
 #include "common/path_util.h"
 #include "common/scm_rev.h"
 #include "compatibility_info.h"
+#include "core/emulator_state.h"
 #include "create_shortcut.h"
 #include "game_info.h"
 #include "gui_settings.h"
@@ -446,9 +447,9 @@ public:
         }
 
         if (selected == &gameConfigConfigure || selected == &gameConfigCreate) {
-            auto settingsWindow =
-                new SettingsDialog(m_gui_settings, m_compat_info, m_ipc_client, widget,
-                                   Config::getGameRunning(), true, serialStr.toStdString());
+            auto settingsWindow = new SettingsDialog(
+                m_gui_settings, m_compat_info, m_ipc_client, widget,
+                EmulatorState::GetInstance()->IsGameRunning(), true, serialStr.toStdString());
             settingsWindow->exec();
         }
 

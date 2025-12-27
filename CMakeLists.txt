@@ -299,6 +299,8 @@ set(CORE src/core/file_format/elf.cpp
          src/core/file_format/psf.h
          src/core/file_format/trp.cpp
          src/core/file_format/trp.h
+         src/core/emulator_state.cpp
+         src/core/emulator_state.h
 )
 
 set(INPUT src/input/controller.cpp
