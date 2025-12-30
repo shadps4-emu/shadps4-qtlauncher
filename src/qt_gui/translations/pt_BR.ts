@@ -607,23 +607,23 @@
     </message>
     <message>
       <source>Left Stick Deadzone</source>
-      <translation type="unfinished">Left Stick Deadzone</translation>
+      <translation>Zona Morta do Analógico Esquerdo</translation>
     </message>
     <message>
       <source>Min Deadzone (def:2 max:127)</source>
-      <translation type="unfinished">Min Deadzone (def:2 max:127)</translation>
+      <translation>Zona Morta Minima (pad:2 max:127)</translation>
     </message>
     <message>
       <source>Max Deadzone (def:127 max:127)</source>
-      <translation type="unfinished">Max Deadzone (def:127 max:127)</translation>
+      <translation>Zona Morta Máxima (pad:127 max:127)</translation>
     </message>
     <message>
       <source>Right Stick Deadzone</source>
-      <translation type="unfinished">Right Stick Deadzone</translation>
+      <translation>Zona Morta do Analógico Direito</translation>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Dica: Desmapear entradas com botão direito</translation>
     </message>
   </context>
   <context>
@@ -1068,11 +1068,11 @@
     </message>
     <message>
       <source>Create Shortcut for Selected Emulator Version</source>
-      <translation type="unfinished">Create Shortcut for Selected Emulator Version</translation>
+      <translation>Criar Atalho para a Versão do Emulador Selecionado</translation>
     </message>
     <message>
       <source>Create Shortcut for Specified Emulator Version</source>
-      <translation type="unfinished">Create Shortcut for Specified Emulator Version</translation>
+      <translation>Criar Atalho para uma Versão Específica do Emulador</translation>
     </message>
     <message>
       <source>Create Shortcut</source>
@@ -1096,7 +1096,7 @@
     </message>
     <message>
       <source>Delete Shader Cache</source>
-      <translation type="unfinished">Delete Shader Cache</translation>
+      <translation>Apagar Cache de Shader</translation>
     </message>
     <message>
       <source>This game does not have any saved Shader Cache to delete!</source>
@@ -2788,7 +2788,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Do you want to download the version</source>
-      <translation>Deseja excluir a versão</translation>
+      <translation>Deseja baixar a versão</translation>
     </message>
     <message>
       <source>No files available for this platform.</source>
