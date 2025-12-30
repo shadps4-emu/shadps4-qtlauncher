@@ -1227,7 +1227,7 @@
     <name>IpcClient</name>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation>找不到模拟器可执行文件</translation>
+      <translation>找不到模拟器可执行程序</translation>
     </message>
   </context>
   <context>
