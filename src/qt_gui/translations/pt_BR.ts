@@ -1068,7 +1068,7 @@
     </message>
     <message>
       <source>Create Shortcut for Selected Emulator Version</source>
-      <translation>Criar Atalho para a Versão do Emulador Selecionado</translation>
+      <translation>Criar Atalho para a Versão Selecionada do Emulador</translation>
     </message>
     <message>
       <source>Create Shortcut for Specified Emulator Version</source>
@@ -1100,11 +1100,11 @@
     </message>
     <message>
       <source>This game does not have any saved Shader Cache to delete!</source>
-      <translation type="unfinished">This game does not have any saved Shader Cache to delete!</translation>
+      <translation>Este jogo não possui nenhum Cache de Shaders salvo para excluir!</translation>
     </message>
     <message>
       <source>Shader Cache</source>
-      <translation type="unfinished">Shader Cache</translation>
+      <translation>Cache de Shader</translation>
     </message>
   </context>
   <context>
@@ -1218,7 +1218,7 @@
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Dica: Desmapear entradas com botão direito</translation>
     </message>
   </context>
   <context>
@@ -1428,7 +1428,7 @@
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Dica: Desmapear entradas com botão direito</translation>
     </message>
   </context>
   <context>
@@ -1758,7 +1758,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Invalid game argument provided</source>
-      <translation type="unfinished">Invalid game argument provided</translation>
+      <translation>Argumento inválido do jogo</translation>
     </message>
     <message>
       <source>None</source>
@@ -2569,11 +2569,11 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Cannot create portable launcher folder</source>
-      <translation type="unfinished">Cannot create portable launcher folder</translation>
+      <translation>Não é possível criar a pasta portátil do usuário</translation>
     </message>
     <message>
       <source>Portable launcherDir folder created</source>
-      <translation type="unfinished">Portable launcherDir folder created</translation>
+      <translation>Pasta portátil do usuário criada</translation>
     </message>
     <message>
       <source>USB Device</source>
@@ -2601,19 +2601,19 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Enable Shader Cache</source>
-      <translation type="unfinished">Enable Shader Cache</translation>
+      <translation>Habilitar Cache de Shader</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file</source>
-      <translation type="unfinished">Compress the Shader Cache files into a zip file</translation>
+      <translation>Comprimir os arquivos de Cache de Shader em um arquivo zip</translation>
     </message>
     <message>
       <source>Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</source>
-      <translation type="unfinished">Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</translation>
+      <translation>Habilitar Cache de Shader:\nArmazenar shaders compilados para evitar recompilações, reduzir travamento.</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
-      <translation type="unfinished">Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</translation>
+      <translation>Compacte os arquivos de Cache do Shader em um arquivo zip:\nOs arquivos de cache do shader são armazenados dentro de um único arquivo zip em vez de vários arquivos separados.</translation>
     </message>
   </context>
   <context>
@@ -2920,11 +2920,11 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release.</source>
-      <translation type="unfinished">Unable to get hash of latest pre-release.</translation>
+      <translation>Não foi possível obter o hash do pre-release mais recente.</translation>
     </message>
     <message>
       <source>Downloading Pre-release (Nightly), please wait...</source>
-      <translation type="unfinished">Downloading Pre-release (Nightly), please wait...</translation>
+      <translation>Baixando a versão de Pre-release(Nightly), por favor aguarde...</translation>
     </message>
   </context>
   <context>
@@ -2939,19 +2939,19 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Nenhum</translation>
     </message>
     <message>
       <source>Clear</source>
-      <translation type="unfinished">Clear</translation>
+      <translation>Limpar</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Criar</translation>
     </message>
     <message>
       <source>Load</source>
-      <translation type="unfinished">Load</translation>
+      <translation>Carregar</translation>
     </message>
     <message>
       <source>Move</source>
@@ -3158,7 +3158,7 @@ File was too small.</translation>
     </message>
     <message>
       <source>--Unknown--</source>
-      <translation type="unfinished">--Unknown--</translation>
+      <translation>--Desconhecido--</translation>
     </message>
     <message>
       <source>Figure Number:</source>
@@ -3166,15 +3166,15 @@ File was too small.</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Criar</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Cancelar</translation>
     </message>
     <message>
       <source>Error converting value</source>
-      <translation type="unfinished">Error converting value</translation>
+      <translation>Erro ao converter o valor</translation>
     </message>
     <message>
       <source>Figure number entered is invalid!</source>
@@ -3246,7 +3246,7 @@ File was too small.</translation>
     </message>
     <message>
       <source>Error converting value</source>
-      <translation type="unfinished">Error converting value</translation>
+      <translation>Erro ao converter o valor</translation>
     </message>
     <message>
       <source>ID entered is invalid!</source>
