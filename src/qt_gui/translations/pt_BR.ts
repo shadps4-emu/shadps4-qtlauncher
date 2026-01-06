@@ -1766,23 +1766,23 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Manage Skylanders</source>
-      <translation type="unfinished">Manage Skylanders</translation>
+      <translation>Gerenciar Skylanders</translation>
     </message>
     <message>
       <source>Manage Infinity Figures</source>
-      <translation type="unfinished">Manage Infinity Figures</translation>
+      <translation>Gerenciar Bonecos Infinity</translation>
     </message>
     <message>
       <source>Manage Dimensions Toypad</source>
-      <translation type="unfinished">Manage Dimensions Toypad</translation>
+      <translation>Gerenciar Toypad Dimensions</translation>
     </message>
     <message>
       <source>Game Log</source>
-      <translation type="unfinished">Game Log</translation>
+      <translation>Registro do Jogo</translation>
     </message>
     <message>
       <source>Show Game Log</source>
-      <translation type="unfinished">Show Game Log</translation>
+      <translation>Mostrar Registro do Jogo</translation>
     </message>
   </context>
   <context>
@@ -2337,7 +2337,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Present Mode</source>
-      <translation type="unfinished">Present Mode</translation>
+      <translation>Modo de Apresentação</translation>
     </message>
     <message>
       <source>Mailbox (Vsync)</source>
@@ -2357,7 +2357,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</source>
-      <translation type="unfinished">Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</translation>
+      <translation>Modo de Apresentação:\nConfigura como a saída de vídeo será apresentada na sua tela.\n\nMailbox: Os quadros sincronizam com a taxa de atualização da sua tela. Novos quadros substituirão quaisquer quadros pendentes. Reduz a latência, mas pode pular quadros se o desempenho estiver atrasado.\nFifo: Os quadros sincronizam com a taxa de atualização da sua tela. Novos quadros serão colocados em fila atrás dos quadros pendentes. Garante que todos os quadros sejam apresentados, mas pode aumentar a latência.\nImmediate: Os quadros são apresentados imediatamente na sua tela quando estiverem prontos. Pode resultar em tearing (rasgos na imagem).</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
@@ -2405,7 +2405,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</source>
-      <translation type="unfinished">Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</translation>
+      <translation>Ativar Controles de Movimento:\nQuando ativado, usará o controle de movimento do controle, se houver suporte.</translation>
     </message>
     <message>
       <source>Vblank Frequency</source>
@@ -2425,11 +2425,11 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Set &quot;PSN signed-in&quot; to True</source>
-      <translation type="unfinished">Set &quot;PSN signed-in&quot; to True</translation>
+      <translation>Definir &quot;PSN signed-in&quot; como Verdadeiro</translation>
     </message>
     <message>
       <source>Set &quot;Network Connected&quot; to True</source>
-      <translation type="unfinished">Set &quot;Network Connected&quot; to True</translation>
+      <translation>Definir &quot;Network Connected&quot; como Verdadeiro</translation>
     </message>
     <message>
       <source>Miscellaneous</source>
@@ -2457,23 +2457,23 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Enable Direct Memory Access:\nEnables arbitrary memory access from the GPU to CPU memory.</source>
-      <translation type="unfinished">Enable Direct Memory Access:\nEnables arbitrary memory access from the GPU to CPU memory.</translation>
+      <translation>Ativar Acesso Direto à Memória:\nPermite o acesso arbitrário à memória da GPU para a memória da CPU.</translation>
     </message>
     <message>
       <source>Enable PS4 Neo Mode:\nAdds support for PS4 Pro emulation and memory size. Currently causes instability in a large number of tested games.</source>
-      <translation type="unfinished">Enable PS4 Neo Mode:\nAdds support for PS4 Pro emulation and memory size. Currently causes instability in a large number of tested games.</translation>
+      <translation>Ativar Modo PS4 Neo:\nAdiciona suporte para emulação e tamanho de memória do PS4 Pro. Atualmente causa instabilidade em um grande número de jogos testados.</translation>
     </message>
     <message>
       <source>Enable Devkit Console Mode:\nAdds support for Devkit console memory size.</source>
-      <translation type="unfinished">Enable Devkit Console Mode:\nAdds support for Devkit console memory size.</translation>
+      <translation>Ativar Modo Console Devkit:\nAdiciona suporte para o tamanho de memória do console Devkit.</translation>
     </message>
     <message>
       <source>Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</source>
-      <translation type="unfinished">Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</translation>
+      <translation>Definir Network Connected como Verdadeiro:\nForça os jogos a detectarem uma conexão de rede ativa. Recursos online reais ainda não são suportados.</translation>
     </message>
     <message>
       <source>Set PSN Signed-in to True:\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported.</source>
-      <translation type="unfinished">Set PSN Signed-in to True:\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported.</translation>
+      <translation>Definir PSN Signed-in como Verdadeiro:\nForça os jogos a detectarem um login ativo na PSN. Recursos reais da PSN não são suportados.</translation>
     </message>
     <message>
       <source>Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
@@ -2501,11 +2501,11 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Additional DMem Allocation</source>
-      <translation type="unfinished">Additional DMem Allocation</translation>
+      <translation>Alocação Adicional de DMem</translation>
     </message>
     <message>
       <source>Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</source>
-      <translation type="unfinished">Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</translation>
+      <translation>Alocação Adicional de DMem:\nForça a alocação da quantidade especificada de DMem adicional. Causa travamentos ou problemas em alguns jogos.</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</source>
@@ -2545,7 +2545,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Ativar Validação Assistida por GPU:\nInstrumenta os shaders com código que valida se eles estão se comportando corretamente.\nIsso reduzirá o desempenho e alterará provavelmente o comportamento da emulação.\nVocê precisa do Vulkan SDK para que isso funcione.</translation>
     </message>
     <message>
       <source>GUI Language</source>
@@ -2565,7 +2565,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
-      <translation type="unfinished">GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</translation>
+      <translation>Atualizações da GUI:\nRelease: Versões oficiais lançadas todos os meses que podem estar muito desatualizadas, mas são mais confiáveis e testadas.\nNightly: Versões de desenvolvimento que possuem todos os recursos e correções mais recentes, mas podem conter bugs e são menos estáveis.\n\n*Esta atualização aplica-se apenas à interface de usuário Qt. Para atualizar o núcleo do emulador, por favor use o menu &apos;Version Manager&apos;.</translation>
     </message>
     <message>
       <source>Cannot create portable launcher folder</source>
@@ -2585,19 +2585,19 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Skylander Portal</source>
-      <translation type="unfinished">Skylander Portal</translation>
+      <translation>Portal Skylander</translation>
     </message>
     <message>
       <source>Infinity Base</source>
-      <translation type="unfinished">Infinity Base</translation>
+      <translation>Base Infinity</translation>
     </message>
     <message>
       <source>Dimensions Toypad</source>
-      <translation type="unfinished">Dimensions Toypad</translation>
+      <translation>Toypad Dimensions</translation>
     </message>
     <message>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
-      <translation type="unfinished">USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</translation>
+      <translation>Dispositivo USB:\nDispositivo USB Real: Usa um dispositivo USB real conectado ao sistema.\nPortal Skylander: Emula um Portal do Poder de Skylander.\nBase Infinity: Emula uma Base Disney Infinity.\nToypad Dimensions: Emula um Toypad de Lego Dimensions.</translation>
     </message>
     <message>
       <source>Enable Shader Cache</source>
@@ -2931,11 +2931,11 @@ Selecione uma versão do emulador no painel direito.</translation>
     <name>dimensions_dialog</name>
     <message>
       <source>Dimensions Manager</source>
-      <translation type="unfinished">Dimensions Manager</translation>
+      <translation>Gerenciador de Dimensions</translation>
     </message>
     <message>
       <source>Active Dimensions Figures:</source>
-      <translation type="unfinished">Active Dimensions Figures:</translation>
+      <translation>Bonecos Dimensions Ativos:</translation>
     </message>
     <message>
       <source>None</source>
@@ -2955,15 +2955,15 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Move</source>
-      <translation type="unfinished">Move</translation>
+      <translation>Mover</translation>
     </message>
     <message>
       <source>Unknown Figure</source>
-      <translation type="unfinished">Unknown Figure</translation>
+      <translation>Boneco Desconhecido</translation>
     </message>
     <message>
       <source>Select Dimensions File</source>
-      <translation type="unfinished">Select Dimensions File</translation>
+      <translation>Selecionar Arquivo de Dimensions</translation>
     </message>
     <message>
       <source>Dimensions Figure (*.bin);;</source>
@@ -2976,8 +2976,8 @@ Selecione uma versão do emulador no painel direito.</translation>
     <message>
       <source>Failed to open the figure file(%1)!
 File may already be in use on the base.</source>
-      <translation type="unfinished">Failed to open the figure file(%1)!
-File may already be in use on the base.</translation>
+      <translation>Falha ao abrir o arquivo de boneco (%1)! 
+O arquivo pode já estar em uso na base.</translation>
     </message>
     <message>
       <source>Failed to read the figure file!</source>
@@ -2986,8 +2986,8 @@ File may already be in use on the base.</translation>
     <message>
       <source>Failed to read the figure file(%1)!
 File was too small.</source>
-      <translation type="unfinished">Failed to read the figure file(%1)!
-File was too small.</translation>
+      <translation>Falha ao ler o arquivo de boneco (%1)! 
+O arquivo é muito pequeno.</translation>
     </message>
   </context>
   <context>
@@ -3136,8 +3136,8 @@ File was too small.</translation>
     <message>
       <source>Failed to open the figure file(%1)!
 File may already be in use on the base.</source>
-      <translation type="unfinished">Failed to open the figure file(%1)!
-File may already be in use on the base.</translation>
+      <translation>Falha ao abrir o arquivo de imagem (%1)! 
+O arquivo pode já estar em uso pelo sistema base.</translation>
     </message>
     <message>
       <source>Failed to read the figure file!</source>
@@ -3146,8 +3146,8 @@ File may already be in use on the base.</translation>
     <message>
       <source>Failed to read the figure file(%1)!
 File was too small.</source>
-      <translation type="unfinished">Failed to read the figure file(%1)!
-File was too small.</translation>
+      <translation>Falha ao ler o arquivo de imagem (%1)! 
+O arquivo é muito pequeno.</translation>
     </message>
   </context>
   <context>
@@ -3234,7 +3234,7 @@ File was too small.</translation>
     </message>
     <message>
       <source>Variant:</source>
-      <translation type="unfinished">Variant:</translation>
+      <translation>Variante:</translation>
     </message>
     <message>
       <source>Create</source>
@@ -3250,23 +3250,23 @@ File was too small.</translation>
     </message>
     <message>
       <source>ID entered is invalid!</source>
-      <translation type="unfinished">ID entered is invalid!</translation>
+      <translation>O ID inserido é inválido!</translation>
     </message>
     <message>
       <source>Variant entered is invalid!</source>
-      <translation type="unfinished">Variant entered is invalid!</translation>
+      <translation>A variante inserida é inválida!</translation>
     </message>
     <message>
       <source>Create Skylander File</source>
-      <translation type="unfinished">Create Skylander File</translation>
+      <translation>Criar Arquivo Skylander</translation>
     </message>
     <message>
       <source>Skylander Object (*.sky);;All Files (*)</source>
-      <translation type="unfinished">Skylander Object (*.sky);;All Files (*)</translation>
+      <translation>Objeto Skylander (*.sky);;Todos os Arquivos (*)</translation>
     </message>
     <message>
       <source>Failed to create skylander file!</source>
-      <translation type="unfinished">Failed to create skylander file!</translation>
+      <translation>Falha ao criar arquivo skylander!</translation>
     </message>
     <message>
       <source>Failed to create skylander file:
@@ -3279,15 +3279,15 @@ File was too small.</translation>
     <name>skylander_dialog</name>
     <message>
       <source>Skylanders Manager</source>
-      <translation type="unfinished">Skylanders Manager</translation>
+      <translation>Gerenciador de Skylanders</translation>
     </message>
     <message>
       <source>Active Portal Skylanders:</source>
-      <translation type="unfinished">Active Portal Skylanders:</translation>
+      <translation>Skylanders no Portal Ativo:</translation>
     </message>
     <message>
       <source>Skylander %1</source>
-      <translation type="unfinished">Skylander %1</translation>
+      <translation>Skylander %1</translation>
     </message>
     <message>
       <source>Clear</source>
@@ -3307,7 +3307,7 @@ File was too small.</translation>
     </message>
     <message>
       <source>Skylander (*.sky *.bin *.dmp *.dump);;All Files (*)</source>
-      <translation type="unfinished">Skylander (*.sky *.bin *.dmp *.dump);;All Files (*)</translation>
+      <translation>Skylander (*.sky *.bin *.dmp *.dump);;Todos os Arquivos (*)</translation>
     </message>
     <message>
       <source>Failed to open the skylander file!</source>
@@ -3321,13 +3321,13 @@ O arquivo pode já estar em uso no portal.</translation>
     </message>
     <message>
       <source>Failed to read the skylander file!</source>
-      <translation type="unfinished">Failed to read the skylander file!</translation>
+      <translation>Falha ao ler o arquivo skylander!</translation>
     </message>
     <message>
       <source>Failed to read the skylander file(%1)!
 File was too small.</source>
-      <translation type="unfinished">Failed to read the skylander file(%1)!
-File was too small.</translation>
+      <translation>Falha ao ler o arquivo skylander (%1)! 
+O arquivo é muito pequeno.</translation>
     </message>
     <message>
       <source>Unknown (Id:%1 Var:%2)</source>
