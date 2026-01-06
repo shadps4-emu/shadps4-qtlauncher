@@ -2565,7 +2565,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
-      <translation>Atualizações da GUI:\nRelease: Versões oficiais lançadas todos os meses que podem estar muito desatualizadas, mas são mais confiáveis e testadas.\nNightly: Versões de desenvolvimento que possuem todos os recursos e correções mais recentes, mas podem conter bugs e são menos estáveis.\n\n*Esta atualização aplica-se apenas à interface de usuário Qt. Para atualizar o núcleo do emulador, por favor use o menu &apos;Version Manager&apos;.</translation>
+      <translation>Atualizações da GUI:\nRelease: Versões oficiais lançadas todos os meses que podem estar muito desatualizadas, mas são mais confiáveis e testadas.\nNightly: Versões de desenvolvimento que possuem todos os recursos e correções mais recentes, mas podem conter bugs e são menos estáveis.\n\n*Esta atualização aplica-se apenas à interface de usuário Qt. Para atualizar o núcleo do emulador, por favor use o menu &apos;Gerenciador de Versões&apos;.</translation>
     </message>
     <message>
       <source>Cannot create portable launcher folder</source>
