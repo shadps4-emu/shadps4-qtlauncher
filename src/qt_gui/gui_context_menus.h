@@ -182,8 +182,6 @@ public:
 
         menu.addMenu(compatibilityMenu);
 
-        compatibilityMenu->setEnabled(
-            m_gui_settings->GetValue(gui::glc_showCompatibility).toBool());
         viewCompatibilityReport->setEnabled(m_games[itemID].compatibility.status !=
                                             CompatibilityStatus::Unknown);
 
