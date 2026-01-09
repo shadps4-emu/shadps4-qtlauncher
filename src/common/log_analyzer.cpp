@@ -122,7 +122,7 @@ bool DetectLogTypeAndSetupEntries(std::filesystem::path const& path) {
     std::getline(log, first_line);
     first_line = trim(first_line);
     Entry version_test =
-        Entry("[Loader] <Info> emulator.cpp:# Run: Starting shadps4 emulator +", "", "");
+        Entry("[Loader] <Info> ^ emulator.cpp:# Run: Starting shadps4 emulator +", "", "");
     version_test.ProcessLine(first_line);
     if (version_test.occurrence_count == 1) {
         type = version_test.parsed_data[0].contains("WIP") ? Nightly : Release;

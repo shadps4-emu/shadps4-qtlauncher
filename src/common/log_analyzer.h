@@ -22,36 +22,36 @@ using std::string;
 static inline constexpr char const* const is_valid_report_suite = R"(
 #Entry
 -The game ID in the log does not match the game ID of the selected game.
-[Loader] <Info> emulator.cpp:# Run: Game id: @ Title: *
+[Loader] <Info> ^ emulator.cpp:# Run: Game id: @ Title: *
 #Entry
 -The emulator version wasn't an official release one.
-[Loader] <Info> emulator.cpp:# Run: Starting shadps4 emulator +
+[Loader] <Info> ^ emulator.cpp:# Run: Starting shadps4 emulator +
 
 #MatchValueEntry
 -The emulator version wasn't an official release one.
-[Loader] <Info> emulator.cpp:# Run: Remote https://github.com/@(/)*
+[Loader] <Info> ^ emulator.cpp:# Run: Remote https://github.com/@(/)*
 shadps4-emu
 #MatchValueEntry
 -The log type was not snyc.
-[Config] <Info> emulator.cpp:# Run: General LogType: @
+[Config] <Info> ^ emulator.cpp:# Run: General LogType: @
 sync
 #MatchValueEntry
 -PS4 Neo mode was turned on.
-[Config] <Info> emulator.cpp:# Run: General isNeo: @
+[Config] <Info> ^ emulator.cpp:# Run: General isNeo: @
 false
 
 #ShouldntExistEntry
 -isDevKit was turned on.
-[Kernel.Vmm] <Warning> memory.cpp:# SetupMemoryRegions: Config::isDevKitConsole is enabled! *
+[Kernel.Vmm] <Warning> ^ memory.cpp:# SetupMemoryRegions: Config::isDevKitConsole is enabled! *
 #ShouldntExistEntry
 -System modules were missing.
-[Loader] <Info> emulator.cpp:# LoadSystemModules: No HLE available for @{ module}
+[Loader] <Info> ^ emulator.cpp:# LoadSystemModules: No HLE available for @{ module}
 #ShouldntExistEntry
 -System modules were missing.
-[Loader] <Info> emulator.cpp:# LoadSystemModules: Can't Load @{ switching to HLE}
+[Loader] <Info> ^ emulator.cpp:# LoadSystemModules: Can't Load @{ switching to HLE}
 #ShouldntExistEntry
 -Patches were used.
-[Loader] <Info> memory_patcher.cpp:# PatchMemory: Applied patch: *
+[Loader] <Info> ^ memory_patcher.cpp:# PatchMemory: Applied patch: *
 )";
 
 inline int entry_id_counter = 1;
@@ -134,6 +134,15 @@ public:
                 in << string(line_it, line.end());
                 parsed_data.push_back(in.str().substr(0, in.str().size() - chars_to_discard));
                 return;
+            } else if (*pattern_it == '^') {
+                if (*line_it == '(') { // thread logging present
+                    while (line_it + 1 != line.end() && *line_it != ')') {
+                        ++line_it;
+                    }
+                    ++line_it;
+                } else { // skip space after
+                    ++pattern_it;
+                }
             } else {
                 if (line_it == line.end() || *pattern_it != *line_it++) {
                     return;
