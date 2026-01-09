@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: Copyright 2025 shadLauncher4 Project
+// SPDX-FileCopyrightText: Copyright 2025-2026 shadLauncher4 Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #pragma once
@@ -16,6 +16,8 @@ public:
 
     bool IsGameRunning() const;
     void SetGameRunning(bool running);
+    bool IsAutoPatchesLoadEnabled() const;
+    void SetAutoPatchesLoadEnabled(bool enable);
 
 private:
     static std::shared_ptr<EmulatorState> s_instance;
@@ -23,4 +25,5 @@ private:
 
     // state variables
     bool m_running = false;
+    bool m_load_patches_auto = true;
 };

@@ -198,7 +198,7 @@ static ConfigEntry<bool> pipelineCacheArchive(false);
 static ConfigEntry<bool> isDebugDump(false);
 static ConfigEntry<bool> isShaderDebug(false);
 static ConfigEntry<bool> isSeparateLogFilesEnabled(false);
-static ConfigEntry<bool> isFpsColor(true);
+static ConfigEntry<bool> showFpsCounter(false);
 static ConfigEntry<bool> logEnabled(true);
 
 // GUI
@@ -452,8 +452,12 @@ bool isPipelineCacheArchived() {
     return pipelineCacheArchive.get();
 }
 
-bool fpsColor() {
-    return isFpsColor.get();
+bool getShowFpsCounter() {
+    return showFpsCounter.get();
+}
+
+void setShowFpsCounter(bool enable, bool is_game_specific) {
+    showFpsCounter.set(enable, is_game_specific);
 }
 
 bool isLoggingEnabled() {
@@ -951,7 +955,7 @@ void load(const std::filesystem::path& path, bool is_game_specific) {
         isDebugDump.setFromToml(debug, "DebugDump", is_game_specific);
         isSeparateLogFilesEnabled.setFromToml(debug, "isSeparateLogFilesEnabled", is_game_specific);
         isShaderDebug.setFromToml(debug, "CollectShader", is_game_specific);
-        isFpsColor.setFromToml(debug, "FPSColor", is_game_specific);
+        showFpsCounter.setFromToml(debug, "showFpsCounter", is_game_specific);
         logEnabled.setFromToml(debug, "logEnabled", is_game_specific);
         current_version = toml::find_or<std::string>(debug, "ConfigVersion", current_version);
     }
@@ -1170,7 +1174,7 @@ void save(const std::filesystem::path& path, bool is_game_specific) {
         data["GPU"]["internalScreenWidth"] = internalScreenWidth.base_value;
         data["GPU"]["internalScreenHeight"] = internalScreenHeight.base_value;
         data["GPU"]["patchShaders"] = shouldPatchShaders.base_value;
-        data["Debug"]["FPSColor"] = isFpsColor.base_value;
+        data["Debug"]["showFpsCounter"] = showFpsCounter.base_value;
     }
 
     // Sorting of TOML sections
@@ -1194,8 +1198,6 @@ void setDefaultValues(bool is_game_specific) {
         isConnectedToNetwork.set(false, is_game_specific);
         directMemoryAccessEnabled.set(false, is_game_specific);
         extraDmemInMbytes.set(0, is_game_specific);
-        pipelineCacheEnable.set(false, is_game_specific);
-        pipelineCacheArchive.set(false, is_game_specific);
     }
 
     // Entries with game-specific settings that are in both the game-specific and global GUI
@@ -1244,6 +1246,8 @@ void setDefaultValues(bool is_game_specific) {
     vkHostMarkers.set(false, is_game_specific);
     vkGuestMarkers.set(false, is_game_specific);
     rdocEnable.set(false, is_game_specific);
+    pipelineCacheEnable.set(false, is_game_specific);
+    pipelineCacheArchive.set(false, is_game_specific);
 
     // GS - Debug
     isDebugDump.set(false, is_game_specific);
@@ -1278,7 +1282,7 @@ void setDefaultValues(bool is_game_specific) {
         internalScreenHeight.base_value = 720;
 
         // Debug
-        isFpsColor.base_value = true;
+        showFpsCounter.base_value = false;
     }
 }
 
@@ -1293,6 +1297,7 @@ hotkey_pause = f9
 hotkey_reload_inputs = f8
 hotkey_toggle_mouse_to_joystick = f7
 hotkey_toggle_mouse_to_gyro = f6
+hotkey_toggle_mouse_to_touchpad = delete
 hotkey_quit = lctrl, lshift, end
 )";
 }
