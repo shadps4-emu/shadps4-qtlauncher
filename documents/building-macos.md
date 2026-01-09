@@ -43,11 +43,11 @@ brew install qt@6
 
 Clone the repository recursively:
 ```
-git clone --recursive https://github.com/shadps4-emu/shadPS4QtLauncher.git
-cd shadPS4QtLauncher
+git clone --recursive https://github.com/shadps4-emu/shadPS4-qtlauncher.git
+cd shadPS4-qtlauncher
 ```
 
-Generate the build directory in the shadPS4QtLauncher directory:
+Generate the build directory in the shadPS4-qtlauncher directory:
 ```
 cmake -S . -B build/ -DCMAKE_OSX_ARCHITECTURES=x86_64
 ```
