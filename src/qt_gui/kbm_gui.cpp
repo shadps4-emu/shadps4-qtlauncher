@@ -486,13 +486,15 @@ void KBMSettings::SetUIValuestoMappings(std::string config_id) {
             } else if (output_string.contains("mouse_movement_params")) {
                 std::size_t comma_pos = line.find(',');
                 if (comma_pos != std::string::npos) {
-                    std::string DOstring = line.substr(equal_pos + 1, comma_pos);
-                    float DOffsetValue = std::stof(DOstring) * 100.0;
+                    const std::string old_locale = std::setlocale(LC_NUMERIC, nullptr);
+                    // Set locale to use a dot as a decimal separator
+                    std::setlocale(LC_NUMERIC, "C");
+                    std::string DOstring = line.substr(equal_pos + 1, comma_pos - (equal_pos + 1));
+                    float DOffsetValue = std::stof(DOstring) * 100.f;
                     int DOffsetInt = static_cast<int>(DOffsetValue);
                     ui->DeadzoneOffsetSlider->setValue(DOffsetInt);
                     QString LabelValue = QString::number(DOffsetInt / 100.0, 'f', 2);
                     ui->DeadzoneOffsetLabel->setText(LabelValue);
-
                     std::string SMSOstring = line.substr(comma_pos + 1);
                     std::size_t comma_pos2 = SMSOstring.find(',');
                     if (comma_pos2 != std::string::npos) {
@@ -510,6 +512,8 @@ void KBMSettings::SetUIValuestoMappings(std::string config_id) {
                         LabelValue = QString::number(SOffsetInt / 1000.0, 'f', 3);
                         ui->SpeedOffsetLabel->setText(LabelValue);
                     }
+                    // Restore locale
+                    std::setlocale(LC_NUMERIC, old_locale.c_str());
                 }
             }
         }
