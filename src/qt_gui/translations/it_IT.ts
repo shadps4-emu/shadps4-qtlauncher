@@ -1096,7 +1096,7 @@
     </message>
     <message>
       <source>Delete Shader Cache</source>
-      <translation>Elimina Cache Shader</translation>
+      <translation>Elimina Cache degli Shader</translation>
     </message>
     <message>
       <source>This game does not have any saved Shader Cache to delete!</source>
