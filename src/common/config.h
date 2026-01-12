@@ -27,6 +27,8 @@ void load(const std::filesystem::path& path, bool is_game_specific = false);
 void save(const std::filesystem::path& path, bool is_game_specific = false);
 void resetGameSpecificValue(std::string entry);
 
+bool getGameRunning();
+void setGameRunning(bool running);
 int getVolumeSlider();
 void setVolumeSlider(int volumeValue, bool is_game_specific = false);
 std::string getTrophyKey();
@@ -123,7 +125,8 @@ int getSpecialPadClass();
 bool getPSNSignedIn();
 void setPSNSignedIn(bool sign, bool is_game_specific = false);
 bool patchShaders(); // no set
-bool fpsColor();     // no set
+bool getShowFpsCounter();
+void setShowFpsCounter(bool enable, bool is_game_specific = false);
 bool isNeoModeConsole();
 void setNeoMode(bool enable, bool is_game_specific = false);
 bool isDevKitConsole();
