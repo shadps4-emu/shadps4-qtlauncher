@@ -45,7 +45,7 @@ Go through the Git for Windows installation as normal
 
 1. Open Git for Windows, navigate to a place where you want to store the shadPS4 source code folder
 2. Clone the repository by running  
-    `git clone --depth 1 --recursive https://github.com/shadps4-emu/shadPS4`
+    `git clone --depth 1 --recursive https://github.com/shadps4-emu/shadps4-qtlauncher`
 
 ### Compiling with Visual Studio GUI
 
