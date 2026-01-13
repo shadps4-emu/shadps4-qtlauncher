@@ -2916,7 +2916,7 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Failed to delete folder.</source>
-      <translation type="unfinished">Failed to delete folder.</translation>
+      <translation>Klasör silinemedi.</translation>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release.</source>
@@ -2943,7 +2943,7 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Clear</source>
-      <translation type="unfinished">Clear</translation>
+      <translation>Temizle</translation>
     </message>
     <message>
       <source>Create</source>
@@ -3107,7 +3107,7 @@ File was too small.</translation>
     </message>
     <message>
       <source>Clear</source>
-      <translation type="unfinished">Clear</translation>
+      <translation>Temizle</translation>
     </message>
     <message>
       <source>Create</source>
