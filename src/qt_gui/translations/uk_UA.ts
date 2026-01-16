@@ -1012,99 +1012,99 @@
     </message>
     <message>
       <source>Create Game-specific Settings from Global Settings</source>
-      <translation type="unfinished">Create Game-specific Settings from Global Settings</translation>
+      <translation>Створити налаштування для гри із глобальних налаштувань</translation>
     </message>
     <message>
       <source>Delete Game-specific Settings</source>
-      <translation type="unfinished">Delete Game-specific Settings</translation>
+      <translation>Видалити ігрові налаштування</translation>
     </message>
     <message>
       <source>Update Database</source>
-      <translation type="unfinished">Update Database</translation>
+      <translation>Оновити базу даних</translation>
     </message>
     <message>
       <source>View Report</source>
-      <translation type="unfinished">View Report</translation>
+      <translation>Переглянути звіт</translation>
     </message>
     <message>
       <source>Submit a Report</source>
-      <translation type="unfinished">Submit a Report</translation>
+      <translation>Надіслати звіт</translation>
     </message>
     <message>
       <source>Confirm deletion</source>
-      <translation type="unfinished">Confirm deletion</translation>
+      <translation>Підтвердити видалення</translation>
     </message>
     <message>
       <source>Delete game-specific settings?</source>
-      <translation type="unfinished">Delete game-specific settings?</translation>
+      <translation>Видалити ігрові налаштування?</translation>
     </message>
     <message>
       <source>Launch...</source>
-      <translation type="unfinished">Launch...</translation>
+      <translation>Запуск...</translation>
     </message>
     <message>
       <source>Launch with game specific configs (default)</source>
-      <translation type="unfinished">Launch with game specific configs (default)</translation>
+      <translation>Запуск із визначеними ігровими налаштуваннями (типово)</translation>
     </message>
     <message>
       <source>Launch with global config only</source>
-      <translation type="unfinished">Launch with global config only</translation>
+      <translation>Запуск лише з глобальною конфігурацією</translation>
     </message>
     <message>
       <source>Launch with default settings</source>
-      <translation type="unfinished">Launch with default settings</translation>
+      <translation>Запуск із типовими налаштуваннями</translation>
     </message>
     <message>
       <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
-      <translation type="unfinished">Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</translation>
+      <translation>Не вдалося надіслати звіт, оскільки останній журнал гри не пройшов наступну перевірку, і тому вважатиметься недійсним звітом:</translation>
     </message>
     <message>
       <source>Ok</source>
-      <translation type="unfinished">Ok</translation>
+      <translation>Гаразд</translation>
     </message>
     <message>
       <source>Info</source>
-      <translation type="unfinished">Info</translation>
+      <translation>Інформація</translation>
     </message>
     <message>
       <source>Create Shortcut for Selected Emulator Version</source>
-      <translation type="unfinished">Create Shortcut for Selected Emulator Version</translation>
+      <translation>Створити ярлик для вибраної версії емулятора</translation>
     </message>
     <message>
       <source>Create Shortcut for Specified Emulator Version</source>
-      <translation type="unfinished">Create Shortcut for Specified Emulator Version</translation>
+      <translation>Створити ярлик для вказаної версії емулятора</translation>
     </message>
     <message>
       <source>Create Shortcut</source>
-      <translation type="unfinished">Create Shortcut</translation>
+      <translation>Створити ярлик</translation>
     </message>
     <message>
       <source>Shortcut creation</source>
-      <translation type="unfinished">Shortcut creation</translation>
+      <translation>Створення ярлика</translation>
     </message>
     <message>
       <source>Shortcut created successfully!</source>
-      <translation type="unfinished">Shortcut created successfully!</translation>
+      <translation>Ярлик успішно створено!</translation>
     </message>
     <message>
       <source>Error creating shortcut!</source>
-      <translation type="unfinished">Error creating shortcut!</translation>
+      <translation>Помилка при створенні ярлика!</translation>
     </message>
     <message>
       <source>Failed to convert icon.</source>
-      <translation type="unfinished">Failed to convert icon.</translation>
+      <translation>Не вдалося конвертувати значок.</translation>
     </message>
     <message>
       <source>Delete Shader Cache</source>
-      <translation type="unfinished">Delete Shader Cache</translation>
+      <translation>Видалити кеш шейдерів</translation>
     </message>
     <message>
       <source>This game does not have any saved Shader Cache to delete!</source>
-      <translation type="unfinished">This game does not have any saved Shader Cache to delete!</translation>
+      <translation>У цій грі немає збереженого кешу шейдерів для видалення!</translation>
     </message>
     <message>
       <source>Shader Cache</source>
-      <translation type="unfinished">Shader Cache</translation>
+      <translation>Кеш шейдерів</translation>
     </message>
   </context>
   <context>
@@ -1134,39 +1134,39 @@
     <name>Hotkeys</name>
     <message>
       <source>Customize Hotkeys</source>
-      <translation type="unfinished">Customize Hotkeys</translation>
+      <translation>Персоналізувати гарячі клавіші</translation>
     </message>
     <message>
       <source>Controller Hotkeys</source>
-      <translation type="unfinished">Controller Hotkeys</translation>
+      <translation>Гарячі клавіші контролера</translation>
     </message>
     <message>
       <source>Show FPS Counter</source>
-      <translation type="unfinished">Show FPS Counter</translation>
+      <translation>Показати лічильник к / с</translation>
     </message>
     <message>
       <source>unmapped</source>
-      <translation type="unfinished">unmapped</translation>
+      <translation>непризначено</translation>
     </message>
     <message>
       <source>Quit Emulation</source>
-      <translation type="unfinished">Quit Emulation</translation>
+      <translation>Завершити емуляцію</translation>
     </message>
     <message>
       <source>Reload Button Mappings</source>
-      <translation type="unfinished">Reload Button Mappings</translation>
+      <translation>Перезавантажити призначення кнопок</translation>
     </message>
     <message>
       <source>Toggle Fullscreen</source>
-      <translation type="unfinished">Toggle Fullscreen</translation>
+      <translation>Увімк. / Вимк. повний екран</translation>
     </message>
     <message>
       <source>Toggle Pause</source>
-      <translation type="unfinished">Toggle Pause</translation>
+      <translation>Відтворення / Пауза</translation>
     </message>
     <message>
       <source>Keyboard Hotkeys</source>
-      <translation type="unfinished">Keyboard Hotkeys</translation>
+      <translation>Гарячі клавіші</translation>
     </message>
     <message>
       <source>Renderdoc Capture (for debugging only)</source>
@@ -2377,31 +2377,31 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>RCAS Attenuation:</source>
-      <translation type="unfinished">RCAS Attenuation:</translation>
+      <translation>RCAS-затухання:</translation>
     </message>
     <message>
       <source>Load Presets...</source>
-      <translation type="unfinished">Load Presets...</translation>
+      <translation>Завантажити шаблони...</translation>
     </message>
     <message>
       <source>Log</source>
-      <translation type="unfinished">Log</translation>
+      <translation>Журнал</translation>
     </message>
     <message>
       <source>Open Log Location:\nOpen the folder where the log file is saved.</source>
-      <translation type="unfinished">Open Log Location:\nOpen the folder where the log file is saved.</translation>
+      <translation>Відкрити розташування журналу:\nВідкрити теку, де збережено файл журналу.</translation>
     </message>
     <message>
       <source>Microphone:\nNone: Does not use the microphone.\nDefault Device: Will use the default device defined in the system.\nOr manually choose the microphone to be used from the list.</source>
-      <translation type="unfinished">Microphone:\nNone: Does not use the microphone.\nDefault Device: Will use the default device defined in the system.\nOr manually choose the microphone to be used from the list.</translation>
+      <translation>Мікрофон:\nНемає: Не використовує мікрофон.\nТиповий пристрій: Використовуватиме типовий пристрій, визначений у системі.\nАбо вручну виберіть мікрофон зі списку.</translation>
     </message>
     <message>
       <source>Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</source>
-      <translation type="unfinished">Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</translation>
+      <translation>Гучність:\nНалаштування гучності для ігор на загальному рівні, діапазон від 0 до 500%, типово — 100%.</translation>
     </message>
     <message>
       <source>Default tab when opening settings:\nChoose which tab will open, the default is General.</source>
-      <translation type="unfinished">Default tab when opening settings:\nChoose which tab will open, the default is General.</translation>
+      <translation>Типова вкладка при відкритті налаштувань:\nВиберіть, яку вкладку буде відкрито, типово — Загальна.</translation>
     </message>
     <message>
       <source>Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</source>
