@@ -7,158 +7,158 @@
     <name>AboutDialog</name>
     <message>
       <source>About shadPS4</source>
-      <translation type="unfinished">About shadPS4</translation>
+      <translation>O shadPS4</translation>
     </message>
     <message>
       <source>shadPS4 is an experimental open-source emulator for the PlayStation 4.</source>
-      <translation type="unfinished">shadPS4 is an experimental open-source emulator for the PlayStation 4.</translation>
+      <translation>shadPS4 je experimentální open-source emulátor pro PlayStation 4.</translation>
     </message>
     <message>
       <source>This software should not be used to play games you have not legally obtained.</source>
-      <translation type="unfinished">This software should not be used to play games you have not legally obtained.</translation>
+      <translation>Tento software by neměl být používán k hraní her, které jste nezískali legálně.</translation>
     </message>
   </context>
   <context>
     <name>CheatsPatches</name>
     <message>
       <source>Cheats / Patches for </source>
-      <translation type="unfinished">Cheats / Patches for </translation>
+      <translation>Cheaty / Patche pro </translation>
     </message>
     <message>
       <source>Cheats/Patches are experimental.\nUse with caution.\n\nDownload cheats individually by selecting the repository and clicking the download button.\nIn the Patches tab, you can download all patches at once, choose which ones you want to use, and save your selection.\n\nSince we do not develop the Cheats/Patches,\nplease report issues to the cheat author.\n\nCreated a new cheat? Visit:\n</source>
-      <translation type="unfinished">Cheats/Patches are experimental.\nUse with caution.\n\nDownload cheats individually by selecting the repository and clicking the download button.\nIn the Patches tab, you can download all patches at once, choose which ones you want to use, and save your selection.\n\nSince we do not develop the Cheats/Patches,\nplease report issues to the cheat author.\n\nCreated a new cheat? Visit:\n</translation>
+      <translation>Cheaty/Patche jsou experimentální.\nPoužívejte s opatrností.\n\nStáhněte si cheaty jednotlivě výběrem repozitáře a kliknutím na tlačítko Stáhnout.\nV záložce Patche si můžete stáhnout všechny patche najednou, zvolte které chcete použít a uložte svůj výběr.\n\nProtože nevyvíjíme Cheaty/Patche,\nprosím nahlaste problémy jeho autorovi.\n\nVytvořily jste nový cheat? Navštivte:\n</translation>
     </message>
     <message>
       <source>No Image Available</source>
-      <translation type="unfinished">No Image Available</translation>
+      <translation>Obrázek není k dispozici</translation>
     </message>
     <message>
       <source>Serial: </source>
-      <translation type="unfinished">Serial: </translation>
+      <translation>Serial: </translation>
     </message>
     <message>
       <source>Version: </source>
-      <translation type="unfinished">Version: </translation>
+      <translation>Verze: </translation>
     </message>
     <message>
       <source>Size: </source>
-      <translation type="unfinished">Size: </translation>
+      <translation>Velikost: </translation>
     </message>
     <message>
       <source>Select Cheat File:</source>
-      <translation type="unfinished">Select Cheat File:</translation>
+      <translation>Vybrat soubor Cheatu:</translation>
     </message>
     <message>
       <source>Repository:</source>
-      <translation type="unfinished">Repository:</translation>
+      <translation>Repozitář:</translation>
     </message>
     <message>
       <source>Download Cheats</source>
-      <translation type="unfinished">Download Cheats</translation>
+      <translation>Stáhnout Cheaty</translation>
     </message>
     <message>
       <source>Delete File</source>
-      <translation type="unfinished">Delete File</translation>
+      <translation>Odstranit soubor</translation>
     </message>
     <message>
       <source>No files selected.</source>
-      <translation type="unfinished">No files selected.</translation>
+      <translation>Nebyly vybrány žádné soubory.</translation>
     </message>
     <message>
       <source>You can delete the cheats you don&apos;t want after downloading them.</source>
-      <translation type="unfinished">You can delete the cheats you don&apos;t want after downloading them.</translation>
+      <translation>Cheaty, které po stažení nechcete, můžete odstranit.</translation>
     </message>
     <message>
       <source>Do you want to delete the selected file?\n%1</source>
-      <translation type="unfinished">Do you want to delete the selected file?\n%1</translation>
+      <translation>Chcete odstranit vybraný soubor?\n%1</translation>
     </message>
     <message>
       <source>Select Patch File:</source>
-      <translation type="unfinished">Select Patch File:</translation>
+      <translation>Vybrat soubor Patche:</translation>
     </message>
     <message>
       <source>Download Patches</source>
-      <translation type="unfinished">Download Patches</translation>
+      <translation>Stáhnout Patche</translation>
     </message>
     <message>
       <source>Save</source>
-      <translation type="unfinished">Save</translation>
+      <translation>Uložit</translation>
     </message>
     <message>
       <source>Cheats</source>
-      <translation type="unfinished">Cheats</translation>
+      <translation>Cheaty</translation>
     </message>
     <message>
       <source>Patches</source>
-      <translation type="unfinished">Patches</translation>
+      <translation>Patche</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Chyba</translation>
     </message>
     <message>
       <source>No patch selected.</source>
-      <translation type="unfinished">No patch selected.</translation>
+      <translation>Nebyl vybrán žádný Patch.</translation>
     </message>
     <message>
       <source>Unable to open files.json for reading.</source>
-      <translation type="unfinished">Unable to open files.json for reading.</translation>
+      <translation>Nelze otevřít files.json pro čtení.</translation>
     </message>
     <message>
       <source>No patch file found for the current serial.</source>
-      <translation type="unfinished">No patch file found for the current serial.</translation>
+      <translation>Žádný soubor Patche nenalezen pro aktuální serial.</translation>
     </message>
     <message>
       <source>Unable to open the file for reading.</source>
-      <translation type="unfinished">Unable to open the file for reading.</translation>
+      <translation>Soubor nelze otevřít pro čtení.</translation>
     </message>
     <message>
       <source>Unable to open the file for writing.</source>
-      <translation type="unfinished">Unable to open the file for writing.</translation>
+      <translation>Soubor nelze otevřít pro zápis.</translation>
     </message>
     <message>
       <source>Failed to parse XML: </source>
-      <translation type="unfinished">Failed to parse XML: </translation>
+      <translation>Nepodařilo se zpracovat XML: </translation>
     </message>
     <message>
       <source>Success</source>
-      <translation type="unfinished">Success</translation>
+      <translation>Úspěšně dokončeno</translation>
     </message>
     <message>
       <source>Options saved successfully.</source>
-      <translation type="unfinished">Options saved successfully.</translation>
+      <translation>Nastavení byla úspěšně uložena.</translation>
     </message>
     <message>
       <source>Invalid Source</source>
-      <translation type="unfinished">Invalid Source</translation>
+      <translation>Neplatný zdroj</translation>
     </message>
     <message>
       <source>The selected source is invalid.</source>
-      <translation type="unfinished">The selected source is invalid.</translation>
+      <translation>Vybraný zdroj je neplatný.</translation>
     </message>
     <message>
       <source>File Exists</source>
-      <translation type="unfinished">File Exists</translation>
+      <translation>Soubor existuje </translation>
     </message>
     <message>
       <source>File already exists. Do you want to replace it?</source>
-      <translation type="unfinished">File already exists. Do you want to replace it?</translation>
+      <translation>Soubor již existuje. Chcete ho nahradit?</translation>
     </message>
     <message>
       <source>Failed to save file:</source>
-      <translation type="unfinished">Failed to save file:</translation>
+      <translation>Uložení souboru se nezdařilo:</translation>
     </message>
     <message>
       <source>Failed to download file:</source>
-      <translation type="unfinished">Failed to download file:</translation>
+      <translation>Stažení souboru se nezdařilo:</translation>
     </message>
     <message>
       <source>Cheats Not Found</source>
-      <translation type="unfinished">Cheats Not Found</translation>
+      <translation>Cheaty nenalezeny</translation>
     </message>
     <message>
       <source>No Cheats found for this game in this version of the selected repository,try another repository or a different version of the game.</source>
-      <translation type="unfinished">No Cheats found for this game in this version of the selected repository,try another repository or a different version of the game.</translation>
+      <translation>Žádné Cheaty této verze hry v tomto repozitáři nebyly nalezeny, zkuste jiný repozitář nebo jinou verzi hry.</translation>
     </message>
     <message>
       <source>Cheats Downloaded Successfully</source>
