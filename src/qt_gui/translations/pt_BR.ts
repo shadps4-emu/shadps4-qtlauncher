@@ -269,7 +269,7 @@
     </message>
     <message>
       <source>No pre-releases found.</source>
-      <translation>Nenhum Pre-Release encontrado.</translation>
+      <translation>Nenhum Pre-Lançamento encontrado.</translation>
     </message>
     <message>
       <source>No download URL found for the specified asset.</source>
@@ -384,7 +384,7 @@
     </message>
     <message>
       <source>Boots</source>
-      <translation>Inicia</translation>
+      <translation>Inicializa</translation>
     </message>
     <message>
       <source>Menus</source>
@@ -559,7 +559,7 @@
     </message>
     <message>
       <source>n/a</source>
-      <translation>n/a</translation>
+      <translation>n/d</translation>
     </message>
     <message>
       <source>Set Active Gamepad as Default</source>
@@ -1198,7 +1198,7 @@
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation>Redefinir para o Padrão</translation>
+      <translation>Restaurar Padrões</translation>
     </message>
     <message>
       <source>Unable to Save</source>
@@ -1447,7 +1447,7 @@
     </message>
     <message>
       <source>Load</source>
-      <translation>Usar</translation>
+      <translation>Carregar</translation>
     </message>
     <message>
       <source>Close</source>
@@ -1474,7 +1474,7 @@
     </message>
     <message>
       <source>Boot Game</source>
-      <translation>Iniciar Jogo</translation>
+      <translation>Inicializar Jogo</translation>
     </message>
     <message>
       <source>Check for Updates</source>
@@ -1770,7 +1770,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Manage Infinity Figures</source>
-      <translation>Gerenciar Bonecos Infinity</translation>
+      <translation>Gerenciar Colecionáveis Infinity</translation>
     </message>
     <message>
       <source>Manage Dimensions Toypad</source>
@@ -2113,7 +2113,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Idle</source>
-      <translation>Parado</translation>
+      <translation>Ocioso</translation>
     </message>
     <message>
       <source>Always</source>
@@ -2273,11 +2273,11 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Top</source>
-      <translation>Acima</translation>
+      <translation>Superior</translation>
     </message>
     <message>
       <source>Bottom</source>
-      <translation>Abaixo</translation>
+      <translation>Inferior</translation>
     </message>
     <message>
       <source>Notification Duration</source>
@@ -2525,11 +2525,11 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Enable Core Validation</source>
-      <translation>Habilitar Camadas de Validação do Vulkan</translation>
+      <translation>Habilitar Validação de Núcleo</translation>
     </message>
     <message>
       <source>Enable Sync Validation</source>
-      <translation>Habilitar Camadas de Validação do Vulkan</translation>
+      <translation>Habilitar Validação de Sincronização</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation</source>
@@ -3067,15 +3067,15 @@ O arquivo é muito pequeno.</translation>
     </message>
     <message>
       <source>Play Set/Power Disc</source>
-      <translation>Play Set/Disco de Poder</translation>
+      <translation>Conjunto/Power Disc</translation>
     </message>
     <message>
       <source>Power Disc Two</source>
-      <translation>Disco de Poder Dois</translation>
+      <translation>Power Disc Dois</translation>
     </message>
     <message>
       <source>Power Disc Three</source>
-      <translation>Disco de Poder Três</translation>
+      <translation>Power Disc Três</translation>
     </message>
     <message>
       <source>Player One</source>
