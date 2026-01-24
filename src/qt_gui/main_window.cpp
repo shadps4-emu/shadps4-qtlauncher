@@ -143,7 +143,19 @@ void MainWindow::StopGame() {
 void MainWindow::onGameClosed() {
     EmulatorState::GetInstance()->SetGameRunning(false);
     is_paused = false;
-    AddUiWidgets();
+
+    // swap the pause button back to the play button on close
+    ui->playButton->setVisible(true);
+    ui->pauseButton->setVisible(false);
+    if (showLabels) {
+        QLabel* playButtonLabel = ui->playButton->parentWidget()->findChild<QLabel*>();
+        if (playButtonLabel)
+            playButtonLabel->setVisible(true);
+
+        QLabel* pauseButtonLabel = ui->pauseButton->parentWidget()->findChild<QLabel*>();
+        if (pauseButtonLabel)
+            pauseButtonLabel->setVisible(false);
+    }
 
     // clear dialogs when game closed
     skylander_dialog* sky_diag = skylander_dialog::get_dlg(this, m_ipc_client);
