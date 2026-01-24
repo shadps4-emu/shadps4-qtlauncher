@@ -147,7 +147,7 @@ void MainWindow::onGameClosed() {
     // swap the pause button back to the play button on close
     ui->playButton->setVisible(true);
     ui->pauseButton->setVisible(false);
-    if (showLabels) {
+    if (ui->toggleLabelsAct->isChecked()) {
         QLabel* playButtonLabel = ui->playButton->parentWidget()->findChild<QLabel*>();
         if (playButtonLabel)
             playButtonLabel->setVisible(true);
