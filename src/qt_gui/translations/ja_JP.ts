@@ -1064,7 +1064,7 @@
     </message>
     <message>
       <source>Info</source>
-      <translation type="unfinished">Info</translation>
+      <translation>情報</translation>
     </message>
     <message>
       <source>Create Shortcut for Selected Emulator Version</source>
@@ -1096,7 +1096,7 @@
     </message>
     <message>
       <source>Delete Shader Cache</source>
-      <translation type="unfinished">Delete Shader Cache</translation>
+      <translation>シェーダーキャッシュを削除</translation>
     </message>
     <message>
       <source>This game does not have any saved Shader Cache to delete!</source>
@@ -1104,7 +1104,7 @@
     </message>
     <message>
       <source>Shader Cache</source>
-      <translation type="unfinished">Shader Cache</translation>
+      <translation>シェーダーキャッシュ</translation>
     </message>
   </context>
   <context>
@@ -2521,7 +2521,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Validation Layers</source>
-      <translation type="unfinished">Validation Layers</translation>
+      <translation>検証レイヤー</translation>
     </message>
     <message>
       <source>Enable Core Validation</source>
@@ -2549,23 +2549,23 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>GUI Language</source>
-      <translation type="unfinished">GUI Language</translation>
+      <translation>GUI言語</translation>
     </message>
     <message>
       <source>GUI Updates</source>
-      <translation type="unfinished">GUI Updates</translation>
+      <translation>GUIアップデート</translation>
     </message>
     <message>
       <source>DLC Path</source>
-      <translation type="unfinished">DLC Path</translation>
+      <translation>DLCパス</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path</source>
-      <translation type="unfinished">PS4 Sysmodules Path</translation>
+      <translation>PS4 Sysmodules パス</translation>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
-      <translation type="unfinished">GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</translation>
+      <translation>GUIの更新:\nリリース版：毎月リリースされる公式バージョン。非常に古い場合もありますが、信頼性が高くテスト済みです。\nナイトリー版：最新機能と修正を全て含む開発版。バグが含まれる可能性があり、安定性は低くなります。\n\n*この更新はQtユーザーインターフェースのみに適用されます。エミュレータコアを更新するには、「バージョン管理」メニューをご利用ください。</translation>
     </message>
     <message>
       <source>Cannot create portable launcher folder</source>
