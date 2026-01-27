@@ -2357,23 +2357,24 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</source>
-      <translation type="unfinished">Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</translation>
+      <translation>Режим показу:\nНалаштовує спосіб виведення відео на ваш екран.\n\nПоштова скринька: Кадри синхронізуються з частотою оновлення вашого екрана. Нові кадри замінять будь-які очікувальні кадри. Зменшує затримку, але може пропускати кадри, якщо відстає.\nFifo: Кадри синхронізуються з частотою оновлення вашого екрана. Нові кадри стають в чергу після очікувальних кадрів. Гарантує показ усіх кадрів, але може збільшити затримку.
+\nНегайно: Кадри негайно зображуються на екрані, коли готові. Може призвести до розривів зображення.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the DLC path.</translation>
+      <translation>Перегляд:\nЗнайти теку, яку потрібно встановити як шлях до доповнення.</translation>
     </message>
     <message>
       <source>FSR Settings</source>
-      <translation type="unfinished">FSR Settings</translation>
+      <translation>Налаштування FSR</translation>
     </message>
     <message>
       <source>Enable FSR</source>
-      <translation type="unfinished">Enable FSR</translation>
+      <translation>Увімкнути FSR</translation>
     </message>
     <message>
       <source>Enable RCAS (sharpening)</source>
-      <translation type="unfinished">Enable RCAS (sharpening)</translation>
+      <translation>Увімкнути RCAS (гострота)</translation>
     </message>
     <message>
       <source>RCAS Attenuation:</source>
