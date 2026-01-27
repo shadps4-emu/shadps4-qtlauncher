@@ -623,7 +623,7 @@
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>İpucu: Giriş atamalarını sağ tıklayarak kaldırın</translation>
     </message>
   </context>
   <context>
@@ -715,11 +715,11 @@
     </message>
     <message>
       <source>Directory with your dumped games</source>
-      <translation type="unfinished">Directory with your dumped games</translation>
+      <translation>Dump edilmiş oyunlarınızın bulunduğu dizin</translation>
     </message>
     <message>
       <source>Directory with your dumped DLC&apos;s</source>
-      <translation type="unfinished">Directory with your dumped DLC&apos;s</translation>
+      <translation>Dump edilmiş DLC'lerinizin bulunduğu dizin&amp;apos</translation>
     </message>
     <message>
       <source>Directory with games</source>
@@ -1012,7 +1012,7 @@
     </message>
     <message>
       <source>Create Game-specific Settings from Global Settings</source>
-      <translation type="unfinished">Create Game-specific Settings from Global Settings</translation>
+      <translation>Global Ayarlardan Oyuna Özel Ayarlar Oluştur</translation>
     </message>
     <message>
       <source>Delete Game-specific Settings</source>
@@ -1048,7 +1048,7 @@
     </message>
     <message>
       <source>Launch with global config only</source>
-      <translation type="unfinished">Launch with global config only</translation>
+      <translation>Sadece global yapılandırma ile başlat</translation>
     </message>
     <message>
       <source>Launch with default settings</source>
@@ -1096,15 +1096,15 @@
     </message>
     <message>
       <source>Delete Shader Cache</source>
-      <translation type="unfinished">Delete Shader Cache</translation>
+      <translation>Shader Önbelleğini Sil</translation>
     </message>
     <message>
       <source>This game does not have any saved Shader Cache to delete!</source>
-      <translation type="unfinished">This game does not have any saved Shader Cache to delete!</translation>
+      <translation>Bu oyunun silinecek kayıtlı bir Shader Önbelleği yok!</translation>
     </message>
     <message>
       <source>Shader Cache</source>
-      <translation type="unfinished">Shader Cache</translation>
+      <translation>Shader Önbelleği</translation>
     </message>
   </context>
   <context>
@@ -1154,7 +1154,7 @@
     </message>
     <message>
       <source>Reload Button Mappings</source>
-      <translation type="unfinished">Reload Button Mappings</translation>
+      <translation>Düğme Atamalarını Yeniden Yükle</translation>
     </message>
     <message>
       <source>Toggle Fullscreen</source>
