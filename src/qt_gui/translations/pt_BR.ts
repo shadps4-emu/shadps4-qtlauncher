@@ -2373,7 +2373,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Enable RCAS (sharpening)</source>
-      <translation>Habilitar RCAS (sharpening)</translation>
+      <translation>Habilitar RCAS (nitidez)</translation>
     </message>
     <message>
       <source>RCAS Attenuation:</source>
