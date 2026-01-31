@@ -360,6 +360,10 @@ set(QT_GUI src/qt_gui/about_dialog.cpp
            src/qt_gui/settings_dialog.cpp
            src/qt_gui/settings_dialog.h
            src/qt_gui/settings_dialog.ui
+           src/qt_gui/settings_tab_dialog.cpp
+           src/qt_gui/settings_tab_dialog.h
+           src/qt_gui/settings_tab_targets.cpp
+           src/qt_gui/settings_tab_targets.h
            src/qt_gui/gui_settings.cpp
            src/qt_gui/gui_settings.h
            src/qt_gui/settings.cpp
