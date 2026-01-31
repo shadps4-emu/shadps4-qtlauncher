@@ -29,6 +29,7 @@
 #include "main_window.h"
 #include "settings_dialog.h"
 #include "skylander_dialog.h"
+#include "open_targets.h"
 
 MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
@@ -47,7 +48,7 @@ MainWindow::~MainWindow() {
     SaveWindowState();
 }
 
-bool MainWindow::Init() {
+bool MainWindow::Init(InitMode init_mode) {
     auto start = std::chrono::steady_clock::now();
     // setup ui
     LoadTranslation();
@@ -59,30 +60,34 @@ bool MainWindow::Init() {
     CreateConnects();
     SetLastUsedTheme();
     SetLastIconSizeBullet();
-    // show ui
-    setMinimumSize(900, 405);
-    std::string window_title = "";
-    std::string remote_url(Common::g_scm_remote_url);
-    std::string remote_host = Common::GetRemoteNameFromLink();
-    if (remote_host == "shadps4-emu" || remote_url.length() == 0) {
-        window_title = fmt::format("shadPS4QtLauncher v{} {} {}", Common::g_scm_app_version,
-                                   Common::g_scm_branch, Common::g_scm_desc);
-    } else {
-        window_title = fmt::format("shadPS4QtLauncher v{} {}/{} {}", Common::g_scm_app_version,
-                                   remote_host, Common::g_scm_branch, Common::g_scm_desc);
+    const bool is_full_init = init_mode == InitMode::Full;
+    if (is_full_init) {
+        setMinimumSize(900, 405);
+        std::string window_title = "";
+        std::string remote_url(Common::g_scm_remote_url);
+        std::string remote_host = Common::GetRemoteNameFromLink();
+        if (remote_host == "shadps4-emu" || remote_url.length() == 0) {
+            window_title = fmt::format("shadPS4QtLauncher v{} {} {}", Common::g_scm_app_version,
+                                       Common::g_scm_branch, Common::g_scm_desc);
+        } else {
+            window_title =
+                fmt::format("shadPS4QtLauncher v{} {}/{} {}", Common::g_scm_app_version,
+                            remote_host, Common::g_scm_branch, Common::g_scm_desc);
+        }
+        setWindowTitle(QString::fromStdString(window_title));
     }
-    setWindowTitle(QString::fromStdString(window_title));
-    this->show();
     // load game list
     LoadGameLists();
 
 #ifdef ENABLE_UPDATER
     // Check for update
-    CheckUpdateMain(true);
+    if (is_full_init) {
+        CheckUpdateMain(true);
+    }
 #endif
 
     LoadVersionComboBox();
-    if (m_gui_settings->GetValue(gui::vm_checkOnStartup).toBool()) {
+    if (is_full_init && m_gui_settings->GetValue(gui::vm_checkOnStartup).toBool()) {
         auto versionDialog = new VersionDialog(m_gui_settings, this);
         versionDialog->checkUpdatePre(false);
     }
@@ -98,6 +103,27 @@ bool MainWindow::Init() {
     statusBar->showMessage(statusMessage);
 
     return true;
+}
+
+UiOpenTargets::OpenTargetContext MainWindow::BuildOpenTargetContext(
+    QWidget* parent, bool attach_parent_destroy, bool is_game_specific,
+    const std::string& game_serial) const {
+    UiOpenTargets::OpenTargetContext context{};
+    context.gui_settings = m_gui_settings;
+    context.compat_info = m_compat_info;
+    context.ipc_client = m_ipc_client;
+    context.game_info = m_game_info;
+    context.running_game_serial = runningGameSerial;
+    context.is_game_running = EmulatorState::GetInstance()->IsGameRunning();
+    context.is_game_specific = is_game_specific;
+    context.game_serial = game_serial;
+    context.attach_parent_destroy = attach_parent_destroy;
+    context.parent = parent;
+    return context;
+}
+
+const std::string& MainWindow::GetRunningGameSerial() const {
+    return runningGameSerial;
 }
 
 void MainWindow::CreateActions() {
@@ -457,6 +483,11 @@ void MainWindow::CreateConnects() {
     connect(ui->toggleLabelsAct, &QAction::toggled, this, &MainWindow::toggleLabelsUnderIcons);
     connect(ui->fullscreenButton, &QPushButton::clicked, this, &MainWindow::toggleFullscreen);
 
+    const auto open_target = [this](UiOpenTargets::TargetId target_id) {
+        auto context = BuildOpenTargetContext(this);
+        return UiOpenTargets::OpenTarget(target_id, context, UiOpenTargets::OpenBehaviorForUi());
+    };
+
     connect(ui->showLogAct, &QAction::triggered, this, [this](bool state) {
         if (state) {
             ui->logDisplay->show();
@@ -497,21 +528,24 @@ void MainWindow::CreateConnects() {
     connect(m_game_list_frame.get(), &QTableWidget::cellDoubleClicked, this,
             &MainWindow::StartGame);
 
-    connect(ui->configureAct, &QAction::triggered, this, [this]() {
-        auto settingsDialog = new SettingsDialog(m_gui_settings, m_compat_info, m_ipc_client, this,
-                                                 EmulatorState::GetInstance()->IsGameRunning());
+    const auto open_settings_dialog = [this, open_target]() {
+        auto result = open_target(UiOpenTargets::TargetId::Settings);
+        auto settings_dialog = qobject_cast<SettingsDialog*>(result.opened_window);
+        if (!settings_dialog) {
+            return;
+        }
 
-        connect(settingsDialog, &SettingsDialog::LanguageChanged, this,
+        connect(settings_dialog, &SettingsDialog::LanguageChanged, this,
                 &MainWindow::OnLanguageChanged);
 
-        connect(settingsDialog, &SettingsDialog::CompatibilityChanged, this,
+        connect(settings_dialog, &SettingsDialog::CompatibilityChanged, this,
                 &MainWindow::RefreshGameTable);
 
-        connect(settingsDialog, &SettingsDialog::accepted, this, &MainWindow::RefreshGameTable);
-        connect(settingsDialog, &SettingsDialog::rejected, this, &MainWindow::RefreshGameTable);
-        connect(settingsDialog, &SettingsDialog::close, this, &MainWindow::RefreshGameTable);
+        connect(settings_dialog, &SettingsDialog::accepted, this, &MainWindow::RefreshGameTable);
+        connect(settings_dialog, &SettingsDialog::rejected, this, &MainWindow::RefreshGameTable);
+        connect(settings_dialog, &SettingsDialog::close, this, &MainWindow::RefreshGameTable);
 
-        connect(settingsDialog, &SettingsDialog::BackgroundOpacityChanged, this,
+        connect(settings_dialog, &SettingsDialog::BackgroundOpacityChanged, this,
                 [this](int opacity) {
                     m_gui_settings->SetValue(gui::gl_backgroundImageOpacity,
                                              std::clamp(opacity, 0, 100));
@@ -528,63 +562,31 @@ void MainWindow::CreateConnects() {
                         }
                     }
                 });
+    };
 
-        settingsDialog->exec();
+    connect(ui->configureAct, &QAction::triggered, this, [open_settings_dialog]() {
+        open_settings_dialog();
     });
 
-    connect(ui->settingsButton, &QPushButton::clicked, this, [this]() {
-        auto settingsDialog = new SettingsDialog(m_gui_settings, m_compat_info, m_ipc_client, this,
-                                                 EmulatorState::GetInstance()->IsGameRunning());
-
-        connect(settingsDialog, &SettingsDialog::LanguageChanged, this,
-                &MainWindow::OnLanguageChanged);
-
-        connect(settingsDialog, &SettingsDialog::CompatibilityChanged, this,
-                &MainWindow::RefreshGameTable);
-
-        connect(settingsDialog, &SettingsDialog::accepted, this, &MainWindow::RefreshGameTable);
-        connect(settingsDialog, &SettingsDialog::rejected, this, &MainWindow::RefreshGameTable);
-        connect(settingsDialog, &SettingsDialog::close, this, &MainWindow::RefreshGameTable);
-
-        connect(settingsDialog, &SettingsDialog::BackgroundOpacityChanged, this,
-                [this](int opacity) {
-                    m_gui_settings->SetValue(gui::gl_backgroundImageOpacity,
-                                             std::clamp(opacity, 0, 100));
-                    if (m_game_list_frame) {
-                        QTableWidgetItem* current = m_game_list_frame->GetCurrentItem();
-                        if (current) {
-                            m_game_list_frame->SetListBackgroundImage(current);
-                        }
-                    }
-                    if (m_game_grid_frame) {
-                        if (m_game_grid_frame->IsValidCellSelected()) {
-                            m_game_grid_frame->SetGridBackgroundImage(m_game_grid_frame->crtRow,
-                                                                      m_game_grid_frame->crtColumn);
-                        }
-                    }
-                });
-
-        settingsDialog->exec();
+    connect(ui->settingsButton, &QPushButton::clicked, this, [open_settings_dialog]() {
+        open_settings_dialog();
     });
 
-    connect(ui->controllerButton, &QPushButton::clicked, this, [this]() {
-        ControlSettings* remapWindow = new ControlSettings(
-            m_game_info, m_ipc_client, EmulatorState::GetInstance()->IsGameRunning(),
-            runningGameSerial, this);
-        remapWindow->exec();
+    connect(ui->controllerButton, &QPushButton::clicked, this, [open_target]() {
+        open_target(UiOpenTargets::TargetId::Controllers);
     });
 
-    connect(ui->keyboardButton, &QPushButton::clicked, this, [this]() {
-        auto kbmWindow =
-            new KBMSettings(m_game_info, m_ipc_client,
-                            EmulatorState::GetInstance()->IsGameRunning(), runningGameSerial, this);
-        kbmWindow->exec();
+    connect(ui->keyboardButton, &QPushButton::clicked, this, [open_target]() {
+        open_target(UiOpenTargets::TargetId::KeyboardMouse);
     });
 
-    connect(ui->versionManagerButton, &QPushButton::clicked, this, [this]() {
-        auto versionDialog = new VersionDialog(m_gui_settings, this);
-        connect(versionDialog, &QDialog::finished, this, [this](int) { LoadVersionComboBox(); });
-        versionDialog->exec();
+    connect(ui->versionManagerButton, &QPushButton::clicked, this, [this, open_target]() {
+        auto result = open_target(UiOpenTargets::TargetId::VersionManager);
+        auto version_dialog = qobject_cast<QDialog*>(result.opened_window);
+        if (version_dialog) {
+            connect(version_dialog, &QDialog::finished, this,
+                    [this](int) { LoadVersionComboBox(); });
+        }
     });
 
 #ifdef ENABLE_UPDATER
@@ -594,15 +596,11 @@ void MainWindow::CreateConnects() {
     });
 #endif
 
-    connect(ui->aboutAct, &QAction::triggered, this, [this]() {
-        auto aboutDialog = new AboutDialog(m_gui_settings, this);
-        aboutDialog->exec();
-    });
+    connect(ui->aboutAct, &QAction::triggered, this,
+            [open_target]() { open_target(UiOpenTargets::TargetId::About); });
 
-    connect(ui->configureHotkeys, &QAction::triggered, this, [this]() {
-        auto hotkeyDialog =
-            new Hotkeys(m_ipc_client, EmulatorState::GetInstance()->IsGameRunning(), this);
-        hotkeyDialog->exec();
+    connect(ui->configureHotkeys, &QAction::triggered, this, [open_target]() {
+        open_target(UiOpenTargets::TargetId::Hotkeys);
     });
 
     connect(ui->setIconSizeTinyAct, &QAction::triggered, this, [this]() {
@@ -705,81 +703,8 @@ void MainWindow::CreateConnects() {
     });
 
     // Cheats/Patches Download.
-    connect(ui->downloadCheatsPatchesAct, &QAction::triggered, this, [this]() {
-        QDialog* panelDialog = new QDialog(this);
-        QVBoxLayout* layout = new QVBoxLayout(panelDialog);
-        QPushButton* downloadAllCheatsButton =
-            new QPushButton(tr("Download Cheats For All Installed Games"), panelDialog);
-        QPushButton* downloadAllPatchesButton =
-            new QPushButton(tr("Download Patches For All Games"), panelDialog);
-
-        layout->addWidget(downloadAllCheatsButton);
-        layout->addWidget(downloadAllPatchesButton);
-
-        panelDialog->setLayout(layout);
-
-        connect(downloadAllCheatsButton, &QPushButton::clicked, this, [this, panelDialog]() {
-            QEventLoop eventLoop;
-            int pendingDownloads = 0;
-
-            auto onDownloadFinished = [&]() {
-                if (--pendingDownloads <= 0) {
-                    eventLoop.quit();
-                }
-            };
-
-            for (const GameInfo& game : m_game_info->m_games) {
-                QString empty = "";
-                QString gameSerial = QString::fromStdString(game.serial);
-                QString gameVersion = QString::fromStdString(game.version);
-
-                CheatsPatches* cheatsPatches = new CheatsPatches(
-                    m_gui_settings, m_ipc_client, empty, empty, empty, empty, empty, nullptr);
-                connect(cheatsPatches, &CheatsPatches::downloadFinished, onDownloadFinished);
-
-                pendingDownloads += 2;
-
-                cheatsPatches->downloadCheats("GoldHEN", gameSerial, gameVersion, false);
-                cheatsPatches->downloadCheats("shadPS4", gameSerial, gameVersion, false);
-            }
-            eventLoop.exec();
-
-            QMessageBox::information(
-                nullptr, tr("Download Complete"),
-                tr("You have downloaded cheats for all the games you have installed."));
-
-            panelDialog->accept();
-        });
-        connect(downloadAllPatchesButton, &QPushButton::clicked, [this, panelDialog]() {
-            QEventLoop eventLoop;
-            int pendingDownloads = 0;
-
-            auto onDownloadFinished = [&]() {
-                if (--pendingDownloads <= 0) {
-                    eventLoop.quit();
-                }
-            };
-
-            QString empty = "";
-            CheatsPatches* cheatsPatches = new CheatsPatches(m_gui_settings, m_ipc_client, empty,
-                                                             empty, empty, empty, empty, nullptr);
-            connect(cheatsPatches, &CheatsPatches::downloadFinished, onDownloadFinished);
-
-            pendingDownloads += 2;
-
-            cheatsPatches->downloadPatches("GoldHEN", false);
-            cheatsPatches->downloadPatches("shadPS4", false);
-
-            eventLoop.exec();
-            QMessageBox::information(
-                nullptr, tr("Download Complete"),
-                QString(tr("Patches Downloaded Successfully!") + "\n" +
-                        tr("All Patches available for all games have been downloaded.")));
-            cheatsPatches->createFilesJson("GoldHEN");
-            cheatsPatches->createFilesJson("shadPS4");
-            panelDialog->accept();
-        });
-        panelDialog->exec();
+    connect(ui->downloadCheatsPatchesAct, &QAction::triggered, this, [open_target]() {
+        open_target(UiOpenTargets::TargetId::CheatsPatchesDownload);
     });
 
     // Dump game list.
@@ -818,81 +743,23 @@ void MainWindow::CreateConnects() {
             &ElfViewer::OpenElfFolder);
 
     // Trophy Viewer
-    connect(ui->trophyViewerAct, &QAction::triggered, this, [this]() {
-        if (m_game_info->m_games.empty()) {
-            QMessageBox::information(
-                this, tr("Trophy Viewer"),
-                tr("No games found. Please add your games to your library first."));
-            return;
-        }
-
-        const auto& firstGame = m_game_info->m_games[0];
-        QString trophyPath, gameTrpPath;
-        Common::FS::PathToQString(trophyPath, firstGame.serial);
-        Common::FS::PathToQString(gameTrpPath, firstGame.path);
-
-        auto game_update_path = Common::FS::PathFromQString(gameTrpPath);
-        game_update_path += "-UPDATE";
-        if (std::filesystem::exists(game_update_path)) {
-            Common::FS::PathToQString(gameTrpPath, game_update_path);
-        } else {
-            game_update_path = Common::FS::PathFromQString(gameTrpPath);
-            game_update_path += "-patch";
-            if (std::filesystem::exists(game_update_path)) {
-                Common::FS::PathToQString(gameTrpPath, game_update_path);
-            }
-        }
-
-        QVector<TrophyGameInfo> allTrophyGames;
-        for (const auto& game : m_game_info->m_games) {
-            TrophyGameInfo gameInfo;
-            gameInfo.name = QString::fromStdString(game.name);
-            Common::FS::PathToQString(gameInfo.trophyPath, game.serial);
-            Common::FS::PathToQString(gameInfo.gameTrpPath, game.path);
-
-            auto update_path = Common::FS::PathFromQString(gameInfo.gameTrpPath);
-            update_path += "-UPDATE";
-            if (std::filesystem::exists(update_path)) {
-                Common::FS::PathToQString(gameInfo.gameTrpPath, update_path);
-            } else {
-                update_path = Common::FS::PathFromQString(gameInfo.gameTrpPath);
-                update_path += "-patch";
-                if (std::filesystem::exists(update_path)) {
-                    Common::FS::PathToQString(gameInfo.gameTrpPath, update_path);
-                }
-            }
-
-            allTrophyGames.append(gameInfo);
-        }
-
-        QString gameName = QString::fromStdString(firstGame.name);
-        TrophyViewer* trophyViewer =
-            new TrophyViewer(m_gui_settings, trophyPath, gameTrpPath, gameName, allTrophyGames);
-        trophyViewer->show();
+    connect(ui->trophyViewerAct, &QAction::triggered, this, [open_target]() {
+        open_target(UiOpenTargets::TargetId::TrophyViewer);
     });
 
     // Manage Skylanders
-    connect(ui->skylanderPortalAction, &QAction::triggered, this, [this]() {
-        if (Config::getUsbDeviceBackend() == Config::UsbBackendType::SkylandersPortal) {
-            skylander_dialog* sky_diag = skylander_dialog::get_dlg(this, m_ipc_client);
-            sky_diag->show();
-        }
+    connect(ui->skylanderPortalAction, &QAction::triggered, this, [open_target]() {
+        open_target(UiOpenTargets::TargetId::SkylanderPortal);
     });
 
     // Manage Infinity Figures
-    connect(ui->infinityFiguresAction, &QAction::triggered, this, [this]() {
-        if (Config::getUsbDeviceBackend() == Config::UsbBackendType::InfinityBase) {
-            infinity_dialog* inf_diag = infinity_dialog::get_dlg(this, m_ipc_client);
-            inf_diag->show();
-        }
+    connect(ui->infinityFiguresAction, &QAction::triggered, this, [open_target]() {
+        open_target(UiOpenTargets::TargetId::InfinityBase);
     });
 
     // Manage Dimensions Toypad
-    connect(ui->dimensionsToypadAction, &QAction::triggered, this, [this]() {
-        if (Config::getUsbDeviceBackend() == Config::UsbBackendType::DimensionsToypad) {
-            dimensions_dialog* dim_dialog = dimensions_dialog::get_dlg(this, m_ipc_client);
-            dim_dialog->show();
-        }
+    connect(ui->dimensionsToypadAction, &QAction::triggered, this, [open_target]() {
+        open_target(UiOpenTargets::TargetId::DimensionsToypad);
     });
 
     // Themes
@@ -1117,9 +984,13 @@ void MainWindow::BootGame() {
 }
 
 void MainWindow::InstallDirectory() {
-    GameInstallDialog dlg;
-    dlg.exec();
-    RefreshGameTable();
+    auto context = BuildOpenTargetContext(this);
+    auto result =
+        UiOpenTargets::OpenTarget(UiOpenTargets::TargetId::GameInstall, context,
+                                  UiOpenTargets::OpenBehaviorForUi());
+    if (result.success) {
+        RefreshGameTable();
+    }
 }
 
 void MainWindow::SetLastUsedTheme() {
@@ -1363,8 +1234,10 @@ void MainWindow::StartEmulator(std::filesystem::path path, QStringList args) {
     QString selectedVersion = m_gui_settings->GetValue(gui::vm_versionSelected).toString();
     if (selectedVersion.isEmpty()) {
         QMessageBox::warning(this, tr("No Version Selected"),
-                             // clang-format off
-tr("No emulator version was selected.\nThe Version Manager menu will then open.\nSelect an emulator version from the right panel."));
+        // clang-format off
+        tr("No emulator version was selected.\n"
+           "The Version Manager menu will then open.\n"
+           "Select an emulator version from the right panel."));
         // clang-format on
         auto versionDialog = new VersionDialog(m_gui_settings, this);
         connect(versionDialog, &QDialog::finished, this, [this](int) { LoadVersionComboBox(); });
