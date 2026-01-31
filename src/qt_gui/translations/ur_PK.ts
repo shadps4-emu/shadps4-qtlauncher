@@ -34,23 +34,23 @@
     </message>
     <message>
       <source>Serial: </source>
-      <translation type="unfinished">Serial: </translation>
+      <translation>سیریل:</translation>
     </message>
     <message>
       <source>Version: </source>
-      <translation type="unfinished">Version: </translation>
+      <translation>ورژن:</translation>
     </message>
     <message>
       <source>Size: </source>
-      <translation type="unfinished">Size: </translation>
+      <translation>سائز:</translation>
     </message>
     <message>
       <source>Select Cheat File:</source>
-      <translation type="unfinished">Select Cheat File:</translation>
+      <translation>چیٹ فائل منتخب کریں:</translation>
     </message>
     <message>
       <source>Repository:</source>
-      <translation type="unfinished">Repository:</translation>
+      <translation>ریپوزٹری:</translation>
     </message>
     <message>
       <source>Download Cheats</source>
@@ -66,7 +66,7 @@
     </message>
     <message>
       <source>You can delete the cheats you don&apos;t want after downloading them.</source>
-      <translation type="unfinished">You can delete the cheats you don&apos;t want after downloading them.</translation>
+      <translation>آپ وہ چیٹس حذف کر سکتے ہیں جو آپ ڈاؤن لوڈ کرنے کے بعد استعمال نہیں کرنا چاہتے۔</translation>
     </message>
     <message>
       <source>Do you want to delete the selected file?\n%1</source>
@@ -102,15 +102,15 @@
     </message>
     <message>
       <source>Unable to open files.json for reading.</source>
-      <translation type="unfinished">Unable to open files.json for reading.</translation>
+      <translation>پڑھنے کے لیے files.json کھولا نہیں جا سکا۔</translation>
     </message>
     <message>
       <source>No patch file found for the current serial.</source>
-      <translation type="unfinished">No patch file found for the current serial.</translation>
+      <translation>موجودہ سیریل کے لیے کوئی پیچ فائل نہیں ملی۔</translation>
     </message>
     <message>
       <source>Unable to open the file for reading.</source>
-      <translation type="unfinished">Unable to open the file for reading.</translation>
+      <translation>پڑھنے کے لیے فائل کھولی نہیں جا سکی۔</translation>
     </message>
     <message>
       <source>Unable to open the file for writing.</source>
@@ -130,11 +130,11 @@
     </message>
     <message>
       <source>Invalid Source</source>
-      <translation type="unfinished">Invalid Source</translation>
+      <translation>غلط سورس</translation>
     </message>
     <message>
       <source>The selected source is invalid.</source>
-      <translation type="unfinished">The selected source is invalid.</translation>
+      <translation>منتخب کردہ سورس غلط ہے۔</translation>
     </message>
     <message>
       <source>File Exists</source>
@@ -188,19 +188,19 @@
     </message>
     <message>
       <source>Failed to parse JSON data from HTML.</source>
-      <translation type="unfinished">Failed to parse JSON data from HTML.</translation>
+      <translation>HTML سے JSON ڈیٹا پڑھنے میں ناکامی ہوئی۔</translation>
     </message>
     <message>
       <source>Failed to retrieve HTML page.</source>
-      <translation type="unfinished">Failed to retrieve HTML page.</translation>
+      <translation>HTML پیج حاصل کرنے میں ناکامی ہوئی۔</translation>
     </message>
     <message>
       <source>The game is in version: %1</source>
-      <translation type="unfinished">The game is in version: %1</translation>
+      <translation>گیم کا ورژن ہے: %1</translation>
     </message>
     <message>
       <source>The downloaded patch only works on version: %1</source>
-      <translation type="unfinished">The downloaded patch only works on version: %1</translation>
+      <translation>ڈاؤن لوڈ کیا گیا پیچ صرف اس ورژن پر کام کرتا ہے: %1</translation>
     </message>
     <message>
       <source>You may need to update your game.</source>
@@ -208,7 +208,7 @@
     </message>
     <message>
       <source>Incompatibility Notice</source>
-      <translation type="unfinished">Incompatibility Notice</translation>
+      <translation>عدم مطابقت کی اطلاع</translation>
     </message>
     <message>
       <source>Failed to open file:</source>
@@ -216,23 +216,23 @@
     </message>
     <message>
       <source>XML ERROR:</source>
-      <translation type="unfinished">XML ERROR:</translation>
+      <translation>XML میں خرابی:</translation>
     </message>
     <message>
       <source>Failed to open files.json for writing</source>
-      <translation type="unfinished">Failed to open files.json for writing</translation>
+      <translation>files.json کو لکھائی کے لیے کھولے جانے میں ناکامی پیش آئی</translation>
     </message>
     <message>
       <source>Author: </source>
-      <translation type="unfinished">Author: </translation>
+      <translation>مصنف:</translation>
     </message>
     <message>
       <source>Directory does not exist:</source>
-      <translation type="unfinished">Directory does not exist:</translation>
+      <translation>یہ ڈائریکٹری موجود نہیں ہے:</translation>
     </message>
     <message>
       <source>Failed to open files.json for reading.</source>
-      <translation type="unfinished">Failed to open files.json for reading.</translation>
+      <translation>files.json کو پڑھنے کے لیے کھولے جانے میں ناکامی پیش آئی۔</translation>
     </message>
     <message>
       <source>Name:</source>
@@ -295,11 +295,11 @@
     </message>
     <message>
       <source>Show Changelog</source>
-      <translation type="unfinished">Show Changelog</translation>
+      <translation>تبدیلیوں کی فہرست دکھائیں</translation>
     </message>
     <message>
       <source>Check for Updates at Startup</source>
-      <translation type="unfinished">Check for Updates at Startup</translation>
+      <translation>کھولے جانے پر اپ ڈیٹس کے لیے چیک کریں</translation>
     </message>
     <message>
       <source>Update</source>
@@ -331,7 +331,7 @@
     </message>
     <message>
       <source>Failed to save the update file at</source>
-      <translation type="unfinished">Failed to save the update file at</translation>
+      <translation>اپ ڈیٹ فائل کو اس مقام پر محفوظ کرنے میں ناکامی ہوئی</translation>
     </message>
     <message>
       <source>Starting Update...</source>
@@ -339,22 +339,22 @@
     </message>
     <message>
       <source>Failed to create the update script file</source>
-      <translation type="unfinished">Failed to create the update script file</translation>
+      <translation>اپ ڈیٹ اسکرپٹ فائل بنانے میں ناکامی ہوئی</translation>
     </message>
     <message>
       <source>Auto Updater - GUI</source>
-      <translation type="unfinished">Auto Updater - GUI</translation>
+      <translation>خودکار اپ ڈیٹر - GUI</translation>
     </message>
     <message>
       <source>Update Available - GUI</source>
-      <translation type="unfinished">Update Available - GUI</translation>
+      <translation>نئی اپ ڈیٹ دستیاب ہے - GUI</translation>
     </message>
   </context>
   <context>
     <name>CompatibilityInfoClass</name>
     <message>
       <source>Fetching compatibility data, please wait</source>
-      <translation type="unfinished">Fetching compatibility data, please wait</translation>
+      <translation>مطابقت کے ڈیٹا کو حاصل کیا جا رہا ہے، براہ مہربانی انتظار کریں</translation>
     </message>
     <message>
       <source>Cancel</source>
@@ -366,11 +366,11 @@
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>خرابی</translation>
     </message>
     <message>
       <source>Unable to update compatibility data! Try again later.</source>
-      <translation type="unfinished">Unable to update compatibility data! Try again later.</translation>
+      <translation>مطابقت کے ڈیٹا کو اپ ڈیٹ نہیں کیا جا سکا! تھوڑی دیر بعد کوشش کریں۔</translation>
     </message>
     <message>
       <source>Unable to open compatibility_data.json for writing.</source>
