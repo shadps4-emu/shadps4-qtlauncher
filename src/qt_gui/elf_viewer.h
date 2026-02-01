@@ -3,7 +3,13 @@
 
 #pragma once
 
+#include <QColor>
 #include <QFileDialog>
+#include <QGraphicsDropShadowEffect>
+#include <QLabel>
+#include <QTableWidget>
+#include <QTableWidgetItem>
+#include <QVBoxLayout>
 
 #include "core/file_format/elf.h"
 #include "game_list_frame.h"

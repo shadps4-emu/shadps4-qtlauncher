@@ -4,11 +4,16 @@
 #pragma once
 
 #include <functional>
+#include <memory>
 
 #include <QClipboard>
 #include <QDesktopServices>
+#include <QGuiApplication>
+#include <QHeaderView>
 #include <QMenu>
 #include <QMessageBox>
+#include <QTableWidget>
+#include <QTableWidgetItem>
 #include <QTreeWidgetItem>
 
 #include "background_music_player.h"
@@ -24,8 +29,7 @@
 #include "game_info.h"
 #include "gui_settings.h"
 #include "ipc/ipc_client.h"
-#include "settings_dialog.h"
-#include "trophy_viewer.h"
+#include "open_targets.h"
 
 #ifdef Q_OS_WIN
 #include <ShlObj.h>
@@ -398,57 +402,33 @@ public:
         }
 
         if (selected == &openTrophyViewer) {
-            QString trophyPath, gameTrpPath;
-            Common::FS::PathToQString(trophyPath, m_games[itemID].serial);
-            Common::FS::PathToQString(gameTrpPath, m_games[itemID].path);
-            auto game_update_path = Common::FS::PathFromQString(gameTrpPath);
-            game_update_path += "-UPDATE";
-            if (std::filesystem::exists(game_update_path)) {
-                Common::FS::PathToQString(gameTrpPath, game_update_path);
-            } else {
-                game_update_path = Common::FS::PathFromQString(gameTrpPath);
-                game_update_path += "-patch";
-                if (std::filesystem::exists(game_update_path)) {
-                    Common::FS::PathToQString(gameTrpPath, game_update_path);
-                }
-            }
-
-            // Array with all games and their trophy information
-            QVector<TrophyGameInfo> allTrophyGames;
-            for (const auto& game : m_games) {
-                TrophyGameInfo gameInfo;
-                gameInfo.name = QString::fromStdString(game.name);
-                Common::FS::PathToQString(gameInfo.trophyPath, game.serial);
-                Common::FS::PathToQString(gameInfo.gameTrpPath, game.path);
-
-                auto update_path = Common::FS::PathFromQString(gameInfo.gameTrpPath);
-                update_path += "-UPDATE";
-                if (std::filesystem::exists(update_path)) {
-                    Common::FS::PathToQString(gameInfo.gameTrpPath, update_path);
-                } else {
-                    update_path = Common::FS::PathFromQString(gameInfo.gameTrpPath);
-                    update_path += "-patch";
-                    if (std::filesystem::exists(update_path)) {
-                        Common::FS::PathToQString(gameInfo.gameTrpPath, update_path);
-                    }
-                }
-
-                allTrophyGames.append(gameInfo);
-            }
-
-            QString gameName = QString::fromStdString(m_games[itemID].name);
-            TrophyViewer* trophyViewer =
-                new TrophyViewer(m_gui_settings, trophyPath, gameTrpPath, gameName, allTrophyGames);
-            trophyViewer->show();
-            connect(widget->parent(), &QWidget::destroyed, trophyViewer,
-                    [trophyViewer]() { trophyViewer->deleteLater(); });
+            UiOpenTargets::OpenTargetContext context{};
+            context.gui_settings = m_gui_settings;
+            context.compat_info = m_compat_info;
+            context.ipc_client = m_ipc_client;
+            context.game_info = std::make_shared<GameInfoClass>();
+            context.game_info->m_games = m_games;
+            context.is_game_running = EmulatorState::GetInstance()->IsGameRunning();
+            context.game_serial = serialStr.toStdString();
+            context.attach_parent_destroy = true;
+            context.parent = widget;
+            UiOpenTargets::OpenTarget(UiOpenTargets::TargetId::TrophyViewer, context,
+                                      UiOpenTargets::OpenBehaviorForUi());
         }
 
         if (selected == &gameConfigConfigure || selected == &gameConfigCreate) {
-            auto settingsWindow = new SettingsDialog(
-                m_gui_settings, m_compat_info, m_ipc_client, widget,
-                EmulatorState::GetInstance()->IsGameRunning(), true, serialStr.toStdString());
-            settingsWindow->exec();
+            UiOpenTargets::OpenTargetContext context{};
+            context.gui_settings = m_gui_settings;
+            context.compat_info = m_compat_info;
+            context.ipc_client = m_ipc_client;
+            context.game_info = std::make_shared<GameInfoClass>();
+            context.game_info->m_games = m_games;
+            context.is_game_running = EmulatorState::GetInstance()->IsGameRunning();
+            context.is_game_specific = true;
+            context.game_serial = serialStr.toStdString();
+            context.parent = widget;
+            UiOpenTargets::OpenTarget(UiOpenTargets::TargetId::Settings, context,
+                                      UiOpenTargets::OpenBehaviorForUi());
         }
 
         if (selected == &gameConfigDelete) {

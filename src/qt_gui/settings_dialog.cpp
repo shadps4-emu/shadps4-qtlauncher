@@ -4,10 +4,13 @@
 #include <vector>
 #include <QCompleter>
 #include <QDesktopServices>
+#include <QDialogButtonBox>
 #include <QDirIterator>
 #include <QFileDialog>
 #include <QHoverEvent>
 #include <QMessageBox>
+#include <QTabWidget>
+#include <QTextEdit>
 #include <SDL3/SDL.h>
 #include <fmt/format.h>
 #include <toml.hpp>
@@ -90,6 +93,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
       gs_serial(gsc_serial) {
 
     ui->setupUi(this);
+    close_target = this;
     ui->tabWidgetSettings->setUsesScrollButtons(false);
     getPhysicalDevices();
 
@@ -113,7 +117,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         ui->chooseHomeTabComboBox->removeItem(8);
     }
 
-    std::filesystem::path config_file =
+    config_file =
         is_game_specific
             ? Common::FS::GetUserPath(Common::FS::PathType::CustomConfigs) / (gs_serial + ".toml")
             : Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "config.toml";
@@ -200,36 +204,11 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
     defaultTextEdit = tr("Point your mouse at an option to display its description.");
     ui->descriptionText->setText(defaultTextEdit);
 
-    connect(ui->buttonBox, &QDialogButtonBox::rejected, this, &QWidget::close);
+    connect(ui->buttonBox, &QDialogButtonBox::rejected, this,
+            [this]() { close_target->close(); });
 
     connect(ui->buttonBox, &QDialogButtonBox::clicked, this,
-            [this, config_file](QAbstractButton* button) {
-                if (button == ui->buttonBox->button(QDialogButtonBox::Save)) {
-                    is_game_saving = true;
-                    UpdateSettings(is_game_specific);
-                    Config::save(config_file, is_game_specific);
-                    QWidget::close();
-                } else if (button == ui->buttonBox->button(QDialogButtonBox::Apply)) {
-                    UpdateSettings(is_game_specific);
-                    Config::save(config_file, is_game_specific);
-                } else if (button == ui->buttonBox->button(QDialogButtonBox::RestoreDefaults)) {
-                    setDefaultValues();
-                    Config::setDefaultValues(is_game_specific);
-                    Config::save(config_file, is_game_specific);
-                    LoadValuesFromConfig();
-                } else if (button == ui->buttonBox->button(QDialogButtonBox::Close)) {
-                    ui->backgroundImageOpacitySlider->setValue(backgroundImageOpacitySlider_backup);
-                    emit BackgroundOpacityChanged(backgroundImageOpacitySlider_backup);
-                    ui->BGMVolumeSlider->setValue(bgm_volume_backup);
-                    BackgroundMusicPlayer::getInstance().setVolume(bgm_volume_backup);
-                    SyncRealTimeWidgetstoConfig();
-                }
-                if (Common::Log::IsActive()) {
-                    Common::Log::Filter filter;
-                    filter.ParseFilterString(Config::getLogFilter());
-                    Common::Log::SetGlobalFilter(filter);
-                }
-            });
+            [this](QAbstractButton* button) { HandleButtonBoxClicked(button); });
 
     ui->buttonBox->button(QDialogButtonBox::Save)->setText(tr("Save"));
     ui->buttonBox->button(QDialogButtonBox::Apply)->setText(tr("Apply"));
@@ -556,11 +535,18 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
 
 void SettingsDialog::closeEvent(QCloseEvent* event) {
     if (!is_game_saving) {
-        ui->backgroundImageOpacitySlider->setValue(backgroundImageOpacitySlider_backup);
-        emit BackgroundOpacityChanged(backgroundImageOpacitySlider_backup);
-        ui->BGMVolumeSlider->setValue(bgm_volume_backup);
-        BackgroundMusicPlayer::getInstance().setVolume(bgm_volume_backup);
-        SyncRealTimeWidgetstoConfig();
+        if (ShouldApplyToTab(SettingsTabId::Gui, scoped_tab_id) && !is_game_specific) {
+            ui->backgroundImageOpacitySlider->setValue(backgroundImageOpacitySlider_backup);
+            emit BackgroundOpacityChanged(backgroundImageOpacitySlider_backup);
+            ui->BGMVolumeSlider->setValue(bgm_volume_backup);
+            BackgroundMusicPlayer::getInstance().setVolume(bgm_volume_backup);
+        }
+
+        toml::value data;
+        toml::value gs_data;
+        if (LoadSyncConfigData(data, gs_data)) {
+            SyncRealTimeWidgetsForScope(data, gs_data);
+        }
     }
 
     SDL_Event quitLoop{};
@@ -578,12 +564,6 @@ void SettingsDialog::closeEvent(QCloseEvent* event) {
 }
 
 void SettingsDialog::LoadValuesFromConfig() {
-    std::filesystem::path config_file;
-    config_file =
-        is_game_specific
-            ? Common::FS::GetUserPath(Common::FS::PathType::CustomConfigs) / (gs_serial + ".toml")
-            : Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "config.toml";
-
     std::error_code error;
     bool is_newly_created = false;
     if (!std::filesystem::exists(config_file, error)) {
@@ -591,212 +571,23 @@ void SettingsDialog::LoadValuesFromConfig() {
         is_newly_created = true;
     }
 
+    toml::value data;
     try {
-        std::ifstream ifs;
-        ifs.exceptions(std::ifstream::failbit | std::ifstream::badbit);
-        const toml::value data = toml::parse(config_file);
+        data = toml::parse(config_file);
     } catch (std::exception& ex) {
         fmt::print("Got exception trying to load config file. Exception: {}\n", ex.what());
         return;
     }
 
-    const toml::value data = toml::parse(config_file);
-    const QVector<int> languageIndexes = {21, 23, 14, 6, 18, 1, 12, 22, 2, 4,  25, 24, 29, 5,  0, 9,
-                                          15, 16, 17, 7, 26, 8, 11, 20, 3, 13, 27, 10, 19, 30, 28};
+    LoadValuesForScope(data, data, is_newly_created);
 
-    // Entries with no game-specific settings
     if (!is_game_specific) {
-        const auto save_data_path = Config::GetSaveDataPath();
-        QString save_data_path_string;
-        Common::FS::PathToQString(save_data_path_string, save_data_path);
-        ui->currentSaveDataPath->setText(save_data_path_string);
-
-        const auto dlc_folder_path = Config::getAddonInstallDir();
-        QString dlc_folder_path_string;
-        Common::FS::PathToQString(dlc_folder_path_string, dlc_folder_path);
-        ui->currentDLCFolder->setText(dlc_folder_path_string);
-
-        const auto sysmodules_path = Config::getSysModulesPath();
-        QString sysmodules_path_string;
-        Common::FS::PathToQString(sysmodules_path_string, sysmodules_path);
-        ui->sysmodulesPath->setText(sysmodules_path_string);
-
-        ui->emulatorLanguageComboBox->setCurrentIndex(
-            languages[m_gui_settings->GetValue(gui::gen_guiLanguage).toString().toStdString()]);
-
-        ui->playBGMCheckBox->setChecked(
-            m_gui_settings->GetValue(gui::gl_playBackgroundMusic).toBool());
-
-        ui->RCASSlider->setValue(toml::find_or<int>(data, "GPU", "rcasAttenuation", 250));
-        ui->RCASValue->setText(QString::number(ui->RCASSlider->value() / 1000.0, 'f', 3));
-
-        ui->BGMVolumeSlider->setValue(
-            m_gui_settings->GetValue(gui::gl_backgroundMusicVolume).toInt());
-        ui->discordRPCCheckbox->setChecked(
-            toml::find_or<bool>(data, "General", "enableDiscordRPC", true));
-
-        ui->trophyKeyLineEdit->setText(
-            QString::fromStdString(toml::find_or<std::string>(data, "Keys", "TrophyKey", "")));
-        ui->trophyKeyLineEdit->setEchoMode(QLineEdit::Password);
-        ui->enableCompatibilityCheckBox->setChecked(
-            m_gui_settings->GetValue(gui::glc_showCompatibility).toBool());
-        ui->checkCompatibilityOnStartupCheckBox->setChecked(
-            m_gui_settings->GetValue(gui::gen_checkCompatibilityAtStartup).toBool());
-
-        ui->removeFolderButton->setEnabled(!ui->gameFoldersListWidget->selectedItems().isEmpty());
-        ui->backgroundImageOpacitySlider->setValue(
-            m_gui_settings->GetValue(gui::gl_backgroundImageOpacity).toInt());
-        ui->showBackgroundImageCheckBox->setChecked(
-            m_gui_settings->GetValue(gui::gl_showBackgroundImage).toBool());
-
-        backgroundImageOpacitySlider_backup =
-            m_gui_settings->GetValue(gui::gl_backgroundImageOpacity).toInt();
-        bgm_volume_backup = m_gui_settings->GetValue(gui::gl_backgroundMusicVolume).toInt();
-
-#ifdef ENABLE_UPDATER
-        ui->updateCheckBox->setChecked(m_gui_settings->GetValue(gui::gen_checkForUpdates).toBool());
-        ui->changelogCheckBox->setChecked(
-            m_gui_settings->GetValue(gui::gen_showChangeLog).toBool());
-#endif
-
-        SyncRealTimeWidgetstoConfig();
+        toml::value sync_data;
+        toml::value gs_data;
+        if (LoadSyncConfigData(sync_data, gs_data)) {
+            SyncRealTimeWidgetsForScope(sync_data, gs_data);
+        }
     }
-
-    // Entries with game-specific settings, *load these from toml file, not from Config::get*
-    ui->consoleLanguageComboBox->setCurrentIndex(
-        std::distance(languageIndexes.begin(),
-                      std::find(languageIndexes.begin(), languageIndexes.end(),
-                                toml::find_or<int>(data, "Settings", "consoleLanguage", 6))) %
-        languageIndexes.size());
-
-    std::string micDevice =
-        toml::find_or<std::string>(data, "Audio", "micDevice", "Default Device");
-    QString micValue = QString::fromStdString(micDevice);
-    int micIndex = ui->micComboBox->findData(micValue);
-    if (micIndex != -1) {
-        ui->micComboBox->setCurrentIndex(micIndex);
-    } else {
-        ui->micComboBox->setCurrentIndex(0);
-    }
-
-    ui->readbacksCheckBox->setChecked(toml::find_or<bool>(data, "GPU", "readbacks", false));
-    ui->readbackLinearImagesCheckBox->setChecked(
-        toml::find_or<bool>(data, "GPU", "readbackLinearImages", false));
-    ui->dmaCheckBox->setChecked(toml::find_or<bool>(data, "GPU", "directMemoryAccess", false));
-    ui->neoCheckBox->setChecked(toml::find_or<bool>(data, "General", "isPS4Pro", false));
-    ui->devkitCheckBox->setChecked(toml::find_or<bool>(data, "General", "isDevKit", false));
-    ui->networkConnectedCheckBox->setChecked(
-        toml::find_or<bool>(data, "General", "isConnectedToNetwork", false));
-    ui->shaderCaheCheckBox->setChecked(
-        toml::find_or<bool>(data, "Vulkan", "pipelineCacheEnable", false));
-    ui->shaderCacheArchiveCheckBox->setChecked(
-        toml::find_or<bool>(data, "Vulkan", "pipelineCacheArchive", false));
-    ui->psnSignInCheckBox->setChecked(toml::find_or<bool>(data, "General", "isPSNSignedIn", false));
-    ui->vblankSpinBox->setValue(toml::find_or<int>(data, "GPU", "vblankFrequency", 60));
-    ui->dmemSpinBox->setValue(toml::find_or<int>(data, "General", "extraDmemInMbytes", 0));
-
-    // First options is auto selection -1, so gpuId on the GUI will always have to subtract 1
-    // when setting and add 1 when getting to select the correct gpu in Qt
-    ui->graphicsAdapterBox->setCurrentIndex(toml::find_or<int>(data, "Vulkan", "gpuId", -1) + 1);
-    ui->widthSpinBox->setValue(toml::find_or<int>(data, "GPU", "screenWidth", 1280));
-    ui->heightSpinBox->setValue(toml::find_or<int>(data, "GPU", "screenHeight", 720));
-    ui->dumpShadersCheckBox->setChecked(toml::find_or<bool>(data, "GPU", "dumpShaders", false));
-    ui->nullGpuCheckBox->setChecked(toml::find_or<bool>(data, "GPU", "nullGpu", false));
-    ui->enableHDRCheckBox->setChecked(toml::find_or<bool>(data, "GPU", "allowHDR", false));
-    ui->FSRCheckBox->setChecked(toml::find_or<bool>(data, "GPU", "fsrEnabled", true));
-    ui->RCASCheckBox->setChecked(toml::find_or<bool>(data, "GPU", "rcasEnabled", true));
-    ui->RCASSlider->setValue(toml::find_or<int>(data, "GPU", "rcasAttenuation", 250));
-    ui->RCASValue->setText(QString::number(ui->RCASSlider->value() / 1000.0, 'f', 3));
-    ui->disableTrophycheckBox->setChecked(
-        toml::find_or<bool>(data, "General", "isTrophyPopupDisabled", false));
-    ui->popUpDurationSpinBox->setValue(
-        toml::find_or<double>(data, "General", "trophyNotificationDuration", 6.0));
-    ui->showSplashCheckBox->setChecked(toml::find_or<bool>(data, "General", "showSplash", false));
-    ui->hideCursorComboBox->setCurrentIndex(toml::find_or<int>(data, "Input", "cursorState", 1));
-    OnCursorStateChanged(toml::find_or<int>(data, "Input", "cursorState", 1));
-    ui->idleTimeoutSpinBox->setValue(toml::find_or<int>(data, "Input", "cursorHideTimeout", 5));
-    ui->motionControlsCheckBox->setChecked(
-        toml::find_or<bool>(data, "Input", "isMotionControlsEnabled", true));
-    ui->backgroundControllerCheckBox->setChecked(
-        toml::find_or<bool>(data, "Input", "backgroundControllerInput", false));
-    ui->usbComboBox->setCurrentIndex(toml::find_or<int>(data, "Input", "usbDeviceBackend", 0));
-
-    std::string sideTrophy = toml::find_or<std::string>(data, "General", "sideTrophy", "right");
-    QString side = QString::fromStdString(sideTrophy);
-    ui->radioButton_Left->setChecked(side == "left");
-    ui->radioButton_Right->setChecked(side == "right");
-    ui->radioButton_Top->setChecked(side == "top");
-    ui->radioButton_Bottom->setChecked(side == "bottom");
-
-    ui->horizontalVolumeSlider->setValue(toml::find_or<int>(data, "General", "volumeSlider", 100));
-    ui->volumeText->setText(QString::number(ui->horizontalVolumeSlider->sliderPosition()) + "%");
-
-    std::string fullScreenMode =
-        toml::find_or<std::string>(data, "GPU", "FullscreenMode", "Windowed");
-    QString translatedText_FullscreenMode =
-        screenModeMap.key(QString::fromStdString(fullScreenMode));
-    ui->displayModeComboBox->setCurrentText(translatedText_FullscreenMode);
-
-    std::string presentMode = toml::find_or<std::string>(data, "GPU", "presentMode", "Mailbox");
-    QString translatedText_PresentMode = presentModeMap.key(QString::fromStdString(presentMode));
-    ui->presentModeComboBox->setCurrentText(translatedText_PresentMode);
-
-    std::string logType = toml::find_or<std::string>(data, "General", "logType", "sync");
-    QString translatedText_logType = logTypeMap.key(QString::fromStdString(logType));
-    if (!translatedText_logType.isEmpty()) {
-        ui->logTypeComboBox->setCurrentText(translatedText_logType);
-    }
-    ui->logFilterLineEdit->setText(
-        QString::fromStdString(toml::find_or<std::string>(data, "General", "logFilter", "")));
-    ui->userNameLineEdit->setText(
-        QString::fromStdString(toml::find_or<std::string>(data, "General", "userName", "shadPS4")));
-
-    ui->debugDump->setChecked(toml::find_or<bool>(data, "Debug", "DebugDump", false));
-    ui->separateLogFilesCheckbox->setChecked(
-        toml::find_or<bool>(data, "Debug", "isSeparateLogFilesEnabled", false));
-    ui->vkValidationCheckBox->setChecked(toml::find_or<bool>(data, "Vulkan", "validation", false));
-    ui->vkSyncValidationCheckBox->setChecked(
-        toml::find_or<bool>(data, "Vulkan", "validation_sync", false));
-    ui->vkCoreValidationCheckBox->setChecked(
-        toml::find_or<bool>(data, "Vulkan", "validation_core", false));
-    ui->vkGpuValidationCheckBox->setChecked(
-        toml::find_or<bool>(data, "Vulkan", "validation_gpu", false));
-    ui->vkValidationCheckBox->isChecked() ? ui->vkLayersGroupBox->setVisible(true)
-                                          : ui->vkLayersGroupBox->setVisible(false);
-    ui->shaderCaheCheckBox->isChecked() ? ui->shaderCacheArchiveCheckBox->setVisible(true)
-                                        : ui->shaderCacheArchiveCheckBox->setVisible(false);
-
-    ui->rdocCheckBox->setChecked(toml::find_or<bool>(data, "Vulkan", "rdocEnable", false));
-    ui->crashDiagnosticsCheckBox->setChecked(
-        toml::find_or<bool>(data, "Vulkan", "crashDiagnostic", false));
-    ui->guestMarkersCheckBox->setChecked(
-        toml::find_or<bool>(data, "Vulkan", "guestMarkers", false));
-    ui->hostMarkersCheckBox->setChecked(toml::find_or<bool>(data, "Vulkan", "hostMarkers", false));
-    ui->copyGPUBuffersCheckBox->setChecked(
-        toml::find_or<bool>(data, "GPU", "copyGPUBuffers", false));
-    ui->collectShaderCheckBox->setChecked(
-        toml::find_or<bool>(data, "Debug", "CollectShader", false));
-    ui->enableLoggingCheckBox->setChecked(toml::find_or<bool>(data, "Debug", "logEnabled", true));
-
-    ui->GenAudioComboBox->setCurrentText(
-        QString::fromStdString(toml::find_or<std::string>(data, "Audio", "mainOutputDevice", "")));
-    ui->DsAudioComboBox->setCurrentText(QString::fromStdString(
-        toml::find_or<std::string>(data, "Audio", "padSpkOutputDevice", "")));
-
-    QString chooseHomeTab = m_gui_settings->GetValue(gui::gen_homeTab).toString();
-    QString translatedText = chooseHomeTabMap.key(chooseHomeTab);
-    if (translatedText.isEmpty()) {
-        translatedText = tr("General");
-    }
-    ui->chooseHomeTabComboBox->setCurrentText(translatedText);
-
-    QStringList tabNames = {tr("General"), tr("Frontend"), tr("Graphics"),
-                            tr("User"),    tr("Input"),    tr("Paths"),
-                            tr("Log"),     tr("Debug"),    tr("Experimental")};
-    int indexTab = tabNames.indexOf(translatedText);
-    if (indexTab == -1 || !ui->tabWidgetSettings->isTabVisible(indexTab) || is_newly_created)
-        indexTab = 0;
-    ui->tabWidgetSettings->setCurrentIndex(indexTab);
 }
 
 void SettingsDialog::InitializeEmulatorLanguages() {
@@ -871,71 +662,137 @@ void SettingsDialog::updateNoteTextEdit(const QString& elementName) {
     // clang-format off
     // General
     if (elementName == "consoleLanguageGroupBox") {
-        text = tr("Console Language:\\nSets the language that the PS4 game uses.\\nIt's recommended to set this to a language the game supports, which will vary by region.");
+        text = tr("Console Language:\\n"
+                  "Sets the language that the PS4 game uses.\\n"
+                  "It's recommended to set this to a language the game supports, "
+                  "which will vary by region.");
     } else if (elementName == "emulatorLanguageGroupBox") {
         text = tr("Emulator Language:\\nSets the language of the emulator's user interface.");
     } else if (elementName == "showSplashCheckBox") {
-        text = tr("Show Splash Screen:\\nShows the game's splash screen (a special image) while the game is starting.");
+        text = tr("Show Splash Screen:\\n"
+                  "Shows the game's splash screen (a special image) while the game is starting.");
     } else if (elementName == "discordRPCCheckbox") {
-        text = tr("Enable Discord Rich Presence:\\nDisplays the emulator icon and relevant information on your Discord profile.");
+        text = tr("Enable Discord Rich Presence:\\n"
+                  "Displays the emulator icon and relevant information on your Discord profile.");
     } else if (elementName == "userName") {
-        text = tr("Username:\\nSets the PS4's account username, which may be displayed by some games.");
+        text = tr("Username:\\n"
+                  "Sets the PS4's account username, which may be displayed by some games.");
     } else if (elementName == "label_Trophy" || elementName == "trophyKeyLineEdit") {
-        text = tr("Trophy Key:\\nKey used to decrypt trophies. Must be obtained from your jailbroken console.\\nMust contain only hex characters.");
+        text = tr("Trophy Key:\\n"
+                  "Key used to decrypt trophies. Must be obtained from your jailbroken "
+                  "console.\\n"
+                  "Must contain only hex characters.");
     } else if (elementName == "logTypeGroupBox") {
-        text = tr("Log Type:\\nSets whether to synchronize the output of the log window for performance. May have adverse effects on emulation.");
+        text = tr("Log Type:\\n"
+                  "Sets whether to synchronize the output of the log window for performance. "
+                  "May have adverse effects on emulation.");
     } else if (elementName == "logFilter") {
-        text = tr("Log Filter:\\nFilters the log to only print specific information.\\nExamples: \"Core:Trace\" \"Lib.Pad:Debug Common.Filesystem:Error\" \"*:Critical\"\\nLevels: Trace, Debug, Info, Warning, Error, Critical - in this order, a specific level silences all levels preceding it in the list and logs every level after it.");
+        text = tr("Log Filter:\\n"
+                  "Filters the log to only print specific information.\\n"
+                  "Examples: \"Core:Trace\" \"Lib.Pad:Debug Common.Filesystem:Error\" "
+                  "\"*:Critical\"\\n"
+                  "Levels: Trace, Debug, Info, Warning, Error, Critical - in this order, a "
+                  "specific level silences all levels preceding it in the list and logs every "
+                  "level after it.");
     #ifdef ENABLE_UPDATER
     } else if (elementName == "updaterGroupBox") {
-        text = tr("GUI Updates:\\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\\n\\n*This update applies only to the Qt user interface. To update the emulator core, please use the 'Version Manager' menu.");
+        text = tr("GUI Updates:\\n"
+                  "Release: Official versions released every month that may be very outdated, "
+                  "but are more reliable and tested.\\n"
+                  "Nightly: Development versions that have all the latest features and fixes, "
+                  "but may contain bugs and are less stable.\\n\\n"
+                  "*This update applies only to the Qt user interface. To update the emulator "
+                  "core, please use the 'Version Manager' menu.");
 #endif
     } else if (elementName == "GUIBackgroundImageGroupBox") {
         text = tr("Background Image:\\nControl the opacity of the game background image.");
     } else if (elementName == "GUIMusicGroupBox") {
-        text = tr("Play Title Music:\\nIf a game supports it, enable playing special music when selecting the game in the GUI.");
+        text = tr("Play Title Music:\\n"
+                  "If a game supports it, enable playing special music when selecting the "
+                  "game in the GUI.");
     } else if (elementName == "enableHDRCheckBox") {
-        text = tr("Enable HDR:\\nEnables HDR in games that support it.\\nYour monitor must have support for the BT2020 PQ color space and the RGB10A2 swapchain format.");
+        text = tr("Enable HDR:\\n"
+                  "Enables HDR in games that support it.\\n"
+                  "Your monitor must have support for the BT2020 PQ color space and the RGB10A2 "
+                  "swapchain format.");
     } else if (elementName == "disableTrophycheckBox") {
-        text = tr("Disable Trophy Pop-ups:\\nDisable in-game trophy notifications. Trophy progress can still be tracked using the Trophy Viewer (right-click the game in the main window).");
+        text = tr("Disable Trophy Pop-ups:\\n"
+                  "Disable in-game trophy notifications. Trophy progress can still be tracked "
+                  "using the Trophy Viewer (right-click the game in the main window).");
     } else if (elementName == "enableCompatibilityCheckBox") {
-        text = tr("Display Compatibility Data:\\nDisplays game compatibility information in table view. Enable \"Update Compatibility On Startup\" to get up-to-date information.");
+        text = tr("Display Compatibility Data:\\n"
+                  "Displays game compatibility information in table view. Enable "
+                  "\"Update Compatibility On Startup\" to get up-to-date information.");
     } else if (elementName == "checkCompatibilityOnStartupCheckBox") {
-        text = tr("Update Compatibility On Startup:\\nAutomatically update the compatibility database when shadPS4 starts.");
+        text = tr("Update Compatibility On Startup:\\n"
+                  "Automatically update the compatibility database when shadPS4 starts.");
     } else if (elementName == "updateCompatibilityButton") {
-        text = tr("Update Compatibility Database:\\nImmediately update the compatibility database.");
+        text = tr("Update Compatibility Database:\\n"
+                  "Immediately update the compatibility database.");
     }
 
     //User
     if (elementName == "OpenCustomTrophyLocationButton") {
-        text = tr("Open the custom trophy images/sounds folder:\\nYou can add custom images to the trophies and an audio.\\nAdd the files to custom_trophy with the following names:\\ntrophy.wav OR trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\\nNote: The sound will only work in QT versions.");
+        text = tr("Open the custom trophy images/sounds folder:\\n"
+                  "You can add custom images to the trophies and an audio.\\n"
+                  "Add the files to custom_trophy with the following names:\\n"
+                  "trophy.wav OR trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\\n"
+                  "Note: The sound will only work in QT versions.");
     }
 
     // Input
     if (elementName == "hideCursorGroupBox") {
-        text = tr("Hide Cursor:\\nChoose when the cursor will disappear:\\nNever: You will always see the mouse.\\nidle: Set a time for it to disappear after being idle.\\nAlways: you will never see the mouse.");
+        text = tr("Hide Cursor:\\n"
+                  "Choose when the cursor will disappear:\\n"
+                  "Never: You will always see the mouse.\\n"
+                  "idle: Set a time for it to disappear after being idle.\\n"
+                  "Always: you will never see the mouse.");
     } else if (elementName == "idleTimeoutGroupBox") {
-        text = tr("Hide Idle Cursor Timeout:\\nThe duration (seconds) after which the cursor that has been idle hides itself.");
+        text = tr("Hide Idle Cursor Timeout:\\n"
+                  "The duration (seconds) after which the cursor that has been idle hides "
+                  "itself.");
     } else if (elementName == "backgroundControllerCheckBox") {
-        text = tr("Enable Controller Background Input:\\nAllow shadPS4 to detect controller inputs when the game window is not in focus.");
+        text = tr("Enable Controller Background Input:\\n"
+                  "Allow shadPS4 to detect controller inputs when the game window is not in "
+                  "focus.");
     }
 
     // Graphics
     if (elementName == "graphicsAdapterGroupBox") {
-        text = tr("Graphics Device:\\nOn multiple GPU systems, select the GPU the emulator will use from the drop down list,\\nor select \"Auto Select\" to automatically determine it.");
+        text = tr("Graphics Device:\\n"
+                  "On multiple GPU systems, select the GPU the emulator will use from the drop "
+                  "down list,\\n"
+                  "or select \"Auto Select\" to automatically determine it.");
     } else if (elementName == "presentModeGroupBox") {
-        text = tr("Present Mode:\\nConfigures how video output will be presented to your screen.\\n\\n"
-                  "Mailbox: Frames synchronize with your screen's refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\\n"
-                  "Fifo: Frames synchronize with your screen's refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\\n"
-                  "Immediate: Frames immediately present to your screen when ready. May result in tearing.");
+        text = tr("Present Mode:\\n"
+                  "Configures how video output will be presented to your screen.\\n\\n"
+                  "Mailbox: Frames synchronize with your screen's refresh rate. New frames will "
+                  "replace any pending frames. Reduces latency but may skip frames if running "
+                  "behind.\\n"
+                  "Fifo: Frames synchronize with your screen's refresh rate. New frames will be "
+                  "queued behind pending frames. Ensures all frames are presented but may "
+                  "increase latency.\\n"
+                  "Immediate: Frames immediately present to your screen when ready. May result "
+                  "in tearing.");
     } else if (elementName == "windowSizeGroupBox") {
-        text = tr("Width/Height:\\nSets the size of the emulator window at launch, which can be resized during gameplay.\\nThis is different from the in-game resolution.");
+        text = tr("Width/Height:\\n"
+                  "Sets the size of the emulator window at launch, which can be resized during "
+                  "gameplay.\\n"
+                  "This is different from the in-game resolution.");
     } else if (elementName == "heightDivider") {
-        text = tr("Vblank Frequency:\\nThe frame rate at which the emulator refreshes at (60hz is the baseline, whether the game runs at 30 or 60fps). Changing this may have adverse effects, such as increasing the game speed, or breaking critical game functionality that does not expect this to change!");
+        text = tr("Vblank Frequency:\\n"
+                  "The frame rate at which the emulator refreshes at (60hz is the baseline, "
+                  "whether the game runs at 30 or 60fps). Changing this may have adverse "
+                  "effects, such as increasing the game speed, or breaking critical game "
+                  "functionality that does not expect this to change!");
     } else if (elementName == "dumpShadersCheckBox") {
-        text = tr("Enable Shaders Dumping:\\nFor the sake of technical debugging, saves the game's shaders to a folder as they render.");
+        text = tr("Enable Shaders Dumping:\\n"
+                  "For the sake of technical debugging, saves the game's shaders to a folder "
+                  "as they render.");
     } else if (elementName == "nullGpuCheckBox") {
-        text = tr("Enable Null GPU:\\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.");
+        text = tr("Enable Null GPU:\\n"
+                  "For the sake of technical debugging, disables game rendering as if there "
+                  "were no graphics card. The screen will be black.");
     }
 
     // Path
@@ -946,7 +803,10 @@ void SettingsDialog::updateNoteTextEdit(const QString& elementName) {
     } else if (elementName == "removeFolderButton") {
         text = tr("Remove:\\nRemove a folder from the list.");
     } else if (elementName == "PortableUserFolderGroupBox") {
-        text = tr("Portable user folder:\\nStores shadPS4 settings and data that will be applied only to the shadPS4 build located in the current folder. Restart the app after creating the portable user folder to begin using it.");
+        text = tr("Portable user folder:\\n"
+                  "Stores shadPS4 settings and data that will be applied only to the shadPS4 "
+                  "build located in the current folder. Restart the app after creating the "
+                  "portable user folder to begin using it.");
     } else if (elementName == "sysmodulesGroupBox") {
         text = tr("PS4 Sysmodules Path:\\nThe folder where PS4 sysmodules are loaded from.");
     } else if (elementName == "browse_sysmodules") {
@@ -969,66 +829,132 @@ void SettingsDialog::updateNoteTextEdit(const QString& elementName) {
 
     // Debug
     if (elementName == "debugDump") {
-        text = tr("Enable Debug Dumping:\\nSaves the import and export symbols and file header information of the currently running PS4 program to a directory.");
+        text = tr("Enable Debug Dumping:\\n"
+                  "Saves the import and export symbols and file header information of the "
+                  "currently running PS4 program to a directory.");
     } else if (elementName == "vkValidationCheckBox") {
-        text = tr("Enable Vulkan Validation Layers:\\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\\nThis will reduce performance and likely change the behavior of emulation.\\nYou need the Vulkan SDK for this to work.");
+        text = tr("Enable Vulkan Validation Layers:\\n"
+                  "Enables a system that validates the state of the Vulkan renderer and logs "
+                  "information about its internal state.\\n"
+                  "This will reduce performance and likely change the behavior of emulation.\\n"
+                  "You need the Vulkan SDK for this to work.");
     } else if (elementName == "vkSyncValidationCheckBox") {
-        text = tr("Enable Sync Validation:\\nEnables a system that validates the timing of Vulkan rendering tasks.\\nThis will reduce performance and likely change the behavior of emulation.\\nYou need the Vulkan SDK for this to work.");
+        text = tr("Enable Sync Validation:\\n"
+                  "Enables a system that validates the timing of Vulkan rendering tasks.\\n"
+                  "This will reduce performance and likely change the behavior of emulation.\\n"
+                  "You need the Vulkan SDK for this to work.");
     } else if (elementName == "vkCoreValidationCheckBox") {
-        text = tr("Enable Core Validation:\\nEnables the main API validation functions.\\nThis will reduce performance and likely change the behavior of emulation.\\nYou need the Vulkan SDK for this to work.");
+        text = tr("Enable Core Validation:\\n"
+                  "Enables the main API validation functions.\\n"
+                  "This will reduce performance and likely change the behavior of emulation.\\n"
+                  "You need the Vulkan SDK for this to work.");
     } else if (elementName == "vkGpuValidationCheckBox") {
-        text = tr("Enable GPU-Assisted Validation:\\nInstruments shaders with code that validates if they are behaving correctly.\\nThis will reduce performance and likely change the behavior of emulation.\\nYou need the Vulkan SDK for this to work.");
+        text = tr("Enable GPU-Assisted Validation:\\n"
+                  "Instruments shaders with code that validates if they are behaving correctly."
+                  "\\n"
+                  "This will reduce performance and likely change the behavior of emulation.\\n"
+                  "You need the Vulkan SDK for this to work.");
     } else if (elementName == "rdocCheckBox") {
-        text = tr("Enable RenderDoc Debugging:\\nIf enabled, the emulator will provide compatibility with Renderdoc to allow capture and analysis of the currently rendered frame.");
+        text = tr("Enable RenderDoc Debugging:\\n"
+                  "If enabled, the emulator will provide compatibility with Renderdoc to allow "
+                  "capture and analysis of the currently rendered frame.");
     } else if (elementName == "crashDiagnosticsCheckBox") {
-        text = tr("Crash Diagnostics:\\nCreates a .yaml file with info about the Vulkan state at the time of crashing.\\nUseful for debugging 'Device lost' errors. If you have this enabled, you should enable Host AND Guest Debug Markers.\\nYou need Vulkan Validation Layers enabled and the Vulkan SDK for this to work.");
+        text = tr("Crash Diagnostics:\\n"
+                  "Creates a .yaml file with info about the Vulkan state at the time of "
+                  "crashing.\\n"
+                  "Useful for debugging 'Device lost' errors. If you have this enabled, you "
+                  "should enable Host AND Guest Debug Markers.\\n"
+                  "You need Vulkan Validation Layers enabled and the Vulkan SDK for this to "
+                  "work.");
     } else if (elementName == "guestMarkersCheckBox") {
-        text = tr("Guest Debug Markers:\\nInserts any debug markers the game itself has added to the command buffer.\\nIf you have this enabled, you should enable Crash Diagnostics.\\nUseful for programs like RenderDoc.");
+        text = tr("Guest Debug Markers:\\n"
+                  "Inserts any debug markers the game itself has added to the command buffer."
+                  "\\n"
+                  "If you have this enabled, you should enable Crash Diagnostics.\\n"
+                  "Useful for programs like RenderDoc.");
     } else if (elementName == "hostMarkersCheckBox") {
-        text = tr("Host Debug Markers:\\nInserts emulator-side information like markers for specific AMDGPU commands around Vulkan commands, as well as giving resources debug names.\\nIf you have this enabled, you should enable Crash Diagnostics.\\nUseful for programs like RenderDoc.");
+        text = tr("Host Debug Markers:\\n"
+                  "Inserts emulator-side information like markers for specific AMDGPU commands "
+                  "around Vulkan commands, as well as giving resources debug names.\\n"
+                  "If you have this enabled, you should enable Crash Diagnostics.\\n"
+                  "Useful for programs like RenderDoc.");
     } else if (elementName == "copyGPUBuffersCheckBox") {
-        text = tr("Copy GPU Buffers:\\nGets around race conditions involving GPU submits.\\nMay or may not help with PM4 type 0 crashes.");
+        text = tr("Copy GPU Buffers:\\n"
+                  "Gets around race conditions involving GPU submits.\\n"
+                  "May or may not help with PM4 type 0 crashes.");
     } else if (elementName == "collectShaderCheckBox") {
-        text = tr("Collect Shaders:\\nYou need this enabled to edit shaders with the debug menu (Ctrl + F10).");
+        text = tr("Collect Shaders:\\n"
+                  "You need this enabled to edit shaders with the debug menu (Ctrl + F10).");
     } else if (elementName == "separateLogFilesCheckbox") {
         text = tr("Separate Log Files:\\nWrites a separate logfile for each game.");
     } else if (elementName == "enableLoggingCheckBox") {
-        text = tr("Enable Logging:\\nEnables logging.\\nDo not change this if you do not know what you're doing!\\nWhen asking for help, make sure this setting is ENABLED.");
+        text = tr("Enable Logging:\\n"
+                  "Enables logging.\\n"
+                  "Do not change this if you do not know what you're doing!\\n"
+                  "When asking for help, make sure this setting is ENABLED.");
     } else if (elementName == "OpenLogLocationButton") {
         text = tr("Open Log Location:\\nOpen the folder where the log file is saved.");
     } else if (elementName == "micComboBox") {
-        text = tr("Microphone:\\nNone: Does not use the microphone.\\nDefault Device: Will use the default device defined in the system.\\nOr manually choose the microphone to be used from the list.");
+        text = tr("Microphone:\\n"
+                  "None: Does not use the microphone.\\n"
+                  "Default Device: Will use the default device defined in the system.\\n"
+                  "Or manually choose the microphone to be used from the list.");
     } else if (elementName == "volumeSliderElement") {
-        text = tr("Volume:\\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.");
+        text = tr("Volume:\\n"
+                  "Adjust volume for games on a global level, range goes from 0-500% with the "
+                  "default being 100%.");
     } else if (elementName == "chooseHomeTabGroupBox") {
-        text = tr("Default tab when opening settings:\\nChoose which tab will open, the default is General.");
+        text = tr("Default tab when opening settings:\\n"
+                  "Choose which tab will open, the default is General.");
     } else if (elementName == "motionControlsCheckBox") {
-        text = tr("Enable Motion Controls:\\nWhen enabled it will use the controller's motion control if supported.");
+        text = tr("Enable Motion Controls:\\n"
+                  "When enabled it will use the controller's motion control if supported.");
     } else if (elementName == "usbComboBox") {
-        text = tr("USB Device:\\nReal USB Device: Use a real USB Device attached to the system.\\nSkylander Portal: Emulate a Skylander Portal of Power.\\nInfinity Base: Emulate a Disney Infinity Base.\\nDimensions Toypad: Emulate a Lego Dimensions Toypad.");
+        text = tr("USB Device:\\n"
+                  "Real USB Device: Use a real USB Device attached to the system.\\n"
+                  "Skylander Portal: Emulate a Skylander Portal of Power.\\n"
+                  "Infinity Base: Emulate a Disney Infinity Base.\\n"
+                  "Dimensions Toypad: Emulate a Lego Dimensions Toypad.");
     }
 
     // Experimental
     if (elementName == "dmaCheckBox") {
-        text = tr("Enable Direct Memory Access:\\nEnables arbitrary memory access from the GPU to CPU memory.");
+        text = tr("Enable Direct Memory Access:\\n"
+                  "Enables arbitrary memory access from the GPU to CPU memory.");
     } else if (elementName == "neoCheckBox") {
-        text = tr("Enable PS4 Neo Mode:\\nAdds support for PS4 Pro emulation and memory size. Currently causes instability in a large number of tested games.");
+        text = tr("Enable PS4 Neo Mode:\\n"
+                  "Adds support for PS4 Pro emulation and memory size. Currently causes "
+                  "instability in a large number of tested games.");
     } else if (elementName == "devkitCheckBox") {
         text = tr("Enable Devkit Console Mode:\\nAdds support for Devkit console memory size.");
     } else if (elementName == "networkConnectedCheckBox") {
-        text = tr("Set Network Connected to True:\\nForces games to detect an active network connection. Actual online capabilities are not yet supported.");
+        text = tr("Set Network Connected to True:\\n"
+                  "Forces games to detect an active network connection. Actual online "
+                  "capabilities are not yet supported.");
     } else if (elementName == "shaderCaheCheckBox") {
-        text = tr("Enable Shader Cache:\\nStoring compiled shaders to avoid recompilations, reduce stuttering.");
+        text = tr("Enable Shader Cache:\\n"
+                  "Storing compiled shaders to avoid recompilations, reduce stuttering.");
     } else if (elementName == "shaderCacheArchiveCheckBox") {
-        text = tr("Compress the Shader Cache files into a zip file:\\nThe shader cache files are stored within a single zip file instead of multiple separate files.");
+        text = tr("Compress the Shader Cache files into a zip file:\\n"
+                  "The shader cache files are stored within a single zip file instead of "
+                  "multiple separate files.");
     } else if (elementName == "psnSignInCheckBox") {
-        text = tr("Set PSN Signed-in to True:\\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported.");
+        text = tr("Set PSN Signed-in to True:\\n"
+                  "Forces games to detect an active PSN sign-in. Actual PSN capabilities are "
+                  "not supported.");
     } else if (elementName == "readbacksCheckBox") {
-        text = tr("Enable Readbacks:\\nEnable GPU memory readbacks and writebacks.\\nThis is required for proper behavior in some games.\\nMight cause stability and/or performance issues.");
+        text = tr("Enable Readbacks:\\n"
+                  "Enable GPU memory readbacks and writebacks.\\n"
+                  "This is required for proper behavior in some games.\\n"
+                  "Might cause stability and/or performance issues.");
     } else if (elementName == "readbackLinearImagesCheckBox") {
-        text = tr("Enable Readback Linear Images:\\nEnables async downloading of GPU modified linear images.\\nMight fix issues in some games.");
+        text = tr("Enable Readback Linear Images:\\n"
+                  "Enables async downloading of GPU modified linear images.\\n"
+                  "Might fix issues in some games.");
     } else if (elementName == "dmemGroupBox") {
-        text = tr("Additional DMem Allocation:\\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.");
+        text = tr("Additional DMem Allocation:\\n"
+                  "Forces allocation of the specified amount of additional DMem. Crashes or "
+                  "causes issues in some games.");
     }
 
     // clang-format on
@@ -1051,161 +977,735 @@ bool SettingsDialog::eventFilter(QObject* obj, QEvent* event) {
     return QDialog::eventFilter(obj, event);
 }
 
-void SettingsDialog::UpdateSettings(bool is_specific) {
-    // Entries with game-specific settings, needs the game-specific arg
-    Config::setReadbacks(ui->readbacksCheckBox->isChecked(), is_specific);
-    Config::setReadbackLinearImages(ui->readbackLinearImagesCheckBox->isChecked(), is_specific);
-    Config::setDirectMemoryAccess(ui->dmaCheckBox->isChecked(), is_specific);
-    Config::setDevKitConsole(ui->devkitCheckBox->isChecked(), is_specific);
-    Config::setNeoMode(ui->neoCheckBox->isChecked(), is_specific);
-    Config::setConnectedToNetwork(ui->networkConnectedCheckBox->isChecked(), is_specific);
-    Config::setPipelineCacheEnabled(ui->shaderCaheCheckBox->isChecked(), is_specific);
-    Config::setPipelineCacheArchived(ui->shaderCacheArchiveCheckBox->isChecked(), is_specific);
-    Config::setPSNSignedIn(ui->psnSignInCheckBox->isChecked(), is_specific);
-    Config::setVblankFreq(ui->vblankSpinBox->value(), is_specific);
-    Config::setExtraDmemInMbytes(ui->dmemSpinBox->value(), is_specific);
+QTabWidget* SettingsDialog::GetTabWidget() const {
+    return ui->tabWidgetSettings;
+}
 
-    Config::setIsFullscreen(
-        screenModeMap.value(ui->displayModeComboBox->currentText()) != "Windowed", is_specific);
-    Config::setFullscreenMode(
-        screenModeMap.value(ui->displayModeComboBox->currentText()).toStdString(), is_specific);
-    Config::setPresentMode(
-        presentModeMap.value(ui->presentModeComboBox->currentText()).toStdString(), is_specific);
-    Config::setIsMotionControlsEnabled(ui->motionControlsCheckBox->isChecked(), is_specific);
-    Config::setBackgroundControllerInput(ui->backgroundControllerCheckBox->isChecked(),
-                                         is_specific);
-    Config::setisTrophyPopupDisabled(ui->disableTrophycheckBox->isChecked(), is_specific);
-    Config::setTrophyNotificationDuration(ui->popUpDurationSpinBox->value(), is_specific);
+QDialogButtonBox* SettingsDialog::GetButtonBox() const {
+    return ui->buttonBox;
+}
 
-    if (ui->radioButton_Top->isChecked()) {
-        Config::setSideTrophy("top", is_specific);
-    } else if (ui->radioButton_Left->isChecked()) {
-        Config::setSideTrophy("left", is_specific);
-    } else if (ui->radioButton_Right->isChecked()) {
-        Config::setSideTrophy("right", is_specific);
-    } else if (ui->radioButton_Bottom->isChecked()) {
-        Config::setSideTrophy("bottom", is_specific);
+QTextEdit* SettingsDialog::GetDescriptionText() const {
+    return ui->descriptionText;
+}
+
+void SettingsDialog::SetCloseTarget(QWidget* target) {
+    close_target = target ? target : this;
+}
+
+void SettingsDialog::SetSingleTabScope(const QString& tab_object_name) {
+    scoped_tab_id = TabIdFromObjectName(tab_object_name);
+}
+
+void SettingsDialog::ClearTabScope() {
+    scoped_tab_id = SettingsTabId::Unknown;
+}
+
+SettingsDialog::SettingsTabId SettingsDialog::TabIdFromObjectName(const QString& object_name) {
+    if (object_name == "generalTab") {
+        return SettingsTabId::General;
+    }
+    if (object_name == "guiTab") {
+        return SettingsTabId::Gui;
+    }
+    if (object_name == "graphicsTab") {
+        return SettingsTabId::Graphics;
+    }
+    if (object_name == "userTab") {
+        return SettingsTabId::User;
+    }
+    if (object_name == "inputTab") {
+        return SettingsTabId::Input;
+    }
+    if (object_name == "pathsTab") {
+        return SettingsTabId::Paths;
+    }
+    if (object_name == "logTab") {
+        return SettingsTabId::Log;
+    }
+    if (object_name == "debugTab") {
+        return SettingsTabId::Debug;
+    }
+    if (object_name == "experimentalTab") {
+        return SettingsTabId::Experimental;
+    }
+    return SettingsTabId::Unknown;
+}
+
+bool SettingsDialog::ShouldApplyToTab(SettingsTabId tab_id, SettingsTabId scope_tab_id) {
+    if (scope_tab_id == SettingsTabId::Unknown) {
+        return true;
+    }
+    return tab_id == scope_tab_id;
+}
+
+void SettingsDialog::HandleButtonBoxClicked(QAbstractButton* button) {
+    if (button == ui->buttonBox->button(QDialogButtonBox::Save)) {
+        is_game_saving = true;
+        ApplySettingsForScope();
+        Config::save(config_file, is_game_specific);
+        close_target->close();
+    } else if (button == ui->buttonBox->button(QDialogButtonBox::Apply)) {
+        ApplySettingsForScope();
+        Config::save(config_file, is_game_specific);
+    } else if (button == ui->buttonBox->button(QDialogButtonBox::RestoreDefaults)) {
+        SetDefaultValuesForScope();
+        if (scoped_tab_id == SettingsTabId::Unknown) {
+            Config::setDefaultValues(is_game_specific);
+        }
+        Config::save(config_file, is_game_specific);
+        LoadValuesFromConfig();
+    } else if (button == ui->buttonBox->button(QDialogButtonBox::Close)) {
+        if (ShouldApplyToTab(SettingsTabId::Gui, scoped_tab_id) && !is_game_specific) {
+            ui->backgroundImageOpacitySlider->setValue(backgroundImageOpacitySlider_backup);
+            emit BackgroundOpacityChanged(backgroundImageOpacitySlider_backup);
+            ui->BGMVolumeSlider->setValue(bgm_volume_backup);
+            BackgroundMusicPlayer::getInstance().setVolume(bgm_volume_backup);
+        }
+
+        toml::value data;
+        toml::value gs_data;
+        if (LoadSyncConfigData(data, gs_data)) {
+            SyncRealTimeWidgetsForScope(data, gs_data);
+        }
     }
 
-    Config::setLoggingEnabled(ui->enableLoggingCheckBox->isChecked(), is_specific);
-    Config::setAllowHDR(ui->enableHDRCheckBox->isChecked(), is_specific);
-    Config::setLogType(logTypeMap.value(ui->logTypeComboBox->currentText()).toStdString(),
-                       is_specific);
-    Config::setMicDevice(ui->micComboBox->currentData().toString().toStdString(), is_specific);
-    Config::setLogFilter(ui->logFilterLineEdit->text().toStdString(), is_specific);
-    Config::setUserName(ui->userNameLineEdit->text().toStdString(), is_specific);
-    Config::setCursorState(ui->hideCursorComboBox->currentIndex(), is_specific);
-    Config::setCursorHideTimeout(ui->hideCursorComboBox->currentIndex(), is_specific);
-    Config::setGpuId(ui->graphicsAdapterBox->currentIndex() - 1, is_specific);
-    Config::setUsbDeviceBackend(ui->usbComboBox->currentIndex(), is_specific);
-    Config::setVolumeSlider(ui->horizontalVolumeSlider->value(), is_specific);
-    Config::setLanguage(languageIndexes[ui->consoleLanguageComboBox->currentIndex()], is_specific);
-    Config::setWindowWidth(ui->widthSpinBox->value(), is_specific);
-    Config::setWindowHeight(ui->heightSpinBox->value(), is_specific);
-    Config::setDumpShaders(ui->dumpShadersCheckBox->isChecked(), is_specific);
-    Config::setNullGpu(ui->nullGpuCheckBox->isChecked(), is_specific);
-    Config::setFsrEnabled(ui->FSRCheckBox->isChecked(), is_specific);
-    Config::setRcasEnabled(ui->RCASCheckBox->isChecked(), is_specific);
-    Config::setRcasAttenuation(ui->RCASSlider->value(), is_specific);
-    Config::setShowSplash(ui->showSplashCheckBox->isChecked(), is_specific);
-    Config::setDebugDump(ui->debugDump->isChecked(), is_specific);
-    Config::setSeparateLogFilesEnabled(ui->separateLogFilesCheckbox->isChecked(), is_specific);
-    Config::setVkValidation(ui->vkValidationCheckBox->isChecked(), is_specific);
-    Config::setVkSyncValidation(ui->vkSyncValidationCheckBox->isChecked(), is_specific);
-    Config::setVkCoreValidation(ui->vkCoreValidationCheckBox->isChecked(), is_specific);
-    Config::setVkGpuValidation(ui->vkGpuValidationCheckBox->isChecked(), is_specific);
-    Config::setRdocEnabled(ui->rdocCheckBox->isChecked(), is_specific);
-    Config::setVkHostMarkersEnabled(ui->hostMarkersCheckBox->isChecked(), is_specific);
-    Config::setVkGuestMarkersEnabled(ui->guestMarkersCheckBox->isChecked(), is_specific);
-    Config::setVkCrashDiagnosticEnabled(ui->crashDiagnosticsCheckBox->isChecked(), is_specific);
-    Config::setCollectShaderForDebug(ui->collectShaderCheckBox->isChecked(), is_specific);
-    Config::setCopyGPUCmdBuffers(ui->copyGPUBuffersCheckBox->isChecked(), is_specific);
-
-    // Entries with no game-specific settings
-    if (!is_specific) {
-        std::vector<Config::GameInstallDir> dirs_with_states;
-        for (int i = 0; i < ui->gameFoldersListWidget->count(); i++) {
-            QListWidgetItem* item = ui->gameFoldersListWidget->item(i);
-            QString path_string = item->text();
-            auto path = Common::FS::PathFromQString(path_string);
-            bool enabled = (item->checkState() == Qt::Checked);
-
-            dirs_with_states.push_back({path, enabled});
-        }
-        Config::setAllGameInstallDirs(dirs_with_states);
-
-        BackgroundMusicPlayer::getInstance().setVolume(ui->BGMVolumeSlider->value());
-
-        Config::setTrophyKey(ui->trophyKeyLineEdit->text().toStdString());
-        Config::setEnableDiscordRPC(ui->discordRPCCheckbox->isChecked());
-        m_gui_settings->SetValue(gui::glc_showCompatibility,
-                                 ui->enableCompatibilityCheckBox->isChecked());
-        m_gui_settings->SetValue(gui::gen_checkCompatibilityAtStartup,
-                                 ui->checkCompatibilityOnStartupCheckBox->isChecked());
-        m_gui_settings->SetValue(gui::gl_playBackgroundMusic, ui->playBGMCheckBox->isChecked());
-        m_gui_settings->SetValue(gui::gl_backgroundMusicVolume, ui->BGMVolumeSlider->value());
-        m_gui_settings->SetValue(gui::gen_checkForUpdates, ui->updateCheckBox->isChecked());
-        m_gui_settings->SetValue(gui::gen_showChangeLog, ui->changelogCheckBox->isChecked());
-        m_gui_settings->SetValue(gui::gl_showBackgroundImage,
-                                 ui->showBackgroundImageCheckBox->isChecked());
-        m_gui_settings->SetValue(gui::gl_backgroundImageOpacity,
-                                 std::clamp(ui->backgroundImageOpacitySlider->value(), 0, 100));
-        emit BackgroundOpacityChanged(ui->backgroundImageOpacitySlider->value());
-        m_gui_settings->SetValue(gui::gen_homeTab,
-                                 chooseHomeTabMap.value(ui->chooseHomeTabComboBox->currentText()));
+    if (Common::Log::IsActive()) {
+        Common::Log::Filter filter;
+        filter.ParseFilterString(Config::getLogFilter());
+        Common::Log::SetGlobalFilter(filter);
     }
 }
 
-void SettingsDialog::SyncRealTimeWidgetstoConfig() {
-    std::filesystem::path userdir = Common::FS::GetUserPath(Common::FS::PathType::UserDir);
-    const toml::value data = toml::parse(userdir / "config.toml");
-
-    if (!is_game_specific) {
-        ui->gameFoldersListWidget->clear();
-        if (data.contains("GUI")) {
-            const toml::value& gui = data.at("GUI");
-            const auto install_dir_array =
-                toml::find_or<std::vector<std::u8string>>(gui, "installDirs", {});
-
-            std::vector<bool> install_dirs_enabled;
-            try {
-                install_dirs_enabled = Config::getGameInstallDirsEnabled();
-            } catch (...) {
-                // If it does not exist, assume that all are enabled.
-                install_dirs_enabled.resize(install_dir_array.size(), true);
-            }
-
-            if (install_dirs_enabled.size() < install_dir_array.size()) {
-                install_dirs_enabled.resize(install_dir_array.size(), true);
-            }
-
-            std::vector<Config::GameInstallDir> settings_install_dirs_config;
-
-            for (size_t i = 0; i < install_dir_array.size(); i++) {
-                std::filesystem::path dir = install_dir_array[i];
-                bool enabled = install_dirs_enabled[i];
-
-                settings_install_dirs_config.push_back({dir, enabled});
-
-                QString path_string;
-                Common::FS::PathToQString(path_string, dir);
-
-                QListWidgetItem* item = new QListWidgetItem(path_string);
-                item->setFlags(item->flags() | Qt::ItemIsUserCheckable);
-                item->setCheckState(enabled ? Qt::Checked : Qt::Unchecked);
-                ui->gameFoldersListWidget->addItem(item);
-            }
-
-            Config::setAllGameInstallDirs(settings_install_dirs_config);
-        }
+void SettingsDialog::ApplySettingsForScope() {
+    if (scoped_tab_id == SettingsTabId::Unknown) {
+        ApplySettingsForTab(SettingsTabId::General);
+        ApplySettingsForTab(SettingsTabId::Gui);
+        ApplySettingsForTab(SettingsTabId::Graphics);
+        ApplySettingsForTab(SettingsTabId::User);
+        ApplySettingsForTab(SettingsTabId::Input);
+        ApplySettingsForTab(SettingsTabId::Paths);
+        ApplySettingsForTab(SettingsTabId::Log);
+        ApplySettingsForTab(SettingsTabId::Debug);
+        ApplySettingsForTab(SettingsTabId::Experimental);
+        return;
     }
 
-    toml::value gs_data;
-    is_game_specific
-        ? gs_data = toml::parse(Common::FS::GetUserPath(Common::FS::PathType::CustomConfigs) /
-                                (gs_serial + ".toml"))
-        : gs_data = data;
+    ApplySettingsForTab(scoped_tab_id);
+}
 
+void SettingsDialog::ApplySettingsForTab(SettingsTabId tab_id) {
+    const bool is_specific = is_game_specific;
+
+    switch (tab_id) {
+    case SettingsTabId::General: {
+        Config::setVolumeSlider(ui->horizontalVolumeSlider->value(), is_specific);
+        Config::setLanguage(languageIndexes[ui->consoleLanguageComboBox->currentIndex()],
+                            is_specific);
+        Config::setShowSplash(ui->showSplashCheckBox->isChecked(), is_specific);
+        Config::setMainOutputDevice(ui->GenAudioComboBox->currentText().toStdString(),
+                                    is_specific);
+        Config::setPadSpkOutputDevice(ui->DsAudioComboBox->currentText().toStdString(),
+                                      is_specific);
+        break;
+    }
+    case SettingsTabId::Gui: {
+        if (!is_specific) {
+            BackgroundMusicPlayer::getInstance().setVolume(ui->BGMVolumeSlider->value());
+            Config::setTrophyKey(ui->trophyKeyLineEdit->text().toStdString());
+            Config::setEnableDiscordRPC(ui->discordRPCCheckbox->isChecked());
+            m_gui_settings->SetValue(gui::glc_showCompatibility,
+                                     ui->enableCompatibilityCheckBox->isChecked());
+            m_gui_settings->SetValue(gui::gen_checkCompatibilityAtStartup,
+                                     ui->checkCompatibilityOnStartupCheckBox->isChecked());
+            m_gui_settings->SetValue(gui::gl_playBackgroundMusic,
+                                     ui->playBGMCheckBox->isChecked());
+            m_gui_settings->SetValue(gui::gl_backgroundMusicVolume,
+                                     ui->BGMVolumeSlider->value());
+            m_gui_settings->SetValue(gui::gen_checkForUpdates, ui->updateCheckBox->isChecked());
+            m_gui_settings->SetValue(gui::gen_showChangeLog, ui->changelogCheckBox->isChecked());
+            m_gui_settings->SetValue(gui::gl_showBackgroundImage,
+                                     ui->showBackgroundImageCheckBox->isChecked());
+            m_gui_settings->SetValue(gui::gl_backgroundImageOpacity,
+                                     std::clamp(ui->backgroundImageOpacitySlider->value(), 0, 100));
+            emit BackgroundOpacityChanged(ui->backgroundImageOpacitySlider->value());
+            m_gui_settings->SetValue(
+                gui::gen_homeTab,
+                chooseHomeTabMap.value(ui->chooseHomeTabComboBox->currentText()));
+        }
+        break;
+    }
+    case SettingsTabId::Graphics: {
+        Config::setIsFullscreen(
+            screenModeMap.value(ui->displayModeComboBox->currentText()) != "Windowed",
+            is_specific);
+        Config::setFullscreenMode(
+            screenModeMap.value(ui->displayModeComboBox->currentText()).toStdString(),
+            is_specific);
+        Config::setPresentMode(
+            presentModeMap.value(ui->presentModeComboBox->currentText()).toStdString(),
+            is_specific);
+        Config::setAllowHDR(ui->enableHDRCheckBox->isChecked(), is_specific);
+        Config::setGpuId(ui->graphicsAdapterBox->currentIndex() - 1, is_specific);
+        Config::setWindowWidth(ui->widthSpinBox->value(), is_specific);
+        Config::setWindowHeight(ui->heightSpinBox->value(), is_specific);
+        Config::setDumpShaders(ui->dumpShadersCheckBox->isChecked(), is_specific);
+        Config::setNullGpu(ui->nullGpuCheckBox->isChecked(), is_specific);
+        Config::setFsrEnabled(ui->FSRCheckBox->isChecked(), is_specific);
+        Config::setRcasEnabled(ui->RCASCheckBox->isChecked(), is_specific);
+        Config::setRcasAttenuation(ui->RCASSlider->value(), is_specific);
+        break;
+    }
+    case SettingsTabId::User: {
+        Config::setUserName(ui->userNameLineEdit->text().toStdString(), is_specific);
+        Config::setisTrophyPopupDisabled(ui->disableTrophycheckBox->isChecked(), is_specific);
+        Config::setTrophyNotificationDuration(ui->popUpDurationSpinBox->value(), is_specific);
+
+        if (ui->radioButton_Top->isChecked()) {
+            Config::setSideTrophy("top", is_specific);
+        } else if (ui->radioButton_Left->isChecked()) {
+            Config::setSideTrophy("left", is_specific);
+        } else if (ui->radioButton_Right->isChecked()) {
+            Config::setSideTrophy("right", is_specific);
+        } else if (ui->radioButton_Bottom->isChecked()) {
+            Config::setSideTrophy("bottom", is_specific);
+        }
+        break;
+    }
+    case SettingsTabId::Input: {
+        Config::setIsMotionControlsEnabled(ui->motionControlsCheckBox->isChecked(), is_specific);
+        Config::setBackgroundControllerInput(ui->backgroundControllerCheckBox->isChecked(),
+                                             is_specific);
+        Config::setCursorState(ui->hideCursorComboBox->currentIndex(), is_specific);
+        Config::setCursorHideTimeout(ui->hideCursorComboBox->currentIndex(), is_specific);
+        Config::setMicDevice(ui->micComboBox->currentData().toString().toStdString(),
+                             is_specific);
+        Config::setUsbDeviceBackend(ui->usbComboBox->currentIndex(), is_specific);
+        break;
+    }
+    case SettingsTabId::Paths: {
+        if (!is_specific) {
+            std::vector<Config::GameInstallDir> dirs_with_states;
+            for (int i = 0; i < ui->gameFoldersListWidget->count(); i++) {
+                QListWidgetItem* item = ui->gameFoldersListWidget->item(i);
+                QString path_string = item->text();
+                auto path = Common::FS::PathFromQString(path_string);
+                bool enabled = (item->checkState() == Qt::Checked);
+
+                dirs_with_states.push_back({path, enabled});
+            }
+            Config::setAllGameInstallDirs(dirs_with_states);
+        }
+        break;
+    }
+    case SettingsTabId::Log: {
+        Config::setLoggingEnabled(ui->enableLoggingCheckBox->isChecked(), is_specific);
+        Config::setLogType(logTypeMap.value(ui->logTypeComboBox->currentText()).toStdString(),
+                           is_specific);
+        Config::setLogFilter(ui->logFilterLineEdit->text().toStdString(), is_specific);
+        Config::setSeparateLogFilesEnabled(ui->separateLogFilesCheckbox->isChecked(),
+                                           is_specific);
+        break;
+    }
+    case SettingsTabId::Debug: {
+        Config::setDebugDump(ui->debugDump->isChecked(), is_specific);
+        Config::setVkValidation(ui->vkValidationCheckBox->isChecked(), is_specific);
+        Config::setVkSyncValidation(ui->vkSyncValidationCheckBox->isChecked(), is_specific);
+        Config::setVkCoreValidation(ui->vkCoreValidationCheckBox->isChecked(), is_specific);
+        Config::setVkGpuValidation(ui->vkGpuValidationCheckBox->isChecked(), is_specific);
+        Config::setRdocEnabled(ui->rdocCheckBox->isChecked(), is_specific);
+        Config::setVkHostMarkersEnabled(ui->hostMarkersCheckBox->isChecked(), is_specific);
+        Config::setVkGuestMarkersEnabled(ui->guestMarkersCheckBox->isChecked(), is_specific);
+        Config::setVkCrashDiagnosticEnabled(ui->crashDiagnosticsCheckBox->isChecked(),
+                                            is_specific);
+        Config::setCollectShaderForDebug(ui->collectShaderCheckBox->isChecked(), is_specific);
+        Config::setCopyGPUCmdBuffers(ui->copyGPUBuffersCheckBox->isChecked(), is_specific);
+        break;
+    }
+    case SettingsTabId::Experimental: {
+        Config::setReadbacks(ui->readbacksCheckBox->isChecked(), is_specific);
+        Config::setReadbackLinearImages(ui->readbackLinearImagesCheckBox->isChecked(),
+                                        is_specific);
+        Config::setDirectMemoryAccess(ui->dmaCheckBox->isChecked(), is_specific);
+        Config::setDevKitConsole(ui->devkitCheckBox->isChecked(), is_specific);
+        Config::setNeoMode(ui->neoCheckBox->isChecked(), is_specific);
+        Config::setConnectedToNetwork(ui->networkConnectedCheckBox->isChecked(), is_specific);
+        Config::setPipelineCacheEnabled(ui->shaderCaheCheckBox->isChecked(), is_specific);
+        Config::setPipelineCacheArchived(ui->shaderCacheArchiveCheckBox->isChecked(),
+                                         is_specific);
+        Config::setPSNSignedIn(ui->psnSignInCheckBox->isChecked(), is_specific);
+        Config::setVblankFreq(ui->vblankSpinBox->value(), is_specific);
+        Config::setExtraDmemInMbytes(ui->dmemSpinBox->value(), is_specific);
+        break;
+    }
+    case SettingsTabId::Unknown:
+        break;
+    }
+}
+
+void SettingsDialog::LoadValuesForScope(const toml::value& data, const toml::value& gs_data,
+                                        bool is_newly_created) {
+    if (scoped_tab_id == SettingsTabId::Unknown) {
+        LoadValuesForTab(SettingsTabId::General, data, gs_data, is_newly_created);
+        LoadValuesForTab(SettingsTabId::Gui, data, gs_data, is_newly_created);
+        LoadValuesForTab(SettingsTabId::Graphics, data, gs_data, is_newly_created);
+        LoadValuesForTab(SettingsTabId::User, data, gs_data, is_newly_created);
+        LoadValuesForTab(SettingsTabId::Input, data, gs_data, is_newly_created);
+        LoadValuesForTab(SettingsTabId::Paths, data, gs_data, is_newly_created);
+        LoadValuesForTab(SettingsTabId::Log, data, gs_data, is_newly_created);
+        LoadValuesForTab(SettingsTabId::Debug, data, gs_data, is_newly_created);
+        LoadValuesForTab(SettingsTabId::Experimental, data, gs_data, is_newly_created);
+
+        if (!is_game_specific) {
+            QString chooseHomeTab = m_gui_settings->GetValue(gui::gen_homeTab).toString();
+            QString translatedText = chooseHomeTabMap.key(chooseHomeTab);
+            if (translatedText.isEmpty()) {
+                translatedText = tr("General");
+            }
+            ui->chooseHomeTabComboBox->setCurrentText(translatedText);
+
+            QStringList tabNames = {tr("General"), tr("Frontend"), tr("Graphics"),
+                                    tr("User"),    tr("Input"),    tr("Paths"),
+                                    tr("Log"),     tr("Debug"),    tr("Experimental")};
+            int indexTab = tabNames.indexOf(translatedText);
+            if (indexTab == -1 || !ui->tabWidgetSettings->isTabVisible(indexTab) ||
+                is_newly_created) {
+                indexTab = 0;
+            }
+            ui->tabWidgetSettings->setCurrentIndex(indexTab);
+        }
+        return;
+    }
+
+    LoadValuesForTab(scoped_tab_id, data, gs_data, is_newly_created);
+}
+
+void SettingsDialog::LoadValuesForTab(SettingsTabId tab_id, const toml::value& data,
+                                      const toml::value& gs_data, bool is_newly_created) {
+    Q_UNUSED(is_newly_created);
+    switch (tab_id) {
+    case SettingsTabId::General: {
+        ui->consoleLanguageComboBox->setCurrentIndex(
+            std::distance(languageIndexes.begin(),
+                          std::find(languageIndexes.begin(), languageIndexes.end(),
+                                    toml::find_or<int>(gs_data, "Settings",
+                                                      "consoleLanguage", 6))) %
+            languageIndexes.size());
+
+        ui->showSplashCheckBox->setChecked(
+            toml::find_or<bool>(gs_data, "General", "showSplash", false));
+
+        ui->horizontalVolumeSlider->setValue(
+            toml::find_or<int>(gs_data, "General", "volumeSlider", 100));
+        ui->volumeText->setText(QString::number(ui->horizontalVolumeSlider->sliderPosition()) +
+                                "%");
+
+        ui->GenAudioComboBox->setCurrentText(QString::fromStdString(
+            toml::find_or<std::string>(gs_data, "Audio", "mainOutputDevice", "")));
+        ui->DsAudioComboBox->setCurrentText(QString::fromStdString(
+            toml::find_or<std::string>(gs_data, "Audio", "padSpkOutputDevice", "")));
+        break;
+    }
+    case SettingsTabId::Gui: {
+        if (!is_game_specific) {
+            ui->emulatorLanguageComboBox->setCurrentIndex(
+                languages[m_gui_settings->GetValue(gui::gen_guiLanguage).toString().toStdString()]);
+
+            ui->playBGMCheckBox->setChecked(
+                m_gui_settings->GetValue(gui::gl_playBackgroundMusic).toBool());
+
+            ui->BGMVolumeSlider->setValue(
+                m_gui_settings->GetValue(gui::gl_backgroundMusicVolume).toInt());
+            ui->discordRPCCheckbox->setChecked(
+                toml::find_or<bool>(data, "General", "enableDiscordRPC", true));
+
+            ui->trophyKeyLineEdit->setText(
+                QString::fromStdString(toml::find_or<std::string>(data, "Keys", "TrophyKey", "")));
+            ui->trophyKeyLineEdit->setEchoMode(QLineEdit::Password);
+            ui->enableCompatibilityCheckBox->setChecked(
+                m_gui_settings->GetValue(gui::glc_showCompatibility).toBool());
+            ui->checkCompatibilityOnStartupCheckBox->setChecked(
+                m_gui_settings->GetValue(gui::gen_checkCompatibilityAtStartup).toBool());
+
+            ui->backgroundImageOpacitySlider->setValue(
+                m_gui_settings->GetValue(gui::gl_backgroundImageOpacity).toInt());
+            ui->showBackgroundImageCheckBox->setChecked(
+                m_gui_settings->GetValue(gui::gl_showBackgroundImage).toBool());
+
+            backgroundImageOpacitySlider_backup =
+                m_gui_settings->GetValue(gui::gl_backgroundImageOpacity).toInt();
+            bgm_volume_backup = m_gui_settings->GetValue(gui::gl_backgroundMusicVolume).toInt();
+
+#ifdef ENABLE_UPDATER
+            ui->updateCheckBox->setChecked(
+                m_gui_settings->GetValue(gui::gen_checkForUpdates).toBool());
+            ui->changelogCheckBox->setChecked(
+                m_gui_settings->GetValue(gui::gen_showChangeLog).toBool());
+#endif
+        }
+        break;
+    }
+    case SettingsTabId::Graphics: {
+        ui->graphicsAdapterBox->setCurrentIndex(
+            toml::find_or<int>(gs_data, "Vulkan", "gpuId", -1) + 1);
+        ui->widthSpinBox->setValue(toml::find_or<int>(gs_data, "GPU", "screenWidth", 1280));
+        ui->heightSpinBox->setValue(toml::find_or<int>(gs_data, "GPU", "screenHeight", 720));
+        ui->dumpShadersCheckBox->setChecked(
+            toml::find_or<bool>(gs_data, "GPU", "dumpShaders", false));
+        ui->nullGpuCheckBox->setChecked(toml::find_or<bool>(gs_data, "GPU", "nullGpu", false));
+        ui->enableHDRCheckBox->setChecked(
+            toml::find_or<bool>(gs_data, "GPU", "allowHDR", false));
+        ui->FSRCheckBox->setChecked(toml::find_or<bool>(gs_data, "GPU", "fsrEnabled", true));
+        ui->RCASCheckBox->setChecked(toml::find_or<bool>(gs_data, "GPU", "rcasEnabled", true));
+        ui->RCASSlider->setValue(
+            toml::find_or<int>(gs_data, "GPU", "rcasAttenuation", 250));
+        ui->RCASValue->setText(QString::number(ui->RCASSlider->value() / 1000.0, 'f', 3));
+
+        std::string fullScreenMode =
+            toml::find_or<std::string>(gs_data, "GPU", "FullscreenMode", "Windowed");
+        QString translatedText_FullscreenMode =
+            screenModeMap.key(QString::fromStdString(fullScreenMode));
+        ui->displayModeComboBox->setCurrentText(translatedText_FullscreenMode);
+
+        std::string presentMode =
+            toml::find_or<std::string>(gs_data, "GPU", "presentMode", "Mailbox");
+        QString translatedText_PresentMode =
+            presentModeMap.key(QString::fromStdString(presentMode));
+        ui->presentModeComboBox->setCurrentText(translatedText_PresentMode);
+        break;
+    }
+    case SettingsTabId::User: {
+        ui->userNameLineEdit->setText(
+            QString::fromStdString(toml::find_or<std::string>(gs_data, "General", "userName",
+                                                              "shadPS4")));
+        ui->disableTrophycheckBox->setChecked(
+            toml::find_or<bool>(gs_data, "General", "isTrophyPopupDisabled", false));
+        ui->popUpDurationSpinBox->setValue(
+            toml::find_or<double>(gs_data, "General", "trophyNotificationDuration", 6.0));
+
+        std::string sideTrophy =
+            toml::find_or<std::string>(gs_data, "General", "sideTrophy", "right");
+        QString side = QString::fromStdString(sideTrophy);
+        ui->radioButton_Left->setChecked(side == "left");
+        ui->radioButton_Right->setChecked(side == "right");
+        ui->radioButton_Top->setChecked(side == "top");
+        ui->radioButton_Bottom->setChecked(side == "bottom");
+        break;
+    }
+    case SettingsTabId::Input: {
+        ui->hideCursorComboBox->setCurrentIndex(
+            toml::find_or<int>(gs_data, "Input", "cursorState", 1));
+        OnCursorStateChanged(toml::find_or<int>(gs_data, "Input", "cursorState", 1));
+        ui->idleTimeoutSpinBox->setValue(
+            toml::find_or<int>(gs_data, "Input", "cursorHideTimeout", 5));
+        ui->motionControlsCheckBox->setChecked(
+            toml::find_or<bool>(gs_data, "Input", "isMotionControlsEnabled", true));
+        ui->backgroundControllerCheckBox->setChecked(
+            toml::find_or<bool>(gs_data, "Input", "backgroundControllerInput", false));
+        ui->usbComboBox->setCurrentIndex(
+            toml::find_or<int>(gs_data, "Input", "usbDeviceBackend", 0));
+
+        std::string micDevice =
+            toml::find_or<std::string>(gs_data, "Audio", "micDevice", "Default Device");
+        QString micValue = QString::fromStdString(micDevice);
+        int micIndex = ui->micComboBox->findData(micValue);
+        if (micIndex != -1) {
+            ui->micComboBox->setCurrentIndex(micIndex);
+        } else {
+            ui->micComboBox->setCurrentIndex(0);
+        }
+        break;
+    }
+    case SettingsTabId::Paths: {
+        if (!is_game_specific) {
+            const auto save_data_path = Config::GetSaveDataPath();
+            QString save_data_path_string;
+            Common::FS::PathToQString(save_data_path_string, save_data_path);
+            ui->currentSaveDataPath->setText(save_data_path_string);
+
+            const auto dlc_folder_path = Config::getAddonInstallDir();
+            QString dlc_folder_path_string;
+            Common::FS::PathToQString(dlc_folder_path_string, dlc_folder_path);
+            ui->currentDLCFolder->setText(dlc_folder_path_string);
+
+            const auto sysmodules_path = Config::getSysModulesPath();
+            QString sysmodules_path_string;
+            Common::FS::PathToQString(sysmodules_path_string, sysmodules_path);
+            ui->sysmodulesPath->setText(sysmodules_path_string);
+
+            ui->removeFolderButton->setEnabled(
+                !ui->gameFoldersListWidget->selectedItems().isEmpty());
+
+            SyncGameFoldersFromConfig(data);
+        }
+        break;
+    }
+    case SettingsTabId::Log: {
+        std::string logType =
+            toml::find_or<std::string>(gs_data, "General", "logType", "sync");
+        QString translatedText_logType = logTypeMap.key(QString::fromStdString(logType));
+        if (!translatedText_logType.isEmpty()) {
+            ui->logTypeComboBox->setCurrentText(translatedText_logType);
+        }
+        ui->logFilterLineEdit->setText(QString::fromStdString(
+            toml::find_or<std::string>(gs_data, "General", "logFilter", "")));
+        ui->enableLoggingCheckBox->setChecked(
+            toml::find_or<bool>(gs_data, "Debug", "logEnabled", true));
+        ui->separateLogFilesCheckbox->setChecked(
+            toml::find_or<bool>(gs_data, "Debug", "isSeparateLogFilesEnabled", false));
+        break;
+    }
+    case SettingsTabId::Debug: {
+        ui->debugDump->setChecked(toml::find_or<bool>(gs_data, "Debug", "DebugDump", false));
+        ui->vkValidationCheckBox->setChecked(
+            toml::find_or<bool>(gs_data, "Vulkan", "validation", false));
+        ui->vkSyncValidationCheckBox->setChecked(
+            toml::find_or<bool>(gs_data, "Vulkan", "validation_sync", false));
+        ui->vkCoreValidationCheckBox->setChecked(
+            toml::find_or<bool>(gs_data, "Vulkan", "validation_core", false));
+        ui->vkGpuValidationCheckBox->setChecked(
+            toml::find_or<bool>(gs_data, "Vulkan", "validation_gpu", false));
+        ui->vkValidationCheckBox->isChecked() ? ui->vkLayersGroupBox->setVisible(true)
+                                              : ui->vkLayersGroupBox->setVisible(false);
+
+        ui->rdocCheckBox->setChecked(toml::find_or<bool>(gs_data, "Vulkan", "rdocEnable", false));
+        ui->crashDiagnosticsCheckBox->setChecked(
+            toml::find_or<bool>(gs_data, "Vulkan", "crashDiagnostic", false));
+        ui->guestMarkersCheckBox->setChecked(
+            toml::find_or<bool>(gs_data, "Vulkan", "guestMarkers", false));
+        ui->hostMarkersCheckBox->setChecked(
+            toml::find_or<bool>(gs_data, "Vulkan", "hostMarkers", false));
+        ui->copyGPUBuffersCheckBox->setChecked(
+            toml::find_or<bool>(gs_data, "GPU", "copyGPUBuffers", false));
+        ui->collectShaderCheckBox->setChecked(
+            toml::find_or<bool>(gs_data, "Debug", "CollectShader", false));
+        break;
+    }
+    case SettingsTabId::Experimental: {
+        ui->readbacksCheckBox->setChecked(
+            toml::find_or<bool>(gs_data, "GPU", "readbacks", false));
+        ui->readbackLinearImagesCheckBox->setChecked(
+            toml::find_or<bool>(gs_data, "GPU", "readbackLinearImages", false));
+        ui->dmaCheckBox->setChecked(
+            toml::find_or<bool>(gs_data, "GPU", "directMemoryAccess", false));
+        ui->neoCheckBox->setChecked(toml::find_or<bool>(gs_data, "General", "isPS4Pro", false));
+        ui->devkitCheckBox->setChecked(
+            toml::find_or<bool>(gs_data, "General", "isDevKit", false));
+        ui->networkConnectedCheckBox->setChecked(
+            toml::find_or<bool>(gs_data, "General", "isConnectedToNetwork", false));
+        ui->shaderCaheCheckBox->setChecked(
+            toml::find_or<bool>(gs_data, "Vulkan", "pipelineCacheEnable", false));
+        ui->shaderCacheArchiveCheckBox->setChecked(
+            toml::find_or<bool>(gs_data, "Vulkan", "pipelineCacheArchive", false));
+        ui->psnSignInCheckBox->setChecked(
+            toml::find_or<bool>(gs_data, "General", "isPSNSignedIn", false));
+        ui->vblankSpinBox->setValue(toml::find_or<int>(gs_data, "GPU", "vblankFrequency", 60));
+        ui->dmemSpinBox->setValue(
+            toml::find_or<int>(gs_data, "General", "extraDmemInMbytes", 0));
+
+        ui->shaderCaheCheckBox->isChecked() ? ui->shaderCacheArchiveCheckBox->setVisible(true)
+                                            : ui->shaderCacheArchiveCheckBox->setVisible(false);
+        break;
+    }
+    case SettingsTabId::Unknown:
+        break;
+    }
+}
+
+void SettingsDialog::SetDefaultValuesForScope() {
+    if (scoped_tab_id == SettingsTabId::Unknown) {
+        SetDefaultValuesForTab(SettingsTabId::General);
+        SetDefaultValuesForTab(SettingsTabId::Gui);
+        SetDefaultValuesForTab(SettingsTabId::Graphics);
+        SetDefaultValuesForTab(SettingsTabId::User);
+        SetDefaultValuesForTab(SettingsTabId::Input);
+        SetDefaultValuesForTab(SettingsTabId::Paths);
+        SetDefaultValuesForTab(SettingsTabId::Log);
+        SetDefaultValuesForTab(SettingsTabId::Debug);
+        SetDefaultValuesForTab(SettingsTabId::Experimental);
+        return;
+    }
+
+    SetDefaultValuesForTab(scoped_tab_id);
+}
+
+void SettingsDialog::SetDefaultValuesForTab(SettingsTabId tab_id) {
+    const bool is_specific = is_game_specific;
+
+    switch (tab_id) {
+    case SettingsTabId::General:
+        Config::setVolumeSlider(100, is_specific);
+        Config::setLanguage(1, is_specific);
+        Config::setShowSplash(false, is_specific);
+        Config::setMainOutputDevice("Default Device", is_specific);
+        Config::setPadSpkOutputDevice("Default Device", is_specific);
+        break;
+    case SettingsTabId::Gui:
+        if (!is_specific) {
+            m_gui_settings->SetValue(gui::gl_showBackgroundImage, true);
+            m_gui_settings->SetValue(gui::gl_backgroundImageOpacity, 50);
+            m_gui_settings->SetValue(gui::gl_playBackgroundMusic, false);
+            m_gui_settings->SetValue(gui::gl_backgroundMusicVolume, 50);
+            m_gui_settings->SetValue(gui::gen_checkForUpdates, false);
+            m_gui_settings->SetValue(gui::gen_showChangeLog, false);
+            m_gui_settings->SetValue(gui::gen_guiLanguage, "en_US");
+            m_gui_settings->SetValue(gui::glc_showLoadGameSizeEnabled, true);
+            m_gui_settings->SetValue(gui::glc_showCompatibility, false);
+            m_gui_settings->SetValue(gui::gen_checkCompatibilityAtStartup, false);
+            m_gui_settings->SetValue(gui::gen_homeTab, "General");
+
+            Config::setEnableDiscordRPC(false);
+            Config::setTrophyKey("");
+        }
+        break;
+    case SettingsTabId::Graphics:
+        Config::setWindowWidth(1280, is_specific);
+        Config::setWindowHeight(720, is_specific);
+        Config::setIsFullscreen(false, is_specific);
+        Config::setFullscreenMode("Windowed", is_specific);
+        Config::setPresentMode("Mailbox", is_specific);
+        Config::setAllowHDR(false, is_specific);
+        Config::setGpuId(-1, is_specific);
+        Config::setDumpShaders(false, is_specific);
+        Config::setNullGpu(false, is_specific);
+        Config::setFsrEnabled(true, is_specific);
+        Config::setRcasEnabled(true, is_specific);
+        Config::setRcasAttenuation(250, is_specific);
+        break;
+    case SettingsTabId::User:
+        Config::setUserName("shadPS4", is_specific);
+        Config::setisTrophyPopupDisabled(false, is_specific);
+        Config::setTrophyNotificationDuration(6.0, is_specific);
+        Config::setSideTrophy("right", is_specific);
+        break;
+    case SettingsTabId::Input:
+        Config::setCursorState(Config::HideCursorState::Idle, is_specific);
+        Config::setCursorHideTimeout(5, is_specific);
+        Config::setIsMotionControlsEnabled(true, is_specific);
+        Config::setBackgroundControllerInput(false, is_specific);
+        Config::setUsbDeviceBackend(Config::UsbBackendType::Real, is_specific);
+        Config::setMicDevice("Default Device", is_specific);
+        break;
+    case SettingsTabId::Paths:
+        break;
+    case SettingsTabId::Log:
+        Config::setLoggingEnabled(true, is_specific);
+        Config::setLogType("sync", is_specific);
+        Config::setLogFilter("", is_specific);
+        Config::setSeparateLogFilesEnabled(false, is_specific);
+        break;
+    case SettingsTabId::Debug:
+        Config::setDebugDump(false, is_specific);
+        Config::setVkValidation(false, is_specific);
+        Config::setVkSyncValidation(false, is_specific);
+        Config::setVkCoreValidation(true, is_specific);
+        Config::setVkGpuValidation(false, is_specific);
+        Config::setRdocEnabled(false, is_specific);
+        Config::setVkHostMarkersEnabled(false, is_specific);
+        Config::setVkGuestMarkersEnabled(false, is_specific);
+        Config::setVkCrashDiagnosticEnabled(false, is_specific);
+        Config::setCollectShaderForDebug(false, is_specific);
+        Config::setCopyGPUCmdBuffers(false, is_specific);
+        break;
+    case SettingsTabId::Experimental:
+        Config::setReadbacks(false, is_specific);
+        Config::setReadbackLinearImages(false, is_specific);
+        Config::setDirectMemoryAccess(false, is_specific);
+        Config::setDevKitConsole(false, is_specific);
+        Config::setNeoMode(false, is_specific);
+        Config::setConnectedToNetwork(false, is_specific);
+        Config::setPipelineCacheEnabled(false, is_specific);
+        Config::setPipelineCacheArchived(false, is_specific);
+        Config::setPSNSignedIn(false, is_specific);
+        Config::setVblankFreq(60, is_specific);
+        Config::setExtraDmemInMbytes(0, is_specific);
+        break;
+    case SettingsTabId::Unknown:
+        break;
+    }
+}
+
+void SettingsDialog::SyncRealTimeWidgetsForScope(const toml::value& data,
+                                                 const toml::value& gs_data) {
+    if (scoped_tab_id == SettingsTabId::Unknown) {
+        SyncRealTimeWidgetsForTab(SettingsTabId::General, data, gs_data);
+        SyncRealTimeWidgetsForTab(SettingsTabId::Paths, data, gs_data);
+        SyncRealTimeWidgetsForTab(SettingsTabId::Graphics, data, gs_data);
+        return;
+    }
+
+    SyncRealTimeWidgetsForTab(scoped_tab_id, data, gs_data);
+}
+
+void SettingsDialog::SyncRealTimeWidgetsForTab(SettingsTabId tab_id, const toml::value& data,
+                                               const toml::value& gs_data) {
+    switch (tab_id) {
+    case SettingsTabId::General:
+        SyncVolumeFromConfig(gs_data);
+        break;
+    case SettingsTabId::Paths:
+        SyncGameFoldersFromConfig(data);
+        break;
+    case SettingsTabId::Graphics:
+        SyncRunningGameGpuFromConfig(gs_data);
+        break;
+    case SettingsTabId::Gui:
+    case SettingsTabId::User:
+    case SettingsTabId::Input:
+    case SettingsTabId::Log:
+    case SettingsTabId::Debug:
+    case SettingsTabId::Experimental:
+    case SettingsTabId::Unknown:
+        break;
+    }
+}
+
+void SettingsDialog::SyncGameFoldersFromConfig(const toml::value& data) {
+    if (is_game_specific) {
+        return;
+    }
+
+    ui->gameFoldersListWidget->clear();
+    if (!data.contains("GUI")) {
+        return;
+    }
+
+    const toml::value& gui = data.at("GUI");
+    const auto install_dir_array =
+        toml::find_or<std::vector<std::u8string>>(gui, "installDirs", {});
+
+    std::vector<bool> install_dirs_enabled;
+    try {
+        install_dirs_enabled = Config::getGameInstallDirsEnabled();
+    } catch (...) {
+        install_dirs_enabled.resize(install_dir_array.size(), true);
+    }
+
+    if (install_dirs_enabled.size() < install_dir_array.size()) {
+        install_dirs_enabled.resize(install_dir_array.size(), true);
+    }
+
+    std::vector<Config::GameInstallDir> settings_install_dirs_config;
+
+    for (size_t i = 0; i < install_dir_array.size(); i++) {
+        std::filesystem::path dir = install_dir_array[i];
+        bool enabled = install_dirs_enabled[i];
+
+        settings_install_dirs_config.push_back({dir, enabled});
+
+        QString path_string;
+        Common::FS::PathToQString(path_string, dir);
+
+        QListWidgetItem* item = new QListWidgetItem(path_string);
+        item->setFlags(item->flags() | Qt::ItemIsUserCheckable);
+        item->setCheckState(enabled ? Qt::Checked : Qt::Unchecked);
+        ui->gameFoldersListWidget->addItem(item);
+    }
+
+    Config::setAllGameInstallDirs(settings_install_dirs_config);
+}
+
+void SettingsDialog::SyncVolumeFromConfig(const toml::value& gs_data) {
     int sliderValue = toml::find_or<int>(gs_data, "General", "volumeSlider", 100);
     ui->horizontalVolumeSlider->setValue(sliderValue);
 
@@ -1213,30 +1713,43 @@ void SettingsDialog::SyncRealTimeWidgetstoConfig() {
     // function, need to null it out if GS GUI is closed without saving
     is_game_specific ? Config::resetGameSpecificValue("volumeSlider")
                      : Config::setVolumeSlider(sliderValue);
-
-    if (EmulatorState::GetInstance()->IsGameRunning()) {
-        m_ipc_client->setFsr(toml::find_or<bool>(gs_data, "GPU", "fsrEnabled", true));
-        m_ipc_client->setRcas(toml::find_or<bool>(gs_data, "GPU", "rcasEnabled", true));
-        m_ipc_client->setRcasAttenuation(
-            toml::find_or<int>(gs_data, "GPU", "rcasAttenuation", 250));
-    }
 }
 
-void SettingsDialog::setDefaultValues() {
-    if (!is_game_specific) {
-        m_gui_settings->SetValue(gui::gl_showBackgroundImage, true);
-        m_gui_settings->SetValue(gui::gl_backgroundImageOpacity, 50);
-        m_gui_settings->SetValue(gui::gl_playBackgroundMusic, false);
-        m_gui_settings->SetValue(gui::gl_backgroundMusicVolume, 50);
-        m_gui_settings->SetValue(gui::gen_checkForUpdates, false);
-        m_gui_settings->SetValue(gui::gen_showChangeLog, false);
-        m_gui_settings->SetValue(gui::gen_guiLanguage, "en_US");
-        m_gui_settings->SetValue(gui::glc_showLoadGameSizeEnabled, true);
-        m_gui_settings->SetValue(gui::glc_showCompatibility, false);
-        m_gui_settings->SetValue(gui::gen_checkCompatibilityAtStartup, false);
-        m_gui_settings->SetValue(gui::gen_homeTab, "General");
+void SettingsDialog::SyncRunningGameGpuFromConfig(const toml::value& gs_data) {
+    if (!EmulatorState::GetInstance()->IsGameRunning()) {
+        return;
     }
+
+    m_ipc_client->setFsr(toml::find_or<bool>(gs_data, "GPU", "fsrEnabled", true));
+    m_ipc_client->setRcas(toml::find_or<bool>(gs_data, "GPU", "rcasEnabled", true));
+    m_ipc_client->setRcasAttenuation(
+        toml::find_or<int>(gs_data, "GPU", "rcasAttenuation", 250));
 }
+
+bool SettingsDialog::LoadSyncConfigData(toml::value& data, toml::value& gs_data) const {
+    std::filesystem::path userdir = Common::FS::GetUserPath(Common::FS::PathType::UserDir);
+    try {
+        data = toml::parse(userdir / "config.toml");
+    } catch (std::exception& ex) {
+        fmt::print("Got exception trying to load config file. Exception: {}\n", ex.what());
+        return false;
+    }
+
+    try {
+        gs_data = is_game_specific
+            ? toml::parse(Common::FS::GetUserPath(Common::FS::PathType::CustomConfigs) /
+                          (gs_serial + ".toml"))
+            : data;
+    } catch (std::exception& ex) {
+        fmt::print("Got exception trying to load config file. Exception: {}\n", ex.what());
+        return false;
+    }
+
+    return true;
+}
+
+
+
 
 void SettingsDialog::pollSDLevents() {
     SDL_Event event;

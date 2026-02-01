@@ -3,8 +3,10 @@
 
 #pragma once
 
+#include <cctype>
 #include <filesystem>
 #include <optional>
+#include <string>
 #include <vector>
 
 class QString; // to avoid including <QString> in this header
@@ -134,5 +136,34 @@ void PathToQString(QString& result, const std::filesystem::path& path);
 [[nodiscard]] std::optional<std::filesystem::path> FindGameByID(const std::filesystem::path& dir,
                                                                 const std::string& game_id,
                                                                 int max_depth);
+
+[[nodiscard]] inline std::optional<std::filesystem::path> NormalizeGamePathToEboot(
+    const std::filesystem::path& input_path) {
+    if (input_path.empty()) {
+        return std::nullopt;
+    }
+
+    std::error_code error;
+    if (std::filesystem::is_regular_file(input_path, error)) {
+        const auto filename = input_path.filename().string();
+        std::string lowercase = filename;
+        for (char& ch : lowercase) {
+            ch = static_cast<char>(std::tolower(static_cast<unsigned char>(ch)));
+        }
+        if (lowercase == "eboot.bin") {
+            return input_path;
+        }
+        return std::nullopt;
+    }
+
+    if (std::filesystem::is_directory(input_path, error)) {
+        auto candidate = input_path / "eboot.bin";
+        if (std::filesystem::exists(candidate, error)) {
+            return candidate;
+        }
+    }
+
+    return std::nullopt;
+}
 
 } // namespace Common::FS

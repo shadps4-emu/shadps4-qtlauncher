@@ -3,8 +3,10 @@
 
 #pragma once
 
+#include <QAction>
 #include <QActionGroup>
 #include <QDragEnterEvent>
+#include <QMainWindow>
 #include <QProcess>
 #include <QTranslator>
 
@@ -22,6 +24,7 @@
 #include "ipc/ipc_client.h"
 #include "main_window_themes.h"
 #include "main_window_ui.h"
+#include "open_targets.h"
 
 class MainWindow : public QMainWindow {
     Q_OBJECT
@@ -29,9 +32,14 @@ signals:
     void WindowResized(QResizeEvent* event);
 
 public:
+    enum class InitMode {
+        Full,
+        Headless,
+    };
+
     explicit MainWindow(QWidget* parent = nullptr);
     ~MainWindow();
-    bool Init();
+    bool Init(InitMode init_mode = InitMode::Full);
     void InstallDirectory();
     void StartGame();
     void StartGameWithArgs(QStringList args = {});
@@ -42,6 +50,10 @@ public:
     void StopGame();
     void RestartGame();
     void LoadVersionComboBox();
+    UiOpenTargets::OpenTargetContext BuildOpenTargetContext(
+        QWidget* parent = nullptr, bool attach_parent_destroy = false,
+        bool is_game_specific = false, const std::string& game_serial = "") const;
+    const std::string& GetRunningGameSerial() const;
     bool showLabels;
     std::shared_ptr<IpcClient> m_ipc_client = std::make_shared<IpcClient>();
 
