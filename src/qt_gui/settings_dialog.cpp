@@ -204,8 +204,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
     defaultTextEdit = tr("Point your mouse at an option to display its description.");
     ui->descriptionText->setText(defaultTextEdit);
 
-    connect(ui->buttonBox, &QDialogButtonBox::rejected, this,
-            [this]() { close_target->close(); });
+    connect(ui->buttonBox, &QDialogButtonBox::rejected, this, [this]() { close_target->close(); });
 
     connect(ui->buttonBox, &QDialogButtonBox::clicked, this,
             [this](QAbstractButton* button) { HandleButtonBoxClicked(button); });
@@ -1103,8 +1102,7 @@ void SettingsDialog::ApplySettingsForTab(SettingsTabId tab_id) {
         Config::setLanguage(languageIndexes[ui->consoleLanguageComboBox->currentIndex()],
                             is_specific);
         Config::setShowSplash(ui->showSplashCheckBox->isChecked(), is_specific);
-        Config::setMainOutputDevice(ui->GenAudioComboBox->currentText().toStdString(),
-                                    is_specific);
+        Config::setMainOutputDevice(ui->GenAudioComboBox->currentText().toStdString(), is_specific);
         Config::setPadSpkOutputDevice(ui->DsAudioComboBox->currentText().toStdString(),
                                       is_specific);
         break;
@@ -1118,10 +1116,8 @@ void SettingsDialog::ApplySettingsForTab(SettingsTabId tab_id) {
                                      ui->enableCompatibilityCheckBox->isChecked());
             m_gui_settings->SetValue(gui::gen_checkCompatibilityAtStartup,
                                      ui->checkCompatibilityOnStartupCheckBox->isChecked());
-            m_gui_settings->SetValue(gui::gl_playBackgroundMusic,
-                                     ui->playBGMCheckBox->isChecked());
-            m_gui_settings->SetValue(gui::gl_backgroundMusicVolume,
-                                     ui->BGMVolumeSlider->value());
+            m_gui_settings->SetValue(gui::gl_playBackgroundMusic, ui->playBGMCheckBox->isChecked());
+            m_gui_settings->SetValue(gui::gl_backgroundMusicVolume, ui->BGMVolumeSlider->value());
             m_gui_settings->SetValue(gui::gen_checkForUpdates, ui->updateCheckBox->isChecked());
             m_gui_settings->SetValue(gui::gen_showChangeLog, ui->changelogCheckBox->isChecked());
             m_gui_settings->SetValue(gui::gl_showBackgroundImage,
@@ -1130,18 +1126,15 @@ void SettingsDialog::ApplySettingsForTab(SettingsTabId tab_id) {
                                      std::clamp(ui->backgroundImageOpacitySlider->value(), 0, 100));
             emit BackgroundOpacityChanged(ui->backgroundImageOpacitySlider->value());
             m_gui_settings->SetValue(
-                gui::gen_homeTab,
-                chooseHomeTabMap.value(ui->chooseHomeTabComboBox->currentText()));
+                gui::gen_homeTab, chooseHomeTabMap.value(ui->chooseHomeTabComboBox->currentText()));
         }
         break;
     }
     case SettingsTabId::Graphics: {
         Config::setIsFullscreen(
-            screenModeMap.value(ui->displayModeComboBox->currentText()) != "Windowed",
-            is_specific);
+            screenModeMap.value(ui->displayModeComboBox->currentText()) != "Windowed", is_specific);
         Config::setFullscreenMode(
-            screenModeMap.value(ui->displayModeComboBox->currentText()).toStdString(),
-            is_specific);
+            screenModeMap.value(ui->displayModeComboBox->currentText()).toStdString(), is_specific);
         Config::setPresentMode(
             presentModeMap.value(ui->presentModeComboBox->currentText()).toStdString(),
             is_specific);
@@ -1178,8 +1171,7 @@ void SettingsDialog::ApplySettingsForTab(SettingsTabId tab_id) {
                                              is_specific);
         Config::setCursorState(ui->hideCursorComboBox->currentIndex(), is_specific);
         Config::setCursorHideTimeout(ui->hideCursorComboBox->currentIndex(), is_specific);
-        Config::setMicDevice(ui->micComboBox->currentData().toString().toStdString(),
-                             is_specific);
+        Config::setMicDevice(ui->micComboBox->currentData().toString().toStdString(), is_specific);
         Config::setUsbDeviceBackend(ui->usbComboBox->currentIndex(), is_specific);
         break;
     }
@@ -1203,8 +1195,7 @@ void SettingsDialog::ApplySettingsForTab(SettingsTabId tab_id) {
         Config::setLogType(logTypeMap.value(ui->logTypeComboBox->currentText()).toStdString(),
                            is_specific);
         Config::setLogFilter(ui->logFilterLineEdit->text().toStdString(), is_specific);
-        Config::setSeparateLogFilesEnabled(ui->separateLogFilesCheckbox->isChecked(),
-                                           is_specific);
+        Config::setSeparateLogFilesEnabled(ui->separateLogFilesCheckbox->isChecked(), is_specific);
         break;
     }
     case SettingsTabId::Debug: {
@@ -1216,23 +1207,20 @@ void SettingsDialog::ApplySettingsForTab(SettingsTabId tab_id) {
         Config::setRdocEnabled(ui->rdocCheckBox->isChecked(), is_specific);
         Config::setVkHostMarkersEnabled(ui->hostMarkersCheckBox->isChecked(), is_specific);
         Config::setVkGuestMarkersEnabled(ui->guestMarkersCheckBox->isChecked(), is_specific);
-        Config::setVkCrashDiagnosticEnabled(ui->crashDiagnosticsCheckBox->isChecked(),
-                                            is_specific);
+        Config::setVkCrashDiagnosticEnabled(ui->crashDiagnosticsCheckBox->isChecked(), is_specific);
         Config::setCollectShaderForDebug(ui->collectShaderCheckBox->isChecked(), is_specific);
         Config::setCopyGPUCmdBuffers(ui->copyGPUBuffersCheckBox->isChecked(), is_specific);
         break;
     }
     case SettingsTabId::Experimental: {
         Config::setReadbacks(ui->readbacksCheckBox->isChecked(), is_specific);
-        Config::setReadbackLinearImages(ui->readbackLinearImagesCheckBox->isChecked(),
-                                        is_specific);
+        Config::setReadbackLinearImages(ui->readbackLinearImagesCheckBox->isChecked(), is_specific);
         Config::setDirectMemoryAccess(ui->dmaCheckBox->isChecked(), is_specific);
         Config::setDevKitConsole(ui->devkitCheckBox->isChecked(), is_specific);
         Config::setNeoMode(ui->neoCheckBox->isChecked(), is_specific);
         Config::setConnectedToNetwork(ui->networkConnectedCheckBox->isChecked(), is_specific);
         Config::setPipelineCacheEnabled(ui->shaderCaheCheckBox->isChecked(), is_specific);
-        Config::setPipelineCacheArchived(ui->shaderCacheArchiveCheckBox->isChecked(),
-                                         is_specific);
+        Config::setPipelineCacheArchived(ui->shaderCacheArchiveCheckBox->isChecked(), is_specific);
         Config::setPSNSignedIn(ui->psnSignInCheckBox->isChecked(), is_specific);
         Config::setVblankFreq(ui->vblankSpinBox->value(), is_specific);
         Config::setExtraDmemInMbytes(ui->dmemSpinBox->value(), is_specific);
@@ -1286,10 +1274,10 @@ void SettingsDialog::LoadValuesForTab(SettingsTabId tab_id, const toml::value& d
     switch (tab_id) {
     case SettingsTabId::General: {
         ui->consoleLanguageComboBox->setCurrentIndex(
-            std::distance(languageIndexes.begin(),
-                          std::find(languageIndexes.begin(), languageIndexes.end(),
-                                    toml::find_or<int>(gs_data, "Settings",
-                                                      "consoleLanguage", 6))) %
+            std::distance(
+                languageIndexes.begin(),
+                std::find(languageIndexes.begin(), languageIndexes.end(),
+                          toml::find_or<int>(gs_data, "Settings", "consoleLanguage", 6))) %
             languageIndexes.size());
 
         ui->showSplashCheckBox->setChecked(
@@ -1346,19 +1334,17 @@ void SettingsDialog::LoadValuesForTab(SettingsTabId tab_id, const toml::value& d
         break;
     }
     case SettingsTabId::Graphics: {
-        ui->graphicsAdapterBox->setCurrentIndex(
-            toml::find_or<int>(gs_data, "Vulkan", "gpuId", -1) + 1);
+        ui->graphicsAdapterBox->setCurrentIndex(toml::find_or<int>(gs_data, "Vulkan", "gpuId", -1) +
+                                                1);
         ui->widthSpinBox->setValue(toml::find_or<int>(gs_data, "GPU", "screenWidth", 1280));
         ui->heightSpinBox->setValue(toml::find_or<int>(gs_data, "GPU", "screenHeight", 720));
         ui->dumpShadersCheckBox->setChecked(
             toml::find_or<bool>(gs_data, "GPU", "dumpShaders", false));
         ui->nullGpuCheckBox->setChecked(toml::find_or<bool>(gs_data, "GPU", "nullGpu", false));
-        ui->enableHDRCheckBox->setChecked(
-            toml::find_or<bool>(gs_data, "GPU", "allowHDR", false));
+        ui->enableHDRCheckBox->setChecked(toml::find_or<bool>(gs_data, "GPU", "allowHDR", false));
         ui->FSRCheckBox->setChecked(toml::find_or<bool>(gs_data, "GPU", "fsrEnabled", true));
         ui->RCASCheckBox->setChecked(toml::find_or<bool>(gs_data, "GPU", "rcasEnabled", true));
-        ui->RCASSlider->setValue(
-            toml::find_or<int>(gs_data, "GPU", "rcasAttenuation", 250));
+        ui->RCASSlider->setValue(toml::find_or<int>(gs_data, "GPU", "rcasAttenuation", 250));
         ui->RCASValue->setText(QString::number(ui->RCASSlider->value() / 1000.0, 'f', 3));
 
         std::string fullScreenMode =
@@ -1375,9 +1361,8 @@ void SettingsDialog::LoadValuesForTab(SettingsTabId tab_id, const toml::value& d
         break;
     }
     case SettingsTabId::User: {
-        ui->userNameLineEdit->setText(
-            QString::fromStdString(toml::find_or<std::string>(gs_data, "General", "userName",
-                                                              "shadPS4")));
+        ui->userNameLineEdit->setText(QString::fromStdString(
+            toml::find_or<std::string>(gs_data, "General", "userName", "shadPS4")));
         ui->disableTrophycheckBox->setChecked(
             toml::find_or<bool>(gs_data, "General", "isTrophyPopupDisabled", false));
         ui->popUpDurationSpinBox->setValue(
@@ -1441,8 +1426,7 @@ void SettingsDialog::LoadValuesForTab(SettingsTabId tab_id, const toml::value& d
         break;
     }
     case SettingsTabId::Log: {
-        std::string logType =
-            toml::find_or<std::string>(gs_data, "General", "logType", "sync");
+        std::string logType = toml::find_or<std::string>(gs_data, "General", "logType", "sync");
         QString translatedText_logType = logTypeMap.key(QString::fromStdString(logType));
         if (!translatedText_logType.isEmpty()) {
             ui->logTypeComboBox->setCurrentText(translatedText_logType);
@@ -1482,15 +1466,13 @@ void SettingsDialog::LoadValuesForTab(SettingsTabId tab_id, const toml::value& d
         break;
     }
     case SettingsTabId::Experimental: {
-        ui->readbacksCheckBox->setChecked(
-            toml::find_or<bool>(gs_data, "GPU", "readbacks", false));
+        ui->readbacksCheckBox->setChecked(toml::find_or<bool>(gs_data, "GPU", "readbacks", false));
         ui->readbackLinearImagesCheckBox->setChecked(
             toml::find_or<bool>(gs_data, "GPU", "readbackLinearImages", false));
         ui->dmaCheckBox->setChecked(
             toml::find_or<bool>(gs_data, "GPU", "directMemoryAccess", false));
         ui->neoCheckBox->setChecked(toml::find_or<bool>(gs_data, "General", "isPS4Pro", false));
-        ui->devkitCheckBox->setChecked(
-            toml::find_or<bool>(gs_data, "General", "isDevKit", false));
+        ui->devkitCheckBox->setChecked(toml::find_or<bool>(gs_data, "General", "isDevKit", false));
         ui->networkConnectedCheckBox->setChecked(
             toml::find_or<bool>(gs_data, "General", "isConnectedToNetwork", false));
         ui->shaderCaheCheckBox->setChecked(
@@ -1500,8 +1482,7 @@ void SettingsDialog::LoadValuesForTab(SettingsTabId tab_id, const toml::value& d
         ui->psnSignInCheckBox->setChecked(
             toml::find_or<bool>(gs_data, "General", "isPSNSignedIn", false));
         ui->vblankSpinBox->setValue(toml::find_or<int>(gs_data, "GPU", "vblankFrequency", 60));
-        ui->dmemSpinBox->setValue(
-            toml::find_or<int>(gs_data, "General", "extraDmemInMbytes", 0));
+        ui->dmemSpinBox->setValue(toml::find_or<int>(gs_data, "General", "extraDmemInMbytes", 0));
 
         ui->shaderCaheCheckBox->isChecked() ? ui->shaderCacheArchiveCheckBox->setVisible(true)
                                             : ui->shaderCacheArchiveCheckBox->setVisible(false);
@@ -1722,8 +1703,7 @@ void SettingsDialog::SyncRunningGameGpuFromConfig(const toml::value& gs_data) {
 
     m_ipc_client->setFsr(toml::find_or<bool>(gs_data, "GPU", "fsrEnabled", true));
     m_ipc_client->setRcas(toml::find_or<bool>(gs_data, "GPU", "rcasEnabled", true));
-    m_ipc_client->setRcasAttenuation(
-        toml::find_or<int>(gs_data, "GPU", "rcasAttenuation", 250));
+    m_ipc_client->setRcasAttenuation(toml::find_or<int>(gs_data, "GPU", "rcasAttenuation", 250));
 }
 
 bool SettingsDialog::LoadSyncConfigData(toml::value& data, toml::value& gs_data) const {
@@ -1737,9 +1717,9 @@ bool SettingsDialog::LoadSyncConfigData(toml::value& data, toml::value& gs_data)
 
     try {
         gs_data = is_game_specific
-            ? toml::parse(Common::FS::GetUserPath(Common::FS::PathType::CustomConfigs) /
-                          (gs_serial + ".toml"))
-            : data;
+                      ? toml::parse(Common::FS::GetUserPath(Common::FS::PathType::CustomConfigs) /
+                                    (gs_serial + ".toml"))
+                      : data;
     } catch (std::exception& ex) {
         fmt::print("Got exception trying to load config file. Exception: {}\n", ex.what());
         return false;
@@ -1747,9 +1727,6 @@ bool SettingsDialog::LoadSyncConfigData(toml::value& data, toml::value& gs_data)
 
     return true;
 }
-
-
-
 
 void SettingsDialog::pollSDLevents() {
     SDL_Event event;

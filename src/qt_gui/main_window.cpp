@@ -27,9 +27,9 @@
 #include "ipc/ipc_client.h"
 #include "kbm_gui.h"
 #include "main_window.h"
+#include "open_targets.h"
 #include "settings_dialog.h"
 #include "skylander_dialog.h"
-#include "open_targets.h"
 
 MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
@@ -70,9 +70,8 @@ bool MainWindow::Init(InitMode init_mode) {
             window_title = fmt::format("shadPS4QtLauncher v{} {} {}", Common::g_scm_app_version,
                                        Common::g_scm_branch, Common::g_scm_desc);
         } else {
-            window_title =
-                fmt::format("shadPS4QtLauncher v{} {}/{} {}", Common::g_scm_app_version,
-                            remote_host, Common::g_scm_branch, Common::g_scm_desc);
+            window_title = fmt::format("shadPS4QtLauncher v{} {}/{} {}", Common::g_scm_app_version,
+                                       remote_host, Common::g_scm_branch, Common::g_scm_desc);
         }
         setWindowTitle(QString::fromStdString(window_title));
     }
@@ -109,7 +108,7 @@ UiOpenTargets::OpenTargetContext MainWindow::BuildOpenTargetContext(
     QWidget* parent, bool attach_parent_destroy, bool is_game_specific,
     const std::string& game_serial) const {
     UiOpenTargets::OpenTargetContext context{};
-    context.gui_settings = m_gui_settings;
+    context.gui_settings_shared = m_gui_settings;
     context.compat_info = m_compat_info;
     context.ipc_client = m_ipc_client;
     context.game_info = m_game_info;
@@ -564,21 +563,17 @@ void MainWindow::CreateConnects() {
                 });
     };
 
-    connect(ui->configureAct, &QAction::triggered, this, [open_settings_dialog]() {
-        open_settings_dialog();
-    });
+    connect(ui->configureAct, &QAction::triggered, this,
+            [open_settings_dialog]() { open_settings_dialog(); });
 
-    connect(ui->settingsButton, &QPushButton::clicked, this, [open_settings_dialog]() {
-        open_settings_dialog();
-    });
+    connect(ui->settingsButton, &QPushButton::clicked, this,
+            [open_settings_dialog]() { open_settings_dialog(); });
 
-    connect(ui->controllerButton, &QPushButton::clicked, this, [open_target]() {
-        open_target(UiOpenTargets::TargetId::Controllers);
-    });
+    connect(ui->controllerButton, &QPushButton::clicked, this,
+            [open_target]() { open_target(UiOpenTargets::TargetId::Controllers); });
 
-    connect(ui->keyboardButton, &QPushButton::clicked, this, [open_target]() {
-        open_target(UiOpenTargets::TargetId::KeyboardMouse);
-    });
+    connect(ui->keyboardButton, &QPushButton::clicked, this,
+            [open_target]() { open_target(UiOpenTargets::TargetId::KeyboardMouse); });
 
     connect(ui->versionManagerButton, &QPushButton::clicked, this, [this, open_target]() {
         auto result = open_target(UiOpenTargets::TargetId::VersionManager);
@@ -599,9 +594,8 @@ void MainWindow::CreateConnects() {
     connect(ui->aboutAct, &QAction::triggered, this,
             [open_target]() { open_target(UiOpenTargets::TargetId::About); });
 
-    connect(ui->configureHotkeys, &QAction::triggered, this, [open_target]() {
-        open_target(UiOpenTargets::TargetId::Hotkeys);
-    });
+    connect(ui->configureHotkeys, &QAction::triggered, this,
+            [open_target]() { open_target(UiOpenTargets::TargetId::Hotkeys); });
 
     connect(ui->setIconSizeTinyAct, &QAction::triggered, this, [this]() {
         if (isTableList) {
@@ -703,9 +697,8 @@ void MainWindow::CreateConnects() {
     });
 
     // Cheats/Patches Download.
-    connect(ui->downloadCheatsPatchesAct, &QAction::triggered, this, [open_target]() {
-        open_target(UiOpenTargets::TargetId::CheatsPatchesDownload);
-    });
+    connect(ui->downloadCheatsPatchesAct, &QAction::triggered, this,
+            [open_target]() { open_target(UiOpenTargets::TargetId::CheatsPatchesDownload); });
 
     // Dump game list.
     connect(ui->dumpGameListAct, &QAction::triggered, this, [&] {
@@ -743,24 +736,20 @@ void MainWindow::CreateConnects() {
             &ElfViewer::OpenElfFolder);
 
     // Trophy Viewer
-    connect(ui->trophyViewerAct, &QAction::triggered, this, [open_target]() {
-        open_target(UiOpenTargets::TargetId::TrophyViewer);
-    });
+    connect(ui->trophyViewerAct, &QAction::triggered, this,
+            [open_target]() { open_target(UiOpenTargets::TargetId::TrophyViewer); });
 
     // Manage Skylanders
-    connect(ui->skylanderPortalAction, &QAction::triggered, this, [open_target]() {
-        open_target(UiOpenTargets::TargetId::SkylanderPortal);
-    });
+    connect(ui->skylanderPortalAction, &QAction::triggered, this,
+            [open_target]() { open_target(UiOpenTargets::TargetId::SkylanderPortal); });
 
     // Manage Infinity Figures
-    connect(ui->infinityFiguresAction, &QAction::triggered, this, [open_target]() {
-        open_target(UiOpenTargets::TargetId::InfinityBase);
-    });
+    connect(ui->infinityFiguresAction, &QAction::triggered, this,
+            [open_target]() { open_target(UiOpenTargets::TargetId::InfinityBase); });
 
     // Manage Dimensions Toypad
-    connect(ui->dimensionsToypadAction, &QAction::triggered, this, [open_target]() {
-        open_target(UiOpenTargets::TargetId::DimensionsToypad);
-    });
+    connect(ui->dimensionsToypadAction, &QAction::triggered, this,
+            [open_target]() { open_target(UiOpenTargets::TargetId::DimensionsToypad); });
 
     // Themes
     connect(ui->setThemeDark, &QAction::triggered, &m_window_themes, [this]() {
@@ -985,9 +974,8 @@ void MainWindow::BootGame() {
 
 void MainWindow::InstallDirectory() {
     auto context = BuildOpenTargetContext(this);
-    auto result =
-        UiOpenTargets::OpenTarget(UiOpenTargets::TargetId::GameInstall, context,
-                                  UiOpenTargets::OpenBehaviorForUi());
+    auto result = UiOpenTargets::OpenTarget(UiOpenTargets::TargetId::GameInstall, context,
+                                            UiOpenTargets::OpenBehaviorForUi());
     if (result.success) {
         RefreshGameTable();
     }
@@ -1234,7 +1222,7 @@ void MainWindow::StartEmulator(std::filesystem::path path, QStringList args) {
     QString selectedVersion = m_gui_settings->GetValue(gui::vm_versionSelected).toString();
     if (selectedVersion.isEmpty()) {
         QMessageBox::warning(this, tr("No Version Selected"),
-        // clang-format off
+                             // clang-format off
         tr("No emulator version was selected.\n"
            "The Version Manager menu will then open.\n"
            "Select an emulator version from the right panel."));

@@ -129,9 +129,9 @@ std::optional<QString> ResolveSettingsTabObjectName(SettingsDialog* dialog, cons
 QStringList BuildAvailableTargets(const OpenTargetContext& context) {
     QStringList results = GetTargetIdStrings();
 
-    if (context.gui_settings && context.compat_info && context.ipc_client) {
+    if (context.gui_settings_shared && context.compat_info && context.ipc_client) {
         auto settings_dialog = std::make_unique<SettingsDialog>(
-            context.gui_settings, context.compat_info, context.ipc_client, nullptr,
+            context.gui_settings_shared, context.compat_info, context.ipc_client, nullptr,
             context.is_game_running, context.is_game_specific, context.game_serial);
         results.append(CollectSettingsTabTargets(settings_dialog.get()));
         settings_dialog->close();
@@ -279,11 +279,11 @@ OpenTargetResult OpenTarget(TargetId target_id, const OpenTargetContext& context
 
     switch (target_id) {
     case TargetId::Settings: {
-        if (!context.gui_settings || !context.compat_info || !context.ipc_client) {
+        if (!context.gui_settings_shared || !context.compat_info || !context.ipc_client) {
             result.error_message = QObject::tr("Settings requires GUI, compatibility, and IPC.");
             break;
         }
-        auto dialog = new SettingsDialog(context.gui_settings, context.compat_info,
+        auto dialog = new SettingsDialog(context.gui_settings_shared, context.compat_info,
                                          context.ipc_client, parent, context.is_game_running,
                                          context.is_game_specific, context.game_serial);
         AttachParentDestroy(parent, dialog, context.attach_parent_destroy);
@@ -291,11 +291,11 @@ OpenTargetResult OpenTarget(TargetId target_id, const OpenTargetContext& context
         break;
     }
     case TargetId::VersionManager: {
-        if (!context.gui_settings) {
+        if (!context.gui_settings_shared) {
             result.error_message = QObject::tr("Version Manager requires GUI settings.");
             break;
         }
-        auto dialog = new VersionDialog(context.gui_settings, parent);
+        auto dialog = new VersionDialog(context.gui_settings_shared, parent);
         AttachParentDestroy(parent, dialog, context.attach_parent_destroy);
         result = OpenDialog(dialog, behavior);
         break;
@@ -305,9 +305,9 @@ OpenTargetResult OpenTarget(TargetId target_id, const OpenTargetContext& context
             result.error_message = QObject::tr("Controllers require game info and IPC.");
             break;
         }
-        auto dialog = new ControlSettings(context.game_info, context.ipc_client,
-                                          context.is_game_running, context.running_game_serial,
-                                          parent);
+        auto dialog =
+            new ControlSettings(context.game_info, context.ipc_client, context.is_game_running,
+                                context.running_game_serial, parent);
         AttachParentDestroy(parent, dialog, context.attach_parent_destroy);
         result = OpenDialog(dialog, behavior);
         break;
@@ -318,8 +318,7 @@ OpenTargetResult OpenTarget(TargetId target_id, const OpenTargetContext& context
             break;
         }
         auto dialog = new KBMSettings(context.game_info, context.ipc_client,
-                                      context.is_game_running, context.running_game_serial,
-                                      parent);
+                                      context.is_game_running, context.running_game_serial, parent);
         AttachParentDestroy(parent, dialog, context.attach_parent_destroy);
         result = OpenDialog(dialog, behavior);
         break;
@@ -335,11 +334,11 @@ OpenTargetResult OpenTarget(TargetId target_id, const OpenTargetContext& context
         break;
     }
     case TargetId::About: {
-        if (!context.gui_settings) {
+        if (!context.gui_settings_shared) {
             result.error_message = QObject::tr("About dialog requires GUI settings.");
             break;
         }
-        auto dialog = new AboutDialog(context.gui_settings, parent);
+        auto dialog = new AboutDialog(context.gui_settings_shared, parent);
         AttachParentDestroy(parent, dialog, context.attach_parent_destroy);
         result = OpenDialog(dialog, behavior);
         break;
@@ -351,14 +350,14 @@ OpenTargetResult OpenTarget(TargetId target_id, const OpenTargetContext& context
         break;
     }
     case TargetId::CheatsPatchesDownload: {
-        if (!context.game_info || !context.gui_settings || !context.ipc_client) {
+        if (!context.game_info || !context.gui_settings_shared || !context.ipc_client) {
             result.error_message = QObject::tr("Cheats/Patches requires game info, GUI, and IPC.");
             break;
         }
         auto panel_dialog = new QDialog(parent);
         QVBoxLayout* layout = new QVBoxLayout(panel_dialog);
-        QPushButton* download_all_cheats_button = new QPushButton(
-            QObject::tr("Download Cheats For All Installed Games"), panel_dialog);
+        QPushButton* download_all_cheats_button =
+            new QPushButton(QObject::tr("Download Cheats For All Installed Games"), panel_dialog);
         QPushButton* download_all_patches_button =
             new QPushButton(QObject::tr("Download Patches For All Games"), panel_dialog);
 
@@ -366,44 +365,43 @@ OpenTargetResult OpenTarget(TargetId target_id, const OpenTargetContext& context
         layout->addWidget(download_all_patches_button);
         panel_dialog->setLayout(layout);
 
-        QObject::connect(download_all_cheats_button, &QPushButton::clicked, panel_dialog,
-                         [panel_dialog, context]() {
-                             QEventLoop event_loop;
-                             int pending_downloads = 0;
+        QObject::connect(
+            download_all_cheats_button, &QPushButton::clicked, panel_dialog,
+            [panel_dialog, context]() {
+                QEventLoop event_loop;
+                int pending_downloads = 0;
 
-                             auto on_download_finished = [&]() {
-                                 if (--pending_downloads <= 0) {
-                                     event_loop.quit();
-                                 }
-                             };
+                auto on_download_finished = [&]() {
+                    if (--pending_downloads <= 0) {
+                        event_loop.quit();
+                    }
+                };
 
-                             for (const GameInfo& game : context.game_info->m_games) {
-                                 QString empty = "";
-                                 QString game_serial = QString::fromStdString(game.serial);
-                                 QString game_version = QString::fromStdString(game.version);
+                for (const GameInfo& game : context.game_info->m_games) {
+                    QString empty = "";
+                    QString game_serial = QString::fromStdString(game.serial);
+                    QString game_version = QString::fromStdString(game.version);
 
-                                 CheatsPatches* cheats_patches =
-                                     new CheatsPatches(context.gui_settings, context.ipc_client,
-                                                       empty, empty, empty, empty, empty, nullptr);
-                                 QObject::connect(cheats_patches, &CheatsPatches::downloadFinished,
-                                                  on_download_finished);
+                    CheatsPatches* cheats_patches =
+                        new CheatsPatches(context.gui_settings_shared, context.ipc_client, empty,
+                                          empty, empty, empty, empty, nullptr);
+                    QObject::connect(cheats_patches, &CheatsPatches::downloadFinished,
+                                     on_download_finished);
 
-                                 pending_downloads += 2;
+                    pending_downloads += 2;
 
-                                 cheats_patches->downloadCheats("GoldHEN", game_serial,
-                                                                game_version, false);
-                                 cheats_patches->downloadCheats("shadPS4", game_serial,
-                                                                game_version, false);
-                             }
-                             event_loop.exec();
+                    cheats_patches->downloadCheats("GoldHEN", game_serial, game_version, false);
+                    cheats_patches->downloadCheats("shadPS4", game_serial, game_version, false);
+                }
+                event_loop.exec();
 
-                             QMessageBox::information(
-                                 nullptr, QObject::tr("Download Complete"),
-                                 QObject::tr("You have downloaded cheats for all the games you "
-                                             "have installed."));
+                QMessageBox::information(
+                    nullptr, QObject::tr("Download Complete"),
+                    QObject::tr("You have downloaded cheats for all the games you "
+                                "have installed."));
 
-                             panel_dialog->accept();
-                         });
+                panel_dialog->accept();
+            });
         QObject::connect(download_all_patches_button, &QPushButton::clicked, panel_dialog,
                          [panel_dialog, context]() {
                              QEventLoop event_loop;
@@ -417,8 +415,8 @@ OpenTargetResult OpenTarget(TargetId target_id, const OpenTargetContext& context
 
                              QString empty = "";
                              CheatsPatches* cheats_patches =
-                                 new CheatsPatches(context.gui_settings, context.ipc_client, empty,
-                                                   empty, empty, empty, empty, nullptr);
+                                 new CheatsPatches(context.gui_settings_shared, context.ipc_client,
+                                                   empty, empty, empty, empty, empty, nullptr);
                              QObject::connect(cheats_patches, &CheatsPatches::downloadFinished,
                                               on_download_finished);
 
@@ -443,14 +441,14 @@ OpenTargetResult OpenTarget(TargetId target_id, const OpenTargetContext& context
         break;
     }
     case TargetId::TrophyViewer: {
-        if (!context.game_info || !context.gui_settings) {
+        if (!context.game_info || !context.gui_settings_shared) {
             result.error_message =
                 QObject::tr("Trophy Viewer requires game info and GUI settings.");
             break;
         }
         if (context.game_info->m_games.empty()) {
-            result.error_message = QObject::tr(
-                "No games found. Please add your games to your library first.");
+            result.error_message =
+                QObject::tr("No games found. Please add your games to your library first.");
             break;
         }
 
@@ -460,8 +458,8 @@ OpenTargetResult OpenTarget(TargetId target_id, const OpenTargetContext& context
                 context.game_info->m_games.begin(), context.game_info->m_games.end(),
                 [&context](const GameInfo& game) { return game.serial == context.game_serial; });
             if (it != context.game_info->m_games.end()) {
-                selected_index = static_cast<int>(std::distance(context.game_info->m_games.begin(),
-                                                                it));
+                selected_index =
+                    static_cast<int>(std::distance(context.game_info->m_games.begin(), it));
             }
         }
 
@@ -484,9 +482,8 @@ OpenTargetResult OpenTarget(TargetId target_id, const OpenTargetContext& context
         }
 
         QString game_name = QString::fromStdString(selected_game.name);
-        auto trophy_viewer =
-            new TrophyViewer(context.gui_settings, trophy_path, game_trp_path, game_name,
-                             all_trophy_games);
+        auto trophy_viewer = new TrophyViewer(context.gui_settings_shared, trophy_path,
+                                              game_trp_path, game_name, all_trophy_games);
         AttachParentDestroy(parent, trophy_viewer, context.attach_parent_destroy);
         result = OpenWindow(trophy_viewer, behavior);
         break;
@@ -544,14 +541,14 @@ OpenTargetResult OpenTarget(const QString& target, const OpenTargetContext& cont
     const QString settings_key = QtGui::SettingsTabs::ExtractTabKey(target);
     if (!settings_key.isEmpty()) {
         OpenTargetResult result;
-        if (!context.gui_settings || !context.compat_info || !context.ipc_client) {
+        if (!context.gui_settings_shared || !context.compat_info || !context.ipc_client) {
             result.error_message = QObject::tr("Settings require GUI, compatibility, and IPC.");
             ReportError(result.error_message, behavior, context.parent);
             return result;
         }
 
         auto settings_dialog = std::make_unique<SettingsDialog>(
-            context.gui_settings, context.compat_info, context.ipc_client, nullptr,
+            context.gui_settings_shared, context.compat_info, context.ipc_client, nullptr,
             context.is_game_running, context.is_game_specific, context.game_serial);
         const auto object_name = ResolveSettingsTabObjectName(settings_dialog.get(), settings_key);
         if (!object_name) {

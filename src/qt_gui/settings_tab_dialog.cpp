@@ -6,8 +6,8 @@
 #include <QDialogButtonBox>
 #include <QLabel>
 #include <QSizePolicy>
-#include <QTextEdit>
 #include <QTabWidget>
+#include <QTextEdit>
 #include <QVBoxLayout>
 
 #include "qt_gui/settings_dialog.h"
@@ -98,8 +98,7 @@ SettingsTabDialog::SettingsTabDialog(SettingsDialog* dialog, const QString& tab_
     if (!tab_hint.isEmpty()) {
         const int min_width =
             std::max(tab_hint.width(), std::max(button_hint.width(), description_hint.width()));
-        const int min_height =
-            tab_hint.height() + button_hint.height() + description_hint.height();
+        const int min_height = tab_hint.height() + button_hint.height() + description_hint.height();
         setMinimumSize(QSize(min_width, min_height));
         resize(QSize(min_width, min_height));
     }

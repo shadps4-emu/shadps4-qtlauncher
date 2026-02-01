@@ -403,7 +403,7 @@ public:
 
         if (selected == &openTrophyViewer) {
             UiOpenTargets::OpenTargetContext context{};
-            context.gui_settings = m_gui_settings;
+            context.gui_settings_shared = m_gui_settings;
             context.compat_info = m_compat_info;
             context.ipc_client = m_ipc_client;
             context.game_info = std::make_shared<GameInfoClass>();
@@ -418,7 +418,7 @@ public:
 
         if (selected == &gameConfigConfigure || selected == &gameConfigCreate) {
             UiOpenTargets::OpenTargetContext context{};
-            context.gui_settings = m_gui_settings;
+            context.gui_settings_shared = m_gui_settings;
             context.compat_info = m_compat_info;
             context.ipc_client = m_ipc_client;
             context.game_info = std::make_shared<GameInfoClass>();

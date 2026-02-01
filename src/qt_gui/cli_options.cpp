@@ -68,12 +68,11 @@ ParseResult ParseOptions(const QStringList& arguments) {
     parser.addHelpOption();
 
     const QCommandLineOption open_option("open", "Open a UI target and exit when closed.",
-                                        "target");
-    const QCommandLineOption game_option(QStringList{"g", "game"},
-                                         "Game path (eboot.bin or directory containing it).",
-                                         "path");
-    const QCommandLineOption emulator_option(QStringList{"e", "emulator"},
-                                             "Emulator name or path.", "name_or_path");
+                                         "target");
+    const QCommandLineOption game_option(
+        QStringList{"g", "game"}, "Game path (eboot.bin or directory containing it).", "path");
+    const QCommandLineOption emulator_option(QStringList{"e", "emulator"}, "Emulator name or path.",
+                                             "name_or_path");
     const QCommandLineOption default_emulator_option("d", "Alias for '--emulator default'.");
     const QCommandLineOption show_gui_option(QStringList{"s", "show-gui"},
                                              "Show the GUI after launch.");

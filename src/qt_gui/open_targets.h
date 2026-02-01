@@ -51,7 +51,7 @@ OpenBehavior OpenBehaviorForUi();
 OpenBehavior OpenBehaviorForCli();
 
 struct OpenTargetContext {
-    std::shared_ptr<gui_settings> gui_settings;
+    std::shared_ptr<gui_settings> gui_settings_shared;
     std::shared_ptr<CompatibilityInfoClass> compat_info;
     std::shared_ptr<IpcClient> ipc_client;
     std::shared_ptr<GameInfoClass> game_info;

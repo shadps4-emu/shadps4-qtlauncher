@@ -75,8 +75,8 @@ private:
     void ApplySettingsForTab(SettingsTabId tab_id);
     void LoadValuesForScope(const toml::value& data, const toml::value& gs_data,
                             bool is_newly_created);
-    void LoadValuesForTab(SettingsTabId tab_id, const toml::value& data,
-                          const toml::value& gs_data, bool is_newly_created);
+    void LoadValuesForTab(SettingsTabId tab_id, const toml::value& data, const toml::value& gs_data,
+                          bool is_newly_created);
     void SetDefaultValuesForScope();
     void SetDefaultValuesForTab(SettingsTabId tab_id);
     void SyncRealTimeWidgetsForScope(const toml::value& data, const toml::value& gs_data);
