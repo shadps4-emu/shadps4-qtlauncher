@@ -2363,6 +2363,23 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
       <translation>Präsentationsmodus:\nKonfiguriert, wie die Videoausgabe auf dem Bildschirm dargestellt werden soll.\n\nMailbox (Vsync): Die Frames werden mit der Aktualisierungsrate des Bildschirms synchronisiert. Neue Frames ersetzen alle ausstehenden Frames. Reduziert die Latenz, kann jedoch Frames überspringen, wenn es zu Verzögerungen kommt.\nFIFO (Vsync): Die Frames werden mit der Aktualisierungsrate des Bildschirms synchronisiert. Neue Frames werden hinter ausstehenden Frames in die Warteschlange gestellt. Stellt sicher, dass alle Frames angezeigt werden, kann jedoch die Latenz erhöhen.\nSofort (kein Vsync): Die Frames werden sofort auf dem Bildschirm angezeigt, sobald sie bereit sind. Kann zu Bildfehlern (Tearing) führen.</translation>
     </message>
     <message>
+      <source>Display Mode:
+Controls how the emulator shows the game window.
+Windowed: Runs in a resizable window for easy multitasking.
+Fullscreen: Takes over the display; can improve performance on some systems
+but makes app switching slower.
+Fullscreen (Borderless): Fills the screen without taking exclusive control;
+faster app switching, but may introduce a small performance or latency trade-off.</source>
+      <translation>Anzeigemodus:
+Steuert, wie der Emulator das Spielfenster darstellt.
+Fenster: Läuft in einem frei skalierbaren Fenster für einfaches Multitasking.
+Vollbild: Übernimmt den Bildschirm; kann auf manchen Systemen die Leistung verbessern, macht aber
+das Wechseln zwischen Apps langsamer.
+Vollbild (randlos): Füllt den Bildschirm ohne exklusiven Zugriff; schnelleres App-Wechseln, kann
+aber einen kleinen Leistungs- oder Latenznachteil verursachen.</translation>
+    </message>
+
+    <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
       <translation>Durchsuchen:\nLege einen Ordner für DLCs fest.</translation>
     </message>
@@ -2618,7 +2635,34 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
       <translation>Komprimiere Shader Cache-Dateien in eine Zip-Datei:\nDie Shader Cache-Dateien werden in eine einzige Zip-Datei gespeichert anstatt in mehreren separaten Dateien.</translation>
     </message>
-  </context>
+      <message>
+        <source>FSR Settings:
+Configure FSR upscaling and RCAS sharpening for the image.</source>
+        <translation>FSR-Einstellungen:
+FSR-Upscaling und RCAS-Schärfung für das Bild konfigurieren.</translation>
+    </message>
+    <message>
+        <source>Enable FSR:
+Upscales the game's output to the current display size.
+Can improve image quality when the game renders below that size.</source>
+        <translation>FSR aktivieren:
+Skaliert auf Displaygröße für bessere Qualität bei niedriger Auflösung.</translation>
+    </message>
+    <message>
+        <source>Enable RCAS (sharpening):
+Restores detail lost from upscaling, improving clarity
+but potentially adding halos or noise.</source>
+        <translation>RCAS aktivieren (Schärfung):
+Schärft das Bild, kann aber Halos oder Rauschen erzeugen.</translation>
+    </message>
+    <message>
+        <source>RCAS Attenuation:
+Controls sharpening strength. Lower values are sharper but can cause
+halos or noise; higher values are softer but more stable.</source>
+        <translation>RCAS-Dämpfung:
+Niedriger = schärfer, aber Halos; höher = weicher.</translation>
+    </message>
+</context>
   <context>
     <name>ShortcutDialog</name>
     <message>

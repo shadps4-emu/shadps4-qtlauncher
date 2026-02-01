@@ -2352,6 +2352,23 @@ Select an emulator version from the right panel.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+      <source>Display Mode:
+Controls how the emulator shows the game window.
+Windowed: Runs in a resizable window for easy multitasking.
+Fullscreen: Takes over the display; can improve performance on some systems
+but makes app switching slower.
+Fullscreen (Borderless): Fills the screen without taking exclusive control;
+faster app switching, but may introduce a small performance or latency trade-off.</source>
+      <translation>Display Mode:
+Controls how the emulator shows the game window.
+Windowed: Runs in a resizable window for easy multitasking.
+Fullscreen: Takes over the display; can improve performance on some systems
+but makes app switching slower.
+Fullscreen (Borderless): Fills the screen without taking exclusive control;
+faster app switching, but may introduce a small performance or latency trade-off.</translation>
+    </message>
+
+    <message>
         <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2606,6 +2623,33 @@ Select an emulator version from the right panel.</source>
     <message>
         <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FSR Settings:
+Configure FSR upscaling and RCAS sharpening for the image.</source>
+        <translation>FSR Settings:
+Configure FSR upscaling and RCAS sharpening for the image.</translation>
+    </message>
+    <message>
+        <source>Enable FSR:
+Upscales the game's output to the current display size.
+Can improve image quality when the game renders below that size.</source>
+        <translation>Enable FSR:
+Upscales output to display size for better quality at low res.</translation>
+    </message>
+    <message>
+        <source>Enable RCAS (sharpening):
+Restores detail lost from upscaling, improving clarity
+but potentially adding halos or noise.</source>
+        <translation>Enable RCAS (sharpening):
+Sharpens the image but can add halos or noise.</translation>
+    </message>
+    <message>
+        <source>RCAS Attenuation:
+Controls sharpening strength. Lower values are sharper but can cause
+halos or noise; higher values are softer but more stable.</source>
+        <translation>RCAS Attenuation:
+Lower is sharper but can add halos; higher is softer.</translation>
     </message>
 </context>
 <context>

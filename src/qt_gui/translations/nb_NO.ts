@@ -2360,6 +2360,22 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <translation>Presentasjonsmodus:\nSetter opp hvordan video-utdata skal presenteres til skjermen.\n\n«Mailbox»: Bildene synkroniseres med skjermens oppdateringsfrekvens. Nye bilder erstatter gamle bilder i køen. Reduserer ventetid men kan hoppe over bilder hvis de er forsinket.\n«FIFO»: Bildene synkroniseres med skjermens oppdateringsfrekvens. Nye bilder settes i kø bak gamle bilder. Dette sikrer at alle bildene vises men kan øke ventetid.\nUmiddelbart: Bildene vises til skjermen med en gang når de er klare. Kan forutsake bilderiving.</translation>
     </message>
     <message>
+      <source>Display Mode:
+Controls how the emulator shows the game window.
+Windowed: Runs in a resizable window for easy multitasking.
+Fullscreen: Takes over the display; can improve performance on some systems
+but makes app switching slower.
+Fullscreen (Borderless): Fills the screen without taking exclusive control;
+faster app switching, but may introduce a small performance or latency trade-off.</source>
+      <translation>Skjermmodus:
+Styrer hvordan emulatoren viser spillvinduet.
+Vindu: Kjører i et vindu som kan endre størrelse for enkel multitasking.
+Fullskjerm: Tar over skjermen; kan forbedre ytelsen på noen systemer, men gjør appbytte tregere.
+Fullskjerm (kantløs): Fyller skjermen uten eksklusiv kontroll; raskere appbytte, men kan gi et lite
+ytelses- eller latenstap.</translation>
+    </message>
+
+    <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
       <translation>Bla gjennom:\nLet etter en mappe for å angi den som DLC-adressen.</translation>
     </message>
@@ -2615,7 +2631,34 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
       <translation>Komprimer skyggelegger hurtiglager-filer til en zip-fil:\nskyggeleggerhurtiglager filene lagres i en zip-fil i stedet for flere separate filer.</translation>
     </message>
-  </context>
+      <message>
+        <source>FSR Settings:
+Configure FSR upscaling and RCAS sharpening for the image.</source>
+        <translation>FSR-innstillinger:
+Konfigurer FSR-oppskalering og RCAS-skarpning for bildet.</translation>
+    </message>
+    <message>
+        <source>Enable FSR:
+Upscales the game's output to the current display size.
+Can improve image quality when the game renders below that size.</source>
+        <translation>Aktiver FSR:
+Oppskalerer til skjermstørrelse for bedre kvalitet ved lav oppløsning.</translation>
+    </message>
+    <message>
+        <source>Enable RCAS (sharpening):
+Restores detail lost from upscaling, improving clarity
+but potentially adding halos or noise.</source>
+        <translation>Aktiver RCAS (skarpning):
+Gjør bildet skarpere, men kan gi haloer eller støy.</translation>
+    </message>
+    <message>
+        <source>RCAS Attenuation:
+Controls sharpening strength. Lower values are sharper but can cause
+halos or noise; higher values are softer but more stable.</source>
+        <translation>RCAS-demping:
+Lavere = skarpere men haloer; høyere = mykere.</translation>
+    </message>
+</context>
   <context>
     <name>ShortcutDialog</name>
     <message>

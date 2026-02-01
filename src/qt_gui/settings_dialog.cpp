@@ -496,11 +496,18 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
 
         // Graphics
         ui->graphicsAdapterGroupBox->installEventFilter(this);
+        ui->displayModeGroupBox->installEventFilter(this);
         ui->windowSizeGroupBox->installEventFilter(this);
         ui->presentModeGroupBox->installEventFilter(this);
         ui->heightDivider->installEventFilter(this);
         ui->nullGpuCheckBox->installEventFilter(this);
         ui->enableHDRCheckBox->installEventFilter(this);
+        ui->FSRGroupBox->installEventFilter(this);
+        ui->FSRCheckBox->installEventFilter(this);
+        ui->RCASCheckBox->installEventFilter(this);
+        ui->RCASAtenLabel->installEventFilter(this);
+        ui->RCASSlider->installEventFilter(this);
+        ui->RCASValue->installEventFilter(this);
         ui->chooseHomeTabGroupBox->installEventFilter(this);
 
         // Paths
@@ -904,6 +911,18 @@ void SettingsDialog::updateNoteTextEdit(const QString& elementName) {
         text = tr("Update Compatibility On Startup:\\nAutomatically update the compatibility database when shadPS4 starts.");
     } else if (elementName == "updateCompatibilityButton") {
         text = tr("Update Compatibility Database:\\nImmediately update the compatibility database.");
+    } else if (elementName == "FSRGroupBox") {
+        text = tr("FSR Settings:\nConfigure FSR upscaling and RCAS sharpening for the image.");
+    } else if (elementName == "FSRCheckBox") {
+        text = tr("Enable FSR:\nUpscales the game's output to the current display size.\n"
+                  "Can improve image quality when the game renders below that size.");
+    } else if (elementName == "RCASCheckBox") {
+        text = tr("Enable RCAS (sharpening):\nRestores detail lost from upscaling, improving "
+                  "clarity\nbut potentially adding halos or noise.");
+    } else if (elementName == "RCASAtenLabel" || elementName == "RCASSlider" ||
+               elementName == "RCASValue") {
+        text = tr("RCAS Attenuation:\nControls sharpening strength. Lower values are sharper but "
+                  "can cause\nhalos or noise; higher values are softer but more stable.");
     }
 
     //User
@@ -923,6 +942,14 @@ void SettingsDialog::updateNoteTextEdit(const QString& elementName) {
     // Graphics
     if (elementName == "graphicsAdapterGroupBox") {
         text = tr("Graphics Device:\\nOn multiple GPU systems, select the GPU the emulator will use from the drop down list,\\nor select \"Auto Select\" to automatically determine it.");
+    } else if (elementName == "displayModeGroupBox") {
+        text = tr(
+            "Display Mode:\nControls how the emulator shows the game window.\n"
+            "Windowed: Runs in a resizable window for easy multitasking.\n"
+            "Fullscreen: Takes over the display; can improve performance on some systems\n"
+            "but makes app switching slower.\n"
+            "Fullscreen (Borderless): Fills the screen without taking exclusive control;\n"
+            "faster app switching, but may introduce a small performance or latency trade-off.");
     } else if (elementName == "presentModeGroupBox") {
         text = tr("Present Mode:\\nConfigures how video output will be presented to your screen.\\n\\n"
                   "Mailbox: Frames synchronize with your screen's refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\\n"

@@ -2361,6 +2361,23 @@ Select an emulator version from the right panel.</source>
 \nНегайно: Кадри негайно зображуються на екрані, коли готові. Може призвести до розривів зображення.</translation>
     </message>
     <message>
+      <source>Display Mode:
+Controls how the emulator shows the game window.
+Windowed: Runs in a resizable window for easy multitasking.
+Fullscreen: Takes over the display; can improve performance on some systems
+but makes app switching slower.
+Fullscreen (Borderless): Fills the screen without taking exclusive control;
+faster app switching, but may introduce a small performance or latency trade-off.</source>
+      <translation>Режим відображення:
+Керує тим, як емулятор показує вікно гри.
+У вікні: Працює у вікні зі змінним розміром для зручної багатозадачності.
+На весь екран: Захоплює екран; може покращити продуктивність на деяких системах, але уповільнює
+перемикання між застосунками.
+На весь екран (без рамок): Заповнює екран без ексклюзивного контролю; перемикання між застосунками
+швидше, але може додати невеликий компроміс у продуктивності або затримці.</translation>
+    </message>
+
+    <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
       <translation>Перегляд:\nЗнайти теку, яку потрібно встановити як шлях до доповнення.</translation>
     </message>
@@ -2616,7 +2633,34 @@ Select an emulator version from the right panel.</source>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
       <translation type="unfinished">Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</translation>
     </message>
-  </context>
+      <message>
+        <source>FSR Settings:
+Configure FSR upscaling and RCAS sharpening for the image.</source>
+        <translation>Налаштування FSR:
+Налаштуйте апскейл FSR і різкість RCAS для зображення.</translation>
+    </message>
+    <message>
+        <source>Enable FSR:
+Upscales the game's output to the current display size.
+Can improve image quality when the game renders below that size.</source>
+        <translation>Увімкнути FSR:
+Апскейлить до розміру екрана для кращої якості при низькій роздільності.</translation>
+    </message>
+    <message>
+        <source>Enable RCAS (sharpening):
+Restores detail lost from upscaling, improving clarity
+but potentially adding halos or noise.</source>
+        <translation>Увімкнути RCAS (різкість):
+Підвищує різкість, але може додати ореоли або шум.</translation>
+    </message>
+    <message>
+        <source>RCAS Attenuation:
+Controls sharpening strength. Lower values are sharper but can cause
+halos or noise; higher values are softer but more stable.</source>
+        <translation>Затухання RCAS:
+Нижче = різкіше, але ореоли; вище = м’якше.</translation>
+    </message>
+</context>
   <context>
     <name>ShortcutDialog</name>
     <message>

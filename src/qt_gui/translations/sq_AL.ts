@@ -2360,6 +2360,23 @@ Përzgjidh një version të emulatorit nga paneli i djathtë.</translation>
       <translation>Mënyra e Prezantimit:\nKonfiguron se si dalja video do të paraqitet në ekranin tënd.\n\nMailbox: Fotografitë sinkronizohen me frekuencën e rifreskimit të ekranit tënd. Fotografitë e reja do të zëvendësojnë çdo fotografi në pritje. Ul vonesën por mund të kapërcejë fotografi nëse mbetet pas.\nFifo: Fotografitë sinkronizohen me frekuencën e rifreskimit të ekranit tënd. Fotografitë e reja do të radhiten pas fotografive në pritje. Siguron që të gjitha fotografitë të paraqiten, por mund të rrisë vonesën.\nI menjëhershëm: Fotografitë paraqiten menjëherë në ekranin tënd kur janë gati. Mund të rezultojë në shqyerje.</translation>
     </message>
     <message>
+      <source>Display Mode:
+Controls how the emulator shows the game window.
+Windowed: Runs in a resizable window for easy multitasking.
+Fullscreen: Takes over the display; can improve performance on some systems
+but makes app switching slower.
+Fullscreen (Borderless): Fills the screen without taking exclusive control;
+faster app switching, but may introduce a small performance or latency trade-off.</source>
+      <translation>Mënyra e shfaqjes:
+Kontrollon mënyrën se si emulatori shfaq dritaren e lojës.
+Me dritare: Ekzekutohet në një dritare të rregullueshme për të lehtësuar shumëdetyrimin.
+Ekran i plotë: Merr kontrollin e ekranit; mund të përmirësojë performancën në disa sisteme, por e
+bën më të ngadaltë ndërrimin e aplikacioneve.
+Ekran i plotë (pa kornizë): Mbush ekranin pa kontroll ekskluziv; ndërrim më i shpejtë i
+aplikacioneve, por mund të sjellë një kompromis të vogël në performancë ose vonesë.</translation>
+    </message>
+
+    <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
       <translation>Shfleto:\nShfleto një dosje për ta vendosur si shtegun e DLC-ve.</translation>
     </message>
@@ -2616,7 +2633,34 @@ Zgjidh cilën skedë do të hapet; parazgjedhja është General.</translation>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
       <translation>Paketo skedarët e Kesh-it të Shader-ave në një skedar zip:\nSkedarët e Kesh-it të Shader-ave ruhen në një skedar zip të vetëm në vend të shumë skedarëve të veçantë.</translation>
     </message>
-  </context>
+      <message>
+        <source>FSR Settings:
+Configure FSR upscaling and RCAS sharpening for the image.</source>
+        <translation>Cilësimet FSR:
+Konfiguro rritjen FSR dhe mprehjen RCAS për imazhin.</translation>
+    </message>
+    <message>
+        <source>Enable FSR:
+Upscales the game's output to the current display size.
+Can improve image quality when the game renders below that size.</source>
+        <translation>Aktivizo FSR:
+Rrit në madhësinë e ekranit për cilësi më të mirë në rezolucion të ulët.</translation>
+    </message>
+    <message>
+        <source>Enable RCAS (sharpening):
+Restores detail lost from upscaling, improving clarity
+but potentially adding halos or noise.</source>
+        <translation>Aktivizo RCAS (mprehje):
+E bën imazhin më të mprehtë, por mund të shtojë halo ose zhurmë.</translation>
+    </message>
+    <message>
+        <source>RCAS Attenuation:
+Controls sharpening strength. Lower values are sharper but can cause
+halos or noise; higher values are softer but more stable.</source>
+        <translation>Dobësimi RCAS:
+Më i ulët = më i mprehtë por halo; më i lartë = më i butë.</translation>
+    </message>
+</context>
   <context>
     <name>ShortcutDialog</name>
     <message>
