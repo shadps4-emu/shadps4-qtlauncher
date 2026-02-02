@@ -2542,11 +2542,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Увімкнення перевірки ядра:\nЗабезпечує роботу основних функцій перевірки API.\nЦе знизить продуктивність і, ймовірно, змінить поведінку емуляції.\nДля роботи потрібен Vulkan SDK.</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Увімкнути перевірку з використанням GPU:\nІнструменти шейдери з кодом, який перевіряє, чи вони працюють правильно.\nЦе знизить продуктивність і, ймовірно, змінить поведінку емуляції.\nДля цього потрібен Vulkan SDK.</translation>
     </message>
     <message>
       <source>GUI Language</source>
