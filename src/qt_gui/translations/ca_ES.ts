@@ -2360,23 +2360,6 @@ Selecciona una versió del panell dret.</translation>
       <translation>Mode Presentació:\nConfigura com es presenta la sortida de vídeo a la teva pantalla.\n\nBústia de correu: Sincronitza els fotogrames amb la taxa de refresc de la teva pantalla. Els nous fotogrames reemplacen qualsevol fotograma pendent. Redueix la latència però pot provocar salts de fotogrames si es queden enrere.\nFifo: Els fotogrames es sincronitzen amb la taxa de refresc de la teva pantalla. Els nous fotogrames es posaran en cua darrere els fotogrames pendents. Assegura mostrar tots els fotogrames però augmenta la latència.\nImmediat: Els fotogrames es presenten immediatament a la teva pantalla quan estan disponibles. Pot provocar errors gràfics.</translation>
     </message>
     <message>
-      <source>Display Mode:
-Controls how the emulator shows the game window.
-Windowed: Runs in a resizable window for easy multitasking.
-Fullscreen: Takes over the display; can improve performance on some systems
-but makes app switching slower.
-Fullscreen (Borderless): Fills the screen without taking exclusive control;
-faster app switching, but may introduce a small performance or latency trade-off.</source>
-      <translation>Mode de visualització:
-Controla com l'emulador mostra la finestra del joc.
-En finestra: S'executa en una finestra redimensionable per facilitar la multitasca.
-Pantalla completa: Pren el control de la pantalla; pot millorar el rendiment en alguns sistemes però
-fa més lent el canvi d'aplicació.
-Pantalla completa (sense vores): Omple la pantalla sense control exclusiu; el canvi d'aplicació és
-més ràpid, però pot introduir un petit compromís de rendiment o latència.</translation>
-    </message>
-
-    <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
       <translation>Navegador:\nCerca una carpeta per establir com a ruta DLC.</translation>
     </message>
@@ -2632,34 +2615,7 @@ més ràpid, però pot introduir un petit compromís de rendiment o latència.</
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
       <translation>Comprimeix els fitxers de la memòria cau de shaders en un fitxer zip:\nEls fitxers de la memòria cau de shaders s'emmagatzemen en un sol fitxer zip en compte de fer-ho en diferents fitxers separats.</translation>
     </message>
-      <message>
-        <source>FSR Settings:
-Configure FSR upscaling and RCAS sharpening for the image.</source>
-        <translation>Configuració de l’FSR:
-Configura l’escalat FSR i l’afilat RCAS per a la imatge.</translation>
-    </message>
-    <message>
-        <source>Enable FSR:
-Upscales the game's output to the current display size.
-Can improve image quality when the game renders below that size.</source>
-        <translation>Activa FSR:
-Escala a la mida de la pantalla per a millor qualitat a baixa resolució.</translation>
-    </message>
-    <message>
-        <source>Enable RCAS (sharpening):
-Restores detail lost from upscaling, improving clarity
-but potentially adding halos or noise.</source>
-        <translation>Activa RCAS (afilat):
-Acentua la imatge però pot afegir halos o soroll.</translation>
-    </message>
-    <message>
-        <source>RCAS Attenuation:
-Controls sharpening strength. Lower values are sharper but can cause
-halos or noise; higher values are softer but more stable.</source>
-        <translation>Atenuació RCAS:
-Més baix = més nítid però amb halos; més alt = més suau.</translation>
-    </message>
-</context>
+  </context>
   <context>
     <name>ShortcutDialog</name>
     <message>

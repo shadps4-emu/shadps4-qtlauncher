@@ -2354,21 +2354,6 @@ Select an emulator version from the right panel.</source>
       <translation>呈現模式：\n設定視訊輸出到螢幕上的呈現方式。 \n\nMailbox模式：畫格與螢幕更新率同步。新的畫格將取代任何待處理的畫格。降低延遲，但如果執行速度太慢，可能會丟失畫格。 \nFIFO模式：畫格與螢幕更新率同步。新畫格將排在待處理畫格之後。確保所有畫格都呈現，但可能會增加延遲。 \n立即模式：畫格準備就緒後立即呈現在螢幕上。可能會導致畫面撕裂。</translation>
     </message>
     <message>
-      <source>Display Mode:
-Controls how the emulator shows the game window.
-Windowed: Runs in a resizable window for easy multitasking.
-Fullscreen: Takes over the display; can improve performance on some systems
-but makes app switching slower.
-Fullscreen (Borderless): Fills the screen without taking exclusive control;
-faster app switching, but may introduce a small performance or latency trade-off.</source>
-      <translation>顯示模式:
-控制模擬器如何顯示遊戲視窗。
-視窗模式: 在可調整大小的視窗中執行，便於多工。
-全螢幕: 接管顯示；在某些系統上可能提升效能，但切換應用會更慢。
-全螢幕（無邊框）: 不採取獨占控制即可填滿螢幕；應用切換更快，但可能帶來輕微的效能或延遲取捨。</translation>
-    </message>
-
-    <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
       <translation>瀏覽：\n選取要設定為存放DLC路徑的資料夾。</translation>
     </message>
@@ -2624,34 +2609,7 @@ faster app switching, but may introduce a small performance or latency trade-off
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
       <translation type="unfinished">Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</translation>
     </message>
-      <message>
-        <source>FSR Settings:
-Configure FSR upscaling and RCAS sharpening for the image.</source>
-        <translation>FSR 設定:
-設定 FSR 升采樣與 RCAS 銳化以用於畫面。</translation>
-    </message>
-    <message>
-        <source>Enable FSR:
-Upscales the game's output to the current display size.
-Can improve image quality when the game renders below that size.</source>
-        <translation>啟用 FSR:
-輸出提升到顯示尺寸，低解析度時畫質更好。</translation>
-    </message>
-    <message>
-        <source>Enable RCAS (sharpening):
-Restores detail lost from upscaling, improving clarity
-but potentially adding halos or noise.</source>
-        <translation>啟用 RCAS（銳化）:
-畫面更銳利，但可能出現光暈或雜訊。</translation>
-    </message>
-    <message>
-        <source>RCAS Attenuation:
-Controls sharpening strength. Lower values are sharper but can cause
-halos or noise; higher values are softer but more stable.</source>
-        <translation>RCAS 衰減:
-低值更銳但可能有光暈；高值更柔和。</translation>
-    </message>
-</context>
+  </context>
   <context>
     <name>ShortcutDialog</name>
     <message>

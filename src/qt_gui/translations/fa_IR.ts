@@ -2360,23 +2360,6 @@ Select an emulator version from the right panel.</translation>
       <translation type="unfinished">Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</translation>
     </message>
     <message>
-      <source>Display Mode:
-Controls how the emulator shows the game window.
-Windowed: Runs in a resizable window for easy multitasking.
-Fullscreen: Takes over the display; can improve performance on some systems
-but makes app switching slower.
-Fullscreen (Borderless): Fills the screen without taking exclusive control;
-faster app switching, but may introduce a small performance or latency trade-off.</source>
-      <translation>حالت نمایش:
-کنترل می‌کند شبیه‌ساز چگونه پنجرهٔ بازی را نشان می‌دهد.
-پنجره‌ای: در یک پنجرهٔ قابل تغییر اندازه اجرا می‌شود و چندوظیفگی را آسان‌تر می‌کند.
-تمام‌صفحه: نمایش را در اختیار می‌گیرد؛ ممکن است در برخی سیستم‌ها کارایی را بهتر کند، اما جابه‌جایی
-بین برنامه‌ها را کندتر می‌کند.
-تمام‌صفحه (بدون حاشیه): صفحه را بدون کنترل انحصاری پر می‌کند؛ جابه‌جایی بین برنامه‌ها سریع‌تر است،
-اما ممکن است افت جزئی عملکرد یا تأخیر ایجاد کند.</translation>
-    </message>
-
-    <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
       <translation type="unfinished">Browse:\nBrowse for a folder to set as the DLC path.</translation>
     </message>
@@ -2632,34 +2615,7 @@ faster app switching, but may introduce a small performance or latency trade-off
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
       <translation type="unfinished">Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</translation>
     </message>
-      <message>
-        <source>FSR Settings:
-Configure FSR upscaling and RCAS sharpening for the image.</source>
-        <translation>تنظیمات FSR:
-تنظیم بزرگ‌نمایی FSR و شارپ‌سازی RCAS برای تصویر.</translation>
-    </message>
-    <message>
-        <source>Enable FSR:
-Upscales the game's output to the current display size.
-Can improve image quality when the game renders below that size.</source>
-        <translation>فعال‌سازی FSR:
-خروجی را به اندازه نمایشگر بزرگ می‌کند و کیفیت را در رزولوشن پایین بهتر می‌کند.</translation>
-    </message>
-    <message>
-        <source>Enable RCAS (sharpening):
-Restores detail lost from upscaling, improving clarity
-but potentially adding halos or noise.</source>
-        <translation>فعال‌سازی RCAS (شارپ‌سازی):
-تصویر را شارپ می‌کند اما ممکن است هاله یا نویز اضافه کند.</translation>
-    </message>
-    <message>
-        <source>RCAS Attenuation:
-Controls sharpening strength. Lower values are sharper but can cause
-halos or noise; higher values are softer but more stable.</source>
-        <translation>تضعیف RCAS:
-کمتر = شارپ‌تر با هاله؛ بیشتر = نرم‌تر.</translation>
-    </message>
-</context>
+  </context>
   <context>
     <name>ShortcutDialog</name>
     <message>

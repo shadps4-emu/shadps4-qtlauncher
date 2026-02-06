@@ -1064,7 +1064,7 @@
     </message>
     <message>
       <source>Info</source>
-      <translation type="unfinished">Info</translation>
+      <translation>情報</translation>
     </message>
     <message>
       <source>Create Shortcut for Selected Emulator Version</source>
@@ -1096,7 +1096,7 @@
     </message>
     <message>
       <source>Delete Shader Cache</source>
-      <translation type="unfinished">Delete Shader Cache</translation>
+      <translation>シェーダーキャッシュを削除</translation>
     </message>
     <message>
       <source>This game does not have any saved Shader Cache to delete!</source>
@@ -1104,7 +1104,7 @@
     </message>
     <message>
       <source>Shader Cache</source>
-      <translation type="unfinished">Shader Cache</translation>
+      <translation>シェーダーキャッシュ</translation>
     </message>
   </context>
   <context>
@@ -2360,21 +2360,6 @@ Select an emulator version from the right panel.</translation>
       <translation>表示モード：\nビデオ出力が画面にどのように表示されるかを設定します。\n\nメールボックス：フレームは画面のリフレッシュレートと同期します。新規フレームは待機中のフレームを置き換えます。遅延は減少しますが、処理が遅れた場合にフレームがスキップされる可能性があります。\nFIFO: フレームは画面のリフレッシュレートに同期します。新規フレームは待機中のフレームの後ろにキューイングされます。全フレームの表示を保証しますが、遅延が増加する可能性があります。\n即時: フレームは準備完了次第、直ちに画面に表示されます。ティアリングが発生する可能性があります。</translation>
     </message>
     <message>
-      <source>Display Mode:
-Controls how the emulator shows the game window.
-Windowed: Runs in a resizable window for easy multitasking.
-Fullscreen: Takes over the display; can improve performance on some systems
-but makes app switching slower.
-Fullscreen (Borderless): Fills the screen without taking exclusive control;
-faster app switching, but may introduce a small performance or latency trade-off.</source>
-      <translation>表示モード:
-エミュレーターがゲームウィンドウを表示する方法を設定します。
-ウィンドウ: サイズ変更可能なウィンドウで動作し、マルチタスクに便利です。
-フルスクリーン: 画面を占有します。システムによっては性能が向上する場合がありますが、アプリ切替が遅くなります。
-フルスクリーン（ボーダーレス）: 排他的制御を行わずに画面を埋めます。アプリ切替は速くなりますが、性能や遅延に小さなトレードオフが生じる場合があります。</translation>
-    </message>
-
-    <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
       <translation type="unfinished">Browse:\nBrowse for a folder to set as the DLC path.</translation>
     </message>
@@ -2536,7 +2521,7 @@ faster app switching, but may introduce a small performance or latency trade-off
     </message>
     <message>
       <source>Validation Layers</source>
-      <translation type="unfinished">Validation Layers</translation>
+      <translation>検証レイヤー</translation>
     </message>
     <message>
       <source>Enable Core Validation</source>
@@ -2564,23 +2549,23 @@ faster app switching, but may introduce a small performance or latency trade-off
     </message>
     <message>
       <source>GUI Language</source>
-      <translation type="unfinished">GUI Language</translation>
+      <translation>GUI言語</translation>
     </message>
     <message>
       <source>GUI Updates</source>
-      <translation type="unfinished">GUI Updates</translation>
+      <translation>GUIアップデート</translation>
     </message>
     <message>
       <source>DLC Path</source>
-      <translation type="unfinished">DLC Path</translation>
+      <translation>DLCパス</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path</source>
-      <translation type="unfinished">PS4 Sysmodules Path</translation>
+      <translation>PS4 Sysmodules パス</translation>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
-      <translation type="unfinished">GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</translation>
+      <translation>GUIの更新:\nリリース版：毎月リリースされる公式バージョン。非常に古い場合もありますが、信頼性が高くテスト済みです。\nナイトリー版：最新機能と修正を全て含む開発版。バグが含まれる可能性があり、安定性は低くなります。\n\n*この更新はQtユーザーインターフェースのみに適用されます。エミュレータコアを更新するには、「バージョン管理」メニューをご利用ください。</translation>
     </message>
     <message>
       <source>Cannot create portable launcher folder</source>
@@ -2630,34 +2615,7 @@ faster app switching, but may introduce a small performance or latency trade-off
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
       <translation type="unfinished">Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</translation>
     </message>
-      <message>
-        <source>FSR Settings:
-Configure FSR upscaling and RCAS sharpening for the image.</source>
-        <translation>FSR設定:
-FSRアップスケーリングとRCASシャープ化を画像に適用します。</translation>
-    </message>
-    <message>
-        <source>Enable FSR:
-Upscales the game's output to the current display size.
-Can improve image quality when the game renders below that size.</source>
-        <translation>FSRを有効化:
-出力を表示サイズに拡大し、低解像度時の画質を改善します。</translation>
-    </message>
-    <message>
-        <source>Enable RCAS (sharpening):
-Restores detail lost from upscaling, improving clarity
-but potentially adding halos or noise.</source>
-        <translation>RCASを有効化（シャープ）:
-画像をシャープにしますが、ハローやノイズが出る場合があります。</translation>
-    </message>
-    <message>
-        <source>RCAS Attenuation:
-Controls sharpening strength. Lower values are sharper but can cause
-halos or noise; higher values are softer but more stable.</source>
-        <translation>RCAS減衰:
-低いほどシャープだがハローが増え、高いほど柔らかい。</translation>
-    </message>
-</context>
+  </context>
   <context>
     <name>ShortcutDialog</name>
     <message>

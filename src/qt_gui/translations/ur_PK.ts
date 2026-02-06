@@ -34,23 +34,23 @@
     </message>
     <message>
       <source>Serial: </source>
-      <translation type="unfinished">Serial: </translation>
+      <translation>سیریل:</translation>
     </message>
     <message>
       <source>Version: </source>
-      <translation type="unfinished">Version: </translation>
+      <translation>ورژن:</translation>
     </message>
     <message>
       <source>Size: </source>
-      <translation type="unfinished">Size: </translation>
+      <translation>سائز:</translation>
     </message>
     <message>
       <source>Select Cheat File:</source>
-      <translation type="unfinished">Select Cheat File:</translation>
+      <translation>چیٹ فائل منتخب کریں:</translation>
     </message>
     <message>
       <source>Repository:</source>
-      <translation type="unfinished">Repository:</translation>
+      <translation>ریپوزٹری:</translation>
     </message>
     <message>
       <source>Download Cheats</source>
@@ -66,7 +66,7 @@
     </message>
     <message>
       <source>You can delete the cheats you don&apos;t want after downloading them.</source>
-      <translation type="unfinished">You can delete the cheats you don&apos;t want after downloading them.</translation>
+      <translation>آپ وہ چیٹس حذف کر سکتے ہیں جو آپ ڈاؤن لوڈ کرنے کے بعد استعمال نہیں کرنا چاہتے۔</translation>
     </message>
     <message>
       <source>Do you want to delete the selected file?\n%1</source>
@@ -102,15 +102,15 @@
     </message>
     <message>
       <source>Unable to open files.json for reading.</source>
-      <translation type="unfinished">Unable to open files.json for reading.</translation>
+      <translation>پڑھنے کے لیے files.json کھولا نہیں جا سکا۔</translation>
     </message>
     <message>
       <source>No patch file found for the current serial.</source>
-      <translation type="unfinished">No patch file found for the current serial.</translation>
+      <translation>موجودہ سیریل کے لیے کوئی پیچ فائل نہیں ملی۔</translation>
     </message>
     <message>
       <source>Unable to open the file for reading.</source>
-      <translation type="unfinished">Unable to open the file for reading.</translation>
+      <translation>پڑھنے کے لیے فائل کھولی نہیں جا سکی۔</translation>
     </message>
     <message>
       <source>Unable to open the file for writing.</source>
@@ -130,11 +130,11 @@
     </message>
     <message>
       <source>Invalid Source</source>
-      <translation type="unfinished">Invalid Source</translation>
+      <translation>غلط سورس</translation>
     </message>
     <message>
       <source>The selected source is invalid.</source>
-      <translation type="unfinished">The selected source is invalid.</translation>
+      <translation>منتخب کردہ سورس غلط ہے۔</translation>
     </message>
     <message>
       <source>File Exists</source>
@@ -188,19 +188,19 @@
     </message>
     <message>
       <source>Failed to parse JSON data from HTML.</source>
-      <translation type="unfinished">Failed to parse JSON data from HTML.</translation>
+      <translation>HTML سے JSON ڈیٹا پڑھنے میں ناکامی ہوئی۔</translation>
     </message>
     <message>
       <source>Failed to retrieve HTML page.</source>
-      <translation type="unfinished">Failed to retrieve HTML page.</translation>
+      <translation>HTML پیج حاصل کرنے میں ناکامی ہوئی۔</translation>
     </message>
     <message>
       <source>The game is in version: %1</source>
-      <translation type="unfinished">The game is in version: %1</translation>
+      <translation>گیم کا ورژن ہے: %1</translation>
     </message>
     <message>
       <source>The downloaded patch only works on version: %1</source>
-      <translation type="unfinished">The downloaded patch only works on version: %1</translation>
+      <translation>ڈاؤن لوڈ کیا گیا پیچ صرف اس ورژن پر کام کرتا ہے: %1</translation>
     </message>
     <message>
       <source>You may need to update your game.</source>
@@ -208,7 +208,7 @@
     </message>
     <message>
       <source>Incompatibility Notice</source>
-      <translation type="unfinished">Incompatibility Notice</translation>
+      <translation>عدم مطابقت کی اطلاع</translation>
     </message>
     <message>
       <source>Failed to open file:</source>
@@ -216,23 +216,23 @@
     </message>
     <message>
       <source>XML ERROR:</source>
-      <translation type="unfinished">XML ERROR:</translation>
+      <translation>XML میں خرابی:</translation>
     </message>
     <message>
       <source>Failed to open files.json for writing</source>
-      <translation type="unfinished">Failed to open files.json for writing</translation>
+      <translation>files.json کو لکھائی کے لیے کھولے جانے میں ناکامی پیش آئی</translation>
     </message>
     <message>
       <source>Author: </source>
-      <translation type="unfinished">Author: </translation>
+      <translation>مصنف:</translation>
     </message>
     <message>
       <source>Directory does not exist:</source>
-      <translation type="unfinished">Directory does not exist:</translation>
+      <translation>یہ ڈائریکٹری موجود نہیں ہے:</translation>
     </message>
     <message>
       <source>Failed to open files.json for reading.</source>
-      <translation type="unfinished">Failed to open files.json for reading.</translation>
+      <translation>files.json کو پڑھنے کے لیے کھولے جانے میں ناکامی پیش آئی۔</translation>
     </message>
     <message>
       <source>Name:</source>
@@ -295,11 +295,11 @@
     </message>
     <message>
       <source>Show Changelog</source>
-      <translation type="unfinished">Show Changelog</translation>
+      <translation>تبدیلیوں کی فہرست دکھائیں</translation>
     </message>
     <message>
       <source>Check for Updates at Startup</source>
-      <translation type="unfinished">Check for Updates at Startup</translation>
+      <translation>کھولے جانے پر اپ ڈیٹس کے لیے چیک کریں</translation>
     </message>
     <message>
       <source>Update</source>
@@ -331,7 +331,7 @@
     </message>
     <message>
       <source>Failed to save the update file at</source>
-      <translation type="unfinished">Failed to save the update file at</translation>
+      <translation>اپ ڈیٹ فائل کو اس مقام پر محفوظ کرنے میں ناکامی ہوئی</translation>
     </message>
     <message>
       <source>Starting Update...</source>
@@ -339,22 +339,22 @@
     </message>
     <message>
       <source>Failed to create the update script file</source>
-      <translation type="unfinished">Failed to create the update script file</translation>
+      <translation>اپ ڈیٹ اسکرپٹ فائل بنانے میں ناکامی ہوئی</translation>
     </message>
     <message>
       <source>Auto Updater - GUI</source>
-      <translation type="unfinished">Auto Updater - GUI</translation>
+      <translation>خودکار اپ ڈیٹر - GUI</translation>
     </message>
     <message>
       <source>Update Available - GUI</source>
-      <translation type="unfinished">Update Available - GUI</translation>
+      <translation>نئی اپ ڈیٹ دستیاب ہے - GUI</translation>
     </message>
   </context>
   <context>
     <name>CompatibilityInfoClass</name>
     <message>
       <source>Fetching compatibility data, please wait</source>
-      <translation type="unfinished">Fetching compatibility data, please wait</translation>
+      <translation>مطابقت کے ڈیٹا کو حاصل کیا جا رہا ہے، براہ مہربانی انتظار کریں</translation>
     </message>
     <message>
       <source>Cancel</source>
@@ -366,11 +366,11 @@
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>خرابی</translation>
     </message>
     <message>
       <source>Unable to update compatibility data! Try again later.</source>
-      <translation type="unfinished">Unable to update compatibility data! Try again later.</translation>
+      <translation>مطابقت کے ڈیٹا کو اپ ڈیٹ نہیں کیا جا سکا! تھوڑی دیر بعد کوشش کریں۔</translation>
     </message>
     <message>
       <source>Unable to open compatibility_data.json for writing.</source>
@@ -1492,55 +1492,55 @@
     </message>
     <message>
       <source>Recent Games</source>
-      <translation type="unfinished">Recent Games</translation>
+      <translation>حالیہ گیمز</translation>
     </message>
     <message>
       <source>Open shadPS4 Folder</source>
-      <translation type="unfinished">Open shadPS4 Folder</translation>
+      <translation>shadPS4 فولڈر کھولیں</translation>
     </message>
     <message>
       <source>Exit</source>
-      <translation type="unfinished">Exit</translation>
+      <translation>بند کریں</translation>
     </message>
     <message>
       <source>Exit shadPS4</source>
-      <translation type="unfinished">Exit shadPS4</translation>
+      <translation>shadPS4 کو بند کریں</translation>
     </message>
     <message>
       <source>Exit the application.</source>
-      <translation type="unfinished">Exit the application.</translation>
+      <translation>اپلیکیشن کو بند کریں۔</translation>
     </message>
     <message>
       <source>Show Game List</source>
-      <translation type="unfinished">Show Game List</translation>
+      <translation>گیمز کی فہرست دکھائیں</translation>
     </message>
     <message>
       <source>Game List Refresh</source>
-      <translation type="unfinished">Game List Refresh</translation>
+      <translation>گیمز کی فہرست تازہ کریں</translation>
     </message>
     <message>
       <source>Tiny</source>
-      <translation type="unfinished">Tiny</translation>
+      <translation>بہت چھوٹا</translation>
     </message>
     <message>
       <source>Small</source>
-      <translation type="unfinished">Small</translation>
+      <translation>چھوٹا</translation>
     </message>
     <message>
       <source>Medium</source>
-      <translation type="unfinished">Medium</translation>
+      <translation>درمیانہ</translation>
     </message>
     <message>
       <source>Large</source>
-      <translation type="unfinished">Large</translation>
+      <translation>بڑا</translation>
     </message>
     <message>
       <source>List View</source>
-      <translation type="unfinished">List View</translation>
+      <translation>فہرست کی صورت میں</translation>
     </message>
     <message>
       <source>Grid View</source>
-      <translation type="unfinished">Grid View</translation>
+      <translation>گرڈ کی صورت میں</translation>
     </message>
     <message>
       <source>Elf Viewer</source>
@@ -1548,35 +1548,35 @@
     </message>
     <message>
       <source>Game Install Directory</source>
-      <translation type="unfinished">Game Install Directory</translation>
+      <translation>گیم انسٹال ڈائریکٹری</translation>
     </message>
     <message>
       <source>Download Cheats/Patches</source>
-      <translation type="unfinished">Download Cheats/Patches</translation>
+      <translation>چیٹس/پیچز ڈاؤن لوڈ کریں</translation>
     </message>
     <message>
       <source>Dump Game List</source>
-      <translation type="unfinished">Dump Game List</translation>
+      <translation>گیمز کی فہرست برآمد کریں</translation>
     </message>
     <message>
       <source>Trophy Viewer</source>
-      <translation type="unfinished">Trophy Viewer</translation>
+      <translation>ٹرافیوں کو دیکھیں</translation>
     </message>
     <message>
       <source>No games found. Please add your games to your library first.</source>
-      <translation type="unfinished">No games found. Please add your games to your library first.</translation>
+      <translation>کوئی گیمز نہیں ملی۔ براہ کرم پہلے اپنی لائبریری میں گیمز شامل کریں۔</translation>
     </message>
     <message>
       <source>Search...</source>
-      <translation type="unfinished">Search...</translation>
+      <translation>تلاش کریں…</translation>
     </message>
     <message>
       <source>File</source>
-      <translation type="unfinished">File</translation>
+      <translation>فائل</translation>
     </message>
     <message>
       <source>View</source>
-      <translation type="unfinished">View</translation>
+      <translation>دیکھیں</translation>
     </message>
     <message>
       <source>Game List Icons</source>
@@ -2362,23 +2362,6 @@ Select an emulator version from the right panel.</translation>
       <translation type="unfinished">Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</translation>
     </message>
     <message>
-      <source>Display Mode:
-Controls how the emulator shows the game window.
-Windowed: Runs in a resizable window for easy multitasking.
-Fullscreen: Takes over the display; can improve performance on some systems
-but makes app switching slower.
-Fullscreen (Borderless): Fills the screen without taking exclusive control;
-faster app switching, but may introduce a small performance or latency trade-off.</source>
-      <translation>ڈسپلے موڈ:
-یہ کنٹرول کرتا ہے کہ ایمولیٹر گیم ونڈو کو کیسے دکھاتا ہے۔
-ونڈوڈ: آسان ملٹی ٹاسکنگ کے لیے قابلِ تغییر سائز ونڈو میں چلتا ہے۔
-فل اسکرین: اسکرین کو سنبھالتا ہے؛ کچھ سسٹمز پر کارکردگی بہتر ہو سکتی ہے لیکن ایپس کے درمیان سوئچ
-کرنا سست ہو جاتا ہے۔
-فل اسکرین (بارڈر لیس): بغیر خصوصی کنٹرول کے اسکرین بھر دیتا ہے؛ ایپس کے درمیان سوئچنگ تیز ہوتی ہے،
-لیکن کارکردگی یا تاخیر میں ہلکا سا سمجھوتہ ہو سکتا ہے۔</translation>
-    </message>
-
-    <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
       <translation type="unfinished">Browse:\nBrowse for a folder to set as the DLC path.</translation>
     </message>
@@ -2634,34 +2617,7 @@ faster app switching, but may introduce a small performance or latency trade-off
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
       <translation type="unfinished">Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</translation>
     </message>
-      <message>
-        <source>FSR Settings:
-Configure FSR upscaling and RCAS sharpening for the image.</source>
-        <translation>FSR سیٹنگز:
-FSR اپ اسکیلنگ اور RCAS شارپننگ کو تصویر کے لیے ترتیب دیں۔</translation>
-    </message>
-    <message>
-        <source>Enable FSR:
-Upscales the game's output to the current display size.
-Can improve image quality when the game renders below that size.</source>
-        <translation>FSR فعال کریں:
-آؤٹ پٹ کو ڈسپلے سائز تک اپ اسکیل کر کے کم ریزولوشن پر معیار بہتر کرتا ہے۔</translation>
-    </message>
-    <message>
-        <source>Enable RCAS (sharpening):
-Restores detail lost from upscaling, improving clarity
-but potentially adding halos or noise.</source>
-        <translation>RCAS فعال کریں (شارپننگ):
-تصویر تیز ہوتی ہے مگر ہالوز یا شور آ سکتا ہے۔</translation>
-    </message>
-    <message>
-        <source>RCAS Attenuation:
-Controls sharpening strength. Lower values are sharper but can cause
-halos or noise; higher values are softer but more stable.</source>
-        <translation>RCAS اٹینویشن:
-کم = زیادہ شارپ مگر ہالوز؛ زیادہ = نرم۔</translation>
-    </message>
-</context>
+  </context>
   <context>
     <name>ShortcutDialog</name>
     <message>

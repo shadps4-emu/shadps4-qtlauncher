@@ -2360,23 +2360,6 @@ Select an emulator version from the right panel.</translation>
       <translation type="unfinished">Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</translation>
     </message>
     <message>
-      <source>Display Mode:
-Controls how the emulator shows the game window.
-Windowed: Runs in a resizable window for easy multitasking.
-Fullscreen: Takes over the display; can improve performance on some systems
-but makes app switching slower.
-Fullscreen (Borderless): Fills the screen without taking exclusive control;
-faster app switching, but may introduce a small performance or latency trade-off.</source>
-      <translation>Mode Tampilan:
-Mengatur bagaimana emulator menampilkan jendela game.
-Berjendela: Berjalan di jendela yang dapat diubah ukurannya untuk memudahkan multitasking.
-Layar Penuh: Mengambil alih layar; dapat meningkatkan performa pada beberapa sistem tetapi membuat
-perpindahan aplikasi lebih lambat.
-Layar Penuh (Tanpa Bingkai): Memenuhi layar tanpa kontrol eksklusif; perpindahan aplikasi lebih
-cepat, tetapi dapat menimbulkan trade-off kecil pada performa atau latensi.</translation>
-    </message>
-
-    <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
       <translation type="unfinished">Browse:\nBrowse for a folder to set as the DLC path.</translation>
     </message>
@@ -2632,34 +2615,7 @@ cepat, tetapi dapat menimbulkan trade-off kecil pada performa atau latensi.</tra
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
       <translation type="unfinished">Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</translation>
     </message>
-      <message>
-        <source>FSR Settings:
-Configure FSR upscaling and RCAS sharpening for the image.</source>
-        <translation>Pengaturan FSR:
-Atur upscaling FSR dan penajaman RCAS untuk gambar.</translation>
-    </message>
-    <message>
-        <source>Enable FSR:
-Upscales the game's output to the current display size.
-Can improve image quality when the game renders below that size.</source>
-        <translation>Aktifkan FSR:
-Naikkan output ke ukuran layar untuk kualitas lebih baik pada resolusi rendah.</translation>
-    </message>
-    <message>
-        <source>Enable RCAS (sharpening):
-Restores detail lost from upscaling, improving clarity
-but potentially adding halos or noise.</source>
-        <translation>Aktifkan RCAS (penajaman):
-Menajamkan gambar, tetapi bisa menambah halo atau noise.</translation>
-    </message>
-    <message>
-        <source>RCAS Attenuation:
-Controls sharpening strength. Lower values are sharper but can cause
-halos or noise; higher values are softer but more stable.</source>
-        <translation>Atensi RCAS:
-Lebih rendah = lebih tajam tapi halo; lebih tinggi = lebih halus.</translation>
-    </message>
-</context>
+  </context>
   <context>
     <name>ShortcutDialog</name>
     <message>

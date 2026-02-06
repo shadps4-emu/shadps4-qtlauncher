@@ -2362,21 +2362,6 @@ Select an emulator version from the right panel.</source>
       <translation>呈现模式：\n配置视频输出到屏幕的显示方式。\n\n信箱模式：帧画面与屏幕刷新率同步。新帧将替换所有待处理帧，可降低延迟但落后时可能跳帧。\n先进先出：帧画面与屏幕刷新率同步。新帧将排列在待处理帧之后，确保所有帧都被呈现但可能增加延迟。\n即时模式：帧画面准备就绪后立即显示于屏幕，可能导致画面撕裂。</translation>
     </message>
     <message>
-      <source>Display Mode:
-Controls how the emulator shows the game window.
-Windowed: Runs in a resizable window for easy multitasking.
-Fullscreen: Takes over the display; can improve performance on some systems
-but makes app switching slower.
-Fullscreen (Borderless): Fills the screen without taking exclusive control;
-faster app switching, but may introduce a small performance or latency trade-off.</source>
-      <translation>显示模式:
-控制模拟器如何显示游戏窗口。
-窗口模式: 在可调整大小的窗口中运行，便于多任务。
-全屏: 接管显示；在某些系统上可能提升性能，但切换应用会更慢。
-全屏（无边框）: 不进行独占控制即可填满屏幕；应用切换更快，但可能带来轻微的性能或延迟权衡。</translation>
-    </message>
-
-    <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
       <translation>浏览：\n选择一个目录保存游戏存档数据。</translation>
     </message>
@@ -2634,34 +2619,7 @@ faster app switching, but may introduce a small performance or latency trade-off
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
       <translation>将着色器缓存文件压缩为ZIP文件：\n着色器缓存将以单个ZIP文件存储，而非多个独立文件。</translation>
     </message>
-      <message>
-        <source>FSR Settings:
-Configure FSR upscaling and RCAS sharpening for the image.</source>
-        <translation>FSR 设置:
-配置 FSR 升采样和 RCAS 锐化以用于画面。</translation>
-    </message>
-    <message>
-        <source>Enable FSR:
-Upscales the game's output to the current display size.
-Can improve image quality when the game renders below that size.</source>
-        <translation>启用 FSR:
-输出提升到显示尺寸，低分辨率下画质更好。</translation>
-    </message>
-    <message>
-        <source>Enable RCAS (sharpening):
-Restores detail lost from upscaling, improving clarity
-but potentially adding halos or noise.</source>
-        <translation>启用 RCAS（锐化）:
-让画面更锐利，但可能产生光晕或噪点。</translation>
-    </message>
-    <message>
-        <source>RCAS Attenuation:
-Controls sharpening strength. Lower values are sharper but can cause
-halos or noise; higher values are softer but more stable.</source>
-        <translation>RCAS 衰减:
-低值更锐但可能有光晕；高值更柔和。</translation>
-    </message>
-</context>
+  </context>
   <context>
     <name>ShortcutDialog</name>
     <message>

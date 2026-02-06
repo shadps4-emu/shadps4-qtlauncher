@@ -2360,23 +2360,6 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
       <translation>Modalità presentazione:\nConfigura come sarà presentato l'output video a schermo.\n\nMailbox: i frame si sincronizzano con la frequenza di aggiornamento dello schermo. I nuovi frame sostituiranno tutti i frame in sospeso. Riduce la latenza, ma può saltare frame se l'esecuzione del rendering è lenta.\nFifo: i frame si sincronizzano con la frequenza di aggiornamento del tuo schermo. I nuovi frame saranno accodati dietro i frame in sospeso. Assicura che tutti i fotogrammi siano presentati, ma potrebbe aumentare la latenza.\nImmediato: i fotogrammi sono immediatamente presentati sullo schermo quando sono pronti. Può causare tearing.</translation>
     </message>
     <message>
-      <source>Display Mode:
-Controls how the emulator shows the game window.
-Windowed: Runs in a resizable window for easy multitasking.
-Fullscreen: Takes over the display; can improve performance on some systems
-but makes app switching slower.
-Fullscreen (Borderless): Fills the screen without taking exclusive control;
-faster app switching, but may introduce a small performance or latency trade-off.</source>
-      <translation>Modalità di visualizzazione:
-Controlla come l'emulatore mostra la finestra di gioco.
-In finestra: Funziona in una finestra ridimensionabile per un multitasking più semplice.
-Schermo intero: Prende il controllo dello schermo; può migliorare le prestazioni su alcuni sistemi
-ma rende più lento il passaggio tra applicazioni.
-Schermo intero (senza bordi): Riempie lo schermo senza controllo esclusivo; cambio app più rapido,
-ma può introdurre un piccolo compromesso di prestazioni o latenza.</translation>
-    </message>
-
-    <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
       <translation>Esplora:\nEsplora una cartella da impostare come percorso dati DLC.</translation>
     </message>
@@ -2632,34 +2615,7 @@ ma può introdurre un piccolo compromesso di prestazioni o latenza.</translation
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
       <translation>Comprimi i file della Cache Shader in un file zip:\nI file della cache shader sono memorizzati in un singolo file zip invece di più file separati.</translation>
     </message>
-      <message>
-        <source>FSR Settings:
-Configure FSR upscaling and RCAS sharpening for the image.</source>
-        <translation>Impostazioni FSR:
-Configura l&apos;upscaling FSR e la nitidezza RCAS per l&apos;immagine.</translation>
-    </message>
-    <message>
-        <source>Enable FSR:
-Upscales the game's output to the current display size.
-Can improve image quality when the game renders below that size.</source>
-        <translation>Abilita FSR:
-Scala alla dimensione schermo per qualità migliore a bassa risoluzione.</translation>
-    </message>
-    <message>
-        <source>Enable RCAS (sharpening):
-Restores detail lost from upscaling, improving clarity
-but potentially adding halos or noise.</source>
-        <translation>Abilita RCAS (nitidezza):
-Aumenta la nitidezza ma può aggiungere aloni o rumore.</translation>
-    </message>
-    <message>
-        <source>RCAS Attenuation:
-Controls sharpening strength. Lower values are sharper but can cause
-halos or noise; higher values are softer but more stable.</source>
-        <translation>Attenuazione RCAS:
-Più basso = più nitido ma aloni; più alto = più morbido.</translation>
-    </message>
-</context>
+  </context>
   <context>
     <name>ShortcutDialog</name>
     <message>

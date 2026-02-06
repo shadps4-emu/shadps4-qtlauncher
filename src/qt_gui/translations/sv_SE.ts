@@ -2360,22 +2360,6 @@ Välj en emulatorversion från den högra panelen.</translation>
       <translation>Nuvarande läge:\nKonfigurerar hur videoutgången ska visas på skärmen.\n\nMailbox: Bildrutorna synkroniseras med skärmens uppdateringsfrekvens. Nya bildrutor ersätter alla väntande bildrutor. Minskar fördröjningen men kan hoppa över bildrutor om det uppstår fördröjning.\nFifo: Bildrutorna synkroniseras med skärmens uppdateringsfrekvens. Nya bildrutor placeras i kö bakom väntande bildrutor. Säkerställer att alla bildrutor visas men kan öka fördröjningen.\nOmedelbar: Bildrutorna visas omedelbart på skärmen när de är klara. Kan resultera i tearing.</translation>
     </message>
     <message>
-      <source>Display Mode:
-Controls how the emulator shows the game window.
-Windowed: Runs in a resizable window for easy multitasking.
-Fullscreen: Takes over the display; can improve performance on some systems
-but makes app switching slower.
-Fullscreen (Borderless): Fills the screen without taking exclusive control;
-faster app switching, but may introduce a small performance or latency trade-off.</source>
-      <translation>Visningsläge:
-Styr hur emulatorn visar spelfönstret.
-Fönsterläge: Kör i ett fönster som kan ändra storlek för enkel multitasking.
-Helskärm: Tar över skärmen; kan förbättra prestandan på vissa system men gör appväxling långsammare.
-Helskärm (utan kant): Fyller skärmen utan exklusiv kontroll; snabbare appväxling, men kan ge en
-liten prestanda- eller latensnackdel.</translation>
-    </message>
-
-    <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
       <translation>Bläddra:\nBläddra efter en mapp att ställa in som DLC-sökvägen.</translation>
     </message>
@@ -2631,34 +2615,7 @@ liten prestanda- eller latensnackdel.</translation>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
       <translation>Komprimera shadercachefilerna till en zip-fil:\nShadercachefilerna lagras i en enda zip-fil istället för i flera separata filer.</translation>
     </message>
-      <message>
-        <source>FSR Settings:
-Configure FSR upscaling and RCAS sharpening for the image.</source>
-        <translation>FSR-inställningar:
-Konfigurera FSR-uppskalning och RCAS-skärpning för bilden.</translation>
-    </message>
-    <message>
-        <source>Enable FSR:
-Upscales the game's output to the current display size.
-Can improve image quality when the game renders below that size.</source>
-        <translation>Aktivera FSR:
-Skalar upp till skärmstorlek för bättre kvalitet vid låg upplösning.</translation>
-    </message>
-    <message>
-        <source>Enable RCAS (sharpening):
-Restores detail lost from upscaling, improving clarity
-but potentially adding halos or noise.</source>
-        <translation>Aktivera RCAS (skärpning):
-Skärper bilden men kan ge halos eller brus.</translation>
-    </message>
-    <message>
-        <source>RCAS Attenuation:
-Controls sharpening strength. Lower values are sharper but can cause
-halos or noise; higher values are softer but more stable.</source>
-        <translation>RCAS-dämpning:
-Lägre = skarpare men halos; högre = mjukare.</translation>
-    </message>
-</context>
+  </context>
   <context>
     <name>ShortcutDialog</name>
     <message>

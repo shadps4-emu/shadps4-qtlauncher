@@ -2360,23 +2360,6 @@ Select an emulator version from the right panel.</source>
       <translation>Режим представления:\nНастраивает, как вывод видео будет предоставлен на экране.\n\nMailbox: Кадры синхронизируются с частотой обновления экрана. Новые кадры будут заменять ожидающие кадры. Уменьшает задержку, но может пропустить кадры, если отстаёт.\nFifo: Кадры синхронизируются с частотой обновления экрана. Новые кадры будут в очереди за ожидаемыми кадрами. Обеспечивает отображение всех кадров, но может увеличить задержку.\nImmediate: Кадры отображаются на экране сразу после готовности. Может приводить к разрывам.</translation>
     </message>
     <message>
-      <source>Display Mode:
-Controls how the emulator shows the game window.
-Windowed: Runs in a resizable window for easy multitasking.
-Fullscreen: Takes over the display; can improve performance on some systems
-but makes app switching slower.
-Fullscreen (Borderless): Fills the screen without taking exclusive control;
-faster app switching, but may introduce a small performance or latency trade-off.</source>
-      <translation>Режим отображения:
-Определяет, как эмулятор показывает окно игры.
-Оконный: Запуск в изменяемом по размеру окне для удобной многозадачности.
-Полноэкранный: Захватывает экран; может улучшить производительность на некоторых системах, но
-замедляет переключение приложений.
-Полноэкранный (без рамки): Заполняет экран без эксклюзивного контроля; переключение приложений
-быстрее, но может добавить небольшой компромисс по производительности или задержке.</translation>
-    </message>
-
-    <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
       <translation>Обзор:\nНайдите папку, которую можно указать в качестве пути для DLC.</translation>
     </message>
@@ -2632,34 +2615,7 @@ faster app switching, but may introduce a small performance or latency trade-off
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
       <translation>Сжать файлы кэша шейдеров в zip-файл:\nФайлы кэша шейдеров хранятся в одном zip-файле вместо нескольких отдельных файлов.</translation>
     </message>
-      <message>
-        <source>FSR Settings:
-Configure FSR upscaling and RCAS sharpening for the image.</source>
-        <translation>Настройки FSR:
-Настройка апскейла FSR и резкости RCAS для изображения.</translation>
-    </message>
-    <message>
-        <source>Enable FSR:
-Upscales the game's output to the current display size.
-Can improve image quality when the game renders below that size.</source>
-        <translation>Включить FSR:
-Апскейлит до размера экрана для лучшего качества при низком разрешении.</translation>
-    </message>
-    <message>
-        <source>Enable RCAS (sharpening):
-Restores detail lost from upscaling, improving clarity
-but potentially adding halos or noise.</source>
-        <translation>Включить RCAS (резкость):
-Повышает резкость, но может добавить ореолы или шум.</translation>
-    </message>
-    <message>
-        <source>RCAS Attenuation:
-Controls sharpening strength. Lower values are sharper but can cause
-halos or noise; higher values are softer but more stable.</source>
-        <translation>Ослабление RCAS:
-Меньше = резче, но ореолы; больше = мягче.</translation>
-    </message>
-</context>
+  </context>
   <context>
     <name>ShortcutDialog</name>
     <message>

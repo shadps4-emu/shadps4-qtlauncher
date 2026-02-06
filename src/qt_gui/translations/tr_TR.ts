@@ -623,7 +623,7 @@
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>İpucu: Giriş atamalarını sağ tıklayarak kaldırın</translation>
     </message>
   </context>
   <context>
@@ -715,11 +715,11 @@
     </message>
     <message>
       <source>Directory with your dumped games</source>
-      <translation type="unfinished">Directory with your dumped games</translation>
+      <translation>Dump edilmiş oyunlarınızın bulunduğu dizin</translation>
     </message>
     <message>
       <source>Directory with your dumped DLC&apos;s</source>
-      <translation type="unfinished">Directory with your dumped DLC&apos;s</translation>
+      <translation>Dump edilmiş DLC'lerinizin bulunduğu dizin&amp;apos</translation>
     </message>
     <message>
       <source>Directory with games</source>
@@ -1012,7 +1012,7 @@
     </message>
     <message>
       <source>Create Game-specific Settings from Global Settings</source>
-      <translation type="unfinished">Create Game-specific Settings from Global Settings</translation>
+      <translation>Global Ayarlardan Oyuna Özel Ayarlar Oluştur</translation>
     </message>
     <message>
       <source>Delete Game-specific Settings</source>
@@ -1048,7 +1048,7 @@
     </message>
     <message>
       <source>Launch with global config only</source>
-      <translation type="unfinished">Launch with global config only</translation>
+      <translation>Sadece global yapılandırma ile başlat</translation>
     </message>
     <message>
       <source>Launch with default settings</source>
@@ -1096,15 +1096,15 @@
     </message>
     <message>
       <source>Delete Shader Cache</source>
-      <translation type="unfinished">Delete Shader Cache</translation>
+      <translation>Shader Önbelleğini Sil</translation>
     </message>
     <message>
       <source>This game does not have any saved Shader Cache to delete!</source>
-      <translation type="unfinished">This game does not have any saved Shader Cache to delete!</translation>
+      <translation>Bu oyunun silinecek kayıtlı bir Shader Önbelleği yok!</translation>
     </message>
     <message>
       <source>Shader Cache</source>
-      <translation type="unfinished">Shader Cache</translation>
+      <translation>Shader Önbelleği</translation>
     </message>
   </context>
   <context>
@@ -1154,7 +1154,7 @@
     </message>
     <message>
       <source>Reload Button Mappings</source>
-      <translation type="unfinished">Reload Button Mappings</translation>
+      <translation>Düğme Atamalarını Yeniden Yükle</translation>
     </message>
     <message>
       <source>Toggle Fullscreen</source>
@@ -1218,7 +1218,7 @@
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation/>
     </message>
   </context>
   <context>
@@ -1428,7 +1428,7 @@
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>İpucu: Giriş atamalarını sağ tıklayarak kaldırın</translation>
     </message>
   </context>
   <context>
@@ -1766,11 +1766,11 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Manage Skylanders</source>
-      <translation type="unfinished">Manage Skylanders</translation>
+      <translation>Skylanders Yönet</translation>
     </message>
     <message>
       <source>Manage Infinity Figures</source>
-      <translation type="unfinished">Manage Infinity Figures</translation>
+      <translation>Infinity Figürlerini Yönet</translation>
     </message>
     <message>
       <source>Manage Dimensions Toypad</source>
@@ -1778,11 +1778,11 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Game Log</source>
-      <translation type="unfinished">Game Log</translation>
+      <translation>Oyun Günlüğü</translation>
     </message>
     <message>
       <source>Show Game Log</source>
-      <translation type="unfinished">Show Game Log</translation>
+      <translation>Oyun Günlüğünü Göster</translation>
     </message>
   </context>
   <context>
@@ -2360,23 +2360,6 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
       <translation type="unfinished">Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</translation>
     </message>
     <message>
-      <source>Display Mode:
-Controls how the emulator shows the game window.
-Windowed: Runs in a resizable window for easy multitasking.
-Fullscreen: Takes over the display; can improve performance on some systems
-but makes app switching slower.
-Fullscreen (Borderless): Fills the screen without taking exclusive control;
-faster app switching, but may introduce a small performance or latency trade-off.</source>
-      <translation>Görüntüleme modu:
-Emülatörün oyun penceresini nasıl gösterdiğini kontrol eder.
-Pencereli: Kolay çoklu görev için yeniden boyutlandırılabilir bir pencerede çalışır.
-Tam ekran: Ekranı devralır; bazı sistemlerde performansı artırabilir ancak uygulama geçişini
-yavaşlatır.
-Tam ekran (kenarlıksız): Özel kontrol olmadan ekranı doldurur; uygulama geçişi daha hızlıdır, ancak
-küçük bir performans veya gecikme ödünü doğurabilir.</translation>
-    </message>
-
-    <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
       <translation>Gözat:\nDLC yolu olarak ayarlamak için bir klasöre göz atın.</translation>
     </message>
@@ -2562,7 +2545,7 @@ küçük bir performans veya gecikme ödünü doğurabilir.</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>GPU Destekli Doğrulamayı Etkinleştir:\nShader'ları, doğru çalışıp çalışmadıklarını doğrulayan kodlarla donatır.\nBu, performansı düşürür ve muhtemelen emülasyon davranışını değiştirir.\nBunun çalışması için Vulkan SDK'ya ihtiyacınız vardır.</translation>
     </message>
     <message>
       <source>GUI Language</source>
@@ -2606,60 +2589,33 @@ küçük bir performans veya gecikme ödünü doğurabilir.</translation>
     </message>
     <message>
       <source>Infinity Base</source>
-      <translation type="unfinished">Infinity Base</translation>
+      <translation>Infinity Tabanı</translation>
     </message>
     <message>
       <source>Dimensions Toypad</source>
-      <translation type="unfinished">Dimensions Toypad</translation>
+      <translation>Dimensions Toypad</translation>
     </message>
     <message>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
-      <translation type="unfinished">USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</translation>
+      <translation>USB Cihazı:\nGerçek USB Cihazı: Sisteme takılı gerçek bir USB Cihazı kullanın.\nSkylander Portal: Bir Skylander Portal of Power emüle edin.\nInfinity Base: Bir Disney Infinity Base emüle edin.\nDimensions Toypad: Bir Lego Dimensions Toypad emüle edin.</translation>
     </message>
     <message>
       <source>Enable Shader Cache</source>
-      <translation type="unfinished">Enable Shader Cache</translation>
+      <translation>Shader Önbelleğini Etkinleştir</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file</source>
-      <translation type="unfinished">Compress the Shader Cache files into a zip file</translation>
+      <translation>Shader Önbellek dosyalarını bir zip dosyasına sıkıştır</translation>
     </message>
     <message>
       <source>Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</source>
-      <translation type="unfinished">Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</translation>
+      <translation>Shader Önbelleğini Etkinleştir:\nDerlenmiş shader'ları saklayarak yeniden derlemeyi önler ve takılmaları azaltır.</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
-      <translation type="unfinished">Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</translation>
+      <translation>Shader Önbellek dosyalarını bir zip dosyasına sıkıştır:\nShader önbellek dosyaları, birden fazla ayrı dosya yerine tek bir zip dosyası içinde saklanır.</translation>
     </message>
-      <message>
-        <source>FSR Settings:
-Configure FSR upscaling and RCAS sharpening for the image.</source>
-        <translation>FSR Ayarları:
-FSR yükseltme ve RCAS keskinleştirmeyi görüntü için ayarlayın.</translation>
-    </message>
-    <message>
-        <source>Enable FSR:
-Upscales the game's output to the current display size.
-Can improve image quality when the game renders below that size.</source>
-        <translation>FSR&apos;yi etkinleştir:
-Ekran boyutuna yükseltir, düşük çözünürlükte kaliteyi artırır.</translation>
-    </message>
-    <message>
-        <source>Enable RCAS (sharpening):
-Restores detail lost from upscaling, improving clarity
-but potentially adding halos or noise.</source>
-        <translation>RCAS&apos;i etkinleştir (keskinleştirme):
-Görüntüyü keskinleştirir ama hale veya gürültü ekleyebilir.</translation>
-    </message>
-    <message>
-        <source>RCAS Attenuation:
-Controls sharpening strength. Lower values are sharper but can cause
-halos or noise; higher values are softer but more stable.</source>
-        <translation>RCAS Zayıflatması:
-Düşük = daha keskin ama hale; yüksek = daha yumuşak.</translation>
-    </message>
-</context>
+  </context>
   <context>
     <name>ShortcutDialog</name>
     <message>
@@ -2952,11 +2908,11 @@ Düşük = daha keskin ama hale; yüksek = daha yumuşak.</translation>
     </message>
     <message>
       <source>Local</source>
-      <translation type="unfinished">Local</translation>
+      <translation>Yerel</translation>
     </message>
     <message>
       <source>Failed to determine the folder to remove.</source>
-      <translation type="unfinished">Failed to determine the folder to remove.</translation>
+      <translation>Kaldırılacak klasör belirlenemedi.</translation>
     </message>
     <message>
       <source>Failed to delete folder.</source>
@@ -2964,26 +2920,26 @@ Düşük = daha keskin ama hale; yüksek = daha yumuşak.</translation>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release.</source>
-      <translation type="unfinished">Unable to get hash of latest pre-release.</translation>
+      <translation>En son ön sürümün hash bilgisi alınamadı.</translation>
     </message>
     <message>
       <source>Downloading Pre-release (Nightly), please wait...</source>
-      <translation type="unfinished">Downloading Pre-release (Nightly), please wait...</translation>
+      <translation>Ön sürüm (Nightly) indiriliyor, lütfen bekleyin...</translation>
     </message>
   </context>
   <context>
     <name>dimensions_dialog</name>
     <message>
       <source>Dimensions Manager</source>
-      <translation type="unfinished">Dimensions Manager</translation>
+      <translation>Dimensions Yöneticisi</translation>
     </message>
     <message>
       <source>Active Dimensions Figures:</source>
-      <translation type="unfinished">Active Dimensions Figures:</translation>
+      <translation>Aktif Dimensions Figürleri:</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Hiçbiri</translation>
     </message>
     <message>
       <source>Clear</source>
@@ -2991,74 +2947,72 @@ Düşük = daha keskin ama hale; yüksek = daha yumuşak.</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Oluştur</translation>
     </message>
     <message>
       <source>Load</source>
-      <translation type="unfinished">Load</translation>
+      <translation>Yükle</translation>
     </message>
     <message>
       <source>Move</source>
-      <translation type="unfinished">Move</translation>
+      <translation>Taşı</translation>
     </message>
     <message>
       <source>Unknown Figure</source>
-      <translation type="unfinished">Unknown Figure</translation>
+      <translation>Bilinmeyen Figür</translation>
     </message>
     <message>
       <source>Select Dimensions File</source>
-      <translation type="unfinished">Select Dimensions File</translation>
+      <translation>Dimensions Dosyası Seç</translation>
     </message>
     <message>
       <source>Dimensions Figure (*.bin);;</source>
-      <translation type="unfinished">Dimensions Figure (*.bin);;</translation>
+      <translation>Dimensions Figürü (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to open the figure file!</source>
-      <translation type="unfinished">Failed to open the figure file!</translation>
+      <translation>Figür dosyası açılamadı!</translation>
     </message>
     <message>
       <source>Failed to open the figure file(%1)!
 File may already be in use on the base.</source>
-      <translation type="unfinished">Failed to open the figure file(%1)!
-File may already be in use on the base.</translation>
+      <translation>Figür dosyası (%1) açılamadı! Dosya zaten tabanda kullanımda olabilir.</translation>
     </message>
     <message>
       <source>Failed to read the figure file!</source>
-      <translation type="unfinished">Failed to read the figure file!</translation>
+      <translation>Figür dosyası okunamadı!</translation>
     </message>
     <message>
       <source>Failed to read the figure file(%1)!
 File was too small.</source>
-      <translation type="unfinished">Failed to read the figure file(%1)!
-File was too small.</translation>
+      <translation>Figür dosyası (%1) okunamadı! Dosya boyutu çok küçük.</translation>
     </message>
   </context>
   <context>
     <name>figure_creator_dialog</name>
     <message>
       <source>Figure Creator</source>
-      <translation type="unfinished">Figure Creator</translation>
+      <translation>Figür Oluşturucu</translation>
     </message>
     <message>
       <source>Filter by Series:</source>
-      <translation type="unfinished">Filter by Series:</translation>
+      <translation>Seriye Göre Filtrele:</translation>
     </message>
     <message>
       <source>All</source>
-      <translation type="unfinished">All</translation>
+      <translation>Hepsi</translation>
     </message>
     <message>
       <source>--Unknown--</source>
-      <translation type="unfinished">--Unknown--</translation>
+      <translation>--Bilinmeyen--</translation>
     </message>
     <message>
       <source>Figure Number:</source>
-      <translation type="unfinished">Figure Number:</translation>
+      <translation>Figür Numarası:</translation>
     </message>
     <message>
       <source>Series:</source>
-      <translation type="unfinished">Series:</translation>
+      <translation>Seri:</translation>
     </message>
     <message>
       <source>Create</source>
@@ -3066,44 +3020,43 @@ File was too small.</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>İptal</translation>
     </message>
     <message>
       <source>Error converting value</source>
-      <translation type="unfinished">Error converting value</translation>
+      <translation>Değer dönüştürme hatası</translation>
     </message>
     <message>
       <source>Figure number entered is invalid!</source>
-      <translation type="unfinished">Figure number entered is invalid!</translation>
+      <translation>Girilen figür numarası geçersiz!</translation>
     </message>
     <message>
       <source>Series number entered is invalid!</source>
-      <translation type="unfinished">Series number entered is invalid!</translation>
+      <translation>Girilen seri numarası geçersiz!</translation>
     </message>
     <message>
       <source>Create Figure File</source>
-      <translation type="unfinished">Create Figure File</translation>
+      <translation>Figür Dosyası Oluştur</translation>
     </message>
     <message>
       <source>Infinity Figure (*.bin);;</source>
-      <translation type="unfinished">Infinity Figure (*.bin);;</translation>
+      <translation>Infinity Figürü (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to create figure file!</source>
-      <translation type="unfinished">Failed to create figure file!</translation>
+      <translation>Figür dosyası oluşturulamadı!</translation>
     </message>
     <message>
       <source>Failed to create figure file:
 %1</source>
-      <translation type="unfinished">Failed to create figure file:
-%1</translation>
+      <translation>Figür dosyası oluşturulamadı: %1</translation>
     </message>
   </context>
   <context>
     <name>infinity_dialog</name>
     <message>
       <source>Infinity Manager</source>
-      <translation type="unfinished">Infinity Manager</translation>
+      <translation>Infinity Yöneticisi</translation>
     </message>
     <message>
       <source>Active Infinity Figures:</source>
@@ -3111,43 +3064,43 @@ File was too small.</translation>
     </message>
     <message>
       <source>Play Set/Power Disc</source>
-      <translation type="unfinished">Play Set/Power Disc</translation>
+      <translation>Oyun Seti/Güç Diski</translation>
     </message>
     <message>
       <source>Power Disc Two</source>
-      <translation type="unfinished">Power Disc Two</translation>
+      <translation>Güç Diski İki</translation>
     </message>
     <message>
       <source>Power Disc Three</source>
-      <translation type="unfinished">Power Disc Three</translation>
+      <translation>Güç Diski Üç</translation>
     </message>
     <message>
       <source>Player One</source>
-      <translation type="unfinished">Player One</translation>
+      <translation>Birinci Oyuncu</translation>
     </message>
     <message>
       <source>Player One Ability One</source>
-      <translation type="unfinished">Player One Ability One</translation>
+      <translation>Birinci Oyuncu Yetenek Bir</translation>
     </message>
     <message>
       <source>Player One Ability Two</source>
-      <translation type="unfinished">Player One Ability Two</translation>
+      <translation>Birinci Oyuncu Yetenek İki</translation>
     </message>
     <message>
       <source>Player Two</source>
-      <translation type="unfinished">Player Two</translation>
+      <translation>İkinci Oyuncu</translation>
     </message>
     <message>
       <source>Player Two Ability One</source>
-      <translation type="unfinished">Player Two Ability One</translation>
+      <translation>İkinci Oyuncu Yetenek Bir</translation>
     </message>
     <message>
       <source>Player Two Ability Two</source>
-      <translation type="unfinished">Player Two Ability Two</translation>
+      <translation>İkinci Oyuncu Yetenek İki</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Hiçbiri</translation>
     </message>
     <message>
       <source>Clear</source>
@@ -3155,130 +3108,56 @@ File was too small.</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Oluştur</translation>
     </message>
     <message>
       <source>Load</source>
-      <translation type="unfinished">Load</translation>
+      <translation>Yükle</translation>
     </message>
     <message>
       <source>Unknown Figure</source>
-      <translation type="unfinished">Unknown Figure</translation>
+      <translation>Bilinmeyen Figür</translation>
     </message>
     <message>
       <source>Select Infinity File</source>
-      <translation type="unfinished">Select Infinity File</translation>
+      <translation>Infinity Dosyası Seç</translation>
     </message>
     <message>
       <source>Infinity Figure (*.bin);;</source>
-      <translation type="unfinished">Infinity Figure (*.bin);;</translation>
+      <translation>Infinity Figürü (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to open the figure file!</source>
-      <translation type="unfinished">Failed to open the figure file!</translation>
+      <translation>Figür dosyası açılamadı!</translation>
     </message>
     <message>
       <source>Failed to open the figure file(%1)!
 File may already be in use on the base.</source>
-      <translation type="unfinished">Failed to open the figure file(%1)!
-File may already be in use on the base.</translation>
+      <translation>Figür dosyası (%1) açılamadı! Dosya zaten tabanda kullanımda olabilir.</translation>
     </message>
     <message>
       <source>Failed to read the figure file!</source>
-      <translation type="unfinished">Failed to read the figure file!</translation>
+      <translation>Figür dosyası okunamadı!</translation>
     </message>
     <message>
       <source>Failed to read the figure file(%1)!
 File was too small.</source>
-      <translation type="unfinished">Failed to read the figure file(%1)!
-File was too small.</translation>
+      <translation>Figür dosyası (%1) okunamadı! Dosya boyutu çok küçük.</translation>
     </message>
   </context>
   <context>
     <name>minifig_creator_dialog</name>
     <message>
       <source>Figure Creator</source>
-      <translation type="unfinished">Figure Creator</translation>
-    </message>
-    <message>
-      <source>--Unknown--</source>
-      <translation type="unfinished">--Unknown--</translation>
-    </message>
-    <message>
-      <source>Figure Number:</source>
-      <translation type="unfinished">Figure Number:</translation>
-    </message>
-    <message>
-      <source>Create</source>
-      <translation type="unfinished">Create</translation>
-    </message>
-    <message>
-      <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
-    </message>
-    <message>
-      <source>Error converting value</source>
-      <translation type="unfinished">Error converting value</translation>
-    </message>
-    <message>
-      <source>Figure number entered is invalid!</source>
-      <translation type="unfinished">Figure number entered is invalid!</translation>
-    </message>
-    <message>
-      <source>Create Figure File</source>
-      <translation type="unfinished">Create Figure File</translation>
-    </message>
-    <message>
-      <source>Dimensions Figure (*.bin);;</source>
-      <translation type="unfinished">Dimensions Figure (*.bin);;</translation>
-    </message>
-    <message>
-      <source>Failed to create minifig file!</source>
-      <translation type="unfinished">Failed to create minifig file!</translation>
-    </message>
-    <message>
-      <source>Failed to create minifig file:
-%1</source>
-      <translation type="unfinished">Failed to create minifig file:
-%1</translation>
-    </message>
-  </context>
-  <context>
-    <name>minifig_move_dialog</name>
-    <message>
-      <source>Figure Mover</source>
-      <translation type="unfinished">Figure Mover</translation>
-    </message>
-    <message>
-      <source>None</source>
-      <translation type="unfinished">None</translation>
-    </message>
-    <message>
-      <source>Move Here</source>
-      <translation type="unfinished">Move Here</translation>
-    </message>
-    <message>
-      <source>Pick up and Place</source>
-      <translation type="unfinished">Pick up and Place</translation>
-    </message>
-  </context>
-  <context>
-    <name>skylander_creator_dialog</name>
-    <message>
-      <source>Skylander Creator</source>
-      <translation type="unfinished">Skylander Creator</translation>
+      <translation>Figür Oluşturucu</translation>
     </message>
     <message>
       <source>--Unknown--</source>
       <translation>--Bilinmeyen--</translation>
     </message>
     <message>
-      <source>ID:</source>
-      <translation type="unfinished">ID:</translation>
-    </message>
-    <message>
-      <source>Variant:</source>
-      <translation type="unfinished">Variant:</translation>
+      <source>Figure Number:</source>
+      <translation>Figür Numarası:</translation>
     </message>
     <message>
       <source>Create</source>
@@ -3290,15 +3169,86 @@ File was too small.</translation>
     </message>
     <message>
       <source>Error converting value</source>
-      <translation type="unfinished">Error converting value</translation>
+      <translation>Değer dönüştürme hatası</translation>
+    </message>
+    <message>
+      <source>Figure number entered is invalid!</source>
+      <translation>Girilen figür numarası geçersiz!</translation>
+    </message>
+    <message>
+      <source>Create Figure File</source>
+      <translation>Figür Dosyası Oluştur</translation>
+    </message>
+    <message>
+      <source>Dimensions Figure (*.bin);;</source>
+      <translation>Dimensions Figürü (*.bin);;</translation>
+    </message>
+    <message>
+      <source>Failed to create minifig file!</source>
+      <translation>Minifig dosyası oluşturulamadı!</translation>
+    </message>
+    <message>
+      <source>Failed to create minifig file:
+%1</source>
+      <translation>Minifig dosyası oluşturulamadı: %1</translation>
+    </message>
+  </context>
+  <context>
+    <name>minifig_move_dialog</name>
+    <message>
+      <source>Figure Mover</source>
+      <translation>Figür Taşıyıcı</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation>Hiçbiri</translation>
+    </message>
+    <message>
+      <source>Move Here</source>
+      <translation>Buraya Taşı</translation>
+    </message>
+    <message>
+      <source>Pick up and Place</source>
+      <translation>Al ve Yerleştir</translation>
+    </message>
+  </context>
+  <context>
+    <name>skylander_creator_dialog</name>
+    <message>
+      <source>Skylander Creator</source>
+      <translation>Skylander Oluşturucu</translation>
+    </message>
+    <message>
+      <source>--Unknown--</source>
+      <translation>--Bilinmeyen--</translation>
+    </message>
+    <message>
+      <source>ID:</source>
+      <translation>ID:</translation>
+    </message>
+    <message>
+      <source>Variant:</source>
+      <translation>Varyant:</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation>Oluştur</translation>
+    </message>
+    <message>
+      <source>Cancel</source>
+      <translation>İptal</translation>
+    </message>
+    <message>
+      <source>Error converting value</source>
+      <translation>Değer dönüştürme hatası</translation>
     </message>
     <message>
       <source>ID entered is invalid!</source>
-      <translation type="unfinished">ID entered is invalid!</translation>
+      <translation>Girilen ID geçersiz!</translation>
     </message>
     <message>
       <source>Variant entered is invalid!</source>
-      <translation type="unfinished">Variant entered is invalid!</translation>
+      <translation>Girilen varyant geçersiz!</translation>
     </message>
     <message>
       <source>Create Skylander File</source>
@@ -3306,7 +3256,7 @@ File was too small.</translation>
     </message>
     <message>
       <source>Skylander Object (*.sky);;All Files (*)</source>
-      <translation type="unfinished">Skylander Object (*.sky);;All Files (*)</translation>
+      <translation>Skylander Nesnesi (*.sky);;Tüm Dosyalar (*)</translation>
     </message>
     <message>
       <source>Failed to create skylander file!</source>
@@ -3315,15 +3265,14 @@ File was too small.</translation>
     <message>
       <source>Failed to create skylander file:
 %1</source>
-      <translation type="unfinished">Failed to create skylander file:
-%1</translation>
+      <translation>Skylander dosyası oluşturulamadı: %1</translation>
     </message>
   </context>
   <context>
     <name>skylander_dialog</name>
     <message>
       <source>Skylanders Manager</source>
-      <translation type="unfinished">Skylanders Manager</translation>
+      <translation>Skylanders Yöneticisi</translation>
     </message>
     <message>
       <source>Active Portal Skylanders:</source>
@@ -3360,8 +3309,7 @@ File was too small.</translation>
     <message>
       <source>Failed to open the skylander file(%1)!
 File may already be in use on the portal.</source>
-      <translation type="unfinished">Failed to open the skylander file(%1)!
-File may already be in use on the portal.</translation>
+      <translation>Skylander dosyası (%1) açılamadı! Dosya zaten portalda kullanımda olabilir.</translation>
     </message>
     <message>
       <source>Failed to read the skylander file!</source>
@@ -3375,7 +3323,7 @@ Dosya çok küçüktü.</translation>
     </message>
     <message>
       <source>Unknown (Id:%1 Var:%2)</source>
-      <translation type="unfinished">Unknown (Id:%1 Var:%2)</translation>
+      <translation>Bilinmeyen (Id:%1 Var:%2)</translation>
     </message>
     <message>
       <source>None</source>
