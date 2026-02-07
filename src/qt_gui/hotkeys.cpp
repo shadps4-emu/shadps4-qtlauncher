@@ -27,12 +27,14 @@ Hotkeys::Hotkeys(std::shared_ptr<IpcClient> ipc_client, bool isGameRunning, QWid
     CheckGamePad();
     installEventFilter(this);
 
-    PadButtonsList = {ui->fpsButtonPad, ui->quitButtonPad, ui->fullscreenButtonPad,
-                      ui->pauseButtonPad, ui->reloadButtonPad};
+    PadButtonsList = {ui->fpsButtonPad,    ui->quitButtonPad,   ui->fullscreenButtonPad,
+                      ui->pauseButtonPad,  ui->reloadButtonPad, ui->volUpButtonPad,
+                      ui->volDownButtonPad};
 
-    KBButtonsList = {ui->fpsButtonKB,         ui->quitButtonKB,   ui->fullscreenButtonKB,
-                     ui->pauseButtonKB,       ui->reloadButtonKB, ui->renderdocButton,
-                     ui->mouseJoystickButton, ui->mouseGyroButton};
+    KBButtonsList = {ui->fpsButtonKB,         ui->quitButtonKB,    ui->fullscreenButtonKB,
+                     ui->pauseButtonKB,       ui->reloadButtonKB,  ui->renderdocButton,
+                     ui->mouseJoystickButton, ui->mouseGyroButton, ui->volUpButtonKB,
+                     ui->volDownButtonKB};
 
     connect(ui->buttonBox, &QDialogButtonBox::clicked, this, [this](QAbstractButton* button) {
         if (button == ui->buttonBox->button(QDialogButtonBox::Save)) {
@@ -115,12 +117,16 @@ void Hotkeys::SetDefault() {
     ui->quitButtonPad->setText("unmapped");
     ui->fullscreenButtonPad->setText("unmapped");
     ui->pauseButtonPad->setText("unmapped");
+    ui->volUpButtonPad->setText("unmapped");
+    ui->volDownButtonPad->setText("unmapped");
     ui->reloadButtonPad->setText("unmapped");
 
     ui->fpsButtonKB->setText("f10");
     ui->quitButtonKB->setText("lctrl, lshift, end");
     ui->fullscreenButtonKB->setText("f11");
     ui->pauseButtonKB->setText("f9");
+    ui->volUpButtonKB->setText("kpplus");
+    ui->volDownButtonKB->setText("kpminus");
     ui->reloadButtonKB->setText("f8");
 
     ui->renderdocButton->setText("f12");
@@ -160,6 +166,12 @@ void Hotkeys::SaveHotkeys(bool CloseOnSave) {
 
     add_mapping(ui->reloadButtonPad->text(), "hotkey_reload_inputs");
     add_mapping(ui->reloadButtonKB->text(), "hotkey_reload_inputs");
+    lines.push_back("");
+
+    add_mapping(ui->volUpButtonPad->text(), "hotkey_volume_up ");
+    add_mapping(ui->volUpButtonKB->text(), "hotkey_volume_up ");
+    add_mapping(ui->volDownButtonPad->text(), "hotkey_volume_down ");
+    add_mapping(ui->volDownButtonKB->text(), "hotkey_volume_down ");
     lines.push_back("");
 
     add_mapping(ui->renderdocButton->text(), "hotkey_renderdoc_capture");
@@ -299,6 +311,14 @@ void Hotkeys::LoadHotkeys() {
             ui->mouseJoystickButton->setText(QString::fromStdString(input_string));
         } else if (output_string.contains("hotkey_toggle_mouse_to_gyro")) {
             ui->mouseGyroButton->setText(QString::fromStdString(input_string));
+        } else if (output_string.contains("hotkey_volume_up")) {
+            controllerInputDetected
+                ? ui->volUpButtonPad->setText(QString::fromStdString(input_string))
+                : ui->volUpButtonKB->setText(QString::fromStdString(input_string));
+        } else if (output_string.contains("hotkey_volume_down")) {
+            controllerInputDetected
+                ? ui->volDownButtonPad->setText(QString::fromStdString(input_string))
+                : ui->volDownButtonKB->setText(QString::fromStdString(input_string));
         }
     }
 
