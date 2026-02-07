@@ -106,13 +106,6 @@ void Hotkeys::EnableMappingButtons() {
 
 void Hotkeys::SetDefault() {
 
-    PadButtonsList = {ui->fpsButtonPad, ui->quitButtonPad, ui->fullscreenButtonPad,
-                      ui->pauseButtonPad, ui->reloadButtonPad};
-
-    KBButtonsList = {ui->fpsButtonKB,         ui->quitButtonKB,   ui->fullscreenButtonKB,
-                     ui->pauseButtonKB,       ui->reloadButtonKB, ui->renderdocButton,
-                     ui->mouseJoystickButton, ui->mouseGyroButton};
-
     ui->fpsButtonPad->setText("unmapped");
     ui->quitButtonPad->setText("unmapped");
     ui->fullscreenButtonPad->setText("unmapped");
