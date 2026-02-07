@@ -399,8 +399,8 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
             QString initial_path;
             Common::FS::PathToQString(initial_path, sysmodules_path);
 
-            QString sysmodules_path_string =
-                QFileDialog::getExistingDirectory(this, tr("Select the DLC folder"), initial_path);
+            QString sysmodules_path_string = QFileDialog::getExistingDirectory(
+                this, tr("Select the System Modules folder"), initial_path);
 
             auto file_path = Common::FS::PathFromQString(sysmodules_path_string);
             if (!file_path.empty()) {
@@ -591,16 +591,16 @@ void SettingsDialog::LoadValuesFromConfig() {
         is_newly_created = true;
     }
 
+    toml::value data;
     try {
         std::ifstream ifs;
         ifs.exceptions(std::ifstream::failbit | std::ifstream::badbit);
-        const toml::value data = toml::parse(config_file);
+        data = toml::parse(config_file);
     } catch (std::exception& ex) {
         fmt::print("Got exception trying to load config file. Exception: {}\n", ex.what());
         return;
     }
 
-    const toml::value data = toml::parse(config_file);
     const QVector<int> languageIndexes = {21, 23, 14, 6, 18, 1, 12, 22, 2, 4,  25, 24, 29, 5,  0, 9,
                                           15, 16, 17, 7, 26, 8, 11, 20, 3, 13, 27, 10, 19, 30, 28};
 
@@ -797,6 +797,20 @@ void SettingsDialog::LoadValuesFromConfig() {
     if (indexTab == -1 || !ui->tabWidgetSettings->isTabVisible(indexTab) || is_newly_created)
         indexTab = 0;
     ui->tabWidgetSettings->setCurrentIndex(indexTab);
+
+    if (data.contains("Debug")) {
+        const toml::value& debug = data.at("Debug");
+        Config::SysModulesMap modules;
+        if (debug.contains("enabledSysModules") && debug.at("enabledSysModules").is_table()) {
+            for (const auto& [key, val] : debug.at("enabledSysModules").as_table()) {
+                if (val.is_boolean()) {
+                    modules[key] = val.as_boolean();
+                }
+            }
+        }
+        Config::setEnabledSysModules(modules, is_game_specific);
+        PopulateModules();
+    }
 }
 
 void SettingsDialog::InitializeEmulatorLanguages() {
@@ -1051,6 +1065,27 @@ bool SettingsDialog::eventFilter(QObject* obj, QEvent* event) {
     return QDialog::eventFilter(obj, event);
 }
 
+Config::SysModulesMap SettingsDialog::getEnabledSysModulesFromUI() const {
+    Config::SysModulesMap modules;
+
+    auto layout = ui->verticalLayout_SystemModules;
+    for (int i = 0; i < layout->count(); ++i) {
+        auto item = layout->itemAt(i);
+        if (!item)
+            continue;
+
+        auto widget = item->widget();
+        if (!widget)
+            continue;
+
+        if (auto* cb = qobject_cast<QCheckBox*>(widget)) {
+            modules[cb->text().toStdString()] = cb->isChecked();
+        }
+    }
+
+    return modules;
+}
+
 void SettingsDialog::UpdateSettings(bool is_specific) {
     // Entries with game-specific settings, needs the game-specific arg
     Config::setReadbacks(ui->readbacksCheckBox->isChecked(), is_specific);
@@ -1120,6 +1155,7 @@ void SettingsDialog::UpdateSettings(bool is_specific) {
     Config::setVkCrashDiagnosticEnabled(ui->crashDiagnosticsCheckBox->isChecked(), is_specific);
     Config::setCollectShaderForDebug(ui->collectShaderCheckBox->isChecked(), is_specific);
     Config::setCopyGPUCmdBuffers(ui->copyGPUBuffersCheckBox->isChecked(), is_specific);
+    Config::setEnabledSysModules(getEnabledSysModulesFromUI(), is_specific);
 
     // Entries with no game-specific settings
     if (!is_specific) {
@@ -1369,4 +1405,48 @@ void SettingsDialog::getPhysicalDevices() {
     }
 
     vkDestroyInstance(instance, nullptr);
+}
+
+void SettingsDialog::PopulateModules() {
+    while (QLayoutItem* item = ui->verticalLayout_SystemModules->takeAt(0)) {
+        if (QWidget* widget = item->widget()) {
+            widget->deleteLater();
+        }
+        delete item;
+    }
+    const auto& AllSysModules = Config::getAllSysModules();
+    const auto& enabledModules = Config::getEnabledSysModules();
+    const auto sysmodules_path = Config::getSysModulesPath();
+
+    QString sysmodules_path_string;
+    Common::FS::PathToQString(sysmodules_path_string, sysmodules_path);
+    QDir dir(sysmodules_path_string);
+
+    const bool useDefaultAllEnabled = enabledModules.empty();
+
+    ui->label_moduleMissingNotice->setVisible(false);
+
+    for (const auto& module : AllSysModules) {
+        const QString moduleName = QString::fromStdString(module);
+        const QString fullPath = dir.filePath(moduleName);
+        auto* checkBox = new QCheckBox(moduleName, this);
+        const bool exists = QFileInfo::exists(fullPath);
+        bool enabled = true;
+
+        if (!useDefaultAllEnabled) {
+            auto it = enabledModules.find(module);
+            enabled = (it != enabledModules.end()) ? it->second : true;
+        }
+
+        // If the module file does not exist in the folder (Name in red and warning)
+        checkBox->setChecked(enabled); // && exists
+        if (!exists) {
+            QPalette palette = checkBox->palette();
+            palette.setColor(QPalette::WindowText, Qt::red);
+            palette.setColor(QPalette::Disabled, QPalette::WindowText, Qt::red);
+            checkBox->setPalette(palette);
+            ui->label_moduleMissingNotice->setVisible(true);
+        }
+        ui->verticalLayout_SystemModules->addWidget(checkBox);
+    }
 }

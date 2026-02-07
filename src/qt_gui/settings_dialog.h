@@ -30,6 +30,7 @@ public:
     ~SettingsDialog();
 
     bool eventFilter(QObject* obj, QEvent* event) override;
+    Config::SysModulesMap getEnabledSysModulesFromUI() const;
     void updateNoteTextEdit(const QString& groupName);
 
     int exec() override;
@@ -52,6 +53,7 @@ private:
     void onAudioDeviceChange(bool isAdd);
     void pollSDLevents();
     void getPhysicalDevices();
+    void PopulateModules();
 
     std::unique_ptr<Ui::SettingsDialog> ui;
 
