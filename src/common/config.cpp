@@ -1161,18 +1161,11 @@ void save(const std::filesystem::path& path, bool is_game_specific) {
     isSeparateLogFilesEnabled.setTomlValue(data, "Debug", "isSeparateLogFilesEnabled",
                                            is_game_specific);
     logEnabled.setTomlValue(data, "Debug", "logEnabled", is_game_specific);
-
-    // remover? sempre é específico, ou retornar true para todos...
-    if (is_game_specific) {
-        if (enabledSysModules.game_specific_value.has_value()) {
-            data["Debug"]["enabledSysModules"] =
-                sysModulesToToml(*enabledSysModules.game_specific_value);
-            enabledSysModules.game_specific_value = std::nullopt;
-        }
-    } else {
-        data["Debug"]["enabledSysModules"] = sysModulesToToml(enabledSysModules.base_value);
+    if (is_game_specific && enabledSysModules.game_specific_value.has_value()) {
+        data["Debug"]["enabledSysModules"] =
+            sysModulesToToml(*enabledSysModules.game_specific_value);
+        enabledSysModules.game_specific_value = std::nullopt;
     }
-
     m_language.setTomlValue(data, "Settings", "consoleLanguage", is_game_specific);
 
     if (!is_game_specific) {
