@@ -1221,11 +1221,11 @@ Einzigartige Inputs können nicht öfters als einmal gebunden werden. Input-Dupl
     </message>
     <message>
       <source>Volume Up</source>
-      <translation type="unfinished">Volume Up</translation>
+      <translation>Lautstärke erhöhen</translation>
     </message>
     <message>
       <source>Volume Down</source>
-      <translation type="unfinished">Volume Down</translation>
+      <translation>Lautstärke reduzieren</translation>
     </message>
   </context>
   <context>
