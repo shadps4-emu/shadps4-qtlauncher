@@ -1754,7 +1754,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Emulator is already running!</source>
-      <translation>O jogo já está executando!</translation>
+      <translation>O emulador já está sendo executado!</translation>
     </message>
     <message>
       <source>Invalid game argument provided</source>
@@ -2405,7 +2405,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</source>
-      <translation>Ativar Controles de Movimento:\nQuando ativado, usará o controle de movimento do controle, se houver suporte.</translation>
+      <translation>Ativar Controles de Movimento:\nQuando ativado usará o sensor de movimento do controle, se suportado.</translation>
     </message>
     <message>
       <source>Vblank Frequency</source>
