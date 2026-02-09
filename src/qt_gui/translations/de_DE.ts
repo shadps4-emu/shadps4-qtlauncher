@@ -1219,6 +1219,14 @@ Einzigartige Inputs können nicht öfters als einmal gebunden werden. Input-Dupl
       <source>Tip: Unmap inputs with right-click</source>
       <translation>Tipp: Mit Rechtsklick kann die Zuordnung einer Eingabe entfernt werden</translation>
     </message>
+    <message>
+      <source>Volume Up</source>
+      <translation type="unfinished">Volume Up</translation>
+    </message>
+    <message>
+      <source>Volume Down</source>
+      <translation type="unfinished">Volume Down</translation>
+    </message>
   </context>
   <context>
     <name>IpcClient</name>
