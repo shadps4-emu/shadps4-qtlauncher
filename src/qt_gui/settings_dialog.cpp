@@ -1439,7 +1439,7 @@ void SettingsDialog::PopulateModules() {
         }
 
         // If the module file does not exist in the folder (Name in red and warning)
-        checkBox->setChecked(enabled); // && exists
+        checkBox->setChecked(enabled);
         if (!exists) {
             QPalette palette = checkBox->palette();
             palette.setColor(QPalette::WindowText, Qt::red);
