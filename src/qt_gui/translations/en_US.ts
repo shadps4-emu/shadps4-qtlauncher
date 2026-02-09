@@ -1216,6 +1216,14 @@
         <source>Tip: Unmap inputs with right-click</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Volume Up</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Volume Down</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>IpcClient</name>
