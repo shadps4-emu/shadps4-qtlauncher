@@ -1243,6 +1243,12 @@ void setDefaultValues(bool is_game_specific) {
         isConnectedToNetwork.set(false, is_game_specific);
         directMemoryAccessEnabled.set(false, is_game_specific);
         extraDmemInMbytes.set(0, is_game_specific);
+
+        Config::SysModulesMap modules;
+        for (const auto& name : getAllSysModules()) {
+            modules[name] = true;
+        }
+        enabledSysModules.set(modules, true);
     }
 
     // Entries with game-specific settings that are in both the game-specific and global GUI
