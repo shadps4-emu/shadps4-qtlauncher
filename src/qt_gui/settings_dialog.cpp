@@ -548,6 +548,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         ui->shaderCacheArchiveCheckBox->installEventFilter(this);
         ui->psnSignInCheckBox->installEventFilter(this);
         ui->dmemGroupBox->installEventFilter(this);
+        ui->groupBox_SystemModules->installEventFilter(this);
     }
 
     SDL_InitSubSystem(SDL_INIT_EVENTS);
@@ -1043,8 +1044,9 @@ void SettingsDialog::updateNoteTextEdit(const QString& elementName) {
         text = tr("Enable Readback Linear Images:\\nEnables async downloading of GPU modified linear images.\\nMight fix issues in some games.");
     } else if (elementName == "dmemGroupBox") {
         text = tr("Additional DMem Allocation:\\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.");
+    } else if (elementName == "groupBox_SystemModules") {
+        text = tr("System Modules:\\nInternal parts of the PS4 system that make the console/emulator work.\\nEach module has a specific function. When enabled, the emulator loads the LLE file.\\nIf disabled or if the file is missing, an HLE version is used when available. If no HLE version exists, the module is not loaded.");
     }
-
     // clang-format on
     ui->descriptionText->setText(text.replace("\\n", "\n"));
 }
@@ -1424,6 +1426,7 @@ void SettingsDialog::PopulateModules() {
 
     const bool useDefaultAllEnabled = enabledModules.empty();
 
+    ui->label_moduleMissingNotice->setStyleSheet("QLabel { color: red; }");
     ui->label_moduleMissingNotice->setVisible(false);
 
     for (const auto& module : AllSysModules) {

@@ -2644,7 +2644,7 @@
             <item>
              <layout class="QVBoxLayout" name="verticalLayout_10">
               <item>
-               <widget class="QGroupBox" name="groupBox_2">
+               <widget class="QGroupBox" name="groupBox_SystemModules">
                 <property name="title">
                  <string>System Modules</string>
                 </property>
@@ -2671,29 +2671,29 @@
                    </property>
                   </layout>
                  </item>
+                 <item>
+                  <widget class="QLabel" name="label_moduleMissingNotice">
+                   <property name="enabled">
+                    <bool>true</bool>
+                   </property>
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <pointsize>11</pointsize>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>*Red modules are missing from the specified folder.</string>
+                   </property>
+                  </widget>
+                 </item>
                 </layout>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="label_moduleMissingNotice">
-                <property name="enabled">
-                 <bool>true</bool>
-                </property>
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="font">
-                 <font>
-                  <pointsize>11</pointsize>
-                  <bold>false</bold>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>*Modules marked in red were not found in the specified folder.</string>
-                </property>
                </widget>
               </item>
               <item>
@@ -2723,7 +2723,7 @@
                  </font>
                 </property>
                 <property name="text">
-                 <string>WARNING: These features are experimental and should not be enabled unless you were told to, or a game requires it. Please ask in the shadPS4 Discord server if you have any questions.</string>
+                 <string>WARNING: These features are experimental and should not be changed unless you were told to, or a game requires it. Please ask in the shadPS4 Discord server if you have any questions.</string>
                 </property>
                 <property name="scaledContents">
                  <bool>false</bool>
