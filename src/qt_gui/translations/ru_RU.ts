@@ -1222,11 +1222,11 @@
     </message>
     <message>
       <source>Volume Up</source>
-      <translation type="unfinished">Volume Up</translation>
+      <translation>Увеличить громкость</translation>
     </message>
     <message>
       <source>Volume Down</source>
-      <translation type="unfinished">Volume Down</translation>
+      <translation>Уменьшить громкость</translation>
     </message>
   </context>
   <context>
