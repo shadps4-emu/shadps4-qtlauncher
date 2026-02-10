@@ -1222,11 +1222,11 @@
     </message>
     <message>
       <source>Volume Up</source>
-      <translation>Aumentar volume</translation>
+      <translation>Aumentar Volume</translation>
     </message>
     <message>
       <source>Volume Down</source>
-      <translation>Diminuir volume</translation>
+      <translation>Diminuir Volume</translation>
     </message>
   </context>
   <context>
