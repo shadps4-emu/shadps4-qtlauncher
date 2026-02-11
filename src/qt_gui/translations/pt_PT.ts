@@ -1766,7 +1766,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Invalid game argument provided</source>
-      <translation>Argumento do jogo inválido fornecido</translation>
+      <translation>Argumento de jogo inválido fornecido</translation>
     </message>
     <message>
       <source>None</source>
