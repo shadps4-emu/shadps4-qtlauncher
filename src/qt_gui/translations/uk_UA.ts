@@ -1222,11 +1222,11 @@
     </message>
     <message>
       <source>Volume Up</source>
-      <translation type="unfinished">Volume Up</translation>
+      <translation>Збільшити гучність</translation>
     </message>
     <message>
       <source>Volume Down</source>
-      <translation type="unfinished">Volume Down</translation>
+      <translation>Зменшити гучність</translation>
     </message>
   </context>
   <context>
@@ -2574,7 +2574,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
-      <translation type="unfinished">GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</translation>
+      <translation>Оновлення інтерфейсу:\nРелізна: офіційні версії, що виходять щомісяця; вони можуть бути застарілими, проте є більш надійними та перевіреними.\nНічна: версії для розробки, що містять усі найновіші функції та виправлення, але можуть мати помилки та бути менш стабільними.\n\n*Це оновлення стосується лише інтерфейсу користувача Qt. Щоб оновити ядро емулятора, скористайтеся меню &apos;Менеджер версій&apos;.</translation>
     </message>
     <message>
       <source>Cannot create portable launcher folder</source>
@@ -2606,7 +2606,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
-      <translation type="unfinished">USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</translation>
+      <translation>USB-пристрій:\nСправжній USB-пристрій: використовувати справжній USB-пристрій, під’єднаний до системи.\nSkylander Portal: емуляція Skylander Portal of Power.\nInfinity Base: емуляція Disney Infinity Base.\nDimensions Toypad: емуляція Lego Dimensions Toypad.</translation>
     </message>
     <message>
       <source>Enable Shader Cache</source>
@@ -2618,11 +2618,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</source>
-      <translation type="unfinished">Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</translation>
+      <translation>Увімкнути кеш шейдерів:\nЗбереження скомпільованих шейдерів для уникнення повторної компіляції та зменшення затримок.</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
-      <translation type="unfinished">Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</translation>
+      <translation>Стисніть файли кешу шейдерів у zip-архів:\nФайли кешу шейдерів зберігаються в одному zip-архіві замість кількох окремих файлів.</translation>
     </message>
   </context>
   <context>
