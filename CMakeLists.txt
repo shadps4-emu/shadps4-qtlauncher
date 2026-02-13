@@ -324,6 +324,8 @@ set(QT_GUI src/qt_gui/about_dialog.cpp
            src/qt_gui/cheats_patches.h
            src/qt_gui/compatibility_info.cpp
            src/qt_gui/compatibility_info.h
+           src/qt_gui/configurable_patches.cpp
+           src/qt_gui/configurable_patches.h
            src/qt_gui/control_settings.cpp
            src/qt_gui/control_settings.h
            src/qt_gui/control_settings.ui
@@ -380,6 +382,8 @@ set(QT_GUI src/qt_gui/about_dialog.cpp
            src/qt_gui/create_shortcut.h
            src/qt_gui/right_click_button.cpp
            src/qt_gui/right_click_button.h
+           src/qt_gui/patch_editor.cpp
+           src/qt_gui/patch_editor.h
            ${RESOURCE_FILES}
            ${TRANSLATIONS}
            ${UPDATER}
