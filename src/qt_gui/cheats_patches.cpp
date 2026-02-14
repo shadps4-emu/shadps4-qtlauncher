@@ -238,18 +238,25 @@ void CheatsPatches::setupUI() {
     QPushButton* editButton = new QPushButton(tr("Configure Patches"));
     editButton->setStyleSheet("font-weight: bold;");
     connect(editButton, &QPushButton::clicked, [this, PATCHS_DIR_QString]() {
+        if (!std::filesystem::exists(Common::FS::GetUserPath(Common::FS::PathType::PatchesDir) /
+                                     "shadPS4" / "configurable_patches.json")) {
+            QMessageBox::warning(this, tr("Patch config file not found"),
+                                 tr("Patch config file not found. Download patches from the "
+                                    "shadPS4 repository to get it."));
+            return;
+        }
         QStringListModel* model = qobject_cast<QStringListModel*>(patchesListView->model());
         if (!model) {
             return;
         }
         QItemSelectionModel* selectionModel = patchesListView->selectionModel();
         if (!selectionModel) {
-            QMessageBox::warning(this, tr("Select Patch File"), tr("No patch file selected."));
+            QMessageBox::warning(this, tr("Error"), tr("No file selected"));
             return;
         }
         QModelIndexList selectedIndexes = selectionModel->selectedIndexes();
         if (selectedIndexes.isEmpty()) {
-            QMessageBox::warning(this, tr("Delete File"), tr("No files selected."));
+            QMessageBox::warning(this, tr("Error"), tr("No file selected"));
             return;
         }
         QModelIndex selectedIndex = selectedIndexes.first();
@@ -709,7 +716,8 @@ void CheatsPatches::populateFileListPatches() {
 void CheatsPatches::downloadPatches(const QString repository, const bool showMessageBox) {
     QString url;
     if (repository == "shadPS4") {
-        url = "https://api.github.com/repos/shadps4-emu/ps4_cheats/contents/PATCHES";
+        // temporarily using my repo for testing since it contains the json
+        url = "https://api.github.com/repos/rainmakerv3/ps4_cheats/contents/PATCHES";
     }
     if (repository == "GoldHEN") {
         url = "https://api.github.com/repos/illusion0001/PS4-PS5-Game-Patch/contents/patches/xml";
@@ -748,7 +756,7 @@ void CheatsPatches::downloadPatches(const QString repository, const bool showMes
                 QString filePath = fileObj["path"].toString();
                 QString downloadUrl = fileObj["download_url"].toString();
 
-                if (fileName.endsWith(".xml")) {
+                if (fileName.endsWith(".xml") || fileName == "configurable_patches.json") {
                     QNetworkRequest fileRequest(downloadUrl);
                     QNetworkReply* fileReply = manager->get(fileRequest);
 

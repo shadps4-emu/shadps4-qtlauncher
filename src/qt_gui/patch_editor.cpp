@@ -21,7 +21,7 @@ PatchEditor::PatchEditor(std::filesystem::path patchPath, QWidget* parent)
     setupUI();
     setWindowTitle(tr("Patch Editor"));
 
-    currentPatches = GetConfigPatchInfo(patchFile);
+    currentPatches = GetGamePatchInfo(patchFile);
 
     populatePatchList();
     refreshValueList();
