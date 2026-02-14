@@ -252,7 +252,7 @@ void PatchEditor::savePatches() {
                 QString valueString;
 
                 if (type != "bytes32") {
-                    valueString = "0x" + QString::number(value, 16);
+                    valueString = QString::number(value, 16);
                 } else {
                     // Not sure if needed, but everything in bytes32 is currently like this
                     valueString = "0x" + QString::number(value, 16).rightJustified(8, '0');
