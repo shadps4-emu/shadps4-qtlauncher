@@ -247,9 +247,17 @@ void PatchEditor::savePatches() {
         for (pugi::xml_node& node : patchListNode.children()) {
             std::string address = node.attribute("Address").as_string();
             if (address == patchInfo.patchData[i].address) {
-                // Assumes bytes32 TODO: other types
                 int value = SpinBoxes[i]->value();
-                QString valueString = "0x" + QString::number(value, 16).rightJustified(8, '0');
+                std::string type = node.attribute("Type").as_string();
+                QString valueString;
+
+                if (type != "bytes32") {
+                    valueString = "0x" + QString::number(value, 16);
+                } else {
+                    // Not sure if needed, but everything in bytes32 is currently like this
+                    valueString = "0x" + QString::number(value, 16).rightJustified(8, '0');
+                }
+
                 node.attribute("Value").set_value(valueString.toStdString().c_str());
             }
         }

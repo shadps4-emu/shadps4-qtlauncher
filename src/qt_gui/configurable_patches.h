@@ -35,15 +35,15 @@ std::vector<ConfigPatchInfo> GetConfigPatchInfo(std::filesystem::path patchFile)
 const ConfigPatchData BloodborneResHor = {
     .dataName = "Resolution (Horizontal)",
     .address = "0x055289f8",
-    .minValue = 1000,
+    .minValue = 600,
     .maxValue = 10000,
 };
 
 const ConfigPatchData BloodborneResVert = {
     .dataName = "Resolution (Vertical)",
     .address = "0x055289fc",
-    .minValue = 300,
-    .maxValue = 3000,
+    .minValue = 400,
+    .maxValue = 6000,
 };
 
 const ConfigPatchInfo BBRes = {
