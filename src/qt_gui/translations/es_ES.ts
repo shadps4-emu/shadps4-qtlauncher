@@ -1220,6 +1220,14 @@
       <source>Tip: Unmap inputs with right-click</source>
       <translation>Consejo: puedes desasignar acciones de entrada haciendo clic derecho</translation>
     </message>
+    <message>
+      <source>Volume Up</source>
+      <translation>Subir volumen</translation>
+    </message>
+    <message>
+      <source>Volume Down</source>
+      <translation>Bajar volumen</translation>
+    </message>
   </context>
   <context>
     <name>IpcClient</name>

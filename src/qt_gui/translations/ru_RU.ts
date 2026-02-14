@@ -269,7 +269,7 @@
     </message>
     <message>
       <source>No pre-releases found.</source>
-      <translation>Предварительных версий не найдено.</translation>
+      <translation>Версий Pre-release не найдено.</translation>
     </message>
     <message>
       <source>No download URL found for the specified asset.</source>
@@ -1219,6 +1219,14 @@
     <message>
       <source>Tip: Unmap inputs with right-click</source>
       <translation>Совет: Уберите назначение правой кнопкой мыши</translation>
+    </message>
+    <message>
+      <source>Volume Up</source>
+      <translation>Увеличить громкость</translation>
+    </message>
+    <message>
+      <source>Volume Down</source>
+      <translation>Уменьшить громкость</translation>
     </message>
   </context>
   <context>

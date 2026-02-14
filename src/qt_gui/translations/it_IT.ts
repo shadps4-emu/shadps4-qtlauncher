@@ -1150,7 +1150,7 @@
     </message>
     <message>
       <source>Quit Emulation</source>
-      <translation>Abbandona L'Emulazione</translation>
+      <translation>Abbandona Emulazione</translation>
     </message>
     <message>
       <source>Reload Button Mappings</source>
@@ -1219,6 +1219,14 @@
     <message>
       <source>Tip: Unmap inputs with right-click</source>
       <translation>Suggerimento: Rimuovi le mappature con il tasto destro del mouse</translation>
+    </message>
+    <message>
+      <source>Volume Up</source>
+      <translation>Alza Volume</translation>
+    </message>
+    <message>
+      <source>Volume Down</source>
+      <translation>Abbassa volume</translation>
     </message>
   </context>
   <context>

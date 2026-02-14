@@ -1220,6 +1220,14 @@
       <source>Tip: Unmap inputs with right-click</source>
       <translation>Tips: Avmappa inmatningar med högerklick</translation>
     </message>
+    <message>
+      <source>Volume Up</source>
+      <translation>Höj volymen</translation>
+    </message>
+    <message>
+      <source>Volume Down</source>
+      <translation>Sänk volymen</translation>
+    </message>
   </context>
   <context>
     <name>IpcClient</name>
