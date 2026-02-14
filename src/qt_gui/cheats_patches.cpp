@@ -244,6 +244,7 @@ void CheatsPatches::setupUI() {
         }
         QItemSelectionModel* selectionModel = patchesListView->selectionModel();
         if (!selectionModel) {
+            QMessageBox::warning(this, tr("Select Patch File"), tr("No patch file selected."));
             return;
         }
         QModelIndexList selectedIndexes = selectionModel->selectedIndexes();
