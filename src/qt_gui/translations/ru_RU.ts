@@ -269,7 +269,7 @@
     </message>
     <message>
       <source>No pre-releases found.</source>
-      <translation>Предварительных версий не найдено.</translation>
+      <translation>Версий Pre-release не найдено.</translation>
     </message>
     <message>
       <source>No download URL found for the specified asset.</source>
