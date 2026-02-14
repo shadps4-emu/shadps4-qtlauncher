@@ -4,8 +4,8 @@
 #include <fstream>
 #include <QFile>
 #include <QMessageBox>
-#include <QXmlStreamReader>
 #include <nlohmann/json.hpp>
+#include <pugixml.hpp>
 
 #include "common/logging/log.h"
 #include "common/path_util.h"
@@ -16,50 +16,38 @@ using namespace CustomPatches;
 
 std::vector<ConfigPatchInfo> CustomPatches::GetGamePatchInfo(std::filesystem::path patchFile) {
     std::vector<ConfigPatchInfo> patchInfo;
+    bool serialMatch = false;
 
-    QString filePath;
-    Common::FS::PathToQString(filePath, patchFile);
-    QFile file(filePath);
-    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        LOG_ERROR(Loader, "Unable to open the file for reading.");
-        return {};
+    pugi::xml_document doc;
+    pugi::xml_parse_result result = doc.load_file(patchFile.c_str());
+
+    if (!result) {
+        LOG_ERROR(Loader, "Unable to open file {} for reading", patchFile.string());
     }
 
-    const QByteArray xmlData = file.readAll();
-    file.close();
-
-    QXmlStreamReader xmlReader(xmlData);
-    std::string currentPatchName;
-    bool serialMatch = false;
+    auto patchDoc = doc.child("Patch");
 
     std::vector<ConfigPatchInfo> AllPatchInfo = GetAllPatchInfo();
     for (const ConfigPatchInfo& currentInfo : AllPatchInfo) {
-
-        while (!xmlReader.atEnd()) {
-            xmlReader.readNext();
-            if (!xmlReader.isStartElement()) {
-                continue;
+        for (pugi::xml_node& node : patchDoc.children()) {
+            if (std::string_view(node.name()) == "TitleID") {
+                for (pugi::xml_node item = node.child("ID"); item; item = item.next_sibling("ID")) {
+                    std::string serial = item.text().get();
+                    if (currentInfo.serialList.contains(serial)) {
+                        serialMatch = true;
+                    }
+                }
             }
 
-            if (xmlReader.name() == QStringLiteral("Metadata")) {
-                const QString appVer = xmlReader.attributes().value("AppVer").toString();
-                QString name = xmlReader.attributes().value("Name").toString();
-                currentPatchName = name.toStdString();
+            if (std::string_view(node.name()) == "Metadata") {
+                std::string appVer = node.attribute("AppVer").as_string();
+                std::string name = node.attribute("Name").as_string();
 
-                if (currentInfo.appVer != appVer || currentPatchName != currentInfo.patchName)
+                if (currentInfo.appVer != appVer || name != currentInfo.patchName)
                     continue;
 
                 if (serialMatch) {
                     patchInfo.push_back(currentInfo);
-                    serialMatch = false;
-                }
-            } else if (xmlReader.name() == QStringLiteral("TitleID")) {
-                while (xmlReader.readNextStartElement()) {
-                    QString serial = xmlReader.readElementText();
-                    if (currentInfo.serialList.contains(serial)) {
-                        serialMatch = true;
-                        break;
-                    }
                 }
             }
         }

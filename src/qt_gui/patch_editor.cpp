@@ -1,16 +1,12 @@
 ﻿// SPDX-FileCopyrightText: Copyright 2024 shadPS4 Emulator Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
-#include <QFile>
 #include <QFont>
 #include <QHBoxLayout>
-#include <QIntValidator>
 #include <QMessageBox>
 #include <QSpacerItem>
-#include <QXmlStreamReader>
 #include <pugixml.hpp>
 
-#include "common/logging/log.h"
 #include "common/path_util.h"
 #include "patch_editor.h"
 
@@ -137,66 +133,47 @@ void PatchEditor::refreshValueList() {
 }
 
 void PatchEditor::populateValues(ConfigPatchInfo patch, int count) {
+    pugi::xml_document doc;
+    pugi::xml_parse_result result = doc.load_file(patchFile.c_str());
+
+    if (!result) {
+        QMessageBox::critical(this, tr("Failed to load patch xml file"),
+                              QString::fromStdString(result.description()));
+        return;
+    }
+
+    auto patchDoc = doc.child("Patch");
+
     for (int i = 0; i < count; i++) {
         Labels[i]->setText(patch.patchData[i].dataName);
         QString address = patch.patchData[i].address;
+        pugi::xml_node patchNode;
 
-        QString patchPatch;
-        Common::FS::PathToQString(patchPatch, patchFile);
-        QFile file(patchPatch);
-        if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-            LOG_ERROR(Loader, "Unable to open the file for reading.");
-            continue;
-        }
-        const QByteArray xmlData = file.readAll();
-        file.close();
-
-        QXmlStreamReader xmlReader(xmlData);
-        std::string currentPatchName;
-
-        while (!xmlReader.atEnd()) {
-            xmlReader.readNext();
-
-            if (!xmlReader.isStartElement()) {
-                continue;
-            }
-
-            if (xmlReader.name() == QStringLiteral("Metadata")) {
-                QString name = xmlReader.attributes().value("Name").toString();
-                currentPatchName = name.toStdString();
-                const QString appVer = xmlReader.attributes().value("AppVer").toString();
-            } else if (xmlReader.name() == QStringLiteral("PatchList")) {
-                while (!xmlReader.atEnd() &&
-                       !(xmlReader.tokenType() == QXmlStreamReader::EndElement &&
-                         xmlReader.name() == QStringLiteral("PatchList"))) {
-
-                    xmlReader.readNext();
-
-                    if (xmlReader.tokenType() != QXmlStreamReader::StartElement ||
-                        xmlReader.name() != QStringLiteral("Line")) {
-                        continue;
-                    }
-
-                    const QXmlStreamAttributes a = xmlReader.attributes();
-                    const QString addr = a.value("Address").toString();
-                    QString val = a.value("Value").toString();
-                    bool success;
-
-                    if (currentPatchName == patch.patchName && addr == address) {
-                        int decValue = val.toInt(&success, 16);
-                        int minVal = patch.patchData[i].minValue;
-                        int maxVal = patch.patchData[i].maxValue;
-
-                        SpinBoxes[i]->setMinimum(minVal);
-                        SpinBoxes[i]->setMaximum(maxVal);
-                        SpinBoxes[i]->setValue(decValue);
-                    }
+        for (pugi::xml_node& node : patchDoc.children()) {
+            if (std::string_view(node.name()) == "Metadata") {
+                std::string currentPatchName = node.attribute("Name").as_string();
+                if (currentPatchName == patch.patchName) {
+                    patchNode = node.child("PatchList");
+                    break;
                 }
             }
         }
 
-        if (xmlReader.hasError()) {
-            QMessageBox::critical(this, tr("Error"), tr("Failed to load patch xml file"));
+        for (pugi::xml_node& node : patchNode.children()) {
+            QString addr = node.attribute("Address").as_string();
+            QString val = node.attribute("Value").as_string();
+            bool success;
+
+            if (addr == address) {
+                int decValue = val.toInt(&success, 16);
+                int minVal = patch.patchData[i].minValue;
+                int maxVal = patch.patchData[i].maxValue;
+
+                SpinBoxes[i]->setMinimum(minVal);
+                SpinBoxes[i]->setMaximum(maxVal);
+                SpinBoxes[i]->setValue(decValue);
+                break;
+            }
         }
     }
 
