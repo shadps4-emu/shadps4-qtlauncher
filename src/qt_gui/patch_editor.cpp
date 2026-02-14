@@ -4,6 +4,7 @@
 #include <QFile>
 #include <QFont>
 #include <QHBoxLayout>
+#include <QIntValidator>
 #include <QMessageBox>
 #include <QSpacerItem>
 #include <QXmlStreamReader>
@@ -59,33 +60,38 @@ void PatchEditor::setupUI() {
     patchValuesHeader->setFont(font);
 
     QLabel* patchValueLabel1 = new QLabel("Value 1");
-    QLineEdit* patchValueEdit1 = new QLineEdit();
+    QSpinBox* patchValueEdit1 = new QSpinBox();
+    patchValueEdit1->setButtonSymbols(QSpinBox::NoButtons);
     valuesLayout1->addWidget(patchValueLabel1);
     valuesLayout1->addWidget(patchValueEdit1);
 
     QLabel* patchValueLabel2 = new QLabel("Value 2");
-    QLineEdit* patchValueEdit2 = new QLineEdit();
+    QSpinBox* patchValueEdit2 = new QSpinBox();
+    patchValueEdit2->setButtonSymbols(QSpinBox::NoButtons);
     valuesLayout2->addWidget(patchValueLabel2);
     valuesLayout2->addWidget(patchValueEdit2);
 
     QLabel* patchValueLabel3 = new QLabel("Value 3");
-    QLineEdit* patchValueEdit3 = new QLineEdit();
+    QSpinBox* patchValueEdit3 = new QSpinBox();
+    patchValueEdit3->setButtonSymbols(QSpinBox::NoButtons);
     valuesLayout3->addWidget(patchValueLabel3);
     valuesLayout3->addWidget(patchValueEdit3);
 
     QLabel* patchValueLabel4 = new QLabel("Value 4");
-    QLineEdit* patchValueEdit4 = new QLineEdit();
+    QSpinBox* patchValueEdit4 = new QSpinBox();
+    patchValueEdit4->setButtonSymbols(QSpinBox::NoButtons);
     valuesLayout4->addWidget(patchValueLabel4);
     valuesLayout4->addWidget(patchValueEdit4);
 
     QLabel* patchValueLabel5 = new QLabel("Value 5");
-    QLineEdit* patchValueEdit5 = new QLineEdit();
+    QSpinBox* patchValueEdit5 = new QSpinBox();
+    patchValueEdit5->setButtonSymbols(QSpinBox::NoButtons);
     valuesLayout5->addWidget(patchValueLabel5);
     valuesLayout5->addWidget(patchValueEdit5);
 
     Labels = {patchValueLabel1, patchValueLabel2, patchValueLabel3, patchValueLabel4,
               patchValueLabel5};
-    LineEdits = {patchValueEdit1, patchValueEdit2, patchValueEdit3, patchValueEdit4,
+    SpinBoxes = {patchValueEdit1, patchValueEdit2, patchValueEdit3, patchValueEdit4,
                  patchValueEdit5};
 
     QVBoxLayout* patchValuesLayout = new QVBoxLayout(this);
@@ -178,7 +184,12 @@ void PatchEditor::populateValues(ConfigPatchInfo patch, int count) {
 
                     if (currentPatchName == patch.patchName && addr == address) {
                         int decValue = val.toInt(&success, 16);
-                        LineEdits[i]->setText(QString::number(decValue));
+                        int minVal = patch.patchData[i].minValue;
+                        int maxVal = patch.patchData[i].maxValue;
+
+                        SpinBoxes[i]->setMinimum(minVal);
+                        SpinBoxes[i]->setMaximum(maxVal);
+                        SpinBoxes[i]->setValue(decValue);
                     }
                 }
             }
@@ -192,7 +203,7 @@ void PatchEditor::populateValues(ConfigPatchInfo patch, int count) {
     for (int i = 0; i < 5; i++) {
         bool visible = i < count ? true : false;
         Labels[i]->setVisible(visible);
-        LineEdits[i]->setVisible(visible);
+        SpinBoxes[i]->setVisible(visible);
     }
 }
 
@@ -237,14 +248,12 @@ void PatchEditor::savePatches() {
             std::string address = node.attribute("Address").as_string();
             if (address == patchInfo.patchData[i].address) {
                 // Assumes bytes32 TODO: other types
-                int value = LineEdits[i]->text().toInt();
+                int value = SpinBoxes[i]->value();
                 QString valueString = "0x" + QString::number(value, 16).rightJustified(8, '0');
                 node.attribute("Value").set_value(valueString.toStdString().c_str());
             }
         }
     }
-
-    // TODO: check min and max values before allowing to save
 
     doc.save_file(patchFile.c_str());
     QMessageBox::information(this, tr("Patch Saved"), tr("Patch saved successfully"));

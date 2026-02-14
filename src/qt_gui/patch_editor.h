@@ -5,8 +5,8 @@
 #include <QDialog>
 #include <QDialogButtonBox>
 #include <QLabel>
-#include <QLineEdit>
 #include <QListWidget>
+#include <QSpinBox>
 #include <QVBoxLayout>
 
 #include "configurable_patches.h"
@@ -34,6 +34,6 @@ private:
     QDialogButtonBox* buttonBox;
 
     QList<QLabel*> Labels;
-    QList<QLineEdit*> LineEdits;
+    QList<QSpinBox*> SpinBoxes;
     std::vector<CustomPatches::ConfigPatchInfo> currentPatches;
 };
