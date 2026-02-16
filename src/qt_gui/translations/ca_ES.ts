@@ -1220,6 +1220,14 @@
       <source>Tip: Unmap inputs with right-click</source>
       <translation>Ajuda: Desassigna les entrades amb el clic dret</translation>
     </message>
+    <message>
+      <source>Volume Up</source>
+      <translation>Apuja el volum</translation>
+    </message>
+    <message>
+      <source>Volume Down</source>
+      <translation>Abaixa el volum</translation>
+    </message>
   </context>
   <context>
     <name>IpcClient</name>
