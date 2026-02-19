@@ -269,7 +269,7 @@
     </message>
     <message>
       <source>No pre-releases found.</source>
-      <translation>Версий Pre-release не найдено.</translation>
+      <translation>Версий предрелиза не найдено.</translation>
     </message>
     <message>
       <source>No download URL found for the specified asset.</source>
@@ -2927,11 +2927,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release.</source>
-      <translation>Не удалось получить хеш последней версии Pre-release.</translation>
+      <translation>Не удалось получить хеш последней версии предрелиза.</translation>
     </message>
     <message>
       <source>Downloading Pre-release (Nightly), please wait...</source>
-      <translation>Загрузка версии Pre‑release (Nightly), пожалуйста, подождите...</translation>
+      <translation>Загрузка версии предрелиза (Nightly), пожалуйста, подождите...</translation>
     </message>
   </context>
   <context>
