@@ -2722,11 +2722,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Check for Pre-release updates at startup</source>
-      <translation>Проверять обновления Pre-Release при запуске</translation>
+      <translation>Проверять обновления предрелиза при запуске</translation>
     </message>
     <message>
       <source>Check for Pre-release Updates</source>
-      <translation>Проверить обновления Pre-Release</translation>
+      <translation>Проверить обновления предрелиза</translation>
     </message>
     <message>
       <source>Select the folder where the emulator versions will be installed</source>
@@ -2827,7 +2827,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>You already have the latest pre-release version.</source>
-      <translation>У вас уже установлена ​​последняя версия Pre-release.</translation>
+      <translation>У вас уже установлена ​​последняя версия предрелиза.</translation>
     </message>
     <message>
       <source>Update Available (Emulator)</source>
@@ -2887,7 +2887,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Pre-release updated successfully</source>
-      <translation>Версия Pre-release успешно обновлена</translation>
+      <translation>Версия предрелиза успешно обновлена</translation>
     </message>
     <message>
       <source>Failed to create the update script file</source>
