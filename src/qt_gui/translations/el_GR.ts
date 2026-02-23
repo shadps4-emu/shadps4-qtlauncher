@@ -7,7 +7,7 @@
     <name>AboutDialog</name>
     <message>
       <source>About shadPS4</source>
-      <translation type="unfinished">About shadPS4</translation>
+      <translation>Σχετικά με το shadPS4</translation>
     </message>
     <message>
       <source>shadPS4 is an experimental open-source emulator for the PlayStation 4.</source>
@@ -15,14 +15,14 @@
     </message>
     <message>
       <source>This software should not be used to play games you have not legally obtained.</source>
-      <translation type="unfinished">This software should not be used to play games you have not legally obtained.</translation>
+      <translation>Αυτό το λογισμικό δεν πρέπει να χρησιμοποιείται για να παίξετε παιχνίδια που δεν έχετε αποκτήσει νόμιμα.</translation>
     </message>
   </context>
   <context>
     <name>CheatsPatches</name>
     <message>
       <source>Cheats / Patches for </source>
-      <translation type="unfinished">Cheats / Patches for </translation>
+      <translation>Cheats / Patches for </translation>
     </message>
     <message>
       <source>Cheats/Patches are experimental.\nUse with caution.\n\nDownload cheats individually by selecting the repository and clicking the download button.\nIn the Patches tab, you can download all patches at once, choose which ones you want to use, and save your selection.\n\nSince we do not develop the Cheats/Patches,\nplease report issues to the cheat author.\n\nCreated a new cheat? Visit:\n</source>
@@ -86,11 +86,11 @@
     </message>
     <message>
       <source>Cheats</source>
-      <translation type="unfinished">Cheats</translation>
+      <translation>Cheats</translation>
     </message>
     <message>
       <source>Patches</source>
-      <translation type="unfinished">Patches</translation>
+      <translation>Τροποποιήσεις</translation>
     </message>
     <message>
       <source>Error</source>
@@ -162,7 +162,7 @@
     </message>
     <message>
       <source>Cheats Downloaded Successfully</source>
-      <translation>Cheats κατεβάστηκαν επιτυχώς</translation>
+      <translation>Τα Cheats κατεβάστηκαν επιτυχώς</translation>
     </message>
     <message>
       <source>You have successfully downloaded the cheats for this version of the game from the selected repository. You can try downloading from another repository, if it is available it will also be possible to use it by selecting the file from the list.</source>
@@ -182,7 +182,7 @@
     </message>
     <message>
       <source>Patches Downloaded Successfully! All Patches available for all games have been downloaded, there is no need to download them individually for each game as happens in Cheats. If the patch does not appear, it may be that it does not exist for the specific serial and version of the game.</source>
-      <translation>Τα Patches κατεβάστηκαν επιτυχώς! Όλα τα Patches για όλα τα παιχνίδια έχουν κατέβει, δεν είναι απαραίτητο να τα κατεβάσετε ένα-ένα για κάθε παιχνίδι, όπως με τα Cheats. Εάν η ενημέρωση δεν εμφανίζεται, μπορεί να μην υπάρχει για τον συγκεκριμένο σειριακό αριθμό και έκδοση του παιχνιδιού.</translation>
+      <translation>Τα patches κατεβάστηκαν επιτυχώς! Όλα τα patches για όλα τα παιχνίδια έχουν κατέβει, δεν είναι απαραίτητο να τα κατεβάσετε ένα-ένα για κάθε παιχνίδι, όπως με τα cheats. Εάν η ενημέρωση δεν εμφανίζεται, μπορεί να μην υπάρχει για τον συγκεκριμένο σειριακό αριθμό και έκδοση του παιχνιδιού.</translation>
     </message>
     <message>
       <source>Failed to parse JSON data from HTML.</source>
@@ -341,11 +341,11 @@
     </message>
     <message>
       <source>Auto Updater - GUI</source>
-      <translation type="unfinished">Auto Updater - GUI</translation>
+      <translation>Αυτόματη Ενημέρωση - GUI</translation>
     </message>
     <message>
       <source>Update Available - GUI</source>
-      <translation type="unfinished">Update Available - GUI</translation>
+      <translation>Διαθέσιμη Ενημέρωση - GUI</translation>
     </message>
   </context>
   <context>
@@ -403,183 +403,183 @@
     <name>ControlSettings</name>
     <message>
       <source>Configure Controls</source>
-      <translation type="unfinished">Configure Controls</translation>
+      <translation>Ρύθμιση Χειρισμού</translation>
     </message>
     <message>
       <source>D-Pad</source>
-      <translation type="unfinished">D-Pad</translation>
+      <translation>D-Pad</translation>
     </message>
     <message>
       <source>Up</source>
-      <translation type="unfinished">Up</translation>
+      <translation>Πάνω</translation>
     </message>
     <message>
       <source>Left</source>
-      <translation type="unfinished">Left</translation>
+      <translation>Αριστερά</translation>
     </message>
     <message>
       <source>Right</source>
-      <translation type="unfinished">Right</translation>
+      <translation>Δεξιά</translation>
     </message>
     <message>
       <source>Down</source>
-      <translation type="unfinished">Down</translation>
+      <translation>κάτω</translation>
     </message>
     <message>
       <source>Left Stick</source>
-      <translation type="unfinished">Left Stick</translation>
+      <translation>Αριστερός Μοχλός</translation>
     </message>
     <message>
       <source>Config Selection</source>
-      <translation type="unfinished">Config Selection</translation>
+      <translation>Επιλογή Ρυθμίσεων</translation>
     </message>
     <message>
       <source>Common Config</source>
-      <translation type="unfinished">Common Config</translation>
+      <translation>Κοινή Διαμόρφωση</translation>
     </message>
     <message>
       <source>Use per-game configs</source>
-      <translation type="unfinished">Use per-game configs</translation>
+      <translation>Χρήση διαμορφώσεων ανά παιχνίδι</translation>
     </message>
     <message>
       <source>Face Buttons</source>
-      <translation type="unfinished">Face Buttons</translation>
+      <translation>Μπροστινά Κουμπιά</translation>
     </message>
     <message>
       <source>Right Stick</source>
-      <translation type="unfinished">Right Stick</translation>
+      <translation>Δεξιός Μοχλός</translation>
     </message>
     <message>
       <source>Color Adjustment</source>
-      <translation type="unfinished">Color Adjustment</translation>
+      <translation>Ρύθμιση Χρώματος</translation>
     </message>
     <message>
       <source>Override Lightbar Color</source>
-      <translation type="unfinished">Override Lightbar Color</translation>
+      <translation>Παράκαμψη Χρώματος Lightbar</translation>
     </message>
     <message>
       <source>Override Color</source>
-      <translation type="unfinished">Override Color</translation>
+      <translation>Παράκαμψη Χρώματος</translation>
     </message>
     <message>
       <source>Unable to Save</source>
-      <translation type="unfinished">Unable to Save</translation>
+      <translation>Αποτυχία αποθήκευσης</translation>
     </message>
     <message>
       <source>Cannot bind axis values more than once</source>
-      <translation type="unfinished">Cannot bind axis values more than once</translation>
+      <translation>Δεν είναι δυνατή η δέσμευση τιμών αξόνων περισσότερο από μία φορά</translation>
     </message>
     <message>
       <source>Save</source>
-      <translation type="unfinished">Save</translation>
+      <translation>Αποθήκευση</translation>
     </message>
     <message>
       <source>Apply</source>
-      <translation type="unfinished">Apply</translation>
+      <translation>Εφαρμογή</translation>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation type="unfinished">Restore Defaults</translation>
+      <translation>Επαναφορά Προεπιλογών</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Ακύρωση</translation>
     </message>
     <message>
       <source>unmapped</source>
-      <translation type="unfinished">unmapped</translation>
+      <translation>Μη αντιστοιχισμένο</translation>
     </message>
     <message>
       <source>Options</source>
-      <translation type="unfinished">Options</translation>
+      <translation>Επιλογές</translation>
     </message>
     <message>
       <source>Touchpad Left</source>
-      <translation type="unfinished">Touchpad Left</translation>
+      <translation>Touchpad Αριστερά</translation>
     </message>
     <message>
       <source>Touchpad Center</source>
-      <translation type="unfinished">Touchpad Center</translation>
+      <translation>Touchpad Κέντρο</translation>
     </message>
     <message>
       <source>Touchpad Right</source>
-      <translation type="unfinished">Touchpad Right</translation>
+      <translation>Touchpad Δεξιά</translation>
     </message>
     <message>
       <source>Triangle</source>
-      <translation type="unfinished">Triangle</translation>
+      <translation>Τρίγωνο</translation>
     </message>
     <message>
       <source>Square</source>
-      <translation type="unfinished">Square</translation>
+      <translation>Τετράγωνο</translation>
     </message>
     <message>
       <source>Circle</source>
-      <translation type="unfinished">Circle</translation>
+      <translation>Κύκλος</translation>
     </message>
     <message>
       <source>Cross</source>
-      <translation type="unfinished">Cross</translation>
+      <translation>Σταυρός</translation>
     </message>
     <message>
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-      <translation type="unfinished">Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
+      <translation>Δεν είναι δυνατή η σύνδεση οποιασδήποτε μοναδικής εισόδου περισσότερες από μία φορές. Διπλότυπες είσοδοι που αντιστοιχίζονται με τα ακόλουθα κουμπιά:
 
 %1</translation>
     </message>
     <message>
       <source>Press a button</source>
-      <translation type="unfinished">Press a button</translation>
+      <translation>Πατήστε ένα κουμπί</translation>
     </message>
     <message>
       <source>Move analog stick</source>
-      <translation type="unfinished">Move analog stick</translation>
+      <translation>Μετακίνησε έναν αναλογικό μοχλό</translation>
     </message>
     <message>
       <source>L1 and L2</source>
-      <translation type="unfinished">L1 and L2</translation>
+      <translation>L1 και L2</translation>
     </message>
     <message>
       <source>Active Gamepad</source>
-      <translation type="unfinished">Active Gamepad</translation>
+      <translation>Ενεργό Gamepad</translation>
     </message>
     <message>
       <source>Gamepad ID</source>
-      <translation type="unfinished">Gamepad ID</translation>
+      <translation>Gamepad ID</translation>
     </message>
     <message>
       <source>Default Gamepad</source>
-      <translation type="unfinished">Default Gamepad</translation>
+      <translation>Προεπιλεγμένο Gamepad</translation>
     </message>
     <message>
       <source>No default selected</source>
-      <translation type="unfinished">No default selected</translation>
+      <translation>Δεν έχει επιλεχθεί προεπιλεγμένο</translation>
     </message>
     <message>
       <source>n/a</source>
-      <translation type="unfinished">n/a</translation>
+      <translation>Μ/Δ</translation>
     </message>
     <message>
       <source>Set Active Gamepad as Default</source>
-      <translation type="unfinished">Set Active Gamepad as Default</translation>
+      <translation>Ορισμός ενεργού Gamepad ως προεπιλεγμένο</translation>
     </message>
     <message>
       <source>Remove Default Gamepad</source>
-      <translation type="unfinished">Remove Default Gamepad</translation>
+      <translation>Αφαίρεση Προεπιλεγμένου Gamepad</translation>
     </message>
     <message>
       <source>R1 and R2</source>
-      <translation type="unfinished">R1 and R2</translation>
+      <translation>R1 και R2</translation>
     </message>
     <message>
       <source>ID: </source>
-      <translation type="unfinished">ID: </translation>
+      <translation>ID: </translation>
     </message>
     <message>
       <source>Default Controller Selected</source>
-      <translation type="unfinished">Default Controller Selected</translation>
+      <translation>Επιλέχθηκε Προεπιλεγμένο Controller</translation>
     </message>
     <message>
       <source>Active controller set as default</source>
@@ -595,15 +595,15 @@
     </message>
     <message>
       <source>RED</source>
-      <translation type="unfinished">RED</translation>
+      <translation>KOKKINO</translation>
     </message>
     <message>
       <source>GREEN</source>
-      <translation type="unfinished">GREEN</translation>
+      <translation>ΠΡΑΣΙΝΟ</translation>
     </message>
     <message>
       <source>BLUE</source>
-      <translation type="unfinished">BLUE</translation>
+      <translation>ΜΠΛΕ</translation>
     </message>
     <message>
       <source>Left Stick Deadzone</source>
@@ -638,7 +638,7 @@
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Σφάλμα</translation>
     </message>
     <message>
       <source>Could not open the file for reading</source>
@@ -650,7 +650,7 @@
     </message>
     <message>
       <source>Save Changes</source>
-      <translation type="unfinished">Save Changes</translation>
+      <translation>Αποθήκευση αλλαγών</translation>
     </message>
     <message>
       <source>Do you want to save changes?</source>
@@ -658,7 +658,7 @@
     </message>
     <message>
       <source>Help</source>
-      <translation type="unfinished">Help</translation>
+      <translation>Βοήθεια</translation>
     </message>
     <message>
       <source>Do you want to reset your custom default config to the original default config?</source>
@@ -670,14 +670,14 @@
     </message>
     <message>
       <source>Reset to Default</source>
-      <translation type="unfinished">Reset to Default</translation>
+      <translation>Επαναφορά στις Προεπιλογές</translation>
     </message>
   </context>
   <context>
     <name>ElfViewer</name>
     <message>
       <source>Open Folder</source>
-      <translation type="unfinished">Open Folder</translation>
+      <translation>Άνοιγμα Φακέλου</translation>
     </message>
   </context>
   <context>
@@ -688,26 +688,26 @@
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Ακύρωση</translation>
     </message>
     <message>
       <source>Loading...</source>
-      <translation type="unfinished">Loading...</translation>
+      <translation>Φόρτωση...</translation>
     </message>
   </context>
   <context>
     <name>GameInstallDialog</name>
     <message>
       <source>shadPS4 - Choose directory</source>
-      <translation type="unfinished">shadPS4 - Choose directory</translation>
+      <translation>shadPS4 - Επιλογή φακέλου</translation>
     </message>
     <message>
       <source>Browse</source>
-      <translation type="unfinished">Browse</translation>
+      <translation>Περιήγηση</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Σφάλμα</translation>
     </message>
     <message>
       <source>Directory to install emulator versions</source>
@@ -746,7 +746,7 @@
     </message>
     <message>
       <source>Compatibility</source>
-      <translation type="unfinished">Compatibility</translation>
+      <translation>Συμβατότητα</translation>
     </message>
     <message>
       <source>Region</source>
@@ -774,7 +774,7 @@
     </message>
     <message>
       <source>Never Played</source>
-      <translation type="unfinished">Never Played</translation>
+      <translation>Δεν Παίχτηκε Ποτέ</translation>
     </message>
     <message>
       <source>h</source>
@@ -790,23 +790,23 @@
     </message>
     <message>
       <source>Compatibility is untested</source>
-      <translation type="unfinished">Compatibility is untested</translation>
+      <translation>Η συμβατότητα δεν έχει ελεγχθεί</translation>
     </message>
     <message>
       <source>Game does not initialize properly / crashes the emulator</source>
-      <translation type="unfinished">Game does not initialize properly / crashes the emulator</translation>
+      <translation>Το παιχνίδι δεν εκκινείται σωστά / προκαλεί σφάλμα στον προσομοιωτή</translation>
     </message>
     <message>
       <source>Game boots, but only displays a blank screen</source>
-      <translation type="unfinished">Game boots, but only displays a blank screen</translation>
+      <translation>Το παιχνίδι εκκινείται , αλλά εμφανίζει μόνο μια μαύρη οθόνη</translation>
     </message>
     <message>
       <source>Game displays an image but does not go past the menu</source>
-      <translation type="unfinished">Game displays an image but does not go past the menu</translation>
+      <translation>Το παιχνίδι εμφανίζει εικόνα, αλλά δεν πάει πέρα από τα μενού</translation>
     </message>
     <message>
       <source>Game has game-breaking glitches or unplayable performance</source>
-      <translation type="unfinished">Game has game-breaking glitches or unplayable performance</translation>
+      <translation>Το παιχνίδι έχει δυσλειτουργίες που χαλάνε το παιχνίδι ή έχει χαμηλή επίδοση </translation>
     </message>
     <message>
       <source>Game can be completed with playable performance and no major glitches</source>
@@ -845,7 +845,7 @@
     </message>
     <message>
       <source>TB</source>
-      <translation type="unfinished">TB</translation>
+      <translation>TB</translation>
     </message>
   </context>
   <context>
@@ -856,11 +856,11 @@
     </message>
     <message>
       <source>SFO Viewer</source>
-      <translation type="unfinished">SFO Viewer</translation>
+      <translation>Προβολέας SFO</translation>
     </message>
     <message>
       <source>Trophy Viewer</source>
-      <translation type="unfinished">Trophy Viewer</translation>
+      <translation>Προβολέας Τροπαίων</translation>
     </message>
     <message>
       <source>Open Folder...</source>
@@ -880,55 +880,55 @@
     </message>
     <message>
       <source>Copy info...</source>
-      <translation type="unfinished">Copy info...</translation>
+      <translation>Αντιγραφή πληροφορίας...</translation>
     </message>
     <message>
       <source>Copy Name</source>
-      <translation type="unfinished">Copy Name</translation>
+      <translation>Αντιγραφή Ονόματος</translation>
     </message>
     <message>
       <source>Copy Serial</source>
-      <translation type="unfinished">Copy Serial</translation>
+      <translation>Αντιγραφή Σειριακού</translation>
     </message>
     <message>
       <source>Copy Version</source>
-      <translation type="unfinished">Copy Version</translation>
+      <translation>Αντιγραφή Έκδοσης</translation>
     </message>
     <message>
       <source>Copy Size</source>
-      <translation type="unfinished">Copy Size</translation>
+      <translation>Αντιγραφή Μεγέθους</translation>
     </message>
     <message>
       <source>Copy All</source>
-      <translation type="unfinished">Copy All</translation>
+      <translation>Αντιγραφή Όλων</translation>
     </message>
     <message>
       <source>Delete...</source>
-      <translation type="unfinished">Delete...</translation>
+      <translation>Διαγραφή...</translation>
     </message>
     <message>
       <source>Delete Game</source>
-      <translation type="unfinished">Delete Game</translation>
+      <translation>Διαγραφή παιχνιδιού</translation>
     </message>
     <message>
       <source>Delete Update</source>
-      <translation type="unfinished">Delete Update</translation>
+      <translation>Διαγραφή Ενημέρωσης</translation>
     </message>
     <message>
       <source>Delete DLC</source>
-      <translation type="unfinished">Delete DLC</translation>
+      <translation>Διαγραφή DLC</translation>
     </message>
     <message>
       <source>Delete Trophy</source>
-      <translation type="unfinished">Delete Trophy</translation>
+      <translation>Διαγραφή Τροπαίου</translation>
     </message>
     <message>
       <source>Compatibility...</source>
-      <translation type="unfinished">Compatibility...</translation>
+      <translation>Συμβατότητα...</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Σφάλμα</translation>
     </message>
     <message>
       <source>Game</source>
@@ -936,139 +936,139 @@
     </message>
     <message>
       <source>This game has no update to delete!</source>
-      <translation type="unfinished">This game has no update to delete!</translation>
+      <translation>Αυτό το παιχνίδι δεν έχει καμία ενημέρωση για διαγραφή!</translation>
     </message>
     <message>
       <source>Update</source>
-      <translation type="unfinished">Update</translation>
+      <translation>Ενημέρωση</translation>
     </message>
     <message>
       <source>This game has no DLC to delete!</source>
-      <translation type="unfinished">This game has no DLC to delete!</translation>
+      <translation>Αυτό το παιχνίδι δεν έχει κανένα DLC για διαγραφή!</translation>
     </message>
     <message>
       <source>DLC</source>
-      <translation type="unfinished">DLC</translation>
+      <translation>DLC</translation>
     </message>
     <message>
       <source>Delete %1</source>
-      <translation type="unfinished">Delete %1</translation>
+      <translation>Διαγραφή %1</translation>
     </message>
     <message>
       <source>Are you sure you want to delete %1&apos;s %2 directory?</source>
-      <translation type="unfinished">Are you sure you want to delete %1&apos;s %2 directory?</translation>
+      <translation>Είστε σίγουροι ότι θέλετε να διαγράψετε τον κατάλογο %1&apos;s %2 ;</translation>
     </message>
     <message>
       <source>Open Update Folder</source>
-      <translation type="unfinished">Open Update Folder</translation>
+      <translation>Άνοιγμα Φακέλου Παιχνιδιού</translation>
     </message>
     <message>
       <source>Delete Save Data</source>
-      <translation type="unfinished">Delete Save Data</translation>
+      <translation>Διαγραφή Αποθηκευμένων Δεδομένων</translation>
     </message>
     <message>
       <source>This game has no update folder to open!</source>
-      <translation type="unfinished">This game has no update folder to open!</translation>
+      <translation>Αυτό το παιχνίδι δεν έχει φάκελο ενημέρωσης για άνοιγμα!</translation>
     </message>
     <message>
       <source>No log file found for this game!</source>
-      <translation type="unfinished">No log file found for this game!</translation>
+      <translation>Δεν βρέθηκε αρχείο καταγραφής για αυτό το παιχνίδι!</translation>
     </message>
     <message>
       <source>This game has no save data to delete!</source>
-      <translation type="unfinished">This game has no save data to delete!</translation>
+      <translation>Αυτό το παιχνίδι δεν έχει αποθηκευμένα δεδομένα για διαγραφή!</translation>
     </message>
     <message>
       <source>This game has no saved trophies to delete!</source>
-      <translation type="unfinished">This game has no saved trophies to delete!</translation>
+      <translation>Αυτό το παιχνίδι δεν έχει αποθηκευμένα τρόπαια για διαγραφή!</translation>
     </message>
     <message>
       <source>Save Data</source>
-      <translation type="unfinished">Save Data</translation>
+      <translation>Αποθήκευση Δεδομένων</translation>
     </message>
     <message>
       <source>Trophy</source>
-      <translation type="unfinished">Trophy</translation>
+      <translation>Τρόπαιο</translation>
     </message>
     <message>
       <source>SFO Viewer for </source>
-      <translation type="unfinished">SFO Viewer for </translation>
+      <translation>Προβολέας SFO για</translation>
     </message>
     <message>
       <source>Remove from Favorites</source>
-      <translation type="unfinished">Remove from Favorites</translation>
+      <translation>Αφαίρεση από τα Αγαπημένα</translation>
     </message>
     <message>
       <source>Add to Favorites</source>
-      <translation type="unfinished">Add to Favorites</translation>
+      <translation>Προσθήκη στα αγαπημένα</translation>
     </message>
     <message>
       <source>Game-specific Settings...</source>
-      <translation type="unfinished">Game-specific Settings...</translation>
+      <translation>Ρυθμίσεις για το συγκεκριμένο παιχνίδι...</translation>
     </message>
     <message>
       <source>Configure Game-specific Settings</source>
-      <translation type="unfinished">Configure Game-specific Settings</translation>
+      <translation>Ρύθμιση ρυθμίσεων για το συγκεκριμένο παιχνίδι</translation>
     </message>
     <message>
       <source>Create Game-specific Settings from Global Settings</source>
-      <translation type="unfinished">Create Game-specific Settings from Global Settings</translation>
+      <translation>Δημιουργία ρυθμίσεων για το συγκεκριμένο παιχνίδι από τις Γενικές Ρυθμίσεις</translation>
     </message>
     <message>
       <source>Delete Game-specific Settings</source>
-      <translation type="unfinished">Delete Game-specific Settings</translation>
+      <translation>Διαγραφή Ρυθμίσεων Συγκεκριμένου Παιχνιδιού</translation>
     </message>
     <message>
       <source>Update Database</source>
-      <translation type="unfinished">Update Database</translation>
+      <translation>Ενημέρωση Βάσης Δεδομένων</translation>
     </message>
     <message>
       <source>View Report</source>
-      <translation type="unfinished">View Report</translation>
+      <translation>Προβολή Αναφοράς</translation>
     </message>
     <message>
       <source>Submit a Report</source>
-      <translation type="unfinished">Submit a Report</translation>
+      <translation>Υποβολή αναφοράς</translation>
     </message>
     <message>
       <source>Confirm deletion</source>
-      <translation type="unfinished">Confirm deletion</translation>
+      <translation>Επιβεβαίωση διαγραφής</translation>
     </message>
     <message>
       <source>Delete game-specific settings?</source>
-      <translation type="unfinished">Delete game-specific settings?</translation>
+      <translation>Διαγραφή ρυθμίσεων συγκεκριμένου παιχνιδιού ;</translation>
     </message>
     <message>
       <source>Launch...</source>
-      <translation type="unfinished">Launch...</translation>
+      <translation>Εκκίνηση...</translation>
     </message>
     <message>
       <source>Launch with game specific configs (default)</source>
-      <translation type="unfinished">Launch with game specific configs (default)</translation>
+      <translation>Εκκίνηση με ρυθμίσεις του συγκεκριμένου παιχνιδιού (προεπιλογή)</translation>
     </message>
     <message>
       <source>Launch with global config only</source>
-      <translation type="unfinished">Launch with global config only</translation>
+      <translation>Εκκίνηση με γενικές ρυθμίσεις μόνο</translation>
     </message>
     <message>
       <source>Launch with default settings</source>
-      <translation type="unfinished">Launch with default settings</translation>
+      <translation>Εκκίνηση με προεπιλεγμένες ρυθμίσεις</translation>
     </message>
     <message>
       <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
-      <translation type="unfinished">Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</translation>
+      <translation>Δεν γινόταν να υποβληθεί αναφορά, γιατί το τελευταίο αρχείο καταγραφής για το παιχνίδι απέτυχε στον ακόλουθο έλεγχο, και ως εκ τούτου θα ήταν μια εσφαλμένη αναφορά :</translation>
     </message>
     <message>
       <source>Ok</source>
-      <translation type="unfinished">Ok</translation>
+      <translation>Οκ</translation>
     </message>
     <message>
       <source>Info</source>
-      <translation type="unfinished">Info</translation>
+      <translation>Πληροφ.</translation>
     </message>
     <message>
       <source>Create Shortcut for Selected Emulator Version</source>
-      <translation type="unfinished">Create Shortcut for Selected Emulator Version</translation>
+      <translation>Δημιουργία συντόμευσης για την επιλεγμένη έκδοση εξομοιωτή  :</translation>
     </message>
     <message>
       <source>Create Shortcut for Specified Emulator Version</source>
