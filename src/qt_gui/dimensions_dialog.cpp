@@ -722,6 +722,7 @@ void dimensions_dialog::load_figure_path(u8 pad, u8 index, const QString& path) 
         return;
     }
 
+    dim_file.Close();
     clear_figure(pad, index);
 
     m_ipc_client->loadDimensionFigure(path.toStdString(), pad, index);
