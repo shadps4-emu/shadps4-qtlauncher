@@ -621,7 +621,7 @@
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation/>
+      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
     </message>
   </context>
   <context>
