@@ -341,7 +341,7 @@ preuzete, nema potrebe ih preuzimati pojedinačno kao što vrijedi u kartici
     </message>
     <message>
       <source>Failed to create the update script file</source>
-      <translation>Neuspjelo kreiranje skripte za ažuriranje</translation>
+      <translation>Neuspjelo izrađivanje skripte za ažuriranje</translation>
     </message>
     <message>
       <source>Auto Updater - GUI</source>
@@ -1073,27 +1073,27 @@ sam izvještaj ne bi postao nevaljan:</translation>
     </message>
     <message>
       <source>Create Shortcut for Selected Emulator Version</source>
-      <translation>Kreiraj Prečac za Izabranu Verziju Emulatora</translation>
+      <translation>Izradi Prečac za Izabranu Verziju Emulatora</translation>
     </message>
     <message>
       <source>Create Shortcut for Specified Emulator Version</source>
-      <translation>Kreiraj Prečac za Određenu Verziju Emulatora</translation>
+      <translation>Izradi Prečac za Određenu Verziju Emulatora</translation>
     </message>
     <message>
       <source>Create Shortcut</source>
-      <translation>Kreiraj prečac</translation>
+      <translation>Izradi prečac</translation>
     </message>
     <message>
       <source>Shortcut creation</source>
-      <translation>Kreiranje Prečca</translation>
+      <translation>Izrada Prečca</translation>
     </message>
     <message>
       <source>Shortcut created successfully!</source>
-      <translation>Prečac kreiran uspješno!</translation>
+      <translation>Prečac izrađen uspješno!</translation>
     </message>
     <message>
       <source>Error creating shortcut!</source>
-      <translation>Greška prilikom kreiranja prečca!</translation>
+      <translation>Greška prilikom izrade prečca!</translation>
     </message>
     <message>
       <source>Failed to convert icon.</source>
@@ -1966,7 +1966,7 @@ Izaberite verziju emulatora s desne liste.</translation>
     </message>
     <message>
       <source>Host Debug Markers</source>
-      <translation>Hostaj Debug Markere</translation>
+      <translation>Host Debug Markeri</translation>
     </message>
     <message>
       <source>Guest Debug Markers</source>
@@ -2130,83 +2130,83 @@ Izaberite verziju emulatora s desne liste.</translation>
     </message>
     <message>
       <source>Always</source>
-      <translation type="unfinished">Always</translation>
+      <translation>Uvijek</translation>
     </message>
     <message>
       <source>Graphics Device:\nOn multiple GPU systems, select the GPU the emulator will use from the drop down list,\nor select &quot;Auto Select&quot; to automatically determine it.</source>
-      <translation type="unfinished">Graphics Device:\nOn multiple GPU systems, select the GPU the emulator will use from the drop down list,\nor select &quot;Auto Select&quot; to automatically determine it.</translation>
+      <translation>Grafička Kartica:\nNa više GPU sustava, odaberite GPU kojeg će emulator koristiti sa padajuće liste,\nili izaberi &quot;Automatski Izbor&quot; za automatsku procjenu.</translation>
     </message>
     <message>
       <source>Width/Height:\nSets the size of the emulator window at launch, which can be resized during gameplay.\nThis is different from the in-game resolution.</source>
-      <translation type="unfinished">Width/Height:\nSets the size of the emulator window at launch, which can be resized during gameplay.\nThis is different from the in-game resolution.</translation>
+      <translation>Širina/Visina:\nPostavlja veličinu prozora emulatora kod pokretanja, koji je podesiv tijekom igranja.\nOvo drugačije od rezolucije unutar igre.</translation>
     </message>
     <message>
       <source>Enable HDR:\nEnables HDR in games that support it.\nYour monitor must have support for the BT2020 PQ color space and the RGB10A2 swapchain format.</source>
-      <translation type="unfinished">Enable HDR:\nEnables HDR in games that support it.\nYour monitor must have support for the BT2020 PQ color space and the RGB10A2 swapchain format.</translation>
+      <translation>Omogući HDR:\nOmogućuje HDR u igrama s podrškom.\nVaš monitor mora podržavat BT2020 PQ prostor boja i RGB10A2 swapchain format.</translation>
     </message>
     <message>
       <source>Game Folders:\nThe list of folders to check for installed games.</source>
-      <translation type="unfinished">Game Folders:\nThe list of folders to check for installed games.</translation>
+      <translation>Mape Igri:\n Lista mapa za provjeru instaliranih igara.</translation>
     </message>
     <message>
       <source>Add:\nAdd a folder to the list.</source>
-      <translation type="unfinished">Add:\nAdd a folder to the list.</translation>
+      <translation>Dodaj:\nDodaj mapu na listu.</translation>
     </message>
     <message>
       <source>Remove:\nRemove a folder from the list.</source>
-      <translation type="unfinished">Remove:\nRemove a folder from the list.</translation>
+      <translation>Ukloni:\nUkloni mapu s liste.</translation>
     </message>
     <message>
       <source>Enable Debug Dumping:\nSaves the import and export symbols and file header information of the currently running PS4 program to a directory.</source>
-      <translation type="unfinished">Enable Debug Dumping:\nSaves the import and export symbols and file header information of the currently running PS4 program to a directory.</translation>
+      <translation>Omogući Odlaganje Debuga:\nSprema simbole uvoza i izvoza i informacije iz zaglavlja datoteka trenutno pokrenutog PS4 programa u mapu.</translation>
     </message>
     <message>
       <source>Enable RenderDoc Debugging:\nIf enabled, the emulator will provide compatibility with Renderdoc to allow capture and analysis of the currently rendered frame.</source>
-      <translation type="unfinished">Enable RenderDoc Debugging:\nIf enabled, the emulator will provide compatibility with Renderdoc to allow capture and analysis of the currently rendered frame.</translation>
+      <translation>Omogući RenderDoc Debugiranje:\nAko omogućeno, emulator omogućuje kompatibilnost uz Renderdoc za snimanje i analizu trenutno renderirane sličice.</translation>
     </message>
     <message>
       <source>Collect Shaders:\nYou need this enabled to edit shaders with the debug menu (Ctrl + F10).</source>
-      <translation type="unfinished">Collect Shaders:\nYou need this enabled to edit shaders with the debug menu (Ctrl + F10).</translation>
+      <translation>Skupljanje Shadera:\nTrebate uključit za obradu shadera iz debug izbornika (Ctrl + F10).</translation>
     </message>
     <message>
       <source>Enable Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
-      <translation type="unfinished">Enable Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</translation>
+      <translation>Omogući Readbackove:\nOmogući GPU readbackove i writebackove.\nPotrebno za ispravno ponašanje u nekim igrama.\nMože dovest do problema u stabilnosti i/ili performansama.</translation>
     </message>
     <message>
       <source>Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</source>
-      <translation type="unfinished">Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</translation>
+      <translation>Omogući Readback Linearnih Slika:\nomogućuje asinkrono preuzimanje GPU modificiranih linearnih slika.\nMože ispravit probleme u nekim igrama.</translation>
     </message>
     <message>
       <source>Copy GPU Buffers:\nGets around race conditions involving GPU submits.\nMay or may not help with PM4 type 0 crashes.</source>
-      <translation type="unfinished">Copy GPU Buffers:\nGets around race conditions involving GPU submits.\nMay or may not help with PM4 type 0 crashes.</translation>
+      <translation>Kopiraj GPU Međuspremnike:\nObilazi problem stanja utrkivanja kod GPU podnesaka.\nMože ili ne mora pomoć s PM4 tip 0 rušenjima.</translation>
     </message>
     <message>
       <source>Host Debug Markers:\nInserts emulator-side information like markers for specific AMDGPU commands around Vulkan commands, as well as giving resources debug names.\nIf you have this enabled, you should enable Crash Diagnostics.\nUseful for programs like RenderDoc.</source>
-      <translation type="unfinished">Host Debug Markers:\nInserts emulator-side information like markers for specific AMDGPU commands around Vulkan commands, as well as giving resources debug names.\nIf you have this enabled, you should enable Crash Diagnostics.\nUseful for programs like RenderDoc.</translation>
+      <translation>Host Debug Markeri:\nUnosi informacije sa strane emulatora kao marker za specifične AMDGPU naredbe u odnosu s Vulkan naredbama, također uz imenovanje resursa debug nazivima.\nAko je ovo omogućeno, trebali bi omogućit Dijagnostiku Rušenja.\nKorisno za programe kao što je RenderDoc.</translation>
     </message>
     <message>
       <source>Guest Debug Markers:\nInserts any debug markers the game itself has added to the command buffer.\nIf you have this enabled, you should enable Crash Diagnostics.\nUseful for programs like RenderDoc.</source>
-      <translation type="unfinished">Guest Debug Markers:\nInserts any debug markers the game itself has added to the command buffer.\nIf you have this enabled, you should enable Crash Diagnostics.\nUseful for programs like RenderDoc.</translation>
+      <translation>Gostujući Debug Markeri:\nUnosi bilo koje debug markere koje je igra sama dodala u međuspremnik naredbi.\nAko je ovo omogućeno, trebali bi omogućit Dijagnostiku Rušenja. \nKorisno za programe kao što je RenderDoc.</translation>
     </message>
     <message>
       <source>Save Data Path:\nThe folder where game save data will be saved.</source>
-      <translation type="unfinished">Save Data Path:\nThe folder where game save data will be saved.</translation>
+      <translation>Spremi Putanje Podataka:\nMapa gdje će spremanja igre biti pohranjena.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the save data path.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the save data path.</translation>
+      <translation>Potraži:\nPotraži mapu za postavljanje kao putanju za spremanje podataka.</translation>
     </message>
     <message>
       <source>Set the volume of the background music.</source>
-      <translation type="unfinished">Set the volume of the background music.</translation>
+      <translation>Podesi glasnoću pozadinske glazbe.</translation>
     </message>
     <message>
       <source>Enable Motion Controls</source>
-      <translation type="unfinished">Enable Motion Controls</translation>
+      <translation>Omogući Kontrole Pokreta</translation>
     </message>
     <message>
       <source>Save Data Path</source>
-      <translation type="unfinished">Save Data Path</translation>
+      <translation>Putanje s Podacima o Spremanju</translation>
     </message>
     <message>
       <source>Browse</source>
@@ -2226,99 +2226,99 @@ Izaberite verziju emulatora s desne liste.</translation>
     </message>
     <message>
       <source>Directory to install games</source>
-      <translation type="unfinished">Directory to install games</translation>
+      <translation>Mapa za instalaciju igri</translation>
     </message>
     <message>
       <source>Directory to save data</source>
-      <translation type="unfinished">Directory to save data</translation>
+      <translation>Mapa za spremanje podataka</translation>
     </message>
     <message>
       <source>Video</source>
-      <translation type="unfinished">Video</translation>
+      <translation>Video</translation>
     </message>
     <message>
       <source>Display Mode</source>
-      <translation type="unfinished">Display Mode</translation>
+      <translation>Mod Prikaza</translation>
     </message>
     <message>
       <source>Windowed</source>
-      <translation type="unfinished">Windowed</translation>
+      <translation>U Prozoru</translation>
     </message>
     <message>
       <source>Fullscreen</source>
-      <translation type="unfinished">Fullscreen</translation>
+      <translation>Cijeli zaslon</translation>
     </message>
     <message>
       <source>Fullscreen (Borderless)</source>
-      <translation type="unfinished">Fullscreen (Borderless)</translation>
+      <translation>Cijeli zaslon (Bez okvira)</translation>
     </message>
     <message>
       <source>Window Size</source>
-      <translation type="unfinished">Window Size</translation>
+      <translation>Veličina Prozora</translation>
     </message>
     <message>
       <source>W:</source>
-      <translation type="unfinished">W:</translation>
+      <translation>W:</translation>
     </message>
     <message>
       <source>H:</source>
-      <translation type="unfinished">H:</translation>
+      <translation>H:</translation>
     </message>
     <message>
       <source>Separate Log Files</source>
-      <translation type="unfinished">Separate Log Files</translation>
+      <translation>Razdvoji Datoteke Zapisnika</translation>
     </message>
     <message>
       <source>Separate Log Files:\nWrites a separate logfile for each game.</source>
-      <translation type="unfinished">Separate Log Files:\nWrites a separate logfile for each game.</translation>
+      <translation>Razdvoji Datoteke Zapisnika:\nPiše odvojenu datoteku zapisnika za svaku igru.</translation>
     </message>
     <message>
       <source>Trophy Notification Position</source>
-      <translation type="unfinished">Trophy Notification Position</translation>
+      <translation>Pozicija Obavijesti o Trofeju</translation>
     </message>
     <message>
       <source>Left</source>
-      <translation type="unfinished">Left</translation>
+      <translation>Lijevo</translation>
     </message>
     <message>
       <source>Right</source>
-      <translation type="unfinished">Right</translation>
+      <translation>Desno</translation>
     </message>
     <message>
       <source>Top</source>
-      <translation type="unfinished">Top</translation>
+      <translation>Gore</translation>
     </message>
     <message>
       <source>Bottom</source>
-      <translation type="unfinished">Bottom</translation>
+      <translation>Dolje</translation>
     </message>
     <message>
       <source>Notification Duration</source>
-      <translation type="unfinished">Notification Duration</translation>
+      <translation>Trajanje Obavijesti</translation>
     </message>
     <message>
       <source>Portable User Folder</source>
-      <translation type="unfinished">Portable User Folder</translation>
+      <translation>Prenosiva Mapa Korisnika</translation>
     </message>
     <message>
       <source>Create Portable User Folder from Common User Folder</source>
-      <translation type="unfinished">Create Portable User Folder from Common User Folder</translation>
+      <translation>Izradi Prenosivu Mapu Korisnika iz Zajedničke Korisničke Mape</translation>
     </message>
     <message>
       <source>Portable user folder:\nStores shadPS4 settings and data that will be applied only to the shadPS4 build located in the current folder. Restart the app after creating the portable user folder to begin using it.</source>
-      <translation type="unfinished">Portable user folder:\nStores shadPS4 settings and data that will be applied only to the shadPS4 build located in the current folder. Restart the app after creating the portable user folder to begin using it.</translation>
+      <translation>Zajedničke korisničke mapa:\nPohranjuje shadPS4 postavke i podatke koji će se primijenit samo na shadPS4 verziju unutar trenutne mape. Ponovno pokrenite nakon izrade prenosive korisničke mape za početak korištenja.</translation>
     </message>
     <message>
       <source>%1 already exists</source>
-      <translation type="unfinished">%1 already exists</translation>
+      <translation>%1 već postoji</translation>
     </message>
     <message>
       <source>%1 successfully created.</source>
-      <translation type="unfinished">%1 successfully created.</translation>
+      <translation>%1 uspješno izrađeno.</translation>
     </message>
     <message>
       <source>Open the custom trophy images/sounds folder:\nYou can add custom images to the trophies and an audio.\nAdd the files to custom_trophy with the following names:\ntrophy.wav OR trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nNote: The sound will only work in QT versions.</source>
-      <translation type="unfinished">Open the custom trophy images/sounds folder:\nYou can add custom images to the trophies and an audio.\nAdd the files to custom_trophy with the following names:\ntrophy.wav OR trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nNote: The sound will only work in QT versions.</translation>
+      <translation>Otvori proizvoljnu mapu slika/zvukova trofeja:\nMožete dodati proizvoljne slike na trofeje i zvuk.\nDodajte datoteke na proizvoljan_trofej s sljedećim nazivima:\ntrophy.wav ILI trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nNapomena: Zvuk radi samo u QT verzijama.</translation>
     </message>
     <message>
       <source>Experimental Features</source>
@@ -2326,7 +2326,7 @@ Izaberite verziju emulatora s desne liste.</translation>
     </message>
     <message>
       <source>WARNING: These features are experimental and should not be enabled unless you were told to, or a game requires it. Please ask in the shadPS4 Discord server if you have any questions.</source>
-      <translation type="unfinished">WARNING: These features are experimental and should not be enabled unless you were told to, or a game requires it. Please ask in the shadPS4 Discord server if you have any questions.</translation>
+      <translation>UPOZORENJE: Ove su mogućnosti eksperimentalne i ne omogućuju se osim uz pokriće, ili ako igra to zahtjeva. Molimo upite pošaljte na shadPS4 Discord serveru.</translation>
     </message>
     <message>
       <source>Enable Background Controller Input</source>
@@ -2334,7 +2334,7 @@ Izaberite verziju emulatora s desne liste.</translation>
     </message>
     <message>
       <source>Enable Controller Background Input:\nAllow shadPS4 to detect controller inputs when the game window is not in focus.</source>
-      <translation type="unfinished">Enable Controller Background Input:\nAllow shadPS4 to detect controller inputs when the game window is not in focus.</translation>
+      <translation>Omogući Unos Pozadinskim Kontrolerom:\nOmogući shadPs4 da prepoznaje unose i dok prozor igre nije fokusiran.</translation>
     </message>
     <message>
       <source>Crash Diagnostics:\nCreates a .yaml file with info about the Vulkan state at the time of crashing.\nUseful for debugging &apos;Device lost&apos; errors. If you have this enabled, you should enable Host AND Guest Debug Markers.\nYou need Vulkan Validation Layers enabled and the Vulkan SDK for this to work.</source>
@@ -2502,7 +2502,7 @@ Izaberite verziju emulatora s desne liste.</translation>
     </message>
     <message>
       <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
-      <translation type="unfinished">Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</translation>
+      <translation>Omogući Odlaganje Shadera:\nZa potrebe tehničkog debugiranja, sprema igrine shadere u mapu za vrijeme renderinga.</translation>
     </message>
     <message>
       <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</source>
