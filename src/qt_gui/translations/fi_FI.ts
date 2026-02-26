@@ -1170,7 +1170,7 @@
     </message>
     <message>
       <source>Renderdoc Capture (for debugging only)</source>
-      <translation type="unfinished">Renderdoc Capture (for debugging only)</translation>
+      <translation>Renderdoc-kaappaus (vain virheenjäljitystä varten)</translation>
     </message>
     <message>
       <source>Toggle Mouse to Joystick Emulation</source>
@@ -1182,121 +1182,121 @@
     </message>
     <message>
       <source>Tip: Up to three simultaneous inputs can be assigned for each hotkey</source>
-      <translation type="unfinished">Tip: Up to three simultaneous inputs can be assigned for each hotkey</translation>
+      <translation>Vihje: Pikanäppäimelle voidaan määrittää jopa kolme eri syötettä</translation>
     </message>
     <message>
       <source>Save</source>
-      <translation type="unfinished">Save</translation>
+      <translation>Tallenna</translation>
     </message>
     <message>
       <source>Apply</source>
-      <translation type="unfinished">Apply</translation>
+      <translation>Käytä</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Peruuta</translation>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation type="unfinished">Restore Defaults</translation>
+      <translation>Palauta oletusarvot</translation>
     </message>
     <message>
       <source>Unable to Save</source>
-      <translation type="unfinished">Unable to Save</translation>
+      <translation>Tallentaminen epäonnistui</translation>
     </message>
     <message>
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-      <translation type="unfinished">Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
+      <translation>Yksittäisiä syötteitä ei voi määrittää useammin kuin kerran. Kaksoiskappaleet on määritetty seuraaviin painikkeisiin:
 
 %1</translation>
     </message>
     <message>
       <source>Waiting for inputs</source>
-      <translation type="unfinished">Waiting for inputs</translation>
+      <translation>Odotetaan syötettä</translation>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Vihje: Tyhjennä syöte hiiren oikealla painikkeella</translation>
     </message>
     <message>
       <source>Volume Up</source>
-      <translation type="unfinished">Volume Up</translation>
+      <translation>Suurenna äänenvoimakkuutta</translation>
     </message>
     <message>
       <source>Volume Down</source>
-      <translation type="unfinished">Volume Down</translation>
+      <translation>Pienennä äänenvoimakkuutta</translation>
     </message>
   </context>
   <context>
     <name>IpcClient</name>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation type="unfinished">Could not find the emulator executable</translation>
+      <translation>Emulaattorin suoritustiedostoa ei löytynyt</translation>
     </message>
   </context>
   <context>
     <name>KBMSettings</name>
     <message>
       <source>Configure Controls</source>
-      <translation type="unfinished">Configure Controls</translation>
+      <translation>Muokkaa ohjainasetuksia</translation>
     </message>
     <message>
       <source>D-Pad</source>
-      <translation type="unfinished">D-Pad</translation>
+      <translation>Ristiohjain</translation>
     </message>
     <message>
       <source>Up</source>
-      <translation type="unfinished">Up</translation>
+      <translation>Ylös</translation>
     </message>
     <message>
       <source>unmapped</source>
-      <translation type="unfinished">unmapped</translation>
+      <translation>Ei määritetty</translation>
     </message>
     <message>
       <source>Left</source>
-      <translation type="unfinished">Left</translation>
+      <translation>Vasen</translation>
     </message>
     <message>
       <source>Right</source>
-      <translation type="unfinished">Right</translation>
+      <translation>Oikea</translation>
     </message>
     <message>
       <source>Down</source>
-      <translation type="unfinished">Down</translation>
+      <translation>Alas</translation>
     </message>
     <message>
       <source>Left Analog Halfmode</source>
-      <translation type="unfinished">Left Analog Halfmode</translation>
+      <translation>Vasemman sauvan puolitila</translation>
     </message>
     <message>
       <source>hold to move left stick at half-speed</source>
-      <translation type="unfinished">hold to move left stick at half-speed</translation>
+      <translation>Pidä painettuna käyttääksesi vasenta sauvaa puolinopeudella</translation>
     </message>
     <message>
       <source>Left Stick</source>
-      <translation type="unfinished">Left Stick</translation>
+      <translation>Vasen sauva</translation>
     </message>
     <message>
       <source>Config Selection</source>
-      <translation type="unfinished">Config Selection</translation>
+      <translation>Kokonpanon valinta</translation>
     </message>
     <message>
       <source>Common Config</source>
-      <translation type="unfinished">Common Config</translation>
+      <translation>Yleinen kokoonpano</translation>
     </message>
     <message>
       <source>Use per-game configs</source>
-      <translation type="unfinished">Use per-game configs</translation>
+      <translation>Käytä pelikohtaisia kokoonpanoja</translation>
     </message>
     <message>
       <source>Text Editor</source>
-      <translation type="unfinished">Text Editor</translation>
+      <translation>Tekstieditori</translation>
     </message>
     <message>
       <source>Help</source>
-      <translation type="unfinished">Help</translation>
+      <translation>Ohje</translation>
     </message>
     <message>
       <source>Mouse to Joystick</source>
@@ -1320,55 +1320,55 @@
     </message>
     <message>
       <source>Face Buttons</source>
-      <translation type="unfinished">Face Buttons</translation>
+      <translation>Toimintonäppäimet</translation>
     </message>
     <message>
       <source>Triangle</source>
-      <translation type="unfinished">Triangle</translation>
+      <translation>Kolmio</translation>
     </message>
     <message>
       <source>Square</source>
-      <translation type="unfinished">Square</translation>
+      <translation>Neliö</translation>
     </message>
     <message>
       <source>Circle</source>
-      <translation type="unfinished">Circle</translation>
+      <translation>Ympyrä</translation>
     </message>
     <message>
       <source>Cross</source>
-      <translation type="unfinished">Cross</translation>
+      <translation>Risti</translation>
     </message>
     <message>
       <source>Right Analog Halfmode</source>
-      <translation type="unfinished">Right Analog Halfmode</translation>
+      <translation>Oikean sauvan puolitila</translation>
     </message>
     <message>
       <source>hold to move right stick at half-speed</source>
-      <translation type="unfinished">hold to move right stick at half-speed</translation>
+      <translation>Pidä painettuna käyttääksesi oikeaa sauvaa puolinopeudella</translation>
     </message>
     <message>
       <source>Right Stick</source>
-      <translation type="unfinished">Right Stick</translation>
+      <translation>Oikea sauva</translation>
     </message>
     <message>
       <source>Speed Offset (def 0.125):</source>
-      <translation type="unfinished">Speed Offset (def 0.125):</translation>
+      <translation>Nopeuden poikkeama (oletus: 0.125):</translation>
     </message>
     <message>
       <source>Copy from Common Config</source>
-      <translation type="unfinished">Copy from Common Config</translation>
+      <translation>Kopioi yleisestä kokoonpanosta</translation>
     </message>
     <message>
       <source>Deadzone Offset (def 0.50):</source>
-      <translation type="unfinished">Deadzone Offset (def 0.50):</translation>
+      <translation>Katvealueen poikkeama (oletus: 0.50):</translation>
     </message>
     <message>
       <source>Speed Multiplier (def 1.0):</source>
-      <translation type="unfinished">Speed Multiplier (def 1.0):</translation>
+      <translation>Nopeuskerroin (oletus: 1.0):</translation>
     </message>
     <message>
       <source>Common Config Selected</source>
-      <translation type="unfinished">Common Config Selected</translation>
+      <translation>Yleinen kokoonpano valittu</translation>
     </message>
     <message>
       <source>This button copies mappings from the Common Config to the currently selected profile, and cannot be used when the currently selected profile is the Common Config.</source>
@@ -1384,11 +1384,11 @@
     </message>
     <message>
       <source>Unable to Save</source>
-      <translation type="unfinished">Unable to Save</translation>
+      <translation>Tallentaminen epäonnistui</translation>
     </message>
     <message>
       <source>Press a key</source>
-      <translation type="unfinished">Press a key</translation>
+      <translation>Paina näppäintä</translation>
     </message>
     <message>
       <source>Cannot set mapping</source>
@@ -1396,47 +1396,47 @@
     </message>
     <message>
       <source>Mousewheel cannot be mapped to stick outputs</source>
-      <translation type="unfinished">Mousewheel cannot be mapped to stick outputs</translation>
+      <translation>Hiiren rullaa ei voi määrittää sauvan ulostuloon</translation>
     </message>
     <message>
       <source>Save</source>
-      <translation type="unfinished">Save</translation>
+      <translation>Tallenna</translation>
     </message>
     <message>
       <source>Apply</source>
-      <translation type="unfinished">Apply</translation>
+      <translation>Käytä</translation>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation type="unfinished">Restore Defaults</translation>
+      <translation>Palauta oletusarvot</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Peruuta</translation>
     </message>
     <message>
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-      <translation type="unfinished">Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
+      <translation>Yksittäisiä syötteitä ei voi määrittää useammin kuin kerran. Kaksoiskappaleet on määritetty seuraaviin painikkeisiin:
 
 %1</translation>
     </message>
     <message>
       <source>Touchpad Left</source>
-      <translation type="unfinished">Touchpad Left</translation>
+      <translation>Kosketuslevyn vasen puoli</translation>
     </message>
     <message>
       <source>Touchpad Center</source>
-      <translation type="unfinished">Touchpad Center</translation>
+      <translation>Kosketuslevyn keskikohta</translation>
     </message>
     <message>
       <source>Touchpad Right</source>
-      <translation type="unfinished">Touchpad Right</translation>
+      <translation>Kosketuslevyn oikea puoli</translation>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Vihje: Tyhjennä syöte hiiren oikealla painikkeella</translation>
     </message>
   </context>
   <context>
@@ -1447,31 +1447,31 @@
     </message>
     <message>
       <source>Comment</source>
-      <translation type="unfinished">Comment</translation>
+      <translation>Kommentti</translation>
     </message>
     <message>
       <source>Filter</source>
-      <translation type="unfinished">Filter</translation>
+      <translation>Suodatin</translation>
     </message>
     <message>
       <source>Load</source>
-      <translation type="unfinished">Load</translation>
+      <translation>Lataa</translation>
     </message>
     <message>
       <source>Close</source>
-      <translation type="unfinished">Close</translation>
+      <translation>Sulje</translation>
     </message>
     <message>
       <source>Add a new preset after the selected row</source>
-      <translation type="unfinished">Add a new preset after the selected row</translation>
+      <translation>Lisää uusi esiasetus valitun rivin jälkeen</translation>
     </message>
     <message>
       <source>Remove selected presets</source>
-      <translation type="unfinished">Remove selected presets</translation>
+      <translation>Poista valitut esiasetukset</translation>
     </message>
     <message>
       <source>Load the selected preset</source>
-      <translation type="unfinished">Load the selected preset</translation>
+      <translation>Lataa valittu esiasetus</translation>
     </message>
   </context>
   <context>
@@ -1502,7 +1502,7 @@
     </message>
     <message>
       <source>Open shadPS4 Folder</source>
-      <translation type="unfinished">Open shadPS4 Folder</translation>
+      <translation>Avaa shadPS4-kansio</translation>
     </message>
     <message>
       <source>Exit</source>
@@ -1566,11 +1566,11 @@
     </message>
     <message>
       <source>Trophy Viewer</source>
-      <translation type="unfinished">Trophy Viewer</translation>
+      <translation>Trophy-selain</translation>
     </message>
     <message>
       <source>No games found. Please add your games to your library first.</source>
-      <translation type="unfinished">No games found. Please add your games to your library first.</translation>
+      <translation>Pelejä ei löytynyt. Ole hyvä ja lisää pelisi kirjastoon ensin.</translation>
     </message>
     <message>
       <source>Search...</source>
@@ -1678,91 +1678,91 @@
     </message>
     <message>
       <source>Run Game</source>
-      <translation type="unfinished">Run Game</translation>
+      <translation>Käynnistä peli</translation>
     </message>
     <message>
       <source>Eboot.bin file not found</source>
-      <translation type="unfinished">Eboot.bin file not found</translation>
+      <translation>Eboot.bin-tiedostoa ei löytynyt</translation>
     </message>
     <message>
       <source>Game is already running!</source>
-      <translation type="unfinished">Game is already running!</translation>
+      <translation>Peli on jo käynnissä!</translation>
     </message>
     <message>
       <source>shadPS4</source>
-      <translation type="unfinished">shadPS4</translation>
+      <translation>shadPS4</translation>
     </message>
     <message>
       <source>Play</source>
-      <translation type="unfinished">Play</translation>
+      <translation>Pelaa</translation>
     </message>
     <message>
       <source>Pause</source>
-      <translation type="unfinished">Pause</translation>
+      <translation>Pysäytä</translation>
     </message>
     <message>
       <source>Stop</source>
-      <translation type="unfinished">Stop</translation>
+      <translation>Lopeta</translation>
     </message>
     <message>
       <source>Restart</source>
-      <translation type="unfinished">Restart</translation>
+      <translation>Käynnistä uudelleen</translation>
     </message>
     <message>
       <source>Full Screen</source>
-      <translation type="unfinished">Full Screen</translation>
+      <translation>Koko näyttö</translation>
     </message>
     <message>
       <source>Controllers</source>
-      <translation type="unfinished">Controllers</translation>
+      <translation>Ohjaimet</translation>
     </message>
     <message>
       <source>Keyboard</source>
-      <translation type="unfinished">Keyboard</translation>
+      <translation>Näppäimistö</translation>
     </message>
     <message>
       <source>Refresh List</source>
-      <translation type="unfinished">Refresh List</translation>
+      <translation>Päivitä luettelo</translation>
     </message>
     <message>
       <source>Resume</source>
-      <translation type="unfinished">Resume</translation>
+      <translation>Jatka</translation>
     </message>
     <message>
       <source>Show Labels Under Icons</source>
-      <translation type="unfinished">Show Labels Under Icons</translation>
+      <translation>Näytä nimet kuvakkeiden alla</translation>
     </message>
     <message>
       <source>Customize Hotkeys</source>
-      <translation type="unfinished">Customize Hotkeys</translation>
+      <translation>Pikanäppäimet</translation>
     </message>
     <message>
       <source>Version Manager</source>
-      <translation type="unfinished">Version Manager</translation>
+      <translation>Versiohallinta</translation>
     </message>
     <message>
       <source>No Version Selected</source>
-      <translation type="unfinished">No Version Selected</translation>
+      <translation>Ei valittua versiota</translation>
     </message>
     <message>
       <source>No emulator version was selected.
 The Version Manager menu will then open.
 Select an emulator version from the right panel.</source>
-      <translation type="unfinished">No emulator version was selected.
-The Version Manager menu will then open.
-Select an emulator version from the right panel.</translation>
+      <translation>Emulaattorin versiota ei valittu.
+Versiohallinnan valikko avataan.
+Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation type="unfinished">Could not find the emulator executable</translation>
+      <translation>Emulaattorin suoritustiedostoa ei löytynyt</translation>
     </message>
     <message>
       <source>Run Emulator</source>
-      <translation type="unfinished">Run Emulator</translation>
+      <translation>Käynnistä emulaattori</translation>
     </message>
     <message>
       <source>Emulator is already running!</source>
-      <translation type="unfinished">Emulator is already running!</translation>
+      <translation>Emulaattori on jo käynnissä!</translation>
     </message>
     <message>
       <source>Invalid game argument provided</source>
@@ -1770,7 +1770,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Ei mitään</translation>
     </message>
     <message>
       <source>Manage Skylanders</source>
@@ -1786,11 +1786,11 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Game Log</source>
-      <translation type="unfinished">Game Log</translation>
+      <translation>Pelin loki</translation>
     </message>
     <message>
       <source>Show Game Log</source>
-      <translation type="unfinished">Show Game Log</translation>
+      <translation>Näytä pelin loki</translation>
     </message>
   </context>
   <context>
@@ -1829,11 +1829,11 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Trophy</source>
-      <translation type="unfinished">Trophy</translation>
+      <translation>Trophyt</translation>
     </message>
     <message>
       <source>Open the custom trophy images/sounds folder</source>
-      <translation type="unfinished">Open the custom trophy images/sounds folder</translation>
+      <translation>Avaa omien trophy-kuvien/-äänien kansio</translation>
     </message>
     <message>
       <source>Logger</source>
@@ -1869,19 +1869,19 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Microphone</source>
-      <translation type="unfinished">Microphone</translation>
+      <translation>Mikrofoni</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Ei mitään</translation>
     </message>
     <message>
       <source>Default Device</source>
-      <translation type="unfinished">Default Device</translation>
+      <translation>Oletuslaite</translation>
     </message>
     <message>
       <source>s</source>
-      <translation type="unfinished">s</translation>
+      <translation>s</translation>
     </message>
     <message>
       <source>Controller</source>
@@ -1913,7 +1913,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Enable HDR</source>
-      <translation type="unfinished">Enable HDR</translation>
+      <translation>Käytä HDR:ää</translation>
     </message>
     <message>
       <source>Paths</source>
@@ -1949,23 +1949,23 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Enable Crash Diagnostics</source>
-      <translation type="unfinished">Enable Crash Diagnostics</translation>
+      <translation>Kaatumisdiagnostiikka</translation>
     </message>
     <message>
       <source>Collect Shaders</source>
-      <translation type="unfinished">Collect Shaders</translation>
+      <translation>Kerää varjostimet</translation>
     </message>
     <message>
       <source>Copy GPU Buffers</source>
-      <translation type="unfinished">Copy GPU Buffers</translation>
+      <translation>Kopioi näytönohjainpuskurit</translation>
     </message>
     <message>
       <source>Host Debug Markers</source>
-      <translation type="unfinished">Host Debug Markers</translation>
+      <translation>Isännän virheenkorjausmerkit</translation>
     </message>
     <message>
       <source>Guest Debug Markers</source>
-      <translation type="unfinished">Guest Debug Markers</translation>
+      <translation>Vieraan virheenkorjausmerkit</translation>
     </message>
     <message>
       <source>Enable Readbacks</source>
@@ -1989,23 +1989,23 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Title Music</source>
-      <translation type="unfinished">Title Music</translation>
+      <translation>Pelin musiikki</translation>
     </message>
     <message>
       <source>Disable Trophy Notification</source>
-      <translation type="unfinished">Disable Trophy Notification</translation>
+      <translation>Poista trophy-ilmoitukset</translation>
     </message>
     <message>
       <source>Background Image</source>
-      <translation type="unfinished">Background Image</translation>
+      <translation>Taustakuva</translation>
     </message>
     <message>
       <source>Show Background Image</source>
-      <translation type="unfinished">Show Background Image</translation>
+      <translation>Näytä taustakuva</translation>
     </message>
     <message>
       <source>Opacity</source>
-      <translation type="unfinished">Opacity</translation>
+      <translation>Peittävyys</translation>
     </message>
     <message>
       <source>Play title music</source>
