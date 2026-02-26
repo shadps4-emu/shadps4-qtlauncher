@@ -2322,7 +2322,7 @@ Izaberite verziju emulatora s desne liste.</translation>
     </message>
     <message>
       <source>Experimental Features</source>
-      <translation type="unfinished">Experimental Features</translation>
+      <translation>Eksperimentalne Mogućnosti</translation>
     </message>
     <message>
       <source>WARNING: These features are experimental and should not be enabled unless you were told to, or a game requires it. Please ask in the shadPS4 Discord server if you have any questions.</source>
@@ -2330,7 +2330,7 @@ Izaberite verziju emulatora s desne liste.</translation>
     </message>
     <message>
       <source>Enable Background Controller Input</source>
-      <translation type="unfinished">Enable Background Controller Input</translation>
+      <translation>Omogući Unos Pozadinskim Kontrolerom</translation>
     </message>
     <message>
       <source>Enable Controller Background Input:\nAllow shadPS4 to detect controller inputs when the game window is not in focus.</source>
@@ -2338,167 +2338,169 @@ Izaberite verziju emulatora s desne liste.</translation>
     </message>
     <message>
       <source>Crash Diagnostics:\nCreates a .yaml file with info about the Vulkan state at the time of crashing.\nUseful for debugging &apos;Device lost&apos; errors. If you have this enabled, you should enable Host AND Guest Debug Markers.\nYou need Vulkan Validation Layers enabled and the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Crash Diagnostics:\nCreates a .yaml file with info about the Vulkan state at the time of crashing.\nUseful for debugging &apos;Device lost&apos; errors. If you have this enabled, you should enable Host AND Guest Debug Markers.\nYou need Vulkan Validation Layers enabled and the Vulkan SDK for this to work.</translation>
+      <translation>Dijagnostika Rušenja:\nIzrađuje .yaml datoteku s informacijama o stanju Vulkana za vrijeme rušenja.\nKorisno za debugiranje &apos;Device lost&apos; pogrešaka. Ako je ovo omogućeno, možete uključiti Host I Guest Debug Markere.\nTrebate omogućene Vulkan-ove Sloj.eve Ovjere i Vulkan SDK za omogućen rad.</translation>
     </message>
     <message>
       <source>Enable Logging</source>
-      <translation type="unfinished">Enable Logging</translation>
+      <translation>Omogući Zapisivanje</translation>
     </message>
     <message>
       <source>Enable Logging:\nEnables logging.\nDo not change this if you do not know what you&apos;re doing!\nWhen asking for help, make sure this setting is ENABLED.</source>
-      <translation type="unfinished">Enable Logging:\nEnables logging.\nDo not change this if you do not know what you&apos;re doing!\nWhen asking for help, make sure this setting is ENABLED.</translation>
+      <translation>Omogući Zapisivanje:\nOmogućuje zapisivanje.\nNe mijenjajte ovo osim ako ne znate što radite!\nKada tražite pomoć, pobrinite se da ova je ova postavka OMOGUĆENA.</translation>
     </message>
     <message>
       <source>Present Mode</source>
-      <translation type="unfinished">Present Mode</translation>
+      <translation>Prezentacijski Mod</translation>
     </message>
     <message>
       <source>Mailbox (Vsync)</source>
-      <translation type="unfinished">Mailbox (Vsync)</translation>
+      <translation>Mailbox (Vsync)</translation>
     </message>
     <message>
       <source>Fifo (Vsync)</source>
-      <translation type="unfinished">Fifo (Vsync)</translation>
+      <translation>Fifo (Vsync)</translation>
     </message>
     <message>
       <source>Immediate (No Vsync)</source>
-      <translation type="unfinished">Immediate (No Vsync)</translation>
+      <translation>Trenutno (Bez Vsynca)</translation>
     </message>
     <message>
       <source>Select the DLC folder</source>
-      <translation type="unfinished">Select the DLC folder</translation>
+      <translation>Odaberi Mapu s DLC-om</translation>
     </message>
     <message>
       <source>Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</source>
-      <translation type="unfinished">Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</translation>
+      <translation>Prezentacijski Mod:\nKonfigurira kako će se video podaci prikazati na ekranu.\n\nMailbox:
+Sličice sinkroniziraju s frekvencijom osvježavanja vašeg ekrana. Nove sličice zamijenit će postojeće. Umanjuje kašnjenje no može preskočit sličice ukoliko kasni.\nFifo: Sličice se sinkroniziraju s frekvencijom osvježavanja vašeg ekrana. Nove se sličice rasporede iza postojećih u čekanju. Osigurava prikaz svih sličica no može dovesti do kašnjenja.\nTrenutno: Sličice se trenutno prikazuju na vaš ekran čim su spremne. Može dovesti do kidanja.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the DLC path.</translation>
+      <translation>Potraži:\nPotraži mapu za postavljanje kao DLC putanje.</translation>
     </message>
     <message>
       <source>FSR Settings</source>
-      <translation type="unfinished">FSR Settings</translation>
+      <translation>FSR Postavke</translation>
     </message>
     <message>
       <source>Enable FSR</source>
-      <translation type="unfinished">Enable FSR</translation>
+      <translation>Omogući FSR</translation>
     </message>
     <message>
       <source>Enable RCAS (sharpening)</source>
-      <translation type="unfinished">Enable RCAS (sharpening)</translation>
+      <translation>Omogući RCAS (izoštravanje)</translation>
     </message>
     <message>
       <source>RCAS Attenuation:</source>
-      <translation type="unfinished">RCAS Attenuation:</translation>
+      <translation>RCAS Atenuacija:</translation>
     </message>
     <message>
       <source>Load Presets...</source>
-      <translation type="unfinished">Load Presets...</translation>
+      <translation>Učitaj Pretpostavke...</translation>
     </message>
     <message>
       <source>Log</source>
-      <translation type="unfinished">Log</translation>
+      <translation>Zapisnik/Dnevnik</translation>
     </message>
     <message>
       <source>Open Log Location:\nOpen the folder where the log file is saved.</source>
-      <translation type="unfinished">Open Log Location:\nOpen the folder where the log file is saved.</translation>
+      <translation>Otvori Lokaciju Zapisnika:\nOtvori mapu gdje se sprema zapisnik.</translation>
     </message>
     <message>
       <source>Microphone:\nNone: Does not use the microphone.\nDefault Device: Will use the default device defined in the system.\nOr manually choose the microphone to be used from the list.</source>
-      <translation type="unfinished">Microphone:\nNone: Does not use the microphone.\nDefault Device: Will use the default device defined in the system.\nOr manually choose the microphone to be used from the list.</translation>
+      <translation>Mikrofon:\nNišta: Mikrofon se ne upotrebljava.\nZadani Uređaj: Koristit će zadani uređaj definiran u sustavu.\nIli ručno izaberite mikrofon za korištenje s liste.</translation>
     </message>
     <message>
       <source>Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</source>
-      <translation type="unfinished">Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</translation>
+      <translation>Glasnoća:\nPodešavanje glasnoće za igre na globalnoj razini, raspon se kreće od 0-500% uz zadanu vrijednost od 100%.</translation>
     </message>
     <message>
       <source>Default tab when opening settings:\nChoose which tab will open, the default is General.</source>
-      <translation type="unfinished">Default tab when opening settings:\nChoose which tab will open, the default is General.</translation>
+      <translation>Zadana kartica kod otvaranja postavki:\nIzaberite koja će se kartica otvoriti, zadana je Općenito.</translation>
     </message>
     <message>
       <source>Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</source>
-      <translation type="unfinished">Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</translation>
+      <translation>Omogući Kontrolu Pokreta:\nKad je omogućeno koristit će kontrole pokreta ako je podržano.</translation>
     </message>
     <message>
       <source>Vblank Frequency</source>
-      <translation type="unfinished">Vblank Frequency</translation>
+      <translation>Vblank Frekvencija</translation>
     </message>
     <message>
       <source>Vblank Frequency:\nThe frame rate at which the emulator refreshes at (60hz is the baseline, whether the game runs at 30 or 60fps). Changing this may have adverse effects, such as increasing the game speed, or breaking critical game functionality that does not expect this to change!</source>
-      <translation type="unfinished">Vblank Frequency:\nThe frame rate at which the emulator refreshes at (60hz is the baseline, whether the game runs at 30 or 60fps). Changing this may have adverse effects, such as increasing the game speed, or breaking critical game functionality that does not expect this to change!</translation>
+      <translation>Vblank Frekvencija:\nBroj sličica u kojima se emulator osvježava (60hz je bazna linija, bilo da se igra pokreće u 30 ili 60fps-a). Mijenjanje ovog može imati negativne posljedice, poput povećanja brzine igre, ili slamanja ključnih funkcionalnosti igre koje ne očekuju promjenu ovdje!</translation>
     </message>
     <message>
       <source>Enable Direct Memory Access</source>
-      <translation type="unfinished">Enable Direct Memory Access</translation>
+      <translation>Omogući Izravan Pristup Memoriji</translation>
     </message>
     <message>
       <source>Enable Devkit Console Mode</source>
-      <translation type="unfinished">Enable Devkit Console Mode</translation>
+      <translation>Omogući Devkit Konzolni Mod</translation>
     </message>
     <message>
       <source>Set &quot;PSN signed-in&quot; to True</source>
-      <translation type="unfinished">Set &quot;PSN signed-in&quot; to True</translation>
+      <translation>Postavi &quot;PSN prijava&quot; na Istina</translation>
     </message>
     <message>
       <source>Set &quot;Network Connected&quot; to True</source>
-      <translation type="unfinished">Set &quot;Network Connected&quot; to True</translation>
+      <translation>Postavi &quot;Umreženost&quot; na Istina</translation>
     </message>
     <message>
       <source>Miscellaneous</source>
-      <translation type="unfinished">Miscellaneous</translation>
+      <translation>Razno</translation>
     </message>
     <message>
       <source>Frontend</source>
-      <translation type="unfinished">Frontend</translation>
+      <translation>Sučelje</translation>
     </message>
     <message>
       <source>Experimental</source>
-      <translation type="unfinished">Experimental</translation>
+      <translation>Eksperimentalno</translation>
     </message>
     <message>
       <source>Show Splash Screen When Launching Game</source>
-      <translation type="unfinished">Show Splash Screen When Launching Game</translation>
+      <translation>Prikaži Početni Ekran Prilikom Pokretanja Igre</translation>
     </message>
     <message>
       <source>General Frontend Settings</source>
-      <translation type="unfinished">General Frontend Settings</translation>
+      <translation>Opće Postavke Sučelja</translation>
     </message>
     <message>
       <source>Enable PS4 Neo Mode</source>
-      <translation type="unfinished">Enable PS4 Neo Mode</translation>
+      <translation>Omogući PS4 Neo Mod</translation>
     </message>
     <message>
       <source>Enable Direct Memory Access:\nEnables arbitrary memory access from the GPU to CPU memory.</source>
-      <translation type="unfinished">Enable Direct Memory Access:\nEnables arbitrary memory access from the GPU to CPU memory.</translation>
+      <translation>Omogući Izravan Pristup Memoriji:\nOmogućuje proizvoljan pristup memoriji iz GPU u CPU memoriju.</translation>
     </message>
     <message>
       <source>Enable PS4 Neo Mode:\nAdds support for PS4 Pro emulation and memory size. Currently causes instability in a large number of tested games.</source>
-      <translation type="unfinished">Enable PS4 Neo Mode:\nAdds support for PS4 Pro emulation and memory size. Currently causes instability in a large number of tested games.</translation>
+      <translation>Omogući PS4 Neo Mod:\nDodaje podršku za PS4 Pro emulaciju i veličinu memorije. Trenutno uzrokuje nestabilnost u velikom broju testiranih igara.</translation>
     </message>
     <message>
       <source>Enable Devkit Console Mode:\nAdds support for Devkit console memory size.</source>
-      <translation type="unfinished">Enable Devkit Console Mode:\nAdds support for Devkit console memory size.</translation>
+      <translation>Omogući Devkit Konzolni Mod:\nDodaje podršku za veličinu memorije Devkit konzole.</translation>
     </message>
     <message>
       <source>Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</source>
-      <translation type="unfinished">Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</translation>
+      <translation>Postavi Mrežnu Povezanost na Istina:\nPrisiljava igre na prepoznavanje aktivne mrežne veze. Prave online mogućnosti još nisu podržane.</translation>
     </message>
     <message>
       <source>Set PSN Signed-in to True:\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported.</source>
-      <translation type="unfinished">Set PSN Signed-in to True:\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported.</translation>
+      <translation>Postavi PSN Prijavljenost na Istina:\nPrisiljava igre na prepoznavanje aktivne PSN prijave.
+Prave online mogućnosti još nisu podržane.</translation>
     </message>
     <message>
       <source>Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Omogući Vulkan-ove Slojeve Ovjere:\nOmogućava sustav ovjere stanja Vulkan rendera i zapisuje informacije o unutarnjem stanju.\nOvo će umanjiti performanse i vjerojatno izmijenit ponašanje emulatora.\nTrebate Vulkan SDK za ovu funkcionalnost.</translation>
     </message>
     <message>
       <source>Audio Device (general)</source>
-      <translation type="unfinished">Audio Device (general)</translation>
+      <translation>Zvučni Uređaj(općenito)</translation>
     </message>
     <message>
       <source>Audio Device (DS4 speaker)</source>
-      <translation type="unfinished">Audio Device (DS4 speaker)</translation>
+      <translation>Zvučni Uređaj (DS4 zvučnik)</translation>
     </message>
     <message>
       <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
@@ -2506,67 +2508,68 @@ Izaberite verziju emulatora s desne liste.</translation>
     </message>
     <message>
       <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</source>
-      <translation type="unfinished">Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</translation>
+      <translation>Omogući Null GPU:\nZa potrebe tehničkog debugiranja, onemogućuje rendering igre kao da nema grafičke kartice. Ekran će biti crn.</translation>
     </message>
     <message>
       <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
-      <translation type="unfinished">DLC Path:\nThe folder where game DLC is loaded from.</translation>
+      <translation>DLC Putanja:\nMapa iz koje se DLC igre učitava.</translation>
     </message>
     <message>
       <source>Additional DMem Allocation</source>
-      <translation type="unfinished">Additional DMem Allocation</translation>
+      <translation>Dodatna DMem Alokacija</translation>
     </message>
     <message>
       <source>Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</source>
-      <translation type="unfinished">Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</translation>
+      <translation>Dodatna DMem Alokacija:\nForsira alokaciju specifične količine dodatnog DMema.
+Izaziva rušenje ili probleme u nekim igrama.</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</source>
-      <translation type="unfinished">PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</translation>
+      <translation>Mapa Sistemskih Modula:\nMapa iz koje se učitavaju sistemski moduli.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the sysmodules path.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the sysmodules path.</translation>
+      <translation>Potraži:\nPotraži mapu za postavljanje u mapu Sistemskih modula.</translation>
     </message>
     <message>
       <source>Vulkan Validation (Requires Vulkan SDK)</source>
-      <translation type="unfinished">Vulkan Validation (Requires Vulkan SDK)</translation>
+      <translation>Vulkan Ovjera (Zahtjeva Vulkan SDK)</translation>
     </message>
     <message>
       <source>Validation Layers</source>
-      <translation type="unfinished">Validation Layers</translation>
+      <translation>Slojevi Ovjere / Validacije</translation>
     </message>
     <message>
       <source>Enable Core Validation</source>
-      <translation type="unfinished">Enable Core Validation</translation>
+      <translation>Omogući Core Ovjeru</translation>
     </message>
     <message>
       <source>Enable Sync Validation</source>
-      <translation type="unfinished">Enable Sync Validation</translation>
+      <translation>Omogući Sync Ovjeru</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation</source>
-      <translation type="unfinished">Enable GPU-Assisted Validation</translation>
+      <translation>Omogući GPU-Podržanu Ovjeru</translation>
     </message>
     <message>
       <source>Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Omogući Vulkan-ove Slojeve Ovjere:\nOmogućava sustav ovjere stanja Vulkan rendera i zapisuje informacije o unutarnjem stanju.\nOvo će umanjiti performanse i vjerojatno izmijenit ponašanje emulatora.\nTrebate Vulkan SDK za ovu funkcionalnost.</translation>
     </message>
     <message>
       <source>Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Omogući Core Ovjeru:\nOmogućuje glavne funkcije API ovjere.\nOvo će umanjiti performanse i vjerojatno izmijenit ponašanje emulatora.\nTrebate Vulkan SDK za ovu funkcionalnost.</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Omogući GPU-Podržanu Ovjeru:\nInstrumentira shadere s kôdom koji ovjerava ispravno ponašanje.\nOvo će umanjiti performanse i vjerojatno izmijenit ponašanje emulatora.\nTrebate Vulkan SDK za ovu funkcionalnost.</translation>
     </message>
     <message>
       <source>GUI Language</source>
-      <translation type="unfinished">GUI Language</translation>
+      <translation>GUI Jezik</translation>
     </message>
     <message>
       <source>GUI Updates</source>
-      <translation type="unfinished">GUI Updates</translation>
+      <translation>GUI Ažuriranja</translation>
     </message>
     <message>
       <source>DLC Path</source>
