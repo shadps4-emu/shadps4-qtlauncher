@@ -1111,11 +1111,11 @@
     <name>HelpDialog</name>
     <message>
       <source>Quickstart</source>
-      <translation type="unfinished">Quickstart</translation>
+      <translation>Pikaopas</translation>
     </message>
     <message>
       <source>FAQ</source>
-      <translation type="unfinished">FAQ</translation>
+      <translation>Usein kysyttyä</translation>
     </message>
     <message>
       <source>Syntax</source>
@@ -1123,7 +1123,7 @@
     </message>
     <message>
       <source>Special Bindings</source>
-      <translation type="unfinished">Special Bindings</translation>
+      <translation>Erityissidokset</translation>
     </message>
     <message>
       <source>Keybindings</source>
@@ -1154,7 +1154,7 @@
     </message>
     <message>
       <source>Reload Button Mappings</source>
-      <translation type="unfinished">Reload Button Mappings</translation>
+      <translation>Lataa näppäinmääritykset uudelleen</translation>
     </message>
     <message>
       <source>Toggle Fullscreen</source>
@@ -1392,7 +1392,7 @@
     </message>
     <message>
       <source>Cannot set mapping</source>
-      <translation type="unfinished">Cannot set mapping</translation>
+      <translation>Ei voida määrittää</translation>
     </message>
     <message>
       <source>Mousewheel cannot be mapped to stick outputs</source>
@@ -1443,7 +1443,7 @@
     <name>LogPresetsDialog</name>
     <message>
       <source>Log Filter Presets</source>
-      <translation type="unfinished">Log Filter Presets</translation>
+      <translation>Lokisuodattimen esiasetukset</translation>
     </message>
     <message>
       <source>Comment</source>
