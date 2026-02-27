@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- SPDX-FileCopyrightText: Copyright 2025 shadPS4 Emulator Project
+<!-- SPDX-FileCopyrightText: Copyright 2026 shadPS4 Emulator Project
      SPDX-License-Identifier: GPL-2.0-or-later -->
 <ui version="4.0">
  <class>SettingsDialog</class>
@@ -82,71 +82,9 @@
        </property>
        <layout class="QVBoxLayout" name="generalTabVLayout" stretch="0">
         <item>
-         <layout class="QGridLayout" name="gridLayout">
-          <property name="bottomMargin">
-           <number>0</number>
-          </property>
-          <property name="spacing">
-           <number>6</number>
-          </property>
-          <item row="0" column="2">
-           <layout class="QVBoxLayout" name="emulatorTabLayoutMiddle">
-            <property name="leftMargin">
-             <number>0</number>
-            </property>
-            <property name="rightMargin">
-             <number>0</number>
-            </property>
-            <property name="bottomMargin">
-             <number>0</number>
-            </property>
-            <item>
-             <widget class="QGroupBox" name="GenAudioGroupBox">
-              <property name="title">
-               <string>Audio Device (general)</string>
-              </property>
-              <layout class="QVBoxLayout" name="verticalLayout_8">
-               <item>
-                <widget class="QComboBox" name="GenAudioComboBox"/>
-               </item>
-              </layout>
-             </widget>
-            </item>
-            <item>
-             <widget class="QGroupBox" name="DsSpeakerGroupBox">
-              <property name="title">
-               <string>Audio Device (DS4 speaker)</string>
-              </property>
-              <layout class="QVBoxLayout" name="verticalLayout_9">
-               <item>
-                <widget class="QComboBox" name="DsAudioComboBox"/>
-               </item>
-               <item>
-                <spacer name="verticalSpacer_3">
-                 <property name="orientation">
-                  <enum>Qt::Orientation::Vertical</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>20</width>
-                   <height>40</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-              </layout>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item row="0" column="0">
-           <layout class="QVBoxLayout" name="systemTabLayoutLeft">
-            <property name="spacing">
-             <number>6</number>
-            </property>
-            <property name="bottomMargin">
-             <number>0</number>
-            </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_8">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_14">
             <item>
              <widget class="QGroupBox" name="SystemSettings">
               <property name="sizePolicy">
@@ -206,7 +144,7 @@
                        <x>0</x>
                        <y>0</y>
                        <width>408</width>
-                       <height>60</height>
+                       <height>68</height>
                       </rect>
                      </property>
                      <layout class="QHBoxLayout" name="horizontalLayout_6">
@@ -264,76 +202,119 @@
               </layout>
              </widget>
             </item>
+            <item>
+             <spacer name="verticalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Orientation::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
            </layout>
           </item>
-          <item row="1" column="0">
-           <widget class="QGroupBox" name="emulatorSettingsGroupBox">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
+          <item>
+           <layout class="QVBoxLayout" name="emulatorTabLayoutMiddle">
+            <property name="leftMargin">
+             <number>0</number>
             </property>
-            <property name="title">
-             <string>Miscellaneous</string>
+            <property name="rightMargin">
+             <number>0</number>
             </property>
-            <property name="flat">
-             <bool>false</bool>
+            <property name="bottomMargin">
+             <number>0</number>
             </property>
-            <property name="checkable">
-             <bool>false</bool>
-            </property>
-            <layout class="QVBoxLayout" name="additionalSettingsVLayout" stretch="0,0">
-             <property name="spacing">
-              <number>6</number>
-             </property>
-             <property name="leftMargin">
-              <number>9</number>
-             </property>
-             <property name="topMargin">
-              <number>9</number>
-             </property>
-             <property name="rightMargin">
-              <number>9</number>
-             </property>
-             <property name="bottomMargin">
-              <number>9</number>
-             </property>
-             <item>
-              <widget class="QCheckBox" name="showSplashCheckBox">
-               <property name="text">
-                <string>Show Splash Screen When Launching Game</string>
+            <item>
+             <widget class="QGroupBox" name="GenAudioGroupBox">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="title">
+               <string>Audio Device (general)</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_8">
+               <item>
+                <widget class="QComboBox" name="GenAudioComboBox"/>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="DsSpeakerGroupBox">
+              <property name="title">
+               <string>Audio Device (DS4 speaker)</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_9">
+               <item>
+                <widget class="QComboBox" name="DsAudioComboBox"/>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="emulatorSettingsGroupBox">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="title">
+               <string>Miscellaneous</string>
+              </property>
+              <property name="flat">
+               <bool>false</bool>
+              </property>
+              <property name="checkable">
+               <bool>false</bool>
+              </property>
+              <layout class="QVBoxLayout" name="additionalSettingsVLayout" stretch="0">
+               <property name="spacing">
+                <number>6</number>
                </property>
-              </widget>
-             </item>
-             <item>
-              <spacer name="verticalSpacer_9">
-               <property name="orientation">
-                <enum>Qt::Orientation::Vertical</enum>
+               <property name="leftMargin">
+                <number>9</number>
                </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>20</width>
-                 <height>40</height>
-                </size>
+               <property name="topMargin">
+                <number>9</number>
                </property>
-              </spacer>
-             </item>
-            </layout>
-           </widget>
-          </item>
-          <item row="1" column="2">
-           <spacer name="horizontalSpacer_9">
-            <property name="orientation">
-             <enum>Qt::Orientation::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
+               <property name="rightMargin">
+                <number>9</number>
+               </property>
+               <property name="bottomMargin">
+                <number>9</number>
+               </property>
+               <item>
+                <widget class="QCheckBox" name="showSplashCheckBox">
+                 <property name="text">
+                  <string>Show Splash Screen When Launching Game</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_4">
+              <property name="orientation">
+               <enum>Qt::Orientation::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
           </item>
          </layout>
         </item>
@@ -1333,6 +1314,12 @@
            <layout class="QHBoxLayout" name="hLayoutUserName">
             <item>
              <widget class="QGroupBox" name="userName">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <property name="title">
                <string>Username</string>
               </property>
@@ -1343,20 +1330,20 @@
               </layout>
              </widget>
             </item>
+            <item>
+             <spacer name="horizontalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Orientation::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
            </layout>
-          </item>
-          <item>
-           <spacer name="horizontalSpacer_2">
-            <property name="orientation">
-             <enum>Qt::Orientation::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>40</height>
-             </size>
-            </property>
-           </spacer>
           </item>
          </layout>
         </item>
@@ -1375,6 +1362,12 @@
            <layout class="QHBoxLayout" name="hLayoutTrophy">
             <item>
              <widget class="QGroupBox" name="trophyGroupBox">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <property name="title">
                <string>Trophy</string>
               </property>
@@ -1496,30 +1489,17 @@
            </layout>
           </item>
           <item>
-           <widget class="QGroupBox" name="PortableUserFolderGroupBox">
-            <property name="title">
-             <string>Portable User Folder</string>
-            </property>
-            <layout class="QVBoxLayout" name="verticalLayout_2">
-             <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_9">
-               <item>
-                <spacer name="horizontalSpacer_6">
-                 <property name="orientation">
-                  <enum>Qt::Orientation::Horizontal</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>40</width>
-                   <height>20</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
+           <layout class="QHBoxLayout" name="horizontalLayout_9">
+            <item>
+             <widget class="QGroupBox" name="PortableUserFolderGroupBox">
+              <property name="title">
+               <string>Portable User Folder</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_2">
                <item>
                 <widget class="QPushButton" name="PortableUserButton">
                  <property name="sizePolicy">
-                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                    <horstretch>0</horstretch>
                    <verstretch>0</verstretch>
                   </sizepolicy>
@@ -1529,23 +1509,23 @@
                  </property>
                 </widget>
                </item>
-               <item>
-                <spacer name="horizontalSpacer_5">
-                 <property name="orientation">
-                  <enum>Qt::Orientation::Horizontal</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>40</width>
-                   <height>20</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
               </layout>
-             </item>
-            </layout>
-           </widget>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_5">
+              <property name="orientation">
+               <enum>Qt::Orientation::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
           </item>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_5"/>
@@ -1587,7 +1567,7 @@
          <height>505</height>
         </rect>
        </property>
-       <layout class="QVBoxLayout" name="inputTabVLayout" stretch="0,0,0,0">
+       <layout class="QVBoxLayout" name="inputTabVLayout" stretch="0,0,0">
         <item>
          <layout class="QHBoxLayout" name="inputTabHLayoutTop" stretch="1,1">
           <item>
@@ -1805,7 +1785,10 @@
            <number>0</number>
           </property>
           <item>
-           <layout class="QHBoxLayout" name="micTabLayoutLeft">
+           <layout class="QHBoxLayout" name="micTabLayoutLeft"/>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_16">
             <item>
              <widget class="QGroupBox" name="MicGroupBox">
               <property name="sizePolicy">
@@ -1824,6 +1807,24 @@
               </layout>
              </widget>
             </item>
+            <item>
+             <widget class="QGroupBox" name="USBDeviceGroupBox">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="title">
+               <string>USB Device</string>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_7_1">
+               <item>
+                <widget class="QComboBox" name="usbComboBox"/>
+               </item>
+              </layout>
+             </widget>
+            </item>
            </layout>
           </item>
           <item>
@@ -1838,28 +1839,6 @@
              </size>
             </property>
            </spacer>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QVBoxLayout" name="USBDeviceLayout">
-          <item>
-           <widget class="QGroupBox" name="USBDeviceGroupBox">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="title">
-             <string>USB Device</string>
-            </property>
-            <layout class="QHBoxLayout" name="horizontalLayout_7_1">
-             <item>
-              <widget class="QComboBox" name="usbComboBox"/>
-             </item>
-            </layout>
-           </widget>
           </item>
          </layout>
         </item>
@@ -2036,7 +2015,7 @@
          <x>0</x>
          <y>0</y>
          <width>946</width>
-         <height>299</height>
+         <height>240</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -2055,102 +2034,32 @@
            <number>0</number>
           </property>
           <item>
-           <layout class="QVBoxLayout" name="loggerTabLayoutRight">
+           <layout class="QVBoxLayout" name="loggerTabLayoutLeft">
             <item>
              <widget class="QGroupBox" name="loggerGroupBox">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <property name="title">
                <string>Logger</string>
               </property>
               <layout class="QVBoxLayout" name="loggerLayout">
                <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_12">
-                 <property name="topMargin">
-                  <number>0</number>
+                <widget class="QCheckBox" name="enableLoggingCheckBox">
+                 <property name="text">
+                  <string>Enable Logging</string>
                  </property>
-                 <item>
-                  <layout class="QVBoxLayout" name="verticalLayout_7">
-                   <property name="topMargin">
-                    <number>0</number>
-                   </property>
-                   <item>
-                    <widget class="QCheckBox" name="enableLoggingCheckBox">
-                     <property name="text">
-                      <string>Enable Logging</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QCheckBox" name="separateLogFilesCheckbox">
-                     <property name="text">
-                      <string>Separate Log Files</string>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </item>
-                 <item>
-                  <widget class="QGroupBox" name="logTypeGroupBox">
-                   <property name="maximumSize">
-                    <size>
-                     <width>16777215</width>
-                     <height>16777215</height>
-                    </size>
-                   </property>
-                   <property name="title">
-                    <string>Log Type</string>
-                   </property>
-                   <layout class="QVBoxLayout" name="logTypeBoxLayout">
-                    <item>
-                     <widget class="QComboBox" name="logTypeComboBox">
-                      <item>
-                       <property name="text">
-                        <string>async</string>
-                       </property>
-                      </item>
-                      <item>
-                       <property name="text">
-                        <string>sync</string>
-                       </property>
-                      </item>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                </layout>
+                </widget>
                </item>
                <item>
-                <layout class="QVBoxLayout" name="vLayoutLogFilter">
-                 <property name="spacing">
-                  <number>6</number>
+                <widget class="QCheckBox" name="separateLogFilesCheckbox">
+                 <property name="text">
+                  <string>Separate Log Files</string>
                  </property>
-                 <property name="leftMargin">
-                  <number>0</number>
-                 </property>
-                 <item>
-                  <layout class="QHBoxLayout" name="hLayoutLogFilter">
-                   <item>
-                    <widget class="QGroupBox" name="logFilter">
-                     <property name="title">
-                      <string>Log Filter</string>
-                     </property>
-                     <layout class="QVBoxLayout" name="logFilterLayout">
-                      <item>
-                       <widget class="QLineEdit" name="logFilterLineEdit"/>
-                      </item>
-                      <item>
-                       <widget class="QPushButton" name="logPresetsButton">
-                        <property name="text">
-                         <string>Load Presets...</string>
-                        </property>
-                       </widget>
-                      </item>
-                     </layout>
-                    </widget>
-                   </item>
-                  </layout>
-                 </item>
-                </layout>
+                </widget>
                </item>
                <item>
                 <widget class="QPushButton" name="OpenLogLocationButton">
@@ -2161,6 +2070,71 @@
                </item>
               </layout>
              </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="logTypeGroupBox">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="title">
+               <string>Log Type</string>
+              </property>
+              <layout class="QVBoxLayout" name="logTypeBoxLayout">
+               <item>
+                <widget class="QComboBox" name="logTypeComboBox">
+                 <item>
+                  <property name="text">
+                   <string>async</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>sync</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_15">
+            <item>
+             <widget class="QGroupBox" name="logFilter">
+              <property name="title">
+               <string>Log Filter</string>
+              </property>
+              <layout class="QVBoxLayout" name="logFilterLayout">
+               <item>
+                <widget class="QLineEdit" name="logFilterLineEdit"/>
+               </item>
+               <item>
+                <widget class="QPushButton" name="logPresetsButton">
+                 <property name="text">
+                  <string>Load Presets...</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_6">
+              <property name="orientation">
+               <enum>Qt::Orientation::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
             </item>
            </layout>
           </item>
@@ -2182,7 +2156,7 @@
          <x>0</x>
          <y>0</y>
          <width>946</width>
-         <height>426</height>
+         <height>418</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -2412,7 +2386,7 @@
          <x>0</x>
          <y>0</y>
          <width>946</width>
-         <height>459</height>
+         <height>450</height>
         </rect>
        </property>
        <property name="sizePolicy">
