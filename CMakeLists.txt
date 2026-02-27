@@ -222,7 +222,6 @@ find_package(fmt 10.2.0 CONFIG)
 find_package(SDL3 3.1.2 CONFIG)
 find_package(toml11 4.2.0 CONFIG)
 find_package(VulkanHeaders 1.4.329 CONFIG)
-find_package(pugixml 1.14 CONFIG)
 list(POP_BACK CMAKE_MODULE_PATH)
 
 if (CMAKE_CXX_COMPILER_ID STREQUAL "Clang" OR CMAKE_CXX_COMPILER_ID STREQUAL "AppleClang")
@@ -400,7 +399,7 @@ qt_add_executable(shadPS4QtLauncher
 
 create_target_directory_groups(shadPS4QtLauncher)
 
-target_link_libraries(shadPS4QtLauncher PRIVATE Vulkan::Headers fmt::fmt toml11::toml11 SDL3::SDL3 pugixml::pugixml volk_headers)
+target_link_libraries(shadPS4QtLauncher PRIVATE Vulkan::Headers fmt::fmt toml11::toml11 SDL3::SDL3 volk_headers)
 
 if (APPLE)
     # Include MoltenVK, along with an ICD file so it can be found by the system Vulkan loader if used for loading layers.

@@ -13,7 +13,6 @@
 #include <QMessageBox>
 #include <QString>
 #include <QXmlStreamReader>
-#include <pugixml.hpp>
 #include "common/logging/log.h"
 #include "common/path_util.h"
 #include "core/file_format/psf.h"
