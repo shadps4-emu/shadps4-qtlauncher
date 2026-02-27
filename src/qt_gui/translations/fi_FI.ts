@@ -1969,11 +1969,11 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Enable Readbacks</source>
-      <translation type="unfinished">Enable Readbacks</translation>
+      <translation>Takaisinluvut</translation>
     </message>
     <message>
       <source>Enable Readback Linear Images</source>
-      <translation type="unfinished">Enable Readback Linear Images</translation>
+      <translation>Takaisinlue lineaariset kuvat</translation>
     </message>
     <message>
       <source>Check for Updates at Startup</source>
@@ -2165,11 +2165,11 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Enable Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
-      <translation type="unfinished">Enable Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</translation>
+      <translation>Takaisinluvut:\nOttaa käyttöön GPU-muistin takaisinluvun ja -kirjoituksen.\nTämä on tarpeen joissakin peleissä.\nSaattaa aiheuttaa ongelmia vakaudssa tai suorituskykvyssä.</translation>
     </message>
     <message>
       <source>Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</source>
-      <translation type="unfinished">Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</translation>
+      <translation>Takaisinlue lineaariset kuvat:\nSallii GPU-muunnettujen lineaaristen kuvien asynkronisen lataamisen.\nSaattaa korjata ongelmia joissakin peleissä.</translation>
     </message>
     <message>
       <source>Copy GPU Buffers:\nGets around race conditions involving GPU submits.\nMay or may not help with PM4 type 0 crashes.</source>
@@ -2321,7 +2321,7 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>WARNING: These features are experimental and should not be enabled unless you were told to, or a game requires it. Please ask in the shadPS4 Discord server if you have any questions.</source>
-      <translation type="unfinished">WARNING: These features are experimental and should not be enabled unless you were told to, or a game requires it. Please ask in the shadPS4 Discord server if you have any questions.</translation>
+      <translation>VAROITUS: Nämä ominaisuudet ovat kokeellisia, eikä niitä pitäisi ottaa käyttöön, ellei sinua kehoteta tai ellei peli sitä vaadi. Ole hyvä ja kysy shadPS4 Discord-palvelimella, jos sinulla on kysyttävää.</translation>
     </message>
     <message>
       <source>Enable Background Controller Input</source>
@@ -2337,11 +2337,11 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Enable Logging</source>
-      <translation type="unfinished">Enable Logging</translation>
+      <translation>Lokitus</translation>
     </message>
     <message>
       <source>Enable Logging:\nEnables logging.\nDo not change this if you do not know what you&apos;re doing!\nWhen asking for help, make sure this setting is ENABLED.</source>
-      <translation type="unfinished">Enable Logging:\nEnables logging.\nDo not change this if you do not know what you&apos;re doing!\nWhen asking for help, make sure this setting is ENABLED.</translation>
+      <translation>Lokitus:\nOttaa lokituksen käyttöön.\nÄlä muuta tätä, jos et tiedä mitä teet!\nKun pyydät apua, varmista, että tämä asetus on käytössä.</translation>
     </message>
     <message>
       <source>Present Mode</source>
@@ -2573,7 +2573,7 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
-      <translation type="unfinished">GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</translation>
+      <translation>Käyttöliittymän päivitykset:\nJulkaisu: Viralliset versiot, jotka julkaistaan kuukausittain ja saattavat olla hyvin vanhoja, mutta ovat luotettavampia ja testatumpia.\nNightly: Kehitysversiot, joissa on kaikki uusimmat ominaisuudet ja korjaukset, mutta ne saattavat sisältää virheitä ja ovat vähemmän vakaita.\n\nTämä päivitys koskee vain Qt-käyttöliittymää. Päivittääksesi emulaattoriytimen, käytä versiohallintaa.</translation>
     </message>
     <message>
       <source>Cannot create portable launcher folder</source>
