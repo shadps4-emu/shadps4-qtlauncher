@@ -559,7 +559,7 @@
     </message>
     <message>
       <source>n/a</source>
-      <translation type="unfinished">n/a</translation>
+      <translation>--</translation>
     </message>
     <message>
       <source>Set Active Gamepad as Default</source>
@@ -1056,7 +1056,7 @@
     </message>
     <message>
       <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
-      <translation type="unfinished">Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</translation>
+      <translation>Raporttia ei voitu lähettää, koska pelin viimeisin loki epäonnistui seuraavassa tarkastuksessa, mikä tekisi raportista virheellisen:</translation>
     </message>
     <message>
       <source>Ok</source>
@@ -1174,11 +1174,11 @@
     </message>
     <message>
       <source>Toggle Mouse to Joystick Emulation</source>
-      <translation type="unfinished">Toggle Mouse to Joystick Emulation</translation>
+      <translation>Hiiren emulointi ohjaussauvana päälle/pois</translation>
     </message>
     <message>
       <source>Toggle Mouse to Gyro Emulation</source>
-      <translation type="unfinished">Toggle Mouse to Gyro Emulation</translation>
+      <translation>Hiiren emulointi gyroskooppina päälle/pois</translation>
     </message>
     <message>
       <source>Tip: Up to three simultaneous inputs can be assigned for each hotkey</source>
@@ -1372,15 +1372,15 @@
     </message>
     <message>
       <source>This button copies mappings from the Common Config to the currently selected profile, and cannot be used when the currently selected profile is the Common Config.</source>
-      <translation type="unfinished">This button copies mappings from the Common Config to the currently selected profile, and cannot be used when the currently selected profile is the Common Config.</translation>
+      <translation>Kopioi määritykset yleisestä kokoonpanosta nykyiseen valittuun profiiliin. Ei voi käyttää, kun yleinen kokoonpano on valittuna profiilina.</translation>
     </message>
     <message>
       <source>Copy values from Common Config</source>
-      <translation type="unfinished">Copy values from Common Config</translation>
+      <translation>Kopioi arvot yleisestä kokoonpanosta</translation>
     </message>
     <message>
       <source>Do you want to overwrite existing mappings with the mappings from the Common Config?</source>
-      <translation type="unfinished">Do you want to overwrite existing mappings with the mappings from the Common Config?</translation>
+      <translation>Haluatko korvata olemassa olevat määritykset yleisen kokoonpanon määrityksillä?</translation>
     </message>
     <message>
       <source>Unable to Save</source>
@@ -1766,7 +1766,7 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Invalid game argument provided</source>
-      <translation type="unfinished">Invalid game argument provided</translation>
+      <translation>Virheellinen annettu peliargumentti</translation>
     </message>
     <message>
       <source>None</source>
@@ -1774,15 +1774,15 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Manage Skylanders</source>
-      <translation type="unfinished">Manage Skylanders</translation>
+      <translation>Skylanders-hallinta</translation>
     </message>
     <message>
       <source>Manage Infinity Figures</source>
-      <translation type="unfinished">Manage Infinity Figures</translation>
+      <translation>Infinity-hahmojen hallinta</translation>
     </message>
     <message>
       <source>Manage Dimensions Toypad</source>
-      <translation type="unfinished">Manage Dimensions Toypad</translation>
+      <translation>Dimensions Toypad -hallinta</translation>
     </message>
     <message>
       <source>Game Log</source>
@@ -2593,19 +2593,19 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Skylander Portal</source>
-      <translation type="unfinished">Skylander Portal</translation>
+      <translation>Skylander Portal</translation>
     </message>
     <message>
       <source>Infinity Base</source>
-      <translation type="unfinished">Infinity Base</translation>
+      <translation>Infinity Base</translation>
     </message>
     <message>
       <source>Dimensions Toypad</source>
-      <translation type="unfinished">Dimensions Toypad</translation>
+      <translation>Dimensions Toypad</translation>
     </message>
     <message>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
-      <translation type="unfinished">USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</translation>
+      <translation>USB-laite:\nAito USB-laite: Käytä todellista USB-laitetta, joka on liitetty järjestelmään.\nSkylander Portal: Emuloi Skylander Portal of Power.\nInfinity Base: Emuloi Disney Infinity Base.\nDimensions Toypad: Emuloi Lego Dimensions Toypad.</translation>
     </message>
     <message>
       <source>Enable Shader Cache</source>
@@ -2613,15 +2613,15 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file</source>
-      <translation type="unfinished">Compress the Shader Cache files into a zip file</translation>
+      <translation>Pakkaa varjostinvälimuistitiedostot ZIP-kansioon</translation>
     </message>
     <message>
       <source>Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</source>
-      <translation type="unfinished">Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</translation>
+      <translation>Varjostinvälimuisti:\nTallentaa käännetyt varjostimet uudelleenkääntämisen välttämiseksi. Vähentää pätkimistä.</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
-      <translation type="unfinished">Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</translation>
+      <translation>Pakkaa varjostinvälimuistitiedostot ZIP-kansioon:\nVarjostinvälimuistitiedostot tallennetaan samaan ZIP-tiedostoon useiden eri tiedostojen sijasta.</translation>
     </message>
   </context>
   <context>
@@ -2678,7 +2678,7 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Path to save versions</source>
-      <translation type="unfinished">Path to save versions</translation>
+      <translation>Tallennettujen versioiden polku</translation>
     </message>
     <message>
       <source>Browse</source>
@@ -2786,13 +2786,13 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Error accessing GitHub API</source>
-      <translation type="unfinished">Error accessing GitHub API</translation>
+      <translation>Virhe GitHub API:n noutamisessa</translation>
     </message>
     <message>
       <source>First you need to choose a location to save the versions in
 &apos;Path to save versions&apos;</source>
-      <translation type="unfinished">First you need to choose a location to save the versions in
-&apos;Path to save versions&apos;</translation>
+      <translation>Valitse ensin sijainti, johon versiot tallennetaan kohteessa
+&apos;Tallennettujen versioiden polku&apos;</translation>
     </message>
     <message>
       <source>Do you want to download the version</source>
