@@ -2425,7 +2425,7 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Enable Direct Memory Access</source>
-      <translation type="unfinished">Enable Direct Memory Access</translation>
+      <translation>Oikosiirto (DMA)</translation>
     </message>
     <message>
       <source>Enable Devkit Console Mode</source>
