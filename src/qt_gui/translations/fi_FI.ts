@@ -2465,11 +2465,11 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Enable Direct Memory Access:\nEnables arbitrary memory access from the GPU to CPU memory.</source>
-      <translation type="unfinished">Enable Direct Memory Access:\nEnables arbitrary memory access from the GPU to CPU memory.</translation>
+      <translation>Oikosiirto (DMA):\nMahdollistaa sattumanvaraisen muistin pääsyn näytönohjaimelta suorittimen muistiin.</translation>
     </message>
     <message>
       <source>Enable PS4 Neo Mode:\nAdds support for PS4 Pro emulation and memory size. Currently causes instability in a large number of tested games.</source>
-      <translation type="unfinished">Enable PS4 Neo Mode:\nAdds support for PS4 Pro emulation and memory size. Currently causes instability in a large number of tested games.</translation>
+      <translation>PS4 Neo-tila:\nLisää tuen PS4 Pro -emulaatiolle ja muistikoolle. Tällä hetkellä aiheuttaa epävakautta monissa testatuissa peleissä.</translation>
     </message>
     <message>
       <source>Enable Devkit Console Mode:\nAdds support for Devkit console memory size.</source>
@@ -2505,7 +2505,7 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
-      <translation type="unfinished">DLC Path:\nThe folder where game DLC is loaded from.</translation>
+      <translation>DLC-polku:\nHakemisto, mistä pelin lisäsisältö ladataan.</translation>
     </message>
     <message>
       <source>Additional DMem Allocation</source>
@@ -2533,15 +2533,15 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Enable Core Validation</source>
-      <translation type="unfinished">Enable Core Validation</translation>
+      <translation>Ydinvalidointi</translation>
     </message>
     <message>
       <source>Enable Sync Validation</source>
-      <translation type="unfinished">Enable Sync Validation</translation>
+      <translation>Synkronointivalidointi</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation</source>
-      <translation type="unfinished">Enable GPU-Assisted Validation</translation>
+      <translation>Näytönohjainavusteinen validointi</translation>
     </message>
     <message>
       <source>Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
@@ -2585,11 +2585,11 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>USB Device</source>
-      <translation type="unfinished">USB Device</translation>
+      <translation>USB-laite</translation>
     </message>
     <message>
       <source>Real USB Device</source>
-      <translation type="unfinished">Real USB Device</translation>
+      <translation>Aito USB-laite</translation>
     </message>
     <message>
       <source>Skylander Portal</source>
