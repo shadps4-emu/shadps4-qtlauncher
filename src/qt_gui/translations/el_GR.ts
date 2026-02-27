@@ -238,7 +238,7 @@
     </message>
     <message>
       <source>Can&apos;t apply cheats before the game is started</source>
-      <translation>Δεν μπορείτε να εφαρμόσετε cheats πριν ξεκινήσει το παιχνίδι.</translation>
+      <translation>Δεν μπορείτε να εφαρμόσετε cheats πριν εκκινηθεί το παιχνίδι.</translation>
     </message>
     <message>
       <source>Close</source>
@@ -852,7 +852,7 @@
     <name>GuiContextMenus</name>
     <message>
       <source>Cheats / Patches</source>
-      <translation>Kodikí / Enimeróseis</translation>
+      <translation>Cheats / Patches</translation>
     </message>
     <message>
       <source>SFO Viewer</source>
