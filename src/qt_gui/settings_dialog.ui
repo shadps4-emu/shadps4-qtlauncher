@@ -59,7 +59,7 @@
       </size>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>8</number>
      </property>
      <property name="usesScrollButtons">
       <bool>true</bool>
@@ -2386,7 +2386,7 @@
          <x>0</x>
          <y>0</y>
          <width>946</width>
-         <height>450</height>
+         <height>500</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -2428,10 +2428,31 @@
                 <number>9</number>
                </property>
                <item>
-                <widget class="QCheckBox" name="readbacksCheckBox">
-                 <property name="text">
-                  <string>Enable Readbacks</string>
+                <widget class="QGroupBox" name="readbacksGroupBox">
+                 <property name="title">
+                  <string>Readbacks Mode</string>
                  </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_7">
+                  <item>
+                   <widget class="QComboBox" name="readbacksModeComboBox">
+                    <item>
+                     <property name="text">
+                      <string>Disabled</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Low</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>High</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                 </layout>
                 </widget>
                </item>
                <item>
