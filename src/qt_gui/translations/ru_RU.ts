@@ -2085,7 +2085,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Background Image:\nControl the opacity of the game background image.</source>
-      <translation>Фоновое изображение:\nКонтролируйте непрозрачность фона игры.</translation>
+      <translation>Фоновое изображение:\nКонтролирует непрозрачность фона игры.</translation>
     </message>
     <message>
       <source>Play Title Music:\nIf a game supports it, enable playing special music when selecting the game in the GUI.</source>
@@ -2405,7 +2405,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</source>
-      <translation>Громкость:\nРегулируйте громкость игр на глобальном уровне, диапазон может быть 0-500% со значением по умолчанию 100%.</translation>
+      <translation>Громкость:\nРегулирует громкость игр на глобальном уровне, диапазон может быть 0-500% со значением по умолчанию 100%.</translation>
     </message>
     <message>
       <source>Default tab when opening settings:\nChoose which tab will open, the default is General.</source>
@@ -2605,7 +2605,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
-      <translation>Устройство USB:\nНастоящее USB-устройство: Используйте настоящее USB-устройство, подключённое к системе.\nSkylander Portal: Эмулируйте Skylander Portal of Power.\nInfinity Base: Эмулируйте Disney Infinity Base.\nDimensions Toypad: Эмулируйте Lego Dimensions Toypad.</translation>
+      <translation>Устройство USB:\nНастоящее USB-устройство: Использует настоящее USB-устройство, подключённое к системе.\nSkylander Portal: Эмулирует Skylander Portal of Power.\nInfinity Base: Эмулирует Disney Infinity Base.\nDimensions Toypad: Эмулирует Lego Dimensions Toypad.</translation>
     </message>
     <message>
       <source>Enable Shader Cache</source>
