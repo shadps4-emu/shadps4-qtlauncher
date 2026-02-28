@@ -447,7 +447,7 @@ preuzete, nema potrebe ih preuzimati pojedinačno kao što vrijedi u kartici
     </message>
     <message>
       <source>Face Buttons</source>
-      <translation>Gumbi Lica</translation>
+      <translation>Akcijski Gumbi</translation>
     </message>
     <message>
       <source>Right Stick</source>
