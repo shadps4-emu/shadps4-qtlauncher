@@ -1969,7 +1969,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable Readback Linear Images</source>
-      <translation>Включить считывание линейных изображений</translation>
+      <translation>Включить обратное чтение линейных изображений</translation>
     </message>
     <message>
       <source>Check for Updates at Startup</source>
@@ -2161,7 +2161,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</source>
-      <translation>Включить считывание линейных изображений:\nВключает асинхронную загрузку изображений, модифицированных GPU.\nМожет исправить проблемы в некоторых играх.</translation>
+      <translation>Включить обратное чтение линейных изображений:\nВключает асинхронную загрузку изображений, модифицированных GPU.\nМожет исправить проблемы в некоторых играх.</translation>
     </message>
     <message>
       <source>Copy GPU Buffers:\nGets around race conditions involving GPU submits.\nMay or may not help with PM4 type 0 crashes.</source>
