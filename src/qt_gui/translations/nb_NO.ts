@@ -1222,11 +1222,11 @@
     </message>
     <message>
       <source>Volume Up</source>
-      <translation type="unfinished">Volume Up</translation>
+      <translation>Øk lydstyrke</translation>
     </message>
     <message>
       <source>Volume Down</source>
-      <translation type="unfinished">Volume Down</translation>
+      <translation>Senk lydstyrke</translation>
     </message>
   </context>
   <context>
@@ -2397,7 +2397,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</source>
-      <translation>Volum:\nJuster volum for spill på et globalt nivå, skalaen går fra 0-500%, standarden er 100%.</translation>
+      <translation>Lydstyrke:\nJuster volum for spill på et globalt nivå, skalaen går fra 0-500 %, standarden er 100 %.</translation>
     </message>
     <message>
       <source>Default tab when opening settings:\nChoose which tab will open, the default is General.</source>
@@ -2617,23 +2617,23 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Readbacks Mode</source>
-      <translation type="unfinished">Readbacks Mode</translation>
+      <translation>Tilbakelesningsmodus</translation>
     </message>
     <message>
       <source>Disabled</source>
-      <translation type="unfinished">Disabled</translation>
+      <translation>Avslått</translation>
     </message>
     <message>
       <source>Low</source>
-      <translation type="unfinished">Low</translation>
+      <translation>Lav</translation>
     </message>
     <message>
       <source>High</source>
-      <translation type="unfinished">High</translation>
+      <translation>Høy</translation>
     </message>
     <message>
       <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
-      <translation type="unfinished">Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</translation>
+      <translation>Tilbakelesninger:\nTa i bruk tilbakelesninger og tilbakeskrivninger.\nDette kreves av noen spill for å fungere ordentlig.\nKan forårsake stabilitets- og/eller ytelsesproblemer.</translation>
     </message>
   </context>
   <context>
