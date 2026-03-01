@@ -2497,7 +2497,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
-      <translation>DLC-mappe:\nMappa hvor spill-DLC-ene lastes fra.</translation>
+      <translation>Sti for nedlastbart innhold:\n Mappa hvor nedlastbart innhold for spillene lastes fra.</translation>
     </message>
     <message>
       <source>Additional DMem Allocation</source>
