@@ -341,7 +341,7 @@
     </message>
     <message>
       <source>Auto Updater - GUI</source>
-      <translation>Auto oppdatering – grensesnitt</translation>
+      <translation>Automatisk oppdatering – grensesnitt</translation>
     </message>
     <message>
       <source>Update Available - GUI</source>
@@ -499,7 +499,7 @@
     </message>
     <message>
       <source>Touchpad Center</source>
-      <translation>Midt berøringsplate</translation>
+      <translation>Midtre berøringsplate</translation>
     </message>
     <message>
       <source>Touchpad Right</source>
@@ -1428,7 +1428,7 @@
     </message>
     <message>
       <source>Touchpad Center</source>
-      <translation>Midt berøringsplate</translation>
+      <translation>Midtre berøringsplate</translation>
     </message>
     <message>
       <source>Touchpad Right</source>
@@ -2774,7 +2774,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Failed to determine the folder path.</source>
-      <translation>Fant ikke stien til mappa.</translation>
+      <translation>Klarte ikke bestemme stien til mappa.</translation>
     </message>
     <message>
       <source>Delete version</source>
@@ -2782,7 +2782,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Do you want to delete the version</source>
-      <translation>Ønsker du å slette den valgte versjonen</translation>
+      <translation>Vil du slette den valgte versjonen</translation>
     </message>
     <message>
       <source>Version list update</source>
@@ -2808,7 +2808,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Do you want to download the version</source>
-      <translation>Ønsker du å laste ned versjonen</translation>
+      <translation>Vil du laste ned versjonen</translation>
     </message>
     <message>
       <source>No files available for this platform.</source>
@@ -2836,7 +2836,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Auto Updater - Emulator</source>
-      <translation>Auto oppdatering – emulator</translation>
+      <translation>Automatisk oppdatering – emulator</translation>
     </message>
     <message>
       <source>You already have the latest pre-release version.</source>
@@ -2856,7 +2856,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Do you want to update?</source>
-      <translation>Ønsker du å oppdatere?</translation>
+      <translation>Vil du oppdatere?</translation>
     </message>
     <message>
       <source>Update</source>
