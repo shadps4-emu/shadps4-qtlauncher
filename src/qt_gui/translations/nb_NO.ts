@@ -719,7 +719,7 @@
     </message>
     <message>
       <source>Directory with your dumped DLC&apos;s</source>
-      <translation>Mappe med dine dumpede DLC-er</translation>
+      <translation>Mappe med dumpet nedlastbart innhold</translation>
     </message>
     <message>
       <source>Directory with games</source>
@@ -727,7 +727,7 @@
     </message>
     <message>
       <source>Directory with DLC&apos;s</source>
-      <translation>Mappe med DLC-er</translation>
+      <translation>Mappe med nedlastbart innhold</translation>
     </message>
   </context>
   <context>
@@ -948,7 +948,7 @@
     </message>
     <message>
       <source>DLC</source>
-      <translation>DLC</translation>
+      <translation>Nedlastbart innhold</translation>
     </message>
     <message>
       <source>Delete %1</source>
@@ -2353,7 +2353,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Select the DLC folder</source>
-      <translation>Velg DLC-mappa</translation>
+      <translation>Velg mappa for nedlastbart innhold</translation>
     </message>
     <message>
       <source>Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</source>
@@ -2361,7 +2361,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
-      <translation>Bla gjennom:\nLet etter en mappe for å angi den som DLC-adressen.</translation>
+      <translation>Endre mappe:\nLet etter ei mappe for å angi den som stien for nedlastbart innhold.</translation>
     </message>
     <message>
       <source>FSR Settings</source>
@@ -2557,7 +2557,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>DLC Path</source>
-      <translation>DLC-mappe</translation>
+      <translation>Sti for nedlastbart innhold</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path</source>
