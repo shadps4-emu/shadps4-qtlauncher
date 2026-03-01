@@ -2617,7 +2617,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Readbacks Mode</source>
-      <translation type="unfinished">Readbacks Mode</translation>
+      <translation>Режим обратного чтения</translation>
     </message>
     <message>
       <source>Disabled</source>
@@ -2633,7 +2633,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
-      <translation type="unfinished">Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</translation>
+      <translation>Обратное чтение:\nВключить обратное чтение и запись в память GPU.\nЭто требуется для правильного поведения в некоторых играх. \nМожет вызвать проблемы со стабильностью/производительностью.</translation>
     </message>
   </context>
   <context>
