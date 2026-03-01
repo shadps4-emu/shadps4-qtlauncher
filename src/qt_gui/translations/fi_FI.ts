@@ -1968,10 +1968,6 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
       <translation>Vieraan virheenkorjausmerkit</translation>
     </message>
     <message>
-      <source>Enable Readbacks</source>
-      <translation>Takaisinluvut</translation>
-    </message>
-    <message>
       <source>Enable Readback Linear Images</source>
       <translation>Takaisinlue lineaariset kuvat</translation>
     </message>
@@ -2162,10 +2158,6 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     <message>
       <source>Collect Shaders:\nYou need this enabled to edit shaders with the debug menu (Ctrl + F10).</source>
       <translation>Kerää varjostimet:\nOta käyttöön, jos aiot muokata varjostimia virheenkorjausvalikossa (Ctrl + F10).</translation>
-    </message>
-    <message>
-      <source>Enable Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
-      <translation>Takaisinluvut:\nOttaa käyttöön GPU-muistin takaisinluvun ja -kirjoituksen.\nTämä on tarpeen joissakin peleissä.\nSaattaa aiheuttaa ongelmia vakaudssa tai suorituskykvyssä.</translation>
     </message>
     <message>
       <source>Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</source>
@@ -2622,6 +2614,26 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
       <translation>Pakkaa varjostinvälimuistitiedostot ZIP-kansioon:\nVarjostinvälimuistitiedostot tallennetaan samaan ZIP-tiedostoon useiden eri tiedostojen sijasta.</translation>
+    </message>
+    <message>
+      <source>Readbacks Mode</source>
+      <translation type="unfinished">Readbacks Mode</translation>
+    </message>
+    <message>
+      <source>Disabled</source>
+      <translation type="unfinished">Disabled</translation>
+    </message>
+    <message>
+      <source>Low</source>
+      <translation type="unfinished">Low</translation>
+    </message>
+    <message>
+      <source>High</source>
+      <translation type="unfinished">High</translation>
+    </message>
+    <message>
+      <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
+      <translation type="unfinished">Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</translation>
     </message>
   </context>
   <context>
