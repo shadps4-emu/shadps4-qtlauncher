@@ -1968,10 +1968,6 @@ Përzgjidh një version të emulatorit nga paneli i djathtë.</translation>
       <translation>Shënjuesit e korrigjimit të guest-it</translation>
     </message>
     <message>
-      <source>Enable Readbacks</source>
-      <translation>Aktivo Rikthimet e Leximit (Readbacks)</translation>
-    </message>
-    <message>
       <source>Enable Readback Linear Images</source>
       <translation>Aktivo Rikthimin e Leximit për Imazhet Lineare</translation>
     </message>
@@ -2162,10 +2158,6 @@ Përzgjidh një version të emulatorit nga paneli i djathtë.</translation>
     <message>
       <source>Collect Shaders:\nYou need this enabled to edit shaders with the debug menu (Ctrl + F10).</source>
       <translation>Mblidh Shader-at:\nDuhet ta aktivizosh këtë për të redaktuar shader-at me menynë e korrigjimit (Ctrl + F10).</translation>
-    </message>
-    <message>
-      <source>Enable Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
-      <translation>Aktivo Rikthimet e Leximit (Readbacks):\nAktivizo rikthimet dhe rishkrimet e kujtesës së GPU-së.\nKjo është e domosdoshme për funksionimin e duhur në disa lojëra.\nMund të shkaktojë probleme qëndrueshmërie dhe/ose performance.</translation>
     </message>
     <message>
       <source>Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</source>
@@ -2623,6 +2615,26 @@ Zgjidh cilën skedë do të hapet; parazgjedhja është General.</translation>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
       <translation>Paketo skedarët e Kesh-it të Shader-ave në një skedar zip:\nSkedarët e Kesh-it të Shader-ave ruhen në një skedar zip të vetëm në vend të shumë skedarëve të veçantë.</translation>
+    </message>
+    <message>
+      <source>Readbacks Mode</source>
+      <translation type="unfinished">Readbacks Mode</translation>
+    </message>
+    <message>
+      <source>Disabled</source>
+      <translation type="unfinished">Disabled</translation>
+    </message>
+    <message>
+      <source>Low</source>
+      <translation type="unfinished">Low</translation>
+    </message>
+    <message>
+      <source>High</source>
+      <translation type="unfinished">High</translation>
+    </message>
+    <message>
+      <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
+      <translation type="unfinished">Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</translation>
     </message>
   </context>
   <context>
