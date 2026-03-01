@@ -1786,11 +1786,11 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Game Log</source>
-      <translation>Spill-logg</translation>
+      <translation>Spill logg</translation>
     </message>
     <message>
       <source>Show Game Log</source>
-      <translation>Vis spill-logg</translation>
+      <translation>Vis spill logg</translation>
     </message>
   </context>
   <context>
