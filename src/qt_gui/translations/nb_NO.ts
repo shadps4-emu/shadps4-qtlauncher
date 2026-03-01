@@ -70,7 +70,7 @@
     </message>
     <message>
       <source>Do you want to delete the selected file?\n%1</source>
-      <translation>Ønsker du å slette den valgte fila?\n%1</translation>
+      <translation>Vil du slette den valgte fila?\n%1</translation>
     </message>
     <message>
       <source>Select Patch File:</source>
@@ -142,7 +142,7 @@
     </message>
     <message>
       <source>File already exists. Do you want to replace it?</source>
-      <translation>Fila finnes allerede. Ønsker du å erstatte den?</translation>
+      <translation>Fila finnes allerede. Vil du erstatte den?</translation>
     </message>
     <message>
       <source>Failed to save file:</source>
@@ -916,7 +916,7 @@
     </message>
     <message>
       <source>Delete DLC</source>
-      <translation>Slett DLC</translation>
+      <translation>Slett nedlastbart innhold</translation>
     </message>
     <message>
       <source>Delete Trophy</source>
@@ -944,7 +944,7 @@
     </message>
     <message>
       <source>This game has no DLC to delete!</source>
-      <translation>Dette spillet har ingen DLC å slette!</translation>
+      <translation>Dette spillet har intet nedlastbart innhold å slette!</translation>
     </message>
     <message>
       <source>DLC</source>
