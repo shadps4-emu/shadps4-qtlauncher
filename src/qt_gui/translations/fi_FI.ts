@@ -559,7 +559,7 @@
     </message>
     <message>
       <source>n/a</source>
-      <translation type="unfinished">n/a</translation>
+      <translation>--</translation>
     </message>
     <message>
       <source>Set Active Gamepad as Default</source>
@@ -1056,7 +1056,7 @@
     </message>
     <message>
       <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
-      <translation type="unfinished">Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</translation>
+      <translation>Raporttia ei voitu lähettää, koska pelin viimeisin loki epäonnistui seuraavassa tarkastuksessa, mikä tekisi raportista virheellisen:</translation>
     </message>
     <message>
       <source>Ok</source>
@@ -1174,11 +1174,11 @@
     </message>
     <message>
       <source>Toggle Mouse to Joystick Emulation</source>
-      <translation type="unfinished">Toggle Mouse to Joystick Emulation</translation>
+      <translation>Hiiren emulointi ohjaussauvana päälle/pois</translation>
     </message>
     <message>
       <source>Toggle Mouse to Gyro Emulation</source>
-      <translation type="unfinished">Toggle Mouse to Gyro Emulation</translation>
+      <translation>Hiiren emulointi gyroskooppina päälle/pois</translation>
     </message>
     <message>
       <source>Tip: Up to three simultaneous inputs can be assigned for each hotkey</source>
@@ -1372,15 +1372,15 @@
     </message>
     <message>
       <source>This button copies mappings from the Common Config to the currently selected profile, and cannot be used when the currently selected profile is the Common Config.</source>
-      <translation type="unfinished">This button copies mappings from the Common Config to the currently selected profile, and cannot be used when the currently selected profile is the Common Config.</translation>
+      <translation>Kopioi määritykset yleisestä kokoonpanosta nykyiseen valittuun profiiliin. Ei voi käyttää, kun yleinen kokoonpano on valittuna profiilina.</translation>
     </message>
     <message>
       <source>Copy values from Common Config</source>
-      <translation type="unfinished">Copy values from Common Config</translation>
+      <translation>Kopioi arvot yleisestä kokoonpanosta</translation>
     </message>
     <message>
       <source>Do you want to overwrite existing mappings with the mappings from the Common Config?</source>
-      <translation type="unfinished">Do you want to overwrite existing mappings with the mappings from the Common Config?</translation>
+      <translation>Haluatko korvata olemassa olevat määritykset yleisen kokoonpanon määrityksillä?</translation>
     </message>
     <message>
       <source>Unable to Save</source>
@@ -1766,7 +1766,7 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Invalid game argument provided</source>
-      <translation type="unfinished">Invalid game argument provided</translation>
+      <translation>Virheellinen annettu peliargumentti</translation>
     </message>
     <message>
       <source>None</source>
@@ -1774,15 +1774,15 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Manage Skylanders</source>
-      <translation type="unfinished">Manage Skylanders</translation>
+      <translation>Skylanders-hallinta</translation>
     </message>
     <message>
       <source>Manage Infinity Figures</source>
-      <translation type="unfinished">Manage Infinity Figures</translation>
+      <translation>Infinity-hahmojen hallinta</translation>
     </message>
     <message>
       <source>Manage Dimensions Toypad</source>
-      <translation type="unfinished">Manage Dimensions Toypad</translation>
+      <translation>Dimensions Toypad -hallinta</translation>
     </message>
     <message>
       <source>Game Log</source>
@@ -1968,12 +1968,8 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
       <translation>Vieraan virheenkorjausmerkit</translation>
     </message>
     <message>
-      <source>Enable Readbacks</source>
-      <translation type="unfinished">Enable Readbacks</translation>
-    </message>
-    <message>
       <source>Enable Readback Linear Images</source>
-      <translation type="unfinished">Enable Readback Linear Images</translation>
+      <translation>Takaisinlue lineaariset kuvat</translation>
     </message>
     <message>
       <source>Check for Updates at Startup</source>
@@ -2164,12 +2160,8 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
       <translation>Kerää varjostimet:\nOta käyttöön, jos aiot muokata varjostimia virheenkorjausvalikossa (Ctrl + F10).</translation>
     </message>
     <message>
-      <source>Enable Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
-      <translation type="unfinished">Enable Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</translation>
-    </message>
-    <message>
       <source>Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</source>
-      <translation type="unfinished">Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</translation>
+      <translation>Takaisinlue lineaariset kuvat:\nSallii GPU-muunnettujen lineaaristen kuvien asynkronisen lataamisen.\nSaattaa korjata ongelmia joissakin peleissä.</translation>
     </message>
     <message>
       <source>Copy GPU Buffers:\nGets around race conditions involving GPU submits.\nMay or may not help with PM4 type 0 crashes.</source>
@@ -2321,7 +2313,7 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>WARNING: These features are experimental and should not be enabled unless you were told to, or a game requires it. Please ask in the shadPS4 Discord server if you have any questions.</source>
-      <translation type="unfinished">WARNING: These features are experimental and should not be enabled unless you were told to, or a game requires it. Please ask in the shadPS4 Discord server if you have any questions.</translation>
+      <translation>VAROITUS: Nämä ominaisuudet ovat kokeellisia, eikä niitä pitäisi ottaa käyttöön, ellei sinua kehoteta tai ellei peli sitä vaadi. Ole hyvä ja kysy shadPS4 Discord-palvelimella, jos sinulla on kysyttävää.</translation>
     </message>
     <message>
       <source>Enable Background Controller Input</source>
@@ -2337,11 +2329,11 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Enable Logging</source>
-      <translation type="unfinished">Enable Logging</translation>
+      <translation>Lokitus</translation>
     </message>
     <message>
       <source>Enable Logging:\nEnables logging.\nDo not change this if you do not know what you&apos;re doing!\nWhen asking for help, make sure this setting is ENABLED.</source>
-      <translation type="unfinished">Enable Logging:\nEnables logging.\nDo not change this if you do not know what you&apos;re doing!\nWhen asking for help, make sure this setting is ENABLED.</translation>
+      <translation>Lokitus:\nOttaa lokituksen käyttöön.\nÄlä muuta tätä, jos et tiedä mitä teet!\nKun pyydät apua, varmista, että tämä asetus on käytössä.</translation>
     </message>
     <message>
       <source>Present Mode</source>
@@ -2425,7 +2417,7 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Enable Direct Memory Access</source>
-      <translation type="unfinished">Enable Direct Memory Access</translation>
+      <translation>Oikosiirto (DMA)</translation>
     </message>
     <message>
       <source>Enable Devkit Console Mode</source>
@@ -2465,11 +2457,11 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Enable Direct Memory Access:\nEnables arbitrary memory access from the GPU to CPU memory.</source>
-      <translation type="unfinished">Enable Direct Memory Access:\nEnables arbitrary memory access from the GPU to CPU memory.</translation>
+      <translation>Oikosiirto (DMA):\nMahdollistaa sattumanvaraisen muistin pääsyn näytönohjaimelta suorittimen muistiin.</translation>
     </message>
     <message>
       <source>Enable PS4 Neo Mode:\nAdds support for PS4 Pro emulation and memory size. Currently causes instability in a large number of tested games.</source>
-      <translation type="unfinished">Enable PS4 Neo Mode:\nAdds support for PS4 Pro emulation and memory size. Currently causes instability in a large number of tested games.</translation>
+      <translation>PS4 Neo-tila:\nLisää tuen PS4 Pro -emulaatiolle ja muistikoolle. Tällä hetkellä aiheuttaa epävakautta monissa testatuissa peleissä.</translation>
     </message>
     <message>
       <source>Enable Devkit Console Mode:\nAdds support for Devkit console memory size.</source>
@@ -2505,7 +2497,7 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
-      <translation type="unfinished">DLC Path:\nThe folder where game DLC is loaded from.</translation>
+      <translation>DLC-polku:\nHakemisto, mistä pelin lisäsisältö ladataan.</translation>
     </message>
     <message>
       <source>Additional DMem Allocation</source>
@@ -2533,15 +2525,15 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Enable Core Validation</source>
-      <translation type="unfinished">Enable Core Validation</translation>
+      <translation>Ydinvalidointi</translation>
     </message>
     <message>
       <source>Enable Sync Validation</source>
-      <translation type="unfinished">Enable Sync Validation</translation>
+      <translation>Synkronointivalidointi</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation</source>
-      <translation type="unfinished">Enable GPU-Assisted Validation</translation>
+      <translation>Näytönohjainavusteinen validointi</translation>
     </message>
     <message>
       <source>Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
@@ -2573,7 +2565,7 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
-      <translation type="unfinished">GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</translation>
+      <translation>Käyttöliittymän päivitykset:\nJulkaisu: Viralliset versiot, jotka julkaistaan kuukausittain ja saattavat olla hyvin vanhoja, mutta ovat luotettavampia ja testatumpia.\nNightly: Kehitysversiot, joissa on kaikki uusimmat ominaisuudet ja korjaukset, mutta ne saattavat sisältää virheitä ja ovat vähemmän vakaita.\n\nTämä päivitys koskee vain Qt-käyttöliittymää. Päivittääksesi emulaattoriytimen, käytä versiohallintaa.</translation>
     </message>
     <message>
       <source>Cannot create portable launcher folder</source>
@@ -2585,27 +2577,27 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>USB Device</source>
-      <translation type="unfinished">USB Device</translation>
+      <translation>USB-laite</translation>
     </message>
     <message>
       <source>Real USB Device</source>
-      <translation type="unfinished">Real USB Device</translation>
+      <translation>Aito USB-laite</translation>
     </message>
     <message>
       <source>Skylander Portal</source>
-      <translation type="unfinished">Skylander Portal</translation>
+      <translation>Skylander Portal</translation>
     </message>
     <message>
       <source>Infinity Base</source>
-      <translation type="unfinished">Infinity Base</translation>
+      <translation>Infinity Base</translation>
     </message>
     <message>
       <source>Dimensions Toypad</source>
-      <translation type="unfinished">Dimensions Toypad</translation>
+      <translation>Dimensions Toypad</translation>
     </message>
     <message>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
-      <translation type="unfinished">USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</translation>
+      <translation>USB-laite:\nAito USB-laite: Käytä todellista USB-laitetta, joka on liitetty järjestelmään.\nSkylander Portal: Emuloi Skylander Portal of Power.\nInfinity Base: Emuloi Disney Infinity Base.\nDimensions Toypad: Emuloi Lego Dimensions Toypad.</translation>
     </message>
     <message>
       <source>Enable Shader Cache</source>
@@ -2613,15 +2605,35 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file</source>
-      <translation type="unfinished">Compress the Shader Cache files into a zip file</translation>
+      <translation>Pakkaa varjostinvälimuistitiedostot ZIP-kansioon</translation>
     </message>
     <message>
       <source>Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</source>
-      <translation type="unfinished">Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</translation>
+      <translation>Varjostinvälimuisti:\nTallentaa käännetyt varjostimet uudelleenkääntämisen välttämiseksi. Vähentää pätkimistä.</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
-      <translation type="unfinished">Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</translation>
+      <translation>Pakkaa varjostinvälimuistitiedostot ZIP-kansioon:\nVarjostinvälimuistitiedostot tallennetaan samaan ZIP-tiedostoon useiden eri tiedostojen sijasta.</translation>
+    </message>
+    <message>
+      <source>Readbacks Mode</source>
+      <translation>Takaisinluvun tila</translation>
+    </message>
+    <message>
+      <source>Disabled</source>
+      <translation>Ei käytössä</translation>
+    </message>
+    <message>
+      <source>Low</source>
+      <translation>Alhainen</translation>
+    </message>
+    <message>
+      <source>High</source>
+      <translation>Korkea</translation>
+    </message>
+    <message>
+      <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
+      <translation>Takaisinluvut:\nOttaa käyttöön GPU-muistin takaisinluvun ja -kirjoituksen.\nTämä on tarpeen joissakin peleissä.\nSaattaa aiheuttaa ongelmia vakaudssa tai suorituskykvyssä.</translation>
     </message>
   </context>
   <context>
@@ -2678,7 +2690,7 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Path to save versions</source>
-      <translation type="unfinished">Path to save versions</translation>
+      <translation>Tallennettujen versioiden polku</translation>
     </message>
     <message>
       <source>Browse</source>
@@ -2786,13 +2798,13 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Error accessing GitHub API</source>
-      <translation type="unfinished">Error accessing GitHub API</translation>
+      <translation>Virhe GitHub API:n noutamisessa</translation>
     </message>
     <message>
       <source>First you need to choose a location to save the versions in
 &apos;Path to save versions&apos;</source>
-      <translation type="unfinished">First you need to choose a location to save the versions in
-&apos;Path to save versions&apos;</translation>
+      <translation>Valitse ensin sijainti, johon versiot tallennetaan kohteessa
+&apos;Tallennettujen versioiden polku&apos;</translation>
     </message>
     <message>
       <source>Do you want to download the version</source>

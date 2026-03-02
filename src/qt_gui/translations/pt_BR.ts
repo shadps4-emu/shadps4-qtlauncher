@@ -1968,10 +1968,6 @@ Selecione uma versão do emulador no painel direito.</translation>
       <translation>Marcadores de Depuração do Convidado</translation>
     </message>
     <message>
-      <source>Enable Readbacks</source>
-      <translation>Ativar Readbacks</translation>
-    </message>
-    <message>
       <source>Enable Readback Linear Images</source>
       <translation>Ativar Readback Linear Images</translation>
     </message>
@@ -2162,10 +2158,6 @@ Selecione uma versão do emulador no painel direito.</translation>
     <message>
       <source>Collect Shaders:\nYou need this enabled to edit shaders with the debug menu (Ctrl + F10).</source>
       <translation>Coletar Shaders:\nVocê precisa dessa opção ativada para editar shaders com o menu de depuração (Ctrl + F10).</translation>
-    </message>
-    <message>
-      <source>Enable Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
-      <translation>Ativar Readbacks:\nAtive a leitura e gravação da memória da GPU.\nIsso é necessário para o funcionamento adequado de alguns jogos.\nPode causar instabilidade e/ou impactar o desempenho.</translation>
     </message>
     <message>
       <source>Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</source>
@@ -2622,6 +2614,26 @@ Selecione uma versão do emulador no painel direito.</translation>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
       <translation>Compacte os arquivos de Cache do Shader em um arquivo zip:\nOs arquivos de cache do shader são armazenados dentro de um único arquivo zip em vez de vários arquivos separados.</translation>
+    </message>
+    <message>
+      <source>Readbacks Mode</source>
+      <translation type="unfinished">Readbacks Mode</translation>
+    </message>
+    <message>
+      <source>Disabled</source>
+      <translation type="unfinished">Disabled</translation>
+    </message>
+    <message>
+      <source>Low</source>
+      <translation type="unfinished">Low</translation>
+    </message>
+    <message>
+      <source>High</source>
+      <translation type="unfinished">High</translation>
+    </message>
+    <message>
+      <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
+      <translation type="unfinished">Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</translation>
     </message>
   </context>
   <context>

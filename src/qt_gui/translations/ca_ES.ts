@@ -1968,10 +1968,6 @@ Selecciona una versió del panell dret.</translation>
       <translation>Marcadors de depuració</translation>
     </message>
     <message>
-      <source>Enable Readbacks</source>
-      <translation>Activar Readbacks</translation>
-    </message>
-    <message>
       <source>Enable Readback Linear Images</source>
       <translation>Activa imatges lineals de Readback</translation>
     </message>
@@ -2162,10 +2158,6 @@ Selecciona una versió del panell dret.</translation>
     <message>
       <source>Collect Shaders:\nYou need this enabled to edit shaders with the debug menu (Ctrl + F10).</source>
       <translation>Recopilar shaders:\nHas de tenir activada aquesta opció per editar els shaders amb el menú de depurador (Ctrl + F10).</translation>
-    </message>
-    <message>
-      <source>Enable Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
-      <translation>Actica Readbacks:\nActiva readbacks i writebacks a la memòria de la targeta gràfica.\nAixò és necessari pel funcionament correcte en alguns jocs.\nPot causar inestabilitat i/o errors de rendiment.</translation>
     </message>
     <message>
       <source>Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</source>
@@ -2622,6 +2614,26 @@ Selecciona una versió del panell dret.</translation>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
       <translation>Comprimeix els fitxers de la memòria cau de shaders en un fitxer zip:\nEls fitxers de la memòria cau de shaders s'emmagatzemen en un sol fitxer zip en compte de fer-ho en diferents fitxers separats.</translation>
+    </message>
+    <message>
+      <source>Readbacks Mode</source>
+      <translation>Mode de lectura</translation>
+    </message>
+    <message>
+      <source>Disabled</source>
+      <translation>Deshabilitat</translation>
+    </message>
+    <message>
+      <source>Low</source>
+      <translation>Baix</translation>
+    </message>
+    <message>
+      <source>High</source>
+      <translation>Alt</translation>
+    </message>
+    <message>
+      <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
+      <translation>Lectura:\nActiva la lectura i escriptura a la memòria de la targeta gràfica.\nAixò és necessari pe comportament correcte en alguns jocs.\nPot causar problemes d'estabilitat o rendiment.</translation>
     </message>
   </context>
   <context>

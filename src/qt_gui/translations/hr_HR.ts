@@ -447,7 +447,7 @@ preuzete, nema potrebe ih preuzimati pojedinačno kao što vrijedi u kartici
     </message>
     <message>
       <source>Face Buttons</source>
-      <translation>Gumbi Lica</translation>
+      <translation>Akcijski Gumbi</translation>
     </message>
     <message>
       <source>Right Stick</source>
@@ -1973,10 +1973,6 @@ Izaberite verziju emulatora s desne liste.</translation>
       <translation>Gostujući Debug Markeri</translation>
     </message>
     <message>
-      <source>Enable Readbacks</source>
-      <translation>Omogući Readbackove</translation>
-    </message>
-    <message>
       <source>Enable Readback Linear Images</source>
       <translation>Omogući Readback Linearne Slike</translation>
     </message>
@@ -2167,10 +2163,6 @@ Izaberite verziju emulatora s desne liste.</translation>
     <message>
       <source>Collect Shaders:\nYou need this enabled to edit shaders with the debug menu (Ctrl + F10).</source>
       <translation>Skupljanje Shadera:\nTrebate uključit za obradu shadera iz debug izbornika (Ctrl + F10).</translation>
-    </message>
-    <message>
-      <source>Enable Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
-      <translation>Omogući Readbackove:\nOmogući GPU readbackove i writebackove.\nPotrebno za ispravno ponašanje u nekim igrama.\nMože dovest do problema u stabilnosti i/ili performansama.</translation>
     </message>
     <message>
       <source>Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</source>
@@ -2630,6 +2622,26 @@ Izaziva rušenje ili probleme u nekim igrama.</translation>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
       <translation>Komprimiraj Shader Cache datoteke u zip datoteku:\nShader cache datoteka spremaju se unutar jedne zip datoteke umjesto više odvojenih datoteka.</translation>
+    </message>
+    <message>
+      <source>Readbacks Mode</source>
+      <translation type="unfinished">Readbacks Mode</translation>
+    </message>
+    <message>
+      <source>Disabled</source>
+      <translation type="unfinished">Disabled</translation>
+    </message>
+    <message>
+      <source>Low</source>
+      <translation type="unfinished">Low</translation>
+    </message>
+    <message>
+      <source>High</source>
+      <translation type="unfinished">High</translation>
+    </message>
+    <message>
+      <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
+      <translation type="unfinished">Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</translation>
     </message>
   </context>
   <context>

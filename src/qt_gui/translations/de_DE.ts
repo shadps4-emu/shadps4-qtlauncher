@@ -1967,10 +1967,6 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
       <translation>Guest-Debug-Markierer</translation>
     </message>
     <message>
-      <source>Enable Readbacks</source>
-      <translation>Aktiviere Readbacks</translation>
-    </message>
-    <message>
       <source>Enable Readback Linear Images</source>
       <translation>Aktiviere Readback Linear Images</translation>
     </message>
@@ -2161,10 +2157,6 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
     <message>
       <source>Collect Shaders:\nYou need this enabled to edit shaders with the debug menu (Ctrl + F10).</source>
       <translation>Shader sammeln:\nSie müssen diese Option aktivieren, um Shader mit dem Debug-Menü (Strg + F10) bearbeiten zu können.</translation>
-    </message>
-    <message>
-      <source>Enable Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
-      <translation>Aktiviere Readbacks:\nAktiviert GPU-Speicher-Readbacks und -Writebacks.\nDies ist für manche Spiele erforderlich, damit sie richtig funktionieren.\nKann Stabilitäts- und/oder Leistungsprobleme verursachen.</translation>
     </message>
     <message>
       <source>Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</source>
@@ -2625,6 +2617,26 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
       <translation>Komprimiere Shader Cache-Dateien in eine Zip-Datei:\nDie Shader Cache-Dateien werden in eine einzige Zip-Datei gespeichert anstatt in mehreren separaten Dateien.</translation>
+    </message>
+    <message>
+      <source>Readbacks Mode</source>
+      <translation>Readback-Modus</translation>
+    </message>
+    <message>
+      <source>Disabled</source>
+      <translation>Deaktiviert</translation>
+    </message>
+    <message>
+      <source>Low</source>
+      <translation>Niedrig</translation>
+    </message>
+    <message>
+      <source>High</source>
+      <translation>Hoch</translation>
+    </message>
+    <message>
+      <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
+      <translation>Readback:\nAktiviert GPU-Speicher-Readbacks und -Writebacks.\nDies ist für manche Spiele erforderlich, damit sie richtig funktionieren.\nKann Stabilitäts- und/oder Leistungsprobleme verursachen.</translation>
     </message>
   </context>
   <context>

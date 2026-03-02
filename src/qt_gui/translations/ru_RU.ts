@@ -1968,12 +1968,8 @@ Select an emulator version from the right panel.</source>
       <translation>Маркеры отладки гостя</translation>
     </message>
     <message>
-      <source>Enable Readbacks</source>
-      <translation>Включить считывание</translation>
-    </message>
-    <message>
       <source>Enable Readback Linear Images</source>
-      <translation>Включить считывание линейных изображений</translation>
+      <translation>Включить обратное чтение линейных изображений</translation>
     </message>
     <message>
       <source>Check for Updates at Startup</source>
@@ -2085,7 +2081,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Background Image:\nControl the opacity of the game background image.</source>
-      <translation>Фоновое изображение:\nКонтролируйте непрозрачность фона игры.</translation>
+      <translation>Фоновое изображение:\nКонтролирует непрозрачность фона игры.</translation>
     </message>
     <message>
       <source>Play Title Music:\nIf a game supports it, enable playing special music when selecting the game in the GUI.</source>
@@ -2164,12 +2160,8 @@ Select an emulator version from the right panel.</source>
       <translation>Собирать шейдеры:\nВам необходимо включить эту функцию для редактирования шейдеров с помощью меню отладки (Ctrl + F10).</translation>
     </message>
     <message>
-      <source>Enable Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
-      <translation>Включить считывание:\nВключить считывание и запись в память GPU.\nЭто требуется для правильного поведения в некоторых играх. \nМожет вызвать проблемы со стабильностью/производительностью.</translation>
-    </message>
-    <message>
       <source>Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</source>
-      <translation>Включить считывание линейных изображений:\nВключает асинхронную загрузку изображений, модифицированных GPU.\nМожет исправить проблемы в некоторых играх.</translation>
+      <translation>Включить обратное чтение линейных изображений:\nВключает асинхронную загрузку изображений, модифицированных GPU.\nМожет исправить проблемы в некоторых играх.</translation>
     </message>
     <message>
       <source>Copy GPU Buffers:\nGets around race conditions involving GPU submits.\nMay or may not help with PM4 type 0 crashes.</source>
@@ -2405,7 +2397,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</source>
-      <translation>Громкость:\nРегулируйте громкость игр на глобальном уровне, диапазон может быть 0-500% со значением по умолчанию 100%.</translation>
+      <translation>Громкость:\nРегулирует громкость игр на глобальном уровне, диапазон может быть 0-500% со значением по умолчанию 100%.</translation>
     </message>
     <message>
       <source>Default tab when opening settings:\nChoose which tab will open, the default is General.</source>
@@ -2605,7 +2597,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
-      <translation>Устройство USB:\nНастоящее USB-устройство: Используйте настоящее USB-устройство, подключённое к системе.\nSkylander Portal: Эмулируйте Skylander Portal of Power.\nInfinity Base: Эмулируйте Disney Infinity Base.\nDimensions Toypad: Эмулируйте Lego Dimensions Toypad.</translation>
+      <translation>Устройство USB:\nНастоящее USB-устройство: Использует настоящее USB-устройство, подключённое к системе.\nSkylander Portal: Эмулирует Skylander Portal of Power.\nInfinity Base: Эмулирует Disney Infinity Base.\nDimensions Toypad: Эмулирует Lego Dimensions Toypad.</translation>
     </message>
     <message>
       <source>Enable Shader Cache</source>
@@ -2622,6 +2614,26 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
       <translation>Сжать файлы кэша шейдеров в zip-файл:\nФайлы кэша шейдеров хранятся в одном zip-файле вместо нескольких отдельных файлов.</translation>
+    </message>
+    <message>
+      <source>Readbacks Mode</source>
+      <translation>Режим обратного чтения</translation>
+    </message>
+    <message>
+      <source>Disabled</source>
+      <translation>Выключено</translation>
+    </message>
+    <message>
+      <source>Low</source>
+      <translation>Низкое</translation>
+    </message>
+    <message>
+      <source>High</source>
+      <translation>Высокое</translation>
+    </message>
+    <message>
+      <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
+      <translation>Обратное чтение:\nВключить обратное чтение и запись в память GPU.\nЭто требуется для правильного поведения в некоторых играх. \nМожет вызвать проблемы со стабильностью/производительностью.</translation>
     </message>
   </context>
   <context>

@@ -1970,10 +1970,6 @@ Select an emulator version from the right panel.</source>
       <translation>Geust 调试标记</translation>
     </message>
     <message>
-      <source>Enable Readbacks</source>
-      <translation>启用Readbacks</translation>
-    </message>
-    <message>
       <source>Enable Readback Linear Images</source>
       <translation>启用Readback线性图像</translation>
     </message>
@@ -2164,10 +2160,6 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Collect Shaders:\nYou need this enabled to edit shaders with the debug menu (Ctrl + F10).</source>
       <translation>收集着色器：\n您需要启用此功能才能使用调试菜单（Ctrl + F10）编辑着色器。</translation>
-    </message>
-    <message>
-      <source>Enable Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
-      <translation>启用Readbacks：\n启用 GPU 内存回读和回写功能。\n这是某些游戏中恰当运行所必需的。\n可能会导致稳定性以及性能问题。</translation>
     </message>
     <message>
       <source>Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</source>
@@ -2626,6 +2618,26 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
       <translation>将着色器缓存文件压缩为ZIP文件：\n着色器缓存将以单个ZIP文件存储，而非多个独立文件。</translation>
+    </message>
+    <message>
+      <source>Readbacks Mode</source>
+      <translation type="unfinished">Readbacks Mode</translation>
+    </message>
+    <message>
+      <source>Disabled</source>
+      <translation type="unfinished">Disabled</translation>
+    </message>
+    <message>
+      <source>Low</source>
+      <translation type="unfinished">Low</translation>
+    </message>
+    <message>
+      <source>High</source>
+      <translation type="unfinished">High</translation>
+    </message>
+    <message>
+      <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
+      <translation type="unfinished">Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</translation>
     </message>
   </context>
   <context>
