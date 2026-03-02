@@ -76,8 +76,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>946</width>
-         <height>511</height>
+         <width>542</width>
+         <height>326</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="generalTabVLayout" stretch="0">
@@ -143,8 +143,8 @@
                       <rect>
                        <x>0</x>
                        <y>0</y>
-                       <width>408</width>
-                       <height>68</height>
+                       <width>126</width>
+                       <height>60</height>
                       </rect>
                      </property>
                      <layout class="QHBoxLayout" name="horizontalLayout_6">
@@ -333,8 +333,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>946</width>
-         <height>511</height>
+         <width>607</width>
+         <height>484</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -933,8 +933,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>946</width>
-         <height>511</height>
+         <width>659</width>
+         <height>353</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="graphicsTabVLayout" stretch="0,0">
@@ -1297,8 +1297,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>946</width>
-         <height>511</height>
+         <width>497</width>
+         <height>431</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="userTabVLayout" stretch="0,0,1">
@@ -1563,8 +1563,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>946</width>
-         <height>511</height>
+         <width>535</width>
+         <height>396</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="inputTabVLayout" stretch="0,0,0">
@@ -1870,8 +1870,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>946</width>
-         <height>511</height>
+         <width>216</width>
+         <height>412</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="pathsTabLayout">
@@ -2014,8 +2014,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>946</width>
-         <height>240</height>
+         <width>324</width>
+         <height>242</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -2155,8 +2155,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>946</width>
-         <height>418</height>
+         <width>494</width>
+         <height>421</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -2386,7 +2386,7 @@
          <x>0</x>
          <y>0</y>
          <width>946</width>
-         <height>500</height>
+         <height>476</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -2512,126 +2512,136 @@
                 </widget>
                </item>
                <item>
-                <widget class="QGroupBox" name="dmemGroupBox">
-                 <property name="title">
-                  <string>Additional DMem Allocation</string>
+                <layout class="QHBoxLayout" name="horizontalLayout_11">
+                 <property name="spacing">
+                  <number>6</number>
                  </property>
-                 <layout class="QVBoxLayout" name="verticalLayout_4">
-                  <property name="spacing">
-                   <number>5</number>
-                  </property>
-                  <property name="leftMargin">
-                   <number>5</number>
-                  </property>
-                  <property name="topMargin">
-                   <number>5</number>
-                  </property>
-                  <property name="rightMargin">
-                   <number>5</number>
-                  </property>
-                  <property name="bottomMargin">
-                   <number>5</number>
-                  </property>
-                  <item>
-                   <widget class="QSpinBox" name="dmemSpinBox">
-                    <property name="frame">
-                     <bool>true</bool>
-                    </property>
-                    <property name="alignment">
-                     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
-                    </property>
-                    <property name="specialValueText">
-                     <string/>
-                    </property>
-                    <property name="accelerated">
-                     <bool>true</bool>
-                    </property>
-                    <property name="correctionMode">
-                     <enum>QAbstractSpinBox::CorrectionMode::CorrectToNearestValue</enum>
-                    </property>
-                    <property name="keyboardTracking">
-                     <bool>false</bool>
-                    </property>
-                    <property name="suffix">
-                     <string notr="true">MB</string>
-                    </property>
-                    <property name="minimum">
-                     <number>0</number>
-                    </property>
-                    <property name="maximum">
-                     <number>100000</number>
-                    </property>
-                    <property name="value">
-                     <number>0</number>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-               <item>
-                <widget class="QGroupBox" name="heightDivider">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
+                 <property name="topMargin">
+                  <number>0</number>
                  </property>
-                 <property name="title">
-                  <string>Vblank Frequency</string>
-                 </property>
-                 <layout class="QVBoxLayout" name="vblankLayout">
-                  <property name="spacing">
-                   <number>5</number>
-                  </property>
-                  <property name="leftMargin">
-                   <number>5</number>
-                  </property>
-                  <property name="topMargin">
-                   <number>5</number>
-                  </property>
-                  <property name="rightMargin">
-                   <number>5</number>
-                  </property>
-                  <property name="bottomMargin">
-                   <number>5</number>
-                  </property>
-                  <item>
-                   <widget class="QSpinBox" name="vblankSpinBox">
-                    <property name="frame">
-                     <bool>true</bool>
+                 <item>
+                  <widget class="QGroupBox" name="heightDivider">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="title">
+                    <string>Vblank Frequency</string>
+                   </property>
+                   <layout class="QVBoxLayout" name="vblankLayout">
+                    <property name="spacing">
+                     <number>5</number>
                     </property>
-                    <property name="alignment">
-                     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+                    <property name="leftMargin">
+                     <number>5</number>
                     </property>
-                    <property name="specialValueText">
-                     <string/>
+                    <property name="topMargin">
+                     <number>5</number>
                     </property>
-                    <property name="accelerated">
-                     <bool>true</bool>
+                    <property name="rightMargin">
+                     <number>5</number>
                     </property>
-                    <property name="correctionMode">
-                     <enum>QAbstractSpinBox::CorrectionMode::CorrectToNearestValue</enum>
+                    <property name="bottomMargin">
+                     <number>5</number>
                     </property>
-                    <property name="keyboardTracking">
-                     <bool>false</bool>
+                    <item>
+                     <widget class="QSpinBox" name="vblankSpinBox">
+                      <property name="frame">
+                       <bool>true</bool>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+                      </property>
+                      <property name="specialValueText">
+                       <string/>
+                      </property>
+                      <property name="accelerated">
+                       <bool>true</bool>
+                      </property>
+                      <property name="correctionMode">
+                       <enum>QAbstractSpinBox::CorrectionMode::CorrectToNearestValue</enum>
+                      </property>
+                      <property name="keyboardTracking">
+                       <bool>false</bool>
+                      </property>
+                      <property name="suffix">
+                       <string notr="true">Hz</string>
+                      </property>
+                      <property name="minimum">
+                       <number>60</number>
+                      </property>
+                      <property name="maximum">
+                       <number>9999</number>
+                      </property>
+                      <property name="value">
+                       <number>60</number>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QGroupBox" name="dmemGroupBox">
+                   <property name="title">
+                    <string>Additional DMem Allocation</string>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_4">
+                    <property name="spacing">
+                     <number>5</number>
                     </property>
-                    <property name="suffix">
-                     <string notr="true">Hz</string>
+                    <property name="leftMargin">
+                     <number>5</number>
                     </property>
-                    <property name="minimum">
-                     <number>60</number>
+                    <property name="topMargin">
+                     <number>5</number>
                     </property>
-                    <property name="maximum">
-                     <number>9999</number>
+                    <property name="rightMargin">
+                     <number>5</number>
                     </property>
-                    <property name="value">
-                     <number>60</number>
+                    <property name="bottomMargin">
+                     <number>5</number>
                     </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
+                    <item>
+                     <widget class="QSpinBox" name="dmemSpinBox">
+                      <property name="frame">
+                       <bool>true</bool>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+                      </property>
+                      <property name="specialValueText">
+                       <string/>
+                      </property>
+                      <property name="accelerated">
+                       <bool>true</bool>
+                      </property>
+                      <property name="correctionMode">
+                       <enum>QAbstractSpinBox::CorrectionMode::CorrectToNearestValue</enum>
+                      </property>
+                      <property name="keyboardTracking">
+                       <bool>false</bool>
+                      </property>
+                      <property name="suffix">
+                       <string notr="true">MB</string>
+                      </property>
+                      <property name="minimum">
+                       <number>0</number>
+                      </property>
+                      <property name="maximum">
+                       <number>100000</number>
+                      </property>
+                      <property name="value">
+                       <number>0</number>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
                </item>
               </layout>
              </widget>
