@@ -1222,6 +1222,14 @@
       <source>Tip: Unmap inputs with right-click</source>
       <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
     </message>
+    <message>
+      <source>Volume Up</source>
+      <translation type="unfinished">Volume Up</translation>
+    </message>
+    <message>
+      <source>Volume Down</source>
+      <translation type="unfinished">Volume Down</translation>
+    </message>
   </context>
   <context>
     <name>IpcClient</name>
@@ -1962,10 +1970,6 @@ Select an emulator version from the right panel.</translation>
       <translation type="unfinished">Guest Debug Markers</translation>
     </message>
     <message>
-      <source>Enable Readbacks</source>
-      <translation type="unfinished">Enable Readbacks</translation>
-    </message>
-    <message>
       <source>Enable Readback Linear Images</source>
       <translation type="unfinished">Enable Readback Linear Images</translation>
     </message>
@@ -2156,10 +2160,6 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Collect Shaders:\nYou need this enabled to edit shaders with the debug menu (Ctrl + F10).</source>
       <translation type="unfinished">Collect Shaders:\nYou need this enabled to edit shaders with the debug menu (Ctrl + F10).</translation>
-    </message>
-    <message>
-      <source>Enable Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
-      <translation type="unfinished">Enable Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</translation>
     </message>
     <message>
       <source>Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</source>
@@ -2616,6 +2616,26 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
       <translation type="unfinished">Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</translation>
+    </message>
+    <message>
+      <source>Readbacks Mode</source>
+      <translation type="unfinished">Readbacks Mode</translation>
+    </message>
+    <message>
+      <source>Disabled</source>
+      <translation type="unfinished">Disabled</translation>
+    </message>
+    <message>
+      <source>Low</source>
+      <translation type="unfinished">Low</translation>
+    </message>
+    <message>
+      <source>High</source>
+      <translation type="unfinished">High</translation>
+    </message>
+    <message>
+      <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
+      <translation type="unfinished">Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</translation>
     </message>
   </context>
   <context>

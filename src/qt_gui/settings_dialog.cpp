@@ -537,7 +537,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         ui->copyGPUBuffersCheckBox->installEventFilter(this);
 
         // Experimental
-        ui->readbacksCheckBox->installEventFilter(this);
+        ui->readbacksGroupBox->installEventFilter(this);
         ui->readbackLinearImagesCheckBox->installEventFilter(this);
         ui->dumpShadersCheckBox->installEventFilter(this);
         ui->dmaCheckBox->installEventFilter(this);
@@ -680,7 +680,7 @@ void SettingsDialog::LoadValuesFromConfig() {
         ui->micComboBox->setCurrentIndex(0);
     }
 
-    ui->readbacksCheckBox->setChecked(toml::find_or<bool>(data, "GPU", "readbacks", false));
+    ui->readbacksModeComboBox->setCurrentIndex(toml::find_or<int>(data, "GPU", "readbacksMode", 0));
     ui->readbackLinearImagesCheckBox->setChecked(
         toml::find_or<bool>(data, "GPU", "readbackLinearImages", false));
     ui->dmaCheckBox->setChecked(toml::find_or<bool>(data, "GPU", "directMemoryAccess", false));
@@ -1038,8 +1038,8 @@ void SettingsDialog::updateNoteTextEdit(const QString& elementName) {
         text = tr("Compress the Shader Cache files into a zip file:\\nThe shader cache files are stored within a single zip file instead of multiple separate files.");
     } else if (elementName == "psnSignInCheckBox") {
         text = tr("Set PSN Signed-in to True:\\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported.");
-    } else if (elementName == "readbacksCheckBox") {
-        text = tr("Enable Readbacks:\\nEnable GPU memory readbacks and writebacks.\\nThis is required for proper behavior in some games.\\nMight cause stability and/or performance issues.");
+    } else if (elementName == "readbacksGroupBox") {
+        text = tr("Readbacks:\\nEnable GPU memory readbacks and writebacks.\\nThis is required for proper behavior in some games.\\nMight cause stability and/or performance issues.");
     } else if (elementName == "readbackLinearImagesCheckBox") {
         text = tr("Enable Readback Linear Images:\\nEnables async downloading of GPU modified linear images.\\nMight fix issues in some games.");
     } else if (elementName == "dmemGroupBox") {
@@ -1090,7 +1090,7 @@ Config::SysModulesMap SettingsDialog::getEnabledSysModulesFromUI() const {
 
 void SettingsDialog::UpdateSettings(bool is_specific) {
     // Entries with game-specific settings, needs the game-specific arg
-    Config::setReadbacks(ui->readbacksCheckBox->isChecked(), is_specific);
+    Config::setReadbacksMode(ui->readbacksModeComboBox->currentIndex());
     Config::setReadbackLinearImages(ui->readbackLinearImagesCheckBox->isChecked(), is_specific);
     Config::setDirectMemoryAccess(ui->dmaCheckBox->isChecked(), is_specific);
     Config::setDevKitConsole(ui->devkitCheckBox->isChecked(), is_specific);

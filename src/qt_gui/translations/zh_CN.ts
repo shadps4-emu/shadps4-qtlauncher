@@ -1222,6 +1222,14 @@
       <source>Tip: Unmap inputs with right-click</source>
       <translation>提示：右键点击可解除输入映射</translation>
     </message>
+    <message>
+      <source>Volume Up</source>
+      <translation type="unfinished">Volume Up</translation>
+    </message>
+    <message>
+      <source>Volume Down</source>
+      <translation type="unfinished">Volume Down</translation>
+    </message>
   </context>
   <context>
     <name>IpcClient</name>
@@ -1962,10 +1970,6 @@ Select an emulator version from the right panel.</source>
       <translation>Geust 调试标记</translation>
     </message>
     <message>
-      <source>Enable Readbacks</source>
-      <translation>启用Readbacks</translation>
-    </message>
-    <message>
       <source>Enable Readback Linear Images</source>
       <translation>启用Readback线性图像</translation>
     </message>
@@ -2158,10 +2162,6 @@ Select an emulator version from the right panel.</source>
       <translation>收集着色器：\n您需要启用此功能才能使用调试菜单（Ctrl + F10）编辑着色器。</translation>
     </message>
     <message>
-      <source>Enable Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
-      <translation>启用Readbacks：\n启用 GPU 内存回读和回写功能。\n这是某些游戏中恰当运行所必需的。\n可能会导致稳定性以及性能问题。</translation>
-    </message>
-    <message>
       <source>Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</source>
       <translation>启用Readback线性图像：\n启用异步下载GPU修改的线性图像。\n可能会修复一些游戏中的问题。</translation>
     </message>
@@ -2343,7 +2343,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Mailbox (Vsync)</source>
-      <translation>信箱（垂直同步）</translation>
+      <translation>邮箱（垂直同步）</translation>
     </message>
     <message>
       <source>Fifo (Vsync)</source>
@@ -2359,7 +2359,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</source>
-      <translation>呈现模式：\n配置视频输出到屏幕的显示方式。\n\n信箱模式：帧画面与屏幕刷新率同步。新帧将替换所有待处理帧，可降低延迟但落后时可能跳帧。\n先进先出：帧画面与屏幕刷新率同步。新帧将排列在待处理帧之后，确保所有帧都被呈现但可能增加延迟。\n即时模式：帧画面准备就绪后立即显示于屏幕，可能导致画面撕裂。</translation>
+      <translation>呈现模式：\n配置视频输出到屏幕的显示方式。\n\n邮箱模式：帧画面与屏幕刷新率同步。新帧将替换所有待处理帧，可降低延迟但落后时可能跳帧。\n先进先出：帧画面与屏幕刷新率同步。新帧将排列在待处理帧之后，确保所有帧都被呈现但可能增加延迟。\n即时模式：帧画面准备就绪后立即显示于屏幕，可能导致画面撕裂。</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
@@ -2618,6 +2618,26 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
       <translation>将着色器缓存文件压缩为ZIP文件：\n着色器缓存将以单个ZIP文件存储，而非多个独立文件。</translation>
+    </message>
+    <message>
+      <source>Readbacks Mode</source>
+      <translation type="unfinished">Readbacks Mode</translation>
+    </message>
+    <message>
+      <source>Disabled</source>
+      <translation type="unfinished">Disabled</translation>
+    </message>
+    <message>
+      <source>Low</source>
+      <translation type="unfinished">Low</translation>
+    </message>
+    <message>
+      <source>High</source>
+      <translation type="unfinished">High</translation>
+    </message>
+    <message>
+      <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
+      <translation type="unfinished">Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</translation>
     </message>
   </context>
   <context>

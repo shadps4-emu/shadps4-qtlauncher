@@ -2,576 +2,580 @@
 <!-- SPDX-FileCopyrightText: Copyright 2025 shadPS4 Emulator Project
      SPDX-License-Identifier: GPL-2.0-or-later -->
 <!DOCTYPE TS>
-<TS version="2.1" language="sv_SE" sourcelanguage="en">
+<TS version="2.1" language="hr_HR" sourcelanguage="en">
   <context>
     <name>AboutDialog</name>
     <message>
       <source>About shadPS4</source>
-      <translation>Om shadPS4</translation>
+      <translation>O shadPS4</translation>
     </message>
     <message>
       <source>shadPS4 is an experimental open-source emulator for the PlayStation 4.</source>
-      <translation>shadPS4 är en experimentell emulator för PlayStation 4 baserad på öppen källkod.</translation>
+      <translation>shadPS4 je eksperimentalan emulator otvorenog kôda za PlayStation 4.</translation>
     </message>
     <message>
       <source>This software should not be used to play games you have not legally obtained.</source>
-      <translation>Denna programvara bör inte användas för att spela spel som du inte legalt äger.</translation>
+      <translation>Ovaj program ne bi se trebao koristit za igranje igara koje se nalaze izvan zakonitog vlasništva.</translation>
     </message>
   </context>
   <context>
     <name>CheatsPatches</name>
     <message>
       <source>Cheats / Patches for </source>
-      <translation>Fusk / Patchar för </translation>
+      <translation>Šifre / Zakrpe za </translation>
     </message>
     <message>
       <source>Cheats/Patches are experimental.\nUse with caution.\n\nDownload cheats individually by selecting the repository and clicking the download button.\nIn the Patches tab, you can download all patches at once, choose which ones you want to use, and save your selection.\n\nSince we do not develop the Cheats/Patches,\nplease report issues to the cheat author.\n\nCreated a new cheat? Visit:\n</source>
-      <translation>Fusk/Patchar är experimentella.\nAnvänd med försiktighet.\n\nHämta fusk individuellt genom att välja förrådet och klicka på hämtningsknappen.\nUnder Patchar-fliken kan du hämta alla patchar på en gång, välj vilken du vill använda och spara ditt val.\n\nEftersom vi inte utvecklar fusk eller patchar,\nrapportera gärna problem till fuskets upphovsperson.\n\nSkapat ett nytt fusk? Besök:\n</translation>
+      <translation>Šifre/Zakrpe su eksperimentalne.\nKoristite uz upozorenje.\n\nPreuzmite 
+šifre pojedinačno odabravši iz repozitorija i klikom na gumb preuzimanje.\nNa kartici Zakrpe, možete preuzeti sve zakrpe odjednom, izaberite one koje vam odgovaraju, pa spremite svoj odabir.\n\nS obzirom da mi ne razvijamo Šifre/Zakrpe,\nmolimo da se za probleme obratite njihovim autorima.\n\nProizveli ste novu
+Šifru? Posjetite:\n</translation>
     </message>
     <message>
       <source>No Image Available</source>
-      <translation>Ingen bild tillgänglig</translation>
+      <translation>Nema Dostupnih Slika</translation>
     </message>
     <message>
       <source>Serial: </source>
-      <translation>Serienummer: </translation>
+      <translation>Serijski broj: </translation>
     </message>
     <message>
       <source>Version: </source>
-      <translation>Version: </translation>
+      <translation>Verzija: </translation>
     </message>
     <message>
       <source>Size: </source>
-      <translation>Storlek: </translation>
+      <translation>Veličina: </translation>
     </message>
     <message>
       <source>Select Cheat File:</source>
-      <translation>Välj fuskfil:</translation>
+      <translation>Odaberi Datoteku Šifri:</translation>
     </message>
     <message>
       <source>Repository:</source>
-      <translation>Förråd:</translation>
+      <translation>Repozitorij:</translation>
     </message>
     <message>
       <source>Download Cheats</source>
-      <translation>Hämta fusk</translation>
+      <translation>Preuzmi Šifre</translation>
     </message>
     <message>
       <source>Delete File</source>
-      <translation>Ta bort fil</translation>
+      <translation>Izbriši Datoteku</translation>
     </message>
     <message>
       <source>No files selected.</source>
-      <translation>Inga filer valda.</translation>
+      <translation>Nema izabranih datoteka.</translation>
     </message>
     <message>
       <source>You can delete the cheats you don&apos;t want after downloading them.</source>
-      <translation>Du kan ta bort fusk som du inte vill ha efter de hämtats ner.</translation>
+      <translation>Možete obrisati šifre koje više ne želite nakon preuzimanja.</translation>
     </message>
     <message>
       <source>Do you want to delete the selected file?\n%1</source>
-      <translation>Vill du ta bort markerade filen?\n%1</translation>
+      <translation>Želite li izbrisati odabranu datoteku?\n%1</translation>
     </message>
     <message>
       <source>Select Patch File:</source>
-      <translation>Välj patchfil:</translation>
+      <translation>Izaberi Datoteku Zakrpe:</translation>
     </message>
     <message>
       <source>Download Patches</source>
-      <translation>Hämta patchar</translation>
+      <translation>Preuzmi Zakrpe</translation>
     </message>
     <message>
       <source>Save</source>
-      <translation>Spara</translation>
+      <translation>Spremi</translation>
     </message>
     <message>
       <source>Cheats</source>
-      <translation>Fusk</translation>
+      <translation>Šifre</translation>
     </message>
     <message>
       <source>Patches</source>
-      <translation>Patchar</translation>
+      <translation>Zakrpe</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation>Fel</translation>
+      <translation>Greška</translation>
     </message>
     <message>
       <source>No patch selected.</source>
-      <translation>Ingen patch vald.</translation>
+      <translation>Zakrpa nije izabrana.</translation>
     </message>
     <message>
       <source>Unable to open files.json for reading.</source>
-      <translation>Kunde inte öppna files.json för läsning.</translation>
+      <translation>Neuspješno otvaranje datoteke files.json za čitanje.</translation>
     </message>
     <message>
       <source>No patch file found for the current serial.</source>
-      <translation>Ingen patchfil hittades för aktuella serienumret.</translation>
+      <translation>Zakrpe nisu pronađene za trenutni serijski broj.</translation>
     </message>
     <message>
       <source>Unable to open the file for reading.</source>
-      <translation>Kunde inte öppna filen för läsning.</translation>
+      <translation>Neuspješno otvaranje datoteka za čitanje.</translation>
     </message>
     <message>
       <source>Unable to open the file for writing.</source>
-      <translation>Kunde inte öppna filen för skrivning.</translation>
+      <translation>Neuspješno otvaranje datoteka za pisanje.</translation>
     </message>
     <message>
       <source>Failed to parse XML: </source>
-      <translation>Misslyckades med att tolka XML: </translation>
+      <translation>Neuspješno parsiranje XML-a: </translation>
     </message>
     <message>
       <source>Success</source>
-      <translation>Lyckades</translation>
+      <translation>Uspjeh</translation>
     </message>
     <message>
       <source>Options saved successfully.</source>
-      <translation>Inställningarna sparades.</translation>
+      <translation>Opcije spremljene uspješno.</translation>
     </message>
     <message>
       <source>Invalid Source</source>
-      <translation>Ogiltig källa</translation>
+      <translation>Nevažeći Izvor</translation>
     </message>
     <message>
       <source>The selected source is invalid.</source>
-      <translation>Vald källa är ogiltig.</translation>
+      <translation>Odabrani izvor nije valjan.</translation>
     </message>
     <message>
       <source>File Exists</source>
-      <translation>Filen finns</translation>
+      <translation>Datoteka Postoji</translation>
     </message>
     <message>
       <source>File already exists. Do you want to replace it?</source>
-      <translation>Filen finns redan. Vill du ersätta den?</translation>
+      <translation>Datoteka već postoji. Želite ju prepisati?</translation>
     </message>
     <message>
       <source>Failed to save file:</source>
-      <translation>Misslyckades med att spara fil:</translation>
+      <translation>Spremanje datoteke nije uspjelo:</translation>
     </message>
     <message>
       <source>Failed to download file:</source>
-      <translation>Misslyckades med att hämta filen:</translation>
+      <translation>Neuspješno preuzimanje datoteke:</translation>
     </message>
     <message>
       <source>Cheats Not Found</source>
-      <translation>Fusk hittades inte</translation>
+      <translation>Šifre Nisu Pronađene</translation>
     </message>
     <message>
       <source>No Cheats found for this game in this version of the selected repository,try another repository or a different version of the game.</source>
-      <translation>Inga fusk hittades för detta spel i denna version av det valda förrådet. Prova ett annat förråd eller en annan version av spelet.</translation>
+      <translation>Nema pronađenih Šifri za ovu igru u verziji odabranog repozitorija,probajte drugi repozitorij ili drugu verziju ove igre.</translation>
     </message>
     <message>
       <source>Cheats Downloaded Successfully</source>
-      <translation>Fusk hämtades ner</translation>
+      <translation>Šifre su preuzete Uspješno</translation>
     </message>
     <message>
       <source>You have successfully downloaded the cheats for this version of the game from the selected repository. You can try downloading from another repository, if it is available it will also be possible to use it by selecting the file from the list.</source>
-      <translation>Du har hämtat ner fusken för denna version av spelet från valt förråd. Du kan försöka att hämta från andra förråd, om de är tillgängliga så kan det vara möjligt att använda det genom att välja det genom att välja filen från listan.</translation>
+      <translation>Uspješno ste preuzeli šifre za ovu verziju igre iz izabranog repozitorija. Probajte preuzeti s drugog repozitorija, ukoliko je dostupno također je moguće iste odabrati izborom datoteke šifri sa liste.</translation>
     </message>
     <message>
       <source>Failed to save:</source>
-      <translation>Misslyckades med att spara:</translation>
+      <translation>Spremanje nije uspjelo:</translation>
     </message>
     <message>
       <source>Failed to download:</source>
-      <translation>Misslyckades med att hämta:</translation>
+      <translation>Preuzimanje neuspjelo:</translation>
     </message>
     <message>
       <source>Download Complete</source>
-      <translation>Hämtning färdig</translation>
+      <translation>Preuzimanje Završeno</translation>
     </message>
     <message>
       <source>Patches Downloaded Successfully! All Patches available for all games have been downloaded, there is no need to download them individually for each game as happens in Cheats. If the patch does not appear, it may be that it does not exist for the specific serial and version of the game.</source>
-      <translation>Patchhämtningen är färdig! Alla patchar tillgängliga för alla spel har hämtats och de behövs inte hämtas individuellt för varje spel som med fusk. Om patchen inte dyker upp kan det bero på att den inte finns för det specifika serienumret och versionen av spelet.</translation>
+      <translation>Zakrpe Uspješno Preuzete! Sve zakrpe dostupne za sve igre su 
+preuzete, nema potrebe ih preuzimati pojedinačno kao što vrijedi u kartici 
+Šifre. Ako se zakrpa ne prikaže, moguće je da ne postoji za specifični serijski broj i verziju igre.</translation>
     </message>
     <message>
       <source>Failed to parse JSON data from HTML.</source>
-      <translation>Misslyckades med att tolka JSON-data från HTML.</translation>
+      <translation>Neuspješno parsiranje JSON podataka iz HTML-a.</translation>
     </message>
     <message>
       <source>Failed to retrieve HTML page.</source>
-      <translation>Misslyckades med att hämta HTML-sida.</translation>
+      <translation>Neuspješno primanje HTML stranice.</translation>
     </message>
     <message>
       <source>The game is in version: %1</source>
-      <translation>Spelet är i version: %1</translation>
+      <translation>Igra je u verziji: %1</translation>
     </message>
     <message>
       <source>The downloaded patch only works on version: %1</source>
-      <translation>Hämtad patch fungerar endast på version: %1</translation>
+      <translation>Preuzeta zakrpa radi isključivo na verziji: %1</translation>
     </message>
     <message>
       <source>You may need to update your game.</source>
-      <translation>Du kan behöva uppdatera ditt spel.</translation>
+      <translation>Trebali bi ažurirati igru.</translation>
     </message>
     <message>
       <source>Incompatibility Notice</source>
-      <translation>Meddelande om inkompatibilitet</translation>
+      <translation>Obavijest o Nekompatibilnosti</translation>
     </message>
     <message>
       <source>Failed to open file:</source>
-      <translation>Misslyckades med att öppna filen:</translation>
+      <translation>Neuspješno otvaranje datoteke:</translation>
     </message>
     <message>
       <source>XML ERROR:</source>
-      <translation>XML-FEL:</translation>
+      <translation>XML GREŠKA:</translation>
     </message>
     <message>
       <source>Failed to open files.json for writing</source>
-      <translation>Misslyckades med att öppna files.json för skrivning</translation>
+      <translation>Neuspješno otvaranje datoteke files.json za pisanje</translation>
     </message>
     <message>
       <source>Author: </source>
-      <translation>Upphovsperson: </translation>
+      <translation>Autor: </translation>
     </message>
     <message>
       <source>Directory does not exist:</source>
-      <translation>Katalogen finns inte:</translation>
+      <translation>Mapa ne postoji:</translation>
     </message>
     <message>
       <source>Failed to open files.json for reading.</source>
-      <translation>Misslyckades med att öppna files.json för läsning.</translation>
+      <translation>Neuspješno otvaranje datoteke files.json za čitanje.</translation>
     </message>
     <message>
       <source>Name:</source>
-      <translation>Namn:</translation>
+      <translation>Ime:</translation>
     </message>
     <message>
       <source>Can&apos;t apply cheats before the game is started</source>
-      <translation>Kan inte tillämpa fusk innan spelet är startat</translation>
+      <translation>Primjena Šifri nije moguća prije pokretanja igre</translation>
     </message>
     <message>
       <source>Close</source>
-      <translation>Stäng</translation>
+      <translation>Zatvori</translation>
     </message>
   </context>
   <context>
     <name>CheckUpdate</name>
     <message>
       <source>Auto Updater</source>
-      <translation>Automatisk uppdatering</translation>
+      <translation>Automatski Ažuriraj</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation>Fel</translation>
+      <translation>Greška</translation>
     </message>
     <message>
       <source>Network error:</source>
-      <translation>Nätverksfel:</translation>
+      <translation>Pogreška u vezi:</translation>
     </message>
     <message>
       <source>The Auto Updater allows up to 60 update checks per hour.\nYou have reached this limit. Please try again later.</source>
-      <translation>Den automatiska uppdateraren tillåter upp till 60 uppdateringskontroller per timme.\nDu har uppnått denna gräns. Försök igen senare.</translation>
+      <translation>Auto Aktualizator omogućuje do 60 provjera ažuriranja unutar sata.\nDosegnuli ste to ograničenje. Molimo pokušajte ponovo kasnije.</translation>
     </message>
     <message>
       <source>Failed to parse update information.</source>
-      <translation>Misslyckades med att tolka uppdateringsinformationen.</translation>
+      <translation>Neuspješno parsiranje informacija o ažuriranju.</translation>
     </message>
     <message>
       <source>No pre-releases found.</source>
-      <translation>Inga förutgåva hittades.</translation>
+      <translation>Pred-izdanja nisu pronađena.</translation>
     </message>
     <message>
       <source>No download URL found for the specified asset.</source>
-      <translation>Ingen hämtnings-URL hittades för angiven tillgång.</translation>
+      <translation>Nema URL-a za preuzimanje za odabrano sredstvo.</translation>
     </message>
     <message>
       <source>Your version is already up to date!</source>
-      <translation>Din version är redan den senaste!</translation>
+      <translation>Verzija je već ažurirana!</translation>
     </message>
     <message>
       <source>Current Version</source>
-      <translation>Aktuell version</translation>
+      <translation>Trenutna Verzija</translation>
     </message>
     <message>
       <source>Latest Version</source>
-      <translation>Senaste version</translation>
+      <translation>Zadnja Verzija</translation>
     </message>
     <message>
       <source>Do you want to update?</source>
-      <translation>Vill du uppdatera?</translation>
+      <translation>Želite li ažurirat?</translation>
     </message>
     <message>
       <source>Show Changelog</source>
-      <translation>Visa ändringslogg</translation>
+      <translation>Prikaži Dnevnik Izmjena</translation>
     </message>
     <message>
       <source>Check for Updates at Startup</source>
-      <translation>Leta efter uppdateringar vid uppstart</translation>
+      <translation>Provjeri Ažuriranja prilikom Pokretanja</translation>
     </message>
     <message>
       <source>Update</source>
-      <translation>Uppdatera</translation>
+      <translation>Ažuriraj</translation>
     </message>
     <message>
       <source>No</source>
-      <translation>Nej</translation>
+      <translation>Ne</translation>
     </message>
     <message>
       <source>Hide Changelog</source>
-      <translation>Dölj ändringslogg</translation>
+      <translation>Sakrij Dnevnik Izmjena</translation>
     </message>
     <message>
       <source>Changes</source>
-      <translation>Ändringar</translation>
+      <translation>Izmjene</translation>
     </message>
     <message>
       <source>Network error occurred while trying to access the URL</source>
-      <translation>Nätverksfel inträffade vid försök att komma åt URL:en</translation>
+      <translation>Mrežna pogreška prilikom pristupa na URL</translation>
     </message>
     <message>
       <source>Download Complete</source>
-      <translation>Hämtning färdig</translation>
+      <translation>Preuzimanje Završeno</translation>
     </message>
     <message>
       <source>The update has been downloaded, press OK to install.</source>
-      <translation>Uppdateringen har hämtats. Tryck på Ok för att installera.</translation>
+      <translation>Ažuriranje je preuzeto, pritisnite OK za instalaciju.</translation>
     </message>
     <message>
       <source>Failed to save the update file at</source>
-      <translation>Misslyckades med att spara uppdateringsfilen i</translation>
+      <translation>Neuspjelo spremanje datoteke ažuracije na</translation>
     </message>
     <message>
       <source>Starting Update...</source>
-      <translation>Startar uppdatering...</translation>
+      <translation>Započinjem Ažuriranje...</translation>
     </message>
     <message>
       <source>Failed to create the update script file</source>
-      <translation>Misslyckades med att skapa uppdateringsskriptfil</translation>
+      <translation>Neuspjelo izrađivanje skripte za ažuriranje</translation>
     </message>
     <message>
       <source>Auto Updater - GUI</source>
-      <translation>Automatisk uppdaterare - Grafiskt gränssnitt</translation>
+      <translation>Auto Aktualizator - GUI</translation>
     </message>
     <message>
       <source>Update Available - GUI</source>
-      <translation>Uppdatering tillgänglig - Grafiskt gränssnitt</translation>
+      <translation>Ažuracija Dostupna - GUI</translation>
     </message>
   </context>
   <context>
     <name>CompatibilityInfoClass</name>
     <message>
       <source>Fetching compatibility data, please wait</source>
-      <translation>Hämtar kompatibilitetsdata, vänta</translation>
+      <translation>Preuzimam podatke o kompatibilnosti, molim pričekajte</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation>Avbryt</translation>
+      <translation>Poništi</translation>
     </message>
     <message>
       <source>Loading...</source>
-      <translation>Läser in...</translation>
+      <translation>Učitavanje...</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation>Fel</translation>
+      <translation>Greška</translation>
     </message>
     <message>
       <source>Unable to update compatibility data! Try again later.</source>
-      <translation>Kunde inte uppdatera kompatibilitetsdata! Försök igen senare.</translation>
+      <translation>Nije moguće ažurirati podatke o kompatibilnosti! Pokušajte ponovo kasnije.</translation>
     </message>
     <message>
       <source>Unable to open compatibility_data.json for writing.</source>
-      <translation>Kunde inte öppna compatibility_data.json för skrivning.</translation>
+      <translation>Nije moguće otvoriti compatibility_data.json za pisanje.</translation>
     </message>
     <message>
       <source>Unknown</source>
-      <translation>Okänt</translation>
+      <translation>Nepoznato</translation>
     </message>
     <message>
       <source>Nothing</source>
-      <translation>Ingenting</translation>
+      <translation>Ništa</translation>
     </message>
     <message>
       <source>Boots</source>
-      <translation>Startar upp</translation>
+      <translation>Pokretljivo</translation>
     </message>
     <message>
       <source>Menus</source>
-      <translation>Menyer</translation>
+      <translation>Izbornici</translation>
     </message>
     <message>
       <source>Ingame</source>
-      <translation>Problem</translation>
+      <translation>Ingame</translation>
     </message>
     <message>
       <source>Playable</source>
-      <translation>Spelbart</translation>
+      <translation>Igrivo</translation>
     </message>
   </context>
   <context>
     <name>ControlSettings</name>
     <message>
       <source>Configure Controls</source>
-      <translation>Konfigurera kontroller</translation>
+      <translation>Konfiguriraj Kontrole</translation>
     </message>
     <message>
       <source>D-Pad</source>
-      <translation>Riktningsknappar</translation>
+      <translation>D-Pad</translation>
     </message>
     <message>
       <source>Up</source>
-      <translation>Upp</translation>
+      <translation>Gore</translation>
     </message>
     <message>
       <source>Left</source>
-      <translation>Vänster</translation>
+      <translation>Lijevo</translation>
     </message>
     <message>
       <source>Right</source>
-      <translation>Höger</translation>
+      <translation>Desno</translation>
     </message>
     <message>
       <source>Down</source>
-      <translation>Ner</translation>
+      <translation>Dolje</translation>
     </message>
     <message>
       <source>Left Stick</source>
-      <translation>Vänster spak</translation>
+      <translation>Lijeva Palica</translation>
     </message>
     <message>
       <source>Config Selection</source>
-      <translation>Konfigurationsval</translation>
+      <translation>Konfiguriraj Odabir</translation>
     </message>
     <message>
       <source>Common Config</source>
-      <translation>Allmän konfiguration</translation>
+      <translation>Zajednička Konfiguracija</translation>
     </message>
     <message>
       <source>Use per-game configs</source>
-      <translation>Använd konfigurationer per spel</translation>
+      <translation>Upotrijebi konfiguracije prema igri</translation>
     </message>
     <message>
       <source>Face Buttons</source>
-      <translation>Handlingsknappar</translation>
+      <translation>Akcijski Gumbi</translation>
     </message>
     <message>
       <source>Right Stick</source>
-      <translation>Höger spak</translation>
+      <translation>Desna Palica</translation>
     </message>
     <message>
       <source>Color Adjustment</source>
-      <translation>Färgjustering</translation>
+      <translation>Podešavanje Boja</translation>
     </message>
     <message>
       <source>Override Lightbar Color</source>
-      <translation>Åsidosätt ljusrampens färg</translation>
+      <translation>Prekorači Boju na Lightbaru</translation>
     </message>
     <message>
       <source>Override Color</source>
-      <translation>Åsidosätt färg</translation>
+      <translation>Prekorači Boju</translation>
     </message>
     <message>
       <source>Unable to Save</source>
-      <translation>Kunde inte spara</translation>
+      <translation>Spremanje neuspješno</translation>
     </message>
     <message>
       <source>Cannot bind axis values more than once</source>
-      <translation>Kan inte binda axelvärden fler än en gång</translation>
+      <translation>Nedopušteno vezanje vrijednosti osi više od jedanput</translation>
     </message>
     <message>
       <source>Save</source>
-      <translation>Spara</translation>
+      <translation>Spremi</translation>
     </message>
     <message>
       <source>Apply</source>
-      <translation>Tillämpa</translation>
+      <translation>Primijeni</translation>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation>Återställ till standard</translation>
+      <translation>Vrati Zadane Postavke</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation>Avbryt</translation>
+      <translation>Poništi</translation>
     </message>
     <message>
       <source>unmapped</source>
-      <translation>omappad</translation>
+      <translation>nemapirano</translation>
     </message>
     <message>
       <source>Options</source>
-      <translation>Options</translation>
+      <translation>Opcije</translation>
     </message>
     <message>
       <source>Touchpad Left</source>
-      <translation>Pekplatta vänster</translation>
+      <translation>Postolje Lijevo</translation>
     </message>
     <message>
       <source>Touchpad Center</source>
-      <translation>Pekplatta i mitten</translation>
+      <translation>Postolje Centar</translation>
     </message>
     <message>
       <source>Touchpad Right</source>
-      <translation>Pekplatta höger</translation>
+      <translation>Postolje Desno</translation>
     </message>
     <message>
       <source>Triangle</source>
-      <translation>Triangel</translation>
+      <translation>Trokut</translation>
     </message>
     <message>
       <source>Square</source>
-      <translation>Fyrkant</translation>
+      <translation>Kvadrat</translation>
     </message>
     <message>
       <source>Circle</source>
-      <translation>Cirkel</translation>
+      <translation>Krug</translation>
     </message>
     <message>
       <source>Cross</source>
-      <translation>Kors</translation>
+      <translation>Križić</translation>
     </message>
     <message>
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-      <translation>Det går inte att binda samma unika inmatning mer än en gång. Dubbletta inmatningar är mappade till följande knappar:
+      <translation>Nedopušteno vezanje bilo kojeg unosa više od jedanput. Dvostruki unosi mapirani na sljedeću gumbe:
 
 %1</translation>
     </message>
     <message>
       <source>Press a button</source>
-      <translation>Tryck på en knapp</translation>
+      <translation>Pritisni gumb</translation>
     </message>
     <message>
       <source>Move analog stick</source>
-      <translation>Rör analog spak</translation>
+      <translation>Pomakni analognu palicu</translation>
     </message>
     <message>
       <source>L1 and L2</source>
-      <translation>L1 och L2</translation>
+      <translation>L1 i L2</translation>
     </message>
     <message>
       <source>Active Gamepad</source>
-      <translation>Aktiv gamepad</translation>
+      <translation>Aktivni Kontroler</translation>
     </message>
     <message>
       <source>Gamepad ID</source>
-      <translation>Gamepad-id</translation>
+      <translation>ID Kontrolera</translation>
     </message>
     <message>
       <source>Default Gamepad</source>
-      <translation>Gamepad (standard)</translation>
+      <translation>Zadani Kontroler</translation>
     </message>
     <message>
       <source>No default selected</source>
-      <translation>Ingen standard vald</translation>
+      <translation>Nije izabran zadani kontroler</translation>
     </message>
     <message>
       <source>n/a</source>
-      <translation>inte tillgänglig</translation>
+      <translation>n/a</translation>
     </message>
     <message>
       <source>Set Active Gamepad as Default</source>
-      <translation>Ställ in aktiv gamepad som standard</translation>
+      <translation>Postavi Aktivni Kontroler kao Zadani</translation>
     </message>
     <message>
       <source>Remove Default Gamepad</source>
-      <translation>Ta bort gamepad som standard</translation>
+      <translation>Ukloni Zadani Kontroler</translation>
     </message>
     <message>
       <source>R1 and R2</source>
-      <translation>R1 och R2</translation>
+      <translation>R1 i R2</translation>
     </message>
     <message>
       <source>ID: </source>
@@ -579,178 +583,178 @@
     </message>
     <message>
       <source>Default Controller Selected</source>
-      <translation>Standardkontroller vald</translation>
+      <translation>Zadani Kontroler Izabran</translation>
     </message>
     <message>
       <source>Active controller set as default</source>
-      <translation>Aktiv kontroller inställd som standard</translation>
+      <translation>Aktivni kontroler postavljen kao zadani</translation>
     </message>
     <message>
       <source>Default Controller Removed</source>
-      <translation>Standardkontroller borttagen</translation>
+      <translation>Zadani Kontroler Uklonjen</translation>
     </message>
     <message>
       <source>Default controller setting removed</source>
-      <translation>Inställning för standardkontroller borttagen</translation>
+      <translation>Postavke zadanog kontrolera uklonjene</translation>
     </message>
     <message>
       <source>RED</source>
-      <translation>RÖD</translation>
+      <translation>CRVENA</translation>
     </message>
     <message>
       <source>GREEN</source>
-      <translation>GRÖN</translation>
+      <translation>ZELENA</translation>
     </message>
     <message>
       <source>BLUE</source>
-      <translation>BLÅ</translation>
+      <translation>PLAVA</translation>
     </message>
     <message>
       <source>Left Stick Deadzone</source>
-      <translation>Dödzon för vänster spak</translation>
+      <translation>Lijeva Palica Deadzone</translation>
     </message>
     <message>
       <source>Min Deadzone (def:2 max:127)</source>
-      <translation>Min dödzon (standard:2 max:127)</translation>
+      <translation>Min Deadzone (def:2 max:127)</translation>
     </message>
     <message>
       <source>Max Deadzone (def:127 max:127)</source>
-      <translation>Max dödzon (standard:127 max:127)</translation>
+      <translation>Maks Deadzone (def:127 max:127)</translation>
     </message>
     <message>
       <source>Right Stick Deadzone</source>
-      <translation>Dödzon för höger spak</translation>
+      <translation>Desna Palica Deadzone</translation>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation>Tips: Avmappa inmatningar med högerklick</translation>
+      <translation>Pomoć: Odmapiraj unose desnom palicom</translation>
     </message>
   </context>
   <context>
     <name>EditorDialog</name>
     <message>
       <source>Edit Keyboard + Mouse and Controller input bindings</source>
-      <translation>Redigera inmatningsbindningar för tangentbord + mus och kontroller</translation>
+      <translation>Uredi Tipkovnica + Miš i Kontroler unose mapiranja</translation>
     </message>
     <message>
       <source>Use Per-Game configs</source>
-      <translation>Använd konfigurationer per-spel</translation>
+      <translation>Koristi Po-Igri konfiguracije</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation>Fel</translation>
+      <translation>Greška</translation>
     </message>
     <message>
       <source>Could not open the file for reading</source>
-      <translation>Kunde inte öppna filen för läsning</translation>
+      <translation>Nije moguće otvoriti datoteku za čitanje</translation>
     </message>
     <message>
       <source>Could not open the file for writing</source>
-      <translation>Kunde inte öppna filen för skrivning</translation>
+      <translation>Nije moguće otvoriti datoteku za pisanje</translation>
     </message>
     <message>
       <source>Save Changes</source>
-      <translation>Spara ändringar</translation>
+      <translation>Spremi Izmjene</translation>
     </message>
     <message>
       <source>Do you want to save changes?</source>
-      <translation>Vill du spara ändringarna?</translation>
+      <translation>Želite li spremiti izmjene?</translation>
     </message>
     <message>
       <source>Help</source>
-      <translation>Hjälp</translation>
+      <translation>Pomoć</translation>
     </message>
     <message>
       <source>Do you want to reset your custom default config to the original default config?</source>
-      <translation>Vill du återställa din anpassade standardkonfiguration till ursprungliga standardkonfigurationen?</translation>
+      <translation>Želite li resetirati vaše proizvoljne postavke na zadane postavke?</translation>
     </message>
     <message>
       <source>Do you want to reset this config to your custom default config?</source>
-      <translation>Vill du återställa denna konfiguration till din anpassade standardkonfiguration?</translation>
+      <translation>Želite li resetirat ovu konfiguraciju na proizvoljnu konfiguraciju?</translation>
     </message>
     <message>
       <source>Reset to Default</source>
-      <translation>Återställ till standard</translation>
+      <translation>Vrati na zadano</translation>
     </message>
   </context>
   <context>
     <name>ElfViewer</name>
     <message>
       <source>Open Folder</source>
-      <translation>Öppna mapp</translation>
+      <translation>Otvori Mapu</translation>
     </message>
   </context>
   <context>
     <name>GameInfoClass</name>
     <message>
       <source>Loading game list, please wait :3</source>
-      <translation>Läser in spellistan, vänta :3</translation>
+      <translation>Učitavanje liste igara, molim pričekajte :3</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation>Avbryt</translation>
+      <translation>Poništi</translation>
     </message>
     <message>
       <source>Loading...</source>
-      <translation>Läser in...</translation>
+      <translation>Učitavanje...</translation>
     </message>
   </context>
   <context>
     <name>GameInstallDialog</name>
     <message>
       <source>shadPS4 - Choose directory</source>
-      <translation>shadPS4 - Välj katalog</translation>
+      <translation>shadLauncher4 - Izbor mape</translation>
     </message>
     <message>
       <source>Browse</source>
-      <translation>Bläddra</translation>
+      <translation>Potraži</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation>Fel</translation>
+      <translation>Greška</translation>
     </message>
     <message>
       <source>Directory to install emulator versions</source>
-      <translation>Katalog för att installera emulatorversioner</translation>
+      <translation>Mapa za instalaciju verzija emulatora</translation>
     </message>
     <message>
       <source>Directory with your dumped games</source>
-      <translation>Katalog med dina dumpade spel</translation>
+      <translation>Mape s dumpanim igrama</translation>
     </message>
     <message>
       <source>Directory with your dumped DLC&apos;s</source>
-      <translation>Katalog med dina dumpade DLCer</translation>
+      <translation>Mapa s dumpanim DLC-ima</translation>
     </message>
     <message>
       <source>Directory with games</source>
-      <translation>Katalog med spel</translation>
+      <translation>Mapa s igrama</translation>
     </message>
     <message>
       <source>Directory with DLC&apos;s</source>
-      <translation>Katalog med DLCer</translation>
+      <translation>Mapa s DLC-ima</translation>
     </message>
   </context>
   <context>
     <name>GameListFrame</name>
     <message>
       <source>Icon</source>
-      <translation>Ikon</translation>
+      <translation>Ikona</translation>
     </message>
     <message>
       <source>Name</source>
-      <translation>Namn</translation>
+      <translation>Ime</translation>
     </message>
     <message>
       <source>Serial</source>
-      <translation>Serienummer</translation>
+      <translation>Serijski broj</translation>
     </message>
     <message>
       <source>Compatibility</source>
-      <translation>Kompatibilitet</translation>
+      <translation>Kompatibilnost</translation>
     </message>
     <message>
       <source>Region</source>
-      <translation>Region</translation>
+      <translation>Regija</translation>
     </message>
     <message>
       <source>Firmware</source>
@@ -758,23 +762,23 @@
     </message>
     <message>
       <source>Size</source>
-      <translation>Storlek</translation>
+      <translation>Veličina</translation>
     </message>
     <message>
       <source>Version</source>
-      <translation>Version</translation>
+      <translation>Verzija</translation>
     </message>
     <message>
       <source>Path</source>
-      <translation>Sökväg</translation>
+      <translation>Putanja</translation>
     </message>
     <message>
       <source>Play Time</source>
-      <translation>Speltid</translation>
+      <translation>Vrijeme Igranja</translation>
     </message>
     <message>
       <source>Never Played</source>
-      <translation>Aldrig spelat</translation>
+      <translation>Nikada igrano</translation>
     </message>
     <message>
       <source>h</source>
@@ -790,35 +794,35 @@
     </message>
     <message>
       <source>Compatibility is untested</source>
-      <translation>Kompatibilitet är otestat</translation>
+      <translation>Kompatibilnost nije testirana</translation>
     </message>
     <message>
       <source>Game does not initialize properly / crashes the emulator</source>
-      <translation>Spelet initierar inte korrekt / kraschar emulatorn</translation>
+      <translation>Igra se ne pokreće normalno / ruši emulator</translation>
     </message>
     <message>
       <source>Game boots, but only displays a blank screen</source>
-      <translation>Spelet startar men visar endast en blank skärm</translation>
+      <translation>Igra se pokrene, no prikazuje samo prazan ekran</translation>
     </message>
     <message>
       <source>Game displays an image but does not go past the menu</source>
-      <translation>Spelet visar en bild men kommer inte förbi menyn</translation>
+      <translation>Igra prikazuje sliku, ali ne prelazi izbornik</translation>
     </message>
     <message>
       <source>Game has game-breaking glitches or unplayable performance</source>
-      <translation>Spelet har allvarliga problem eller ospelbar prestanda</translation>
+      <translation>Igra ima greške koje igru čine neigrivom ili neigrivih performansi</translation>
     </message>
     <message>
       <source>Game can be completed with playable performance and no major glitches</source>
-      <translation>Spelet kan spelas klart med spelbar prestanda och utan större problem</translation>
+      <translation>Igra se može završit igrivim performansama bez bitnih pogrešaka</translation>
     </message>
     <message>
       <source>Click to see details on github</source>
-      <translation>Klicka för att se detaljer på Github</translation>
+      <translation>Kliknite za pregled detalja na githubu</translation>
     </message>
     <message>
       <source>Last updated</source>
-      <translation>Senast uppdaterad</translation>
+      <translation>Zadnje ažurirano</translation>
     </message>
     <message>
       <source>Favorite</source>
@@ -852,99 +856,99 @@
     <name>GuiContextMenus</name>
     <message>
       <source>Cheats / Patches</source>
-      <translation>Fusk / Patchar</translation>
+      <translation>Šifre / Zakrpe</translation>
     </message>
     <message>
       <source>SFO Viewer</source>
-      <translation>SFO-visare</translation>
+      <translation>SFO preglednik</translation>
     </message>
     <message>
       <source>Trophy Viewer</source>
-      <translation>Trofé-visare</translation>
+      <translation>Preglednik Trofeja</translation>
     </message>
     <message>
       <source>Open Folder...</source>
-      <translation>Öppna mapp...</translation>
+      <translation>Otvori Mapu...</translation>
     </message>
     <message>
       <source>Open Game Folder</source>
-      <translation>Öppna spelmapp</translation>
+      <translation>Otvori Mapu Igre</translation>
     </message>
     <message>
       <source>Open Save Data Folder</source>
-      <translation>Öppna mapp för sparat data</translation>
+      <translation>Otvori Mapu Spremanja</translation>
     </message>
     <message>
       <source>Open Log Folder</source>
-      <translation>Öppna loggmapp</translation>
+      <translation>Otvori Mapu Zapisnika</translation>
     </message>
     <message>
       <source>Copy info...</source>
-      <translation>Kopiera till...</translation>
+      <translation>Kopiranje Informacija...</translation>
     </message>
     <message>
       <source>Copy Name</source>
-      <translation>Kopiera namn</translation>
+      <translation>Kopiraj Ime</translation>
     </message>
     <message>
       <source>Copy Serial</source>
-      <translation>Kopiera serienummer</translation>
+      <translation>Kopiraj Serijski Broj</translation>
     </message>
     <message>
       <source>Copy Version</source>
-      <translation>Kopiera version</translation>
+      <translation>Kopiraj Verziju</translation>
     </message>
     <message>
       <source>Copy Size</source>
-      <translation>Kopiera storlek</translation>
+      <translation>Kopiraj Veličinu</translation>
     </message>
     <message>
       <source>Copy All</source>
-      <translation>Kopiera alla</translation>
+      <translation>Kopiraj Sve</translation>
     </message>
     <message>
       <source>Delete...</source>
-      <translation>Ta bort...</translation>
+      <translation>Izbriši...</translation>
     </message>
     <message>
       <source>Delete Game</source>
-      <translation>Ta bort spel</translation>
+      <translation>Izbriši Igru</translation>
     </message>
     <message>
       <source>Delete Update</source>
-      <translation>Ta bort uppdatering</translation>
+      <translation>Izbriši Ažuriranje</translation>
     </message>
     <message>
       <source>Delete DLC</source>
-      <translation>Ta bort DLC</translation>
+      <translation>Izbriši DLC</translation>
     </message>
     <message>
       <source>Delete Trophy</source>
-      <translation>Ta bort trofé</translation>
+      <translation>Izbriši Trofej</translation>
     </message>
     <message>
       <source>Compatibility...</source>
-      <translation>Kompatibilitet...</translation>
+      <translation>Kompatibilnost...</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation>Fel</translation>
+      <translation>Greška</translation>
     </message>
     <message>
       <source>Game</source>
-      <translation>Spel</translation>
+      <translation>Igra</translation>
     </message>
     <message>
       <source>This game has no update to delete!</source>
-      <translation>Detta spel har ingen uppdatering att ta bort!</translation>
+      <translation>Igra nema ažuriranja za brisanje!</translation>
     </message>
     <message>
       <source>Update</source>
-      <translation>Uppdatera</translation>
+      <translation>Ažuriraj</translation>
     </message>
     <message>
       <source>This game has no DLC to delete!</source>
-      <translation>Detta spel har inga DLC att ta bort!</translation>
+      <translation>Ova igra nema DLC za brisanje!</translation>
     </message>
     <message>
       <source>DLC</source>
@@ -952,111 +956,112 @@
     </message>
     <message>
       <source>Delete %1</source>
-      <translation>Ta bort %1</translation>
+      <translation>Izbriši %1</translation>
     </message>
     <message>
       <source>Are you sure you want to delete %1&apos;s %2 directory?</source>
-      <translation>Är du säker på att du vill ta bort %1s %2-katalog?</translation>
+      <translation>Jeste li sigurni da želite izbrisat %1 %2 mapu?</translation>
     </message>
     <message>
       <source>Open Update Folder</source>
-      <translation>Öppna uppdateringsmapp</translation>
+      <translation>Otvori Mapu Ažuriranja</translation>
     </message>
     <message>
       <source>Delete Save Data</source>
-      <translation>Ta bort sparat data</translation>
+      <translation>Izbriši Spremanja</translation>
     </message>
     <message>
       <source>This game has no update folder to open!</source>
-      <translation>Detta spel har ingen uppdateringsmapp att öppna!</translation>
+      <translation>Igra nema ažuriranja za brisanje!</translation>
     </message>
     <message>
       <source>No log file found for this game!</source>
-      <translation>Ingen loggfil hittades för detta spel!</translation>
+      <translation>Nema pronađenog zapisnika za ovu igru!</translation>
     </message>
     <message>
       <source>This game has no save data to delete!</source>
-      <translation>Detta spel har inget sparat data att ta bort!</translation>
+      <translation>Ova igra nema podataka o spremanju za obrisati!</translation>
     </message>
     <message>
       <source>This game has no saved trophies to delete!</source>
-      <translation>Detta spel har inga sparade troféer att ta bort!</translation>
+      <translation>Ova igra nema podataka o spremanju za obrisati!</translation>
     </message>
     <message>
       <source>Save Data</source>
-      <translation>Sparat data</translation>
+      <translation>Spremi Podatke</translation>
     </message>
     <message>
       <source>Trophy</source>
-      <translation>Trofé</translation>
+      <translation>Trofej</translation>
     </message>
     <message>
       <source>SFO Viewer for </source>
-      <translation>SFO-visare för </translation>
+      <translation>SFO Preglednik za </translation>
     </message>
     <message>
       <source>Remove from Favorites</source>
-      <translation>Ta bort från favoriter</translation>
+      <translation>Ukloni iz favorita</translation>
     </message>
     <message>
       <source>Add to Favorites</source>
-      <translation>Lägg till i favoriter</translation>
+      <translation>Dodaj u Favorite</translation>
     </message>
     <message>
       <source>Game-specific Settings...</source>
-      <translation>Spelspecifika inställningar...</translation>
+      <translation>Igri-specifičnePostavke...</translation>
     </message>
     <message>
       <source>Configure Game-specific Settings</source>
-      <translation>Konfigurera spelspecifika inställningar</translation>
+      <translation>Konfiguriraj Igri-specifične Postavke</translation>
     </message>
     <message>
       <source>Create Game-specific Settings from Global Settings</source>
-      <translation>Skapa spelspecifika inställningar från globala inställningar</translation>
+      <translation>Konfiguriraj Igri-specifične Postavke iz Globalnih Postavki</translation>
     </message>
     <message>
       <source>Delete Game-specific Settings</source>
-      <translation>Ta bort spelspecifika inställningar</translation>
+      <translation>Obriši Igri-specifične Postavke</translation>
     </message>
     <message>
       <source>Update Database</source>
-      <translation>Uppdatera databasen</translation>
+      <translation>Ažuriraj Bazu</translation>
     </message>
     <message>
       <source>View Report</source>
-      <translation>Visa rapport</translation>
+      <translation>Vidi Izvještaj</translation>
     </message>
     <message>
       <source>Submit a Report</source>
-      <translation>Skicka in en rapport</translation>
+      <translation>Podnesi Izvještaj</translation>
     </message>
     <message>
       <source>Confirm deletion</source>
-      <translation>Bekräfta borttagning</translation>
+      <translation>Potvrdite brisanje</translation>
     </message>
     <message>
       <source>Delete game-specific settings?</source>
-      <translation>Ta bort spelspecifika inställningar?</translation>
+      <translation>Obriši Igri-specifične Postavke?</translation>
     </message>
     <message>
       <source>Launch...</source>
-      <translation>Starta...</translation>
+      <translation>Pokreni...</translation>
     </message>
     <message>
       <source>Launch with game specific configs (default)</source>
-      <translation>Starta med spelspecifik konfiguration (standard)</translation>
+      <translation>Pokreni igru s njoj specifičnom konfiguracijom (zadano)</translation>
     </message>
     <message>
       <source>Launch with global config only</source>
-      <translation>Starta med endast global konfiguration</translation>
+      <translation>Pokreni samo uz globalnu konfiguraciju</translation>
     </message>
     <message>
       <source>Launch with default settings</source>
-      <translation>Starta med standardinställningar</translation>
+      <translation>Pokreni uz zadane postavke</translation>
     </message>
     <message>
       <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
-      <translation>Det gick inte att skicka rapporten eftersom den senaste loggen för spelet misslyckades vid följande kontroll och därför skulle vara en felaktig rapport:</translation>
+      <translation>Neuspješno podnošenje izvještaja, jer je zadnji zapisnik igre pao na dotičnoj provjeri, kako 
+sam izvještaj ne bi postao nevaljan:</translation>
     </message>
     <message>
       <source>Ok</source>
@@ -1064,629 +1069,629 @@
     </message>
     <message>
       <source>Info</source>
-      <translation>Info</translation>
+      <translation>Informacije</translation>
     </message>
     <message>
       <source>Create Shortcut for Selected Emulator Version</source>
-      <translation>Skapa genväg för vald emulatorversion</translation>
+      <translation>Izradi Prečac za Izabranu Verziju Emulatora</translation>
     </message>
     <message>
       <source>Create Shortcut for Specified Emulator Version</source>
-      <translation>Skapa genväg för angiven emulatorversion</translation>
+      <translation>Izradi Prečac za Određenu Verziju Emulatora</translation>
     </message>
     <message>
       <source>Create Shortcut</source>
-      <translation>Skapa genväg</translation>
+      <translation>Izradi prečac</translation>
     </message>
     <message>
       <source>Shortcut creation</source>
-      <translation>Skapa genväg</translation>
+      <translation>Izrada Prečca</translation>
     </message>
     <message>
       <source>Shortcut created successfully!</source>
-      <translation>Genväg skapad!</translation>
+      <translation>Prečac izrađen uspješno!</translation>
     </message>
     <message>
       <source>Error creating shortcut!</source>
-      <translation>Fel vid skapande av genväg!</translation>
+      <translation>Greška prilikom izrade prečca!</translation>
     </message>
     <message>
       <source>Failed to convert icon.</source>
-      <translation>Misslyckades med att konvertera ikon.</translation>
+      <translation>Pogreška prilikom pretvorbe ikone.</translation>
     </message>
     <message>
       <source>Delete Shader Cache</source>
-      <translation>Ta bort shadercache</translation>
+      <translation>Izbriši Shader Cache</translation>
     </message>
     <message>
       <source>This game does not have any saved Shader Cache to delete!</source>
-      <translation>Detta spel har inte någon sparad shadercache att ta bort!</translation>
+      <translation>Igra nema spremljen Shader Cache za brisanje!</translation>
     </message>
     <message>
       <source>Shader Cache</source>
-      <translation>Shadercache</translation>
+      <translation>Shader Cache</translation>
     </message>
   </context>
   <context>
     <name>HelpDialog</name>
     <message>
       <source>Quickstart</source>
-      <translation>Snabbstart</translation>
+      <translation>Brzi početak</translation>
     </message>
     <message>
       <source>FAQ</source>
-      <translation>Frågor och svar</translation>
+      <translation>FAQ</translation>
     </message>
     <message>
       <source>Syntax</source>
-      <translation>Syntax</translation>
+      <translation>Sintaksa</translation>
     </message>
     <message>
       <source>Special Bindings</source>
-      <translation>Speciella bindningar</translation>
+      <translation>Specijalna Vezivanja</translation>
     </message>
     <message>
       <source>Keybindings</source>
-      <translation>Tangentbindningar</translation>
+      <translation>Tipkovnička vezanja</translation>
     </message>
   </context>
   <context>
     <name>Hotkeys</name>
     <message>
       <source>Customize Hotkeys</source>
-      <translation>Anpassa snabbtangenter</translation>
+      <translation>Uredi Kratice</translation>
     </message>
     <message>
       <source>Controller Hotkeys</source>
-      <translation>Snabbtangenter för kontroller</translation>
+      <translation>Kratice Kontrolera</translation>
     </message>
     <message>
       <source>Show FPS Counter</source>
-      <translation>Visa bildfrekvensräknare</translation>
+      <translation>Prikaz FPS Brojača</translation>
     </message>
     <message>
       <source>unmapped</source>
-      <translation>omappad</translation>
+      <translation>nemapirano</translation>
     </message>
     <message>
       <source>Quit Emulation</source>
-      <translation>Avsluta emulering</translation>
+      <translation>Završi Emulaciju</translation>
     </message>
     <message>
       <source>Reload Button Mappings</source>
-      <translation>Uppdatera knappmappningar</translation>
+      <translation>Ponovno Učitaj Mapiranja Gumba</translation>
     </message>
     <message>
       <source>Toggle Fullscreen</source>
-      <translation>Växla helskärm</translation>
+      <translation>Prikaz Preko Cijelog Ekrana</translation>
     </message>
     <message>
       <source>Toggle Pause</source>
-      <translation>Växla paus</translation>
+      <translation>Uključi Pauzu</translation>
     </message>
     <message>
       <source>Keyboard Hotkeys</source>
-      <translation>Tangentbordsgenvägar</translation>
+      <translation>Tipkovničke Kratice</translation>
     </message>
     <message>
       <source>Renderdoc Capture (for debugging only)</source>
-      <translation>Renderdoc-fångst (endast för felsökning)</translation>
+      <translation>Renderdoc Snimanje (samo za debuggiranje)</translation>
     </message>
     <message>
       <source>Toggle Mouse to Joystick Emulation</source>
-      <translation>Växla mus- till styrspaksemulering</translation>
+      <translation>Uključi Emulaciju Miša u Joystick</translation>
     </message>
     <message>
       <source>Toggle Mouse to Gyro Emulation</source>
-      <translation>Växla mus- till gyroemulering</translation>
+      <translation>Uključi Emulaciju Miša u Žiro</translation>
     </message>
     <message>
       <source>Tip: Up to three simultaneous inputs can be assigned for each hotkey</source>
-      <translation>Tips: Upp till tre samtidiga inmatningar kan tilldelas för varje snabbtangent</translation>
+      <translation>Pomoć: Do tri istovremena unosa mogu bit dodijeljena za svaku tipku kratice</translation>
     </message>
     <message>
       <source>Save</source>
-      <translation>Spara</translation>
+      <translation>Spremi</translation>
     </message>
     <message>
       <source>Apply</source>
-      <translation>Tillämpa</translation>
+      <translation>Primijeni</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation>Avbryt</translation>
+      <translation>Poništi</translation>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation>Återställ till standard</translation>
+      <translation>Vrati Zadane Postavke</translation>
     </message>
     <message>
       <source>Unable to Save</source>
-      <translation>Kunde inte spara</translation>
+      <translation>Spremanje Nije moguće</translation>
     </message>
     <message>
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-      <translation>Det går inte att binda samma unika inmatning mer än en gång. Dubbletter av inmatningar mappas till följande knappar:
+      <translation>Nije moguće vezat jedinstveni unos više odjedanput. Dvostruki unosi mapirani na sljedeće gumbe:
 
 %1</translation>
     </message>
     <message>
       <source>Waiting for inputs</source>
-      <translation>Väntar på inmatningar</translation>
+      <translation>Čekanje na unose</translation>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation>Tips: Avmappa inmatningar med högerklick</translation>
+      <translation>Pomoć: Odmapiraj unose s desnim-klikom</translation>
     </message>
     <message>
       <source>Volume Up</source>
-      <translation>Höj volymen</translation>
+      <translation>Glasnoća Viša</translation>
     </message>
     <message>
       <source>Volume Down</source>
-      <translation>Sänk volymen</translation>
+      <translation>Glasnoća Niža</translation>
     </message>
   </context>
   <context>
     <name>IpcClient</name>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation>Kunde inte hitta körbar emulatorfil</translation>
+      <translation>Nepronađena izvršna datoteka emulatora</translation>
     </message>
   </context>
   <context>
     <name>KBMSettings</name>
     <message>
       <source>Configure Controls</source>
-      <translation>Konfigurera kontroller</translation>
+      <translation>Konfiguriraj Kontrole</translation>
     </message>
     <message>
       <source>D-Pad</source>
-      <translation>Riktningsknappar</translation>
+      <translation>D-Pad</translation>
     </message>
     <message>
       <source>Up</source>
-      <translation>Upp</translation>
+      <translation>Gore</translation>
     </message>
     <message>
       <source>unmapped</source>
-      <translation>inte mappad</translation>
+      <translation>nemapirano</translation>
     </message>
     <message>
       <source>Left</source>
-      <translation>Vänster</translation>
+      <translation>Lijevo</translation>
     </message>
     <message>
       <source>Right</source>
-      <translation>Höger</translation>
+      <translation>Desno</translation>
     </message>
     <message>
       <source>Down</source>
-      <translation>Ner</translation>
+      <translation>Dolje</translation>
     </message>
     <message>
       <source>Left Analog Halfmode</source>
-      <translation>Halvläge för vänster analog</translation>
+      <translation>Lijevi Analogni Polumod</translation>
     </message>
     <message>
       <source>hold to move left stick at half-speed</source>
-      <translation>håll ner för att flytta vänster spak i halvfart</translation>
+      <translation>pritisnite i pomičite lijevu palicu na pola-brzine</translation>
     </message>
     <message>
       <source>Left Stick</source>
-      <translation>Vänster spak</translation>
+      <translation>Lijeva Palica</translation>
     </message>
     <message>
       <source>Config Selection</source>
-      <translation>Konfigurationsval</translation>
+      <translation>Izbor Konfiguracije</translation>
     </message>
     <message>
       <source>Common Config</source>
-      <translation>Gemensam konfiguration</translation>
+      <translation>Zajednička Konfiguracija</translation>
     </message>
     <message>
       <source>Use per-game configs</source>
-      <translation>Använd konfiguration per-spel</translation>
+      <translation>Koristi konfiguracije po-igri</translation>
     </message>
     <message>
       <source>Text Editor</source>
-      <translation>Textredigerare</translation>
+      <translation>Uređivač Teksta</translation>
     </message>
     <message>
       <source>Help</source>
-      <translation>Hjälp</translation>
+      <translation>Pomoć</translation>
     </message>
     <message>
       <source>Mouse to Joystick</source>
-      <translation>Mus till styrspak</translation>
+      <translation>Miš na Joystick</translation>
     </message>
     <message>
       <source>*press F7 ingame to activate</source>
-      <translation>*tryck F7 i spelet för att aktivera</translation>
+      <translation>*pritisni F7 unutar igre za aktivaciju</translation>
     </message>
     <message>
       <source>Options</source>
-      <translation>Alternativ</translation>
+      <translation>Opcije</translation>
     </message>
     <message>
       <source>Mouse Movement Parameters</source>
-      <translation>Parametrar för musrörelse</translation>
+      <translation>Miš Parametri Kretanja</translation>
     </message>
     <message>
       <source>note: click Help Button/Special Keybindings for more information</source>
-      <translation>observera: klicka på Hjälp-knapp/Speciella tangentbindningar för mer information</translation>
+      <translation>napomena: kliknite Gumb Pomoć/Posebna Vezanja za više informacija</translation>
     </message>
     <message>
       <source>Face Buttons</source>
-      <translation>Handlingsknappar</translation>
+      <translation>Gumbi Lica</translation>
     </message>
     <message>
       <source>Triangle</source>
-      <translation>Triangel</translation>
+      <translation>Trokut</translation>
     </message>
     <message>
       <source>Square</source>
-      <translation>Fyrkant</translation>
+      <translation>Kvadrat</translation>
     </message>
     <message>
       <source>Circle</source>
-      <translation>Cirkel</translation>
+      <translation>Krug</translation>
     </message>
     <message>
       <source>Cross</source>
-      <translation>Kryss</translation>
+      <translation>Križić</translation>
     </message>
     <message>
       <source>Right Analog Halfmode</source>
-      <translation>Halvläge för höger analog</translation>
+      <translation>Desni Analogni Polumod</translation>
     </message>
     <message>
       <source>hold to move right stick at half-speed</source>
-      <translation>håll ner för att flytta höger spak i halvfart</translation>
+      <translation>pritisni za pomak desne palice na pola-brzine</translation>
     </message>
     <message>
       <source>Right Stick</source>
-      <translation>Höger spak</translation>
+      <translation>Desna Palica</translation>
     </message>
     <message>
       <source>Speed Offset (def 0.125):</source>
-      <translation>Offset för hastighet (standard 0.125):</translation>
+      <translation>Brzina Offset(0,125):</translation>
     </message>
     <message>
       <source>Copy from Common Config</source>
-      <translation>Kopiera från gemensam konfiguration</translation>
+      <translation>Kopiranje iz zajedničkih konfiguracija</translation>
     </message>
     <message>
       <source>Deadzone Offset (def 0.50):</source>
-      <translation>Offset för dödläge (standard 0.50):</translation>
+      <translation>Deadzone Offset (def 0,50):</translation>
     </message>
     <message>
       <source>Speed Multiplier (def 1.0):</source>
-      <translation>Hastighetsmultiplikator (standard 1.0):</translation>
+      <translation>Množitelj Brzine (def 1,0):</translation>
     </message>
     <message>
       <source>Common Config Selected</source>
-      <translation>Gemensam konfiguration valdes</translation>
+      <translation>Zajednička konfiguracija Izabrana</translation>
     </message>
     <message>
       <source>This button copies mappings from the Common Config to the currently selected profile, and cannot be used when the currently selected profile is the Common Config.</source>
-      <translation>Den här knappen kopierar mappningar från gemensam konfiguration till den aktuella valda profilen och kan inte användas när den aktuella valda profilen är gemensam konfiguration.</translation>
+      <translation>Ovaj gumb kopira mapiranja iz zajedničke Konfiguracije na trenutno izabrani profil, i ne može se koristiti kad je trenutno izabran profil Zajednička Konfiguracija.</translation>
     </message>
     <message>
       <source>Copy values from Common Config</source>
-      <translation>Kopiera värden från gemensam konfiguration</translation>
+      <translation>Kopiraj vrijednosti iz Zajedničke Konfiguracije</translation>
     </message>
     <message>
       <source>Do you want to overwrite existing mappings with the mappings from the Common Config?</source>
-      <translation>Vill du skriva över befintliga mappningar med mappningarna från gemensam konfiguration?</translation>
+      <translation>Želite li prepisati postojeća mapiranja s mapiranjima iz Zajedničke Konfiguracije?</translation>
     </message>
     <message>
       <source>Unable to Save</source>
-      <translation>Kunde inte spara</translation>
+      <translation>Spremanje Nije moguće</translation>
     </message>
     <message>
       <source>Press a key</source>
-      <translation>Tryck på en tangent</translation>
+      <translation>Pritisnite tipku</translation>
     </message>
     <message>
       <source>Cannot set mapping</source>
-      <translation>Kan inte ställa in mappning</translation>
+      <translation>Ne mogu postavit mapiranje</translation>
     </message>
     <message>
       <source>Mousewheel cannot be mapped to stick outputs</source>
-      <translation>Mushjulet kan inte mappas till spakutmatningar</translation>
+      <translation>Kotačić miša se ne može vezat kao izlazi na palici</translation>
     </message>
     <message>
       <source>Save</source>
-      <translation>Spara</translation>
+      <translation>Spremi</translation>
     </message>
     <message>
       <source>Apply</source>
-      <translation>Tillämpa</translation>
+      <translation>Primijeni</translation>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation>Återställ till standard</translation>
+      <translation>Vrati Zadane Postavke</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation>Avbryt</translation>
+      <translation>Poništi</translation>
     </message>
     <message>
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-      <translation>Det går inte att binda samma unika inmatning mer än en gång. Dubbla inmatningar har mappats till följande knappar:
+      <translation>Ne mogu vezat niti jedan unos više odjedanput. Dvostruki unosi mapirani na sljedeće gumbe:
 
 %1</translation>
     </message>
     <message>
       <source>Touchpad Left</source>
-      <translation>Pekplatta vänster</translation>
+      <translation>Postolje Lijevo</translation>
     </message>
     <message>
       <source>Touchpad Center</source>
-      <translation>Pekplatta mitten</translation>
+      <translation>Postolje Centar</translation>
     </message>
     <message>
       <source>Touchpad Right</source>
-      <translation>Pekplatta höger</translation>
+      <translation>Postolje Desno</translation>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation>Tips: Avmappa inmatningar med högerklick</translation>
+      <translation>Pomoć: Odmapiraj unos s desnim-klikom</translation>
     </message>
   </context>
   <context>
     <name>LogPresetsDialog</name>
     <message>
       <source>Log Filter Presets</source>
-      <translation>Förval för loggfilter</translation>
+      <translation>Pretpostavke Filtera Zapisnika</translation>
     </message>
     <message>
       <source>Comment</source>
-      <translation>Kommentar</translation>
+      <translation>Komentar</translation>
     </message>
     <message>
       <source>Filter</source>
-      <translation>Filter</translation>
+      <translation>Filtar</translation>
     </message>
     <message>
       <source>Load</source>
-      <translation>Läs in</translation>
+      <translation>Učitaj</translation>
     </message>
     <message>
       <source>Close</source>
-      <translation>Stäng</translation>
+      <translation>Zatvori</translation>
     </message>
     <message>
       <source>Add a new preset after the selected row</source>
-      <translation>Lägg till ett nytt förval efter markerad rad</translation>
+      <translation>Dodaj novu pretpostavku nakon odabranog retka</translation>
     </message>
     <message>
       <source>Remove selected presets</source>
-      <translation>Ta bort markerade förval</translation>
+      <translation>Ukloni izabrane pretpostavke</translation>
     </message>
     <message>
       <source>Load the selected preset</source>
-      <translation>Läs in markerade förvalet</translation>
+      <translation>Učitaj izabrane pretpostavke</translation>
     </message>
   </context>
   <context>
     <name>MainWindow</name>
     <message>
       <source>Open/Add Elf Folder</source>
-      <translation>Öppna/Lägg till Elf-mapp</translation>
+      <translation>Otvori/Dodaj Elf Mapu</translation>
     </message>
     <message>
       <source>Boot Game</source>
-      <translation>Starta spel</translation>
+      <translation>Pokreni Igru</translation>
     </message>
     <message>
       <source>Check for Updates</source>
-      <translation>Leta efter uppdateringar</translation>
+      <translation>Provjeri Ažuriranja</translation>
     </message>
     <message>
       <source>About shadPS4</source>
-      <translation>Om shadPS4</translation>
+      <translation>O shadPS4</translation>
     </message>
     <message>
       <source>Configure...</source>
-      <translation>Konfigurera...</translation>
+      <translation>Podesi...</translation>
     </message>
     <message>
       <source>Recent Games</source>
-      <translation>Senaste spel</translation>
+      <translation>Nedavne igre</translation>
     </message>
     <message>
       <source>Open shadPS4 Folder</source>
-      <translation>Öppna shadPS4-mapp</translation>
+      <translation>Otvori shadPS4 Mapu</translation>
     </message>
     <message>
       <source>Exit</source>
-      <translation>Avsluta</translation>
+      <translation>Izlaz</translation>
     </message>
     <message>
       <source>Exit shadPS4</source>
-      <translation>Avsluta shadPS4</translation>
+      <translation>Iziđi iz shadPS4</translation>
     </message>
     <message>
       <source>Exit the application.</source>
-      <translation>Avsluta programmet.</translation>
+      <translation>Zatvori aplikaciju.</translation>
     </message>
     <message>
       <source>Show Game List</source>
-      <translation>Visa spellista</translation>
+      <translation>Prikaz Igrače Liste</translation>
     </message>
     <message>
       <source>Game List Refresh</source>
-      <translation>Uppdatera spellista</translation>
+      <translation>Osvježi Igraču Listu</translation>
     </message>
     <message>
       <source>Tiny</source>
-      <translation>Mycket små</translation>
+      <translation>Sitno</translation>
     </message>
     <message>
       <source>Small</source>
-      <translation>Små</translation>
+      <translation>Malo</translation>
     </message>
     <message>
       <source>Medium</source>
-      <translation>Medelstora</translation>
+      <translation>Srednje</translation>
     </message>
     <message>
       <source>Large</source>
-      <translation>Stora</translation>
+      <translation>Veliko</translation>
     </message>
     <message>
       <source>List View</source>
-      <translation>Listvy</translation>
+      <translation>Listni Pregled</translation>
     </message>
     <message>
       <source>Grid View</source>
-      <translation>Rutnätsvy</translation>
+      <translation>Rešetkasti Prikaz</translation>
     </message>
     <message>
       <source>Elf Viewer</source>
-      <translation>Elf-visare</translation>
+      <translation>Elf Preglednik</translation>
     </message>
     <message>
       <source>Game Install Directory</source>
-      <translation>Installationskatalog för spel</translation>
+      <translation>Instalacijska Mapa Igre</translation>
     </message>
     <message>
       <source>Download Cheats/Patches</source>
-      <translation>Hämta fusk/patchar</translation>
+      <translation>Preuzmi Šifre/Zakrpe</translation>
     </message>
     <message>
       <source>Dump Game List</source>
-      <translation>Dumpa spellista</translation>
+      <translation>Dump Igrače Liste</translation>
     </message>
     <message>
       <source>Trophy Viewer</source>
-      <translation>Trofévisare</translation>
+      <translation>Preglednik Trofeja</translation>
     </message>
     <message>
       <source>No games found. Please add your games to your library first.</source>
-      <translation>Inga spel hittades. Lägg till dina spel till biblioteket först.</translation>
+      <translation>Igre nisu pronađene. Molim najprije dodajte igru u biblioteku.</translation>
     </message>
     <message>
       <source>Search...</source>
-      <translation>Sök...</translation>
+      <translation>Pretraži...</translation>
     </message>
     <message>
       <source>File</source>
-      <translation>Arkiv</translation>
+      <translation>Datoteka</translation>
     </message>
     <message>
       <source>View</source>
-      <translation>Visa</translation>
+      <translation>Prikaz</translation>
     </message>
     <message>
       <source>Game List Icons</source>
-      <translation>Ikoner för spellista</translation>
+      <translation>Ikone Igrače Liste</translation>
     </message>
     <message>
       <source>Game List Mode</source>
-      <translation>Läge för spellista</translation>
+      <translation>Mod Igrače Liste</translation>
     </message>
     <message>
       <source>Settings</source>
-      <translation>Inställningar</translation>
+      <translation>Postavke</translation>
     </message>
     <message>
       <source>Utils</source>
-      <translation>Verktyg</translation>
+      <translation>UslužniProgrami</translation>
     </message>
     <message>
       <source>Themes</source>
-      <translation>Teman</translation>
+      <translation>Teme</translation>
     </message>
     <message>
       <source>Help</source>
-      <translation>Hjälp</translation>
+      <translation>Pomoć</translation>
     </message>
     <message>
       <source>Dark</source>
-      <translation>Mörkt</translation>
+      <translation>Tamno</translation>
     </message>
     <message>
       <source>Light</source>
-      <translation>Ljust</translation>
+      <translation>Svijetlo</translation>
     </message>
     <message>
       <source>Green</source>
-      <translation>Grönt</translation>
+      <translation>Zelena</translation>
     </message>
     <message>
       <source>Blue</source>
-      <translation>Blått</translation>
+      <translation>Plava</translation>
     </message>
     <message>
       <source>Violet</source>
-      <translation>Lila</translation>
+      <translation>Ljubičasta</translation>
     </message>
     <message>
       <source>toolBar</source>
-      <translation>Verktygsrad</translation>
+      <translation>alatnaTraka</translation>
     </message>
     <message>
       <source>Game List</source>
-      <translation>Spellista</translation>
+      <translation>Lista Igara</translation>
     </message>
     <message>
       <source>Download Cheats For All Installed Games</source>
-      <translation>Hämta fusk för alla installerade spel</translation>
+      <translation>Preuzmi Šifre Za Sve Instalirane Igre</translation>
     </message>
     <message>
       <source>Download Patches For All Games</source>
-      <translation>Hämta patchar för alla spel</translation>
+      <translation>Preuzmi Zakrpe Za Sve Igre</translation>
     </message>
     <message>
       <source>Download Complete</source>
-      <translation>Hämtning färdig</translation>
+      <translation>Preuzimanje Završeno</translation>
     </message>
     <message>
       <source>You have downloaded cheats for all the games you have installed.</source>
-      <translation>Du har hämtat fusk till alla spelen som du har installerade.</translation>
+      <translation>Preuzeli ste šifre za sve instalirane igre.</translation>
     </message>
     <message>
       <source>Patches Downloaded Successfully!</source>
-      <translation>Patchar hämtades ner!</translation>
+      <translation>Zakrpe su preuzete Uspješno!</translation>
     </message>
     <message>
       <source>All Patches available for all games have been downloaded.</source>
-      <translation>Alla patchar tillgängliga för alla spel har hämtats ner.</translation>
+      <translation>Sve Zakrpe dostupne za sve igre su preuzete.</translation>
     </message>
     <message>
       <source>Games: </source>
-      <translation>Spel: </translation>
+      <translation>Igre: </translation>
     </message>
     <message>
       <source>ELF files (*.bin *.elf *.oelf)</source>
-      <translation>ELF-filer (*.bin *.elf *.oelf)</translation>
+      <translation>ELF datoteke (*.bin *.elf *.oelf)</translation>
     </message>
     <message>
       <source>Game Boot</source>
-      <translation>Starta spel</translation>
+      <translation>Pokretanje Igre</translation>
     </message>
     <message>
       <source>Only one file can be selected!</source>
-      <translation>Endast en fil kan väljas!</translation>
+      <translation>Samo jedna datoteka može bit izabrana!</translation>
     </message>
     <message>
       <source>Run Game</source>
-      <translation>Kör spel</translation>
+      <translation>Pokreni Igru</translation>
     </message>
     <message>
       <source>Eboot.bin file not found</source>
-      <translation>Filen eboot.bin hittades inte</translation>
+      <translation>Eboot.bin datoteka nije pronađena</translation>
     </message>
     <message>
       <source>Game is already running!</source>
-      <translation>Spelet är redan igång!</translation>
+      <translation>Igra je već pokrenuta!</translation>
     </message>
     <message>
       <source>shadPS4</source>
@@ -1694,178 +1699,178 @@
     </message>
     <message>
       <source>Play</source>
-      <translation>Spela</translation>
+      <translation>Pokreni</translation>
     </message>
     <message>
       <source>Pause</source>
-      <translation>Paus</translation>
+      <translation>Pauza</translation>
     </message>
     <message>
       <source>Stop</source>
-      <translation>Stoppa</translation>
+      <translation>Zaustavi</translation>
     </message>
     <message>
       <source>Restart</source>
-      <translation>Starta om</translation>
+      <translation>Restart</translation>
     </message>
     <message>
       <source>Full Screen</source>
-      <translation>Helskärm</translation>
+      <translation>Cijeli Zaslon</translation>
     </message>
     <message>
       <source>Controllers</source>
-      <translation>Kontroller</translation>
+      <translation>Kontroleri</translation>
     </message>
     <message>
       <source>Keyboard</source>
-      <translation>Tangentbord</translation>
+      <translation>Tipkovnica</translation>
     </message>
     <message>
       <source>Refresh List</source>
-      <translation>Uppdatera lista</translation>
+      <translation>Osvježi Listu</translation>
     </message>
     <message>
       <source>Resume</source>
-      <translation>Återuppta</translation>
+      <translation>Nastavi</translation>
     </message>
     <message>
       <source>Show Labels Under Icons</source>
-      <translation>Visa etiketter under ikoner</translation>
+      <translation>Prikaži Oznake Ispod Ikona</translation>
     </message>
     <message>
       <source>Customize Hotkeys</source>
-      <translation>Anpassa snabbtangenter</translation>
+      <translation>Uredi Kratice</translation>
     </message>
     <message>
       <source>Version Manager</source>
-      <translation>Versionshanterare</translation>
+      <translation>Upravitelj Verzija</translation>
     </message>
     <message>
       <source>No Version Selected</source>
-      <translation>Ingen version vald</translation>
+      <translation>Nijedna Verzija Odabrana</translation>
     </message>
     <message>
       <source>No emulator version was selected.
 The Version Manager menu will then open.
 Select an emulator version from the right panel.</source>
-      <translation>Ingen emulatorversion har valts.
-Menyn Versionshanterare kommer då att öppnas.
-Välj en emulatorversion från den högra panelen.</translation>
+      <translation>Nijedna verzija emulatora odabrana.
+Izbornik Upravitelj Verzija se potom otvara.
+Izaberite verziju emulatora s desne liste.</translation>
     </message>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation>Kunde inte hitta körbar emulatorfil</translation>
+      <translation>Nepronađena izvršna datoteka emulatora</translation>
     </message>
     <message>
       <source>Run Emulator</source>
-      <translation>Kör emulator</translation>
+      <translation>Pokreni Emulator</translation>
     </message>
     <message>
       <source>Emulator is already running!</source>
-      <translation>Emulatorn är redan igång!</translation>
+      <translation>Emulator je već pokrenut!</translation>
     </message>
     <message>
       <source>Invalid game argument provided</source>
-      <translation>Ogiltigt spelargument tillhandahölls</translation>
+      <translation>Nevaljan argument igre unesen</translation>
     </message>
     <message>
       <source>None</source>
-      <translation>Ingen</translation>
+      <translation>Ništa</translation>
     </message>
     <message>
       <source>Manage Skylanders</source>
-      <translation>Hantera Skylanders</translation>
+      <translation>Upravljanje Skylandera</translation>
     </message>
     <message>
       <source>Manage Infinity Figures</source>
-      <translation>Hantera Infinity-figurer</translation>
+      <translation>Upravljaj Infinity Figurama</translation>
     </message>
     <message>
       <source>Manage Dimensions Toypad</source>
-      <translation>Hantera Dimensions Toypad</translation>
+      <translation>Upravljanje s Dimensions Toypad</translation>
     </message>
     <message>
       <source>Game Log</source>
-      <translation>Spellogg</translation>
+      <translation>Dnevnik/Zapisnik Igre</translation>
     </message>
     <message>
       <source>Show Game Log</source>
-      <translation>Visa spellogg</translation>
+      <translation>Prikaz Zapisnika Igre</translation>
     </message>
   </context>
   <context>
     <name>SettingsDialog</name>
     <message>
       <source>Settings</source>
-      <translation>Inställningar</translation>
+      <translation>Postavke</translation>
     </message>
     <message>
       <source>General</source>
-      <translation>Allmänt</translation>
+      <translation>Općenito</translation>
     </message>
     <message>
       <source>System</source>
-      <translation>System</translation>
+      <translation>Sustav</translation>
     </message>
     <message>
       <source>Console Language</source>
-      <translation>Konsollspråk</translation>
+      <translation>Jezik Konzole</translation>
     </message>
     <message>
       <source>Default tab when opening settings</source>
-      <translation>Standardflik när inställningar öppnas</translation>
+      <translation>Zadana kartica prilikom otvaranja postavki</translation>
     </message>
     <message>
       <source>Enable Discord Rich Presence</source>
-      <translation>Aktivera Discord Rich Presence</translation>
+      <translation>Omogući Discord Obogaćenu Prisutnost</translation>
     </message>
     <message>
       <source>Username</source>
-      <translation>Användarnamn</translation>
+      <translation>Korisničko ime</translation>
     </message>
     <message>
       <source>Trophy Key</source>
-      <translation>Trofényckel</translation>
+      <translation>Trofej Ključ</translation>
     </message>
     <message>
       <source>Trophy</source>
-      <translation>Troféer</translation>
+      <translation>Trofej</translation>
     </message>
     <message>
       <source>Open the custom trophy images/sounds folder</source>
-      <translation>Öppna mappen för anpassade trofébilder/ljud</translation>
+      <translation>Otvori mapu proizvoljnih slika/zvukova</translation>
     </message>
     <message>
       <source>Logger</source>
-      <translation>Loggning</translation>
+      <translation>Zapisatelj</translation>
     </message>
     <message>
       <source>Log Type</source>
-      <translation>Loggtyp</translation>
+      <translation>Tip Zapisnika</translation>
     </message>
     <message>
       <source>Log Filter</source>
-      <translation>Loggfilter</translation>
+      <translation>Filtar Zapisnika</translation>
     </message>
     <message>
       <source>Open Log Location</source>
-      <translation>Öppna loggplats</translation>
+      <translation>Otvori Lokaciju Zapisnika</translation>
     </message>
     <message>
       <source>Input</source>
-      <translation>Inmatning</translation>
+      <translation>Unos</translation>
     </message>
     <message>
       <source>Cursor</source>
-      <translation>Muspekare</translation>
+      <translation>Pokazivač</translation>
     </message>
     <message>
       <source>Hide Cursor</source>
-      <translation>Dölj muspekare</translation>
+      <translation>Sakrij Pokazivač</translation>
     </message>
     <message>
       <source>Hide Cursor Idle Timeout</source>
-      <translation>Dölj muspekare vid overksam</translation>
+      <translation>Vrijeme Trajanje Prikrivanja Pokazivača</translation>
     </message>
     <message>
       <source>Microphone</source>
@@ -1873,11 +1878,11 @@ Välj en emulatorversion från den högra panelen.</translation>
     </message>
     <message>
       <source>None</source>
-      <translation>Ingen</translation>
+      <translation>Ništa</translation>
     </message>
     <message>
       <source>Default Device</source>
-      <translation>Standardenhet</translation>
+      <translation>Zadani Uređaj</translation>
     </message>
     <message>
       <source>s</source>
@@ -1885,339 +1890,339 @@ Välj en emulatorversion från den högra panelen.</translation>
     </message>
     <message>
       <source>Controller</source>
-      <translation>Handkontroller</translation>
+      <translation>Kontroler</translation>
     </message>
     <message>
       <source>Graphics</source>
-      <translation>Grafik</translation>
+      <translation>Grafika</translation>
     </message>
     <message>
       <source>User</source>
-      <translation>Användare</translation>
+      <translation>Korisnik</translation>
     </message>
     <message>
       <source>Graphics Device</source>
-      <translation>Grafikenhet</translation>
+      <translation>Grafička Kartica</translation>
     </message>
     <message>
       <source>Advanced</source>
-      <translation>Avancerat</translation>
+      <translation>Napredno</translation>
     </message>
     <message>
       <source>Enable Shaders Dumping</source>
-      <translation>Aktivera Shaders Dumping</translation>
+      <translation>Omogući Odlaganje Shadera</translation>
     </message>
     <message>
       <source>Enable NULL GPU</source>
-      <translation>Aktivera NULL GPU</translation>
+      <translation>Omogući NULL GPU</translation>
     </message>
     <message>
       <source>Enable HDR</source>
-      <translation>Aktivera HDR</translation>
+      <translation>Omogući HDR</translation>
     </message>
     <message>
       <source>Paths</source>
-      <translation>Sökvägar</translation>
+      <translation>Putanje</translation>
     </message>
     <message>
       <source>Game Folders</source>
-      <translation>Spelmappar</translation>
+      <translation>Mape Igara</translation>
     </message>
     <message>
       <source>Add...</source>
-      <translation>Lägg till...</translation>
+      <translation>Dodaj...</translation>
     </message>
     <message>
       <source>Remove</source>
-      <translation>Ta bort</translation>
+      <translation>Ukloni</translation>
     </message>
     <message>
       <source>Debug</source>
-      <translation>Felsök</translation>
+      <translation>Debug</translation>
     </message>
     <message>
       <source>Enable Debug Dumping</source>
-      <translation>Aktivera felsökningsdumpning</translation>
+      <translation>Omogući Odlaganje Debuga</translation>
     </message>
     <message>
       <source>Enable Vulkan Validation Layers</source>
-      <translation>Aktivera Vulkan Validation Layers</translation>
+      <translation>Omogući Vulkanove Slojeve Ovjere</translation>
     </message>
     <message>
       <source>Enable RenderDoc Debugging</source>
-      <translation>Aktivera RenderDoc-felsökning</translation>
+      <translation>Omogući RenderDoc Debugiranje</translation>
     </message>
     <message>
       <source>Enable Crash Diagnostics</source>
-      <translation>Aktivera kraschdiagnostik</translation>
+      <translation>Omogući Dijagnostike Rušenja</translation>
     </message>
     <message>
       <source>Collect Shaders</source>
-      <translation>Samla shaders</translation>
+      <translation>Prikupi Shadere</translation>
     </message>
     <message>
       <source>Copy GPU Buffers</source>
-      <translation>Kopiera GPU-buffertar</translation>
+      <translation>Kopiraj GPU međuspremnike</translation>
     </message>
     <message>
       <source>Host Debug Markers</source>
-      <translation>Felsökningsmarkörer för värd</translation>
+      <translation>Host Debug Markeri</translation>
     </message>
     <message>
       <source>Guest Debug Markers</source>
-      <translation>Felsökningsmarkörer för gäst</translation>
+      <translation>Gostujući Debug Markeri</translation>
     </message>
     <message>
       <source>Enable Readback Linear Images</source>
-      <translation>Aktivera återläsning av linjära bilder</translation>
+      <translation>Omogući Readback Linearne Slike</translation>
     </message>
     <message>
       <source>Check for Updates at Startup</source>
-      <translation>Leta efter uppdateringar vid uppstart</translation>
+      <translation>Provjeri Ažuriranja prilikom Pokretanja</translation>
     </message>
     <message>
       <source>Always Show Changelog</source>
-      <translation>Visa alltid ändringsloggen</translation>
+      <translation>Uvijek Prikaži Dnevnik Izmjena</translation>
     </message>
     <message>
       <source>Check for Updates</source>
-      <translation>Leta efter uppdateringar</translation>
+      <translation>Provjeri Ažuriranja</translation>
     </message>
     <message>
       <source>Title Music</source>
-      <translation>Titelmusik</translation>
+      <translation>Naslovna Glazba</translation>
     </message>
     <message>
       <source>Disable Trophy Notification</source>
-      <translation>Inaktivera troféaviseringar</translation>
+      <translation>Onemogući Obavijest o Trofeju</translation>
     </message>
     <message>
       <source>Background Image</source>
-      <translation>Bakgrundsbild</translation>
+      <translation>Pozadinska Slika</translation>
     </message>
     <message>
       <source>Show Background Image</source>
-      <translation>Visa bakgrundsbild</translation>
+      <translation>Prikaži Pozadinsku Sliku</translation>
     </message>
     <message>
       <source>Opacity</source>
-      <translation>Opacitet</translation>
+      <translation>Neprozirnost</translation>
     </message>
     <message>
       <source>Play title music</source>
-      <translation>Spela titelmusik</translation>
+      <translation>Reproduciraj naslovnu glazbu</translation>
     </message>
     <message>
       <source>Update Compatibility Database On Startup</source>
-      <translation>Uppdatera databas vid uppstart</translation>
+      <translation>Ažuriraj Bazu Kompatibilnosti Prilikom Pokretanja</translation>
     </message>
     <message>
       <source>Game Compatibility</source>
-      <translation>Spelkompatibilitet</translation>
+      <translation>Kompatibilnosti Igre</translation>
     </message>
     <message>
       <source>Display Compatibility Data</source>
-      <translation>Visa kompatibilitetsdata</translation>
+      <translation>Prikaz Podataka o Kompatibilnosti</translation>
     </message>
     <message>
       <source>Update Compatibility Database</source>
-      <translation>Uppdatera kompatibilitetsdatabasen</translation>
+      <translation>Ažuriraj Bazu Kompatibilnosti</translation>
     </message>
     <message>
       <source>Volume</source>
-      <translation>Volym</translation>
+      <translation>Glasnoća</translation>
     </message>
     <message>
       <source>Save</source>
-      <translation>Spara</translation>
+      <translation>Spremi</translation>
     </message>
     <message>
       <source>Apply</source>
-      <translation>Verkställ</translation>
+      <translation>Primijeni</translation>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation>Återställ till standard</translation>
+      <translation>Vrati Zadane Postavke</translation>
     </message>
     <message>
       <source>Close</source>
-      <translation>Stäng</translation>
+      <translation>Zatvori</translation>
     </message>
     <message>
       <source>Point your mouse at an option to display its description.</source>
-      <translation>Flytta muspekaren till ett alternativ för att visa dess beskrivning.</translation>
+      <translation>Pokaži mišem na opciju za prikaz opisa.</translation>
     </message>
     <message>
       <source>Console Language:\nSets the language that the PS4 game uses.\nIt&apos;s recommended to set this to a language the game supports, which will vary by region.</source>
-      <translation>Konsollspråk:\nStäller in språket som PS4-spelet använder.\nDet rekommenderas att ställa in detta till ett språk som spelet har stöd för, vilket kan skilja sig mellan regioner.</translation>
+      <translation>Jezik Konzole:\nPostavi jezik kojeg PS4 igra koristi.\nPreporuka je da se ovo postavi na jezik kojeg igra podržava, zavisno o regiji.</translation>
     </message>
     <message>
       <source>Emulator Language:\nSets the language of the emulator&apos;s user interface.</source>
-      <translation>Emulatorspråk:\nStäller in språket för emulatorns användargränssnitt.</translation>
+      <translation>Jezik Emulatora:\nPostavlja jezik korisničkog sučelja emulatora.</translation>
     </message>
     <message>
       <source>Show Splash Screen:\nShows the game&apos;s splash screen (a special image) while the game is starting.</source>
-      <translation>Visa startskärm:\nVisar spelets startskärm (en speciell bild) när spelet startas.</translation>
+      <translation>Prikaži Početni Ekran:\nPrikazuje početni ekran igre (posebnu sliku) za vrijeme pokretanja igre.</translation>
     </message>
     <message>
       <source>Enable Discord Rich Presence:\nDisplays the emulator icon and relevant information on your Discord profile.</source>
-      <translation>Aktivera Discord Rich Presence:\nVisar emulatorikonen och relevant information på din Discord-profil.</translation>
+      <translation>Omogući Discord Obogaćenu Prisutnost:\nPrikaz ikone emulatora i prikladne informacije na vašem Discord profilu.</translation>
     </message>
     <message>
       <source>Username:\nSets the PS4&apos;s account username, which may be displayed by some games.</source>
-      <translation>Användarnamn:\nStäller in PS4ans användarkonto, som kan visas av vissa spel.</translation>
+      <translation>Korisničko ime:\nPostavlja korisničko ime PS4 računa, koje bi neke igre mogle prikazat.</translation>
     </message>
     <message>
       <source>Trophy Key:\nKey used to decrypt trophies. Must be obtained from your jailbroken console.\nMust contain only hex characters.</source>
-      <translation>Trofényckel:\nNyckel som används för att avkryptera troféer. Måste hämtas från din konsoll (jailbroken).\nMåste innehålla endast hex-tecken.</translation>
+      <translation>Trofej Ključ:\nKljuč se koristi za dekripciju trofeja. Mora se dobit iz jailbreakane konzole.\nMora sadržavati isključivo hex znakove.</translation>
     </message>
     <message>
       <source>Log Type:\nSets whether to synchronize the output of the log window for performance. May have adverse effects on emulation.</source>
-      <translation>Loggtyp:\nStäller in huruvida synkronisering av utdata för loggfönstret för prestanda. Kan ha inverkan på emulationen.</translation>
+      <translation>Tip Zapisnika:\nPostavlja sinkronizaciju na izlaz prozora zapisnika radi performansa. Mogući su negativni učinci na emulaciju.</translation>
     </message>
     <message>
       <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Trace&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: Trace, Debug, Info, Warning, Error, Critical - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
-      <translation>Loggfilter:\nFiltrera loggen till att endast skriva ut specifik information.\nExempel: &quot;Core:Trace&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nNivåer: Trace, Debug, Info, Warning, Error, Critical - i den ordningen, en specifik nivå som tystar alla nivåer före den i listan och loggar allting efter den.</translation>
+      <translation>Filtar Zapisnika:\nFiltrira zapisnik za ispis samo specifičnih informacija.\nPrimjeri:&quot;Core:Trace&quot;&quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: Trace, Debug, Info, Warning, Error, Critical - u ovom redoslijedu, specifičan odabir utišava sve one koji mu prethode na listi te zapisuje svaki nivo nakon.</translation>
     </message>
     <message>
       <source>Background Image:\nControl the opacity of the game background image.</source>
-      <translation>Bakgrundsbild:\nKontrollerar opaciteten för spelets bakgrundsbild.</translation>
+      <translation>Pozadinska Slika:\nKontroliraj neprozirnost pozadinske slike igre.</translation>
     </message>
     <message>
       <source>Play Title Music:\nIf a game supports it, enable playing special music when selecting the game in the GUI.</source>
-      <translation>Spela upp titelmusik:\nOm ett spel har stöd för det kan speciell musik spelas upp från spelet i gränssnittet.</translation>
+      <translation>Reproduciraj Naslovnu Glazbu:\nAko igra podržava, omogući posebnu glazbu prilikom izbora unutar GUI-a.</translation>
     </message>
     <message>
       <source>Disable Trophy Pop-ups:\nDisable in-game trophy notifications. Trophy progress can still be tracked using the Trophy Viewer (right-click the game in the main window).</source>
-      <translation>Inaktivera popup för troféer:\nInaktivera troféeaviseringar i spel. Troféförlopp kan fortfarande följas med Troféevisaren (högerklicka på spelet i huvudfönstret)</translation>
+      <translation>Onemogući Pop-upove Trofeja:\nOnemogućavanje obavijesti o trofejima unutar igre. Napredak uz Trofeje se još može pratit korištenjem Preglednika Trofeja (desni-klik na glavni prozor igre).</translation>
     </message>
     <message>
       <source>Hide Cursor:\nChoose when the cursor will disappear:\nNever: You will always see the mouse.\nidle: Set a time for it to disappear after being idle.\nAlways: you will never see the mouse.</source>
-      <translation>Dölj pekare:\nVälj när muspekaren ska försvinna:\nAldrig: Du kommer alltid se muspekaren.\nOverksam: Ställ in en tid för när den ska försvinna efter den inte använts.\nAlltid: du kommer aldrig se muspekaren.</translation>
+      <translation>Sakrij pokazivač:\nIzaberite kada pokazivač nestaje:\nNikada: Uvijek se vidi.\nmirovanje: Postavljanje vremena kada pokazivač nestaje nakon neaktivnosti.\nUvijek: nikada nećete vidjeti miš.</translation>
     </message>
     <message>
       <source>Hide Idle Cursor Timeout:\nThe duration (seconds) after which the cursor that has been idle hides itself.</source>
-      <translation>Dölj pekare vid overksam:\nLängden (sekunder) efter vilken som muspekaren som har varit overksam döljer sig själv.</translation>
+      <translation>Vrijeme Skrivanja Pokazivača u mirovanju:\nTrajanje (u sekundama) nakon kojeg se pokazivač u stanju mirovanja sakrije.</translation>
     </message>
     <message>
       <source>Display Compatibility Data:\nDisplays game compatibility information in table view. Enable &quot;Update Compatibility On Startup&quot; to get up-to-date information.</source>
-      <translation>Visa kompatibilitetsdata:\nVisar information om spelkompatibilitet i tabellvyn. Aktivera &quot;Uppdatera kompatibilitet vid uppstart&quot; för att få uppdaterad information.</translation>
+      <translation>Prikaz Podataka o Kompatibilnosti:\nPrikazuje informacije o kompatibilnosti igre u tabličnom prikazu. Omogući &quot;Ažuriraj Bazu Kompatibilnosti Prilikom Pokretanja&quot; za zadnje informacije.</translation>
     </message>
     <message>
       <source>Update Compatibility On Startup:\nAutomatically update the compatibility database when shadPS4 starts.</source>
-      <translation>Uppdatera kompatibilitet vid uppstart:\nUppdatera automatiskt kompatibilitetsdatabasen när shadPS4 startar.</translation>
+      <translation>Ažuriraj Kompatibilnost kod Pokretanja:\nAutomatski ažuriraj bazu kompatibilnosti nakon pokretanja shadPS4.</translation>
     </message>
     <message>
       <source>Update Compatibility Database:\nImmediately update the compatibility database.</source>
-      <translation>Uppdatera kompatibilitetsdatabasen:\nUppdaterar kompatibilitetsdatabasen direkt.</translation>
+      <translation>Ažuriraj Bazu Kompatibilnosti:\nOdmah ažuriraj bazu kompatibilnosti.</translation>
     </message>
     <message>
       <source>Never</source>
-      <translation>Aldrig</translation>
+      <translation>Nikada</translation>
     </message>
     <message>
       <source>Idle</source>
-      <translation>Overksam</translation>
+      <translation>Mirovanje</translation>
     </message>
     <message>
       <source>Always</source>
-      <translation>Alltid</translation>
+      <translation>Uvijek</translation>
     </message>
     <message>
       <source>Graphics Device:\nOn multiple GPU systems, select the GPU the emulator will use from the drop down list,\nor select &quot;Auto Select&quot; to automatically determine it.</source>
-      <translation>Grafikenhet:\nFör system med flera GPUer kan du välja den GPU som emulatorn ska använda från rullgardinsmenyn,\neller välja &quot;Auto Select&quot; för att automatiskt bestämma det.</translation>
+      <translation>Grafička Kartica:\nNa više GPU sustava, odaberite GPU kojeg će emulator koristiti sa padajuće liste,\nili izaberi &quot;Automatski Izbor&quot; za automatsku procjenu.</translation>
     </message>
     <message>
       <source>Width/Height:\nSets the size of the emulator window at launch, which can be resized during gameplay.\nThis is different from the in-game resolution.</source>
-      <translation>Bredd/Höjd:\nStäller in storleken för emulatorfönstret vid uppstart, som kan storleksändras under spelning.\nDetta är inte det samma som spelupplösningen.</translation>
+      <translation>Širina/Visina:\nPostavlja veličinu prozora emulatora kod pokretanja, koji je podesiv tijekom igranja.\nOvo drugačije od rezolucije unutar igre.</translation>
     </message>
     <message>
       <source>Enable HDR:\nEnables HDR in games that support it.\nYour monitor must have support for the BT2020 PQ color space and the RGB10A2 swapchain format.</source>
-      <translation>Aktivera HDR:\nAktiverar HDR i spel som har stöd för det.\nDin skärm måste ha stöd för färgrymden BT2020 PQ samt swapchain-formatet RGB10A2.</translation>
+      <translation>Omogući HDR:\nOmogućuje HDR u igrama s podrškom.\nVaš monitor mora podržavat BT2020 PQ prostor boja i RGB10A2 swapchain format.</translation>
     </message>
     <message>
       <source>Game Folders:\nThe list of folders to check for installed games.</source>
-      <translation>Spelmappar:\nListan över mappar att leta i efter installerade spel.</translation>
+      <translation>Mape Igri:\n Lista mapa za provjeru instaliranih igara.</translation>
     </message>
     <message>
       <source>Add:\nAdd a folder to the list.</source>
-      <translation>Lägg till:\Lägg till en mapp till listan.</translation>
+      <translation>Dodaj:\nDodaj mapu na listu.</translation>
     </message>
     <message>
       <source>Remove:\nRemove a folder from the list.</source>
-      <translation>Ta bort:\nTa bort en mapp från listan.</translation>
+      <translation>Ukloni:\nUkloni mapu s liste.</translation>
     </message>
     <message>
       <source>Enable Debug Dumping:\nSaves the import and export symbols and file header information of the currently running PS4 program to a directory.</source>
-      <translation>Aktivera felsökningsdumpning:\nSparar import och export av symboler och fil-header-information för aktuellt körande PS4-program till en katalog.</translation>
+      <translation>Omogući Odlaganje Debuga:\nSprema simbole uvoza i izvoza i informacije iz zaglavlja datoteka trenutno pokrenutog PS4 programa u mapu.</translation>
     </message>
     <message>
       <source>Enable RenderDoc Debugging:\nIf enabled, the emulator will provide compatibility with Renderdoc to allow capture and analysis of the currently rendered frame.</source>
-      <translation>Aktivera RenderDoc-felsökning:\nOm aktiverad kommer emulatorn att tillhandahålla kompatibilitet med Renderdoc för att tillåta fångst och analys för aktuell renderad bildruta.</translation>
+      <translation>Omogući RenderDoc Debugiranje:\nAko omogućeno, emulator omogućuje kompatibilnost uz Renderdoc za snimanje i analizu trenutno renderirane sličice.</translation>
     </message>
     <message>
       <source>Collect Shaders:\nYou need this enabled to edit shaders with the debug menu (Ctrl + F10).</source>
-      <translation>Samla shaders:\nDu behöver aktivera detta för att redigera shaders med felsökningsmenyn (Ctrl + F10)</translation>
+      <translation>Skupljanje Shadera:\nTrebate uključit za obradu shadera iz debug izbornika (Ctrl + F10).</translation>
     </message>
     <message>
       <source>Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</source>
-      <translation>Aktivera återläsning av linjära bilder:\nAktiverar asynkron nedladdning av GPU-modifierade linjära bilder.\nKan lösa problem i vissa spel.</translation>
+      <translation>Omogući Readback Linearnih Slika:\nomogućuje asinkrono preuzimanje GPU modificiranih linearnih slika.\nMože ispravit probleme u nekim igrama.</translation>
     </message>
     <message>
       <source>Copy GPU Buffers:\nGets around race conditions involving GPU submits.\nMay or may not help with PM4 type 0 crashes.</source>
-      <translation>Kopiera GPU-buffertar:\nGör att man kan komma runt race conditions som involverar GPU submits.\nKan eller kan inte hjälpa med PM4 type 0-kraschar.</translation>
+      <translation>Kopiraj GPU Međuspremnike:\nObilazi problem stanja utrkivanja kod GPU podnesaka.\nMože ili ne mora pomoć s PM4 tip 0 rušenjima.</translation>
     </message>
     <message>
       <source>Host Debug Markers:\nInserts emulator-side information like markers for specific AMDGPU commands around Vulkan commands, as well as giving resources debug names.\nIf you have this enabled, you should enable Crash Diagnostics.\nUseful for programs like RenderDoc.</source>
-      <translation>Felsökningsmarkörer för värd:\nInfogar informationsliknande markörer i emulatorn för specifika AMDGPU-kommandon runt Vulkan-kommandon, så väl som ger resurser felsökningsnamn.\nOm du har detta aktiverat bör du aktivera Kraschdiagnostik.\nAnvändbart för  program som RenderDoc.</translation>
+      <translation>Host Debug Markeri:\nUnosi informacije sa strane emulatora kao marker za specifične AMDGPU naredbe u odnosu s Vulkan naredbama, također uz imenovanje resursa debug nazivima.\nAko je ovo omogućeno, trebali bi omogućit Dijagnostiku Rušenja.\nKorisno za programe kao što je RenderDoc.</translation>
     </message>
     <message>
       <source>Guest Debug Markers:\nInserts any debug markers the game itself has added to the command buffer.\nIf you have this enabled, you should enable Crash Diagnostics.\nUseful for programs like RenderDoc.</source>
-      <translation>Felsökningsmarkörer för gäst:\nInfogar felsökningsmarkörer som själva spelet har lagt till i kommandobufferten.\nOm du har aktiverat detta bör du aktivera Kraschdiagnostik.\nAnvändbart för program som RenderDoc.</translation>
+      <translation>Gostujući Debug Markeri:\nUnosi bilo koje debug markere koje je igra sama dodala u međuspremnik naredbi.\nAko je ovo omogućeno, trebali bi omogućit Dijagnostiku Rušenja. \nKorisno za programe kao što je RenderDoc.</translation>
     </message>
     <message>
       <source>Save Data Path:\nThe folder where game save data will be saved.</source>
-      <translation>Sökväg för sparat data:\nSökvägen där spelets sparade data kommer att sparas.</translation>
+      <translation>Spremi Putanje Podataka:\nMapa gdje će spremanja igre biti pohranjena.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the save data path.</source>
-      <translation>Bläddra:\nBläddra efter en mapp att ställa in som sökväg för sparat data.</translation>
+      <translation>Potraži:\nPotraži mapu za postavljanje kao putanju za spremanje podataka.</translation>
     </message>
     <message>
       <source>Set the volume of the background music.</source>
-      <translation>Ställ in volymen för bakgrundsmusiken.</translation>
+      <translation>Podesi glasnoću pozadinske glazbe.</translation>
     </message>
     <message>
       <source>Enable Motion Controls</source>
-      <translation>Aktivera rörelsekontroller</translation>
+      <translation>Omogući Kontrole Pokreta</translation>
     </message>
     <message>
       <source>Save Data Path</source>
-      <translation>Sökväg för sparat data</translation>
+      <translation>Putanje s Podacima o Spremanju</translation>
     </message>
     <message>
       <source>Browse</source>
-      <translation>Bläddra</translation>
+      <translation>Potraži</translation>
     </message>
     <message>
       <source>async</source>
-      <translation>asynk</translation>
+      <translation>async</translation>
     </message>
     <message>
       <source>sync</source>
-      <translation>synk</translation>
+      <translation>sync</translation>
     </message>
     <message>
       <source>Auto Select</source>
-      <translation>Välj automatiskt</translation>
+      <translation>Auto Odabir</translation>
     </message>
     <message>
       <source>Directory to install games</source>
-      <translation>Katalog att installera spel till</translation>
+      <translation>Mapa za instalaciju igri</translation>
     </message>
     <message>
       <source>Directory to save data</source>
-      <translation>Katalog för sparat data</translation>
+      <translation>Mapa za spremanje podataka</translation>
     </message>
     <message>
       <source>Video</source>
@@ -2225,27 +2230,27 @@ Välj en emulatorversion från den högra panelen.</translation>
     </message>
     <message>
       <source>Display Mode</source>
-      <translation>Visningsläge</translation>
+      <translation>Mod Prikaza</translation>
     </message>
     <message>
       <source>Windowed</source>
-      <translation>Fönster</translation>
+      <translation>U Prozoru</translation>
     </message>
     <message>
       <source>Fullscreen</source>
-      <translation>Helskärm</translation>
+      <translation>Cijeli zaslon</translation>
     </message>
     <message>
       <source>Fullscreen (Borderless)</source>
-      <translation>Helskärm (kantlöst)</translation>
+      <translation>Cijeli zaslon (Bez okvira)</translation>
     </message>
     <message>
       <source>Window Size</source>
-      <translation>Fönsterstorlek</translation>
+      <translation>Veličina Prozora</translation>
     </message>
     <message>
       <source>W:</source>
-      <translation>B:</translation>
+      <translation>W:</translation>
     </message>
     <message>
       <source>H:</source>
@@ -2253,91 +2258,91 @@ Välj en emulatorversion från den högra panelen.</translation>
     </message>
     <message>
       <source>Separate Log Files</source>
-      <translation>Separata loggfiler</translation>
+      <translation>Razdvoji Datoteke Zapisnika</translation>
     </message>
     <message>
       <source>Separate Log Files:\nWrites a separate logfile for each game.</source>
-      <translation>Separata loggfiler:\nSkriver en separat loggfil för varje spel.</translation>
+      <translation>Razdvoji Datoteke Zapisnika:\nPiše odvojenu datoteku zapisnika za svaku igru.</translation>
     </message>
     <message>
       <source>Trophy Notification Position</source>
-      <translation>Aviseringsposition för trofé</translation>
+      <translation>Pozicija Obavijesti o Trofeju</translation>
     </message>
     <message>
       <source>Left</source>
-      <translation>Vänster</translation>
+      <translation>Lijevo</translation>
     </message>
     <message>
       <source>Right</source>
-      <translation>Höger</translation>
+      <translation>Desno</translation>
     </message>
     <message>
       <source>Top</source>
-      <translation>Överst</translation>
+      <translation>Gore</translation>
     </message>
     <message>
       <source>Bottom</source>
-      <translation>Nederst</translation>
+      <translation>Dolje</translation>
     </message>
     <message>
       <source>Notification Duration</source>
-      <translation>Varaktighet för avisering</translation>
+      <translation>Trajanje Obavijesti</translation>
     </message>
     <message>
       <source>Portable User Folder</source>
-      <translation>Portabel användarmapp</translation>
+      <translation>Prenosiva Mapa Korisnika</translation>
     </message>
     <message>
       <source>Create Portable User Folder from Common User Folder</source>
-      <translation>Skapa portabel användarmapp från gemensam användarmapp</translation>
+      <translation>Izradi Prenosivu Mapu Korisnika iz Zajedničke Korisničke Mape</translation>
     </message>
     <message>
       <source>Portable user folder:\nStores shadPS4 settings and data that will be applied only to the shadPS4 build located in the current folder. Restart the app after creating the portable user folder to begin using it.</source>
-      <translation>Portabel användarmapp:\nLagrar shadPS4-inställningar och data som endast tillämpas på den shadPS4-version som finns i den aktuella mappen. Starta om appen efter att du har skapat den portabla användarmappen för att börja använda den.</translation>
+      <translation>Zajedničke korisničke mapa:\nPohranjuje shadPS4 postavke i podatke koji će se primijenit samo na shadPS4 verziju unutar trenutne mape. Ponovno pokrenite nakon izrade prenosive korisničke mape za početak korištenja.</translation>
     </message>
     <message>
       <source>%1 already exists</source>
-      <translation>%1 finns redan</translation>
+      <translation>%1 već postoji</translation>
     </message>
     <message>
       <source>%1 successfully created.</source>
-      <translation>%1 skapades.</translation>
+      <translation>%1 uspješno izrađeno.</translation>
     </message>
     <message>
       <source>Open the custom trophy images/sounds folder:\nYou can add custom images to the trophies and an audio.\nAdd the files to custom_trophy with the following names:\ntrophy.wav OR trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nNote: The sound will only work in QT versions.</source>
-      <translation>Öppna mappen för anpassade trofébilder/ljud:\nDu kan lägga till egna bilder till troféerna och ett ljud.\nLägg till filerna i custom_trophy med följande namn:\ntrophy.wav ELLER trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nObservera: Ljudet fungerar endast i QT-versioner.</translation>
+      <translation>Otvori proizvoljnu mapu slika/zvukova trofeja:\nMožete dodati proizvoljne slike na trofeje i zvuk.\nDodajte datoteke na proizvoljan_trofej s sljedećim nazivima:\ntrophy.wav ILI trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nNapomena: Zvuk radi samo u QT verzijama.</translation>
     </message>
     <message>
       <source>Experimental Features</source>
-      <translation>Experimentella funktioner</translation>
+      <translation>Eksperimentalne Mogućnosti</translation>
     </message>
     <message>
       <source>WARNING: These features are experimental and should not be enabled unless you were told to, or a game requires it. Please ask in the shadPS4 Discord server if you have any questions.</source>
-      <translation>VARNING: Dessa funktioner är experimentella och bör inte aktiveras om du inte har blivit tillsagd att göra det eller om ett spel kräver det. Fråga i shadPS4s Discord-server om du har några frågor.</translation>
+      <translation>UPOZORENJE: Ove su mogućnosti eksperimentalne i ne omogućuju se osim uz pokriće, ili ako igra to zahtjeva. Molimo upite pošaljte na shadPS4 Discord serveru.</translation>
     </message>
     <message>
       <source>Enable Background Controller Input</source>
-      <translation>Aktivera bakgrundsinmatning från handkontroll</translation>
+      <translation>Omogući Unos Pozadinskim Kontrolerom</translation>
     </message>
     <message>
       <source>Enable Controller Background Input:\nAllow shadPS4 to detect controller inputs when the game window is not in focus.</source>
-      <translation>Aktivera bakgrundsinmatning från handkontroll:\nTillåt shadPS4 att upptäcka inmatningar från handkontrollen när spelfönstret inte är aktivt.</translation>
+      <translation>Omogući Unos Pozadinskim Kontrolerom:\nOmogući shadPs4 da prepoznaje unose i dok prozor igre nije fokusiran.</translation>
     </message>
     <message>
       <source>Crash Diagnostics:\nCreates a .yaml file with info about the Vulkan state at the time of crashing.\nUseful for debugging &apos;Device lost&apos; errors. If you have this enabled, you should enable Host AND Guest Debug Markers.\nYou need Vulkan Validation Layers enabled and the Vulkan SDK for this to work.</source>
-      <translation>Kraschdiagnostik:\nSkapar en .yaml-fil med information om Vulkan-status vid kraschen.\nAnvändbart för felsökning av felmeddelanden om att enheten har förlorats. Om du har aktiverat detta bör du aktivera felsökningsmarkörer för både värd och gäst.\nDu måste ha Vulkan Validation Layers aktiverat och Vulkan SDK för att detta ska fungera.</translation>
+      <translation>Dijagnostika Rušenja:\nIzrađuje .yaml datoteku s informacijama o stanju Vulkana za vrijeme rušenja.\nKorisno za debugiranje &apos;Device lost&apos; pogrešaka. Ako je ovo omogućeno, možete uključiti Host I Guest Debug Markere.\nTrebate omogućene Vulkan-ove Sloj.eve Ovjere i Vulkan SDK za omogućen rad.</translation>
     </message>
     <message>
       <source>Enable Logging</source>
-      <translation>Aktivera loggning</translation>
+      <translation>Omogući Zapisivanje</translation>
     </message>
     <message>
       <source>Enable Logging:\nEnables logging.\nDo not change this if you do not know what you&apos;re doing!\nWhen asking for help, make sure this setting is ENABLED.</source>
-      <translation>Aktivera loggning:\nAktiverar loggning.\nÄndra inte detta om du inte vet vad du gör!\nNär du ber om hjälp, se till att denna inställning är AKTIVERAD.</translation>
+      <translation>Omogući Zapisivanje:\nOmogućuje zapisivanje.\nNe mijenjajte ovo osim ako ne znate što radite!\nKada tražite pomoć, pobrinite se da ova je ova postavka OMOGUĆENA.</translation>
     </message>
     <message>
       <source>Present Mode</source>
-      <translation>Nuvarande läge</translation>
+      <translation>Prezentacijski Mod</translation>
     </message>
     <message>
       <source>Mailbox (Vsync)</source>
@@ -2349,239 +2354,242 @@ Välj en emulatorversion från den högra panelen.</translation>
     </message>
     <message>
       <source>Immediate (No Vsync)</source>
-      <translation>Omedelbar (Ingen Vsync)</translation>
+      <translation>Trenutno (Bez Vsynca)</translation>
     </message>
     <message>
       <source>Select the DLC folder</source>
-      <translation>Välj DLC-mappen</translation>
+      <translation>Odaberi Mapu s DLC-om</translation>
     </message>
     <message>
       <source>Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</source>
-      <translation>Nuvarande läge:\nKonfigurerar hur videoutgången ska visas på skärmen.\n\nMailbox: Bildrutorna synkroniseras med skärmens uppdateringsfrekvens. Nya bildrutor ersätter alla väntande bildrutor. Minskar fördröjningen men kan hoppa över bildrutor om det uppstår fördröjning.\nFifo: Bildrutorna synkroniseras med skärmens uppdateringsfrekvens. Nya bildrutor placeras i kö bakom väntande bildrutor. Säkerställer att alla bildrutor visas men kan öka fördröjningen.\nOmedelbar: Bildrutorna visas omedelbart på skärmen när de är klara. Kan resultera i tearing.</translation>
+      <translation>Prezentacijski Mod:\nKonfigurira kako će se video podaci prikazati na ekranu.\n\nMailbox:
+Sličice sinkroniziraju s frekvencijom osvježavanja vašeg ekrana. Nove sličice zamijenit će postojeće. Umanjuje kašnjenje no može preskočit sličice ukoliko kasni.\nFifo: Sličice se sinkroniziraju s frekvencijom osvježavanja vašeg ekrana. Nove se sličice rasporede iza postojećih u čekanju. Osigurava prikaz svih sličica no može dovesti do kašnjenja.\nTrenutno: Sličice se trenutno prikazuju na vaš ekran čim su spremne. Može dovesti do kidanja.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
-      <translation>Bläddra:\nBläddra efter en mapp att ställa in som DLC-sökvägen.</translation>
+      <translation>Potraži:\nPotraži mapu za postavljanje kao DLC putanje.</translation>
     </message>
     <message>
       <source>FSR Settings</source>
-      <translation>FSR-inställningar</translation>
+      <translation>FSR Postavke</translation>
     </message>
     <message>
       <source>Enable FSR</source>
-      <translation>Aktivera FSR</translation>
+      <translation>Omogući FSR</translation>
     </message>
     <message>
       <source>Enable RCAS (sharpening)</source>
-      <translation>Aktivera RCAS (uppskärpning)</translation>
+      <translation>Omogući RCAS (izoštravanje)</translation>
     </message>
     <message>
       <source>RCAS Attenuation:</source>
-      <translation>RCAS-dämpning:</translation>
+      <translation>RCAS Atenuacija:</translation>
     </message>
     <message>
       <source>Load Presets...</source>
-      <translation>Läs in förval...</translation>
+      <translation>Učitaj Pretpostavke...</translation>
     </message>
     <message>
       <source>Log</source>
-      <translation>Logg</translation>
+      <translation>Zapisnik/Dnevnik</translation>
     </message>
     <message>
       <source>Open Log Location:\nOpen the folder where the log file is saved.</source>
-      <translation>Öppna loggplatsen:\nÖppna mappen där loggfilen är sparad.</translation>
+      <translation>Otvori Lokaciju Zapisnika:\nOtvori mapu gdje se sprema zapisnik.</translation>
     </message>
     <message>
       <source>Microphone:\nNone: Does not use the microphone.\nDefault Device: Will use the default device defined in the system.\nOr manually choose the microphone to be used from the list.</source>
-      <translation>Mikrofon:\nIngen: Använder inte mikrofonen.\nStandardenhet: Använder den standardenhet som är definierad i systemet.\nEller välj manuellt vilken mikrofon som ska användas från listan.</translation>
+      <translation>Mikrofon:\nNišta: Mikrofon se ne upotrebljava.\nZadani Uređaj: Koristit će zadani uređaj definiran u sustavu.\nIli ručno izaberite mikrofon za korištenje s liste.</translation>
     </message>
     <message>
       <source>Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</source>
-      <translation>Volym:\nJustera volymen för spel på global nivå, intervallet går från 0 till 500% med standardvärdet 100%.</translation>
+      <translation>Glasnoća:\nPodešavanje glasnoće za igre na globalnoj razini, raspon se kreće od 0-500% uz zadanu vrijednost od 100%.</translation>
     </message>
     <message>
       <source>Default tab when opening settings:\nChoose which tab will open, the default is General.</source>
-      <translation>Standardflik vid öppning av inställningar:\nVälj vilken flik som ska öppnas, standard är Allmänt.</translation>
+      <translation>Zadana kartica kod otvaranja postavki:\nIzaberite koja će se kartica otvoriti, zadana je Općenito.</translation>
     </message>
     <message>
       <source>Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</source>
-      <translation>Aktivera rörelsekontroller:\nNär denna funktion är aktiverad används kontrollens rörelsekontroll om den stöds.</translation>
+      <translation>Omogući Kontrolu Pokreta:\nKad je omogućeno koristit će kontrole pokreta ako je podržano.</translation>
     </message>
     <message>
       <source>Vblank Frequency</source>
-      <translation>Vblank-frekvens</translation>
+      <translation>Vblank Frekvencija</translation>
     </message>
     <message>
       <source>Vblank Frequency:\nThe frame rate at which the emulator refreshes at (60hz is the baseline, whether the game runs at 30 or 60fps). Changing this may have adverse effects, such as increasing the game speed, or breaking critical game functionality that does not expect this to change!</source>
-      <translation>Vblank-frekvens:\nDen bildfrekvens som emulatorn uppdateras med (60 Hz är baslinjen, oavsett om spelet körs med 30 eller 60 bilder/s). Att ändra detta kan ha negativa effekter, såsom att öka spelhastigheten eller förstöra kritiska spelfunktioner som inte förväntar sig denna förändring!</translation>
+      <translation>Vblank Frekvencija:\nBroj sličica u kojima se emulator osvježava (60hz je bazna linija, bilo da se igra pokreće u 30 ili 60fps-a). Mijenjanje ovog može imati negativne posljedice, poput povećanja brzine igre, ili slamanja ključnih funkcionalnosti igre koje ne očekuju promjenu ovdje!</translation>
     </message>
     <message>
       <source>Enable Direct Memory Access</source>
-      <translation>Aktivera Direct Memory Access</translation>
+      <translation>Omogući Izravan Pristup Memoriji</translation>
     </message>
     <message>
       <source>Enable Devkit Console Mode</source>
-      <translation>Aktivera Devkit-konsolläge</translation>
+      <translation>Omogući Devkit Konzolni Mod</translation>
     </message>
     <message>
       <source>Set &quot;PSN signed-in&quot; to True</source>
-      <translation>Ställ in &quot;PSN signed-in&quot; till True</translation>
+      <translation>Postavi &quot;PSN prijava&quot; na Istina</translation>
     </message>
     <message>
       <source>Set &quot;Network Connected&quot; to True</source>
-      <translation>Ställ in &quot;Network Connected&quot; till True</translation>
+      <translation>Postavi &quot;Umreženost&quot; na Istina</translation>
     </message>
     <message>
       <source>Miscellaneous</source>
-      <translation>Diverse</translation>
+      <translation>Razno</translation>
     </message>
     <message>
       <source>Frontend</source>
-      <translation>Frontend</translation>
+      <translation>Sučelje</translation>
     </message>
     <message>
       <source>Experimental</source>
-      <translation>Experimentell</translation>
+      <translation>Eksperimentalno</translation>
     </message>
     <message>
       <source>Show Splash Screen When Launching Game</source>
-      <translation>Visa startskärm när spel startas</translation>
+      <translation>Prikaži Početni Ekran Prilikom Pokretanja Igre</translation>
     </message>
     <message>
       <source>General Frontend Settings</source>
-      <translation>Allmänna frontend-inställningar</translation>
+      <translation>Opće Postavke Sučelja</translation>
     </message>
     <message>
       <source>Enable PS4 Neo Mode</source>
-      <translation>Aktivera PS4 Neo-läge</translation>
+      <translation>Omogući PS4 Neo Mod</translation>
     </message>
     <message>
       <source>Enable Direct Memory Access:\nEnables arbitrary memory access from the GPU to CPU memory.</source>
-      <translation>Aktivera direkt minnesåtkomst:\nAktiverar godtycklig minnesåtkomst från GPU till CPU-minne.</translation>
+      <translation>Omogući Izravan Pristup Memoriji:\nOmogućuje proizvoljan pristup memoriji iz GPU u CPU memoriju.</translation>
     </message>
     <message>
       <source>Enable PS4 Neo Mode:\nAdds support for PS4 Pro emulation and memory size. Currently causes instability in a large number of tested games.</source>
-      <translation>Aktivera PS4 Neo-läge:\nLägger till stöd för PS4 Pro-emulering och minnesstorlek. Orsakar för närvarande instabilitet i ett stort antal testade spel.</translation>
+      <translation>Omogući PS4 Neo Mod:\nDodaje podršku za PS4 Pro emulaciju i veličinu memorije. Trenutno uzrokuje nestabilnost u velikom broju testiranih igara.</translation>
     </message>
     <message>
       <source>Enable Devkit Console Mode:\nAdds support for Devkit console memory size.</source>
-      <translation>Aktivera Devkit-konsolläge:\nLägger till stöd för Devkit-konsollens minnesstorlek.</translation>
+      <translation>Omogući Devkit Konzolni Mod:\nDodaje podršku za veličinu memorije Devkit konzole.</translation>
     </message>
     <message>
       <source>Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</source>
-      <translation>Ställ in Nätverk anslutet till Sant:\nTvingar spel att upptäcka en aktiv nätverksanslutning. Faktiska onlinefunktioner stöds ännu inte.</translation>
+      <translation>Postavi Mrežnu Povezanost na Istina:\nPrisiljava igre na prepoznavanje aktivne mrežne veze. Prave online mogućnosti još nisu podržane.</translation>
     </message>
     <message>
       <source>Set PSN Signed-in to True:\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported.</source>
-      <translation>Ställ in PSN-inloggning till Sant:\nTvingar spel att upptäcka en aktiv PSN-inloggning. Faktiska PSN-funktioner stöds inte.</translation>
+      <translation>Postavi PSN Prijavljenost na Istina:\nPrisiljava igre na prepoznavanje aktivne PSN prijave.
+Prave online mogućnosti još nisu podržane.</translation>
     </message>
     <message>
       <source>Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation>Aktivera Vulkan-valideringslager:\nAktiverar ett system som validerar tillståndet för Vulkan-renderaren och loggar information om dess interna status.\nDetta minskar prestandan och kan förändra emuleringens beteende.\nDu behöver Vulkan SDK för att detta ska fungera.</translation>
+      <translation>Omogući Vulkan-ove Slojeve Ovjere:\nOmogućava sustav ovjere stanja Vulkan rendera i zapisuje informacije o unutarnjem stanju.\nOvo će umanjiti performanse i vjerojatno izmijenit ponašanje emulatora.\nTrebate Vulkan SDK za ovu funkcionalnost.</translation>
     </message>
     <message>
       <source>Audio Device (general)</source>
-      <translation>Ljudenhet (allmän)</translation>
+      <translation>Zvučni Uređaj(općenito)</translation>
     </message>
     <message>
       <source>Audio Device (DS4 speaker)</source>
-      <translation>Ljudenhet (DS4-högtalare)</translation>
+      <translation>Zvučni Uređaj (DS4 zvučnik)</translation>
     </message>
     <message>
       <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
-      <translation>Aktivera dumpning av shaders:\nFör teknisk felsökning sparas spelets shaders i en mapp när de renderas.</translation>
+      <translation>Omogući Odlaganje Shadera:\nZa potrebe tehničkog debugiranja, sprema igrine shadere u mapu za vrijeme renderinga.</translation>
     </message>
     <message>
       <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</source>
-      <translation>Aktivera Null GPU:\nFör teknisk felsökning inaktiveras spelrenderingen som om det inte fanns något grafikkort. Skärmen blir svart.</translation>
+      <translation>Omogući Null GPU:\nZa potrebe tehničkog debugiranja, onemogućuje rendering igre kao da nema grafičke kartice. Ekran će biti crn.</translation>
     </message>
     <message>
       <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
-      <translation>DLC-sökväg:\nMappen där spelets DLC, hämtningsbart innehåll, läses in från.</translation>
+      <translation>DLC Putanja:\nMapa iz koje se DLC igre učitava.</translation>
     </message>
     <message>
       <source>Additional DMem Allocation</source>
-      <translation>Ytterligare DMem-allokering</translation>
+      <translation>Dodatna DMem Alokacija</translation>
     </message>
     <message>
       <source>Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</source>
-      <translation>Ytterligare DMem-allokering:\nTvingar allokering av den angivna mängden ytterligare DMem. Kraschar eller orsakar problem i vissa spel.</translation>
+      <translation>Dodatna DMem Alokacija:\nForsira alokaciju specifične količine dodatnog DMema.
+Izaziva rušenje ili probleme u nekim igrama.</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</source>
-      <translation>Sökväg till PS4 Sysmodules:\nMappen där PS4 sysmodules läses in från.</translation>
+      <translation>Mapa Sistemskih Modula:\nMapa iz koje se učitavaju sistemski moduli.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the sysmodules path.</source>
-      <translation>Bläddra:\nBläddra efter en mapp som ska anges som sökvägen för sysmodules.</translation>
+      <translation>Potraži:\nPotraži mapu za postavljanje u mapu Sistemskih modula.</translation>
     </message>
     <message>
       <source>Vulkan Validation (Requires Vulkan SDK)</source>
-      <translation>Vulkan-validering (kräver Vulkan SDK)</translation>
+      <translation>Vulkan Ovjera (Zahtjeva Vulkan SDK)</translation>
     </message>
     <message>
       <source>Validation Layers</source>
-      <translation>Valideringslager</translation>
+      <translation>Slojevi Ovjere / Validacije</translation>
     </message>
     <message>
       <source>Enable Core Validation</source>
-      <translation>Aktivera kärnvalidering</translation>
+      <translation>Omogući Core Ovjeru</translation>
     </message>
     <message>
       <source>Enable Sync Validation</source>
-      <translation>Aktivera synkroniseringsvalidering</translation>
+      <translation>Omogući Sync Ovjeru</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation</source>
-      <translation>Aktivera GPU-assisterad validering</translation>
+      <translation>Omogući GPU-Podržanu Ovjeru</translation>
     </message>
     <message>
       <source>Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation>Aktivera synkroniseringsvalidering:\nAktiverar ett system som validerar tider för Vulkan-renderinguppgifter.\nDetta minskar prestandan och kan förändra emuleringens beteende.\nDu behöver Vulkan SDK för att detta ska fungera.</translation>
+      <translation>Omogući Vulkan-ove Slojeve Ovjere:\nOmogućava sustav ovjere stanja Vulkan rendera i zapisuje informacije o unutarnjem stanju.\nOvo će umanjiti performanse i vjerojatno izmijenit ponašanje emulatora.\nTrebate Vulkan SDK za ovu funkcionalnost.</translation>
     </message>
     <message>
       <source>Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation>Aktivera kärnvalidering:\nAktiverar de viktigaste API-valideringsfunktionerna.\nDetta minskar prestandan och kan förändra emuleringens beteende.\nDu behöver Vulkan SDK för att detta ska fungera.</translation>
+      <translation>Omogući Core Ovjeru:\nOmogućuje glavne funkcije API ovjere.\nOvo će umanjiti performanse i vjerojatno izmijenit ponašanje emulatora.\nTrebate Vulkan SDK za ovu funkcionalnost.</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation>Aktivera GPU-assisterad validering:\nInstrumenterar shaders med kod som validerar om de fungerar korrekt.\nDetta minskar prestandan och kan förändra emuleringens beteende.\nDu behöver Vulkan SDK för att detta ska fungera.</translation>
+      <translation>Omogući GPU-Podržanu Ovjeru:\nInstrumentira shadere s kôdom koji ovjerava ispravno ponašanje.\nOvo će umanjiti performanse i vjerojatno izmijenit ponašanje emulatora.\nTrebate Vulkan SDK za ovu funkcionalnost.</translation>
     </message>
     <message>
       <source>GUI Language</source>
-      <translation>Språk för grafiskt gränssnitt</translation>
+      <translation>GUI Jezik</translation>
     </message>
     <message>
       <source>GUI Updates</source>
-      <translation>Uppdateringar för grafiskt gränssnitt</translation>
+      <translation>GUI Ažuriranja</translation>
     </message>
     <message>
       <source>DLC Path</source>
-      <translation>DLC-sökväg</translation>
+      <translation>DLC Putanja</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path</source>
-      <translation>Sökväg för PS4 sysmodules</translation>
+      <translation>PS4 Putanje Sysmodula</translation>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
-      <translation>Uppdateringar för grafiskt gränssnitt:\nUtgåva: Officiella versioner som släpps varje månad och som kan vara mycket föråldrade, men som är mer tillförlitliga och testade.\nNightly: Utvecklingsversioner som har alla de senaste funktionerna och korrigeringarna, men som kan innehålla buggar och är mindre stabila.\n\n*Denna uppdatering gäller endast Qt-användargränssnittet. För att uppdatera emulatorkärnan, använd menyn &apos;Versionshanterare&apos;.</translation>
+      <translation>GUI Ažuriranja:\nRelease: Službena izdanja koja se objavljuju svaki mjesec no mogu bit prilično zastarjela, ali i puno ispitanija i pouzdanija.\nNoćna: Razvojne verzije sa svim mogućnostima i popravcima, koja mogu sadržavat bugove i manje stabilna.\n\n*Ova ažuracija odnosi se samo na Qt korisničko sučelje. Za ažuriranje core-a emulatora, molimo koristit &apos;Upravitelj Verzija&apos; izbornik.</translation>
     </message>
     <message>
       <source>Cannot create portable launcher folder</source>
-      <translation>Kan inte skapa portabel startmapp</translation>
+      <translation>Ne mogu izraditi mapu prenosivog pokretača</translation>
     </message>
     <message>
       <source>Portable launcherDir folder created</source>
-      <translation>Portabel launcherDir-mapp skapad</translation>
+      <translation>Prenosiva launcherDir mapa izrađena</translation>
     </message>
     <message>
       <source>USB Device</source>
-      <translation>USB-enhet</translation>
+      <translation>USB uređaj</translation>
     </message>
     <message>
       <source>Real USB Device</source>
-      <translation>Riktig USB-enhet</translation>
+      <translation>Pravi USB Uređaj</translation>
     </message>
     <message>
       <source>Skylander Portal</source>
@@ -2597,23 +2605,23 @@ Välj en emulatorversion från den högra panelen.</translation>
     </message>
     <message>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
-      <translation>USB-enhet:\nRiktig USB-enhet: Använd en riktig USB-enhet som är ansluten till systemet.\nSkylander Portal: Emulera en Skylander Portal of Power.\nInfinity Base: Emulera en Disney Infinity Base.\nDimensions Toypad: Emulera en Lego Dimensions Toypad.</translation>
+      <translation>Pravi USB Uređaj:\nRealni USB Uređaj: Koristite pravi i povezani USB uređaj na sustavu.\nSkylander Portal: Emulirajte Portal Moći u Skylander Portalu.\nInfinity Base: Emulirajte Disney Infinity Base.\nDimensions Toypad: Emulirajte Lego Dimensions Toypad.</translation>
     </message>
     <message>
       <source>Enable Shader Cache</source>
-      <translation>Aktivera shadercache</translation>
+      <translation>Omogući Shader Cache</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file</source>
-      <translation>Komprimera shadercachefilerna till en zip-fil</translation>
+      <translation>Komprimiraj Shader Cache datoteke u zip datoteku</translation>
     </message>
     <message>
       <source>Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</source>
-      <translation>Aktivera shadercache:\nLagra kompilerade shaders för att undvika omkompileringar och minska hackighet.</translation>
+      <translation>Omogući Shader Cache:\nSpremanje prevedenih shadera za izbjegavanje ponovnog prevođenja, umanjuje štekanje.</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
-      <translation>Komprimera shadercachefilerna till en zip-fil:\nShadercachefilerna lagras i en enda zip-fil istället för i flera separata filer.</translation>
+      <translation>Komprimiraj Shader Cache datoteke u zip datoteku:\nShader cache datoteka spremaju se unutar jedne zip datoteke umjesto više odvojenih datoteka.</translation>
     </message>
     <message>
       <source>Readbacks Mode</source>
@@ -2640,77 +2648,77 @@ Välj en emulatorversion från den högra panelen.</translation>
     <name>ShortcutDialog</name>
     <message>
       <source>Select Version</source>
-      <translation>Välj version</translation>
+      <translation>Odaberi verziju</translation>
     </message>
     <message>
       <source>Select version for shortcut creation</source>
-      <translation>Välj version för att skapa genväg</translation>
+      <translation>Odaberi verziju za izradu prečica</translation>
     </message>
     <message>
       <source>No Version Selected</source>
-      <translation>Ingen version vald</translation>
+      <translation>Nijedna Verzija Odabrana</translation>
     </message>
     <message>
       <source>Select a version first</source>
-      <translation>Välj en version först</translation>
+      <translation>Prvo izaberi verziju</translation>
     </message>
   </context>
   <context>
     <name>TrophyViewer</name>
     <message>
       <source>Trophy Viewer</source>
-      <translation>Trofé-visare</translation>
+      <translation>Preglednik Trofeja</translation>
     </message>
     <message>
       <source>Select Game:</source>
-      <translation>Välj spel:</translation>
+      <translation>Odabir igre:</translation>
     </message>
     <message>
       <source>Progress</source>
-      <translation>Förlopp</translation>
+      <translation>Napredak</translation>
     </message>
     <message>
       <source>Show Earned Trophies</source>
-      <translation>Visa förtjänade troféer</translation>
+      <translation>Prikaži Zaslužene trofeje</translation>
     </message>
     <message>
       <source>Show Not Earned Trophies</source>
-      <translation>Visa icke-förtjänade troféer</translation>
+      <translation>Prikaži Nezaslužene trofeje</translation>
     </message>
     <message>
       <source>Show Hidden Trophies</source>
-      <translation>Visa dolda troféer</translation>
+      <translation>Prikaži Skrivene trofeje</translation>
     </message>
   </context>
   <context>
     <name>VersionDialog</name>
     <message>
       <source>Version Manager</source>
-      <translation>Versionshanterare</translation>
+      <translation>Upravitelj Verzija</translation>
     </message>
     <message>
       <source>Path to save versions</source>
-      <translation>Sökväg för att spara versioner</translation>
+      <translation>Putanja za spremanje verzija</translation>
     </message>
     <message>
       <source>Browse</source>
-      <translation>Bläddra</translation>
+      <translation>Potraži</translation>
     </message>
     <message>
       <source>Installed</source>
-      <translation>Installerad</translation>
+      <translation>Instalirano</translation>
     </message>
     <message>
       <source>Selected</source>
-      <translation>Vald</translation>
+      <translation>Odabrano</translation>
     </message>
     <message>
       <source>Version</source>
-      <translation>Version</translation>
+      <translation>Verzija</translation>
     </message>
     <message>
       <source>Codename</source>
-      <translation>Kodnamn</translation>
+      <translation>Radni naziv</translation>
     </message>
     <message>
       <source>Date</source>
@@ -2718,359 +2726,359 @@ Välj en emulatorversion från den högra panelen.</translation>
     </message>
     <message>
       <source>Add Custom</source>
-      <translation>Lägg till anpassad</translation>
+      <translation>Dodaj Proizvoljno</translation>
     </message>
     <message>
       <source>Delete</source>
-      <translation>Ta bort</translation>
+      <translation>Izbriši</translation>
     </message>
     <message>
       <source>Refresh List</source>
-      <translation>Uppdatera lista</translation>
+      <translation>Osvježi Listu</translation>
     </message>
     <message>
       <source>Download</source>
-      <translation>Hämta ner</translation>
+      <translation>Preuzmi</translation>
     </message>
     <message>
       <source>Check for Pre-release updates at startup</source>
-      <translation>Kontrollera om det finns förhandsutgivna uppdateringar vid start</translation>
+      <translation>Provjeri za ažuracije Pred-izdanja prilikom pokretanja</translation>
     </message>
     <message>
       <source>Check for Pre-release Updates</source>
-      <translation>Leta efter förhandsutgivna uppdateringar</translation>
+      <translation>Provjeri za Ažuriranja Pred-izdanja</translation>
     </message>
     <message>
       <source>Select the folder where the emulator versions will be installed</source>
-      <translation>Välj den mapp där emulatorversioner ska installeras</translation>
+      <translation>Odaberi mapu u koju će se instalirat verzije emulatora</translation>
     </message>
     <message>
       <source>Select executable</source>
-      <translation>Välj körbar fil</translation>
+      <translation>Izaberi Izvršnu datoteku</translation>
     </message>
     <message>
       <source>Executable (*.exe)</source>
-      <translation>Körbar fil (*.exe)</translation>
+      <translation>Izvršna datoteka (*.exe)</translation>
     </message>
     <message>
       <source>Version name</source>
-      <translation>Versionsnamn</translation>
+      <translation>Naziv Verzije</translation>
     </message>
     <message>
       <source>Enter the name of this version as it appears in the list.</source>
-      <translation>Ange namnet för denna version som den visas i listan.</translation>
+      <translation>Unesite naziv ove verzije prema tome kako se pojavi na listi.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation>Fel</translation>
+      <translation>Greška</translation>
     </message>
     <message>
       <source>Success</source>
-      <translation>Lyckades</translation>
+      <translation>Uspjeh</translation>
     </message>
     <message>
       <source>Version added successfully.</source>
-      <translation>Versionen lades till.</translation>
+      <translation>Verzije dodane uspješno.</translation>
     </message>
     <message>
       <source>Failed to determine the folder path.</source>
-      <translation>Misslyckades med att fastställa mappsökvägen.</translation>
+      <translation>Neuspješna procjena putanje mape.</translation>
     </message>
     <message>
       <source>Delete version</source>
-      <translation>Ta bort version</translation>
+      <translation>Obriši verziju</translation>
     </message>
     <message>
       <source>Do you want to delete the version</source>
-      <translation>Vill du ta bort versionen</translation>
+      <translation>Želite li obrisati verziju</translation>
     </message>
     <message>
       <source>Version list update</source>
-      <translation>Versionslistan uppdaterad</translation>
+      <translation>Ažuriranje liste Verzija</translation>
     </message>
     <message>
       <source>No news, the version list is already updated.</source>
-      <translation>Inga nyheter. Versionslistan är redan uppdaterad.</translation>
+      <translation>Nema vijesti, lista verzija već ažurirana.</translation>
     </message>
     <message>
       <source>The latest versions have been added to the list for download.</source>
-      <translation>De senaste versionerna har lagts till i listan för hämtningar.</translation>
+      <translation>Zadnje verzije su već dodane na listu za preuzimanje.</translation>
     </message>
     <message>
       <source>Error accessing GitHub API</source>
-      <translation>Fel vid åtkomst till GitHubs API</translation>
+      <translation>Greška u pristupanju GitHub API-ju</translation>
     </message>
     <message>
       <source>First you need to choose a location to save the versions in
 &apos;Path to save versions&apos;</source>
-      <translation>Först måste du välja en plats att spara versionerna på &apos;Sökväg för att spara versioner&apos;</translation>
+      <translation>Najprije trebate izabrati lokaciju spremanja u &apos;Putanja spremanja verzija&apos;</translation>
     </message>
     <message>
       <source>Do you want to download the version</source>
-      <translation>Vill du hämta ner versionen</translation>
+      <translation>Želite li preuzeti verziju</translation>
     </message>
     <message>
       <source>No files available for this platform.</source>
-      <translation>Inga filer tillgängliga för denna plattform.</translation>
+      <translation>Nema datoteka dostupnih za ovu platformu.</translation>
     </message>
     <message>
       <source>Downloading %1 , please wait...</source>
-      <translation>Hämtar ner %1, vänta...</translation>
+      <translation>Preuzimanje %1 , molim čekajte...</translation>
     </message>
     <message>
       <source>Could not save file.</source>
-      <translation>Kunde inte spara filen.</translation>
+      <translation>Nije bilo moguće spremiti datoteku.</translation>
     </message>
     <message>
       <source>Version %1 has been downloaded and selected.</source>
-      <translation>Version %1 har hämtats ner och valts.</translation>
+      <translation>Verzija %1 je preuzeta i izabrana.</translation>
     </message>
     <message>
       <source>Failed to create zip extraction script</source>
-      <translation>Misslyckades med att skapa skript för zip-extrahering</translation>
+      <translation>Neuspjeh prilikom izrade skripte za zip izvoz</translation>
     </message>
     <message>
       <source>The GitHub API response is not a valid JSON array.</source>
-      <translation>GitHub API-svaret är inte en giltig JSON-array.</translation>
+      <translation>GitHub API odgovor nije valjano JSON polje.</translation>
     </message>
     <message>
       <source>Auto Updater - Emulator</source>
-      <translation>Automatisk uppdaterare - Emulator</translation>
+      <translation>Auto Aktualizator - Emulator</translation>
     </message>
     <message>
       <source>You already have the latest pre-release version.</source>
-      <translation>Du har redan den senaste förutgåvan.</translation>
+      <translation>Već imate zadnju verziju pred-izdanja.</translation>
     </message>
     <message>
       <source>Update Available (Emulator)</source>
-      <translation>Uppdatering tillgänglig (Emulator)</translation>
+      <translation>Ažuriranje Dostupno (Emulator)</translation>
     </message>
     <message>
       <source>Current Version</source>
-      <translation>Aktuell version</translation>
+      <translation>Trenutna Verzija</translation>
     </message>
     <message>
       <source>Latest Version</source>
-      <translation>Senaste version</translation>
+      <translation>Zadnja Verzija</translation>
     </message>
     <message>
       <source>Do you want to update?</source>
-      <translation>Vill du uppdatera?</translation>
+      <translation>Želite li ažurirat?</translation>
     </message>
     <message>
       <source>Update</source>
-      <translation>Uppdatera</translation>
+      <translation>Ažuriraj</translation>
     </message>
     <message>
       <source>No</source>
-      <translation>Nej</translation>
+      <translation>Ne</translation>
     </message>
     <message>
       <source>Show Changelog</source>
-      <translation>Visa ändringslogg</translation>
+      <translation>Prikaži Dnevnik Izmjena</translation>
     </message>
     <message>
       <source>Hide Changelog</source>
-      <translation>Dölj ändringslogg</translation>
+      <translation>Sakrij Dnevnik Izmjena</translation>
     </message>
     <message>
       <source>Network error while fetching changelog</source>
-      <translation>Nätverksfel vid hämtning av ändringslogg</translation>
+      <translation>Mrežna pogreška prilikom preuzimanja dnevnika izmjena</translation>
     </message>
     <message>
       <source>Changes</source>
-      <translation>Ändringar</translation>
+      <translation>Izmjene</translation>
     </message>
     <message>
       <source>No download URL found for the specified asset.</source>
-      <translation>Ingen hämtnings-URL hittades för angiven tillgång.</translation>
+      <translation>Nema URL-a za preuzimanje za odabrano sredstvo.</translation>
     </message>
     <message>
       <source>Network error while downloading</source>
-      <translation>Nätverksfel vid hämtning</translation>
+      <translation>Mrežna pogreška prilikom preuzimanja</translation>
     </message>
     <message>
       <source>Failed to save download file</source>
-      <translation>Misslyckades med att spara hämtad fil</translation>
+      <translation>Neuspješno spremanje preuzete datoteke</translation>
     </message>
     <message>
       <source>Complete installation</source>
-      <translation>Installationen är färdig</translation>
+      <translation>Završi instalaciju</translation>
     </message>
     <message>
       <source>Pre-release updated successfully</source>
-      <translation>Förutgåvan uppdaterades</translation>
+      <translation>Pred-izdanje uspješno ažurirano</translation>
     </message>
     <message>
       <source>Failed to create the update script file</source>
-      <translation>Misslyckades med att skapa uppdateringsskriptfil</translation>
+      <translation>Neuspjelo izrađivanje skripte za ažuriranje</translation>
     </message>
     <message>
       <source>Always Show Changelog</source>
-      <translation>Visa alltid ändringslogg</translation>
+      <translation>Uvijek Prikaži Dnevnik Izmjena</translation>
     </message>
     <message>
       <source>No version selected. Please choose one from the list to delete.</source>
-      <translation>Ingen version vald. Välj en från listan att ta bort.</translation>
+      <translation>Nijedna verzije nije odabrana. Molimo izaberite jednu s liste za brisanje.</translation>
     </message>
     <message>
       <source>Confirm Download</source>
-      <translation>Bekräfta hämtning</translation>
+      <translation>Potvrdite Preuzimanje</translation>
     </message>
     <message>
       <source>Extraction failure.</source>
-      <translation>Extraheringsfel.</translation>
+      <translation>Izvoz neuspješan.</translation>
     </message>
     <message>
       <source>A version with that name already exists.</source>
-      <translation>En version med det namnet finns redan.</translation>
+      <translation>Verzija s time imenom već postoji.</translation>
     </message>
     <message>
       <source>Local</source>
-      <translation>Lokal</translation>
+      <translation>Lokalno</translation>
     </message>
     <message>
       <source>Failed to determine the folder to remove.</source>
-      <translation>Det gick inte att fastställa vilken mapp som skulle tas bort.</translation>
+      <translation>Neuspješno procjenjivanje mape za uklanjanje.</translation>
     </message>
     <message>
       <source>Failed to delete folder.</source>
-      <translation>Det gick inte att ta bort mappen.</translation>
+      <translation>Neuspješno brisanje mape.</translation>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release.</source>
-      <translation>Kunde inte få hash för senaste förutgåvan.</translation>
+      <translation>Neuspješno preuzimanje hash zadnjeg pred-izdanja.</translation>
     </message>
     <message>
       <source>Downloading Pre-release (Nightly), please wait...</source>
-      <translation>Hämtar ner förutgåva (Nightly), vänta...</translation>
+      <translation>Preuzimanje Pred-izdanje (Noćna), molim pričekajte...</translation>
     </message>
   </context>
   <context>
     <name>dimensions_dialog</name>
     <message>
       <source>Dimensions Manager</source>
-      <translation>Hantera Dimensions</translation>
+      <translation>Upravitelj Dimenzija</translation>
     </message>
     <message>
       <source>Active Dimensions Figures:</source>
-      <translation>Aktiva Dimensions-figurer:</translation>
+      <translation>Aktivne Dimenzije Figura:</translation>
     </message>
     <message>
       <source>None</source>
-      <translation>Ingen</translation>
+      <translation>Ništa</translation>
     </message>
     <message>
       <source>Clear</source>
-      <translation>Töm</translation>
+      <translation>Čisto</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation>Skapa</translation>
+      <translation>Izradi</translation>
     </message>
     <message>
       <source>Load</source>
-      <translation>Läs in</translation>
+      <translation>Učitaj</translation>
     </message>
     <message>
       <source>Move</source>
-      <translation>Flytta</translation>
+      <translation>Premjesti</translation>
     </message>
     <message>
       <source>Unknown Figure</source>
-      <translation>Okänd figur</translation>
+      <translation>Nepoznata Figura</translation>
     </message>
     <message>
       <source>Select Dimensions File</source>
-      <translation>Välj Dimensions-fil</translation>
+      <translation>Odaberi Datoteku Dimenzija</translation>
     </message>
     <message>
       <source>Dimensions Figure (*.bin);;</source>
-      <translation>Dimensions-figur (*.bin);;</translation>
+      <translation>Dimenzije Figura (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to open the figure file!</source>
-      <translation>Misslyckades med att öppna figurfilen!</translation>
+      <translation>Neuspjeh u otvaranju datoteke figure!</translation>
     </message>
     <message>
       <source>Failed to open the figure file(%1)!
 File may already be in use on the base.</source>
-      <translation>Misslyckades med att öppna figurfilen(%1)!
-Filen kanske redan används på plattan.</translation>
+      <translation>Neuspjeh u otvaranju datoteke figure(%1)
+Datoteka je već u mogućoj upotrebi na bazi.</translation>
     </message>
     <message>
       <source>Failed to read the figure file!</source>
-      <translation>Misslyckades med att läsa figurfilen!</translation>
+      <translation>Neuspjeh u čitanju datoteke figure!</translation>
     </message>
     <message>
       <source>Failed to read the figure file(%1)!
 File was too small.</source>
-      <translation>Misslyckades med att läsa figurfilen(%1)!
-Filen är för liten.</translation>
+      <translation>Neuspjeh u čitanju datoteke figure(%1)!
+Datoteka je premalena.</translation>
     </message>
   </context>
   <context>
     <name>figure_creator_dialog</name>
     <message>
       <source>Figure Creator</source>
-      <translation>Figurskapare</translation>
+      <translation>Izrada Figure</translation>
     </message>
     <message>
       <source>Filter by Series:</source>
-      <translation>Filtrera efter serie:</translation>
+      <translation>Filtriraj prema Serijama:</translation>
     </message>
     <message>
       <source>All</source>
-      <translation>Alla</translation>
+      <translation>Sve</translation>
     </message>
     <message>
       <source>--Unknown--</source>
-      <translation>--Okänd--</translation>
+      <translation>--Nepoznato--</translation>
     </message>
     <message>
       <source>Figure Number:</source>
-      <translation>Figurnummer:</translation>
+      <translation>Broj Figure:</translation>
     </message>
     <message>
       <source>Series:</source>
-      <translation>Serie:</translation>
+      <translation>Serije:</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation>Skapa</translation>
+      <translation>Izradi</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation>Avbryt</translation>
+      <translation>Poništi</translation>
     </message>
     <message>
       <source>Error converting value</source>
-      <translation>Fel vid konvertering av värde</translation>
+      <translation>Greška u pretvaranju vrijednosti</translation>
     </message>
     <message>
       <source>Figure number entered is invalid!</source>
-      <translation>Figurnumret som angavs är ogiltigt!</translation>
+      <translation>Uneseni broj figure nije valjan!</translation>
     </message>
     <message>
       <source>Series number entered is invalid!</source>
-      <translation>Serienumret som angavs är ogiltigt!</translation>
+      <translation>Uneseni broj serija nije valjan!</translation>
     </message>
     <message>
       <source>Create Figure File</source>
-      <translation>Skapa figurfil</translation>
+      <translation>Izradi Datoteku Figura</translation>
     </message>
     <message>
       <source>Infinity Figure (*.bin);;</source>
-      <translation>Infinity-figur (*.bin);;</translation>
+      <translation>Infinity Figure (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to create figure file!</source>
-      <translation>Misslyckades med att skapa figurfil!</translation>
+      <translation>Neuspjeh u izradi datoteke figura!</translation>
     </message>
     <message>
       <source>Failed to create figure file:
 %1</source>
-      <translation>Misslyckades med att skapa figurfilen:
+      <translation>Neuspjeh u izradi datoteke figura:
 %1</translation>
     </message>
   </context>
@@ -3078,143 +3086,143 @@ Filen är för liten.</translation>
     <name>infinity_dialog</name>
     <message>
       <source>Infinity Manager</source>
-      <translation>Hantera Infinity</translation>
+      <translation>Infinity Manager</translation>
     </message>
     <message>
       <source>Active Infinity Figures:</source>
-      <translation>Aktiva Infinity-figurer:</translation>
+      <translation>Aktivne Infinity Figure:</translation>
     </message>
     <message>
       <source>Play Set/Power Disc</source>
-      <translation>Speluppsättning/Power Disc</translation>
+      <translation>Igraj Set/Power Disk</translation>
     </message>
     <message>
       <source>Power Disc Two</source>
-      <translation>Power Disc Two</translation>
+      <translation>Power Disk Dva</translation>
     </message>
     <message>
       <source>Power Disc Three</source>
-      <translation>Power Disc Three</translation>
+      <translation>Power Disk Tri</translation>
     </message>
     <message>
       <source>Player One</source>
-      <translation>Spelare ett</translation>
+      <translation>Igrač Jedan</translation>
     </message>
     <message>
       <source>Player One Ability One</source>
-      <translation>Spelare ett förmåga ett</translation>
+      <translation>Prvi Igrač Sposobnost Jedan</translation>
     </message>
     <message>
       <source>Player One Ability Two</source>
-      <translation>Spelare ett förmåga två</translation>
+      <translation>Prvi Igrač Sposobnost Dva</translation>
     </message>
     <message>
       <source>Player Two</source>
-      <translation>Spelare två</translation>
+      <translation>Igrač Dva</translation>
     </message>
     <message>
       <source>Player Two Ability One</source>
-      <translation>Spelare två förmåga ett</translation>
+      <translation>Igrač Dva Sposobnost Jedan</translation>
     </message>
     <message>
       <source>Player Two Ability Two</source>
-      <translation>Spelare två förmåga två</translation>
+      <translation>Igrač Dva Sposobnost Dva</translation>
     </message>
     <message>
       <source>None</source>
-      <translation>Ingen</translation>
+      <translation>Ništa</translation>
     </message>
     <message>
       <source>Clear</source>
-      <translation>Töm</translation>
+      <translation>Čisto</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation>Skapa</translation>
+      <translation>Izradi</translation>
     </message>
     <message>
       <source>Load</source>
-      <translation>Läs in</translation>
+      <translation>Učitaj</translation>
     </message>
     <message>
       <source>Unknown Figure</source>
-      <translation>Okänd figur</translation>
+      <translation>Nepoznata Figura</translation>
     </message>
     <message>
       <source>Select Infinity File</source>
-      <translation>Välj Infinity-fil</translation>
+      <translation>Odaberi Infinity Datoteku</translation>
     </message>
     <message>
       <source>Infinity Figure (*.bin);;</source>
-      <translation>Infinity-figur (*.bin);;</translation>
+      <translation>Infinity Figure (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to open the figure file!</source>
-      <translation>Misslyckades med att öppna figurfilen!</translation>
+      <translation>Neuspjeh u otvaranju datoteke figure!</translation>
     </message>
     <message>
       <source>Failed to open the figure file(%1)!
 File may already be in use on the base.</source>
-      <translation>Misslyckades med att öppna figurfilen(%1)!
-Filen kanske redan används på plattan.</translation>
+      <translation>Neuspjeh u otvaranju datoteke figure(%1)
+Datoteka je već u mogućoj upotrebi na bazi.</translation>
     </message>
     <message>
       <source>Failed to read the figure file!</source>
-      <translation>Misslyckades med att läsa figurfilen!</translation>
+      <translation>Neuspjeh u čitanju datoteke figure!</translation>
     </message>
     <message>
       <source>Failed to read the figure file(%1)!
 File was too small.</source>
-      <translation>Misslyckades med att läsa figurfilen(%1)!
-Filen är för liten.</translation>
+      <translation>Neuspjeh u čitanju datoteke figure(%1)!
+Datoteka je premalena.</translation>
     </message>
   </context>
   <context>
     <name>minifig_creator_dialog</name>
     <message>
       <source>Figure Creator</source>
-      <translation>Figurskapare</translation>
+      <translation>Izrada Figure</translation>
     </message>
     <message>
       <source>--Unknown--</source>
-      <translation>--Okänd--</translation>
+      <translation>--Nepoznato--</translation>
     </message>
     <message>
       <source>Figure Number:</source>
-      <translation>Figurnummer:</translation>
+      <translation>Broj Figure:</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation>Skapa</translation>
+      <translation>Izradi</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation>Avbryt</translation>
+      <translation>Poništi</translation>
     </message>
     <message>
       <source>Error converting value</source>
-      <translation>Fel vid konvertering av värde</translation>
+      <translation>Greška u pretvaranju vrijednosti</translation>
     </message>
     <message>
       <source>Figure number entered is invalid!</source>
-      <translation>Figurnumret som angavs är ogiltigt!</translation>
+      <translation>Uneseni broj figure nije valjan!</translation>
     </message>
     <message>
       <source>Create Figure File</source>
-      <translation>Skapa figurfil</translation>
+      <translation>Izradi Datoteku Figura</translation>
     </message>
     <message>
       <source>Dimensions Figure (*.bin);;</source>
-      <translation>Dimensions-figur (*.bin);;</translation>
+      <translation>Dimenzije Figura (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to create minifig file!</source>
-      <translation>Misslyckades med att skapa minifig-fil!</translation>
+      <translation>Neuspjeh u izradi datoteke minifig!</translation>
     </message>
     <message>
       <source>Failed to create minifig file:
 %1</source>
-      <translation>Misslyckades med att skapa minifig-fil:
+      <translation>Neuspjeh u izradi datoteke minifig:
 %1</translation>
     </message>
   </context>
@@ -3222,30 +3230,30 @@ Filen är för liten.</translation>
     <name>minifig_move_dialog</name>
     <message>
       <source>Figure Mover</source>
-      <translation>Figurflyttare</translation>
+      <translation>Premjestitelj Figura</translation>
     </message>
     <message>
       <source>None</source>
-      <translation>Ingen</translation>
+      <translation>Ništa</translation>
     </message>
     <message>
       <source>Move Here</source>
-      <translation>Flytta hit</translation>
+      <translation>Premjesti Ovdje</translation>
     </message>
     <message>
       <source>Pick up and Place</source>
-      <translation>Ta upp och placera</translation>
+      <translation>Uzmi i Postavi</translation>
     </message>
   </context>
   <context>
     <name>skylander_creator_dialog</name>
     <message>
       <source>Skylander Creator</source>
-      <translation>Skylander Creator</translation>
+      <translation>Skylander Izrađivač</translation>
     </message>
     <message>
       <source>--Unknown--</source>
-      <translation>--Okänd--</translation>
+      <translation>--Nepoznato--</translation>
     </message>
     <message>
       <source>ID:</source>
@@ -3253,44 +3261,44 @@ Filen är för liten.</translation>
     </message>
     <message>
       <source>Variant:</source>
-      <translation>Variant:</translation>
+      <translation>Varijanta:</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation>Skapa</translation>
+      <translation>Izradi</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation>Avbryt</translation>
+      <translation>Poništi</translation>
     </message>
     <message>
       <source>Error converting value</source>
-      <translation>Fel vid konvertering av värde</translation>
+      <translation>Greška u pretvaranju vrijednosti</translation>
     </message>
     <message>
       <source>ID entered is invalid!</source>
-      <translation>Angivet id är ogiltigt!</translation>
+      <translation>Uneseni ID nije valjan!</translation>
     </message>
     <message>
       <source>Variant entered is invalid!</source>
-      <translation>Angiven variant är ogiltig!</translation>
+      <translation>Varijanta unesena nije valjana!</translation>
     </message>
     <message>
       <source>Create Skylander File</source>
-      <translation>Skapa Skylander-fil</translation>
+      <translation>Izradi Skylander Datoteku</translation>
     </message>
     <message>
       <source>Skylander Object (*.sky);;All Files (*)</source>
-      <translation>Skylander-objekt (*.sky);;Alla filer (*)</translation>
+      <translation>Skylander Objekt (*.sky);;Sve Datoteke (*)</translation>
     </message>
     <message>
       <source>Failed to create skylander file!</source>
-      <translation>Misslyckades med att skapa skylander-fil!</translation>
+      <translation>Neuspjeh u izradi datoteke skylander!</translation>
     </message>
     <message>
       <source>Failed to create skylander file:
 %1</source>
-      <translation>Misslyckades med att skapa skylander-fil:
+      <translation>Neuspjeh u izradi datoteke skylander:
 %1</translation>
     </message>
   </context>
@@ -3298,11 +3306,11 @@ Filen är för liten.</translation>
     <name>skylander_dialog</name>
     <message>
       <source>Skylanders Manager</source>
-      <translation>Hantera Skylanders</translation>
+      <translation>Upravitelj Skylandera</translation>
     </message>
     <message>
       <source>Active Portal Skylanders:</source>
-      <translation>Aktiv portal för Skylanders:</translation>
+      <translation>Aktivni Portal Skylandera:</translation>
     </message>
     <message>
       <source>Skylander %1</source>
@@ -3310,51 +3318,51 @@ Filen är för liten.</translation>
     </message>
     <message>
       <source>Clear</source>
-      <translation>Töm</translation>
+      <translation>Čisto</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation>Skapa</translation>
+      <translation>Izradi</translation>
     </message>
     <message>
       <source>Load</source>
-      <translation>Läs in</translation>
+      <translation>Učitaj</translation>
     </message>
     <message>
       <source>Select Skylander File</source>
-      <translation>Välj Skylander-fil</translation>
+      <translation>Izradi Skylander Datoteku</translation>
     </message>
     <message>
       <source>Skylander (*.sky *.bin *.dmp *.dump);;All Files (*)</source>
-      <translation>Skylander (*.sky *.bin *.dmp *.dump);;Alla filer (*)</translation>
+      <translation>Skylander (*.sky *.bin *.dmp *.dump);;Sve Datoteke (*)</translation>
     </message>
     <message>
       <source>Failed to open the skylander file!</source>
-      <translation>Misslyckades med att öppna skylander-filen!</translation>
+      <translation>Neuspjeh u otvaranju datoteke skylander!</translation>
     </message>
     <message>
       <source>Failed to open the skylander file(%1)!
 File may already be in use on the portal.</source>
-      <translation>Misslyckades med att öppna skylander-filen(%1)!
-Filen kanske redan används i portalen.</translation>
+      <translation>Neuspjeh u otvaranju datoteke figure(%1)
+Datoteka je već u mogućoj upotrebi na portalu.</translation>
     </message>
     <message>
       <source>Failed to read the skylander file!</source>
-      <translation>Misslyckades med att läsa skylander-filen!</translation>
+      <translation>Neuspjeh u čitanju datoteke skylander!</translation>
     </message>
     <message>
       <source>Failed to read the skylander file(%1)!
 File was too small.</source>
-      <translation>Misslyckades med att läsa skylander-filen(%1)!
-Filen är för liten.</translation>
+      <translation>Neuspjeh u čitanju datoteke skylander(%1)!
+Datoteka je premalena.</translation>
     </message>
     <message>
       <source>Unknown (Id:%1 Var:%2)</source>
-      <translation>Okänd (Id:%1 Var:%2)</translation>
+      <translation>Nepoznato (Id:%1 Var:%2)</translation>
     </message>
     <message>
       <source>None</source>
-      <translation>Ingen</translation>
+      <translation>Ništa</translation>
     </message>
   </context>
 </TS>

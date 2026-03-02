@@ -70,7 +70,7 @@
     </message>
     <message>
       <source>Do you want to delete the selected file?\n%1</source>
-      <translation>Ønsker du å slette den valgte fila?\n%1</translation>
+      <translation>Vil du slette den valgte fila?\n%1</translation>
     </message>
     <message>
       <source>Select Patch File:</source>
@@ -118,7 +118,7 @@
     </message>
     <message>
       <source>Failed to parse XML: </source>
-      <translation>Feil ved tolkning av XML: </translation>
+      <translation>Klarte ikke tolke XML: </translation>
     </message>
     <message>
       <source>Success</source>
@@ -142,7 +142,7 @@
     </message>
     <message>
       <source>File already exists. Do you want to replace it?</source>
-      <translation>Fila finnes allerede. Ønsker du å erstatte den?</translation>
+      <translation>Fila finnes allerede. Vil du erstatte den?</translation>
     </message>
     <message>
       <source>Failed to save file:</source>
@@ -158,7 +158,7 @@
     </message>
     <message>
       <source>No Cheats found for this game in this version of the selected repository,try another repository or a different version of the game.</source>
-      <translation>Ingen juks funnet for dette spillet i denne versjonen av den valgte pakkebrønnen,prøv en annen pakkebrønn eller en annen versjon av spillet.</translation>
+      <translation>Fant ingen juks for dette spillet i denne versjonen av den valgte pakkebrønnen, prøv en annen pakkebrønn eller en annen versjon av spillet.</translation>
     </message>
     <message>
       <source>Cheats Downloaded Successfully</source>
@@ -222,7 +222,7 @@
     </message>
     <message>
       <source>Author: </source>
-      <translation>Forfatter: </translation>
+      <translation>Utvikler: </translation>
     </message>
     <message>
       <source>Directory does not exist:</source>
@@ -341,7 +341,7 @@
     </message>
     <message>
       <source>Auto Updater - GUI</source>
-      <translation>Auto oppdatering – grensesnitt</translation>
+      <translation>Automatisk oppdatering – grensesnitt</translation>
     </message>
     <message>
       <source>Update Available - GUI</source>
@@ -499,7 +499,7 @@
     </message>
     <message>
       <source>Touchpad Center</source>
-      <translation>Midt berøringsplate</translation>
+      <translation>Midtre berøringsplate</translation>
     </message>
     <message>
       <source>Touchpad Right</source>
@@ -719,7 +719,7 @@
     </message>
     <message>
       <source>Directory with your dumped DLC&apos;s</source>
-      <translation>Mappe med dine dumpede DLC-er</translation>
+      <translation>Mappe med dumpet nedlastbart innhold</translation>
     </message>
     <message>
       <source>Directory with games</source>
@@ -727,7 +727,7 @@
     </message>
     <message>
       <source>Directory with DLC&apos;s</source>
-      <translation>Mappe med DLC-er</translation>
+      <translation>Mappe med nedlastbart innhold</translation>
     </message>
   </context>
   <context>
@@ -916,7 +916,7 @@
     </message>
     <message>
       <source>Delete DLC</source>
-      <translation>Slett DLC</translation>
+      <translation>Slett nedlastbart innhold</translation>
     </message>
     <message>
       <source>Delete Trophy</source>
@@ -944,11 +944,11 @@
     </message>
     <message>
       <source>This game has no DLC to delete!</source>
-      <translation>Dette spillet har ingen DLC å slette!</translation>
+      <translation>Dette spillet har intet nedlastbart innhold å slette!</translation>
     </message>
     <message>
       <source>DLC</source>
-      <translation>DLC</translation>
+      <translation>Nedlastbart innhold</translation>
     </message>
     <message>
       <source>Delete %1</source>
@@ -1220,6 +1220,14 @@
       <source>Tip: Unmap inputs with right-click</source>
       <translation>Tips: Fjern tildelinger med «høyre klikk»</translation>
     </message>
+    <message>
+      <source>Volume Up</source>
+      <translation>Øk lydstyrke</translation>
+    </message>
+    <message>
+      <source>Volume Down</source>
+      <translation>Senk lydstyrke</translation>
+    </message>
   </context>
   <context>
     <name>IpcClient</name>
@@ -1420,7 +1428,7 @@
     </message>
     <message>
       <source>Touchpad Center</source>
-      <translation>Midt berøringsplate</translation>
+      <translation>Midtre berøringsplate</translation>
     </message>
     <message>
       <source>Touchpad Right</source>
@@ -1778,11 +1786,11 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Game Log</source>
-      <translation>Spill-logg</translation>
+      <translation>Spill logg</translation>
     </message>
     <message>
       <source>Show Game Log</source>
-      <translation>Vis spill-logg</translation>
+      <translation>Vis spill logg</translation>
     </message>
   </context>
   <context>
@@ -1960,10 +1968,6 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <translation>Gjestefeilsøkingsmarkører</translation>
     </message>
     <message>
-      <source>Enable Readbacks</source>
-      <translation>Bruk tilbakelesninger</translation>
-    </message>
-    <message>
       <source>Enable Readback Linear Images</source>
       <translation>Bruk tilbakelesninger av lineære bilder</translation>
     </message>
@@ -2021,7 +2025,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Volume</source>
-      <translation>Volum</translation>
+      <translation>Lydstyrke</translation>
     </message>
     <message>
       <source>Save</source>
@@ -2154,10 +2158,6 @@ Velg en emulatorversjon fra høyre panel.</translation>
     <message>
       <source>Collect Shaders:\nYou need this enabled to edit shaders with the debug menu (Ctrl + F10).</source>
       <translation>Lagre skyggeleggere:\nDu trenger dette for å redigere skyggeleggerne med feilsøkingsmenyen (Ctrl + F10).</translation>
-    </message>
-    <message>
-      <source>Enable Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
-      <translation>Bruk tilbakelesninger:\nTa i bruk tilbakelesninger og tilbakeskrivninger.\nDette kreves av noen spill for å fungere ordentlig.\nKan forårsake stabilitets- og/eller ytelsesproblemer.</translation>
     </message>
     <message>
       <source>Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</source>
@@ -2353,7 +2353,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Select the DLC folder</source>
-      <translation>Velg DLC-mappa</translation>
+      <translation>Velg mappa for nedlastbart innhold</translation>
     </message>
     <message>
       <source>Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</source>
@@ -2361,7 +2361,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
-      <translation>Bla gjennom:\nLet etter en mappe for å angi den som DLC-adressen.</translation>
+      <translation>Endre mappe:\nLet etter ei mappe for å angi den som stien for nedlastbart innhold.</translation>
     </message>
     <message>
       <source>FSR Settings</source>
@@ -2397,7 +2397,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</source>
-      <translation>Volum:\nJuster volum for spill på et globalt nivå, skalaen går fra 0-500%, standarden er 100%.</translation>
+      <translation>Lydstyrke:\nJuster volum for spill på et globalt nivå, skalaen går fra 0-500 %, standarden er 100 %.</translation>
     </message>
     <message>
       <source>Default tab when opening settings:\nChoose which tab will open, the default is General.</source>
@@ -2497,7 +2497,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
-      <translation>DLC-mappe:\nMappa hvor spill-DLC-ene lastes fra.</translation>
+      <translation>Sti for nedlastbart innhold:\n Mappa hvor nedlastbart innhold for spillene lastes fra.</translation>
     </message>
     <message>
       <source>Additional DMem Allocation</source>
@@ -2557,7 +2557,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>DLC Path</source>
-      <translation>DLC-mappe</translation>
+      <translation>Sti for nedlastbart innhold</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path</source>
@@ -2614,6 +2614,26 @@ Velg en emulatorversjon fra høyre panel.</translation>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
       <translation>Komprimer skyggelegger hurtiglager-filer til en zip-fil:\nskyggeleggerhurtiglager filene lagres i en zip-fil i stedet for flere separate filer.</translation>
+    </message>
+    <message>
+      <source>Readbacks Mode</source>
+      <translation>Tilbakelesningsmodus</translation>
+    </message>
+    <message>
+      <source>Disabled</source>
+      <translation>Avslått</translation>
+    </message>
+    <message>
+      <source>Low</source>
+      <translation>Lav</translation>
+    </message>
+    <message>
+      <source>High</source>
+      <translation>Høy</translation>
+    </message>
+    <message>
+      <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
+      <translation>Tilbakelesninger:\nTa i bruk tilbakelesninger og tilbakeskrivninger.\nDette kreves av noen spill for å fungere ordentlig.\nKan forårsake stabilitets- og/eller ytelsesproblemer.</translation>
     </message>
   </context>
   <context>
@@ -2754,7 +2774,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Failed to determine the folder path.</source>
-      <translation>Fant ikke stien til mappa.</translation>
+      <translation>Klarte ikke bestemme stien til mappa.</translation>
     </message>
     <message>
       <source>Delete version</source>
@@ -2762,7 +2782,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Do you want to delete the version</source>
-      <translation>Ønsker du å slette den valgte versjonen</translation>
+      <translation>Vil du slette den valgte versjonen</translation>
     </message>
     <message>
       <source>Version list update</source>
@@ -2788,7 +2808,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Do you want to download the version</source>
-      <translation>Ønsker du å laste ned versjonen</translation>
+      <translation>Vil du laste ned versjonen</translation>
     </message>
     <message>
       <source>No files available for this platform.</source>
@@ -2816,7 +2836,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Auto Updater - Emulator</source>
-      <translation>Auto oppdatering – emulator</translation>
+      <translation>Automatisk oppdatering – emulator</translation>
     </message>
     <message>
       <source>You already have the latest pre-release version.</source>
@@ -2836,7 +2856,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Do you want to update?</source>
-      <translation>Ønsker du å oppdatere?</translation>
+      <translation>Vil du oppdatere?</translation>
     </message>
     <message>
       <source>Update</source>

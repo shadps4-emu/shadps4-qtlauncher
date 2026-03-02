@@ -1220,6 +1220,14 @@
       <source>Tip: Unmap inputs with right-click</source>
       <translation/>
     </message>
+    <message>
+      <source>Volume Up</source>
+      <translation type="unfinished">Volume Up</translation>
+    </message>
+    <message>
+      <source>Volume Down</source>
+      <translation type="unfinished">Volume Down</translation>
+    </message>
   </context>
   <context>
     <name>IpcClient</name>
@@ -1960,10 +1968,6 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
       <translation>Konuk Hata Ayıklama İşaretleyicileri</translation>
     </message>
     <message>
-      <source>Enable Readbacks</source>
-      <translation>Görüntü Geri Okumayı Etkinleştir</translation>
-    </message>
-    <message>
       <source>Enable Readback Linear Images</source>
       <translation>Lineer Görüntü Geri Okumayı Etkinleştir</translation>
     </message>
@@ -2154,10 +2158,6 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     <message>
       <source>Collect Shaders:\nYou need this enabled to edit shaders with the debug menu (Ctrl + F10).</source>
       <translation>Gölgelendiricileri Topla:\nHata ayıklama menüsüyle (Ctrl + F10) gölgelendiricileri düzenlemek için bunun etkinleştirilmesi gerekir.</translation>
-    </message>
-    <message>
-      <source>Enable Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
-      <translation>Geri Okuma özelliğini etkinleştir:\nGPU belleğinden veri geri okuma ve yazmayı etkinleştirir.\nBazı oyunların doğru çalışması için gereklidir.\nKararlılık ve/veya performans sorunlarına neden olabilir.</translation>
     </message>
     <message>
       <source>Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</source>
@@ -2614,6 +2614,26 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
       <translation>Shader Önbellek dosyalarını bir zip dosyasına sıkıştır:\nShader önbellek dosyaları, birden fazla ayrı dosya yerine tek bir zip dosyası içinde saklanır.</translation>
+    </message>
+    <message>
+      <source>Readbacks Mode</source>
+      <translation type="unfinished">Readbacks Mode</translation>
+    </message>
+    <message>
+      <source>Disabled</source>
+      <translation type="unfinished">Disabled</translation>
+    </message>
+    <message>
+      <source>Low</source>
+      <translation type="unfinished">Low</translation>
+    </message>
+    <message>
+      <source>High</source>
+      <translation type="unfinished">High</translation>
+    </message>
+    <message>
+      <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
+      <translation type="unfinished">Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</translation>
     </message>
   </context>
   <context>

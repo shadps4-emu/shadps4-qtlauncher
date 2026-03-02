@@ -1216,6 +1216,14 @@
       <source>Tip: Unmap inputs with right-click</source>
       <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
     </message>
+    <message>
+      <source>Volume Up</source>
+      <translation type="unfinished">Volume Up</translation>
+    </message>
+    <message>
+      <source>Volume Down</source>
+      <translation type="unfinished">Volume Down</translation>
+    </message>
   </context>
   <context>
     <name>IpcClient</name>
@@ -1954,10 +1962,6 @@ Select an emulator version from the right panel.</source>
       <translation>Guest 偵錯標記</translation>
     </message>
     <message>
-      <source>Enable Readbacks</source>
-      <translation>啟用回溯</translation>
-    </message>
-    <message>
       <source>Enable Readback Linear Images</source>
       <translation>啟用回溯線性映像</translation>
     </message>
@@ -2148,10 +2152,6 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Collect Shaders:\nYou need this enabled to edit shaders with the debug menu (Ctrl + F10).</source>
       <translation>收集著色器：\n您需要啟用此功能才能使用偵錯功能表 (Ctrl + F10) 編輯著色器。</translation>
-    </message>
-    <message>
-      <source>Enable Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
-      <translation>啟用回溯：\n啟用 GPU 記憶體回溯和改寫。\n這是某些遊戲正常運作所需的。\n可能會引發 穩定性問題 及/或 效能問題。</translation>
     </message>
     <message>
       <source>Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</source>
@@ -2608,6 +2608,26 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
       <translation type="unfinished">Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</translation>
+    </message>
+    <message>
+      <source>Readbacks Mode</source>
+      <translation type="unfinished">Readbacks Mode</translation>
+    </message>
+    <message>
+      <source>Disabled</source>
+      <translation type="unfinished">Disabled</translation>
+    </message>
+    <message>
+      <source>Low</source>
+      <translation type="unfinished">Low</translation>
+    </message>
+    <message>
+      <source>High</source>
+      <translation type="unfinished">High</translation>
+    </message>
+    <message>
+      <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
+      <translation type="unfinished">Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</translation>
     </message>
   </context>
   <context>
