@@ -118,7 +118,7 @@
     </message>
     <message>
       <source>Failed to parse XML: </source>
-      <translation>Feil ved tolkning av XML: </translation>
+      <translation>Klarte ikke tolke XML: </translation>
     </message>
     <message>
       <source>Success</source>
@@ -158,7 +158,7 @@
     </message>
     <message>
       <source>No Cheats found for this game in this version of the selected repository,try another repository or a different version of the game.</source>
-      <translation>Ingen juks funnet for dette spillet i denne versjonen av den valgte pakkebrønnen,prøv en annen pakkebrønn eller en annen versjon av spillet.</translation>
+      <translation>Fant ingen juks for dette spillet i denne versjonen av den valgte pakkebrønnen, prøv en annen pakkebrønn eller en annen versjon av spillet.</translation>
     </message>
     <message>
       <source>Cheats Downloaded Successfully</source>
@@ -222,7 +222,7 @@
     </message>
     <message>
       <source>Author: </source>
-      <translation>Forfatter: </translation>
+      <translation>Utvikler: </translation>
     </message>
     <message>
       <source>Directory does not exist:</source>
@@ -2025,7 +2025,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Volume</source>
-      <translation>Volum</translation>
+      <translation>Lydstyrke</translation>
     </message>
     <message>
       <source>Save</source>
