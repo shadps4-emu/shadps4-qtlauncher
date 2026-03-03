@@ -1158,11 +1158,11 @@
     </message>
     <message>
       <source>Toggle Fullscreen</source>
-      <translation>Ativar/desativar Tela cheia</translation>
+      <translation>Alternar Tela Cheia</translation>
     </message>
     <message>
       <source>Toggle Pause</source>
-      <translation>Ativar/desativar Pausa</translation>
+      <translation>Alternar Pausa</translation>
     </message>
     <message>
       <source>Keyboard Hotkeys</source>
