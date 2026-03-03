@@ -615,7 +615,7 @@
     </message>
     <message>
       <source>Max Deadzone (def:127 max:127)</source>
-      <translation>Máximo de zona (predet.: 2, máx.: 127)</translation>
+      <translation>Máximo de zona (predet.: 127, máx.: 127)</translation>
     </message>
     <message>
       <source>Right Stick Deadzone</source>
@@ -1360,7 +1360,7 @@
     </message>
     <message>
       <source>Deadzone Offset (def 0.50):</source>
-      <translation>Zona muerta (predet.: 0,50):</translation>
+      <translation>Compensación de zona muerta (predet.: 0,50):</translation>
     </message>
     <message>
       <source>Speed Multiplier (def 1.0):</source>
@@ -1885,7 +1885,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Controller</source>
-      <translation>Controlador/Mando</translation>
+      <translation>Mando</translation>
     </message>
     <message>
       <source>Graphics</source>
@@ -2177,11 +2177,11 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Save Data Path:\nThe folder where game save data will be saved.</source>
-      <translation>Ruta de Guardado de Datos:\nLa carpeta donde se guardarán los datos del juego.</translation>
+      <translation>Ruta de datos guardados:\nLa carpeta donde se guardarán los datos guardados de los juegos.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the save data path.</source>
-      <translation>Buscar:\nBusque una carpeta para establecer como ruta de datos guardados.</translation>
+      <translation>Buscar:\nPermite buscar una carpeta a establecer como ruta de datos guardados.</translation>
     </message>
     <message>
       <source>Set the volume of the background music.</source>
@@ -2189,7 +2189,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Enable Motion Controls</source>
-      <translation>Habilitar Controles de Movimiento</translation>
+      <translation>Habilitar controles de movimiento</translation>
     </message>
     <message>
       <source>Save Data Path</source>
@@ -2209,15 +2209,15 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Auto Select</source>
-      <translation>Selección Automática</translation>
+      <translation>Selección automática</translation>
     </message>
     <message>
       <source>Directory to install games</source>
-      <translation>Carpeta para instalar juegos</translation>
+      <translation>Directorio de juegos instalados</translation>
     </message>
     <message>
       <source>Directory to save data</source>
-      <translation>Directorio para guardar datos</translation>
+      <translation>Directorio de datos guardados</translation>
     </message>
     <message>
       <source>Video</source>
@@ -2225,7 +2225,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Display Mode</source>
-      <translation>Modo de Imagen</translation>
+      <translation>Modo de imagen</translation>
     </message>
     <message>
       <source>Windowed</source>
@@ -2233,15 +2233,15 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Fullscreen</source>
-      <translation>Pantalla Completa</translation>
+      <translation>Pantalla completa</translation>
     </message>
     <message>
       <source>Fullscreen (Borderless)</source>
-      <translation>Pantalla Completa (sin bordes)</translation>
+      <translation>Pantalla completa (sin bordes)</translation>
     </message>
     <message>
       <source>Window Size</source>
-      <translation>Tamaño de Ventana</translation>
+      <translation>Tamaño de ventana</translation>
     </message>
     <message>
       <source>W:</source>
@@ -2253,15 +2253,15 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Separate Log Files</source>
-      <translation>Archivos de Registro Independientes</translation>
+      <translation>Archivos de registro independientes</translation>
     </message>
     <message>
       <source>Separate Log Files:\nWrites a separate logfile for each game.</source>
-      <translation>Archivos de Registro Independientes:\nEscribe un archivo de registro separado para cada juego.</translation>
+      <translation>Archivos de registro independientes:\nEscribe un archivo de registro distinto para cada juego.</translation>
     </message>
     <message>
       <source>Trophy Notification Position</source>
-      <translation>Posición de Notificación de Trofeos</translation>
+      <translation>Posición de notificaciones de trofeos</translation>
     </message>
     <message>
       <source>Left</source>
@@ -2281,19 +2281,19 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Notification Duration</source>
-      <translation>Duración de Notificaciones</translation>
+      <translation>Duración de notificaciones</translation>
     </message>
     <message>
       <source>Portable User Folder</source>
-      <translation>Carpeta Portable de Usuario</translation>
+      <translation>Carpeta de usuario «portable»</translation>
     </message>
     <message>
       <source>Create Portable User Folder from Common User Folder</source>
-      <translation>Crear Carpeta Portable de Usuario a partir de la Carpeta de Usuario Estándar</translation>
+      <translation>Crear carpeta de usuario «portable» a partir de la estándar</translation>
     </message>
     <message>
       <source>Portable user folder:\nStores shadPS4 settings and data that will be applied only to the shadPS4 build located in the current folder. Restart the app after creating the portable user folder to begin using it.</source>
-      <translation>Carpeta portable de usuario:\nAlmacena la configuración de shadPS4 y los datos que se aplicarán sólo a la compilación shadPS4 ubicada en la carpeta actual. Reinicia la aplicación después de crear la carpeta portable de usuario para empezar a usarla.</translation>
+      <translation>Carpeta de usuario «portable»:\nAlmacena en la carpeta actual la configuración de shadPS4 y los datos que se aplicarán solo a la versión de shadPS4 que se encuentre en dicha carpeta. Reinicia la aplicación una vez hayas creado la carpeta de usuario «portable» para empezar a usarla.</translation>
     </message>
     <message>
       <source>%1 already exists</source>
@@ -2301,11 +2301,11 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>%1 successfully created.</source>
-      <translation>%1 creado correctamente.</translation>
+      <translation>Se ha creado %1.</translation>
     </message>
     <message>
       <source>Open the custom trophy images/sounds folder:\nYou can add custom images to the trophies and an audio.\nAdd the files to custom_trophy with the following names:\ntrophy.wav OR trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nNote: The sound will only work in QT versions.</source>
-      <translation>Abre la carpeta de trofeos/sonidos personalizados:\nPuedes añadir imágenes y un audio personalizados a los trofeos.\nAñade los archivos a custom_trophy con los siguientes nombres:\ntrophy.wav o trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nNota: El sonido sólo funcionará en versiones QT.</translation>
+      <translation>Abrir la carpeta de trofeos/sonidos personalizados:\nPuedes añadir imágenes y un audio personalizados a los trofeos.\nAñade los archivos en la carpeta custom_trophy con los siguientes nombres:\ntrophy.wav O trophy.mp3, bronze.png, gold.png, platinum.png, silver.png.\nNota: solo se reproducirá el sonido en las versiones con QT.</translation>
     </message>
     <message>
       <source>Experimental Features</source>
@@ -2313,7 +2313,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>WARNING: These features are experimental and should not be enabled unless you were told to, or a game requires it. Please ask in the shadPS4 Discord server if you have any questions.</source>
-      <translation>ADVERTENCIA: Estas funciones son experimentales y no deben activarse a menos que se te haya indicado o que un juego lo requiera específicamente. Si tienes dudas, por favor consulta en el servidor de Discord de shadPS4.</translation>
+      <translation>ADVERTENCIA: estas características son experimentales y no debes activarlas a menos que se te haya dicho lo contrario o que un juego concreto las necesite. En caso de duda, pregunta en el servidor de shadPS4 en Discord.</translation>
     </message>
     <message>
       <source>Enable Background Controller Input</source>
@@ -2325,7 +2325,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Crash Diagnostics:\nCreates a .yaml file with info about the Vulkan state at the time of crashing.\nUseful for debugging &apos;Device lost&apos; errors. If you have this enabled, you should enable Host AND Guest Debug Markers.\nYou need Vulkan Validation Layers enabled and the Vulkan SDK for this to work.</source>
-      <translation>Diagnóstico de fallos:\nCrea un archivo .yaml con información sobre el estado de Vulkan en el momento del cuelgue.\nÚtil para depurar errores de tipo &apos;Dispositivo perdido&apos;. Si activas esta opción, deberías habilitar los marcadores de depuración de host Y TAMBIÉN de invitado.\nNecesitas activar las capas de validación de Vulkan y el SDK de Vulkan para que funcione.</translation>
+      <translation>Diagnóstico de fallos:\nCrea un archivo .yaml con información sobre el estado de Vulkan en el momento del cuelgue.\nÚtil para depurar errores de tipo «Dispositivo perdido». Si activas esta opción, deberías habilitar los marcadores de depuración de host Y TAMBIÉN de invitado.\nNecesitas activar las capas de validación de Vulkan y el SDK de Vulkan para que funcione.</translation>
     </message>
     <message>
       <source>Enable Logging</source>
@@ -2361,7 +2361,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
-      <translation>Buscar:\nBusque una carpeta para establecer como ruta de DLC.</translation>
+      <translation>Buscar:\nPermite buscar una carpeta a establecer como ruta de DLC.</translation>
     </message>
     <message>
       <source>FSR Settings</source>
@@ -2393,7 +2393,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Microphone:\nNone: Does not use the microphone.\nDefault Device: Will use the default device defined in the system.\nOr manually choose the microphone to be used from the list.</source>
-      <translation>Micrófono:\nNinguno: no utiliza el micrófono.\nDispositivo por defecto: utilizará el dispositivo que esté definido por defecto en el sistema.\nTambién puedes elegir a mano el micrófono que quieras usar.</translation>
+      <translation>Micrófono:\nNinguno: no utiliza el micrófono.\nDispositivo predeterminado: utilizará el dispositivo que esté definido por defecto en el sistema.\nTambién puedes elegir a mano el micrófono que quieras usar.</translation>
     </message>
     <message>
       <source>Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</source>
@@ -2489,7 +2489,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
-      <translation>Habilitar volcado de Shaders:\nGuarda los shaders (sombreadores) del juego en una carpeta a medida que se vayan renderizando. Para fines de depuración técnica.</translation>
+      <translation>Habilitar volcado de shaders:\nGuarda los shaders (sombreadores) del juego en una carpeta a medida que se vayan renderizando. Para fines de depuración técnica.</translation>
     </message>
     <message>
       <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</source>
@@ -2517,7 +2517,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Vulkan Validation (Requires Vulkan SDK)</source>
-      <translation>Validación Vulkan (Requiere el SDK de Vulkan)</translation>
+      <translation>Validación para Vulkan (Requiere el SDK de Vulkan)</translation>
     </message>
     <message>
       <source>Validation Layers</source>
@@ -2525,55 +2525,55 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Enable Core Validation</source>
-      <translation>Activar validación de núcleo</translation>
+      <translation>Habilitar validación de núcleo</translation>
     </message>
     <message>
       <source>Enable Sync Validation</source>
-      <translation>Activar validación de sincronización</translation>
+      <translation>Habilitar validación de sincronización</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation</source>
-      <translation>Activar validación asistida por GPU</translation>
+      <translation>Habilitar validación asistida por GPU</translation>
     </message>
     <message>
       <source>Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation>Activar validación de sincronización:\nHabilita un sistema que valida la sincronización de las tareas de renderizado de Vulkan.\nEsto reducirá el rendimiento y probablemente cambiará el comportamiento de la emulación.\nNecesitarás el SDK de Vulkan para que esto funcione.</translation>
+      <translation>Habilitar validación de sincronización:\nActiva un sistema que valida la sincronización de las tareas de renderizado de Vulkan.\nReducirá el rendimiento y probablemente cambiará el comportamiento de la emulación.\nNecesitarás el SDK de Vulkan para que funcione.</translation>
     </message>
     <message>
       <source>Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation>Activar validación de núcleo:\nHabilita las funciones principales de validación de la API.\nEsto reducirá el rendimiento y probablemente cambiará el comportamiento de la emulación.\nNecesitarás el SDK de Vulkan para que esto funcione.</translation>
+      <translation>Habilitar validación de núcleo:\nActiva las funciones principales de validación de la API.\nReducirá el rendimiento y probablemente cambiará el comportamiento de la emulación.\nNecesitarás el SDK de Vulkan para que funcione.</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation>Habilitar validación asistida por GPU:\nIncluye un código adicional en los shaders para comprobar que su comportamiento sea el correcto.\nReducirá el rendimiento y, probablemente, cambiará el comportamiento de la emulación.\nNecesitas el SDK de Vulkan para que funcione.</translation>
+      <translation>Habilitar validación asistida por GPU:\nIncluye un código adicional en los shaders para comprobar que su comportamiento sea el correcto.\nReducirá el rendimiento y probablemente cambiará el comportamiento de la emulación.\nNecesitarás el SDK de Vulkan para que funcione.</translation>
     </message>
     <message>
       <source>GUI Language</source>
-      <translation>Idioma de la GUI</translation>
+      <translation>Idioma de la interfaz</translation>
     </message>
     <message>
       <source>GUI Updates</source>
-      <translation>Actualizaciones de la GUI</translation>
+      <translation>Actualizaciones de la interfaz</translation>
     </message>
     <message>
       <source>DLC Path</source>
-      <translation>Ruta de DLCs</translation>
+      <translation>Ruta de DLC</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path</source>
-      <translation>Ruta de Sysmodules de PS4</translation>
+      <translation>Ruta de sysmodules de PS4</translation>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
-      <translation>Actualizaciones de la GUI:\nPrincipal: las versiones oficiales mensuales podrían estar muy obsoletas, pero son más fiables y han sido más testadas.\n«Nightly»: versiones de desarrollo con las últimas características y correcciones, pero que pueden contener fallos y ser menos estables.\n\n* Esta actualización solo se aplica a la interfaz de usuario Qt. Para actualizar el núcleo del emulador debes utilizar el gestor de versiones.</translation>
+      <translation>Actualizaciones de la interfaz:\nPrincipal: las versiones oficiales mensuales podrían estar muy obsoletas, pero son más fiables y han sido más testadas.\n«Nightly»: versiones de desarrollo con las últimas características y correcciones, pero que pueden contener fallos y ser menos estables.\n\n* Esta actualización solo se aplica a la interfaz de usuario Qt. Para actualizar el núcleo del emulador debes utilizar el gestor de versiones.</translation>
     </message>
     <message>
       <source>Cannot create portable launcher folder</source>
-      <translation>No se puede crear la carpeta portable del lanzador</translation>
+      <translation>No se ha podido crear la carpeta «portable» del lanzador</translation>
     </message>
     <message>
       <source>Portable launcherDir folder created</source>
-      <translation>Carpeta portable de launcherDir creada</translation>
+      <translation>Carpeta «portable» de launcherDir creada</translation>
     </message>
     <message>
       <source>USB Device</source>
@@ -2644,26 +2644,26 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Select version for shortcut creation</source>
-      <translation>Seleccionar versión para la creación de acceso directo</translation>
+      <translation>Selecciona la versión con la que se creará el acceso directo</translation>
     </message>
     <message>
       <source>No Version Selected</source>
-      <translation>Ninguna versión seleccionada</translation>
+      <translation>No se ha seleccionado una versión</translation>
     </message>
     <message>
       <source>Select a version first</source>
-      <translation>Selecciona primero una versión</translation>
+      <translation>Debes seleccionar una versión</translation>
     </message>
   </context>
   <context>
     <name>TrophyViewer</name>
     <message>
       <source>Trophy Viewer</source>
-      <translation>Expositor de Trofeos</translation>
+      <translation>Visualizador de trofeos</translation>
     </message>
     <message>
       <source>Select Game:</source>
-      <translation>Selecciona un Juego:</translation>
+      <translation>Selecciona un juego:</translation>
     </message>
     <message>
       <source>Progress</source>
@@ -2671,15 +2671,15 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Show Earned Trophies</source>
-      <translation>Mostrar Trofeos Obtenidos</translation>
+      <translation>Mostrar trofeos ganados</translation>
     </message>
     <message>
       <source>Show Not Earned Trophies</source>
-      <translation>Mostrar Trofeos No Obtenidos</translation>
+      <translation>Mostrar trofeos no ganados</translation>
     </message>
     <message>
       <source>Show Hidden Trophies</source>
-      <translation>Mostrar Trofeos Ocultos</translation>
+      <translation>Mostrar trofeos ocultos</translation>
     </message>
   </context>
   <context>
@@ -2690,11 +2690,11 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Path to save versions</source>
-      <translation>Ruta para guardar las versiones</translation>
+      <translation>Ruta de versiones guardadas</translation>
     </message>
     <message>
       <source>Browse</source>
-      <translation>Explorar</translation>
+      <translation>Buscar</translation>
     </message>
     <message>
       <source>Installed</source>
@@ -2702,7 +2702,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Selected</source>
-      <translation>Seleccionadas</translation>
+      <translation>Seleccionada</translation>
     </message>
     <message>
       <source>Version</source>
@@ -2726,7 +2726,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Refresh List</source>
-      <translation>Refrescar lista</translation>
+      <translation>Actualizar lista</translation>
     </message>
     <message>
       <source>Download</source>
@@ -2742,7 +2742,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Select the folder where the emulator versions will be installed</source>
-      <translation>Seleccionar la carpeta donde se instalarán las versiones del emulador</translation>
+      <translation>Seleccionar carpeta donde se instalarán las versiones del emulador</translation>
     </message>
     <message>
       <source>Select executable</source>
@@ -2766,11 +2766,11 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Success</source>
-      <translation>Éxito</translation>
+      <translation>Proceso completado</translation>
     </message>
     <message>
       <source>Version added successfully.</source>
-      <translation>Versión añadida con éxito.</translation>
+      <translation>Se ha añadido la versión.</translation>
     </message>
     <message>
       <source>Failed to determine the folder path.</source>
@@ -2786,7 +2786,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Version list update</source>
-      <translation>Actualizar la lista de versiones</translation>
+      <translation>Actualización de lista de versiones</translation>
     </message>
     <message>
       <source>No news, the version list is already updated.</source>
@@ -2794,7 +2794,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>The latest versions have been added to the list for download.</source>
-      <translation>Las versiones más recientes han sido añadidas a la lista para descargar.</translation>
+      <translation>Se han añadido las versiones más recientes a la lista para descargar.</translation>
     </message>
     <message>
       <source>Error accessing GitHub API</source>
@@ -2803,7 +2803,8 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     <message>
       <source>First you need to choose a location to save the versions in
 &apos;Path to save versions&apos;</source>
-      <translation>Primero debes elegir una ruta donde guardar las versiones en &apos;Ruta para guardar versiones&apos;</translation>
+      <translation>Debes elegir una ubicación para guardar las versiones
+en «Ruta de versiones guardadas»</translation>
     </message>
     <message>
       <source>Do you want to download the version</source>
@@ -2815,11 +2816,11 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Downloading %1 , please wait...</source>
-      <translation>Descargando %1, por favor, espera...</translation>
+      <translation>Descargando %1, espera...</translation>
     </message>
     <message>
       <source>Could not save file.</source>
-      <translation>No se pudo guardar el archivo.</translation>
+      <translation>No se ha podido guardar el archivo.</translation>
     </message>
     <message>
       <source>Version %1 has been downloaded and selected.</source>
@@ -2831,7 +2832,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>The GitHub API response is not a valid JSON array.</source>
-      <translation>La respuesta de la API de GitHub no es un array JSON válido.</translation>
+      <translation>La respuesta de la API de GitHub no es una matriz JSON válida.</translation>
     </message>
     <message>
       <source>Auto Updater - Emulator</source>
@@ -2839,7 +2840,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>You already have the latest pre-release version.</source>
-      <translation>Ya tienes la última versión de prelanzamiento.</translation>
+      <translation>Ya tienes la última versión prelanzamiento.</translation>
     </message>
     <message>
       <source>Update Available (Emulator)</source>
@@ -2851,7 +2852,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Latest Version</source>
-      <translation>Última versión</translation>
+      <translation>Versión más reciente</translation>
     </message>
     <message>
       <source>Do you want to update?</source>
@@ -2883,7 +2884,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>No download URL found for the specified asset.</source>
-      <translation>Sin URL de descarga para el recurso solicitado.</translation>
+      <translation>No hay URL de descarga para el recurso solicitado.</translation>
     </message>
     <message>
       <source>Network error while downloading</source>
@@ -2899,7 +2900,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Pre-release updated successfully</source>
-      <translation>Versión de prelanzamiento actualizada con éxito</translation>
+      <translation>Versión prelanzamiento actualizada con éxito</translation>
     </message>
     <message>
       <source>Failed to create the update script file</source>
@@ -2911,7 +2912,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>No version selected. Please choose one from the list to delete.</source>
-      <translation>No se ha seleccionado ninguna versión. Por favor, elige una de la lista para eliminarla.</translation>
+      <translation>No se ha seleccionado una versión. Elige una de la lista para eliminarla.</translation>
     </message>
     <message>
       <source>Confirm Download</source>
@@ -2939,7 +2940,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release.</source>
-      <translation>No se ha podido obtener el hash de la última versión prelanzamiento.</translation>
+      <translation>No se ha podido obtener el «hash» de la última versión prelanzamiento.</translation>
     </message>
     <message>
       <source>Downloading Pre-release (Nightly), please wait...</source>
