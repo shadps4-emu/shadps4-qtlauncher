@@ -2618,23 +2618,23 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Readbacks Mode</source>
-      <translation type="unfinished">Readbacks Mode</translation>
+      <translation>Режим зворотного зчитування</translation>
     </message>
     <message>
       <source>Disabled</source>
-      <translation type="unfinished">Disabled</translation>
+      <translation>Вимкнено</translation>
     </message>
     <message>
       <source>Low</source>
-      <translation type="unfinished">Low</translation>
+      <translation>Низькі</translation>
     </message>
     <message>
       <source>High</source>
-      <translation type="unfinished">High</translation>
+      <translation>Високі</translation>
     </message>
     <message>
       <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
-      <translation type="unfinished">Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</translation>
+      <translation>Зворотне зчитування:\nУвімкнути зворотне зчитування та запис пам’яті ГП.\nЦе необхідно для коректної роботи деяких ігор.\nМоже спричинити проблеми зі стабільністю та / або продуктивністю.</translation>
     </message>
   </context>
   <context>
