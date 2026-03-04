@@ -273,7 +273,7 @@
     </message>
     <message>
       <source>No download URL found for the specified asset.</source>
-      <translation>No se ha encontrado la URL de descarga para el recurso especificado.</translation>
+      <translation>No se ha encontrado la URL de descarga para el recurso solicitado.</translation>
     </message>
     <message>
       <source>Your version is already up to date!</source>
@@ -325,7 +325,7 @@
     </message>
     <message>
       <source>The update has been downloaded, press OK to install.</source>
-      <translation>La actualización se ha descargado, pulsa Aceptar para instalarla.</translation>
+      <translation>Se ha descargado la actualización, pulsa Aceptar para instalarla.</translation>
     </message>
     <message>
       <source>Failed to save the update file at</source>
@@ -341,11 +341,11 @@
     </message>
     <message>
       <source>Auto Updater - GUI</source>
-      <translation>Actualizador automático - GUI</translation>
+      <translation>Actualizador automático - Interfaz</translation>
     </message>
     <message>
       <source>Update Available - GUI</source>
-      <translation>Actualización disponible - GUI</translation>
+      <translation>Actualización disponible - Interfaz</translation>
     </message>
   </context>
   <context>
@@ -1989,7 +1989,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Disable Trophy Notification</source>
-      <translation>Desactivar notificaciones de trofeos</translation>
+      <translation>Deshabilitar notificaciones de trofeos</translation>
     </message>
     <message>
       <source>Background Image</source>
@@ -2513,7 +2513,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the sysmodules path.</source>
-      <translation>Buscar:\nBusca una carpeta para establecer como ruta de sysmodules.</translation>
+      <translation>Buscar:\nPermite buscar una carpeta a establecer como ruta de sysmodules.</translation>
     </message>
     <message>
       <source>Vulkan Validation (Requires Vulkan SDK)</source>
@@ -2884,7 +2884,7 @@ en «Ruta de versiones guardadas»</translation>
     </message>
     <message>
       <source>No download URL found for the specified asset.</source>
-      <translation>No hay URL de descarga para el recurso solicitado.</translation>
+      <translation>No se ha encontrado la URL de descarga para el recurso solicitado.</translation>
     </message>
     <message>
       <source>Network error while downloading</source>
