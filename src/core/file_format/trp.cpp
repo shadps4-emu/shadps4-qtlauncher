@@ -142,7 +142,7 @@ bool TRP::Extract(const std::filesystem::path& trophyPath, const std::string tit
                         LOG_CRITICAL(
                             Common_Filesystem,
                             "Trophy XML {} write failed, wanted to write {} bytes, wrote {}",
-                            fmt::UTF(path.u8string()), XML.size(), written);
+                            path.string(), XML.size(), written);
                     }
                 }
             }
