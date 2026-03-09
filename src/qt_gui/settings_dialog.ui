@@ -2442,12 +2442,12 @@
                     </item>
                     <item>
                      <property name="text">
-                      <string>Low</string>
+                      <string>Relaxed</string>
                      </property>
                     </item>
                     <item>
                      <property name="text">
-                      <string>High</string>
+                      <string>Precise</string>
                      </property>
                     </item>
                    </widget>
