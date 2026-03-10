@@ -2629,11 +2629,11 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Relaxed</source>
-      <translation type="unfinished">Relaxed</translation>
+      <translation>Atenuado</translation>
     </message>
     <message>
       <source>Precise</source>
-      <translation type="unfinished">Precise</translation>
+      <translation>Rigoroso</translation>
     </message>
   </context>
   <context>
