@@ -2629,11 +2629,11 @@ Selecciona una versió del panell dret.</translation>
     </message>
     <message>
       <source>Relaxed</source>
-      <translation type="unfinished">Relaxed</translation>
+      <translation>Relaxat</translation>
     </message>
     <message>
       <source>Precise</source>
-      <translation type="unfinished">Precise</translation>
+      <translation>Precís</translation>
     </message>
   </context>
   <context>
