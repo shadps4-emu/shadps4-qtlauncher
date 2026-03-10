@@ -2625,16 +2625,16 @@ Select an emulator version from the right panel.</source>
       <translation>Вимкнено</translation>
     </message>
     <message>
-      <source>Low</source>
-      <translation>Низькі</translation>
-    </message>
-    <message>
-      <source>High</source>
-      <translation>Високі</translation>
-    </message>
-    <message>
       <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
       <translation>Зворотне зчитування:\nУвімкнути зворотне зчитування та запис пам’яті ГП.\nЦе необхідно для коректної роботи деяких ігор.\nМоже спричинити проблеми зі стабільністю та / або продуктивністю.</translation>
+    </message>
+    <message>
+      <source>Relaxed</source>
+      <translation type="unfinished">Relaxed</translation>
+    </message>
+    <message>
+      <source>Precise</source>
+      <translation type="unfinished">Precise</translation>
     </message>
   </context>
   <context>
