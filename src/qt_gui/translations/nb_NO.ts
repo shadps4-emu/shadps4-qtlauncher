@@ -2624,16 +2624,16 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <translation>Avslått</translation>
     </message>
     <message>
-      <source>Low</source>
-      <translation>Lav</translation>
-    </message>
-    <message>
-      <source>High</source>
-      <translation>Høy</translation>
-    </message>
-    <message>
       <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
       <translation>Tilbakelesninger:\nTa i bruk tilbakelesninger og tilbakeskrivninger.\nDette kreves av noen spill for å fungere ordentlig.\nKan forårsake stabilitets- og/eller ytelsesproblemer.</translation>
+    </message>
+    <message>
+      <source>Relaxed</source>
+      <translation type="unfinished">Relaxed</translation>
+    </message>
+    <message>
+      <source>Precise</source>
+      <translation type="unfinished">Precise</translation>
     </message>
   </context>
   <context>
