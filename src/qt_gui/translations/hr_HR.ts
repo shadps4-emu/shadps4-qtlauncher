@@ -2637,11 +2637,11 @@ Izaziva rušenje ili probleme u nekim igrama.</translation>
     </message>
     <message>
       <source>Relaxed</source>
-      <translation type="unfinished">Relaxed</translation>
+      <translation>Opušteno</translation>
     </message>
     <message>
       <source>Precise</source>
-      <translation type="unfinished">Precise</translation>
+      <translation>Precizno</translation>
     </message>
   </context>
   <context>
