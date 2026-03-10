@@ -2624,16 +2624,16 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
       <translation type="unfinished">Disabled</translation>
     </message>
     <message>
-      <source>Low</source>
-      <translation type="unfinished">Low</translation>
-    </message>
-    <message>
-      <source>High</source>
-      <translation type="unfinished">High</translation>
-    </message>
-    <message>
       <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
       <translation type="unfinished">Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</translation>
+    </message>
+    <message>
+      <source>Relaxed</source>
+      <translation type="unfinished">Relaxed</translation>
+    </message>
+    <message>
+      <source>Precise</source>
+      <translation type="unfinished">Precise</translation>
     </message>
   </context>
   <context>
