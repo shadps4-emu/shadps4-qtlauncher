@@ -2630,11 +2630,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Relaxed</source>
-      <translation type="unfinished">Relaxed</translation>
+      <translation>Розслаблено</translation>
     </message>
     <message>
       <source>Precise</source>
-      <translation type="unfinished">Precise</translation>
+      <translation>Точно</translation>
     </message>
   </context>
   <context>
