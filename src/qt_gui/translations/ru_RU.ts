@@ -2629,11 +2629,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Relaxed</source>
-      <translation type="unfinished">Relaxed</translation>
+      <translation>Расслабленный</translation>
     </message>
     <message>
       <source>Precise</source>
-      <translation type="unfinished">Precise</translation>
+      <translation>Точный</translation>
     </message>
   </context>
   <context>
