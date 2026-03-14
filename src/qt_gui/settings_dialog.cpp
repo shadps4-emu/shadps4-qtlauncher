@@ -421,6 +421,11 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
                     [this](const QString& filter) { ui->logFilterLineEdit->setText(filter); });
             dlg->exec();
         });
+
+        connect(ui->logSkipDuplicateCheckBox, &QPushButton::clicked, this, [this]() {
+            ui->logMaxSkipDurationGroupBox->setVisible(
+                !ui->logMaxSkipDurationGroupBox->isVisible());
+        });
     }
 
     // DEBUG TAB
