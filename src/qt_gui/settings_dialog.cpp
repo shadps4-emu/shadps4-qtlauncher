@@ -757,11 +757,15 @@ void SettingsDialog::LoadValuesFromConfig() {
     ui->logSkipDuplicateCheckBox->setChecked(
         toml::find_or<bool>(data, "Log", "skipDuplicate", true));
     ui->logSyncCheckBox->setChecked(toml::find_or<bool>(data, "Log", "sync", true));
+#ifdef _WIN32
     std::string logType = toml::find_or<std::string>(data, "Log", "type", "wincolor");
     QString translatedText_logType = logTypeMap.key(QString::fromStdString(logType));
     if (!translatedText_logType.isEmpty()) {
         ui->logTypeComboBox->setCurrentText(translatedText_logType);
     }
+#else
+    ui->logTypeGroupBox->setVisible(false);
+#endif
 
     ui->userNameLineEdit->setText(
         QString::fromStdString(toml::find_or<std::string>(data, "General", "userName", "shadPS4")));
