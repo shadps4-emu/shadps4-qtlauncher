@@ -30,7 +30,7 @@ enum class PathType {
     LauncherDir,      // Where launcher stores its data.
     LauncherMetaData, // Where launcher stores its game metadata.
     CacheDir,         // Where pipeline and shader cache is stored.
-    FontsDir,       // Where dumped system fonts are stored.
+    FontsDir,         // Where dumped system fonts are stored.
 };
 
 constexpr auto PORTABLE_DIR = "user";

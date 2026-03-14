@@ -26,7 +26,6 @@ using spdlog_stdout = spdlog::sinks::stdout_color_sink_mt;
 #include "common/config.h"
 #include "common/logging/classes.h"
 #include "common/path_util.h"
-//#include "common/thread.h"
 #include "common/types.h"
 
 namespace Common::Log {
@@ -115,7 +114,8 @@ static void Setup(int argc, char* argv[]) {
 
 #ifdef _WIN32
     if (Config::getLogType() == "wincolor") {
-        g_console_sink = std::make_shared<spdlog::sinks::wincolor_stdout_sink_mt>(spdlog::color_mode::always);
+        g_console_sink =
+            std::make_shared<spdlog::sinks::wincolor_stdout_sink_mt>(spdlog::color_mode::always);
     } else {
         g_console_sink = std::make_shared<spdlog::sinks::msvc_sink_mt>();
     }

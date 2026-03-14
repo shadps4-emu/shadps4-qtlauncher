@@ -4,8 +4,8 @@
 #include "log.h"
 
 namespace Common::Log {
-    std::shared_ptr<spdlog_stdout> g_console_sink;
-    std::shared_ptr<spdlog::sinks::basic_file_sink_mt> g_shad_file_sink;
-    std::shared_ptr<spdlog::sinks::basic_file_sink_mt> g_game_file_sink;
-    bool g_should_append = false;
+std::shared_ptr<spdlog_stdout> g_console_sink;
+std::shared_ptr<spdlog::sinks::basic_file_sink_mt> g_shad_file_sink;
+std::shared_ptr<spdlog::sinks::basic_file_sink_mt> g_game_file_sink;
+bool g_should_append = false;
 } // namespace Common::Log
