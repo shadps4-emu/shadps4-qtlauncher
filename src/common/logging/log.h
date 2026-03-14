@@ -190,6 +190,7 @@ static void Redirect(const std::string& name) {
 }
 
 static void StopRedirection() {
+    g_game_file_sink->flush();
     g_game_file_sink->set_level(spdlog::level::off);
     g_shad_file_sink->set_level(spdlog::level::trace);
 }
@@ -198,7 +199,9 @@ static void Truncate() {
     if (g_game_file_sink != nullptr) {
         g_game_file_sink->truncate();
     }
-    g_shad_file_sink->truncate();
+    if (g_shad_file_sink != nullptr) {
+        g_shad_file_sink->truncate();
+    }
 }
 } // namespace Common::Log
 
