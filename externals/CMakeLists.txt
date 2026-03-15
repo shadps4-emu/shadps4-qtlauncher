@@ -62,3 +62,9 @@ add_subdirectory(volk)
 #nlohmann json 
 set(JSON_BuildTests OFF CACHE INTERNAL "")
 add_subdirectory(json)
+
+# spdlog
+set(SPDLOG_NO_EXCEPTIONS ON)
+set(SPDLOG_FMT_EXTERNAL ON)
+set(SPDLOG_DISABLE_DEFAULT_LOGGER ON)
+add_subdirectory(spdlog EXCLUDE_FROM_ALL SYSTEM)

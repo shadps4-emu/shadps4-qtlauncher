@@ -6,7 +6,7 @@
 #include "unordered_map"
 
 #include "common/config.h"
-#include "common/logging/backend.h"
+#include "common/logging/log.h"
 #include "common/versions.h"
 #include "qt_gui/game_install_dialog.h"
 #include "qt_gui/main_window.h"
@@ -27,15 +27,17 @@ int main(int argc, char* argv[]) {
     SetConsoleOutputCP(CP_UTF8);
 #endif
 
+    // Load configurations and initialize Qt application
+    const auto user_dir = Common::FS::GetUserPath(Common::FS::PathType::UserDir);
+    Config::load(user_dir / "config.toml");
+
+    Common::Log::Setup(argc, argv);
+
     QApplication a(argc, argv);
 
     QApplication::setDesktopFileName("net.shadps4.qtlauncher");
     std::shared_ptr<EmulatorState> m_emu_state = std::make_shared<EmulatorState>();
     EmulatorState::SetInstance(m_emu_state);
-
-    // Load configurations and initialize Qt application
-    const auto user_dir = Common::FS::GetUserPath(Common::FS::PathType::UserDir);
-    Config::load(user_dir / "config.toml");
 
     const bool has_command_line_argument = argc > 1;
     bool has_emulator_argument = false;
@@ -138,8 +140,6 @@ int main(int argc, char* argv[]) {
         dlg.exec();
     }
 
-    Common::Log::Initialize("shadPS4Launcher.log");
-
     if (has_command_line_argument && !has_emulator_argument) {
         std::cerr << "Error: Please provide a name or path for the emulator core.\n";
         exit(1);
@@ -179,5 +179,10 @@ int main(int argc, char* argv[]) {
     if (!has_emulator_argument || show_gui) {
         m_main_window->show();
     }
-    return a.exec();
+
+    const auto status = a.exec();
+
+    Common::Log::Shutdown();
+
+    return status;
 }
