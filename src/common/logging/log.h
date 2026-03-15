@@ -114,13 +114,12 @@ static void Setup(int argc, char* argv[]) {
 
 #ifdef _WIN32
     if (Config::getLogType() == "wincolor") {
-        g_console_sink =
-            std::make_shared<spdlog::sinks::wincolor_stdout_sink_mt>(spdlog::color_mode::always);
+        g_console_sink = std::make_shared<spdlog::sinks::wincolor_stdout_sink_mt>();
     } else {
         g_console_sink = std::make_shared<spdlog::sinks::msvc_sink_mt>();
     }
 #else
-    g_console_sink = std::make_shared<spdlog_stdout>(spdlog::color_mode::always);
+    g_console_sink = std::make_shared<spdlog_stdout>();
 #endif
 
     g_shad_file_sink = std::make_shared<spdlog::sinks::basic_file_sink_mt>(
