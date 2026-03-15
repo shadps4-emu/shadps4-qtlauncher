@@ -945,7 +945,7 @@ void SettingsDialog::updateNoteTextEdit(const QString& elementName) {
     } else if (elementName == "logSyncCheckBox") {
         text = tr("Log Sync:\\nSwitch between sync (order) or async (performance).");
     } else if (elementName == "logTypeGroupBox") {
-        text = tr("Log Type:\\nChoose between wincolor or msvc log types.");
+        text = tr("Log Type:\\nChoose between wincolor or msvc log types.\\nwincolor: Default logging for Windows\\nmsvc: Logging for debugging");
     }
 
     //User
