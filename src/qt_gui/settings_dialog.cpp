@@ -761,6 +761,7 @@ void SettingsDialog::LoadValuesFromConfig() {
         toml::find_or<unsigned long long>(data, "Log", "sizeLimit", 100_MB));
     ui->logSkipDuplicateCheckBox->setChecked(
         toml::find_or<bool>(data, "Log", "skipDuplicate", true));
+    ui->logMaxSkipDurationGroupBox->setVisible(ui->logSkipDuplicateCheckBox->isChecked());
     ui->logSyncCheckBox->setChecked(toml::find_or<bool>(data, "Log", "sync", true));
 #ifdef _WIN32
     std::string logType = toml::find_or<std::string>(data, "Log", "type", "wincolor");
