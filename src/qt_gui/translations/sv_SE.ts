@@ -2624,16 +2624,16 @@ Välj en emulatorversion från den högra panelen.</translation>
       <translation>Inaktiverad</translation>
     </message>
     <message>
-      <source>Low</source>
-      <translation>Låg</translation>
-    </message>
-    <message>
-      <source>High</source>
-      <translation>Hög</translation>
-    </message>
-    <message>
       <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
       <translation>Återläsningar:\nAktivera återläsningar och återskrivningar av GPU-minne.\nDetta krävs för korrekt funktion i vissa spel.\nKan orsaka stabilitets- och/eller prestandaproblem.</translation>
+    </message>
+    <message>
+      <source>Relaxed</source>
+      <translation>Avslappnad</translation>
+    </message>
+    <message>
+      <source>Precise</source>
+      <translation>Exakt</translation>
     </message>
   </context>
   <context>

@@ -2624,16 +2624,16 @@ Select an emulator version from the right panel.</source>
       <translation>Выключено</translation>
     </message>
     <message>
-      <source>Low</source>
-      <translation>Низкое</translation>
-    </message>
-    <message>
-      <source>High</source>
-      <translation>Высокое</translation>
-    </message>
-    <message>
       <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
       <translation>Обратное чтение:\nВключить обратное чтение и запись в память GPU.\nЭто требуется для правильного поведения в некоторых играх. \nМожет вызвать проблемы со стабильностью/производительностью.</translation>
+    </message>
+    <message>
+      <source>Relaxed</source>
+      <translation>Расслабленный</translation>
+    </message>
+    <message>
+      <source>Precise</source>
+      <translation>Точный</translation>
     </message>
   </context>
   <context>

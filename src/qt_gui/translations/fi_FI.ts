@@ -2624,16 +2624,16 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
       <translation>Ei käytössä</translation>
     </message>
     <message>
-      <source>Low</source>
-      <translation>Alhainen</translation>
-    </message>
-    <message>
-      <source>High</source>
-      <translation>Korkea</translation>
-    </message>
-    <message>
       <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
       <translation>Takaisinluvut:\nOttaa käyttöön GPU-muistin takaisinluvun ja -kirjoituksen.\nTämä on tarpeen joissakin peleissä.\nSaattaa aiheuttaa ongelmia vakaudssa tai suorituskykvyssä.</translation>
+    </message>
+    <message>
+      <source>Relaxed</source>
+      <translation type="unfinished">Relaxed</translation>
+    </message>
+    <message>
+      <source>Precise</source>
+      <translation type="unfinished">Precise</translation>
     </message>
   </context>
   <context>

@@ -2624,16 +2624,16 @@ Selecciona una versió del panell dret.</translation>
       <translation>Deshabilitat</translation>
     </message>
     <message>
-      <source>Low</source>
-      <translation>Baix</translation>
-    </message>
-    <message>
-      <source>High</source>
-      <translation>Alt</translation>
-    </message>
-    <message>
       <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
       <translation>Lectura:\nActiva la lectura i escriptura a la memòria de la targeta gràfica.\nAixò és necessari pe comportament correcte en alguns jocs.\nPot causar problemes d'estabilitat o rendiment.</translation>
+    </message>
+    <message>
+      <source>Relaxed</source>
+      <translation>Relaxat</translation>
+    </message>
+    <message>
+      <source>Precise</source>
+      <translation>Precís</translation>
     </message>
   </context>
   <context>

@@ -2624,16 +2624,16 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
       <translation>Disabilitato</translation>
     </message>
     <message>
-      <source>Low</source>
-      <translation>Bassa</translation>
-    </message>
-    <message>
-      <source>High</source>
-      <translation>Alta</translation>
-    </message>
-    <message>
       <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
       <translation>Abilita Readback:\nAbilita letture di memoria GPU e riscritture.\nQuesta impostazione è necessaria per un comportamento corretto in alcuni giochi.\nPotrebbe causare problemi di stabilità e/o prestazioni.</translation>
+    </message>
+    <message>
+      <source>Relaxed</source>
+      <translation>Rilassata</translation>
+    </message>
+    <message>
+      <source>Precise</source>
+      <translation>Accurata</translation>
     </message>
   </context>
   <context>

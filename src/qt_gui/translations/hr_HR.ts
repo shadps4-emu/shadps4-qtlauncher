@@ -2632,16 +2632,16 @@ Izaziva rušenje ili probleme u nekim igrama.</translation>
       <translation>Onemogućeno</translation>
     </message>
     <message>
-      <source>Low</source>
-      <translation>Nisko</translation>
-    </message>
-    <message>
-      <source>High</source>
-      <translation>Visoko</translation>
-    </message>
-    <message>
       <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
       <translation>Omogući Readbackove:\nOmogući GPU readbackove i writebackove.\nPotrebno za ispravno ponašanje u nekim igrama.\nMože dovest do problema u stabilnosti i/ili performansama.</translation>
+    </message>
+    <message>
+      <source>Relaxed</source>
+      <translation>Opušteno</translation>
+    </message>
+    <message>
+      <source>Precise</source>
+      <translation>Precizno</translation>
     </message>
   </context>
   <context>

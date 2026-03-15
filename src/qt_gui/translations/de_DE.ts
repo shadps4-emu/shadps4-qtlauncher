@@ -2627,16 +2627,16 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
       <translation>Deaktiviert</translation>
     </message>
     <message>
-      <source>Low</source>
-      <translation>Niedrig</translation>
-    </message>
-    <message>
-      <source>High</source>
-      <translation>Hoch</translation>
-    </message>
-    <message>
       <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
       <translation>Readback:\nAktiviert GPU-Speicher-Readbacks und -Writebacks.\nDies ist für manche Spiele erforderlich, damit sie richtig funktionieren.\nKann Stabilitäts- und/oder Leistungsprobleme verursachen.</translation>
+    </message>
+    <message>
+      <source>Relaxed</source>
+      <translation>Gelockert</translation>
+    </message>
+    <message>
+      <source>Precise</source>
+      <translation>Präzise</translation>
     </message>
   </context>
   <context>

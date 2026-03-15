@@ -2624,16 +2624,16 @@ Selecciona una versión del emulador en el panel derecho.</translation>
       <translation>Desactivar</translation>
     </message>
     <message>
-      <source>Low</source>
-      <translation>Bajo</translation>
-    </message>
-    <message>
-      <source>High</source>
-      <translation>Alto</translation>
-    </message>
-    <message>
       <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
       <translation>Modo de lecturas diferidas:\nActiva las lecturas y escrituras diferidas con la GPU.\nEsta característica es necesaria para que algunos juegos funcionen correctamente.\nPodría provocar problemas de estabilidad o rendimiento.</translation>
+    </message>
+    <message>
+      <source>Relaxed</source>
+      <translation>Relajadas</translation>
+    </message>
+    <message>
+      <source>Precise</source>
+      <translation>Precisas</translation>
     </message>
   </context>
   <context>
