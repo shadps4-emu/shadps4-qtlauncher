@@ -14,7 +14,6 @@
 #include "common/path_util.h"
 #include "common/scm_rev.h"
 
-
 using std::nullopt;
 using std::optional;
 using std::string;
