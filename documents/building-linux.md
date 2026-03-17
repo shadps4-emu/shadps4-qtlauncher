@@ -77,8 +77,8 @@ This option is **highly recommended** for distributions with immutable/atomic fi
 The project uses submodules to manage dependencies, and they need to be initialized before you can build the project. To achieve this, make sure you've cloned the repository with the --recursive flag
 
 ```bash
-git clone --recursive https://github.com/shadps4-emu/shadPS4QtLauncher.git
-cd shadPS4QtLauncher
+git clone --recursive https://github.com/shadps4-emu/shadps4-qtlauncher.git
+cd shadps4-qtlauncher
 ```
 
 ## Building
@@ -87,7 +87,7 @@ There are 3 options you can choose from. Option 1 is **highly recommended**.
 
 #### Option 1: Terminal-only
 
-1. Generate the build directory in the shadPS4QtLauncher directory.
+1. Generate the build directory in the shadps4-qtlauncher directory.
 
 ```bash
 cmake -S . -B build/ -DENABLE_QT_GUI=ON -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++
@@ -120,7 +120,7 @@ You can also specify the Game ID as an argument for which game to boot, as long 
 
 `cmake-gui` should be installed by default alongside `cmake`, if not search for the package in your package manager and install it.
 
-Open `cmake-gui` and specify the source code and build directories. If you cloned the source code to your Home directory, it would be `/home/user/shadPS4QtLauncher` and `/home/user/shadPS4QtLauncher/build`.
+Open `cmake-gui` and specify the source code and build directories. If you cloned the source code to your Home directory, it would be `/home/user/shadps4-qtlauncher` and `/home/user/shadps4-qtlauncher/build`.
 
 Click on Configure, select "Unix Makefiles", select "Specify native compilers", click Next and choose `clang` and `clang++` as the C and CXX compilers. Usually they are located in `/bin/clang` and `/bin/clang++`. Click on Finish and let it configure the project.
 
@@ -134,26 +134,26 @@ This option is pretty convoluted and should only be used if you have VSCode as y
 
 Once set up, go to Extensions and install "CMake Tools":
 
-![image](https://raw.githubusercontent.com/shadps4-emu/shadPS4-qtlauncher/refs/heads/main/documents/Screenshots/Linux/3.png)
+![image](https://raw.githubusercontent.com/shadps4-emu/shadps4-qtlauncher/refs/heads/main/documents/Screenshots/Linux/3.png)
 
 You can also install other CMake and Clang related extensions if you'd like, but this one is what enables you to configure and build CMake projects directly within VSCode.
 
 Go to Settings, filter by `@ext:ms-vscode.cmake-tools configure` and disable this option:
 
-![image](https://raw.githubusercontent.com/shadps4-emu/shadPS4-qtlauncher/refs/heads/main/documents/Screenshots/Linux/1.png)
+![image](https://raw.githubusercontent.com/shadps4-emu/shadps4-qtlauncher/refs/heads/main/documents/Screenshots/Linux/1.png)
 
 If you wish to build with the Qt GUI, add `-DENABLE_QT_GUI=ON` to the configure arguments:
 
-![image](https://raw.githubusercontent.com/shadps4-emu/shadPS4-qtlauncher/refs/heads/main/documents/Screenshots/Linux/2.png)
+![image](https://raw.githubusercontent.com/shadps4-emu/shadps4-qtlauncher/refs/heads/main/documents/Screenshots/Linux/2.png)
 
 On the CMake tab, change the options as you wish, but make sure that it looks similar to or exactly like this:
 
-![image](https://raw.githubusercontent.com/shadps4-emu/shadPS4-qtlauncher/refs/heads/main/documents/Screenshots/Linux/4.png)
+![image](https://raw.githubusercontent.com/shadps4-emu/shadps4-qtlauncher/refs/heads/main/documents/Screenshots/Linux/4.png)
 
 When hovering over Project Status > Configure, there should be an icon titled "Configure". Click on it and let it configure the project, then do the same for Project Status > Build.
 
 If you want to debug it, change the build type under Project Status > Configure to Debug (it should be the default) and compile it, then click on the icon in Project Status > Debug. If you simply want to launch the shadPS4QtLauncher executable from within VSCode, click on the icon in Project Status > Launch.
 
-Don't forget to change the launch target for both options to the shadPS4QtLauncher executable inside shadPS4QtLauncher/build:
+Don't forget to change the launch target for both options to the shadPS4QtLauncher executable inside shadps4-qtlauncher/build:
 
-![image](https://raw.githubusercontent.com/shadps4-emu/shadPS4-qtlauncher/refs/heads/main/documents/Screenshots/Linux/5.png)
+![image](https://raw.githubusercontent.com/shadps4-emu/shadps4-qtlauncher/refs/heads/main/documents/Screenshots/Linux/5.png)
