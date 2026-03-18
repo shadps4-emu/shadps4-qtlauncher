@@ -22,11 +22,11 @@
     <name>CheatsPatches</name>
     <message>
       <source>Cheats / Patches for </source>
-      <translation>Huijaukset / Paikkaukset pelille </translation>
+      <translation>Huijaukset/Paikkaukset pelille </translation>
     </message>
     <message>
       <source>Cheats/Patches are experimental.\nUse with caution.\n\nDownload cheats individually by selecting the repository and clicking the download button.\nIn the Patches tab, you can download all patches at once, choose which ones you want to use, and save your selection.\n\nSince we do not develop the Cheats/Patches,\nplease report issues to the cheat author.\n\nCreated a new cheat? Visit:\n</source>
-      <translation>Huijaukset/Paikkaukset ovat kokeellisia.\nKäytä varoen.\n\nLataa huijaukset yksitellen valitsemalla repositorion ja napsauttamalla latauspainiketta.\nPaikkaukset-välilehdessä voit ladata kaikki paikkaukset kerralla, valita, mitä haluat käyttää ja tallentaa valinnan.\n\nKoska me emme kehitä Huijauksia/Paikkauksia,\nole hyvä ja ilmoita ongelmista huijauksen tekijälle.\n\nLoitko uuden huijauksen? Käy osoitteessa:\n</translation>
+      <translation>Huijaukset/Paikkaukset ovat kokeellisia.\nKäytä varoen.\n\nLataa huijaukset yksitellen valitsemalla repositorion ja napsauttamalla latauspainiketta.\nPaikkaukset-sivulla voit ladata kaikki paikkaukset kerralla, valita mitä haluat käyttää ja tallentaa valinnan.\n\nKoska me emme kehitä huijauksia/paikkauksia,\nilmoita ongelmista huijauksen tekijälle.\n\nLoitko uuden huijauksen? Käy osoitteessa:\n</translation>
     </message>
     <message>
       <source>No Image Available</source>
