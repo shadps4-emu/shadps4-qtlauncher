@@ -2165,7 +2165,7 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Copy GPU Buffers:\nGets around race conditions involving GPU submits.\nMay or may not help with PM4 type 0 crashes.</source>
-      <translation type="unfinished">Copy GPU Buffers:\nGets around race conditions involving GPU submits.\nMay or may not help with PM4 type 0 crashes.</translation>
+      <translation>Kopioi näytönohjainpuskurit:\nKiertää GPU-lähetyksiin liittyvät kilpailuolosuhteet.\nVoi auttaa tai ei auta PM4 tyypin 0 kaatumisissa.</translation>
     </message>
     <message>
       <source>Host Debug Markers:\nInserts emulator-side information like markers for specific AMDGPU commands around Vulkan commands, as well as giving resources debug names.\nIf you have this enabled, you should enable Crash Diagnostics.\nUseful for programs like RenderDoc.</source>
@@ -2285,7 +2285,7 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Portable User Folder</source>
-      <translation type="unfinished">Portable User Folder</translation>
+      <translation>Kannettava käyttäjäkansio</translation>
     </message>
     <message>
       <source>Create Portable User Folder from Common User Folder</source>
@@ -2293,7 +2293,7 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Portable user folder:\nStores shadPS4 settings and data that will be applied only to the shadPS4 build located in the current folder. Restart the app after creating the portable user folder to begin using it.</source>
-      <translation type="unfinished">Portable user folder:\nStores shadPS4 settings and data that will be applied only to the shadPS4 build located in the current folder. Restart the app after creating the portable user folder to begin using it.</translation>
+      <translation>Kannettava käyttäjäkansio:\nTallentaa shadPS4-asetukset ja tiedot, joita käytetään vain nykyiseen kansioon sijoitetussa shadPS4-versiossa. Käynnistä sovellus uudelleen kannettavan käyttäjäkansion luomisen jälkeen aloittaaksesi sen käytön.</translation>
     </message>
     <message>
       <source>%1 already exists</source>
@@ -2409,11 +2409,11 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Vblank Frequency</source>
-      <translation type="unfinished">Vblank Frequency</translation>
+      <translation>Vblank-taajuus</translation>
     </message>
     <message>
       <source>Vblank Frequency:\nThe frame rate at which the emulator refreshes at (60hz is the baseline, whether the game runs at 30 or 60fps). Changing this may have adverse effects, such as increasing the game speed, or breaking critical game functionality that does not expect this to change!</source>
-      <translation type="unfinished">Vblank Frequency:\nThe frame rate at which the emulator refreshes at (60hz is the baseline, whether the game runs at 30 or 60fps). Changing this may have adverse effects, such as increasing the game speed, or breaking critical game functionality that does not expect this to change!</translation>
+      <translation>Vblank-taajuus:\nKuvataajuus, jolla emulaattori päivittyy (60 Hz on lähtötaso, vaikka peli toimisi nopeudella 30 tai 60 FPS). Tämän muuttaminen voi vaikuttaa haitallisesti, kuten lisätä pelin nopeutta tai rikkoa kriittisiä pelitoimintoja, jotka eivät odota tämän muuttuvan!</translation>
     </message>
     <message>
       <source>Enable Direct Memory Access</source>
@@ -2629,11 +2629,11 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Relaxed</source>
-      <translation type="unfinished">Relaxed</translation>
+      <translation>Rento</translation>
     </message>
     <message>
       <source>Precise</source>
-      <translation type="unfinished">Precise</translation>
+      <translation>Tarkka</translation>
     </message>
   </context>
   <context>
