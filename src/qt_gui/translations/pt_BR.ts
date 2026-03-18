@@ -1127,14 +1127,14 @@
     </message>
     <message>
       <source>Keybindings</source>
-      <translation>Teclas de atalho</translation>
+      <translation>Combinação de Teclas</translation>
     </message>
   </context>
   <context>
     <name>Hotkeys</name>
     <message>
       <source>Customize Hotkeys</source>
-      <translation>Personalizar Atalhos</translation>
+      <translation>Personalizar Teclas de Atalho</translation>
     </message>
     <message>
       <source>Controller Hotkeys</source>
@@ -2585,15 +2585,15 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Skylander Portal</source>
-      <translation>Portal Skylander</translation>
+      <translation>Skylander Portal</translation>
     </message>
     <message>
       <source>Infinity Base</source>
-      <translation>Base Infinity</translation>
+      <translation>Infinity Base</translation>
     </message>
     <message>
       <source>Dimensions Toypad</source>
-      <translation>Toypad Dimensions</translation>
+      <translation>Dimensions Toypad</translation>
     </message>
     <message>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
@@ -2955,7 +2955,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Active Dimensions Figures:</source>
-      <translation>Bonecos Dimensions Ativos:</translation>
+      <translation>Colecionáveis Dimensions Ativos:</translation>
     </message>
     <message>
       <source>None</source>
@@ -2979,7 +2979,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Unknown Figure</source>
-      <translation>Boneco Desconhecido</translation>
+      <translation>Colecionável Desconhecido</translation>
     </message>
     <message>
       <source>Select Dimensions File</source>
@@ -2987,26 +2987,26 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Dimensions Figure (*.bin);;</source>
-      <translation>Boneco Dimensions (*.bin);;</translation>
+      <translation>Colecionável Dimensions (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to open the figure file!</source>
-      <translation>Falha ao abrir o arquivo de boneco!</translation>
+      <translation>Falha ao abrir o arquivo de colecionável!</translation>
     </message>
     <message>
       <source>Failed to open the figure file(%1)!
 File may already be in use on the base.</source>
-      <translation>Falha ao abrir o arquivo de boneco (%1)! 
+      <translation>Falha ao abrir o arquivo de colecionável(%1)! 
 O arquivo pode já estar em uso na base.</translation>
     </message>
     <message>
       <source>Failed to read the figure file!</source>
-      <translation>Falha ao ler o arquivo de boneco!</translation>
+      <translation>Falha ao ler o arquivo de colecionável!</translation>
     </message>
     <message>
       <source>Failed to read the figure file(%1)!
 File was too small.</source>
-      <translation>Falha ao ler o arquivo de boneco (%1)! 
+      <translation>Falha ao ler o arquivo de colecionável(%1)! 
 O arquivo é muito pequeno.</translation>
     </message>
   </context>
@@ -3014,7 +3014,7 @@ O arquivo é muito pequeno.</translation>
     <name>figure_creator_dialog</name>
     <message>
       <source>Figure Creator</source>
-      <translation>Criador de Bonecos</translation>
+      <translation>Criador de Colecionável</translation>
     </message>
     <message>
       <source>Filter by Series:</source>
@@ -3030,7 +3030,7 @@ O arquivo é muito pequeno.</translation>
     </message>
     <message>
       <source>Figure Number:</source>
-      <translation>Número do Boneco:</translation>
+      <translation>Número do Colecionável:</translation>
     </message>
     <message>
       <source>Series:</source>
@@ -3050,7 +3050,7 @@ O arquivo é muito pequeno.</translation>
     </message>
     <message>
       <source>Figure number entered is invalid!</source>
-      <translation>O número do boneco inserido é inválido!</translation>
+      <translation>O número do colecionável inserido é inválido!</translation>
     </message>
     <message>
       <source>Series number entered is invalid!</source>
@@ -3058,15 +3058,15 @@ O arquivo é muito pequeno.</translation>
     </message>
     <message>
       <source>Create Figure File</source>
-      <translation>Criar Arquivo de Boneco</translation>
+      <translation>Criar Arquivo de Colecionável</translation>
     </message>
     <message>
       <source>Infinity Figure (*.bin);;</source>
-      <translation>Boneco Infinity (*.bin);;</translation>
+      <translation>Colecionável Infinity (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to create figure file!</source>
-      <translation>Falha ao criar arquivo de boneco!</translation>
+      <translation>Falha ao criar arquivo de colecionável!</translation>
     </message>
     <message>
       <source>Failed to create figure file:
@@ -3083,7 +3083,7 @@ O arquivo é muito pequeno.</translation>
     </message>
     <message>
       <source>Active Infinity Figures:</source>
-      <translation>Bonecos Infinity Ativos:</translation>
+      <translation>Colecionáveis Infinity Ativos:</translation>
     </message>
     <message>
       <source>Play Set/Power Disc</source>
@@ -3139,7 +3139,7 @@ O arquivo é muito pequeno.</translation>
     </message>
     <message>
       <source>Unknown Figure</source>
-      <translation>Boneco Desconhecido</translation>
+      <translation>Colecionável Desconhecido</translation>
     </message>
     <message>
       <source>Select Infinity File</source>
@@ -3147,26 +3147,26 @@ O arquivo é muito pequeno.</translation>
     </message>
     <message>
       <source>Infinity Figure (*.bin);;</source>
-      <translation>Boneco Infinity (*.bin);;</translation>
+      <translation>Colecionável Infinity (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to open the figure file!</source>
-      <translation>Falha ao abrir o arquivo de boneco!</translation>
+      <translation>Falha ao abrir o arquivo de colecionável!</translation>
     </message>
     <message>
       <source>Failed to open the figure file(%1)!
 File may already be in use on the base.</source>
-      <translation>Falha ao abrir o arquivo de imagem (%1)! 
-O arquivo pode já estar em uso pelo sistema base.</translation>
+      <translation>Falha ao abrir o arquivo de colecionável(%1)! 
+O arquivo pode já estar em uso na base.</translation>
     </message>
     <message>
       <source>Failed to read the figure file!</source>
-      <translation>Falha ao ler o arquivo de boneco!</translation>
+      <translation>Falha ao ler o arquivo de colecionável!</translation>
     </message>
     <message>
       <source>Failed to read the figure file(%1)!
 File was too small.</source>
-      <translation>Falha ao ler o arquivo de imagem (%1)! 
+      <translation>Falha ao ler o arquivo de colecionável(%1)! 
 O arquivo é muito pequeno.</translation>
     </message>
   </context>
@@ -3174,7 +3174,7 @@ O arquivo é muito pequeno.</translation>
     <name>minifig_creator_dialog</name>
     <message>
       <source>Figure Creator</source>
-      <translation>Criador de Bonecos</translation>
+      <translation>Criador de Colecionável</translation>
     </message>
     <message>
       <source>--Unknown--</source>
@@ -3182,7 +3182,7 @@ O arquivo é muito pequeno.</translation>
     </message>
     <message>
       <source>Figure Number:</source>
-      <translation>Número do Boneco:</translation>
+      <translation>Número do Colecionável:</translation>
     </message>
     <message>
       <source>Create</source>
@@ -3198,11 +3198,11 @@ O arquivo é muito pequeno.</translation>
     </message>
     <message>
       <source>Figure number entered is invalid!</source>
-      <translation>Número do boneco inserido é inválido!</translation>
+      <translation>Número do colecionável inserido é inválido!</translation>
     </message>
     <message>
       <source>Create Figure File</source>
-      <translation>Criar Arquivo de Boneco</translation>
+      <translation>Criar Arquivo de Colecionável</translation>
     </message>
     <message>
       <source>Dimensions Figure (*.bin);;</source>
@@ -3303,7 +3303,7 @@ O arquivo é muito pequeno.</translation>
     </message>
     <message>
       <source>Active Portal Skylanders:</source>
-      <translation>Skylanders no Portal Ativo:</translation>
+      <translation>Portal Skylanders Ativo:</translation>
     </message>
     <message>
       <source>Skylander %1</source>
