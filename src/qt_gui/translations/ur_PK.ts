@@ -2047,7 +2047,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Point your mouse at an option to display its description.</source>
-      <translation>کسی آپشن کی تفصیل ظاہر کرنے کے لیے ماؤس اس پر لے جائیں۔</translation>
+      <translation>کسی آپشن کی تفصیلات دیکھنے کے لیے ماؤس سے اس کی نشان دہی کریں۔</translation>
     </message>
     <message>
       <source>Console Language:\nSets the language that the PS4 game uses.\nIt&apos;s recommended to set this to a language the game supports, which will vary by region.</source>

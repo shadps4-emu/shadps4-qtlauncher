@@ -22,11 +22,11 @@
     <name>CheatsPatches</name>
     <message>
       <source>Cheats / Patches for </source>
-      <translation>Huijaukset / Paikkaukset pelille </translation>
+      <translation>Huijaukset/Paikkaukset pelille </translation>
     </message>
     <message>
       <source>Cheats/Patches are experimental.\nUse with caution.\n\nDownload cheats individually by selecting the repository and clicking the download button.\nIn the Patches tab, you can download all patches at once, choose which ones you want to use, and save your selection.\n\nSince we do not develop the Cheats/Patches,\nplease report issues to the cheat author.\n\nCreated a new cheat? Visit:\n</source>
-      <translation>Huijaukset/Paikkaukset ovat kokeellisia.\nKäytä varoen.\n\nLataa huijaukset yksitellen valitsemalla repositorion ja napsauttamalla latauspainiketta.\nPaikkaukset-välilehdessä voit ladata kaikki paikkaukset kerralla, valita, mitä haluat käyttää ja tallentaa valinnan.\n\nKoska me emme kehitä Huijauksia/Paikkauksia,\nole hyvä ja ilmoita ongelmista huijauksen tekijälle.\n\nLoitko uuden huijauksen? Käy osoitteessa:\n</translation>
+      <translation>Huijaukset/Paikkaukset ovat kokeellisia.\nKäytä varoen.\n\nLataa huijaukset yksitellen valitsemalla repositorion ja napsauttamalla latauspainiketta.\nPaikkaukset-sivulla voit ladata kaikki paikkaukset kerralla, valita mitä haluat käyttää ja tallentaa valinnan.\n\nKoska me emme kehitä huijauksia/paikkauksia,\nilmoita ongelmista huijauksen tekijälle.\n\nLoitko uuden huijauksen? Käy osoitteessa:\n</translation>
     </message>
     <message>
       <source>No Image Available</source>
@@ -2165,15 +2165,15 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Copy GPU Buffers:\nGets around race conditions involving GPU submits.\nMay or may not help with PM4 type 0 crashes.</source>
-      <translation type="unfinished">Copy GPU Buffers:\nGets around race conditions involving GPU submits.\nMay or may not help with PM4 type 0 crashes.</translation>
+      <translation>Kopioi näytönohjainpuskurit:\nKiertää GPU-lähetyksiin liittyvät kilpailuolosuhteet.\nVoi auttaa tai ei auta PM4 tyypin 0 kaatumisissa.</translation>
     </message>
     <message>
       <source>Host Debug Markers:\nInserts emulator-side information like markers for specific AMDGPU commands around Vulkan commands, as well as giving resources debug names.\nIf you have this enabled, you should enable Crash Diagnostics.\nUseful for programs like RenderDoc.</source>
-      <translation type="unfinished">Host Debug Markers:\nInserts emulator-side information like markers for specific AMDGPU commands around Vulkan commands, as well as giving resources debug names.\nIf you have this enabled, you should enable Crash Diagnostics.\nUseful for programs like RenderDoc.</translation>
+      <translation>Isännän virheenkorjausmerkit:\nLisää emulaattoripuolen tietoja, kuten merkkejä, tiettyihin AMDGPU-komentoihin Vulkan-komentojen ympärillä sekä antaa resursseille virheenjäljitysnimiä.\nJos tämä on käytössä, Kaatumisdiagnostiikka tulisi ottaa myös käyttöön.\nHyödyllinen esimerkiksi RenderDocille.</translation>
     </message>
     <message>
       <source>Guest Debug Markers:\nInserts any debug markers the game itself has added to the command buffer.\nIf you have this enabled, you should enable Crash Diagnostics.\nUseful for programs like RenderDoc.</source>
-      <translation type="unfinished">Guest Debug Markers:\nInserts any debug markers the game itself has added to the command buffer.\nIf you have this enabled, you should enable Crash Diagnostics.\nUseful for programs like RenderDoc.</translation>
+      <translation>Vieraan virheenkorjausmerkit:\nLisää kaikki virheenkorjausmerkit komentopuskuriin, jotka peli itse on lisännyt.\nJos tämä on käytössä, Kaatumisdiagnostiikka tulisi ottaa myös käyttöön.\nHyödyllinen esimerkiksi RenderDocille.</translation>
     </message>
     <message>
       <source>Save Data Path:\nThe folder where game save data will be saved.</source>
@@ -2285,15 +2285,15 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Portable User Folder</source>
-      <translation type="unfinished">Portable User Folder</translation>
+      <translation>Kannettava käyttäjäkansio</translation>
     </message>
     <message>
       <source>Create Portable User Folder from Common User Folder</source>
-      <translation type="unfinished">Create Portable User Folder from Common User Folder</translation>
+      <translation>Luo kannettava käyttäjäkansio yleisestä käyttäjäkansiosta</translation>
     </message>
     <message>
       <source>Portable user folder:\nStores shadPS4 settings and data that will be applied only to the shadPS4 build located in the current folder. Restart the app after creating the portable user folder to begin using it.</source>
-      <translation type="unfinished">Portable user folder:\nStores shadPS4 settings and data that will be applied only to the shadPS4 build located in the current folder. Restart the app after creating the portable user folder to begin using it.</translation>
+      <translation>Kannettava käyttäjäkansio:\nTallentaa shadPS4-asetukset ja tiedot, joita käytetään vain nykyiseen kansioon sijoitetussa shadPS4-versiossa. Käynnistä sovellus uudelleen kannettavan käyttäjäkansion luomisen jälkeen aloittaaksesi sen käytön.</translation>
     </message>
     <message>
       <source>%1 already exists</source>
@@ -2325,7 +2325,7 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Crash Diagnostics:\nCreates a .yaml file with info about the Vulkan state at the time of crashing.\nUseful for debugging &apos;Device lost&apos; errors. If you have this enabled, you should enable Host AND Guest Debug Markers.\nYou need Vulkan Validation Layers enabled and the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Crash Diagnostics:\nCreates a .yaml file with info about the Vulkan state at the time of crashing.\nUseful for debugging &apos;Device lost&apos; errors. If you have this enabled, you should enable Host AND Guest Debug Markers.\nYou need Vulkan Validation Layers enabled and the Vulkan SDK for this to work.</translation>
+      <translation>Kaatumisdiagnostiikka:\nLuo .yaml-tiedoston, joka sisältää tietoja Vulkanin tilasta kaatumisen aikana.\nHyödyllinen laitteiden katoamisvirheiden debuggaamisessa. Jos tämä on käytössä, Isännän ja Vieraan virheenkorjausmerkit tulisi otta myös käyttöön.\nTarvitset Vulkan-validointikerrokset käyttöön ja Vulkan SDK:n tämän toimintaan.</translation>
     </message>
     <message>
       <source>Enable Logging</source>
@@ -2409,11 +2409,11 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Vblank Frequency</source>
-      <translation type="unfinished">Vblank Frequency</translation>
+      <translation>Vblank-taajuus</translation>
     </message>
     <message>
       <source>Vblank Frequency:\nThe frame rate at which the emulator refreshes at (60hz is the baseline, whether the game runs at 30 or 60fps). Changing this may have adverse effects, such as increasing the game speed, or breaking critical game functionality that does not expect this to change!</source>
-      <translation type="unfinished">Vblank Frequency:\nThe frame rate at which the emulator refreshes at (60hz is the baseline, whether the game runs at 30 or 60fps). Changing this may have adverse effects, such as increasing the game speed, or breaking critical game functionality that does not expect this to change!</translation>
+      <translation>Vblank-taajuus:\nKuvataajuus, jolla emulaattori päivittyy (60 Hz on lähtötaso, vaikka peli toimisi nopeudella 30 tai 60 FPS). Tämän muuttaminen voi vaikuttaa haitallisesti, kuten lisätä pelin nopeutta tai rikkoa kriittisiä pelitoimintoja, jotka eivät odota tämän muuttuvan!</translation>
     </message>
     <message>
       <source>Enable Direct Memory Access</source>
@@ -2421,15 +2421,15 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Enable Devkit Console Mode</source>
-      <translation type="unfinished">Enable Devkit Console Mode</translation>
+      <translation>Devkit-konsolitila</translation>
     </message>
     <message>
       <source>Set &quot;PSN signed-in&quot; to True</source>
-      <translation type="unfinished">Set &quot;PSN signed-in&quot; to True</translation>
+      <translation>Pakota PSN-kirjautuminen</translation>
     </message>
     <message>
       <source>Set &quot;Network Connected&quot; to True</source>
-      <translation type="unfinished">Set &quot;Network Connected&quot; to True</translation>
+      <translation>Pakota verkkoyhteys</translation>
     </message>
     <message>
       <source>Miscellaneous</source>
@@ -2465,19 +2465,19 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Enable Devkit Console Mode:\nAdds support for Devkit console memory size.</source>
-      <translation type="unfinished">Enable Devkit Console Mode:\nAdds support for Devkit console memory size.</translation>
+      <translation>Devkit-konsolitila:\nLisää tuen Devkit-konsolin muistikoolle.</translation>
     </message>
     <message>
       <source>Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</source>
-      <translation type="unfinished">Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</translation>
+      <translation>Pakota verkkoyhteys:\nPakottaa pelit havaitsemaan aktiivisen verkkoyhteyden. Todellisia verkkoyhteysominaisuuksia ei vielä tueta.</translation>
     </message>
     <message>
       <source>Set PSN Signed-in to True:\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported.</source>
-      <translation type="unfinished">Set PSN Signed-in to True:\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported.</translation>
+      <translation>Pakota PSN-kirjautuminen:\nPakottaa pelit havaitsemaan aktiivisen PSN-kirjautumisen. Todellisia PSN-ominaisuuksia ei tueta.</translation>
     </message>
     <message>
       <source>Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Vulkan-validointikerrokset:\nAktivoi järjestelmän, joka validoi Vulkan-renderöijän tilan ja kirjaa tietoa sen sisäisestä tilasta. Heikentää suorituskykyä ja todennäköisesti muuttaa emulaation käyttäytymistä.\nTarvitset Vulkan SDK:n tämän toimintaan.</translation>
     </message>
     <message>
       <source>Audio Device (general)</source>
@@ -2489,11 +2489,11 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
-      <translation type="unfinished">Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</translation>
+      <translation>Varjostimien vedostus:\nTeknistä vianetsintää varten pelin varjostimia tallennetaan hakemistoon niiden renderöityessä.</translation>
     </message>
     <message>
       <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</source>
-      <translation type="unfinished">Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</translation>
+      <translation>NULL GPU:\nTeknistä vianetsintää varten. Pelin renderöinti estetään, ikään kuin näytönohjainta ei olisi. Ruutu näkyy mustana.</translation>
     </message>
     <message>
       <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
@@ -2501,15 +2501,15 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Additional DMem Allocation</source>
-      <translation type="unfinished">Additional DMem Allocation</translation>
+      <translation>Ylimääräinen DMem-allokointi</translation>
     </message>
     <message>
       <source>Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</source>
-      <translation type="unfinished">Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</translation>
+      <translation>Ylimääräinen DMem-allokointi:\nPakottaa määrätyn määrän ylimääräistä DMem allokoitavaksi. Aiheuttaa kaatumista tai ongelmia joissakin peleissä.</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</source>
-      <translation type="unfinished">PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</translation>
+      <translation>PS4-järjestelmämoduulien polku:\nHakemisto, mistä PS4-järjestelmämoduulit ladataan.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the sysmodules path.</source>
@@ -2517,11 +2517,11 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Vulkan Validation (Requires Vulkan SDK)</source>
-      <translation type="unfinished">Vulkan Validation (Requires Vulkan SDK)</translation>
+      <translation>Vulkan-validointi (vaatii Vulkan SDK:n)</translation>
     </message>
     <message>
       <source>Validation Layers</source>
-      <translation type="unfinished">Validation Layers</translation>
+      <translation>Validointikerrokset</translation>
     </message>
     <message>
       <source>Enable Core Validation</source>
@@ -2537,15 +2537,15 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Synkronointivalidointi:\nAktivoi järjestelmän, joka validoi Vulkan-renderöintitehtävien ajoituksen.\nHeikentää suorituskykyä ja todennäköisesti muuttaa emuloinnin käyttäytymistä.\nTarvitset Vulkan SDK:n tämän toimintaan.</translation>
     </message>
     <message>
       <source>Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Ydinvalidointi:\nMahdollistaa API:n päävalidointitoiminnot.\nHeikentää suorituskykyä ja todennäköisesti muuttaa emuloinnin käyttäytymistä.\nTarvitset Vulkan SDK:n tämän toimintaan.</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Näytönohjainavusteinen validointi:\nOhjaa varjostimia koodilla, joka validoi niiden oikeanlaisen toiminnan.\nHeikentää suorituskykyä ja todennäköisesti muuttaa emuloinnin käyttäytymistä.\nTarvitset Vulkan SDK:n tämän toimintaan.</translation>
     </message>
     <message>
       <source>GUI Language</source>
@@ -2569,11 +2569,11 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Cannot create portable launcher folder</source>
-      <translation type="unfinished">Cannot create portable launcher folder</translation>
+      <translation>Kannettavan käynnistyskansion luominen ei onnistunut</translation>
     </message>
     <message>
       <source>Portable launcherDir folder created</source>
-      <translation type="unfinished">Portable launcherDir folder created</translation>
+      <translation>Kannettava launcherDir-kansio luotu</translation>
     </message>
     <message>
       <source>USB Device</source>
@@ -2629,11 +2629,11 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Relaxed</source>
-      <translation type="unfinished">Relaxed</translation>
+      <translation>Rento</translation>
     </message>
     <message>
       <source>Precise</source>
-      <translation type="unfinished">Precise</translation>
+      <translation>Tarkka</translation>
     </message>
   </context>
   <context>
@@ -3087,39 +3087,39 @@ Tiedosto on liian pieni.</translation>
     </message>
     <message>
       <source>Play Set/Power Disc</source>
-      <translation type="unfinished">Play Set/Power Disc</translation>
+      <translation>Pelisetti/Voimalevy</translation>
     </message>
     <message>
       <source>Power Disc Two</source>
-      <translation type="unfinished">Power Disc Two</translation>
+      <translation>Voimalevy 2</translation>
     </message>
     <message>
       <source>Power Disc Three</source>
-      <translation type="unfinished">Power Disc Three</translation>
+      <translation>Voimalevy 3</translation>
     </message>
     <message>
       <source>Player One</source>
-      <translation type="unfinished">Player One</translation>
+      <translation>Pelaaja 1</translation>
     </message>
     <message>
       <source>Player One Ability One</source>
-      <translation type="unfinished">Player One Ability One</translation>
+      <translation>Pelaajan 1 toiminto 1</translation>
     </message>
     <message>
       <source>Player One Ability Two</source>
-      <translation type="unfinished">Player One Ability Two</translation>
+      <translation>Pelaajan 1 toiminto 2</translation>
     </message>
     <message>
       <source>Player Two</source>
-      <translation type="unfinished">Player Two</translation>
+      <translation>Pelaaja 2</translation>
     </message>
     <message>
       <source>Player Two Ability One</source>
-      <translation type="unfinished">Player Two Ability One</translation>
+      <translation>Pelaajan 2 toiminto 1</translation>
     </message>
     <message>
       <source>Player Two Ability Two</source>
-      <translation type="unfinished">Player Two Ability Two</translation>
+      <translation>Pelaajan 2 toiminto 2</translation>
     </message>
     <message>
       <source>None</source>
@@ -3303,7 +3303,7 @@ Tiedosto on liian pieni.</translation>
     </message>
     <message>
       <source>Active Portal Skylanders:</source>
-      <translation type="unfinished">Active Portal Skylanders:</translation>
+      <translation>Aktiiviset portaalin Skylanderit:</translation>
     </message>
     <message>
       <source>Skylander %1</source>
