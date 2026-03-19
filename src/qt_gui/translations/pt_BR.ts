@@ -289,11 +289,11 @@
     </message>
     <message>
       <source>Do you want to update?</source>
-      <translation>Você quer atualizar?</translation>
+      <translation>Deseja atualizar?</translation>
     </message>
     <message>
       <source>Show Changelog</source>
-      <translation>Mostrar Mudanças</translation>
+      <translation>Mostrar Histórico de Alterações</translation>
     </message>
     <message>
       <source>Check for Updates at Startup</source>
@@ -309,7 +309,7 @@
     </message>
     <message>
       <source>Hide Changelog</source>
-      <translation>Ocultar Mudanças</translation>
+      <translation>Ocultar Histórico de Alterações</translation>
     </message>
     <message>
       <source>Changes</source>
@@ -1977,7 +1977,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Always Show Changelog</source>
-      <translation>Sempre Mostrar o Histórico de Mudanças</translation>
+      <translation>Sempre Mostrar o Histórico de Alterações</translation>
     </message>
     <message>
       <source>Check for Updates</source>
@@ -2057,7 +2057,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Show Splash Screen:\nShows the game&apos;s splash screen (a special image) while the game is starting.</source>
-      <translation>Mostrar Splash Inicial:\nExibe a tela inicial do jogo (imagem especial) ao iniciar o jogo.</translation>
+      <translation>Mostrar Tela Inicial:\nExibe a tela inicial do jogo (imagem especial) enquanto o jogo está iniciando.</translation>
     </message>
     <message>
       <source>Enable Discord Rich Presence:\nDisplays the emulator icon and relevant information on your Discord profile.</source>
@@ -2868,15 +2868,15 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Show Changelog</source>
-      <translation>Mostrar Mudanças</translation>
+      <translation>Mostrar Histórico de Alterações</translation>
     </message>
     <message>
       <source>Hide Changelog</source>
-      <translation>Ocultar Mudanças</translation>
+      <translation>Ocultar Histórico de Alterações</translation>
     </message>
     <message>
       <source>Network error while fetching changelog</source>
-      <translation>Erro de rede ao obter o changelog</translation>
+      <translation>Erro de rede ao obter o histórico de alterações</translation>
     </message>
     <message>
       <source>Changes</source>
@@ -2908,7 +2908,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Always Show Changelog</source>
-      <translation>Sempre Mostrar o Histórico de Mudanças</translation>
+      <translation>Sempre Mostrar o Histórico de Alterações</translation>
     </message>
     <message>
       <source>No version selected. Please choose one from the list to delete.</source>
@@ -3223,7 +3223,7 @@ O arquivo é muito pequeno.</translation>
     <name>minifig_move_dialog</name>
     <message>
       <source>Figure Mover</source>
-      <translation>Movedor de Bonecos</translation>
+      <translation>Transportador do Colecionável</translation>
     </message>
     <message>
       <source>None</source>
