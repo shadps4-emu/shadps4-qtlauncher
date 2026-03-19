@@ -433,6 +433,9 @@ target_link_libraries(shadPS4QtLauncher PRIVATE Qt6::Widgets Qt6::Concurrent Qt6
 if (ENABLE_UPDATER)
     add_definitions(-DENABLE_UPDATER)
 endif()
+if (HIDE_VERSION_MANAGER)
+    add_definitions(-DHIDE_VERSION_MANAGER)
+endif()
 
 if (WIN32)
     target_link_libraries(shadPS4QtLauncher PRIVATE mincore)
