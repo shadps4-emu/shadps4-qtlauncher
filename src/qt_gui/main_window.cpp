@@ -285,6 +285,9 @@ void MainWindow::AddUiWidgets() {
     versionLayout->addWidget(ui->versionComboBox);
     versionLayout->addWidget(ui->versionManagerButton);
     ui->versionManagerButton->setText(tr("Version Manager"));
+#ifdef HIDE_VERSION_MANAGER
+    versionContainer->setHidden(true);
+#endif
     ui->toolBar->addWidget(versionContainer);
 }
 

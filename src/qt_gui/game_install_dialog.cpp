@@ -22,7 +22,9 @@ GameInstallDialog::GameInstallDialog() : m_gamesDirectory(nullptr) {
 
     layout->addWidget(SetupGamesDirectory());
     layout->addWidget(SetupAddonsDirectory());
+#ifndef HIDE_VERSION_MANAGER
     layout->addWidget(SetupVersionDirectory());
+#endif
     layout->addStretch();
     layout->addWidget(SetupDialogActions());
 
