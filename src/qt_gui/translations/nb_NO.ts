@@ -2629,11 +2629,11 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Relaxed</source>
-      <translation type="unfinished">Relaxed</translation>
+      <translation>Avslappet</translation>
     </message>
     <message>
       <source>Precise</source>
-      <translation type="unfinished">Precise</translation>
+      <translation>Nøyaktig</translation>
     </message>
   </context>
   <context>

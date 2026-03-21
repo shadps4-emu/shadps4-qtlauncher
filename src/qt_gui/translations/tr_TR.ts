@@ -1222,11 +1222,11 @@
     </message>
     <message>
       <source>Volume Up</source>
-      <translation type="unfinished">Volume Up</translation>
+      <translation>Sesi Yükselt</translation>
     </message>
     <message>
       <source>Volume Down</source>
-      <translation type="unfinished">Volume Down</translation>
+      <translation>Sesi Kıs</translation>
     </message>
   </context>
   <context>
