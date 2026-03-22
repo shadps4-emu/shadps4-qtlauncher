@@ -41,7 +41,7 @@ signals:
 
 private:
     void LoadValuesFromConfig();
-    void UpdateSettings(bool game_specific = false);
+    void UpdateSettings(bool is_specific = false);
     void SyncRealTimeWidgetstoConfig();
     void InitializeEmulatorLanguages();
     void OnLanguageChanged(int index);
@@ -52,6 +52,7 @@ private:
     void onAudioDeviceChange(bool isAdd);
     void pollSDLevents();
     void getPhysicalDevices();
+    void SaveSettings();
 
     std::unique_ptr<Ui::SettingsDialog> ui;
 
@@ -70,5 +71,4 @@ private:
     std::shared_ptr<gui_settings> m_gui_settings;
     std::shared_ptr<IpcClient> m_ipc_client;
     QFuture<void> Polling;
-    EmulatorSettingsImpl* m_emu_settings;
 };

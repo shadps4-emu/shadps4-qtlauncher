@@ -53,6 +53,8 @@ constexpr auto CUSTOM_TROPHY = "custom_trophy";
 constexpr auto CUSTOM_CONFIGS = "custom_configs";
 constexpr auto VERSION_DIR = "versions";
 constexpr auto CACHE_DIR = "cache";
+constexpr auto FONTS_DIR = "fonts";
+constexpr auto HOME_DIR = "home";
 
 // Filenames
 constexpr auto LOG_FILE = "shad_log.txt";

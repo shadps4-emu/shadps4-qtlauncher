@@ -94,14 +94,14 @@ public:
         QAction gameConfigDelete(tr("Delete Game-specific Settings"), widget);
 
         if (std::filesystem::exists(Common::FS::GetUserPath(Common::FS::PathType::CustomConfigs) /
-                                    (m_games[itemID].serial + ".toml"))) {
+                                    (m_games[itemID].serial + ".json"))) {
             gameConfigMenu->addAction(&gameConfigConfigure);
         } else {
             gameConfigMenu->addAction(&gameConfigCreate);
         }
 
         if (std::filesystem::exists(Common::FS::GetUserPath(Common::FS::PathType::CustomConfigs) /
-                                    (m_games[itemID].serial + ".toml")))
+                                    (m_games[itemID].serial + ".json")))
             gameConfigMenu->addAction(&gameConfigDelete);
 
         menu.addMenu(gameConfigMenu);
@@ -459,7 +459,7 @@ public:
                                                           QMessageBox::Yes | QMessageBox::No)) {
                 std::filesystem::remove(
                     Common::FS::GetUserPath(Common::FS::PathType::CustomConfigs) /
-                    (m_games[itemID].serial + ".toml"));
+                    (m_games[itemID].serial + ".json"));
             }
         }
 

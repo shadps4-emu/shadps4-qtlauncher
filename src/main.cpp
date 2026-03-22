@@ -34,8 +34,9 @@ int main(int argc, char* argv[]) {
     EmulatorState::SetInstance(m_emu_state);
 
     // Load configurations and initialize Qt application
-    const auto user_dir = Common::FS::GetUserPath(Common::FS::PathType::UserDir);
-    EmulatorSettings.Load();
+    std::shared_ptr<EmulatorSettingsImpl> emu_settings = std::make_shared<EmulatorSettingsImpl>();
+    emu_settings->Load();
+    EmulatorSettingsImpl::SetInstance(emu_settings);
 
     const bool has_command_line_argument = argc > 1;
     bool has_emulator_argument = false;
@@ -131,9 +132,6 @@ int main(int argc, char* argv[]) {
             return 1;
         }
     }
-
-    std::shared_ptr<EmulatorSettingsImpl> emu_settings = std::make_shared<EmulatorSettingsImpl>();
-    EmulatorSettingsImpl::SetInstance(emu_settings);
 
     // If no game directories are set and no command line argument, prompt for it
     if (EmulatorSettings.GetGameInstallDirsEnabled().empty() && !has_command_line_argument) {
