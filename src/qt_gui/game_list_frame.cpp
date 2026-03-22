@@ -2,7 +2,6 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include <QToolTip>
-#include "common/config.h"
 #include "common/logging/log.h"
 #include "common/path_util.h"
 #include "game_list_frame.h"

@@ -4,6 +4,7 @@
 #pragma once
 
 #include <QDialog>
+#include <QNetworkAccessManager>
 #include <QTextBrowser>
 #include <QTreeWidget>
 

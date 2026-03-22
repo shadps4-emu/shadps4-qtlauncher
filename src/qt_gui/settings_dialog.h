@@ -9,8 +9,8 @@
 #include <QGroupBox>
 #include <QPushButton>
 
-#include "common/config.h"
 #include "common/path_util.h"
+#include "core/emulator_settings.h"
 #include "gui_settings.h"
 #include "ipc/ipc_client.h"
 #include "qt_gui/compatibility_info.h"
@@ -70,4 +70,5 @@ private:
     std::shared_ptr<gui_settings> m_gui_settings;
     std::shared_ptr<IpcClient> m_ipc_client;
     QFuture<void> Polling;
+    EmulatorSettingsImpl* m_emu_settings;
 };

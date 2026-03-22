@@ -9,7 +9,6 @@
 #include <QTranslator>
 
 #include "background_music_player.h"
-#include "common/config.h"
 #include "common/path_util.h"
 #include "compatibility_info.h"
 #include "core/file_format/psf.h"

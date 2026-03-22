@@ -7,7 +7,6 @@
 #include <QScrollBar>
 
 #include "background_music_player.h"
-#include "common/config.h"
 #include "game_info.h"
 #include "game_list_utils.h"
 #include "gui_context_menus.h"

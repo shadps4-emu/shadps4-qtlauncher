@@ -12,7 +12,6 @@
 #include <fmt/format.h>
 #include <toml.hpp>
 
-#include "common/config.h"
 #include "common/logging/log.h"
 #include "common/scm_rev.h"
 #include "qt_gui/compatibility_info.h"
@@ -97,6 +96,14 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
 
     // Add a small clear "x" button inside the Log Filter input
     ui->logFilterLineEdit->setClearButtonEnabled(true);
+
+    auto gs_path =
+        Common::FS::GetUserPath(Common::FS::PathType::CustomConfigs) / (gs_serial + ".json");
+    if (is_game_specific) {
+        m_emu_settings->Load();
+    } else {
+        m_emu_settings->Load(gs_path.string());
+    }
 
     if (is_game_specific) {
         // Paths tab
@@ -1273,7 +1280,7 @@ void SettingsDialog::onAudioDeviceChange(bool isAdd) {
     SDL_AudioDeviceID* devices = SDL_GetAudioPlaybackDevices(&deviceCount);
 
     if (!devices) {
-        LOG_ERROR(Lib_AudioOut, "Unable to retrieve audio device list {}", SDL_GetError());
+        LOG_ERROR(Core_Devices, "Unable to retrieve audio device list {}", SDL_GetError());
         return;
     }
 

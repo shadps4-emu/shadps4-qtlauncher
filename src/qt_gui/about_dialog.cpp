@@ -7,7 +7,7 @@
 #include <QImage>
 #include <QLabel>
 #include <QPixmap>
-#include <common/config.h>
+
 #include "about_dialog.h"
 #include "main_window_themes.h"
 #include "ui_about_dialog.h"

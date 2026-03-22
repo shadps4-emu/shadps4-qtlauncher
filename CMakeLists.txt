@@ -274,8 +274,6 @@ set(COMMON src/common/logging/backend.cpp
            src/common/assert.cpp
            src/common/assert.h
            src/common/bounded_threadsafe_queue.h
-           src/common/config.cpp
-           src/common/config.h
            src/common/versions.cpp
            src/common/versions.h
            src/common/endian.h
@@ -300,10 +298,12 @@ set(CORE src/core/file_format/elf.cpp
          src/core/file_format/trp.h
          src/core/emulator_state.cpp
          src/core/emulator_state.h
+         src/core/emulator_settings.cpp
+         src/core/emulator_settings.h
 )
 
-set(INPUT src/input/controller.cpp
-          src/input/controller.h
+set(INPUT src/input/input.cpp
+          src/input/input.h
 )
 
 qt_add_resources(RESOURCE_FILES src/shadps4.qrc)
