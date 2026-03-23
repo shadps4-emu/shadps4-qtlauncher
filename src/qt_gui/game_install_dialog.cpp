@@ -22,9 +22,7 @@ GameInstallDialog::GameInstallDialog() : m_gamesDirectory(nullptr) {
 
     layout->addWidget(SetupGamesDirectory());
     layout->addWidget(SetupAddonsDirectory());
-#ifndef HIDE_VERSION_MANAGER
     layout->addWidget(SetupVersionDirectory());
-#endif
     layout->addStretch();
     layout->addWidget(SetupDialogActions());
 
@@ -127,6 +125,10 @@ QWidget* GameInstallDialog::SetupVersionDirectory() {
     auto browse = new QPushButton(tr("Browse"));
     connect(browse, &QPushButton::clicked, this, &GameInstallDialog::BrowseVersionDirectory);
     layout->addWidget(browse);
+
+#ifdef HIDE_VERSION_MANAGER
+    group->setHidden(true);
+#endif
 
     return group;
 }
