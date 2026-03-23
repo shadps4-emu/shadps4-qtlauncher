@@ -21,10 +21,10 @@
 #include <QStringList>
 #include <QTextBrowser>
 #include <QVBoxLayout>
-#include <common/config.h>
-#include <common/path_util.h>
-#include <common/scm_rev.h>
+
 #include "check_update.h"
+#include "common/path_util.h"
+#include "common/scm_rev.h"
 
 using namespace Common::FS;
 
@@ -265,7 +265,6 @@ void CheckUpdate::setupUI(const QString& downloadUrl, const QString& latestDate,
     connect(autoUpdateCheckBox, &QCheckBox::checkStateChanged, this, [this](Qt::CheckState state) {
         const auto user_dir = Common::FS::GetUserPath(Common::FS::PathType::UserDir);
         m_gui_settings->SetValue(gui::gen_checkForUpdates, (state == Qt::Checked));
-        Config::save(user_dir / "config.toml");
     });
 
     setLayout(layout);
