@@ -20,7 +20,6 @@
 #include <common/path_util.h>
 #include <common/versions.h>
 
-#include "common/config.h"
 #include "gui_settings.h"
 #include "qt_gui/main_window.h"
 #include "ui_version_dialog.h"

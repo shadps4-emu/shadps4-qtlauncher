@@ -5,6 +5,7 @@
 
 #include "common/path_util.h"
 #include "compatibility_info.h"
+#include "core/emulator_settings.h"
 #include "game_info.h"
 
 // Maximum depth to search for games in subdirectories
@@ -39,7 +40,7 @@ GameInfoClass::~GameInfoClass() = default;
 
 void GameInfoClass::GetGameInfo(QWidget* parent) {
     QStringList filePaths;
-    for (const auto& installLoc : Config::getGameInstallDirs()) {
+    for (const auto& installLoc : EmulatorSettings.GetGameInstallDirs()) {
         QString installDir;
         Common::FS::PathToQString(installDir, installLoc);
         ScanDirectoryRecursively(installDir, filePaths, 0);

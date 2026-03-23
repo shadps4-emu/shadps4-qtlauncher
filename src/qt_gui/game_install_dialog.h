@@ -5,7 +5,6 @@
 
 #include <QDialog>
 
-#include "common/config.h"
 #include "common/path_util.h"
 #include "gui_settings.h"
 

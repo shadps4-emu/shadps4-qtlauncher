@@ -10,6 +10,8 @@
 #include <SDL3/SDL_events.h>
 
 #include "common/path_util.h"
+#include "core/emulator_settings.h"
+#include "input/input.h"
 #include "kbm_config_dialog.h"
 #include "kbm_gui.h"
 #include "kbm_help_dialog.h"
@@ -23,7 +25,7 @@ KBMSettings::KBMSettings(std::shared_ptr<GameInfoClass> game_info_get,
       GameRunning(isGameRunning), RunningGameSerial(GameRunningSerial), ui(new Ui::KBMSettings) {
 
     ui->setupUi(this);
-    ui->PerGameCheckBox->setChecked(!Config::GetUseUnifiedInputConfig());
+    ui->PerGameCheckBox->setChecked(!EmulatorSettings.IsUseUnifiedInputConfig());
     ui->TextEditorButton->setFocus();
     this->setFocusPolicy(Qt::StrongFocus);
 
@@ -254,7 +256,7 @@ void KBMSettings::SaveKBMConfig(bool close_on_save) {
     lines.push_back(output_string + " = " + input_string);
 
     lines.push_back("");
-    const auto config_file = Config::GetFoolproofInputConfigFile(config_id);
+    const auto config_file = Input::GetFoolproofInputConfigFile(config_id);
     std::fstream file(config_file);
     int lineCount = 0;
     std::string line;
@@ -341,12 +343,12 @@ QString(tr("Cannot bind any unique input more than once. Duplicate inputs mapped
     }
     output_file.close();
 
-    Config::SetUseUnifiedInputConfig(!ui->PerGameCheckBox->isChecked());
-    Config::save(Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "config.toml");
+    EmulatorSettings.SetUseUnifiedInputConfig(!ui->PerGameCheckBox->isChecked());
+    EmulatorSettings.Save();
 
     if (GameRunning) {
-        Config::GetUseUnifiedInputConfig() ? m_ipc_client->reloadInputs("default")
-                                           : m_ipc_client->reloadInputs(RunningGameSerial);
+        EmulatorSettings.IsUseUnifiedInputConfig() ? m_ipc_client->reloadInputs("default")
+                                                   : m_ipc_client->reloadInputs(RunningGameSerial);
     }
 
     if (close_on_save)
@@ -396,7 +398,7 @@ void KBMSettings::SetDefault() {
 }
 
 void KBMSettings::SetUIValuestoMappings(std::string config_id) {
-    const auto config_file = Config::GetFoolproofInputConfigFile(config_id);
+    const auto config_file = Input::GetFoolproofInputConfigFile(config_id);
     std::ifstream file(config_file);
 
     int lineCount = 0;

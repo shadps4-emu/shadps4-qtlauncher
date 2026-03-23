@@ -13,12 +13,12 @@
 
 #include "background_music_player.h"
 #include "cheats_patches.h"
-#include "common/config.h"
 #include "common/log_analyzer.h"
 #include "common/logging/log.h"
 #include "common/path_util.h"
 #include "common/scm_rev.h"
 #include "compatibility_info.h"
+#include "core/emulator_settings.h"
 #include "core/emulator_state.h"
 #include "create_shortcut.h"
 #include "game_info.h"
@@ -94,14 +94,14 @@ public:
         QAction gameConfigDelete(tr("Delete Game-specific Settings"), widget);
 
         if (std::filesystem::exists(Common::FS::GetUserPath(Common::FS::PathType::CustomConfigs) /
-                                    (m_games[itemID].serial + ".toml"))) {
+                                    (m_games[itemID].serial + ".json"))) {
             gameConfigMenu->addAction(&gameConfigConfigure);
         } else {
             gameConfigMenu->addAction(&gameConfigCreate);
         }
 
         if (std::filesystem::exists(Common::FS::GetUserPath(Common::FS::PathType::CustomConfigs) /
-                                    (m_games[itemID].serial + ".toml")))
+                                    (m_games[itemID].serial + ".json")))
             gameConfigMenu->addAction(&gameConfigDelete);
 
         menu.addMenu(gameConfigMenu);
@@ -227,8 +227,10 @@ public:
 
         if (selected == openSaveDataFolder) {
             QString saveDataPath;
-            Common::FS::PathToQString(saveDataPath,
-                                      Config::GetSaveDataPath() / "1" / m_games[itemID].save_dir);
+
+            // TODO: Replace 1 with the user's number
+            Common::FS::PathToQString(saveDataPath, EmulatorSettings.GetHomeDir() / "savedata" /
+                                                        "1" / m_games[itemID].save_dir);
             QDir(saveDataPath).mkpath(saveDataPath);
             QDesktopServices::openUrl(QUrl::fromLocalFile(saveDataPath));
         }
@@ -237,7 +239,7 @@ public:
             QString logPath;
             Common::FS::PathToQString(logPath,
                                       Common::FS::GetUserPath(Common::FS::PathType::LogDir));
-            if (!Config::getSeparateLogFilesEnabled()) {
+            if (!EmulatorSettings.IsSeparateLoggingEnabled()) {
                 QDesktopServices::openUrl(QUrl::fromLocalFile(logPath));
             } else {
                 QString fileName = QString::fromStdString(m_games[itemID].serial) + ".log";
@@ -457,7 +459,7 @@ public:
                                                           QMessageBox::Yes | QMessageBox::No)) {
                 std::filesystem::remove(
                     Common::FS::GetUserPath(Common::FS::PathType::CustomConfigs) /
-                    (m_games[itemID].serial + ".toml"));
+                    (m_games[itemID].serial + ".json"));
             }
         }
 
@@ -518,10 +520,12 @@ public:
                 game_update_path = folder_path + "-patch";
             }
             Common::FS::PathToQString(
-                dlc_path, Config::getAddonInstallDir() /
+                dlc_path, EmulatorSettings.GetAddonInstallDir() /
                               Common::FS::PathFromQString(folder_path).parent_path().filename());
-            Common::FS::PathToQString(save_data_path,
-                                      Config::GetSaveDataPath() / "1" / m_games[itemID].save_dir);
+
+            // To do: replace 1 with user number
+            Common::FS::PathToQString(save_data_path, EmulatorSettings.GetHomeDir() / "savedata" /
+                                                          "1" / m_games[itemID].save_dir);
             Common::FS::PathToQString(trophy_data_path,
                                       Common::FS::GetUserPath(Common::FS::PathType::MetaDataDir) /
                                           m_games[itemID].serial / "TrophyFiles");
@@ -628,8 +632,8 @@ public:
         if (selected == submitCompatibilityReport) {
             std::filesystem::path log_file_path =
                 (Common::FS::GetUserPath(Common::FS::PathType::LogDir) /
-                 (Config::getSeparateLogFilesEnabled() ? m_games[itemID].serial + ".log"
-                                                       : "shad_log.txt"));
+                 (EmulatorSettings.IsSeparateLoggingEnabled() ? m_games[itemID].serial + ".log"
+                                                              : "shad_log.txt"));
             bool is_valid_file = LogAnalyzer::ProcessFile(log_file_path);
             std::optional<std::string> report_result = std::nullopt;
             if (is_valid_file) {

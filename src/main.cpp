@@ -5,9 +5,9 @@
 #include "system_error"
 #include "unordered_map"
 
-#include "common/config.h"
 #include "common/logging/backend.h"
 #include "common/versions.h"
+#include "core/emulator_settings.h"
 #include "qt_gui/game_install_dialog.h"
 #include "qt_gui/main_window.h"
 #ifdef _WIN32
@@ -34,8 +34,9 @@ int main(int argc, char* argv[]) {
     EmulatorState::SetInstance(m_emu_state);
 
     // Load configurations and initialize Qt application
-    const auto user_dir = Common::FS::GetUserPath(Common::FS::PathType::UserDir);
-    Config::load(user_dir / "config.toml");
+    std::shared_ptr<EmulatorSettingsImpl> emu_settings = std::make_shared<EmulatorSettingsImpl>();
+    emu_settings->Load();
+    EmulatorSettingsImpl::SetInstance(emu_settings);
 
     const bool has_command_line_argument = argc > 1;
     bool has_emulator_argument = false;
@@ -133,7 +134,7 @@ int main(int argc, char* argv[]) {
     }
 
     // If no game directories are set and no command line argument, prompt for it
-    if (Config::getGameInstallDirsEnabled().empty() && !has_command_line_argument) {
+    if (EmulatorSettings.GetGameInstallDirsEnabled().empty() && !has_command_line_argument) {
         GameInstallDialog dlg;
         dlg.exec();
     }

@@ -23,7 +23,7 @@
 #include "game_install_dialog.h"
 #include "hotkeys.h"
 #include "infinity_dialog.h"
-#include "input/controller.h"
+#include "input/input.h"
 #include "ipc/ipc_client.h"
 #include "kbm_gui.h"
 #include "main_window.h"
@@ -876,7 +876,7 @@ void MainWindow::CreateConnects() {
 
     // Manage Skylanders
     connect(ui->skylanderPortalAction, &QAction::triggered, this, [this]() {
-        if (Config::getUsbDeviceBackend() == Config::UsbBackendType::SkylandersPortal) {
+        if (EmulatorSettings.GetUsbDeviceBackend() == UsbBackendType::SkylandersPortal) {
             skylander_dialog* sky_diag = skylander_dialog::get_dlg(this, m_ipc_client);
             sky_diag->show();
         }
@@ -884,7 +884,7 @@ void MainWindow::CreateConnects() {
 
     // Manage Infinity Figures
     connect(ui->infinityFiguresAction, &QAction::triggered, this, [this]() {
-        if (Config::getUsbDeviceBackend() == Config::UsbBackendType::InfinityBase) {
+        if (EmulatorSettings.GetUsbDeviceBackend() == UsbBackendType::InfinityBase) {
             infinity_dialog* inf_diag = infinity_dialog::get_dlg(this, m_ipc_client);
             inf_diag->show();
         }
@@ -892,7 +892,7 @@ void MainWindow::CreateConnects() {
 
     // Manage Dimensions Toypad
     connect(ui->dimensionsToypadAction, &QAction::triggered, this, [this]() {
-        if (Config::getUsbDeviceBackend() == Config::UsbBackendType::DimensionsToypad) {
+        if (EmulatorSettings.GetUsbDeviceBackend() == UsbBackendType::DimensionsToypad) {
             dimensions_dialog* dim_dialog = dimensions_dialog::get_dlg(this, m_ipc_client);
             dim_dialog->show();
         }
@@ -1408,11 +1408,11 @@ void MainWindow::StartEmulatorExecutable(std::filesystem::path emuPath, QString 
         gameFound = true;
     } else {
         // In install folders, find game folder with same name as gameArg
-        const auto install_dir_array = Config::getGameInstallDirs();
+        const auto install_dir_array = EmulatorSettings.GetGameInstallDirs();
         std::vector<bool> install_dirs_enabled;
 
         try {
-            install_dirs_enabled = Config::getGameInstallDirsEnabled();
+            install_dirs_enabled = EmulatorSettings.GetGameInstallDirsEnabled();
         } catch (...) {
             // If it does not exist, assume that all are enabled.
             install_dirs_enabled.resize(install_dir_array.size(), true);

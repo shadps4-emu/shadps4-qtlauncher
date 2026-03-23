@@ -9,7 +9,8 @@
 #include "common/logging/log.h"
 #include "common/path_util.h"
 #include "control_settings.h"
-#include "input/controller.h"
+#include "core/emulator_settings.h"
+#include "input/input.h"
 #include "ui_control_settings.h"
 
 ControlSettings::ControlSettings(std::shared_ptr<GameInfoClass> game_info_get,
@@ -85,7 +86,7 @@ ControlSettings::ControlSettings(std::shared_ptr<GameInfoClass> game_info_get,
     ui->buttonBox->button(QDialogButtonBox::RestoreDefaults)->setText(tr("Restore Defaults"));
     ui->buttonBox->button(QDialogButtonBox::Cancel)->setText(tr("Cancel"));
 
-    ui->PerGameCheckBox->setChecked(!Config::GetUseUnifiedInputConfig());
+    ui->PerGameCheckBox->setChecked(!EmulatorSettings.IsUseUnifiedInputConfig());
 
     connect(ui->buttonBox, &QDialogButtonBox::rejected, this, &QWidget::close);
 
@@ -133,8 +134,8 @@ ControlSettings::ControlSettings(std::shared_ptr<GameInfoClass> game_info_get,
         std::string GUID =
             GamepadSelect::GetGUIDString(gamepads, ui->ActiveGamepadBox->currentIndex());
         ui->DefaultGamepadLabel->setText(tr("ID: ") + QString::fromStdString(GUID).right(16));
-        Config::setDefaultControllerID(GUID);
-        Config::save(Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "config.toml");
+        EmulatorSettings.SetDefaultControllerId(GUID);
+        EmulatorSettings.Save();
         QMessageBox::information(this, tr("Default Controller Selected"),
                                  tr("Active controller set as default"));
     });
@@ -142,8 +143,8 @@ ControlSettings::ControlSettings(std::shared_ptr<GameInfoClass> game_info_get,
     connect(ui->RemoveDefaultGamepadButton, &QPushButton::clicked, this, [this]() {
         ui->DefaultGamepadName->setText(tr("No default selected"));
         ui->DefaultGamepadLabel->setText(tr("n/a"));
-        Config::setDefaultControllerID("");
-        Config::save(Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "config.toml");
+        EmulatorSettings.SetDefaultControllerId("");
+        EmulatorSettings.Save();
         QMessageBox::information(this, tr("Default Controller Removed"),
                                  tr("Default controller setting removed"));
     });
@@ -185,7 +186,7 @@ void ControlSettings::SaveControllerConfig(bool CloseOnSave) {
     config_id = (ui->ProfileComboBox->currentText() == tr("Common Config"))
                     ? "default"
                     : ui->ProfileComboBox->currentText().toStdString();
-    const auto config_file = Config::GetFoolproofInputConfigFile(config_id);
+    const auto config_file = Input::GetFoolproofInputConfigFile(config_id);
 
     int lineCount = 0;
     std::string line;
@@ -355,15 +356,18 @@ void ControlSettings::SaveControllerConfig(bool CloseOnSave) {
     }
     output_file.close();
 
-    Config::SetUseUnifiedInputConfig(!ui->PerGameCheckBox->isChecked());
+    /* To do: change to IPC command
     Config::SetOverrideControllerColor(ui->LightbarCheckBox->isChecked());
     Config::SetControllerCustomColor(ui->RSlider->value(), ui->GSlider->value(),
                                      ui->BSlider->value());
-    Config::save(Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "config.toml");
+    */
+
+    EmulatorSettings.SetUseUnifiedInputConfig(!ui->PerGameCheckBox->isChecked());
+    EmulatorSettings.Save();
 
     if (GameRunning) {
-        Config::GetUseUnifiedInputConfig() ? m_ipc_client->reloadInputs("default")
-                                           : m_ipc_client->reloadInputs(RunningGameSerial);
+        EmulatorSettings.IsUseUnifiedInputConfig() ? m_ipc_client->reloadInputs("default")
+                                                   : m_ipc_client->reloadInputs(RunningGameSerial);
     }
 
     if (CloseOnSave)
@@ -426,7 +430,7 @@ void ControlSettings::SetUIValuestoMappings() {
                     ? "default"
                     : ui->ProfileComboBox->currentText().toStdString();
 
-    const auto config_file = Config::GetFoolproofInputConfigFile(config_id);
+    const auto config_file = Input::GetFoolproofInputConfigFile(config_id);
     std::ifstream file(config_file);
 
     bool CrossExists = false, CircleExists = false, SquareExists = false, TriangleExists = false,
@@ -723,8 +727,8 @@ void ControlSettings::CheckGamePad() {
     }
 
     QString defaultGUID = "";
-    int defaultIndex =
-        GamepadSelect::GetIndexfromGUID(gamepads, gamepad_count, Config::getDefaultControllerID());
+    int defaultIndex = GamepadSelect::GetIndexfromGUID(gamepads, gamepad_count,
+                                                       EmulatorSettings.GetDefaultControllerId());
     int activeIndex = GamepadSelect::GetIndexfromGUID(gamepads, gamepad_count,
                                                       GamepadSelect::GetSelectedGamepad());
 

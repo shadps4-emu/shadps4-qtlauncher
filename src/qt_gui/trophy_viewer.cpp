@@ -10,7 +10,6 @@
 #include <QResizeEvent>
 #include <QScreen>
 #include <cmrc/cmrc.hpp>
-#include <common/config.h>
 
 #include "common/path_util.h"
 #include "main_window_themes.h"
