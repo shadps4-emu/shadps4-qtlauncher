@@ -1820,14 +1820,6 @@ Përzgjidh një version të emulatorit nga paneli i djathtë.</translation>
       <translation>Aktivizo Discord Rich Presence</translation>
     </message>
     <message>
-      <source>Username</source>
-      <translation>Përdoruesi</translation>
-    </message>
-    <message>
-      <source>Trophy Key</source>
-      <translation>Çelësi i Trofeve</translation>
-    </message>
-    <message>
       <source>Trophy</source>
       <translation>Trofeu</translation>
     </message>
@@ -2064,14 +2056,6 @@ Përzgjidh një version të emulatorit nga paneli i djathtë.</translation>
       <translation>Aktivizo Discord Rich Presence:\nShfaq ikonën e emulatorit dhe informacionin përkatës në profilin tënd në Discord.</translation>
     </message>
     <message>
-      <source>Username:\nSets the PS4&apos;s account username, which may be displayed by some games.</source>
-      <translation>Përdoruesi:\nPërcakton emrin e përdoruesit të llogarisë PS4, i cili mund të shfaqet nga disa lojëra.</translation>
-    </message>
-    <message>
-      <source>Trophy Key:\nKey used to decrypt trophies. Must be obtained from your jailbroken console.\nMust contain only hex characters.</source>
-      <translation>Çelësi i Trofeve:\nÇelësi përdoret për të deshifruar trofetë. Duhet të merret nga konsola jote me jailbreak.\nDuhet të përmbajë vetëm karaktere hex.</translation>
-    </message>
-    <message>
       <source>Log Type:\nSets whether to synchronize the output of the log window for performance. May have adverse effects on emulation.</source>
       <translation>Lloji i ditarit:\nPërcakton nëse të sinkronizohet dalja e dritares së ditarit për performancë. Mund të ketë efekte të këqija në emulim.</translation>
     </message>
@@ -2192,10 +2176,6 @@ Përzgjidh një version të emulatorit nga paneli i djathtë.</translation>
       <translation>Aktivizo kontrollet me lëvizje</translation>
     </message>
     <message>
-      <source>Save Data Path</source>
-      <translation>Shtegu i të dhënave të ruajtjes</translation>
-    </message>
-    <message>
       <source>Browse</source>
       <translation>Shfleto</translation>
     </message>
@@ -2214,10 +2194,6 @@ Përzgjidh një version të emulatorit nga paneli i djathtë.</translation>
     <message>
       <source>Directory to install games</source>
       <translation>Dosja ku do instalohen lojërat</translation>
-    </message>
-    <message>
-      <source>Directory to save data</source>
-      <translation>Dosja për të ruajtur të dhënat</translation>
     </message>
     <message>
       <source>Video</source>
@@ -2635,6 +2611,18 @@ Zgjidh cilën skedë do të hapet; parazgjedhja është General.</translation>
     <message>
       <source>Precise</source>
       <translation type="unfinished">Precise</translation>
+    </message>
+    <message>
+      <source>Home Path (Save and Trophy Data)</source>
+      <translation type="unfinished">Home Path (Save and Trophy Data)</translation>
+    </message>
+    <message>
+      <source>Select shadPS4 Home Path</source>
+      <translation type="unfinished">Select shadPS4 Home Path</translation>
+    </message>
+    <message>
+      <source>Select the system modules folder</source>
+      <translation type="unfinished">Select the system modules folder</translation>
     </message>
   </context>
   <context>
