@@ -2613,15 +2613,15 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Home Path (Save and Trophy Data)</source>
-      <translation type="unfinished">Home Path (Save and Trophy Data)</translation>
+      <translation>Путь к домашней папке (сохранения и трофеи)</translation>
     </message>
     <message>
       <source>Select shadPS4 Home Path</source>
-      <translation type="unfinished">Select shadPS4 Home Path</translation>
+      <translation>Выберите путь к домашней папке shadPS4</translation>
     </message>
     <message>
       <source>Select the system modules folder</source>
-      <translation type="unfinished">Select the system modules folder</translation>
+      <translation>Выберите папку системных модулей</translation>
     </message>
   </context>
   <context>
