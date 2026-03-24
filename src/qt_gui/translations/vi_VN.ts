@@ -1820,14 +1820,6 @@ Select an emulator version from the right panel.</translation>
       <translation>Bật Discord Rich Presence</translation>
     </message>
     <message>
-      <source>Username</source>
-      <translation>Tên người dùng</translation>
-    </message>
-    <message>
-      <source>Trophy Key</source>
-      <translation type="unfinished">Trophy Key</translation>
-    </message>
-    <message>
       <source>Trophy</source>
       <translation type="unfinished">Trophy</translation>
     </message>
@@ -2064,14 +2056,6 @@ Select an emulator version from the right panel.</translation>
       <translation>Bật Discord Rich Presence:\nHiển thị biểu tượng trình giả lập và thông tin liên quan trên hồ sơ Discord của bạn.</translation>
     </message>
     <message>
-      <source>Username:\nSets the PS4&apos;s account username, which may be displayed by some games.</source>
-      <translation>Tên người dùng:\nChọn tên người dùng của tài khoản PS4, có thể được một số trò chơi hiển thị.</translation>
-    </message>
-    <message>
-      <source>Trophy Key:\nKey used to decrypt trophies. Must be obtained from your jailbroken console.\nMust contain only hex characters.</source>
-      <translation type="unfinished">Trophy Key:\nKey used to decrypt trophies. Must be obtained from your jailbroken console.\nMust contain only hex characters.</translation>
-    </message>
-    <message>
       <source>Log Type:\nSets whether to synchronize the output of the log window for performance. May have adverse effects on emulation.</source>
       <translation>Loại nhật ký:\nChọn xem có đồng bộ hóa đầu ra cửa sổ nhật ký cho hiệu suất hay không. Điều này có thể có tác động tiêu cực đến việc giả lập.</translation>
     </message>
@@ -2192,10 +2176,6 @@ Select an emulator version from the right panel.</translation>
       <translation>Bật điều khiển bằng cử chỉ</translation>
     </message>
     <message>
-      <source>Save Data Path</source>
-      <translation>Đường dẫn để lưu dữ liệu</translation>
-    </message>
-    <message>
       <source>Browse</source>
       <translation>Duyệt</translation>
     </message>
@@ -2214,10 +2194,6 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Directory to install games</source>
       <translation>Thư mục để cài các trò chơi</translation>
-    </message>
-    <message>
-      <source>Directory to save data</source>
-      <translation>Thư mục để lưu dữ liệu</translation>
     </message>
     <message>
       <source>Video</source>
@@ -2634,6 +2610,18 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Precise</source>
       <translation type="unfinished">Precise</translation>
+    </message>
+    <message>
+      <source>Home Path (Save and Trophy Data)</source>
+      <translation type="unfinished">Home Path (Save and Trophy Data)</translation>
+    </message>
+    <message>
+      <source>Select shadPS4 Home Path</source>
+      <translation type="unfinished">Select shadPS4 Home Path</translation>
+    </message>
+    <message>
+      <source>Select the system modules folder</source>
+      <translation type="unfinished">Select the system modules folder</translation>
     </message>
   </context>
   <context>
