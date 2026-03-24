@@ -1820,14 +1820,6 @@ Select an emulator version from the right panel.</translation>
       <translation>Discord Rich Presenceを有効にする</translation>
     </message>
     <message>
-      <source>Username</source>
-      <translation>ユーザー名</translation>
-    </message>
-    <message>
-      <source>Trophy Key</source>
-      <translation>トロフィーキー</translation>
-    </message>
-    <message>
       <source>Trophy</source>
       <translation>トロフィー</translation>
     </message>
@@ -2064,14 +2056,6 @@ Select an emulator version from the right panel.</translation>
       <translation>Discord Rich Presenceを有効にする:\nエミュレーターのアイコンと関連情報をDiscordプロフィールに表示します。</translation>
     </message>
     <message>
-      <source>Username:\nSets the PS4&apos;s account username, which may be displayed by some games.</source>
-      <translation>ユーザー名:\nPS4のアカウントユーザー名を設定します。これは、一部のゲームで表示される場合があります。</translation>
-    </message>
-    <message>
-      <source>Trophy Key:\nKey used to decrypt trophies. Must be obtained from your jailbroken console.\nMust contain only hex characters.</source>
-      <translation>トロフィーキー:\nトロフィーの復号に使用されるキーです。脱獄済みのコンソールから取得することができます。\n16進数のみを受け入れます。</translation>
-    </message>
-    <message>
       <source>Log Type:\nSets whether to synchronize the output of the log window for performance. May have adverse effects on emulation.</source>
       <translation>ログタイプ:\nパフォーマンスのためにログウィンドウの出力を同期させるかどうかを設定します。エミュレーションに悪影響を及ぼす可能性があります。</translation>
     </message>
@@ -2192,10 +2176,6 @@ Select an emulator version from the right panel.</translation>
       <translation>モーションコントロールを有効にする</translation>
     </message>
     <message>
-      <source>Save Data Path</source>
-      <translation>セーブデータパス</translation>
-    </message>
-    <message>
       <source>Browse</source>
       <translation>参照</translation>
     </message>
@@ -2214,10 +2194,6 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Directory to install games</source>
       <translation>ゲームをインストールするディレクトリ</translation>
-    </message>
-    <message>
-      <source>Directory to save data</source>
-      <translation type="unfinished">Directory to save data</translation>
     </message>
     <message>
       <source>Video</source>
@@ -2634,6 +2610,18 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Precise</source>
       <translation type="unfinished">Precise</translation>
+    </message>
+    <message>
+      <source>Home Path (Save and Trophy Data)</source>
+      <translation type="unfinished">Home Path (Save and Trophy Data)</translation>
+    </message>
+    <message>
+      <source>Select shadPS4 Home Path</source>
+      <translation type="unfinished">Select shadPS4 Home Path</translation>
+    </message>
+    <message>
+      <source>Select the system modules folder</source>
+      <translation type="unfinished">Select the system modules folder</translation>
     </message>
   </context>
   <context>
