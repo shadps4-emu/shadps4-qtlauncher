@@ -1820,14 +1820,6 @@ Select an emulator version from the right panel.</translation>
       <translation>Discord Rich Presence را فعال کنید</translation>
     </message>
     <message>
-      <source>Username</source>
-      <translation>نام کاربری</translation>
-    </message>
-    <message>
-      <source>Trophy Key</source>
-      <translation type="unfinished">Trophy Key</translation>
-    </message>
-    <message>
       <source>Trophy</source>
       <translation type="unfinished">Trophy</translation>
     </message>
@@ -2064,14 +2056,6 @@ Select an emulator version from the right panel.</translation>
       <translation>فعال کردن Discord Rich Presence:\nآیکون شبیه ساز و اطلاعات مربوطه را در نمایه Discord شما نمایش می دهد.</translation>
     </message>
     <message>
-      <source>Username:\nSets the PS4&apos;s account username, which may be displayed by some games.</source>
-      <translation>نام کاربری:\nنام کاربری حساب PS4 را تنظیم می‌کند که ممکن است توسط برخی بازی‌ها نمایش داده شود.</translation>
-    </message>
-    <message>
-      <source>Trophy Key:\nKey used to decrypt trophies. Must be obtained from your jailbroken console.\nMust contain only hex characters.</source>
-      <translation>کلید تروفی:\و کلیدی که برای رمزگشایی تروفی‌ها استفاده می‌شود. باید از کنسول جیلبریک شده شما دریافت شود.\باید فقط شامل کاراکترهای هگز باشد.</translation>
-    </message>
-    <message>
       <source>Log Type:\nSets whether to synchronize the output of the log window for performance. May have adverse effects on emulation.</source>
       <translation>نوع لاگ:\nتنظیم می‌کند که آیا خروجی پنجره لاگ برای بهبود عملکرد همگام‌سازی شود یا خیر. این ممکن است تأثیر منفی بر شبیه‌سازی داشته باشد.</translation>
     </message>
@@ -2192,10 +2176,6 @@ Select an emulator version from the right panel.</translation>
       <translation type="unfinished">Enable Motion Controls</translation>
     </message>
     <message>
-      <source>Save Data Path</source>
-      <translation type="unfinished">Save Data Path</translation>
-    </message>
-    <message>
       <source>Browse</source>
       <translation>انتخاب دستی</translation>
     </message>
@@ -2214,10 +2194,6 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Directory to install games</source>
       <translation>محل نصب بازی ها</translation>
-    </message>
-    <message>
-      <source>Directory to save data</source>
-      <translation type="unfinished">Directory to save data</translation>
     </message>
     <message>
       <source>Video</source>
@@ -2634,6 +2610,18 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Precise</source>
       <translation type="unfinished">Precise</translation>
+    </message>
+    <message>
+      <source>Home Path (Save and Trophy Data)</source>
+      <translation type="unfinished">Home Path (Save and Trophy Data)</translation>
+    </message>
+    <message>
+      <source>Select shadPS4 Home Path</source>
+      <translation type="unfinished">Select shadPS4 Home Path</translation>
+    </message>
+    <message>
+      <source>Select the system modules folder</source>
+      <translation type="unfinished">Select the system modules folder</translation>
     </message>
   </context>
   <context>
