@@ -1820,14 +1820,6 @@ Select an emulator version from the right panel.</translation>
       <translation>A Discord Rich Presence engedélyezése</translation>
     </message>
     <message>
-      <source>Username</source>
-      <translation>Felhasználónév</translation>
-    </message>
-    <message>
-      <source>Trophy Key</source>
-      <translation type="unfinished">Trophy Key</translation>
-    </message>
-    <message>
       <source>Trophy</source>
       <translation type="unfinished">Trophy</translation>
     </message>
@@ -2064,14 +2056,6 @@ Select an emulator version from the right panel.</translation>
       <translation>A Discord Rich Presence engedélyezése:\nMegjeleníti az emulator ikonját és a kapcsolódó információkat a Discord profilján.</translation>
     </message>
     <message>
-      <source>Username:\nSets the PS4&apos;s account username, which may be displayed by some games.</source>
-      <translation>Felhasználónév:\nBeállítja a PS4 fiók felhasználónevét, amelyet egyes játékok megjeleníthetnek.</translation>
-    </message>
-    <message>
-      <source>Trophy Key:\nKey used to decrypt trophies. Must be obtained from your jailbroken console.\nMust contain only hex characters.</source>
-      <translation type="unfinished">Trophy Key:\nKey used to decrypt trophies. Must be obtained from your jailbroken console.\nMust contain only hex characters.</translation>
-    </message>
-    <message>
       <source>Log Type:\nSets whether to synchronize the output of the log window for performance. May have adverse effects on emulation.</source>
       <translation>Napló típusa:\nBeállítja, hogy szinkronizálja-e a naplóablak kimenetét a teljesítmény érdekében. Ennek kedvezőtlen hatásai lehetnek az emulációra.</translation>
     </message>
@@ -2192,10 +2176,6 @@ Select an emulator version from the right panel.</translation>
       <translation type="unfinished">Enable Motion Controls</translation>
     </message>
     <message>
-      <source>Save Data Path</source>
-      <translation type="unfinished">Save Data Path</translation>
-    </message>
-    <message>
       <source>Browse</source>
       <translation>Böngészés</translation>
     </message>
@@ -2214,10 +2194,6 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Directory to install games</source>
       <translation>Mappa a játékok telepítésére</translation>
-    </message>
-    <message>
-      <source>Directory to save data</source>
-      <translation type="unfinished">Directory to save data</translation>
     </message>
     <message>
       <source>Video</source>
@@ -2634,6 +2610,18 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Precise</source>
       <translation type="unfinished">Precise</translation>
+    </message>
+    <message>
+      <source>Home Path (Save and Trophy Data)</source>
+      <translation type="unfinished">Home Path (Save and Trophy Data)</translation>
+    </message>
+    <message>
+      <source>Select shadPS4 Home Path</source>
+      <translation type="unfinished">Select shadPS4 Home Path</translation>
+    </message>
+    <message>
+      <source>Select the system modules folder</source>
+      <translation type="unfinished">Select the system modules folder</translation>
     </message>
   </context>
   <context>
