@@ -1820,14 +1820,6 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <translation>Bruk Discord Rich Presence</translation>
     </message>
     <message>
-      <source>Username</source>
-      <translation>Brukernavn</translation>
-    </message>
-    <message>
-      <source>Trophy Key</source>
-      <translation>Trofénøkkel</translation>
-    </message>
-    <message>
       <source>Trophy</source>
       <translation>Trofé</translation>
     </message>
@@ -2064,14 +2056,6 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <translation>Bruk Discord Rich Presence:\nViser emulatorikonet og relevant informasjon på Discord-profilen din.</translation>
     </message>
     <message>
-      <source>Username:\nSets the PS4&apos;s account username, which may be displayed by some games.</source>
-      <translation>Brukernavn:\nAngir brukernavnet for PS4-kontoen, som kan vises av enkelte spill.</translation>
-    </message>
-    <message>
-      <source>Trophy Key:\nKey used to decrypt trophies. Must be obtained from your jailbroken console.\nMust contain only hex characters.</source>
-      <translation>Trofénøkkel:\nNøkkel brukes til å dekryptere trofeer. Må hentes fra din konsoll (jailbroken).\nMå bare inneholde sekskantede tegn.</translation>
-    </message>
-    <message>
       <source>Log Type:\nSets whether to synchronize the output of the log window for performance. May have adverse effects on emulation.</source>
       <translation>Loggføringstype:\nAngir om loggvinduets utdata skal synkroniseres for ytelse. Kan ha negative effekter for emulatoren.</translation>
     </message>
@@ -2192,10 +2176,6 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <translation>Bruk bevegelsesstyring</translation>
     </message>
     <message>
-      <source>Save Data Path</source>
-      <translation>Lagrede datamappe</translation>
-    </message>
-    <message>
       <source>Browse</source>
       <translation>Endre mappe</translation>
     </message>
@@ -2214,10 +2194,6 @@ Velg en emulatorversjon fra høyre panel.</translation>
     <message>
       <source>Directory to install games</source>
       <translation>Mappe for installering av spill</translation>
-    </message>
-    <message>
-      <source>Directory to save data</source>
-      <translation>Mappe for lagring av data</translation>
     </message>
     <message>
       <source>Video</source>
@@ -2634,6 +2610,18 @@ Velg en emulatorversjon fra høyre panel.</translation>
     <message>
       <source>Precise</source>
       <translation>Nøyaktig</translation>
+    </message>
+    <message>
+      <source>Home Path (Save and Trophy Data)</source>
+      <translation type="unfinished">Home Path (Save and Trophy Data)</translation>
+    </message>
+    <message>
+      <source>Select shadPS4 Home Path</source>
+      <translation type="unfinished">Select shadPS4 Home Path</translation>
+    </message>
+    <message>
+      <source>Select the system modules folder</source>
+      <translation type="unfinished">Select the system modules folder</translation>
     </message>
   </context>
   <context>
