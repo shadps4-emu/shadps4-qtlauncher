@@ -19,6 +19,7 @@
 #include "common/versions.h"
 #include "control_settings.h"
 #include "core/emulator_state.h"
+#include "crypto_key_dialog.h"
 #include "dimensions_dialog.h"
 #include "game_install_dialog.h"
 #include "hotkeys.h"
@@ -606,6 +607,11 @@ void MainWindow::CreateConnects() {
         auto hotkeyDialog =
             new Hotkeys(m_ipc_client, EmulatorState::GetInstance()->IsGameRunning(), this);
         hotkeyDialog->exec();
+    });
+
+    connect(ui->keyManager, &QAction::triggered, this, [this]() {
+        auto keyDialog = new CryptoManagerDialog(this);
+        keyDialog->exec();
     });
 
     connect(ui->setIconSizeTinyAct, &QAction::triggered, this, [this]() {
@@ -1251,6 +1257,7 @@ void MainWindow::SetUiIcons(bool isWhite) {
     ui->infinityFiguresAction->setIcon(RecolorIcon(ui->infinityFiguresAction->icon(), isWhite));
     ui->dimensionsToypadAction->setIcon(RecolorIcon(ui->dimensionsToypadAction->icon(), isWhite));
     ui->configureAct->setIcon(RecolorIcon(ui->configureAct->icon(), isWhite));
+    ui->keyManager->setIcon(RecolorIcon(ui->keyManager->icon(), isWhite));
     ui->addElfFolderAct->setIcon(RecolorIcon(ui->addElfFolderAct->icon(), isWhite));
 }
 

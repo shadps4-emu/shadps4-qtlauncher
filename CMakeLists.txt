@@ -284,14 +284,18 @@ set(COMMON src/common/logging/backend.cpp
            src/common/path_util.h
            src/common/sha1.h
            src/common/types.h
-           src/common/memory_patcher.h
            src/common/memory_patcher.cpp
+           src/common/memory_patcher.h
+           src/common/key_manager.cpp
+           src/common/key_manager.h
            ${CMAKE_CURRENT_BINARY_DIR}/src/common/scm_rev.cpp
            src/common/scm_rev.h
 )
 
 set(CORE src/core/file_format/elf.cpp
          src/core/file_format/elf.h
+         src/core/file_format/npbind.cpp
+         src/core/file_format/npbind.h
          src/core/file_format/psf.cpp
          src/core/file_format/psf.h
          src/core/file_format/trp.cpp
@@ -379,6 +383,9 @@ set(QT_GUI src/qt_gui/about_dialog.cpp
            src/qt_gui/create_shortcut.h
            src/qt_gui/right_click_button.cpp
            src/qt_gui/right_click_button.h
+           src/qt_gui/crypto_key_dialog.cpp
+           src/qt_gui/crypto_key_dialog.h
+           src/qt_gui/hex_plain_text_edit.h
            ${RESOURCE_FILES}
            ${TRANSLATIONS}
            ${UPDATER}
