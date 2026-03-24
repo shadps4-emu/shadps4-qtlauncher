@@ -1820,14 +1820,6 @@ Selecciona una versió del panell dret.</translation>
       <translation>Activa la Discord Rich Presence</translation>
     </message>
     <message>
-      <source>Username</source>
-      <translation>Nom d’usuari</translation>
-    </message>
-    <message>
-      <source>Trophy Key</source>
-      <translation>Clau dels trofeus</translation>
-    </message>
-    <message>
       <source>Trophy</source>
       <translation>Trofeu</translation>
     </message>
@@ -2064,14 +2056,6 @@ Selecciona una versió del panell dret.</translation>
       <translation>Activa Discord Rich Presence:\nMostra la icona de l'emulador i informació rellevant en el teu perfil de Discord.</translation>
     </message>
     <message>
-      <source>Username:\nSets the PS4&apos;s account username, which may be displayed by some games.</source>
-      <translation>Nom d'usuari:\nProveeix el nom d'usuari del compte de PS4, que es farà servir i es veurà en alguns jocs.</translation>
-    </message>
-    <message>
-      <source>Trophy Key:\nKey used to decrypt trophies. Must be obtained from your jailbroken console.\nMust contain only hex characters.</source>
-      <translation>Clau de trofeus:\nClau que es fa servir per desxifrar trofeus. Cal obtenir-la de la teva consola desbloquejada.\nAcostuma a tenir caràcters hexadecimals.</translation>
-    </message>
-    <message>
       <source>Log Type:\nSets whether to synchronize the output of the log window for performance. May have adverse effects on emulation.</source>
       <translation>Tipus de registre:\nEstableix si sincronitza la sortida de la finestra de registre per millorar el rendiment. Pot tenir reaccions adverses en el rendiment.</translation>
     </message>
@@ -2192,10 +2176,6 @@ Selecciona una versió del panell dret.</translation>
       <translation>Habilita els controls de moviment</translation>
     </message>
     <message>
-      <source>Save Data Path</source>
-      <translation>Desa la ruta a les dades</translation>
-    </message>
-    <message>
       <source>Browse</source>
       <translation>Navega</translation>
     </message>
@@ -2214,10 +2194,6 @@ Selecciona una versió del panell dret.</translation>
     <message>
       <source>Directory to install games</source>
       <translation>Carpeta per instal·lar jocs</translation>
-    </message>
-    <message>
-      <source>Directory to save data</source>
-      <translation>Carpeta de les dades desades</translation>
     </message>
     <message>
       <source>Video</source>
@@ -2634,6 +2610,18 @@ Selecciona una versió del panell dret.</translation>
     <message>
       <source>Precise</source>
       <translation>Precís</translation>
+    </message>
+    <message>
+      <source>Home Path (Save and Trophy Data)</source>
+      <translation>Ruta a la carpeta Home (Dades de desat i trofeus)</translation>
+    </message>
+    <message>
+      <source>Select shadPS4 Home Path</source>
+      <translation>Selecciona la ruta a la carpeta Home de shadPS4</translation>
+    </message>
+    <message>
+      <source>Select the system modules folder</source>
+      <translation>Selecciona la carpeta del sistema de mòduls</translation>
     </message>
   </context>
   <context>
