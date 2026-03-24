@@ -59,7 +59,7 @@
       </size>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>5</number>
      </property>
      <property name="usesScrollButtons">
       <bool>true</bool>
@@ -1862,22 +1862,22 @@
          </widget>
         </item>
         <item>
-         <widget class="QGroupBox" name="saveDataGroupBox">
+         <widget class="QGroupBox" name="homeFolderGroupBox">
           <property name="title">
-           <string>Home Path (Save and Trophy Data)</string>
+           <string>Home Folder Location (Saves, Inputs, Trophy Data)</string>
           </property>
           <layout class="QVBoxLayout" name="saveDataLayout">
            <item>
             <layout class="QHBoxLayout" name="horizontalLayout_4">
              <item>
-              <widget class="QLineEdit" name="currentSaveDataPath">
+              <widget class="QLineEdit" name="homeFolderPath">
                <property name="readOnly">
                 <bool>true</bool>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="browseButton">
+              <widget class="QPushButton" name="homeFolderButton">
                <property name="text">
                 <string>Browse</string>
                </property>
