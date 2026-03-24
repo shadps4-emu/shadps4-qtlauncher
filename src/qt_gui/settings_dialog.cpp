@@ -116,6 +116,9 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         ui->chooseHomeTabComboBox->removeItem(8);
     }
 
+    // to do: unhide when implemented
+    ui->homeFolderGroupBox->setVisible(false);
+
     ui->buttonBox->button(QDialogButtonBox::StandardButton::Close)->setFocus();
 
     logTypeMap = {{tr("async"), "async"}, {tr("sync"), "sync"}};
@@ -363,7 +366,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
             }
         });
 
-        connect(ui->browseButton, &QPushButton::clicked, this, [this]() {
+        connect(ui->homeFolderButton, &QPushButton::clicked, this, [this]() {
             const auto home_path = EmulatorSettings.GetHomeDir();
             QString initial_path;
             Common::FS::PathToQString(initial_path, home_path);
@@ -374,7 +377,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
             auto file_path = Common::FS::PathFromQString(home_path_string);
             if (!file_path.empty()) {
                 EmulatorSettings.SetHomeDir(file_path);
-                ui->currentSaveDataPath->setText(home_path_string);
+                ui->homeFolderPath->setText(home_path_string);
             }
         });
 
@@ -514,12 +517,12 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         ui->gameFoldersListWidget->installEventFilter(this);
         ui->addFolderButton->installEventFilter(this);
         ui->removeFolderButton->installEventFilter(this);
-        ui->saveDataGroupBox->installEventFilter(this);
+        ui->homeFolderGroupBox->installEventFilter(this);
         ui->sysmodulesGroupBox->installEventFilter(this);
         ui->browse_sysmodules->installEventFilter(this);
-        ui->currentSaveDataPath->installEventFilter(this);
+        ui->homeFolderPath->installEventFilter(this);
         ui->currentDLCFolder->installEventFilter(this);
-        ui->browseButton->installEventFilter(this);
+        ui->homeFolderButton->installEventFilter(this);
         ui->folderButton->installEventFilter(this);
 
         // Log
@@ -604,7 +607,7 @@ void SettingsDialog::LoadValuesFromConfig() {
         const auto home_path = EmulatorSettings.GetHomeDir();
         QString home_path_string;
         Common::FS::PathToQString(home_path_string, home_path);
-        ui->currentSaveDataPath->setText(home_path_string);
+        ui->homeFolderPath->setText(home_path_string);
 
         const auto dlc_folder_path = EmulatorSettings.GetAddonInstallDir();
         QString dlc_folder_path_string;
@@ -927,10 +930,10 @@ void SettingsDialog::updateNoteTextEdit(const QString& elementName) {
     }
 
     // Save Data
-    if (elementName == "saveDataGroupBox" || elementName == "currentSaveDataPath") {
-        text = tr("Save Data Path:\\nThe folder where game save data will be saved.");
-    } else if (elementName == "browseButton") {
-        text = tr("Browse:\\nBrowse for a folder to set as the save data path.");
+    if (elementName == "homeFolderGroupBox" || elementName == "homeFolderPath") {
+        text = tr("Home Folder Location:\\nThe folder where save data, trophy files, and input configs are stored for all users.");
+    } else if (elementName == "homeFolderButton") {
+        text = tr("Browse:\\nBrowse for a folder to set as the home folder.");
     }
 
     // Debug

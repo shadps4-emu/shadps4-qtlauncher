@@ -228,9 +228,9 @@ public:
         if (selected == openSaveDataFolder) {
             QString saveDataPath;
 
-            // TODO: Replace 1 with the user's number
-            Common::FS::PathToQString(saveDataPath, EmulatorSettings.GetHomeDir() / "savedata" /
-                                                        "1" / m_games[itemID].save_dir);
+            // TODO: replace save folder when home folder is implemented
+            Common::FS::PathToQString(
+                saveDataPath, Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "savedata");
             QDir(saveDataPath).mkpath(saveDataPath);
             QDesktopServices::openUrl(QUrl::fromLocalFile(saveDataPath));
         }
@@ -523,9 +523,10 @@ public:
                 dlc_path, EmulatorSettings.GetAddonInstallDir() /
                               Common::FS::PathFromQString(folder_path).parent_path().filename());
 
-            // To do: replace 1 with user number
-            Common::FS::PathToQString(save_data_path, EmulatorSettings.GetHomeDir() / "savedata" /
-                                                          "1" / m_games[itemID].save_dir);
+            // TODO: replace save folder when home folder is implemented
+            Common::FS::PathToQString(save_data_path,
+                                      Common::FS::GetUserPath(Common::FS::PathType::UserDir) /
+                                          "savedata" / "1" / m_games[itemID].save_dir);
             Common::FS::PathToQString(trophy_data_path,
                                       Common::FS::GetUserPath(Common::FS::PathType::MetaDataDir) /
                                           m_games[itemID].serial / "TrophyFiles");
