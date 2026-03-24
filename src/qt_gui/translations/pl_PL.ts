@@ -1820,14 +1820,6 @@ Select an emulator version from the right panel.</translation>
       <translation>Włącz Discord Rich Presence</translation>
     </message>
     <message>
-      <source>Username</source>
-      <translation>Nazwa użytkownika</translation>
-    </message>
-    <message>
-      <source>Trophy Key</source>
-      <translation>Klucz trofeów</translation>
-    </message>
-    <message>
       <source>Trophy</source>
       <translation>Trofea</translation>
     </message>
@@ -2064,14 +2056,6 @@ Select an emulator version from the right panel.</translation>
       <translation>Włącz Discord Rich Presence:\nWyświetla ikonę emulatora i odpowiednie informacje na twoim profilu Discord.</translation>
     </message>
     <message>
-      <source>Username:\nSets the PS4&apos;s account username, which may be displayed by some games.</source>
-      <translation>Nazwa użytkownika:\nUstala nazwę użytkownika konta PS4, która może być wyświetlana w niektórych grach.</translation>
-    </message>
-    <message>
-      <source>Trophy Key:\nKey used to decrypt trophies. Must be obtained from your jailbroken console.\nMust contain only hex characters.</source>
-      <translation>Klucz trofeów:\nKlucz używany do odszyfrowywania trofeów. Musi być uzyskany z konsoli po jailbreaku. Musi zawierać tylko znaki w kodzie szesnastkowym.</translation>
-    </message>
-    <message>
       <source>Log Type:\nSets whether to synchronize the output of the log window for performance. May have adverse effects on emulation.</source>
       <translation>Typ logu:\nUstala, czy synchronizować wyjście okna dziennika dla wydajności. Może to mieć negatywny wpływ na emulację.</translation>
     </message>
@@ -2192,10 +2176,6 @@ Select an emulator version from the right panel.</translation>
       <translation>Włącz sterowanie ruchem</translation>
     </message>
     <message>
-      <source>Save Data Path</source>
-      <translation>Ścieżka zapisanych danych</translation>
-    </message>
-    <message>
       <source>Browse</source>
       <translation>Przeglądaj</translation>
     </message>
@@ -2214,10 +2194,6 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Directory to install games</source>
       <translation>Katalog do instalacji gier</translation>
-    </message>
-    <message>
-      <source>Directory to save data</source>
-      <translation>Katalog do zapisywania danych</translation>
     </message>
     <message>
       <source>Video</source>
@@ -2634,6 +2610,18 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Precise</source>
       <translation type="unfinished">Precise</translation>
+    </message>
+    <message>
+      <source>Home Path (Save and Trophy Data)</source>
+      <translation type="unfinished">Home Path (Save and Trophy Data)</translation>
+    </message>
+    <message>
+      <source>Select shadPS4 Home Path</source>
+      <translation type="unfinished">Select shadPS4 Home Path</translation>
+    </message>
+    <message>
+      <source>Select the system modules folder</source>
+      <translation type="unfinished">Select the system modules folder</translation>
     </message>
   </context>
   <context>
