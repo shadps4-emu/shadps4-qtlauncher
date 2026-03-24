@@ -1820,14 +1820,6 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
       <translation>Discord Rich Presence&apos;i etkinleştir</translation>
     </message>
     <message>
-      <source>Username</source>
-      <translation>Kullanıcı Adı</translation>
-    </message>
-    <message>
-      <source>Trophy Key</source>
-      <translation>Kupa Anahtarı</translation>
-    </message>
-    <message>
       <source>Trophy</source>
       <translation>Kupa</translation>
     </message>
@@ -2064,14 +2056,6 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
       <translation>Discord Rich Presence&apos;i etkinleştir:\nEmülatör simgesini ve Discord profilinizdeki ilgili bilgileri gösterir.</translation>
     </message>
     <message>
-      <source>Username:\nSets the PS4&apos;s account username, which may be displayed by some games.</source>
-      <translation>Kullanıcı Adı:\nBazı oyunlar tarafından gösterilebilen PS4 hesabının kullanıcı adını ayarlar.</translation>
-    </message>
-    <message>
-      <source>Trophy Key:\nKey used to decrypt trophies. Must be obtained from your jailbroken console.\nMust contain only hex characters.</source>
-      <translation>Kupa Anahtarı:\nKupaların şifresini çözmek için kullanılan anahtardır. Jailbreak yapılmış konsolunuzdan alınmalıdır.\nYalnızca onaltılık karakterler içermelidir.</translation>
-    </message>
-    <message>
       <source>Log Type:\nSets whether to synchronize the output of the log window for performance. May have adverse effects on emulation.</source>
       <translation>Günlük Türü:\nPerformans için günlük penceresi çıkışını senkronize etme durumunu ayarlar. Bu, emülasyonda olumsuz etkilere yol açabilir.</translation>
     </message>
@@ -2192,10 +2176,6 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
       <translation>Hareket Kontrollerini Etkinleştir</translation>
     </message>
     <message>
-      <source>Save Data Path</source>
-      <translation>Kayıt Verileri Yolu</translation>
-    </message>
-    <message>
       <source>Browse</source>
       <translation>Gözat</translation>
     </message>
@@ -2214,10 +2194,6 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     <message>
       <source>Directory to install games</source>
       <translation>Oyunların yükleneceği dizin</translation>
-    </message>
-    <message>
-      <source>Directory to save data</source>
-      <translation>Kayıt verilerinin tutulacağı dizin</translation>
     </message>
     <message>
       <source>Video</source>
@@ -2634,6 +2610,18 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     <message>
       <source>Precise</source>
       <translation type="unfinished">Precise</translation>
+    </message>
+    <message>
+      <source>Home Path (Save and Trophy Data)</source>
+      <translation type="unfinished">Home Path (Save and Trophy Data)</translation>
+    </message>
+    <message>
+      <source>Select shadPS4 Home Path</source>
+      <translation type="unfinished">Select shadPS4 Home Path</translation>
+    </message>
+    <message>
+      <source>Select the system modules folder</source>
+      <translation type="unfinished">Select the system modules folder</translation>
     </message>
   </context>
   <context>
