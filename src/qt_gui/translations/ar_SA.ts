@@ -1820,14 +1820,6 @@ Select an emulator version from the right panel.</source>
       <translation>تفعيل حالة الثراء في ديسكورد</translation>
     </message>
     <message>
-      <source>Username</source>
-      <translation>اسم المستخدم</translation>
-    </message>
-    <message>
-      <source>Trophy Key</source>
-      <translation>مفتاح الكأس</translation>
-    </message>
-    <message>
       <source>Trophy</source>
       <translation>الكؤوس</translation>
     </message>
@@ -2064,14 +2056,6 @@ Select an emulator version from the right panel.</source>
       <translation>تفعيل حالة الثراء في ديسكورد:\nيعرض أيقونة المحاكي ومعلومات ذات صلة على ملفك الشخصي في ديسكورد.</translation>
     </message>
     <message>
-      <source>Username:\nSets the PS4&apos;s account username, which may be displayed by some games.</source>
-      <translation>اسم المستخدم:\nيحدد اسم حساب&apos;PS4، وقد يظهر في بعض الألعاب.</translation>
-    </message>
-    <message>
-      <source>Trophy Key:\nKey used to decrypt trophies. Must be obtained from your jailbroken console.\nMust contain only hex characters.</source>
-      <translation>مفتاح الكؤوس:\nيُستخدم لفك تشفير الجوائز داخل الألعاب. يُستخرج من جهاز معدل.\nيجب أن يُكتب باستخدام رموز ست عشرية فقط.</translation>
-    </message>
-    <message>
       <source>Log Type:\nSets whether to synchronize the output of the log window for performance. May have adverse effects on emulation.</source>
       <translation>نوع السجل:\nييحدد ما إذا كان سيتم مزامنة مخرجات نافذة السجل لتحسين الأداء. قد يؤدي ذلك إلى تأثيرات سلبية على المحاكاة.</translation>
     </message>
@@ -2192,10 +2176,6 @@ Select an emulator version from the right panel.</source>
       <translation>تفعيل التحكم بالحركة</translation>
     </message>
     <message>
-      <source>Save Data Path</source>
-      <translation>مسار بيانات الحفظ</translation>
-    </message>
-    <message>
       <source>Browse</source>
       <translation>تصفح</translation>
     </message>
@@ -2214,10 +2194,6 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Directory to install games</source>
       <translation>مجلد تثبيت الألعاب</translation>
-    </message>
-    <message>
-      <source>Directory to save data</source>
-      <translation>مسار الحفظ لبيانات الألعاب</translation>
     </message>
     <message>
       <source>Video</source>
@@ -2635,6 +2611,18 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Precise</source>
       <translation type="unfinished">Precise</translation>
+    </message>
+    <message>
+      <source>Home Path (Save and Trophy Data)</source>
+      <translation type="unfinished">Home Path (Save and Trophy Data)</translation>
+    </message>
+    <message>
+      <source>Select shadPS4 Home Path</source>
+      <translation type="unfinished">Select shadPS4 Home Path</translation>
+    </message>
+    <message>
+      <source>Select the system modules folder</source>
+      <translation type="unfinished">Select the system modules folder</translation>
     </message>
   </context>
   <context>
