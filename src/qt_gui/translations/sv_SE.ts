@@ -1820,14 +1820,6 @@ Välj en emulatorversion från den högra panelen.</translation>
       <translation>Aktivera Discord Rich Presence</translation>
     </message>
     <message>
-      <source>Username</source>
-      <translation>Användarnamn</translation>
-    </message>
-    <message>
-      <source>Trophy Key</source>
-      <translation>Trofényckel</translation>
-    </message>
-    <message>
       <source>Trophy</source>
       <translation>Troféer</translation>
     </message>
@@ -2064,14 +2056,6 @@ Välj en emulatorversion från den högra panelen.</translation>
       <translation>Aktivera Discord Rich Presence:\nVisar emulatorikonen och relevant information på din Discord-profil.</translation>
     </message>
     <message>
-      <source>Username:\nSets the PS4&apos;s account username, which may be displayed by some games.</source>
-      <translation>Användarnamn:\nStäller in PS4ans användarkonto, som kan visas av vissa spel.</translation>
-    </message>
-    <message>
-      <source>Trophy Key:\nKey used to decrypt trophies. Must be obtained from your jailbroken console.\nMust contain only hex characters.</source>
-      <translation>Trofényckel:\nNyckel som används för att avkryptera troféer. Måste hämtas från din konsoll (jailbroken).\nMåste innehålla endast hex-tecken.</translation>
-    </message>
-    <message>
       <source>Log Type:\nSets whether to synchronize the output of the log window for performance. May have adverse effects on emulation.</source>
       <translation>Loggtyp:\nStäller in huruvida synkronisering av utdata för loggfönstret för prestanda. Kan ha inverkan på emulationen.</translation>
     </message>
@@ -2192,10 +2176,6 @@ Välj en emulatorversion från den högra panelen.</translation>
       <translation>Aktivera rörelsekontroller</translation>
     </message>
     <message>
-      <source>Save Data Path</source>
-      <translation>Sökväg för sparat data</translation>
-    </message>
-    <message>
       <source>Browse</source>
       <translation>Bläddra</translation>
     </message>
@@ -2214,10 +2194,6 @@ Välj en emulatorversion från den högra panelen.</translation>
     <message>
       <source>Directory to install games</source>
       <translation>Katalog att installera spel till</translation>
-    </message>
-    <message>
-      <source>Directory to save data</source>
-      <translation>Katalog för sparat data</translation>
     </message>
     <message>
       <source>Video</source>
@@ -2634,6 +2610,18 @@ Välj en emulatorversion från den högra panelen.</translation>
     <message>
       <source>Precise</source>
       <translation>Exakt</translation>
+    </message>
+    <message>
+      <source>Home Path (Save and Trophy Data)</source>
+      <translation type="unfinished">Home Path (Save and Trophy Data)</translation>
+    </message>
+    <message>
+      <source>Select shadPS4 Home Path</source>
+      <translation type="unfinished">Select shadPS4 Home Path</translation>
+    </message>
+    <message>
+      <source>Select the system modules folder</source>
+      <translation type="unfinished">Select the system modules folder</translation>
     </message>
   </context>
   <context>

@@ -1825,14 +1825,6 @@ Izaberite verziju emulatora s desne liste.</translation>
       <translation>Omogući Discord Obogaćenu Prisutnost</translation>
     </message>
     <message>
-      <source>Username</source>
-      <translation>Korisničko ime</translation>
-    </message>
-    <message>
-      <source>Trophy Key</source>
-      <translation>Trofej Ključ</translation>
-    </message>
-    <message>
       <source>Trophy</source>
       <translation>Trofej</translation>
     </message>
@@ -2069,14 +2061,6 @@ Izaberite verziju emulatora s desne liste.</translation>
       <translation>Omogući Discord Obogaćenu Prisutnost:\nPrikaz ikone emulatora i prikladne informacije na vašem Discord profilu.</translation>
     </message>
     <message>
-      <source>Username:\nSets the PS4&apos;s account username, which may be displayed by some games.</source>
-      <translation>Korisničko ime:\nPostavlja korisničko ime PS4 računa, koje bi neke igre mogle prikazat.</translation>
-    </message>
-    <message>
-      <source>Trophy Key:\nKey used to decrypt trophies. Must be obtained from your jailbroken console.\nMust contain only hex characters.</source>
-      <translation>Trofej Ključ:\nKljuč se koristi za dekripciju trofeja. Mora se dobit iz jailbreakane konzole.\nMora sadržavati isključivo hex znakove.</translation>
-    </message>
-    <message>
       <source>Log Type:\nSets whether to synchronize the output of the log window for performance. May have adverse effects on emulation.</source>
       <translation>Tip Zapisnika:\nPostavlja sinkronizaciju na izlaz prozora zapisnika radi performansa. Mogući su negativni učinci na emulaciju.</translation>
     </message>
@@ -2197,10 +2181,6 @@ Izaberite verziju emulatora s desne liste.</translation>
       <translation>Omogući Kontrole Pokreta</translation>
     </message>
     <message>
-      <source>Save Data Path</source>
-      <translation>Putanje s Podacima o Spremanju</translation>
-    </message>
-    <message>
       <source>Browse</source>
       <translation>Potraži</translation>
     </message>
@@ -2219,10 +2199,6 @@ Izaberite verziju emulatora s desne liste.</translation>
     <message>
       <source>Directory to install games</source>
       <translation>Mapa za instalaciju igri</translation>
-    </message>
-    <message>
-      <source>Directory to save data</source>
-      <translation>Mapa za spremanje podataka</translation>
     </message>
     <message>
       <source>Video</source>
@@ -2642,6 +2618,18 @@ Izaziva rušenje ili probleme u nekim igrama.</translation>
     <message>
       <source>Precise</source>
       <translation>Precizno</translation>
+    </message>
+    <message>
+      <source>Home Path (Save and Trophy Data)</source>
+      <translation type="unfinished">Home Path (Save and Trophy Data)</translation>
+    </message>
+    <message>
+      <source>Select shadPS4 Home Path</source>
+      <translation type="unfinished">Select shadPS4 Home Path</translation>
+    </message>
+    <message>
+      <source>Select the system modules folder</source>
+      <translation type="unfinished">Select the system modules folder</translation>
     </message>
   </context>
   <context>

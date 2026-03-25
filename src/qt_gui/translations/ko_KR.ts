@@ -1820,14 +1820,6 @@ Select an emulator version from the right panel.</translation>
       <translation>디스코드 활동 상태 표시</translation>
     </message>
     <message>
-      <source>Username</source>
-      <translation>사용자 이름</translation>
-    </message>
-    <message>
-      <source>Trophy Key</source>
-      <translation type="unfinished">Trophy Key</translation>
-    </message>
-    <message>
       <source>Trophy</source>
       <translation type="unfinished">Trophy</translation>
     </message>
@@ -2064,14 +2056,6 @@ Select an emulator version from the right panel.</translation>
       <translation>Discord Rich Presence 활성화:\nDiscord 프로필에 에뮬레이터 아이콘과 관련 정보를 표시합니다.</translation>
     </message>
     <message>
-      <source>Username:\nSets the PS4&apos;s account username, which may be displayed by some games.</source>
-      <translation>사용자 이름:\n몇몇 게임에서 표시되는 PS4 계정의 사용자명을 설정합니다.</translation>
-    </message>
-    <message>
-      <source>Trophy Key:\nKey used to decrypt trophies. Must be obtained from your jailbroken console.\nMust contain only hex characters.</source>
-      <translation type="unfinished">Trophy Key:\nKey used to decrypt trophies. Must be obtained from your jailbroken console.\nMust contain only hex characters.</translation>
-    </message>
-    <message>
       <source>Log Type:\nSets whether to synchronize the output of the log window for performance. May have adverse effects on emulation.</source>
       <translation>로그 유형:\n성능을 위해 로그 창 출력의 동기화 여부를 설정합니다. 에뮬레이션에 부작용이 있을 수 있습니다.</translation>
     </message>
@@ -2192,10 +2176,6 @@ Select an emulator version from the right panel.</translation>
       <translation type="unfinished">Enable Motion Controls</translation>
     </message>
     <message>
-      <source>Save Data Path</source>
-      <translation type="unfinished">Save Data Path</translation>
-    </message>
-    <message>
       <source>Browse</source>
       <translation type="unfinished">Browse</translation>
     </message>
@@ -2214,10 +2194,6 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Directory to install games</source>
       <translation type="unfinished">Directory to install games</translation>
-    </message>
-    <message>
-      <source>Directory to save data</source>
-      <translation type="unfinished">Directory to save data</translation>
     </message>
     <message>
       <source>Video</source>
@@ -2634,6 +2610,18 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Precise</source>
       <translation type="unfinished">Precise</translation>
+    </message>
+    <message>
+      <source>Home Path (Save and Trophy Data)</source>
+      <translation type="unfinished">Home Path (Save and Trophy Data)</translation>
+    </message>
+    <message>
+      <source>Select shadPS4 Home Path</source>
+      <translation type="unfinished">Select shadPS4 Home Path</translation>
+    </message>
+    <message>
+      <source>Select the system modules folder</source>
+      <translation type="unfinished">Select the system modules folder</translation>
     </message>
   </context>
   <context>

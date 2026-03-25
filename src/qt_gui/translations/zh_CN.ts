@@ -1822,14 +1822,6 @@ Select an emulator version from the right panel.</source>
       <translation>启用 Discord Rich Presence</translation>
     </message>
     <message>
-      <source>Username</source>
-      <translation>用户名</translation>
-    </message>
-    <message>
-      <source>Trophy Key</source>
-      <translation>奖杯密钥</translation>
-    </message>
-    <message>
       <source>Trophy</source>
       <translation>奖杯</translation>
     </message>
@@ -2066,14 +2058,6 @@ Select an emulator version from the right panel.</source>
       <translation>启用 Discord Rich Presence：\n在您的 Discord 个人资料上显示模拟器图标和相关信息。</translation>
     </message>
     <message>
-      <source>Username:\nSets the PS4&apos;s account username, which may be displayed by some games.</source>
-      <translation>用户名：\n设置 PS4 帐户的用户名，某些游戏中可能会显示此名称。</translation>
-    </message>
-    <message>
-      <source>Trophy Key:\nKey used to decrypt trophies. Must be obtained from your jailbroken console.\nMust contain only hex characters.</source>
-      <translation>奖杯密钥：\n用于解密奖杯的密钥。必须从您的越狱主机中获得。\n仅包含十六进制字符。</translation>
-    </message>
-    <message>
       <source>Log Type:\nSets whether to synchronize the output of the log window for performance. May have adverse effects on emulation.</source>
       <translation>日志类型：\n设置日志窗口输出的同步方式以提高性能。可能会对模拟产生不良影响。</translation>
     </message>
@@ -2194,10 +2178,6 @@ Select an emulator version from the right panel.</source>
       <translation>启用体感控制</translation>
     </message>
     <message>
-      <source>Save Data Path</source>
-      <translation>保存数据路径</translation>
-    </message>
-    <message>
       <source>Browse</source>
       <translation>浏览</translation>
     </message>
@@ -2216,10 +2196,6 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Directory to install games</source>
       <translation>要安装游戏的目录</translation>
-    </message>
-    <message>
-      <source>Directory to save data</source>
-      <translation>存档数据目录</translation>
     </message>
     <message>
       <source>Video</source>
@@ -2638,6 +2614,18 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Precise</source>
       <translation>精确</translation>
+    </message>
+    <message>
+      <source>Home Path (Save and Trophy Data)</source>
+      <translation type="unfinished">Home Path (Save and Trophy Data)</translation>
+    </message>
+    <message>
+      <source>Select shadPS4 Home Path</source>
+      <translation type="unfinished">Select shadPS4 Home Path</translation>
+    </message>
+    <message>
+      <source>Select the system modules folder</source>
+      <translation type="unfinished">Select the system modules folder</translation>
     </message>
   </context>
   <context>

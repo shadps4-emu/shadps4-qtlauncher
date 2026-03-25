@@ -1820,14 +1820,6 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
       <translation>Abilita Discord Rich Presence</translation>
     </message>
     <message>
-      <source>Username</source>
-      <translation>Nome Utente</translation>
-    </message>
-    <message>
-      <source>Trophy Key</source>
-      <translation>Chiave Trofei</translation>
-    </message>
-    <message>
       <source>Trophy</source>
       <translation>Trofei</translation>
     </message>
@@ -2064,14 +2056,6 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
       <translation>Abilita Discord Rich Presence:\nMostra l&apos;icona dell&apos;emulatore e informazioni pertinenti sul tuo profilo Discord.</translation>
     </message>
     <message>
-      <source>Username:\nSets the PS4&apos;s account username, which may be displayed by some games.</source>
-      <translation>Nome Utente:\nImposta il nome utente dell&apos;account PS4, che potrebbe essere visualizzato da alcuni giochi.</translation>
-    </message>
-    <message>
-      <source>Trophy Key:\nKey used to decrypt trophies. Must be obtained from your jailbroken console.\nMust contain only hex characters.</source>
-      <translation>Chiave Trofei:\nChiave utilizzata per la decrittazione dei trofei. Deve essere estratta dalla vostra console con jailbreak.\nDeve contenere solo caratteri esadecimali.</translation>
-    </message>
-    <message>
       <source>Log Type:\nSets whether to synchronize the output of the log window for performance. May have adverse effects on emulation.</source>
       <translation>Tipo di Log:\nImposta se sincronizzare l&apos;output della finestra di log per le prestazioni. Potrebbe avere effetti avversi sull&apos;emulazione.</translation>
     </message>
@@ -2192,10 +2176,6 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
       <translation>Abilita Controlli Di Movimento</translation>
     </message>
     <message>
-      <source>Save Data Path</source>
-      <translation>Percorso Dati Salvataggio</translation>
-    </message>
-    <message>
       <source>Browse</source>
       <translation>Sfoglia</translation>
     </message>
@@ -2214,10 +2194,6 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
     <message>
       <source>Directory to install games</source>
       <translation>Cartella di installazione dei giochi</translation>
-    </message>
-    <message>
-      <source>Directory to save data</source>
-      <translation>Cartella per salvare i dati</translation>
     </message>
     <message>
       <source>Video</source>
@@ -2634,6 +2610,18 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
     <message>
       <source>Precise</source>
       <translation>Accurata</translation>
+    </message>
+    <message>
+      <source>Home Path (Save and Trophy Data)</source>
+      <translation type="unfinished">Home Path (Save and Trophy Data)</translation>
+    </message>
+    <message>
+      <source>Select shadPS4 Home Path</source>
+      <translation type="unfinished">Select shadPS4 Home Path</translation>
+    </message>
+    <message>
+      <source>Select the system modules folder</source>
+      <translation type="unfinished">Select the system modules folder</translation>
     </message>
   </context>
   <context>

@@ -1819,14 +1819,6 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
       <translation>Discord Rich Presence aktivieren</translation>
     </message>
     <message>
-      <source>Username</source>
-      <translation>Benutzername</translation>
-    </message>
-    <message>
-      <source>Trophy Key</source>
-      <translation>Trophäen-Schlüssel</translation>
-    </message>
-    <message>
       <source>Trophy</source>
       <translation>Trophäe</translation>
     </message>
@@ -2063,14 +2055,6 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
       <translation>Discord Rich Presence aktivieren:\nZeigt das Emulator-Icon und relevante Informationen in deinem Discord-Profil an.</translation>
     </message>
     <message>
-      <source>Username:\nSets the PS4&apos;s account username, which may be displayed by some games.</source>
-      <translation>Benutzername:\nLegt den Namen des PS4-Kontos fest, der in einigen Spielen angezeigt werden kann.</translation>
-    </message>
-    <message>
-      <source>Trophy Key:\nKey used to decrypt trophies. Must be obtained from your jailbroken console.\nMust contain only hex characters.</source>
-      <translation>Trophäenschlüssel:\nSchlüssel zum Entschlüsseln von Trophäen. Muss von Ihrer gejailbreakten Konsole abgerufen werden.\nDarf nur Hex-Zeichen enthalten.</translation>
-    </message>
-    <message>
       <source>Log Type:\nSets whether to synchronize the output of the log window for performance. May have adverse effects on emulation.</source>
       <translation>Protokolltyp:\nLegt fest, ob die Ausgabe des Protokollfensters synchronisiert wird, um die Leistung zu verbessern. Dies kann sich negativ auf die Emulation auswirken.</translation>
     </message>
@@ -2191,10 +2175,6 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
       <translation>Aktiviere Bewegungssteuerung</translation>
     </message>
     <message>
-      <source>Save Data Path</source>
-      <translation>Speicherdaten-Pfad</translation>
-    </message>
-    <message>
       <source>Browse</source>
       <translation>Durchsuchen</translation>
     </message>
@@ -2213,10 +2193,6 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
     <message>
       <source>Directory to install games</source>
       <translation>Installationsverzeichnis für Spiele</translation>
-    </message>
-    <message>
-      <source>Directory to save data</source>
-      <translation>Verzeichnis für Speicherdaten</translation>
     </message>
     <message>
       <source>Video</source>
@@ -2637,6 +2613,18 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
     <message>
       <source>Precise</source>
       <translation>Präzise</translation>
+    </message>
+    <message>
+      <source>Home Path (Save and Trophy Data)</source>
+      <translation type="unfinished">Home Path (Save and Trophy Data)</translation>
+    </message>
+    <message>
+      <source>Select shadPS4 Home Path</source>
+      <translation type="unfinished">Select shadPS4 Home Path</translation>
+    </message>
+    <message>
+      <source>Select the system modules folder</source>
+      <translation type="unfinished">Select the system modules folder</translation>
     </message>
   </context>
   <context>

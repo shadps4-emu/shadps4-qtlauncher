@@ -1820,14 +1820,6 @@ Select an emulator version from the right panel.</source>
       <translation>Увімкнути Discord Rich Presence</translation>
     </message>
     <message>
-      <source>Username</source>
-      <translation>Ім&apos;я користувача</translation>
-    </message>
-    <message>
-      <source>Trophy Key</source>
-      <translation>Ключ трофеїв</translation>
-    </message>
-    <message>
       <source>Trophy</source>
       <translation>Трофеї</translation>
     </message>
@@ -2064,14 +2056,6 @@ Select an emulator version from the right panel.</source>
       <translation>Увімкнути Discord Rich Presence:\nВідображає значок емулятора та відповідну інформацію у вашому профілі Discord.</translation>
     </message>
     <message>
-      <source>Username:\nSets the PS4&apos;s account username, which may be displayed by some games.</source>
-      <translation>Ім&apos;я користувача:\nВстановіть ім&apos;я користувача акаунта PS4. Воно може відображатися в деяких іграх.</translation>
-    </message>
-    <message>
-      <source>Trophy Key:\nKey used to decrypt trophies. Must be obtained from your jailbroken console.\nMust contain only hex characters.</source>
-      <translation>Ключ трофеїв:\nКлюч для розшифровки трофеїв. Може бути отриманий зі зламаної консолі.\nПовинен містити лише шістнадцяткові символи.</translation>
-    </message>
-    <message>
       <source>Log Type:\nSets whether to synchronize the output of the log window for performance. May have adverse effects on emulation.</source>
       <translation>Тип логів:\nВстановіть, чи синхронізувати виведення вікна логів заради продуктивності. Це може негативно вплинути на емуляцію.</translation>
     </message>
@@ -2192,10 +2176,6 @@ Select an emulator version from the right panel.</source>
       <translation>Увімкнути керування рухом</translation>
     </message>
     <message>
-      <source>Save Data Path</source>
-      <translation>Шлях до файлів збережень</translation>
-    </message>
-    <message>
       <source>Browse</source>
       <translation>Обрати</translation>
     </message>
@@ -2214,10 +2194,6 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Directory to install games</source>
       <translation>Папка для встановлення ігор</translation>
-    </message>
-    <message>
-      <source>Directory to save data</source>
-      <translation>Папка для збереження даних</translation>
     </message>
     <message>
       <source>Video</source>
@@ -2635,6 +2611,18 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Precise</source>
       <translation>Точно</translation>
+    </message>
+    <message>
+      <source>Home Path (Save and Trophy Data)</source>
+      <translation>Шлях до головної (збереження та трофеї)</translation>
+    </message>
+    <message>
+      <source>Select shadPS4 Home Path</source>
+      <translation>Виберіть шлях до головної теки shadPS4</translation>
+    </message>
+    <message>
+      <source>Select the system modules folder</source>
+      <translation>Виберіть теку модулів системи</translation>
     </message>
   </context>
   <context>

@@ -1820,14 +1820,6 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
       <translation>Ota käyttöön Discord Rich Presence</translation>
     </message>
     <message>
-      <source>Username</source>
-      <translation>Käyttäjänimi</translation>
-    </message>
-    <message>
-      <source>Trophy Key</source>
-      <translation>Trophy Avain</translation>
-    </message>
-    <message>
       <source>Trophy</source>
       <translation>Trophyt</translation>
     </message>
@@ -2064,14 +2056,6 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
       <translation>Ota käyttöön Discord Rich Presence:\nNäyttää emulaattorin kuvakkeen ja asiaankuuluvat tiedot Discord-profiilissasi.</translation>
     </message>
     <message>
-      <source>Username:\nSets the PS4&apos;s account username, which may be displayed by some games.</source>
-      <translation>Käyttäjänimi:\nAsettaa PS4-tilin käyttäjänimen, joka voi näkyä joissain peleissä.</translation>
-    </message>
-    <message>
-      <source>Trophy Key:\nKey used to decrypt trophies. Must be obtained from your jailbroken console.\nMust contain only hex characters.</source>
-      <translation>Trophy Avain:\nThrophyjen dekryptoinnissa käytetty avain. Pitää hankkia jailbreakatusta konsolista.\nSaa sisältää vain hex-merkkejä.</translation>
-    </message>
-    <message>
       <source>Log Type:\nSets whether to synchronize the output of the log window for performance. May have adverse effects on emulation.</source>
       <translation>Lokityyppi:\nAsettaa, synkronoidaanko loki-ikkunan ulostulo suorituskyvyn vuoksi. Tämä voi vaikuttaa haitallisesti emulointiin.</translation>
     </message>
@@ -2192,10 +2176,6 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
       <translation>Liikeohjaus</translation>
     </message>
     <message>
-      <source>Save Data Path</source>
-      <translation>Tallennustietojen polku</translation>
-    </message>
-    <message>
       <source>Browse</source>
       <translation>Selaa</translation>
     </message>
@@ -2214,10 +2194,6 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     <message>
       <source>Directory to install games</source>
       <translation>Pelien asennushakemisto</translation>
-    </message>
-    <message>
-      <source>Directory to save data</source>
-      <translation>Tallennustietojen hakemisto</translation>
     </message>
     <message>
       <source>Video</source>
@@ -2634,6 +2610,18 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     <message>
       <source>Precise</source>
       <translation>Tarkka</translation>
+    </message>
+    <message>
+      <source>Home Path (Save and Trophy Data)</source>
+      <translation type="unfinished">Home Path (Save and Trophy Data)</translation>
+    </message>
+    <message>
+      <source>Select shadPS4 Home Path</source>
+      <translation type="unfinished">Select shadPS4 Home Path</translation>
+    </message>
+    <message>
+      <source>Select the system modules folder</source>
+      <translation type="unfinished">Select the system modules folder</translation>
     </message>
   </context>
   <context>
