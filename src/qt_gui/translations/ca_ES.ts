@@ -644,7 +644,7 @@ Must be a valid hex string with even length.</translation>
     </message>
     <message>
       <source>Trophy Key:</source>
-      <translation type="unfinished">Trophy Key:</translation>
+      <translation>Clau dels trofeus:</translation>
     </message>
     <message>
       <source>Status: Not loaded</source>
@@ -652,7 +652,7 @@ Must be a valid hex string with even length.</translation>
     </message>
     <message>
       <source>Trophy Key</source>
-      <translation type="unfinished">Trophy Key</translation>
+      <translation>Clau dels trofeus</translation>
     </message>
     <message>
       <source>Enter %1</source>
@@ -672,11 +672,11 @@ Must be a valid hex string with even length.</translation>
     </message>
     <message>
       <source>Coefficient</source>
-      <translation type="unfinished">Coefficient</translation>
+      <translation>Coeficient</translation>
     </message>
     <message>
       <source>Modulus</source>
-      <translation type="unfinished">Modulus</translation>
+      <translation>Mòduls</translation>
     </message>
     <message>
       <source>Prime 1</source>
@@ -730,11 +730,11 @@ All fields must be valid hex strings with even length.</translation>
     </message>
     <message>
       <source>Close</source>
-      <translation type="unfinished">Close</translation>
+      <translation>Tanca</translation>
     </message>
     <message>
       <source>Warning</source>
-      <translation type="unfinished">Warning</translation>
+      <translation>Avís</translation>
     </message>
     <message>
       <source>No key file found or failed to load.
@@ -744,11 +744,11 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Validation Error</source>
-      <translation type="unfinished">Validation Error</translation>
+      <translation>Error de validació</translation>
     </message>
     <message>
       <source>Success</source>
-      <translation type="unfinished">Success</translation>
+      <translation>Realitzat amb èxit</translation>
     </message>
     <message>
       <source>Keys saved successfully!</source>
@@ -756,7 +756,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Error</translation>
     </message>
     <message>
       <source>Failed to save keys!</source>
@@ -776,11 +776,11 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Status: Valid</source>
-      <translation type="unfinished">Status: Valid</translation>
+      <translation>Estatus: Vàlid</translation>
     </message>
     <message>
       <source>Invalid File</source>
-      <translation type="unfinished">Invalid File</translation>
+      <translation>Fitxer invàlid</translation>
     </message>
     <message>
       <source>Only JSON files are supported.</source>
@@ -792,7 +792,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>JSON Error</source>
-      <translation type="unfinished">JSON Error</translation>
+      <translation>Error JSON</translation>
     </message>
     <message>
       <source>Invalid JSON format.</source>
