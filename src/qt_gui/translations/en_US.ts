@@ -625,6 +625,186 @@
     </message>
 </context>
 <context>
+    <name>CryptoManagerDialog</name>
+    <message>
+        <source>Crypto Key Manager</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Trophy Key: Used for trophy decryption.
+Must be a valid hex string with even length.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter Trophy Key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Trophy Key:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Status: Not loaded</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Trophy Key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Exponent1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Exponent2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Public Exponent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Coefficient</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Modulus</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Prime 1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Prime 2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Private Exponent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fake Keyset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>RSA key components for fake signing.
+All fields must be valid hex strings with even length.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Debug Rif Keyset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>RSA key components for debug RIF files.
+All fields must be valid hex strings with even length.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pkg Derived Key3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>RSA key components for package decryption.
+All fields must be valid hex strings with even length.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Load All Keys</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save All Keys</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Close</source>
+        <translation type="unfinished">Close</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No key file found or failed to load.
+Please enter your keys and save them.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Validation Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Success</source>
+        <translation type="unfinished">Success</translation>
+    </message>
+    <message>
+        <source>Keys saved successfully!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation type="unfinished">Error</translation>
+    </message>
+    <message>
+        <source>Failed to save keys!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Status: All fields empty</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Status: Invalid hex values</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Status: Incomplete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Status: Valid</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Only JSON files are supported.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to open file.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>JSON Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid JSON format.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Keys successfully loaded from JSON!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Trophy Key contains invalid hex or has odd length.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 contains invalid hex or has odd length.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>EditorDialog</name>
     <message>
         <source>Edit Keyboard + Mouse and Controller input bindings</source>
@@ -1784,6 +1964,10 @@ Select an emulator version from the right panel.</source>
         <source>Show Game Log</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Manage Cryptographic Keys</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SettingsDialog</name>
@@ -2150,14 +2334,6 @@ Select an emulator version from the right panel.</source>
     <message>
         <source>Guest Debug Markers:\nInserts any debug markers the game itself has added to the command buffer.\nIf you have this enabled, you should enable Crash Diagnostics.\nUseful for programs like RenderDoc.</source>
         <translation>Guest Debug Markers:\nInserts any debug markers the game itself has added to the command buffer.\nIf you have this enabled, you should enable Crash Diagnostics.\nUseful for programs like RenderDoc.</translation>
-    </message>
-    <message>
-        <source>Save Data Path:\nThe folder where game save data will be saved.</source>
-        <translation>Save Data Path:\nThe folder where game save data will be saved.</translation>
-    </message>
-    <message>
-        <source>Browse:\nBrowse for a folder to set as the save data path.</source>
-        <translation>Browse:\nBrowse for a folder to set as the save data path.</translation>
     </message>
     <message>
         <source>Set the volume of the background music.</source>
@@ -2604,15 +2780,23 @@ Select an emulator version from the right panel.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Home Path (Save and Trophy Data)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Select shadPS4 Home Path</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Select the system modules folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Home Folder Location (Saves, Inputs, Trophy Data)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Browse:\nBrowse for a folder to set as the home folder.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
