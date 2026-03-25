@@ -627,6 +627,191 @@
     </message>
   </context>
   <context>
+    <name>CryptoManagerDialog</name>
+    <message>
+      <source>Crypto Key Manager</source>
+      <translation>Gerenciador de Chaves Criptográficas</translation>
+    </message>
+    <message>
+      <source>Trophy Key: Used for trophy decryption.
+Must be a valid hex string with even length.</source>
+      <translation>Chave de Troféu: Usada para descriptografar troféus.
+Deve ser uma sequência hexadecimal válida com comprimento par.</translation>
+    </message>
+    <message>
+      <source>Enter Trophy Key</source>
+      <translation>Inserir Chave de Troféu</translation>
+    </message>
+    <message>
+      <source>Trophy Key:</source>
+      <translation>Chave de Troféu:</translation>
+    </message>
+    <message>
+      <source>Status: Not loaded</source>
+      <translation>Estado: Não carregado</translation>
+    </message>
+    <message>
+      <source>Trophy Key</source>
+      <translation>Chave de Troféu</translation>
+    </message>
+    <message>
+      <source>Enter %1</source>
+      <translation>Inserir %1</translation>
+    </message>
+    <message>
+      <source>Exponent1</source>
+      <translation>Expoente1</translation>
+    </message>
+    <message>
+      <source>Exponent2</source>
+      <translation>Expoente2</translation>
+    </message>
+    <message>
+      <source>Public Exponent</source>
+      <translation>Expoente Público</translation>
+    </message>
+    <message>
+      <source>Coefficient</source>
+      <translation>Coeficiente</translation>
+    </message>
+    <message>
+      <source>Modulus</source>
+      <translation>Módulo</translation>
+    </message>
+    <message>
+      <source>Prime 1</source>
+      <translation>Primo 1</translation>
+    </message>
+    <message>
+      <source>Prime 2</source>
+      <translation>Primo 2</translation>
+    </message>
+    <message>
+      <source>Private Exponent</source>
+      <translation>Expoente Privado</translation>
+    </message>
+    <message>
+      <source>Fake Keyset</source>
+      <translation>Conjunto de Chaves Falsas</translation>
+    </message>
+    <message>
+      <source>RSA key components for fake signing.
+All fields must be valid hex strings with even length.</source>
+      <translation>Componentes de chave RSA para assinatura falsa.
+Todos os campos devem ser strings hexadecimais válidas com comprimento par.</translation>
+    </message>
+    <message>
+      <source>Debug Rif Keyset</source>
+      <translation>Depurar Conjunto de Chaves Rif</translation>
+    </message>
+    <message>
+      <source>RSA key components for debug RIF files.
+All fields must be valid hex strings with even length.</source>
+      <translation>Componentes de chave RSA para depurar arquivos RIF.
+Todos os campos devem ser textos hexadecimais válidos com comprimento par.</translation>
+    </message>
+    <message>
+      <source>Pkg Derived Key3</source>
+      <translation>Chave3 Derivada do Pkg</translation>
+    </message>
+    <message>
+      <source>RSA key components for package decryption.
+All fields must be valid hex strings with even length.</source>
+      <translation>Componentes de chave RSA para pacotes de descriptografia.
+Todos os campos devem ser textos hexadecimais válidos com comprimento par.</translation>
+    </message>
+    <message>
+      <source>Load All Keys</source>
+      <translation>Carregar Todas as Chaves</translation>
+    </message>
+    <message>
+      <source>Save All Keys</source>
+      <translation>Salvar Todas as Chaves</translation>
+    </message>
+    <message>
+      <source>Close</source>
+      <translation>Fechar</translation>
+    </message>
+    <message>
+      <source>Warning</source>
+      <translation>Aviso</translation>
+    </message>
+    <message>
+      <source>No key file found or failed to load.
+Please enter your keys and save them.</source>
+      <translation>Nenhum arquivo de chaves encontrado ou falhou ao carregar.
+Por favor, digite suas chaves e salve-as.</translation>
+    </message>
+    <message>
+      <source>Validation Error</source>
+      <translation>Erro de Validação</translation>
+    </message>
+    <message>
+      <source>Success</source>
+      <translation>Sucesso</translation>
+    </message>
+    <message>
+      <source>Keys saved successfully!</source>
+      <translation>Chaves salvas com sucesso!</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation>Erro</translation>
+    </message>
+    <message>
+      <source>Failed to save keys!</source>
+      <translation>Falha ao salvar as chaves!</translation>
+    </message>
+    <message>
+      <source>Status: All fields empty</source>
+      <translation>Estado: Todos os campos vazios</translation>
+    </message>
+    <message>
+      <source>Status: Invalid hex values</source>
+      <translation>Estado: Valores hexadecimais inválidos</translation>
+    </message>
+    <message>
+      <source>Status: Incomplete</source>
+      <translation>Estado: Incompleto</translation>
+    </message>
+    <message>
+      <source>Status: Valid</source>
+      <translation>Estado: Válido</translation>
+    </message>
+    <message>
+      <source>Invalid File</source>
+      <translation>Arquivo Inválido</translation>
+    </message>
+    <message>
+      <source>Only JSON files are supported.</source>
+      <translation>Somente arquivos JSON são suportados.</translation>
+    </message>
+    <message>
+      <source>Unable to open file.</source>
+      <translation>Não foi possível abrir o arquivo.</translation>
+    </message>
+    <message>
+      <source>JSON Error</source>
+      <translation>Erro de JSON</translation>
+    </message>
+    <message>
+      <source>Invalid JSON format.</source>
+      <translation>Formato do JSON inválido.</translation>
+    </message>
+    <message>
+      <source>Keys successfully loaded from JSON!</source>
+      <translation>Chaves carregadas com sucesso do JSON!</translation>
+    </message>
+    <message>
+      <source>Trophy Key contains invalid hex or has odd length.</source>
+      <translation>A Chave do Troféu contém hexadecimal inválido ou possui comprimento ímpar.</translation>
+    </message>
+    <message>
+      <source>%1 contains invalid hex or has odd length.</source>
+      <translation>%1 contém hexadecimal inválido ou tem comprimento ímpar.</translation>
+    </message>
+  </context>
+  <context>
     <name>EditorDialog</name>
     <message>
       <source>Edit Keyboard + Mouse and Controller input bindings</source>
@@ -1792,6 +1977,10 @@ Selecione uma versão do emulador no painel direito.</translation>
       <source>Show Game Log</source>
       <translation>Mostrar Registro do Jogo</translation>
     </message>
+    <message>
+      <source>Manage Cryptographic Keys</source>
+      <translation>Gerenciar Chaves Criptográficas</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -2158,14 +2347,6 @@ Selecione uma versão do emulador no painel direito.</translation>
     <message>
       <source>Guest Debug Markers:\nInserts any debug markers the game itself has added to the command buffer.\nIf you have this enabled, you should enable Crash Diagnostics.\nUseful for programs like RenderDoc.</source>
       <translation>Marcadores de Depuração do Convidado:\nInsere quaisquer marcadores de depuração que o próprio jogo adicionou ao buffer de comando.\nSe isso estiver habilitado, ative os Diagnósticos de Falhas.\nÚtil para programas como o RenderDoc.</translation>
-    </message>
-    <message>
-      <source>Save Data Path:\nThe folder where game save data will be saved.</source>
-      <translation>Caminho dos Dados Salvos:\nA pasta que onde os dados de salvamento de jogo serão salvos.</translation>
-    </message>
-    <message>
-      <source>Browse:\nBrowse for a folder to set as the save data path.</source>
-      <translation>Procurar:\nProcure uma pasta para definir como o caminho para salvar dados.</translation>
     </message>
     <message>
       <source>Set the volume of the background music.</source>
@@ -2612,16 +2793,24 @@ Selecione uma versão do emulador no painel direito.</translation>
       <translation>Rigoroso</translation>
     </message>
     <message>
-      <source>Home Path (Save and Trophy Data)</source>
-      <translation>Pasta Raiz (Dados Salvos e Troféus)</translation>
-    </message>
-    <message>
       <source>Select shadPS4 Home Path</source>
       <translation>Selecione a Pasta Raiz do shadPS4</translation>
     </message>
     <message>
       <source>Select the system modules folder</source>
       <translation>Selecione a pasta dos módulos do sistema</translation>
+    </message>
+    <message>
+      <source>Home Folder Location (Saves, Inputs, Trophy Data)</source>
+      <translation>Local da Pasta Raiz (Dados de Jogos Salvos, Entradas, Troféis)</translation>
+    </message>
+    <message>
+      <source>Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</source>
+      <translation>Local da Pasta Raiz:\nA pasta onde os dados de jogos salvos, arquivos de troféu e configurações de entrada são armazenados para todos os usuários.</translation>
+    </message>
+    <message>
+      <source>Browse:\nBrowse for a folder to set as the home folder.</source>
+      <translation>Procurar:\nProcura uma pasta para definir como pasta raiz.</translation>
     </message>
   </context>
   <context>

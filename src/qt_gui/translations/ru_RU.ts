@@ -627,6 +627,191 @@
     </message>
   </context>
   <context>
+    <name>CryptoManagerDialog</name>
+    <message>
+      <source>Crypto Key Manager</source>
+      <translation>Менеджер криптоключей</translation>
+    </message>
+    <message>
+      <source>Trophy Key: Used for trophy decryption.
+Must be a valid hex string with even length.</source>
+      <translation>Ключ трофеев: используется для расшифровки трофеев.
+Должен представлять собой допустимую шестнадцатеричную строку четной длины.</translation>
+    </message>
+    <message>
+      <source>Enter Trophy Key</source>
+      <translation>Введите ключ трофея</translation>
+    </message>
+    <message>
+      <source>Trophy Key:</source>
+      <translation>Ключ трофеев:</translation>
+    </message>
+    <message>
+      <source>Status: Not loaded</source>
+      <translation>Статус: Не загружено</translation>
+    </message>
+    <message>
+      <source>Trophy Key</source>
+      <translation>Ключ трофеев</translation>
+    </message>
+    <message>
+      <source>Enter %1</source>
+      <translation>Ввод %1</translation>
+    </message>
+    <message>
+      <source>Exponent1</source>
+      <translation>Экспонента1</translation>
+    </message>
+    <message>
+      <source>Exponent2</source>
+      <translation>Экспонента2</translation>
+    </message>
+    <message>
+      <source>Public Exponent</source>
+      <translation>Открытая экспонента</translation>
+    </message>
+    <message>
+      <source>Coefficient</source>
+      <translation>Коэффициент</translation>
+    </message>
+    <message>
+      <source>Modulus</source>
+      <translation>Модуль</translation>
+    </message>
+    <message>
+      <source>Prime 1</source>
+      <translation>Простое число 1</translation>
+    </message>
+    <message>
+      <source>Prime 2</source>
+      <translation>Простое число 2</translation>
+    </message>
+    <message>
+      <source>Private Exponent</source>
+      <translation>Закрытая экспонента</translation>
+    </message>
+    <message>
+      <source>Fake Keyset</source>
+      <translation>Поддельный набор ключей</translation>
+    </message>
+    <message>
+      <source>RSA key components for fake signing.
+All fields must be valid hex strings with even length.</source>
+      <translation>Компоненты ключа RSA для поддельной подписи.
+Все поля должны быть допустимыми шестнадцатеричными строками четной длины.</translation>
+    </message>
+    <message>
+      <source>Debug Rif Keyset</source>
+      <translation>Набор ключей Debug Rif</translation>
+    </message>
+    <message>
+      <source>RSA key components for debug RIF files.
+All fields must be valid hex strings with even length.</source>
+      <translation>Компоненты ключа RSA для отладочных RIF-файлов.
+Все поля должны быть допустимыми шестнадцатеричными строками четной длины.</translation>
+    </message>
+    <message>
+      <source>Pkg Derived Key3</source>
+      <translation>Pkg Derived Key3</translation>
+    </message>
+    <message>
+      <source>RSA key components for package decryption.
+All fields must be valid hex strings with even length.</source>
+      <translation>Компоненты ключа RSA для расшифровки пакета.
+Все поля должны быть допустимыми шестнадцатеричными строками четной длины.</translation>
+    </message>
+    <message>
+      <source>Load All Keys</source>
+      <translation>Загрузить все ключи</translation>
+    </message>
+    <message>
+      <source>Save All Keys</source>
+      <translation>Сохранить все ключи</translation>
+    </message>
+    <message>
+      <source>Close</source>
+      <translation>Закрыть</translation>
+    </message>
+    <message>
+      <source>Warning</source>
+      <translation>Предупреждение</translation>
+    </message>
+    <message>
+      <source>No key file found or failed to load.
+Please enter your keys and save them.</source>
+      <translation>Файл ключа не найден или не удалось загрузить.
+Пожалуйста, введите ваши ключи и сохраните их.</translation>
+    </message>
+    <message>
+      <source>Validation Error</source>
+      <translation>Ошибка проверки</translation>
+    </message>
+    <message>
+      <source>Success</source>
+      <translation>Успех</translation>
+    </message>
+    <message>
+      <source>Keys saved successfully!</source>
+      <translation>Ключи успешно сохранены!</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation>Ошибка</translation>
+    </message>
+    <message>
+      <source>Failed to save keys!</source>
+      <translation>Не удалось сохранить ключи!</translation>
+    </message>
+    <message>
+      <source>Status: All fields empty</source>
+      <translation>Статус: Все поля пусты</translation>
+    </message>
+    <message>
+      <source>Status: Invalid hex values</source>
+      <translation>Статус: Недопустимые шестнадцатеричные значения</translation>
+    </message>
+    <message>
+      <source>Status: Incomplete</source>
+      <translation>Статус: Незавершено</translation>
+    </message>
+    <message>
+      <source>Status: Valid</source>
+      <translation>Статус: Действителен</translation>
+    </message>
+    <message>
+      <source>Invalid File</source>
+      <translation>Недействительный файл</translation>
+    </message>
+    <message>
+      <source>Only JSON files are supported.</source>
+      <translation>Поддерживаются только файлы JSON.</translation>
+    </message>
+    <message>
+      <source>Unable to open file.</source>
+      <translation>Не удалось открыть файл.</translation>
+    </message>
+    <message>
+      <source>JSON Error</source>
+      <translation>Ошибка JSON</translation>
+    </message>
+    <message>
+      <source>Invalid JSON format.</source>
+      <translation>Неверный формат JSON.</translation>
+    </message>
+    <message>
+      <source>Keys successfully loaded from JSON!</source>
+      <translation>Ключи успешно загружены из JSON!</translation>
+    </message>
+    <message>
+      <source>Trophy Key contains invalid hex or has odd length.</source>
+      <translation>Ключ трофеев содержит недопустимые шестнадцатеричные значения или имеет нечетную длину.</translation>
+    </message>
+    <message>
+      <source>%1 contains invalid hex or has odd length.</source>
+      <translation>%1 содержит недопустимое шестнадцатеричное значение или имеет нечетную длину.</translation>
+    </message>
+  </context>
+  <context>
     <name>EditorDialog</name>
     <message>
       <source>Edit Keyboard + Mouse and Controller input bindings</source>
@@ -1792,6 +1977,10 @@ Select an emulator version from the right panel.</source>
       <source>Show Game Log</source>
       <translation>Показать журнал игры</translation>
     </message>
+    <message>
+      <source>Manage Cryptographic Keys</source>
+      <translation>Управление криптографическими ключами</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -2158,14 +2347,6 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Guest Debug Markers:\nInserts any debug markers the game itself has added to the command buffer.\nIf you have this enabled, you should enable Crash Diagnostics.\nUseful for programs like RenderDoc.</source>
       <translation>Маркеры отладки гостя:\nДобавляет любые отладочные маркеры, добавленные самой игрой, в буфер команд.\nЕсли эта функция включена, вам следует включить Диагностику сбоев.\nПолезно для таких программ, как RenderDoc.</translation>
-    </message>
-    <message>
-      <source>Save Data Path:\nThe folder where game save data will be saved.</source>
-      <translation>Путь сохранений:\nПапка, в которой будут храниться сохранения игр.</translation>
-    </message>
-    <message>
-      <source>Browse:\nBrowse for a folder to set as the save data path.</source>
-      <translation>Обзор:\nНайдите папку, которую можно указать в качестве пути для сохранений.</translation>
     </message>
     <message>
       <source>Set the volume of the background music.</source>
@@ -2612,16 +2793,24 @@ Select an emulator version from the right panel.</source>
       <translation>Точный</translation>
     </message>
     <message>
-      <source>Home Path (Save and Trophy Data)</source>
-      <translation>Путь к домашней папке (сохранения и трофеи)</translation>
-    </message>
-    <message>
       <source>Select shadPS4 Home Path</source>
       <translation>Выберите путь к домашней папке shadPS4</translation>
     </message>
     <message>
       <source>Select the system modules folder</source>
       <translation>Выберите папку системных модулей</translation>
+    </message>
+    <message>
+      <source>Home Folder Location (Saves, Inputs, Trophy Data)</source>
+      <translation>Местоположение домашней папки (сохранения, входы, трофеи)</translation>
+    </message>
+    <message>
+      <source>Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</source>
+      <translation>Путь к домашней папке:\nПапка, в которой хранятся данные сохранений, файлы трофеев и конфигурации вводов для всех пользователей.</translation>
+    </message>
+    <message>
+      <source>Browse:\nBrowse for a folder to set as the home folder.</source>
+      <translation>Просмотр:\nВыберите папку, которую хотите установить в качестве домашней папки.</translation>
     </message>
   </context>
   <context>
