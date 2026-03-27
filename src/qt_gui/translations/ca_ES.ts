@@ -635,8 +635,8 @@
     <message>
       <source>Trophy Key: Used for trophy decryption.
 Must be a valid hex string with even length.</source>
-      <translation type="unfinished">Trophy Key: Used for trophy decryption.
-Must be a valid hex string with even length.</translation>
+      <translation>Clau de trofeus: Es fa servir per la descripció de trofeus.
+Ha de ser un valor hexadecimal amb una longitud parell.</translation>
     </message>
     <message>
       <source>Enter Trophy Key</source>
@@ -697,8 +697,8 @@ Must be a valid hex string with even length.</translation>
     <message>
       <source>RSA key components for fake signing.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for fake signing.
-All fields must be valid hex strings with even length.</translation>
+      <translation>Components de la clau RSA per signatures falses.
+Tots els camps han de tenir una cadena hexadecimal vàlida amb una longitud parell.</translation>
     </message>
     <message>
       <source>Debug Rif Keyset</source>
@@ -707,8 +707,8 @@ All fields must be valid hex strings with even length.</translation>
     <message>
       <source>RSA key components for debug RIF files.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for debug RIF files.
-All fields must be valid hex strings with even length.</translation>
+      <translation>Components de la clau RSA per depurar fitxers RIF.
+Tots els camps han de tenir una cadena hexadecimal vàlida amb una longitud parell.</translation>
     </message>
     <message>
       <source>Pkg Derived Key3</source>
@@ -717,8 +717,8 @@ All fields must be valid hex strings with even length.</translation>
     <message>
       <source>RSA key components for package decryption.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for package decryption.
-All fields must be valid hex strings with even length.</translation>
+      <translation>Components de la clau RSA pel desxifratge de paquets.
+Tots els camps han de tenir una cadena hexadecimal vàlida amb longitud parell.</translation>
     </message>
     <message>
       <source>Load All Keys</source>
@@ -739,8 +739,8 @@ All fields must be valid hex strings with even length.</translation>
     <message>
       <source>No key file found or failed to load.
 Please enter your keys and save them.</source>
-      <translation type="unfinished">No key file found or failed to load.
-Please enter your keys and save them.</translation>
+      <translation>No s'ha trobat el fitxer de claus o hi ha hagut un error en carregar.
+Si us plau, introdueix les teves claus per desar-les.</translation>
     </message>
     <message>
       <source>Validation Error</source>
@@ -2806,11 +2806,11 @@ Selecciona una versió del panell dret.</translation>
     </message>
     <message>
       <source>Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</source>
-      <translation type="unfinished">Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</translation>
+      <translation>Ubicació de la carpeta Home:\nLa carpeta on es desen les dades, fitxers de trofeus i la configuració d'entrada per tots els usuaris.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the home folder.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the home folder.</translation>
+      <translation>Navegador:\nNavega per una carpeta per escollir-la com a carpeta home.</translation>
     </message>
   </context>
   <context>
