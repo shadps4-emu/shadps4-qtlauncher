@@ -304,6 +304,10 @@ set(CORE src/core/file_format/elf.cpp
          src/core/emulator_state.h
          src/core/emulator_settings.cpp
          src/core/emulator_settings.h
+         src/core/user_manager.cpp
+         src/core/user_manager.h
+         src/core/user_settings.cpp
+         src/core/user_settings.h
 )
 
 set(INPUT src/input/input.cpp
@@ -386,6 +390,10 @@ set(QT_GUI src/qt_gui/about_dialog.cpp
            src/qt_gui/crypto_key_dialog.cpp
            src/qt_gui/crypto_key_dialog.h
            src/qt_gui/hex_plain_text_edit.h
+           src/qt_gui/user_manager_dialog.cpp
+           src/qt_gui/user_manager_dialog.h
+           src/qt_gui/table_item_delegate.cpp
+           src/qt_gui/table_item_delegate.h
            ${RESOURCE_FILES}
            ${TRANSLATIONS}
            ${UPDATER}

@@ -10,6 +10,7 @@
 #include "common/versions.h"
 #include "core/emulator_settings.h"
 #include "core/emulator_state.h"
+#include "core/user_settings.h"
 #include "qt_gui/game_install_dialog.h"
 #include "qt_gui/main_window.h"
 #ifdef _WIN32
@@ -39,6 +40,7 @@ int main(int argc, char* argv[]) {
     std::shared_ptr<EmulatorSettingsImpl> emu_settings = std::make_shared<EmulatorSettingsImpl>();
     emu_settings->Load();
     EmulatorSettingsImpl::SetInstance(emu_settings);
+    UserSettings.Load();
 
     std::shared_ptr<KeyManager> m_key_manager = std::make_shared<KeyManager>();
     KeyManager::SetInstance(m_key_manager); // initialize singleton instance

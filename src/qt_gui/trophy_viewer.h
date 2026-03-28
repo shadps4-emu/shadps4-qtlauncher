@@ -68,6 +68,7 @@ private:
     QDockWidget* trophyInfoDock;
     QPushButton* reopenButton;
     QVector<TrophyGameInfo> allTrophyGames_;
+    std::vector<std::string> npCommIds;
 
     std::string GetTrpType(const QChar trp_) {
         switch (trp_.toLatin1()) {

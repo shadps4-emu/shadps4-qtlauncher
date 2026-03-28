@@ -79,6 +79,7 @@ path = [
     "src/images/hotkey.png",
     "src/images/game_settings.png",
     "src/images/key.png",
+    "src/images/users.png",
     "src/shadps4.qrc",
     "src/shadps4.rc",
     "src/qt_gui/translations/update_translation.sh",
