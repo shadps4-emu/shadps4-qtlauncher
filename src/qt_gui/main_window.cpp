@@ -30,6 +30,7 @@
 #include "main_window.h"
 #include "settings_dialog.h"
 #include "skylander_dialog.h"
+#include "user_manager_dialog.h"
 
 MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
@@ -609,9 +610,9 @@ void MainWindow::CreateConnects() {
         hotkeyDialog->exec();
     });
 
-    connect(ui->keyManager, &QAction::triggered, this, [this]() {
-        auto keyDialog = new CryptoManagerDialog(this);
-        keyDialog->exec();
+    connect(ui->userManager, &QAction::triggered, this, [this]() {
+        auto userDialog = new UserManagerDialog(this);
+        userDialog->exec();
     });
 
     connect(ui->setIconSizeTinyAct, &QAction::triggered, this, [this]() {
@@ -1258,6 +1259,7 @@ void MainWindow::SetUiIcons(bool isWhite) {
     ui->dimensionsToypadAction->setIcon(RecolorIcon(ui->dimensionsToypadAction->icon(), isWhite));
     ui->configureAct->setIcon(RecolorIcon(ui->configureAct->icon(), isWhite));
     ui->keyManager->setIcon(RecolorIcon(ui->keyManager->icon(), isWhite));
+    ui->userManager->setIcon(RecolorIcon(ui->userManager->icon(), isWhite));
     ui->addElfFolderAct->setIcon(RecolorIcon(ui->addElfFolderAct->icon(), isWhite));
 }
 

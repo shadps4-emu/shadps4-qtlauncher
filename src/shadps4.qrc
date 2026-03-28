@@ -41,5 +41,6 @@
 	<file>images/hotkey.png</file>
 	<file>images/game_settings.png</file>
 	<file>images/key.png</file>
+	<file>images/users.png</file>
     </qresource>
 </RCC>
