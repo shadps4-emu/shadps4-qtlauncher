@@ -630,17 +630,17 @@
     <name>CryptoManagerDialog</name>
     <message>
       <source>Crypto Key Manager</source>
-      <translation type="unfinished">Crypto Key Manager</translation>
+      <translation>Administrador de claus de criptografia</translation>
     </message>
     <message>
       <source>Trophy Key: Used for trophy decryption.
 Must be a valid hex string with even length.</source>
-      <translation type="unfinished">Trophy Key: Used for trophy decryption.
-Must be a valid hex string with even length.</translation>
+      <translation>Clau de trofeus: Es fa servir per la descripció de trofeus.
+Ha de ser un valor hexadecimal amb una longitud parell.</translation>
     </message>
     <message>
       <source>Enter Trophy Key</source>
-      <translation type="unfinished">Enter Trophy Key</translation>
+      <translation>Introdueix una clau de trofeus</translation>
     </message>
     <message>
       <source>Trophy Key:</source>
@@ -648,7 +648,7 @@ Must be a valid hex string with even length.</translation>
     </message>
     <message>
       <source>Status: Not loaded</source>
-      <translation type="unfinished">Status: Not loaded</translation>
+      <translation>Estat: no carregat</translation>
     </message>
     <message>
       <source>Trophy Key</source>
@@ -656,19 +656,19 @@ Must be a valid hex string with even length.</translation>
     </message>
     <message>
       <source>Enter %1</source>
-      <translation type="unfinished">Enter %1</translation>
+      <translation>Nombre enter %1</translation>
     </message>
     <message>
       <source>Exponent1</source>
-      <translation type="unfinished">Exponent1</translation>
+      <translation>Exponent1</translation>
     </message>
     <message>
       <source>Exponent2</source>
-      <translation type="unfinished">Exponent2</translation>
+      <translation>Exponent2</translation>
     </message>
     <message>
       <source>Public Exponent</source>
-      <translation type="unfinished">Public Exponent</translation>
+      <translation>Exponent públic</translation>
     </message>
     <message>
       <source>Coefficient</source>
@@ -680,53 +680,53 @@ Must be a valid hex string with even length.</translation>
     </message>
     <message>
       <source>Prime 1</source>
-      <translation type="unfinished">Prime 1</translation>
+      <translation>Primer 1</translation>
     </message>
     <message>
       <source>Prime 2</source>
-      <translation type="unfinished">Prime 2</translation>
+      <translation>Primer 2</translation>
     </message>
     <message>
       <source>Private Exponent</source>
-      <translation type="unfinished">Private Exponent</translation>
+      <translation>Exponent privat</translation>
     </message>
     <message>
       <source>Fake Keyset</source>
-      <translation type="unfinished">Fake Keyset</translation>
+      <translation>Conjunt de claus falses</translation>
     </message>
     <message>
       <source>RSA key components for fake signing.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for fake signing.
-All fields must be valid hex strings with even length.</translation>
+      <translation>Components de la clau RSA per signatures falses.
+Tots els camps han de tenir una cadena hexadecimal vàlida amb una longitud parell.</translation>
     </message>
     <message>
       <source>Debug Rif Keyset</source>
-      <translation type="unfinished">Debug Rif Keyset</translation>
+      <translation>Depura un conjunt de claus Rif</translation>
     </message>
     <message>
       <source>RSA key components for debug RIF files.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for debug RIF files.
-All fields must be valid hex strings with even length.</translation>
+      <translation>Components de la clau RSA per depurar fitxers RIF.
+Tots els camps han de tenir una cadena hexadecimal vàlida amb una longitud parell.</translation>
     </message>
     <message>
       <source>Pkg Derived Key3</source>
-      <translation type="unfinished">Pkg Derived Key3</translation>
+      <translation>Pkg derivat Key3</translation>
     </message>
     <message>
       <source>RSA key components for package decryption.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for package decryption.
-All fields must be valid hex strings with even length.</translation>
+      <translation>Components de la clau RSA pel desxifratge de paquets.
+Tots els camps han de tenir una cadena hexadecimal vàlida amb longitud parell.</translation>
     </message>
     <message>
       <source>Load All Keys</source>
-      <translation type="unfinished">Load All Keys</translation>
+      <translation>Carrega totes les claus</translation>
     </message>
     <message>
       <source>Save All Keys</source>
-      <translation type="unfinished">Save All Keys</translation>
+      <translation>Desa totes les claus</translation>
     </message>
     <message>
       <source>Close</source>
@@ -739,8 +739,8 @@ All fields must be valid hex strings with even length.</translation>
     <message>
       <source>No key file found or failed to load.
 Please enter your keys and save them.</source>
-      <translation type="unfinished">No key file found or failed to load.
-Please enter your keys and save them.</translation>
+      <translation>No s'ha trobat el fitxer de claus o hi ha hagut un error en carregar.
+Si us plau, introdueix les teves claus per desar-les.</translation>
     </message>
     <message>
       <source>Validation Error</source>
@@ -752,7 +752,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Keys saved successfully!</source>
-      <translation type="unfinished">Keys saved successfully!</translation>
+      <translation>S'han desat les claus correctament!</translation>
     </message>
     <message>
       <source>Error</source>
@@ -760,19 +760,19 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Failed to save keys!</source>
-      <translation type="unfinished">Failed to save keys!</translation>
+      <translation>Error en desar les claus!</translation>
     </message>
     <message>
       <source>Status: All fields empty</source>
-      <translation type="unfinished">Status: All fields empty</translation>
+      <translation>Estat: Tots els camps buits</translation>
     </message>
     <message>
       <source>Status: Invalid hex values</source>
-      <translation type="unfinished">Status: Invalid hex values</translation>
+      <translation>Estat: Valors hexadecimals no vàlids</translation>
     </message>
     <message>
       <source>Status: Incomplete</source>
-      <translation type="unfinished">Status: Incomplete</translation>
+      <translation>Estat: incomplert</translation>
     </message>
     <message>
       <source>Status: Valid</source>
@@ -784,11 +784,11 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Only JSON files are supported.</source>
-      <translation type="unfinished">Only JSON files are supported.</translation>
+      <translation>Només se suporta els fitxers JSON.</translation>
     </message>
     <message>
       <source>Unable to open file.</source>
-      <translation type="unfinished">Unable to open file.</translation>
+      <translation>No s'ha pogut obrir el fitxer.</translation>
     </message>
     <message>
       <source>JSON Error</source>
@@ -796,19 +796,19 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Invalid JSON format.</source>
-      <translation type="unfinished">Invalid JSON format.</translation>
+      <translation>Format JSON no vàlid.</translation>
     </message>
     <message>
       <source>Keys successfully loaded from JSON!</source>
-      <translation type="unfinished">Keys successfully loaded from JSON!</translation>
+      <translation>Les claus s'han carregat correctament des del fitxer JSON!</translation>
     </message>
     <message>
       <source>Trophy Key contains invalid hex or has odd length.</source>
-      <translation type="unfinished">Trophy Key contains invalid hex or has odd length.</translation>
+      <translation>La clau de trofeus conté valors hexadecimals o té una longitud senar.</translation>
     </message>
     <message>
       <source>%1 contains invalid hex or has odd length.</source>
-      <translation type="unfinished">%1 contains invalid hex or has odd length.</translation>
+      <translation>%1 conté valors hexadecimals no vàlids o té una longitud senar.</translation>
     </message>
   </context>
   <context>
@@ -1979,7 +1979,7 @@ Selecciona una versió del panell dret.</translation>
     </message>
     <message>
       <source>Manage Cryptographic Keys</source>
-      <translation type="unfinished">Manage Cryptographic Keys</translation>
+      <translation>Administrador de claus criptogràfiques</translation>
     </message>
   </context>
   <context>
@@ -2802,15 +2802,15 @@ Selecciona una versió del panell dret.</translation>
     </message>
     <message>
       <source>Home Folder Location (Saves, Inputs, Trophy Data)</source>
-      <translation type="unfinished">Home Folder Location (Saves, Inputs, Trophy Data)</translation>
+      <translation>Ubicació de la carpeta Home (Desats, entrades i dades de trofeu)</translation>
     </message>
     <message>
       <source>Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</source>
-      <translation type="unfinished">Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</translation>
+      <translation>Ubicació de la carpeta Home:\nLa carpeta on es desen les dades, fitxers de trofeus i la configuració d'entrada per tots els usuaris.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the home folder.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the home folder.</translation>
+      <translation>Navegador:\nNavega per una carpeta per escollir-la com a carpeta home.</translation>
     </message>
   </context>
   <context>
