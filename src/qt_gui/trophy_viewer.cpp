@@ -483,13 +483,15 @@ void TrophyViewer::PopulateTrophyWidget(QString title) {
     QXmlStreamReader reader(&file);
     while (!reader.atEnd() && !reader.hasError()) {
         reader.readNext();
-
-        if (reader.name().toString() == "name" && !trpId.isEmpty()) {
-            trophyNames.append(reader.readElementText());
-        }
-
-        if (reader.name().toString() == "detail" && !trpId.isEmpty()) {
-            trophyDetails.append(reader.readElementText());
+        if (reader.isStartElement() && reader.name().toString() == "trophy") {
+            while (reader.readNextStartElement()) {
+                if (reader.name().toString() == "name" && !trpId.isEmpty()) {
+                    trophyNames.append(reader.readElementText());
+                }
+                if (reader.name().toString() == "detail" && !trpId.isEmpty()) {
+                    trophyDetails.append(reader.readElementText());
+                }
+            }
         }
     }
 
