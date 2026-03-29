@@ -1105,7 +1105,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Delete Trophy</source>
-      <translation>Удалить трофей</translation>
+      <translation>Удалить трофеи</translation>
     </message>
     <message>
       <source>Compatibility...</source>
