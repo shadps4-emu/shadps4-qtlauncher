@@ -630,185 +630,185 @@
     <name>CryptoManagerDialog</name>
     <message>
       <source>Crypto Key Manager</source>
-      <translation type="unfinished">Crypto Key Manager</translation>
+      <translation>Kryptonøkkel-behandler</translation>
     </message>
     <message>
       <source>Trophy Key: Used for trophy decryption.
 Must be a valid hex string with even length.</source>
-      <translation type="unfinished">Trophy Key: Used for trophy decryption.
-Must be a valid hex string with even length.</translation>
+      <translation>Trofénøkkel: Brukes for dekryptering av trofeer.
+Må være en gyldig sekskantede tekststreng med partallslengde.</translation>
     </message>
     <message>
       <source>Enter Trophy Key</source>
-      <translation type="unfinished">Enter Trophy Key</translation>
+      <translation>Skriv inn trofénøkkel</translation>
     </message>
     <message>
       <source>Trophy Key:</source>
-      <translation type="unfinished">Trophy Key:</translation>
+      <translation>Trofénøkkel:</translation>
     </message>
     <message>
       <source>Status: Not loaded</source>
-      <translation type="unfinished">Status: Not loaded</translation>
+      <translation>Status: Ikke lastet</translation>
     </message>
     <message>
       <source>Trophy Key</source>
-      <translation type="unfinished">Trophy Key</translation>
+      <translation>Trofénøkkel</translation>
     </message>
     <message>
       <source>Enter %1</source>
-      <translation type="unfinished">Enter %1</translation>
+      <translation>Skriv inn %1</translation>
     </message>
     <message>
       <source>Exponent1</source>
-      <translation type="unfinished">Exponent1</translation>
+      <translation>Eksponent 1</translation>
     </message>
     <message>
       <source>Exponent2</source>
-      <translation type="unfinished">Exponent2</translation>
+      <translation>Eksponent 2</translation>
     </message>
     <message>
       <source>Public Exponent</source>
-      <translation type="unfinished">Public Exponent</translation>
+      <translation>Offentlig eksponent</translation>
     </message>
     <message>
       <source>Coefficient</source>
-      <translation type="unfinished">Coefficient</translation>
+      <translation>Koeffisient</translation>
     </message>
     <message>
       <source>Modulus</source>
-      <translation type="unfinished">Modulus</translation>
+      <translation>Heltallsdivisjon</translation>
     </message>
     <message>
       <source>Prime 1</source>
-      <translation type="unfinished">Prime 1</translation>
+      <translation>Primtall 1</translation>
     </message>
     <message>
       <source>Prime 2</source>
-      <translation type="unfinished">Prime 2</translation>
+      <translation>Primtall 2</translation>
     </message>
     <message>
       <source>Private Exponent</source>
-      <translation type="unfinished">Private Exponent</translation>
+      <translation>Privat eksponent</translation>
     </message>
     <message>
       <source>Fake Keyset</source>
-      <translation type="unfinished">Fake Keyset</translation>
+      <translation>Falsk nøkkelsett</translation>
     </message>
     <message>
       <source>RSA key components for fake signing.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for fake signing.
-All fields must be valid hex strings with even length.</translation>
+      <translation>RSA-nøkkelkomponenter for falsk signering.
+Alle felt må være en gyldig sekskantede tekststreng med partallslengde.</translation>
     </message>
     <message>
       <source>Debug Rif Keyset</source>
-      <translation type="unfinished">Debug Rif Keyset</translation>
+      <translation>Feilsøking av Rif-nøkkelsett</translation>
     </message>
     <message>
       <source>RSA key components for debug RIF files.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for debug RIF files.
-All fields must be valid hex strings with even length.</translation>
+      <translation>RSA-nøkkelkomponenter for feilsøking av Rif-filer.
+Alle felt må være en gyldig sekskantede tekststreng med partallslengde.</translation>
     </message>
     <message>
       <source>Pkg Derived Key3</source>
-      <translation type="unfinished">Pkg Derived Key3</translation>
+      <translation>Pakkeavledet (pkg) nøkkel 3</translation>
     </message>
     <message>
       <source>RSA key components for package decryption.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for package decryption.
-All fields must be valid hex strings with even length.</translation>
+      <translation>RSA-nøkkelkomponenter for dekryptering av pakker.
+Alle felt må være en gyldig sekskantede tekststreng med partallslengde.</translation>
     </message>
     <message>
       <source>Load All Keys</source>
-      <translation type="unfinished">Load All Keys</translation>
+      <translation>Last alle nøkler</translation>
     </message>
     <message>
       <source>Save All Keys</source>
-      <translation type="unfinished">Save All Keys</translation>
+      <translation>Lagre alle nøkler</translation>
     </message>
     <message>
       <source>Close</source>
-      <translation type="unfinished">Close</translation>
+      <translation>Lukk</translation>
     </message>
     <message>
       <source>Warning</source>
-      <translation type="unfinished">Warning</translation>
+      <translation>Advarsel</translation>
     </message>
     <message>
       <source>No key file found or failed to load.
 Please enter your keys and save them.</source>
-      <translation type="unfinished">No key file found or failed to load.
-Please enter your keys and save them.</translation>
+      <translation>Klarte ikke laste nøkkelfila.
+Skriv inn nøklene og lagre dem.</translation>
     </message>
     <message>
       <source>Validation Error</source>
-      <translation type="unfinished">Validation Error</translation>
+      <translation>Feil ved validering</translation>
     </message>
     <message>
       <source>Success</source>
-      <translation type="unfinished">Success</translation>
+      <translation>Vellykket</translation>
     </message>
     <message>
       <source>Keys saved successfully!</source>
-      <translation type="unfinished">Keys saved successfully!</translation>
+      <translation>Lagret nøklene på vellykket vis!</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Feil</translation>
     </message>
     <message>
       <source>Failed to save keys!</source>
-      <translation type="unfinished">Failed to save keys!</translation>
+      <translation>Klarte ikke lagre nøklene.</translation>
     </message>
     <message>
       <source>Status: All fields empty</source>
-      <translation type="unfinished">Status: All fields empty</translation>
+      <translation>Status: Alle felt er tomme</translation>
     </message>
     <message>
       <source>Status: Invalid hex values</source>
-      <translation type="unfinished">Status: Invalid hex values</translation>
+      <translation>Status: Ugyldige sekskantede verdier</translation>
     </message>
     <message>
       <source>Status: Incomplete</source>
-      <translation type="unfinished">Status: Incomplete</translation>
+      <translation>Status: Ikke-fullført</translation>
     </message>
     <message>
       <source>Status: Valid</source>
-      <translation type="unfinished">Status: Valid</translation>
+      <translation>Status: Gyldig</translation>
     </message>
     <message>
       <source>Invalid File</source>
-      <translation type="unfinished">Invalid File</translation>
+      <translation>Ugyldig fil</translation>
     </message>
     <message>
       <source>Only JSON files are supported.</source>
-      <translation type="unfinished">Only JSON files are supported.</translation>
+      <translation>Støtter kun JSON-filer.</translation>
     </message>
     <message>
       <source>Unable to open file.</source>
-      <translation type="unfinished">Unable to open file.</translation>
+      <translation>Klarte ikke åpne fila.</translation>
     </message>
     <message>
       <source>JSON Error</source>
-      <translation type="unfinished">JSON Error</translation>
+      <translation>Feil ved JSON</translation>
     </message>
     <message>
       <source>Invalid JSON format.</source>
-      <translation type="unfinished">Invalid JSON format.</translation>
+      <translation>Ugyldig JSON-format.</translation>
     </message>
     <message>
       <source>Keys successfully loaded from JSON!</source>
-      <translation type="unfinished">Keys successfully loaded from JSON!</translation>
+      <translation>Lastet nøklene fra JSON-fila på vellykket vis!</translation>
     </message>
     <message>
       <source>Trophy Key contains invalid hex or has odd length.</source>
-      <translation type="unfinished">Trophy Key contains invalid hex or has odd length.</translation>
+      <translation>Trofénøkkelen inneholder ugyldig sekskantede tegn eller har oddetall lengde.</translation>
     </message>
     <message>
       <source>%1 contains invalid hex or has odd length.</source>
-      <translation type="unfinished">%1 contains invalid hex or has odd length.</translation>
+      <translation>%1 inneholder ugyldig sekskantede tegn eller har oddetall lengde.</translation>
     </message>
   </context>
   <context>
@@ -1290,6 +1290,26 @@ Please enter your keys and save them.</translation>
     <message>
       <source>Shader Cache</source>
       <translation>Skyggelegger hurtiglager</translation>
+    </message>
+    <message>
+      <source>User 1</source>
+      <translation>Bruker 1</translation>
+    </message>
+    <message>
+      <source>User 2</source>
+      <translation>Bruker 2</translation>
+    </message>
+    <message>
+      <source>User 3</source>
+      <translation>Bruker 3</translation>
+    </message>
+    <message>
+      <source>User 4</source>
+      <translation>Bruker 4</translation>
+    </message>
+    <message>
+      <source>This game has no save folder to open!</source>
+      <translation>Dette spillet har ingen lagret datamappe å åpne!</translation>
     </message>
   </context>
   <context>
@@ -1979,7 +1999,11 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Manage Cryptographic Keys</source>
-      <translation type="unfinished">Manage Cryptographic Keys</translation>
+      <translation>Håndter kryptografiske nøkler</translation>
+    </message>
+    <message>
+      <source>Manage Users</source>
+      <translation>Håndter brukere</translation>
     </message>
   </context>
   <context>
@@ -2670,7 +2694,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the sysmodules path.</source>
-      <translation>Endre mappe:\nBla gjennom for å finne mappa til systemmodulene.</translation>
+      <translation>Endre mappe:\nLet etter ei mappe for å angi den som stien for systemmoduler.</translation>
     </message>
     <message>
       <source>Vulkan Validation (Requires Vulkan SDK)</source>
@@ -2794,23 +2818,23 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Select shadPS4 Home Path</source>
-      <translation type="unfinished">Select shadPS4 Home Path</translation>
+      <translation>Velg hjemmesti for shadPS4</translation>
     </message>
     <message>
       <source>Select the system modules folder</source>
-      <translation type="unfinished">Select the system modules folder</translation>
+      <translation>Velg sti for systemmoduler</translation>
     </message>
     <message>
       <source>Home Folder Location (Saves, Inputs, Trophy Data)</source>
-      <translation type="unfinished">Home Folder Location (Saves, Inputs, Trophy Data)</translation>
+      <translation>Hjemmemappe-plassering (lagret spilldata, inndata og trofédata)</translation>
     </message>
     <message>
       <source>Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</source>
-      <translation type="unfinished">Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</translation>
+      <translation>Hjemmemappe-plassering\nMappa hvor lagret spilldata, troféfiler og inndataoppsett lagres for alle brukere.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the home folder.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the home folder.</translation>
+      <translation>Endre mappe:\nLet etter ei mappe for å angi den som stien for hjemmemappe.</translation>
     </message>
   </context>
   <context>
@@ -2857,6 +2881,105 @@ Velg en emulatorversjon fra høyre panel.</translation>
     <message>
       <source>Show Hidden Trophies</source>
       <translation>Vis skjulte trofeer</translation>
+    </message>
+  </context>
+  <context>
+    <name>UserManagerDialog</name>
+    <message>
+      <source>User Manager</source>
+      <translation>Brukerbehandler</translation>
+    </message>
+    <message>
+      <source>&amp;Create User</source>
+      <translation>&amp;Opprett bruker</translation>
+    </message>
+    <message>
+      <source>&amp;Delete User</source>
+      <translation>&amp;Slett bruker</translation>
+    </message>
+    <message>
+      <source>&amp;Rename User</source>
+      <translation>&amp;Gi brukeren nytt navn</translation>
+    </message>
+    <message>
+      <source>&amp;Set Default User</source>
+      <translation>&amp;Sett som standardbruker</translation>
+    </message>
+    <message>
+      <source>&amp;Set Color</source>
+      <translation>&amp;Velg farge</translation>
+    </message>
+    <message>
+      <source>&amp;Set Controller Port</source>
+      <translation>&amp;Velg kontroller-port</translation>
+    </message>
+    <message>
+      <source>&amp;Close</source>
+      <translation>&amp;Lukk</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation>Feil</translation>
+    </message>
+    <message>
+      <source>Cannot add more users.</source>
+      <translation>Klarte ikke legge til flere brukere.</translation>
+    </message>
+    <message>
+      <source>Create New User</source>
+      <translation>Opprett ny bruker</translation>
+    </message>
+    <message>
+      <source>New User ID: %1</source>
+      <translation>Ny bruker-ID: %1</translation>
+    </message>
+    <message>
+      <source>Username (3–16 chars, letters, numbers, _, -)</source>
+      <translation>Brukernavn (3-16 tegn, bokstaver, tall, _, -)</translation>
+    </message>
+    <message>
+      <source>Invalid Username</source>
+      <translation>Ugyldig brukernavn</translation>
+    </message>
+    <message>
+      <source>Username must be 3–16 chars and valid.</source>
+      <translation>Brukernavn må være mellom 3-16 tegn og gyldig.</translation>
+    </message>
+    <message>
+      <source>Delete Confirmation</source>
+      <translation>Bekreftelse for sletting</translation>
+    </message>
+    <message>
+      <source>Delete user ID %1?</source>
+      <translation>Slett bruker-ID %1?</translation>
+    </message>
+    <message>
+      <source>Rename User</source>
+      <translation>Gi brukeren nytt navn</translation>
+    </message>
+    <message>
+      <source>Old Username: %1</source>
+      <translation>Gammelt brukernavn: %1</translation>
+    </message>
+    <message>
+      <source>Set User Color</source>
+      <translation>Velg brukerfarge</translation>
+    </message>
+    <message>
+      <source>Select color:</source>
+      <translation>Velg farge:</translation>
+    </message>
+    <message>
+      <source>Set Controller Port</source>
+      <translation>Velg kontroller-port</translation>
+    </message>
+    <message>
+      <source>Assign port (1-4) to this user:</source>
+      <translation>Gi port (1-4) til denne brukeren:</translation>
+    </message>
+    <message>
+      <source>&amp;Open User Directory</source>
+      <translation>&amp;Åpne brukermappe</translation>
     </message>
   </context>
   <context>

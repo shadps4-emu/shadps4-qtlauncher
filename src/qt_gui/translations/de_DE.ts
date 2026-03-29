@@ -1290,6 +1290,26 @@ Bitte gib die Schlüssel ein und speicher diese.</translation>
       <source>Shader Cache</source>
       <translation>Shader Cache</translation>
     </message>
+    <message>
+      <source>User 1</source>
+      <translation>Benutzer 1</translation>
+    </message>
+    <message>
+      <source>User 2</source>
+      <translation>Benutzer 2</translation>
+    </message>
+    <message>
+      <source>User 3</source>
+      <translation>Benutzer 3</translation>
+    </message>
+    <message>
+      <source>User 4</source>
+      <translation>Benutzer 4</translation>
+    </message>
+    <message>
+      <source>This game has no save folder to open!</source>
+      <translation>Dieses Spiel hat keinen Speicherdaten-Ordner zum Öffnen!</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -1979,6 +1999,10 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
     <message>
       <source>Manage Cryptographic Keys</source>
       <translation>Kryptografische Schlüssel verwalten</translation>
+    </message>
+    <message>
+      <source>Manage Users</source>
+      <translation>Benutzer verwalten</translation>
     </message>
   </context>
   <context>
@@ -2860,6 +2884,105 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
     <message>
       <source>Show Hidden Trophies</source>
       <translation>Verborgene Trophäen anzeigen</translation>
+    </message>
+  </context>
+  <context>
+    <name>UserManagerDialog</name>
+    <message>
+      <source>User Manager</source>
+      <translation>Benutzerverwaltung</translation>
+    </message>
+    <message>
+      <source>&amp;Create User</source>
+      <translation>&amp;Benutzer erstellen</translation>
+    </message>
+    <message>
+      <source>&amp;Delete User</source>
+      <translation>&amp;Benutzer löschen</translation>
+    </message>
+    <message>
+      <source>&amp;Rename User</source>
+      <translation>&amp;Benutzer umbenennen</translation>
+    </message>
+    <message>
+      <source>&amp;Set Default User</source>
+      <translation>&amp;Standardbenutzer festlegen</translation>
+    </message>
+    <message>
+      <source>&amp;Set Color</source>
+      <translation>&amp;Farbe festlegen</translation>
+    </message>
+    <message>
+      <source>&amp;Set Controller Port</source>
+      <translation>&amp;Controlleranschluss festlegen</translation>
+    </message>
+    <message>
+      <source>&amp;Close</source>
+      <translation>&amp;Schließen</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation>Fehler</translation>
+    </message>
+    <message>
+      <source>Cannot add more users.</source>
+      <translation>Es kann kein weiterer Benutzer erstellt werden.</translation>
+    </message>
+    <message>
+      <source>Create New User</source>
+      <translation>Neuen Benutzer erstellen</translation>
+    </message>
+    <message>
+      <source>New User ID: %1</source>
+      <translation>Neuer Benutzer ID: %1</translation>
+    </message>
+    <message>
+      <source>Username (3–16 chars, letters, numbers, _, -)</source>
+      <translation>Benutzername (3-16 Zeichen, Buchstaben, Zahlen, _, -)</translation>
+    </message>
+    <message>
+      <source>Invalid Username</source>
+      <translation>Ungültiger Benutzername</translation>
+    </message>
+    <message>
+      <source>Username must be 3–16 chars and valid.</source>
+      <translation>Benutzername muss 3-16 Zeichen beinhalten und gültig sein.</translation>
+    </message>
+    <message>
+      <source>Delete Confirmation</source>
+      <translation>Löschbestätigung</translation>
+    </message>
+    <message>
+      <source>Delete user ID %1?</source>
+      <translation>Benutzer ID %1 löschen?</translation>
+    </message>
+    <message>
+      <source>Rename User</source>
+      <translation>Beutzer umbenennen</translation>
+    </message>
+    <message>
+      <source>Old Username: %1</source>
+      <translation>Alter Benutzername: %1</translation>
+    </message>
+    <message>
+      <source>Set User Color</source>
+      <translation>Farbe für Benutzer festlegen</translation>
+    </message>
+    <message>
+      <source>Select color:</source>
+      <translation>Farbe auswählen:</translation>
+    </message>
+    <message>
+      <source>Set Controller Port</source>
+      <translation>Controlleranschluss festlegen</translation>
+    </message>
+    <message>
+      <source>Assign port (1-4) to this user:</source>
+      <translation>Weise einen Anschluss (1-4) zu diesem Benutzer zu:</translation>
+    </message>
+    <message>
+      <source>&amp;Open User Directory</source>
+      <translation>&amp;Benutzerverzeichnis öffnen</translation>
     </message>
   </context>
   <context>

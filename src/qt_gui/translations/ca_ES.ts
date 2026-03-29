@@ -1291,6 +1291,26 @@ Si us plau, introdueix les teves claus per desar-les.</translation>
       <source>Shader Cache</source>
       <translation>Memòria cau de shaders</translation>
     </message>
+    <message>
+      <source>User 1</source>
+      <translation>Usuari 1</translation>
+    </message>
+    <message>
+      <source>User 2</source>
+      <translation>Usuari 2</translation>
+    </message>
+    <message>
+      <source>User 3</source>
+      <translation>Usuari 3</translation>
+    </message>
+    <message>
+      <source>User 4</source>
+      <translation>Usuari 4</translation>
+    </message>
+    <message>
+      <source>This game has no save folder to open!</source>
+      <translation type="unfinished">This game has no save folder to open!</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -1980,6 +2000,10 @@ Selecciona una versió del panell dret.</translation>
     <message>
       <source>Manage Cryptographic Keys</source>
       <translation>Administrador de claus criptogràfiques</translation>
+    </message>
+    <message>
+      <source>Manage Users</source>
+      <translation>Gestiona els usuaris</translation>
     </message>
   </context>
   <context>
@@ -2857,6 +2881,105 @@ Selecciona una versió del panell dret.</translation>
     <message>
       <source>Show Hidden Trophies</source>
       <translation>Mostra els trofeus ocults</translation>
+    </message>
+  </context>
+  <context>
+    <name>UserManagerDialog</name>
+    <message>
+      <source>User Manager</source>
+      <translation>Administrador d'usuaris</translation>
+    </message>
+    <message>
+      <source>&amp;Create User</source>
+      <translation>Creació d'usuari</translation>
+    </message>
+    <message>
+      <source>&amp;Delete User</source>
+      <translation>Suprimeix l'usuari</translation>
+    </message>
+    <message>
+      <source>&amp;Rename User</source>
+      <translation>Reanomena l'usuari</translation>
+    </message>
+    <message>
+      <source>&amp;Set Default User</source>
+      <translation>&amp;Estableix l'usuari per defecte</translation>
+    </message>
+    <message>
+      <source>&amp;Set Color</source>
+      <translation>Estableix el color</translation>
+    </message>
+    <message>
+      <source>&amp;Set Controller Port</source>
+      <translation type="unfinished">&amp;Set Controller Port</translation>
+    </message>
+    <message>
+      <source>&amp;Close</source>
+      <translation>&amp;Tanca</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation>Error</translation>
+    </message>
+    <message>
+      <source>Cannot add more users.</source>
+      <translation type="unfinished">Cannot add more users.</translation>
+    </message>
+    <message>
+      <source>Create New User</source>
+      <translation>Crea un nou usuari</translation>
+    </message>
+    <message>
+      <source>New User ID: %1</source>
+      <translation>Nou ID d'usuari: %1</translation>
+    </message>
+    <message>
+      <source>Username (3–16 chars, letters, numbers, _, -)</source>
+      <translation type="unfinished">Username (3–16 chars, letters, numbers, _, -)</translation>
+    </message>
+    <message>
+      <source>Invalid Username</source>
+      <translation>Nom d'usuari incorrecte</translation>
+    </message>
+    <message>
+      <source>Username must be 3–16 chars and valid.</source>
+      <translation type="unfinished">Username must be 3–16 chars and valid.</translation>
+    </message>
+    <message>
+      <source>Delete Confirmation</source>
+      <translation type="unfinished">Delete Confirmation</translation>
+    </message>
+    <message>
+      <source>Delete user ID %1?</source>
+      <translation type="unfinished">Delete user ID %1?</translation>
+    </message>
+    <message>
+      <source>Rename User</source>
+      <translation>Reanomena l'usuari</translation>
+    </message>
+    <message>
+      <source>Old Username: %1</source>
+      <translation>Nom d'usuari anterior: %1</translation>
+    </message>
+    <message>
+      <source>Set User Color</source>
+      <translation>Selecciona el color d'usuari</translation>
+    </message>
+    <message>
+      <source>Select color:</source>
+      <translation>Seleccioneu el color:</translation>
+    </message>
+    <message>
+      <source>Set Controller Port</source>
+      <translation type="unfinished">Set Controller Port</translation>
+    </message>
+    <message>
+      <source>Assign port (1-4) to this user:</source>
+      <translation type="unfinished">Assign port (1-4) to this user:</translation>
+    </message>
+    <message>
+      <source>&amp;Open User Directory</source>
+      <translation type="unfinished">&amp;Open User Directory</translation>
     </message>
   </context>
   <context>

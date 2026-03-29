@@ -1291,6 +1291,26 @@ Please enter your keys and save them.</source>
       <source>Shader Cache</source>
       <translation>Кэш шейдеров</translation>
     </message>
+    <message>
+      <source>User 1</source>
+      <translation>Пользователь 1</translation>
+    </message>
+    <message>
+      <source>User 2</source>
+      <translation>Пользователь 2</translation>
+    </message>
+    <message>
+      <source>User 3</source>
+      <translation>Пользователь 3</translation>
+    </message>
+    <message>
+      <source>User 4</source>
+      <translation>Пользователь 4</translation>
+    </message>
+    <message>
+      <source>This game has no save folder to open!</source>
+      <translation>У этой игры нет папки сохранений, которую можно открыть!</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -1980,6 +2000,10 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Manage Cryptographic Keys</source>
       <translation>Управление криптографическими ключами</translation>
+    </message>
+    <message>
+      <source>Manage Users</source>
+      <translation>Управление пользователями</translation>
     </message>
   </context>
   <context>
@@ -2857,6 +2881,105 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Show Hidden Trophies</source>
       <translation>Показать скрытые трофеи</translation>
+    </message>
+  </context>
+  <context>
+    <name>UserManagerDialog</name>
+    <message>
+      <source>User Manager</source>
+      <translation>Менеджер пользователей</translation>
+    </message>
+    <message>
+      <source>&amp;Create User</source>
+      <translation>&amp;Создать пользователя</translation>
+    </message>
+    <message>
+      <source>&amp;Delete User</source>
+      <translation>&amp;Удалить пользователя</translation>
+    </message>
+    <message>
+      <source>&amp;Rename User</source>
+      <translation>&amp;Переименовать пользователя</translation>
+    </message>
+    <message>
+      <source>&amp;Set Default User</source>
+      <translation>&amp;Установить пользователя по умолчанию</translation>
+    </message>
+    <message>
+      <source>&amp;Set Color</source>
+      <translation>&amp;Установить цвет</translation>
+    </message>
+    <message>
+      <source>&amp;Set Controller Port</source>
+      <translation>&amp;Установить порт контроллера</translation>
+    </message>
+    <message>
+      <source>&amp;Close</source>
+      <translation>&amp;Закрыть</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation>Ошибка</translation>
+    </message>
+    <message>
+      <source>Cannot add more users.</source>
+      <translation>Невозможно добавить новых пользователей.</translation>
+    </message>
+    <message>
+      <source>Create New User</source>
+      <translation>Создать нового пользователя</translation>
+    </message>
+    <message>
+      <source>New User ID: %1</source>
+      <translation>ID нового пользователя: %1</translation>
+    </message>
+    <message>
+      <source>Username (3–16 chars, letters, numbers, _, -)</source>
+      <translation>Имя пользователя (3–16 символов, буквы, цифры, _, -)</translation>
+    </message>
+    <message>
+      <source>Invalid Username</source>
+      <translation>Неверное имя пользователя</translation>
+    </message>
+    <message>
+      <source>Username must be 3–16 chars and valid.</source>
+      <translation>Имя пользователя должно состоять из 3–16 символов и быть действительным.</translation>
+    </message>
+    <message>
+      <source>Delete Confirmation</source>
+      <translation>Подтверждение удаления</translation>
+    </message>
+    <message>
+      <source>Delete user ID %1?</source>
+      <translation>Удалить пользователя с ID %1?</translation>
+    </message>
+    <message>
+      <source>Rename User</source>
+      <translation>Переименовать пользователя</translation>
+    </message>
+    <message>
+      <source>Old Username: %1</source>
+      <translation>Старое имя пользователя: %1</translation>
+    </message>
+    <message>
+      <source>Set User Color</source>
+      <translation>Установить цвет пользователя</translation>
+    </message>
+    <message>
+      <source>Select color:</source>
+      <translation>Выберите цвет:</translation>
+    </message>
+    <message>
+      <source>Set Controller Port</source>
+      <translation>Установить порт контроллера</translation>
+    </message>
+    <message>
+      <source>Assign port (1-4) to this user:</source>
+      <translation>Назначьте этому пользователю порт (1-4):</translation>
+    </message>
+    <message>
+      <source>&amp;Open User Directory</source>
+      <translation>&amp;Открыть каталог пользователей</translation>
     </message>
   </context>
   <context>
