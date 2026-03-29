@@ -1284,6 +1284,26 @@ Please enter your keys and save them.</source>
         <source>Shader Cache</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>User 1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>User 2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>User 3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>User 4</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This game has no save folder to open!</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>HelpDialog</name>
@@ -1966,6 +1986,10 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
         <source>Manage Cryptographic Keys</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Manage Users</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2843,6 +2867,105 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
         <source>Show Hidden Trophies</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>UserManagerDialog</name>
+    <message>
+        <source>User Manager</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Create User</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Delete User</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Rename User</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Set Default User</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Set Color</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Set Controller Port</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Close</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation type="unfinished">Error</translation>
+    </message>
+    <message>
+        <source>Cannot add more users.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Create New User</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New User ID: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Username (3–16 chars, letters, numbers, _, -)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid Username</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Username must be 3–16 chars and valid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Delete Confirmation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Delete user ID %1?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rename User</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Old Username: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Set User Color</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select color:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Set Controller Port</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Assign port (1-4) to this user:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Open User Directory</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
