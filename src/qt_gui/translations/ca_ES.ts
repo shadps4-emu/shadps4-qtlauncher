@@ -1293,19 +1293,19 @@ Si us plau, introdueix les teves claus per desar-les.</translation>
     </message>
     <message>
       <source>User 1</source>
-      <translation type="unfinished">User 1</translation>
+      <translation>Usuari 1</translation>
     </message>
     <message>
       <source>User 2</source>
-      <translation type="unfinished">User 2</translation>
+      <translation>Usuari 2</translation>
     </message>
     <message>
       <source>User 3</source>
-      <translation type="unfinished">User 3</translation>
+      <translation>Usuari 3</translation>
     </message>
     <message>
       <source>User 4</source>
-      <translation type="unfinished">User 4</translation>
+      <translation>Usuari 4</translation>
     </message>
     <message>
       <source>This game has no save folder to open!</source>
@@ -2003,7 +2003,7 @@ Selecciona una versió del panell dret.</translation>
     </message>
     <message>
       <source>Manage Users</source>
-      <translation type="unfinished">Manage Users</translation>
+      <translation>Gestiona els usuaris</translation>
     </message>
   </context>
   <context>
@@ -2887,27 +2887,27 @@ Selecciona una versió del panell dret.</translation>
     <name>UserManagerDialog</name>
     <message>
       <source>User Manager</source>
-      <translation type="unfinished">User Manager</translation>
+      <translation>Administrador d'usuaris</translation>
     </message>
     <message>
       <source>&amp;Create User</source>
-      <translation type="unfinished">&amp;Create User</translation>
+      <translation>Creació d'usuari</translation>
     </message>
     <message>
       <source>&amp;Delete User</source>
-      <translation type="unfinished">&amp;Delete User</translation>
+      <translation>Suprimeix l'usuari</translation>
     </message>
     <message>
       <source>&amp;Rename User</source>
-      <translation type="unfinished">&amp;Rename User</translation>
+      <translation>Reanomena l'usuari</translation>
     </message>
     <message>
       <source>&amp;Set Default User</source>
-      <translation type="unfinished">&amp;Set Default User</translation>
+      <translation>&amp;Estableix l'usuari per defecte</translation>
     </message>
     <message>
       <source>&amp;Set Color</source>
-      <translation type="unfinished">&amp;Set Color</translation>
+      <translation>Estableix el color</translation>
     </message>
     <message>
       <source>&amp;Set Controller Port</source>
@@ -2915,11 +2915,11 @@ Selecciona una versió del panell dret.</translation>
     </message>
     <message>
       <source>&amp;Close</source>
-      <translation type="unfinished">&amp;Close</translation>
+      <translation>&amp;Tanca</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Error</translation>
     </message>
     <message>
       <source>Cannot add more users.</source>
@@ -2927,11 +2927,11 @@ Selecciona una versió del panell dret.</translation>
     </message>
     <message>
       <source>Create New User</source>
-      <translation type="unfinished">Create New User</translation>
+      <translation>Crea un nou usuari</translation>
     </message>
     <message>
       <source>New User ID: %1</source>
-      <translation type="unfinished">New User ID: %1</translation>
+      <translation>Nou ID d'usuari: %1</translation>
     </message>
     <message>
       <source>Username (3–16 chars, letters, numbers, _, -)</source>
@@ -2939,7 +2939,7 @@ Selecciona una versió del panell dret.</translation>
     </message>
     <message>
       <source>Invalid Username</source>
-      <translation type="unfinished">Invalid Username</translation>
+      <translation>Nom d'usuari incorrecte</translation>
     </message>
     <message>
       <source>Username must be 3–16 chars and valid.</source>
@@ -2955,19 +2955,19 @@ Selecciona una versió del panell dret.</translation>
     </message>
     <message>
       <source>Rename User</source>
-      <translation type="unfinished">Rename User</translation>
+      <translation>Reanomena l'usuari</translation>
     </message>
     <message>
       <source>Old Username: %1</source>
-      <translation type="unfinished">Old Username: %1</translation>
+      <translation>Nom d'usuari anterior: %1</translation>
     </message>
     <message>
       <source>Set User Color</source>
-      <translation type="unfinished">Set User Color</translation>
+      <translation>Selecciona el color d'usuari</translation>
     </message>
     <message>
       <source>Select color:</source>
-      <translation type="unfinished">Select color:</translation>
+      <translation>Seleccioneu el color:</translation>
     </message>
     <message>
       <source>Set Controller Port</source>
