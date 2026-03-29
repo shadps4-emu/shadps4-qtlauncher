@@ -630,185 +630,185 @@
     <name>CryptoManagerDialog</name>
     <message>
       <source>Crypto Key Manager</source>
-      <translation type="unfinished">Crypto Key Manager</translation>
+      <translation>Gestor de claves criptográficas</translation>
     </message>
     <message>
       <source>Trophy Key: Used for trophy decryption.
 Must be a valid hex string with even length.</source>
-      <translation type="unfinished">Trophy Key: Used for trophy decryption.
-Must be a valid hex string with even length.</translation>
+      <translation>Clave de trofeos:\nNecesaria para descifrar los trofeos.
+Debe ser una cadena hexadecimal válida con longitud par.</translation>
     </message>
     <message>
       <source>Enter Trophy Key</source>
-      <translation type="unfinished">Enter Trophy Key</translation>
+      <translation>Introducir clave de trofeos</translation>
     </message>
     <message>
       <source>Trophy Key:</source>
-      <translation type="unfinished">Trophy Key:</translation>
+      <translation>Clave de trofeos:</translation>
     </message>
     <message>
       <source>Status: Not loaded</source>
-      <translation type="unfinished">Status: Not loaded</translation>
+      <translation>Estado: sin cargar</translation>
     </message>
     <message>
       <source>Trophy Key</source>
-      <translation type="unfinished">Trophy Key</translation>
+      <translation>Clave de trofeos</translation>
     </message>
     <message>
       <source>Enter %1</source>
-      <translation type="unfinished">Enter %1</translation>
+      <translation>Introducir %1</translation>
     </message>
     <message>
       <source>Exponent1</source>
-      <translation type="unfinished">Exponent1</translation>
+      <translation>Exponente1</translation>
     </message>
     <message>
       <source>Exponent2</source>
-      <translation type="unfinished">Exponent2</translation>
+      <translation>Exponente2</translation>
     </message>
     <message>
       <source>Public Exponent</source>
-      <translation type="unfinished">Public Exponent</translation>
+      <translation>Exponente público</translation>
     </message>
     <message>
       <source>Coefficient</source>
-      <translation type="unfinished">Coefficient</translation>
+      <translation>Coeficiente</translation>
     </message>
     <message>
       <source>Modulus</source>
-      <translation type="unfinished">Modulus</translation>
+      <translation>Módulo</translation>
     </message>
     <message>
       <source>Prime 1</source>
-      <translation type="unfinished">Prime 1</translation>
+      <translation>Primo 1</translation>
     </message>
     <message>
       <source>Prime 2</source>
-      <translation type="unfinished">Prime 2</translation>
+      <translation>Primo 2</translation>
     </message>
     <message>
       <source>Private Exponent</source>
-      <translation type="unfinished">Private Exponent</translation>
+      <translation>Exponente privado</translation>
     </message>
     <message>
       <source>Fake Keyset</source>
-      <translation type="unfinished">Fake Keyset</translation>
+      <translation>Conjunto de claves falsas</translation>
     </message>
     <message>
       <source>RSA key components for fake signing.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for fake signing.
-All fields must be valid hex strings with even length.</translation>
+      <translation>Los componentes de claves RSA para generar firmas falsas.
+Todos los campos deben contener cadenas hexadecimales válidas con longitud par.</translation>
     </message>
     <message>
       <source>Debug Rif Keyset</source>
-      <translation type="unfinished">Debug Rif Keyset</translation>
+      <translation>Conjunto de claves Rif de depuración</translation>
     </message>
     <message>
       <source>RSA key components for debug RIF files.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for debug RIF files.
-All fields must be valid hex strings with even length.</translation>
+      <translation>Los componentes de claves RSA para los archivos RIF de depuración.
+Todos los campos deben contener cadenas hexadecimales válidas con longitud par.</translation>
     </message>
     <message>
       <source>Pkg Derived Key3</source>
-      <translation type="unfinished">Pkg Derived Key3</translation>
+      <translation>Key3 derivada de Pkg</translation>
     </message>
     <message>
       <source>RSA key components for package decryption.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for package decryption.
-All fields must be valid hex strings with even length.</translation>
+      <translation>Los componentes de claves RSA para descifrar paquetes.
+Todos los campos deben contener cadenas hexadecimales válidas con longitud par.</translation>
     </message>
     <message>
       <source>Load All Keys</source>
-      <translation type="unfinished">Load All Keys</translation>
+      <translation>Cargar todas las claves</translation>
     </message>
     <message>
       <source>Save All Keys</source>
-      <translation type="unfinished">Save All Keys</translation>
+      <translation>Guardar todas las claves</translation>
     </message>
     <message>
       <source>Close</source>
-      <translation type="unfinished">Close</translation>
+      <translation>Cerrar</translation>
     </message>
     <message>
       <source>Warning</source>
-      <translation type="unfinished">Warning</translation>
+      <translation>Advertencia</translation>
     </message>
     <message>
       <source>No key file found or failed to load.
 Please enter your keys and save them.</source>
-      <translation type="unfinished">No key file found or failed to load.
-Please enter your keys and save them.</translation>
+      <translation>No se ha encontrado el archivo de claves o no se ha podido cargar.
+Debes introducir tus claves y guardarlas.</translation>
     </message>
     <message>
       <source>Validation Error</source>
-      <translation type="unfinished">Validation Error</translation>
+      <translation>Error de validación</translation>
     </message>
     <message>
       <source>Success</source>
-      <translation type="unfinished">Success</translation>
+      <translation>Proceso completado</translation>
     </message>
     <message>
       <source>Keys saved successfully!</source>
-      <translation type="unfinished">Keys saved successfully!</translation>
+      <translation>¡Se han guardado las claves!</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Error</translation>
     </message>
     <message>
       <source>Failed to save keys!</source>
-      <translation type="unfinished">Failed to save keys!</translation>
+      <translation>¡Error al guardar las claves!</translation>
     </message>
     <message>
       <source>Status: All fields empty</source>
-      <translation type="unfinished">Status: All fields empty</translation>
+      <translation>Estado: todos los campos vacíos</translation>
     </message>
     <message>
       <source>Status: Invalid hex values</source>
-      <translation type="unfinished">Status: Invalid hex values</translation>
+      <translation>Estado: valores hexadecimales no válidos</translation>
     </message>
     <message>
       <source>Status: Incomplete</source>
-      <translation type="unfinished">Status: Incomplete</translation>
+      <translation>Estado: incompleto</translation>
     </message>
     <message>
       <source>Status: Valid</source>
-      <translation type="unfinished">Status: Valid</translation>
+      <translation>Estado: válido</translation>
     </message>
     <message>
       <source>Invalid File</source>
-      <translation type="unfinished">Invalid File</translation>
+      <translation>Archivo no válido</translation>
     </message>
     <message>
       <source>Only JSON files are supported.</source>
-      <translation type="unfinished">Only JSON files are supported.</translation>
+      <translation>Solo se admiten archivos JSON.</translation>
     </message>
     <message>
       <source>Unable to open file.</source>
-      <translation type="unfinished">Unable to open file.</translation>
+      <translation>No se ha podido abrir el archivo.</translation>
     </message>
     <message>
       <source>JSON Error</source>
-      <translation type="unfinished">JSON Error</translation>
+      <translation>Error de JSON</translation>
     </message>
     <message>
       <source>Invalid JSON format.</source>
-      <translation type="unfinished">Invalid JSON format.</translation>
+      <translation>Formato JSON no válido.</translation>
     </message>
     <message>
       <source>Keys successfully loaded from JSON!</source>
-      <translation type="unfinished">Keys successfully loaded from JSON!</translation>
+      <translation>¡Se han cargado las claves del archivo JSON!</translation>
     </message>
     <message>
       <source>Trophy Key contains invalid hex or has odd length.</source>
-      <translation type="unfinished">Trophy Key contains invalid hex or has odd length.</translation>
+      <translation>La clave de trofeos es un valor hexadecimnal no válido o tiene una longitud impar.</translation>
     </message>
     <message>
       <source>%1 contains invalid hex or has odd length.</source>
-      <translation type="unfinished">%1 contains invalid hex or has odd length.</translation>
+      <translation>%1 es un valor hexadecimnal no válido o tiene una longitud impar.</translation>
     </message>
   </context>
   <context>
@@ -1293,23 +1293,23 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>User 1</source>
-      <translation type="unfinished">User 1</translation>
+      <translation>Usuario 1</translation>
     </message>
     <message>
       <source>User 2</source>
-      <translation type="unfinished">User 2</translation>
+      <translation>Usuario 2</translation>
     </message>
     <message>
       <source>User 3</source>
-      <translation type="unfinished">User 3</translation>
+      <translation>Usuario 3</translation>
     </message>
     <message>
       <source>User 4</source>
-      <translation type="unfinished">User 4</translation>
+      <translation>Usuario 4</translation>
     </message>
     <message>
       <source>This game has no save folder to open!</source>
-      <translation type="unfinished">This game has no save folder to open!</translation>
+      <translation>¡Este juego no tiene carpeta de datos guardados!</translation>
     </message>
   </context>
   <context>
@@ -1999,11 +1999,11 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Manage Cryptographic Keys</source>
-      <translation type="unfinished">Manage Cryptographic Keys</translation>
+      <translation>Gestor de claves criptográficas</translation>
     </message>
     <message>
       <source>Manage Users</source>
-      <translation type="unfinished">Manage Users</translation>
+      <translation>Gestor de usuarios</translation>
     </message>
   </context>
   <context>
@@ -2818,23 +2818,23 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Select shadPS4 Home Path</source>
-      <translation type="unfinished">Select shadPS4 Home Path</translation>
+      <translation>Seleccionar ruta de inicio de shadPS4</translation>
     </message>
     <message>
       <source>Select the system modules folder</source>
-      <translation type="unfinished">Select the system modules folder</translation>
+      <translation>Seleccionar carpeta de módulos del sistema</translation>
     </message>
     <message>
       <source>Home Folder Location (Saves, Inputs, Trophy Data)</source>
-      <translation type="unfinished">Home Folder Location (Saves, Inputs, Trophy Data)</translation>
+      <translation>Ubicación de la carpeta de inicio (datos guardados, controles, datos de trofeos)</translation>
     </message>
     <message>
       <source>Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</source>
-      <translation type="unfinished">Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</translation>
+      <translation>Ubicación de la carpeta de inicio:\nLa carpeta donde el emulador guardará los datos guardados, archivos de trofeos y configuraciones de entrada de todos los usuarios.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the home folder.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the home folder.</translation>
+      <translation>Buscar:\nPermite buscar una carpeta a establecer como carpeta de inicio.</translation>
     </message>
   </context>
   <context>
@@ -2887,99 +2887,99 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     <name>UserManagerDialog</name>
     <message>
       <source>User Manager</source>
-      <translation type="unfinished">User Manager</translation>
+      <translation>Gestor de usuarios</translation>
     </message>
     <message>
       <source>&amp;Create User</source>
-      <translation type="unfinished">&amp;Create User</translation>
+      <translation>&amp;Crear usuario</translation>
     </message>
     <message>
       <source>&amp;Delete User</source>
-      <translation type="unfinished">&amp;Delete User</translation>
+      <translation>&amp;Eliminar usuario</translation>
     </message>
     <message>
       <source>&amp;Rename User</source>
-      <translation type="unfinished">&amp;Rename User</translation>
+      <translation>&amp;Renombrar usuario</translation>
     </message>
     <message>
       <source>&amp;Set Default User</source>
-      <translation type="unfinished">&amp;Set Default User</translation>
+      <translation>&amp;Establecer usuario predeterminado</translation>
     </message>
     <message>
       <source>&amp;Set Color</source>
-      <translation type="unfinished">&amp;Set Color</translation>
+      <translation>&amp;Establecer color</translation>
     </message>
     <message>
       <source>&amp;Set Controller Port</source>
-      <translation type="unfinished">&amp;Set Controller Port</translation>
+      <translation>&amp;Establecer puerto de mando</translation>
     </message>
     <message>
       <source>&amp;Close</source>
-      <translation type="unfinished">&amp;Close</translation>
+      <translation>&amp;Cerrar</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Error</translation>
     </message>
     <message>
       <source>Cannot add more users.</source>
-      <translation type="unfinished">Cannot add more users.</translation>
+      <translation>No se pueden añadir más usuarios.</translation>
     </message>
     <message>
       <source>Create New User</source>
-      <translation type="unfinished">Create New User</translation>
+      <translation>Crear usuario nuevo</translation>
     </message>
     <message>
       <source>New User ID: %1</source>
-      <translation type="unfinished">New User ID: %1</translation>
+      <translation>ID de usuario nuevo: %1</translation>
     </message>
     <message>
       <source>Username (3–16 chars, letters, numbers, _, -)</source>
-      <translation type="unfinished">Username (3–16 chars, letters, numbers, _, -)</translation>
+      <translation>Nombre de usuario (3-16 caracteres, letras, números, _ y -)</translation>
     </message>
     <message>
       <source>Invalid Username</source>
-      <translation type="unfinished">Invalid Username</translation>
+      <translation>Nombre de usuario no válido</translation>
     </message>
     <message>
       <source>Username must be 3–16 chars and valid.</source>
-      <translation type="unfinished">Username must be 3–16 chars and valid.</translation>
+      <translation>El nombre de usuario debe tener entre 3 y 16 caracteres y contener caracteres válidos.</translation>
     </message>
     <message>
       <source>Delete Confirmation</source>
-      <translation type="unfinished">Delete Confirmation</translation>
+      <translation>Confirmación de eliminación</translation>
     </message>
     <message>
       <source>Delete user ID %1?</source>
-      <translation type="unfinished">Delete user ID %1?</translation>
+      <translation>¿Eliminar el ID de usuario %1?</translation>
     </message>
     <message>
       <source>Rename User</source>
-      <translation type="unfinished">Rename User</translation>
+      <translation>Renombrar usuario</translation>
     </message>
     <message>
       <source>Old Username: %1</source>
-      <translation type="unfinished">Old Username: %1</translation>
+      <translation>Nombre antiguo: %1</translation>
     </message>
     <message>
       <source>Set User Color</source>
-      <translation type="unfinished">Set User Color</translation>
+      <translation>Establecer color de usuario</translation>
     </message>
     <message>
       <source>Select color:</source>
-      <translation type="unfinished">Select color:</translation>
+      <translation>Seleccionar color:</translation>
     </message>
     <message>
       <source>Set Controller Port</source>
-      <translation type="unfinished">Set Controller Port</translation>
+      <translation>Establecer puerto de mando</translation>
     </message>
     <message>
       <source>Assign port (1-4) to this user:</source>
-      <translation type="unfinished">Assign port (1-4) to this user:</translation>
+      <translation>Asigna un puerto (1-4) a este usuario:</translation>
     </message>
     <message>
       <source>&amp;Open User Directory</source>
-      <translation type="unfinished">&amp;Open User Directory</translation>
+      <translation>&amp;Abrir directorio de usuarios</translation>
     </message>
   </context>
   <context>
