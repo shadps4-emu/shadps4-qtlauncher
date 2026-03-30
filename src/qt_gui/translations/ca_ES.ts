@@ -1309,7 +1309,7 @@ Si us plau, introdueix les teves claus per desar-les.</translation>
     </message>
     <message>
       <source>This game has no save folder to open!</source>
-      <translation type="unfinished">This game has no save folder to open!</translation>
+      <translation>Aquest joc no té carpeta de desats per obrir!</translation>
     </message>
   </context>
   <context>
@@ -2911,7 +2911,7 @@ Selecciona una versió del panell dret.</translation>
     </message>
     <message>
       <source>&amp;Set Controller Port</source>
-      <translation type="unfinished">&amp;Set Controller Port</translation>
+      <translation>&amp;Selecciona el port del controlador</translation>
     </message>
     <message>
       <source>&amp;Close</source>
@@ -2923,7 +2923,7 @@ Selecciona una versió del panell dret.</translation>
     </message>
     <message>
       <source>Cannot add more users.</source>
-      <translation type="unfinished">Cannot add more users.</translation>
+      <translation>No es poden afegir més usuaris.</translation>
     </message>
     <message>
       <source>Create New User</source>
@@ -2935,7 +2935,7 @@ Selecciona una versió del panell dret.</translation>
     </message>
     <message>
       <source>Username (3–16 chars, letters, numbers, _, -)</source>
-      <translation type="unfinished">Username (3–16 chars, letters, numbers, _, -)</translation>
+      <translation>Nom d'usuari (entre 3 i 16 caràcters, lletres, nombres, _, -)</translation>
     </message>
     <message>
       <source>Invalid Username</source>
@@ -2943,15 +2943,15 @@ Selecciona una versió del panell dret.</translation>
     </message>
     <message>
       <source>Username must be 3–16 chars and valid.</source>
-      <translation type="unfinished">Username must be 3–16 chars and valid.</translation>
+      <translation>El nom d'usuari ha de tenir entre 3 i 16 caràcters vàlids.</translation>
     </message>
     <message>
       <source>Delete Confirmation</source>
-      <translation type="unfinished">Delete Confirmation</translation>
+      <translation>Confirmació de l'eliminació</translation>
     </message>
     <message>
       <source>Delete user ID %1?</source>
-      <translation type="unfinished">Delete user ID %1?</translation>
+      <translation>Vols eliminar l'usuari amb ID %1?</translation>
     </message>
     <message>
       <source>Rename User</source>
@@ -2971,15 +2971,15 @@ Selecciona una versió del panell dret.</translation>
     </message>
     <message>
       <source>Set Controller Port</source>
-      <translation type="unfinished">Set Controller Port</translation>
+      <translation>Selecciona el port del controlador</translation>
     </message>
     <message>
       <source>Assign port (1-4) to this user:</source>
-      <translation type="unfinished">Assign port (1-4) to this user:</translation>
+      <translation>Assigna el port (1-4) a aquest usuari:</translation>
     </message>
     <message>
       <source>&amp;Open User Directory</source>
-      <translation type="unfinished">&amp;Open User Directory</translation>
+      <translation>&amp;Obre la carpeta d'usuari</translation>
     </message>
   </context>
   <context>
