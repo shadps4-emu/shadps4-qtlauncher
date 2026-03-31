@@ -240,6 +240,7 @@ void CheatsPatches::setupUI() {
     connect(editButton, &QPushButton::clicked, [this, PATCHS_DIR_QString]() {
         PatchEditor* editor = new PatchEditor(patchFile, gamePatches, this);
         editor->exec();
+        gamePatches = CustomPatches::GetGamePatchInfo(patchFile);
     });
 
     QHBoxLayout* editLayout = new QHBoxLayout();
@@ -1403,6 +1404,7 @@ void CheatsPatches::checkConfigurablePatches() {
     QString filePath = PATCHS_DIR_QString + "/" + directoryName + "/" + fileName;
 
     patchFile = Common::FS::PathFromQString(filePath);
+    gamePatches.clear();
     gamePatches = CustomPatches::GetGamePatchInfo(patchFile);
 
     if (gamePatches.empty()) {
