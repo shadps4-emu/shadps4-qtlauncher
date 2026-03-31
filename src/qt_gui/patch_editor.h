@@ -2,11 +2,11 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include <filesystem>
+#include <QComboBox>
 #include <QDialog>
 #include <QDialogButtonBox>
 #include <QLabel>
 #include <QListWidget>
-#include <QSpinBox>
 #include <QVBoxLayout>
 
 #include "configurable_patches.h"
@@ -24,16 +24,19 @@ signals:
 private:
     void setupUI();
     void populatePatchList();
-    void populateValues(CustomPatches::ConfigPatchInfo, int count);
+    void populateValues(CustomPatches::ConfigPatchInfo);
     void refreshValueList();
     void savePatches();
+    void refreshOptionDesc(int index);
 
     std::filesystem::path patchFile;
 
+    QLabel* optionLabel = new QLabel(this);
+    QLabel* optionDesc = new QLabel(this);
+    QComboBox* optionValues = new QComboBox(this);
     QListWidget* patchList = new QListWidget(this);
     QDialogButtonBox* buttonBox;
 
-    QList<QLabel*> Labels;
-    QList<QSpinBox*> SpinBoxes;
+    CustomPatches::ConfigPatchInfo currentPatch;
     std::vector<CustomPatches::ConfigPatchInfo> currentPatches;
 };

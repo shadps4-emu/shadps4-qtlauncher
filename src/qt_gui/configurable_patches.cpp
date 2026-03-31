@@ -68,6 +68,7 @@ std::vector<ConfigPatchInfo> CustomPatches::GetAllPatchInfo() {
         std::string patchName;
         std::string appVer;
         std::vector<json> patchValues;
+        std::vector<json> modifiedValuesVec;
         ConfigPatchInfo currentPatch;
 
         if (value.is_object()) {
@@ -78,7 +79,7 @@ std::vector<ConfigPatchInfo> CustomPatches::GetAllPatchInfo() {
                     appVer = objvalue.get<std::string>();
                 } else if (objkey == "Serial") {
                     serialVector = objvalue.get<std::vector<std::string>>();
-                } else if (objkey == "PatchValues") {
+                } else if (objkey == "Options") {
                     patchValues = objvalue.get<std::vector<json>>();
                 }
             }
@@ -91,13 +92,18 @@ std::vector<ConfigPatchInfo> CustomPatches::GetAllPatchInfo() {
             }
 
             for (const json& value : patchValues) {
-                ConfigPatchData patchdata = {
-                    .dataName = QString::fromStdString(value["ValueName"].get<std::string>()),
-                    .address = QString::fromStdString(value["Address"].get<std::string>()),
-                    .minValue = value["Min"].get<int>(),
-                    .maxValue = value["Max"].get<int>(),
+                OptionData data = {
+                    .optionName = QString::fromStdString(value["OptionName"].get<std::string>()),
+                    .optionNotes = QString::fromStdString(value["OptionNotes"].get<std::string>()),
                 };
-                currentPatch.patchData.push_back(patchdata);
+
+                modifiedValuesVec = value["ModifiedValues"].get<std::vector<json>>();
+                for (const json& modifiedValue : modifiedValuesVec) {
+                    data.modifiedValues.emplace_back(modifiedValue[0].get<std::string>(),
+                                                     modifiedValue[1].get<int>());
+                }
+
+                currentPatch.optionData.push_back(data);
             }
             allPatchInfo.push_back(currentPatch);
         }

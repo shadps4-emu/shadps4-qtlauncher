@@ -4,6 +4,7 @@
 #include <QFont>
 #include <QHBoxLayout>
 #include <QMessageBox>
+#include <QPushButton>
 #include <QSpacerItem>
 #include <pugixml.hpp>
 
@@ -15,7 +16,7 @@ using namespace CustomPatches;
 PatchEditor::PatchEditor(std::filesystem::path patchPath, QWidget* parent)
     : QDialog(parent), patchFile(patchPath) {
     setupUI();
-    setWindowTitle(tr("Patch Editor"));
+    setWindowTitle(tr("Patch Configuration"));
 
     currentPatches = GetGamePatchInfo(patchFile);
 
@@ -27,6 +28,7 @@ PatchEditor::PatchEditor(std::filesystem::path patchPath, QWidget* parent)
         patchList->addItem(tr("No configurable patches found"));
 
     connect(patchList, &QListWidget::itemSelectionChanged, this, &PatchEditor::refreshValueList);
+    connect(optionValues, &QComboBox::currentIndexChanged, this, &PatchEditor::refreshOptionDesc);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &PatchEditor::savePatches);
 }
@@ -35,74 +37,38 @@ void PatchEditor::setupUI() {
     QVBoxLayout* mainLayout = new QVBoxLayout(this);
     QHBoxLayout* patchesLayout = new QHBoxLayout(this);
 
-    QVBoxLayout* valuesLayout1 = new QVBoxLayout(this);
-    QVBoxLayout* valuesLayout2 = new QVBoxLayout(this);
-    QVBoxLayout* valuesLayout3 = new QVBoxLayout(this);
-    QVBoxLayout* valuesLayout4 = new QVBoxLayout(this);
-    QVBoxLayout* valuesLayout5 = new QVBoxLayout(this);
-
     QVBoxLayout* patchListLayout = new QVBoxLayout(this);
-    QLabel* patchListLabel = new QLabel(tr("Configurable Patches"));
-    QFont font = patchListLabel->font();
+    QLabel* patchListHeader = new QLabel(tr("Configurable Patches"));
+    QFont font = patchListHeader->font();
     font.setPointSize(12);
     font.setBold(true);
-    patchListLabel->setFont(font);
+    patchListHeader->setFont(font);
 
-    patchListLayout->addWidget(patchListLabel);
+    patchListLayout->addWidget(patchListHeader);
     patchListLayout->addWidget(patchList);
 
     QLabel* patchValuesHeader = new QLabel(tr("Configurable Values"));
-    patchValuesHeader->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
     patchValuesHeader->setFont(font);
 
-    QLabel* patchValueLabel1 = new QLabel("Value 1");
-    QSpinBox* patchValueEdit1 = new QSpinBox();
-    patchValueEdit1->setButtonSymbols(QSpinBox::NoButtons);
-    valuesLayout1->addWidget(patchValueLabel1);
-    valuesLayout1->addWidget(patchValueEdit1);
-
-    QLabel* patchValueLabel2 = new QLabel("Value 2");
-    QSpinBox* patchValueEdit2 = new QSpinBox();
-    patchValueEdit2->setButtonSymbols(QSpinBox::NoButtons);
-    valuesLayout2->addWidget(patchValueLabel2);
-    valuesLayout2->addWidget(patchValueEdit2);
-
-    QLabel* patchValueLabel3 = new QLabel("Value 3");
-    QSpinBox* patchValueEdit3 = new QSpinBox();
-    patchValueEdit3->setButtonSymbols(QSpinBox::NoButtons);
-    valuesLayout3->addWidget(patchValueLabel3);
-    valuesLayout3->addWidget(patchValueEdit3);
-
-    QLabel* patchValueLabel4 = new QLabel("Value 4");
-    QSpinBox* patchValueEdit4 = new QSpinBox();
-    patchValueEdit4->setButtonSymbols(QSpinBox::NoButtons);
-    valuesLayout4->addWidget(patchValueLabel4);
-    valuesLayout4->addWidget(patchValueEdit4);
-
-    QLabel* patchValueLabel5 = new QLabel("Value 5");
-    QSpinBox* patchValueEdit5 = new QSpinBox();
-    patchValueEdit5->setButtonSymbols(QSpinBox::NoButtons);
-    valuesLayout5->addWidget(patchValueLabel5);
-    valuesLayout5->addWidget(patchValueEdit5);
-
-    Labels = {patchValueLabel1, patchValueLabel2, patchValueLabel3, patchValueLabel4,
-              patchValueLabel5};
-    SpinBoxes = {patchValueEdit1, patchValueEdit2, patchValueEdit3, patchValueEdit4,
-                 patchValueEdit5};
+    optionLabel->setText(tr("Options for Selected Patch"));
+    optionDesc->setText(tr("Description: "));
+    optionDesc->setWordWrap(true);
+    optionValues->addItem(tr("No patch selected"));
 
     QVBoxLayout* patchValuesLayout = new QVBoxLayout(this);
     patchValuesLayout->addWidget(patchValuesHeader);
-    patchValuesLayout->addLayout(valuesLayout1);
-    patchValuesLayout->addLayout(valuesLayout2);
-    patchValuesLayout->addLayout(valuesLayout3);
-    patchValuesLayout->addLayout(valuesLayout4);
-    patchValuesLayout->addLayout(valuesLayout5);
+    patchValuesLayout->addWidget(optionLabel);
+    patchValuesLayout->addWidget(optionValues);
+    patchValuesLayout->addSpacing(20);
+    patchValuesLayout->addWidget(optionDesc);
     patchValuesLayout->addStretch(1);
 
-    patchesLayout->addLayout(patchListLayout);
-    patchesLayout->addLayout(patchValuesLayout);
+    patchesLayout->addLayout(patchListLayout, 1);
+    patchesLayout->addLayout(patchValuesLayout, 1);
 
-    buttonBox = new QDialogButtonBox(QDialogButtonBox::Save | QDialogButtonBox::Cancel);
+    buttonBox = new QDialogButtonBox(QDialogButtonBox::Save | QDialogButtonBox::Close);
+    buttonBox->button(QDialogButtonBox::Save)->setText(tr("Save Current Patch"));
+
     QHBoxLayout* buttonLayout = new QHBoxLayout(this);
     buttonLayout->addWidget(buttonBox);
 
@@ -120,67 +86,25 @@ void PatchEditor::populatePatchList() {
 void PatchEditor::refreshValueList() {
     if (!patchList->selectedItems().isEmpty()) {
         QString patchname = patchList->selectedItems().first()->text();
-        int count;
         for (const auto& patch : currentPatches) {
             if (patchname == patch.patchName) {
-                count = patch.patchData.size();
-                populateValues(patch, count);
+                currentPatch = patch;
+                populateValues(patch);
             }
         }
-    } else {
-        populateValues({}, -1);
     }
 }
 
-void PatchEditor::populateValues(ConfigPatchInfo patch, int count) {
-    pugi::xml_document doc;
-    pugi::xml_parse_result result = doc.load_file(patchFile.c_str());
+void PatchEditor::refreshOptionDesc(int index) {
+    optionDesc->setText("Description:\n" + currentPatch.optionData[index].optionNotes);
+}
 
-    if (!result) {
-        QMessageBox::critical(this, tr("Failed to load patch xml file"),
-                              QString::fromStdString(result.description()));
-        return;
-    }
+void PatchEditor::populateValues(ConfigPatchInfo patch) {
+    optionDesc->setText("Description:\n" + patch.optionData[0].optionNotes);
+    optionValues->clear();
 
-    auto patchDoc = doc.child("Patch");
-
-    for (int i = 0; i < count; i++) {
-        Labels[i]->setText(patch.patchData[i].dataName);
-        QString address = patch.patchData[i].address;
-        pugi::xml_node patchNode;
-
-        for (pugi::xml_node& node : patchDoc.children()) {
-            if (std::string_view(node.name()) == "Metadata") {
-                std::string currentPatchName = node.attribute("Name").as_string();
-                if (currentPatchName == patch.patchName) {
-                    patchNode = node.child("PatchList");
-                    break;
-                }
-            }
-        }
-
-        for (pugi::xml_node& node : patchNode.children()) {
-            QString addr = node.attribute("Address").as_string();
-            QString val = node.attribute("Value").as_string();
-            bool success;
-
-            if (addr == address) {
-                int decValue = val.toInt(&success, 16);
-                int minVal = patch.patchData[i].minValue;
-                int maxVal = patch.patchData[i].maxValue;
-
-                SpinBoxes[i]->setMinimum(minVal);
-                SpinBoxes[i]->setMaximum(maxVal);
-                SpinBoxes[i]->setValue(decValue);
-                break;
-            }
-        }
-    }
-
-    for (int i = 0; i < 5; i++) {
-        bool visible = i < count ? true : false;
-        Labels[i]->setVisible(visible);
-        SpinBoxes[i]->setVisible(visible);
+    for (auto const& data : patch.optionData) {
+        optionValues->addItem(data.optionName);
     }
 }
 
@@ -188,15 +112,6 @@ void PatchEditor::savePatches() {
     if (patchList->selectedItems().empty()) {
         QMessageBox::warning(this, tr("Error"), tr("No Patch Selected"));
         return;
-    }
-
-    QString name = patchList->selectedItems().first()->text();
-    ConfigPatchInfo patchInfo;
-
-    for (const ConfigPatchInfo& patch : currentPatches) {
-        if (patch.patchName == name) {
-            patchInfo = patch;
-        }
     }
 
     pugi::xml_document doc;
@@ -214,25 +129,29 @@ void PatchEditor::savePatches() {
     for (pugi::xml_node& node : patchDoc.children()) {
         if (std::string_view(node.name()) == "Metadata") {
             std::string name = node.attribute("Name").as_string();
-            if (name == patchInfo.patchName.toStdString()) {
+            if (name == currentPatch.patchName.toStdString()) {
                 patchListNode = node.child("PatchList");
             }
         }
     }
 
-    for (int i = 0; i < patchInfo.patchData.size(); i++) {
+    CustomPatches::OptionData selectedOption =
+        currentPatch.optionData[optionValues->currentIndex()];
+    for (const std::tuple<std::string, int>& value : selectedOption.modifiedValues) {
+        std::string valueAddress = std::get<0>(value);
+        int valueModified = std::get<1>(value);
+
         for (pugi::xml_node& node : patchListNode.children()) {
-            std::string address = node.attribute("Address").as_string();
-            if (address == patchInfo.patchData[i].address) {
-                int value = SpinBoxes[i]->value();
+            std::string xmlAddress = node.attribute("Address").as_string();
+            if (xmlAddress == valueAddress) {
                 std::string type = node.attribute("Type").as_string();
                 QString valueString;
 
                 if (type != "bytes32") {
-                    valueString = QString::number(value, 16);
+                    valueString = QString::number(valueModified, 16);
                 } else {
                     // Not sure if needed, but everything in bytes32 is currently like this
-                    valueString = "0x" + QString::number(value, 16).rightJustified(8, '0');
+                    valueString = "0x" + QString::number(valueModified, 16).rightJustified(8, '0');
                 }
 
                 node.attribute("Value").set_value(valueString.toStdString().c_str());

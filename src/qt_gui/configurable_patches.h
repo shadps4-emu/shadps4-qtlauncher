@@ -4,24 +4,24 @@
 #pragma once
 
 #include <filesystem>
+#include <tuple>
 #include <vector>
 #include <QString>
 #include <QStringList>
 
 namespace CustomPatches {
 
-struct ConfigPatchData {
-    QString dataName;
-    QString address;
-    int minValue;
-    int maxValue;
+struct OptionData {
+    QString optionName;
+    QString optionNotes;
+    std::vector<std::tuple<std::string, int>> modifiedValues;
 };
 
 struct ConfigPatchInfo {
+    QStringList serialList;
     QString patchName;
     QString appVer;
-    QStringList serialList;
-    std::vector<ConfigPatchData> patchData;
+    std::vector<OptionData> optionData;
 };
 
 std::vector<ConfigPatchInfo> GetGamePatchInfo(std::filesystem::path patchFile);
