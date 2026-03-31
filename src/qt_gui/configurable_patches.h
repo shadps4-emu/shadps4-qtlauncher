@@ -21,10 +21,12 @@ struct ConfigPatchInfo {
     QStringList serialList;
     QString patchName;
     QString appVer;
+    int selectedOption;
     std::vector<OptionData> optionData;
 };
 
 std::vector<ConfigPatchInfo> GetGamePatchInfo(std::filesystem::path patchFile);
 std::vector<ConfigPatchInfo> GetAllPatchInfo();
+void saveSelectedOption(std::string patchName, int option);
 
 } // namespace CustomPatches

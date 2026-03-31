@@ -6,8 +6,10 @@
 #include <QMessageBox>
 #include <QPushButton>
 #include <QSpacerItem>
+#include <nlohmann/json.hpp>
 #include <pugixml.hpp>
 
+#include "common/logging/log.h"
 #include "common/path_util.h"
 #include "patch_editor.h"
 
@@ -95,16 +97,23 @@ void PatchEditor::refreshValueList() {
 }
 
 void PatchEditor::refreshOptionDesc(int index) {
+    if (index < 0) {
+        return;
+    }
+
     optionDesc->setText("Description:\n" + currentPatch.optionData[index].optionNotes);
 }
 
 void PatchEditor::populateValues(ConfigPatchInfo patch) {
-    optionDesc->setText("Description:\n" + patch.optionData[0].optionNotes);
+    int index = patch.selectedOption;
     optionValues->clear();
 
     for (auto const& data : patch.optionData) {
         optionValues->addItem(data.optionName);
     }
+
+    optionDesc->setText("Description:\n" + patch.optionData[index].optionNotes);
+    optionValues->setCurrentIndex(index);
 }
 
 void PatchEditor::savePatches() {
@@ -113,52 +122,65 @@ void PatchEditor::savePatches() {
         return;
     }
 
-    pugi::xml_document doc;
-    pugi::xml_parse_result result = doc.load_file(patchFile.c_str());
+    std::string patchName = patchList->selectedItems().first()->text().toStdString();
+    int selectionIndex = optionValues->currentIndex();
 
-    if (!result) {
-        QMessageBox::critical(this, tr("Failed to load patch xml file"),
-                              QString::fromStdString(result.description()));
+    try {
+        pugi::xml_document doc;
+        pugi::xml_parse_result result = doc.load_file(patchFile.c_str());
+
+        if (!result) {
+            QMessageBox::critical(this, tr("Failed to load patch xml file"),
+                                  QString::fromStdString(result.description()));
+            return;
+        }
+
+        auto patchDoc = doc.child("Patch");
+        pugi::xml_node patchListNode;
+
+        for (pugi::xml_node& node : patchDoc.children()) {
+            if (std::string_view(node.name()) == "Metadata") {
+                std::string name = node.attribute("Name").as_string();
+                if (name == currentPatch.patchName.toStdString()) {
+                    patchListNode = node.child("PatchList");
+                }
+            }
+        }
+
+        CustomPatches::OptionData selectedOption = currentPatch.optionData[selectionIndex];
+        for (const std::tuple<std::string, int>& value : selectedOption.modifiedValues) {
+            std::string valueAddress = std::get<0>(value);
+            int valueModified = std::get<1>(value);
+
+            for (pugi::xml_node& node : patchListNode.children()) {
+                std::string xmlAddress = node.attribute("Address").as_string();
+                if (xmlAddress == valueAddress) {
+                    std::string type = node.attribute("Type").as_string();
+                    QString valueString;
+
+                    if (type != "bytes32") {
+                        valueString = QString::number(valueModified, 16);
+                    } else {
+                        // Not sure if needed, but everything in bytes32 is currently like this
+                        valueString =
+                            "0x" + QString::number(valueModified, 16).rightJustified(8, '0');
+                    }
+
+                    node.attribute("Value").set_value(valueString.toStdString().c_str());
+                }
+            }
+        }
+
+        doc.save_file(patchFile.c_str());
+        CustomPatches::saveSelectedOption(patchName, selectionIndex);
+        currentPatch.selectedOption = selectionIndex;
+        ;
+    } catch (const std::exception& e) {
+        QMessageBox::information(this, tr("Error"),
+                                 tr("Error saving configurable patches: ") + e.what());
         return;
     }
 
-    auto patchDoc = doc.child("Patch");
-    pugi::xml_node patchListNode;
-
-    for (pugi::xml_node& node : patchDoc.children()) {
-        if (std::string_view(node.name()) == "Metadata") {
-            std::string name = node.attribute("Name").as_string();
-            if (name == currentPatch.patchName.toStdString()) {
-                patchListNode = node.child("PatchList");
-            }
-        }
-    }
-
-    CustomPatches::OptionData selectedOption =
-        currentPatch.optionData[optionValues->currentIndex()];
-    for (const std::tuple<std::string, int>& value : selectedOption.modifiedValues) {
-        std::string valueAddress = std::get<0>(value);
-        int valueModified = std::get<1>(value);
-
-        for (pugi::xml_node& node : patchListNode.children()) {
-            std::string xmlAddress = node.attribute("Address").as_string();
-            if (xmlAddress == valueAddress) {
-                std::string type = node.attribute("Type").as_string();
-                QString valueString;
-
-                if (type != "bytes32") {
-                    valueString = QString::number(valueModified, 16);
-                } else {
-                    // Not sure if needed, but everything in bytes32 is currently like this
-                    valueString = "0x" + QString::number(valueModified, 16).rightJustified(8, '0');
-                }
-
-                node.attribute("Value").set_value(valueString.toStdString().c_str());
-            }
-        }
-    }
-
-    doc.save_file(patchFile.c_str());
     QMessageBox::information(this, tr("Patch Saved"), tr("Patch saved successfully"));
 }
 

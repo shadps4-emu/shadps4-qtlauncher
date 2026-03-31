@@ -67,6 +67,7 @@ std::vector<ConfigPatchInfo> CustomPatches::GetAllPatchInfo() {
         std::vector<std::string> serialVector;
         std::string patchName;
         std::string appVer;
+        int selectedOption;
         std::vector<json> patchValues;
         std::vector<json> modifiedValuesVec;
         ConfigPatchInfo currentPatch;
@@ -79,6 +80,8 @@ std::vector<ConfigPatchInfo> CustomPatches::GetAllPatchInfo() {
                     appVer = objvalue.get<std::string>();
                 } else if (objkey == "Serial") {
                     serialVector = objvalue.get<std::vector<std::string>>();
+                } else if (objkey == "SelectedOption") {
+                    selectedOption = objvalue.get<int>();
                 } else if (objkey == "Options") {
                     patchValues = objvalue.get<std::vector<json>>();
                 }
@@ -86,6 +89,7 @@ std::vector<ConfigPatchInfo> CustomPatches::GetAllPatchInfo() {
 
             currentPatch.patchName = QString::fromStdString(patchName);
             currentPatch.appVer = QString::fromStdString(appVer);
+            currentPatch.selectedOption = selectedOption;
 
             for (const std::string& serial : serialVector) {
                 currentPatch.serialList.append(QString::fromStdString(serial));
@@ -110,4 +114,25 @@ std::vector<ConfigPatchInfo> CustomPatches::GetAllPatchInfo() {
     }
 
     return allPatchInfo;
+}
+
+void CustomPatches::saveSelectedOption(std::string patchName, int option) {
+    std::filesystem::path filePath = Common::FS::GetUserPath(Common::FS::PathType::PatchesDir) /
+                                     "shadPS4" / "configurable_patches.json";
+    std::ifstream file(filePath.c_str());
+    json data = json::parse(file);
+    file.close();
+
+    for (auto& item : data) {
+        if (item.is_object()) {
+            if (item.contains("Name") && item["Name"] == patchName) {
+                item["SelectedOption"] = option;
+                break;
+            }
+        }
+    }
+
+    std::ofstream outFile(filePath.c_str());
+    outFile << std::setw(2) << data;
+    outFile.close();
 }
