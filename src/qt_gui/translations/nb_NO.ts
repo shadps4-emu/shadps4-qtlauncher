@@ -70,7 +70,7 @@
     </message>
     <message>
       <source>Do you want to delete the selected file?\n%1</source>
-      <translation>Ønsker du å slette den valgte fila?\n%1</translation>
+      <translation>Vil du slette den valgte fila?\n%1</translation>
     </message>
     <message>
       <source>Select Patch File:</source>
@@ -118,7 +118,7 @@
     </message>
     <message>
       <source>Failed to parse XML: </source>
-      <translation>Feil ved tolkning av XML: </translation>
+      <translation>Klarte ikke tolke XML: </translation>
     </message>
     <message>
       <source>Success</source>
@@ -142,7 +142,7 @@
     </message>
     <message>
       <source>File already exists. Do you want to replace it?</source>
-      <translation>Fila finnes allerede. Ønsker du å erstatte den?</translation>
+      <translation>Fila finnes allerede. Vil du erstatte den?</translation>
     </message>
     <message>
       <source>Failed to save file:</source>
@@ -158,7 +158,7 @@
     </message>
     <message>
       <source>No Cheats found for this game in this version of the selected repository,try another repository or a different version of the game.</source>
-      <translation>Ingen juks funnet for dette spillet i denne versjonen av den valgte pakkebrønnen,prøv en annen pakkebrønn eller en annen versjon av spillet.</translation>
+      <translation>Fant ingen juks for dette spillet i denne versjonen av den valgte pakkebrønnen, prøv en annen pakkebrønn eller en annen versjon av spillet.</translation>
     </message>
     <message>
       <source>Cheats Downloaded Successfully</source>
@@ -222,7 +222,7 @@
     </message>
     <message>
       <source>Author: </source>
-      <translation>Forfatter: </translation>
+      <translation>Utvikler: </translation>
     </message>
     <message>
       <source>Directory does not exist:</source>
@@ -341,7 +341,7 @@
     </message>
     <message>
       <source>Auto Updater - GUI</source>
-      <translation>Auto oppdatering – grensesnitt</translation>
+      <translation>Automatisk oppdatering – grensesnitt</translation>
     </message>
     <message>
       <source>Update Available - GUI</source>
@@ -499,7 +499,7 @@
     </message>
     <message>
       <source>Touchpad Center</source>
-      <translation>Midt berøringsplate</translation>
+      <translation>Midtre berøringsplate</translation>
     </message>
     <message>
       <source>Touchpad Right</source>
@@ -627,6 +627,191 @@
     </message>
   </context>
   <context>
+    <name>CryptoManagerDialog</name>
+    <message>
+      <source>Crypto Key Manager</source>
+      <translation>Kryptonøkkel-behandler</translation>
+    </message>
+    <message>
+      <source>Trophy Key: Used for trophy decryption.
+Must be a valid hex string with even length.</source>
+      <translation>Trofénøkkel: Brukes for dekryptering av trofeer.
+Må være en gyldig sekskantede tekststreng med partallslengde.</translation>
+    </message>
+    <message>
+      <source>Enter Trophy Key</source>
+      <translation>Skriv inn trofénøkkel</translation>
+    </message>
+    <message>
+      <source>Trophy Key:</source>
+      <translation>Trofénøkkel:</translation>
+    </message>
+    <message>
+      <source>Status: Not loaded</source>
+      <translation>Status: Ikke lastet</translation>
+    </message>
+    <message>
+      <source>Trophy Key</source>
+      <translation>Trofénøkkel</translation>
+    </message>
+    <message>
+      <source>Enter %1</source>
+      <translation>Skriv inn %1</translation>
+    </message>
+    <message>
+      <source>Exponent1</source>
+      <translation>Eksponent 1</translation>
+    </message>
+    <message>
+      <source>Exponent2</source>
+      <translation>Eksponent 2</translation>
+    </message>
+    <message>
+      <source>Public Exponent</source>
+      <translation>Offentlig eksponent</translation>
+    </message>
+    <message>
+      <source>Coefficient</source>
+      <translation>Koeffisient</translation>
+    </message>
+    <message>
+      <source>Modulus</source>
+      <translation>Heltallsdivisjon</translation>
+    </message>
+    <message>
+      <source>Prime 1</source>
+      <translation>Primtall 1</translation>
+    </message>
+    <message>
+      <source>Prime 2</source>
+      <translation>Primtall 2</translation>
+    </message>
+    <message>
+      <source>Private Exponent</source>
+      <translation>Privat eksponent</translation>
+    </message>
+    <message>
+      <source>Fake Keyset</source>
+      <translation>Falsk nøkkelsett</translation>
+    </message>
+    <message>
+      <source>RSA key components for fake signing.
+All fields must be valid hex strings with even length.</source>
+      <translation>RSA-nøkkelkomponenter for falsk signering.
+Alle felt må være en gyldig sekskantede tekststreng med partallslengde.</translation>
+    </message>
+    <message>
+      <source>Debug Rif Keyset</source>
+      <translation>Feilsøking av Rif-nøkkelsett</translation>
+    </message>
+    <message>
+      <source>RSA key components for debug RIF files.
+All fields must be valid hex strings with even length.</source>
+      <translation>RSA-nøkkelkomponenter for feilsøking av Rif-filer.
+Alle felt må være en gyldig sekskantede tekststreng med partallslengde.</translation>
+    </message>
+    <message>
+      <source>Pkg Derived Key3</source>
+      <translation>Pakkeavledet (pkg) nøkkel 3</translation>
+    </message>
+    <message>
+      <source>RSA key components for package decryption.
+All fields must be valid hex strings with even length.</source>
+      <translation>RSA-nøkkelkomponenter for dekryptering av pakker.
+Alle felt må være en gyldig sekskantede tekststreng med partallslengde.</translation>
+    </message>
+    <message>
+      <source>Load All Keys</source>
+      <translation>Last alle nøkler</translation>
+    </message>
+    <message>
+      <source>Save All Keys</source>
+      <translation>Lagre alle nøkler</translation>
+    </message>
+    <message>
+      <source>Close</source>
+      <translation>Lukk</translation>
+    </message>
+    <message>
+      <source>Warning</source>
+      <translation>Advarsel</translation>
+    </message>
+    <message>
+      <source>No key file found or failed to load.
+Please enter your keys and save them.</source>
+      <translation>Klarte ikke laste nøkkelfila.
+Skriv inn nøklene og lagre dem.</translation>
+    </message>
+    <message>
+      <source>Validation Error</source>
+      <translation>Feil ved validering</translation>
+    </message>
+    <message>
+      <source>Success</source>
+      <translation>Vellykket</translation>
+    </message>
+    <message>
+      <source>Keys saved successfully!</source>
+      <translation>Lagret nøklene på vellykket vis!</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation>Feil</translation>
+    </message>
+    <message>
+      <source>Failed to save keys!</source>
+      <translation>Klarte ikke lagre nøklene.</translation>
+    </message>
+    <message>
+      <source>Status: All fields empty</source>
+      <translation>Status: Alle felt er tomme</translation>
+    </message>
+    <message>
+      <source>Status: Invalid hex values</source>
+      <translation>Status: Ugyldige sekskantede verdier</translation>
+    </message>
+    <message>
+      <source>Status: Incomplete</source>
+      <translation>Status: Ikke-fullført</translation>
+    </message>
+    <message>
+      <source>Status: Valid</source>
+      <translation>Status: Gyldig</translation>
+    </message>
+    <message>
+      <source>Invalid File</source>
+      <translation>Ugyldig fil</translation>
+    </message>
+    <message>
+      <source>Only JSON files are supported.</source>
+      <translation>Støtter kun JSON-filer.</translation>
+    </message>
+    <message>
+      <source>Unable to open file.</source>
+      <translation>Klarte ikke åpne fila.</translation>
+    </message>
+    <message>
+      <source>JSON Error</source>
+      <translation>Feil ved JSON</translation>
+    </message>
+    <message>
+      <source>Invalid JSON format.</source>
+      <translation>Ugyldig JSON-format.</translation>
+    </message>
+    <message>
+      <source>Keys successfully loaded from JSON!</source>
+      <translation>Lastet nøklene fra JSON-fila på vellykket vis!</translation>
+    </message>
+    <message>
+      <source>Trophy Key contains invalid hex or has odd length.</source>
+      <translation>Trofénøkkelen inneholder ugyldig sekskantede tegn eller har oddetall lengde.</translation>
+    </message>
+    <message>
+      <source>%1 contains invalid hex or has odd length.</source>
+      <translation>%1 inneholder ugyldig sekskantede tegn eller har oddetall lengde.</translation>
+    </message>
+  </context>
+  <context>
     <name>EditorDialog</name>
     <message>
       <source>Edit Keyboard + Mouse and Controller input bindings</source>
@@ -719,7 +904,7 @@
     </message>
     <message>
       <source>Directory with your dumped DLC&apos;s</source>
-      <translation>Mappe med dine dumpede DLC-er</translation>
+      <translation>Mappe med dumpet nedlastbart innhold</translation>
     </message>
     <message>
       <source>Directory with games</source>
@@ -727,7 +912,7 @@
     </message>
     <message>
       <source>Directory with DLC&apos;s</source>
-      <translation>Mappe med DLC-er</translation>
+      <translation>Mappe med nedlastbart innhold</translation>
     </message>
   </context>
   <context>
@@ -916,7 +1101,7 @@
     </message>
     <message>
       <source>Delete DLC</source>
-      <translation>Slett DLC</translation>
+      <translation>Slett nedlastbart innhold</translation>
     </message>
     <message>
       <source>Delete Trophy</source>
@@ -944,11 +1129,11 @@
     </message>
     <message>
       <source>This game has no DLC to delete!</source>
-      <translation>Dette spillet har ingen DLC å slette!</translation>
+      <translation>Dette spillet har intet nedlastbart innhold å slette!</translation>
     </message>
     <message>
       <source>DLC</source>
-      <translation>DLC</translation>
+      <translation>Nedlastbart innhold</translation>
     </message>
     <message>
       <source>Delete %1</source>
@@ -1106,6 +1291,26 @@
       <source>Shader Cache</source>
       <translation>Skyggelegger hurtiglager</translation>
     </message>
+    <message>
+      <source>User 1</source>
+      <translation>Bruker 1</translation>
+    </message>
+    <message>
+      <source>User 2</source>
+      <translation>Bruker 2</translation>
+    </message>
+    <message>
+      <source>User 3</source>
+      <translation>Bruker 3</translation>
+    </message>
+    <message>
+      <source>User 4</source>
+      <translation>Bruker 4</translation>
+    </message>
+    <message>
+      <source>This game has no save folder to open!</source>
+      <translation>Dette spillet har ingen lagret datamappe å åpne!</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -1219,6 +1424,14 @@
     <message>
       <source>Tip: Unmap inputs with right-click</source>
       <translation>Tips: Fjern tildelinger med «høyre klikk»</translation>
+    </message>
+    <message>
+      <source>Volume Up</source>
+      <translation>Øk lydstyrke</translation>
+    </message>
+    <message>
+      <source>Volume Down</source>
+      <translation>Senk lydstyrke</translation>
     </message>
   </context>
   <context>
@@ -1420,7 +1633,7 @@
     </message>
     <message>
       <source>Touchpad Center</source>
-      <translation>Midt berøringsplate</translation>
+      <translation>Midtre berøringsplate</translation>
     </message>
     <message>
       <source>Touchpad Right</source>
@@ -1778,11 +1991,19 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Game Log</source>
-      <translation>Spill-logg</translation>
+      <translation>Spill logg</translation>
     </message>
     <message>
       <source>Show Game Log</source>
-      <translation>Vis spill-logg</translation>
+      <translation>Vis spill logg</translation>
+    </message>
+    <message>
+      <source>Manage Cryptographic Keys</source>
+      <translation>Håndter kryptografiske nøkler</translation>
+    </message>
+    <message>
+      <source>Manage Users</source>
+      <translation>Håndter brukere</translation>
     </message>
   </context>
   <context>
@@ -1810,14 +2031,6 @@ Velg en emulatorversjon fra høyre panel.</translation>
     <message>
       <source>Enable Discord Rich Presence</source>
       <translation>Bruk Discord Rich Presence</translation>
-    </message>
-    <message>
-      <source>Username</source>
-      <translation>Brukernavn</translation>
-    </message>
-    <message>
-      <source>Trophy Key</source>
-      <translation>Trofénøkkel</translation>
     </message>
     <message>
       <source>Trophy</source>
@@ -1960,10 +2173,6 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <translation>Gjestefeilsøkingsmarkører</translation>
     </message>
     <message>
-      <source>Enable Readbacks</source>
-      <translation>Bruk tilbakelesninger</translation>
-    </message>
-    <message>
       <source>Enable Readback Linear Images</source>
       <translation>Bruk tilbakelesninger av lineære bilder</translation>
     </message>
@@ -2021,7 +2230,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Volume</source>
-      <translation>Volum</translation>
+      <translation>Lydstyrke</translation>
     </message>
     <message>
       <source>Save</source>
@@ -2058,14 +2267,6 @@ Velg en emulatorversjon fra høyre panel.</translation>
     <message>
       <source>Enable Discord Rich Presence:\nDisplays the emulator icon and relevant information on your Discord profile.</source>
       <translation>Bruk Discord Rich Presence:\nViser emulatorikonet og relevant informasjon på Discord-profilen din.</translation>
-    </message>
-    <message>
-      <source>Username:\nSets the PS4&apos;s account username, which may be displayed by some games.</source>
-      <translation>Brukernavn:\nAngir brukernavnet for PS4-kontoen, som kan vises av enkelte spill.</translation>
-    </message>
-    <message>
-      <source>Trophy Key:\nKey used to decrypt trophies. Must be obtained from your jailbroken console.\nMust contain only hex characters.</source>
-      <translation>Trofénøkkel:\nNøkkel brukes til å dekryptere trofeer. Må hentes fra din konsoll (jailbroken).\nMå bare inneholde sekskantede tegn.</translation>
     </message>
     <message>
       <source>Log Type:\nSets whether to synchronize the output of the log window for performance. May have adverse effects on emulation.</source>
@@ -2156,10 +2357,6 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <translation>Lagre skyggeleggere:\nDu trenger dette for å redigere skyggeleggerne med feilsøkingsmenyen (Ctrl + F10).</translation>
     </message>
     <message>
-      <source>Enable Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
-      <translation>Bruk tilbakelesninger:\nTa i bruk tilbakelesninger og tilbakeskrivninger.\nDette kreves av noen spill for å fungere ordentlig.\nKan forårsake stabilitets- og/eller ytelsesproblemer.</translation>
-    </message>
-    <message>
       <source>Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</source>
       <translation>Bruk tilbakelesninger av lineære bilder:\nTar i bruk asynkron nedlasting av lineære bilder modifisert av GPU-en.\nKan rette feil i noen spill.</translation>
     </message>
@@ -2176,24 +2373,12 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <translation>Gjestefeilsøkingsmarkører:\nSetter inn eventuelle feilsøkingsmarkører spillet selv har lagt til kommandobufferen.\nHvis dette brukes, burde du også bruke krasjdiagnostikk.\nNyttig for programmer som RenderDoc.</translation>
     </message>
     <message>
-      <source>Save Data Path:\nThe folder where game save data will be saved.</source>
-      <translation>Lagrede datamappe:\nListe over data shadPS4 lagrer.</translation>
-    </message>
-    <message>
-      <source>Browse:\nBrowse for a folder to set as the save data path.</source>
-      <translation>Endre mappe:\nEndrer hvilken mappe shadPS4 skal lagre data til.</translation>
-    </message>
-    <message>
       <source>Set the volume of the background music.</source>
       <translation>Sett volumet til bakgrunnsmusikken.</translation>
     </message>
     <message>
       <source>Enable Motion Controls</source>
       <translation>Bruk bevegelsesstyring</translation>
-    </message>
-    <message>
-      <source>Save Data Path</source>
-      <translation>Lagrede datamappe</translation>
     </message>
     <message>
       <source>Browse</source>
@@ -2214,10 +2399,6 @@ Velg en emulatorversjon fra høyre panel.</translation>
     <message>
       <source>Directory to install games</source>
       <translation>Mappe for installering av spill</translation>
-    </message>
-    <message>
-      <source>Directory to save data</source>
-      <translation>Mappe for lagring av data</translation>
     </message>
     <message>
       <source>Video</source>
@@ -2353,7 +2534,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Select the DLC folder</source>
-      <translation>Velg DLC-mappa</translation>
+      <translation>Velg mappa for nedlastbart innhold</translation>
     </message>
     <message>
       <source>Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</source>
@@ -2361,7 +2542,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
-      <translation>Bla gjennom:\nLet etter en mappe for å angi den som DLC-adressen.</translation>
+      <translation>Endre mappe:\nLet etter ei mappe for å angi den som stien for nedlastbart innhold.</translation>
     </message>
     <message>
       <source>FSR Settings</source>
@@ -2397,7 +2578,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</source>
-      <translation>Volum:\nJuster volum for spill på et globalt nivå, skalaen går fra 0-500%, standarden er 100%.</translation>
+      <translation>Lydstyrke:\nJuster volum for spill på et globalt nivå, skalaen går fra 0-500 %, standarden er 100 %.</translation>
     </message>
     <message>
       <source>Default tab when opening settings:\nChoose which tab will open, the default is General.</source>
@@ -2497,7 +2678,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
-      <translation>DLC-mappe:\nMappa hvor spill-DLC-ene lastes fra.</translation>
+      <translation>Sti for nedlastbart innhold:\n Mappa hvor nedlastbart innhold for spillene lastes fra.</translation>
     </message>
     <message>
       <source>Additional DMem Allocation</source>
@@ -2513,7 +2694,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the sysmodules path.</source>
-      <translation>Endre mappe:\nBla gjennom for å finne mappa til systemmodulene.</translation>
+      <translation>Endre mappe:\nLet etter ei mappe for å angi den som stien for systemmoduler.</translation>
     </message>
     <message>
       <source>Vulkan Validation (Requires Vulkan SDK)</source>
@@ -2557,7 +2738,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>DLC Path</source>
-      <translation>DLC-mappe</translation>
+      <translation>Sti for nedlastbart innhold</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path</source>
@@ -2615,6 +2796,46 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
       <translation>Komprimer skyggelegger hurtiglager-filer til en zip-fil:\nskyggeleggerhurtiglager filene lagres i en zip-fil i stedet for flere separate filer.</translation>
     </message>
+    <message>
+      <source>Readbacks Mode</source>
+      <translation>Tilbakelesningsmodus</translation>
+    </message>
+    <message>
+      <source>Disabled</source>
+      <translation>Avslått</translation>
+    </message>
+    <message>
+      <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
+      <translation>Tilbakelesninger:\nTa i bruk tilbakelesninger og tilbakeskrivninger.\nDette kreves av noen spill for å fungere ordentlig.\nKan forårsake stabilitets- og/eller ytelsesproblemer.</translation>
+    </message>
+    <message>
+      <source>Relaxed</source>
+      <translation>Avslappet</translation>
+    </message>
+    <message>
+      <source>Precise</source>
+      <translation>Nøyaktig</translation>
+    </message>
+    <message>
+      <source>Select shadPS4 Home Path</source>
+      <translation>Velg hjemmesti for shadPS4</translation>
+    </message>
+    <message>
+      <source>Select the system modules folder</source>
+      <translation>Velg sti for systemmoduler</translation>
+    </message>
+    <message>
+      <source>Home Folder Location (Saves, Inputs, Trophy Data)</source>
+      <translation>Hjemmemappe-plassering (lagret spilldata, inndata og trofédata)</translation>
+    </message>
+    <message>
+      <source>Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</source>
+      <translation>Hjemmemappe-plassering\nMappa hvor lagret spilldata, troféfiler og inndataoppsett lagres for alle brukere.</translation>
+    </message>
+    <message>
+      <source>Browse:\nBrowse for a folder to set as the home folder.</source>
+      <translation>Endre mappe:\nLet etter ei mappe for å angi den som stien for hjemmemappe.</translation>
+    </message>
   </context>
   <context>
     <name>ShortcutDialog</name>
@@ -2660,6 +2881,105 @@ Velg en emulatorversjon fra høyre panel.</translation>
     <message>
       <source>Show Hidden Trophies</source>
       <translation>Vis skjulte trofeer</translation>
+    </message>
+  </context>
+  <context>
+    <name>UserManagerDialog</name>
+    <message>
+      <source>User Manager</source>
+      <translation>Brukerbehandler</translation>
+    </message>
+    <message>
+      <source>&amp;Create User</source>
+      <translation>&amp;Opprett bruker</translation>
+    </message>
+    <message>
+      <source>&amp;Delete User</source>
+      <translation>&amp;Slett bruker</translation>
+    </message>
+    <message>
+      <source>&amp;Rename User</source>
+      <translation>&amp;Gi brukeren nytt navn</translation>
+    </message>
+    <message>
+      <source>&amp;Set Default User</source>
+      <translation>&amp;Sett som standardbruker</translation>
+    </message>
+    <message>
+      <source>&amp;Set Color</source>
+      <translation>&amp;Velg farge</translation>
+    </message>
+    <message>
+      <source>&amp;Set Controller Port</source>
+      <translation>&amp;Velg kontroller-port</translation>
+    </message>
+    <message>
+      <source>&amp;Close</source>
+      <translation>&amp;Lukk</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation>Feil</translation>
+    </message>
+    <message>
+      <source>Cannot add more users.</source>
+      <translation>Klarte ikke legge til flere brukere.</translation>
+    </message>
+    <message>
+      <source>Create New User</source>
+      <translation>Opprett ny bruker</translation>
+    </message>
+    <message>
+      <source>New User ID: %1</source>
+      <translation>Ny bruker-ID: %1</translation>
+    </message>
+    <message>
+      <source>Username (3–16 chars, letters, numbers, _, -)</source>
+      <translation>Brukernavn (3-16 tegn, bokstaver, tall, _, -)</translation>
+    </message>
+    <message>
+      <source>Invalid Username</source>
+      <translation>Ugyldig brukernavn</translation>
+    </message>
+    <message>
+      <source>Username must be 3–16 chars and valid.</source>
+      <translation>Brukernavn må være mellom 3-16 tegn og gyldig.</translation>
+    </message>
+    <message>
+      <source>Delete Confirmation</source>
+      <translation>Bekreftelse for sletting</translation>
+    </message>
+    <message>
+      <source>Delete user ID %1?</source>
+      <translation>Slett bruker-ID %1?</translation>
+    </message>
+    <message>
+      <source>Rename User</source>
+      <translation>Gi brukeren nytt navn</translation>
+    </message>
+    <message>
+      <source>Old Username: %1</source>
+      <translation>Gammelt brukernavn: %1</translation>
+    </message>
+    <message>
+      <source>Set User Color</source>
+      <translation>Velg brukerfarge</translation>
+    </message>
+    <message>
+      <source>Select color:</source>
+      <translation>Velg farge:</translation>
+    </message>
+    <message>
+      <source>Set Controller Port</source>
+      <translation>Velg kontroller-port</translation>
+    </message>
+    <message>
+      <source>Assign port (1-4) to this user:</source>
+      <translation>Gi port (1-4) til denne brukeren:</translation>
+    </message>
+    <message>
+      <source>&amp;Open User Directory</source>
+      <translation>&amp;Åpne brukermappe</translation>
     </message>
   </context>
   <context>
@@ -2754,7 +3074,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Failed to determine the folder path.</source>
-      <translation>Fant ikke stien til mappa.</translation>
+      <translation>Klarte ikke bestemme stien til mappa.</translation>
     </message>
     <message>
       <source>Delete version</source>
@@ -2762,7 +3082,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Do you want to delete the version</source>
-      <translation>Ønsker du å slette den valgte versjonen</translation>
+      <translation>Vil du slette den valgte versjonen</translation>
     </message>
     <message>
       <source>Version list update</source>
@@ -2788,7 +3108,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Do you want to download the version</source>
-      <translation>Ønsker du å laste ned versjonen</translation>
+      <translation>Vil du laste ned versjonen</translation>
     </message>
     <message>
       <source>No files available for this platform.</source>
@@ -2816,7 +3136,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Auto Updater - Emulator</source>
-      <translation>Auto oppdatering – emulator</translation>
+      <translation>Automatisk oppdatering – emulator</translation>
     </message>
     <message>
       <source>You already have the latest pre-release version.</source>
@@ -2836,7 +3156,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Do you want to update?</source>
-      <translation>Ønsker du å oppdatere?</translation>
+      <translation>Vil du oppdatere?</translation>
     </message>
     <message>
       <source>Update</source>

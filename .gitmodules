@@ -10,10 +10,6 @@
 	path = externals/toml11
 	url = https://github.com/ToruNiina/toml11.git
 	shallow = true
-[submodule "externals/pugixml"]
-	path = externals/pugixml
-	url = https://github.com/zeux/pugixml.git
-	shallow = true
 [submodule "externals/volk"]
 	path = externals/volk
 	url = https://github.com/zeux/volk.git

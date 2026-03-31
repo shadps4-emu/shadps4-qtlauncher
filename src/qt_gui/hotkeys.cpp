@@ -7,11 +7,11 @@
 #include <QtConcurrent/qtconcurrentrun.h>
 #include <SDL3/SDL.h>
 
-#include "common/config.h"
 #include "common/logging/log.h"
 #include "common/path_util.h"
+#include "core/emulator_settings.h"
 #include "hotkeys.h"
-#include "input/controller.h"
+#include "input/input.h"
 #include "sdl_event_wrapper.h"
 #include "ui_hotkeys.h"
 
@@ -171,7 +171,7 @@ void Hotkeys::SaveHotkeys(bool CloseOnSave) {
     add_mapping(ui->mouseJoystickButton->text(), "hotkey_toggle_mouse_to_joystick");
     add_mapping(ui->mouseGyroButton->text(), "hotkey_toggle_mouse_to_gyro");
 
-    auto hotkey_file = Config::GetFoolproofInputConfigFile("global");
+    auto hotkey_file = Input::GetFoolproofInputConfigFile("global");
     std::fstream file(hotkey_file);
     int lineCount = 0;
     std::string line;
@@ -254,7 +254,7 @@ void Hotkeys::SaveHotkeys(bool CloseOnSave) {
 }
 
 void Hotkeys::LoadHotkeys() {
-    auto hotkey_file = Config::GetFoolproofInputConfigFile("global");
+    auto hotkey_file = Input::GetFoolproofInputConfigFile("global");
     std::ifstream file(hotkey_file);
     int lineCount = 0;
     std::string line = "";
@@ -334,7 +334,7 @@ void Hotkeys::CheckGamePad() {
     }
 
     int defaultIndex = GamepadSelect::GetIndexfromGUID(h_gamepads, gamepad_count,
-                                                       Config::getDefaultControllerID());
+                                                       EmulatorSettings.GetDefaultControllerId());
     int activeIndex = GamepadSelect::GetIndexfromGUID(h_gamepads, gamepad_count,
                                                       GamepadSelect::GetSelectedGamepad());
 

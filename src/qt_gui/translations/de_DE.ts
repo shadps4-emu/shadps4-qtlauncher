@@ -626,6 +626,191 @@ Einzigartige Inputs können nicht öfters als einmal gebunden werden. Input-Dupl
     </message>
   </context>
   <context>
+    <name>CryptoManagerDialog</name>
+    <message>
+      <source>Crypto Key Manager</source>
+      <translation>Kryptografie Schlüsselverwaltung</translation>
+    </message>
+    <message>
+      <source>Trophy Key: Used for trophy decryption.
+Must be a valid hex string with even length.</source>
+      <translation>Trophäen-Schlüssel: Wird für die Entschlüsselung der Trophäen verwendet.
+Muss ein gültiger Hex-Wert mit gleicher Länge sein.</translation>
+    </message>
+    <message>
+      <source>Enter Trophy Key</source>
+      <translation>Trophäen-Schlüssel eingeben</translation>
+    </message>
+    <message>
+      <source>Trophy Key:</source>
+      <translation>Trophäen-Schlüssel:</translation>
+    </message>
+    <message>
+      <source>Status: Not loaded</source>
+      <translation>Status: Nicht geladen</translation>
+    </message>
+    <message>
+      <source>Trophy Key</source>
+      <translation>Trophäen-Schlüssel</translation>
+    </message>
+    <message>
+      <source>Enter %1</source>
+      <translation>%1 eingeben</translation>
+    </message>
+    <message>
+      <source>Exponent1</source>
+      <translation>Exponent1</translation>
+    </message>
+    <message>
+      <source>Exponent2</source>
+      <translation>Exponent2</translation>
+    </message>
+    <message>
+      <source>Public Exponent</source>
+      <translation>Öffentlicher Exponent</translation>
+    </message>
+    <message>
+      <source>Coefficient</source>
+      <translation>Koeffizient</translation>
+    </message>
+    <message>
+      <source>Modulus</source>
+      <translation>Modulo</translation>
+    </message>
+    <message>
+      <source>Prime 1</source>
+      <translation>Primzahl 1</translation>
+    </message>
+    <message>
+      <source>Prime 2</source>
+      <translation>Primzahl 2</translation>
+    </message>
+    <message>
+      <source>Private Exponent</source>
+      <translation>Privater Exponent</translation>
+    </message>
+    <message>
+      <source>Fake Keyset</source>
+      <translation>Fake Schlüsselset</translation>
+    </message>
+    <message>
+      <source>RSA key components for fake signing.
+All fields must be valid hex strings with even length.</source>
+      <translation>RSA-Schlüsselkomponenten für gefälschte Signatur.
+Alle Felder müssen gültige Hex-Werte mit gleicher Länge sein.</translation>
+    </message>
+    <message>
+      <source>Debug Rif Keyset</source>
+      <translation>Debug Rif Schlüsselset</translation>
+    </message>
+    <message>
+      <source>RSA key components for debug RIF files.
+All fields must be valid hex strings with even length.</source>
+      <translation>RSA-Schlüsselkomponenten für Debug RIF-Dateien.
+Alle Felder müssen gültige Hex-Werte mit gleicher Länge sein.</translation>
+    </message>
+    <message>
+      <source>Pkg Derived Key3</source>
+      <translation>PKG-basierter Schlüssel 3</translation>
+    </message>
+    <message>
+      <source>RSA key components for package decryption.
+All fields must be valid hex strings with even length.</source>
+      <translation>RSA-Schlüsselkomponenten für die Paketentschlüsselung.
+Alle Felder müssen gültige Hex-Werte mit gleicher Länge sein.</translation>
+    </message>
+    <message>
+      <source>Load All Keys</source>
+      <translation>Alle Schlüssel laden</translation>
+    </message>
+    <message>
+      <source>Save All Keys</source>
+      <translation>Alle Schlüssel speichern</translation>
+    </message>
+    <message>
+      <source>Close</source>
+      <translation>Schließen</translation>
+    </message>
+    <message>
+      <source>Warning</source>
+      <translation>Warnung</translation>
+    </message>
+    <message>
+      <source>No key file found or failed to load.
+Please enter your keys and save them.</source>
+      <translation>Schlüsseldatei konnte nicht gefunden oder geladen werden.
+Bitte gib die Schlüssel ein und speicher diese.</translation>
+    </message>
+    <message>
+      <source>Validation Error</source>
+      <translation>Überprüfungsfehler</translation>
+    </message>
+    <message>
+      <source>Success</source>
+      <translation>Erfolgreich</translation>
+    </message>
+    <message>
+      <source>Keys saved successfully!</source>
+      <translation>Schlüssel erfolgreich gespeichert!</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation>Fehler</translation>
+    </message>
+    <message>
+      <source>Failed to save keys!</source>
+      <translation>Fehler beim Speichern der Schlüssel!</translation>
+    </message>
+    <message>
+      <source>Status: All fields empty</source>
+      <translation>Status: Alle Felder leer</translation>
+    </message>
+    <message>
+      <source>Status: Invalid hex values</source>
+      <translation>Status: Ungültige Hex-Werte</translation>
+    </message>
+    <message>
+      <source>Status: Incomplete</source>
+      <translation>Status: Unvollständig</translation>
+    </message>
+    <message>
+      <source>Status: Valid</source>
+      <translation>Status: Gültig</translation>
+    </message>
+    <message>
+      <source>Invalid File</source>
+      <translation>Ungültige Datei</translation>
+    </message>
+    <message>
+      <source>Only JSON files are supported.</source>
+      <translation>Es werden nur JSON-Dateien unterstützt.</translation>
+    </message>
+    <message>
+      <source>Unable to open file.</source>
+      <translation>Die Datei kann nicht geöffnet werden.</translation>
+    </message>
+    <message>
+      <source>JSON Error</source>
+      <translation>JSON-Fehler</translation>
+    </message>
+    <message>
+      <source>Invalid JSON format.</source>
+      <translation>Ungültiges JSON-Format.</translation>
+    </message>
+    <message>
+      <source>Keys successfully loaded from JSON!</source>
+      <translation>Schlüssel erfolgreich aus JSON geladen!</translation>
+    </message>
+    <message>
+      <source>Trophy Key contains invalid hex or has odd length.</source>
+      <translation>Der Trophäen-Schlüssel enthält einen ungültigen Hex-Wert oder hat eine ungewöhnliche Länge.</translation>
+    </message>
+    <message>
+      <source>%1 contains invalid hex or has odd length.</source>
+      <translation>Der %1 enthält einen ungültigen Hex-Wert oder hat eine ungewöhnliche Länge.</translation>
+    </message>
+  </context>
+  <context>
     <name>EditorDialog</name>
     <message>
       <source>Edit Keyboard + Mouse and Controller input bindings</source>
@@ -1105,6 +1290,26 @@ Einzigartige Inputs können nicht öfters als einmal gebunden werden. Input-Dupl
       <source>Shader Cache</source>
       <translation>Shader Cache</translation>
     </message>
+    <message>
+      <source>User 1</source>
+      <translation>Benutzer 1</translation>
+    </message>
+    <message>
+      <source>User 2</source>
+      <translation>Benutzer 2</translation>
+    </message>
+    <message>
+      <source>User 3</source>
+      <translation>Benutzer 3</translation>
+    </message>
+    <message>
+      <source>User 4</source>
+      <translation>Benutzer 4</translation>
+    </message>
+    <message>
+      <source>This game has no save folder to open!</source>
+      <translation>Dieses Spiel hat keinen Speicherdaten-Ordner zum Öffnen!</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -1218,6 +1423,14 @@ Einzigartige Inputs können nicht öfters als einmal gebunden werden. Input-Dupl
     <message>
       <source>Tip: Unmap inputs with right-click</source>
       <translation>Tipp: Mit Rechtsklick kann die Zuordnung einer Eingabe entfernt werden</translation>
+    </message>
+    <message>
+      <source>Volume Up</source>
+      <translation>Lautstärke erhöhen</translation>
+    </message>
+    <message>
+      <source>Volume Down</source>
+      <translation>Lautstärke reduzieren</translation>
     </message>
   </context>
   <context>
@@ -1783,6 +1996,14 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
       <source>Show Game Log</source>
       <translation>Spielprotokoll anzeigen</translation>
     </message>
+    <message>
+      <source>Manage Cryptographic Keys</source>
+      <translation>Kryptografische Schlüssel verwalten</translation>
+    </message>
+    <message>
+      <source>Manage Users</source>
+      <translation>Benutzer verwalten</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -1809,14 +2030,6 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
     <message>
       <source>Enable Discord Rich Presence</source>
       <translation>Discord Rich Presence aktivieren</translation>
-    </message>
-    <message>
-      <source>Username</source>
-      <translation>Benutzername</translation>
-    </message>
-    <message>
-      <source>Trophy Key</source>
-      <translation>Trophäen-Schlüssel</translation>
     </message>
     <message>
       <source>Trophy</source>
@@ -1959,10 +2172,6 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
       <translation>Guest-Debug-Markierer</translation>
     </message>
     <message>
-      <source>Enable Readbacks</source>
-      <translation>Aktiviere Readbacks</translation>
-    </message>
-    <message>
       <source>Enable Readback Linear Images</source>
       <translation>Aktiviere Readback Linear Images</translation>
     </message>
@@ -2059,14 +2268,6 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
       <translation>Discord Rich Presence aktivieren:\nZeigt das Emulator-Icon und relevante Informationen in deinem Discord-Profil an.</translation>
     </message>
     <message>
-      <source>Username:\nSets the PS4&apos;s account username, which may be displayed by some games.</source>
-      <translation>Benutzername:\nLegt den Namen des PS4-Kontos fest, der in einigen Spielen angezeigt werden kann.</translation>
-    </message>
-    <message>
-      <source>Trophy Key:\nKey used to decrypt trophies. Must be obtained from your jailbroken console.\nMust contain only hex characters.</source>
-      <translation>Trophäenschlüssel:\nSchlüssel zum Entschlüsseln von Trophäen. Muss von Ihrer gejailbreakten Konsole abgerufen werden.\nDarf nur Hex-Zeichen enthalten.</translation>
-    </message>
-    <message>
       <source>Log Type:\nSets whether to synchronize the output of the log window for performance. May have adverse effects on emulation.</source>
       <translation>Protokolltyp:\nLegt fest, ob die Ausgabe des Protokollfensters synchronisiert wird, um die Leistung zu verbessern. Dies kann sich negativ auf die Emulation auswirken.</translation>
     </message>
@@ -2155,10 +2356,6 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
       <translation>Shader sammeln:\nSie müssen diese Option aktivieren, um Shader mit dem Debug-Menü (Strg + F10) bearbeiten zu können.</translation>
     </message>
     <message>
-      <source>Enable Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
-      <translation>Aktiviere Readbacks:\nAktiviert GPU-Speicher-Readbacks und -Writebacks.\nDies ist für manche Spiele erforderlich, damit sie richtig funktionieren.\nKann Stabilitäts- und/oder Leistungsprobleme verursachen.</translation>
-    </message>
-    <message>
       <source>Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</source>
       <translation>Aktiviere Readback Linear Images:\nAktiviert das asynchrone Herunterladen von GPU-modifizierten linearen Bildern.\nKann Probleme in einigen Spielen beheben.</translation>
     </message>
@@ -2175,24 +2372,12 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
       <translation>Gast-Debug-Markierer:\nFügt alle Debug-Markierer, die das Spiel selbst hinzugefügt hat, in den Befehlspuffer ein.\nWenn Sie dies aktiviert haben, sollten Sie die Absturzdiagnose aktivieren.\nNützlich für Programme wie RenderDoc.</translation>
     </message>
     <message>
-      <source>Save Data Path:\nThe folder where game save data will be saved.</source>
-      <translation>Speicherdaten-Pfad:\nDer Ordner, in den Speicherdaten gespeichert werden.</translation>
-    </message>
-    <message>
-      <source>Browse:\nBrowse for a folder to set as the save data path.</source>
-      <translation>Durchsuchen:\nDurchsuchen eines Ordners, um den Speicherdatenpfad festzulegen.</translation>
-    </message>
-    <message>
       <source>Set the volume of the background music.</source>
       <translation>Legen Sie die Lautstärke der Hintergrundmusik fest.</translation>
     </message>
     <message>
       <source>Enable Motion Controls</source>
       <translation>Aktiviere Bewegungssteuerung</translation>
-    </message>
-    <message>
-      <source>Save Data Path</source>
-      <translation>Speicherdaten-Pfad</translation>
     </message>
     <message>
       <source>Browse</source>
@@ -2213,10 +2398,6 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
     <message>
       <source>Directory to install games</source>
       <translation>Installationsverzeichnis für Spiele</translation>
-    </message>
-    <message>
-      <source>Directory to save data</source>
-      <translation>Verzeichnis für Speicherdaten</translation>
     </message>
     <message>
       <source>Video</source>
@@ -2618,6 +2799,46 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
       <translation>Komprimiere Shader Cache-Dateien in eine Zip-Datei:\nDie Shader Cache-Dateien werden in eine einzige Zip-Datei gespeichert anstatt in mehreren separaten Dateien.</translation>
     </message>
+    <message>
+      <source>Readbacks Mode</source>
+      <translation>Readback-Modus</translation>
+    </message>
+    <message>
+      <source>Disabled</source>
+      <translation>Deaktiviert</translation>
+    </message>
+    <message>
+      <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
+      <translation>Readback:\nAktiviert GPU-Speicher-Readbacks und -Writebacks.\nDies ist für manche Spiele erforderlich, damit sie richtig funktionieren.\nKann Stabilitäts- und/oder Leistungsprobleme verursachen.</translation>
+    </message>
+    <message>
+      <source>Relaxed</source>
+      <translation>Gelockert</translation>
+    </message>
+    <message>
+      <source>Precise</source>
+      <translation>Präzise</translation>
+    </message>
+    <message>
+      <source>Select shadPS4 Home Path</source>
+      <translation>Wähle shadPS4 Benutzerdaten-Pfad</translation>
+    </message>
+    <message>
+      <source>Select the system modules folder</source>
+      <translation>Wähle den Systemmodule Ordner</translation>
+    </message>
+    <message>
+      <source>Home Folder Location (Saves, Inputs, Trophy Data)</source>
+      <translation>Benutzerdaten Ordner (Speicher-, Eingaben- und Trophäendaten)</translation>
+    </message>
+    <message>
+      <source>Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</source>
+      <translation>Benutzerdaten Ordner:\nDer Ordner in den Speicherdaten, Trophäen und Eingabekonfiguration für alle Benutzer gespeichert werden.</translation>
+    </message>
+    <message>
+      <source>Browse:\nBrowse for a folder to set as the home folder.</source>
+      <translation>Durchsuchen:\nLege einen Ordner für Benutzerdaten fest.</translation>
+    </message>
   </context>
   <context>
     <name>ShortcutDialog</name>
@@ -2663,6 +2884,105 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
     <message>
       <source>Show Hidden Trophies</source>
       <translation>Verborgene Trophäen anzeigen</translation>
+    </message>
+  </context>
+  <context>
+    <name>UserManagerDialog</name>
+    <message>
+      <source>User Manager</source>
+      <translation>Benutzerverwaltung</translation>
+    </message>
+    <message>
+      <source>&amp;Create User</source>
+      <translation>&amp;Benutzer erstellen</translation>
+    </message>
+    <message>
+      <source>&amp;Delete User</source>
+      <translation>&amp;Benutzer löschen</translation>
+    </message>
+    <message>
+      <source>&amp;Rename User</source>
+      <translation>&amp;Benutzer umbenennen</translation>
+    </message>
+    <message>
+      <source>&amp;Set Default User</source>
+      <translation>&amp;Standardbenutzer festlegen</translation>
+    </message>
+    <message>
+      <source>&amp;Set Color</source>
+      <translation>&amp;Farbe festlegen</translation>
+    </message>
+    <message>
+      <source>&amp;Set Controller Port</source>
+      <translation>&amp;Controlleranschluss festlegen</translation>
+    </message>
+    <message>
+      <source>&amp;Close</source>
+      <translation>&amp;Schließen</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation>Fehler</translation>
+    </message>
+    <message>
+      <source>Cannot add more users.</source>
+      <translation>Es kann kein weiterer Benutzer erstellt werden.</translation>
+    </message>
+    <message>
+      <source>Create New User</source>
+      <translation>Neuen Benutzer erstellen</translation>
+    </message>
+    <message>
+      <source>New User ID: %1</source>
+      <translation>Neuer Benutzer ID: %1</translation>
+    </message>
+    <message>
+      <source>Username (3–16 chars, letters, numbers, _, -)</source>
+      <translation>Benutzername (3-16 Zeichen, Buchstaben, Zahlen, _, -)</translation>
+    </message>
+    <message>
+      <source>Invalid Username</source>
+      <translation>Ungültiger Benutzername</translation>
+    </message>
+    <message>
+      <source>Username must be 3–16 chars and valid.</source>
+      <translation>Benutzername muss 3-16 Zeichen beinhalten und gültig sein.</translation>
+    </message>
+    <message>
+      <source>Delete Confirmation</source>
+      <translation>Löschbestätigung</translation>
+    </message>
+    <message>
+      <source>Delete user ID %1?</source>
+      <translation>Benutzer ID %1 löschen?</translation>
+    </message>
+    <message>
+      <source>Rename User</source>
+      <translation>Beutzer umbenennen</translation>
+    </message>
+    <message>
+      <source>Old Username: %1</source>
+      <translation>Alter Benutzername: %1</translation>
+    </message>
+    <message>
+      <source>Set User Color</source>
+      <translation>Farbe für Benutzer festlegen</translation>
+    </message>
+    <message>
+      <source>Select color:</source>
+      <translation>Farbe auswählen:</translation>
+    </message>
+    <message>
+      <source>Set Controller Port</source>
+      <translation>Controlleranschluss festlegen</translation>
+    </message>
+    <message>
+      <source>Assign port (1-4) to this user:</source>
+      <translation>Weise einen Anschluss (1-4) zu diesem Benutzer zu:</translation>
+    </message>
+    <message>
+      <source>&amp;Open User Directory</source>
+      <translation>&amp;Benutzerverzeichnis öffnen</translation>
     </message>
   </context>
   <context>

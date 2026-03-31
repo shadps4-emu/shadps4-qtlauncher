@@ -5,15 +5,17 @@
 #include "system_error"
 #include "unordered_map"
 
-#include "common/config.h"
+#include "common/key_manager.h"
 #include "common/logging/backend.h"
 #include "common/versions.h"
+#include "core/emulator_settings.h"
+#include "core/emulator_state.h"
+#include "core/user_settings.h"
 #include "qt_gui/game_install_dialog.h"
 #include "qt_gui/main_window.h"
 #ifdef _WIN32
 #include <windows.h>
 #endif
-#include <core/emulator_state.h>
 
 // Custom message handler to ignore Qt logs
 void customMessageHandler(QtMsgType, const QMessageLogContext&, const QString&) {}
@@ -30,12 +32,19 @@ int main(int argc, char* argv[]) {
     QApplication a(argc, argv);
 
     QApplication::setDesktopFileName("net.shadps4.qtlauncher");
+
+    // Load configurations and initialize Qt application
     std::shared_ptr<EmulatorState> m_emu_state = std::make_shared<EmulatorState>();
     EmulatorState::SetInstance(m_emu_state);
 
-    // Load configurations and initialize Qt application
-    const auto user_dir = Common::FS::GetUserPath(Common::FS::PathType::UserDir);
-    Config::load(user_dir / "config.toml");
+    std::shared_ptr<EmulatorSettingsImpl> emu_settings = std::make_shared<EmulatorSettingsImpl>();
+    emu_settings->Load();
+    EmulatorSettingsImpl::SetInstance(emu_settings);
+    UserSettings.Load();
+
+    std::shared_ptr<KeyManager> m_key_manager = std::make_shared<KeyManager>();
+    KeyManager::SetInstance(m_key_manager); // initialize singleton instance
+    m_key_manager->LoadFromFile();          // load keys
 
     const bool has_command_line_argument = argc > 1;
     bool has_emulator_argument = false;
@@ -133,7 +142,7 @@ int main(int argc, char* argv[]) {
     }
 
     // If no game directories are set and no command line argument, prompt for it
-    if (Config::getGameInstallDirsEnabled().empty() && !has_command_line_argument) {
+    if (EmulatorSettings.GetGameInstallDirsEnabled().empty() && !has_command_line_argument) {
         GameInstallDialog dlg;
         dlg.exec();
     }

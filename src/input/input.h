@@ -3,6 +3,7 @@
 
 #pragma once
 
+#include <filesystem>
 #include <string>
 #include <SDL3/SDL_gamepad.h>
 
@@ -14,3 +15,7 @@ std::string GetSelectedGamepad();
 void SetSelectedGamepad(std::string GUID);
 
 } // namespace GamepadSelect
+
+namespace Input {
+std::filesystem::path GetFoolproofInputConfigFile(const std::string& game_id = "");
+} // namespace Input

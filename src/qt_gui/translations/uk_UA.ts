@@ -627,6 +627,191 @@
     </message>
   </context>
   <context>
+    <name>CryptoManagerDialog</name>
+    <message>
+      <source>Crypto Key Manager</source>
+      <translation type="unfinished">Crypto Key Manager</translation>
+    </message>
+    <message>
+      <source>Trophy Key: Used for trophy decryption.
+Must be a valid hex string with even length.</source>
+      <translation type="unfinished">Trophy Key: Used for trophy decryption.
+Must be a valid hex string with even length.</translation>
+    </message>
+    <message>
+      <source>Enter Trophy Key</source>
+      <translation type="unfinished">Enter Trophy Key</translation>
+    </message>
+    <message>
+      <source>Trophy Key:</source>
+      <translation type="unfinished">Trophy Key:</translation>
+    </message>
+    <message>
+      <source>Status: Not loaded</source>
+      <translation type="unfinished">Status: Not loaded</translation>
+    </message>
+    <message>
+      <source>Trophy Key</source>
+      <translation type="unfinished">Trophy Key</translation>
+    </message>
+    <message>
+      <source>Enter %1</source>
+      <translation type="unfinished">Enter %1</translation>
+    </message>
+    <message>
+      <source>Exponent1</source>
+      <translation type="unfinished">Exponent1</translation>
+    </message>
+    <message>
+      <source>Exponent2</source>
+      <translation type="unfinished">Exponent2</translation>
+    </message>
+    <message>
+      <source>Public Exponent</source>
+      <translation type="unfinished">Public Exponent</translation>
+    </message>
+    <message>
+      <source>Coefficient</source>
+      <translation type="unfinished">Coefficient</translation>
+    </message>
+    <message>
+      <source>Modulus</source>
+      <translation type="unfinished">Modulus</translation>
+    </message>
+    <message>
+      <source>Prime 1</source>
+      <translation type="unfinished">Prime 1</translation>
+    </message>
+    <message>
+      <source>Prime 2</source>
+      <translation type="unfinished">Prime 2</translation>
+    </message>
+    <message>
+      <source>Private Exponent</source>
+      <translation type="unfinished">Private Exponent</translation>
+    </message>
+    <message>
+      <source>Fake Keyset</source>
+      <translation type="unfinished">Fake Keyset</translation>
+    </message>
+    <message>
+      <source>RSA key components for fake signing.
+All fields must be valid hex strings with even length.</source>
+      <translation type="unfinished">RSA key components for fake signing.
+All fields must be valid hex strings with even length.</translation>
+    </message>
+    <message>
+      <source>Debug Rif Keyset</source>
+      <translation type="unfinished">Debug Rif Keyset</translation>
+    </message>
+    <message>
+      <source>RSA key components for debug RIF files.
+All fields must be valid hex strings with even length.</source>
+      <translation type="unfinished">RSA key components for debug RIF files.
+All fields must be valid hex strings with even length.</translation>
+    </message>
+    <message>
+      <source>Pkg Derived Key3</source>
+      <translation type="unfinished">Pkg Derived Key3</translation>
+    </message>
+    <message>
+      <source>RSA key components for package decryption.
+All fields must be valid hex strings with even length.</source>
+      <translation type="unfinished">RSA key components for package decryption.
+All fields must be valid hex strings with even length.</translation>
+    </message>
+    <message>
+      <source>Load All Keys</source>
+      <translation type="unfinished">Load All Keys</translation>
+    </message>
+    <message>
+      <source>Save All Keys</source>
+      <translation type="unfinished">Save All Keys</translation>
+    </message>
+    <message>
+      <source>Close</source>
+      <translation type="unfinished">Close</translation>
+    </message>
+    <message>
+      <source>Warning</source>
+      <translation type="unfinished">Warning</translation>
+    </message>
+    <message>
+      <source>No key file found or failed to load.
+Please enter your keys and save them.</source>
+      <translation type="unfinished">No key file found or failed to load.
+Please enter your keys and save them.</translation>
+    </message>
+    <message>
+      <source>Validation Error</source>
+      <translation type="unfinished">Validation Error</translation>
+    </message>
+    <message>
+      <source>Success</source>
+      <translation type="unfinished">Success</translation>
+    </message>
+    <message>
+      <source>Keys saved successfully!</source>
+      <translation type="unfinished">Keys saved successfully!</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation type="unfinished">Error</translation>
+    </message>
+    <message>
+      <source>Failed to save keys!</source>
+      <translation type="unfinished">Failed to save keys!</translation>
+    </message>
+    <message>
+      <source>Status: All fields empty</source>
+      <translation type="unfinished">Status: All fields empty</translation>
+    </message>
+    <message>
+      <source>Status: Invalid hex values</source>
+      <translation type="unfinished">Status: Invalid hex values</translation>
+    </message>
+    <message>
+      <source>Status: Incomplete</source>
+      <translation type="unfinished">Status: Incomplete</translation>
+    </message>
+    <message>
+      <source>Status: Valid</source>
+      <translation type="unfinished">Status: Valid</translation>
+    </message>
+    <message>
+      <source>Invalid File</source>
+      <translation type="unfinished">Invalid File</translation>
+    </message>
+    <message>
+      <source>Only JSON files are supported.</source>
+      <translation type="unfinished">Only JSON files are supported.</translation>
+    </message>
+    <message>
+      <source>Unable to open file.</source>
+      <translation type="unfinished">Unable to open file.</translation>
+    </message>
+    <message>
+      <source>JSON Error</source>
+      <translation type="unfinished">JSON Error</translation>
+    </message>
+    <message>
+      <source>Invalid JSON format.</source>
+      <translation type="unfinished">Invalid JSON format.</translation>
+    </message>
+    <message>
+      <source>Keys successfully loaded from JSON!</source>
+      <translation type="unfinished">Keys successfully loaded from JSON!</translation>
+    </message>
+    <message>
+      <source>Trophy Key contains invalid hex or has odd length.</source>
+      <translation type="unfinished">Trophy Key contains invalid hex or has odd length.</translation>
+    </message>
+    <message>
+      <source>%1 contains invalid hex or has odd length.</source>
+      <translation type="unfinished">%1 contains invalid hex or has odd length.</translation>
+    </message>
+  </context>
+  <context>
     <name>EditorDialog</name>
     <message>
       <source>Edit Keyboard + Mouse and Controller input bindings</source>
@@ -1106,6 +1291,26 @@
       <source>Shader Cache</source>
       <translation>Кеш шейдерів</translation>
     </message>
+    <message>
+      <source>User 1</source>
+      <translation type="unfinished">User 1</translation>
+    </message>
+    <message>
+      <source>User 2</source>
+      <translation type="unfinished">User 2</translation>
+    </message>
+    <message>
+      <source>User 3</source>
+      <translation type="unfinished">User 3</translation>
+    </message>
+    <message>
+      <source>User 4</source>
+      <translation type="unfinished">User 4</translation>
+    </message>
+    <message>
+      <source>This game has no save folder to open!</source>
+      <translation type="unfinished">This game has no save folder to open!</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -1219,6 +1424,14 @@
     <message>
       <source>Tip: Unmap inputs with right-click</source>
       <translation>Підказка: відв’язати введення можна правою кнопкою миші</translation>
+    </message>
+    <message>
+      <source>Volume Up</source>
+      <translation>Збільшити гучність</translation>
+    </message>
+    <message>
+      <source>Volume Down</source>
+      <translation>Зменшити гучність</translation>
     </message>
   </context>
   <context>
@@ -1784,6 +1997,14 @@ Select an emulator version from the right panel.</source>
       <source>Show Game Log</source>
       <translation>Показати ігровий журнал</translation>
     </message>
+    <message>
+      <source>Manage Cryptographic Keys</source>
+      <translation type="unfinished">Manage Cryptographic Keys</translation>
+    </message>
+    <message>
+      <source>Manage Users</source>
+      <translation type="unfinished">Manage Users</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -1810,14 +2031,6 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Enable Discord Rich Presence</source>
       <translation>Увімкнути Discord Rich Presence</translation>
-    </message>
-    <message>
-      <source>Username</source>
-      <translation>Ім&apos;я користувача</translation>
-    </message>
-    <message>
-      <source>Trophy Key</source>
-      <translation>Ключ трофеїв</translation>
     </message>
     <message>
       <source>Trophy</source>
@@ -1960,10 +2173,6 @@ Select an emulator version from the right panel.</source>
       <translation>Гостьові маркери налагодження</translation>
     </message>
     <message>
-      <source>Enable Readbacks</source>
-      <translation>Увімкнути відгуки</translation>
-    </message>
-    <message>
       <source>Enable Readback Linear Images</source>
       <translation>Увімкнути відгуки лінійних зображень</translation>
     </message>
@@ -2060,14 +2269,6 @@ Select an emulator version from the right panel.</source>
       <translation>Увімкнути Discord Rich Presence:\nВідображає значок емулятора та відповідну інформацію у вашому профілі Discord.</translation>
     </message>
     <message>
-      <source>Username:\nSets the PS4&apos;s account username, which may be displayed by some games.</source>
-      <translation>Ім&apos;я користувача:\nВстановіть ім&apos;я користувача акаунта PS4. Воно може відображатися в деяких іграх.</translation>
-    </message>
-    <message>
-      <source>Trophy Key:\nKey used to decrypt trophies. Must be obtained from your jailbroken console.\nMust contain only hex characters.</source>
-      <translation>Ключ трофеїв:\nКлюч для розшифровки трофеїв. Може бути отриманий зі зламаної консолі.\nПовинен містити лише шістнадцяткові символи.</translation>
-    </message>
-    <message>
       <source>Log Type:\nSets whether to synchronize the output of the log window for performance. May have adverse effects on emulation.</source>
       <translation>Тип логів:\nВстановіть, чи синхронізувати виведення вікна логів заради продуктивності. Це може негативно вплинути на емуляцію.</translation>
     </message>
@@ -2156,10 +2357,6 @@ Select an emulator version from the right panel.</source>
       <translation>Збирати шейдери:\nВам потрібно увімкнути цю опцію, щоб редагувати шейдери за допомогою меню налагодження (Ctrl + F10).</translation>
     </message>
     <message>
-      <source>Enable Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
-      <translation>Увімкнути відгуки:\nувімкнути відгуки та запис пам'яті GPU\nЦе потрібно для коректної поведінки у деяких іграх.\nМоже спричинити проблеми зі стабільністю та/або продуктивністю.</translation>
-    </message>
-    <message>
       <source>Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</source>
       <translation>Увімкнути відгуки лінійних зображень:\nУвімкнути асинхронне завантаження зображень, модифікованих GPU.\nМоже виправити проблеми у деяких іграх.</translation>
     </message>
@@ -2176,24 +2373,12 @@ Select an emulator version from the right panel.</source>
       <translation>Гостьові маркери налагодження:\nВставляє налагоджувані маркери, які сама гра додала до командного буфера.\nЯкщо ця опція увімкнена, рекомендується також активувати діагностику збоїв.\nКорисно для програм на кшталт RenderDoc.</translation>
     </message>
     <message>
-      <source>Save Data Path:\nThe folder where game save data will be saved.</source>
-      <translation>Шлях до файлів збережень:\nПапка, де будуть зберігатися ігрові збереження.</translation>
-    </message>
-    <message>
-      <source>Browse:\nBrowse for a folder to set as the save data path.</source>
-      <translation>Вибрати:\nВиберіть папку для ігрових збережень.</translation>
-    </message>
-    <message>
       <source>Set the volume of the background music.</source>
       <translation>Налаштування гучності фонової музики.</translation>
     </message>
     <message>
       <source>Enable Motion Controls</source>
       <translation>Увімкнути керування рухом</translation>
-    </message>
-    <message>
-      <source>Save Data Path</source>
-      <translation>Шлях до файлів збережень</translation>
     </message>
     <message>
       <source>Browse</source>
@@ -2214,10 +2399,6 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Directory to install games</source>
       <translation>Папка для встановлення ігор</translation>
-    </message>
-    <message>
-      <source>Directory to save data</source>
-      <translation>Папка для збереження даних</translation>
     </message>
     <message>
       <source>Video</source>
@@ -2566,7 +2747,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
-      <translation type="unfinished">GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</translation>
+      <translation>Оновлення інтерфейсу:\nРелізна: офіційні версії, що виходять щомісяця; вони можуть бути застарілими, проте є більш надійними та перевіреними.\nНічна: версії для розробки, що містять усі найновіші функції та виправлення, але можуть мати помилки та бути менш стабільними.\n\n*Це оновлення стосується лише інтерфейсу користувача Qt. Щоб оновити ядро емулятора, скористайтеся меню &apos;Менеджер версій&apos;.</translation>
     </message>
     <message>
       <source>Cannot create portable launcher folder</source>
@@ -2598,7 +2779,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
-      <translation type="unfinished">USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</translation>
+      <translation>USB-пристрій:\nСправжній USB-пристрій: використовувати справжній USB-пристрій, під’єднаний до системи.\nSkylander Portal: емуляція Skylander Portal of Power.\nInfinity Base: емуляція Disney Infinity Base.\nDimensions Toypad: емуляція Lego Dimensions Toypad.</translation>
     </message>
     <message>
       <source>Enable Shader Cache</source>
@@ -2610,11 +2791,51 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</source>
-      <translation type="unfinished">Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</translation>
+      <translation>Увімкнути кеш шейдерів:\nЗбереження скомпільованих шейдерів для уникнення повторної компіляції та зменшення затримок.</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
-      <translation type="unfinished">Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</translation>
+      <translation>Стисніть файли кешу шейдерів у zip-архів:\nФайли кешу шейдерів зберігаються в одному zip-архіві замість кількох окремих файлів.</translation>
+    </message>
+    <message>
+      <source>Readbacks Mode</source>
+      <translation>Режим зворотного зчитування</translation>
+    </message>
+    <message>
+      <source>Disabled</source>
+      <translation>Вимкнено</translation>
+    </message>
+    <message>
+      <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
+      <translation>Зворотне зчитування:\nУвімкнути зворотне зчитування та запис пам’яті ГП.\nЦе необхідно для коректної роботи деяких ігор.\nМоже спричинити проблеми зі стабільністю та / або продуктивністю.</translation>
+    </message>
+    <message>
+      <source>Relaxed</source>
+      <translation>Розслаблено</translation>
+    </message>
+    <message>
+      <source>Precise</source>
+      <translation>Точно</translation>
+    </message>
+    <message>
+      <source>Select shadPS4 Home Path</source>
+      <translation>Виберіть шлях до головної теки shadPS4</translation>
+    </message>
+    <message>
+      <source>Select the system modules folder</source>
+      <translation>Виберіть теку модулів системи</translation>
+    </message>
+    <message>
+      <source>Home Folder Location (Saves, Inputs, Trophy Data)</source>
+      <translation type="unfinished">Home Folder Location (Saves, Inputs, Trophy Data)</translation>
+    </message>
+    <message>
+      <source>Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</source>
+      <translation type="unfinished">Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</translation>
+    </message>
+    <message>
+      <source>Browse:\nBrowse for a folder to set as the home folder.</source>
+      <translation type="unfinished">Browse:\nBrowse for a folder to set as the home folder.</translation>
     </message>
   </context>
   <context>
@@ -2661,6 +2882,105 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Show Hidden Trophies</source>
       <translation>Показати приховані трофеї</translation>
+    </message>
+  </context>
+  <context>
+    <name>UserManagerDialog</name>
+    <message>
+      <source>User Manager</source>
+      <translation type="unfinished">User Manager</translation>
+    </message>
+    <message>
+      <source>&amp;Create User</source>
+      <translation type="unfinished">&amp;Create User</translation>
+    </message>
+    <message>
+      <source>&amp;Delete User</source>
+      <translation type="unfinished">&amp;Delete User</translation>
+    </message>
+    <message>
+      <source>&amp;Rename User</source>
+      <translation type="unfinished">&amp;Rename User</translation>
+    </message>
+    <message>
+      <source>&amp;Set Default User</source>
+      <translation type="unfinished">&amp;Set Default User</translation>
+    </message>
+    <message>
+      <source>&amp;Set Color</source>
+      <translation type="unfinished">&amp;Set Color</translation>
+    </message>
+    <message>
+      <source>&amp;Set Controller Port</source>
+      <translation type="unfinished">&amp;Set Controller Port</translation>
+    </message>
+    <message>
+      <source>&amp;Close</source>
+      <translation type="unfinished">&amp;Close</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation type="unfinished">Error</translation>
+    </message>
+    <message>
+      <source>Cannot add more users.</source>
+      <translation type="unfinished">Cannot add more users.</translation>
+    </message>
+    <message>
+      <source>Create New User</source>
+      <translation type="unfinished">Create New User</translation>
+    </message>
+    <message>
+      <source>New User ID: %1</source>
+      <translation type="unfinished">New User ID: %1</translation>
+    </message>
+    <message>
+      <source>Username (3–16 chars, letters, numbers, _, -)</source>
+      <translation type="unfinished">Username (3–16 chars, letters, numbers, _, -)</translation>
+    </message>
+    <message>
+      <source>Invalid Username</source>
+      <translation type="unfinished">Invalid Username</translation>
+    </message>
+    <message>
+      <source>Username must be 3–16 chars and valid.</source>
+      <translation type="unfinished">Username must be 3–16 chars and valid.</translation>
+    </message>
+    <message>
+      <source>Delete Confirmation</source>
+      <translation type="unfinished">Delete Confirmation</translation>
+    </message>
+    <message>
+      <source>Delete user ID %1?</source>
+      <translation type="unfinished">Delete user ID %1?</translation>
+    </message>
+    <message>
+      <source>Rename User</source>
+      <translation type="unfinished">Rename User</translation>
+    </message>
+    <message>
+      <source>Old Username: %1</source>
+      <translation type="unfinished">Old Username: %1</translation>
+    </message>
+    <message>
+      <source>Set User Color</source>
+      <translation type="unfinished">Set User Color</translation>
+    </message>
+    <message>
+      <source>Select color:</source>
+      <translation type="unfinished">Select color:</translation>
+    </message>
+    <message>
+      <source>Set Controller Port</source>
+      <translation type="unfinished">Set Controller Port</translation>
+    </message>
+    <message>
+      <source>Assign port (1-4) to this user:</source>
+      <translation type="unfinished">Assign port (1-4) to this user:</translation>
+    </message>
+    <message>
+      <source>&amp;Open User Directory</source>
+      <translation type="unfinished">&amp;Open User Directory</translation>
     </message>
   </context>
   <context>

@@ -627,6 +627,191 @@
     </message>
   </context>
   <context>
+    <name>CryptoManagerDialog</name>
+    <message>
+      <source>Crypto Key Manager</source>
+      <translation type="unfinished">Crypto Key Manager</translation>
+    </message>
+    <message>
+      <source>Trophy Key: Used for trophy decryption.
+Must be a valid hex string with even length.</source>
+      <translation type="unfinished">Trophy Key: Used for trophy decryption.
+Must be a valid hex string with even length.</translation>
+    </message>
+    <message>
+      <source>Enter Trophy Key</source>
+      <translation type="unfinished">Enter Trophy Key</translation>
+    </message>
+    <message>
+      <source>Trophy Key:</source>
+      <translation type="unfinished">Trophy Key:</translation>
+    </message>
+    <message>
+      <source>Status: Not loaded</source>
+      <translation type="unfinished">Status: Not loaded</translation>
+    </message>
+    <message>
+      <source>Trophy Key</source>
+      <translation type="unfinished">Trophy Key</translation>
+    </message>
+    <message>
+      <source>Enter %1</source>
+      <translation type="unfinished">Enter %1</translation>
+    </message>
+    <message>
+      <source>Exponent1</source>
+      <translation type="unfinished">Exponent1</translation>
+    </message>
+    <message>
+      <source>Exponent2</source>
+      <translation type="unfinished">Exponent2</translation>
+    </message>
+    <message>
+      <source>Public Exponent</source>
+      <translation type="unfinished">Public Exponent</translation>
+    </message>
+    <message>
+      <source>Coefficient</source>
+      <translation type="unfinished">Coefficient</translation>
+    </message>
+    <message>
+      <source>Modulus</source>
+      <translation type="unfinished">Modulus</translation>
+    </message>
+    <message>
+      <source>Prime 1</source>
+      <translation type="unfinished">Prime 1</translation>
+    </message>
+    <message>
+      <source>Prime 2</source>
+      <translation type="unfinished">Prime 2</translation>
+    </message>
+    <message>
+      <source>Private Exponent</source>
+      <translation type="unfinished">Private Exponent</translation>
+    </message>
+    <message>
+      <source>Fake Keyset</source>
+      <translation type="unfinished">Fake Keyset</translation>
+    </message>
+    <message>
+      <source>RSA key components for fake signing.
+All fields must be valid hex strings with even length.</source>
+      <translation type="unfinished">RSA key components for fake signing.
+All fields must be valid hex strings with even length.</translation>
+    </message>
+    <message>
+      <source>Debug Rif Keyset</source>
+      <translation type="unfinished">Debug Rif Keyset</translation>
+    </message>
+    <message>
+      <source>RSA key components for debug RIF files.
+All fields must be valid hex strings with even length.</source>
+      <translation type="unfinished">RSA key components for debug RIF files.
+All fields must be valid hex strings with even length.</translation>
+    </message>
+    <message>
+      <source>Pkg Derived Key3</source>
+      <translation type="unfinished">Pkg Derived Key3</translation>
+    </message>
+    <message>
+      <source>RSA key components for package decryption.
+All fields must be valid hex strings with even length.</source>
+      <translation type="unfinished">RSA key components for package decryption.
+All fields must be valid hex strings with even length.</translation>
+    </message>
+    <message>
+      <source>Load All Keys</source>
+      <translation type="unfinished">Load All Keys</translation>
+    </message>
+    <message>
+      <source>Save All Keys</source>
+      <translation type="unfinished">Save All Keys</translation>
+    </message>
+    <message>
+      <source>Close</source>
+      <translation type="unfinished">Close</translation>
+    </message>
+    <message>
+      <source>Warning</source>
+      <translation type="unfinished">Warning</translation>
+    </message>
+    <message>
+      <source>No key file found or failed to load.
+Please enter your keys and save them.</source>
+      <translation type="unfinished">No key file found or failed to load.
+Please enter your keys and save them.</translation>
+    </message>
+    <message>
+      <source>Validation Error</source>
+      <translation type="unfinished">Validation Error</translation>
+    </message>
+    <message>
+      <source>Success</source>
+      <translation type="unfinished">Success</translation>
+    </message>
+    <message>
+      <source>Keys saved successfully!</source>
+      <translation type="unfinished">Keys saved successfully!</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation type="unfinished">Error</translation>
+    </message>
+    <message>
+      <source>Failed to save keys!</source>
+      <translation type="unfinished">Failed to save keys!</translation>
+    </message>
+    <message>
+      <source>Status: All fields empty</source>
+      <translation type="unfinished">Status: All fields empty</translation>
+    </message>
+    <message>
+      <source>Status: Invalid hex values</source>
+      <translation type="unfinished">Status: Invalid hex values</translation>
+    </message>
+    <message>
+      <source>Status: Incomplete</source>
+      <translation type="unfinished">Status: Incomplete</translation>
+    </message>
+    <message>
+      <source>Status: Valid</source>
+      <translation type="unfinished">Status: Valid</translation>
+    </message>
+    <message>
+      <source>Invalid File</source>
+      <translation type="unfinished">Invalid File</translation>
+    </message>
+    <message>
+      <source>Only JSON files are supported.</source>
+      <translation type="unfinished">Only JSON files are supported.</translation>
+    </message>
+    <message>
+      <source>Unable to open file.</source>
+      <translation type="unfinished">Unable to open file.</translation>
+    </message>
+    <message>
+      <source>JSON Error</source>
+      <translation type="unfinished">JSON Error</translation>
+    </message>
+    <message>
+      <source>Invalid JSON format.</source>
+      <translation type="unfinished">Invalid JSON format.</translation>
+    </message>
+    <message>
+      <source>Keys successfully loaded from JSON!</source>
+      <translation type="unfinished">Keys successfully loaded from JSON!</translation>
+    </message>
+    <message>
+      <source>Trophy Key contains invalid hex or has odd length.</source>
+      <translation type="unfinished">Trophy Key contains invalid hex or has odd length.</translation>
+    </message>
+    <message>
+      <source>%1 contains invalid hex or has odd length.</source>
+      <translation type="unfinished">%1 contains invalid hex or has odd length.</translation>
+    </message>
+  </context>
+  <context>
     <name>EditorDialog</name>
     <message>
       <source>Edit Keyboard + Mouse and Controller input bindings</source>
@@ -1106,6 +1291,26 @@
       <source>Shader Cache</source>
       <translation>Shader Önbelleği</translation>
     </message>
+    <message>
+      <source>User 1</source>
+      <translation type="unfinished">User 1</translation>
+    </message>
+    <message>
+      <source>User 2</source>
+      <translation type="unfinished">User 2</translation>
+    </message>
+    <message>
+      <source>User 3</source>
+      <translation type="unfinished">User 3</translation>
+    </message>
+    <message>
+      <source>User 4</source>
+      <translation type="unfinished">User 4</translation>
+    </message>
+    <message>
+      <source>This game has no save folder to open!</source>
+      <translation type="unfinished">This game has no save folder to open!</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -1219,6 +1424,14 @@
     <message>
       <source>Tip: Unmap inputs with right-click</source>
       <translation/>
+    </message>
+    <message>
+      <source>Volume Up</source>
+      <translation>Sesi Yükselt</translation>
+    </message>
+    <message>
+      <source>Volume Down</source>
+      <translation>Sesi Kıs</translation>
     </message>
   </context>
   <context>
@@ -1784,6 +1997,14 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
       <source>Show Game Log</source>
       <translation>Oyun Günlüğünü Göster</translation>
     </message>
+    <message>
+      <source>Manage Cryptographic Keys</source>
+      <translation type="unfinished">Manage Cryptographic Keys</translation>
+    </message>
+    <message>
+      <source>Manage Users</source>
+      <translation type="unfinished">Manage Users</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -1810,14 +2031,6 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     <message>
       <source>Enable Discord Rich Presence</source>
       <translation>Discord Rich Presence&apos;i etkinleştir</translation>
-    </message>
-    <message>
-      <source>Username</source>
-      <translation>Kullanıcı Adı</translation>
-    </message>
-    <message>
-      <source>Trophy Key</source>
-      <translation>Kupa Anahtarı</translation>
     </message>
     <message>
       <source>Trophy</source>
@@ -1960,10 +2173,6 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
       <translation>Konuk Hata Ayıklama İşaretleyicileri</translation>
     </message>
     <message>
-      <source>Enable Readbacks</source>
-      <translation>Görüntü Geri Okumayı Etkinleştir</translation>
-    </message>
-    <message>
       <source>Enable Readback Linear Images</source>
       <translation>Lineer Görüntü Geri Okumayı Etkinleştir</translation>
     </message>
@@ -2060,14 +2269,6 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
       <translation>Discord Rich Presence&apos;i etkinleştir:\nEmülatör simgesini ve Discord profilinizdeki ilgili bilgileri gösterir.</translation>
     </message>
     <message>
-      <source>Username:\nSets the PS4&apos;s account username, which may be displayed by some games.</source>
-      <translation>Kullanıcı Adı:\nBazı oyunlar tarafından gösterilebilen PS4 hesabının kullanıcı adını ayarlar.</translation>
-    </message>
-    <message>
-      <source>Trophy Key:\nKey used to decrypt trophies. Must be obtained from your jailbroken console.\nMust contain only hex characters.</source>
-      <translation>Kupa Anahtarı:\nKupaların şifresini çözmek için kullanılan anahtardır. Jailbreak yapılmış konsolunuzdan alınmalıdır.\nYalnızca onaltılık karakterler içermelidir.</translation>
-    </message>
-    <message>
       <source>Log Type:\nSets whether to synchronize the output of the log window for performance. May have adverse effects on emulation.</source>
       <translation>Günlük Türü:\nPerformans için günlük penceresi çıkışını senkronize etme durumunu ayarlar. Bu, emülasyonda olumsuz etkilere yol açabilir.</translation>
     </message>
@@ -2156,10 +2357,6 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
       <translation>Gölgelendiricileri Topla:\nHata ayıklama menüsüyle (Ctrl + F10) gölgelendiricileri düzenlemek için bunun etkinleştirilmesi gerekir.</translation>
     </message>
     <message>
-      <source>Enable Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
-      <translation>Geri Okuma özelliğini etkinleştir:\nGPU belleğinden veri geri okuma ve yazmayı etkinleştirir.\nBazı oyunların doğru çalışması için gereklidir.\nKararlılık ve/veya performans sorunlarına neden olabilir.</translation>
-    </message>
-    <message>
       <source>Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</source>
       <translation>Doğrusal görüntülerde geri okumayı etkinleştir:\nGPU tarafından değiştirilmiş doğrusal görüntülerin eşzamanlı olmayan indirilmesini etkinleştirir.\nBazı oyunlardaki sorunları düzeltebilir.</translation>
     </message>
@@ -2176,24 +2373,12 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
       <translation>Konuk Hata Ayıklama İşaretleyicileri\nOyunun kendisinin komut arabelleğine eklediği tüm hata ayıklama işaretlerini ekler.\nBunu etkinleştirdiyseniz, Çökme Tanılamalarını etkinleştirmeniz gerekir.\nRenderDoc gibi programlar için kullanışlıdır.</translation>
     </message>
     <message>
-      <source>Save Data Path:\nThe folder where game save data will be saved.</source>
-      <translation>Kayıt Verileri Yolu:\nOyun kayıt verilerinin kaydedileceği klasördür.</translation>
-    </message>
-    <message>
-      <source>Browse:\nBrowse for a folder to set as the save data path.</source>
-      <translation>Gözat:\nKayıt verileri yolu olarak ayarlamak için bir klasöre göz atın.</translation>
-    </message>
-    <message>
       <source>Set the volume of the background music.</source>
       <translation>Arka plan müziğinin ses seviyesini ayarlayın.</translation>
     </message>
     <message>
       <source>Enable Motion Controls</source>
       <translation>Hareket Kontrollerini Etkinleştir</translation>
-    </message>
-    <message>
-      <source>Save Data Path</source>
-      <translation>Kayıt Verileri Yolu</translation>
     </message>
     <message>
       <source>Browse</source>
@@ -2214,10 +2399,6 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     <message>
       <source>Directory to install games</source>
       <translation>Oyunların yükleneceği dizin</translation>
-    </message>
-    <message>
-      <source>Directory to save data</source>
-      <translation>Kayıt verilerinin tutulacağı dizin</translation>
     </message>
     <message>
       <source>Video</source>
@@ -2615,6 +2796,46 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
       <translation>Shader Önbellek dosyalarını bir zip dosyasına sıkıştır:\nShader önbellek dosyaları, birden fazla ayrı dosya yerine tek bir zip dosyası içinde saklanır.</translation>
     </message>
+    <message>
+      <source>Readbacks Mode</source>
+      <translation type="unfinished">Readbacks Mode</translation>
+    </message>
+    <message>
+      <source>Disabled</source>
+      <translation type="unfinished">Disabled</translation>
+    </message>
+    <message>
+      <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
+      <translation type="unfinished">Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</translation>
+    </message>
+    <message>
+      <source>Relaxed</source>
+      <translation type="unfinished">Relaxed</translation>
+    </message>
+    <message>
+      <source>Precise</source>
+      <translation type="unfinished">Precise</translation>
+    </message>
+    <message>
+      <source>Select shadPS4 Home Path</source>
+      <translation type="unfinished">Select shadPS4 Home Path</translation>
+    </message>
+    <message>
+      <source>Select the system modules folder</source>
+      <translation type="unfinished">Select the system modules folder</translation>
+    </message>
+    <message>
+      <source>Home Folder Location (Saves, Inputs, Trophy Data)</source>
+      <translation type="unfinished">Home Folder Location (Saves, Inputs, Trophy Data)</translation>
+    </message>
+    <message>
+      <source>Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</source>
+      <translation type="unfinished">Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</translation>
+    </message>
+    <message>
+      <source>Browse:\nBrowse for a folder to set as the home folder.</source>
+      <translation type="unfinished">Browse:\nBrowse for a folder to set as the home folder.</translation>
+    </message>
   </context>
   <context>
     <name>ShortcutDialog</name>
@@ -2660,6 +2881,105 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     <message>
       <source>Show Hidden Trophies</source>
       <translation>Gizli Kupaları Göster</translation>
+    </message>
+  </context>
+  <context>
+    <name>UserManagerDialog</name>
+    <message>
+      <source>User Manager</source>
+      <translation type="unfinished">User Manager</translation>
+    </message>
+    <message>
+      <source>&amp;Create User</source>
+      <translation type="unfinished">&amp;Create User</translation>
+    </message>
+    <message>
+      <source>&amp;Delete User</source>
+      <translation type="unfinished">&amp;Delete User</translation>
+    </message>
+    <message>
+      <source>&amp;Rename User</source>
+      <translation type="unfinished">&amp;Rename User</translation>
+    </message>
+    <message>
+      <source>&amp;Set Default User</source>
+      <translation type="unfinished">&amp;Set Default User</translation>
+    </message>
+    <message>
+      <source>&amp;Set Color</source>
+      <translation type="unfinished">&amp;Set Color</translation>
+    </message>
+    <message>
+      <source>&amp;Set Controller Port</source>
+      <translation type="unfinished">&amp;Set Controller Port</translation>
+    </message>
+    <message>
+      <source>&amp;Close</source>
+      <translation type="unfinished">&amp;Close</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation type="unfinished">Error</translation>
+    </message>
+    <message>
+      <source>Cannot add more users.</source>
+      <translation type="unfinished">Cannot add more users.</translation>
+    </message>
+    <message>
+      <source>Create New User</source>
+      <translation type="unfinished">Create New User</translation>
+    </message>
+    <message>
+      <source>New User ID: %1</source>
+      <translation type="unfinished">New User ID: %1</translation>
+    </message>
+    <message>
+      <source>Username (3–16 chars, letters, numbers, _, -)</source>
+      <translation type="unfinished">Username (3–16 chars, letters, numbers, _, -)</translation>
+    </message>
+    <message>
+      <source>Invalid Username</source>
+      <translation type="unfinished">Invalid Username</translation>
+    </message>
+    <message>
+      <source>Username must be 3–16 chars and valid.</source>
+      <translation type="unfinished">Username must be 3–16 chars and valid.</translation>
+    </message>
+    <message>
+      <source>Delete Confirmation</source>
+      <translation type="unfinished">Delete Confirmation</translation>
+    </message>
+    <message>
+      <source>Delete user ID %1?</source>
+      <translation type="unfinished">Delete user ID %1?</translation>
+    </message>
+    <message>
+      <source>Rename User</source>
+      <translation type="unfinished">Rename User</translation>
+    </message>
+    <message>
+      <source>Old Username: %1</source>
+      <translation type="unfinished">Old Username: %1</translation>
+    </message>
+    <message>
+      <source>Set User Color</source>
+      <translation type="unfinished">Set User Color</translation>
+    </message>
+    <message>
+      <source>Select color:</source>
+      <translation type="unfinished">Select color:</translation>
+    </message>
+    <message>
+      <source>Set Controller Port</source>
+      <translation type="unfinished">Set Controller Port</translation>
+    </message>
+    <message>
+      <source>Assign port (1-4) to this user:</source>
+      <translation type="unfinished">Assign port (1-4) to this user:</translation>
+    </message>
+    <message>
+      <source>&amp;Open User Directory</source>
+      <translation type="unfinished">&amp;Open User Directory</translation>
     </message>
   </context>
   <context>
@@ -3016,7 +3336,7 @@ File was too small.</source>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Oluştur</translation>
     </message>
     <message>
       <source>Cancel</source>

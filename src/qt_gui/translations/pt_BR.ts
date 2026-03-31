@@ -289,11 +289,11 @@
     </message>
     <message>
       <source>Do you want to update?</source>
-      <translation>Você quer atualizar?</translation>
+      <translation>Deseja atualizar?</translation>
     </message>
     <message>
       <source>Show Changelog</source>
-      <translation>Mostrar Mudanças</translation>
+      <translation>Mostrar Histórico de Alterações</translation>
     </message>
     <message>
       <source>Check for Updates at Startup</source>
@@ -309,7 +309,7 @@
     </message>
     <message>
       <source>Hide Changelog</source>
-      <translation>Ocultar Mudanças</translation>
+      <translation>Ocultar Histórico de Alterações</translation>
     </message>
     <message>
       <source>Changes</source>
@@ -624,6 +624,191 @@
     <message>
       <source>Tip: Unmap inputs with right-click</source>
       <translation>Dica: Desmapear entradas com botão direito</translation>
+    </message>
+  </context>
+  <context>
+    <name>CryptoManagerDialog</name>
+    <message>
+      <source>Crypto Key Manager</source>
+      <translation>Gerenciador de Chaves Criptográficas</translation>
+    </message>
+    <message>
+      <source>Trophy Key: Used for trophy decryption.
+Must be a valid hex string with even length.</source>
+      <translation>Chave de Troféu: Usada para descriptografar troféus.
+Deve ser uma sequência hexadecimal válida com comprimento par.</translation>
+    </message>
+    <message>
+      <source>Enter Trophy Key</source>
+      <translation>Inserir Chave de Troféu</translation>
+    </message>
+    <message>
+      <source>Trophy Key:</source>
+      <translation>Chave de Troféu:</translation>
+    </message>
+    <message>
+      <source>Status: Not loaded</source>
+      <translation>Estado: Não carregado</translation>
+    </message>
+    <message>
+      <source>Trophy Key</source>
+      <translation>Chave de Troféu</translation>
+    </message>
+    <message>
+      <source>Enter %1</source>
+      <translation>Inserir %1</translation>
+    </message>
+    <message>
+      <source>Exponent1</source>
+      <translation>Expoente1</translation>
+    </message>
+    <message>
+      <source>Exponent2</source>
+      <translation>Expoente2</translation>
+    </message>
+    <message>
+      <source>Public Exponent</source>
+      <translation>Expoente Público</translation>
+    </message>
+    <message>
+      <source>Coefficient</source>
+      <translation>Coeficiente</translation>
+    </message>
+    <message>
+      <source>Modulus</source>
+      <translation>Módulo</translation>
+    </message>
+    <message>
+      <source>Prime 1</source>
+      <translation>Primo 1</translation>
+    </message>
+    <message>
+      <source>Prime 2</source>
+      <translation>Primo 2</translation>
+    </message>
+    <message>
+      <source>Private Exponent</source>
+      <translation>Expoente Privado</translation>
+    </message>
+    <message>
+      <source>Fake Keyset</source>
+      <translation>Conjunto de Chaves Falsas</translation>
+    </message>
+    <message>
+      <source>RSA key components for fake signing.
+All fields must be valid hex strings with even length.</source>
+      <translation>Componentes de chave RSA para assinatura falsa.
+Todos os campos devem ser strings hexadecimais válidas com comprimento par.</translation>
+    </message>
+    <message>
+      <source>Debug Rif Keyset</source>
+      <translation>Depurar Conjunto de Chaves Rif</translation>
+    </message>
+    <message>
+      <source>RSA key components for debug RIF files.
+All fields must be valid hex strings with even length.</source>
+      <translation>Componentes de chave RSA para depurar arquivos RIF.
+Todos os campos devem ser textos hexadecimais válidos com comprimento par.</translation>
+    </message>
+    <message>
+      <source>Pkg Derived Key3</source>
+      <translation>Chave3 Derivada do Pkg</translation>
+    </message>
+    <message>
+      <source>RSA key components for package decryption.
+All fields must be valid hex strings with even length.</source>
+      <translation>Componentes de chave RSA para pacotes de descriptografia.
+Todos os campos devem ser textos hexadecimais válidos com comprimento par.</translation>
+    </message>
+    <message>
+      <source>Load All Keys</source>
+      <translation>Carregar Todas as Chaves</translation>
+    </message>
+    <message>
+      <source>Save All Keys</source>
+      <translation>Salvar Todas as Chaves</translation>
+    </message>
+    <message>
+      <source>Close</source>
+      <translation>Fechar</translation>
+    </message>
+    <message>
+      <source>Warning</source>
+      <translation>Aviso</translation>
+    </message>
+    <message>
+      <source>No key file found or failed to load.
+Please enter your keys and save them.</source>
+      <translation>Nenhum arquivo de chaves encontrado ou falhou ao carregar.
+Por favor, digite suas chaves e salve-as.</translation>
+    </message>
+    <message>
+      <source>Validation Error</source>
+      <translation>Erro de Validação</translation>
+    </message>
+    <message>
+      <source>Success</source>
+      <translation>Sucesso</translation>
+    </message>
+    <message>
+      <source>Keys saved successfully!</source>
+      <translation>Chaves salvas com sucesso!</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation>Erro</translation>
+    </message>
+    <message>
+      <source>Failed to save keys!</source>
+      <translation>Falha ao salvar as chaves!</translation>
+    </message>
+    <message>
+      <source>Status: All fields empty</source>
+      <translation>Estado: Todos os campos vazios</translation>
+    </message>
+    <message>
+      <source>Status: Invalid hex values</source>
+      <translation>Estado: Valores hexadecimais inválidos</translation>
+    </message>
+    <message>
+      <source>Status: Incomplete</source>
+      <translation>Estado: Incompleto</translation>
+    </message>
+    <message>
+      <source>Status: Valid</source>
+      <translation>Estado: Válido</translation>
+    </message>
+    <message>
+      <source>Invalid File</source>
+      <translation>Arquivo Inválido</translation>
+    </message>
+    <message>
+      <source>Only JSON files are supported.</source>
+      <translation>Somente arquivos JSON são suportados.</translation>
+    </message>
+    <message>
+      <source>Unable to open file.</source>
+      <translation>Não foi possível abrir o arquivo.</translation>
+    </message>
+    <message>
+      <source>JSON Error</source>
+      <translation>Erro de JSON</translation>
+    </message>
+    <message>
+      <source>Invalid JSON format.</source>
+      <translation>Formato do JSON inválido.</translation>
+    </message>
+    <message>
+      <source>Keys successfully loaded from JSON!</source>
+      <translation>Chaves carregadas com sucesso do JSON!</translation>
+    </message>
+    <message>
+      <source>Trophy Key contains invalid hex or has odd length.</source>
+      <translation>A Chave do Troféu contém hexadecimal inválido ou possui comprimento ímpar.</translation>
+    </message>
+    <message>
+      <source>%1 contains invalid hex or has odd length.</source>
+      <translation>%1 contém hexadecimal inválido ou tem comprimento ímpar.</translation>
     </message>
   </context>
   <context>
@@ -1106,6 +1291,26 @@
       <source>Shader Cache</source>
       <translation>Cache de Shader</translation>
     </message>
+    <message>
+      <source>User 1</source>
+      <translation type="unfinished">User 1</translation>
+    </message>
+    <message>
+      <source>User 2</source>
+      <translation type="unfinished">User 2</translation>
+    </message>
+    <message>
+      <source>User 3</source>
+      <translation type="unfinished">User 3</translation>
+    </message>
+    <message>
+      <source>User 4</source>
+      <translation type="unfinished">User 4</translation>
+    </message>
+    <message>
+      <source>This game has no save folder to open!</source>
+      <translation type="unfinished">This game has no save folder to open!</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -1127,14 +1332,14 @@
     </message>
     <message>
       <source>Keybindings</source>
-      <translation>Teclas de atalho</translation>
+      <translation>Combinação de Teclas</translation>
     </message>
   </context>
   <context>
     <name>Hotkeys</name>
     <message>
       <source>Customize Hotkeys</source>
-      <translation>Personalizar Atalhos</translation>
+      <translation>Personalizar Teclas de Atalho</translation>
     </message>
     <message>
       <source>Controller Hotkeys</source>
@@ -1158,11 +1363,11 @@
     </message>
     <message>
       <source>Toggle Fullscreen</source>
-      <translation>Ativar/desativar Tela cheia</translation>
+      <translation>Alternar Tela Cheia</translation>
     </message>
     <message>
       <source>Toggle Pause</source>
-      <translation>Ativar/desativar Pausa</translation>
+      <translation>Alternar Pausa</translation>
     </message>
     <message>
       <source>Keyboard Hotkeys</source>
@@ -1219,6 +1424,14 @@
     <message>
       <source>Tip: Unmap inputs with right-click</source>
       <translation>Dica: Desmapear entradas com botão direito</translation>
+    </message>
+    <message>
+      <source>Volume Up</source>
+      <translation>Aumentar Volume</translation>
+    </message>
+    <message>
+      <source>Volume Down</source>
+      <translation>Diminuir Volume</translation>
     </message>
   </context>
   <context>
@@ -1784,6 +1997,14 @@ Selecione uma versão do emulador no painel direito.</translation>
       <source>Show Game Log</source>
       <translation>Mostrar Registro do Jogo</translation>
     </message>
+    <message>
+      <source>Manage Cryptographic Keys</source>
+      <translation>Gerenciar Chaves Criptográficas</translation>
+    </message>
+    <message>
+      <source>Manage Users</source>
+      <translation type="unfinished">Manage Users</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -1810,14 +2031,6 @@ Selecione uma versão do emulador no painel direito.</translation>
     <message>
       <source>Enable Discord Rich Presence</source>
       <translation>Ativar Discord Rich Presence</translation>
-    </message>
-    <message>
-      <source>Username</source>
-      <translation>Nome de usuário</translation>
-    </message>
-    <message>
-      <source>Trophy Key</source>
-      <translation>Chave de Troféu</translation>
     </message>
     <message>
       <source>Trophy</source>
@@ -1960,10 +2173,6 @@ Selecione uma versão do emulador no painel direito.</translation>
       <translation>Marcadores de Depuração do Convidado</translation>
     </message>
     <message>
-      <source>Enable Readbacks</source>
-      <translation>Ativar Readbacks</translation>
-    </message>
-    <message>
       <source>Enable Readback Linear Images</source>
       <translation>Ativar Readback Linear Images</translation>
     </message>
@@ -1973,7 +2182,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Always Show Changelog</source>
-      <translation>Sempre Mostrar o Histórico de Mudanças</translation>
+      <translation>Sempre Mostrar o Histórico de Alterações</translation>
     </message>
     <message>
       <source>Check for Updates</source>
@@ -2053,19 +2262,11 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Show Splash Screen:\nShows the game&apos;s splash screen (a special image) while the game is starting.</source>
-      <translation>Mostrar Splash Inicial:\nExibe a tela inicial do jogo (imagem especial) ao iniciar o jogo.</translation>
+      <translation>Mostrar Tela Inicial:\nExibe a tela inicial do jogo (imagem especial) enquanto o jogo está iniciando.</translation>
     </message>
     <message>
       <source>Enable Discord Rich Presence:\nDisplays the emulator icon and relevant information on your Discord profile.</source>
       <translation>Ativar Discord Rich Presence:\nExibe o ícone do emulador e informações relevantes no seu perfil do Discord.</translation>
-    </message>
-    <message>
-      <source>Username:\nSets the PS4&apos;s account username, which may be displayed by some games.</source>
-      <translation>Nome de usuário:\nDefine o nome de usuário da conta do PS4, que pode ser exibido por alguns jogos.</translation>
-    </message>
-    <message>
-      <source>Trophy Key:\nKey used to decrypt trophies. Must be obtained from your jailbroken console.\nMust contain only hex characters.</source>
-      <translation>Chave de Troféu:\nChave usada para descriptografar troféus. Deve ser obtida a partir do seu console desbloqueado.\nDeve conter apenas caracteres hexadecimais.</translation>
     </message>
     <message>
       <source>Log Type:\nSets whether to synchronize the output of the log window for performance. May have adverse effects on emulation.</source>
@@ -2156,10 +2357,6 @@ Selecione uma versão do emulador no painel direito.</translation>
       <translation>Coletar Shaders:\nVocê precisa dessa opção ativada para editar shaders com o menu de depuração (Ctrl + F10).</translation>
     </message>
     <message>
-      <source>Enable Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
-      <translation>Ativar Readbacks:\nAtive a leitura e gravação da memória da GPU.\nIsso é necessário para o funcionamento adequado de alguns jogos.\nPode causar instabilidade e/ou impactar o desempenho.</translation>
-    </message>
-    <message>
       <source>Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</source>
       <translation>Ativar Readback Linear Images:\nAtiva o download assíncrono de imagens lineares(Linear Images) modificadas pela GPU.\nPode corrigir problemas em alguns jogos.</translation>
     </message>
@@ -2176,24 +2373,12 @@ Selecione uma versão do emulador no painel direito.</translation>
       <translation>Marcadores de Depuração do Convidado:\nInsere quaisquer marcadores de depuração que o próprio jogo adicionou ao buffer de comando.\nSe isso estiver habilitado, ative os Diagnósticos de Falhas.\nÚtil para programas como o RenderDoc.</translation>
     </message>
     <message>
-      <source>Save Data Path:\nThe folder where game save data will be saved.</source>
-      <translation>Caminho dos Dados Salvos:\nA pasta que onde os dados de salvamento de jogo serão salvos.</translation>
-    </message>
-    <message>
-      <source>Browse:\nBrowse for a folder to set as the save data path.</source>
-      <translation>Procurar:\nProcure uma pasta para definir como o caminho para salvar dados.</translation>
-    </message>
-    <message>
       <source>Set the volume of the background music.</source>
       <translation>Defina o volume da música de fundo.</translation>
     </message>
     <message>
       <source>Enable Motion Controls</source>
       <translation>Ativar Controles de Movimento</translation>
-    </message>
-    <message>
-      <source>Save Data Path</source>
-      <translation>Caminho dos Dados Salvos</translation>
     </message>
     <message>
       <source>Browse</source>
@@ -2214,10 +2399,6 @@ Selecione uma versão do emulador no painel direito.</translation>
     <message>
       <source>Directory to install games</source>
       <translation>Diretório para instalar jogos</translation>
-    </message>
-    <message>
-      <source>Directory to save data</source>
-      <translation>Diretório para salvar dados</translation>
     </message>
     <message>
       <source>Video</source>
@@ -2585,15 +2766,15 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Skylander Portal</source>
-      <translation>Portal Skylander</translation>
+      <translation>Skylander Portal</translation>
     </message>
     <message>
       <source>Infinity Base</source>
-      <translation>Base Infinity</translation>
+      <translation>Infinity Base</translation>
     </message>
     <message>
       <source>Dimensions Toypad</source>
-      <translation>Toypad Dimensions</translation>
+      <translation>Dimensions Toypad</translation>
     </message>
     <message>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
@@ -2614,6 +2795,46 @@ Selecione uma versão do emulador no painel direito.</translation>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
       <translation>Compacte os arquivos de Cache do Shader em um arquivo zip:\nOs arquivos de cache do shader são armazenados dentro de um único arquivo zip em vez de vários arquivos separados.</translation>
+    </message>
+    <message>
+      <source>Readbacks Mode</source>
+      <translation>Modo Readbacks</translation>
+    </message>
+    <message>
+      <source>Disabled</source>
+      <translation>Desabilitado</translation>
+    </message>
+    <message>
+      <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
+      <translation>Redbacks:\nAtiva readbacks e writebacks de memória da GPU.\nIsto é necessário para o funcionamento correto em alguns jogos.\nPode causar problemas de estabilidade e/ou desempenho.</translation>
+    </message>
+    <message>
+      <source>Relaxed</source>
+      <translation>Atenuado</translation>
+    </message>
+    <message>
+      <source>Precise</source>
+      <translation>Rigoroso</translation>
+    </message>
+    <message>
+      <source>Select shadPS4 Home Path</source>
+      <translation>Selecione a Pasta Raiz do shadPS4</translation>
+    </message>
+    <message>
+      <source>Select the system modules folder</source>
+      <translation>Selecione a pasta dos módulos do sistema</translation>
+    </message>
+    <message>
+      <source>Home Folder Location (Saves, Inputs, Trophy Data)</source>
+      <translation>Local da Pasta Raiz (Dados de Jogos Salvos, Entradas, Troféis)</translation>
+    </message>
+    <message>
+      <source>Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</source>
+      <translation>Local da Pasta Raiz:\nA pasta onde os dados de jogos salvos, arquivos de troféu e configurações de entrada são armazenados para todos os usuários.</translation>
+    </message>
+    <message>
+      <source>Browse:\nBrowse for a folder to set as the home folder.</source>
+      <translation>Procurar:\nProcura uma pasta para definir como pasta raiz.</translation>
     </message>
   </context>
   <context>
@@ -2660,6 +2881,105 @@ Selecione uma versão do emulador no painel direito.</translation>
     <message>
       <source>Show Hidden Trophies</source>
       <translation>Mostrar Troféus Ocultos</translation>
+    </message>
+  </context>
+  <context>
+    <name>UserManagerDialog</name>
+    <message>
+      <source>User Manager</source>
+      <translation type="unfinished">User Manager</translation>
+    </message>
+    <message>
+      <source>&amp;Create User</source>
+      <translation type="unfinished">&amp;Create User</translation>
+    </message>
+    <message>
+      <source>&amp;Delete User</source>
+      <translation type="unfinished">&amp;Delete User</translation>
+    </message>
+    <message>
+      <source>&amp;Rename User</source>
+      <translation type="unfinished">&amp;Rename User</translation>
+    </message>
+    <message>
+      <source>&amp;Set Default User</source>
+      <translation type="unfinished">&amp;Set Default User</translation>
+    </message>
+    <message>
+      <source>&amp;Set Color</source>
+      <translation type="unfinished">&amp;Set Color</translation>
+    </message>
+    <message>
+      <source>&amp;Set Controller Port</source>
+      <translation type="unfinished">&amp;Set Controller Port</translation>
+    </message>
+    <message>
+      <source>&amp;Close</source>
+      <translation type="unfinished">&amp;Close</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation type="unfinished">Error</translation>
+    </message>
+    <message>
+      <source>Cannot add more users.</source>
+      <translation type="unfinished">Cannot add more users.</translation>
+    </message>
+    <message>
+      <source>Create New User</source>
+      <translation type="unfinished">Create New User</translation>
+    </message>
+    <message>
+      <source>New User ID: %1</source>
+      <translation type="unfinished">New User ID: %1</translation>
+    </message>
+    <message>
+      <source>Username (3–16 chars, letters, numbers, _, -)</source>
+      <translation type="unfinished">Username (3–16 chars, letters, numbers, _, -)</translation>
+    </message>
+    <message>
+      <source>Invalid Username</source>
+      <translation type="unfinished">Invalid Username</translation>
+    </message>
+    <message>
+      <source>Username must be 3–16 chars and valid.</source>
+      <translation type="unfinished">Username must be 3–16 chars and valid.</translation>
+    </message>
+    <message>
+      <source>Delete Confirmation</source>
+      <translation type="unfinished">Delete Confirmation</translation>
+    </message>
+    <message>
+      <source>Delete user ID %1?</source>
+      <translation type="unfinished">Delete user ID %1?</translation>
+    </message>
+    <message>
+      <source>Rename User</source>
+      <translation type="unfinished">Rename User</translation>
+    </message>
+    <message>
+      <source>Old Username: %1</source>
+      <translation type="unfinished">Old Username: %1</translation>
+    </message>
+    <message>
+      <source>Set User Color</source>
+      <translation type="unfinished">Set User Color</translation>
+    </message>
+    <message>
+      <source>Select color:</source>
+      <translation type="unfinished">Select color:</translation>
+    </message>
+    <message>
+      <source>Set Controller Port</source>
+      <translation type="unfinished">Set Controller Port</translation>
+    </message>
+    <message>
+      <source>Assign port (1-4) to this user:</source>
+      <translation type="unfinished">Assign port (1-4) to this user:</translation>
+    </message>
+    <message>
+      <source>&amp;Open User Directory</source>
+      <translation type="unfinished">&amp;Open User Directory</translation>
     </message>
   </context>
   <context>
@@ -2848,15 +3168,15 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Show Changelog</source>
-      <translation>Mostrar Mudanças</translation>
+      <translation>Mostrar Histórico de Alterações</translation>
     </message>
     <message>
       <source>Hide Changelog</source>
-      <translation>Ocultar Mudanças</translation>
+      <translation>Ocultar Histórico de Alterações</translation>
     </message>
     <message>
       <source>Network error while fetching changelog</source>
-      <translation>Erro de rede ao obter o changelog</translation>
+      <translation>Erro de rede ao obter o histórico de alterações</translation>
     </message>
     <message>
       <source>Changes</source>
@@ -2888,7 +3208,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Always Show Changelog</source>
-      <translation>Sempre Mostrar o Histórico de Mudanças</translation>
+      <translation>Sempre Mostrar o Histórico de Alterações</translation>
     </message>
     <message>
       <source>No version selected. Please choose one from the list to delete.</source>
@@ -2935,7 +3255,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Active Dimensions Figures:</source>
-      <translation>Bonecos Dimensions Ativos:</translation>
+      <translation>Colecionáveis Dimensions Ativos:</translation>
     </message>
     <message>
       <source>None</source>
@@ -2959,7 +3279,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Unknown Figure</source>
-      <translation>Boneco Desconhecido</translation>
+      <translation>Colecionável Desconhecido</translation>
     </message>
     <message>
       <source>Select Dimensions File</source>
@@ -2967,26 +3287,26 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Dimensions Figure (*.bin);;</source>
-      <translation>Boneco Dimensions (*.bin);;</translation>
+      <translation>Colecionável Dimensions (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to open the figure file!</source>
-      <translation>Falha ao abrir o arquivo de boneco!</translation>
+      <translation>Falha ao abrir o arquivo de colecionável!</translation>
     </message>
     <message>
       <source>Failed to open the figure file(%1)!
 File may already be in use on the base.</source>
-      <translation>Falha ao abrir o arquivo de boneco (%1)! 
+      <translation>Falha ao abrir o arquivo de colecionável(%1)! 
 O arquivo pode já estar em uso na base.</translation>
     </message>
     <message>
       <source>Failed to read the figure file!</source>
-      <translation>Falha ao ler o arquivo de boneco!</translation>
+      <translation>Falha ao ler o arquivo de colecionável!</translation>
     </message>
     <message>
       <source>Failed to read the figure file(%1)!
 File was too small.</source>
-      <translation>Falha ao ler o arquivo de boneco (%1)! 
+      <translation>Falha ao ler o arquivo de colecionável(%1)! 
 O arquivo é muito pequeno.</translation>
     </message>
   </context>
@@ -2994,7 +3314,7 @@ O arquivo é muito pequeno.</translation>
     <name>figure_creator_dialog</name>
     <message>
       <source>Figure Creator</source>
-      <translation>Criador de Bonecos</translation>
+      <translation>Criador de Colecionável</translation>
     </message>
     <message>
       <source>Filter by Series:</source>
@@ -3010,7 +3330,7 @@ O arquivo é muito pequeno.</translation>
     </message>
     <message>
       <source>Figure Number:</source>
-      <translation>Número do Boneco:</translation>
+      <translation>Número do Colecionável:</translation>
     </message>
     <message>
       <source>Series:</source>
@@ -3030,7 +3350,7 @@ O arquivo é muito pequeno.</translation>
     </message>
     <message>
       <source>Figure number entered is invalid!</source>
-      <translation>O número do boneco inserido é inválido!</translation>
+      <translation>O número do colecionável inserido é inválido!</translation>
     </message>
     <message>
       <source>Series number entered is invalid!</source>
@@ -3038,15 +3358,15 @@ O arquivo é muito pequeno.</translation>
     </message>
     <message>
       <source>Create Figure File</source>
-      <translation>Criar Arquivo de Boneco</translation>
+      <translation>Criar Arquivo de Colecionável</translation>
     </message>
     <message>
       <source>Infinity Figure (*.bin);;</source>
-      <translation>Boneco Infinity (*.bin);;</translation>
+      <translation>Colecionável Infinity (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to create figure file!</source>
-      <translation>Falha ao criar arquivo de boneco!</translation>
+      <translation>Falha ao criar arquivo de colecionável!</translation>
     </message>
     <message>
       <source>Failed to create figure file:
@@ -3063,7 +3383,7 @@ O arquivo é muito pequeno.</translation>
     </message>
     <message>
       <source>Active Infinity Figures:</source>
-      <translation>Bonecos Infinity Ativos:</translation>
+      <translation>Colecionáveis Infinity Ativos:</translation>
     </message>
     <message>
       <source>Play Set/Power Disc</source>
@@ -3119,7 +3439,7 @@ O arquivo é muito pequeno.</translation>
     </message>
     <message>
       <source>Unknown Figure</source>
-      <translation>Boneco Desconhecido</translation>
+      <translation>Colecionável Desconhecido</translation>
     </message>
     <message>
       <source>Select Infinity File</source>
@@ -3127,26 +3447,26 @@ O arquivo é muito pequeno.</translation>
     </message>
     <message>
       <source>Infinity Figure (*.bin);;</source>
-      <translation>Boneco Infinity (*.bin);;</translation>
+      <translation>Colecionável Infinity (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to open the figure file!</source>
-      <translation>Falha ao abrir o arquivo de boneco!</translation>
+      <translation>Falha ao abrir o arquivo de colecionável!</translation>
     </message>
     <message>
       <source>Failed to open the figure file(%1)!
 File may already be in use on the base.</source>
-      <translation>Falha ao abrir o arquivo de imagem (%1)! 
-O arquivo pode já estar em uso pelo sistema base.</translation>
+      <translation>Falha ao abrir o arquivo de colecionável(%1)! 
+O arquivo pode já estar em uso na base.</translation>
     </message>
     <message>
       <source>Failed to read the figure file!</source>
-      <translation>Falha ao ler o arquivo de boneco!</translation>
+      <translation>Falha ao ler o arquivo de colecionável!</translation>
     </message>
     <message>
       <source>Failed to read the figure file(%1)!
 File was too small.</source>
-      <translation>Falha ao ler o arquivo de imagem (%1)! 
+      <translation>Falha ao ler o arquivo de colecionável(%1)! 
 O arquivo é muito pequeno.</translation>
     </message>
   </context>
@@ -3154,7 +3474,7 @@ O arquivo é muito pequeno.</translation>
     <name>minifig_creator_dialog</name>
     <message>
       <source>Figure Creator</source>
-      <translation>Criador de Bonecos</translation>
+      <translation>Criador de Colecionável</translation>
     </message>
     <message>
       <source>--Unknown--</source>
@@ -3162,7 +3482,7 @@ O arquivo é muito pequeno.</translation>
     </message>
     <message>
       <source>Figure Number:</source>
-      <translation>Número do Boneco:</translation>
+      <translation>Número do Colecionável:</translation>
     </message>
     <message>
       <source>Create</source>
@@ -3178,11 +3498,11 @@ O arquivo é muito pequeno.</translation>
     </message>
     <message>
       <source>Figure number entered is invalid!</source>
-      <translation>Número do boneco inserido é inválido!</translation>
+      <translation>Número do colecionável inserido é inválido!</translation>
     </message>
     <message>
       <source>Create Figure File</source>
-      <translation>Criar Arquivo de Boneco</translation>
+      <translation>Criar Arquivo de Colecionável</translation>
     </message>
     <message>
       <source>Dimensions Figure (*.bin);;</source>
@@ -3203,7 +3523,7 @@ O arquivo é muito pequeno.</translation>
     <name>minifig_move_dialog</name>
     <message>
       <source>Figure Mover</source>
-      <translation>Movedor de Bonecos</translation>
+      <translation>Transportador do Colecionável</translation>
     </message>
     <message>
       <source>None</source>
@@ -3283,7 +3603,7 @@ O arquivo é muito pequeno.</translation>
     </message>
     <message>
       <source>Active Portal Skylanders:</source>
-      <translation>Skylanders no Portal Ativo:</translation>
+      <translation>Portal Skylanders Ativo:</translation>
     </message>
     <message>
       <source>Skylander %1</source>

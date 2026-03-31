@@ -627,6 +627,191 @@
     </message>
   </context>
   <context>
+    <name>CryptoManagerDialog</name>
+    <message>
+      <source>Crypto Key Manager</source>
+      <translation>Administrador de claus de criptografia</translation>
+    </message>
+    <message>
+      <source>Trophy Key: Used for trophy decryption.
+Must be a valid hex string with even length.</source>
+      <translation>Clau de trofeus: Es fa servir per la descripció de trofeus.
+Ha de ser un valor hexadecimal amb una longitud parell.</translation>
+    </message>
+    <message>
+      <source>Enter Trophy Key</source>
+      <translation>Introdueix una clau de trofeus</translation>
+    </message>
+    <message>
+      <source>Trophy Key:</source>
+      <translation>Clau dels trofeus:</translation>
+    </message>
+    <message>
+      <source>Status: Not loaded</source>
+      <translation>Estat: no carregat</translation>
+    </message>
+    <message>
+      <source>Trophy Key</source>
+      <translation>Clau dels trofeus</translation>
+    </message>
+    <message>
+      <source>Enter %1</source>
+      <translation>Nombre enter %1</translation>
+    </message>
+    <message>
+      <source>Exponent1</source>
+      <translation>Exponent1</translation>
+    </message>
+    <message>
+      <source>Exponent2</source>
+      <translation>Exponent2</translation>
+    </message>
+    <message>
+      <source>Public Exponent</source>
+      <translation>Exponent públic</translation>
+    </message>
+    <message>
+      <source>Coefficient</source>
+      <translation>Coeficient</translation>
+    </message>
+    <message>
+      <source>Modulus</source>
+      <translation>Mòduls</translation>
+    </message>
+    <message>
+      <source>Prime 1</source>
+      <translation>Primer 1</translation>
+    </message>
+    <message>
+      <source>Prime 2</source>
+      <translation>Primer 2</translation>
+    </message>
+    <message>
+      <source>Private Exponent</source>
+      <translation>Exponent privat</translation>
+    </message>
+    <message>
+      <source>Fake Keyset</source>
+      <translation>Conjunt de claus falses</translation>
+    </message>
+    <message>
+      <source>RSA key components for fake signing.
+All fields must be valid hex strings with even length.</source>
+      <translation>Components de la clau RSA per signatures falses.
+Tots els camps han de tenir una cadena hexadecimal vàlida amb una longitud parell.</translation>
+    </message>
+    <message>
+      <source>Debug Rif Keyset</source>
+      <translation>Depura un conjunt de claus Rif</translation>
+    </message>
+    <message>
+      <source>RSA key components for debug RIF files.
+All fields must be valid hex strings with even length.</source>
+      <translation>Components de la clau RSA per depurar fitxers RIF.
+Tots els camps han de tenir una cadena hexadecimal vàlida amb una longitud parell.</translation>
+    </message>
+    <message>
+      <source>Pkg Derived Key3</source>
+      <translation>Pkg derivat Key3</translation>
+    </message>
+    <message>
+      <source>RSA key components for package decryption.
+All fields must be valid hex strings with even length.</source>
+      <translation>Components de la clau RSA pel desxifratge de paquets.
+Tots els camps han de tenir una cadena hexadecimal vàlida amb longitud parell.</translation>
+    </message>
+    <message>
+      <source>Load All Keys</source>
+      <translation>Carrega totes les claus</translation>
+    </message>
+    <message>
+      <source>Save All Keys</source>
+      <translation>Desa totes les claus</translation>
+    </message>
+    <message>
+      <source>Close</source>
+      <translation>Tanca</translation>
+    </message>
+    <message>
+      <source>Warning</source>
+      <translation>Avís</translation>
+    </message>
+    <message>
+      <source>No key file found or failed to load.
+Please enter your keys and save them.</source>
+      <translation>No s'ha trobat el fitxer de claus o hi ha hagut un error en carregar.
+Si us plau, introdueix les teves claus per desar-les.</translation>
+    </message>
+    <message>
+      <source>Validation Error</source>
+      <translation>Error de validació</translation>
+    </message>
+    <message>
+      <source>Success</source>
+      <translation>Realitzat amb èxit</translation>
+    </message>
+    <message>
+      <source>Keys saved successfully!</source>
+      <translation>S'han desat les claus correctament!</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation>Error</translation>
+    </message>
+    <message>
+      <source>Failed to save keys!</source>
+      <translation>Error en desar les claus!</translation>
+    </message>
+    <message>
+      <source>Status: All fields empty</source>
+      <translation>Estat: Tots els camps buits</translation>
+    </message>
+    <message>
+      <source>Status: Invalid hex values</source>
+      <translation>Estat: Valors hexadecimals no vàlids</translation>
+    </message>
+    <message>
+      <source>Status: Incomplete</source>
+      <translation>Estat: incomplert</translation>
+    </message>
+    <message>
+      <source>Status: Valid</source>
+      <translation>Estatus: Vàlid</translation>
+    </message>
+    <message>
+      <source>Invalid File</source>
+      <translation>Fitxer invàlid</translation>
+    </message>
+    <message>
+      <source>Only JSON files are supported.</source>
+      <translation>Només se suporta els fitxers JSON.</translation>
+    </message>
+    <message>
+      <source>Unable to open file.</source>
+      <translation>No s'ha pogut obrir el fitxer.</translation>
+    </message>
+    <message>
+      <source>JSON Error</source>
+      <translation>Error JSON</translation>
+    </message>
+    <message>
+      <source>Invalid JSON format.</source>
+      <translation>Format JSON no vàlid.</translation>
+    </message>
+    <message>
+      <source>Keys successfully loaded from JSON!</source>
+      <translation>Les claus s'han carregat correctament des del fitxer JSON!</translation>
+    </message>
+    <message>
+      <source>Trophy Key contains invalid hex or has odd length.</source>
+      <translation>La clau de trofeus conté valors hexadecimals o té una longitud senar.</translation>
+    </message>
+    <message>
+      <source>%1 contains invalid hex or has odd length.</source>
+      <translation>%1 conté valors hexadecimals no vàlids o té una longitud senar.</translation>
+    </message>
+  </context>
+  <context>
     <name>EditorDialog</name>
     <message>
       <source>Edit Keyboard + Mouse and Controller input bindings</source>
@@ -1106,6 +1291,26 @@
       <source>Shader Cache</source>
       <translation>Memòria cau de shaders</translation>
     </message>
+    <message>
+      <source>User 1</source>
+      <translation>Usuari 1</translation>
+    </message>
+    <message>
+      <source>User 2</source>
+      <translation>Usuari 2</translation>
+    </message>
+    <message>
+      <source>User 3</source>
+      <translation>Usuari 3</translation>
+    </message>
+    <message>
+      <source>User 4</source>
+      <translation>Usuari 4</translation>
+    </message>
+    <message>
+      <source>This game has no save folder to open!</source>
+      <translation>Aquest joc no té carpeta de desats per obrir!</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -1219,6 +1424,14 @@
     <message>
       <source>Tip: Unmap inputs with right-click</source>
       <translation>Ajuda: Desassigna les entrades amb el clic dret</translation>
+    </message>
+    <message>
+      <source>Volume Up</source>
+      <translation>Apuja el volum</translation>
+    </message>
+    <message>
+      <source>Volume Down</source>
+      <translation>Abaixa el volum</translation>
     </message>
   </context>
   <context>
@@ -1784,6 +1997,14 @@ Selecciona una versió del panell dret.</translation>
       <source>Show Game Log</source>
       <translation>Registre de la llista de jocs</translation>
     </message>
+    <message>
+      <source>Manage Cryptographic Keys</source>
+      <translation>Administrador de claus criptogràfiques</translation>
+    </message>
+    <message>
+      <source>Manage Users</source>
+      <translation>Gestiona els usuaris</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -1810,14 +2031,6 @@ Selecciona una versió del panell dret.</translation>
     <message>
       <source>Enable Discord Rich Presence</source>
       <translation>Activa la Discord Rich Presence</translation>
-    </message>
-    <message>
-      <source>Username</source>
-      <translation>Nom d’usuari</translation>
-    </message>
-    <message>
-      <source>Trophy Key</source>
-      <translation>Clau dels trofeus</translation>
     </message>
     <message>
       <source>Trophy</source>
@@ -1960,10 +2173,6 @@ Selecciona una versió del panell dret.</translation>
       <translation>Marcadors de depuració</translation>
     </message>
     <message>
-      <source>Enable Readbacks</source>
-      <translation>Activar Readbacks</translation>
-    </message>
-    <message>
       <source>Enable Readback Linear Images</source>
       <translation>Activa imatges lineals de Readback</translation>
     </message>
@@ -2060,14 +2269,6 @@ Selecciona una versió del panell dret.</translation>
       <translation>Activa Discord Rich Presence:\nMostra la icona de l'emulador i informació rellevant en el teu perfil de Discord.</translation>
     </message>
     <message>
-      <source>Username:\nSets the PS4&apos;s account username, which may be displayed by some games.</source>
-      <translation>Nom d'usuari:\nProveeix el nom d'usuari del compte de PS4, que es farà servir i es veurà en alguns jocs.</translation>
-    </message>
-    <message>
-      <source>Trophy Key:\nKey used to decrypt trophies. Must be obtained from your jailbroken console.\nMust contain only hex characters.</source>
-      <translation>Clau de trofeus:\nClau que es fa servir per desxifrar trofeus. Cal obtenir-la de la teva consola desbloquejada.\nAcostuma a tenir caràcters hexadecimals.</translation>
-    </message>
-    <message>
       <source>Log Type:\nSets whether to synchronize the output of the log window for performance. May have adverse effects on emulation.</source>
       <translation>Tipus de registre:\nEstableix si sincronitza la sortida de la finestra de registre per millorar el rendiment. Pot tenir reaccions adverses en el rendiment.</translation>
     </message>
@@ -2156,10 +2357,6 @@ Selecciona una versió del panell dret.</translation>
       <translation>Recopilar shaders:\nHas de tenir activada aquesta opció per editar els shaders amb el menú de depurador (Ctrl + F10).</translation>
     </message>
     <message>
-      <source>Enable Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
-      <translation>Actica Readbacks:\nActiva readbacks i writebacks a la memòria de la targeta gràfica.\nAixò és necessari pel funcionament correcte en alguns jocs.\nPot causar inestabilitat i/o errors de rendiment.</translation>
-    </message>
-    <message>
       <source>Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</source>
       <translation>Activa imatges lineals de Readback:\nActiva la descàrrega asíncrona d'imatges lineals modificades de la targeta gràfica:\nPot corregir errors en alguns jocs.</translation>
     </message>
@@ -2176,24 +2373,12 @@ Selecciona una versió del panell dret.</translation>
       <translation>Marcadors de depuració de convidat:\nInsereix qualsevol marcador que el joc ha afegit a la memòria intermèdia de les comandes.\nSi està activada aquesta opció, caldria activar el diagnòstic d'errors.\nÉs útil per aplicacions com RenderDoc.</translation>
     </message>
     <message>
-      <source>Save Data Path:\nThe folder where game save data will be saved.</source>
-      <translation>Carpeta de dades desades:\nLa carpeta on es desaran les dades el joc.</translation>
-    </message>
-    <message>
-      <source>Browse:\nBrowse for a folder to set as the save data path.</source>
-      <translation>Navegador:\nCerca una carpeta que serà assignada com la carpeta de dades desades.</translation>
-    </message>
-    <message>
       <source>Set the volume of the background music.</source>
       <translation>Selecciona el volum de la música de fons.</translation>
     </message>
     <message>
       <source>Enable Motion Controls</source>
       <translation>Habilita els controls de moviment</translation>
-    </message>
-    <message>
-      <source>Save Data Path</source>
-      <translation>Desa la ruta a les dades</translation>
     </message>
     <message>
       <source>Browse</source>
@@ -2214,10 +2399,6 @@ Selecciona una versió del panell dret.</translation>
     <message>
       <source>Directory to install games</source>
       <translation>Carpeta per instal·lar jocs</translation>
-    </message>
-    <message>
-      <source>Directory to save data</source>
-      <translation>Carpeta de les dades desades</translation>
     </message>
     <message>
       <source>Video</source>
@@ -2615,6 +2796,46 @@ Selecciona una versió del panell dret.</translation>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
       <translation>Comprimeix els fitxers de la memòria cau de shaders en un fitxer zip:\nEls fitxers de la memòria cau de shaders s'emmagatzemen en un sol fitxer zip en compte de fer-ho en diferents fitxers separats.</translation>
     </message>
+    <message>
+      <source>Readbacks Mode</source>
+      <translation>Mode de lectura</translation>
+    </message>
+    <message>
+      <source>Disabled</source>
+      <translation>Deshabilitat</translation>
+    </message>
+    <message>
+      <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
+      <translation>Lectura:\nActiva la lectura i escriptura a la memòria de la targeta gràfica.\nAixò és necessari pe comportament correcte en alguns jocs.\nPot causar problemes d'estabilitat o rendiment.</translation>
+    </message>
+    <message>
+      <source>Relaxed</source>
+      <translation>Relaxat</translation>
+    </message>
+    <message>
+      <source>Precise</source>
+      <translation>Precís</translation>
+    </message>
+    <message>
+      <source>Select shadPS4 Home Path</source>
+      <translation>Selecciona la ruta a la carpeta Home de shadPS4</translation>
+    </message>
+    <message>
+      <source>Select the system modules folder</source>
+      <translation>Selecciona la carpeta del sistema de mòduls</translation>
+    </message>
+    <message>
+      <source>Home Folder Location (Saves, Inputs, Trophy Data)</source>
+      <translation>Ubicació de la carpeta Home (Desats, entrades i dades de trofeu)</translation>
+    </message>
+    <message>
+      <source>Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</source>
+      <translation>Ubicació de la carpeta Home:\nLa carpeta on es desen les dades, fitxers de trofeus i la configuració d'entrada per tots els usuaris.</translation>
+    </message>
+    <message>
+      <source>Browse:\nBrowse for a folder to set as the home folder.</source>
+      <translation>Navegador:\nNavega per una carpeta per escollir-la com a carpeta home.</translation>
+    </message>
   </context>
   <context>
     <name>ShortcutDialog</name>
@@ -2660,6 +2881,105 @@ Selecciona una versió del panell dret.</translation>
     <message>
       <source>Show Hidden Trophies</source>
       <translation>Mostra els trofeus ocults</translation>
+    </message>
+  </context>
+  <context>
+    <name>UserManagerDialog</name>
+    <message>
+      <source>User Manager</source>
+      <translation>Administrador d'usuaris</translation>
+    </message>
+    <message>
+      <source>&amp;Create User</source>
+      <translation>Creació d'usuari</translation>
+    </message>
+    <message>
+      <source>&amp;Delete User</source>
+      <translation>Suprimeix l'usuari</translation>
+    </message>
+    <message>
+      <source>&amp;Rename User</source>
+      <translation>Reanomena l'usuari</translation>
+    </message>
+    <message>
+      <source>&amp;Set Default User</source>
+      <translation>&amp;Estableix l'usuari per defecte</translation>
+    </message>
+    <message>
+      <source>&amp;Set Color</source>
+      <translation>Estableix el color</translation>
+    </message>
+    <message>
+      <source>&amp;Set Controller Port</source>
+      <translation>&amp;Selecciona el port del controlador</translation>
+    </message>
+    <message>
+      <source>&amp;Close</source>
+      <translation>&amp;Tanca</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation>Error</translation>
+    </message>
+    <message>
+      <source>Cannot add more users.</source>
+      <translation>No es poden afegir més usuaris.</translation>
+    </message>
+    <message>
+      <source>Create New User</source>
+      <translation>Crea un nou usuari</translation>
+    </message>
+    <message>
+      <source>New User ID: %1</source>
+      <translation>Nou ID d'usuari: %1</translation>
+    </message>
+    <message>
+      <source>Username (3–16 chars, letters, numbers, _, -)</source>
+      <translation>Nom d'usuari (entre 3 i 16 caràcters, lletres, nombres, _, -)</translation>
+    </message>
+    <message>
+      <source>Invalid Username</source>
+      <translation>Nom d'usuari incorrecte</translation>
+    </message>
+    <message>
+      <source>Username must be 3–16 chars and valid.</source>
+      <translation>El nom d'usuari ha de tenir entre 3 i 16 caràcters vàlids.</translation>
+    </message>
+    <message>
+      <source>Delete Confirmation</source>
+      <translation>Confirmació de l'eliminació</translation>
+    </message>
+    <message>
+      <source>Delete user ID %1?</source>
+      <translation>Vols eliminar l'usuari amb ID %1?</translation>
+    </message>
+    <message>
+      <source>Rename User</source>
+      <translation>Reanomena l'usuari</translation>
+    </message>
+    <message>
+      <source>Old Username: %1</source>
+      <translation>Nom d'usuari anterior: %1</translation>
+    </message>
+    <message>
+      <source>Set User Color</source>
+      <translation>Selecciona el color d'usuari</translation>
+    </message>
+    <message>
+      <source>Select color:</source>
+      <translation>Seleccioneu el color:</translation>
+    </message>
+    <message>
+      <source>Set Controller Port</source>
+      <translation>Selecciona el port del controlador</translation>
+    </message>
+    <message>
+      <source>Assign port (1-4) to this user:</source>
+      <translation>Assigna el port (1-4) a aquest usuari:</translation>
+    </message>
+    <message>
+      <source>&amp;Open User Directory</source>
+      <translation>&amp;Obre la carpeta d'usuari</translation>
     </message>
   </context>
   <context>

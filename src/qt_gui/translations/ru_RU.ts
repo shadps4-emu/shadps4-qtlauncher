@@ -269,7 +269,7 @@
     </message>
     <message>
       <source>No pre-releases found.</source>
-      <translation>Предварительных версий не найдено.</translation>
+      <translation>Версий предрелиза не найдено.</translation>
     </message>
     <message>
       <source>No download URL found for the specified asset.</source>
@@ -627,6 +627,191 @@
     </message>
   </context>
   <context>
+    <name>CryptoManagerDialog</name>
+    <message>
+      <source>Crypto Key Manager</source>
+      <translation>Менеджер криптоключей</translation>
+    </message>
+    <message>
+      <source>Trophy Key: Used for trophy decryption.
+Must be a valid hex string with even length.</source>
+      <translation>Ключ трофеев: используется для расшифровки трофеев.
+Должен представлять собой допустимую шестнадцатеричную строку четной длины.</translation>
+    </message>
+    <message>
+      <source>Enter Trophy Key</source>
+      <translation>Введите ключ трофея</translation>
+    </message>
+    <message>
+      <source>Trophy Key:</source>
+      <translation>Ключ трофеев:</translation>
+    </message>
+    <message>
+      <source>Status: Not loaded</source>
+      <translation>Статус: Не загружено</translation>
+    </message>
+    <message>
+      <source>Trophy Key</source>
+      <translation>Ключ трофеев</translation>
+    </message>
+    <message>
+      <source>Enter %1</source>
+      <translation>Ввод %1</translation>
+    </message>
+    <message>
+      <source>Exponent1</source>
+      <translation>Экспонента1</translation>
+    </message>
+    <message>
+      <source>Exponent2</source>
+      <translation>Экспонента2</translation>
+    </message>
+    <message>
+      <source>Public Exponent</source>
+      <translation>Открытая экспонента</translation>
+    </message>
+    <message>
+      <source>Coefficient</source>
+      <translation>Коэффициент</translation>
+    </message>
+    <message>
+      <source>Modulus</source>
+      <translation>Модуль</translation>
+    </message>
+    <message>
+      <source>Prime 1</source>
+      <translation>Простое число 1</translation>
+    </message>
+    <message>
+      <source>Prime 2</source>
+      <translation>Простое число 2</translation>
+    </message>
+    <message>
+      <source>Private Exponent</source>
+      <translation>Закрытая экспонента</translation>
+    </message>
+    <message>
+      <source>Fake Keyset</source>
+      <translation>Поддельный набор ключей</translation>
+    </message>
+    <message>
+      <source>RSA key components for fake signing.
+All fields must be valid hex strings with even length.</source>
+      <translation>Компоненты ключа RSA для поддельной подписи.
+Все поля должны быть допустимыми шестнадцатеричными строками четной длины.</translation>
+    </message>
+    <message>
+      <source>Debug Rif Keyset</source>
+      <translation>Набор ключей Debug Rif</translation>
+    </message>
+    <message>
+      <source>RSA key components for debug RIF files.
+All fields must be valid hex strings with even length.</source>
+      <translation>Компоненты ключа RSA для отладочных RIF-файлов.
+Все поля должны быть допустимыми шестнадцатеричными строками четной длины.</translation>
+    </message>
+    <message>
+      <source>Pkg Derived Key3</source>
+      <translation>Pkg Derived Key3</translation>
+    </message>
+    <message>
+      <source>RSA key components for package decryption.
+All fields must be valid hex strings with even length.</source>
+      <translation>Компоненты ключа RSA для расшифровки пакета.
+Все поля должны быть допустимыми шестнадцатеричными строками четной длины.</translation>
+    </message>
+    <message>
+      <source>Load All Keys</source>
+      <translation>Загрузить все ключи</translation>
+    </message>
+    <message>
+      <source>Save All Keys</source>
+      <translation>Сохранить все ключи</translation>
+    </message>
+    <message>
+      <source>Close</source>
+      <translation>Закрыть</translation>
+    </message>
+    <message>
+      <source>Warning</source>
+      <translation>Предупреждение</translation>
+    </message>
+    <message>
+      <source>No key file found or failed to load.
+Please enter your keys and save them.</source>
+      <translation>Файл ключа не найден или не удалось загрузить.
+Пожалуйста, введите ваши ключи и сохраните их.</translation>
+    </message>
+    <message>
+      <source>Validation Error</source>
+      <translation>Ошибка проверки</translation>
+    </message>
+    <message>
+      <source>Success</source>
+      <translation>Успех</translation>
+    </message>
+    <message>
+      <source>Keys saved successfully!</source>
+      <translation>Ключи успешно сохранены!</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation>Ошибка</translation>
+    </message>
+    <message>
+      <source>Failed to save keys!</source>
+      <translation>Не удалось сохранить ключи!</translation>
+    </message>
+    <message>
+      <source>Status: All fields empty</source>
+      <translation>Статус: Все поля пусты</translation>
+    </message>
+    <message>
+      <source>Status: Invalid hex values</source>
+      <translation>Статус: Недопустимые шестнадцатеричные значения</translation>
+    </message>
+    <message>
+      <source>Status: Incomplete</source>
+      <translation>Статус: Незавершено</translation>
+    </message>
+    <message>
+      <source>Status: Valid</source>
+      <translation>Статус: Действителен</translation>
+    </message>
+    <message>
+      <source>Invalid File</source>
+      <translation>Недействительный файл</translation>
+    </message>
+    <message>
+      <source>Only JSON files are supported.</source>
+      <translation>Поддерживаются только файлы JSON.</translation>
+    </message>
+    <message>
+      <source>Unable to open file.</source>
+      <translation>Не удалось открыть файл.</translation>
+    </message>
+    <message>
+      <source>JSON Error</source>
+      <translation>Ошибка JSON</translation>
+    </message>
+    <message>
+      <source>Invalid JSON format.</source>
+      <translation>Неверный формат JSON.</translation>
+    </message>
+    <message>
+      <source>Keys successfully loaded from JSON!</source>
+      <translation>Ключи успешно загружены из JSON!</translation>
+    </message>
+    <message>
+      <source>Trophy Key contains invalid hex or has odd length.</source>
+      <translation>Ключ трофеев содержит недопустимые шестнадцатеричные значения или имеет нечетную длину.</translation>
+    </message>
+    <message>
+      <source>%1 contains invalid hex or has odd length.</source>
+      <translation>%1 содержит недопустимое шестнадцатеричное значение или имеет нечетную длину.</translation>
+    </message>
+  </context>
+  <context>
     <name>EditorDialog</name>
     <message>
       <source>Edit Keyboard + Mouse and Controller input bindings</source>
@@ -920,7 +1105,7 @@
     </message>
     <message>
       <source>Delete Trophy</source>
-      <translation>Удалить трофей</translation>
+      <translation>Удалить трофеи</translation>
     </message>
     <message>
       <source>Compatibility...</source>
@@ -1106,6 +1291,26 @@
       <source>Shader Cache</source>
       <translation>Кэш шейдеров</translation>
     </message>
+    <message>
+      <source>User 1</source>
+      <translation>Пользователь 1</translation>
+    </message>
+    <message>
+      <source>User 2</source>
+      <translation>Пользователь 2</translation>
+    </message>
+    <message>
+      <source>User 3</source>
+      <translation>Пользователь 3</translation>
+    </message>
+    <message>
+      <source>User 4</source>
+      <translation>Пользователь 4</translation>
+    </message>
+    <message>
+      <source>This game has no save folder to open!</source>
+      <translation>У этой игры нет папки сохранений, которую можно открыть!</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -1219,6 +1424,14 @@
     <message>
       <source>Tip: Unmap inputs with right-click</source>
       <translation>Совет: Уберите назначение правой кнопкой мыши</translation>
+    </message>
+    <message>
+      <source>Volume Up</source>
+      <translation>Увеличить громкость</translation>
+    </message>
+    <message>
+      <source>Volume Down</source>
+      <translation>Уменьшить громкость</translation>
     </message>
   </context>
   <context>
@@ -1784,6 +1997,14 @@ Select an emulator version from the right panel.</source>
       <source>Show Game Log</source>
       <translation>Показать журнал игры</translation>
     </message>
+    <message>
+      <source>Manage Cryptographic Keys</source>
+      <translation>Управление криптографическими ключами</translation>
+    </message>
+    <message>
+      <source>Manage Users</source>
+      <translation>Управление пользователями</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -1810,14 +2031,6 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Enable Discord Rich Presence</source>
       <translation>Включить Discord Rich Presence</translation>
-    </message>
-    <message>
-      <source>Username</source>
-      <translation>Имя пользователя</translation>
-    </message>
-    <message>
-      <source>Trophy Key</source>
-      <translation>Ключ трофеев</translation>
     </message>
     <message>
       <source>Trophy</source>
@@ -1960,12 +2173,8 @@ Select an emulator version from the right panel.</source>
       <translation>Маркеры отладки гостя</translation>
     </message>
     <message>
-      <source>Enable Readbacks</source>
-      <translation>Включить считывание</translation>
-    </message>
-    <message>
       <source>Enable Readback Linear Images</source>
-      <translation>Включить считывание линейных изображений</translation>
+      <translation>Включить обратное чтение линейных изображений</translation>
     </message>
     <message>
       <source>Check for Updates at Startup</source>
@@ -2060,14 +2269,6 @@ Select an emulator version from the right panel.</source>
       <translation>Включить Discord Rich Presence:\nОтображает значок эмулятора и соответствующую информацию в вашем профиле Discord.</translation>
     </message>
     <message>
-      <source>Username:\nSets the PS4&apos;s account username, which may be displayed by some games.</source>
-      <translation>Имя пользователя:\nУстанавливает имя пользователя аккаунта PS4. Это может отображаться в некоторых играх.</translation>
-    </message>
-    <message>
-      <source>Trophy Key:\nKey used to decrypt trophies. Must be obtained from your jailbroken console.\nMust contain only hex characters.</source>
-      <translation>Ключ трофеев:\nКлюч, используемый для расшифровки трофеев. Должен быть получен из вашей взломанной консоли.\nДолжен содержать только шестнадцатеричные символы.</translation>
-    </message>
-    <message>
       <source>Log Type:\nSets whether to synchronize the output of the log window for performance. May have adverse effects on emulation.</source>
       <translation>Тип логов:\nУстановите, синхронизировать ли вывод окна логов ради производительности. Это может негативно сказаться на эмуляции.</translation>
     </message>
@@ -2077,7 +2278,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Background Image:\nControl the opacity of the game background image.</source>
-      <translation>Фоновое изображение:\nКонтролируйте непрозрачность фона игры.</translation>
+      <translation>Фоновое изображение:\nКонтролирует непрозрачность фона игры.</translation>
     </message>
     <message>
       <source>Play Title Music:\nIf a game supports it, enable playing special music when selecting the game in the GUI.</source>
@@ -2156,12 +2357,8 @@ Select an emulator version from the right panel.</source>
       <translation>Собирать шейдеры:\nВам необходимо включить эту функцию для редактирования шейдеров с помощью меню отладки (Ctrl + F10).</translation>
     </message>
     <message>
-      <source>Enable Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
-      <translation>Включить считывание:\nВключить считывание и запись в память GPU.\nЭто требуется для правильного поведения в некоторых играх. \nМожет вызвать проблемы со стабильностью/производительностью.</translation>
-    </message>
-    <message>
       <source>Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</source>
-      <translation>Включить считывание линейных изображений:\nВключает асинхронную загрузку изображений, модифицированных GPU.\nМожет исправить проблемы в некоторых играх.</translation>
+      <translation>Включить обратное чтение линейных изображений:\nВключает асинхронную загрузку изображений, модифицированных GPU.\nМожет исправить проблемы в некоторых играх.</translation>
     </message>
     <message>
       <source>Copy GPU Buffers:\nGets around race conditions involving GPU submits.\nMay or may not help with PM4 type 0 crashes.</source>
@@ -2176,24 +2373,12 @@ Select an emulator version from the right panel.</source>
       <translation>Маркеры отладки гостя:\nДобавляет любые отладочные маркеры, добавленные самой игрой, в буфер команд.\nЕсли эта функция включена, вам следует включить Диагностику сбоев.\nПолезно для таких программ, как RenderDoc.</translation>
     </message>
     <message>
-      <source>Save Data Path:\nThe folder where game save data will be saved.</source>
-      <translation>Путь сохранений:\nПапка, в которой будут храниться сохранения игр.</translation>
-    </message>
-    <message>
-      <source>Browse:\nBrowse for a folder to set as the save data path.</source>
-      <translation>Обзор:\nНайдите папку, которую можно указать в качестве пути для сохранений.</translation>
-    </message>
-    <message>
       <source>Set the volume of the background music.</source>
       <translation>Установите громкость фоновой музыки.</translation>
     </message>
     <message>
       <source>Enable Motion Controls</source>
       <translation>Включить управление движением</translation>
-    </message>
-    <message>
-      <source>Save Data Path</source>
-      <translation>Путь сохранений</translation>
     </message>
     <message>
       <source>Browse</source>
@@ -2214,10 +2399,6 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Directory to install games</source>
       <translation>Каталог для установки игр</translation>
-    </message>
-    <message>
-      <source>Directory to save data</source>
-      <translation>Каталог для сохранений</translation>
     </message>
     <message>
       <source>Video</source>
@@ -2397,7 +2578,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</source>
-      <translation>Громкость:\nРегулируйте громкость игр на глобальном уровне, диапазон может быть 0-500% со значением по умолчанию 100%.</translation>
+      <translation>Громкость:\nРегулирует громкость игр на глобальном уровне, диапазон может быть 0-500% со значением по умолчанию 100%.</translation>
     </message>
     <message>
       <source>Default tab when opening settings:\nChoose which tab will open, the default is General.</source>
@@ -2597,7 +2778,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
-      <translation>Устройство USB:\nНастоящее USB-устройство: Используйте настоящее USB-устройство, подключённое к системе.\nSkylander Portal: Эмулируйте Skylander Portal of Power.\nInfinity Base: Эмулируйте Disney Infinity Base.\nDimensions Toypad: Эмулируйте Lego Dimensions Toypad.</translation>
+      <translation>Устройство USB:\nНастоящее USB-устройство: Использует настоящее USB-устройство, подключённое к системе.\nSkylander Portal: Эмулирует Skylander Portal of Power.\nInfinity Base: Эмулирует Disney Infinity Base.\nDimensions Toypad: Эмулирует Lego Dimensions Toypad.</translation>
     </message>
     <message>
       <source>Enable Shader Cache</source>
@@ -2614,6 +2795,46 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
       <translation>Сжать файлы кэша шейдеров в zip-файл:\nФайлы кэша шейдеров хранятся в одном zip-файле вместо нескольких отдельных файлов.</translation>
+    </message>
+    <message>
+      <source>Readbacks Mode</source>
+      <translation>Режим обратного чтения</translation>
+    </message>
+    <message>
+      <source>Disabled</source>
+      <translation>Выключено</translation>
+    </message>
+    <message>
+      <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
+      <translation>Обратное чтение:\nВключить обратное чтение и запись в память GPU.\nЭто требуется для правильного поведения в некоторых играх. \nМожет вызвать проблемы со стабильностью/производительностью.</translation>
+    </message>
+    <message>
+      <source>Relaxed</source>
+      <translation>Расслабленный</translation>
+    </message>
+    <message>
+      <source>Precise</source>
+      <translation>Точный</translation>
+    </message>
+    <message>
+      <source>Select shadPS4 Home Path</source>
+      <translation>Выберите путь к домашней папке shadPS4</translation>
+    </message>
+    <message>
+      <source>Select the system modules folder</source>
+      <translation>Выберите папку системных модулей</translation>
+    </message>
+    <message>
+      <source>Home Folder Location (Saves, Inputs, Trophy Data)</source>
+      <translation>Местоположение домашней папки (сохранения, входы, трофеи)</translation>
+    </message>
+    <message>
+      <source>Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</source>
+      <translation>Путь к домашней папке:\nПапка, в которой хранятся данные сохранений, файлы трофеев и конфигурации вводов для всех пользователей.</translation>
+    </message>
+    <message>
+      <source>Browse:\nBrowse for a folder to set as the home folder.</source>
+      <translation>Просмотр:\nВыберите папку, которую хотите установить в качестве домашней папки.</translation>
     </message>
   </context>
   <context>
@@ -2660,6 +2881,105 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Show Hidden Trophies</source>
       <translation>Показать скрытые трофеи</translation>
+    </message>
+  </context>
+  <context>
+    <name>UserManagerDialog</name>
+    <message>
+      <source>User Manager</source>
+      <translation>Менеджер пользователей</translation>
+    </message>
+    <message>
+      <source>&amp;Create User</source>
+      <translation>&amp;Создать пользователя</translation>
+    </message>
+    <message>
+      <source>&amp;Delete User</source>
+      <translation>&amp;Удалить пользователя</translation>
+    </message>
+    <message>
+      <source>&amp;Rename User</source>
+      <translation>&amp;Переименовать пользователя</translation>
+    </message>
+    <message>
+      <source>&amp;Set Default User</source>
+      <translation>&amp;Установить пользователя по умолчанию</translation>
+    </message>
+    <message>
+      <source>&amp;Set Color</source>
+      <translation>&amp;Установить цвет</translation>
+    </message>
+    <message>
+      <source>&amp;Set Controller Port</source>
+      <translation>&amp;Установить порт контроллера</translation>
+    </message>
+    <message>
+      <source>&amp;Close</source>
+      <translation>&amp;Закрыть</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation>Ошибка</translation>
+    </message>
+    <message>
+      <source>Cannot add more users.</source>
+      <translation>Невозможно добавить новых пользователей.</translation>
+    </message>
+    <message>
+      <source>Create New User</source>
+      <translation>Создать нового пользователя</translation>
+    </message>
+    <message>
+      <source>New User ID: %1</source>
+      <translation>ID нового пользователя: %1</translation>
+    </message>
+    <message>
+      <source>Username (3–16 chars, letters, numbers, _, -)</source>
+      <translation>Имя пользователя (3–16 символов, буквы, цифры, _, -)</translation>
+    </message>
+    <message>
+      <source>Invalid Username</source>
+      <translation>Неверное имя пользователя</translation>
+    </message>
+    <message>
+      <source>Username must be 3–16 chars and valid.</source>
+      <translation>Имя пользователя должно состоять из 3–16 символов и быть действительным.</translation>
+    </message>
+    <message>
+      <source>Delete Confirmation</source>
+      <translation>Подтверждение удаления</translation>
+    </message>
+    <message>
+      <source>Delete user ID %1?</source>
+      <translation>Удалить пользователя с ID %1?</translation>
+    </message>
+    <message>
+      <source>Rename User</source>
+      <translation>Переименовать пользователя</translation>
+    </message>
+    <message>
+      <source>Old Username: %1</source>
+      <translation>Старое имя пользователя: %1</translation>
+    </message>
+    <message>
+      <source>Set User Color</source>
+      <translation>Установить цвет пользователя</translation>
+    </message>
+    <message>
+      <source>Select color:</source>
+      <translation>Выберите цвет:</translation>
+    </message>
+    <message>
+      <source>Set Controller Port</source>
+      <translation>Установить порт контроллера</translation>
+    </message>
+    <message>
+      <source>Assign port (1-4) to this user:</source>
+      <translation>Назначьте этому пользователю порт (1-4):</translation>
+    </message>
+    <message>
+      <source>&amp;Open User Directory</source>
+      <translation>&amp;Открыть каталог пользователей</translation>
     </message>
   </context>
   <context>
@@ -2714,11 +3034,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Check for Pre-release updates at startup</source>
-      <translation>Проверять обновления Pre-Release при запуске</translation>
+      <translation>Проверять обновления предрелиза при запуске</translation>
     </message>
     <message>
       <source>Check for Pre-release Updates</source>
-      <translation>Проверить обновления Pre-Release</translation>
+      <translation>Проверить обновления предрелиза</translation>
     </message>
     <message>
       <source>Select the folder where the emulator versions will be installed</source>
@@ -2819,7 +3139,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>You already have the latest pre-release version.</source>
-      <translation>У вас уже установлена ​​последняя версия Pre-release.</translation>
+      <translation>У вас уже установлена ​​последняя версия предрелиза.</translation>
     </message>
     <message>
       <source>Update Available (Emulator)</source>
@@ -2879,7 +3199,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Pre-release updated successfully</source>
-      <translation>Версия Pre-release успешно обновлена</translation>
+      <translation>Версия предрелиза успешно обновлена</translation>
     </message>
     <message>
       <source>Failed to create the update script file</source>
@@ -2919,11 +3239,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release.</source>
-      <translation>Не удалось получить хеш последней версии Pre-release.</translation>
+      <translation>Не удалось получить хеш последней версии предрелиза.</translation>
     </message>
     <message>
       <source>Downloading Pre-release (Nightly), please wait...</source>
-      <translation>Загрузка версии Pre‑release (Nightly), пожалуйста, подождите...</translation>
+      <translation>Загрузка версии предрелиза (Nightly), пожалуйста, подождите...</translation>
     </message>
   </context>
   <context>

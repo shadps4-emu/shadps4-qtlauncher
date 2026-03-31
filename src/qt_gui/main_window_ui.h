@@ -41,6 +41,8 @@ public:
     QAction* aboutAct;
     QAction* configureAct;
     QAction* configureHotkeys;
+    QAction* keyManager;
+    QAction* userManager;
     QAction* setThemeDark;
     QAction* setThemeLight;
     QAction* setThemeGreen;
@@ -181,6 +183,12 @@ public:
         configureHotkeys = new QAction(MainWindow);
         configureHotkeys->setObjectName("configureHotkeys");
         configureHotkeys->setIcon(QIcon(":images/hotkey.png"));
+        keyManager = new QAction(MainWindow);
+        keyManager->setObjectName("keyManager");
+        keyManager->setIcon(QIcon(":images/key.png"));
+        userManager = new QAction(MainWindow);
+        userManager->setObjectName("keyManager");
+        userManager->setIcon(QIcon(":images/users.png"));
         setThemeDark = new QAction(MainWindow);
         setThemeDark->setObjectName("setThemeDark");
         setThemeDark->setCheckable(true);
@@ -358,6 +366,8 @@ public:
         menuSettings->addAction(configureAct);
         menuSettings->addAction(gameInstallPathAct);
         menuSettings->addAction(configureHotkeys);
+        menuSettings->addAction(keyManager);
+        menuSettings->addAction(userManager);
         menuSettings->addAction(menuUtils->menuAction());
         menuUtils->addAction(downloadCheatsPatchesAct);
         menuUtils->addAction(dumpGameListAct);
@@ -393,6 +403,9 @@ public:
         configureAct->setText(QCoreApplication::translate("MainWindow", "Configure...", nullptr));
         configureHotkeys->setText(
             QCoreApplication::translate("MainWindow", "Customize Hotkeys", nullptr));
+        keyManager->setText(
+            QCoreApplication::translate("MainWindow", "Manage Cryptographic Keys", nullptr));
+        userManager->setText(QCoreApplication::translate("MainWindow", "Manage Users", nullptr));
 #if QT_CONFIG(tooltip)
 #endif // QT_CONFIG(tooltip)
         menuRecent->setTitle(QCoreApplication::translate("MainWindow", "Recent Games", nullptr));

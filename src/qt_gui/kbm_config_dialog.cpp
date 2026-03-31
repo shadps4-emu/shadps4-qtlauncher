@@ -7,9 +7,10 @@
 #include <filesystem>
 #include <fstream>
 #include <iostream>
-#include "common/config.h"
 #include "common/path_util.h"
+#include "core/emulator_settings.h"
 #include "game_info.h"
+#include "input/input.h"
 
 #include <QCheckBox>
 #include <QCloseEvent>
@@ -42,12 +43,12 @@ EditorDialog::EditorDialog(QWidget* parent) : QDialog(parent) {
     loadInstalledGames();
 
     QCheckBox* unifiedInputCheckBox = new QCheckBox(tr("Use Per-Game configs"), this);
-    unifiedInputCheckBox->setChecked(!Config::GetUseUnifiedInputConfig());
+    unifiedInputCheckBox->setChecked(!EmulatorSettings.IsUseUnifiedInputConfig());
 
     // Connect checkbox signal
     connect(unifiedInputCheckBox, &QCheckBox::toggled, this, [](bool checked) {
-        Config::SetUseUnifiedInputConfig(!checked);
-        Config::save(Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "config.toml");
+        EmulatorSettings.SetUseUnifiedInputConfig(!checked);
+        EmulatorSettings.Save();
     });
     // Create Save, Cancel, and Help buttons
     QPushButton* saveButton = new QPushButton("Save", this);
@@ -84,7 +85,7 @@ EditorDialog::EditorDialog(QWidget* parent) : QDialog(parent) {
 
 void EditorDialog::loadFile(QString game) {
 
-    const auto config_file = Config::GetFoolproofInputConfigFile(game.toStdString());
+    const auto config_file = Input::GetFoolproofInputConfigFile(game.toStdString());
     QFile file(config_file);
 
     if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
@@ -99,7 +100,7 @@ void EditorDialog::loadFile(QString game) {
 
 void EditorDialog::saveFile(QString game) {
 
-    const auto config_file = Config::GetFoolproofInputConfigFile(game.toStdString());
+    const auto config_file = Input::GetFoolproofInputConfigFile(game.toStdString());
     QFile file(config_file);
 
     if (file.open(QIODevice::WriteOnly | QIODevice::Text)) {
@@ -194,10 +195,10 @@ void EditorDialog::onResetToDefaultClicked() {
 
     if (reply == QMessageBox::Yes) {
         if (default_default) {
-            const auto default_file = Config::GetFoolproofInputConfigFile("default");
+            const auto default_file = Input::GetFoolproofInputConfigFile("default");
             std::filesystem::remove(default_file);
         }
-        const auto config_file = Config::GetFoolproofInputConfigFile("default");
+        const auto config_file = Input::GetFoolproofInputConfigFile("default");
         QFile file(config_file);
 
         if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
@@ -218,7 +219,7 @@ bool EditorDialog::hasUnsavedChanges() {
 void EditorDialog::loadInstalledGames() {
     previous_game = "default";
     QStringList filePaths;
-    for (const auto& installLoc : Config::getGameInstallDirs()) {
+    for (const auto& installLoc : EmulatorSettings.GetGameInstallDirs()) {
         QString installDir;
         Common::FS::PathToQString(installDir, installLoc);
         QDir parentFolder(installDir);

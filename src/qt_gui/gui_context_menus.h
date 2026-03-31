@@ -13,13 +13,14 @@
 
 #include "background_music_player.h"
 #include "cheats_patches.h"
-#include "common/config.h"
 #include "common/log_analyzer.h"
 #include "common/logging/log.h"
 #include "common/path_util.h"
 #include "common/scm_rev.h"
 #include "compatibility_info.h"
+#include "core/emulator_settings.h"
 #include "core/emulator_state.h"
+#include "core/user_settings.h"
 #include "create_shortcut.h"
 #include "game_info.h"
 #include "gui_settings.h"
@@ -77,16 +78,25 @@ public:
         QMenu* openFolderMenu = new QMenu(tr("Open Folder..."), widget);
         QAction* openGameFolder = new QAction(tr("Open Game Folder"), widget);
         QAction* openUpdateFolder = new QAction(tr("Open Update Folder"), widget);
-        QAction* openSaveDataFolder = new QAction(tr("Open Save Data Folder"), widget);
+        QMenu* openSaveDataMenu = new QMenu(tr("Open Save Data Folder"), widget);
+        QAction* openUser1Save = new QAction(tr("User 1"), widget);
+        QAction* openUser2Save = new QAction(tr("User 2"), widget);
+        QAction* openUser3Save = new QAction(tr("User 3"), widget);
+        QAction* openUser4Save = new QAction(tr("User 4"), widget);
         QAction* openLogFolder = new QAction(tr("Open Log Folder"), widget);
 
         openFolderMenu->addAction(openGameFolder);
         openFolderMenu->addAction(openUpdateFolder);
-        openFolderMenu->addAction(openSaveDataFolder);
         openFolderMenu->addAction(openLogFolder);
+
+        openSaveDataMenu->addAction(openUser1Save);
+        openSaveDataMenu->addAction(openUser2Save);
+        openSaveDataMenu->addAction(openUser3Save);
+        openSaveDataMenu->addAction(openUser4Save);
 
         menu.addMenu(launchMenu);
         menu.addMenu(openFolderMenu);
+        menu.addMenu(openSaveDataMenu);
 
         QMenu* gameConfigMenu = new QMenu(tr("Game-specific Settings..."), widget);
         QAction gameConfigConfigure(tr("Configure Game-specific Settings"), widget);
@@ -94,14 +104,14 @@ public:
         QAction gameConfigDelete(tr("Delete Game-specific Settings"), widget);
 
         if (std::filesystem::exists(Common::FS::GetUserPath(Common::FS::PathType::CustomConfigs) /
-                                    (m_games[itemID].serial + ".toml"))) {
+                                    (m_games[itemID].serial + ".json"))) {
             gameConfigMenu->addAction(&gameConfigConfigure);
         } else {
             gameConfigMenu->addAction(&gameConfigCreate);
         }
 
         if (std::filesystem::exists(Common::FS::GetUserPath(Common::FS::PathType::CustomConfigs) /
-                                    (m_games[itemID].serial + ".toml")))
+                                    (m_games[itemID].serial + ".json")))
             gameConfigMenu->addAction(&gameConfigDelete);
 
         menu.addMenu(gameConfigMenu);
@@ -156,17 +166,26 @@ public:
         QMenu* deleteMenu = new QMenu(tr("Delete..."), widget);
         QAction* deleteGame = new QAction(tr("Delete Game"), widget);
         QAction* deleteUpdate = new QAction(tr("Delete Update"), widget);
-        QAction* deleteSaveData = new QAction(tr("Delete Save Data"), widget);
+        QMenu* deleteSaveDataMenu = new QMenu(tr("Delete Save Data"), widget);
+        QAction* deleteUser1Save = new QAction(tr("User 1"), widget);
+        QAction* deleteUser2Save = new QAction(tr("User 2"), widget);
+        QAction* deleteUser3Save = new QAction(tr("User 3"), widget);
+        QAction* deleteUser4Save = new QAction(tr("User 4"), widget);
         QAction* deleteDLC = new QAction(tr("Delete DLC"), widget);
         QAction* deleteTrophy = new QAction(tr("Delete Trophy"), widget);
         QAction* deleteShaderCache = new QAction(tr("Delete Shader Cache"), widget);
 
         deleteMenu->addAction(deleteGame);
         deleteMenu->addAction(deleteUpdate);
-        deleteMenu->addAction(deleteSaveData);
+        deleteMenu->addMenu(deleteSaveDataMenu);
         deleteMenu->addAction(deleteDLC);
         deleteMenu->addAction(deleteTrophy);
         deleteMenu->addAction(deleteShaderCache);
+
+        deleteSaveDataMenu->addAction(deleteUser1Save);
+        deleteSaveDataMenu->addAction(deleteUser2Save);
+        deleteSaveDataMenu->addAction(deleteUser3Save);
+        deleteSaveDataMenu->addAction(deleteUser4Save);
 
         menu.addMenu(deleteMenu);
 
@@ -225,19 +244,39 @@ public:
             }
         }
 
-        if (selected == openSaveDataFolder) {
-            QString saveDataPath;
-            Common::FS::PathToQString(saveDataPath,
-                                      Config::GetSaveDataPath() / "1" / m_games[itemID].save_dir);
-            QDir(saveDataPath).mkpath(saveDataPath);
-            QDesktopServices::openUrl(QUrl::fromLocalFile(saveDataPath));
+        if (selected == openUser1Save || selected == openUser2Save || selected == openUser3Save ||
+            selected == openUser4Save) {
+
+            int user_id;
+            if (selected == openUser1Save) {
+                user_id = 1000;
+            } else if (selected == openUser2Save) {
+                user_id = 1001;
+            } else if (selected == openUser3Save) {
+                user_id = 1002;
+            } else if (selected == openUser4Save) {
+                user_id = 1003;
+            }
+
+            if (!std::filesystem::exists(EmulatorSettings.GetHomeDir() / std::to_string(user_id) /
+                                         "savedata" / m_games[itemID].save_dir)) {
+                QMessageBox::critical(nullptr, tr("Error"),
+                                      QString(tr("This game has no save folder to open!")));
+            } else {
+                QString saveDataPath;
+                Common::FS::PathToQString(saveDataPath, EmulatorSettings.GetHomeDir() /
+                                                            std::to_string(user_id) / "savedata" /
+                                                            m_games[itemID].save_dir);
+                QDir(saveDataPath).mkpath(saveDataPath);
+                QDesktopServices::openUrl(QUrl::fromLocalFile(saveDataPath));
+            }
         }
 
         if (selected == openLogFolder) {
             QString logPath;
             Common::FS::PathToQString(logPath,
                                       Common::FS::GetUserPath(Common::FS::PathType::LogDir));
-            if (!Config::getSeparateLogFilesEnabled()) {
+            if (!EmulatorSettings.IsSeparateLoggingEnabled()) {
                 QDesktopServices::openUrl(QUrl::fromLocalFile(logPath));
             } else {
                 QString fileName = QString::fromStdString(m_games[itemID].serial) + ".log";
@@ -457,7 +496,7 @@ public:
                                                           QMessageBox::Yes | QMessageBox::No)) {
                 std::filesystem::remove(
                     Common::FS::GetUserPath(Common::FS::PathType::CustomConfigs) /
-                    (m_games[itemID].serial + ".toml"));
+                    (m_games[itemID].serial + ".json"));
             }
         }
 
@@ -507,8 +546,9 @@ public:
         }
 
         if (selected == deleteGame || selected == deleteUpdate || selected == deleteDLC ||
-            selected == deleteSaveData || selected == deleteTrophy ||
-            selected == deleteShaderCache) {
+            selected == deleteUser1Save || selected == deleteUser2Save ||
+            selected == deleteUser3Save || selected == deleteUser4Save ||
+            selected == deleteTrophy || selected == deleteShaderCache) {
             bool error = false;
             QString folder_path, game_update_path, dlc_path, save_data_path, trophy_data_path,
                 shader_cache_path, shader_cache_zip_path;
@@ -518,10 +558,8 @@ public:
                 game_update_path = folder_path + "-patch";
             }
             Common::FS::PathToQString(
-                dlc_path, Config::getAddonInstallDir() /
+                dlc_path, EmulatorSettings.GetAddonInstallDir() /
                               Common::FS::PathFromQString(folder_path).parent_path().filename());
-            Common::FS::PathToQString(save_data_path,
-                                      Config::GetSaveDataPath() / "1" / m_games[itemID].save_dir);
             Common::FS::PathToQString(trophy_data_path,
                                       Common::FS::GetUserPath(Common::FS::PathType::MetaDataDir) /
                                           m_games[itemID].serial / "TrophyFiles");
@@ -531,8 +569,22 @@ public:
             Common::FS::PathToQString(shader_cache_zip_path,
                                       Common::FS::GetUserPath(Common::FS::PathType::CacheDir) /
                                           (m_games[itemID].serial + ".zip"));
-            QString message_type;
 
+            int user_id;
+            if (selected == deleteUser1Save) {
+                user_id = 1000;
+            } else if (selected == deleteUser2Save) {
+                user_id = 1001;
+            } else if (selected == deleteUser3Save) {
+                user_id = 1002;
+            } else if (selected == deleteUser4Save) {
+                user_id = 1003;
+            }
+            Common::FS::PathToQString(save_data_path, EmulatorSettings.GetHomeDir() /
+                                                          std::to_string(user_id) / "savedata" /
+                                                          m_games[itemID].save_dir);
+
+            QString message_type;
             if (selected == deleteGame) {
                 BackgroundMusicPlayer::getInstance().stopMusic();
                 message_type = tr("Game");
@@ -554,7 +606,8 @@ public:
                     folder_path = dlc_path;
                     message_type = tr("DLC");
                 }
-            } else if (selected == deleteSaveData) {
+            } else if (selected == deleteUser1Save || selected == deleteUser2Save ||
+                       selected == deleteUser3Save || selected == deleteUser4Save) {
                 if (!std::filesystem::exists(Common::FS::PathFromQString(save_data_path))) {
                     QMessageBox::critical(nullptr, tr("Error"),
                                           QString(tr("This game has no save data to delete!")));
@@ -628,8 +681,8 @@ public:
         if (selected == submitCompatibilityReport) {
             std::filesystem::path log_file_path =
                 (Common::FS::GetUserPath(Common::FS::PathType::LogDir) /
-                 (Config::getSeparateLogFilesEnabled() ? m_games[itemID].serial + ".log"
-                                                       : "shad_log.txt"));
+                 (EmulatorSettings.IsSeparateLoggingEnabled() ? m_games[itemID].serial + ".log"
+                                                              : "shad_log.txt"));
             bool is_valid_file = LogAnalyzer::ProcessFile(log_file_path);
             std::optional<std::string> report_result = std::nullopt;
             if (is_valid_file) {

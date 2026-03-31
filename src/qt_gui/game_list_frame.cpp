@@ -2,7 +2,6 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include <QToolTip>
-#include "common/config.h"
 #include "common/logging/log.h"
 #include "common/path_util.h"
 #include "game_list_frame.h"
@@ -154,7 +153,7 @@ void GameListFrame::PopulateGameList(bool isInitialPopulation) {
     for (int i = 0; i < m_game_info->m_games.size(); i++) {
         SetTableItem(i, 1, QString::fromStdString(m_game_info->m_games[i].name));
         if (std::filesystem::exists(Common::FS::GetUserPath(Common::FS::PathType::CustomConfigs) /
-                                    (m_game_info->m_games[i].serial + ".toml"))) {
+                                    (m_game_info->m_games[i].serial + ".json"))) {
             QTableWidgetItem* name_item = item(i, 1);
             name_item->setIcon(QIcon(":images/game_settings.png"));
         }

@@ -12,6 +12,7 @@
 #include <QPushButton>
 #include <QVBoxLayout>
 
+#include "core/emulator_settings.h"
 #include "game_install_dialog.h"
 #include "gui_settings.h"
 
@@ -64,8 +65,9 @@ QWidget* GameInstallDialog::SetupGamesDirectory() {
     // Input.
     m_gamesDirectory = new QLineEdit();
     QString install_dir;
-    std::filesystem::path install_path =
-        Config::getGameInstallDirs().empty() ? "" : Config::getGameInstallDirs().front();
+    std::filesystem::path install_path = EmulatorSettings.GetGameInstallDirs().empty()
+                                             ? ""
+                                             : EmulatorSettings.GetGameInstallDirs().front();
     Common::FS::PathToQString(install_dir, install_path);
     m_gamesDirectory->setText(install_dir);
     m_gamesDirectory->setMinimumWidth(400);
@@ -89,7 +91,7 @@ QWidget* GameInstallDialog::SetupAddonsDirectory() {
     // Input.
     m_addonsDirectory = new QLineEdit();
     QString install_dir;
-    Common::FS::PathToQString(install_dir, Config::getAddonInstallDir());
+    Common::FS::PathToQString(install_dir, EmulatorSettings.GetAddonInstallDir());
     m_addonsDirectory->setText(install_dir);
     m_addonsDirectory->setMinimumWidth(400);
 
@@ -125,6 +127,10 @@ QWidget* GameInstallDialog::SetupVersionDirectory() {
     auto browse = new QPushButton(tr("Browse"));
     connect(browse, &QPushButton::clicked, this, &GameInstallDialog::BrowseVersionDirectory);
     layout->addWidget(browse);
+
+#ifdef HIDE_VERSION_MANAGER
+    group->setHidden(true);
+#endif
 
     return group;
 }
@@ -181,12 +187,12 @@ void GameInstallDialog::Save() {
     }
 
     // Save the directories
-    Config::addGameInstallDir(Common::FS::PathFromQString(gamesDirectory));
-    Config::setAddonInstallDir(Common::FS::PathFromQString(addonsDirectory));
+    EmulatorSettings.AddGameInstallDir(Common::FS::PathFromQString(gamesDirectory));
+    EmulatorSettings.SetAddonInstallDir(Common::FS::PathFromQString(addonsDirectory));
     m_gui_settings->SetValue(gui::vm_versionPath, versionDirectory);
 
     const auto config_dir = Common::FS::GetUserPath(Common::FS::PathType::UserDir);
-    Config::save(config_dir / "config.toml");
+    EmulatorSettings.Save();
 
     accept();
 }

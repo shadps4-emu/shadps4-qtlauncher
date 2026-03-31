@@ -222,7 +222,6 @@ find_package(fmt 10.2.0 CONFIG)
 find_package(SDL3 3.1.2 CONFIG)
 find_package(toml11 4.2.0 CONFIG)
 find_package(VulkanHeaders 1.4.329 CONFIG)
-find_package(pugixml 1.14 CONFIG)
 list(POP_BACK CMAKE_MODULE_PATH)
 
 if (CMAKE_CXX_COMPILER_ID STREQUAL "Clang" OR CMAKE_CXX_COMPILER_ID STREQUAL "AppleClang")
@@ -275,8 +274,6 @@ set(COMMON src/common/logging/backend.cpp
            src/common/assert.cpp
            src/common/assert.h
            src/common/bounded_threadsafe_queue.h
-           src/common/config.cpp
-           src/common/config.h
            src/common/versions.cpp
            src/common/versions.h
            src/common/endian.h
@@ -287,24 +284,34 @@ set(COMMON src/common/logging/backend.cpp
            src/common/path_util.h
            src/common/sha1.h
            src/common/types.h
-           src/common/memory_patcher.h
            src/common/memory_patcher.cpp
+           src/common/memory_patcher.h
+           src/common/key_manager.cpp
+           src/common/key_manager.h
            ${CMAKE_CURRENT_BINARY_DIR}/src/common/scm_rev.cpp
            src/common/scm_rev.h
 )
 
 set(CORE src/core/file_format/elf.cpp
          src/core/file_format/elf.h
+         src/core/file_format/npbind.cpp
+         src/core/file_format/npbind.h
          src/core/file_format/psf.cpp
          src/core/file_format/psf.h
          src/core/file_format/trp.cpp
          src/core/file_format/trp.h
          src/core/emulator_state.cpp
          src/core/emulator_state.h
+         src/core/emulator_settings.cpp
+         src/core/emulator_settings.h
+         src/core/user_manager.cpp
+         src/core/user_manager.h
+         src/core/user_settings.cpp
+         src/core/user_settings.h
 )
 
-set(INPUT src/input/controller.cpp
-          src/input/controller.h
+set(INPUT src/input/input.cpp
+          src/input/input.h
 )
 
 qt_add_resources(RESOURCE_FILES src/shadps4.qrc)
@@ -384,6 +391,13 @@ set(QT_GUI src/qt_gui/about_dialog.cpp
            src/qt_gui/right_click_button.h
            src/qt_gui/patch_editor.cpp
            src/qt_gui/patch_editor.h
+           src/qt_gui/crypto_key_dialog.cpp
+           src/qt_gui/crypto_key_dialog.h
+           src/qt_gui/hex_plain_text_edit.h
+           src/qt_gui/user_manager_dialog.cpp
+           src/qt_gui/user_manager_dialog.h
+           src/qt_gui/table_item_delegate.cpp
+           src/qt_gui/table_item_delegate.h
            ${RESOURCE_FILES}
            ${TRANSLATIONS}
            ${UPDATER}
@@ -404,7 +418,7 @@ qt_add_executable(shadPS4QtLauncher
 
 create_target_directory_groups(shadPS4QtLauncher)
 
-target_link_libraries(shadPS4QtLauncher PRIVATE Vulkan::Headers fmt::fmt toml11::toml11 SDL3::SDL3 pugixml::pugixml volk_headers)
+target_link_libraries(shadPS4QtLauncher PRIVATE Vulkan::Headers fmt::fmt toml11::toml11 SDL3::SDL3 volk_headers)
 
 if (APPLE)
     # Include MoltenVK, along with an ICD file so it can be found by the system Vulkan loader if used for loading layers.
@@ -437,6 +451,9 @@ endif()
 target_link_libraries(shadPS4QtLauncher PRIVATE Qt6::Widgets Qt6::Concurrent Qt6::Network Qt6::Multimedia nlohmann_json::nlohmann_json)
 if (ENABLE_UPDATER)
     add_definitions(-DENABLE_UPDATER)
+endif()
+if (HIDE_VERSION_MANAGER)
+    add_definitions(-DHIDE_VERSION_MANAGER)
 endif()
 
 if (WIN32)

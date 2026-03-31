@@ -8,7 +8,6 @@
 #include <QtConcurrent>
 #include <QtNetwork>
 
-#include "common/config.h"
 #include "core/file_format/psf.h"
 
 enum class CompatibilityStatus {

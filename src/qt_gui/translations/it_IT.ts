@@ -627,6 +627,191 @@
     </message>
   </context>
   <context>
+    <name>CryptoManagerDialog</name>
+    <message>
+      <source>Crypto Key Manager</source>
+      <translation>Gestore Chiavi Crittografiche</translation>
+    </message>
+    <message>
+      <source>Trophy Key: Used for trophy decryption.
+Must be a valid hex string with even length.</source>
+      <translation>Chiave Trofei: Usata per decrittare i trofei.
+Deve essere una stringa esadecimale valida con lunghezza pari.</translation>
+    </message>
+    <message>
+      <source>Enter Trophy Key</source>
+      <translation>Inserisci Chiave Trofei</translation>
+    </message>
+    <message>
+      <source>Trophy Key:</source>
+      <translation>Chiave Trofei:</translation>
+    </message>
+    <message>
+      <source>Status: Not loaded</source>
+      <translation>Stato: non caricato</translation>
+    </message>
+    <message>
+      <source>Trophy Key</source>
+      <translation>Chiave Trofei</translation>
+    </message>
+    <message>
+      <source>Enter %1</source>
+      <translation>Inserisci %1</translation>
+    </message>
+    <message>
+      <source>Exponent1</source>
+      <translation>Esponente1</translation>
+    </message>
+    <message>
+      <source>Exponent2</source>
+      <translation>Esponente2</translation>
+    </message>
+    <message>
+      <source>Public Exponent</source>
+      <translation>Esponente Pubblico</translation>
+    </message>
+    <message>
+      <source>Coefficient</source>
+      <translation>Coefficiente</translation>
+    </message>
+    <message>
+      <source>Modulus</source>
+      <translation>Modulo</translation>
+    </message>
+    <message>
+      <source>Prime 1</source>
+      <translation>Prime 1</translation>
+    </message>
+    <message>
+      <source>Prime 2</source>
+      <translation>Prime 2</translation>
+    </message>
+    <message>
+      <source>Private Exponent</source>
+      <translation>Esponente Privato</translation>
+    </message>
+    <message>
+      <source>Fake Keyset</source>
+      <translation>Simula Keyset</translation>
+    </message>
+    <message>
+      <source>RSA key components for fake signing.
+All fields must be valid hex strings with even length.</source>
+      <translation>Componenti chiave RSA per la simulazione della firma.
+Tutti i campi devono essere stringhe esadecimali valide con lunghezza uniforme.</translation>
+    </message>
+    <message>
+      <source>Debug Rif Keyset</source>
+      <translation>Debug Rif Keyset</translation>
+    </message>
+    <message>
+      <source>RSA key components for debug RIF files.
+All fields must be valid hex strings with even length.</source>
+      <translation>Componenti chiave RSA per il debug dei file RIF.
+Tutti i campi devono essere stringhe esadecimali valide con lunghezza uniforme.</translation>
+    </message>
+    <message>
+      <source>Pkg Derived Key3</source>
+      <translation>Pkg Derivato Key3</translation>
+    </message>
+    <message>
+      <source>RSA key components for package decryption.
+All fields must be valid hex strings with even length.</source>
+      <translation>Componenti chiave RSA per la decrittazione dei pacchetti.
+Tutti i campi devono essere stringhe esadecimali valide con lunghezza uniforme.</translation>
+    </message>
+    <message>
+      <source>Load All Keys</source>
+      <translation>Carica Tutte Le Chiavi</translation>
+    </message>
+    <message>
+      <source>Save All Keys</source>
+      <translation>Salva Tutte Le Chiavi</translation>
+    </message>
+    <message>
+      <source>Close</source>
+      <translation>Chiudi</translation>
+    </message>
+    <message>
+      <source>Warning</source>
+      <translation>Attenzione</translation>
+    </message>
+    <message>
+      <source>No key file found or failed to load.
+Please enter your keys and save them.</source>
+      <translation>Nessun file chiave trovato o caricamento fallito.
+Inserisci le chiavi e salvale.</translation>
+    </message>
+    <message>
+      <source>Validation Error</source>
+      <translation>Errore di Validazione</translation>
+    </message>
+    <message>
+      <source>Success</source>
+      <translation>Successo</translation>
+    </message>
+    <message>
+      <source>Keys saved successfully!</source>
+      <translation>Chiavi salvate con successo!</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation>Errore</translation>
+    </message>
+    <message>
+      <source>Failed to save keys!</source>
+      <translation>Impossibile salvare le chiavi!</translation>
+    </message>
+    <message>
+      <source>Status: All fields empty</source>
+      <translation>Stato: Tutti i campi vuoti</translation>
+    </message>
+    <message>
+      <source>Status: Invalid hex values</source>
+      <translation>Stato: valori esadecimali non validi</translation>
+    </message>
+    <message>
+      <source>Status: Incomplete</source>
+      <translation>Stato: Incompleto</translation>
+    </message>
+    <message>
+      <source>Status: Valid</source>
+      <translation>Status: Valid</translation>
+    </message>
+    <message>
+      <source>Invalid File</source>
+      <translation>File non valido</translation>
+    </message>
+    <message>
+      <source>Only JSON files are supported.</source>
+      <translation>Sono supportati solo i file JSON.</translation>
+    </message>
+    <message>
+      <source>Unable to open file.</source>
+      <translation>Impossibile aprire il file.</translation>
+    </message>
+    <message>
+      <source>JSON Error</source>
+      <translation>Errore JSON</translation>
+    </message>
+    <message>
+      <source>Invalid JSON format.</source>
+      <translation>Formato JSON non valido.</translation>
+    </message>
+    <message>
+      <source>Keys successfully loaded from JSON!</source>
+      <translation>Chiavi caricate con successo dal JSON!</translation>
+    </message>
+    <message>
+      <source>Trophy Key contains invalid hex or has odd length.</source>
+      <translation>La chiave dei trofei contiene un esadecimale non valido o con una lunghezza dispari.</translation>
+    </message>
+    <message>
+      <source>%1 contains invalid hex or has odd length.</source>
+      <translation>%1 contiene esadecimale non valido o ha una lunghezza dispari.</translation>
+    </message>
+  </context>
+  <context>
     <name>EditorDialog</name>
     <message>
       <source>Edit Keyboard + Mouse and Controller input bindings</source>
@@ -1106,6 +1291,26 @@
       <source>Shader Cache</source>
       <translation>Cache Shader</translation>
     </message>
+    <message>
+      <source>User 1</source>
+      <translation>Utente 1</translation>
+    </message>
+    <message>
+      <source>User 2</source>
+      <translation>Utente 2</translation>
+    </message>
+    <message>
+      <source>User 3</source>
+      <translation>Utente 3</translation>
+    </message>
+    <message>
+      <source>User 4</source>
+      <translation>Utente 4</translation>
+    </message>
+    <message>
+      <source>This game has no save folder to open!</source>
+      <translation>Questo gioco non ha alcuna cartella di dati di salvataggio da aprire!</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -1150,7 +1355,7 @@
     </message>
     <message>
       <source>Quit Emulation</source>
-      <translation>Abbandona L'Emulazione</translation>
+      <translation>Abbandona Emulazione</translation>
     </message>
     <message>
       <source>Reload Button Mappings</source>
@@ -1219,6 +1424,14 @@
     <message>
       <source>Tip: Unmap inputs with right-click</source>
       <translation>Suggerimento: Rimuovi le mappature con il tasto destro del mouse</translation>
+    </message>
+    <message>
+      <source>Volume Up</source>
+      <translation>Alza Volume</translation>
+    </message>
+    <message>
+      <source>Volume Down</source>
+      <translation>Abbassa volume</translation>
     </message>
   </context>
   <context>
@@ -1784,6 +1997,14 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
       <source>Show Game Log</source>
       <translation>Mostra Registro Di Gioco</translation>
     </message>
+    <message>
+      <source>Manage Cryptographic Keys</source>
+      <translation>Gestisci Chiavi Crittografiche</translation>
+    </message>
+    <message>
+      <source>Manage Users</source>
+      <translation>Gestione utenti</translation>
+    </message>
   </context>
   <context>
     <name>SettingsDialog</name>
@@ -1810,14 +2031,6 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
     <message>
       <source>Enable Discord Rich Presence</source>
       <translation>Abilita Discord Rich Presence</translation>
-    </message>
-    <message>
-      <source>Username</source>
-      <translation>Nome Utente</translation>
-    </message>
-    <message>
-      <source>Trophy Key</source>
-      <translation>Chiave Trofei</translation>
     </message>
     <message>
       <source>Trophy</source>
@@ -1960,10 +2173,6 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
       <translation>Marcatori di Debug del Guest </translation>
     </message>
     <message>
-      <source>Enable Readbacks</source>
-      <translation>Abilita Readback</translation>
-    </message>
-    <message>
       <source>Enable Readback Linear Images</source>
       <translation>Abilita Immagini Lineari Di Readback</translation>
     </message>
@@ -2060,14 +2269,6 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
       <translation>Abilita Discord Rich Presence:\nMostra l&apos;icona dell&apos;emulatore e informazioni pertinenti sul tuo profilo Discord.</translation>
     </message>
     <message>
-      <source>Username:\nSets the PS4&apos;s account username, which may be displayed by some games.</source>
-      <translation>Nome Utente:\nImposta il nome utente dell&apos;account PS4, che potrebbe essere visualizzato da alcuni giochi.</translation>
-    </message>
-    <message>
-      <source>Trophy Key:\nKey used to decrypt trophies. Must be obtained from your jailbroken console.\nMust contain only hex characters.</source>
-      <translation>Chiave Trofei:\nChiave utilizzata per la decrittazione dei trofei. Deve essere estratta dalla vostra console con jailbreak.\nDeve contenere solo caratteri esadecimali.</translation>
-    </message>
-    <message>
       <source>Log Type:\nSets whether to synchronize the output of the log window for performance. May have adverse effects on emulation.</source>
       <translation>Tipo di Log:\nImposta se sincronizzare l&apos;output della finestra di log per le prestazioni. Potrebbe avere effetti avversi sull&apos;emulazione.</translation>
     </message>
@@ -2156,10 +2357,6 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
       <translation>Raccogli Shader:\nBisogna attivare questa opzione per poter modificare gli shader nel menu di debug (Ctrl + F10).</translation>
     </message>
     <message>
-      <source>Enable Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
-      <translation>Abilita Readbacks:\nAbilita letture di memoria GPU e writebacks.\nQuesto è necessario per un comportamento corretto in alcuni giochi.\nPotrebbe causare problemi di stabilità e/o prestazioni.</translation>
-    </message>
-    <message>
       <source>Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</source>
       <translation>Abilita le immagini lineari di Readback:\nConsente il download asincronico delle immagini lineari modificate dalla GPU.\nPotrebbe risolvere problemi grafici in alcuni giochi.</translation>
     </message>
@@ -2176,24 +2373,12 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
       <translation>Marcatori di Debug del Guest:\nInserisce nel log marcatori di debug che il gioco stesso ha aggiunto al buffer dei comandi.\nSe hai abilitato questa opzione dovresti abilitare anche Diagnostica Crash.\nUtile per programmi come RenderDoc.</translation>
     </message>
     <message>
-      <source>Save Data Path:\nThe folder where game save data will be saved.</source>
-      <translation>Percorso Dati Salvataggio:\n La cartella dove verranno archiviati i salvataggi di gioco.</translation>
-    </message>
-    <message>
-      <source>Browse:\nBrowse for a folder to set as the save data path.</source>
-      <translation>Esplora:\nEsplora una cartella da impostare come percorso dati di salvataggio.</translation>
-    </message>
-    <message>
       <source>Set the volume of the background music.</source>
       <translation>Imposta il volume della musica di sottofondo.</translation>
     </message>
     <message>
       <source>Enable Motion Controls</source>
       <translation>Abilita Controlli Di Movimento</translation>
-    </message>
-    <message>
-      <source>Save Data Path</source>
-      <translation>Percorso Dati Salvataggio</translation>
     </message>
     <message>
       <source>Browse</source>
@@ -2214,10 +2399,6 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
     <message>
       <source>Directory to install games</source>
       <translation>Cartella di installazione dei giochi</translation>
-    </message>
-    <message>
-      <source>Directory to save data</source>
-      <translation>Cartella per salvare i dati</translation>
     </message>
     <message>
       <source>Video</source>
@@ -2615,6 +2796,46 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
       <translation>Comprimi i file della Cache Shader in un file zip:\nI file della cache shader sono memorizzati in un singolo file zip invece di più file separati.</translation>
     </message>
+    <message>
+      <source>Readbacks Mode</source>
+      <translation>Modalità Readback</translation>
+    </message>
+    <message>
+      <source>Disabled</source>
+      <translation>Disabilitato</translation>
+    </message>
+    <message>
+      <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
+      <translation>Abilita Readback:\nAbilita letture di memoria GPU e riscritture.\nQuesta impostazione è necessaria per un comportamento corretto in alcuni giochi.\nPotrebbe causare problemi di stabilità e/o prestazioni.</translation>
+    </message>
+    <message>
+      <source>Relaxed</source>
+      <translation>Rilassata</translation>
+    </message>
+    <message>
+      <source>Precise</source>
+      <translation>Accurata</translation>
+    </message>
+    <message>
+      <source>Select shadPS4 Home Path</source>
+      <translation>Seleziona il Percorso Principale di shadPS4</translation>
+    </message>
+    <message>
+      <source>Select the system modules folder</source>
+      <translation>Seleziona la cartella dei moduli di sistema</translation>
+    </message>
+    <message>
+      <source>Home Folder Location (Saves, Inputs, Trophy Data)</source>
+      <translation>Posizione Cartella Principale (Salvataggi, Comandi, Dati Trofei)</translation>
+    </message>
+    <message>
+      <source>Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</source>
+      <translation>Posizione Cartella Principale:\nLa cartella dove i salvataggi dei dati, i file trofei e le configurazioni di input sono memorizzati per tutti gli utenti.</translation>
+    </message>
+    <message>
+      <source>Browse:\nBrowse for a folder to set as the home folder.</source>
+      <translation>Esplora:\nEsplora una cartella da impostare come percorso principale.</translation>
+    </message>
   </context>
   <context>
     <name>ShortcutDialog</name>
@@ -2660,6 +2881,105 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
     <message>
       <source>Show Hidden Trophies</source>
       <translation>Mostra Trofei Nascosti</translation>
+    </message>
+  </context>
+  <context>
+    <name>UserManagerDialog</name>
+    <message>
+      <source>User Manager</source>
+      <translation>Gestore utenti</translation>
+    </message>
+    <message>
+      <source>&amp;Create User</source>
+      <translation>&amp;Crea Utente</translation>
+    </message>
+    <message>
+      <source>&amp;Delete User</source>
+      <translation>&amp;Elimina Utente</translation>
+    </message>
+    <message>
+      <source>&amp;Rename User</source>
+      <translation>&amp;Rinomina Utente</translation>
+    </message>
+    <message>
+      <source>&amp;Set Default User</source>
+      <translation>&amp;Imposta Utente Predefinito</translation>
+    </message>
+    <message>
+      <source>&amp;Set Color</source>
+      <translation>&amp;Imposta Colore</translation>
+    </message>
+    <message>
+      <source>&amp;Set Controller Port</source>
+      <translation>&amp;Imposta Porta Controller</translation>
+    </message>
+    <message>
+      <source>&amp;Close</source>
+      <translation>&amp;Chiudi</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation>Errore</translation>
+    </message>
+    <message>
+      <source>Cannot add more users.</source>
+      <translation>Impossibile aggiungere ulteriori utenti.</translation>
+    </message>
+    <message>
+      <source>Create New User</source>
+      <translation>Crea Nuovo Utente</translation>
+    </message>
+    <message>
+      <source>New User ID: %1</source>
+      <translation>Nuovo ID Utente: %1</translation>
+    </message>
+    <message>
+      <source>Username (3–16 chars, letters, numbers, _, -)</source>
+      <translation>Nome utente (3–16 caratteri, lettere, numeri, _, -)</translation>
+    </message>
+    <message>
+      <source>Invalid Username</source>
+      <translation>Nome utente non valido</translation>
+    </message>
+    <message>
+      <source>Username must be 3–16 chars and valid.</source>
+      <translation>Il nome utente deve contenere 3-16 caratteri validi.</translation>
+    </message>
+    <message>
+      <source>Delete Confirmation</source>
+      <translation>Conferma Cancellazione</translation>
+    </message>
+    <message>
+      <source>Delete user ID %1?</source>
+      <translation>Eliminare l'ID utente %1?</translation>
+    </message>
+    <message>
+      <source>Rename User</source>
+      <translation>Rinomina Utente</translation>
+    </message>
+    <message>
+      <source>Old Username: %1</source>
+      <translation>Vecchio Nome Utente: %1</translation>
+    </message>
+    <message>
+      <source>Set User Color</source>
+      <translation>Imposta Colore Utente</translation>
+    </message>
+    <message>
+      <source>Select color:</source>
+      <translation>Seleziona colore:</translation>
+    </message>
+    <message>
+      <source>Set Controller Port</source>
+      <translation>Imposta Porta Controller</translation>
+    </message>
+    <message>
+      <source>Assign port (1-4) to this user:</source>
+      <translation>Assegna la porta (1-4) a questo utente:</translation>
+    </message>
+    <message>
+      <source>&amp;Open User Directory</source>
+      <translation>&amp;Apri Cartella Utente</translation>
     </message>
   </context>
   <context>

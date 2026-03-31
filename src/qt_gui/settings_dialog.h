@@ -9,8 +9,8 @@
 #include <QGroupBox>
 #include <QPushButton>
 
-#include "common/config.h"
 #include "common/path_util.h"
+#include "core/emulator_settings.h"
 #include "gui_settings.h"
 #include "ipc/ipc_client.h"
 #include "qt_gui/compatibility_info.h"
@@ -41,7 +41,7 @@ signals:
 
 private:
     void LoadValuesFromConfig();
-    void UpdateSettings(bool game_specific = false);
+    void UpdateSettings(bool is_specific = false);
     void SyncRealTimeWidgetstoConfig();
     void InitializeEmulatorLanguages();
     void OnLanguageChanged(int index);
@@ -52,6 +52,7 @@ private:
     void onAudioDeviceChange(bool isAdd);
     void pollSDLevents();
     void getPhysicalDevices();
+    void SaveSettings();
 
     std::unique_ptr<Ui::SettingsDialog> ui;
 

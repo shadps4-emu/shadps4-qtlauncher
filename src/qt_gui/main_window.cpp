@@ -19,16 +19,18 @@
 #include "common/versions.h"
 #include "control_settings.h"
 #include "core/emulator_state.h"
+#include "crypto_key_dialog.h"
 #include "dimensions_dialog.h"
 #include "game_install_dialog.h"
 #include "hotkeys.h"
 #include "infinity_dialog.h"
-#include "input/controller.h"
+#include "input/input.h"
 #include "ipc/ipc_client.h"
 #include "kbm_gui.h"
 #include "main_window.h"
 #include "settings_dialog.h"
 #include "skylander_dialog.h"
+#include "user_manager_dialog.h"
 
 MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
@@ -285,6 +287,9 @@ void MainWindow::AddUiWidgets() {
     versionLayout->addWidget(ui->versionComboBox);
     versionLayout->addWidget(ui->versionManagerButton);
     ui->versionManagerButton->setText(tr("Version Manager"));
+#ifdef HIDE_VERSION_MANAGER
+    versionContainer->setHidden(true);
+#endif
     ui->toolBar->addWidget(versionContainer);
 }
 
@@ -605,6 +610,11 @@ void MainWindow::CreateConnects() {
         hotkeyDialog->exec();
     });
 
+    connect(ui->userManager, &QAction::triggered, this, [this]() {
+        auto userDialog = new UserManagerDialog(this);
+        userDialog->exec();
+    });
+
     connect(ui->setIconSizeTinyAct, &QAction::triggered, this, [this]() {
         if (isTableList) {
             m_game_list_frame->icon_size =
@@ -873,7 +883,7 @@ void MainWindow::CreateConnects() {
 
     // Manage Skylanders
     connect(ui->skylanderPortalAction, &QAction::triggered, this, [this]() {
-        if (Config::getUsbDeviceBackend() == Config::UsbBackendType::SkylandersPortal) {
+        if (EmulatorSettings.GetUsbDeviceBackend() == UsbBackendType::SkylandersPortal) {
             skylander_dialog* sky_diag = skylander_dialog::get_dlg(this, m_ipc_client);
             sky_diag->show();
         }
@@ -881,7 +891,7 @@ void MainWindow::CreateConnects() {
 
     // Manage Infinity Figures
     connect(ui->infinityFiguresAction, &QAction::triggered, this, [this]() {
-        if (Config::getUsbDeviceBackend() == Config::UsbBackendType::InfinityBase) {
+        if (EmulatorSettings.GetUsbDeviceBackend() == UsbBackendType::InfinityBase) {
             infinity_dialog* inf_diag = infinity_dialog::get_dlg(this, m_ipc_client);
             inf_diag->show();
         }
@@ -889,7 +899,7 @@ void MainWindow::CreateConnects() {
 
     // Manage Dimensions Toypad
     connect(ui->dimensionsToypadAction, &QAction::triggered, this, [this]() {
-        if (Config::getUsbDeviceBackend() == Config::UsbBackendType::DimensionsToypad) {
+        if (EmulatorSettings.GetUsbDeviceBackend() == UsbBackendType::DimensionsToypad) {
             dimensions_dialog* dim_dialog = dimensions_dialog::get_dlg(this, m_ipc_client);
             dim_dialog->show();
         }
@@ -1248,6 +1258,8 @@ void MainWindow::SetUiIcons(bool isWhite) {
     ui->infinityFiguresAction->setIcon(RecolorIcon(ui->infinityFiguresAction->icon(), isWhite));
     ui->dimensionsToypadAction->setIcon(RecolorIcon(ui->dimensionsToypadAction->icon(), isWhite));
     ui->configureAct->setIcon(RecolorIcon(ui->configureAct->icon(), isWhite));
+    ui->keyManager->setIcon(RecolorIcon(ui->keyManager->icon(), isWhite));
+    ui->userManager->setIcon(RecolorIcon(ui->userManager->icon(), isWhite));
     ui->addElfFolderAct->setIcon(RecolorIcon(ui->addElfFolderAct->icon(), isWhite));
 }
 
@@ -1405,11 +1417,11 @@ void MainWindow::StartEmulatorExecutable(std::filesystem::path emuPath, QString 
         gameFound = true;
     } else {
         // In install folders, find game folder with same name as gameArg
-        const auto install_dir_array = Config::getGameInstallDirs();
+        const auto install_dir_array = EmulatorSettings.GetGameInstallDirs();
         std::vector<bool> install_dirs_enabled;
 
         try {
-            install_dirs_enabled = Config::getGameInstallDirsEnabled();
+            install_dirs_enabled = EmulatorSettings.GetGameInstallDirsEnabled();
         } catch (...) {
             // If it does not exist, assume that all are enabled.
             install_dirs_enabled.resize(install_dir_array.size(), true);

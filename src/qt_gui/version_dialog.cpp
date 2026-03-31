@@ -20,7 +20,6 @@
 #include <common/path_util.h>
 #include <common/versions.h>
 
-#include "common/config.h"
 #include "gui_settings.h"
 #include "qt_gui/main_window.h"
 #include "ui_version_dialog.h"
@@ -260,8 +259,8 @@ void VersionDialog::DownloadListVersion() {
                 QList<QTreeWidgetItem*> otherItems;
                 bool foundPreRelease = false;
 
-                //  > v.0.5.0
-                auto isVersionGreaterThan_0_5_0 = [](const QString& tagName) -> bool {
+                //  > v.0.16.0
+                auto isVersionGreaterThan_0_16_0 = [](const QString& tagName) -> bool {
                     QRegularExpression versionRegex(R"(v\.?(\d+)\.(\d+)\.(\d+))");
                     QRegularExpressionMatch match = versionRegex.match(tagName);
                     if (match.hasMatch()) {
@@ -271,9 +270,9 @@ void VersionDialog::DownloadListVersion() {
 
                         if (major > 0)
                             return true;
-                        if (major == 0 && minor >= 5)
+                        if (major == 0 && minor >= 16)
                             return true;
-                        if (major == 0 && minor == 5 && patch > 0)
+                        if (major == 0 && minor == 16 && patch > 0)
                             return true;
                     }
                     return false;
@@ -291,7 +290,7 @@ void VersionDialog::DownloadListVersion() {
                         }
                         continue;
                     }
-                    if (!isVersionGreaterThan_0_5_0(tagName)) {
+                    if (!isVersionGreaterThan_0_16_0(tagName)) {
                         continue;
                     }
 
