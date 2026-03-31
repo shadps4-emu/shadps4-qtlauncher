@@ -47,6 +47,11 @@ if (NOT TARGET toml11::toml11)
     endif()
 endif()
 
+# pugixml
+if (NOT TARGET pugixml::pugixml)
+    add_subdirectory(pugixml)
+endif()
+
 # Apple-only dependencies
 if (APPLE)
     # MoltenVK
