@@ -32,7 +32,6 @@
 #include "common/memory_patcher.h"
 #include "common/path_util.h"
 #include "core/emulator_state.h"
-#include "patch_editor.h"
 
 CheatsPatches::CheatsPatches(std::shared_ptr<gui_settings> gui_settings,
                              std::shared_ptr<IpcClient> ipc_client, const QString& gameName,
@@ -235,38 +234,11 @@ void CheatsPatches::setupUI() {
     QStringListModel* patchesModel = new QStringListModel();
     patchesListView->setModel(patchesModel);
 
-    QPushButton* editButton = new QPushButton(tr("Configure Patches"));
+    editButton = new QPushButton(tr("Configure Patches"));
     editButton->setStyleSheet("font-weight: bold;");
+
     connect(editButton, &QPushButton::clicked, [this, PATCHS_DIR_QString]() {
-        if (!std::filesystem::exists(Common::FS::GetUserPath(Common::FS::PathType::PatchesDir) /
-                                     "shadPS4" / "configurable_patches.json")) {
-            QMessageBox::warning(this, tr("Patch config file not found"),
-                                 tr("Patch config file not found. Download patches from the "
-                                    "shadPS4 repository to get it."));
-            return;
-        }
-        QStringListModel* model = qobject_cast<QStringListModel*>(patchesListView->model());
-        if (!model) {
-            return;
-        }
-        QItemSelectionModel* selectionModel = patchesListView->selectionModel();
-        if (!selectionModel) {
-            QMessageBox::warning(this, tr("Error"), tr("No file selected"));
-            return;
-        }
-        QModelIndexList selectedIndexes = selectionModel->selectedIndexes();
-        if (selectedIndexes.isEmpty()) {
-            QMessageBox::warning(this, tr("Error"), tr("No file selected"));
-            return;
-        }
-        QModelIndex selectedIndex = selectedIndexes.first();
-        QString selectedFileName = model->data(selectedIndex).toString();
-
-        QString fileName = selectedFileName.split('|').first().trimmed();
-        QString directoryName = selectedFileName.split('|').last().trimmed();
-        QString filePath = PATCHS_DIR_QString + "/" + directoryName + "/" + fileName;
-
-        PatchEditor* editor = new PatchEditor(Common::FS::PathFromQString(filePath), this);
+        PatchEditor* editor = new PatchEditor(patchFile, gamePatches, this);
         editor->exec();
     });
 
@@ -702,6 +674,7 @@ void CheatsPatches::populateFileListPatches() {
             if (!selectedIndexes.isEmpty()) {
                 QString selectedText = selectedIndexes.first().data().toString();
                 addPatchesToLayout(selectedText);
+                checkConfigurablePatches();
             }
         });
 
@@ -1391,5 +1364,46 @@ void CheatsPatches::onPatchCheckBoxHovered(QCheckBox* checkBox, bool hovered) {
         }
     } else {
         instructionsTextEdit->setText(defaultTextEdit_MSG);
+    }
+}
+
+void CheatsPatches::checkConfigurablePatches() {
+    if (!std::filesystem::exists(Common::FS::GetUserPath(Common::FS::PathType::PatchesDir) /
+                                 "shadPS4" / "configurable_patches.json")) {
+        LOG_INFO(Loader,
+                 ("The file configurable_patches.json was not found in the shadPS4 patch folder"));
+        editButton->setVisible(false);
+        return;
+    }
+
+    QStringListModel* model = qobject_cast<QStringListModel*>(patchesListView->model());
+    if (!model) {
+        return;
+    }
+    QItemSelectionModel* selectionModel = patchesListView->selectionModel();
+    if (!selectionModel) {
+        return;
+    }
+    QModelIndexList selectedIndexes = selectionModel->selectedIndexes();
+    if (selectedIndexes.isEmpty()) {
+        return;
+    }
+    QModelIndex selectedIndex = selectedIndexes.first();
+    QString selectedFileName = model->data(selectedIndex).toString();
+
+    QString PATCHS_DIR_QString;
+    Common::FS::PathToQString(PATCHS_DIR_QString,
+                              Common::FS::GetUserPath(Common::FS::PathType::PatchesDir));
+    QString fileName = selectedFileName.split('|').first().trimmed();
+    QString directoryName = selectedFileName.split('|').last().trimmed();
+    QString filePath = PATCHS_DIR_QString + "/" + directoryName + "/" + fileName;
+
+    patchFile = Common::FS::PathFromQString(filePath);
+    gamePatches = CustomPatches::GetGamePatchInfo(patchFile);
+
+    if (gamePatches.empty()) {
+        editButton->setVisible(false);
+    } else {
+        editButton->setVisible(true);
     }
 }

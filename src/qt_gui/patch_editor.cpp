@@ -13,12 +13,11 @@
 
 using namespace CustomPatches;
 
-PatchEditor::PatchEditor(std::filesystem::path patchPath, QWidget* parent)
-    : QDialog(parent), patchFile(patchPath) {
+PatchEditor::PatchEditor(std::filesystem::path patchPath,
+                         std::vector<CustomPatches::ConfigPatchInfo> patches, QWidget* parent)
+    : QDialog(parent), gamePatches(patches), patchFile(patchPath) {
     setupUI();
     setWindowTitle(tr("Patch Configuration"));
-
-    currentPatches = GetGamePatchInfo(patchFile);
 
     populatePatchList();
     refreshValueList();
@@ -78,7 +77,7 @@ void PatchEditor::setupUI() {
 }
 
 void PatchEditor::populatePatchList() {
-    for (const ConfigPatchInfo& patch : currentPatches) {
+    for (const ConfigPatchInfo& patch : gamePatches) {
         patchList->addItem(patch.patchName);
     }
 }
@@ -86,7 +85,7 @@ void PatchEditor::populatePatchList() {
 void PatchEditor::refreshValueList() {
     if (!patchList->selectedItems().isEmpty()) {
         QString patchname = patchList->selectedItems().first()->text();
-        for (const auto& patch : currentPatches) {
+        for (const auto& patch : gamePatches) {
             if (patchname == patch.patchName) {
                 currentPatch = patch;
                 populateValues(patch);

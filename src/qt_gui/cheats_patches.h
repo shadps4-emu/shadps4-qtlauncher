@@ -24,8 +24,10 @@
 #include <QVBoxLayout>
 #include <QVector>
 #include <QWidget>
+
 #include "gui_settings.h"
 #include "ipc/ipc_client.h"
+#include "patch_editor.h"
 
 class CheatsPatches : public QWidget {
     Q_OBJECT
@@ -57,6 +59,7 @@ private:
     // Cheat and Patch Management
     void populateFileListCheats();
     void populateFileListPatches();
+    void checkConfigurablePatches();
 
     void addCheatsToLayout(const QJsonArray& modsArray, const QJsonArray& creditsArray);
     void addPatchesToLayout(const QString& serial);
@@ -104,6 +107,8 @@ private:
     QVector<QCheckBox*> m_cheatCheckBoxes;
     std::shared_ptr<gui_settings> m_gui_settings;
     std::shared_ptr<IpcClient> m_ipc_client;
+    std::vector<CustomPatches::ConfigPatchInfo> gamePatches;
+    std::filesystem::path patchFile;
 
     // UI Elements
     QVBoxLayout* rightLayout;
@@ -115,6 +120,7 @@ private:
     QItemSelectionModel* selectionModel;
     QComboBox* patchesComboBox;
     QListView* patchesListView;
+    QPushButton* editButton;
 
     // Strings
     QString defaultTextEdit_MSG;

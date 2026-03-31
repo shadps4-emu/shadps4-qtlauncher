@@ -1,6 +1,8 @@
 // SPDX-FileCopyrightText: Copyright 2024 shadPS4 Emulator Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
+#pragma once
+
 #include <filesystem>
 #include <QComboBox>
 #include <QDialog>
@@ -15,7 +17,8 @@ class PatchEditor : public QDialog {
     Q_OBJECT
 
 public:
-    PatchEditor(std::filesystem::path patchPath, QWidget* parent = nullptr);
+    PatchEditor(std::filesystem::path patchPath,
+                std::vector<CustomPatches::ConfigPatchInfo> patches, QWidget* parent = nullptr);
     ~PatchEditor();
 
 signals:
@@ -38,5 +41,5 @@ private:
     QDialogButtonBox* buttonBox;
 
     CustomPatches::ConfigPatchInfo currentPatch;
-    std::vector<CustomPatches::ConfigPatchInfo> currentPatches;
+    std::vector<CustomPatches::ConfigPatchInfo> gamePatches;
 };
