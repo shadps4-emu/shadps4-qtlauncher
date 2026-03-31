@@ -1378,16 +1378,20 @@ void CheatsPatches::checkConfigurablePatches() {
 
     QStringListModel* model = qobject_cast<QStringListModel*>(patchesListView->model());
     if (!model) {
+        editButton->setVisible(false);
         return;
     }
     QItemSelectionModel* selectionModel = patchesListView->selectionModel();
     if (!selectionModel) {
+        editButton->setVisible(false);
         return;
     }
     QModelIndexList selectedIndexes = selectionModel->selectedIndexes();
     if (selectedIndexes.isEmpty()) {
+        editButton->setVisible(false);
         return;
     }
+
     QModelIndex selectedIndex = selectedIndexes.first();
     QString selectedFileName = model->data(selectedIndex).toString();
 
