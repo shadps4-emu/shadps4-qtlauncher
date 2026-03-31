@@ -25,3 +25,7 @@
 [submodule "externals/MoltenVK"]
 	path = externals/MoltenVK
 	url = https://github.com/shadPS4-emu/ext-MoltenVK.git
+[submodule "externals/pugixml"]
+	path = externals/pugixml
+	url = https://github.com/zeux/pugixml.git
+	shallow = true
