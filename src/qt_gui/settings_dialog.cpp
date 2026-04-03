@@ -1064,7 +1064,7 @@ void SettingsDialog::UpdateSettings(bool is_specific) {
                                 is_specific);
     EmulatorSettings.SetLogFilter(ui->logFilterLineEdit->text().toStdString(), is_specific);
     EmulatorSettings.SetCursorState(ui->hideCursorComboBox->currentIndex(), is_specific);
-    EmulatorSettings.SetCursorHideTimeout(ui->hideCursorComboBox->currentIndex(), is_specific);
+    EmulatorSettings.SetCursorHideTimeout(ui->idleTimeoutSpinBox->value(), is_specific);
     EmulatorSettings.SetGpuId(ui->graphicsAdapterBox->currentIndex() - 1, is_specific);
     EmulatorSettings.SetUsbDeviceBackend(ui->usbComboBox->currentIndex(), is_specific);
     EmulatorSettings.SetCameraId(ui->cameraComboBox->currentIndex() - 1, is_specific);
