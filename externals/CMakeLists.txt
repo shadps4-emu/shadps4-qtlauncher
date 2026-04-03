@@ -47,6 +47,45 @@ if (NOT TARGET toml11::toml11)
     endif()
 endif()
 
+#openal
+if (NOT TARGET OpenAL::OpenAL)
+set(ALSOFT_ENABLE_MODULES OFF CACHE BOOL "" FORCE)
+set(LIBTYPE "STATIC" CACHE STRING "" FORCE)
+# Disable everything we don't need
+set(ALSOFT_UTILS OFF CACHE BOOL "" FORCE)
+set(ALSOFT_EXAMPLES OFF CACHE BOOL "" FORCE)
+set(ALSOFT_TESTS OFF CACHE BOOL "" FORCE)
+set(ALSOFT_INSTALL OFF CACHE BOOL "" FORCE)
+set(ALSOFT_CONFIG OFF CACHE BOOL "" FORCE)
+
+# Backends (platform-specific)
+if (WIN32)
+    set(ALSOFT_BACKEND_WASAPI ON CACHE BOOL "" FORCE)
+    set(ALSOFT_BACKEND_DSOUND OFF CACHE BOOL "" FORCE)
+    set(ALSOFT_BACKEND_WINMM OFF CACHE BOOL "" FORCE)
+elseif (APPLE)
+    set(ALSOFT_BACKEND_COREAUDIO ON CACHE BOOL "" FORCE)
+else()
+    set(ALSOFT_BACKEND_ALSA ON CACHE BOOL "" FORCE)
+    set(ALSOFT_BACKEND_PULSEAUDIO ON CACHE BOOL "" FORCE)
+    set(ALSOFT_BACKEND_PIPEWIRE OFF CACHE BOOL "" FORCE)
+endif()
+# Headless-safe
+set(ALSOFT_BACKEND_NULL ON CACHE BOOL "" FORCE)
+
+# Static build
+set(BUILD_SHARED_LIBS OFF CACHE BOOL "" FORCE)
+
+add_subdirectory(openal-soft EXCLUDE_FROM_ALL)
+endif()
+
+#nlohmann json
+set(JSON_BuildTests OFF CACHE INTERNAL "")
+add_subdirectory(json)
+
+#volk
+add_subdirectory(volk)
+
 # Apple-only dependencies
 if (APPLE)
     # MoltenVK
@@ -56,9 +95,3 @@ if (APPLE)
         add_subdirectory(MoltenVK)
     endif()
 endif()
-
-add_subdirectory(volk)
-
-#nlohmann json 
-set(JSON_BuildTests OFF CACHE INTERNAL "")
-add_subdirectory(json)

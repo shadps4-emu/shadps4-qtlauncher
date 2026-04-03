@@ -46,29 +46,26 @@ private:
     void InitializeEmulatorLanguages();
     void OnLanguageChanged(int index);
     void OnCursorStateChanged(s16 index);
-    void closeEvent(QCloseEvent* event) override;
-    void setDefaultValues();
+    void SetDefaultValues();
     void VolumeSliderChange(int value);
-    void onAudioDeviceChange(bool isAdd);
-    void pollSDLevents();
-    void getPhysicalDevices();
+    void PollSDLevents();
+    void GetPhysicalDevices();
     void SaveSettings();
+    void RefreshAudioDevices();
 
-    std::unique_ptr<Ui::SettingsDialog> ui;
+    void closeEvent(QCloseEvent* event) override;
 
     std::map<std::string, int> languages;
-
     QString defaultTextEdit;
-
     int initialHeight;
-
     std::string gs_serial;
+    QFuture<void> Polling;
 
     bool is_game_running = false;
     bool is_game_specific = false;
     bool is_game_saving = false;
 
+    std::unique_ptr<Ui::SettingsDialog> ui;
     std::shared_ptr<gui_settings> m_gui_settings;
     std::shared_ptr<IpcClient> m_ipc_client;
-    QFuture<void> Polling;
 };
