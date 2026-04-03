@@ -14,7 +14,7 @@
 
 CryptoManagerDialog::CryptoManagerDialog(QWidget* parent) : QDialog(parent) {
     setWindowTitle(tr("Crypto Key Manager"));
-    setMinimumSize(700, 600);
+    setMinimumSize(700, 200);
     setAcceptDrops(true);
     SetupUI();
     LoadKeys();
@@ -119,7 +119,8 @@ void CryptoManagerDialog::SetupUI() {
         layout->addWidget(statusLabel);
 
         layout->addStretch();
-        tabWidget->addTab(tab, title);
+        // To do: uncomment tabs when needed
+        // tabWidget->addTab(tab, title);
 
         return tab;
     };
@@ -148,8 +149,8 @@ void CryptoManagerDialog::SetupUI() {
     // Global buttons
     // ----------------------------
     QHBoxLayout* buttonLayout = new QHBoxLayout();
-    loadButton = new QPushButton(tr("Load All Keys"));
-    saveButton = new QPushButton(tr("Save All Keys"));
+    loadButton = new QPushButton(tr("Load Key"));
+    saveButton = new QPushButton(tr("Save Key"));
     closeButton = new QPushButton(tr("Close"));
 
     connect(loadButton, &QPushButton::clicked, this, &CryptoManagerDialog::LoadKeys);
@@ -160,11 +161,6 @@ void CryptoManagerDialog::SetupUI() {
     buttonLayout->addWidget(saveButton);
     buttonLayout->addWidget(closeButton);
     mainLayout->addLayout(buttonLayout);
-
-    // To do: unhide tabs when needed
-    tabWidget->setTabVisible(1, false);
-    tabWidget->setTabVisible(2, false);
-    tabWidget->setTabVisible(3, false);
 }
 
 // ----------------------------
