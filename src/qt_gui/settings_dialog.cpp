@@ -179,6 +179,8 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
     ui->usbComboBox->addItem(tr("Infinity Base"));
     ui->usbComboBox->addItem(tr("Dimensions Toypad"));
 
+    ui->cameraComboBox->addItem(tr("None"));
+
     if (!SDL_Init(SDL_INIT_CAMERA)) {
         LOG_ERROR(Config, "SDL_INIT_CAMERA failed: {}", SDL_GetError());
     }
@@ -191,10 +193,6 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
             ui->cameraComboBox->addItem(name);
         }
         SDL_free(devices);
-    }
-
-    if (ui->cameraComboBox->count() == 0) {
-        ui->cameraComboBox->addItem(tr("None"));
     }
 
     SDL_QuitSubSystem(SDL_INIT_CAMERA);
@@ -692,6 +690,7 @@ void SettingsDialog::LoadValuesFromConfig() {
     ui->motionControlsCheckBox->setChecked(EmulatorSettings.IsMotionControlsEnabled());
     ui->backgroundControllerCheckBox->setChecked(EmulatorSettings.IsBackgroundControllerInput());
     ui->usbComboBox->setCurrentIndex(EmulatorSettings.GetUsbDeviceBackend());
+    ui->cameraComboBox->setCurrentIndex(EmulatorSettings.GetCameraId() + 1);
 
     std::string sideTrophy = EmulatorSettings.GetTrophyNotificationSide();
     QString side = QString::fromStdString(sideTrophy);
@@ -1068,6 +1067,7 @@ void SettingsDialog::UpdateSettings(bool is_specific) {
     EmulatorSettings.SetCursorHideTimeout(ui->hideCursorComboBox->currentIndex(), is_specific);
     EmulatorSettings.SetGpuId(ui->graphicsAdapterBox->currentIndex() - 1, is_specific);
     EmulatorSettings.SetUsbDeviceBackend(ui->usbComboBox->currentIndex(), is_specific);
+    EmulatorSettings.SetCameraId(ui->cameraComboBox->currentIndex() - 1, is_specific);
     EmulatorSettings.SetVolumeSlider(ui->horizontalVolumeSlider->value(), is_specific);
     EmulatorSettings.SetConsoleLanguage(
         languageIndexes[ui->consoleLanguageComboBox->currentIndex()], is_specific);
