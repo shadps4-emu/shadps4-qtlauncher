@@ -615,6 +615,11 @@ void MainWindow::CreateConnects() {
         userDialog->exec();
     });
 
+    connect(ui->keyManager, &QAction::triggered, this, [this]() {
+        auto keyDialog = new CryptoManagerDialog(this);
+        keyDialog->exec();
+    });
+
     connect(ui->setIconSizeTinyAct, &QAction::triggered, this, [this]() {
         if (isTableList) {
             m_game_list_frame->icon_size =
