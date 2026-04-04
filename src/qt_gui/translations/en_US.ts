@@ -715,14 +715,6 @@ All fields must be valid hex strings with even length.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Load All Keys</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Save All Keys</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Close</source>
         <translation type="unfinished">Close</translation>
     </message>
@@ -801,6 +793,14 @@ Please enter your keys and save them.</source>
     </message>
     <message>
         <source>%1 contains invalid hex or has odd length.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Load Key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save Key</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
