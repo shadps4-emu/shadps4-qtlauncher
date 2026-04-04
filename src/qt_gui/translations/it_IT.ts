@@ -721,14 +721,6 @@ All fields must be valid hex strings with even length.</source>
 Tutti i campi devono essere stringhe esadecimali valide con lunghezza uniforme.</translation>
     </message>
     <message>
-      <source>Load All Keys</source>
-      <translation>Carica Tutte Le Chiavi</translation>
-    </message>
-    <message>
-      <source>Save All Keys</source>
-      <translation>Salva Tutte Le Chiavi</translation>
-    </message>
-    <message>
       <source>Close</source>
       <translation>Chiudi</translation>
     </message>
@@ -809,6 +801,14 @@ Inserisci le chiavi e salvale.</translation>
     <message>
       <source>%1 contains invalid hex or has odd length.</source>
       <translation>%1 contiene esadecimale non valido o ha una lunghezza dispari.</translation>
+    </message>
+    <message>
+      <source>Load Key</source>
+      <translation type="unfinished">Load Key</translation>
+    </message>
+    <message>
+      <source>Save Key</source>
+      <translation type="unfinished">Save Key</translation>
     </message>
   </context>
   <context>
