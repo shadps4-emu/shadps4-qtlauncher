@@ -126,7 +126,7 @@
     </message>
     <message>
       <source>Options saved successfully.</source>
-      <translation type="unfinished">Options saved successfully.</translation>
+      <translation>آپشنز محفوظ ہو چکے ہیں۔</translation>
     </message>
     <message>
       <source>Invalid Source</source>
@@ -378,7 +378,7 @@
     </message>
     <message>
       <source>Unknown</source>
-      <translation type="unfinished">Unknown</translation>
+      <translation>نامعلوم</translation>
     </message>
     <message>
       <source>Nothing</source>
@@ -386,7 +386,7 @@
     </message>
     <message>
       <source>Boots</source>
-      <translation type="unfinished">Boots</translation>
+      <translation>چالو ہوتا ہے</translation>
     </message>
     <message>
       <source>Menus</source>
@@ -405,31 +405,31 @@
     <name>ControlSettings</name>
     <message>
       <source>Configure Controls</source>
-      <translation type="unfinished">Configure Controls</translation>
+      <translation>کنٹرولز کو ترتیب دیں</translation>
     </message>
     <message>
       <source>D-Pad</source>
-      <translation type="unfinished">D-Pad</translation>
+      <translation>ڈی-پیڈ</translation>
     </message>
     <message>
       <source>Up</source>
-      <translation type="unfinished">Up</translation>
+      <translation>اوپر</translation>
     </message>
     <message>
       <source>Left</source>
-      <translation type="unfinished">Left</translation>
+      <translation>بائیں</translation>
     </message>
     <message>
       <source>Right</source>
-      <translation type="unfinished">Right</translation>
+      <translation>دائیں</translation>
     </message>
     <message>
       <source>Down</source>
-      <translation type="unfinished">Down</translation>
+      <translation>نیچے</translation>
     </message>
     <message>
       <source>Left Stick</source>
-      <translation type="unfinished">Left Stick</translation>
+      <translation>بائیں اسٹک</translation>
     </message>
     <message>
       <source>Config Selection</source>
@@ -445,11 +445,11 @@
     </message>
     <message>
       <source>Face Buttons</source>
-      <translation type="unfinished">Face Buttons</translation>
+      <translation>فیس بٹنز</translation>
     </message>
     <message>
       <source>Right Stick</source>
-      <translation type="unfinished">Right Stick</translation>
+      <translation>دائیں اسٹک</translation>
     </message>
     <message>
       <source>Color Adjustment</source>
@@ -473,11 +473,11 @@
     </message>
     <message>
       <source>Save</source>
-      <translation type="unfinished">Save</translation>
+      <translation>محفوظ کریں</translation>
     </message>
     <message>
       <source>Apply</source>
-      <translation type="unfinished">Apply</translation>
+      <translation>لاگو کریں</translation>
     </message>
     <message>
       <source>Restore Defaults</source>
@@ -489,23 +489,23 @@
     </message>
     <message>
       <source>unmapped</source>
-      <translation type="unfinished">unmapped</translation>
+      <translation>غیر مختص</translation>
     </message>
     <message>
       <source>Options</source>
-      <translation type="unfinished">Options</translation>
+      <translation>آپشنز</translation>
     </message>
     <message>
       <source>Touchpad Left</source>
-      <translation type="unfinished">Touchpad Left</translation>
+      <translation>ٹچ پیڈ کا بایاں حصہ</translation>
     </message>
     <message>
       <source>Touchpad Center</source>
-      <translation type="unfinished">Touchpad Center</translation>
+      <translation>ٹچ پیڈ کا درمیانہ حصہ</translation>
     </message>
     <message>
       <source>Touchpad Right</source>
-      <translation type="unfinished">Touchpad Right</translation>
+      <translation>ٹچ پیڈ کا دایاں حصہ</translation>
     </message>
     <message>
       <source>Triangle</source>
@@ -533,15 +533,15 @@
     </message>
     <message>
       <source>Press a button</source>
-      <translation type="unfinished">Press a button</translation>
+      <translation>کوئی ایک بٹن دبائیں</translation>
     </message>
     <message>
       <source>Move analog stick</source>
-      <translation type="unfinished">Move analog stick</translation>
+      <translation>اینالاگ اسٹک کو ہلائیں۔</translation>
     </message>
     <message>
       <source>L1 and L2</source>
-      <translation type="unfinished">L1 and L2</translation>
+      <translation>ایل 1 اور ایل 2</translation>
     </message>
     <message>
       <source>Active Gamepad</source>
@@ -825,7 +825,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>خرابی</translation>
     </message>
     <message>
       <source>Could not open the file for reading</source>
@@ -894,7 +894,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>خرابی</translation>
     </message>
     <message>
       <source>Directory to install emulator versions</source>
@@ -1115,7 +1115,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>خرابی</translation>
     </message>
     <message>
       <source>Game</source>
@@ -1247,11 +1247,11 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Ok</source>
-      <translation type="unfinished">Ok</translation>
+      <translation>ٹھیک ہے</translation>
     </message>
     <message>
       <source>Info</source>
-      <translation type="unfinished">Info</translation>
+      <translation>معلومات</translation>
     </message>
     <message>
       <source>Create Shortcut for Selected Emulator Version</source>
@@ -1349,11 +1349,11 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Show FPS Counter</source>
-      <translation type="unfinished">Show FPS Counter</translation>
+      <translation>ایف پی ایس کی گنتی واضح کریں</translation>
     </message>
     <message>
       <source>unmapped</source>
-      <translation type="unfinished">unmapped</translation>
+      <translation>غیر مختص</translation>
     </message>
     <message>
       <source>Quit Emulation</source>
@@ -1393,23 +1393,23 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Save</source>
-      <translation type="unfinished">Save</translation>
+      <translation>محفوظ کریں</translation>
     </message>
     <message>
       <source>Apply</source>
-      <translation type="unfinished">Apply</translation>
+      <translation>لاگو کریں</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>منسوخ کریں</translation>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation type="unfinished">Restore Defaults</translation>
+      <translation>ڈیفالٹس کو بحال کریں</translation>
     </message>
     <message>
       <source>Unable to Save</source>
-      <translation type="unfinished">Unable to Save</translation>
+      <translation>محفوظ نہیں کیا جا سکتا</translation>
     </message>
     <message>
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
@@ -1429,11 +1429,11 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Volume Up</source>
-      <translation type="unfinished">Volume Up</translation>
+      <translation>زیادہ آواز</translation>
     </message>
     <message>
       <source>Volume Down</source>
-      <translation type="unfinished">Volume Down</translation>
+      <translation>کم آواز</translation>
     </message>
   </context>
   <context>
@@ -1451,27 +1451,27 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>D-Pad</source>
-      <translation type="unfinished">D-Pad</translation>
+      <translation>ڈی-پیڈ</translation>
     </message>
     <message>
       <source>Up</source>
-      <translation type="unfinished">Up</translation>
+      <translation>اوپر</translation>
     </message>
     <message>
       <source>unmapped</source>
-      <translation type="unfinished">unmapped</translation>
+      <translation>غیر مختص</translation>
     </message>
     <message>
       <source>Left</source>
-      <translation type="unfinished">Left</translation>
+      <translation>بائیں</translation>
     </message>
     <message>
       <source>Right</source>
-      <translation type="unfinished">Right</translation>
+      <translation>دائیں</translation>
     </message>
     <message>
       <source>Down</source>
-      <translation type="unfinished">Down</translation>
+      <translation>نیچے</translation>
     </message>
     <message>
       <source>Left Analog Halfmode</source>
@@ -1483,7 +1483,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Left Stick</source>
-      <translation type="unfinished">Left Stick</translation>
+      <translation>بائیں اسٹک</translation>
     </message>
     <message>
       <source>Config Selection</source>
@@ -1515,7 +1515,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Options</source>
-      <translation type="unfinished">Options</translation>
+      <translation>آپشنز</translation>
     </message>
     <message>
       <source>Mouse Movement Parameters</source>
@@ -1527,7 +1527,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Face Buttons</source>
-      <translation type="unfinished">Face Buttons</translation>
+      <translation>فیس بٹنز</translation>
     </message>
     <message>
       <source>Triangle</source>
@@ -1555,7 +1555,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Right Stick</source>
-      <translation type="unfinished">Right Stick</translation>
+      <translation>دائیں اسٹک</translation>
     </message>
     <message>
       <source>Speed Offset (def 0.125):</source>
@@ -1693,11 +1693,11 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Check for Updates</source>
-      <translation type="unfinished">Check for Updates</translation>
+      <translation>اپ ڈیٹس کے لیے چیک کریں</translation>
     </message>
     <message>
       <source>About shadPS4</source>
-      <translation type="unfinished">About shadPS4</translation>
+      <translation>shadPS4 کے بارے میں</translation>
     </message>
     <message>
       <source>Configure...</source>
@@ -1901,15 +1901,16 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Play</source>
-      <translation type="unfinished">Play</translation>
+      <translation>کھیلیں
+</translation>
     </message>
     <message>
       <source>Pause</source>
-      <translation type="unfinished">Pause</translation>
+      <translation>روکیں</translation>
     </message>
     <message>
       <source>Stop</source>
-      <translation type="unfinished">Stop</translation>
+      <translation>بند کریں</translation>
     </message>
     <message>
       <source>Restart</source>
@@ -1917,7 +1918,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Full Screen</source>
-      <translation type="unfinished">Full Screen</translation>
+      <translation>فل سکرین</translation>
     </message>
     <message>
       <source>Controllers</source>
@@ -1925,7 +1926,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Keyboard</source>
-      <translation type="unfinished">Keyboard</translation>
+      <translation>کی بورڈ</translation>
     </message>
     <message>
       <source>Refresh List</source>
@@ -1933,7 +1934,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Resume</source>
-      <translation type="unfinished">Resume</translation>
+      <translation>بحال کریں</translation>
     </message>
     <message>
       <source>Show Labels Under Icons</source>
@@ -1977,7 +1978,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>کوئی نہیں</translation>
     </message>
     <message>
       <source>Manage Skylanders</source>
@@ -2012,11 +2013,11 @@ Select an emulator version from the right panel.</translation>
     <name>SettingsDialog</name>
     <message>
       <source>Settings</source>
-      <translation type="unfinished">Settings</translation>
+      <translation>ترتیبات</translation>
     </message>
     <message>
       <source>General</source>
-      <translation type="unfinished">General</translation>
+      <translation>جنرل</translation>
     </message>
     <message>
       <source>System</source>
@@ -2036,7 +2037,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Trophy</source>
-      <translation type="unfinished">Trophy</translation>
+      <translation>ٹرافی</translation>
     </message>
     <message>
       <source>Open the custom trophy images/sounds folder</source>
@@ -2232,23 +2233,23 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Volume</source>
-      <translation type="unfinished">Volume</translation>
+      <translation>آواز</translation>
     </message>
     <message>
       <source>Save</source>
-      <translation type="unfinished">Save</translation>
+      <translation>محفوظ کریں</translation>
     </message>
     <message>
       <source>Apply</source>
-      <translation type="unfinished">Apply</translation>
+      <translation>لاگو کریں</translation>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation type="unfinished">Restore Defaults</translation>
+      <translation>ڈیفالٹس کو بحال کریں</translation>
     </message>
     <message>
       <source>Close</source>
-      <translation type="unfinished">Close</translation>
+      <translation>بند کریں</translation>
     </message>
     <message>
       <source>Point your mouse at an option to display its description.</source>
@@ -2404,7 +2405,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Video</source>
-      <translation type="unfinished">Video</translation>
+      <translation>ویڈیو</translation>
     </message>
     <message>
       <source>Display Mode</source>
@@ -2448,19 +2449,19 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Left</source>
-      <translation type="unfinished">Left</translation>
+      <translation>بائیں</translation>
     </message>
     <message>
       <source>Right</source>
-      <translation type="unfinished">Right</translation>
+      <translation>دائیں</translation>
     </message>
     <message>
       <source>Top</source>
-      <translation type="unfinished">Top</translation>
+      <translation>اوپر</translation>
     </message>
     <message>
       <source>Bottom</source>
-      <translation type="unfinished">Bottom</translation>
+      <translation>نیچے</translation>
     </message>
     <message>
       <source>Notification Duration</source>
@@ -2624,7 +2625,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Experimental</source>
-      <translation type="unfinished">Experimental</translation>
+      <translation>تجرباتی</translation>
     </message>
     <message>
       <source>Show Splash Screen When Launching Game</source>
@@ -3261,7 +3262,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>کوئی نہیں</translation>
     </message>
     <message>
       <source>Clear</source>
@@ -3269,7 +3270,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>بنائیں</translation>
     </message>
     <message>
       <source>Load</source>
@@ -3277,7 +3278,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Move</source>
-      <translation type="unfinished">Move</translation>
+      <translation>منتقل کریں</translation>
     </message>
     <message>
       <source>Unknown Figure</source>
@@ -3324,7 +3325,7 @@ File was too small.</translation>
     </message>
     <message>
       <source>All</source>
-      <translation type="unfinished">All</translation>
+      <translation>تمام</translation>
     </message>
     <message>
       <source>--Unknown--</source>
@@ -3340,11 +3341,11 @@ File was too small.</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>بنائیں</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>منسوخ کریں</translation>
     </message>
     <message>
       <source>Error converting value</source>
@@ -3529,7 +3530,7 @@ File was too small.</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>کوئی نہیں</translation>
     </message>
     <message>
       <source>Move Here</source>
@@ -3548,7 +3549,7 @@ File was too small.</translation>
     </message>
     <message>
       <source>--Unknown--</source>
-      <translation type="unfinished">--Unknown--</translation>
+      <translation>--نامعلوم--</translation>
     </message>
     <message>
       <source>ID:</source>
@@ -3560,11 +3561,11 @@ File was too small.</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>بنائیں</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>منسوخ کریں</translation>
     </message>
     <message>
       <source>Error converting value</source>
