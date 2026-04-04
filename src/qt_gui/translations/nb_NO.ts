@@ -721,14 +721,6 @@ All fields must be valid hex strings with even length.</source>
 Alle felt må være en gyldig sekskantede tekststreng med partallslengde.</translation>
     </message>
     <message>
-      <source>Load All Keys</source>
-      <translation>Last alle nøkler</translation>
-    </message>
-    <message>
-      <source>Save All Keys</source>
-      <translation>Lagre alle nøkler</translation>
-    </message>
-    <message>
       <source>Close</source>
       <translation>Lukk</translation>
     </message>
@@ -809,6 +801,14 @@ Skriv inn nøklene og lagre dem.</translation>
     <message>
       <source>%1 contains invalid hex or has odd length.</source>
       <translation>%1 inneholder ugyldig sekskantede tegn eller har oddetall lengde.</translation>
+    </message>
+    <message>
+      <source>Load Key</source>
+      <translation type="unfinished">Load Key</translation>
+    </message>
+    <message>
+      <source>Save Key</source>
+      <translation type="unfinished">Save Key</translation>
     </message>
   </context>
   <context>
