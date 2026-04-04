@@ -721,14 +721,6 @@ All fields must be valid hex strings with even length.</source>
 Todos os campos devem ser textos hexadecimais válidos com comprimento par.</translation>
     </message>
     <message>
-      <source>Load All Keys</source>
-      <translation>Carregar Todas as Chaves</translation>
-    </message>
-    <message>
-      <source>Save All Keys</source>
-      <translation>Salvar Todas as Chaves</translation>
-    </message>
-    <message>
       <source>Close</source>
       <translation>Fechar</translation>
     </message>
@@ -809,6 +801,14 @@ Por favor, digite suas chaves e salve-as.</translation>
     <message>
       <source>%1 contains invalid hex or has odd length.</source>
       <translation>%1 contém hexadecimal inválido ou tem comprimento ímpar.</translation>
+    </message>
+    <message>
+      <source>Load Key</source>
+      <translation type="unfinished">Load Key</translation>
+    </message>
+    <message>
+      <source>Save Key</source>
+      <translation type="unfinished">Save Key</translation>
     </message>
   </context>
   <context>
