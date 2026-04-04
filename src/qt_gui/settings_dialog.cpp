@@ -2,6 +2,8 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include <vector>
+#include <AL/al.h>
+#include <AL/alc.h>
 #include <QCompleter>
 #include <QDesktopServices>
 #include <QDirIterator>
@@ -72,6 +74,7 @@ QMap<QString, QString> screenModeMap;
 QMap<QString, QString> presentModeMap;
 QMap<QString, QString> chooseHomeTabMap;
 QMap<QString, QString> micMap;
+QMap<int, QString> audioBackendMap;
 
 int backgroundImageOpacitySlider_backup;
 int bgm_volume_backup;
@@ -88,7 +91,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
 
     ui->setupUi(this);
     ui->tabWidgetSettings->setUsesScrollButtons(false);
-    getPhysicalDevices();
+    GetPhysicalDevices();
 
     initialHeight = this->height();
 
@@ -138,6 +141,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
                         {tr("Debug"), "Debug"},
                         {tr("Experimental"), "Experimental"}};
     micMap = {{tr("None"), "None"}, {tr("Default Device"), "Default Device"}};
+    audioBackendMap = {{0, "SDL"}, {1, "OpenAL"}};
 
     if (m_physical_devices.empty()) {
         // Populate cache of physical devices.
@@ -151,7 +155,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
             }
             m_physical_devices.push_back(name);
         }*/
-        getPhysicalDevices();
+        GetPhysicalDevices();
     }
 
     // Add list of available GPUs
@@ -170,32 +174,35 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
     ui->hideCursorComboBox->addItem(tr("Idle"));
     ui->hideCursorComboBox->addItem(tr("Always"));
 
-    ui->micComboBox->addItem(micMap.key("None"), "None");
-    ui->micComboBox->addItem(micMap.key("Default Device"), "Default Device");
-    SDL_InitSubSystem(SDL_INIT_AUDIO);
-    int count = 0;
-    SDL_AudioDeviceID* devices = SDL_GetAudioRecordingDevices(&count);
-    if (devices) {
-        for (int i = 0; i < count; ++i) {
-            SDL_AudioDeviceID devId = devices[i];
-            const char* name = SDL_GetAudioDeviceName(devId);
-            if (name) {
-                QString qname = QString::fromUtf8(name);
-                ui->micComboBox->addItem(qname, QString::number(devId));
-            }
-        }
-        SDL_free(devices);
-    } else {
-        qDebug() << "Erro SDL_GetAudioRecordingDevices:" << SDL_GetError();
-    }
-
     ui->usbComboBox->addItem(tr("Real USB Device"));
     ui->usbComboBox->addItem(tr("Skylander Portal"));
     ui->usbComboBox->addItem(tr("Infinity Base"));
     ui->usbComboBox->addItem(tr("Dimensions Toypad"));
 
+    ui->cameraComboBox->addItem(tr("None"));
+
+    if (!SDL_Init(SDL_INIT_CAMERA)) {
+        LOG_ERROR(Config, "SDL_INIT_CAMERA failed: {}", SDL_GetError());
+    }
+
+    int count = 0;
+    SDL_CameraID* devices = SDL_GetCameras(&count);
+    if (devices) {
+        for (int i = 0; i < count; i++) {
+            const char* name = SDL_GetCameraName(devices[i]);
+            ui->cameraComboBox->addItem(name);
+        }
+        SDL_free(devices);
+    }
+
+    SDL_QuitSubSystem(SDL_INIT_CAMERA);
+
+    if (!SDL_Init(SDL_INIT_AUDIO)) {
+        LOG_ERROR(Config, "SDL_INIT_AUDIO failed: {}", SDL_GetError());
+    }
+    RefreshAudioDevices();
+
     InitializeEmulatorLanguages();
-    onAudioDeviceChange(true);
     LoadValuesFromConfig();
 
     defaultTextEdit = tr("Point your mouse at an option to display its description.");
@@ -213,7 +220,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
             UpdateSettings(is_game_specific);
             SaveSettings();
         } else if (button == ui->buttonBox->button(QDialogButtonBox::RestoreDefaults)) {
-            setDefaultValues();
+            SetDefaultValues();
             EmulatorSettings.SetDefaultValues();
             SaveSettings();
             LoadValuesFromConfig();
@@ -248,6 +255,9 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
                 m_ipc_client->adjustVol(value, is_game_specific);
         });
 
+        connect(ui->audioBackendComboBox, &QComboBox::currentIndexChanged, this,
+                &SettingsDialog::RefreshAudioDevices);
+
 #ifdef ENABLE_UPDATER
         connect(ui->updateCheckBox, &QCheckBox::checkStateChanged, this,
                 [this](Qt::CheckState state) {
@@ -278,18 +288,6 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
                         m_compat_info->LoadCompatibilityFile();
                     }
                     emit CompatibilityChanged();
-                });
-
-        // Audio Device (general)
-        connect(ui->GenAudioComboBox, &QComboBox::currentTextChanged, this,
-                [this](const QString& device) {
-                    EmulatorSettings.SetSDLMainOutputDevice(device.toStdString());
-                });
-
-        // Audio Device (DS4 speaker)
-        connect(ui->DsAudioComboBox, &QComboBox::currentTextChanged, this,
-                [this](const QString& device) {
-                    EmulatorSettings.SetSDLPadSpkOutputDevice(device.toStdString());
                 });
     }
 
@@ -560,7 +558,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
     }
 
     SDL_InitSubSystem(SDL_INIT_EVENTS);
-    Polling = QtConcurrent::run(&SettingsDialog::pollSDLevents, this);
+    Polling = QtConcurrent::run(&SettingsDialog::PollSDLevents, this);
 }
 
 void SettingsDialog::closeEvent(QCloseEvent* event) {
@@ -578,10 +576,8 @@ void SettingsDialog::closeEvent(QCloseEvent* event) {
     Polling.waitForFinished();
 
     SDL_QuitSubSystem(SDL_INIT_EVENTS);
-
-    // This breaks the microphone selection
-    // SDL_QuitSubSystem(SDL_INIT_AUDIO);
-    // SDL_Quit();
+    SDL_QuitSubSystem(SDL_INIT_AUDIO);
+    SDL_Quit();
 
     QDialog::closeEvent(event);
 }
@@ -660,15 +656,6 @@ void SettingsDialog::LoadValuesFromConfig() {
                                 EmulatorSettings.GetConsoleLanguage())) %
         languageIndexes.size());
 
-    std::string micDevice = EmulatorSettings.GetSDLMicDevice();
-    QString micValue = QString::fromStdString(micDevice);
-    int micIndex = ui->micComboBox->findData(micValue);
-    if (micIndex != -1) {
-        ui->micComboBox->setCurrentIndex(micIndex);
-    } else {
-        ui->micComboBox->setCurrentIndex(0);
-    }
-
     ui->readbacksModeComboBox->setCurrentIndex(EmulatorSettings.GetReadbacksMode());
     ui->readbackLinearImagesCheckBox->setChecked(EmulatorSettings.IsReadbackLinearImagesEnabled());
     ui->dmaCheckBox->setChecked(EmulatorSettings.IsDirectMemoryAccessEnabled());
@@ -703,6 +690,7 @@ void SettingsDialog::LoadValuesFromConfig() {
     ui->motionControlsCheckBox->setChecked(EmulatorSettings.IsMotionControlsEnabled());
     ui->backgroundControllerCheckBox->setChecked(EmulatorSettings.IsBackgroundControllerInput());
     ui->usbComboBox->setCurrentIndex(EmulatorSettings.GetUsbDeviceBackend());
+    ui->cameraComboBox->setCurrentIndex(EmulatorSettings.GetCameraId() + 1);
 
     std::string sideTrophy = EmulatorSettings.GetTrophyNotificationSide();
     QString side = QString::fromStdString(sideTrophy);
@@ -749,10 +737,23 @@ void SettingsDialog::LoadValuesFromConfig() {
     ui->collectShaderCheckBox->setChecked(EmulatorSettings.IsShaderCollect());
     ui->enableLoggingCheckBox->setChecked(EmulatorSettings.IsLogEnabled());
 
-    ui->GenAudioComboBox->setCurrentText(
-        QString::fromStdString(EmulatorSettings.GetSDLMainOutputDevice()));
-    ui->DsAudioComboBox->setCurrentText(
-        QString::fromStdString(EmulatorSettings.GetSDLPadSpkOutputDevice()));
+    ui->audioBackendComboBox->setCurrentText(audioBackendMap[EmulatorSettings.GetAudioBackend()]);
+    const QString backend = ui->audioBackendComboBox->currentText();
+
+    if (backend == "SDL") {
+        ui->GenAudioComboBox->setCurrentText(
+            QString::fromStdString(EmulatorSettings.GetSDLMainOutputDevice()));
+        ui->DsAudioComboBox->setCurrentText(
+            QString::fromStdString(EmulatorSettings.GetSDLPadSpkOutputDevice()));
+        ui->micComboBox->setCurrentText(QString::fromStdString(EmulatorSettings.GetSDLMicDevice()));
+    } else if (backend == "OpenAL") {
+        ui->GenAudioComboBox->setCurrentText(
+            QString::fromStdString(EmulatorSettings.GetOpenALMainOutputDevice()));
+        ui->DsAudioComboBox->setCurrentText(
+            QString::fromStdString(EmulatorSettings.GetOpenALPadSpkOutputDevice()));
+        ui->micComboBox->setCurrentText(
+            QString::fromStdString(EmulatorSettings.GetOpenALMicDevice()));
+    }
 
     QString chooseHomeTab = m_gui_settings->GetValue(gui::gen_homeTab).toString();
     QString translatedText = chooseHomeTabMap.key(chooseHomeTab);
@@ -1061,13 +1062,12 @@ void SettingsDialog::UpdateSettings(bool is_specific) {
     EmulatorSettings.SetHdrAllowed(ui->enableHDRCheckBox->isChecked(), is_specific);
     EmulatorSettings.SetLogType(logTypeMap.value(ui->logTypeComboBox->currentText()).toStdString(),
                                 is_specific);
-    EmulatorSettings.SetSDLMicDevice(ui->micComboBox->currentData().toString().toStdString(),
-                                     is_specific);
     EmulatorSettings.SetLogFilter(ui->logFilterLineEdit->text().toStdString(), is_specific);
     EmulatorSettings.SetCursorState(ui->hideCursorComboBox->currentIndex(), is_specific);
-    EmulatorSettings.SetCursorHideTimeout(ui->hideCursorComboBox->currentIndex(), is_specific);
+    EmulatorSettings.SetCursorHideTimeout(ui->idleTimeoutSpinBox->value(), is_specific);
     EmulatorSettings.SetGpuId(ui->graphicsAdapterBox->currentIndex() - 1, is_specific);
     EmulatorSettings.SetUsbDeviceBackend(ui->usbComboBox->currentIndex(), is_specific);
+    EmulatorSettings.SetCameraId(ui->cameraComboBox->currentIndex() - 1, is_specific);
     EmulatorSettings.SetVolumeSlider(ui->horizontalVolumeSlider->value(), is_specific);
     EmulatorSettings.SetConsoleLanguage(
         languageIndexes[ui->consoleLanguageComboBox->currentIndex()], is_specific);
@@ -1096,6 +1096,23 @@ void SettingsDialog::UpdateSettings(bool is_specific) {
                                                  is_specific);
     EmulatorSettings.SetShaderCollect(ui->collectShaderCheckBox->isChecked(), is_specific);
     EmulatorSettings.SetCopyGpuBuffers(ui->copyGPUBuffersCheckBox->isChecked(), is_specific);
+
+    const std::string backend = ui->audioBackendComboBox->currentText().toStdString();
+    EmulatorSettings.SetAudioBackend(audioBackendMap.key(QString::fromStdString(backend)));
+    if (backend == "SDL") {
+        EmulatorSettings.SetSDLMainOutputDevice(ui->GenAudioComboBox->currentText().toStdString(),
+                                                is_specific);
+        EmulatorSettings.SetSDLPadSpkOutputDevice(ui->DsAudioComboBox->currentText().toStdString(),
+                                                  is_specific);
+        EmulatorSettings.SetSDLMicDevice(ui->micComboBox->currentText().toStdString(), is_specific);
+    } else if (backend == "OpenAL") {
+        EmulatorSettings.SetOpenALMainOutputDevice(
+            ui->GenAudioComboBox->currentText().toStdString(), is_specific);
+        EmulatorSettings.SetOpenALPadSpkOutputDevice(
+            ui->DsAudioComboBox->currentText().toStdString(), is_specific);
+        EmulatorSettings.SetOpenALMicDevice(ui->micComboBox->currentText().toStdString(),
+                                            is_specific);
+    }
 
     // Entries with no game-specific settings
     if (!is_game_specific) {
@@ -1171,7 +1188,7 @@ void SettingsDialog::SyncRealTimeWidgetstoConfig() {
     }
 }
 
-void SettingsDialog::setDefaultValues() {
+void SettingsDialog::SetDefaultValues() {
     if (!is_game_specific) {
         m_gui_settings->SetValue(gui::gl_showBackgroundImage, true);
         m_gui_settings->SetValue(gui::gl_backgroundImageOpacity, 50);
@@ -1195,7 +1212,7 @@ void SettingsDialog::SaveSettings() {
     }
 };
 
-void SettingsDialog::pollSDLevents() {
+void SettingsDialog::PollSDLevents() {
     SDL_Event event;
     while (SdlEventWrapper::Wrapper::wrapperActive) {
 
@@ -1207,53 +1224,108 @@ void SettingsDialog::pollSDLevents() {
             return;
         }
 
-        if (event.type == SDL_EVENT_AUDIO_DEVICE_ADDED) {
-            onAudioDeviceChange(true);
-        }
-
-        if (event.type == SDL_EVENT_AUDIO_DEVICE_REMOVED) {
-            onAudioDeviceChange(false);
+        if (event.type == SDL_EVENT_AUDIO_DEVICE_ADDED ||
+            event.type == SDL_EVENT_AUDIO_DEVICE_REMOVED) {
+            RefreshAudioDevices();
         }
     }
 }
 
-void SettingsDialog::onAudioDeviceChange(bool isAdd) {
+void SettingsDialog::RefreshAudioDevices() {
+    // prevent device list from refreshing too fast
+    QThread::msleep(100);
+
     ui->GenAudioComboBox->clear();
     ui->DsAudioComboBox->clear();
+    ui->micComboBox->clear();
 
-    // prevent device list from refreshing too fast
-    if (!isAdd)
-        QThread::msleep(100);
-
+    const QString backend = ui->audioBackendComboBox->currentText();
     int deviceCount;
-    QStringList deviceList;
-    SDL_AudioDeviceID* devices = SDL_GetAudioPlaybackDevices(&deviceCount);
+    QStringList playbackDeviceList;
+    QStringList recordingDeviceList;
 
-    if (!devices) {
-        LOG_ERROR(Core_Devices, "Unable to retrieve audio device list {}", SDL_GetError());
-        return;
-    }
-
-    for (int i = 0; i < deviceCount; ++i) {
-        const char* name = SDL_GetAudioDeviceName(devices[i]);
-        std::string name_string = std::string(name);
-        deviceList.append(QString::fromStdString(name_string));
-    }
-
+    ui->micComboBox->addItem(micMap.key("None"), "None");
+    ui->micComboBox->addItem(micMap.key("Default Device"), "Default Device");
     ui->GenAudioComboBox->addItem(tr("Default Device"), "Default Device");
-    ui->GenAudioComboBox->addItems(deviceList);
-    ui->GenAudioComboBox->setCurrentText(
-        QString::fromStdString(EmulatorSettings.GetSDLMainOutputDevice()));
-
     ui->DsAudioComboBox->addItem(tr("Default Device"), "Default Device");
-    ui->DsAudioComboBox->addItems(deviceList);
-    ui->DsAudioComboBox->setCurrentText(
-        QString::fromStdString(EmulatorSettings.GetSDLPadSpkOutputDevice()));
 
-    SDL_free(devices);
+    if (backend == "SDL") {
+        // Playback
+        SDL_AudioDeviceID* playbackDevices = SDL_GetAudioPlaybackDevices(&deviceCount);
+
+        if (!playbackDevices) {
+            LOG_ERROR(Core_Devices, "Unable to retrieve audio device list {}", SDL_GetError());
+            return;
+        }
+
+        for (int i = 0; i < deviceCount; ++i) {
+            const char* name = SDL_GetAudioDeviceName(playbackDevices[i]);
+            std::string name_string = std::string(name);
+            playbackDeviceList.append(QString::fromStdString(name_string));
+        }
+
+        SDL_free(playbackDevices);
+
+        // Mics
+        int count = 0;
+        SDL_AudioDeviceID* recordingDevices = SDL_GetAudioRecordingDevices(&count);
+        if (recordingDevices) {
+            for (int i = 0; i < count; ++i) {
+                SDL_AudioDeviceID devId = recordingDevices[i];
+                const char* name = SDL_GetAudioDeviceName(devId);
+                if (name) {
+                    QString qname = QString::fromUtf8(name);
+                    ui->micComboBox->addItem(qname, QString::number(devId));
+                }
+            }
+            SDL_free(recordingDevices);
+        } else {
+            qDebug() << "Error SDL_GetAudioRecordingDevices:" << SDL_GetError();
+        }
+    } else if (backend == "OpenAL") {
+        // Playback
+        const ALCchar* playbackdevices = alcGetString(NULL, ALC_ALL_DEVICES_SPECIFIER);
+        if (playbackdevices) {
+            while (*playbackdevices != '\0') {
+                playbackDeviceList.append(QString::fromUtf8(playbackdevices));
+                playbackdevices += strlen(playbackdevices) + 1;
+            }
+        }
+
+        // Mics
+        if (alcIsExtensionPresent(NULL, "ALC_ENUMERATION_EXT") == AL_TRUE) {
+            const ALCchar* recordingDevices = alcGetString(NULL, ALC_CAPTURE_DEVICE_SPECIFIER);
+
+            if (recordingDevices) {
+                while (*recordingDevices != '\0') {
+                    recordingDeviceList.append(QString::fromUtf8(recordingDevices));
+                    recordingDevices += strlen(recordingDevices) + 1;
+                }
+            }
+        }
+    }
+
+    ui->DsAudioComboBox->addItems(playbackDeviceList);
+    ui->GenAudioComboBox->addItems(playbackDeviceList);
+    ui->micComboBox->addItems(recordingDeviceList);
+
+    if (backend == "SDL") {
+        ui->GenAudioComboBox->setCurrentText(
+            QString::fromStdString(EmulatorSettings.GetSDLMainOutputDevice()));
+        ui->DsAudioComboBox->setCurrentText(
+            QString::fromStdString(EmulatorSettings.GetSDLPadSpkOutputDevice()));
+        ui->micComboBox->setCurrentText(QString::fromStdString(EmulatorSettings.GetSDLMicDevice()));
+    } else if (backend == "OpenAL") {
+        ui->GenAudioComboBox->setCurrentText(
+            QString::fromStdString(EmulatorSettings.GetOpenALMainOutputDevice()));
+        ui->DsAudioComboBox->setCurrentText(
+            QString::fromStdString(EmulatorSettings.GetOpenALPadSpkOutputDevice()));
+        ui->micComboBox->setCurrentText(
+            QString::fromStdString(EmulatorSettings.GetOpenALMicDevice()));
+    }
 }
 
-void SettingsDialog::getPhysicalDevices() {
+void SettingsDialog::GetPhysicalDevices() {
     if (volkInitialize() != VK_SUCCESS) {
         qWarning() << "Failed to initialize Volk.";
         return;

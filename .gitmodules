@@ -25,3 +25,7 @@
 [submodule "externals/MoltenVK"]
 	path = externals/MoltenVK
 	url = https://github.com/shadPS4-emu/ext-MoltenVK.git
+[submodule "externals/openal-soft"]
+	path = externals/openal-soft
+	url = https://github.com/shadexternals/openal-soft.git
+	shallow = true
