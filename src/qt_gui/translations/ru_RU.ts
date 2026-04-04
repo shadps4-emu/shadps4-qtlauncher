@@ -721,14 +721,6 @@ All fields must be valid hex strings with even length.</source>
 Все поля должны быть допустимыми шестнадцатеричными строками четной длины.</translation>
     </message>
     <message>
-      <source>Load All Keys</source>
-      <translation>Загрузить все ключи</translation>
-    </message>
-    <message>
-      <source>Save All Keys</source>
-      <translation>Сохранить все ключи</translation>
-    </message>
-    <message>
       <source>Close</source>
       <translation>Закрыть</translation>
     </message>
@@ -809,6 +801,14 @@ Please enter your keys and save them.</source>
     <message>
       <source>%1 contains invalid hex or has odd length.</source>
       <translation>%1 содержит недопустимое шестнадцатеричное значение или имеет нечетную длину.</translation>
+    </message>
+    <message>
+      <source>Load Key</source>
+      <translation type="unfinished">Load Key</translation>
+    </message>
+    <message>
+      <source>Save Key</source>
+      <translation type="unfinished">Save Key</translation>
     </message>
   </context>
   <context>
