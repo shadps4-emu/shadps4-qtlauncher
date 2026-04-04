@@ -804,11 +804,11 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Load Key</source>
-      <translation type="unfinished">Load Key</translation>
+      <translation>Загрузить ключ</translation>
     </message>
     <message>
       <source>Save Key</source>
-      <translation type="unfinished">Save Key</translation>
+      <translation>Сохранить ключ</translation>
     </message>
   </context>
   <context>
