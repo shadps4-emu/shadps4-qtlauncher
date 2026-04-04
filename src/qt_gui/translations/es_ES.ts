@@ -721,14 +721,6 @@ All fields must be valid hex strings with even length.</source>
 Todos los campos deben contener cadenas hexadecimales válidas con longitud par.</translation>
     </message>
     <message>
-      <source>Load All Keys</source>
-      <translation>Cargar todas las claves</translation>
-    </message>
-    <message>
-      <source>Save All Keys</source>
-      <translation>Guardar todas las claves</translation>
-    </message>
-    <message>
       <source>Close</source>
       <translation>Cerrar</translation>
     </message>
@@ -809,6 +801,14 @@ Debes introducir tus claves y guardarlas.</translation>
     <message>
       <source>%1 contains invalid hex or has odd length.</source>
       <translation>%1 es un valor hexadecimnal no válido o tiene una longitud impar.</translation>
+    </message>
+    <message>
+      <source>Load Key</source>
+      <translation type="unfinished">Load Key</translation>
+    </message>
+    <message>
+      <source>Save Key</source>
+      <translation type="unfinished">Save Key</translation>
     </message>
   </context>
   <context>
