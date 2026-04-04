@@ -720,14 +720,6 @@ All fields must be valid hex strings with even length.</source>
 Alle Felder müssen gültige Hex-Werte mit gleicher Länge sein.</translation>
     </message>
     <message>
-      <source>Load All Keys</source>
-      <translation>Alle Schlüssel laden</translation>
-    </message>
-    <message>
-      <source>Save All Keys</source>
-      <translation>Alle Schlüssel speichern</translation>
-    </message>
-    <message>
       <source>Close</source>
       <translation>Schließen</translation>
     </message>
@@ -808,6 +800,14 @@ Bitte gib die Schlüssel ein und speicher diese.</translation>
     <message>
       <source>%1 contains invalid hex or has odd length.</source>
       <translation>Der %1 enthält einen ungültigen Hex-Wert oder hat eine ungewöhnliche Länge.</translation>
+    </message>
+    <message>
+      <source>Load Key</source>
+      <translation type="unfinished">Load Key</translation>
+    </message>
+    <message>
+      <source>Save Key</source>
+      <translation type="unfinished">Save Key</translation>
     </message>
   </context>
   <context>
