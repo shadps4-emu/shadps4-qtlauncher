@@ -721,14 +721,6 @@ All fields must be valid hex strings with even length.</source>
 Tots els camps han de tenir una cadena hexadecimal vàlida amb longitud parell.</translation>
     </message>
     <message>
-      <source>Load All Keys</source>
-      <translation>Carrega totes les claus</translation>
-    </message>
-    <message>
-      <source>Save All Keys</source>
-      <translation>Desa totes les claus</translation>
-    </message>
-    <message>
       <source>Close</source>
       <translation>Tanca</translation>
     </message>
@@ -809,6 +801,14 @@ Si us plau, introdueix les teves claus per desar-les.</translation>
     <message>
       <source>%1 contains invalid hex or has odd length.</source>
       <translation>%1 conté valors hexadecimals no vàlids o té una longitud senar.</translation>
+    </message>
+    <message>
+      <source>Load Key</source>
+      <translation type="unfinished">Load Key</translation>
+    </message>
+    <message>
+      <source>Save Key</source>
+      <translation type="unfinished">Save Key</translation>
     </message>
   </context>
   <context>
