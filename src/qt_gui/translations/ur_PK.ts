@@ -2076,10 +2076,6 @@ Select an emulator version from the right panel.</translation>
       <translation type="unfinished">Hide Cursor Idle Timeout</translation>
     </message>
     <message>
-      <source>Microphone</source>
-      <translation type="unfinished">Microphone</translation>
-    </message>
-    <message>
       <source>None</source>
       <translation type="unfinished">None</translation>
     </message>
@@ -2838,6 +2834,26 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Browse:\nBrowse for a folder to set as the home folder.</source>
       <translation type="unfinished">Browse:\nBrowse for a folder to set as the home folder.</translation>
+    </message>
+    <message>
+      <source>Audio</source>
+      <translation type="unfinished">Audio</translation>
+    </message>
+    <message>
+      <source>Audio Backend</source>
+      <translation type="unfinished">Audio Backend</translation>
+    </message>
+    <message>
+      <source>Mic Device</source>
+      <translation type="unfinished">Mic Device</translation>
+    </message>
+    <message>
+      <source>Devices</source>
+      <translation type="unfinished">Devices</translation>
+    </message>
+    <message>
+      <source>Camera</source>
+      <translation type="unfinished">Camera</translation>
     </message>
   </context>
   <context>
