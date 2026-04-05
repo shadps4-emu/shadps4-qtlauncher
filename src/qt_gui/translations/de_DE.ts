@@ -2072,10 +2072,6 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
       <translation>Zeit wann der Mauszeiger ausgeblendet werden soll</translation>
     </message>
     <message>
-      <source>Microphone</source>
-      <translation>Mikrofon</translation>
-    </message>
-    <message>
       <source>None</source>
       <translation>Keine</translation>
     </message>
@@ -2838,6 +2834,26 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
     <message>
       <source>Browse:\nBrowse for a folder to set as the home folder.</source>
       <translation>Durchsuchen:\nLege einen Ordner für Benutzerdaten fest.</translation>
+    </message>
+    <message>
+      <source>Audio</source>
+      <translation type="unfinished">Audio</translation>
+    </message>
+    <message>
+      <source>Audio Backend</source>
+      <translation type="unfinished">Audio Backend</translation>
+    </message>
+    <message>
+      <source>Mic Device</source>
+      <translation type="unfinished">Mic Device</translation>
+    </message>
+    <message>
+      <source>Devices</source>
+      <translation type="unfinished">Devices</translation>
+    </message>
+    <message>
+      <source>Camera</source>
+      <translation type="unfinished">Camera</translation>
     </message>
   </context>
   <context>
