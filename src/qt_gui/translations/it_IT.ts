@@ -721,14 +721,6 @@ All fields must be valid hex strings with even length.</source>
 Tutti i campi devono essere stringhe esadecimali valide con lunghezza uniforme.</translation>
     </message>
     <message>
-      <source>Load All Keys</source>
-      <translation>Carica Tutte Le Chiavi</translation>
-    </message>
-    <message>
-      <source>Save All Keys</source>
-      <translation>Salva Tutte Le Chiavi</translation>
-    </message>
-    <message>
       <source>Close</source>
       <translation>Chiudi</translation>
     </message>
@@ -809,6 +801,14 @@ Inserisci le chiavi e salvale.</translation>
     <message>
       <source>%1 contains invalid hex or has odd length.</source>
       <translation>%1 contiene esadecimale non valido o ha una lunghezza dispari.</translation>
+    </message>
+    <message>
+      <source>Load Key</source>
+      <translation type="unfinished">Load Key</translation>
+    </message>
+    <message>
+      <source>Save Key</source>
+      <translation type="unfinished">Save Key</translation>
     </message>
   </context>
   <context>
@@ -2073,10 +2073,6 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
       <translation>Timeout inattività per nascondere il cursore</translation>
     </message>
     <message>
-      <source>Microphone</source>
-      <translation>Microfono</translation>
-    </message>
-    <message>
       <source>None</source>
       <translation>Nessuno</translation>
     </message>
@@ -2835,6 +2831,26 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
     <message>
       <source>Browse:\nBrowse for a folder to set as the home folder.</source>
       <translation>Esplora:\nEsplora una cartella da impostare come percorso principale.</translation>
+    </message>
+    <message>
+      <source>Audio</source>
+      <translation type="unfinished">Audio</translation>
+    </message>
+    <message>
+      <source>Audio Backend</source>
+      <translation type="unfinished">Audio Backend</translation>
+    </message>
+    <message>
+      <source>Mic Device</source>
+      <translation type="unfinished">Mic Device</translation>
+    </message>
+    <message>
+      <source>Devices</source>
+      <translation type="unfinished">Devices</translation>
+    </message>
+    <message>
+      <source>Camera</source>
+      <translation type="unfinished">Camera</translation>
     </message>
   </context>
   <context>

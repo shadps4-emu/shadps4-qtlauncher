@@ -720,14 +720,6 @@ All fields must be valid hex strings with even length.</source>
 Alle Felder müssen gültige Hex-Werte mit gleicher Länge sein.</translation>
     </message>
     <message>
-      <source>Load All Keys</source>
-      <translation>Alle Schlüssel laden</translation>
-    </message>
-    <message>
-      <source>Save All Keys</source>
-      <translation>Alle Schlüssel speichern</translation>
-    </message>
-    <message>
       <source>Close</source>
       <translation>Schließen</translation>
     </message>
@@ -808,6 +800,14 @@ Bitte gib die Schlüssel ein und speicher diese.</translation>
     <message>
       <source>%1 contains invalid hex or has odd length.</source>
       <translation>Der %1 enthält einen ungültigen Hex-Wert oder hat eine ungewöhnliche Länge.</translation>
+    </message>
+    <message>
+      <source>Load Key</source>
+      <translation type="unfinished">Load Key</translation>
+    </message>
+    <message>
+      <source>Save Key</source>
+      <translation type="unfinished">Save Key</translation>
     </message>
   </context>
   <context>
@@ -2072,10 +2072,6 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
       <translation>Zeit wann der Mauszeiger ausgeblendet werden soll</translation>
     </message>
     <message>
-      <source>Microphone</source>
-      <translation>Mikrofon</translation>
-    </message>
-    <message>
       <source>None</source>
       <translation>Keine</translation>
     </message>
@@ -2838,6 +2834,26 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
     <message>
       <source>Browse:\nBrowse for a folder to set as the home folder.</source>
       <translation>Durchsuchen:\nLege einen Ordner für Benutzerdaten fest.</translation>
+    </message>
+    <message>
+      <source>Audio</source>
+      <translation type="unfinished">Audio</translation>
+    </message>
+    <message>
+      <source>Audio Backend</source>
+      <translation type="unfinished">Audio Backend</translation>
+    </message>
+    <message>
+      <source>Mic Device</source>
+      <translation type="unfinished">Mic Device</translation>
+    </message>
+    <message>
+      <source>Devices</source>
+      <translation type="unfinished">Devices</translation>
+    </message>
+    <message>
+      <source>Camera</source>
+      <translation type="unfinished">Camera</translation>
     </message>
   </context>
   <context>

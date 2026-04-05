@@ -656,7 +656,7 @@ Must be a valid hex string with even length.</translation>
     </message>
     <message>
       <source>Enter %1</source>
-      <translation type="unfinished">Enter %1</translation>
+      <translation>أدخل %1</translation>
     </message>
     <message>
       <source>Exponent1</source>
@@ -721,20 +721,12 @@ All fields must be valid hex strings with even length.</source>
 All fields must be valid hex strings with even length.</translation>
     </message>
     <message>
-      <source>Load All Keys</source>
-      <translation type="unfinished">Load All Keys</translation>
-    </message>
-    <message>
-      <source>Save All Keys</source>
-      <translation type="unfinished">Save All Keys</translation>
-    </message>
-    <message>
       <source>Close</source>
-      <translation type="unfinished">Close</translation>
+      <translation>إغلاق</translation>
     </message>
     <message>
       <source>Warning</source>
-      <translation type="unfinished">Warning</translation>
+      <translation>تحذير</translation>
     </message>
     <message>
       <source>No key file found or failed to load.
@@ -748,7 +740,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Success</source>
-      <translation type="unfinished">Success</translation>
+      <translation>تم بنجاح</translation>
     </message>
     <message>
       <source>Keys saved successfully!</source>
@@ -756,7 +748,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>خطأ</translation>
     </message>
     <message>
       <source>Failed to save keys!</source>
@@ -780,7 +772,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Invalid File</source>
-      <translation type="unfinished">Invalid File</translation>
+      <translation>ملف غير صالح</translation>
     </message>
     <message>
       <source>Only JSON files are supported.</source>
@@ -809,6 +801,14 @@ Please enter your keys and save them.</translation>
     <message>
       <source>%1 contains invalid hex or has odd length.</source>
       <translation type="unfinished">%1 contains invalid hex or has odd length.</translation>
+    </message>
+    <message>
+      <source>Load Key</source>
+      <translation type="unfinished">Load Key</translation>
+    </message>
+    <message>
+      <source>Save Key</source>
+      <translation type="unfinished">Save Key</translation>
     </message>
   </context>
   <context>
@@ -1293,19 +1293,19 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>User 1</source>
-      <translation type="unfinished">User 1</translation>
+      <translation>المستخدم 1</translation>
     </message>
     <message>
       <source>User 2</source>
-      <translation type="unfinished">User 2</translation>
+      <translation>المستخدم 2</translation>
     </message>
     <message>
       <source>User 3</source>
-      <translation type="unfinished">User 3</translation>
+      <translation>المستخدم 3</translation>
     </message>
     <message>
       <source>User 4</source>
-      <translation type="unfinished">User 4</translation>
+      <translation>المستخدم 4</translation>
     </message>
     <message>
       <source>This game has no save folder to open!</source>
@@ -1427,11 +1427,11 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Volume Up</source>
-      <translation type="unfinished">Volume Up</translation>
+      <translation>رفع مستوى الصوت</translation>
     </message>
     <message>
       <source>Volume Down</source>
-      <translation type="unfinished">Volume Down</translation>
+      <translation>خفض مستوى الصوت</translation>
     </message>
   </context>
   <context>
@@ -2003,7 +2003,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Manage Users</source>
-      <translation type="unfinished">Manage Users</translation>
+      <translation>إدارة المستخدمين</translation>
     </message>
   </context>
   <context>
@@ -2071,10 +2071,6 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Hide Cursor Idle Timeout</source>
       <translation>إخفاء المؤشر بعد فترة الخمول</translation>
-    </message>
-    <message>
-      <source>Microphone</source>
-      <translation>الميكروفون</translation>
     </message>
     <message>
       <source>None</source>
@@ -2837,6 +2833,26 @@ Select an emulator version from the right panel.</source>
       <source>Browse:\nBrowse for a folder to set as the home folder.</source>
       <translation type="unfinished">Browse:\nBrowse for a folder to set as the home folder.</translation>
     </message>
+    <message>
+      <source>Audio</source>
+      <translation type="unfinished">Audio</translation>
+    </message>
+    <message>
+      <source>Audio Backend</source>
+      <translation type="unfinished">Audio Backend</translation>
+    </message>
+    <message>
+      <source>Mic Device</source>
+      <translation type="unfinished">Mic Device</translation>
+    </message>
+    <message>
+      <source>Devices</source>
+      <translation type="unfinished">Devices</translation>
+    </message>
+    <message>
+      <source>Camera</source>
+      <translation type="unfinished">Camera</translation>
+    </message>
   </context>
   <context>
     <name>ShortcutDialog</name>
@@ -2888,27 +2904,27 @@ Select an emulator version from the right panel.</source>
     <name>UserManagerDialog</name>
     <message>
       <source>User Manager</source>
-      <translation type="unfinished">User Manager</translation>
+      <translation>إدارة المستخدم</translation>
     </message>
     <message>
       <source>&amp;Create User</source>
-      <translation type="unfinished">&amp;Create User</translation>
+      <translation>&amp;إنشاء مستخدم</translation>
     </message>
     <message>
       <source>&amp;Delete User</source>
-      <translation type="unfinished">&amp;Delete User</translation>
+      <translation>&amp;حذف المستخدم</translation>
     </message>
     <message>
       <source>&amp;Rename User</source>
-      <translation type="unfinished">&amp;Rename User</translation>
+      <translation>&amp;إعادة تسمية المستخدم</translation>
     </message>
     <message>
       <source>&amp;Set Default User</source>
-      <translation type="unfinished">&amp;Set Default User</translation>
+      <translation>&amp;تعيين مستخدم افتراضي</translation>
     </message>
     <message>
       <source>&amp;Set Color</source>
-      <translation type="unfinished">&amp;Set Color</translation>
+      <translation>&amp;تعيين اللون</translation>
     </message>
     <message>
       <source>&amp;Set Controller Port</source>
@@ -2928,7 +2944,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Create New User</source>
-      <translation type="unfinished">Create New User</translation>
+      <translation>إنشاء مستخدم جديد</translation>
     </message>
     <message>
       <source>New User ID: %1</source>
@@ -2940,7 +2956,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Invalid Username</source>
-      <translation type="unfinished">Invalid Username</translation>
+      <translation>اسم المستخدم غير صالح</translation>
     </message>
     <message>
       <source>Username must be 3–16 chars and valid.</source>
@@ -2956,7 +2972,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Rename User</source>
-      <translation type="unfinished">Rename User</translation>
+      <translation>إعادة تسمية المستخدم</translation>
     </message>
     <message>
       <source>Old Username: %1</source>

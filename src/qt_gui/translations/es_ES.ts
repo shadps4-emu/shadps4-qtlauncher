@@ -721,14 +721,6 @@ All fields must be valid hex strings with even length.</source>
 Todos los campos deben contener cadenas hexadecimales válidas con longitud par.</translation>
     </message>
     <message>
-      <source>Load All Keys</source>
-      <translation>Cargar todas las claves</translation>
-    </message>
-    <message>
-      <source>Save All Keys</source>
-      <translation>Guardar todas las claves</translation>
-    </message>
-    <message>
       <source>Close</source>
       <translation>Cerrar</translation>
     </message>
@@ -809,6 +801,14 @@ Debes introducir tus claves y guardarlas.</translation>
     <message>
       <source>%1 contains invalid hex or has odd length.</source>
       <translation>%1 es un valor hexadecimnal no válido o tiene una longitud impar.</translation>
+    </message>
+    <message>
+      <source>Load Key</source>
+      <translation type="unfinished">Load Key</translation>
+    </message>
+    <message>
+      <source>Save Key</source>
+      <translation type="unfinished">Save Key</translation>
     </message>
   </context>
   <context>
@@ -2073,10 +2073,6 @@ Selecciona una versión del emulador en el panel derecho.</translation>
       <translation>Tiempo de espera para ocultar el cursor si queda inactivo</translation>
     </message>
     <message>
-      <source>Microphone</source>
-      <translation>Micrófono</translation>
-    </message>
-    <message>
       <source>None</source>
       <translation>Ninguno</translation>
     </message>
@@ -2835,6 +2831,26 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     <message>
       <source>Browse:\nBrowse for a folder to set as the home folder.</source>
       <translation>Buscar:\nPermite buscar una carpeta a establecer como carpeta de inicio.</translation>
+    </message>
+    <message>
+      <source>Audio</source>
+      <translation type="unfinished">Audio</translation>
+    </message>
+    <message>
+      <source>Audio Backend</source>
+      <translation type="unfinished">Audio Backend</translation>
+    </message>
+    <message>
+      <source>Mic Device</source>
+      <translation type="unfinished">Mic Device</translation>
+    </message>
+    <message>
+      <source>Devices</source>
+      <translation type="unfinished">Devices</translation>
+    </message>
+    <message>
+      <source>Camera</source>
+      <translation type="unfinished">Camera</translation>
     </message>
   </context>
   <context>

@@ -721,14 +721,6 @@ All fields must be valid hex strings with even length.</source>
 All fields must be valid hex strings with even length.</translation>
     </message>
     <message>
-      <source>Load All Keys</source>
-      <translation type="unfinished">Load All Keys</translation>
-    </message>
-    <message>
-      <source>Save All Keys</source>
-      <translation type="unfinished">Save All Keys</translation>
-    </message>
-    <message>
       <source>Close</source>
       <translation type="unfinished">Close</translation>
     </message>
@@ -809,6 +801,14 @@ Please enter your keys and save them.</translation>
     <message>
       <source>%1 contains invalid hex or has odd length.</source>
       <translation type="unfinished">%1 contains invalid hex or has odd length.</translation>
+    </message>
+    <message>
+      <source>Load Key</source>
+      <translation type="unfinished">Load Key</translation>
+    </message>
+    <message>
+      <source>Save Key</source>
+      <translation type="unfinished">Save Key</translation>
     </message>
   </context>
   <context>
@@ -2073,10 +2073,6 @@ Select an emulator version from the right panel.</translation>
       <translation>Timeout pentru ascunderea cursorului inactiv</translation>
     </message>
     <message>
-      <source>Microphone</source>
-      <translation type="unfinished">Microphone</translation>
-    </message>
-    <message>
       <source>None</source>
       <translation type="unfinished">None</translation>
     </message>
@@ -2835,6 +2831,26 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Browse:\nBrowse for a folder to set as the home folder.</source>
       <translation type="unfinished">Browse:\nBrowse for a folder to set as the home folder.</translation>
+    </message>
+    <message>
+      <source>Audio</source>
+      <translation type="unfinished">Audio</translation>
+    </message>
+    <message>
+      <source>Audio Backend</source>
+      <translation type="unfinished">Audio Backend</translation>
+    </message>
+    <message>
+      <source>Mic Device</source>
+      <translation type="unfinished">Mic Device</translation>
+    </message>
+    <message>
+      <source>Devices</source>
+      <translation type="unfinished">Devices</translation>
+    </message>
+    <message>
+      <source>Camera</source>
+      <translation type="unfinished">Camera</translation>
     </message>
   </context>
   <context>

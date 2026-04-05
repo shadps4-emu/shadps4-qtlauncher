@@ -721,14 +721,6 @@ All fields must be valid hex strings with even length.</source>
 Todos os campos devem ser textos hexadecimais válidos com comprimento par.</translation>
     </message>
     <message>
-      <source>Load All Keys</source>
-      <translation>Carregar Todas as Chaves</translation>
-    </message>
-    <message>
-      <source>Save All Keys</source>
-      <translation>Salvar Todas as Chaves</translation>
-    </message>
-    <message>
       <source>Close</source>
       <translation>Fechar</translation>
     </message>
@@ -809,6 +801,14 @@ Por favor, digite suas chaves e salve-as.</translation>
     <message>
       <source>%1 contains invalid hex or has odd length.</source>
       <translation>%1 contém hexadecimal inválido ou tem comprimento ímpar.</translation>
+    </message>
+    <message>
+      <source>Load Key</source>
+      <translation type="unfinished">Load Key</translation>
+    </message>
+    <message>
+      <source>Save Key</source>
+      <translation type="unfinished">Save Key</translation>
     </message>
   </context>
   <context>
@@ -2073,10 +2073,6 @@ Selecione uma versão do emulador no painel direito.</translation>
       <translation>Tempo de Inatividade para Ocultar Cursor</translation>
     </message>
     <message>
-      <source>Microphone</source>
-      <translation>Microfone</translation>
-    </message>
-    <message>
       <source>None</source>
       <translation>Nenhum</translation>
     </message>
@@ -2835,6 +2831,26 @@ Selecione uma versão do emulador no painel direito.</translation>
     <message>
       <source>Browse:\nBrowse for a folder to set as the home folder.</source>
       <translation>Procurar:\nProcura uma pasta para definir como pasta raiz.</translation>
+    </message>
+    <message>
+      <source>Audio</source>
+      <translation type="unfinished">Audio</translation>
+    </message>
+    <message>
+      <source>Audio Backend</source>
+      <translation type="unfinished">Audio Backend</translation>
+    </message>
+    <message>
+      <source>Mic Device</source>
+      <translation type="unfinished">Mic Device</translation>
+    </message>
+    <message>
+      <source>Devices</source>
+      <translation type="unfinished">Devices</translation>
+    </message>
+    <message>
+      <source>Camera</source>
+      <translation type="unfinished">Camera</translation>
     </message>
   </context>
   <context>
