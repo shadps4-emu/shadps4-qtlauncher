@@ -644,7 +644,7 @@ Must be a valid hex string with even length.</translation>
     </message>
     <message>
       <source>Trophy Key:</source>
-      <translation type="unfinished">Trophy Key:</translation>
+      <translation>Kupa Anahtarı:</translation>
     </message>
     <message>
       <source>Status: Not loaded</source>
@@ -652,7 +652,7 @@ Must be a valid hex string with even length.</translation>
     </message>
     <message>
       <source>Trophy Key</source>
-      <translation type="unfinished">Trophy Key</translation>
+      <translation>Kupa Anahtarı</translation>
     </message>
     <message>
       <source>Enter %1</source>
@@ -672,7 +672,7 @@ Must be a valid hex string with even length.</translation>
     </message>
     <message>
       <source>Coefficient</source>
-      <translation type="unfinished">Coefficient</translation>
+      <translation>Katsayı</translation>
     </message>
     <message>
       <source>Modulus</source>
@@ -722,11 +722,11 @@ All fields must be valid hex strings with even length.</translation>
     </message>
     <message>
       <source>Close</source>
-      <translation type="unfinished">Close</translation>
+      <translation>Kapat</translation>
     </message>
     <message>
       <source>Warning</source>
-      <translation type="unfinished">Warning</translation>
+      <translation>Uyarı</translation>
     </message>
     <message>
       <source>No key file found or failed to load.
@@ -736,19 +736,19 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Validation Error</source>
-      <translation type="unfinished">Validation Error</translation>
+      <translation>Doğrulama Hatası</translation>
     </message>
     <message>
       <source>Success</source>
-      <translation type="unfinished">Success</translation>
+      <translation>Başarılı</translation>
     </message>
     <message>
       <source>Keys saved successfully!</source>
-      <translation type="unfinished">Keys saved successfully!</translation>
+      <translation>Anahtarlar başarıyla kaydedildi!</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Hata</translation>
     </message>
     <message>
       <source>Failed to save keys!</source>
@@ -772,7 +772,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Invalid File</source>
-      <translation type="unfinished">Invalid File</translation>
+      <translation>Geçersiz Dosya</translation>
     </message>
     <message>
       <source>Only JSON files are supported.</source>
@@ -784,7 +784,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>JSON Error</source>
-      <translation type="unfinished">JSON Error</translation>
+      <translation>JSON Hatası</translation>
     </message>
     <message>
       <source>Invalid JSON format.</source>
@@ -2003,7 +2003,7 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Manage Users</source>
-      <translation type="unfinished">Manage Users</translation>
+      <translation>Kullanıcıları Yönet</translation>
     </message>
   </context>
   <context>
@@ -2834,7 +2834,7 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Audio</source>
-      <translation type="unfinished">Audio</translation>
+      <translation>Ses</translation>
     </message>
     <message>
       <source>Audio Backend</source>
@@ -2850,7 +2850,7 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Camera</source>
-      <translation type="unfinished">Camera</translation>
+      <translation>Kamera</translation>
     </message>
   </context>
   <context>
@@ -2903,11 +2903,11 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     <name>UserManagerDialog</name>
     <message>
       <source>User Manager</source>
-      <translation type="unfinished">User Manager</translation>
+      <translation>Kullanıcı Yöneticisi</translation>
     </message>
     <message>
       <source>&amp;Create User</source>
-      <translation type="unfinished">&amp;Create User</translation>
+      <translation>&amp;Kullanıcı Oluştur</translation>
     </message>
     <message>
       <source>&amp;Delete User</source>
@@ -2915,11 +2915,11 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>&amp;Rename User</source>
-      <translation type="unfinished">&amp;Rename User</translation>
+      <translation>&amp;Kullanıcıyı Yeniden Adlandır</translation>
     </message>
     <message>
       <source>&amp;Set Default User</source>
-      <translation type="unfinished">&amp;Set Default User</translation>
+      <translation>&amp;Varsayılan Kullanıcı Ayarla</translation>
     </message>
     <message>
       <source>&amp;Set Color</source>
@@ -2931,11 +2931,11 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>&amp;Close</source>
-      <translation type="unfinished">&amp;Close</translation>
+      <translation>&amp;Kapat</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Hata</translation>
     </message>
     <message>
       <source>Cannot add more users.</source>
@@ -2943,7 +2943,7 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Create New User</source>
-      <translation type="unfinished">Create New User</translation>
+      <translation>Yeni Kullanıcı Oluştur</translation>
     </message>
     <message>
       <source>New User ID: %1</source>
@@ -2955,7 +2955,7 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Invalid Username</source>
-      <translation type="unfinished">Invalid Username</translation>
+      <translation>Geçersiz Kullanıcı Adı</translation>
     </message>
     <message>
       <source>Username must be 3–16 chars and valid.</source>
@@ -2971,11 +2971,11 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Rename User</source>
-      <translation type="unfinished">Rename User</translation>
+      <translation>Kullanıcıyı Yeniden Adlandır</translation>
     </message>
     <message>
       <source>Old Username: %1</source>
-      <translation type="unfinished">Old Username: %1</translation>
+      <translation>Eski Kullanıcı Adı: %1</translation>
     </message>
     <message>
       <source>Set User Color</source>
@@ -2983,7 +2983,7 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Select color:</source>
-      <translation type="unfinished">Select color:</translation>
+      <translation>Renk seç:</translation>
     </message>
     <message>
       <source>Set Controller Port</source>
@@ -2995,7 +2995,7 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>&amp;Open User Directory</source>
-      <translation type="unfinished">&amp;Open User Directory</translation>
+      <translation>&amp;Kullanıcı Dizinini Aç</translation>
     </message>
   </context>
   <context>
