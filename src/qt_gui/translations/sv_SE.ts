@@ -648,7 +648,7 @@ Must be a valid hex string with even length.</translation>
     </message>
     <message>
       <source>Status: Not loaded</source>
-      <translation type="unfinished">Status: Not loaded</translation>
+      <translation>Status: Inte inläst</translation>
     </message>
     <message>
       <source>Trophy Key</source>
@@ -660,35 +660,35 @@ Must be a valid hex string with even length.</translation>
     </message>
     <message>
       <source>Exponent1</source>
-      <translation type="unfinished">Exponent1</translation>
+      <translation>Exponent1</translation>
     </message>
     <message>
       <source>Exponent2</source>
-      <translation type="unfinished">Exponent2</translation>
+      <translation>Exponent2</translation>
     </message>
     <message>
       <source>Public Exponent</source>
-      <translation type="unfinished">Public Exponent</translation>
+      <translation>Publik exponent</translation>
     </message>
     <message>
       <source>Coefficient</source>
-      <translation type="unfinished">Coefficient</translation>
+      <translation>Koefficient</translation>
     </message>
     <message>
       <source>Modulus</source>
-      <translation type="unfinished">Modulus</translation>
+      <translation>Modul</translation>
     </message>
     <message>
       <source>Prime 1</source>
-      <translation type="unfinished">Prime 1</translation>
+      <translation>Primtal 1</translation>
     </message>
     <message>
       <source>Prime 2</source>
-      <translation type="unfinished">Prime 2</translation>
+      <translation>Primtal 2</translation>
     </message>
     <message>
       <source>Private Exponent</source>
-      <translation type="unfinished">Private Exponent</translation>
+      <translation>Privat exponent</translation>
     </message>
     <message>
       <source>Fake Keyset</source>
@@ -722,11 +722,11 @@ All fields must be valid hex strings with even length.</translation>
     </message>
     <message>
       <source>Close</source>
-      <translation type="unfinished">Close</translation>
+      <translation>Stäng</translation>
     </message>
     <message>
       <source>Warning</source>
-      <translation type="unfinished">Warning</translation>
+      <translation>Varning</translation>
     </message>
     <message>
       <source>No key file found or failed to load.
@@ -736,59 +736,59 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Validation Error</source>
-      <translation type="unfinished">Validation Error</translation>
+      <translation>Valideringsfel</translation>
     </message>
     <message>
       <source>Success</source>
-      <translation type="unfinished">Success</translation>
+      <translation>Lyckades</translation>
     </message>
     <message>
       <source>Keys saved successfully!</source>
-      <translation type="unfinished">Keys saved successfully!</translation>
+      <translation>Nycklar sparades!</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Fel</translation>
     </message>
     <message>
       <source>Failed to save keys!</source>
-      <translation type="unfinished">Failed to save keys!</translation>
+      <translation>Misslyckades med att spara nycklar!</translation>
     </message>
     <message>
       <source>Status: All fields empty</source>
-      <translation type="unfinished">Status: All fields empty</translation>
+      <translation>Status: Alla fält tomma</translation>
     </message>
     <message>
       <source>Status: Invalid hex values</source>
-      <translation type="unfinished">Status: Invalid hex values</translation>
+      <translation>Status: Ogiltiga hexvärden</translation>
     </message>
     <message>
       <source>Status: Incomplete</source>
-      <translation type="unfinished">Status: Incomplete</translation>
+      <translation>Status: Inte komplett</translation>
     </message>
     <message>
       <source>Status: Valid</source>
-      <translation type="unfinished">Status: Valid</translation>
+      <translation>Status: Giltig</translation>
     </message>
     <message>
       <source>Invalid File</source>
-      <translation type="unfinished">Invalid File</translation>
+      <translation>Ogiltig fil</translation>
     </message>
     <message>
       <source>Only JSON files are supported.</source>
-      <translation type="unfinished">Only JSON files are supported.</translation>
+      <translation>Endast JSON-filer stöds.</translation>
     </message>
     <message>
       <source>Unable to open file.</source>
-      <translation type="unfinished">Unable to open file.</translation>
+      <translation>Kunde inte öppna filen.</translation>
     </message>
     <message>
       <source>JSON Error</source>
-      <translation type="unfinished">JSON Error</translation>
+      <translation>JSON-fel</translation>
     </message>
     <message>
       <source>Invalid JSON format.</source>
-      <translation type="unfinished">Invalid JSON format.</translation>
+      <translation>Ogiltigt JSON-format.</translation>
     </message>
     <message>
       <source>Keys successfully loaded from JSON!</source>
@@ -804,11 +804,11 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Load Key</source>
-      <translation type="unfinished">Load Key</translation>
+      <translation>Läs in nyckel</translation>
     </message>
     <message>
       <source>Save Key</source>
-      <translation type="unfinished">Save Key</translation>
+      <translation>Spara nyckel</translation>
     </message>
   </context>
   <context>
@@ -1293,19 +1293,19 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>User 1</source>
-      <translation type="unfinished">User 1</translation>
+      <translation>Användare 1</translation>
     </message>
     <message>
       <source>User 2</source>
-      <translation type="unfinished">User 2</translation>
+      <translation>Användare 2</translation>
     </message>
     <message>
       <source>User 3</source>
-      <translation type="unfinished">User 3</translation>
+      <translation>Användare 3</translation>
     </message>
     <message>
       <source>User 4</source>
-      <translation type="unfinished">User 4</translation>
+      <translation>Användare 4</translation>
     </message>
     <message>
       <source>This game has no save folder to open!</source>
@@ -1999,11 +1999,11 @@ Välj en emulatorversion från den högra panelen.</translation>
     </message>
     <message>
       <source>Manage Cryptographic Keys</source>
-      <translation type="unfinished">Manage Cryptographic Keys</translation>
+      <translation>Hantera kryptografiska nycklar</translation>
     </message>
     <message>
       <source>Manage Users</source>
-      <translation type="unfinished">Manage Users</translation>
+      <translation>Hantera användare</translation>
     </message>
   </context>
   <context>
@@ -2834,23 +2834,23 @@ Välj en emulatorversion från den högra panelen.</translation>
     </message>
     <message>
       <source>Audio</source>
-      <translation type="unfinished">Audio</translation>
+      <translation>Ljud</translation>
     </message>
     <message>
       <source>Audio Backend</source>
-      <translation type="unfinished">Audio Backend</translation>
+      <translation>Ljudbakände</translation>
     </message>
     <message>
       <source>Mic Device</source>
-      <translation type="unfinished">Mic Device</translation>
+      <translation>Mikrofonenhet</translation>
     </message>
     <message>
       <source>Devices</source>
-      <translation type="unfinished">Devices</translation>
+      <translation>Enheter</translation>
     </message>
     <message>
       <source>Camera</source>
-      <translation type="unfinished">Camera</translation>
+      <translation>Kamera</translation>
     </message>
   </context>
   <context>
@@ -2903,99 +2903,99 @@ Välj en emulatorversion från den högra panelen.</translation>
     <name>UserManagerDialog</name>
     <message>
       <source>User Manager</source>
-      <translation type="unfinished">User Manager</translation>
+      <translation>Användarhanterare</translation>
     </message>
     <message>
       <source>&amp;Create User</source>
-      <translation type="unfinished">&amp;Create User</translation>
+      <translation>S&amp;kapa användare</translation>
     </message>
     <message>
       <source>&amp;Delete User</source>
-      <translation type="unfinished">&amp;Delete User</translation>
+      <translation>&amp;Ta bort användare</translation>
     </message>
     <message>
       <source>&amp;Rename User</source>
-      <translation type="unfinished">&amp;Rename User</translation>
+      <translation>&amp;Byt namn på användare</translation>
     </message>
     <message>
       <source>&amp;Set Default User</source>
-      <translation type="unfinished">&amp;Set Default User</translation>
+      <translation>S&amp;täll in standardanvändare</translation>
     </message>
     <message>
       <source>&amp;Set Color</source>
-      <translation type="unfinished">&amp;Set Color</translation>
+      <translation>&amp;Ställ in färg</translation>
     </message>
     <message>
       <source>&amp;Set Controller Port</source>
-      <translation type="unfinished">&amp;Set Controller Port</translation>
+      <translation>S&amp;täll in kontrollerport</translation>
     </message>
     <message>
       <source>&amp;Close</source>
-      <translation type="unfinished">&amp;Close</translation>
+      <translation>S&amp;täng</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Fel</translation>
     </message>
     <message>
       <source>Cannot add more users.</source>
-      <translation type="unfinished">Cannot add more users.</translation>
+      <translation>Kan inte lägga till fler användare.</translation>
     </message>
     <message>
       <source>Create New User</source>
-      <translation type="unfinished">Create New User</translation>
+      <translation>Skapa ny användare</translation>
     </message>
     <message>
       <source>New User ID: %1</source>
-      <translation type="unfinished">New User ID: %1</translation>
+      <translation>Nytt användar-id: %1</translation>
     </message>
     <message>
       <source>Username (3–16 chars, letters, numbers, _, -)</source>
-      <translation type="unfinished">Username (3–16 chars, letters, numbers, _, -)</translation>
+      <translation>Användarnamn (3–16 tecken, bokstäver, siffror, _, -)</translation>
     </message>
     <message>
       <source>Invalid Username</source>
-      <translation type="unfinished">Invalid Username</translation>
+      <translation>Ogiltigt användarnamn</translation>
     </message>
     <message>
       <source>Username must be 3–16 chars and valid.</source>
-      <translation type="unfinished">Username must be 3–16 chars and valid.</translation>
+      <translation>Användarnamn måste innehålla 3-16 tecken och vara giltigt.</translation>
     </message>
     <message>
       <source>Delete Confirmation</source>
-      <translation type="unfinished">Delete Confirmation</translation>
+      <translation>Bekräfta borttagning</translation>
     </message>
     <message>
       <source>Delete user ID %1?</source>
-      <translation type="unfinished">Delete user ID %1?</translation>
+      <translation>Ta bort användar-id %1?</translation>
     </message>
     <message>
       <source>Rename User</source>
-      <translation type="unfinished">Rename User</translation>
+      <translation>Byt namn på användare</translation>
     </message>
     <message>
       <source>Old Username: %1</source>
-      <translation type="unfinished">Old Username: %1</translation>
+      <translation>Gammalt användarnamn: %1</translation>
     </message>
     <message>
       <source>Set User Color</source>
-      <translation type="unfinished">Set User Color</translation>
+      <translation>Ställ in användarfärg</translation>
     </message>
     <message>
       <source>Select color:</source>
-      <translation type="unfinished">Select color:</translation>
+      <translation>Välj färg:</translation>
     </message>
     <message>
       <source>Set Controller Port</source>
-      <translation type="unfinished">Set Controller Port</translation>
+      <translation>Ställ in kontrollerport</translation>
     </message>
     <message>
       <source>Assign port (1-4) to this user:</source>
-      <translation type="unfinished">Assign port (1-4) to this user:</translation>
+      <translation>Tilldela port (1-4) till denna användare:</translation>
     </message>
     <message>
       <source>&amp;Open User Directory</source>
-      <translation type="unfinished">&amp;Open User Directory</translation>
+      <translation>Ö&amp;ppna användarkatalog</translation>
     </message>
   </context>
   <context>
