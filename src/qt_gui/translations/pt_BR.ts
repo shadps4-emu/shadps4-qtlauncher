@@ -3172,7 +3172,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Do you want to update?</source>
-      <translation>Você quer atualizar?</translation>
+      <translation>Deseja atualizar?</translation>
     </message>
     <message>
       <source>Update</source>
