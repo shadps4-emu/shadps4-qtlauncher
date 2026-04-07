@@ -2658,11 +2658,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Audio Device (general)</source>
-      <translation>Аудиоустройство (главное)</translation>
+      <translation>Устройство аудио (основное)</translation>
     </message>
     <message>
       <source>Audio Device (DS4 speaker)</source>
-      <translation>Аудиоустройство (динамик DS4)</translation>
+      <translation>Устройство аудио (динамик DS4)</translation>
     </message>
     <message>
       <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
