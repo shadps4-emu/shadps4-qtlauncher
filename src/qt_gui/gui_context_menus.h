@@ -61,6 +61,16 @@ public:
             return changedFavorite;
         }
 
+        // Get all user names
+        QString User1 =
+            QString::fromStdString(UserSettings.GetUserManager().GetUserByID(1000)->user_name);
+        QString User2 =
+            QString::fromStdString(UserSettings.GetUserManager().GetUserByID(1001)->user_name);
+        QString User3 =
+            QString::fromStdString(UserSettings.GetUserManager().GetUserByID(1002)->user_name);
+        QString User4 =
+            QString::fromStdString(UserSettings.GetUserManager().GetUserByID(1003)->user_name);
+
         // Setup menu.
         QMenu menu(widget);
 
@@ -79,10 +89,10 @@ public:
         QAction* openGameFolder = new QAction(tr("Open Game Folder"), widget);
         QAction* openUpdateFolder = new QAction(tr("Open Update Folder"), widget);
         QMenu* openSaveDataMenu = new QMenu(tr("Open Save Data Folder"), widget);
-        QAction* openUser1Save = new QAction(tr("User 1"), widget);
-        QAction* openUser2Save = new QAction(tr("User 2"), widget);
-        QAction* openUser3Save = new QAction(tr("User 3"), widget);
-        QAction* openUser4Save = new QAction(tr("User 4"), widget);
+        QAction* openUser1Save = new QAction(QString("%1 1: " + User1).arg(tr("User")), widget);
+        QAction* openUser2Save = new QAction(QString("%1 2: " + User2).arg(tr("User")), widget);
+        QAction* openUser3Save = new QAction(QString("%1 3: " + User3).arg(tr("User")), widget);
+        QAction* openUser4Save = new QAction(QString("%1 4: " + User4).arg(tr("User")), widget);
         QAction* openLogFolder = new QAction(tr("Open Log Folder"), widget);
 
         openFolderMenu->addAction(openGameFolder);
@@ -167,10 +177,10 @@ public:
         QAction* deleteGame = new QAction(tr("Delete Game"), widget);
         QAction* deleteUpdate = new QAction(tr("Delete Update"), widget);
         QMenu* deleteSaveDataMenu = new QMenu(tr("Delete Save Data"), widget);
-        QAction* deleteUser1Save = new QAction(tr("User 1"), widget);
-        QAction* deleteUser2Save = new QAction(tr("User 2"), widget);
-        QAction* deleteUser3Save = new QAction(tr("User 3"), widget);
-        QAction* deleteUser4Save = new QAction(tr("User 4"), widget);
+        QAction* deleteUser1Save = new QAction(QString("%1 1: " + User1).arg(tr("User")), widget);
+        QAction* deleteUser2Save = new QAction(QString("%1 2: " + User2).arg(tr("User")), widget);
+        QAction* deleteUser3Save = new QAction(QString("%1 3: " + User3).arg(tr("User")), widget);
+        QAction* deleteUser4Save = new QAction(QString("%1 4: " + User4).arg(tr("User")), widget);
         QAction* deleteDLC = new QAction(tr("Delete DLC"), widget);
         QAction* deleteTrophy = new QAction(tr("Delete Trophy"), widget);
         QAction* deleteShaderCache = new QAction(tr("Delete Shader Cache"), widget);
