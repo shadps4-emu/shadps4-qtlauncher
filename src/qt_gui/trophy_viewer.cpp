@@ -15,6 +15,7 @@
 #include "common/path_util.h"
 #include "core/emulator_settings.h"
 #include "core/file_format/npbind.h"
+#include "core/user_settings.h"
 #include "main_window_themes.h"
 #include "trophy_viewer.h"
 
@@ -206,7 +207,9 @@ TrophyViewer::TrophyViewer(std::shared_ptr<gui_settings> gui_settings, QString t
             << "ID"
             << "Hidden"
             << "PID";
-    PopulateTrophyWidget(trophyPath);
+
+    std::string defaultUsername = UserSettings.GetUserManager().GetDefaultUser().user_name;
+    PopulateTrophyWidget(trophyPath, QString::fromStdString(defaultUsername));
 
     trophyInfoDock = new QDockWidget("", this);
     QWidget* dockWidget = new QWidget(trophyInfoDock);
@@ -215,6 +218,22 @@ TrophyViewer::TrophyViewer(std::shared_ptr<gui_settings> gui_settings, QString t
 
     // ComboBox for game selection
     if (!allTrophyGames_.isEmpty()) {
+        QLabel* userSelectionLabel = new QLabel(tr("Select User:"), dockWidget);
+        dockLayout->addWidget(userSelectionLabel);
+
+        userSelectionComboBox = new QComboBox(dockWidget);
+        for (const auto& User : UserSettings.GetUserManager().GetAllUsers()) {
+            userSelectionComboBox->addItem(QString::fromStdString(User.user_name));
+        }
+
+        // Select default user in ComboBox
+        int defaultIndex = userSelectionComboBox->findText(QString::fromStdString(defaultUsername));
+        if (defaultIndex >= 0) {
+            userSelectionComboBox->setCurrentIndex(defaultIndex);
+        }
+
+        dockLayout->addWidget(userSelectionComboBox);
+
         QLabel* gameSelectionLabel = new QLabel(tr("Select Game:"), dockWidget);
         dockLayout->addWidget(gameSelectionLabel);
 
@@ -233,8 +252,15 @@ TrophyViewer::TrophyViewer(std::shared_ptr<gui_settings> gui_settings, QString t
 
         dockLayout->addWidget(gameSelectionComboBox);
 
-        connect(gameSelectionComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this,
-                &TrophyViewer::onGameSelectionChanged);
+        connect(gameSelectionComboBox, &QComboBox::currentIndexChanged, this, [this]() {
+            SelectionChanged(gameSelectionComboBox->currentIndex(),
+                             userSelectionComboBox->currentText());
+        });
+
+        connect(userSelectionComboBox, &QComboBox::currentIndexChanged, this, [this]() {
+            SelectionChanged(gameSelectionComboBox->currentIndex(),
+                             userSelectionComboBox->currentText());
+        });
 
         QFrame* line = new QFrame(dockWidget);
         line->setFrameShape(QFrame::HLine);
@@ -303,8 +329,8 @@ TrophyViewer::TrophyViewer(std::shared_ptr<gui_settings> gui_settings, QString t
     });
 }
 
-void TrophyViewer::onGameSelectionChanged(int index) {
-    if (index < 0 || index >= allTrophyGames_.size()) {
+void TrophyViewer::SelectionChanged(int gameIndex, QString user) {
+    if (gameIndex < 0 || gameIndex >= allTrophyGames_.size()) {
         return;
     }
 
@@ -314,7 +340,7 @@ void TrophyViewer::onGameSelectionChanged(int index) {
         delete widget;
     }
 
-    const TrophyGameInfo& selectedGame = allTrophyGames_[index];
+    const TrophyGameInfo& selectedGame = allTrophyGames_[gameIndex];
     currentGameName_ = selectedGame.name;
     gameTrpPath_ = selectedGame.gameTrpPath;
 
@@ -333,7 +359,7 @@ void TrophyViewer::onGameSelectionChanged(int index) {
         }
     }
 
-    PopulateTrophyWidget(selectedGame.trophyPath);
+    PopulateTrophyWidget(selectedGame.trophyPath, user);
 
     updateTrophyInfo();
     updateTableFilters();
@@ -350,7 +376,7 @@ void TrophyViewer::reopenLeftDock() {
     reopenButton->setVisible(false);
 }
 
-void TrophyViewer::PopulateTrophyWidget(QString title) {
+void TrophyViewer::PopulateTrophyWidget(QString title, QString user) {
 
     // only use first npCommID for now
     std::string npCommId = npCommIds[0];
@@ -372,8 +398,16 @@ void TrophyViewer::PopulateTrophyWidget(QString title) {
         }
     }
 
-    std::string filename = npCommId + ".xml";
-    auto user_trophy_file = EmulatorSettings.GetHomeDir() / "1000" / "trophy" / filename;
+    const std::string filename = npCommId + ".xml";
+    std::string userId = "1000";
+
+    for (const auto& User : UserSettings.GetUserManager().GetAllUsers()) {
+        if (User.user_name == user) {
+            userId = std::to_string(User.user_id);
+        }
+    }
+
+    auto user_trophy_file = EmulatorSettings.GetHomeDir() / userId / "trophy" / filename;
     if (!std::filesystem::exists(user_trophy_file)) {
         std::error_code discard;
         std::filesystem::copy_file(trophyFilesPath / "Xml" / "TROPCONF.XML", user_trophy_file,
