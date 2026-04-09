@@ -951,7 +951,7 @@ Skriv inn nøklene og lagre dem.</translation>
     </message>
     <message>
       <source>Path</source>
-      <translation>Adresse</translation>
+      <translation>Sti</translation>
     </message>
     <message>
       <source>Play Time</source>
