@@ -45,10 +45,10 @@ public:
     void reopenLeftDock();
 
 private slots:
-    void onGameSelectionChanged(int index);
+    void SelectionChanged(int gameIndex, QString user);
 
 private:
-    void PopulateTrophyWidget(QString title);
+    void PopulateTrophyWidget(QString title, QString user);
     void SetTableItem(QTableWidget* parent, int row, int column, QString str);
     bool userResizedWindow_ = false;
     bool programmaticResize_ = false;
@@ -64,6 +64,7 @@ private:
     QCheckBox* showNotEarnedCheck;
     QCheckBox* showHiddenCheck;
     QComboBox* gameSelectionComboBox;
+    QComboBox* userSelectionComboBox;
     QPushButton* expandButton;
     QDockWidget* trophyInfoDock;
     QPushButton* reopenButton;
