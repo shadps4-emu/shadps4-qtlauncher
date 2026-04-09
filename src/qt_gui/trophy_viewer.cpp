@@ -425,7 +425,7 @@ void TrophyViewer::PopulateTrophyWidget(QString title, QString user) {
         delete widget;
     }
 
-    QString tabName = "User 1";
+    QString tabName = QString(tr("%1 trophies for %2").arg(currentGameName_).arg(user));
     QString trpDir = trophyDirQt;
 
     QString iconsPath = trpDir + "/Icons";
@@ -620,7 +620,7 @@ void TrophyViewer::PopulateTrophyWidget(QString title, QString user) {
         tableWidget->setColumnWidth(3, hardMinDesc);
     }
 
-    tabWidget->addTab(tableWidget, tabName.insert(6, " ").replace(0, 1, tabName.at(0).toUpper()));
+    tabWidget->addTab(tableWidget, tabName);
 
     this->setCentralWidget(tabWidget);
 
