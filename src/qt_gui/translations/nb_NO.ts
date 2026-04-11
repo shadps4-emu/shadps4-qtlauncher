@@ -1292,24 +1292,12 @@ Skriv inn nøklene og lagre dem.</translation>
       <translation>Skyggelegger hurtiglager</translation>
     </message>
     <message>
-      <source>User 1</source>
-      <translation>Bruker 1</translation>
-    </message>
-    <message>
-      <source>User 2</source>
-      <translation>Bruker 2</translation>
-    </message>
-    <message>
-      <source>User 3</source>
-      <translation>Bruker 3</translation>
-    </message>
-    <message>
-      <source>User 4</source>
-      <translation>Bruker 4</translation>
-    </message>
-    <message>
       <source>This game has no save folder to open!</source>
       <translation>Dette spillet har ingen lagret datamappe å åpne!</translation>
+    </message>
+    <message>
+      <source>User</source>
+      <translation type="unfinished">User</translation>
     </message>
   </context>
   <context>
@@ -2897,6 +2885,14 @@ Velg en emulatorversjon fra høyre panel.</translation>
     <message>
       <source>Show Hidden Trophies</source>
       <translation>Vis skjulte trofeer</translation>
+    </message>
+    <message>
+      <source>Select User:</source>
+      <translation type="unfinished">Select User:</translation>
+    </message>
+    <message>
+      <source>%1 trophies for %2</source>
+      <translation type="unfinished">%1 trophies for %2</translation>
     </message>
   </context>
   <context>
