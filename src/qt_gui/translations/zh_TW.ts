@@ -1290,24 +1290,12 @@ Please enter your keys and save them.</translation>
       <translation type="unfinished">Shader Cache</translation>
     </message>
     <message>
-      <source>User 1</source>
-      <translation type="unfinished">User 1</translation>
-    </message>
-    <message>
-      <source>User 2</source>
-      <translation type="unfinished">User 2</translation>
-    </message>
-    <message>
-      <source>User 3</source>
-      <translation type="unfinished">User 3</translation>
-    </message>
-    <message>
-      <source>User 4</source>
-      <translation type="unfinished">User 4</translation>
-    </message>
-    <message>
       <source>This game has no save folder to open!</source>
       <translation type="unfinished">This game has no save folder to open!</translation>
+    </message>
+    <message>
+      <source>User</source>
+      <translation type="unfinished">User</translation>
     </message>
   </context>
   <context>
@@ -2891,6 +2879,14 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Show Hidden Trophies</source>
       <translation>顯示隱藏的獎盃</translation>
+    </message>
+    <message>
+      <source>Select User:</source>
+      <translation type="unfinished">Select User:</translation>
+    </message>
+    <message>
+      <source>%1 trophies for %2</source>
+      <translation type="unfinished">%1 trophies for %2</translation>
     </message>
   </context>
   <context>
