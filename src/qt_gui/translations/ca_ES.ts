@@ -1292,24 +1292,12 @@ Si us plau, introdueix les teves claus per desar-les.</translation>
       <translation>Memòria cau de shaders</translation>
     </message>
     <message>
-      <source>User 1</source>
-      <translation>Usuari 1</translation>
-    </message>
-    <message>
-      <source>User 2</source>
-      <translation>Usuari 2</translation>
-    </message>
-    <message>
-      <source>User 3</source>
-      <translation>Usuari 3</translation>
-    </message>
-    <message>
-      <source>User 4</source>
-      <translation>Usuari 4</translation>
-    </message>
-    <message>
       <source>This game has no save folder to open!</source>
       <translation>Aquest joc no té carpeta de desats per obrir!</translation>
+    </message>
+    <message>
+      <source>User</source>
+      <translation>Usuari</translation>
     </message>
   </context>
   <context>
@@ -2897,6 +2885,14 @@ Selecciona una versió del panell dret.</translation>
     <message>
       <source>Show Hidden Trophies</source>
       <translation>Mostra els trofeus ocults</translation>
+    </message>
+    <message>
+      <source>Select User:</source>
+      <translation>Selecciona usuari:</translation>
+    </message>
+    <message>
+      <source>%1 trophies for %2</source>
+      <translation>%1 trofeus per %2</translation>
     </message>
   </context>
   <context>

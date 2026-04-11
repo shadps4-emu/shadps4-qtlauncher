@@ -1297,24 +1297,12 @@ sam izvještaj ne bi postao nevaljan:</translation>
       <translation>Shader Cache</translation>
     </message>
     <message>
-      <source>User 1</source>
-      <translation type="unfinished">User 1</translation>
-    </message>
-    <message>
-      <source>User 2</source>
-      <translation type="unfinished">User 2</translation>
-    </message>
-    <message>
-      <source>User 3</source>
-      <translation type="unfinished">User 3</translation>
-    </message>
-    <message>
-      <source>User 4</source>
-      <translation type="unfinished">User 4</translation>
-    </message>
-    <message>
       <source>This game has no save folder to open!</source>
       <translation type="unfinished">This game has no save folder to open!</translation>
+    </message>
+    <message>
+      <source>User</source>
+      <translation type="unfinished">User</translation>
     </message>
   </context>
   <context>
@@ -2905,6 +2893,14 @@ Izaziva rušenje ili probleme u nekim igrama.</translation>
     <message>
       <source>Show Hidden Trophies</source>
       <translation>Prikaži Skrivene trofeje</translation>
+    </message>
+    <message>
+      <source>Select User:</source>
+      <translation type="unfinished">Select User:</translation>
+    </message>
+    <message>
+      <source>%1 trophies for %2</source>
+      <translation type="unfinished">%1 trophies for %2</translation>
     </message>
   </context>
   <context>

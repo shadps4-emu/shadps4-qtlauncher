@@ -1291,24 +1291,12 @@ Bitte gib die Schlüssel ein und speicher diese.</translation>
       <translation>Shader Cache</translation>
     </message>
     <message>
-      <source>User 1</source>
-      <translation>Benutzer 1</translation>
-    </message>
-    <message>
-      <source>User 2</source>
-      <translation>Benutzer 2</translation>
-    </message>
-    <message>
-      <source>User 3</source>
-      <translation>Benutzer 3</translation>
-    </message>
-    <message>
-      <source>User 4</source>
-      <translation>Benutzer 4</translation>
-    </message>
-    <message>
       <source>This game has no save folder to open!</source>
       <translation>Dieses Spiel hat keinen Speicherdaten-Ordner zum Öffnen!</translation>
+    </message>
+    <message>
+      <source>User</source>
+      <translation type="unfinished">User</translation>
     </message>
   </context>
   <context>
@@ -2900,6 +2888,14 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
     <message>
       <source>Show Hidden Trophies</source>
       <translation>Verborgene Trophäen anzeigen</translation>
+    </message>
+    <message>
+      <source>Select User:</source>
+      <translation type="unfinished">Select User:</translation>
+    </message>
+    <message>
+      <source>%1 trophies for %2</source>
+      <translation type="unfinished">%1 trophies for %2</translation>
     </message>
   </context>
   <context>

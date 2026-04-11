@@ -1290,24 +1290,12 @@ Please enter your keys and save them.</source>
       <translation>着色器缓存</translation>
     </message>
     <message>
-      <source>User 1</source>
-      <translation>用户1</translation>
-    </message>
-    <message>
-      <source>User 2</source>
-      <translation>用户2</translation>
-    </message>
-    <message>
-      <source>User 3</source>
-      <translation>用户3</translation>
-    </message>
-    <message>
-      <source>User 4</source>
-      <translation>用户4</translation>
-    </message>
-    <message>
       <source>This game has no save folder to open!</source>
       <translation>此游戏没有可打开的存档文件夹！</translation>
+    </message>
+    <message>
+      <source>User</source>
+      <translation type="unfinished">User</translation>
     </message>
   </context>
   <context>
@@ -2897,6 +2885,14 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Show Hidden Trophies</source>
       <translation>显示隐藏奖杯</translation>
+    </message>
+    <message>
+      <source>Select User:</source>
+      <translation type="unfinished">Select User:</translation>
+    </message>
+    <message>
+      <source>%1 trophies for %2</source>
+      <translation type="unfinished">%1 trophies for %2</translation>
     </message>
   </context>
   <context>

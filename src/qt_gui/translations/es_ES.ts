@@ -1292,24 +1292,12 @@ Debes introducir tus claves y guardarlas.</translation>
       <translation>Caché de shaders</translation>
     </message>
     <message>
-      <source>User 1</source>
-      <translation>Usuario 1</translation>
-    </message>
-    <message>
-      <source>User 2</source>
-      <translation>Usuario 2</translation>
-    </message>
-    <message>
-      <source>User 3</source>
-      <translation>Usuario 3</translation>
-    </message>
-    <message>
-      <source>User 4</source>
-      <translation>Usuario 4</translation>
-    </message>
-    <message>
       <source>This game has no save folder to open!</source>
       <translation>¡Este juego no tiene carpeta de datos guardados!</translation>
+    </message>
+    <message>
+      <source>User</source>
+      <translation type="unfinished">User</translation>
     </message>
   </context>
   <context>
@@ -2897,6 +2885,14 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     <message>
       <source>Show Hidden Trophies</source>
       <translation>Mostrar trofeos ocultos</translation>
+    </message>
+    <message>
+      <source>Select User:</source>
+      <translation type="unfinished">Select User:</translation>
+    </message>
+    <message>
+      <source>%1 trophies for %2</source>
+      <translation type="unfinished">%1 trophies for %2</translation>
     </message>
   </context>
   <context>

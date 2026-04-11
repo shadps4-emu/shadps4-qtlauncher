@@ -1292,24 +1292,12 @@ Please enter your keys and save them.</translation>
       <translation>Shadercache</translation>
     </message>
     <message>
-      <source>User 1</source>
-      <translation>Användare 1</translation>
-    </message>
-    <message>
-      <source>User 2</source>
-      <translation>Användare 2</translation>
-    </message>
-    <message>
-      <source>User 3</source>
-      <translation>Användare 3</translation>
-    </message>
-    <message>
-      <source>User 4</source>
-      <translation>Användare 4</translation>
-    </message>
-    <message>
       <source>This game has no save folder to open!</source>
       <translation type="unfinished">This game has no save folder to open!</translation>
+    </message>
+    <message>
+      <source>User</source>
+      <translation type="unfinished">User</translation>
     </message>
   </context>
   <context>
@@ -2897,6 +2885,14 @@ Välj en emulatorversion från den högra panelen.</translation>
     <message>
       <source>Show Hidden Trophies</source>
       <translation>Visa dolda troféer</translation>
+    </message>
+    <message>
+      <source>Select User:</source>
+      <translation type="unfinished">Select User:</translation>
+    </message>
+    <message>
+      <source>%1 trophies for %2</source>
+      <translation type="unfinished">%1 trophies for %2</translation>
     </message>
   </context>
   <context>
