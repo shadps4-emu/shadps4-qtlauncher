@@ -1292,24 +1292,12 @@ Por favor, digite suas chaves e salve-as.</translation>
       <translation>Cache de Shader</translation>
     </message>
     <message>
-      <source>User 1</source>
-      <translation>Usuário 1</translation>
-    </message>
-    <message>
-      <source>User 2</source>
-      <translation>Usuário 2</translation>
-    </message>
-    <message>
-      <source>User 3</source>
-      <translation>Usuário 3</translation>
-    </message>
-    <message>
-      <source>User 4</source>
-      <translation>Usuário 4</translation>
-    </message>
-    <message>
       <source>This game has no save folder to open!</source>
       <translation>Este jogo não possui pasta de jogo salvo para abrir!</translation>
+    </message>
+    <message>
+      <source>User</source>
+      <translation type="unfinished">User</translation>
     </message>
   </context>
   <context>
@@ -2897,6 +2885,14 @@ Selecione uma versão do emulador no painel direito.</translation>
     <message>
       <source>Show Hidden Trophies</source>
       <translation>Mostrar Troféus Ocultos</translation>
+    </message>
+    <message>
+      <source>Select User:</source>
+      <translation type="unfinished">Select User:</translation>
+    </message>
+    <message>
+      <source>%1 trophies for %2</source>
+      <translation type="unfinished">%1 trophies for %2</translation>
     </message>
   </context>
   <context>
