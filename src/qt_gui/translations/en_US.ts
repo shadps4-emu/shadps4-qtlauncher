@@ -1285,24 +1285,12 @@ Please enter your keys and save them.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>User 1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>User 2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>User 3</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>User 4</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>This game has no save folder to open!</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>User</source>
+        <translation type="unfinished">User</translation>
     </message>
 </context>
 <context>
@@ -2883,6 +2871,14 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
         <source>Show Hidden Trophies</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select User:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 trophies for %2</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
