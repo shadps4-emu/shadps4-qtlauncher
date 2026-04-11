@@ -97,6 +97,7 @@ KBMSettings::KBMSettings(std::shared_ptr<GameInfoClass> game_info_get,
     connect(ui->HelpButton, &QPushButton::clicked, this, &KBMSettings::onHelpClicked);
     connect(ui->TextEditorButton, &QPushButton::clicked, this, [this]() {
         auto kbmWindow = new EditorDialog(this);
+        connect(kbmWindow, &EditorDialog::configSaved, this, &QWidget::close);
         kbmWindow->exec();
         SetUIValuestoMappings(config_id);
     });

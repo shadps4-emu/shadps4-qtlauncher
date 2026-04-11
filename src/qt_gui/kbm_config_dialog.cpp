@@ -154,6 +154,7 @@ void EditorDialog::onSaveClicked() {
         isHelpOpen = false;
     }
     saveFile(gameComboBox->currentText());
+    configSaved();
     reject(); // Close the dialog
 }
 

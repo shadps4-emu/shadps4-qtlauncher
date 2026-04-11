@@ -35,4 +35,7 @@ private slots:
     void onHelpClicked();   // Slot for handling help button
     void onResetToDefaultClicked();
     void onGameSelectionChanged(const QString& game); // Slot for game selection changes
+
+signals:
+    void configSaved();
 };
