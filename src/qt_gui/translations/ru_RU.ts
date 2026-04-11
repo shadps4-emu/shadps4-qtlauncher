@@ -1297,7 +1297,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>User</source>
-      <translation type="unfinished">User</translation>
+      <translation>Пользователь</translation>
     </message>
   </context>
   <context>
@@ -2888,11 +2888,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Select User:</source>
-      <translation type="unfinished">Select User:</translation>
+      <translation>Выбрать пользователя:</translation>
     </message>
     <message>
       <source>%1 trophies for %2</source>
-      <translation type="unfinished">%1 trophies for %2</translation>
+      <translation>%1 трофеев для %2</translation>
     </message>
   </context>
   <context>
