@@ -1297,7 +1297,7 @@ Inserisci le chiavi e salvale.</translation>
     </message>
     <message>
       <source>User</source>
-      <translation type="unfinished">User</translation>
+      <translation>Utente</translation>
     </message>
   </context>
   <context>
@@ -2888,11 +2888,11 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
     </message>
     <message>
       <source>Select User:</source>
-      <translation type="unfinished">Select User:</translation>
+      <translation>Seleziona Utente:</translation>
     </message>
     <message>
       <source>%1 trophies for %2</source>
-      <translation type="unfinished">%1 trophies for %2</translation>
+      <translation>Trofei %1 per %2</translation>
     </message>
   </context>
   <context>
