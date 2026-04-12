@@ -30,8 +30,6 @@ VersionDialog::VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget
     ui->setupUi(this);
     this->setMinimumSize(670, 350);
 
-    auto const& version_list = VersionManager::GetVersionList();
-
     ui->checkOnStartupCheckBox->setChecked(
         m_gui_settings->GetValue(gui::vm_checkOnStartup).toBool());
     ui->showChangelogCheckBox->setChecked(m_gui_settings->GetValue(gui::vm_showChangeLog).toBool());
@@ -86,15 +84,15 @@ VersionDialog::VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget
     connect(ui->checkChangesVersionButton, &QPushButton::clicked, this,
             [this]() { LoadInstalledList(); });
 
-    connect(ui->addCustomVersionButton, &QPushButton::clicked, this, [this, version_list]() {
+    connect(ui->addCustomVersionButton, &QPushButton::clicked, this, [this]() {
         QString exePath;
 
 #ifdef Q_OS_WIN
         exePath = QFileDialog::getOpenFileName(this, tr("Select executable"), QDir::rootPath(),
                                                tr("Executable (*.exe)"));
 #elif defined(Q_OS_LINUX) || defined(Q_OS_MACOS)
-    exePath = QFileDialog::getOpenFileName(this, tr("Select executable"), QDir::rootPath(),
-                                           "Executable (*)");
+        exePath = QFileDialog::getOpenFileName(this, tr("Select executable"), QDir::rootPath(),
+                                               "Executable (*)");
 #endif
 
         if (exePath.isEmpty())
@@ -109,6 +107,8 @@ VersionDialog::VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget
             return;
 
         version_name = version_name.trimmed();
+
+        auto version_list = VersionManager::GetVersionList();
 
         if (std::find_if(version_list.cbegin(), version_list.cend(), [version_name](auto i) {
                 return i.name == version_name.toStdString();
