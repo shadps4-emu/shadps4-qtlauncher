@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include "common/assert.h"
-#include "common/logging/backend.h"
+#include "common/logging/log.h"
 
 #if defined(__x86_64__) || defined(_M_X64)
 #define Crash() __asm__ __volatile__("int $3")
@@ -13,14 +13,12 @@
 #endif
 
 void assert_fail_impl() {
-    Common::Log::Stop();
-    std::fflush(stdout);
+    Common::Log::Shutdown();
     Crash();
 }
 
 [[noreturn]] void unreachable_impl() {
-    Common::Log::Stop();
-    std::fflush(stdout);
+    Common::Log::Shutdown();
     Crash();
     throw std::runtime_error("Unreachable code");
 }

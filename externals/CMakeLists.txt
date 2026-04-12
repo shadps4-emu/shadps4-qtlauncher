@@ -16,6 +16,19 @@ if (MSVC)
     add_definitions(-D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_DEPRECATE -D_SCL_SECURE_NO_WARNINGS)
 endif()
 
+# spdlog
+set(SPDLOG_NO_EXCEPTIONS ON)
+set(SPDLOG_DISABLE_GLOBAL_LOGGER ON)
+FetchContent_Declare(
+        spdlog
+        GIT_REPOSITORY https://github.com/Niram7777/spdlog.git
+        GIT_TAG d0bcab2f6b67be52aad4b1e64aa73fd46c7b38e5
+        GIT_SHALLOW true
+        EXCLUDE_FROM_ALL
+        SYSTEM
+)
+FetchContent_MakeAvailable(spdlog)
+
 # fmtlib
 if (NOT TARGET fmt::fmt)
     add_subdirectory(fmt)
