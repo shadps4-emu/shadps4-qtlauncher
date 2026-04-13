@@ -1295,7 +1295,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>User</source>
-      <translation type="unfinished">User</translation>
+      <translation>用户</translation>
     </message>
   </context>
   <context>
@@ -2888,11 +2888,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Select User:</source>
-      <translation type="unfinished">Select User:</translation>
+      <translation>选择用户：</translation>
     </message>
     <message>
       <source>%1 trophies for %2</source>
-      <translation type="unfinished">%1 trophies for %2</translation>
+      <translation>%2 的 %1 个奖杯</translation>
     </message>
   </context>
   <context>
