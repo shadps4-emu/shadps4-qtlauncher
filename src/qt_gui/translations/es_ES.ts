@@ -1297,7 +1297,7 @@ Debes introducir tus claves y guardarlas.</translation>
     </message>
     <message>
       <source>User</source>
-      <translation type="unfinished">User</translation>
+      <translation>Usuario</translation>
     </message>
   </context>
   <context>
@@ -2888,11 +2888,11 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Select User:</source>
-      <translation type="unfinished">Select User:</translation>
+      <translation>Seleccionar usuario:</translation>
     </message>
     <message>
       <source>%1 trophies for %2</source>
-      <translation type="unfinished">%1 trophies for %2</translation>
+      <translation>%1 trofeos de %2</translation>
     </message>
   </context>
   <context>
