@@ -1296,7 +1296,7 @@ Bitte gib die Schlüssel ein und speicher diese.</translation>
     </message>
     <message>
       <source>User</source>
-      <translation type="unfinished">User</translation>
+      <translation>Benutzer</translation>
     </message>
   </context>
   <context>
@@ -2891,11 +2891,11 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
     </message>
     <message>
       <source>Select User:</source>
-      <translation type="unfinished">Select User:</translation>
+      <translation>Benutzer auswählen:</translation>
     </message>
     <message>
       <source>%1 trophies for %2</source>
-      <translation type="unfinished">%1 trophies for %2</translation>
+      <translation>%1 Trophäen für %2</translation>
     </message>
   </context>
   <context>
