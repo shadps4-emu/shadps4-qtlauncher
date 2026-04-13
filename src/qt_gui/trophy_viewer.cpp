@@ -377,7 +377,6 @@ void TrophyViewer::reopenLeftDock() {
 }
 
 void TrophyViewer::PopulateTrophyWidget(QString title, QString user) {
-
     int index = 0;
     for (const auto& npCommId : npCommIds) {
         auto trophyFilesPath =
@@ -385,11 +384,10 @@ void TrophyViewer::PopulateTrophyWidget(QString title, QString user) {
         QString trophyDirQt;
         Common::FS::PathToQString(trophyDirQt, trophyFilesPath);
 
-        std::filesystem::path extractPath =
-            GetTrpFilesPath(Common::FS::PathFromQString(gameTrpPath_));
         QDir dir(trophyDirQt);
         if (!dir.exists()) {
-            if (!trp.Extract(extractPath, index, npCommId, trophyFilesPath)) {
+            if (!trp.Extract(Common::FS::PathFromQString(gameTrpPath_), index, npCommId,
+                             trophyFilesPath, true)) {
                 LOG_ERROR(Loader, "Couldn't extract trophies");
 
                 continue;
@@ -408,6 +406,11 @@ void TrophyViewer::PopulateTrophyWidget(QString title, QString user) {
 
         auto user_trophy_file = EmulatorSettings.GetHomeDir() / userId / "trophy" / filename;
         if (!std::filesystem::exists(user_trophy_file)) {
+
+            if (!std::filesystem::exists(user_trophy_file.parent_path())) {
+                std::filesystem::create_directories(user_trophy_file.parent_path());
+            }
+
             std::error_code discard;
             std::filesystem::copy_file(trophyFilesPath / "Xml" / "TROPCONF.XML", user_trophy_file,
                                        discard);
@@ -657,28 +660,4 @@ void TrophyViewer::SetTableItem(QTableWidget* parent, int row, int column, QStri
     }
 
     parent->setItem(row, column, item);
-}
-
-std::filesystem::path TrophyViewer::GetTrpFilesPath(std::filesystem::path gamePath) {
-    if (!gamePath.string().ends_with("-patch") && !gamePath.string().ends_with("-Update")) {
-        return gamePath;
-    }
-
-    std::string basePath = gamePath.string();
-    if (gamePath.string().ends_with("-patch")) {
-        basePath.erase(basePath.length() - 6);
-    } else if (gamePath.string().ends_with("-UDPATE")) {
-        basePath.erase(basePath.length() - 7);
-    }
-
-    if (std::filesystem::exists(gamePath / "sce_sys" / "trophy")) {
-        for (const auto& entry :
-             std::filesystem::directory_iterator(gamePath / "sce_sys" / "trophy")) {
-            if (entry.path().filename().string().ends_with(".trp")) {
-                return gamePath;
-            }
-        }
-    }
-
-    return basePath;
 }

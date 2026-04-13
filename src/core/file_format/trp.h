@@ -37,7 +37,7 @@ public:
     TRP();
     ~TRP();
     bool Extract(const std::filesystem::path& trophyPath, int index, std::string npCommId,
-                 const std::filesystem::path& outputPath);
+                 const std::filesystem::path& outputPath, bool mergeBasePath = false);
 
 private:
     bool ProcessPngEntry(Common::FS::IOFile& file, const TrpEntry& entry,
