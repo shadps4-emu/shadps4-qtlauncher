@@ -161,7 +161,7 @@ void TrophyViewer::updateTableFilters() {
                 visible = false;
             if (unlockedText == "locked" && !showNotEarned)
                 visible = false;
-            if (hiddenText.toLower() == "yes" && !showHidden)
+            if (hiddenText.toLower() == "yes" && !showHidden && unlockedText != "unlocked")
                 visible = false;
 
             table->setRowHidden(row, !visible);
@@ -378,249 +378,248 @@ void TrophyViewer::reopenLeftDock() {
 
 void TrophyViewer::PopulateTrophyWidget(QString title, QString user) {
 
-    // only use first npCommID for now
-    std::string npCommId = npCommIds[0];
+    int index = 0;
+    for (const auto& npCommId : npCommIds) {
+        auto trophyFilesPath =
+            Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "trophy" / npCommId;
+        QString trophyDirQt;
+        Common::FS::PathToQString(trophyDirQt, trophyFilesPath);
 
-    auto trophyFilesPath =
-        Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "trophy" / npCommId;
-    QString trophyDirQt;
-    Common::FS::PathToQString(trophyDirQt, trophyFilesPath);
+        std::filesystem::path extractPath =
+            GetTrpFilesPath(Common::FS::PathFromQString(gameTrpPath_));
+        QDir dir(trophyDirQt);
+        if (!dir.exists()) {
+            if (!trp.Extract(extractPath, index, npCommId, trophyFilesPath)) {
+                LOG_ERROR(Loader, "Couldn't extract trophies");
 
-    QDir dir(trophyDirQt);
-    if (!dir.exists()) {
-        std::filesystem::path path = Common::FS::PathFromQString(gameTrpPath_);
-        if (!trp.Extract(path, 0, npCommId, trophyFilesPath)) {
-            QMessageBox::critical(this, "Trophy Data Extraction Error",
-                                  "Unable to extract Trophy data, please ensure you have "
-                                  "inputted a trophy key in the settings menu.");
-            QWidget::close();
+                continue;
+            }
+        }
+
+        index++;
+
+        const std::string filename = npCommId + ".xml";
+        std::string userId = "1000";
+        for (const auto& User : UserSettings.GetUserManager().GetAllUsers()) {
+            if (User.user_name == user) {
+                userId = std::to_string(User.user_id);
+            }
+        }
+
+        auto user_trophy_file = EmulatorSettings.GetHomeDir() / userId / "trophy" / filename;
+        if (!std::filesystem::exists(user_trophy_file)) {
+            std::error_code discard;
+            std::filesystem::copy_file(trophyFilesPath / "Xml" / "TROPCONF.XML", user_trophy_file,
+                                       discard);
+        }
+
+        QFileInfoList dirList = dir.entryInfoList(QDir::Dirs | QDir::NoDotAndDotDot);
+        if (dirList.isEmpty())
+            return;
+
+        QString trpDir = trophyDirQt;
+
+        QString iconsPath = trpDir + "/Icons";
+        QDir iconsDir(iconsPath);
+        QFileInfoList iconDirList = iconsDir.entryInfoList(QDir::Files | QDir::NoDotAndDotDot);
+        std::vector<QImage> icons;
+
+        for (const QFileInfo& iconInfo : iconDirList) {
+            QString fileName = iconInfo.fileName();
+
+            // Skip files that doesn't start with "trop" or "TROP"
+            if (!fileName.startsWith("trop", Qt::CaseInsensitive))
+                continue;
+
+            QImage icon =
+                QImage(iconInfo.absoluteFilePath())
+                    .scaled(QSize(128, 128), Qt::KeepAspectRatio, Qt::SmoothTransformation);
+            icons.push_back(icon);
+        }
+
+        QStringList trpId;
+        QStringList trpHidden;
+        QStringList trpUnlocked;
+        QStringList trpType;
+        QStringList trpPid;
+        QStringList trophyNames;
+        QStringList trophyDetails;
+        QStringList trpTimeUnlocked;
+
+        QString userXmlPath;
+        Common::FS::PathToQString(userXmlPath, user_trophy_file);
+        QFile userFile(userXmlPath);
+        if (!userFile.open(QFile::ReadOnly | QFile::Text)) {
             return;
         }
-    }
 
-    const std::string filename = npCommId + ".xml";
-    std::string userId = "1000";
+        QXmlStreamReader usrFileReader(&userFile);
+        while (!usrFileReader.atEnd() && !usrFileReader.hasError()) {
+            usrFileReader.readNext();
+            if (usrFileReader.isStartElement() && usrFileReader.name().toString() == "trophy") {
+                trpId.append(usrFileReader.attributes().value("id").toString());
+                trpHidden.append(usrFileReader.attributes().value("hidden").toString());
+                trpType.append(usrFileReader.attributes().value("ttype").toString());
+                trpPid.append(usrFileReader.attributes().value("pid").toString());
 
-    for (const auto& User : UserSettings.GetUserManager().GetAllUsers()) {
-        if (User.user_name == user) {
-            userId = std::to_string(User.user_id);
-        }
-    }
-
-    auto user_trophy_file = EmulatorSettings.GetHomeDir() / userId / "trophy" / filename;
-    if (!std::filesystem::exists(user_trophy_file)) {
-        std::error_code discard;
-        std::filesystem::copy_file(trophyFilesPath / "Xml" / "TROPCONF.XML", user_trophy_file,
-                                   discard);
-    }
-
-    QFileInfoList dirList = dir.entryInfoList(QDir::Dirs | QDir::NoDotAndDotDot);
-    if (dirList.isEmpty())
-        return;
-
-    // Clears previous tabs (if any)
-    while (tabWidget->count() > 0) {
-        QWidget* widget = tabWidget->widget(0);
-        tabWidget->removeTab(0);
-        delete widget;
-    }
-
-    QString tabName = QString(tr("%1 trophies for %2").arg(currentGameName_).arg(user));
-    QString trpDir = trophyDirQt;
-
-    QString iconsPath = trpDir + "/Icons";
-    QDir iconsDir(iconsPath);
-    QFileInfoList iconDirList = iconsDir.entryInfoList(QDir::Files | QDir::NoDotAndDotDot);
-    std::vector<QImage> icons;
-
-    for (const QFileInfo& iconInfo : iconDirList) {
-        QString fileName = iconInfo.fileName();
-
-        // Skip files that doesn't start with "trop" or "TROP"
-        if (!fileName.startsWith("trop", Qt::CaseInsensitive))
-            continue;
-
-        QImage icon = QImage(iconInfo.absoluteFilePath())
-                          .scaled(QSize(128, 128), Qt::KeepAspectRatio, Qt::SmoothTransformation);
-        icons.push_back(icon);
-    }
-
-    QStringList trpId;
-    QStringList trpHidden;
-    QStringList trpUnlocked;
-    QStringList trpType;
-    QStringList trpPid;
-    QStringList trophyNames;
-    QStringList trophyDetails;
-    QStringList trpTimeUnlocked;
-
-    QString userXmlPath;
-    Common::FS::PathToQString(userXmlPath, user_trophy_file);
-    QFile userFile(userXmlPath);
-    if (!userFile.open(QFile::ReadOnly | QFile::Text)) {
-        return;
-    }
-
-    QXmlStreamReader usrFileReader(&userFile);
-    while (!usrFileReader.atEnd() && !usrFileReader.hasError()) {
-        usrFileReader.readNext();
-        if (usrFileReader.isStartElement() && usrFileReader.name().toString() == "trophy") {
-            trpId.append(usrFileReader.attributes().value("id").toString());
-            trpHidden.append(usrFileReader.attributes().value("hidden").toString());
-            trpType.append(usrFileReader.attributes().value("ttype").toString());
-            trpPid.append(usrFileReader.attributes().value("pid").toString());
-
-            if (usrFileReader.attributes().hasAttribute("unlockstate")) {
-                if (usrFileReader.attributes().value("unlockstate").toString() == "true") {
-                    trpUnlocked.append("unlocked");
-                } else {
-                    trpUnlocked.append("locked");
-                }
-                if (usrFileReader.attributes().hasAttribute("timestamp")) {
-                    QString ts = usrFileReader.attributes().value("timestamp").toString();
-                    if (ts.length() > 10)
-                        trpTimeUnlocked.append("unknown");
-                    else {
-                        bool ok;
-                        qint64 timestampInt = ts.toLongLong(&ok);
-                        if (ok) {
-                            QDateTime dt = QDateTime::fromSecsSinceEpoch(timestampInt);
-                            QString format = useEuropeanDateFormat ? "dd/MM/yyyy HH:mm:ss"
-                                                                   : "MM/dd/yyyy HH:mm:ss";
-                            trpTimeUnlocked.append(dt.toString(format));
-                        } else {
+                if (usrFileReader.attributes().hasAttribute("unlockstate")) {
+                    if (usrFileReader.attributes().value("unlockstate").toString() == "true") {
+                        trpUnlocked.append("unlocked");
+                    } else {
+                        trpUnlocked.append("locked");
+                    }
+                    if (usrFileReader.attributes().hasAttribute("timestamp")) {
+                        QString ts = usrFileReader.attributes().value("timestamp").toString();
+                        if (ts.length() > 10)
                             trpTimeUnlocked.append("unknown");
+                        else {
+                            bool ok;
+                            qint64 timestampInt = ts.toLongLong(&ok);
+                            if (ok) {
+                                QDateTime dt = QDateTime::fromSecsSinceEpoch(timestampInt);
+                                QString format = useEuropeanDateFormat ? "dd/MM/yyyy HH:mm:ss"
+                                                                       : "MM/dd/yyyy HH:mm:ss";
+                                trpTimeUnlocked.append(dt.toString(format));
+                            } else {
+                                trpTimeUnlocked.append("unknown");
+                            }
                         }
+                    } else {
+                        trpTimeUnlocked.append("");
                     }
                 } else {
+                    trpUnlocked.append("locked");
                     trpTimeUnlocked.append("");
                 }
+            }
+        }
+
+        std::filesystem::path path = GetTrophyXmlPath(
+            Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "trophy" / npCommId / "Xml",
+            EmulatorSettings.GetConsoleLanguage());
+        QString xmlPath;
+        Common::FS::PathToQString(xmlPath, path);
+
+        QFile file(xmlPath);
+        if (!file.open(QFile::ReadOnly | QFile::Text)) {
+            QMessageBox::information(this, "test", "did not open");
+            return;
+        }
+
+        QString tabName;
+        QXmlStreamReader reader(&file);
+        while (!reader.atEnd() && !reader.hasError()) {
+            reader.readNext();
+            if (reader.isStartElement() && reader.name().toString() == "title-name") {
+                tabName = reader.readElementText();
+            }
+
+            if (reader.isStartElement() && reader.name().toString() == "trophy") {
+                while (reader.readNextStartElement()) {
+                    if (reader.name().toString() == "name" && !trpId.isEmpty()) {
+                        trophyNames.append(reader.readElementText());
+                    }
+                    if (reader.name().toString() == "detail" && !trpId.isEmpty()) {
+                        trophyDetails.append(reader.readElementText());
+                    }
+                }
+            }
+        }
+
+        QTableWidget* tableWidget = new QTableWidget(this);
+        tableWidget->setShowGrid(false);
+        tableWidget->setColumnCount(9);
+        tableWidget->setHorizontalHeaderLabels(headers);
+        tableWidget->setSelectionBehavior(QAbstractItemView::SelectRows);
+        tableWidget->setSelectionMode(QAbstractItemView::SingleSelection);
+        tableWidget->setVerticalScrollMode(QAbstractItemView::ScrollPerPixel);
+        tableWidget->horizontalHeader()->setStretchLastSection(false);
+        tableWidget->verticalHeader()->setVisible(false);
+        tableWidget->setRowCount(static_cast<int>(icons.size()));
+        tableWidget->setSortingEnabled(true);
+        tableWidget->setWordWrap(true);
+
+        for (int row = 0; auto& icon : icons) {
+            QTableWidgetItem* item = new QTableWidgetItem();
+            item->setData(Qt::DecorationRole, icon);
+            item->setFlags(item->flags() & ~Qt::ItemIsEditable);
+            tableWidget->setItem(row, 1, item);
+
+            const std::string filename = GetTrpType(trpType[row].at(0));
+            QTableWidgetItem* typeitem = new QTableWidgetItem();
+
+            const auto CustomTrophy_Dir =
+                Common::FS::GetUserPath(Common::FS::PathType::CustomTrophy);
+            std::string customPath;
+
+            if (fs::exists(CustomTrophy_Dir / filename)) {
+                customPath = (CustomTrophy_Dir / filename).string();
+            }
+
+            std::vector<char> imgdata;
+
+            if (!customPath.empty()) {
+                std::ifstream file(customPath, std::ios::binary);
+                if (file) {
+                    imgdata = std::vector<char>(std::istreambuf_iterator<char>(file),
+                                                std::istreambuf_iterator<char>());
+                }
             } else {
-                trpUnlocked.append("locked");
-                trpTimeUnlocked.append("");
+                auto resource = cmrc::res::get_filesystem();
+                std::string resourceString = "src/images/" + filename;
+                auto file = resource.open(resourceString);
+                imgdata = std::vector<char>(file.begin(), file.end());
             }
-        }
-    }
 
-    std::filesystem::path path = GetTrophyXmlPath(
-        Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "trophy" / npCommId / "Xml",
-        EmulatorSettings.GetConsoleLanguage());
-    QString xmlPath;
-    Common::FS::PathToQString(xmlPath, path);
+            QImage type_icon = QImage::fromData(imgdata).scaled(
+                QSize(100, 100), Qt::KeepAspectRatio, Qt::SmoothTransformation);
+            typeitem->setData(Qt::DecorationRole, type_icon);
+            typeitem->setFlags(typeitem->flags() & ~Qt::ItemIsEditable);
+            tableWidget->setItem(row, 5, typeitem);
 
-    QFile file(xmlPath);
-    if (!file.open(QFile::ReadOnly | QFile::Text)) {
-        QMessageBox::information(this, "test", "did not open");
-        return;
-    }
-
-    QXmlStreamReader reader(&file);
-    while (!reader.atEnd() && !reader.hasError()) {
-        reader.readNext();
-        if (reader.isStartElement() && reader.name().toString() == "trophy") {
-            while (reader.readNextStartElement()) {
-                if (reader.name().toString() == "name" && !trpId.isEmpty()) {
-                    trophyNames.append(reader.readElementText());
-                }
-                if (reader.name().toString() == "detail" && !trpId.isEmpty()) {
-                    trophyDetails.append(reader.readElementText());
-                }
+            std::string detailString = trophyDetails[row].toStdString();
+            std::size_t newline_pos = 0;
+            while ((newline_pos = detailString.find("\n", newline_pos)) != std::string::npos) {
+                detailString.replace(newline_pos, 1, " ");
+                ++newline_pos;
             }
-        }
-    }
 
-    QTableWidget* tableWidget = new QTableWidget(this);
-    tableWidget->setShowGrid(false);
-    tableWidget->setColumnCount(9);
-    tableWidget->setHorizontalHeaderLabels(headers);
-    tableWidget->setSelectionBehavior(QAbstractItemView::SelectRows);
-    tableWidget->setSelectionMode(QAbstractItemView::SingleSelection);
-    tableWidget->setVerticalScrollMode(QAbstractItemView::ScrollPerPixel);
-    tableWidget->horizontalHeader()->setStretchLastSection(false);
-    tableWidget->verticalHeader()->setVisible(false);
-    tableWidget->setRowCount(static_cast<int>(icons.size()));
-    tableWidget->setSortingEnabled(true);
-    tableWidget->setWordWrap(true);
-
-    for (int row = 0; auto& icon : icons) {
-        QTableWidgetItem* item = new QTableWidgetItem();
-        item->setData(Qt::DecorationRole, icon);
-        item->setFlags(item->flags() & ~Qt::ItemIsEditable);
-        tableWidget->setItem(row, 1, item);
-
-        const std::string filename = GetTrpType(trpType[row].at(0));
-        QTableWidgetItem* typeitem = new QTableWidgetItem();
-
-        const auto CustomTrophy_Dir = Common::FS::GetUserPath(Common::FS::PathType::CustomTrophy);
-        std::string customPath;
-
-        if (fs::exists(CustomTrophy_Dir / filename)) {
-            customPath = (CustomTrophy_Dir / filename).string();
-        }
-
-        std::vector<char> imgdata;
-
-        if (!customPath.empty()) {
-            std::ifstream file(customPath, std::ios::binary);
-            if (file) {
-                imgdata = std::vector<char>(std::istreambuf_iterator<char>(file),
-                                            std::istreambuf_iterator<char>());
+            if (!trophyNames.isEmpty() && !trophyDetails.isEmpty()) {
+                SetTableItem(tableWidget, row, 0, trpUnlocked[row]);
+                SetTableItem(tableWidget, row, 2, trophyNames[row]);
+                SetTableItem(tableWidget, row, 3, QString::fromStdString(detailString));
+                SetTableItem(tableWidget, row, 4, trpTimeUnlocked[row]);
+                SetTableItem(tableWidget, row, 6, trpId[row]);
+                SetTableItem(tableWidget, row, 7, trpHidden[row]);
+                SetTableItem(tableWidget, row, 8, trpPid[row]);
             }
-        } else {
-            auto resource = cmrc::res::get_filesystem();
-            std::string resourceString = "src/images/" + filename;
-            auto file = resource.open(resourceString);
-            imgdata = std::vector<char>(file.begin(), file.end());
+
+            tableWidget->verticalHeader()->resizeSection(row, icon.height());
+            row++;
         }
 
-        QImage type_icon = QImage::fromData(imgdata).scaled(QSize(100, 100), Qt::KeepAspectRatio,
-                                                            Qt::SmoothTransformation);
-        typeitem->setData(Qt::DecorationRole, type_icon);
-        typeitem->setFlags(typeitem->flags() & ~Qt::ItemIsEditable);
-        tableWidget->setItem(row, 5, typeitem);
+        auto header = tableWidget->horizontalHeader();
+        header->setSectionResizeMode(1, QHeaderView::ResizeToContents);
+        header->setSectionResizeMode(5, QHeaderView::ResizeToContents);
+        header->setSectionResizeMode(0, QHeaderView::ResizeToContents);
+        header->setSectionResizeMode(2, QHeaderView::ResizeToContents);
+        header->setSectionResizeMode(3, QHeaderView::Stretch);
+        header->setSectionResizeMode(4, QHeaderView::ResizeToContents);
+        header->setSectionResizeMode(6, QHeaderView::ResizeToContents);
+        header->setSectionResizeMode(7, QHeaderView::ResizeToContents);
+        header->setSectionResizeMode(8, QHeaderView::ResizeToContents);
 
-        std::string detailString = trophyDetails[row].toStdString();
-        std::size_t newline_pos = 0;
-        while ((newline_pos = detailString.find("\n", newline_pos)) != std::string::npos) {
-            detailString.replace(newline_pos, 1, " ");
-            ++newline_pos;
+        tableWidget->resizeColumnsToContents();
+        tableWidget->resizeRowsToContents();
+
+        const int hardMinDesc = 300;
+        int currentDesc = tableWidget->columnWidth(3);
+        if (currentDesc < hardMinDesc) {
+            tableWidget->setColumnWidth(3, hardMinDesc);
         }
 
-        if (!trophyNames.isEmpty() && !trophyDetails.isEmpty()) {
-            SetTableItem(tableWidget, row, 0, trpUnlocked[row]);
-            SetTableItem(tableWidget, row, 2, trophyNames[row]);
-            SetTableItem(tableWidget, row, 3, QString::fromStdString(detailString));
-            SetTableItem(tableWidget, row, 4, trpTimeUnlocked[row]);
-            SetTableItem(tableWidget, row, 6, trpId[row]);
-            SetTableItem(tableWidget, row, 7, trpHidden[row]);
-            SetTableItem(tableWidget, row, 8, trpPid[row]);
-        }
-
-        tableWidget->verticalHeader()->resizeSection(row, icon.height());
-        row++;
+        tabWidget->addTab(tableWidget, tabName);
     }
-
-    auto header = tableWidget->horizontalHeader();
-    header->setSectionResizeMode(1, QHeaderView::ResizeToContents);
-    header->setSectionResizeMode(5, QHeaderView::ResizeToContents);
-    header->setSectionResizeMode(0, QHeaderView::ResizeToContents);
-    header->setSectionResizeMode(2, QHeaderView::ResizeToContents);
-    header->setSectionResizeMode(3, QHeaderView::Stretch);
-    header->setSectionResizeMode(4, QHeaderView::ResizeToContents);
-    header->setSectionResizeMode(6, QHeaderView::ResizeToContents);
-    header->setSectionResizeMode(7, QHeaderView::ResizeToContents);
-    header->setSectionResizeMode(8, QHeaderView::ResizeToContents);
-
-    tableWidget->resizeColumnsToContents();
-    tableWidget->resizeRowsToContents();
-
-    const int hardMinDesc = 300;
-    int currentDesc = tableWidget->columnWidth(3);
-    if (currentDesc < hardMinDesc) {
-        tableWidget->setColumnWidth(3, hardMinDesc);
-    }
-
-    tabWidget->addTab(tableWidget, tabName);
 
     this->setCentralWidget(tabWidget);
 
@@ -658,4 +657,28 @@ void TrophyViewer::SetTableItem(QTableWidget* parent, int row, int column, QStri
     }
 
     parent->setItem(row, column, item);
+}
+
+std::filesystem::path TrophyViewer::GetTrpFilesPath(std::filesystem::path gamePath) {
+    if (!gamePath.string().ends_with("-patch") && !gamePath.string().ends_with("-Update")) {
+        return gamePath;
+    }
+
+    std::string basePath = gamePath.string();
+    if (gamePath.string().ends_with("-patch")) {
+        basePath.erase(basePath.length() - 6);
+    } else if (gamePath.string().ends_with("-UDPATE")) {
+        basePath.erase(basePath.length() - 7);
+    }
+
+    if (std::filesystem::exists(gamePath / "sce_sys" / "trophy")) {
+        for (const auto& entry :
+             std::filesystem::directory_iterator(gamePath / "sce_sys" / "trophy")) {
+            if (entry.path().filename().string().ends_with(".trp")) {
+                return gamePath;
+            }
+        }
+    }
+
+    return basePath;
 }
