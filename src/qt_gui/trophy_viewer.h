@@ -53,6 +53,7 @@ private:
     bool userResizedWindow_ = false;
     bool programmaticResize_ = false;
     bool initialSizeApplied_ = false;
+    std::filesystem::path GetTrpFilesPath(std::filesystem::path gamePath);
 
     QTabWidget* tabWidget = nullptr;
     QStringList headers;

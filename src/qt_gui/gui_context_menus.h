@@ -13,6 +13,7 @@
 
 #include "background_music_player.h"
 #include "cheats_patches.h"
+#include "common/key_manager.h"
 #include "common/log_analyzer.h"
 #include "common/logging/log.h"
 #include "common/path_util.h"
@@ -447,6 +448,17 @@ public:
         }
 
         if (selected == &openTrophyViewer) {
+            const auto& user_key_vec =
+                KeyManager::GetInstance()->GetAllKeys().TrophyKeySet.ReleaseTrophyKey;
+
+            if (user_key_vec.size() != 16) {
+                // turn clang format off to maintain one string line for easy translations
+                // clang-format off
+                QMessageBox::critical(nullptr, tr("Error"), tr("A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys."));
+                // clang-format on
+                return changedFavorite;
+            }
+
             QString trophyPath, gameTrpPath;
             Common::FS::PathToQString(trophyPath, m_games[itemID].serial);
             Common::FS::PathToQString(gameTrpPath, m_games[itemID].path);
