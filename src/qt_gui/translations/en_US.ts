@@ -1292,6 +1292,10 @@ Please enter your keys and save them.</source>
         <source>User</source>
         <translation type="unfinished">User</translation>
     </message>
+    <message>
+        <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>HelpDialog</name>
@@ -2875,10 +2879,6 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
         <source>Select User:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>%1 trophies for %2</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
