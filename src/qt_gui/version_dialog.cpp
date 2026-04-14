@@ -1196,7 +1196,12 @@ void VersionDialog::showDownloadDialog(const QString& tagName, const QString& do
                     .type = VersionManager::VersionType::Nightly,
                 };
                 VersionManager::UpdatePrerelease(new_version);
-                m_gui_settings->SetValue(gui::vm_versionSelected, exe);
+
+                // Only auto-select if no version was previously selected.
+                // Preserve the user's existing selection (e.g. a custom build).
+                if (m_gui_settings->GetValue(gui::vm_versionSelected).toString().isEmpty()) {
+                    m_gui_settings->SetValue(gui::vm_versionSelected, exe);
+                }
 
                 QMessageBox::information(this, tr("Complete installation"),
                                          tr("Pre-release updated successfully") + ":\n" + tagName);
