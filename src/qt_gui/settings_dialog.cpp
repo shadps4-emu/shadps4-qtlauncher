@@ -737,7 +737,7 @@ void SettingsDialog::LoadValuesFromConfig() {
     ui->collectShaderCheckBox->setChecked(EmulatorSettings.IsShaderCollect());
     ui->enableLoggingCheckBox->setChecked(EmulatorSettings.IsLogEnabled());
 
-    ui->audioBackendComboBox->setCurrentText(audioBackendMap[EmulatorSettings.GetAudioBackend()]);
+    ui->audioBackendComboBox->setCurrentIndex(EmulatorSettings.GetAudioBackend());
     const QString backend = ui->audioBackendComboBox->currentText();
 
     if (backend == "SDL") {
@@ -1098,7 +1098,7 @@ void SettingsDialog::UpdateSettings(bool is_specific) {
     EmulatorSettings.SetCopyGpuBuffers(ui->copyGPUBuffersCheckBox->isChecked(), is_specific);
 
     const std::string backend = ui->audioBackendComboBox->currentText().toStdString();
-    EmulatorSettings.SetAudioBackend(audioBackendMap.key(QString::fromStdString(backend)));
+    EmulatorSettings.SetAudioBackend(ui->audioBackendComboBox->currentIndex());
     if (backend == "SDL") {
         EmulatorSettings.SetSDLMainOutputDevice(ui->GenAudioComboBox->currentText().toStdString(),
                                                 is_specific);
