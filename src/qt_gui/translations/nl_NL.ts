@@ -11,7 +11,7 @@
     </message>
     <message>
       <source>shadPS4 is an experimental open-source emulator for the PlayStation 4.</source>
-      <translation type="unfinished">shadPS4 is an experimental open-source emulator for the PlayStation 4.</translation>
+      <translation>shadPS4 is een experimenteel open-souce emulator voor de PlayStation 4.</translation>
     </message>
     <message>
       <source>This software should not be used to play games you have not legally obtained.</source>
@@ -427,7 +427,7 @@
     </message>
     <message>
       <source>Left Stick</source>
-      <translation type="unfinished">Left Stick</translation>
+      <translation>Linker joystick</translation>
     </message>
     <message>
       <source>Config Selection</source>
@@ -447,7 +447,7 @@
     </message>
     <message>
       <source>Right Stick</source>
-      <translation type="unfinished">Right Stick</translation>
+      <translation>Rechter joystick</translation>
     </message>
     <message>
       <source>Color Adjustment</source>
@@ -459,11 +459,11 @@
     </message>
     <message>
       <source>Override Color</source>
-      <translation type="unfinished">Override Color</translation>
+      <translation>Kleur Overschrijven</translation>
     </message>
     <message>
       <source>Unable to Save</source>
-      <translation type="unfinished">Unable to Save</translation>
+      <translation>Opslaan niet mogelijk</translation>
     </message>
     <message>
       <source>Cannot bind axis values more than once</source>
@@ -471,11 +471,11 @@
     </message>
     <message>
       <source>Save</source>
-      <translation type="unfinished">Save</translation>
+      <translation>Opslaan</translation>
     </message>
     <message>
       <source>Apply</source>
-      <translation type="unfinished">Apply</translation>
+      <translation>Toepassen</translation>
     </message>
     <message>
       <source>Restore Defaults</source>
@@ -483,7 +483,7 @@
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Annuleren</translation>
     </message>
     <message>
       <source>unmapped</source>
@@ -491,35 +491,35 @@
     </message>
     <message>
       <source>Options</source>
-      <translation type="unfinished">Options</translation>
+      <translation>Opties</translation>
     </message>
     <message>
       <source>Touchpad Left</source>
-      <translation type="unfinished">Touchpad Left</translation>
+      <translation>Touchpad Links</translation>
     </message>
     <message>
       <source>Touchpad Center</source>
-      <translation type="unfinished">Touchpad Center</translation>
+      <translation>Touchpad Midden</translation>
     </message>
     <message>
       <source>Touchpad Right</source>
-      <translation type="unfinished">Touchpad Right</translation>
+      <translation>Touchpad Rechts</translation>
     </message>
     <message>
       <source>Triangle</source>
-      <translation type="unfinished">Triangle</translation>
+      <translation>Driehoek</translation>
     </message>
     <message>
       <source>Square</source>
-      <translation type="unfinished">Square</translation>
+      <translation>Vierkant</translation>
     </message>
     <message>
       <source>Circle</source>
-      <translation type="unfinished">Circle</translation>
+      <translation>Cirkel</translation>
     </message>
     <message>
       <source>Cross</source>
-      <translation type="unfinished">Cross</translation>
+      <translation>Kruis</translation>
     </message>
     <message>
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
@@ -535,11 +535,11 @@
     </message>
     <message>
       <source>Move analog stick</source>
-      <translation type="unfinished">Move analog stick</translation>
+      <translation>Beweeg analoge joystick</translation>
     </message>
     <message>
       <source>L1 and L2</source>
-      <translation type="unfinished">L1 and L2</translation>
+      <translation>L1 en L2</translation>
     </message>
     <message>
       <source>Active Gamepad</source>
@@ -551,11 +551,11 @@
     </message>
     <message>
       <source>Default Gamepad</source>
-      <translation type="unfinished">Default Gamepad</translation>
+      <translation>Standaard Gamepad</translation>
     </message>
     <message>
       <source>No default selected</source>
-      <translation type="unfinished">No default selected</translation>
+      <translation>Geen standaard geselecteerd</translation>
     </message>
     <message>
       <source>n/a</source>
@@ -563,15 +563,15 @@
     </message>
     <message>
       <source>Set Active Gamepad as Default</source>
-      <translation type="unfinished">Set Active Gamepad as Default</translation>
+      <translation>Actieve gamepad instellen als standaard</translation>
     </message>
     <message>
       <source>Remove Default Gamepad</source>
-      <translation type="unfinished">Remove Default Gamepad</translation>
+      <translation>Standaard Gamepad Verwijderen</translation>
     </message>
     <message>
       <source>R1 and R2</source>
-      <translation type="unfinished">R1 and R2</translation>
+      <translation>R1 en R2</translation>
     </message>
     <message>
       <source>ID: </source>
@@ -672,7 +672,7 @@ Must be a valid hex string with even length.</translation>
     </message>
     <message>
       <source>Coefficient</source>
-      <translation type="unfinished">Coefficient</translation>
+      <translation>Coëfficiënt</translation>
     </message>
     <message>
       <source>Modulus</source>
@@ -688,7 +688,7 @@ Must be a valid hex string with even length.</translation>
     </message>
     <message>
       <source>Private Exponent</source>
-      <translation type="unfinished">Private Exponent</translation>
+      <translation>Privé Exponent</translation>
     </message>
     <message>
       <source>Fake Keyset</source>
@@ -722,11 +722,11 @@ All fields must be valid hex strings with even length.</translation>
     </message>
     <message>
       <source>Close</source>
-      <translation type="unfinished">Close</translation>
+      <translation>Sluiten</translation>
     </message>
     <message>
       <source>Warning</source>
-      <translation type="unfinished">Warning</translation>
+      <translation>Waarschuwing</translation>
     </message>
     <message>
       <source>No key file found or failed to load.
@@ -736,11 +736,11 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Validation Error</source>
-      <translation type="unfinished">Validation Error</translation>
+      <translation>Validatie Fout</translation>
     </message>
     <message>
       <source>Success</source>
-      <translation type="unfinished">Success</translation>
+      <translation>Succes</translation>
     </message>
     <message>
       <source>Keys saved successfully!</source>
@@ -748,7 +748,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Foutmelding</translation>
     </message>
     <message>
       <source>Failed to save keys!</source>
@@ -764,19 +764,19 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Status: Incomplete</source>
-      <translation type="unfinished">Status: Incomplete</translation>
+      <translation>Status: Niet Compleet</translation>
     </message>
     <message>
       <source>Status: Valid</source>
-      <translation type="unfinished">Status: Valid</translation>
+      <translation>Status: Geldig</translation>
     </message>
     <message>
       <source>Invalid File</source>
-      <translation type="unfinished">Invalid File</translation>
+      <translation>Ongeldig Bestand</translation>
     </message>
     <message>
       <source>Only JSON files are supported.</source>
-      <translation type="unfinished">Only JSON files are supported.</translation>
+      <translation>Alleen JSON-bestanden worden ondersteund.</translation>
     </message>
     <message>
       <source>Unable to open file.</source>
@@ -784,11 +784,11 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>JSON Error</source>
-      <translation type="unfinished">JSON Error</translation>
+      <translation>JSON Foutmelding</translation>
     </message>
     <message>
       <source>Invalid JSON format.</source>
-      <translation type="unfinished">Invalid JSON format.</translation>
+      <translation>Ongeldig JSON-formaat.</translation>
     </message>
     <message>
       <source>Keys successfully loaded from JSON!</source>
@@ -862,7 +862,7 @@ Please enter your keys and save them.</translation>
     <name>ElfViewer</name>
     <message>
       <source>Open Folder</source>
-      <translation type="unfinished">Open Folder</translation>
+      <translation>Map Openen</translation>
     </message>
   </context>
   <context>
