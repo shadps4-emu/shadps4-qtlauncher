@@ -162,7 +162,7 @@
     </message>
     <message>
       <source>Cheats Downloaded Successfully</source>
-      <translation type="unfinished">Cheats Downloaded Successfully</translation>
+      <translation>Cheaty úspěšně staženy</translation>
     </message>
     <message>
       <source>You have successfully downloaded the cheats for this version of the game from the selected repository. You can try downloading from another repository, if it is available it will also be possible to use it by selecting the file from the list.</source>
@@ -170,15 +170,15 @@
     </message>
     <message>
       <source>Failed to save:</source>
-      <translation type="unfinished">Failed to save:</translation>
+      <translation>Nepodařilo se uložit:</translation>
     </message>
     <message>
       <source>Failed to download:</source>
-      <translation type="unfinished">Failed to download:</translation>
+      <translation>Nepodařilo se stáhnout:</translation>
     </message>
     <message>
       <source>Download Complete</source>
-      <translation type="unfinished">Download Complete</translation>
+      <translation>Stahování dokončeno</translation>
     </message>
     <message>
       <source>Patches Downloaded Successfully! All Patches available for all games have been downloaded, there is no need to download them individually for each game as happens in Cheats. If the patch does not appear, it may be that it does not exist for the specific serial and version of the game.</source>
@@ -186,90 +186,90 @@
     </message>
     <message>
       <source>Failed to parse JSON data from HTML.</source>
-      <translation type="unfinished">Failed to parse JSON data from HTML.</translation>
+      <translation>Nepodařilo se zpracovat JSON data z HTML.</translation>
     </message>
     <message>
       <source>Failed to retrieve HTML page.</source>
-      <translation type="unfinished">Failed to retrieve HTML page.</translation>
+      <translation>Nepodařilo se načíst HTML stránku.</translation>
     </message>
     <message>
       <source>The game is in version: %1</source>
-      <translation type="unfinished">The game is in version: %1</translation>
+      <translation>Hra je ve verzi: %1</translation>
     </message>
     <message>
       <source>The downloaded patch only works on version: %1</source>
-      <translation type="unfinished">The downloaded patch only works on version: %1</translation>
+      <translation>Stažený patch funguje pouze na verzi: %1</translation>
     </message>
     <message>
       <source>You may need to update your game.</source>
-      <translation type="unfinished">You may need to update your game.</translation>
+      <translation>Možná budete muset aktualizovat hru.</translation>
     </message>
     <message>
       <source>Incompatibility Notice</source>
-      <translation type="unfinished">Incompatibility Notice</translation>
+      <translation>Oznámení o nekompatibilitě</translation>
     </message>
     <message>
       <source>Failed to open file:</source>
-      <translation type="unfinished">Failed to open file:</translation>
+      <translation>Nepodařilo se otevřít soubor:</translation>
     </message>
     <message>
       <source>XML ERROR:</source>
-      <translation type="unfinished">XML ERROR:</translation>
+      <translation>XML CHYBA:</translation>
     </message>
     <message>
       <source>Failed to open files.json for writing</source>
-      <translation type="unfinished">Failed to open files.json for writing</translation>
+      <translation>Nepodařilo se otevřít files.json pro zápis.</translation>
     </message>
     <message>
       <source>Author: </source>
-      <translation type="unfinished">Author: </translation>
+      <translation>Autor:</translation>
     </message>
     <message>
       <source>Directory does not exist:</source>
-      <translation type="unfinished">Directory does not exist:</translation>
+      <translation>Adresář neexistuje:</translation>
     </message>
     <message>
       <source>Failed to open files.json for reading.</source>
-      <translation type="unfinished">Failed to open files.json for reading.</translation>
+      <translation>Nepodařilo se otevřít files.json pro čtení.</translation>
     </message>
     <message>
       <source>Name:</source>
-      <translation type="unfinished">Name:</translation>
+      <translation>Název:</translation>
     </message>
     <message>
       <source>Can&apos;t apply cheats before the game is started</source>
-      <translation type="unfinished">Can&apos;t apply cheats before the game is started</translation>
+      <translation>Nelze použít cheaty před spuštěním hry</translation>
     </message>
     <message>
       <source>Close</source>
-      <translation type="unfinished">Close</translation>
+      <translation>Zavřít</translation>
     </message>
   </context>
   <context>
     <name>CheckUpdate</name>
     <message>
       <source>Auto Updater</source>
-      <translation type="unfinished">Auto Updater</translation>
+      <translation>Automatické aktualizace</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Chyba</translation>
     </message>
     <message>
       <source>Network error:</source>
-      <translation type="unfinished">Network error:</translation>
+      <translation>Chyba sítě:</translation>
     </message>
     <message>
       <source>The Auto Updater allows up to 60 update checks per hour.\nYou have reached this limit. Please try again later.</source>
-      <translation type="unfinished">The Auto Updater allows up to 60 update checks per hour.\nYou have reached this limit. Please try again later.</translation>
+      <translation>Automatická aktualizace umožňuje až 60 kontrol aktualizace za hodinu.\nDosáhli jste tohoto limitu. Opakujte akci později.</translation>
     </message>
     <message>
       <source>Failed to parse update information.</source>
-      <translation type="unfinished">Failed to parse update information.</translation>
+      <translation>Nepodařilo se zpracovat informace o aktualizaci.</translation>
     </message>
     <message>
       <source>No pre-releases found.</source>
-      <translation type="unfinished">No pre-releases found.</translation>
+      <translation>Nebyly nalezeny žádné předběžné verze.</translation>
     </message>
     <message>
       <source>No download URL found for the specified asset.</source>
@@ -277,289 +277,289 @@
     </message>
     <message>
       <source>Your version is already up to date!</source>
-      <translation type="unfinished">Your version is already up to date!</translation>
+      <translation>Vaše verze je již aktuální!</translation>
     </message>
     <message>
       <source>Current Version</source>
-      <translation type="unfinished">Current Version</translation>
+      <translation>Aktuální verze</translation>
     </message>
     <message>
       <source>Latest Version</source>
-      <translation type="unfinished">Latest Version</translation>
+      <translation>Nejnovější verze</translation>
     </message>
     <message>
       <source>Do you want to update?</source>
-      <translation type="unfinished">Do you want to update?</translation>
+      <translation>Přejete si aktualizovat?</translation>
     </message>
     <message>
       <source>Show Changelog</source>
-      <translation type="unfinished">Show Changelog</translation>
+      <translation>Zobrazit seznam změn</translation>
     </message>
     <message>
       <source>Check for Updates at Startup</source>
-      <translation type="unfinished">Check for Updates at Startup</translation>
+      <translation>Zkontrolovat aktualizace při spuštění</translation>
     </message>
     <message>
       <source>Update</source>
-      <translation type="unfinished">Update</translation>
+      <translation>Aktualizovat</translation>
     </message>
     <message>
       <source>No</source>
-      <translation type="unfinished">No</translation>
+      <translation>Ne</translation>
     </message>
     <message>
       <source>Hide Changelog</source>
-      <translation type="unfinished">Hide Changelog</translation>
+      <translation>Skrýt seznam změn</translation>
     </message>
     <message>
       <source>Changes</source>
-      <translation type="unfinished">Changes</translation>
+      <translation>Změny</translation>
     </message>
     <message>
       <source>Network error occurred while trying to access the URL</source>
-      <translation type="unfinished">Network error occurred while trying to access the URL</translation>
+      <translation>Při pokusu o přístup k URL došlo k chybě sítě</translation>
     </message>
     <message>
       <source>Download Complete</source>
-      <translation type="unfinished">Download Complete</translation>
+      <translation>Stahování dokončeno</translation>
     </message>
     <message>
       <source>The update has been downloaded, press OK to install.</source>
-      <translation type="unfinished">The update has been downloaded, press OK to install.</translation>
+      <translation>Aktualizace byla stažena, pro instalaci stiskněte tlačítko OK.</translation>
     </message>
     <message>
       <source>Failed to save the update file at</source>
-      <translation type="unfinished">Failed to save the update file at</translation>
+      <translation>Nepodařilo se uložit soubor aktualizace do</translation>
     </message>
     <message>
       <source>Starting Update...</source>
-      <translation type="unfinished">Starting Update...</translation>
+      <translation>Spouštění aktualizace...</translation>
     </message>
     <message>
       <source>Failed to create the update script file</source>
-      <translation type="unfinished">Failed to create the update script file</translation>
+      <translation>Nepodařilo se vytvořit soubor aktualizačního skriptu</translation>
     </message>
     <message>
       <source>Auto Updater - GUI</source>
-      <translation type="unfinished">Auto Updater - GUI</translation>
+      <translation>Automatická aktualizace - GUI</translation>
     </message>
     <message>
       <source>Update Available - GUI</source>
-      <translation type="unfinished">Update Available - GUI</translation>
+      <translation>Dostupná aktualizace - GUI</translation>
     </message>
   </context>
   <context>
     <name>CompatibilityInfoClass</name>
     <message>
       <source>Fetching compatibility data, please wait</source>
-      <translation type="unfinished">Fetching compatibility data, please wait</translation>
+      <translation>Načítání dat o kompatibilitě, prosím čekejte</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Zrušit</translation>
     </message>
     <message>
       <source>Loading...</source>
-      <translation type="unfinished">Loading...</translation>
+      <translation>Načítání…</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Chyba</translation>
     </message>
     <message>
       <source>Unable to update compatibility data! Try again later.</source>
-      <translation type="unfinished">Unable to update compatibility data! Try again later.</translation>
+      <translation>Nelze aktualizovat data o kompatibilitě! Opakujte akci později.</translation>
     </message>
     <message>
       <source>Unable to open compatibility_data.json for writing.</source>
-      <translation type="unfinished">Unable to open compatibility_data.json for writing.</translation>
+      <translation>Nelze otevřít compatibility_data.json pro zápis.</translation>
     </message>
     <message>
       <source>Unknown</source>
-      <translation type="unfinished">Unknown</translation>
+      <translation>Neznámo</translation>
     </message>
     <message>
       <source>Nothing</source>
-      <translation type="unfinished">Nothing</translation>
+      <translation>Nic</translation>
     </message>
     <message>
       <source>Boots</source>
-      <translation type="unfinished">Boots</translation>
+      <translation>Lze načíst</translation>
     </message>
     <message>
       <source>Menus</source>
-      <translation type="unfinished">Menus</translation>
+      <translation>V menu</translation>
     </message>
     <message>
       <source>Ingame</source>
-      <translation type="unfinished">Ingame</translation>
+      <translation>Ve hře</translation>
     </message>
     <message>
       <source>Playable</source>
-      <translation type="unfinished">Playable</translation>
+      <translation>Hratelné</translation>
     </message>
   </context>
   <context>
     <name>ControlSettings</name>
     <message>
       <source>Configure Controls</source>
-      <translation type="unfinished">Configure Controls</translation>
+      <translation>Nastavení ovládání</translation>
     </message>
     <message>
       <source>D-Pad</source>
-      <translation type="unfinished">D-Pad</translation>
+      <translation>Směrová tlačítka</translation>
     </message>
     <message>
       <source>Up</source>
-      <translation type="unfinished">Up</translation>
+      <translation>Nahoru</translation>
     </message>
     <message>
       <source>Left</source>
-      <translation type="unfinished">Left</translation>
+      <translation>Vlevo</translation>
     </message>
     <message>
       <source>Right</source>
-      <translation type="unfinished">Right</translation>
+      <translation>Vpravo</translation>
     </message>
     <message>
       <source>Down</source>
-      <translation type="unfinished">Down</translation>
+      <translation>Dolů</translation>
     </message>
     <message>
       <source>Left Stick</source>
-      <translation type="unfinished">Left Stick</translation>
+      <translation>Levá analogová páčka</translation>
     </message>
     <message>
       <source>Config Selection</source>
-      <translation type="unfinished">Config Selection</translation>
+      <translation>Výběr nastavení</translation>
     </message>
     <message>
       <source>Common Config</source>
-      <translation type="unfinished">Common Config</translation>
+      <translation>Běžné nastavení</translation>
     </message>
     <message>
       <source>Use per-game configs</source>
-      <translation type="unfinished">Use per-game configs</translation>
+      <translation>Použít nastavení pro hru</translation>
     </message>
     <message>
       <source>Face Buttons</source>
-      <translation type="unfinished">Face Buttons</translation>
+      <translation>Akční tlačítka</translation>
     </message>
     <message>
       <source>Right Stick</source>
-      <translation type="unfinished">Right Stick</translation>
+      <translation>Pravá analogová páčka</translation>
     </message>
     <message>
       <source>Color Adjustment</source>
-      <translation type="unfinished">Color Adjustment</translation>
+      <translation>Úprava barev</translation>
     </message>
     <message>
       <source>Override Lightbar Color</source>
-      <translation type="unfinished">Override Lightbar Color</translation>
+      <translation>Přepsat barvu Lightbar</translation>
     </message>
     <message>
       <source>Override Color</source>
-      <translation type="unfinished">Override Color</translation>
+      <translation>Přepsat barvu</translation>
     </message>
     <message>
       <source>Unable to Save</source>
-      <translation type="unfinished">Unable to Save</translation>
+      <translation>Nelze uložit</translation>
     </message>
     <message>
       <source>Cannot bind axis values more than once</source>
-      <translation type="unfinished">Cannot bind axis values more than once</translation>
+      <translation>Hodnoty osy nelze spojit více než jednou</translation>
     </message>
     <message>
       <source>Save</source>
-      <translation type="unfinished">Save</translation>
+      <translation>Uložit</translation>
     </message>
     <message>
       <source>Apply</source>
-      <translation type="unfinished">Apply</translation>
+      <translation>Použít</translation>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation type="unfinished">Restore Defaults</translation>
+      <translation>Obnovit výchozí</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Zrušit</translation>
     </message>
     <message>
       <source>unmapped</source>
-      <translation type="unfinished">unmapped</translation>
+      <translation>nemapováno</translation>
     </message>
     <message>
       <source>Options</source>
-      <translation type="unfinished">Options</translation>
+      <translation>Options</translation>
     </message>
     <message>
       <source>Touchpad Left</source>
-      <translation type="unfinished">Touchpad Left</translation>
+      <translation>Touchpad vlevo</translation>
     </message>
     <message>
       <source>Touchpad Center</source>
-      <translation type="unfinished">Touchpad Center</translation>
+      <translation>Střed Touchpadu</translation>
     </message>
     <message>
       <source>Touchpad Right</source>
-      <translation type="unfinished">Touchpad Right</translation>
+      <translation>Touchpad vpravo</translation>
     </message>
     <message>
       <source>Triangle</source>
-      <translation type="unfinished">Triangle</translation>
+      <translation>Trojúhelník</translation>
     </message>
     <message>
       <source>Square</source>
-      <translation type="unfinished">Square</translation>
+      <translation>Čtverec</translation>
     </message>
     <message>
       <source>Circle</source>
-      <translation type="unfinished">Circle</translation>
+      <translation>Kolečko</translation>
     </message>
     <message>
       <source>Cross</source>
-      <translation type="unfinished">Cross</translation>
+      <translation>Křížek</translation>
     </message>
     <message>
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-      <translation type="unfinished">Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
+      <translation>Nelze spojit unikátní vstup více než jednou. Duplikujte vstupy mapované na následující tlačítka:
 
 %1</translation>
     </message>
     <message>
       <source>Press a button</source>
-      <translation type="unfinished">Press a button</translation>
+      <translation>Stiskněte tlačítko</translation>
     </message>
     <message>
       <source>Move analog stick</source>
-      <translation type="unfinished">Move analog stick</translation>
+      <translation>Pohněte s analogovou páčkou</translation>
     </message>
     <message>
       <source>L1 and L2</source>
-      <translation type="unfinished">L1 and L2</translation>
+      <translation>L1 a L2</translation>
     </message>
     <message>
       <source>Active Gamepad</source>
-      <translation type="unfinished">Active Gamepad</translation>
+      <translation>Aktivní ovladač</translation>
     </message>
     <message>
       <source>Gamepad ID</source>
-      <translation type="unfinished">Gamepad ID</translation>
+      <translation>ID ovladače</translation>
     </message>
     <message>
       <source>Default Gamepad</source>
-      <translation type="unfinished">Default Gamepad</translation>
+      <translation>Výchozí ovladač</translation>
     </message>
     <message>
       <source>No default selected</source>
-      <translation type="unfinished">No default selected</translation>
+      <translation>Není vybrán žádný výchozí</translation>
     </message>
     <message>
       <source>n/a</source>
-      <translation type="unfinished">n/a</translation>
+      <translation>Není k dispozici</translation>
     </message>
     <message>
       <source>Set Active Gamepad as Default</source>
@@ -567,59 +567,59 @@
     </message>
     <message>
       <source>Remove Default Gamepad</source>
-      <translation type="unfinished">Remove Default Gamepad</translation>
+      <translation>Odstranit výchozí ovladač</translation>
     </message>
     <message>
       <source>R1 and R2</source>
-      <translation type="unfinished">R1 and R2</translation>
+      <translation>R1 a R2</translation>
     </message>
     <message>
       <source>ID: </source>
-      <translation type="unfinished">ID: </translation>
+      <translation>ID: </translation>
     </message>
     <message>
       <source>Default Controller Selected</source>
-      <translation type="unfinished">Default Controller Selected</translation>
+      <translation>Výchozí ovladač vybrán</translation>
     </message>
     <message>
       <source>Active controller set as default</source>
-      <translation type="unfinished">Active controller set as default</translation>
+      <translation>Aktivní ovladač nastaven jako výchozí</translation>
     </message>
     <message>
       <source>Default Controller Removed</source>
-      <translation type="unfinished">Default Controller Removed</translation>
+      <translation>Výchozí ovladač odstraněn</translation>
     </message>
     <message>
       <source>Default controller setting removed</source>
-      <translation type="unfinished">Default controller setting removed</translation>
+      <translation>Výchozí nastavení ovladače odstraněno</translation>
     </message>
     <message>
       <source>RED</source>
-      <translation type="unfinished">RED</translation>
+      <translation>Červená</translation>
     </message>
     <message>
       <source>GREEN</source>
-      <translation type="unfinished">GREEN</translation>
+      <translation>Zelená</translation>
     </message>
     <message>
       <source>BLUE</source>
-      <translation type="unfinished">BLUE</translation>
+      <translation>Modrá</translation>
     </message>
     <message>
       <source>Left Stick Deadzone</source>
-      <translation type="unfinished">Left Stick Deadzone</translation>
+      <translation>Mrtvá zóna levé analogové páčky</translation>
     </message>
     <message>
       <source>Min Deadzone (def:2 max:127)</source>
-      <translation type="unfinished">Min Deadzone (def:2 max:127)</translation>
+      <translation>Min mrtvá zóna (výchozí:2 max:127)</translation>
     </message>
     <message>
       <source>Max Deadzone (def:127 max:127)</source>
-      <translation type="unfinished">Max Deadzone (def:127 max:127)</translation>
+      <translation>Max mrtvá zóna (výchozí:127 max:127)</translation>
     </message>
     <message>
       <source>Right Stick Deadzone</source>
-      <translation type="unfinished">Right Stick Deadzone</translation>
+      <translation>Mrtvá zóna pravé analogové páčky</translation>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
@@ -640,23 +640,23 @@ Must be a valid hex string with even length.</translation>
     </message>
     <message>
       <source>Enter Trophy Key</source>
-      <translation type="unfinished">Enter Trophy Key</translation>
+      <translation>Zadejte klíč trofeje</translation>
     </message>
     <message>
       <source>Trophy Key:</source>
-      <translation type="unfinished">Trophy Key:</translation>
+      <translation>Klíč trofeje:</translation>
     </message>
     <message>
       <source>Status: Not loaded</source>
-      <translation type="unfinished">Status: Not loaded</translation>
+      <translation>Stav: Nenačteno</translation>
     </message>
     <message>
       <source>Trophy Key</source>
-      <translation type="unfinished">Trophy Key</translation>
+      <translation>Klíč trofeje</translation>
     </message>
     <message>
       <source>Enter %1</source>
-      <translation type="unfinished">Enter %1</translation>
+      <translation>Zadejte %1</translation>
     </message>
     <message>
       <source>Exponent1</source>
@@ -1298,6 +1298,10 @@ Please enter your keys and save them.</translation>
     <message>
       <source>User</source>
       <translation type="unfinished">User</translation>
+    </message>
+    <message>
+      <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
+      <translation type="unfinished">A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</translation>
     </message>
   </context>
   <context>
@@ -2889,10 +2893,6 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Select User:</source>
       <translation type="unfinished">Select User:</translation>
-    </message>
-    <message>
-      <source>%1 trophies for %2</source>
-      <translation type="unfinished">%1 trophies for %2</translation>
     </message>
   </context>
   <context>

@@ -1299,6 +1299,10 @@ Si us plau, introdueix les teves claus per desar-les.</translation>
       <source>User</source>
       <translation>Usuari</translation>
     </message>
+    <message>
+      <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
+      <translation type="unfinished">A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -2889,10 +2893,6 @@ Selecciona una versió del panell dret.</translation>
     <message>
       <source>Select User:</source>
       <translation>Selecciona usuari:</translation>
-    </message>
-    <message>
-      <source>%1 trophies for %2</source>
-      <translation>%1 trofeus per %2</translation>
     </message>
   </context>
   <context>

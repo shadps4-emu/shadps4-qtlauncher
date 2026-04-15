@@ -1297,6 +1297,10 @@ Please enter your keys and save them.</source>
       <source>User</source>
       <translation>用户</translation>
     </message>
+    <message>
+      <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
+      <translation type="unfinished">A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -2889,10 +2893,6 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Select User:</source>
       <translation>选择用户：</translation>
-    </message>
-    <message>
-      <source>%1 trophies for %2</source>
-      <translation>%2 的 %1 个奖杯</translation>
     </message>
   </context>
   <context>

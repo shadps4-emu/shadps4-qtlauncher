@@ -1297,7 +1297,11 @@ Por favor, digite suas chaves e salve-as.</translation>
     </message>
     <message>
       <source>User</source>
-      <translation type="unfinished">User</translation>
+      <translation>Usuário</translation>
+    </message>
+    <message>
+      <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
+      <translation type="unfinished">A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</translation>
     </message>
   </context>
   <context>
@@ -2888,11 +2892,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Select User:</source>
-      <translation type="unfinished">Select User:</translation>
-    </message>
-    <message>
-      <source>%1 trophies for %2</source>
-      <translation type="unfinished">%1 trophies for %2</translation>
+      <translation>Escolha o Usuário:</translation>
     </message>
   </context>
   <context>
