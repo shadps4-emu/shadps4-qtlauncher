@@ -1459,6 +1459,21 @@ void MainWindow::StartEmulatorExecutable(std::filesystem::path emuPath, QString 
             quick_exit(1);
         }
 
+        // Apply game-specific config overrides if available.
+        // This replicates the behavior of "Launch with game specific configs"
+        // from the GUI context menu, ensuring CLI launches also respect
+        // per-game settings stored in custom_configs/<serial>.json.
+        if (!args.contains("--config-global") && !args.contains("--config-clean")) {
+            auto gameDir = last_game_path.parent_path();
+            auto info = GameInfoClass::readGameInfo(gameDir);
+            if (!info.serial.empty()) {
+                if (EmulatorSettings.Load(info.serial)) {
+                    EmulatorSettings.Save();
+                    runningGameSerial = info.serial;
+                }
+            }
+        }
+
         QStringList game_args{"--game", QString::fromStdWString(last_game_path.wstring())};
         args.append(game_args);
     }
