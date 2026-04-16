@@ -62,16 +62,6 @@ public:
             return changedFavorite;
         }
 
-        // Get all user names
-        QString User1 =
-            QString::fromStdString(UserSettings.GetUserManager().GetUserByID(1000)->user_name);
-        QString User2 =
-            QString::fromStdString(UserSettings.GetUserManager().GetUserByID(1001)->user_name);
-        QString User3 =
-            QString::fromStdString(UserSettings.GetUserManager().GetUserByID(1002)->user_name);
-        QString User4 =
-            QString::fromStdString(UserSettings.GetUserManager().GetUserByID(1003)->user_name);
-
         // Setup menu.
         QMenu menu(widget);
 
