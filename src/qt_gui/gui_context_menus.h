@@ -558,13 +558,7 @@ public:
                 int user_id = activeUsers[i].user_id;
                 bool error = false;
 
-                QString folder_path, game_update_path, save_data_path;
-                Common::FS::PathToQString(folder_path, m_games[itemID].path);
-                game_update_path = folder_path + "-UPDATE";
-                if (!std::filesystem::exists(Common::FS::PathFromQString(game_update_path))) {
-                    game_update_path = folder_path + "-patch";
-                }
-
+                QString save_data_path;
                 Common::FS::PathToQString(save_data_path, EmulatorSettings.GetHomeDir() /
                                                               std::to_string(user_id) / "savedata" /
                                                               m_games[itemID].save_dir);
