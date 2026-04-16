@@ -1301,7 +1301,7 @@ Debes introducir tus claves y guardarlas.</translation>
     </message>
     <message>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
-      <translation type="unfinished">A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</translation>
+      <translation>Se necesita una clave de trofeos para poder usar el visualizador de trofeos. Puedes introducirla en Utilidades - Gestor de claves criptográficas.</translation>
     </message>
   </context>
   <context>
