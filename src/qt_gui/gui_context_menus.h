@@ -62,16 +62,6 @@ public:
             return changedFavorite;
         }
 
-        // Get all user names
-        QString User1 =
-            QString::fromStdString(UserSettings.GetUserManager().GetUserByID(1000)->user_name);
-        QString User2 =
-            QString::fromStdString(UserSettings.GetUserManager().GetUserByID(1001)->user_name);
-        QString User3 =
-            QString::fromStdString(UserSettings.GetUserManager().GetUserByID(1002)->user_name);
-        QString User4 =
-            QString::fromStdString(UserSettings.GetUserManager().GetUserByID(1003)->user_name);
-
         // Setup menu.
         QMenu menu(widget);
 
@@ -90,20 +80,24 @@ public:
         QAction* openGameFolder = new QAction(tr("Open Game Folder"), widget);
         QAction* openUpdateFolder = new QAction(tr("Open Update Folder"), widget);
         QMenu* openSaveDataMenu = new QMenu(tr("Open Save Data Folder"), widget);
-        QAction* openUser1Save = new QAction(QString("%1 1: " + User1).arg(tr("User")), widget);
-        QAction* openUser2Save = new QAction(QString("%1 2: " + User2).arg(tr("User")), widget);
-        QAction* openUser3Save = new QAction(QString("%1 3: " + User3).arg(tr("User")), widget);
-        QAction* openUser4Save = new QAction(QString("%1 4: " + User4).arg(tr("User")), widget);
+
         QAction* openLogFolder = new QAction(tr("Open Log Folder"), widget);
 
         openFolderMenu->addAction(openGameFolder);
         openFolderMenu->addAction(openUpdateFolder);
         openFolderMenu->addAction(openLogFolder);
 
-        openSaveDataMenu->addAction(openUser1Save);
-        openSaveDataMenu->addAction(openUser2Save);
-        openSaveDataMenu->addAction(openUser3Save);
-        openSaveDataMenu->addAction(openUser4Save);
+        QList<QAction*> openSaveActionList;
+        std::vector<User> activeUsers = UserSettings.GetUserManager().GetValidUsers();
+
+        for (int i = 0; const auto& user : activeUsers) {
+            QString savelabel =
+                "User " + QString::number(i + 1) + ": " + QString::fromStdString(user.user_name);
+            QAction* action = new QAction(savelabel);
+            openSaveDataMenu->addAction(action);
+            openSaveActionList.append(action);
+            i++;
+        }
 
         menu.addMenu(launchMenu);
         menu.addMenu(openFolderMenu);
@@ -178,10 +172,6 @@ public:
         QAction* deleteGame = new QAction(tr("Delete Game"), widget);
         QAction* deleteUpdate = new QAction(tr("Delete Update"), widget);
         QMenu* deleteSaveDataMenu = new QMenu(tr("Delete Save Data"), widget);
-        QAction* deleteUser1Save = new QAction(QString("%1 1: " + User1).arg(tr("User")), widget);
-        QAction* deleteUser2Save = new QAction(QString("%1 2: " + User2).arg(tr("User")), widget);
-        QAction* deleteUser3Save = new QAction(QString("%1 3: " + User3).arg(tr("User")), widget);
-        QAction* deleteUser4Save = new QAction(QString("%1 4: " + User4).arg(tr("User")), widget);
         QAction* deleteDLC = new QAction(tr("Delete DLC"), widget);
         QAction* deleteTrophy = new QAction(tr("Delete Trophy"), widget);
         QAction* deleteShaderCache = new QAction(tr("Delete Shader Cache"), widget);
@@ -193,11 +183,15 @@ public:
         deleteMenu->addAction(deleteTrophy);
         deleteMenu->addAction(deleteShaderCache);
 
-        deleteSaveDataMenu->addAction(deleteUser1Save);
-        deleteSaveDataMenu->addAction(deleteUser2Save);
-        deleteSaveDataMenu->addAction(deleteUser3Save);
-        deleteSaveDataMenu->addAction(deleteUser4Save);
-
+        QList<QAction*> deleteSaveActionList;
+        for (int i = 0; const auto& user : activeUsers) {
+            QString savelabel =
+                "User " + QString::number(i + 1) + ": " + QString::fromStdString(user.user_name);
+            QAction* action = new QAction(savelabel);
+            deleteSaveDataMenu->addAction(action);
+            deleteSaveActionList.append(action);
+            i++;
+        }
         menu.addMenu(deleteMenu);
 
         // Compatibility submenu.
@@ -255,32 +249,24 @@ public:
             }
         }
 
-        if (selected == openUser1Save || selected == openUser2Save || selected == openUser3Save ||
-            selected == openUser4Save) {
-
-            int user_id;
-            if (selected == openUser1Save) {
-                user_id = 1000;
-            } else if (selected == openUser2Save) {
-                user_id = 1001;
-            } else if (selected == openUser3Save) {
-                user_id = 1002;
-            } else if (selected == openUser4Save) {
-                user_id = 1003;
+        for (int i = 0; const auto& action : openSaveActionList) {
+            if (selected == action) {
+                int user_id = activeUsers[i].user_id;
+                if (!std::filesystem::exists(EmulatorSettings.GetHomeDir() /
+                                             std::to_string(user_id) / "savedata" /
+                                             m_games[itemID].save_dir)) {
+                    QMessageBox::critical(nullptr, tr("Error"),
+                                          QString(tr("This game has no save folder to open!")));
+                } else {
+                    QString saveDataPath;
+                    Common::FS::PathToQString(
+                        saveDataPath, EmulatorSettings.GetHomeDir() / std::to_string(user_id) /
+                                          "savedata" / m_games[itemID].save_dir);
+                    QDir(saveDataPath).mkpath(saveDataPath);
+                    QDesktopServices::openUrl(QUrl::fromLocalFile(saveDataPath));
+                }
             }
-
-            if (!std::filesystem::exists(EmulatorSettings.GetHomeDir() / std::to_string(user_id) /
-                                         "savedata" / m_games[itemID].save_dir)) {
-                QMessageBox::critical(nullptr, tr("Error"),
-                                      QString(tr("This game has no save folder to open!")));
-            } else {
-                QString saveDataPath;
-                Common::FS::PathToQString(saveDataPath, EmulatorSettings.GetHomeDir() /
-                                                            std::to_string(user_id) / "savedata" /
-                                                            m_games[itemID].save_dir);
-                QDir(saveDataPath).mkpath(saveDataPath);
-                QDesktopServices::openUrl(QUrl::fromLocalFile(saveDataPath));
-            }
+            i++;
         }
 
         if (selected == openLogFolder) {
@@ -567,13 +553,43 @@ public:
             clipboard->setText(combinedText);
         }
 
+        for (int i = 0; const auto& action : deleteSaveActionList) {
+            if (selected == action) {
+                int user_id = activeUsers[i].user_id;
+                bool error = false;
+
+                QString save_data_path;
+                Common::FS::PathToQString(save_data_path, EmulatorSettings.GetHomeDir() /
+                                                              std::to_string(user_id) / "savedata" /
+                                                              m_games[itemID].save_dir);
+
+                if (!std::filesystem::exists(Common::FS::PathFromQString(save_data_path))) {
+                    QMessageBox::critical(nullptr, tr("Error"),
+                                          QString(tr("This game has no save data to delete!")));
+                    error = true;
+                }
+
+                if (!error) {
+                    QString gameName = QString::fromStdString(m_games[itemID].name);
+                    QDir dir(save_data_path);
+                    QMessageBox::StandardButton reply = QMessageBox::question(
+                        nullptr, QString(tr("Delete %1")).arg(tr("Save Data")),
+                        QString(tr("Are you sure you want to delete %1's %2 directory?"))
+                            .arg(gameName, tr("Save Data")),
+                        QMessageBox::Yes | QMessageBox::No);
+                    if (reply == QMessageBox::Yes) {
+                        dir.removeRecursively();
+                    }
+                }
+            }
+            i++;
+        }
+
         if (selected == deleteGame || selected == deleteUpdate || selected == deleteDLC ||
-            selected == deleteUser1Save || selected == deleteUser2Save ||
-            selected == deleteUser3Save || selected == deleteUser4Save ||
             selected == deleteTrophy || selected == deleteShaderCache) {
             bool error = false;
-            QString folder_path, game_update_path, dlc_path, save_data_path, trophy_data_path,
-                shader_cache_path, shader_cache_zip_path;
+            QString folder_path, game_update_path, dlc_path, trophy_data_path, shader_cache_path,
+                shader_cache_zip_path;
             Common::FS::PathToQString(folder_path, m_games[itemID].path);
             game_update_path = folder_path + "-UPDATE";
             if (!std::filesystem::exists(Common::FS::PathFromQString(game_update_path))) {
@@ -591,20 +607,6 @@ public:
             Common::FS::PathToQString(shader_cache_zip_path,
                                       Common::FS::GetUserPath(Common::FS::PathType::CacheDir) /
                                           (m_games[itemID].serial + ".zip"));
-
-            int user_id;
-            if (selected == deleteUser1Save) {
-                user_id = 1000;
-            } else if (selected == deleteUser2Save) {
-                user_id = 1001;
-            } else if (selected == deleteUser3Save) {
-                user_id = 1002;
-            } else if (selected == deleteUser4Save) {
-                user_id = 1003;
-            }
-            Common::FS::PathToQString(save_data_path, EmulatorSettings.GetHomeDir() /
-                                                          std::to_string(user_id) / "savedata" /
-                                                          m_games[itemID].save_dir);
 
             QString message_type;
             if (selected == deleteGame) {
@@ -627,16 +629,6 @@ public:
                 } else {
                     folder_path = dlc_path;
                     message_type = tr("DLC");
-                }
-            } else if (selected == deleteUser1Save || selected == deleteUser2Save ||
-                       selected == deleteUser3Save || selected == deleteUser4Save) {
-                if (!std::filesystem::exists(Common::FS::PathFromQString(save_data_path))) {
-                    QMessageBox::critical(nullptr, tr("Error"),
-                                          QString(tr("This game has no save data to delete!")));
-                    error = true;
-                } else {
-                    folder_path = save_data_path;
-                    message_type = tr("Save Data");
                 }
             } else if (selected == deleteTrophy) {
                 if (!std::filesystem::exists(Common::FS::PathFromQString(trophy_data_path))) {
