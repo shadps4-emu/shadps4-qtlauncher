@@ -1299,7 +1299,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
-      <translation type="unfinished">A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</translation>
+      <translation>使用奖杯查看器需要提供奖杯密钥。可通过点击“设置”->“管理加密密钥”来输入。</translation>
     </message>
   </context>
   <context>
