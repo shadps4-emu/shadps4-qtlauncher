@@ -1296,10 +1296,6 @@ Please enter your keys and save them.</source>
       <translation>У этой игры нет папки сохранений, которую можно открыть!</translation>
     </message>
     <message>
-      <source>User</source>
-      <translation>Пользователь</translation>
-    </message>
-    <message>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
       <translation>Ключ трофеев требуется для просмотра трофеев. Это можно ввести, нажав Настройки - Управление криптографическими ключами.</translation>
     </message>
