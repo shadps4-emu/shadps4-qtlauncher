@@ -1296,10 +1296,6 @@ Si us plau, introdueix les teves claus per desar-les.</translation>
       <translation>Aquest joc no té carpeta de desats per obrir!</translation>
     </message>
     <message>
-      <source>User</source>
-      <translation>Usuari</translation>
-    </message>
-    <message>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
       <translation>Es necessita una clau de trofeu per fer servir el visualitzador de trofeus. Pot introduir la clau clicant a Configuració - Administrar claus criptogràfiques.</translation>
     </message>
