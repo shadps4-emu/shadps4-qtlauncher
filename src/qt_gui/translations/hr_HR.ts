@@ -634,185 +634,185 @@ preuzete, nema potrebe ih preuzimati pojedinačno kao što vrijedi u kartici
     <name>CryptoManagerDialog</name>
     <message>
       <source>Crypto Key Manager</source>
-      <translation type="unfinished">Crypto Key Manager</translation>
+      <translation>Upravitelj Kripto Ključa</translation>
     </message>
     <message>
       <source>Trophy Key: Used for trophy decryption.
 Must be a valid hex string with even length.</source>
-      <translation type="unfinished">Trophy Key: Used for trophy decryption.
-Must be a valid hex string with even length.</translation>
+      <translation>Trofej Ključ: Koristi se za dekripciju trofeja.
+Mora biti valjani hex string jednake duljine.</translation>
     </message>
     <message>
       <source>Enter Trophy Key</source>
-      <translation type="unfinished">Enter Trophy Key</translation>
+      <translation>Unesite Ključ Trofeja</translation>
     </message>
     <message>
       <source>Trophy Key:</source>
-      <translation type="unfinished">Trophy Key:</translation>
+      <translation>Trofej Ključ:</translation>
     </message>
     <message>
       <source>Status: Not loaded</source>
-      <translation type="unfinished">Status: Not loaded</translation>
+      <translation>Status: Nije učitano</translation>
     </message>
     <message>
       <source>Trophy Key</source>
-      <translation type="unfinished">Trophy Key</translation>
+      <translation>Trofej Ključ</translation>
     </message>
     <message>
       <source>Enter %1</source>
-      <translation type="unfinished">Enter %1</translation>
+      <translation>Unesi %1</translation>
     </message>
     <message>
       <source>Exponent1</source>
-      <translation type="unfinished">Exponent1</translation>
+      <translation>Eksponent1</translation>
     </message>
     <message>
       <source>Exponent2</source>
-      <translation type="unfinished">Exponent2</translation>
+      <translation>Eksponent2</translation>
     </message>
     <message>
       <source>Public Exponent</source>
-      <translation type="unfinished">Public Exponent</translation>
+      <translation>Javni Eksponent</translation>
     </message>
     <message>
       <source>Coefficient</source>
-      <translation type="unfinished">Coefficient</translation>
+      <translation>Koeficijent</translation>
     </message>
     <message>
       <source>Modulus</source>
-      <translation type="unfinished">Modulus</translation>
+      <translation>Modulo</translation>
     </message>
     <message>
       <source>Prime 1</source>
-      <translation type="unfinished">Prime 1</translation>
+      <translation>Prim 1</translation>
     </message>
     <message>
       <source>Prime 2</source>
-      <translation type="unfinished">Prime 2</translation>
+      <translation>Prim 2</translation>
     </message>
     <message>
       <source>Private Exponent</source>
-      <translation type="unfinished">Private Exponent</translation>
+      <translation>Privatni Eksponent</translation>
     </message>
     <message>
       <source>Fake Keyset</source>
-      <translation type="unfinished">Fake Keyset</translation>
+      <translation>Pseudo Ključevi</translation>
     </message>
     <message>
       <source>RSA key components for fake signing.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for fake signing.
-All fields must be valid hex strings with even length.</translation>
+      <translation>RSA komponente ključa za pseudo potpisivanje.
+Sva polja moraju bit valjani hex stringovi jednake duljine.</translation>
     </message>
     <message>
       <source>Debug Rif Keyset</source>
-      <translation type="unfinished">Debug Rif Keyset</translation>
+      <translation>Debugiraj Rif Ključeve</translation>
     </message>
     <message>
       <source>RSA key components for debug RIF files.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for debug RIF files.
-All fields must be valid hex strings with even length.</translation>
+      <translation>RSA komponente ključa za debug RIF datoteka.
+Sva polja moraju bit valjani hex stringovi jednake duljine.</translation>
     </message>
     <message>
       <source>Pkg Derived Key3</source>
-      <translation type="unfinished">Pkg Derived Key3</translation>
+      <translation>Pkg Izvedeni Ključ3</translation>
     </message>
     <message>
       <source>RSA key components for package decryption.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for package decryption.
-All fields must be valid hex strings with even length.</translation>
+      <translation>RSA komponente ključa za paketnu dekripciju.
+Sva polja moraju bit valjani hex stringovi jednake duljine.</translation>
     </message>
     <message>
       <source>Close</source>
-      <translation type="unfinished">Close</translation>
+      <translation>Zatvori</translation>
     </message>
     <message>
       <source>Warning</source>
-      <translation type="unfinished">Warning</translation>
+      <translation>Upozorenje</translation>
     </message>
     <message>
       <source>No key file found or failed to load.
 Please enter your keys and save them.</source>
-      <translation type="unfinished">No key file found or failed to load.
-Please enter your keys and save them.</translation>
+      <translation>Nema pronađenih datoteki ključeva ili greška u učitanju.
+Molimo unesite vlastite ključeve i spremite ih.</translation>
     </message>
     <message>
       <source>Validation Error</source>
-      <translation type="unfinished">Validation Error</translation>
+      <translation>Greška u Potvrdi</translation>
     </message>
     <message>
       <source>Success</source>
-      <translation type="unfinished">Success</translation>
+      <translation>Uspješno</translation>
     </message>
     <message>
       <source>Keys saved successfully!</source>
-      <translation type="unfinished">Keys saved successfully!</translation>
+      <translation>Ključevi spremljeni uspješno!</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Greška</translation>
     </message>
     <message>
       <source>Failed to save keys!</source>
-      <translation type="unfinished">Failed to save keys!</translation>
+      <translation>Neuspješno spremanje ključeva!</translation>
     </message>
     <message>
       <source>Status: All fields empty</source>
-      <translation type="unfinished">Status: All fields empty</translation>
+      <translation>Status: Sva polja prazna</translation>
     </message>
     <message>
       <source>Status: Invalid hex values</source>
-      <translation type="unfinished">Status: Invalid hex values</translation>
+      <translation>Status: Nevaljane hex vrijednosti</translation>
     </message>
     <message>
       <source>Status: Incomplete</source>
-      <translation type="unfinished">Status: Incomplete</translation>
+      <translation>Status: Nedovršeno</translation>
     </message>
     <message>
       <source>Status: Valid</source>
-      <translation type="unfinished">Status: Valid</translation>
+      <translation>Status: Valjano</translation>
     </message>
     <message>
       <source>Invalid File</source>
-      <translation type="unfinished">Invalid File</translation>
+      <translation>Nevaljane Datoteke</translation>
     </message>
     <message>
       <source>Only JSON files are supported.</source>
-      <translation type="unfinished">Only JSON files are supported.</translation>
+      <translation>Samo JSON datoteke su podržane.</translation>
     </message>
     <message>
       <source>Unable to open file.</source>
-      <translation type="unfinished">Unable to open file.</translation>
+      <translation>Neuspješno otvaranje datoteke.</translation>
     </message>
     <message>
       <source>JSON Error</source>
-      <translation type="unfinished">JSON Error</translation>
+      <translation>JSON Greška</translation>
     </message>
     <message>
       <source>Invalid JSON format.</source>
-      <translation type="unfinished">Invalid JSON format.</translation>
+      <translation>Nevaljani JSON format.</translation>
     </message>
     <message>
       <source>Keys successfully loaded from JSON!</source>
-      <translation type="unfinished">Keys successfully loaded from JSON!</translation>
+      <translation>Ključevi uspješno učitani iz JSON-a!</translation>
     </message>
     <message>
       <source>Trophy Key contains invalid hex or has odd length.</source>
-      <translation type="unfinished">Trophy Key contains invalid hex or has odd length.</translation>
+      <translation>Ključ Trofeja sadrži nevaljanu ili ima neparnu duljinu.</translation>
     </message>
     <message>
       <source>%1 contains invalid hex or has odd length.</source>
-      <translation type="unfinished">%1 contains invalid hex or has odd length.</translation>
+      <translation>%1 sadrži nevaljanu hex ili ima neparnu duljinu.</translation>
     </message>
     <message>
       <source>Load Key</source>
-      <translation type="unfinished">Load Key</translation>
+      <translation>Učitaj ključ</translation>
     </message>
     <message>
       <source>Save Key</source>
-      <translation type="unfinished">Save Key</translation>
+      <translation>Spremi ključ</translation>
     </message>
   </context>
   <context>
@@ -1298,15 +1298,15 @@ sam izvještaj ne bi postao nevaljan:</translation>
     </message>
     <message>
       <source>This game has no save folder to open!</source>
-      <translation type="unfinished">This game has no save folder to open!</translation>
+      <translation>Ova igra nema direktorij spremanja za otvaranjei!</translation>
     </message>
     <message>
       <source>User</source>
-      <translation type="unfinished">User</translation>
+      <translation>Korisnik</translation>
     </message>
     <message>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
-      <translation type="unfinished">A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</translation>
+      <translation>Za korištenje Preglednika trofeja potreban je ključ trofeja. Može se unijeti klikom na Postavke - Upravljanje kriptografskim ključevima.</translation>
     </message>
   </context>
   <context>
@@ -1996,11 +1996,11 @@ Izaberite verziju emulatora s desne liste.</translation>
     </message>
     <message>
       <source>Manage Cryptographic Keys</source>
-      <translation type="unfinished">Manage Cryptographic Keys</translation>
+      <translation>Upravljanje kriptografskim ključevima</translation>
     </message>
     <message>
       <source>Manage Users</source>
-      <translation type="unfinished">Manage Users</translation>
+      <translation>Upravljajte korisnicima</translation>
     </message>
   </context>
   <context>
@@ -2814,43 +2814,43 @@ Izaziva rušenje ili probleme u nekim igrama.</translation>
     </message>
     <message>
       <source>Select shadPS4 Home Path</source>
-      <translation type="unfinished">Select shadPS4 Home Path</translation>
+      <translation>Odaberite početnu putanju shadPS4</translation>
     </message>
     <message>
       <source>Select the system modules folder</source>
-      <translation type="unfinished">Select the system modules folder</translation>
+      <translation>Odaberite mapu sistemskih modula</translation>
     </message>
     <message>
       <source>Home Folder Location (Saves, Inputs, Trophy Data)</source>
-      <translation type="unfinished">Home Folder Location (Saves, Inputs, Trophy Data)</translation>
+      <translation>Lokacija početne mape (spreme, unosi, podaci o trofejima)</translation>
     </message>
     <message>
       <source>Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</source>
-      <translation type="unfinished">Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</translation>
+      <translation>Lokacija početne mape:\nMapa u kojoj se pohranjuju podaci za spremanje, datoteke s trofejima i konfiguracije unosa za sve korisnike.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the home folder.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the home folder.</translation>
+      <translation>Pregled:\nPretražite mapu koju želite postaviti kao početnu mapu.</translation>
     </message>
     <message>
       <source>Audio</source>
-      <translation type="unfinished">Audio</translation>
+      <translation>Zvuk</translation>
     </message>
     <message>
       <source>Audio Backend</source>
-      <translation type="unfinished">Audio Backend</translation>
+      <translation>Zvučni Poslužitelj</translation>
     </message>
     <message>
       <source>Mic Device</source>
-      <translation type="unfinished">Mic Device</translation>
+      <translation>Mikrofon</translation>
     </message>
     <message>
       <source>Devices</source>
-      <translation type="unfinished">Devices</translation>
+      <translation>Uređaji</translation>
     </message>
     <message>
       <source>Camera</source>
-      <translation type="unfinished">Camera</translation>
+      <translation>Fotoaparat</translation>
     </message>
   </context>
   <context>
@@ -2900,106 +2900,106 @@ Izaziva rušenje ili probleme u nekim igrama.</translation>
     </message>
     <message>
       <source>Select User:</source>
-      <translation type="unfinished">Select User:</translation>
+      <translation>Izbor Korisnika:</translation>
     </message>
   </context>
   <context>
     <name>UserManagerDialog</name>
     <message>
       <source>User Manager</source>
-      <translation type="unfinished">User Manager</translation>
+      <translation>Upravitelj Korisnika</translation>
     </message>
     <message>
       <source>&amp;Create User</source>
-      <translation type="unfinished">&amp;Create User</translation>
+      <translation>&amp;Izradi Korisnika</translation>
     </message>
     <message>
       <source>&amp;Delete User</source>
-      <translation type="unfinished">&amp;Delete User</translation>
+      <translation>&amp;Izbriši Korisnika</translation>
     </message>
     <message>
       <source>&amp;Rename User</source>
-      <translation type="unfinished">&amp;Rename User</translation>
+      <translation>&amp;Preimenuj Korisnika</translation>
     </message>
     <message>
       <source>&amp;Set Default User</source>
-      <translation type="unfinished">&amp;Set Default User</translation>
+      <translation>&amp;Postavi Zadanog Korisnika</translation>
     </message>
     <message>
       <source>&amp;Set Color</source>
-      <translation type="unfinished">&amp;Set Color</translation>
+      <translation>&amp;Postavi boju</translation>
     </message>
     <message>
       <source>&amp;Set Controller Port</source>
-      <translation type="unfinished">&amp;Set Controller Port</translation>
+      <translation>&amp;Postavi Port Kontrolera</translation>
     </message>
     <message>
       <source>&amp;Close</source>
-      <translation type="unfinished">&amp;Close</translation>
+      <translation>&amp;Zatvori</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Greška</translation>
     </message>
     <message>
       <source>Cannot add more users.</source>
-      <translation type="unfinished">Cannot add more users.</translation>
+      <translation>Nije moguće dodat više korisnika.</translation>
     </message>
     <message>
       <source>Create New User</source>
-      <translation type="unfinished">Create New User</translation>
+      <translation>Izradi Novog Korisnika</translation>
     </message>
     <message>
       <source>New User ID: %1</source>
-      <translation type="unfinished">New User ID: %1</translation>
+      <translation>ID Novog Korisnika: %1</translation>
     </message>
     <message>
       <source>Username (3–16 chars, letters, numbers, _, -)</source>
-      <translation type="unfinished">Username (3–16 chars, letters, numbers, _, -)</translation>
+      <translation>Korisničko Ime (3–16 znakova, slova, brojevi, _, -)</translation>
     </message>
     <message>
       <source>Invalid Username</source>
-      <translation type="unfinished">Invalid Username</translation>
+      <translation>Nevaljano korisničko ime</translation>
     </message>
     <message>
       <source>Username must be 3–16 chars and valid.</source>
-      <translation type="unfinished">Username must be 3–16 chars and valid.</translation>
+      <translation>Korisničko Ime mora sadržavati valjanih 3–16 znakova.</translation>
     </message>
     <message>
       <source>Delete Confirmation</source>
-      <translation type="unfinished">Delete Confirmation</translation>
+      <translation>Izbrisati Potvrde</translation>
     </message>
     <message>
       <source>Delete user ID %1?</source>
-      <translation type="unfinished">Delete user ID %1?</translation>
+      <translation>Obriši korisnički ID %1?</translation>
     </message>
     <message>
       <source>Rename User</source>
-      <translation type="unfinished">Rename User</translation>
+      <translation>Preimenuj Korisnika</translation>
     </message>
     <message>
       <source>Old Username: %1</source>
-      <translation type="unfinished">Old Username: %1</translation>
+      <translation>Staro Korisničko Ime: %1</translation>
     </message>
     <message>
       <source>Set User Color</source>
-      <translation type="unfinished">Set User Color</translation>
+      <translation>Postavi Korisničku Boju</translation>
     </message>
     <message>
       <source>Select color:</source>
-      <translation type="unfinished">Select color:</translation>
+      <translation>Izaberi boju:</translation>
     </message>
     <message>
       <source>Set Controller Port</source>
-      <translation type="unfinished">Set Controller Port</translation>
+      <translation>Postavi Port Kontrolera</translation>
     </message>
     <message>
       <source>Assign port (1-4) to this user:</source>
-      <translation type="unfinished">Assign port (1-4) to this user:</translation>
+      <translation>Dodijeli port(1-4) ovom korisniku:</translation>
     </message>
     <message>
       <source>&amp;Open User Directory</source>
-      <translation type="unfinished">&amp;Open User Directory</translation>
+      <translation>&amp;Otvori Korisničku Mapu</translation>
     </message>
   </context>
   <context>
