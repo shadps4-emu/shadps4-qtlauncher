@@ -6,7 +6,7 @@
 #include "unordered_map"
 
 #include "common/key_manager.h"
-#include "common/logging/backend.h"
+#include "common/logging/log.h"
 #include "common/versions.h"
 #include "core/emulator_settings.h"
 #include "core/emulator_state.h"
@@ -29,6 +29,9 @@ int main(int argc, char* argv[]) {
     SetConsoleOutputCP(CP_UTF8);
 #endif
 
+    // Start default log
+    Common::Log::Setup("shadPS4Launcher.log");
+
     QApplication a(argc, argv);
 
     QApplication::setDesktopFileName("net.shadps4.qtlauncher");
@@ -41,6 +44,11 @@ int main(int argc, char* argv[]) {
     emu_settings->Load();
     EmulatorSettingsImpl::SetInstance(emu_settings);
     UserSettings.Load();
+
+    Common::Log::Shutdown();
+    // Start configured log
+    Common::Log::g_should_append |= EmulatorSettings.IsLogAppend();
+    Common::Log::Setup("shadPS4Launcher.log");
 
     std::shared_ptr<KeyManager> m_key_manager = std::make_shared<KeyManager>();
     KeyManager::SetInstance(m_key_manager); // initialize singleton instance
@@ -146,8 +154,6 @@ int main(int argc, char* argv[]) {
         GameInstallDialog dlg;
         dlg.exec();
     }
-
-    Common::Log::Initialize("shadPS4Launcher.log");
 
     if (has_command_line_argument && !has_emulator_argument) {
         std::cerr << "Error: Please provide a name or path for the emulator core.\n";

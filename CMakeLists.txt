@@ -19,6 +19,8 @@ endif()
 
 project(shadPS4QtLauncher CXX C ASM ${ADDITIONAL_LANGUAGES})
 
+include(FetchContent)
+
 # Forcing PIE makes sure that the base address is high enough so that it doesn't clash with the PS4 memory.
 if(UNIX AND NOT APPLE)
     set(CMAKE_POSITION_INDEPENDENT_CODE TRUE)
@@ -259,16 +261,11 @@ file(APPEND ${TRANSLATIONS_QRC} "</qresource></RCC>")
 
 qt_add_resources(TRANSLATIONS ${TRANSLATIONS_QRC})
 
-set(COMMON src/common/logging/backend.cpp
-           src/common/logging/backend.h
-           src/common/logging/filter.cpp
-           src/common/logging/filter.h
+set(COMMON src/common/logging/classes.h
            src/common/logging/formatter.h
-           src/common/logging/log_entry.h
+           src/common/logging/log.cpp
            src/common/logging/log.h
-           src/common/logging/text_formatter.cpp
-           src/common/logging/text_formatter.h
-           src/common/logging/types.h
+           src/common/logging/thread_name_formatter.h
            src/common/log_analyzer.cpp
            src/common/log_analyzer.h
            src/common/aes.h
@@ -415,7 +412,7 @@ qt_add_executable(shadPS4QtLauncher
 
 create_target_directory_groups(shadPS4QtLauncher)
 
-target_link_libraries(shadPS4QtLauncher PRIVATE Vulkan::Headers fmt::fmt toml11::toml11 SDL3::SDL3 volk_headers)
+target_link_libraries(shadPS4QtLauncher PRIVATE Vulkan::Headers fmt::fmt toml11::toml11 SDL3::SDL3 volk_headers spdlog::spdlog)
 
 if (APPLE)
     # Include MoltenVK, along with an ICD file so it can be found by the system Vulkan loader if used for loading layers.

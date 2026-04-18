@@ -13,14 +13,14 @@
 #include <SDL3/SDL.h>
 #include <fmt/format.h>
 
+#include "common/assert.h"
 #include "common/logging/log.h"
 #include "qt_gui/compatibility_info.h"
 #ifdef ENABLE_UPDATER
 #include "check_update.h"
 #endif
 #include "background_music_player.h"
-#include "common/logging/backend.h"
-#include "common/logging/filter.h"
+#include "common/logging/log.h"
 #include "core/emulator_state.h"
 #include "log_presets_dialog.h"
 #include "sdl_event_wrapper.h"
@@ -81,6 +81,44 @@ int bgm_volume_backup;
 
 static std::vector<QString> m_physical_devices;
 
+void LogUpdateLevels() {
+    std::optional<spdlog::level> default_log_level = spdlog::level::debug;
+    std::unordered_map<std::string, spdlog::level> log_level_per_class;
+
+    if (EmulatorSettings.IsLogEnable()) {
+        for (const auto class_level : std::views::split(EmulatorSettings.GetLogFilter(), ',')) {
+            const auto class_level_pair =
+                std::views::split(class_level, '=') | std::ranges::to<std::vector<std::string>>();
+
+            if (class_level_pair.size() == 1) {
+                default_log_level = spdlog::level_from_str(class_level_pair.front() |
+                                                           std::ranges::to<std::string>());
+            } else {
+                log_level_per_class[class_level_pair.front() | std::ranges::to<std::string>()] =
+                    spdlog::level_from_str(class_level_pair.back() |
+                                           std::ranges::to<std::string>());
+            }
+        }
+    }
+
+    for (auto& [name, logger] : Common::Log::ALL_LOGGERS) {
+        ASSERT_MSG(logger != nullptr, "logger {} is null", name);
+
+        if (EmulatorSettings.IsLogEnable()) {
+            const auto level_it = log_level_per_class.find(std::string(name));
+
+            if ((level_it == log_level_per_class.end()) && !default_log_level.has_value()) {
+                continue;
+            }
+
+            logger->set_level(level_it != log_level_per_class.end() ? level_it->second
+                                                                    : *default_log_level);
+        } else {
+            logger->set_level(spdlog::level::off);
+        }
+    }
+}
+
 SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
                                std::shared_ptr<CompatibilityInfoClass> m_compat_info,
                                std::shared_ptr<IpcClient> ipc_client, QWidget* parent,
@@ -124,7 +162,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
 
     ui->buttonBox->button(QDialogButtonBox::StandardButton::Close)->setFocus();
 
-    logTypeMap = {{tr("async"), "async"}, {tr("sync"), "sync"}};
+    logTypeMap = {{tr("wincolor"), "wincolor"}, {tr("msvc"), "msvc"}};
     screenModeMap = {{tr("Fullscreen (Borderless)"), "Fullscreen (Borderless)"},
                      {tr("Windowed"), "Windowed"},
                      {tr("Fullscreen"), "Fullscreen"}};
@@ -231,11 +269,8 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
             BackgroundMusicPlayer::getInstance().setVolume(bgm_volume_backup);
             SyncRealTimeWidgetstoConfig();
         }
-        if (Common::Log::IsActive()) {
-            Common::Log::Filter filter;
-            filter.ParseFilterString(EmulatorSettings.GetLogFilter());
-            Common::Log::SetGlobalFilter(filter);
-        }
+
+        LogUpdateLevels();
     });
 
     ui->buttonBox->button(QDialogButtonBox::Save)->setText(tr("Save"));
@@ -410,9 +445,9 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         });
     }
 
-    // DEBUG TAB
+    // LOG TAB
     {
-        connect(ui->OpenLogLocationButton, &QPushButton::clicked, this, []() {
+        connect(ui->logOpenLocationButton, &QPushButton::clicked, this, []() {
             QString userPath;
             Common::FS::PathToQString(userPath,
                                       Common::FS::GetUserPath(Common::FS::PathType::LogDir));
@@ -427,6 +462,14 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
             dlg->exec();
         });
 
+        connect(ui->logSkipDuplicateCheckBox, &QPushButton::clicked, this, [this]() {
+            ui->logMaxSkipDurationGroupBox->setVisible(
+                !ui->logMaxSkipDurationGroupBox->isVisible());
+        });
+    }
+
+    // DEBUG TAB
+    {
         connect(ui->vkValidationCheckBox, &QCheckBox::checkStateChanged, this,
                 [this](Qt::CheckState state) {
                     state ? ui->vkLayersGroupBox->setVisible(true)
@@ -524,11 +567,16 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         ui->folderButton->installEventFilter(this);
 
         // Log
-        ui->logTypeGroupBox->installEventFilter(this);
+        ui->logAppendCheckBox->installEventFilter(this);
+        ui->logEnableCheckBox->installEventFilter(this);
         ui->logFilter->installEventFilter(this);
-        ui->enableLoggingCheckBox->installEventFilter(this);
-        ui->separateLogFilesCheckbox->installEventFilter(this);
-        ui->OpenLogLocationButton->installEventFilter(this);
+        ui->logMaxSkipDurationLineEdit->installEventFilter(this);
+        ui->logOpenLocationButton->installEventFilter(this);
+        ui->logSeparateCheckBox->installEventFilter(this);
+        ui->logSizeLimitLineEdit->installEventFilter(this);
+        ui->logSkipDuplicateCheckBox->installEventFilter(this);
+        ui->logSyncCheckBox->installEventFilter(this);
+        ui->logTypeGroupBox->installEventFilter(this);
 
         // Debug
         ui->debugDump->installEventFilter(this);
@@ -711,15 +759,27 @@ void SettingsDialog::LoadValuesFromConfig() {
     QString translatedText_PresentMode = presentModeMap.key(QString::fromStdString(presentMode));
     ui->presentModeComboBox->setCurrentText(translatedText_PresentMode);
 
+    // Log
+    ui->logAppendCheckBox->setChecked(EmulatorSettings.IsLogAppend());
+    ui->logEnableCheckBox->setChecked(EmulatorSettings.IsLogEnable());
+    ui->logFilterLineEdit->setText(QString::fromStdString(EmulatorSettings.GetLogFilter()));
+    ui->logMaxSkipDurationLineEdit->setValue(EmulatorSettings.GetLogMaxSkipDuration());
+    ui->logSeparateCheckBox->setChecked(EmulatorSettings.IsLogSeparate());
+    ui->logSizeLimitLineEdit->setValue(EmulatorSettings.GetLogSizeLimit());
+    ui->logSkipDuplicateCheckBox->setChecked(EmulatorSettings.IsLogSkipDuplicate());
+    ui->logMaxSkipDurationGroupBox->setVisible(ui->logSkipDuplicateCheckBox->isChecked());
+    ui->logSyncCheckBox->setChecked(EmulatorSettings.IsLogSync());
+#ifdef _WIN32
     std::string logType = EmulatorSettings.GetLogType();
     QString translatedText_logType = logTypeMap.key(QString::fromStdString(logType));
     if (!translatedText_logType.isEmpty()) {
         ui->logTypeComboBox->setCurrentText(translatedText_logType);
     }
-    ui->logFilterLineEdit->setText(QString::fromStdString(EmulatorSettings.GetLogFilter()));
+#else
+    ui->logTypeGroupBox->setVisible(false);
+#endif
 
     ui->debugDump->setChecked(EmulatorSettings.IsDebugDump());
-    ui->separateLogFilesCheckbox->setChecked(EmulatorSettings.IsSeparateLoggingEnabled());
     ui->vkValidationCheckBox->setChecked(EmulatorSettings.IsVkValidationEnabled());
     ui->vkSyncValidationCheckBox->setChecked(EmulatorSettings.IsVkValidationSyncEnabled());
     ui->vkCoreValidationCheckBox->setChecked(EmulatorSettings.IsVkValidationCoreEnabled());
@@ -735,7 +795,6 @@ void SettingsDialog::LoadValuesFromConfig() {
     ui->hostMarkersCheckBox->setChecked(EmulatorSettings.IsVkHostMarkersEnabled());
     ui->copyGPUBuffersCheckBox->setChecked(EmulatorSettings.IsCopyGpuBuffers());
     ui->collectShaderCheckBox->setChecked(EmulatorSettings.IsShaderCollect());
-    ui->enableLoggingCheckBox->setChecked(EmulatorSettings.IsLogEnabled());
 
     ui->audioBackendComboBox->setCurrentIndex(EmulatorSettings.GetAudioBackend());
     const QString backend = ui->audioBackendComboBox->currentText();
@@ -852,10 +911,6 @@ void SettingsDialog::updateNoteTextEdit(const QString& elementName) {
         text = tr("Show Splash Screen:\\nShows the game's splash screen (a special image) while the game is starting.");
     } else if (elementName == "discordRPCCheckbox") {
         text = tr("Enable Discord Rich Presence:\\nDisplays the emulator icon and relevant information on your Discord profile.");
-    } else if (elementName == "logTypeGroupBox") {
-        text = tr("Log Type:\\nSets whether to synchronize the output of the log window for performance. May have adverse effects on emulation.");
-    } else if (elementName == "logFilter") {
-        text = tr("Log Filter:\\nFilters the log to only print specific information.\\nExamples: \"Core:Trace\" \"Lib.Pad:Debug Common.Filesystem:Error\" \"*:Critical\"\\nLevels: Trace, Debug, Info, Warning, Error, Critical - in this order, a specific level silences all levels preceding it in the list and logs every level after it.");
     #ifdef ENABLE_UPDATER
     } else if (elementName == "updaterGroupBox") {
         text = tr("GUI Updates:\\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\\n\\n*This update applies only to the Qt user interface. To update the emulator core, please use the 'Version Manager' menu.");
@@ -874,6 +929,29 @@ void SettingsDialog::updateNoteTextEdit(const QString& elementName) {
         text = tr("Update Compatibility On Startup:\\nAutomatically update the compatibility database when shadPS4 starts.");
     } else if (elementName == "updateCompatibilityButton") {
         text = tr("Update Compatibility Database:\\nImmediately update the compatibility database.");
+    }
+
+    // Log
+    if (elementName == "logAppendCheckBox") {
+        text = tr("Log Append:\\nAppend to existing logs.");
+    } else if (elementName == "logEnableCheckBox") {
+        text = tr("Enable Logging:\\nEnables logging.\\nDo not change this if you do not know what you're doing!\\nWhen asking for help, make sure this setting is ENABLED.");
+    } else if (elementName == "logFilter") {
+        text = tr("Log Filter:\\nFilters the log to only print specific information.\\nExamples: \"Core=trace\" \"Lib.Pad=debug,Common.Filesystem=error\" \"critical\"\\nLevels: trace, debug, info, warning, error, critical - in this order, a specific level silences all levels preceding it in the list and logs every level after it.");
+    } else if (elementName == "logMaxSkipDurationLineEdit") {
+        text = tr("Log Max Skip Duration:\\nInterval without writing same lines (ms) - only if 'Log Skip Duplicate' enabled."); //TODO grey out if disabled
+    } else if (elementName == "logOpenLocationButton") {
+        text = tr("Open Log Location:\\nOpen the folder where the log file is saved.");
+    } else if (elementName == "logSeparateCheckBox") {
+        text = tr("Separate Log Files:\\nWrites a separate logfile for each game.");
+    } else if (elementName == "logSizeLimitLineEdit") {
+        text = tr("Log Size Limit:\\nMaximum size of log files (bytes).");
+    } else if (elementName == "logSkipDuplicateCheckBox") {
+        text = tr("Log Skip Duplicate:\\nSave storage by avoiding writing log that is identical.");
+    } else if (elementName == "logSyncCheckBox") {
+        text = tr("Log Sync:\\nSwitch between sync (order) or async (performance).");
+    } else if (elementName == "logTypeGroupBox") {
+        text = tr("Log Type:\\nChoose between wincolor or msvc log types.\\nwincolor: Default logging for Windows\\nmsvc: Logging for debugging");
     }
 
     //User
@@ -960,12 +1038,6 @@ void SettingsDialog::updateNoteTextEdit(const QString& elementName) {
         text = tr("Copy GPU Buffers:\\nGets around race conditions involving GPU submits.\\nMay or may not help with PM4 type 0 crashes.");
     } else if (elementName == "collectShaderCheckBox") {
         text = tr("Collect Shaders:\\nYou need this enabled to edit shaders with the debug menu (Ctrl + F10).");
-    } else if (elementName == "separateLogFilesCheckbox") {
-        text = tr("Separate Log Files:\\nWrites a separate logfile for each game.");
-    } else if (elementName == "enableLoggingCheckBox") {
-        text = tr("Enable Logging:\\nEnables logging.\\nDo not change this if you do not know what you're doing!\\nWhen asking for help, make sure this setting is ENABLED.");
-    } else if (elementName == "OpenLogLocationButton") {
-        text = tr("Open Log Location:\\nOpen the folder where the log file is saved.");
     } else if (elementName == "micComboBox") {
         text = tr("Microphone:\\nNone: Does not use the microphone.\\nDefault Device: Will use the default device defined in the system.\\nOr manually choose the microphone to be used from the list.");
     } else if (elementName == "volumeSliderElement") {
@@ -1058,11 +1130,21 @@ void SettingsDialog::UpdateSettings(bool is_specific) {
         EmulatorSettings.SetTrophyNotificationSide("bottom", is_specific);
     }
 
-    EmulatorSettings.SetLogEnabled(ui->enableLoggingCheckBox->isChecked(), is_specific);
-    EmulatorSettings.SetHdrAllowed(ui->enableHDRCheckBox->isChecked(), is_specific);
+    // Log
+    EmulatorSettings.SetLogAppend(ui->logAppendCheckBox->isChecked(), is_specific);
+    EmulatorSettings.SetLogEnable(ui->logEnableCheckBox->isChecked(), is_specific);
+    EmulatorSettings.SetLogFilter(ui->logFilterLineEdit->text().toStdString(), is_specific);
+    EmulatorSettings.SetLogMaxSkipDuration(ui->logMaxSkipDurationLineEdit->value(), is_specific);
+    EmulatorSettings.SetLogSeparate(ui->logSeparateCheckBox->isChecked(), is_specific);
+    EmulatorSettings.SetLogSizeLimit(ui->logSizeLimitLineEdit->value(), is_specific);
+    EmulatorSettings.SetLogSkipDuplicate(ui->logSkipDuplicateCheckBox->isChecked(), is_specific);
+    EmulatorSettings.SetLogSync(ui->logSyncCheckBox->isChecked(), is_specific);
+#ifdef _WIN32
     EmulatorSettings.SetLogType(logTypeMap.value(ui->logTypeComboBox->currentText()).toStdString(),
                                 is_specific);
-    EmulatorSettings.SetLogFilter(ui->logFilterLineEdit->text().toStdString(), is_specific);
+#endif
+
+    EmulatorSettings.SetHdrAllowed(ui->enableHDRCheckBox->isChecked(), is_specific);
     EmulatorSettings.SetCursorState(ui->hideCursorComboBox->currentIndex(), is_specific);
     EmulatorSettings.SetCursorHideTimeout(ui->idleTimeoutSpinBox->value(), is_specific);
     EmulatorSettings.SetGpuId(ui->graphicsAdapterBox->currentIndex() - 1, is_specific);
@@ -1080,8 +1162,6 @@ void SettingsDialog::UpdateSettings(bool is_specific) {
     EmulatorSettings.SetRcasAttenuation(ui->RCASSlider->value(), is_specific);
     EmulatorSettings.SetShowSplash(ui->showSplashCheckBox->isChecked(), is_specific);
     EmulatorSettings.SetDebugDump(ui->debugDump->isChecked(), is_specific);
-    EmulatorSettings.SetSeparateLoggingEnabled(ui->separateLogFilesCheckbox->isChecked(),
-                                               is_specific);
     EmulatorSettings.SetVkValidationEnabled(ui->vkValidationCheckBox->isChecked(), is_specific);
     EmulatorSettings.SetVkValidationSyncEnabled(ui->vkSyncValidationCheckBox->isChecked(),
                                                 is_specific);

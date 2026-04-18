@@ -1980,23 +1980,82 @@
               </property>
               <layout class="QVBoxLayout" name="loggerLayout">
                <item>
-                <widget class="QCheckBox" name="enableLoggingCheckBox">
+                <widget class="QCheckBox" name="logEnableCheckBox">
                  <property name="text">
                   <string>Enable Logging</string>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QCheckBox" name="separateLogFilesCheckbox">
+                <widget class="QPushButton" name="logOpenLocationButton">
+                 <property name="text">
+                  <string>Open Log Location</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QCheckBox" name="logSeparateCheckBox">
                  <property name="text">
                   <string>Separate Log Files</string>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QPushButton" name="OpenLogLocationButton">
+                <widget class="QCheckBox" name="logSyncCheckBox">
                  <property name="text">
-                  <string>Open Log Location</string>
+                  <string>Log Sync</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QCheckBox" name="logSkipDuplicateCheckBox">
+                 <property name="text">
+                  <string>Log Skip Duplicate</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QGroupBox" name="logMaxSkipDurationGroupBox">
+                 <property name="title">
+                  <string>Log Max Skip Duration</string>
+                 </property>
+                 <layout class="QHBoxLayout" name="logMaxSkipDurationBoxLayout">
+                  <item>
+                   <widget class="QSpinBox" name="logMaxSkipDurationLineEdit">
+                    <property name="suffix">
+                     <string> ms</string>
+                    </property>
+                    <property name="maximum">
+                     <number>9999999</number>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QGroupBox" name="logSizeLimitGroupBox">
+                 <property name="title">
+                  <string>Log Size Limit</string>
+                 </property>
+                 <layout class="QHBoxLayout" name="logSizeLimitBoxLayout">
+                  <item>
+                   <widget class="QSpinBox" name="logSizeLimitLineEdit">
+                    <property name="suffix">
+                     <string> B</string>
+                    </property>
+                    <property name="maximum">
+                     <number>999999999</number>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QCheckBox" name="logAppendCheckBox">
+                 <property name="text">
+                  <string>Log Append</string>
                  </property>
                 </widget>
                </item>
@@ -2019,12 +2078,12 @@
                 <widget class="QComboBox" name="logTypeComboBox">
                  <item>
                   <property name="text">
-                   <string>async</string>
+                   <string>wincolor</string>
                   </property>
                  </item>
                  <item>
                   <property name="text">
-                   <string>sync</string>
+                   <string>msvc</string>
                   </property>
                  </item>
                 </widget>

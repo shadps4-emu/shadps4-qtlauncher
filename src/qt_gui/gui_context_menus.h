@@ -273,7 +273,7 @@ public:
             QString logPath;
             Common::FS::PathToQString(logPath,
                                       Common::FS::GetUserPath(Common::FS::PathType::LogDir));
-            if (!EmulatorSettings.IsSeparateLoggingEnabled()) {
+            if (!EmulatorSettings.IsLogEnable()) {
                 QDesktopServices::openUrl(QUrl::fromLocalFile(logPath));
             } else {
                 QString fileName = QString::fromStdString(m_games[itemID].serial) + ".log";
@@ -695,8 +695,8 @@ public:
         if (selected == submitCompatibilityReport) {
             std::filesystem::path log_file_path =
                 (Common::FS::GetUserPath(Common::FS::PathType::LogDir) /
-                 (EmulatorSettings.IsSeparateLoggingEnabled() ? m_games[itemID].serial + ".log"
-                                                              : "shad_log.txt"));
+                 (EmulatorSettings.IsLogSeparate() ? m_games[itemID].serial + ".log"
+                                                   : "shad_log.txt"));
             bool is_valid_file = LogAnalyzer::ProcessFile(log_file_path);
             std::optional<std::string> report_result = std::nullopt;
             if (is_valid_file) {

@@ -16,6 +16,11 @@ if (MSVC)
     add_definitions(-D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_DEPRECATE -D_SCL_SECURE_NO_WARNINGS)
 endif()
 
+# spdlog
+set(SPDLOG_NO_EXCEPTIONS ON)
+set(SPDLOG_DISABLE_GLOBAL_LOGGER ON)
+add_subdirectory(spdlog)
+
 # fmtlib
 if (NOT TARGET fmt::fmt)
     add_subdirectory(fmt)

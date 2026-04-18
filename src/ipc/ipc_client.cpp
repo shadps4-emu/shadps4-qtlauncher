@@ -232,15 +232,15 @@ void IpcClient::onStdout() {
     QStringList entries = dataString.split('\n');
 
     for (QString& entry : entries) {
-        if (entry.contains("<Warning>")) {
+        if (entry.contains("<warning>")) {
             color = Qt::yellow;
-        } else if (entry.contains("<Error>")) {
+        } else if (entry.contains("<error>")) {
             color = Qt::red;
-        } else if (entry.contains("<Critical>")) {
+        } else if (entry.contains("<critical>")) {
             color = Qt::magenta;
-        } else if (entry.contains("<Trace>")) {
+        } else if (entry.contains("<trace>")) {
             color = Qt::gray;
-        } else if (entry.contains("<Debug>")) {
+        } else if (entry.contains("<debug>")) {
             color = Qt::cyan;
         } else {
             color = Qt::white;

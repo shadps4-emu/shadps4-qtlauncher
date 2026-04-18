@@ -5,6 +5,7 @@
 #include <unordered_map>
 #include "common/logging/log.h"
 #include "common/path_util.h"
+#include "common/types.h"
 
 #ifdef __APPLE__
 #include <CoreFoundation/CFBundle.h>

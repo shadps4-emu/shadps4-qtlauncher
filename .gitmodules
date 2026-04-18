@@ -29,3 +29,8 @@
 	path = externals/openal-soft
 	url = https://github.com/shadexternals/openal-soft.git
 	shallow = true
+[submodule "externals/spdlog"]
+	path = externals/spdlog
+	url = https://github.com/gabime/spdlog.git
+	shallow = true
+	branch = v2.x
