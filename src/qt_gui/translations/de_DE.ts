@@ -1295,10 +1295,6 @@ Bitte gib die Schlüssel ein und speicher diese.</translation>
       <translation>Dieses Spiel hat keinen Speicherdaten-Ordner zum Öffnen!</translation>
     </message>
     <message>
-      <source>User</source>
-      <translation>Benutzer</translation>
-    </message>
-    <message>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
       <translation type="unfinished">A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</translation>
     </message>
