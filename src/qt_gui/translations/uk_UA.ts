@@ -1296,10 +1296,6 @@ Please enter your keys and save them.</source>
       <translation>У цій грі немає теки зі збереженнями для відкриття!</translation>
     </message>
     <message>
-      <source>User</source>
-      <translation>Користувач</translation>
-    </message>
-    <message>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
       <translation type="unfinished">A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</translation>
     </message>
