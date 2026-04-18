@@ -1296,10 +1296,6 @@ Por favor, digite suas chaves e salve-as.</translation>
       <translation>Este jogo não possui pasta de jogo salvo para abrir!</translation>
     </message>
     <message>
-      <source>User</source>
-      <translation>Usuário</translation>
-    </message>
-    <message>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
       <translation>É necessária uma chave de troféu para usar o Visualizador de Troféus. Você pode inseri-la clicando em Configurações - Gerenciar Chaves Criptográficas.</translation>
     </message>

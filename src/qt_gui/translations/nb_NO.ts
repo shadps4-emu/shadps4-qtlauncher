@@ -1296,10 +1296,6 @@ Skriv inn nøklene og lagre dem.</translation>
       <translation>Dette spillet har ingen lagret datamappe å åpne!</translation>
     </message>
     <message>
-      <source>User</source>
-      <translation type="unfinished">User</translation>
-    </message>
-    <message>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
       <translation type="unfinished">A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</translation>
     </message>

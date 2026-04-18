@@ -933,7 +933,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Compatibility</source>
-      <translation type="unfinished">Compatibility</translation>
+      <translation>کمپیٹیبلٹی</translation>
     </message>
     <message>
       <source>Region</source>
@@ -1111,7 +1111,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Compatibility...</source>
-      <translation type="unfinished">Compatibility...</translation>
+      <translation>کمپیٹیبلٹی...</translation>
     </message>
     <message>
       <source>Error</source>
@@ -1296,10 +1296,6 @@ Please enter your keys and save them.</translation>
     <message>
       <source>This game has no save folder to open!</source>
       <translation type="unfinished">This game has no save folder to open!</translation>
-    </message>
-    <message>
-      <source>User</source>
-      <translation type="unfinished">User</translation>
     </message>
     <message>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
@@ -1793,7 +1789,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Settings</source>
-      <translation type="unfinished">Settings</translation>
+      <translation>ترتیبات</translation>
     </message>
     <message>
       <source>Utils</source>
@@ -2181,7 +2177,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Title Music</source>
-      <translation type="unfinished">Title Music</translation>
+      <translation>ٹائٹل کا میوزک</translation>
     </message>
     <message>
       <source>Disable Trophy Notification</source>
@@ -2189,11 +2185,11 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Background Image</source>
-      <translation type="unfinished">Background Image</translation>
+      <translation>بیک گراؤنڈ کی تصویر</translation>
     </message>
     <message>
       <source>Show Background Image</source>
-      <translation type="unfinished">Show Background Image</translation>
+      <translation>بیک گراؤنڈ کی تصویر دکھائیں</translation>
     </message>
     <message>
       <source>Opacity</source>
@@ -2201,7 +2197,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Play title music</source>
-      <translation type="unfinished">Play title music</translation>
+      <translation>ٹائٹل کا میوزک چلائیں</translation>
     </message>
     <message>
       <source>Update Compatibility Database On Startup</source>
@@ -2269,11 +2265,11 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Background Image:\nControl the opacity of the game background image.</source>
-      <translation type="unfinished">Background Image:\nControl the opacity of the game background image.</translation>
+      <translation>بیک گراؤنڈ کی تصویر:\nگیم کی بیک گراؤنڈ کی تصویر کی شفافیت کو کنٹرول کریں۔</translation>
     </message>
     <message>
       <source>Play Title Music:\nIf a game supports it, enable playing special music when selecting the game in the GUI.</source>
-      <translation type="unfinished">Play Title Music:\nIf a game supports it, enable playing special music when selecting the game in the GUI.</translation>
+      <translation>ٹائٹل کا میوزک چلائیں:\nاگر گیم کا ٹائٹل میوزک ہو تو، جی یو آئی میں گیم کو منتخب کرنے کے دوران، یہ میوزک چلایا جائے۔</translation>
     </message>
     <message>
       <source>Disable Trophy Pop-ups:\nDisable in-game trophy notifications. Trophy progress can still be tracked using the Trophy Viewer (right-click the game in the main window).</source>
@@ -2537,7 +2533,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>FSR Settings</source>
-      <translation type="unfinished">FSR Settings</translation>
+      <translation>ایف ایس آر کی ترتیبات</translation>
     </message>
     <message>
       <source>Enable FSR</source>
@@ -2621,7 +2617,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>General Frontend Settings</source>
-      <translation type="unfinished">General Frontend Settings</translation>
+      <translation>فرنٹ اینڈ کی عمومی ترتیبات</translation>
     </message>
     <message>
       <source>Enable PS4 Neo Mode</source>
