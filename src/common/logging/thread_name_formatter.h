@@ -12,6 +12,13 @@
 namespace Common::Log {
 static constexpr unsigned long long UNLIMITED_SIZE = 0;
 
+static constexpr std::array level_string_views{"Trace", "Debug",    "Info", "Warning",
+                                               "Error", "Critical", "Off"};
+
+[[nodiscard]] static constexpr std::string_view to_string_view(spdlog::level lvl) noexcept {
+    return level_string_views.at(level_to_number(lvl));
+}
+
 struct thread_name_formatter : spdlog::formatter {
     ~thread_name_formatter() override = default;
 
@@ -29,8 +36,7 @@ struct thread_name_formatter : spdlog::formatter {
         dest.push_back(']');
         dest.push_back(' ');
         dest.push_back('<');
-        spdlog::details::fmt_helper::append_string_view(spdlog::to_string_view(msg.log_level),
-                                                        dest);
+        spdlog::details::fmt_helper::append_string_view(Log::to_string_view(msg.log_level), dest);
         dest.push_back('>');
         dest.push_back(' ');
         dest.push_back('(');
@@ -42,9 +48,7 @@ struct thread_name_formatter : spdlog::formatter {
         spdlog::details::fmt_helper::append_int(msg.source.line, dest);
         dest.push_back(' ');
         spdlog::details::fmt_helper::append_string_view(
-            std::string_view(msg.source.funcname).contains("(anonymous class)::operator()")
-                ? "lambda"
-                : msg.source.funcname,
+            std::string_view(msg.source.funcname) == "operator()" ? "lambda" : msg.source.funcname,
             dest);
         dest.push_back(':');
         dest.push_back(' ');
