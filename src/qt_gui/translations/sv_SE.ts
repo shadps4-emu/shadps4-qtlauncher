@@ -2888,7 +2888,7 @@ Välj en emulatorversion från den högra panelen.</translation>
     </message>
     <message>
       <source>Select User:</source>
-      <translation type="unfinished">Select User:</translation>
+      <translation>Välj användare:</translation>
     </message>
   </context>
   <context>
