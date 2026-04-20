@@ -2253,14 +2253,6 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
       <translation>Ota käyttöön Discord Rich Presence:\nNäyttää emulaattorin kuvakkeen ja asiaankuuluvat tiedot Discord-profiilissasi.</translation>
     </message>
     <message>
-      <source>Log Type:\nSets whether to synchronize the output of the log window for performance. May have adverse effects on emulation.</source>
-      <translation>Lokityyppi:\nAsettaa, synkronoidaanko loki-ikkunan ulostulo suorituskyvyn vuoksi. Tämä voi vaikuttaa haitallisesti emulointiin.</translation>
-    </message>
-    <message>
-      <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Trace&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: Trace, Debug, Info, Warning, Error, Critical - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
-      <translation>Lokisuodatin:\nSuodattaa lokia tulostamaan vain määrättyä tietoa.\nEsimerkkejä: &quot;Core:Trace&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nTasot: Trace, Debug, Info, Warning, Error, Critical - tässä järjestyksessä. Valittu taso vaientaa kaikki edeltävät tasot luettelossa ja kirjaa kaikki tasot sen jälkeen.</translation>
-    </message>
-    <message>
       <source>Background Image:\nControl the opacity of the game background image.</source>
       <translation>Taustakuva:\nMäärittää pelin taustakuvan läpinäkyvyyden.</translation>
     </message>
@@ -2367,14 +2359,6 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     <message>
       <source>Browse</source>
       <translation>Selaa</translation>
-    </message>
-    <message>
-      <source>async</source>
-      <translation>Asynkroninen</translation>
-    </message>
-    <message>
-      <source>sync</source>
-      <translation>Synkronoitu</translation>
     </message>
     <message>
       <source>Auto Select</source>
@@ -2839,6 +2823,70 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     <message>
       <source>Camera</source>
       <translation type="unfinished">Camera</translation>
+    </message>
+    <message>
+      <source>Log Sync</source>
+      <translation type="unfinished">Log Sync</translation>
+    </message>
+    <message>
+      <source>Log Skip Duplicate</source>
+      <translation type="unfinished">Log Skip Duplicate</translation>
+    </message>
+    <message>
+      <source>Log Max Skip Duration</source>
+      <translation type="unfinished">Log Max Skip Duration</translation>
+    </message>
+    <message>
+      <source> ms</source>
+      <translation type="unfinished"> ms</translation>
+    </message>
+    <message>
+      <source>Log Size Limit</source>
+      <translation type="unfinished">Log Size Limit</translation>
+    </message>
+    <message>
+      <source> B</source>
+      <translation type="unfinished"> B</translation>
+    </message>
+    <message>
+      <source>Log Append</source>
+      <translation type="unfinished">Log Append</translation>
+    </message>
+    <message>
+      <source>wincolor</source>
+      <translation type="unfinished">wincolor</translation>
+    </message>
+    <message>
+      <source>msvc</source>
+      <translation type="unfinished">msvc</translation>
+    </message>
+    <message>
+      <source>Log Append:\nAppend to existing logs.</source>
+      <translation type="unfinished">Log Append:\nAppend to existing logs.</translation>
+    </message>
+    <message>
+      <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core=trace&quot; &quot;Lib.Pad=debug,Common.Filesystem=error&quot; &quot;critical&quot;\nLevels: trace, debug, info, warning, error, critical - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
+      <translation type="unfinished">Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core=trace&quot; &quot;Lib.Pad=debug,Common.Filesystem=error&quot; &quot;critical&quot;\nLevels: trace, debug, info, warning, error, critical - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</translation>
+    </message>
+    <message>
+      <source>Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</source>
+      <translation type="unfinished">Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</translation>
+    </message>
+    <message>
+      <source>Log Size Limit:\nMaximum size of log files (bytes).</source>
+      <translation type="unfinished">Log Size Limit:\nMaximum size of log files (bytes).</translation>
+    </message>
+    <message>
+      <source>Log Skip Duplicate:\nSave storage by avoiding writing log that is identical.</source>
+      <translation type="unfinished">Log Skip Duplicate:\nSave storage by avoiding writing log that is identical.</translation>
+    </message>
+    <message>
+      <source>Log Sync:\nSwitch between sync (order) or async (performance).</source>
+      <translation type="unfinished">Log Sync:\nSwitch between sync (order) or async (performance).</translation>
+    </message>
+    <message>
+      <source>Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</source>
+      <translation type="unfinished">Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</translation>
     </message>
   </context>
   <context>
