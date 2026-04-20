@@ -635,7 +635,7 @@
     <message>
       <source>Trophy Key: Used for trophy decryption.
 Must be a valid hex string with even length.</source>
-      <translation>Clave de trofeos:\nNecesaria para descifrar los trofeos.
+      <translation>Clave de trofeos: Necesaria para descifrar los trofeos.
 Debe ser una cadena hexadecimal válida con longitud par.</translation>
     </message>
     <message>
