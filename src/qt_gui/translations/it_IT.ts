@@ -2253,14 +2253,6 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
       <translation>Abilita Discord Rich Presence:\nMostra l&apos;icona dell&apos;emulatore e informazioni pertinenti sul tuo profilo Discord.</translation>
     </message>
     <message>
-      <source>Log Type:\nSets whether to synchronize the output of the log window for performance. May have adverse effects on emulation.</source>
-      <translation>Tipo di Log:\nImposta se sincronizzare l&apos;output della finestra di log per le prestazioni. Potrebbe avere effetti avversi sull&apos;emulazione.</translation>
-    </message>
-    <message>
-      <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Trace&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: Trace, Debug, Info, Warning, Error, Critical - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
-      <translation>Filtro Log:\nFiltra il log per stampare solo informazioni specifiche.\nEsempi: &quot;Core:Trace&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot; Livelli: Trace, Debug, Info, Warning, Error, Critical - in questo ordine, un livello specifico silenzia tutti i livelli precedenti nell&apos;elenco e registra ogni livello successivo.</translation>
-    </message>
-    <message>
       <source>Background Image:\nControl the opacity of the game background image.</source>
       <translation>Immagine di sfondo:\nControlla l'opacità dell'immagine di sfondo del gioco.</translation>
     </message>
@@ -2367,14 +2359,6 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
     <message>
       <source>Browse</source>
       <translation>Sfoglia</translation>
-    </message>
-    <message>
-      <source>async</source>
-      <translation>Non sincronizzato</translation>
-    </message>
-    <message>
-      <source>sync</source>
-      <translation>Sincronizzato</translation>
     </message>
     <message>
       <source>Auto Select</source>
@@ -2839,6 +2823,70 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
     <message>
       <source>Camera</source>
       <translation>Camera</translation>
+    </message>
+    <message>
+      <source>Log Sync</source>
+      <translation type="unfinished">Log Sync</translation>
+    </message>
+    <message>
+      <source>Log Skip Duplicate</source>
+      <translation type="unfinished">Log Skip Duplicate</translation>
+    </message>
+    <message>
+      <source>Log Max Skip Duration</source>
+      <translation type="unfinished">Log Max Skip Duration</translation>
+    </message>
+    <message>
+      <source> ms</source>
+      <translation type="unfinished"> ms</translation>
+    </message>
+    <message>
+      <source>Log Size Limit</source>
+      <translation type="unfinished">Log Size Limit</translation>
+    </message>
+    <message>
+      <source> B</source>
+      <translation type="unfinished"> B</translation>
+    </message>
+    <message>
+      <source>Log Append</source>
+      <translation type="unfinished">Log Append</translation>
+    </message>
+    <message>
+      <source>wincolor</source>
+      <translation type="unfinished">wincolor</translation>
+    </message>
+    <message>
+      <source>msvc</source>
+      <translation type="unfinished">msvc</translation>
+    </message>
+    <message>
+      <source>Log Append:\nAppend to existing logs.</source>
+      <translation type="unfinished">Log Append:\nAppend to existing logs.</translation>
+    </message>
+    <message>
+      <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core=trace&quot; &quot;Lib.Pad=debug,Common.Filesystem=error&quot; &quot;critical&quot;\nLevels: trace, debug, info, warning, error, critical - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
+      <translation type="unfinished">Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core=trace&quot; &quot;Lib.Pad=debug,Common.Filesystem=error&quot; &quot;critical&quot;\nLevels: trace, debug, info, warning, error, critical - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</translation>
+    </message>
+    <message>
+      <source>Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</source>
+      <translation type="unfinished">Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</translation>
+    </message>
+    <message>
+      <source>Log Size Limit:\nMaximum size of log files (bytes).</source>
+      <translation type="unfinished">Log Size Limit:\nMaximum size of log files (bytes).</translation>
+    </message>
+    <message>
+      <source>Log Skip Duplicate:\nSave storage by avoiding writing log that is identical.</source>
+      <translation type="unfinished">Log Skip Duplicate:\nSave storage by avoiding writing log that is identical.</translation>
+    </message>
+    <message>
+      <source>Log Sync:\nSwitch between sync (order) or async (performance).</source>
+      <translation type="unfinished">Log Sync:\nSwitch between sync (order) or async (performance).</translation>
+    </message>
+    <message>
+      <source>Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</source>
+      <translation type="unfinished">Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</translation>
     </message>
   </context>
   <context>
