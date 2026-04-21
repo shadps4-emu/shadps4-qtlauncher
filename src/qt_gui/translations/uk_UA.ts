@@ -479,7 +479,7 @@
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation>За замовчуванням</translation>
+      <translation>Відновити до типових</translation>
     </message>
     <message>
       <source>Cancel</source>
@@ -563,7 +563,7 @@
     </message>
     <message>
       <source>Set Active Gamepad as Default</source>
-      <translation>Встановити активний контролер за замовчуванням</translation>
+      <translation>Встановити активний контролер як типовий</translation>
     </message>
     <message>
       <source>Remove Default Gamepad</source>
@@ -583,7 +583,7 @@
     </message>
     <message>
       <source>Active controller set as default</source>
-      <translation>Активний контролер встановлено за замовчуванням</translation>
+      <translation>Активний контролер встановлено як типовий</translation>
     </message>
     <message>
       <source>Default Controller Removed</source>
@@ -847,11 +847,11 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Do you want to reset your custom default config to the original default config?</source>
-      <translation>Ви бажаєте скинути ваші налаштування за замовчуванням до початкової конфігурації?</translation>
+      <translation>Бажаєте скинути ваші типові власні налаштування до початкових?</translation>
     </message>
     <message>
       <source>Do you want to reset this config to your custom default config?</source>
-      <translation>Ви бажаєте скинути ці налаштування до вашої конфігурації за замовчуванням?</translation>
+      <translation>Бажаєте скинути ці налаштування до вашої типової конфігурації?</translation>
     </message>
     <message>
       <source>Reset to Default</source>
@@ -862,7 +862,7 @@ Please enter your keys and save them.</source>
     <name>ElfViewer</name>
     <message>
       <source>Open Folder</source>
-      <translation>Відкрити папку</translation>
+      <translation>Відкрити теку</translation>
     </message>
   </context>
   <context>
@@ -884,7 +884,7 @@ Please enter your keys and save them.</source>
     <name>GameInstallDialog</name>
     <message>
       <source>shadPS4 - Choose directory</source>
-      <translation>shadPS4 - Виберіть папку</translation>
+      <translation>shadPS4: Виберіть теку</translation>
     </message>
     <message>
       <source>Browse</source>
@@ -1049,19 +1049,19 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Open Folder...</source>
-      <translation>Відкрити Папку...</translation>
+      <translation>Відкрити теку...</translation>
     </message>
     <message>
       <source>Open Game Folder</source>
-      <translation>Відкрити папку гри</translation>
+      <translation>Відкрити теку гри</translation>
     </message>
     <message>
       <source>Open Save Data Folder</source>
-      <translation>Відкрити папку збережень гри</translation>
+      <translation>Відкрити теку збережень гри</translation>
     </message>
     <message>
       <source>Open Log Folder</source>
-      <translation>Відкрити папку логів</translation>
+      <translation>Відкрити теку журналів</translation>
     </message>
     <message>
       <source>Copy info...</source>
@@ -1141,11 +1141,11 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Are you sure you want to delete %1&apos;s %2 directory?</source>
-      <translation>Ви впевнені, що хочете видалити %1 з папки %2?</translation>
+      <translation>Упевнені, що хочете видалити %1 з теки %2?</translation>
     </message>
     <message>
       <source>Open Update Folder</source>
-      <translation>Відкрити папку оновлень</translation>
+      <translation>Відкрити теку оновлень</translation>
     </message>
     <message>
       <source>Delete Save Data</source>
@@ -1153,7 +1153,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>This game has no update folder to open!</source>
-      <translation>Ця гра не має папки оновленнь, щоб відкрити її!</translation>
+      <translation>Ця гра не має теки оновленнь, щоб відкрити її!</translation>
     </message>
     <message>
       <source>No log file found for this game!</source>
@@ -1601,7 +1601,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation>За замовчуванням</translation>
+      <translation>Відновити до типових</translation>
     </message>
     <message>
       <source>Cancel</source>
@@ -1671,7 +1671,7 @@ Please enter your keys and save them.</source>
     <name>MainWindow</name>
     <message>
       <source>Open/Add Elf Folder</source>
-      <translation>Відкрити/Додати папку Elf</translation>
+      <translation>Відкрити/Додати теку Elf</translation>
     </message>
     <message>
       <source>Boot Game</source>
@@ -1695,7 +1695,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Open shadPS4 Folder</source>
-      <translation>Відкрити папку shadPS4</translation>
+      <translation>Відкрити теку shadPS4</translation>
     </message>
     <message>
       <source>Exit</source>
@@ -2014,7 +2014,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Default tab when opening settings</source>
-      <translation>Вкладка за замовчуванням при відкритті налаштувань</translation>
+      <translation>Типова вкладка при відкритті налаштувань</translation>
     </message>
     <message>
       <source>Enable Discord Rich Presence</source>
@@ -2026,7 +2026,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Open the custom trophy images/sounds folder</source>
-      <translation>Відкрити папку користувацьких зображень трофеїв/звуків</translation>
+      <translation>Відкрити теку користувацьких зображень трофеїв/звуків</translation>
     </message>
     <message>
       <source>Logger</source>
@@ -2110,7 +2110,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Game Folders</source>
-      <translation>Ігрові папки</translation>
+      <translation>Ігрові теки</translation>
     </message>
     <message>
       <source>Add...</source>
@@ -2226,7 +2226,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation>За замовчуванням</translation>
+      <translation>Відновити до типових</translation>
     </message>
     <message>
       <source>Close</source>
@@ -2310,19 +2310,19 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Game Folders:\nThe list of folders to check for installed games.</source>
-      <translation>Ігрові папки:\nСписок папок, що скануватимуться для виявлення ігор.</translation>
+      <translation>Ігрові теки:\nСписок тек, що скануватимуться для виявлення ігор.</translation>
     </message>
     <message>
       <source>Add:\nAdd a folder to the list.</source>
-      <translation>Додати:\nДодати папку в список.</translation>
+      <translation>Додати:\nДодати теку в список.</translation>
     </message>
     <message>
       <source>Remove:\nRemove a folder from the list.</source>
-      <translation>Вилучити:\nВилучити папку зі списку.</translation>
+      <translation>Вилучити:\nВилучити теку зі списку.</translation>
     </message>
     <message>
       <source>Enable Debug Dumping:\nSaves the import and export symbols and file header information of the currently running PS4 program to a directory.</source>
-      <translation>Увімкнути налагоджувальні дампи:\nЗберігає символи імпорту, експорту та інформацію про заголовок файлу поточної виконуваної програми PS4 у папку.</translation>
+      <translation>Увімкнути налагоджувальні дампи:\nЗберігає символи імпорту, експорту та інформацію про заголовок файлу поточної виконуваної програми PS4 у теку.</translation>
     </message>
     <message>
       <source>Enable RenderDoc Debugging:\nIf enabled, the emulator will provide compatibility with Renderdoc to allow capture and analysis of the currently rendered frame.</source>
@@ -2366,7 +2366,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Directory to install games</source>
-      <translation>Папка для встановлення ігор</translation>
+      <translation>Тека для встановлення ігор</translation>
     </message>
     <message>
       <source>Video</source>
@@ -2434,15 +2434,15 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Portable User Folder</source>
-      <translation>Портативна папка користувача</translation>
+      <translation>Портативна тека користувача</translation>
     </message>
     <message>
       <source>Create Portable User Folder from Common User Folder</source>
-      <translation>Створити портативну папку користувача з загальної папки</translation>
+      <translation>Створити портативну теку користувача із загальної теки</translation>
     </message>
     <message>
       <source>Portable user folder:\nStores shadPS4 settings and data that will be applied only to the shadPS4 build located in the current folder. Restart the app after creating the portable user folder to begin using it.</source>
-      <translation>Портативна папка користувача:\nЗберігає налаштування та дані shadPS4, які будуть застосовані лише до збірки shadPS4, розташованої у поточній теці. Перезапустіть програму після створення портативної теки користувача, щоб почати користуватися нею.</translation>
+      <translation>Портативна тека користувача:\nЗберігає налаштування та дані shadPS4, які будуть застосовані лише до збірки shadPS4, розташованої у поточній теці. Перезапустіть програму після створення портативної теки користувача, щоб почати користуватися нею.</translation>
     </message>
     <message>
       <source>%1 already exists</source>
@@ -2454,7 +2454,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Open the custom trophy images/sounds folder:\nYou can add custom images to the trophies and an audio.\nAdd the files to custom_trophy with the following names:\ntrophy.wav OR trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nNote: The sound will only work in QT versions.</source>
-      <translation>Відкрити папку користувацьких зображень трофеїв/звуків:\nВи можете додати користувацькі зображення до трофеїв та звук.\nДодайте файли до теки custom_trophy з такими назвами:\ntrophy.wav АБО trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nПримітка: Звук буде працювати лише у версіях ShadPS4 з графічним інтерфейсом.</translation>
+      <translation>Відкрити теку користувацьких зображень трофеїв/звуків:\nВи можете додати користувацькі зображення до трофеїв та звук.\nДодайте файли до теки custom_trophy з такими назвами:\ntrophy.wav АБО trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nПримітка: Звук буде працювати лише у версіях ShadPS4 з графічним інтерфейсом.</translation>
     </message>
     <message>
       <source>Experimental Features</source>
