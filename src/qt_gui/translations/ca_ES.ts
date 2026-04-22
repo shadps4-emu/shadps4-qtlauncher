@@ -2253,14 +2253,6 @@ Selecciona una versió del panell dret.</translation>
       <translation>Activa Discord Rich Presence:\nMostra la icona de l'emulador i informació rellevant en el teu perfil de Discord.</translation>
     </message>
     <message>
-      <source>Log Type:\nSets whether to synchronize the output of the log window for performance. May have adverse effects on emulation.</source>
-      <translation>Tipus de registre:\nEstableix si sincronitza la sortida de la finestra de registre per millorar el rendiment. Pot tenir reaccions adverses en el rendiment.</translation>
-    </message>
-    <message>
-      <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Trace&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: Trace, Debug, Info, Warning, Error, Critical - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
-      <translation>Filtre del registre:\nFiltra el registre per mostrar només la informació especificada.\nExemples: &quot;Core:Trace&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nNivells: Trace, Debug, Info, Warning, Error, Critical - en aquest ordre, un nivell específic silencia tots els nivells precedents de la llista i mostra només els nivells posteriors.</translation>
-    </message>
-    <message>
       <source>Background Image:\nControl the opacity of the game background image.</source>
       <translation>Imatge de fons:\nControla la opacitat de la imatge de fons del joc.</translation>
     </message>
@@ -2367,14 +2359,6 @@ Selecciona una versió del panell dret.</translation>
     <message>
       <source>Browse</source>
       <translation>Navega</translation>
-    </message>
-    <message>
-      <source>async</source>
-      <translation>asíncron</translation>
-    </message>
-    <message>
-      <source>sync</source>
-      <translation>sincronitzar</translation>
     </message>
     <message>
       <source>Auto Select</source>
@@ -2839,6 +2823,70 @@ Selecciona una versió del panell dret.</translation>
     <message>
       <source>Camera</source>
       <translation>Càmera</translation>
+    </message>
+    <message>
+      <source>Log Sync</source>
+      <translation>Sincronització del registre</translation>
+    </message>
+    <message>
+      <source>Log Skip Duplicate</source>
+      <translation>Ignora registres duplicats</translation>
+    </message>
+    <message>
+      <source>Log Max Skip Duration</source>
+      <translation>Duració màxima per ignorar registres</translation>
+    </message>
+    <message>
+      <source> ms</source>
+      <translation> ms</translation>
+    </message>
+    <message>
+      <source>Log Size Limit</source>
+      <translation>Límit de la mida del registre</translation>
+    </message>
+    <message>
+      <source> B</source>
+      <translation> B</translation>
+    </message>
+    <message>
+      <source>Log Append</source>
+      <translation>Annexar al registre</translation>
+    </message>
+    <message>
+      <source>wincolor</source>
+      <translation>wincolor</translation>
+    </message>
+    <message>
+      <source>msvc</source>
+      <translation>msvc</translation>
+    </message>
+    <message>
+      <source>Log Append:\nAppend to existing logs.</source>
+      <translation>Annexar al registre:\nAnnexar als registres actuals.</translation>
+    </message>
+    <message>
+      <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core=trace&quot; &quot;Lib.Pad=debug,Common.Filesystem=error&quot; &quot;critical&quot;\nLevels: trace, debug, info, warning, error, critical - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
+      <translation>Filtre del registre:\nFiltra el registre per mostrar només la informació especificada.\nExemples: &quot;Core:Trace&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nNivells: Trace, Debug, Info, Warning, Error, Critical - en aquest ordre, un nivell específic silencia tots els nivells precedents de la llista i mostra només els nivells posteriors.</translation>
+    </message>
+    <message>
+      <source>Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</source>
+      <translation>Duració màxima per ignorar registres:\nInterval sense escriure les mateixes línies (ms) - només si està activada l'opció Ignora els registres duplicats.</translation>
+    </message>
+    <message>
+      <source>Log Size Limit:\nMaximum size of log files (bytes).</source>
+      <translation>Límit de la mida del registre:\nMida màxima dels fitxers del registre (bytes).</translation>
+    </message>
+    <message>
+      <source>Log Skip Duplicate:\nSave storage by avoiding writing log that is identical.</source>
+      <translation>Ignora els registres duplicats:\nEstalvia emmagatzematge evitant desar registres idèntics.</translation>
+    </message>
+    <message>
+      <source>Log Sync:\nSwitch between sync (order) or async (performance).</source>
+      <translation>Sincronització del registre:\nAlterna entre sincronització (ordre) o asíncron (rendiment).</translation>
+    </message>
+    <message>
+      <source>Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</source>
+      <translation>Tipus de registre:\nSelecciona entre els tipus de registre wincolor o msvc.\nwincolor: Registre per defecte a Windows\nmsvc: Registre per depuració</translation>
     </message>
   </context>
   <context>

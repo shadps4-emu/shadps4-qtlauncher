@@ -2253,14 +2253,6 @@ Select an emulator version from the right panel.</source>
       <translation>Включить Discord Rich Presence:\nОтображает значок эмулятора и соответствующую информацию в вашем профиле Discord.</translation>
     </message>
     <message>
-      <source>Log Type:\nSets whether to synchronize the output of the log window for performance. May have adverse effects on emulation.</source>
-      <translation>Тип логов:\nУстановите, синхронизировать ли вывод окна логов ради производительности. Это может негативно сказаться на эмуляции.</translation>
-    </message>
-    <message>
-      <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Trace&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: Trace, Debug, Info, Warning, Error, Critical - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
-      <translation>Фильтр логов:\nФильтрует логи, чтобы показывать только определенную информацию.\nПримеры: &quot;Core:Trace&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nУровни: Trace, Debug, Info, Warning, Error, Critical - в этом порядке, конкретный уровень глушит все предыдущие уровни в списке и показывает все последующие уровни.</translation>
-    </message>
-    <message>
       <source>Background Image:\nControl the opacity of the game background image.</source>
       <translation>Фоновое изображение:\nКонтролирует непрозрачность фона игры.</translation>
     </message>
@@ -2367,14 +2359,6 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Browse</source>
       <translation>Обзор</translation>
-    </message>
-    <message>
-      <source>async</source>
-      <translation>асинхронный</translation>
-    </message>
-    <message>
-      <source>sync</source>
-      <translation>синхронный</translation>
     </message>
     <message>
       <source>Auto Select</source>
@@ -2839,6 +2823,70 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Camera</source>
       <translation>Камера</translation>
+    </message>
+    <message>
+      <source>Log Sync</source>
+      <translation>Синхронизация логов</translation>
+    </message>
+    <message>
+      <source>Log Skip Duplicate</source>
+      <translation>Пропуск дубликатов логов</translation>
+    </message>
+    <message>
+      <source>Log Max Skip Duration</source>
+      <translation>Максимальная длительность пропуска логов</translation>
+    </message>
+    <message>
+      <source> ms</source>
+      <translation>мс</translation>
+    </message>
+    <message>
+      <source>Log Size Limit</source>
+      <translation>Лимит размера лога</translation>
+    </message>
+    <message>
+      <source> B</source>
+      <translation> Б</translation>
+    </message>
+    <message>
+      <source>Log Append</source>
+      <translation>Добавление к логам</translation>
+    </message>
+    <message>
+      <source>wincolor</source>
+      <translation>wincolor</translation>
+    </message>
+    <message>
+      <source>msvc</source>
+      <translation>msvc</translation>
+    </message>
+    <message>
+      <source>Log Append:\nAppend to existing logs.</source>
+      <translation>Добавление к логам:\nДобавление к существующим логам.</translation>
+    </message>
+    <message>
+      <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core=trace&quot; &quot;Lib.Pad=debug,Common.Filesystem=error&quot; &quot;critical&quot;\nLevels: trace, debug, info, warning, error, critical - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
+      <translation>Фильтр логов:\nФильтрует логи, чтобы показывать только определенную информацию.\nПримеры: &quot;Core=Trace&quot; &quot;Lib.Pad=Debug Common.Filesystem=Error&quot; &quot;сritical&quot;\nУровни: trace, debug, info, warning, error, critical - в этом порядке, конкретный уровень глушит все предыдущие уровни в списке и показывает все последующие уровни.</translation>
+    </message>
+    <message>
+      <source>Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</source>
+      <translation>Максимальная длительность пропуска логов:\nИнтервал без записи одинаковых строк (мс) - только если включено &apos;Пропуск дубликатов логов&apos;.</translation>
+    </message>
+    <message>
+      <source>Log Size Limit:\nMaximum size of log files (bytes).</source>
+      <translation>Лимит размера лога:\nМаксимальный размер файлов лога (в байтах).</translation>
+    </message>
+    <message>
+      <source>Log Skip Duplicate:\nSave storage by avoiding writing log that is identical.</source>
+      <translation>Пропуск дубликатов логов:\nЭкономит место в хранилище, избегая записи идентичных логов.</translation>
+    </message>
+    <message>
+      <source>Log Sync:\nSwitch between sync (order) or async (performance).</source>
+      <translation>Синхронизация логов:\nПереключение между синхронизацией (порядок) или асинхронностью (производительность).</translation>
+    </message>
+    <message>
+      <source>Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</source>
+      <translation>Тип логов:\nВыберите между типами логов wincolor или msvc.\nwincolor: Стандартное логирование для Windows\nmsvc: Логирование для отладки</translation>
     </message>
   </context>
   <context>

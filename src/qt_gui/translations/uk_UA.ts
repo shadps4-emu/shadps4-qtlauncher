@@ -479,7 +479,7 @@
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation>За замовчуванням</translation>
+      <translation>Відновити до типових</translation>
     </message>
     <message>
       <source>Cancel</source>
@@ -563,7 +563,7 @@
     </message>
     <message>
       <source>Set Active Gamepad as Default</source>
-      <translation>Встановити активний контролер за замовчуванням</translation>
+      <translation>Встановити активний контролер як типовий</translation>
     </message>
     <message>
       <source>Remove Default Gamepad</source>
@@ -583,7 +583,7 @@
     </message>
     <message>
       <source>Active controller set as default</source>
-      <translation>Активний контролер встановлено за замовчуванням</translation>
+      <translation>Активний контролер встановлено як типовий</translation>
     </message>
     <message>
       <source>Default Controller Removed</source>
@@ -847,11 +847,11 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Do you want to reset your custom default config to the original default config?</source>
-      <translation>Ви бажаєте скинути ваші налаштування за замовчуванням до початкової конфігурації?</translation>
+      <translation>Бажаєте скинути ваші типові власні налаштування до початкових?</translation>
     </message>
     <message>
       <source>Do you want to reset this config to your custom default config?</source>
-      <translation>Ви бажаєте скинути ці налаштування до вашої конфігурації за замовчуванням?</translation>
+      <translation>Бажаєте скинути ці налаштування до вашої типової конфігурації?</translation>
     </message>
     <message>
       <source>Reset to Default</source>
@@ -862,7 +862,7 @@ Please enter your keys and save them.</source>
     <name>ElfViewer</name>
     <message>
       <source>Open Folder</source>
-      <translation>Відкрити папку</translation>
+      <translation>Відкрити теку</translation>
     </message>
   </context>
   <context>
@@ -884,7 +884,7 @@ Please enter your keys and save them.</source>
     <name>GameInstallDialog</name>
     <message>
       <source>shadPS4 - Choose directory</source>
-      <translation>shadPS4 - Виберіть папку</translation>
+      <translation>shadPS4: Виберіть теку</translation>
     </message>
     <message>
       <source>Browse</source>
@@ -1049,19 +1049,19 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Open Folder...</source>
-      <translation>Відкрити Папку...</translation>
+      <translation>Відкрити теку...</translation>
     </message>
     <message>
       <source>Open Game Folder</source>
-      <translation>Відкрити папку гри</translation>
+      <translation>Відкрити теку гри</translation>
     </message>
     <message>
       <source>Open Save Data Folder</source>
-      <translation>Відкрити папку збережень гри</translation>
+      <translation>Відкрити теку збережень гри</translation>
     </message>
     <message>
       <source>Open Log Folder</source>
-      <translation>Відкрити папку логів</translation>
+      <translation>Відкрити теку журналів</translation>
     </message>
     <message>
       <source>Copy info...</source>
@@ -1141,11 +1141,11 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Are you sure you want to delete %1&apos;s %2 directory?</source>
-      <translation>Ви впевнені, що хочете видалити %1 з папки %2?</translation>
+      <translation>Упевнені, що хочете видалити %1 з теки %2?</translation>
     </message>
     <message>
       <source>Open Update Folder</source>
-      <translation>Відкрити папку оновлень</translation>
+      <translation>Відкрити теку оновлень</translation>
     </message>
     <message>
       <source>Delete Save Data</source>
@@ -1153,7 +1153,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>This game has no update folder to open!</source>
-      <translation>Ця гра не має папки оновленнь, щоб відкрити її!</translation>
+      <translation>Ця гра не має теки оновленнь, щоб відкрити її!</translation>
     </message>
     <message>
       <source>No log file found for this game!</source>
@@ -1297,7 +1297,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
-      <translation type="unfinished">A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</translation>
+      <translation>Для використання Переглядача трофеїв потрібен ключ трофеїв. Його можна ввести, натиснувши Налаштування - Керування криптографічними ключами.</translation>
     </message>
   </context>
   <context>
@@ -1601,7 +1601,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation>За замовчуванням</translation>
+      <translation>Відновити до типових</translation>
     </message>
     <message>
       <source>Cancel</source>
@@ -1671,7 +1671,7 @@ Please enter your keys and save them.</source>
     <name>MainWindow</name>
     <message>
       <source>Open/Add Elf Folder</source>
-      <translation>Відкрити/Додати папку Elf</translation>
+      <translation>Відкрити/Додати теку Elf</translation>
     </message>
     <message>
       <source>Boot Game</source>
@@ -1695,7 +1695,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Open shadPS4 Folder</source>
-      <translation>Відкрити папку shadPS4</translation>
+      <translation>Відкрити теку shadPS4</translation>
     </message>
     <message>
       <source>Exit</source>
@@ -2014,7 +2014,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Default tab when opening settings</source>
-      <translation>Вкладка за замовчуванням при відкритті налаштувань</translation>
+      <translation>Типова вкладка при відкритті налаштувань</translation>
     </message>
     <message>
       <source>Enable Discord Rich Presence</source>
@@ -2026,7 +2026,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Open the custom trophy images/sounds folder</source>
-      <translation>Відкрити папку користувацьких зображень трофеїв/звуків</translation>
+      <translation>Відкрити теку користувацьких зображень трофеїв/звуків</translation>
     </message>
     <message>
       <source>Logger</source>
@@ -2110,7 +2110,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Game Folders</source>
-      <translation>Ігрові папки</translation>
+      <translation>Ігрові теки</translation>
     </message>
     <message>
       <source>Add...</source>
@@ -2226,7 +2226,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation>За замовчуванням</translation>
+      <translation>Відновити до типових</translation>
     </message>
     <message>
       <source>Close</source>
@@ -2251,14 +2251,6 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Enable Discord Rich Presence:\nDisplays the emulator icon and relevant information on your Discord profile.</source>
       <translation>Увімкнути Discord Rich Presence:\nВідображає значок емулятора та відповідну інформацію у вашому профілі Discord.</translation>
-    </message>
-    <message>
-      <source>Log Type:\nSets whether to synchronize the output of the log window for performance. May have adverse effects on emulation.</source>
-      <translation>Тип логів:\nВстановіть, чи синхронізувати виведення вікна логів заради продуктивності. Це може негативно вплинути на емуляцію.</translation>
-    </message>
-    <message>
-      <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Trace&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: Trace, Debug, Info, Warning, Error, Critical - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
-      <translation>Фільтр логів:\nФільтрує логи, щоб показувати тільки певну інформацію.\nПриклади: &quot;Core:Trace&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot; Рівні: Trace, Debug, Info, Warning, Error, Critical - у цьому порядку, конкретний рівень глушить усі попередні рівні у списку і показує всі наступні рівні.</translation>
     </message>
     <message>
       <source>Background Image:\nControl the opacity of the game background image.</source>
@@ -2318,19 +2310,19 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Game Folders:\nThe list of folders to check for installed games.</source>
-      <translation>Ігрові папки:\nСписок папок, що скануватимуться для виявлення ігор.</translation>
+      <translation>Ігрові теки:\nСписок тек, що скануватимуться для виявлення ігор.</translation>
     </message>
     <message>
       <source>Add:\nAdd a folder to the list.</source>
-      <translation>Додати:\nДодати папку в список.</translation>
+      <translation>Додати:\nДодати теку в список.</translation>
     </message>
     <message>
       <source>Remove:\nRemove a folder from the list.</source>
-      <translation>Вилучити:\nВилучити папку зі списку.</translation>
+      <translation>Вилучити:\nВилучити теку зі списку.</translation>
     </message>
     <message>
       <source>Enable Debug Dumping:\nSaves the import and export symbols and file header information of the currently running PS4 program to a directory.</source>
-      <translation>Увімкнути налагоджувальні дампи:\nЗберігає символи імпорту, експорту та інформацію про заголовок файлу поточної виконуваної програми PS4 у папку.</translation>
+      <translation>Увімкнути налагоджувальні дампи:\nЗберігає символи імпорту, експорту та інформацію про заголовок файлу поточної виконуваної програми PS4 у теку.</translation>
     </message>
     <message>
       <source>Enable RenderDoc Debugging:\nIf enabled, the emulator will provide compatibility with Renderdoc to allow capture and analysis of the currently rendered frame.</source>
@@ -2369,20 +2361,12 @@ Select an emulator version from the right panel.</source>
       <translation>Обрати</translation>
     </message>
     <message>
-      <source>async</source>
-      <translation>Асинхронний</translation>
-    </message>
-    <message>
-      <source>sync</source>
-      <translation>Синхронний</translation>
-    </message>
-    <message>
       <source>Auto Select</source>
       <translation>Автовибір</translation>
     </message>
     <message>
       <source>Directory to install games</source>
-      <translation>Папка для встановлення ігор</translation>
+      <translation>Тека для встановлення ігор</translation>
     </message>
     <message>
       <source>Video</source>
@@ -2450,15 +2434,15 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Portable User Folder</source>
-      <translation>Портативна папка користувача</translation>
+      <translation>Портативна тека користувача</translation>
     </message>
     <message>
       <source>Create Portable User Folder from Common User Folder</source>
-      <translation>Створити портативну папку користувача з загальної папки</translation>
+      <translation>Створити портативну теку користувача із загальної теки</translation>
     </message>
     <message>
       <source>Portable user folder:\nStores shadPS4 settings and data that will be applied only to the shadPS4 build located in the current folder. Restart the app after creating the portable user folder to begin using it.</source>
-      <translation>Портативна папка користувача:\nЗберігає налаштування та дані shadPS4, які будуть застосовані лише до збірки shadPS4, розташованої у поточній теці. Перезапустіть програму після створення портативної теки користувача, щоб почати користуватися нею.</translation>
+      <translation>Портативна тека користувача:\nЗберігає налаштування та дані shadPS4, які будуть застосовані лише до збірки shadPS4, розташованої у поточній теці. Перезапустіть програму після створення портативної теки користувача, щоб почати користуватися нею.</translation>
     </message>
     <message>
       <source>%1 already exists</source>
@@ -2470,7 +2454,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Open the custom trophy images/sounds folder:\nYou can add custom images to the trophies and an audio.\nAdd the files to custom_trophy with the following names:\ntrophy.wav OR trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nNote: The sound will only work in QT versions.</source>
-      <translation>Відкрити папку користувацьких зображень трофеїв/звуків:\nВи можете додати користувацькі зображення до трофеїв та звук.\nДодайте файли до теки custom_trophy з такими назвами:\ntrophy.wav АБО trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nПримітка: Звук буде працювати лише у версіях ShadPS4 з графічним інтерфейсом.</translation>
+      <translation>Відкрити теку користувацьких зображень трофеїв/звуків:\nВи можете додати користувацькі зображення до трофеїв та звук.\nДодайте файли до теки custom_trophy з такими назвами:\ntrophy.wav АБО trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nПримітка: Звук буде працювати лише у версіях ShadPS4 з графічним інтерфейсом.</translation>
     </message>
     <message>
       <source>Experimental Features</source>
@@ -2823,23 +2807,87 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Audio</source>
-      <translation type="unfinished">Audio</translation>
+      <translation>Звук</translation>
     </message>
     <message>
       <source>Audio Backend</source>
-      <translation type="unfinished">Audio Backend</translation>
+      <translation>Аудіосистема</translation>
     </message>
     <message>
       <source>Mic Device</source>
-      <translation type="unfinished">Mic Device</translation>
+      <translation>Мікрофон</translation>
     </message>
     <message>
       <source>Devices</source>
-      <translation type="unfinished">Devices</translation>
+      <translation>Пристрої</translation>
     </message>
     <message>
       <source>Camera</source>
-      <translation type="unfinished">Camera</translation>
+      <translation>Камера</translation>
+    </message>
+    <message>
+      <source>Log Sync</source>
+      <translation>Синхронізація журналу</translation>
+    </message>
+    <message>
+      <source>Log Skip Duplicate</source>
+      <translation>Пропустити дублікат у журналі</translation>
+    </message>
+    <message>
+      <source>Log Max Skip Duration</source>
+      <translation>Макс. тривалості пропуску журналу</translation>
+    </message>
+    <message>
+      <source> ms</source>
+      <translation> мс</translation>
+    </message>
+    <message>
+      <source>Log Size Limit</source>
+      <translation>Ліміт розміру журналу</translation>
+    </message>
+    <message>
+      <source> B</source>
+      <translation> B</translation>
+    </message>
+    <message>
+      <source>Log Append</source>
+      <translation>Додавання до журналу</translation>
+    </message>
+    <message>
+      <source>wincolor</source>
+      <translation>wincolor</translation>
+    </message>
+    <message>
+      <source>msvc</source>
+      <translation>msvc</translation>
+    </message>
+    <message>
+      <source>Log Append:\nAppend to existing logs.</source>
+      <translation>Додавання до журналу:\nДодати до наявних журналів.</translation>
+    </message>
+    <message>
+      <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core=trace&quot; &quot;Lib.Pad=debug,Common.Filesystem=error&quot; &quot;critical&quot;\nLevels: trace, debug, info, warning, error, critical - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
+      <translation>Фільтр журналу:\nФільтрує журнал, щоби виводити лише певну інформацію.\nПриклади: &quot;Core=trace&quot; &quot;Lib.Pad=debug,Common.Filesystem=error&quot; &quot;critical&quot;\nРівні: trace, debug, info, warning, error, critical — у такому порядку; вибір конкретного рівня вимикає всі попередні рівні у списку та записує всі наступні.</translation>
+    </message>
+    <message>
+      <source>Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</source>
+      <translation>Макс. тривалість пропуску журналу:\nІнтервал без запису однакових рядків (мс) — лише якщо увімкнено «Пропускати дублікати в журналах».</translation>
+    </message>
+    <message>
+      <source>Log Size Limit:\nMaximum size of log files (bytes).</source>
+      <translation>Ліміт розміру журналу:\nМаксимальний розмір журналу (у байтах).</translation>
+    </message>
+    <message>
+      <source>Log Skip Duplicate:\nSave storage by avoiding writing log that is identical.</source>
+      <translation>Пропускати дублікати в журналі:\nЕкономить місце в сховищі, уникаючи запису ідентичних журналів.</translation>
+    </message>
+    <message>
+      <source>Log Sync:\nSwitch between sync (order) or async (performance).</source>
+      <translation>Синхронізація журналів:\nПеремикання між синхронним (порядок) або асинхронним (продуктивність) режимами.</translation>
+    </message>
+    <message>
+      <source>Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</source>
+      <translation>Тип журналювання:\nВиберіть між типами журналів wincolor або msvc.\nwincolor: Стандартне журналювання для Windows\nmsvc: журналювання для налагодження</translation>
     </message>
   </context>
   <context>
@@ -2889,106 +2937,106 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Select User:</source>
-      <translation type="unfinished">Select User:</translation>
+      <translation>Виберіть користувача:</translation>
     </message>
   </context>
   <context>
     <name>UserManagerDialog</name>
     <message>
       <source>User Manager</source>
-      <translation type="unfinished">User Manager</translation>
+      <translation>Керування користувачами</translation>
     </message>
     <message>
       <source>&amp;Create User</source>
-      <translation type="unfinished">&amp;Create User</translation>
+      <translation>&amp;Створити користувача</translation>
     </message>
     <message>
       <source>&amp;Delete User</source>
-      <translation type="unfinished">&amp;Delete User</translation>
+      <translation>&amp;Видалити користувача</translation>
     </message>
     <message>
       <source>&amp;Rename User</source>
-      <translation type="unfinished">&amp;Rename User</translation>
+      <translation>&amp;Перейменувати користувача</translation>
     </message>
     <message>
       <source>&amp;Set Default User</source>
-      <translation type="unfinished">&amp;Set Default User</translation>
+      <translation>&amp;Встановити як типового користувача</translation>
     </message>
     <message>
       <source>&amp;Set Color</source>
-      <translation type="unfinished">&amp;Set Color</translation>
+      <translation>&amp;Встановити колір</translation>
     </message>
     <message>
       <source>&amp;Set Controller Port</source>
-      <translation type="unfinished">&amp;Set Controller Port</translation>
+      <translation>&amp;Встановити порт контролера</translation>
     </message>
     <message>
       <source>&amp;Close</source>
-      <translation type="unfinished">&amp;Close</translation>
+      <translation>&amp;Закрити</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Помилка</translation>
     </message>
     <message>
       <source>Cannot add more users.</source>
-      <translation type="unfinished">Cannot add more users.</translation>
+      <translation>Не вдалося додати більше користувачів.</translation>
     </message>
     <message>
       <source>Create New User</source>
-      <translation type="unfinished">Create New User</translation>
+      <translation>Створити нового користувача</translation>
     </message>
     <message>
       <source>New User ID: %1</source>
-      <translation type="unfinished">New User ID: %1</translation>
+      <translation>ID нового користувача: %1</translation>
     </message>
     <message>
       <source>Username (3–16 chars, letters, numbers, _, -)</source>
-      <translation type="unfinished">Username (3–16 chars, letters, numbers, _, -)</translation>
+      <translation>Ім’я користувача (3-16 символів, букви, цифри, _, -)</translation>
     </message>
     <message>
       <source>Invalid Username</source>
-      <translation type="unfinished">Invalid Username</translation>
+      <translation>Некоректне ім’я користувача</translation>
     </message>
     <message>
       <source>Username must be 3–16 chars and valid.</source>
-      <translation type="unfinished">Username must be 3–16 chars and valid.</translation>
+      <translation>Ім’я користувача має складатися з 3-16 символів та бути коректним.</translation>
     </message>
     <message>
       <source>Delete Confirmation</source>
-      <translation type="unfinished">Delete Confirmation</translation>
+      <translation>Підтвердити видалення</translation>
     </message>
     <message>
       <source>Delete user ID %1?</source>
-      <translation type="unfinished">Delete user ID %1?</translation>
+      <translation>Видалити ID користувача %1?</translation>
     </message>
     <message>
       <source>Rename User</source>
-      <translation type="unfinished">Rename User</translation>
+      <translation>Перейменувати користувача</translation>
     </message>
     <message>
       <source>Old Username: %1</source>
-      <translation type="unfinished">Old Username: %1</translation>
+      <translation>Старе ім’я користувача: %1</translation>
     </message>
     <message>
       <source>Set User Color</source>
-      <translation type="unfinished">Set User Color</translation>
+      <translation>Встановити колір користувача</translation>
     </message>
     <message>
       <source>Select color:</source>
-      <translation type="unfinished">Select color:</translation>
+      <translation>Виберіть колір:</translation>
     </message>
     <message>
       <source>Set Controller Port</source>
-      <translation type="unfinished">Set Controller Port</translation>
+      <translation>Встановити порт контролера</translation>
     </message>
     <message>
       <source>Assign port (1-4) to this user:</source>
-      <translation type="unfinished">Assign port (1-4) to this user:</translation>
+      <translation>Призначити порт (1-4) для цього користувача:</translation>
     </message>
     <message>
       <source>&amp;Open User Directory</source>
-      <translation type="unfinished">&amp;Open User Directory</translation>
+      <translation>&amp;Відкрити каталог користувачів</translation>
     </message>
   </context>
   <context>
