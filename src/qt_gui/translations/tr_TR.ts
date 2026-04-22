@@ -1411,7 +1411,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation/>
+      <translation>İpucu: Giriş atamalarını sağ tıklayarak kaldırın</translation>
     </message>
     <message>
       <source>Volume Up</source>
@@ -2818,7 +2818,7 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Devices</source>
-      <translation type="unfinished">Devices</translation>
+      <translation>Cihazlar</translation>
     </message>
     <message>
       <source>Camera</source>
@@ -3019,7 +3019,7 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Set User Color</source>
-      <translation type="unfinished">Set User Color</translation>
+      <translation>Kullanıcı Rengini Ayarla</translation>
     </message>
     <message>
       <source>Select color:</source>
