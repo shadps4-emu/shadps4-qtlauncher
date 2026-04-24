@@ -71,12 +71,12 @@ jobs:
     - name: Setup Qt
       uses: jurplel/install-qt-action@v4
       with:
-        version: 6.10.0
+        version: 6.11.0
         host: windows
         target: desktop
         arch: win64_msvc2022_64
         archives: qtbase qttools
-        modules: qtmultimedia qtshadertools qtquick
+        modules: qtmultimedia qtshadertools
 
     - name: Cache CMake Configuration
       uses: actions/cache@v4
@@ -138,12 +138,12 @@ jobs:
     - name: Setup Qt
       uses: jurplel/install-qt-action@v4
       with:
-        version: 6.10.0
+        version: 6.11.0
         host: mac
         target: desktop
         arch: clang_64
         archives: qtbase qttools
-        modules: qtmultimedia qtshadertools qtquick
+        modules: qtmultimedia qtshadertools
 
     - name: Cache CMake Configuration
       uses: actions/cache@v4 
@@ -207,9 +207,9 @@ jobs:
     - name: Install Qt
       uses: jurplel/install-qt-action@v4
       with:
-        version: 6.10.0
+        version: 6.11.0
         arch: linux_gcc_64
-        modules: "qtmultimedia qtshadertools qtquick"
+        modules: "qtmultimedia qtshadertools"
         tools: 'tools_generic'
         setup-python: false
         cache: true
@@ -268,9 +268,9 @@ jobs:
     - name: Install Qt
       uses: jurplel/install-qt-action@v4
       with:
-        version: 6.10.0
+        version: 6.11.0
         arch: linux_gcc_64
-        modules: "qtmultimedia qtshadertools qtquick"
+        modules: "qtmultimedia qtshadertools"
         tools: 'tools_generic'
         setup-python: false
         cache: true

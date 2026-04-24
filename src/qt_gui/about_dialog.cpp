@@ -5,7 +5,7 @@
 #include "about_dialog.h"
 
 #include <QGuiApplication>
-#include <QQuickStyle>
+//#include <QQuickStyle>
 #include <QWidget>
 
 #include "gui_settings.h"
@@ -19,7 +19,7 @@ AboutDialog::AboutDialog(std::shared_ptr<gui_settings> gui_settings, QWidget*)
 {
     const QPalette p = qApp->palette();
 
-    QQuickStyle::setStyle("Fusion");
+    //QQuickStyle::setStyle("Fusion");
 
     auto* engine = new QQmlApplicationEngine;
     auto* ctx = engine->rootContext();
