@@ -5,6 +5,8 @@
 #include "system_error"
 #include "unordered_map"
 
+#include <cstdio>
+
 #include "common/key_manager.h"
 #include "common/logging/log.h"
 #include "common/versions.h"
@@ -17,8 +19,34 @@
 #include <windows.h>
 #endif
 
-// Custom message handler to ignore Qt logs
-void customMessageHandler(QtMsgType, const QMessageLogContext&, const QString&) {}
+void customMessageHandler(QtMsgType type, const QMessageLogContext& context, const QString& msg) {
+    const char* level = "Info";
+    switch (type) {
+    case QtDebugMsg:
+        level = "Debug";
+        break;
+    case QtInfoMsg:
+        level = "Info";
+        break;
+    case QtWarningMsg:
+        level = "Warning";
+        break;
+    case QtCriticalMsg:
+        level = "Critical";
+        break;
+    case QtFatalMsg:
+        level = "Fatal";
+        break;
+    }
+
+    const QByteArray message = msg.toLocal8Bit();
+    const char* category = context.category ? context.category : "qt";
+    const char* file = context.file ? context.file : "unknown";
+    const char* function = context.function ? context.function : "unknown";
+
+    std::fprintf(stderr, "[Qt][%s][%s] %s (%s:%d, %s)\n", level, category, message.constData(),
+                 file, context.line, function);
+}
 
 void StopProgram() {
     exit(0);
@@ -61,7 +89,6 @@ int main(int argc, char* argv[]) {
     QStringList emulator_args{};
     QString game_arg = "";
 
-    // Ignore Qt logs
     qInstallMessageHandler(customMessageHandler);
 
     // Map of argument strings to lambda functions
