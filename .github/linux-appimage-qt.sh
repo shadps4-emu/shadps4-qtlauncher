@@ -9,9 +9,9 @@ fi
 
 export Qt6_DIR="/usr/lib/qt6"
 export PATH="$Qt6_DIR/bin:$PATH"
-export EXTRA_QT_PLUGINS="waylandcompositor;quickcontrols2"
+export EXTRA_QT_PLUGINS="waylandcompositor"
 export EXTRA_PLATFORM_PLUGINS="libqwayland.so"
-export QMLPATHS="$GITHUB_WORKSPACE/src/qml"
+export $QML_SOURCES_PATHS="$GITHUB_WORKSPACE/src/qml"
 
 # Prepare Tools for building the AppImage
 wget -q https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage
