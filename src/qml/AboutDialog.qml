@@ -262,18 +262,24 @@ ApplicationWindow {
                         opacity: 0.5
                     }
 
-                    ScrollView {
+                    Rectangle {
                         Layout.fillWidth: true
                         Layout.fillHeight: true
-                        contentWidth: availableWidth
+                        color: Qt.darker(themeWindow, 1.3)
 
-                        Text {
-                            width: parent.width
-                            wrapMode: Text.WordWrap
-                            font.pixelSize: 14
-                            color: themeText
-                            lineHeight: 1.6
-                            text: licenseText
+                        ScrollView {
+                            anchors.fill: parent
+                            anchors.margins: 8
+                            contentWidth: availableWidth
+
+                            Text {
+                                width: parent.width
+                                wrapMode: Text.WordWrap
+                                font.pixelSize: 14
+                                color: themeText
+                                lineHeight: 1.3
+                                text: licenseText
+                            }
                         }
                     }
                 }
