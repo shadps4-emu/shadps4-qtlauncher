@@ -78,8 +78,6 @@ jobs:
         host: windows
         target: desktop
         arch: win64_msvc2022_64
-        archives: qtbase qttools
-        modules: qtmultimedia qtshadertools qtdeclarative
 
     - name: Cache CMake Configuration
       uses: actions/cache@v4
@@ -145,8 +143,6 @@ jobs:
         host: mac
         target: desktop
         arch: clang_64
-        archives: qtbase qttools
-        modules: qtmultimedia qtshadertools
 
     - name: Cache CMake Configuration
       uses: actions/cache@v4 
