@@ -3,19 +3,14 @@
 
 #pragma once
 
-#include <memory>
 #include <QObject>
 
 class QWidget;
-class gui_settings;
 
 class AboutDialog : public QObject {
     Q_OBJECT
 
 public:
-    explicit AboutDialog(std::shared_ptr<gui_settings> gui_settings, QWidget* parent = nullptr);
+    explicit AboutDialog(QWidget* parent = nullptr);
     ~AboutDialog() = default;
-
-private:
-    std::shared_ptr<gui_settings> m_gui_settings;
 };
