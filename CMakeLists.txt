@@ -322,7 +322,6 @@ endif()
 
 set(QT_GUI src/qt_gui/about_dialog.cpp
            src/qt_gui/about_dialog.h
-           src/qt_gui/about_dialog.ui
            src/qt_gui/background_music_player.cpp
            src/qt_gui/background_music_player.h
            src/qt_gui/cheats_patches.cpp
