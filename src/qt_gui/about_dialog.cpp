@@ -5,9 +5,9 @@
 
 #include <QFile>
 #include <QGuiApplication>
-#include <QWidget>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
+#include <QWidget>
 
 AboutDialog::AboutDialog(QWidget*) {
     const QPalette p = qApp->palette();
