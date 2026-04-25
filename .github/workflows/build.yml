@@ -79,7 +79,7 @@ jobs:
         target: desktop
         arch: win64_msvc2022_64
         archives: qtbase qttools
-        modules: qtmultimedia qtshadertools
+        modules: qtmultimedia qtshadertools qtdeclarative
 
     - name: Cache CMake Configuration
       uses: actions/cache@v4
