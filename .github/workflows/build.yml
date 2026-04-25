@@ -68,6 +68,9 @@ jobs:
       run: |
         git fetch origin --unshallow --filter=blob:none
 
+    - name: Install latest aqt
+      run: pip install --upgrade git+https://github.com/miurahr/aqtinstall
+
     - name: Setup Qt
       uses: jurplel/install-qt-action@v4
       with:
