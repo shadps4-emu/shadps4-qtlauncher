@@ -159,19 +159,12 @@ ApplicationWindow {
                     spacing: 24
 
                     Text {
-                        text: qsTr("Want to contribute to shadPS4? Check out our GitHub repositories:")
+                        text: qsTr("Want to contribute to shadPS4? Check us out at:")
                         font.pixelSize: 18
                         color: themeText
                         wrapMode: Text.WordWrap
                         width: parent.width
                         lineHeight: 1.5
-                    }
-
-                    Rectangle {
-                        width: parent.width * 0.4
-                        height: 1
-                        color: themeMid
-                        opacity: 0.5
                     }
 
                     Column {
@@ -213,25 +206,23 @@ ApplicationWindow {
                         }
                     }
 
-                    Rectangle {
-                        width: parent.width * 0.4
-                        height: 1
-                        color: themeMid
-                        opacity: 0.5
-                    }
-
-                    Text {
-                        textFormat: Text.RichText
-                        text: qsTr("Want to help translate shadPS4? We use ") +
-                            "<a href='https://crowdin.com/project/shadps4' style='color:" + themeLink + "; text-decoration:none;'>Crowdin</a>" +
-                            qsTr(" to manage our translations.")
-                        font.pixelSize: 18
-                        color: themeText
-                        wrapMode: Text.WordWrap
-                        width: parent.width
-                        lineHeight: 1.5
-                        onLinkActivated: Qt.openUrlExternally(link)
-                        HoverHandler { cursorShape: Qt.PointingHandCursor }
+                    Column {
+                        spacing: 6
+                        Text {
+                            text: "QtLauncher Translation at Crowdin"
+                            font.pixelSize: 16
+                            font.bold: true
+                            color: themeText
+                        }
+                        Text {
+                            textFormat: Text.RichText
+                            text: "<a href='https://crowdin.com/project/shadps4' style='color:" + themeLink + "; text-decoration:none;'>https://crowdin.com/project/shadps4</a>"
+                            font.pixelSize: 14
+                            onLinkActivated: Qt.openUrlExternally(link)
+                            HoverHandler {
+                                cursorShape: Qt.PointingHandCursor
+                            }
+                        }
                     }
                 }
             }
