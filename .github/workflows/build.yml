@@ -177,7 +177,7 @@ jobs:
       run: |
         mkdir upload
         mv ${{ github.workspace }}/build/shadPS4QtLauncher.app upload
-        macdeployqt -qmldir=src/qml  upload/shadPS4QtLauncher.app
+        macdeployqt upload/shadPS4QtLauncher.app -qmldir=src/qml
         codesign --deep -fs - upload/shadPS4QtLauncher.app
         tar cf shadPS4QtLauncher-macos-qt.tar.gz -C upload .
     - uses: actions/upload-artifact@v4
