@@ -9,10 +9,10 @@
 #include <QQmlContext>
 #include <QWidget>
 
-AboutDialog::AboutDialog(QWidget*) {
+AboutDialog::AboutDialog(QWidget* parent) {
     const QPalette p = qApp->palette();
 
-    auto* engine = new QQmlApplicationEngine;
+    auto* engine = new QQmlApplicationEngine(parent);
     auto* ctx = engine->rootContext();
     ctx->setContextProperty("themeWindow", p.color(QPalette::Window).name());
     ctx->setContextProperty("themeText", p.color(QPalette::WindowText).name());
