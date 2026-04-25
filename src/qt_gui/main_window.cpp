@@ -600,8 +600,7 @@ void MainWindow::CreateConnects() {
 #endif
 
     connect(ui->aboutAct, &QAction::triggered, this,
-        [this]() { auto aboutDialog = new AboutDialog(this);
-    });
+            [this]() { auto aboutDialog = new AboutDialog(this); });
 
     connect(ui->configureHotkeys, &QAction::triggered, this, [this]() {
         auto hotkeyDialog =
