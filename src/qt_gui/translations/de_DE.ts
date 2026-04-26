@@ -1296,7 +1296,7 @@ Bitte gib die Schlüssel ein und speicher diese.</translation>
     </message>
     <message>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
-      <translation type="unfinished">A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</translation>
+      <translation>Ein Trophäenschlüssel wird benötigt, um den Trophäenbetrachter verwenden zu können. Dies kann durch Klicken auf Einstellungen - Kryptografische Schlüssel verwalten eingegeben werden.</translation>
     </message>
   </context>
   <context>
@@ -2829,67 +2829,67 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
     </message>
     <message>
       <source>Log Sync</source>
-      <translation type="unfinished">Log Sync</translation>
+      <translation>Log Sync</translation>
     </message>
     <message>
       <source>Log Skip Duplicate</source>
-      <translation type="unfinished">Log Skip Duplicate</translation>
+      <translation>Doppeltes Log überspringen</translation>
     </message>
     <message>
       <source>Log Max Skip Duration</source>
-      <translation type="unfinished">Log Max Skip Duration</translation>
+      <translation>Maximale Überspringdauer des Logs</translation>
     </message>
     <message>
       <source> ms</source>
-      <translation type="unfinished"> ms</translation>
+      <translation> ms</translation>
     </message>
     <message>
       <source>Log Size Limit</source>
-      <translation type="unfinished">Log Size Limit</translation>
+      <translation>Loggrößenlimit</translation>
     </message>
     <message>
       <source> B</source>
-      <translation type="unfinished"> B</translation>
+      <translation> B</translation>
     </message>
     <message>
       <source>Log Append</source>
-      <translation type="unfinished">Log Append</translation>
+      <translation>Log anhängen</translation>
     </message>
     <message>
       <source>wincolor</source>
-      <translation type="unfinished">wincolor</translation>
+      <translation>wincolor</translation>
     </message>
     <message>
       <source>msvc</source>
-      <translation type="unfinished">msvc</translation>
+      <translation>msvc</translation>
     </message>
     <message>
       <source>Log Append:\nAppend to existing logs.</source>
-      <translation type="unfinished">Log Append:\nAppend to existing logs.</translation>
+      <translation>Log angehängt:\nAn bestehende Protokolle anhängen.</translation>
     </message>
     <message>
       <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core=trace&quot; &quot;Lib.Pad=debug,Common.Filesystem=error&quot; &quot;critical&quot;\nLevels: trace, debug, info, warning, error, critical - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
-      <translation type="unfinished">Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core=trace&quot; &quot;Lib.Pad=debug,Common.Filesystem=error&quot; &quot;critical&quot;\nLevels: trace, debug, info, warning, error, critical - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</translation>
+      <translation>Log-Filter:\nFiltert das Log nur um spezifische Informationen auszugeben.\nBeispiele: &quot;Core=trace&quot; &quot;Lib.Pad=debug,Common. ilesystem=error&quot; &quot;critical&quot;\nLevels: trace, debug, info, warning, error, kritisch - in dieser Reihenfolge stummt eine bestimmte Ebene alle Ebenen, die ihr in der Liste vorausgehen und protokolliert alle Ebenen danach.</translation>
     </message>
     <message>
       <source>Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</source>
-      <translation type="unfinished">Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</translation>
+      <translation>Maximale Überspringdauer des Logs:\nIntervall ohne die gleichen Zeilen (ms) zu schreiben - nur, wenn &apos;Doppeltes Log überspringen&apos; aktiviert ist.</translation>
     </message>
     <message>
       <source>Log Size Limit:\nMaximum size of log files (bytes).</source>
-      <translation type="unfinished">Log Size Limit:\nMaximum size of log files (bytes).</translation>
+      <translation>Loggrößenlimit:\nMaximale Größe der Logdateien (Bytes).</translation>
     </message>
     <message>
       <source>Log Skip Duplicate:\nSave storage by avoiding writing log that is identical.</source>
-      <translation type="unfinished">Log Skip Duplicate:\nSave storage by avoiding writing log that is identical.</translation>
+      <translation>Doppeltes Log überspringen:\nSpeicher sparen, indem es verhindert, dass identische Protokolle geschrieben werden.</translation>
     </message>
     <message>
       <source>Log Sync:\nSwitch between sync (order) or async (performance).</source>
-      <translation type="unfinished">Log Sync:\nSwitch between sync (order) or async (performance).</translation>
+      <translation>Log Sync:\nWechseln Sie zwischen Sync (Reihenfolge) oder async (Performance).</translation>
     </message>
     <message>
       <source>Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</source>
-      <translation type="unfinished">Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</translation>
+      <translation>Log-Typ:\nWählen Sie zwischen Wincolor oder msvc Log-Typen.\nWincolor: Standard Logging für Windows\nmsvc: logging für Debugging</translation>
     </message>
   </context>
   <context>
