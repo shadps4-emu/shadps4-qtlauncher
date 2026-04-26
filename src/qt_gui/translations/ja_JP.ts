@@ -748,7 +748,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>エラー</translation>
     </message>
     <message>
       <source>Failed to save keys!</source>
@@ -772,7 +772,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Invalid File</source>
-      <translation type="unfinished">Invalid File</translation>
+      <translation>無効なファイル</translation>
     </message>
     <message>
       <source>Only JSON files are supported.</source>
@@ -784,7 +784,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>JSON Error</source>
-      <translation type="unfinished">JSON Error</translation>
+      <translation>JSON エラー</translation>
     </message>
     <message>
       <source>Invalid JSON format.</source>
