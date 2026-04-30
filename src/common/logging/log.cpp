@@ -201,7 +201,7 @@ void Setup(std::string_view log_filename) {
     std::unordered_map<std::string, spdlog::level> log_level_per_class;
 
     if (EmulatorSettings.IsLogEnable()) {
-        for (const auto class_level : std::views::split(EmulatorSettings.GetLogFilter(), ',')) {
+        for (const auto class_level : std::views::split(EmulatorSettings.GetLogFilter(), ' ')) {
             const auto class_level_pair =
                 std::views::split(class_level, ':') | std::ranges::to<std::vector<std::string>>();
 
