@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright 2025 shadPS4 Emulator Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
+#include <iostream>
 #include <vector>
 #include <AL/al.h>
 #include <AL/alc.h>
@@ -82,16 +83,21 @@ int bgm_volume_backup;
 static std::vector<QString> m_physical_devices;
 
 void LogUpdateLevels() {
-    std::optional<spdlog::level> default_log_level = spdlog::level::debug;
+    spdlog::level default_log_level = spdlog::level::info;
     std::unordered_map<std::string, spdlog::level> log_level_per_class;
 
     if (EmulatorSettings.IsLogEnable()) {
-        for (const auto class_level : std::views::split(EmulatorSettings.GetLogFilter(), ',')) {
+        for (const auto class_level : std::views::split(EmulatorSettings.GetLogFilter(), ' ')) {
             const auto class_level_pair =
-                std::views::split(class_level, '=') | std::ranges::to<std::vector<std::string>>();
+                std::views::split(class_level, ':') | std::ranges::to<std::vector<std::string>>();
 
-            if (class_level_pair.size() == 1) {
-                default_log_level = spdlog::level_from_str(class_level_pair.front() |
+            if (class_level_pair.size() != 2) {
+                std::cerr << "bad log filter provided" << std::endl;
+                continue;
+            }
+
+            if (class_level_pair.front()[0] == '*') {
+                default_log_level = spdlog::level_from_str(class_level_pair.back() |
                                                            std::ranges::to<std::string>());
             } else {
                 log_level_per_class[class_level_pair.front() | std::ranges::to<std::string>()] =
@@ -107,12 +113,8 @@ void LogUpdateLevels() {
         if (EmulatorSettings.IsLogEnable()) {
             const auto level_it = log_level_per_class.find(std::string(name));
 
-            if ((level_it == log_level_per_class.end()) && !default_log_level.has_value()) {
-                continue;
-            }
-
             logger->set_level(level_it != log_level_per_class.end() ? level_it->second
-                                                                    : *default_log_level);
+                                                                    : default_log_level);
         } else {
             logger->set_level(spdlog::level::off);
         }
@@ -937,7 +939,7 @@ void SettingsDialog::updateNoteTextEdit(const QString& elementName) {
     } else if (elementName == "logEnableCheckBox") {
         text = tr("Enable Logging:\\nEnables logging.\\nDo not change this if you do not know what you're doing!\\nWhen asking for help, make sure this setting is ENABLED.");
     } else if (elementName == "logFilter") {
-        text = tr("Log Filter:\\nFilters the log to only print specific information.\\nExamples: \"Core=trace\" \"Lib.Pad=debug,Common.Filesystem=error\" \"critical\"\\nLevels: trace, debug, info, warning, error, critical - in this order, a specific level silences all levels preceding it in the list and logs every level after it.");
+        text = tr("Log Filter:\\nFilters the log to only print specific information.\\nExamples: \"Core:Debug\" \"Lib.Pad:Debug Common.Filesystem:Error\" \"*:Critical\"\\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.");
     } else if (elementName == "logMaxSkipDurationLineEdit") {
         text = tr("Log Max Skip Duration:\\nInterval without writing same lines (ms) - only if 'Log Skip Duplicate' enabled."); //TODO grey out if disabled
     } else if (elementName == "logOpenLocationButton") {
