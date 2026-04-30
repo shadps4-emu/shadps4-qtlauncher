@@ -756,7 +756,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Status: All fields empty</source>
-      <translation type="unfinished">Status: All fields empty</translation>
+      <translation>Durum: Tüm alanlar boş</translation>
     </message>
     <message>
       <source>Status: Invalid hex values</source>
@@ -764,11 +764,11 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Status: Incomplete</source>
-      <translation type="unfinished">Status: Incomplete</translation>
+      <translation>Durum: Tamamlanmamış</translation>
     </message>
     <message>
       <source>Status: Valid</source>
-      <translation type="unfinished">Status: Valid</translation>
+      <translation>Durum: Geçerli</translation>
     </message>
     <message>
       <source>Invalid File</source>
@@ -788,11 +788,11 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Invalid JSON format.</source>
-      <translation type="unfinished">Invalid JSON format.</translation>
+      <translation>Geçersiz JSON biçimi.</translation>
     </message>
     <message>
       <source>Keys successfully loaded from JSON!</source>
-      <translation type="unfinished">Keys successfully loaded from JSON!</translation>
+      <translation>Anahtarlar JSON'dan başarıyla yüklendi!</translation>
     </message>
     <message>
       <source>Trophy Key contains invalid hex or has odd length.</source>
@@ -2810,11 +2810,11 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Audio Backend</source>
-      <translation type="unfinished">Audio Backend</translation>
+      <translation>Ses Arka Ucu</translation>
     </message>
     <message>
       <source>Mic Device</source>
-      <translation type="unfinished">Mic Device</translation>
+      <translation>Mikrofon Cihazı</translation>
     </message>
     <message>
       <source>Devices</source>
@@ -2854,11 +2854,11 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>wincolor</source>
-      <translation type="unfinished">wincolor</translation>
+      <translation>wincolor</translation>
     </message>
     <message>
       <source>msvc</source>
-      <translation type="unfinished">msvc</translation>
+      <translation>msvc</translation>
     </message>
     <message>
       <source>Log Append:\nAppend to existing logs.</source>
@@ -2936,7 +2936,7 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Select User:</source>
-      <translation type="unfinished">Select User:</translation>
+      <translation>Kullanıcı Seç:</translation>
     </message>
   </context>
   <context>
@@ -2951,7 +2951,7 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>&amp;Delete User</source>
-      <translation type="unfinished">&amp;Delete User</translation>
+      <translation>&amp;Kullanıcıyı Sil</translation>
     </message>
     <message>
       <source>&amp;Rename User</source>
@@ -2963,7 +2963,7 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>&amp;Set Color</source>
-      <translation type="unfinished">&amp;Set Color</translation>
+      <translation>&amp;Renk Ayarla</translation>
     </message>
     <message>
       <source>&amp;Set Controller Port</source>
@@ -3003,7 +3003,7 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Delete Confirmation</source>
-      <translation type="unfinished">Delete Confirmation</translation>
+      <translation>Silme Onayı</translation>
     </message>
     <message>
       <source>Delete user ID %1?</source>
@@ -3019,7 +3019,7 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Set User Color</source>
-      <translation>Kullanıcı Rengini Ayarla</translation>
+      <translation>Kullanıcı Rengi Ayarla</translation>
     </message>
     <message>
       <source>Select color:</source>
