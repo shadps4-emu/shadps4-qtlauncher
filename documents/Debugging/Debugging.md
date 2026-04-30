@@ -81,14 +81,12 @@ You can configure the emulator by editing the `config.toml` file found in the `u
   - `dumpShaders`: Dump shaders that are loaded by the emulator. Dump path: `../user/shader/dumps`
   - `nullGpu`: Disables rendering.
   - `screenWidth` and `screenHeight`: Configures the game window width and height.
+  - `Fullscreen`: Display the game in a full screen borderless window.
     
 - `[Vulkan]`
    - `validation`-related settings: Use when debugging Vulkan.
    - `rdocEnable`: Automatically hook RenderDoc when installed. Useful for debugging shaders and game rendering.
    - `rdocMarkersEnable`: Enable automatic RenderDoc event annotation
-     
-- `[LLE]`
-   - `libc`: Use LLE with `libc`.
    
 </details>
 
