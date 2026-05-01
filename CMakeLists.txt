@@ -239,7 +239,7 @@ endif()
 add_subdirectory(externals)
 include_directories(src)
 
-find_package(Qt6 REQUIRED COMPONENTS Widgets Concurrent LinguistTools Network Multimedia)
+find_package(Qt6 REQUIRED COMPONENTS Widgets Concurrent LinguistTools Network Multimedia Quick QuickControls2 Qml ShaderTools)
 qt_standard_project_setup()
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOMOC ON)
@@ -322,7 +322,6 @@ endif()
 
 set(QT_GUI src/qt_gui/about_dialog.cpp
            src/qt_gui/about_dialog.h
-           src/qt_gui/about_dialog.ui
            src/qt_gui/background_music_player.cpp
            src/qt_gui/background_music_player.h
            src/qt_gui/cheats_patches.cpp
@@ -409,6 +408,7 @@ qt_add_executable(shadPS4QtLauncher
     src/images/shadPS4.icns
     src/main.cpp
 )
+qt_add_shaders(shadPS4QtLauncher "shadPS4QtLauncher_shaders" BASE "src/qml/shaders" PREFIX "/shaders" FILES src/qml/shaders/invert.frag PRECOMPILE OPTIMIZED)
 
 create_target_directory_groups(shadPS4QtLauncher)
 
@@ -442,7 +442,7 @@ if (APPLE)
     add_dependencies(shadPS4QtLauncher CopyMoltenVK)
 endif()
 
-target_link_libraries(shadPS4QtLauncher PRIVATE Qt6::Widgets Qt6::Concurrent Qt6::Network Qt6::Multimedia nlohmann_json::nlohmann_json OpenAL::OpenAL)
+target_link_libraries(shadPS4QtLauncher PRIVATE Qt6::Widgets Qt6::Quick Qt6::QuickControls2 Qt6::Qml Qt6::Concurrent Qt6::Network Qt6::Multimedia nlohmann_json::nlohmann_json OpenAL::OpenAL)
 if (ENABLE_UPDATER)
     add_definitions(-DENABLE_UPDATER)
 endif()
