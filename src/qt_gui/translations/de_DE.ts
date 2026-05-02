@@ -1128,7 +1128,7 @@ Bitte gib die Schlüssel ein und speicher diese.</translation>
     </message>
     <message>
       <source>This game has no DLC to delete!</source>
-      <translation>Dieses Spiel hat kein DLC zum aktualisieren!</translation>
+      <translation>Dieses Spiel hat keine DLCs zum Löschen!</translation>
     </message>
     <message>
       <source>DLC</source>
