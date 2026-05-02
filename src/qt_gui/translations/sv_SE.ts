@@ -2838,7 +2838,7 @@ Välj en emulatorversion från den högra panelen.</translation>
     </message>
     <message>
       <source> ms</source>
-      <translation type="unfinished"> ms</translation>
+      <translation> ms</translation>
     </message>
     <message>
       <source>Log Size Limit</source>
@@ -2846,7 +2846,7 @@ Välj en emulatorversion från den högra panelen.</translation>
     </message>
     <message>
       <source> B</source>
-      <translation type="unfinished"> B</translation>
+      <translation> B</translation>
     </message>
     <message>
       <source>Log Append</source>
