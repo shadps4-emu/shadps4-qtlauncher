@@ -843,7 +843,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Help</source>
-      <translation type="unfinished">Help</translation>
+      <translation>Pomoc</translation>
     </message>
     <message>
       <source>Do you want to reset your custom default config to the original default config?</source>
@@ -896,23 +896,23 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Directory to install emulator versions</source>
-      <translation type="unfinished">Directory to install emulator versions</translation>
+      <translation>Adresář pro instalaci verzí emulátoru</translation>
     </message>
     <message>
       <source>Directory with your dumped games</source>
-      <translation type="unfinished">Directory with your dumped games</translation>
+      <translation>Adresář s vašimi kopiemi her</translation>
     </message>
     <message>
       <source>Directory with your dumped DLC&apos;s</source>
-      <translation type="unfinished">Directory with your dumped DLC&apos;s</translation>
+      <translation>Adresář s vašimi kopiemi DLC</translation>
     </message>
     <message>
       <source>Directory with games</source>
-      <translation type="unfinished">Directory with games</translation>
+      <translation>Adresář s hrami</translation>
     </message>
     <message>
       <source>Directory with DLC&apos;s</source>
-      <translation type="unfinished">Directory with DLC&apos;s</translation>
+      <translation>Adresář s DLC</translation>
     </message>
   </context>
   <context>
@@ -2322,7 +2322,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Enable Debug Dumping:\nSaves the import and export symbols and file header information of the currently running PS4 program to a directory.</source>
-      <translation type="unfinished">Enable Debug Dumping:\nSaves the import and export symbols and file header information of the currently running PS4 program to a directory.</translation>
+      <translation>Povolit debug Dumping:\nUloží importy a export symbolů a informací hlavičky souboru aktuálně spuštěného programu PS4 do adresáře.</translation>
     </message>
     <message>
       <source>Enable RenderDoc Debugging:\nIf enabled, the emulator will provide compatibility with Renderdoc to allow capture and analysis of the currently rendered frame.</source>
@@ -2368,7 +2368,7 @@ Užitečné pro programy jako RenderDoc.</translation>
     </message>
     <message>
       <source>Directory to install games</source>
-      <translation type="unfinished">Directory to install games</translation>
+      <translation>Adresář pro instalaci her</translation>
     </message>
     <message>
       <source>Video</source>
@@ -3037,7 +3037,7 @@ Užitečné pro programy jako RenderDoc.</translation>
     </message>
     <message>
       <source>&amp;Open User Directory</source>
-      <translation type="unfinished">&amp;Open User Directory</translation>
+      <translation>&amp;Otevřít uživatelský adresář</translation>
     </message>
   </context>
   <context>
