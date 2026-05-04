@@ -166,7 +166,7 @@
     </message>
     <message>
       <source>You have successfully downloaded the cheats for this version of the game from the selected repository. You can try downloading from another repository, if it is available it will also be possible to use it by selecting the file from the list.</source>
-      <translation type="unfinished">You have successfully downloaded the cheats for this version of the game from the selected repository. You can try downloading from another repository, if it is available it will also be possible to use it by selecting the file from the list.</translation>
+      <translation>Úspěšně jste si stáhli cheaty pro tuto verzi hry z vybraného repozitáře. Můžete zkusit stažení z jiného repozitáře. Pokud je k dispozici, bude možné jej použít výběrem souboru ze seznamu.</translation>
     </message>
     <message>
       <source>Failed to save:</source>
@@ -563,7 +563,7 @@
     </message>
     <message>
       <source>Set Active Gamepad as Default</source>
-      <translation type="unfinished">Set Active Gamepad as Default</translation>
+      <translation>Nastavit aktivní gamepad jako výchozí</translation>
     </message>
     <message>
       <source>Remove Default Gamepad</source>
@@ -623,20 +623,20 @@
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Tip: Odmapovat vstupy kliknutím pravým tlačítkem myši</translation>
     </message>
   </context>
   <context>
     <name>CryptoManagerDialog</name>
     <message>
       <source>Crypto Key Manager</source>
-      <translation type="unfinished">Crypto Key Manager</translation>
+      <translation>Správce šifrovacích klíčů</translation>
     </message>
     <message>
       <source>Trophy Key: Used for trophy decryption.
 Must be a valid hex string with even length.</source>
-      <translation type="unfinished">Trophy Key: Used for trophy decryption.
-Must be a valid hex string with even length.</translation>
+      <translation>Klíč trofeje: Používá se pro dešifrování trofeje.
+Musí být platný hexadecimální řetězec se správnou délkou.</translation>
     </message>
     <message>
       <source>Enter Trophy Key</source>
@@ -660,39 +660,39 @@ Must be a valid hex string with even length.</translation>
     </message>
     <message>
       <source>Exponent1</source>
-      <translation type="unfinished">Exponent1</translation>
+      <translation>Exponent1</translation>
     </message>
     <message>
       <source>Exponent2</source>
-      <translation type="unfinished">Exponent2</translation>
+      <translation>Exponent2</translation>
     </message>
     <message>
       <source>Public Exponent</source>
-      <translation type="unfinished">Public Exponent</translation>
+      <translation>Public Exponent</translation>
     </message>
     <message>
       <source>Coefficient</source>
-      <translation type="unfinished">Coefficient</translation>
+      <translation>Coefficient</translation>
     </message>
     <message>
       <source>Modulus</source>
-      <translation type="unfinished">Modulus</translation>
+      <translation>Modulus</translation>
     </message>
     <message>
       <source>Prime 1</source>
-      <translation type="unfinished">Prime 1</translation>
+      <translation>Prime 1</translation>
     </message>
     <message>
       <source>Prime 2</source>
-      <translation type="unfinished">Prime 2</translation>
+      <translation>Prime 2</translation>
     </message>
     <message>
       <source>Private Exponent</source>
-      <translation type="unfinished">Private Exponent</translation>
+      <translation>Private Exponent</translation>
     </message>
     <message>
       <source>Fake Keyset</source>
-      <translation type="unfinished">Fake Keyset</translation>
+      <translation>Falešná sada klíčů</translation>
     </message>
     <message>
       <source>RSA key components for fake signing.
@@ -722,11 +722,11 @@ All fields must be valid hex strings with even length.</translation>
     </message>
     <message>
       <source>Close</source>
-      <translation type="unfinished">Close</translation>
+      <translation>Zavřít</translation>
     </message>
     <message>
       <source>Warning</source>
-      <translation type="unfinished">Warning</translation>
+      <translation>Upozornění</translation>
     </message>
     <message>
       <source>No key file found or failed to load.
@@ -736,11 +736,11 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Validation Error</source>
-      <translation type="unfinished">Validation Error</translation>
+      <translation>Chyba ověření</translation>
     </message>
     <message>
       <source>Success</source>
-      <translation type="unfinished">Success</translation>
+      <translation>Dokončeno</translation>
     </message>
     <message>
       <source>Keys saved successfully!</source>
@@ -796,7 +796,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Trophy Key contains invalid hex or has odd length.</source>
-      <translation type="unfinished">Trophy Key contains invalid hex or has odd length.</translation>
+      <translation>Klíč trofeje obsahuje neplatný hexadecimální znak nebo má nesprávnou délku.</translation>
     </message>
     <message>
       <source>%1 contains invalid hex or has odd length.</source>
@@ -851,7 +851,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Do you want to reset this config to your custom default config?</source>
-      <translation type="unfinished">Do you want to reset this config to your custom default config?</translation>
+      <translation>Chcete obnovit toto nastavení na vlastní výchozí nastavení?</translation>
     </message>
     <message>
       <source>Reset to Default</source>
@@ -1253,58 +1253,58 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Create Shortcut for Selected Emulator Version</source>
-      <translation type="unfinished">Create Shortcut for Selected Emulator Version</translation>
+      <translation>Vytvořit zástupce hry pro aktuálně vybranou verzi emulátoru</translation>
     </message>
     <message>
       <source>Create Shortcut for Specified Emulator Version</source>
-      <translation type="unfinished">Create Shortcut for Specified Emulator Version</translation>
+      <translation>Vytvořit zástupce pro určitou verzi emulátoru</translation>
     </message>
     <message>
       <source>Create Shortcut</source>
-      <translation type="unfinished">Create Shortcut</translation>
+      <translation>Vytvořit zástupce</translation>
     </message>
     <message>
       <source>Shortcut creation</source>
-      <translation type="unfinished">Shortcut creation</translation>
+      <translation>Vytvoření zástupce</translation>
     </message>
     <message>
       <source>Shortcut created successfully!</source>
-      <translation type="unfinished">Shortcut created successfully!</translation>
+      <translation>Zástupce úspěšně vytvořen!</translation>
     </message>
     <message>
       <source>Error creating shortcut!</source>
-      <translation type="unfinished">Error creating shortcut!</translation>
+      <translation>Chyba při vytváření zástupce!</translation>
     </message>
     <message>
       <source>Failed to convert icon.</source>
-      <translation type="unfinished">Failed to convert icon.</translation>
+      <translation>Nepodařilo se převést ikonu.</translation>
     </message>
     <message>
       <source>Delete Shader Cache</source>
-      <translation type="unfinished">Delete Shader Cache</translation>
+      <translation>Odstranit mezipaměť Shaderů</translation>
     </message>
     <message>
       <source>This game does not have any saved Shader Cache to delete!</source>
-      <translation type="unfinished">This game does not have any saved Shader Cache to delete!</translation>
+      <translation>Tato hra nemá žádnou uloženou mezipaměť Shaderů k odstranění!</translation>
     </message>
     <message>
       <source>Shader Cache</source>
-      <translation type="unfinished">Shader Cache</translation>
+      <translation>Mezipaměť Shaderů</translation>
     </message>
     <message>
       <source>This game has no save folder to open!</source>
-      <translation type="unfinished">This game has no save folder to open!</translation>
+      <translation>Tato hra nemá žádnou složku se savy pro otevření!</translation>
     </message>
     <message>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
-      <translation type="unfinished">A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</translation>
+      <translation>K použití prohlížeče trofejí je nutný klíč trofeje. Lze jej zadat kliknutím na tlačítko Nastavení - Správa kryptografických klíčů.</translation>
     </message>
   </context>
   <context>
     <name>HelpDialog</name>
     <message>
       <source>Quickstart</source>
-      <translation type="unfinished">Quickstart</translation>
+      <translation>Průvodce začátky</translation>
     </message>
     <message>
       <source>FAQ</source>
@@ -1312,26 +1312,26 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Syntax</source>
-      <translation type="unfinished">Syntax</translation>
+      <translation>Syntax</translation>
     </message>
     <message>
       <source>Special Bindings</source>
-      <translation type="unfinished">Special Bindings</translation>
+      <translation>Speciální klávesové zkratky</translation>
     </message>
     <message>
       <source>Keybindings</source>
-      <translation type="unfinished">Keybindings</translation>
+      <translation>Klávesové zkratky</translation>
     </message>
   </context>
   <context>
     <name>Hotkeys</name>
     <message>
       <source>Customize Hotkeys</source>
-      <translation type="unfinished">Customize Hotkeys</translation>
+      <translation>Přizpůsobit klávesové zkratky</translation>
     </message>
     <message>
       <source>Controller Hotkeys</source>
-      <translation type="unfinished">Controller Hotkeys</translation>
+      <translation>Tlačítkové zkratky ovladače</translation>
     </message>
     <message>
       <source>Show FPS Counter</source>
@@ -1359,19 +1359,19 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Keyboard Hotkeys</source>
-      <translation type="unfinished">Keyboard Hotkeys</translation>
+      <translation>Klávesové zkratky</translation>
     </message>
     <message>
       <source>Renderdoc Capture (for debugging only)</source>
-      <translation type="unfinished">Renderdoc Capture (for debugging only)</translation>
+      <translation>Snímek Renderdoc (pouze pro ladění)</translation>
     </message>
     <message>
       <source>Toggle Mouse to Joystick Emulation</source>
-      <translation type="unfinished">Toggle Mouse to Joystick Emulation</translation>
+      <translation>Přepnout myš na emulaci Joysticku</translation>
     </message>
     <message>
       <source>Toggle Mouse to Gyro Emulation</source>
-      <translation type="unfinished">Toggle Mouse to Gyro Emulation</translation>
+      <translation>Přepnout myš na emulaci Gyroskopu</translation>
     </message>
     <message>
       <source>Tip: Up to three simultaneous inputs can be assigned for each hotkey</source>
@@ -1407,11 +1407,11 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Waiting for inputs</source>
-      <translation type="unfinished">Waiting for inputs</translation>
+      <translation>Čekání na vstup</translation>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Tip: Odmapovat vstupy kliknutím pravým tlačítkem myši</translation>
     </message>
     <message>
       <source>Volume Up</source>
@@ -1426,7 +1426,7 @@ Please enter your keys and save them.</translation>
     <name>IpcClient</name>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation type="unfinished">Could not find the emulator executable</translation>
+      <translation>Nelze najít spustitelný soubor emulátoru</translation>
     </message>
   </context>
   <context>
@@ -1461,23 +1461,23 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Left Analog Halfmode</source>
-      <translation type="unfinished">Left Analog Halfmode</translation>
+      <translation>Půlrežim levé analogové páčky</translation>
     </message>
     <message>
       <source>hold to move left stick at half-speed</source>
-      <translation type="unfinished">hold to move left stick at half-speed</translation>
+      <translation>Držet pro pohyb levé analogové páčky poloviční rychlostí</translation>
     </message>
     <message>
       <source>Left Stick</source>
-      <translation type="unfinished">Left Stick</translation>
+      <translation>Levá analogová páčka</translation>
     </message>
     <message>
       <source>Config Selection</source>
-      <translation type="unfinished">Config Selection</translation>
+      <translation>Výběr nastavení</translation>
     </message>
     <message>
       <source>Common Config</source>
-      <translation type="unfinished">Common Config</translation>
+      <translation>Běžné nastavení</translation>
     </message>
     <message>
       <source>Use per-game configs</source>
@@ -1541,15 +1541,15 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Right Stick</source>
-      <translation type="unfinished">Right Stick</translation>
+      <translation>Pravá analogová páčka</translation>
     </message>
     <message>
       <source>Speed Offset (def 0.125):</source>
-      <translation type="unfinished">Speed Offset (def 0.125):</translation>
+      <translation>Odsazení rychlosti (def 0.125):</translation>
     </message>
     <message>
       <source>Copy from Common Config</source>
-      <translation type="unfinished">Copy from Common Config</translation>
+      <translation>Kopírovat z běžného nastavení</translation>
     </message>
     <message>
       <source>Deadzone Offset (def 0.50):</source>
@@ -1569,7 +1569,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Copy values from Common Config</source>
-      <translation type="unfinished">Copy values from Common Config</translation>
+      <translation>Kopírovat hodnoty z běžného nastavení</translation>
     </message>
     <message>
       <source>Do you want to overwrite existing mappings with the mappings from the Common Config?</source>
@@ -1611,7 +1611,7 @@ Please enter your keys and save them.</translation>
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-      <translation type="unfinished">Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
+      <translation>Nelze spojit unikátní vstup více než jednou. Duplikujte vstupy mapované na následující tlačítka:
 
 %1</translation>
     </message>
@@ -1629,7 +1629,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Tip: Odmapovat vstupy kliknutím pravým tlačítkem myši</translation>
     </message>
   </context>
   <context>
@@ -1851,7 +1851,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>All Patches available for all games have been downloaded.</source>
-      <translation type="unfinished">All Patches available for all games have been downloaded.</translation>
+      <translation>Všechny patche k dispozici pro všechny hry byly staženy.</translation>
     </message>
     <message>
       <source>Games: </source>
@@ -1923,75 +1923,75 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Show Labels Under Icons</source>
-      <translation type="unfinished">Show Labels Under Icons</translation>
+      <translation>Zobrazit popisky pod ikonami</translation>
     </message>
     <message>
       <source>Customize Hotkeys</source>
-      <translation type="unfinished">Customize Hotkeys</translation>
+      <translation>Přizpůsobit klávesové zkratky</translation>
     </message>
     <message>
       <source>Version Manager</source>
-      <translation type="unfinished">Version Manager</translation>
+      <translation>Správa verzí emulátoru</translation>
     </message>
     <message>
       <source>No Version Selected</source>
-      <translation type="unfinished">No Version Selected</translation>
+      <translation>Nebyla vybrána žádná verze</translation>
     </message>
     <message>
       <source>No emulator version was selected.
 The Version Manager menu will then open.
 Select an emulator version from the right panel.</source>
-      <translation type="unfinished">No emulator version was selected.
-The Version Manager menu will then open.
-Select an emulator version from the right panel.</translation>
+      <translation>Nebyla vybrána žádná verze emulátoru.
+Nabídka Správce verzí se pak otevře.
+Vyberte verzi emulátoru z nabídky pravého panelu.</translation>
     </message>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation type="unfinished">Could not find the emulator executable</translation>
+      <translation>Nelze najít spustitelný soubor emulátoru</translation>
     </message>
     <message>
       <source>Run Emulator</source>
-      <translation type="unfinished">Run Emulator</translation>
+      <translation>Spustit emulátor</translation>
     </message>
     <message>
       <source>Emulator is already running!</source>
-      <translation type="unfinished">Emulator is already running!</translation>
+      <translation>Emulátor již běží!</translation>
     </message>
     <message>
       <source>Invalid game argument provided</source>
-      <translation type="unfinished">Invalid game argument provided</translation>
+      <translation>Poskytnut neplatný herní argument</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Žádné</translation>
     </message>
     <message>
       <source>Manage Skylanders</source>
-      <translation type="unfinished">Manage Skylanders</translation>
+      <translation>Správa Skylanders</translation>
     </message>
     <message>
       <source>Manage Infinity Figures</source>
-      <translation type="unfinished">Manage Infinity Figures</translation>
+      <translation>Správa Infinity Figurky</translation>
     </message>
     <message>
       <source>Manage Dimensions Toypad</source>
-      <translation type="unfinished">Manage Dimensions Toypad</translation>
+      <translation>Správa Dimensions Toy pad</translation>
     </message>
     <message>
       <source>Game Log</source>
-      <translation type="unfinished">Game Log</translation>
+      <translation>Protokol hry</translation>
     </message>
     <message>
       <source>Show Game Log</source>
-      <translation type="unfinished">Show Game Log</translation>
+      <translation>Zobrazit protokol hry</translation>
     </message>
     <message>
       <source>Manage Cryptographic Keys</source>
-      <translation type="unfinished">Manage Cryptographic Keys</translation>
+      <translation>Správa kryptografických klíčů</translation>
     </message>
     <message>
       <source>Manage Users</source>
-      <translation type="unfinished">Manage Users</translation>
+      <translation>Správa uživatelů</translation>
     </message>
   </context>
   <context>
@@ -2022,11 +2022,11 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Trophy</source>
-      <translation type="unfinished">Trophy</translation>
+      <translation>Trofeje</translation>
     </message>
     <message>
       <source>Open the custom trophy images/sounds folder</source>
-      <translation type="unfinished">Open the custom trophy images/sounds folder</translation>
+      <translation>Otevřít složku s vlastními obrázky/zvuky pro trofeje</translation>
     </message>
     <message>
       <source>Logger</source>
@@ -2046,7 +2046,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Input</source>
-      <translation type="unfinished">Input</translation>
+      <translation>Vstup</translation>
     </message>
     <message>
       <source>Cursor</source>
@@ -2178,7 +2178,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Disable Trophy Notification</source>
-      <translation type="unfinished">Disable Trophy Notification</translation>
+      <translation>Vypnout oznámení trofeje</translation>
     </message>
     <message>
       <source>Background Image</source>
@@ -2262,7 +2262,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Disable Trophy Pop-ups:\nDisable in-game trophy notifications. Trophy progress can still be tracked using the Trophy Viewer (right-click the game in the main window).</source>
-      <translation type="unfinished">Disable Trophy Pop-ups:\nDisable in-game trophy notifications. Trophy progress can still be tracked using the Trophy Viewer (right-click the game in the main window).</translation>
+      <translation>Zakázat vyskakovací okno trofeje:\nZakázat oznámení o trofeji ve hře. Průběh trofeje může být stále sledován pomocí prohlížeče trofejí (klepněte pravým tlačítkem myši na hru v hlavním okně).</translation>
     </message>
     <message>
       <source>Hide Cursor:\nChoose when the cursor will disappear:\nNever: You will always see the mouse.\nidle: Set a time for it to disappear after being idle.\nAlways: you will never see the mouse.</source>
@@ -2412,7 +2412,7 @@ Užitečné pro programy jako RenderDoc.</translation>
     </message>
     <message>
       <source>Trophy Notification Position</source>
-      <translation type="unfinished">Trophy Notification Position</translation>
+      <translation>Pozice oznámení trofeje</translation>
     </message>
     <message>
       <source>Left</source>
@@ -2456,7 +2456,7 @@ Užitečné pro programy jako RenderDoc.</translation>
     </message>
     <message>
       <source>Open the custom trophy images/sounds folder:\nYou can add custom images to the trophies and an audio.\nAdd the files to custom_trophy with the following names:\ntrophy.wav OR trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nNote: The sound will only work in QT versions.</source>
-      <translation type="unfinished">Open the custom trophy images/sounds folder:\nYou can add custom images to the trophies and an audio.\nAdd the files to custom_trophy with the following names:\ntrophy.wav OR trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nNote: The sound will only work in QT versions.</translation>
+      <translation>Otevřít složku s vlastními obrázky/zvuky pro trofeje:\nMůžete přidat vlastní obrázky a zvuky do trofejí.\nPřidejte soubory do custom_trophy s následujícími názvy:\ntrophy.wav nebo trophy.mp3, bronze.png, gold.png, platinum.png, silver.png\nPoznámka: Zvuk bude fungovat pouze v QT verzích.</translation>
     </message>
     <message>
       <source>Experimental Features</source>
@@ -2796,11 +2796,11 @@ Užitečné pro programy jako RenderDoc.</translation>
     </message>
     <message>
       <source>Home Folder Location (Saves, Inputs, Trophy Data)</source>
-      <translation type="unfinished">Home Folder Location (Saves, Inputs, Trophy Data)</translation>
+      <translation>Umístění domovské složky (savy, vstupy, data trofejí)</translation>
     </message>
     <message>
       <source>Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</source>
-      <translation type="unfinished">Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</translation>
+      <translation>Umístění domovské složky:\nSložka, ve které jsou uloženy savy, soubory trofejí a nastavení vstupů pro všechny uživatele.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the home folder.</source>
@@ -2914,31 +2914,31 @@ Užitečné pro programy jako RenderDoc.</translation>
     <name>TrophyViewer</name>
     <message>
       <source>Trophy Viewer</source>
-      <translation type="unfinished">Trophy Viewer</translation>
+      <translation>Prohlížeč trofejí</translation>
     </message>
     <message>
       <source>Select Game:</source>
-      <translation type="unfinished">Select Game:</translation>
+      <translation>Vybrat hru:</translation>
     </message>
     <message>
       <source>Progress</source>
-      <translation type="unfinished">Progress</translation>
+      <translation>Postup</translation>
     </message>
     <message>
       <source>Show Earned Trophies</source>
-      <translation type="unfinished">Show Earned Trophies</translation>
+      <translation>Zobrazit získané trofeje</translation>
     </message>
     <message>
       <source>Show Not Earned Trophies</source>
-      <translation type="unfinished">Show Not Earned Trophies</translation>
+      <translation>Zobrazit nezískané trofeje</translation>
     </message>
     <message>
       <source>Show Hidden Trophies</source>
-      <translation type="unfinished">Show Hidden Trophies</translation>
+      <translation>Zobrazit skryté trofeje</translation>
     </message>
     <message>
       <source>Select User:</source>
-      <translation type="unfinished">Select User:</translation>
+      <translation>Vybrat uživatele:</translation>
     </message>
   </context>
   <context>
