@@ -635,12 +635,12 @@
     <message>
       <source>Trophy Key: Used for trophy decryption.
 Must be a valid hex string with even length.</source>
-      <translation type="unfinished">Trophy Key: Used for trophy decryption.
-Must be a valid hex string with even length.</translation>
+      <translation>Kupa Anahtarı: Kupa şifresini çözmek için kullanılır.
+Uzunluğu çift sayı olan geçerli bir onaltılık değer olmalıdır.</translation>
     </message>
     <message>
       <source>Enter Trophy Key</source>
-      <translation type="unfinished">Enter Trophy Key</translation>
+      <translation>Kupa Anahtarı Gir</translation>
     </message>
     <message>
       <source>Trophy Key:</source>
@@ -648,7 +648,7 @@ Must be a valid hex string with even length.</translation>
     </message>
     <message>
       <source>Status: Not loaded</source>
-      <translation type="unfinished">Status: Not loaded</translation>
+      <translation>Durum: Yüklenmedi</translation>
     </message>
     <message>
       <source>Trophy Key</source>
@@ -756,19 +756,19 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Status: All fields empty</source>
-      <translation type="unfinished">Status: All fields empty</translation>
+      <translation>Durum: Tüm alanlar boş</translation>
     </message>
     <message>
       <source>Status: Invalid hex values</source>
-      <translation type="unfinished">Status: Invalid hex values</translation>
+      <translation>Durum: Geçersiz onaltılık değerler</translation>
     </message>
     <message>
       <source>Status: Incomplete</source>
-      <translation type="unfinished">Status: Incomplete</translation>
+      <translation>Durum: Tamamlanmamış</translation>
     </message>
     <message>
       <source>Status: Valid</source>
-      <translation type="unfinished">Status: Valid</translation>
+      <translation>Durum: Geçerli</translation>
     </message>
     <message>
       <source>Invalid File</source>
@@ -776,11 +776,11 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Only JSON files are supported.</source>
-      <translation type="unfinished">Only JSON files are supported.</translation>
+      <translation>Yalnızca JSON dosyaları desteklenmektedir.</translation>
     </message>
     <message>
       <source>Unable to open file.</source>
-      <translation type="unfinished">Unable to open file.</translation>
+      <translation>Dosya açılamadı.</translation>
     </message>
     <message>
       <source>JSON Error</source>
@@ -788,11 +788,11 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Invalid JSON format.</source>
-      <translation type="unfinished">Invalid JSON format.</translation>
+      <translation>Geçersiz JSON biçimi.</translation>
     </message>
     <message>
       <source>Keys successfully loaded from JSON!</source>
-      <translation type="unfinished">Keys successfully loaded from JSON!</translation>
+      <translation>Anahtarlar JSON'dan başarıyla yüklendi!</translation>
     </message>
     <message>
       <source>Trophy Key contains invalid hex or has odd length.</source>
@@ -1293,7 +1293,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>This game has no save folder to open!</source>
-      <translation type="unfinished">This game has no save folder to open!</translation>
+      <translation>Bu oyunun açılacak kayıt klasörü yok!</translation>
     </message>
     <message>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
@@ -1987,7 +1987,7 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Manage Cryptographic Keys</source>
-      <translation type="unfinished">Manage Cryptographic Keys</translation>
+      <translation>Şifresel Anahtarları Yönet</translation>
     </message>
     <message>
       <source>Manage Users</source>
@@ -2046,7 +2046,7 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Input</source>
-      <translation>Girdi</translation>
+      <translation>Giriş</translation>
     </message>
     <message>
       <source>Cursor</source>
@@ -2802,7 +2802,7 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the home folder.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the home folder.</translation>
+      <translation>Gözat:\nAna klasör olarak ayarlamak için bir klasöre göz atın.</translation>
     </message>
     <message>
       <source>Audio</source>
@@ -2810,11 +2810,11 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Audio Backend</source>
-      <translation type="unfinished">Audio Backend</translation>
+      <translation>Ses Arka Ucu</translation>
     </message>
     <message>
       <source>Mic Device</source>
-      <translation type="unfinished">Mic Device</translation>
+      <translation>Mikrofon Cihazı</translation>
     </message>
     <message>
       <source>Devices</source>
@@ -2838,15 +2838,15 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source> ms</source>
-      <translation type="unfinished"> ms</translation>
+      <translation> ms</translation>
     </message>
     <message>
       <source>Log Size Limit</source>
-      <translation type="unfinished">Log Size Limit</translation>
+      <translation>Günlük Boyutu Sınırı</translation>
     </message>
     <message>
       <source> B</source>
-      <translation type="unfinished"> B</translation>
+      <translation> B</translation>
     </message>
     <message>
       <source>Log Append</source>
@@ -2854,11 +2854,11 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>wincolor</source>
-      <translation type="unfinished">wincolor</translation>
+      <translation>wincolor</translation>
     </message>
     <message>
       <source>msvc</source>
-      <translation type="unfinished">msvc</translation>
+      <translation>msvc</translation>
     </message>
     <message>
       <source>Log Append:\nAppend to existing logs.</source>
@@ -2886,7 +2886,7 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</source>
-      <translation type="unfinished">Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</translation>
+      <translation>Günlük Türü:\nwincolor veya msvc günlük türleri arasında seçim yapın.\nwincolor: Windows için varsayılan günlük kaydıdır.\nmsvc: Hata ayıklama için günlük kaydıdır.</translation>
     </message>
   </context>
   <context>
@@ -2936,7 +2936,7 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Select User:</source>
-      <translation type="unfinished">Select User:</translation>
+      <translation>Kullanıcı Seç:</translation>
     </message>
   </context>
   <context>
@@ -2951,7 +2951,7 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>&amp;Delete User</source>
-      <translation type="unfinished">&amp;Delete User</translation>
+      <translation>&amp;Kullanıcıyı Sil</translation>
     </message>
     <message>
       <source>&amp;Rename User</source>
@@ -2963,11 +2963,11 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>&amp;Set Color</source>
-      <translation type="unfinished">&amp;Set Color</translation>
+      <translation>&amp;Renk Ayarla</translation>
     </message>
     <message>
       <source>&amp;Set Controller Port</source>
-      <translation type="unfinished">&amp;Set Controller Port</translation>
+      <translation>&amp;Kontrolcü Portu Ayarla</translation>
     </message>
     <message>
       <source>&amp;Close</source>
@@ -2979,7 +2979,7 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Cannot add more users.</source>
-      <translation type="unfinished">Cannot add more users.</translation>
+      <translation>Daha fazla kullanıcı eklenemiyor.</translation>
     </message>
     <message>
       <source>Create New User</source>
@@ -2987,11 +2987,11 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>New User ID: %1</source>
-      <translation type="unfinished">New User ID: %1</translation>
+      <translation>Yeni Kullanıcı ID'si: %1</translation>
     </message>
     <message>
       <source>Username (3–16 chars, letters, numbers, _, -)</source>
-      <translation type="unfinished">Username (3–16 chars, letters, numbers, _, -)</translation>
+      <translation>Kullanıcı adı (3 ila 16 karakter, harfler, sayılar, _, -)</translation>
     </message>
     <message>
       <source>Invalid Username</source>
@@ -2999,15 +2999,15 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Username must be 3–16 chars and valid.</source>
-      <translation type="unfinished">Username must be 3–16 chars and valid.</translation>
+      <translation>Kullanıcı adı 3 ila 16 karakter uzunluğunda ve geçerli olmalıdır.</translation>
     </message>
     <message>
       <source>Delete Confirmation</source>
-      <translation type="unfinished">Delete Confirmation</translation>
+      <translation>Silme Onayı</translation>
     </message>
     <message>
       <source>Delete user ID %1?</source>
-      <translation type="unfinished">Delete user ID %1?</translation>
+      <translation>%1 numaralı kullanıcı ID'si silinsin mi?</translation>
     </message>
     <message>
       <source>Rename User</source>
@@ -3019,7 +3019,7 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Set User Color</source>
-      <translation>Kullanıcı Rengini Ayarla</translation>
+      <translation>Kullanıcı Rengi Ayarla</translation>
     </message>
     <message>
       <source>Select color:</source>
@@ -3027,7 +3027,7 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Set Controller Port</source>
-      <translation type="unfinished">Set Controller Port</translation>
+      <translation>Kontrolcü Portu Ayarla</translation>
     </message>
     <message>
       <source>Assign port (1-4) to this user:</source>

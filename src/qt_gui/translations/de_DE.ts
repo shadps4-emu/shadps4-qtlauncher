@@ -1128,7 +1128,7 @@ Bitte gib die Schlüssel ein und speicher diese.</translation>
     </message>
     <message>
       <source>This game has no DLC to delete!</source>
-      <translation>Dieses Spiel hat kein DLC zum aktualisieren!</translation>
+      <translation>Dieses Spiel hat keine DLCs zum Löschen!</translation>
     </message>
     <message>
       <source>DLC</source>
@@ -1296,7 +1296,7 @@ Bitte gib die Schlüssel ein und speicher diese.</translation>
     </message>
     <message>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
-      <translation>Ein Trophäenschlüssel wird benötigt, um den Trophäenbetrachter verwenden zu können. Dies kann durch Klicken auf Einstellungen - Kryptografische Schlüssel verwalten eingegeben werden.</translation>
+      <translation>Ein Trophäen-Schlüssel wird benötigt, um die Trophäenansicht verwenden zu können. Dies kann durch Klicken auf "Einstellungen" - "Kryptografische Schlüssel verwalten" eingetragen werden.</translation>
     </message>
   </context>
   <context>
@@ -2829,15 +2829,15 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
     </message>
     <message>
       <source>Log Sync</source>
-      <translation>Log Sync</translation>
+      <translation>Synchrones Protokoll</translation>
     </message>
     <message>
       <source>Log Skip Duplicate</source>
-      <translation>Doppeltes Log überspringen</translation>
+      <translation>Doppelte Protokollzeilen überspringen</translation>
     </message>
     <message>
       <source>Log Max Skip Duration</source>
-      <translation>Maximale Überspringdauer des Logs</translation>
+      <translation>Max. Überspringdauer der Protokollzeilen</translation>
     </message>
     <message>
       <source> ms</source>
@@ -2845,7 +2845,7 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
     </message>
     <message>
       <source>Log Size Limit</source>
-      <translation>Loggrößenlimit</translation>
+      <translation>Protokollgrößenlimit</translation>
     </message>
     <message>
       <source> B</source>
@@ -2853,7 +2853,7 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
     </message>
     <message>
       <source>Log Append</source>
-      <translation>Log anhängen</translation>
+      <translation>Protokoll anhängen</translation>
     </message>
     <message>
       <source>wincolor</source>
@@ -2865,31 +2865,31 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
     </message>
     <message>
       <source>Log Append:\nAppend to existing logs.</source>
-      <translation>Log angehängt:\nAn bestehende Protokolle anhängen.</translation>
+      <translation>Protokoll anhängen:\nAn bereits vorhandenen Protokoll anhängen.</translation>
     </message>
     <message>
       <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core=trace&quot; &quot;Lib.Pad=debug,Common.Filesystem=error&quot; &quot;critical&quot;\nLevels: trace, debug, info, warning, error, critical - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
-      <translation>Log-Filter:\nFiltert das Log nur um spezifische Informationen auszugeben.\nBeispiele: &quot;Core=trace&quot; &quot;Lib.Pad=debug,Common. ilesystem=error&quot; &quot;critical&quot;\nLevels: trace, debug, info, warning, error, kritisch - in dieser Reihenfolge stummt eine bestimmte Ebene alle Ebenen, die ihr in der Liste vorausgehen und protokolliert alle Ebenen danach.</translation>
+      <translation>Protokoll-Filter:\nFiltert das Protokoll so, dass nur bestimmte Informationen ausgegeben werden.\nBeispiele: &quot;Core=trace&quot; &quot;Lib.Pad=debug Common.Filesystem=error&quot; &quot;critical&quot;\n Ebenen: trace, debug, info, warning, error, critical - in dieser Reihenfolge, eine ausgewählte Ebene blendet alle niedrigeren Ebenen aus und zeigt alle höheren Ebenen an.</translation>
     </message>
     <message>
       <source>Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</source>
-      <translation>Maximale Überspringdauer des Logs:\nIntervall ohne die gleichen Zeilen (ms) zu schreiben - nur, wenn &apos;Doppeltes Log überspringen&apos; aktiviert ist.</translation>
+      <translation>Max. Überspringdauer der Protokollzeilen:\nDie max. Dauer in der verhindert wird das dieselben Protokollzeilen geschrieben werden (ms) - nur wenn &apos;Doppelte Protokollzeilen überspringen&apos; aktiviert ist.</translation>
     </message>
     <message>
       <source>Log Size Limit:\nMaximum size of log files (bytes).</source>
-      <translation>Loggrößenlimit:\nMaximale Größe der Logdateien (Bytes).</translation>
+      <translation>Protokollgrößenlimit:\nMaximale Größe der Protokolldateien (in Bytes).</translation>
     </message>
     <message>
       <source>Log Skip Duplicate:\nSave storage by avoiding writing log that is identical.</source>
-      <translation>Doppeltes Log überspringen:\nSpeicher sparen, indem es verhindert, dass identische Protokolle geschrieben werden.</translation>
+      <translation>Doppelte Protokollzeilen überspringen:\nReduziert den Speicherbedarf, indem mehrere identische Protokollzeilen nicht geschrieben werden.</translation>
     </message>
     <message>
       <source>Log Sync:\nSwitch between sync (order) or async (performance).</source>
-      <translation>Log Sync:\nWechseln Sie zwischen Sync (Reihenfolge) oder async (Performance).</translation>
+      <translation>Synchrones Protokoll:\nWechsel zwischen synchron (Reihenfolge) oder asynchron (Leistung).</translation>
     </message>
     <message>
       <source>Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</source>
-      <translation>Log-Typ:\nWählen Sie zwischen Wincolor oder msvc Log-Typen.\nWincolor: Standard Logging für Windows\nmsvc: logging für Debugging</translation>
+      <translation>Protokoll-Typ:\nWähle zwischen wincolor und msvc aus.\nwincolor: Standard Protokollierung für Windows\nmsvc: Protokollierung für Debugging</translation>
     </message>
   </context>
   <context>
