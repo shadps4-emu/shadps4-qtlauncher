@@ -702,13 +702,13 @@ All fields must be valid hex strings with even length.</translation>
     </message>
     <message>
       <source>Debug Rif Keyset</source>
-      <translation type="unfinished">Debug Rif Keyset</translation>
+      <translation>Debug Rif Keyset</translation>
     </message>
     <message>
       <source>RSA key components for debug RIF files.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for debug RIF files.
-All fields must be valid hex strings with even length.</translation>
+      <translation>Komponenty RSA klíče pro debug RIF souborů.
+Všechna pole musí mít platné hexadecimální řetězce se sudou délkou.</translation>
     </message>
     <message>
       <source>Pkg Derived Key3</source>
@@ -1347,7 +1347,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Reload Button Mappings</source>
-      <translation type="unfinished">Reload Button Mappings</translation>
+      <translation>Znovunačtení mapování tlačítek při emulaci</translation>
     </message>
     <message>
       <source>Toggle Fullscreen</source>
@@ -1998,27 +1998,27 @@ Vyberte verzi emulátoru z nabídky pravého panelu.</translation>
     <name>SettingsDialog</name>
     <message>
       <source>Settings</source>
-      <translation type="unfinished">Settings</translation>
+      <translation>Nastavení</translation>
     </message>
     <message>
       <source>General</source>
-      <translation type="unfinished">General</translation>
+      <translation>Obecné</translation>
     </message>
     <message>
       <source>System</source>
-      <translation type="unfinished">System</translation>
+      <translation>Systém</translation>
     </message>
     <message>
       <source>Console Language</source>
-      <translation type="unfinished">Console Language</translation>
+      <translation>Jazyk konzole</translation>
     </message>
     <message>
       <source>Default tab when opening settings</source>
-      <translation type="unfinished">Default tab when opening settings</translation>
+      <translation>Výchozí karta při otevření nastavení</translation>
     </message>
     <message>
       <source>Enable Discord Rich Presence</source>
-      <translation type="unfinished">Enable Discord Rich Presence</translation>
+      <translation>Zapnout Discord Rich Presence</translation>
     </message>
     <message>
       <source>Trophy</source>
@@ -2030,19 +2030,19 @@ Vyberte verzi emulátoru z nabídky pravého panelu.</translation>
     </message>
     <message>
       <source>Logger</source>
-      <translation type="unfinished">Logger</translation>
+      <translation>Záznamník logů</translation>
     </message>
     <message>
       <source>Log Type</source>
-      <translation type="unfinished">Log Type</translation>
+      <translation>Typ logu</translation>
     </message>
     <message>
       <source>Log Filter</source>
-      <translation type="unfinished">Log Filter</translation>
+      <translation>Filtr logů</translation>
     </message>
     <message>
       <source>Open Log Location</source>
-      <translation type="unfinished">Open Log Location</translation>
+      <translation>Otevřít umístění logu</translation>
     </message>
     <message>
       <source>Input</source>
@@ -2050,67 +2050,67 @@ Vyberte verzi emulátoru z nabídky pravého panelu.</translation>
     </message>
     <message>
       <source>Cursor</source>
-      <translation type="unfinished">Cursor</translation>
+      <translation>Kurzor</translation>
     </message>
     <message>
       <source>Hide Cursor</source>
-      <translation type="unfinished">Hide Cursor</translation>
+      <translation>Skrýt kurzor</translation>
     </message>
     <message>
       <source>Hide Cursor Idle Timeout</source>
-      <translation type="unfinished">Hide Cursor Idle Timeout</translation>
+      <translation>Prodleva automatického skrytí kurzoru</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Žádné</translation>
     </message>
     <message>
       <source>Default Device</source>
-      <translation type="unfinished">Default Device</translation>
+      <translation>Výchozí zařízení</translation>
     </message>
     <message>
       <source>s</source>
-      <translation type="unfinished">s</translation>
+      <translation>sekund</translation>
     </message>
     <message>
       <source>Controller</source>
-      <translation type="unfinished">Controller</translation>
+      <translation>Ovladač</translation>
     </message>
     <message>
       <source>Graphics</source>
-      <translation type="unfinished">Graphics</translation>
+      <translation>Grafika</translation>
     </message>
     <message>
       <source>User</source>
-      <translation type="unfinished">User</translation>
+      <translation>Uživatel</translation>
     </message>
     <message>
       <source>Graphics Device</source>
-      <translation type="unfinished">Graphics Device</translation>
+      <translation>Grafické zařízení</translation>
     </message>
     <message>
       <source>Advanced</source>
-      <translation type="unfinished">Advanced</translation>
+      <translation>Pokročilé</translation>
     </message>
     <message>
       <source>Enable Shaders Dumping</source>
-      <translation type="unfinished">Enable Shaders Dumping</translation>
+      <translation>Zapnout dumping shaderů</translation>
     </message>
     <message>
       <source>Enable NULL GPU</source>
-      <translation type="unfinished">Enable NULL GPU</translation>
+      <translation>Zapnout NULL GPU</translation>
     </message>
     <message>
       <source>Enable HDR</source>
-      <translation type="unfinished">Enable HDR</translation>
+      <translation>Zapnout HDR</translation>
     </message>
     <message>
       <source>Paths</source>
-      <translation type="unfinished">Paths</translation>
+      <translation>Umístění</translation>
     </message>
     <message>
       <source>Game Folders</source>
-      <translation type="unfinished">Game Folders</translation>
+      <translation>Herní složky</translation>
     </message>
     <message>
       <source>Add...</source>
@@ -2122,19 +2122,19 @@ Vyberte verzi emulátoru z nabídky pravého panelu.</translation>
     </message>
     <message>
       <source>Debug</source>
-      <translation type="unfinished">Debug</translation>
+      <translation>Debug</translation>
     </message>
     <message>
       <source>Enable Debug Dumping</source>
-      <translation type="unfinished">Enable Debug Dumping</translation>
+      <translation>Zapnout debug dumping</translation>
     </message>
     <message>
       <source>Enable Vulkan Validation Layers</source>
-      <translation type="unfinished">Enable Vulkan Validation Layers</translation>
+      <translation>Zapnout validační vrstvy Vulkanu</translation>
     </message>
     <message>
       <source>Enable RenderDoc Debugging</source>
-      <translation type="unfinished">Enable RenderDoc Debugging</translation>
+      <translation>Zapnout RenderDoc debugging</translation>
     </message>
     <message>
       <source>Enable Crash Diagnostics</source>
@@ -2150,11 +2150,11 @@ Vyberte verzi emulátoru z nabídky pravého panelu.</translation>
     </message>
     <message>
       <source>Host Debug Markers</source>
-      <translation type="unfinished">Host Debug Markers</translation>
+      <translation>Host Debug Markers</translation>
     </message>
     <message>
       <source>Guest Debug Markers</source>
-      <translation type="unfinished">Guest Debug Markers</translation>
+      <translation>Guest Debug Markers</translation>
     </message>
     <message>
       <source>Enable Readback Linear Images</source>
@@ -2640,7 +2640,7 @@ Užitečné pro programy jako RenderDoc.</translation>
     </message>
     <message>
       <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
-      <translation type="unfinished">Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</translation>
+      <translation>Zapnout dumping shaderů:\nShadery hry se pro debugging uloží do složky, jak se vykreslí.</translation>
     </message>
     <message>
       <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</source>
@@ -3685,7 +3685,7 @@ File was too small.</translation>
     </message>
     <message>
       <source>Skylander (*.sky *.bin *.dmp *.dump);;All Files (*)</source>
-      <translation type="unfinished">Skylander (*.sky *.bin *.dmp *.dump);;All Files (*)</translation>
+      <translation>Skylander (*.sky *.bin *.dmp *.dump);;Všechny soubory (*)</translation>
     </message>
     <message>
       <source>Failed to open the skylander file!</source>
