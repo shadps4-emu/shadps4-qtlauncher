@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include <QFuture>
+#include <QLabel>
 #include <QTimer>
 #include <SDL3/SDL_gamepad.h>
 
@@ -47,6 +48,7 @@ private:
     void CheckGamePad();
     void SetMapping(QString input);
     void Cleanup();
+    void SetTextColoredPixmap(QLabel* label, const QPixmap& source);
 
     std::shared_ptr<IpcClient> m_ipc_client;
 

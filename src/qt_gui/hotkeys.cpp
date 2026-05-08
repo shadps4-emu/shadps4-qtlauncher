@@ -4,6 +4,7 @@
 #include <fstream>
 #include <QKeyEvent>
 #include <QMessageBox>
+#include <QPainter>
 #include <QtConcurrent/qtconcurrentrun.h>
 #include <SDL3/SDL.h>
 
@@ -15,10 +16,31 @@
 #include "sdl_event_wrapper.h"
 #include "ui_hotkeys.h"
 
+void Hotkeys::SetTextColoredPixmap(QLabel* label, const QPixmap& source) {
+    QColor textColor = this->palette().color(QPalette::WindowText);
+    QPixmap result = source;
+    QPainter painter(&result);
+
+    painter.setCompositionMode(QPainter::CompositionMode_SourceIn);
+    painter.fillRect(result.rect(), textColor);
+    painter.end();
+
+    label->setPixmap(result);
+}
+
 Hotkeys::Hotkeys(std::shared_ptr<IpcClient> ipc_client, bool isGameRunning, QWidget* parent)
     : QDialog(parent), m_ipc_client(ipc_client), GameRunning(isGameRunning), ui(new Ui::Hotkeys) {
 
     ui->setupUi(this);
+
+    QPixmap controllerPixmap(":/images/controller_icon.png");
+    QPixmap scaledController =
+        controllerPixmap.scaled(70, 70, Qt::KeepAspectRatio, Qt::SmoothTransformation);
+    SetTextColoredPixmap(ui->controllerLabel, scaledController);
+
+    QPixmap KBPixmap(":/images/keyboard_icon.png");
+    QPixmap scaledKB = KBPixmap.scaled(70, 70, Qt::KeepAspectRatio, Qt::SmoothTransformation);
+    SetTextColoredPixmap(ui->keyboardLabel, scaledKB);
 
     SDL_InitSubSystem(SDL_INIT_GAMEPAD);
     SDL_InitSubSystem(SDL_INIT_EVENTS);
