@@ -105,7 +105,6 @@ void Hotkeys::EnableMappingButtons() {
 }
 
 void Hotkeys::SetDefault() {
-
     ui->fpsButtonPad->setText("unmapped");
     ui->quitButtonPad->setText("unmapped");
     ui->fullscreenButtonPad->setText("unmapped");
@@ -793,7 +792,7 @@ bool Hotkeys::eventFilter(QObject* obj, QEvent* event) {
         }
     }
 
-    if (event->type() == QEvent::KeyPress && EnableKBMapping) {
+    if (event->type() == QEvent::KeyRelease && EnableKBMapping) {
         CheckMapping(MappingButton);
         return true;
     }
@@ -803,7 +802,6 @@ bool Hotkeys::eventFilter(QObject* obj, QEvent* event) {
 
 void Hotkeys::processSDLEvents(int Type, int Input, int Value) {
     if (EnablePadMapping) {
-
         if (pressedButtons.size() >= 3) {
             return;
         }
@@ -866,7 +864,7 @@ void Hotkeys::processSDLEvents(int Type, int Input, int Value) {
                     pressedButtons.insert(1, "l2");
                     L2Pressed = true;
                 } else if (Value < 5000) {
-                    if (L2Pressed && !R2Pressed)
+                    if (L2Pressed)
                         CheckMapping(MappingButton);
                 }
                 break;
@@ -875,7 +873,7 @@ void Hotkeys::processSDLEvents(int Type, int Input, int Value) {
                     pressedButtons.insert(2, "r2");
                     R2Pressed = true;
                 } else if (Value < 5000) {
-                    if (R2Pressed && !L2Pressed)
+                    if (R2Pressed)
                         CheckMapping(MappingButton);
                 }
                 break;
