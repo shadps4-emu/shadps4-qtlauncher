@@ -704,9 +704,9 @@ public:
             }
             if (!is_valid_file || report_result.has_value()) {
                 QString error_string = QString::fromStdString(
-                    !is_valid_file
-                        ? "The log is invalid, it either doesn't exist or log filters were used."
-                        : *report_result);
+                    !is_valid_file ? "The log is invalid, it either doesn't exist, is empty, or "
+                                     "log filters were used."
+                                   : *report_result);
                 QMessageBox msgBox(QMessageBox::Critical, tr("Error"),
                                    tr("Couldn't submit report, because the latest log for the "
                                       "game failed on the following check, and therefore would be "

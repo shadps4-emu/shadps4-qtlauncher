@@ -146,6 +146,9 @@ bool DetectLogTypeAndSetupEntries(std::filesystem::path const& path) {
 
 bool ProcessFile(std::filesystem::path const& path) {
     bool is_valid_file = DetectLogTypeAndSetupEntries(path);
+    if (!is_valid_file) {
+        return false;
+    }
     std::ifstream log(path);
     std::string linebuf;
     if (log.is_open()) {
