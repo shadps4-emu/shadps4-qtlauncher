@@ -25,17 +25,23 @@
       <item>
        <layout class="QHBoxLayout" name="LabelsLayout">
         <item>
-         <spacer name="horizontalSpacer_4">
-          <property name="orientation">
-           <enum>Qt::Orientation::Horizontal</enum>
+         <widget class="QLabel" name="hotkeysLabel">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
           </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+            <bold>true</bold>
+           </font>
           </property>
-         </spacer>
+          <property name="text">
+           <string>Hotkeys</string>
+          </property>
+         </widget>
         </item>
         <item>
          <widget class="QLabel" name="controllerLabel">
@@ -125,7 +131,7 @@
           <item>
            <layout class="QVBoxLayout" name="HotkeysLayout">
             <item>
-             <widget class="QFrame" name="frame">
+             <widget class="QFrame" name="showFpsFrame">
               <property name="frameShape">
                <enum>QFrame::Shape::StyledPanel</enum>
               </property>
@@ -134,7 +140,7 @@
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_3">
                <item>
-                <widget class="QLabel" name="label_4">
+                <widget class="QLabel" name="showFpsLabel">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                    <horstretch>0</horstretch>
@@ -194,7 +200,7 @@
              </widget>
             </item>
             <item>
-             <widget class="QFrame" name="frame_2">
+             <widget class="QFrame" name="quitFrame">
               <property name="frameShape">
                <enum>QFrame::Shape::StyledPanel</enum>
               </property>
@@ -203,7 +209,7 @@
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_2">
                <item>
-                <widget class="QLabel" name="label">
+                <widget class="QLabel" name="quitLabel">
                  <property name="font">
                   <font>
                    <pointsize>12</pointsize>
@@ -242,7 +248,7 @@
              </widget>
             </item>
             <item>
-             <widget class="QFrame" name="frame_4">
+             <widget class="QFrame" name="pauseFrame">
               <property name="frameShape">
                <enum>QFrame::Shape::StyledPanel</enum>
               </property>
@@ -251,7 +257,7 @@
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_5">
                <item>
-                <widget class="QLabel" name="label_3">
+                <widget class="QLabel" name="pauseLabel">
                  <property name="font">
                   <font>
                    <pointsize>12</pointsize>
@@ -290,7 +296,7 @@
              </widget>
             </item>
             <item>
-             <widget class="QFrame" name="frame_3">
+             <widget class="QFrame" name="fullscreenFrame">
               <property name="frameShape">
                <enum>QFrame::Shape::StyledPanel</enum>
               </property>
@@ -299,7 +305,7 @@
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_4">
                <item>
-                <widget class="QLabel" name="label_2">
+                <widget class="QLabel" name="fullscreenLabel">
                  <property name="font">
                   <font>
                    <pointsize>12</pointsize>
@@ -338,7 +344,7 @@
              </widget>
             </item>
             <item>
-             <widget class="QFrame" name="frame_5">
+             <widget class="QFrame" name="volumeUpFrame">
               <property name="frameShape">
                <enum>QFrame::Shape::StyledPanel</enum>
               </property>
@@ -347,7 +353,7 @@
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_6">
                <item>
-                <widget class="QLabel" name="label_5">
+                <widget class="QLabel" name="volumeUpLabel">
                  <property name="font">
                   <font>
                    <pointsize>12</pointsize>
@@ -380,7 +386,7 @@
              </widget>
             </item>
             <item>
-             <widget class="QFrame" name="frame_6">
+             <widget class="QFrame" name="volumeDownFrame">
               <property name="frameShape">
                <enum>QFrame::Shape::StyledPanel</enum>
               </property>
@@ -389,7 +395,7 @@
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_7">
                <item>
-                <widget class="QLabel" name="label_6">
+                <widget class="QLabel" name="volumeDownLabel">
                  <property name="font">
                   <font>
                    <pointsize>12</pointsize>
@@ -422,7 +428,7 @@
              </widget>
             </item>
             <item>
-             <widget class="QFrame" name="frame_7">
+             <widget class="QFrame" name="reloadInputsFrame">
               <property name="frameShape">
                <enum>QFrame::Shape::StyledPanel</enum>
               </property>
@@ -431,7 +437,7 @@
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_8">
                <item>
-                <widget class="QLabel" name="label_7">
+                <widget class="QLabel" name="reloadInputsLabel">
                  <property name="font">
                   <font>
                    <pointsize>12</pointsize>
@@ -467,7 +473,7 @@
              </widget>
             </item>
             <item>
-             <widget class="QFrame" name="frame_11">
+             <widget class="QFrame" name="screenshotFrame">
               <property name="frameShape">
                <enum>QFrame::Shape::StyledPanel</enum>
               </property>
@@ -476,7 +482,7 @@
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout">
                <item>
-                <widget class="QLabel" name="label_11">
+                <widget class="QLabel" name="screenshotLabel">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                    <horstretch>0</horstretch>
@@ -530,7 +536,7 @@
              </widget>
             </item>
             <item>
-             <widget class="QFrame" name="frame_12">
+             <widget class="QFrame" name="screenshotOverlaysFrame">
               <property name="frameShape">
                <enum>QFrame::Shape::StyledPanel</enum>
               </property>
@@ -539,7 +545,7 @@
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_12">
                <item>
-                <widget class="QLabel" name="label_12">
+                <widget class="QLabel" name="screenshotOverlaysLabel">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                    <horstretch>0</horstretch>
@@ -593,7 +599,7 @@
              </widget>
             </item>
             <item>
-             <widget class="QFrame" name="frame_13">
+             <widget class="QFrame" name="settingsFrame">
               <property name="frameShape">
                <enum>QFrame::Shape::StyledPanel</enum>
               </property>
@@ -602,7 +608,7 @@
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_13">
                <item>
-                <widget class="QLabel" name="label_13">
+                <widget class="QLabel" name="settingsLabel">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                    <horstretch>0</horstretch>
@@ -656,7 +662,7 @@
              </widget>
             </item>
             <item>
-             <widget class="QFrame" name="frame_9">
+             <widget class="QFrame" name="mouseJoystickFrame">
               <property name="frameShape">
                <enum>QFrame::Shape::StyledPanel</enum>
               </property>
@@ -665,7 +671,7 @@
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_10">
                <item>
-                <widget class="QLabel" name="label_9">
+                <widget class="QLabel" name="mouseJoystickLabel">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                    <horstretch>0</horstretch>
@@ -719,7 +725,7 @@
              </widget>
             </item>
             <item>
-             <widget class="QFrame" name="frame_10">
+             <widget class="QFrame" name="mouseGyroFrame">
               <property name="frameShape">
                <enum>QFrame::Shape::StyledPanel</enum>
               </property>
@@ -728,7 +734,7 @@
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_11">
                <item>
-                <widget class="QLabel" name="label_10">
+                <widget class="QLabel" name="mouseGyroLabel">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                    <horstretch>0</horstretch>
@@ -791,7 +797,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="tipLabel_2">
+    <widget class="QLabel" name="rightClickLabel">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
        <horstretch>0</horstretch>
@@ -813,7 +819,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="tipLabel">
+    <widget class="QLabel" name="multipleInputsLabel">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
        <horstretch>0</horstretch>
