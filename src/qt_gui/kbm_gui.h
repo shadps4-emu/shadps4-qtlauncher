@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include <QDialog>
+#include <QMap>
 
 #include "game_info.h"
 #include "ipc/ipc_client.h"
@@ -65,7 +66,7 @@ private:
     int MappingTimer;
     QTimer* timer;
     QRightClickButton* MappingButton;
-    QList<QRightClickButton*> ButtonsList;
+    QList<QPair<QRightClickButton*, std::string>> ButtonsList;
     std::string config_id;
     const std::vector<std::string> ControllerInputs = {
         "cross",        "circle",    "square",      "triangle",    "l1",

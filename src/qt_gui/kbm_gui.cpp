@@ -6,6 +6,7 @@
 #include <QMessageBox>
 #include <QMouseEvent>
 #include <QPushButton>
+#include <QScrollBar>
 #include <QWheelEvent>
 #include <SDL3/SDL_events.h>
 
@@ -38,34 +39,92 @@ KBMSettings::KBMSettings(std::shared_ptr<GameInfoClass> game_info_get,
         ui->ProfileComboBox->addItem(QString::fromStdString(m_game_info->m_games[i].serial));
     }
 
-    ButtonsList = {ui->CrossButton,
-                   ui->CircleButton,
-                   ui->TriangleButton,
-                   ui->SquareButton,
-                   ui->L1Button,
-                   ui->R1Button,
-                   ui->L2Button,
-                   ui->R2Button,
-                   ui->L3Button,
-                   ui->R3Button,
-                   ui->OptionsButton,
-                   ui->TouchpadLeftButton,
-                   ui->TouchpadCenterButton,
-                   ui->TouchpadRightButton,
-                   ui->DpadUpButton,
-                   ui->DpadDownButton,
-                   ui->DpadLeftButton,
-                   ui->DpadRightButton,
-                   ui->LStickUpButton,
-                   ui->LStickDownButton,
-                   ui->LStickLeftButton,
-                   ui->LStickRightButton,
-                   ui->RStickUpButton,
-                   ui->RStickDownButton,
-                   ui->RStickLeftButton,
-                   ui->RStickRightButton,
-                   ui->LHalfButton,
-                   ui->RHalfButton};
+    ButtonsList = {
+        {ui->CrossButton, "cross"},
+        {ui->CrossButton2, "cross"},
+        {ui->CrossButton3, "cross"},
+        {ui->CircleButton, "circle"},
+        {ui->CircleButton2, "circle"},
+        {ui->CircleButton3, "circle"},
+        {ui->TriangleButton, "triangle"},
+        {ui->TriangleButton2, "triangle"},
+        {ui->TriangleButton3, "triangle"},
+        {ui->SquareButton, "square"},
+        {ui->SquareButton2, "square"},
+        {ui->SquareButton3, "square"},
+        {ui->L1Button, "l1"},
+        {ui->L1Button2, "l1"},
+        {ui->L1Button3, "l1"},
+        {ui->R1Button, "r1"},
+        {ui->R1Button2, "r1"},
+        {ui->R1Button3, "r1"},
+        {ui->L2Button, "l2"},
+        {ui->L2Button2, "l2"},
+        {ui->L2Button3, "l2"},
+        {ui->R2Button, "r2"},
+        {ui->R2Button2, "r2"},
+        {ui->R2Button3, "r2"},
+        {ui->L3Button, "l3"},
+        {ui->L3Button2, "l3"},
+        {ui->L3Button3, "l3"},
+        {ui->R3Button, "r3"},
+        {ui->R3Button2, "r3"},
+        {ui->R3Button3, "r3"},
+        {ui->OptionsButton, "options"},
+        {ui->OptionsButton2, "options"},
+        {ui->OptionsButton3, "options"},
+        {ui->TouchpadLeftButton, "touchpad_left"},
+        {ui->TouchpadLeftButton2, "touchpad_left"},
+        {ui->TouchpadLeftButton3, "touchpad_left"},
+        {ui->TouchpadCenterButton, "touchpad_center"},
+        {ui->TouchpadCenterButton2, "touchpad_center"},
+        {ui->TouchpadCenterButton3, "touchpad_center"},
+        {ui->TouchpadRightButton, "touchpad_right"},
+        {ui->TouchpadRightButton2, "touchpad_right"},
+        {ui->TouchpadRightButton3, "touchpad_right"},
+        {ui->DpadUpButton, "pad_up"},
+        {ui->DpadUpButton2, "pad_up"},
+        {ui->DpadUpButton3, "pad_up"},
+        {ui->DpadDownButton, "pad_down"},
+        {ui->DpadDownButton2, "pad_down"},
+        {ui->DpadDownButton3, "pad_down"},
+        {ui->DpadLeftButton, "pad_left"},
+        {ui->DpadLeftButton2, "pad_left"},
+        {ui->DpadLeftButton3, "pad_left"},
+        {ui->DpadRightButton, "pad_right"},
+        {ui->DpadRightButton2, "pad_right"},
+        {ui->DpadRightButton3, "pad_right"},
+        {ui->LStickUpButton, "axis_left_y_minus"},
+        {ui->LStickUpButton2, "axis_left_y_minus"},
+        {ui->LStickUpButton3, "axis_left_y_minus"},
+        {ui->LStickDownButton, "axis_left_y_plus"},
+        {ui->LStickDownButton2, "axis_left_y_plus"},
+        {ui->LStickDownButton3, "axis_left_y_plus"},
+        {ui->LStickLeftButton, "axis_left_x_minus"},
+        {ui->LStickLeftButton2, "axis_left_x_minus"},
+        {ui->LStickLeftButton3, "axis_left_x_minus"},
+        {ui->LStickRightButton, "axis_left_x_plus"},
+        {ui->LStickRightButton2, "axis_left_x_plus"},
+        {ui->LStickRightButton3, "axis_left_x_plus"},
+        {ui->RStickUpButton, "axis_right_y_minus"},
+        {ui->RStickUpButton2, "axis_right_y_minus"},
+        {ui->RStickUpButton3, "axis_right_y_minus"},
+        {ui->RStickDownButton, "axis_right_y_plus"},
+        {ui->RStickDownButton2, "axis_right_y_plus"},
+        {ui->RStickDownButton3, "axis_right_y_plus"},
+        {ui->RStickLeftButton, "axis_right_x_minus"},
+        {ui->RStickLeftButton2, "axis_right_x_minus"},
+        {ui->RStickLeftButton3, "axis_right_x_minus"},
+        {ui->RStickRightButton, "axis_right_x_plus"},
+        {ui->RStickRightButton2, "axis_right_x_plus"},
+        {ui->RStickRightButton3, "axis_right_x_plus"},
+        {ui->LHalfButton, "leftjoystick_halfmode"},
+        {ui->LHalfButton2, "leftjoystick_halfmode"},
+        {ui->LHalfButton3, "leftjoystick_halfmode"},
+        {ui->RHalfButton, "rightjoystick_halfmode"},
+        {ui->RHalfButton2, "rightjoystick_halfmode"},
+        {ui->RHalfButton3, "rightjoystick_halfmode"},
+    };
 
     ButtonConnects();
     SetUIValuestoMappings("default");
@@ -153,18 +212,21 @@ tr("Do you want to overwrite existing mappings with the mappings from the Common
 }
 
 void KBMSettings::ButtonConnects() {
-    for (auto& button : ButtonsList) {
-        connect(button, &QPushButton::clicked, this, [this, &button]() { StartTimer(button); });
+    for (auto& entry : ButtonsList) {
+        connect(entry.first, &QPushButton::clicked, this,
+                [this, &entry]() { StartTimer(entry.first); });
 
-        connect(button, &QRightClickButton::rightClicked, this,
-                [this, &button]() { button->setText("unmapped"); });
+        connect(entry.first, &QRightClickButton::rightClicked, this,
+                [this, &entry]() { entry.first->setText("unmapped"); });
     }
 }
 
 void KBMSettings::DisableMappingButtons() {
-    for (const auto& i : ButtonsList) {
-        i->setEnabled(false);
+    for (auto& entry : ButtonsList) {
+        entry.first->setEnabled(false);
     }
+
+    ui->scrollArea->verticalScrollBar()->setEnabled(false);
 
     ui->buttonBox->button(QDialogButtonBox::Save)->setEnabled(false);
     ui->buttonBox->button(QDialogButtonBox::Apply)->setEnabled(false);
@@ -172,9 +234,11 @@ void KBMSettings::DisableMappingButtons() {
 }
 
 void KBMSettings::EnableMappingButtons() {
-    for (const auto& i : ButtonsList) {
-        i->setEnabled(true);
+    for (auto& entry : ButtonsList) {
+        entry.first->setEnabled(true);
     }
+
+    ui->scrollArea->verticalScrollBar()->setEnabled(true);
 
     ui->buttonBox->button(QDialogButtonBox::Save)->setEnabled(true);
     ui->buttonBox->button(QDialogButtonBox::Apply)->setEnabled(true);
@@ -191,63 +255,17 @@ void KBMSettings::SaveKBMConfig(bool close_on_save) {
     lines.push_back("#Keyboard bindings");
     lines.push_back("");
 
-    // Lambda to reduce repetitive code for mapping buttons to config lines
-    auto add_mapping = [&](const QString& buttonText, const std::string& output_name) {
-        input_string = buttonText.toStdString();
-        output_string = output_name;
-        lines.push_back(output_string + " = " + input_string);
+    for (const auto& entry : ButtonsList) {
+        input_string = entry.first->text().toStdString();
+        output_string = entry.second;
         if (input_string != "unmapped") {
+            lines.push_back(output_string + " = " + input_string);
             inputs.push_back(input_string);
         }
-    };
-
-    add_mapping(ui->CrossButton->text(), "cross");
-    add_mapping(ui->CircleButton->text(), "circle");
-    add_mapping(ui->TriangleButton->text(), "triangle");
-    add_mapping(ui->SquareButton->text(), "square");
+    }
 
     lines.push_back("");
-
-    add_mapping(ui->DpadUpButton->text(), "pad_up");
-    add_mapping(ui->DpadDownButton->text(), "pad_down");
-    add_mapping(ui->DpadLeftButton->text(), "pad_left");
-    add_mapping(ui->DpadRightButton->text(), "pad_right");
-
-    lines.push_back("");
-
-    add_mapping(ui->L1Button->text(), "l1");
-    add_mapping(ui->R1Button->text(), "r1");
-    add_mapping(ui->L2Button->text(), "l2");
-    add_mapping(ui->R2Button->text(), "r2");
-    add_mapping(ui->L3Button->text(), "l3");
-    add_mapping(ui->R3Button->text(), "r3");
-
-    lines.push_back("");
-
-    add_mapping(ui->TouchpadLeftButton->text(), "touchpad_left");
-    add_mapping(ui->TouchpadCenterButton->text(), "touchpad_center");
-    add_mapping(ui->TouchpadRightButton->text(), "touchpad_right");
-    add_mapping(ui->OptionsButton->text(), "options");
-
-    lines.push_back("");
-
-    add_mapping(ui->LStickUpButton->text(), "axis_left_y_minus");
-    add_mapping(ui->LStickDownButton->text(), "axis_left_y_plus");
-    add_mapping(ui->LStickLeftButton->text(), "axis_left_x_minus");
-    add_mapping(ui->LStickRightButton->text(), "axis_left_x_plus");
-
-    lines.push_back("");
-
-    add_mapping(ui->RStickUpButton->text(), "axis_right_y_minus");
-    add_mapping(ui->RStickDownButton->text(), "axis_right_y_plus");
-    add_mapping(ui->RStickLeftButton->text(), "axis_right_x_minus");
-    add_mapping(ui->RStickRightButton->text(), "axis_right_x_plus");
-
-    lines.push_back("");
-
     lines.push_back("mouse_to_joystick = " + ui->MouseJoystickBox->currentText().toStdString());
-    add_mapping(ui->LHalfButton->text(), "leftjoystick_halfmode");
-    add_mapping(ui->RHalfButton->text(), "rightjoystick_halfmode");
 
     std::string DOString = std::format("{:.2f}", (ui->DeadzoneOffsetSlider->value() / 100.f));
     std::string SMString = std::format("{:.1f}", (ui->SpeedMultiplierSlider->value() / 10.f));
@@ -287,7 +305,7 @@ void KBMSettings::SaveKBMConfig(bool close_on_save) {
         input_string = line.substr(equal_pos + 2);
 
         bool controllerInputdetected = false;
-        for (std::string input : ControllerInputs) {
+        for (const std::string& input : ControllerInputs) {
             // Needed to avoid detecting backspace while detecting back
             if (input_string.contains(input) && !input_string.contains("backspace")) {
                 controllerInputdetected = true;
@@ -315,10 +333,10 @@ void KBMSettings::SaveKBMConfig(bool close_on_save) {
 
     if (duplicateFound) {
         QStringList duplicatesList;
-        for (const QString mapping : duplicateMappings) {
-            for (const auto& button : ButtonsList) {
-                if (button->text() == mapping)
-                    duplicatesList.append(button->objectName() + " - " + mapping);
+        for (const QString& mapping : duplicateMappings) {
+            for (const auto& entry : ButtonsList) {
+                if (entry.first->text() == mapping)
+                    duplicatesList.append(entry.first->objectName() + " - " + mapping);
             }
         }
         QMessageBox::information(
@@ -399,6 +417,10 @@ void KBMSettings::SetDefault() {
 }
 
 void KBMSettings::SetUIValuestoMappings(std::string config_id) {
+    for (auto& entry : ButtonsList) {
+        entry.first->setText("unmapped");
+    }
+
     const auto config_file = Input::GetFoolproofInputConfigFile(config_id);
     std::ifstream file(config_file);
 
@@ -419,7 +441,7 @@ void KBMSettings::SetUIValuestoMappings(std::string config_id) {
         std::string input_string = line.substr(equal_pos + 2);
 
         bool controllerInputdetected = false;
-        for (std::string input : ControllerInputs) {
+        for (const std::string& input : ControllerInputs) {
             // Needed to avoid detecting backspace while detecting back
             if (input_string.contains(input) && !input_string.contains("backspace")) {
                 controllerInputdetected = true;
@@ -428,65 +450,14 @@ void KBMSettings::SetUIValuestoMappings(std::string config_id) {
         }
 
         if (!controllerInputdetected) {
-            if (output_string == "cross") {
-                ui->CrossButton->setText(QString::fromStdString(input_string));
-            } else if (output_string == "circle") {
-                ui->CircleButton->setText(QString::fromStdString(input_string));
-            } else if (output_string == "square") {
-                ui->SquareButton->setText(QString::fromStdString(input_string));
-            } else if (output_string == "triangle") {
-                ui->TriangleButton->setText(QString::fromStdString(input_string));
-            } else if (output_string == "l1") {
-                ui->L1Button->setText(QString::fromStdString(input_string));
-            } else if (output_string == "l2") {
-                ui->L2Button->setText(QString::fromStdString(input_string));
-            } else if (output_string == "r1") {
-                ui->R1Button->setText(QString::fromStdString(input_string));
-            } else if (output_string == "r2") {
-                ui->R2Button->setText(QString::fromStdString(input_string));
-            } else if (output_string == "l3") {
-                ui->L3Button->setText(QString::fromStdString(input_string));
-            } else if (output_string == "r3") {
-                ui->R3Button->setText(QString::fromStdString(input_string));
-            } else if (output_string == "pad_up") {
-                ui->DpadUpButton->setText(QString::fromStdString(input_string));
-            } else if (output_string == "pad_down") {
-                ui->DpadDownButton->setText(QString::fromStdString(input_string));
-            } else if (output_string == "pad_left") {
-                ui->DpadLeftButton->setText(QString::fromStdString(input_string));
-            } else if (output_string == "pad_right") {
-                ui->DpadRightButton->setText(QString::fromStdString(input_string));
-            } else if (output_string == "options") {
-                ui->OptionsButton->setText(QString::fromStdString(input_string));
-            } else if (output_string == "touchpad_left") {
-                ui->TouchpadLeftButton->setText(QString::fromStdString(input_string));
-            } else if (output_string == "touchpad_center") {
-                ui->TouchpadCenterButton->setText(QString::fromStdString(input_string));
-            } else if (output_string == "touchpad_right") {
-                ui->TouchpadRightButton->setText(QString::fromStdString(input_string));
-            } else if (output_string == "axis_left_x_minus") {
-                ui->LStickLeftButton->setText(QString::fromStdString(input_string));
-            } else if (output_string == "axis_left_x_plus") {
-                ui->LStickRightButton->setText(QString::fromStdString(input_string));
-            } else if (output_string == "axis_left_y_minus") {
-                ui->LStickUpButton->setText(QString::fromStdString(input_string));
-            } else if (output_string == "axis_left_y_plus") {
-                ui->LStickDownButton->setText(QString::fromStdString(input_string));
-            } else if (output_string == "axis_right_x_minus") {
-                ui->RStickLeftButton->setText(QString::fromStdString(input_string));
-            } else if (output_string == "axis_right_x_plus") {
-                ui->RStickRightButton->setText(QString::fromStdString(input_string));
-            } else if (output_string == "axis_right_y_minus") {
-                ui->RStickUpButton->setText(QString::fromStdString(input_string));
-            } else if (output_string == "axis_right_y_plus") {
-                ui->RStickDownButton->setText(QString::fromStdString(input_string));
-            } else if (output_string == "mouse_to_joystick") {
-                ui->MouseJoystickBox->setCurrentText(QString::fromStdString(input_string));
-            } else if (output_string == "leftjoystick_halfmode") {
-                ui->LHalfButton->setText(QString::fromStdString(input_string));
-            } else if (output_string == "rightjoystick_halfmode") {
-                ui->RHalfButton->setText(QString::fromStdString(input_string));
-            } else if (output_string.contains("mouse_movement_params")) {
+            for (auto& entry : ButtonsList) {
+                if (output_string == entry.second && entry.first->text() == "unmapped") {
+                    entry.first->setText(QString::fromStdString(input_string));
+                    break;
+                }
+            }
+
+            if (output_string.contains("mouse_movement_params")) {
                 std::size_t comma_pos = line.find(',');
                 if (comma_pos != std::string::npos) {
                     const std::string old_locale = std::setlocale(LC_NUMERIC, nullptr);
@@ -518,6 +489,8 @@ void KBMSettings::SetUIValuestoMappings(std::string config_id) {
                     // Restore locale
                     std::setlocale(LC_NUMERIC, old_locale.c_str());
                 }
+            } else if (output_string == "mouse_to_joystick") {
+                ui->MouseJoystickBox->setCurrentText(QString::fromStdString(input_string));
             }
         }
     }
@@ -565,6 +538,7 @@ void KBMSettings::StartTimer(QRightClickButton*& button) {
     MappingButton = button;
     connect(timer, &QTimer::timeout, this, [this]() { CheckMapping(MappingButton); });
     timer->start(1000);
+    button->setStyleSheet("border: 1px solid lightblue;");
 }
 
 void KBMSettings::CheckMapping(QRightClickButton*& button) {
@@ -588,15 +562,18 @@ void KBMSettings::CheckMapping(QRightClickButton*& button) {
         timer->stop();
     }
     if (MappingCompleted) {
+        button->setText(mapping);
+        button->setStyleSheet("");
+
         EnableMapping = false;
         EnableMappingButtons();
         timer->stop();
-
-        button->setText(mapping);
     }
 
     if (MappingTimer <= 0) {
         button->setText(mapping);
+        button->setStyleSheet("");
+
         EnableMapping = false;
         EnableMappingButtons();
         timer->stop();

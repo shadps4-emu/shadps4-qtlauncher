@@ -11,12 +11,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1235</width>
-    <height>874</height>
+    <width>1000</width>
+    <height>962</height>
    </rect>
   </property>
   <property name="sizePolicy">
-   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
@@ -44,1676 +44,1861 @@
     <number>6</number>
    </property>
    <item>
-    <widget class="QScrollArea" name="scrollArea">
-     <property name="focusPolicy">
-      <enum>Qt::FocusPolicy::NoFocus</enum>
-     </property>
-     <property name="widgetResizable">
-      <bool>true</bool>
-     </property>
-     <widget class="QWidget" name="scrollAreaWidgetContents">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>1207</width>
-        <height>860</height>
-       </rect>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_19">
-       <property name="leftMargin">
-        <number>0</number>
-       </property>
-       <property name="topMargin">
-        <number>0</number>
-       </property>
-       <property name="rightMargin">
-        <number>0</number>
-       </property>
-       <property name="bottomMargin">
-        <number>0</number>
-       </property>
-       <item>
-        <layout class="QHBoxLayout" name="RemapLayout">
-         <item>
-          <layout class="QVBoxLayout" name="verticalLayout_left">
-           <property name="spacing">
-            <number>5</number>
-           </property>
+    <widget class="QWidget" name="Contents" native="true">
+     <layout class="QVBoxLayout" name="verticalLayout_6">
+      <item>
+       <layout class="QVBoxLayout" name="mainLayout">
+        <item>
+         <widget class="QGroupBox" name="ProfileGroupBox">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="title">
+           <string>Config Selection</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_16">
            <item>
-            <widget class="QGroupBox" name="gb_dpad">
-             <property name="enabled">
-              <bool>true</bool>
-             </property>
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="title">
-              <string>D-Pad</string>
-             </property>
-             <layout class="QVBoxLayout" name="gb_dpad_layout">
-              <property name="spacing">
-               <number>6</number>
-              </property>
-              <property name="leftMargin">
-               <number>5</number>
-              </property>
-              <property name="topMargin">
-               <number>5</number>
-              </property>
-              <property name="rightMargin">
-               <number>5</number>
-              </property>
-              <property name="bottomMargin">
-               <number>5</number>
-              </property>
-              <item>
-               <widget class="QWidget" name="dpad_up" native="true">
-                <layout class="QHBoxLayout" name="dpad_up_layout">
-                 <property name="spacing">
-                  <number>0</number>
-                 </property>
-                 <property name="leftMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>0</number>
-                 </property>
-                 <item>
-                  <widget class="QGroupBox" name="gb_dpad_up">
-                   <property name="minimumSize">
-                    <size>
-                     <width>160</width>
-                     <height>0</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>0</width>
-                     <height>16777215</height>
-                    </size>
-                   </property>
-                   <property name="title">
-                    <string>Up</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignmentFlag::AlignCenter</set>
-                   </property>
-                   <layout class="QHBoxLayout" name="horizontalLayout_4">
-                    <item>
-                     <widget class="QRightClickButton" name="DpadUpButton">
-                      <property name="focusPolicy">
-                       <enum>Qt::FocusPolicy::NoFocus</enum>
-                      </property>
-                      <property name="text">
-                       <string>unmapped</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <layout class="QHBoxLayout" name="layout_dpad_left_right">
-                <item>
-                 <widget class="QGroupBox" name="gb_dpad_left">
-                  <property name="minimumSize">
-                   <size>
-                    <width>160</width>
-                    <height>0</height>
-                   </size>
-                  </property>
-                  <property name="title">
-                   <string>Left</string>
-                  </property>
-                  <property name="alignment">
-                   <set>Qt::AlignmentFlag::AlignCenter</set>
-                  </property>
-                  <layout class="QVBoxLayout" name="gb_dpad_left_layout">
-                   <property name="leftMargin">
-                    <number>5</number>
-                   </property>
-                   <property name="topMargin">
-                    <number>5</number>
-                   </property>
-                   <property name="rightMargin">
-                    <number>5</number>
-                   </property>
-                   <property name="bottomMargin">
-                    <number>5</number>
-                   </property>
-                   <item>
-                    <widget class="QRightClickButton" name="DpadLeftButton">
-                     <property name="focusPolicy">
-                      <enum>Qt::FocusPolicy::NoFocus</enum>
-                     </property>
-                     <property name="text">
-                      <string>unmapped</string>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QGroupBox" name="gb_dpad_right">
-                  <property name="minimumSize">
-                   <size>
-                    <width>160</width>
-                    <height>0</height>
-                   </size>
-                  </property>
-                  <property name="title">
-                   <string>Right</string>
-                  </property>
-                  <property name="alignment">
-                   <set>Qt::AlignmentFlag::AlignCenter</set>
-                  </property>
-                  <layout class="QVBoxLayout" name="gb_dpad_right_layout">
-                   <property name="leftMargin">
-                    <number>5</number>
-                   </property>
-                   <property name="topMargin">
-                    <number>5</number>
-                   </property>
-                   <property name="rightMargin">
-                    <number>5</number>
-                   </property>
-                   <property name="bottomMargin">
-                    <number>5</number>
-                   </property>
-                   <item>
-                    <widget class="QRightClickButton" name="DpadRightButton">
-                     <property name="focusPolicy">
-                      <enum>Qt::FocusPolicy::NoFocus</enum>
-                     </property>
-                     <property name="text">
-                      <string>unmapped</string>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <widget class="QWidget" name="dpad_down" native="true">
-                <layout class="QHBoxLayout" name="dpad_down_layout">
-                 <property name="leftMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>0</number>
-                 </property>
-                 <item>
-                  <widget class="QGroupBox" name="gb_dpad_down">
-                   <property name="minimumSize">
-                    <size>
-                     <width>160</width>
-                     <height>0</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>124</width>
-                     <height>16777215</height>
-                    </size>
-                   </property>
-                   <property name="title">
-                    <string>Down</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignmentFlag::AlignCenter</set>
-                   </property>
-                   <layout class="QHBoxLayout" name="horizontalLayout_3">
-                    <item>
-                     <widget class="QRightClickButton" name="DpadDownButton">
-                      <property name="focusPolicy">
-                       <enum>Qt::FocusPolicy::NoFocus</enum>
-                      </property>
-                      <property name="text">
-                       <string>unmapped</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-             </layout>
-            </widget>
+            <layout class="QHBoxLayout" name="profileTitleLayout">
+             <item>
+              <widget class="QComboBox" name="ProfileComboBox">
+               <property name="font">
+                <font>
+                 <pointsize>9</pointsize>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="focusPolicy">
+                <enum>Qt::FocusPolicy::NoFocus</enum>
+               </property>
+               <property name="currentText">
+                <string/>
+               </property>
+               <property name="currentIndex">
+                <number>-1</number>
+               </property>
+               <property name="placeholderText">
+                <string>Common Config</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="TitleLabel">
+               <property name="font">
+                <font>
+                 <pointsize>10</pointsize>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Common Config</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+               <property name="wordWrap">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </item>
            <item>
-            <spacer name="verticalSpacer">
-             <property name="orientation">
-              <enum>Qt::Orientation::Vertical</enum>
-             </property>
-             <property name="sizeType">
-              <enum>QSizePolicy::Policy::Maximum</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>20</width>
-               <height>40</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item>
-            <widget class="QGroupBox" name="LeftStickDeadZoneGB">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="title">
-              <string>Left Analog Halfmode</string>
-             </property>
-             <layout class="QVBoxLayout" name="verticalLayout_15">
-              <item>
-               <widget class="QRightClickButton" name="LHalfButton">
-                <property name="focusPolicy">
-                 <enum>Qt::FocusPolicy::NoFocus</enum>
-                </property>
-                <property name="text">
-                 <string>unmapped</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="label_2">
-                <property name="font">
-                 <font>
-                  <italic>true</italic>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>hold to move left stick at half-speed</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </item>
-           <item>
-            <widget class="QGroupBox" name="gb_left_stick">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="title">
-              <string>Left Stick</string>
-             </property>
-             <layout class="QVBoxLayout" name="gb_left_stick_layout">
-              <property name="leftMargin">
-               <number>5</number>
-              </property>
-              <property name="topMargin">
-               <number>5</number>
-              </property>
-              <property name="rightMargin">
-               <number>5</number>
-              </property>
-              <property name="bottomMargin">
-               <number>5</number>
-              </property>
-              <item>
-               <widget class="QWidget" name="left_stick_up" native="true">
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>2121</height>
-                 </size>
-                </property>
-                <layout class="QHBoxLayout" name="left_stick_up_layout">
-                 <property name="leftMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>0</number>
-                 </property>
-                 <item>
-                  <widget class="QGroupBox" name="gb_left_stick_up">
-                   <property name="minimumSize">
-                    <size>
-                     <width>160</width>
-                     <height>0</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>124</width>
-                     <height>16777215</height>
-                    </size>
-                   </property>
-                   <property name="title">
-                    <string>Up</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignmentFlag::AlignCenter</set>
-                   </property>
-                   <layout class="QVBoxLayout" name="verticalLayout_10">
-                    <item>
-                     <widget class="QRightClickButton" name="LStickUpButton">
-                      <property name="focusPolicy">
-                       <enum>Qt::FocusPolicy::NoFocus</enum>
-                      </property>
-                      <property name="text">
-                       <string>unmapped</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <layout class="QHBoxLayout" name="layout_left_stick_left_right">
-                <item>
-                 <widget class="QGroupBox" name="gb_left_stick_left">
-                  <property name="minimumSize">
-                   <size>
-                    <width>160</width>
-                    <height>0</height>
-                   </size>
-                  </property>
-                  <property name="title">
-                   <string>Left</string>
-                  </property>
-                  <property name="alignment">
-                   <set>Qt::AlignmentFlag::AlignCenter</set>
-                  </property>
-                  <layout class="QVBoxLayout" name="gb_left_stick_left_layout">
-                   <property name="leftMargin">
-                    <number>5</number>
-                   </property>
-                   <property name="topMargin">
-                    <number>5</number>
-                   </property>
-                   <property name="rightMargin">
-                    <number>5</number>
-                   </property>
-                   <property name="bottomMargin">
-                    <number>5</number>
-                   </property>
-                   <item>
-                    <widget class="QRightClickButton" name="LStickLeftButton">
-                     <property name="focusPolicy">
-                      <enum>Qt::FocusPolicy::NoFocus</enum>
-                     </property>
-                     <property name="text">
-                      <string>unmapped</string>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QGroupBox" name="gb_left_stick_right">
-                  <property name="minimumSize">
-                   <size>
-                    <width>160</width>
-                    <height>0</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>16777215</width>
-                    <height>16777215</height>
-                   </size>
-                  </property>
-                  <property name="title">
-                   <string>Right</string>
-                  </property>
-                  <property name="alignment">
-                   <set>Qt::AlignmentFlag::AlignCenter</set>
-                  </property>
-                  <layout class="QVBoxLayout" name="gb_left_stick_right_layout">
-                   <property name="leftMargin">
-                    <number>5</number>
-                   </property>
-                   <property name="topMargin">
-                    <number>5</number>
-                   </property>
-                   <property name="rightMargin">
-                    <number>5</number>
-                   </property>
-                   <property name="bottomMargin">
-                    <number>5</number>
-                   </property>
-                   <item>
-                    <widget class="QRightClickButton" name="LStickRightButton">
-                     <property name="focusPolicy">
-                      <enum>Qt::FocusPolicy::NoFocus</enum>
-                     </property>
-                     <property name="text">
-                      <string>unmapped</string>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <widget class="QWidget" name="left_stick_down" native="true">
-                <layout class="QHBoxLayout" name="left_stick_down_layout">
-                 <property name="leftMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>0</number>
-                 </property>
-                 <item>
-                  <widget class="QGroupBox" name="gb_left_stick_down">
-                   <property name="minimumSize">
-                    <size>
-                     <width>160</width>
-                     <height>0</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>124</width>
-                     <height>21212</height>
-                    </size>
-                   </property>
-                   <property name="title">
-                    <string>Down</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignmentFlag::AlignCenter</set>
-                   </property>
-                   <layout class="QVBoxLayout" name="verticalLayout_8">
-                    <item>
-                     <widget class="QRightClickButton" name="LStickDownButton">
-                      <property name="focusPolicy">
-                       <enum>Qt::FocusPolicy::NoFocus</enum>
-                      </property>
-                      <property name="text">
-                       <string>unmapped</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-             </layout>
-            </widget>
+            <layout class="QHBoxLayout" name="profileLayout2">
+             <item>
+              <widget class="QCheckBox" name="PerGameCheckBox">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>9</pointsize>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="focusPolicy">
+                <enum>Qt::FocusPolicy::NoFocus</enum>
+               </property>
+               <property name="text">
+                <string>Use per-game configs</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="CopyCommonButton">
+               <property name="font">
+                <font>
+                 <pointsize>9</pointsize>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="focusPolicy">
+                <enum>Qt::FocusPolicy::NoFocus</enum>
+               </property>
+               <property name="text">
+                <string>Copy from Common Config</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </item>
           </layout>
-         </item>
-         <item>
-          <layout class="QVBoxLayout" name="verticalLayout_middle" stretch="0,0,0,0,0">
-           <property name="spacing">
-            <number>0</number>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="headerLabelsLayout">
+          <item>
+           <widget class="QLabel" name="outputLabel">
+            <property name="font">
+             <font>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Output</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="inputLabel">
+            <property name="font">
+             <font>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Input</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="altLabel">
+            <property name="font">
+             <font>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Alternate Input 1</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="alt2Label">
+            <property name="font">
+             <font>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Alternate Input 2</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QScrollArea" name="scrollArea">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="focusPolicy">
+           <enum>Qt::FocusPolicy::NoFocus</enum>
+          </property>
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>-617</y>
+             <width>968</width>
+             <height>1367</height>
+            </rect>
            </property>
-           <item>
-            <widget class="QGroupBox" name="ProfileGroupBox">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <pointsize>12</pointsize>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="title">
-              <string>Config Selection</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignmentFlag::AlignCenter</set>
-             </property>
-             <layout class="QVBoxLayout" name="verticalLayout_16">
+           <layout class="QVBoxLayout" name="verticalLayout_19">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <layout class="QVBoxLayout" name="scrollAreaLayout" stretch="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
+              <property name="spacing">
+               <number>0</number>
+              </property>
               <item>
-               <layout class="QHBoxLayout" name="horizontalLayout_6">
-                <item>
-                 <widget class="QComboBox" name="ProfileComboBox">
-                  <property name="font">
-                   <font>
-                    <pointsize>9</pointsize>
-                    <bold>false</bold>
-                   </font>
-                  </property>
-                  <property name="focusPolicy">
-                   <enum>Qt::FocusPolicy::NoFocus</enum>
-                  </property>
-                  <property name="currentText">
-                   <string/>
-                  </property>
-                  <property name="currentIndex">
-                   <number>-1</number>
-                  </property>
-                  <property name="placeholderText">
-                   <string>Common Config</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QLabel" name="TitleLabel">
-                  <property name="font">
-                   <font>
-                    <pointsize>10</pointsize>
-                    <bold>true</bold>
-                   </font>
-                  </property>
-                  <property name="text">
-                   <string>Common Config</string>
-                  </property>
-                  <property name="alignment">
-                   <set>Qt::AlignmentFlag::AlignCenter</set>
-                  </property>
-                  <property name="wordWrap">
-                   <bool>true</bool>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
+               <widget class="QFrame" name="crossFrame">
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_21">
+                 <item>
+                  <widget class="QLabel" name="crossLabel">
+                   <property name="text">
+                    <string>Cross</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="CrossButton">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="CrossButton2">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="CrossButton3">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
               </item>
               <item>
-               <layout class="QHBoxLayout" name="horizontalLayout_2">
+               <widget class="QFrame" name="circleFrame">
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_20">
+                 <item>
+                  <widget class="QLabel" name="circleLabel">
+                   <property name="text">
+                    <string>Circle</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="CircleButton">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="CircleButton3">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="CircleButton2">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="sqaureFrame">
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_19">
+                 <item>
+                  <widget class="QLabel" name="sqaureLabel">
+                   <property name="text">
+                    <string>Square</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="SquareButton">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="SquareButton2">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="SquareButton3">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="triangleFrame">
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_8">
+                 <item>
+                  <widget class="QLabel" name="triangleLabel">
+                   <property name="text">
+                    <string>Triangle</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="TriangleButton">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="TriangleButton2">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="TriangleButton3">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="dpadUpFrame">
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_7">
+                 <item>
+                  <widget class="QLabel" name="dpadUpLabel">
+                   <property name="text">
+                    <string>Dpad Up</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="DpadUpButton">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="DpadUpButton2">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="DpadUpButton3">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="dpadDownFrame">
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_3">
+                 <item>
+                  <widget class="QLabel" name="dpadDownLabel">
+                   <property name="text">
+                    <string>Dpad Down</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="DpadDownButton">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="DpadDownButton2">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="DpadDownButton3">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="dpadLeftFrame">
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_12">
+                 <item>
+                  <widget class="QLabel" name="dpadLeftLabel">
+                   <property name="text">
+                    <string>Dpad Left</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="DpadLeftButton">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="DpadLeftButton2">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="DpadLeftButton3">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="dpadRightFrame">
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_4">
+                 <item>
+                  <widget class="QLabel" name="dpadRightLabel">
+                   <property name="text">
+                    <string>Dpad Right</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="DpadRightButton">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="DpadRightButton2">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="DpadRightButton3">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="lstickUpFrame">
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_13">
+                 <item>
+                  <widget class="QLabel" name="lstickUpLabel">
+                   <property name="text">
+                    <string>Left Stick Up</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="LStickUpButton">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="LStickUpButton3">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="LStickUpButton2">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="lstickDownFrame">
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_14">
+                 <item>
+                  <widget class="QLabel" name="lstickDownLabel">
+                   <property name="text">
+                    <string>Left Stick Down</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="LStickDownButton">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="LStickDownButton2">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="LStickDownButton3">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="lstickLeftFrame">
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_16">
+                 <item>
+                  <widget class="QLabel" name="lstickLeftLabel">
+                   <property name="text">
+                    <string>Left Stick Left</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="LStickLeftButton">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="LStickLeftButton2">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="LStickLeftButton3">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="lstickRightFrame">
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_15">
+                 <item>
+                  <widget class="QLabel" name="lstickRightLabel">
+                   <property name="text">
+                    <string>Left Stick Right</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="LStickRightButton">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="LStickRightButton2">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="LStickRightButton3">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="lstickHalfmodeFrame">
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_17">
+                 <item>
+                  <widget class="QLabel" name="lstickHalfmodeLabel">
+                   <property name="text">
+                    <string>Left Analog Halfmode</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="LHalfButton">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="LHalfButton2">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="LHalfButton3">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="rstickUpFrame">
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_22">
+                 <item>
+                  <widget class="QLabel" name="rstickUpLabel">
+                   <property name="text">
+                    <string>Right Stick Up</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="RStickUpButton">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="RStickUpButton2">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="RStickUpButton3">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="rstickDownFrame">
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_23">
+                 <item>
+                  <widget class="QLabel" name="rstickDownLabel">
+                   <property name="text">
+                    <string>Right Stick Down</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="RStickDownButton">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="RStickDownButton2">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="RStickDownButton3">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="rstickLeftFrame">
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_25">
+                 <item>
+                  <widget class="QLabel" name="rstickLeftLabel">
+                   <property name="text">
+                    <string>Right Stick Left</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="RStickLeftButton">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="RStickLeftButton2">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="RStickLeftButton3">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="rstickRightFrame">
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_24">
+                 <item>
+                  <widget class="QLabel" name="rstickRightLabel">
+                   <property name="text">
+                    <string>Right Stick Right</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="RStickRightButton">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="RStickRightButton2">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="RStickRightButton3">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="rstickHalfmodeFrame">
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_18">
+                 <item>
+                  <widget class="QLabel" name="rstickHalfmodeLabel">
+                   <property name="text">
+                    <string>Right Analog Halfmode</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="RHalfButton">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="RHalfButton2">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="RHalfButton3">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="l1Frame">
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_27">
+                 <item>
+                  <widget class="QLabel" name="l1Label">
+                   <property name="text">
+                    <string>L1</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="L1Button">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="L1Button2">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="L1Button3">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="r1Frame">
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_28">
+                 <item>
+                  <widget class="QLabel" name="r1Label">
+                   <property name="text">
+                    <string>R1</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="R1Button">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="R1Button2">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="R1Button3">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="l2Frame">
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_30">
+                 <item>
+                  <widget class="QLabel" name="l2Label">
+                   <property name="text">
+                    <string>L2</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="L2Button">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="L2Button2">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="L2Button3">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="r2Frame">
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_29">
+                 <item>
+                  <widget class="QLabel" name="r2Label">
+                   <property name="text">
+                    <string>R2</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="R2Button">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string notr="true">unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="R2Button2">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="R2Button3">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="l3Frame">
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_31">
+                 <item>
+                  <widget class="QLabel" name="l3Label">
+                   <property name="text">
+                    <string>L3</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="L3Button">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="L3Button2">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="L3Button3">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="r3Frame">
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_32">
+                 <item>
+                  <widget class="QLabel" name="r3Label">
+                   <property name="text">
+                    <string>R3</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="R3Button">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="R3Button2">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="R3Button3">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="optionsFrame">
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_26">
+                 <item>
+                  <widget class="QLabel" name="optionsLabel">
+                   <property name="text">
+                    <string>Options</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="OptionsButton">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="OptionsButton2">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="OptionsButton3">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="touchpadLeftFrame">
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_33">
+                 <item>
+                  <widget class="QLabel" name="touchpadLeftLabel">
+                   <property name="text">
+                    <string>Touchpad Left</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="TouchpadLeftButton">
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="TouchpadLeftButton2">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="TouchpadLeftButton3">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="touchpadCenterFrame">
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_34">
+                 <item>
+                  <widget class="QLabel" name="touchpadCenterLabel">
+                   <property name="text">
+                    <string>Touchpad Center</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="TouchpadCenterButton">
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="TouchpadCenterButton2">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="TouchpadCenterButton3">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="touchpadRightFrame">
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_35">
+                 <item>
+                  <widget class="QLabel" name="touchpadRightLabel">
+                   <property name="text">
+                    <string>Touchpad Right</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="TouchpadRightButton">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="TouchpadRightButton2">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRightClickButton" name="TouchpadRightButton3">
+                   <property name="focusPolicy">
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
+                   </property>
+                   <property name="text">
+                    <string>unmapped</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="mouseSettingsLayout">
                 <item>
-                 <widget class="QCheckBox" name="PerGameCheckBox">
+                 <widget class="QGroupBox" name="MouseParamsBox">
                   <property name="sizePolicy">
-                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                     <horstretch>0</horstretch>
                     <verstretch>0</verstretch>
                    </sizepolicy>
                   </property>
                   <property name="font">
                    <font>
-                    <pointsize>9</pointsize>
                     <bold>false</bold>
                    </font>
                   </property>
-                  <property name="focusPolicy">
-                   <enum>Qt::FocusPolicy::NoFocus</enum>
-                  </property>
-                  <property name="text">
-                   <string>Use per-game configs</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="CopyCommonButton">
-                  <property name="font">
-                   <font>
-                    <pointsize>9</pointsize>
-                    <bold>false</bold>
-                   </font>
-                  </property>
-                  <property name="focusPolicy">
-                   <enum>Qt::FocusPolicy::NoFocus</enum>
-                  </property>
-                  <property name="text">
-                   <string>Copy from Common Config</string>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-             </layout>
-            </widget>
-           </item>
-           <item>
-            <layout class="QHBoxLayout" name="layout_middle_top">
-             <property name="spacing">
-              <number>0</number>
-             </property>
-             <item>
-              <layout class="QVBoxLayout" name="layout_l1_l2">
-               <item>
-                <widget class="QGroupBox" name="gb_l1">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>160</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="title">
-                  <string notr="true">L1</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignmentFlag::AlignCenter</set>
-                 </property>
-                 <layout class="QVBoxLayout" name="gb_l1_layout">
-                  <property name="leftMargin">
-                   <number>5</number>
-                  </property>
-                  <property name="topMargin">
-                   <number>5</number>
-                  </property>
-                  <property name="rightMargin">
-                   <number>5</number>
-                  </property>
-                  <property name="bottomMargin">
-                   <number>5</number>
-                  </property>
-                  <item>
-                   <widget class="QRightClickButton" name="L1Button">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="focusPolicy">
-                     <enum>Qt::FocusPolicy::NoFocus</enum>
-                    </property>
-                    <property name="text">
-                     <string>unmapped</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-               <item>
-                <widget class="QGroupBox" name="gb_l2">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>160</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="title">
-                  <string notr="true">L2</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignmentFlag::AlignCenter</set>
-                 </property>
-                 <layout class="QVBoxLayout" name="gb_l2_layout">
-                  <property name="leftMargin">
-                   <number>5</number>
-                  </property>
-                  <property name="topMargin">
-                   <number>5</number>
-                  </property>
-                  <property name="rightMargin">
-                   <number>5</number>
-                  </property>
-                  <property name="bottomMargin">
-                   <number>5</number>
-                  </property>
-                  <item>
-                   <widget class="QRightClickButton" name="L2Button">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="focusPolicy">
-                     <enum>Qt::FocusPolicy::NoFocus</enum>
-                    </property>
-                    <property name="text">
-                     <string>unmapped</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-              </layout>
-             </item>
-             <item>
-              <layout class="QVBoxLayout" name="layout_system_buttons" stretch="0,0">
-               <item>
-                <widget class="QGroupBox" name="groupBox_4">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>0</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="title">
-                  <string/>
-                 </property>
-                 <layout class="QVBoxLayout" name="verticalLayout_20">
-                  <item>
-                   <widget class="QPushButton" name="TextEditorButton">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>24</height>
-                     </size>
-                    </property>
-                    <property name="focusPolicy">
-                     <enum>Qt::FocusPolicy::NoFocus</enum>
-                    </property>
-                    <property name="text">
-                     <string>Text Editor</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QPushButton" name="HelpButton">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>24</height>
-                     </size>
-                    </property>
-                    <property name="focusPolicy">
-                     <enum>Qt::FocusPolicy::NoFocus</enum>
-                    </property>
-                    <property name="text">
-                     <string>Help</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-               <item>
-                <widget class="QGroupBox" name="gb_options">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>160</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="title">
-                  <string>Options</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignmentFlag::AlignCenter</set>
-                 </property>
-                 <layout class="QVBoxLayout" name="gb_start_layout">
-                  <property name="leftMargin">
-                   <number>5</number>
-                  </property>
-                  <property name="topMargin">
-                   <number>5</number>
-                  </property>
-                  <property name="rightMargin">
-                   <number>5</number>
-                  </property>
-                  <property name="bottomMargin">
-                   <number>5</number>
-                  </property>
-                  <item>
-                   <widget class="QRightClickButton" name="OptionsButton">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="focusPolicy">
-                     <enum>Qt::FocusPolicy::NoFocus</enum>
-                    </property>
-                    <property name="text">
-                     <string>unmapped</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-              </layout>
-             </item>
-             <item>
-              <layout class="QVBoxLayout" name="layout_r1_r2">
-               <item>
-                <widget class="QGroupBox" name="gb_r1">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>160</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="title">
-                  <string notr="true">R1</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignmentFlag::AlignCenter</set>
-                 </property>
-                 <layout class="QVBoxLayout" name="gb_r1_layout">
-                  <property name="leftMargin">
-                   <number>5</number>
-                  </property>
-                  <property name="topMargin">
-                   <number>5</number>
-                  </property>
-                  <property name="rightMargin">
-                   <number>5</number>
-                  </property>
-                  <property name="bottomMargin">
-                   <number>5</number>
-                  </property>
-                  <item>
-                   <widget class="QRightClickButton" name="R1Button">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="focusPolicy">
-                     <enum>Qt::FocusPolicy::NoFocus</enum>
-                    </property>
-                    <property name="text">
-                     <string>unmapped</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-               <item>
-                <widget class="QGroupBox" name="gb_r2">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>160</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="title">
-                  <string notr="true">R2</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignmentFlag::AlignCenter</set>
-                 </property>
-                 <layout class="QVBoxLayout" name="gb_r2_layout">
-                  <property name="leftMargin">
-                   <number>5</number>
-                  </property>
-                  <property name="topMargin">
-                   <number>5</number>
-                  </property>
-                  <property name="rightMargin">
-                   <number>5</number>
-                  </property>
-                  <property name="bottomMargin">
-                   <number>5</number>
-                  </property>
-                  <item>
-                   <widget class="QRightClickButton" name="R2Button">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="focusPolicy">
-                     <enum>Qt::FocusPolicy::NoFocus</enum>
-                    </property>
-                    <property name="text">
-                     <string notr="true">unmapped</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-              </layout>
-             </item>
-            </layout>
-           </item>
-           <item>
-            <widget class="QWidget" name="widget_controller" native="true">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>200</height>
-              </size>
-             </property>
-             <layout class="QHBoxLayout" name="widget_controller_layout">
-              <property name="leftMargin">
-               <number>0</number>
-              </property>
-              <property name="topMargin">
-               <number>0</number>
-              </property>
-              <property name="rightMargin">
-               <number>0</number>
-              </property>
-              <property name="bottomMargin">
-               <number>0</number>
-              </property>
-              <item>
-               <widget class="QLabel" name="l_controller">
-                <property name="maximumSize">
-                 <size>
-                  <width>424</width>
-                  <height>250</height>
-                 </size>
-                </property>
-                <property name="pixmap">
-                 <pixmap resource="../shadps4.qrc">:/images/KBM.png</pixmap>
-                </property>
-                <property name="scaledContents">
-                 <bool>true</bool>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignmentFlag::AlignBottom|Qt::AlignmentFlag::AlignHCenter</set>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </item>
-           <item>
-            <layout class="QHBoxLayout" name="layout_middle_bottom">
-             <property name="spacing">
-              <number>0</number>
-             </property>
-             <property name="sizeConstraint">
-              <enum>QLayout::SizeConstraint::SetDefaultConstraint</enum>
-             </property>
-             <item>
-              <layout class="QVBoxLayout" name="verticalLayout_4">
-               <item>
-                <widget class="QGroupBox" name="gb_l3">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>160</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="title">
-                  <string notr="true">L3</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignmentFlag::AlignCenter</set>
-                 </property>
-                 <layout class="QVBoxLayout" name="gb_l3_layout">
-                  <property name="leftMargin">
-                   <number>5</number>
-                  </property>
-                  <property name="topMargin">
-                   <number>5</number>
-                  </property>
-                  <property name="rightMargin">
-                   <number>5</number>
-                  </property>
-                  <property name="bottomMargin">
-                   <number>5</number>
-                  </property>
-                  <item>
-                   <widget class="QRightClickButton" name="L3Button">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="focusPolicy">
-                     <enum>Qt::FocusPolicy::NoFocus</enum>
-                    </property>
-                    <property name="text">
-                     <string>unmapped</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-               <item>
-                <widget class="QGroupBox" name="gb_touchpadleft">
-                 <property name="title">
-                  <string>Touchpad Left</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignmentFlag::AlignCenter</set>
-                 </property>
-                 <layout class="QVBoxLayout" name="verticalLayout_17">
-                  <item>
-                   <widget class="QRightClickButton" name="TouchpadLeftButton">
-                    <property name="text">
-                     <string>unmapped</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-              </layout>
-             </item>
-             <item>
-              <layout class="QVBoxLayout" name="verticalLayout_21">
-               <item>
-                <widget class="QGroupBox" name="groupBox_5">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>0</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="title">
-                  <string>Mouse to Joystick</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignmentFlag::AlignCenter</set>
-                 </property>
-                 <layout class="QVBoxLayout" name="verticalLayout_22">
-                  <item>
-                   <widget class="QComboBox" name="MouseJoystickBox">
-                    <property name="focusPolicy">
-                     <enum>Qt::FocusPolicy::NoFocus</enum>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QLabel" name="label_4">
-                    <property name="font">
-                     <font>
-                      <italic>true</italic>
-                     </font>
-                    </property>
-                    <property name="text">
-                     <string>*press F7 ingame to activate</string>
-                    </property>
-                    <property name="wordWrap">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-               <item>
-                <widget class="QGroupBox" name="gb_touchpadcenter">
-                 <property name="title">
-                  <string>Touchpad Center</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignmentFlag::AlignCenter</set>
-                 </property>
-                 <layout class="QVBoxLayout" name="verticalLayout_11">
-                  <item>
-                   <widget class="QRightClickButton" name="TouchpadCenterButton">
-                    <property name="text">
-                     <string>unmapped</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-              </layout>
-             </item>
-             <item>
-              <layout class="QVBoxLayout" name="verticalLayout_12">
-               <item>
-                <widget class="QGroupBox" name="gb_r3">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>160</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="title">
-                  <string notr="true">R3</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignmentFlag::AlignCenter</set>
-                 </property>
-                 <layout class="QVBoxLayout" name="gb_r3_layout">
-                  <property name="leftMargin">
-                   <number>5</number>
-                  </property>
-                  <property name="topMargin">
-                   <number>5</number>
-                  </property>
-                  <property name="rightMargin">
-                   <number>5</number>
-                  </property>
-                  <property name="bottomMargin">
-                   <number>5</number>
-                  </property>
-                  <item>
-                   <widget class="QRightClickButton" name="R3Button">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="focusPolicy">
-                     <enum>Qt::FocusPolicy::NoFocus</enum>
-                    </property>
-                    <property name="text">
-                     <string>unmapped</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-               <item>
-                <widget class="QGroupBox" name="gb_touchpadright">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>160</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="title">
-                  <string>Touchpad Right</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignmentFlag::AlignCenter</set>
-                 </property>
-                 <layout class="QVBoxLayout" name="verticalLayout_9">
-                  <item>
-                   <widget class="QRightClickButton" name="TouchpadRightButton">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="focusPolicy">
-                     <enum>Qt::FocusPolicy::NoFocus</enum>
-                    </property>
-                    <property name="text">
-                     <string>unmapped</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-              </layout>
-             </item>
-            </layout>
-           </item>
-           <item>
-            <layout class="QHBoxLayout" name="horizontalLayout_8">
-             <item>
-              <layout class="QVBoxLayout" name="verticalLayout_14">
-               <item>
-                <widget class="QGroupBox" name="MouseParamsBox">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <bold>false</bold>
-                  </font>
-                 </property>
-                 <property name="title">
-                  <string>Mouse Movement Parameters</string>
-                 </property>
-                 <layout class="QVBoxLayout" name="verticalLayout_18">
-                  <item>
-                   <layout class="QHBoxLayout" name="horizontalLayout_9">
-                    <item>
-                     <widget class="QLabel" name="DeadzoneOffsetLabel_text">
-                      <property name="font">
-                       <font>
-                        <bold>false</bold>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>Deadzone Offset (def 0.50):</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QSlider" name="DeadzoneOffsetSlider">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="focusPolicy">
-                       <enum>Qt::FocusPolicy::NoFocus</enum>
-                      </property>
-                      <property name="maximum">
-                       <number>100</number>
-                      </property>
-                      <property name="value">
-                       <number>50</number>
-                      </property>
-                      <property name="orientation">
-                       <enum>Qt::Orientation::Horizontal</enum>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QLabel" name="DeadzoneOffsetLabel">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>30</width>
-                        <height>16777215</height>
-                       </size>
-                      </property>
-                      <property name="text">
-                       <string notr="true">0.50</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </item>
-                  <item>
-                   <layout class="QHBoxLayout" name="horizontalLayout_10">
-                    <item>
-                     <widget class="QLabel" name="SpeedMultiplierLabel_text">
-                      <property name="font">
-                       <font>
-                        <bold>false</bold>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>Speed Multiplier (def 1.0):</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QSlider" name="SpeedMultiplierSlider">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="focusPolicy">
-                       <enum>Qt::FocusPolicy::NoFocus</enum>
-                      </property>
-                      <property name="minimum">
-                       <number>1</number>
-                      </property>
-                      <property name="maximum">
-                       <number>50</number>
-                      </property>
-                      <property name="pageStep">
-                       <number>5</number>
-                      </property>
-                      <property name="value">
-                       <number>10</number>
-                      </property>
-                      <property name="orientation">
-                       <enum>Qt::Orientation::Horizontal</enum>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QLabel" name="SpeedMultiplierLabel">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>30</width>
-                        <height>16777215</height>
-                       </size>
-                      </property>
-                      <property name="text">
-                       <string notr="true">1.0</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </item>
-                  <item>
-                   <layout class="QHBoxLayout" name="horizontalLayout_11">
-                    <item>
-                     <widget class="QLabel" name="SpeedOffsetLabel_text">
-                      <property name="font">
-                       <font>
-                        <bold>false</bold>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>Speed Offset (def 0.125):</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QSlider" name="SpeedOffsetSlider">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="focusPolicy">
-                       <enum>Qt::FocusPolicy::NoFocus</enum>
-                      </property>
-                      <property name="maximum">
-                       <number>1000</number>
-                      </property>
-                      <property name="pageStep">
-                       <number>100</number>
-                      </property>
-                      <property name="value">
-                       <number>125</number>
-                      </property>
-                      <property name="orientation">
-                       <enum>Qt::Orientation::Horizontal</enum>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QLabel" name="SpeedOffsetLabel">
-                      <property name="maximumSize">
-                       <size>
-                        <width>30</width>
-                        <height>16777215</height>
-                       </size>
-                      </property>
-                      <property name="text">
-                       <string notr="true">0.125</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </item>
-                  <item>
-                   <widget class="QLabel" name="MoreInfoLabel">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <italic>true</italic>
-                      <bold>false</bold>
-                     </font>
-                    </property>
-                    <property name="text">
-                     <string>note: click Help Button/Special Keybindings for more information</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-              </layout>
-             </item>
-            </layout>
-           </item>
-          </layout>
-         </item>
-         <item>
-          <layout class="QVBoxLayout" name="verticalLayout_right">
-           <property name="spacing">
-            <number>5</number>
-           </property>
-           <item>
-            <widget class="QGroupBox" name="gb_face_buttons">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="title">
-              <string>Face Buttons</string>
-             </property>
-             <layout class="QVBoxLayout" name="gb_face_buttons_layout">
-              <property name="leftMargin">
-               <number>5</number>
-              </property>
-              <property name="topMargin">
-               <number>5</number>
-              </property>
-              <property name="rightMargin">
-               <number>5</number>
-              </property>
-              <property name="bottomMargin">
-               <number>5</number>
-              </property>
-              <item>
-               <widget class="QWidget" name="widget_triangle" native="true">
-                <layout class="QHBoxLayout" name="widget_triangle_layout">
-                 <property name="leftMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>0</number>
-                 </property>
-                 <item>
-                  <widget class="QGroupBox" name="gb_triangle">
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
-                   <property name="minimumSize">
-                    <size>
-                     <width>160</width>
-                     <height>0</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>0</width>
-                     <height>16777215</height>
-                    </size>
-                   </property>
-                   <property name="title">
-                    <string>Triangle</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignmentFlag::AlignCenter</set>
-                   </property>
-                   <layout class="QVBoxLayout" name="verticalLayout_3">
-                    <item>
-                     <widget class="QRightClickButton" name="TriangleButton">
-                      <property name="focusPolicy">
-                       <enum>Qt::FocusPolicy::NoFocus</enum>
-                      </property>
-                      <property name="text">
-                       <string>unmapped</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <layout class="QHBoxLayout" name="layout_square_circle">
-                <item>
-                 <widget class="QGroupBox" name="gb_square">
-                  <property name="minimumSize">
-                   <size>
-                    <width>160</width>
-                    <height>0</height>
-                   </size>
-                  </property>
                   <property name="title">
-                   <string>Square</string>
+                   <string>Mouse Movement Parameters</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignmentFlag::AlignCenter</set>
                   </property>
-                  <layout class="QVBoxLayout" name="gb_square_layout">
-                   <property name="leftMargin">
-                    <number>5</number>
-                   </property>
-                   <property name="topMargin">
-                    <number>5</number>
-                   </property>
-                   <property name="rightMargin">
-                    <number>5</number>
-                   </property>
-                   <property name="bottomMargin">
-                    <number>5</number>
-                   </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_18">
                    <item>
-                    <widget class="QRightClickButton" name="SquareButton">
-                     <property name="focusPolicy">
-                      <enum>Qt::FocusPolicy::NoFocus</enum>
+                    <layout class="QHBoxLayout" name="deadzoneOffsetLayout">
+                     <item>
+                      <widget class="QLabel" name="DeadzoneOffsetLabel_text">
+                       <property name="font">
+                        <font>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Deadzone Offset (def 0.50):</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QSlider" name="DeadzoneOffsetSlider">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="focusPolicy">
+                        <enum>Qt::FocusPolicy::NoFocus</enum>
+                       </property>
+                       <property name="maximum">
+                        <number>100</number>
+                       </property>
+                       <property name="value">
+                        <number>50</number>
+                       </property>
+                       <property name="orientation">
+                        <enum>Qt::Orientation::Horizontal</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="DeadzoneOffsetLabel">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>30</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string notr="true">0.50</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="speedMultLayout">
+                     <item>
+                      <widget class="QLabel" name="SpeedMultiplierLabel_text">
+                       <property name="font">
+                        <font>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Speed Multiplier (def 1.0):</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QSlider" name="SpeedMultiplierSlider">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="focusPolicy">
+                        <enum>Qt::FocusPolicy::NoFocus</enum>
+                       </property>
+                       <property name="minimum">
+                        <number>1</number>
+                       </property>
+                       <property name="maximum">
+                        <number>50</number>
+                       </property>
+                       <property name="pageStep">
+                        <number>5</number>
+                       </property>
+                       <property name="value">
+                        <number>10</number>
+                       </property>
+                       <property name="orientation">
+                        <enum>Qt::Orientation::Horizontal</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="SpeedMultiplierLabel">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>30</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string notr="true">1.0</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="speedOffsetLayout">
+                     <item>
+                      <widget class="QLabel" name="SpeedOffsetLabel_text">
+                       <property name="font">
+                        <font>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Speed Offset (def 0.125):</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QSlider" name="SpeedOffsetSlider">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="focusPolicy">
+                        <enum>Qt::FocusPolicy::NoFocus</enum>
+                       </property>
+                       <property name="maximum">
+                        <number>1000</number>
+                       </property>
+                       <property name="pageStep">
+                        <number>100</number>
+                       </property>
+                       <property name="value">
+                        <number>125</number>
+                       </property>
+                       <property name="orientation">
+                        <enum>Qt::Orientation::Horizontal</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="SpeedOffsetLabel">
+                       <property name="maximumSize">
+                        <size>
+                         <width>30</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string notr="true">0.125</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="MoreInfoLabel">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <italic>true</italic>
+                       <bold>false</bold>
+                      </font>
                      </property>
                      <property name="text">
-                      <string>unmapped</string>
+                      <string>note: click Help Button/Special Keybindings for more information</string>
                      </property>
                     </widget>
                    </item>
@@ -1721,39 +1906,48 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QGroupBox" name="gb_circle">
+                 <widget class="QGroupBox" name="mouseJoystickGB">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="minimumSize">
                    <size>
-                    <width>160</width>
+                    <width>0</width>
                     <height>0</height>
                    </size>
                   </property>
                   <property name="title">
-                   <string>Circle</string>
+                   <string>Mouse to Joystick</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignmentFlag::AlignCenter</set>
                   </property>
-                  <layout class="QVBoxLayout" name="gb_circle_layout">
-                   <property name="leftMargin">
-                    <number>5</number>
-                   </property>
-                   <property name="topMargin">
-                    <number>5</number>
-                   </property>
-                   <property name="rightMargin">
-                    <number>5</number>
-                   </property>
-                   <property name="bottomMargin">
-                    <number>5</number>
-                   </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_3">
                    <item>
-                    <widget class="QRightClickButton" name="CircleButton">
+                    <widget class="QComboBox" name="MouseJoystickBox">
                      <property name="focusPolicy">
                       <enum>Qt::FocusPolicy::NoFocus</enum>
                      </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="mouseJoystickLabel">
+                     <property name="font">
+                      <font>
+                       <italic>true</italic>
+                      </font>
+                     </property>
                      <property name="text">
-                      <string>unmapped</string>
+                      <string>*press F7 ingame to activate</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop</set>
+                     </property>
+                     <property name="wordWrap">
+                      <bool>true</bool>
                      </property>
                     </widget>
                    </item>
@@ -1762,392 +1956,106 @@
                 </item>
                </layout>
               </item>
-              <item>
-               <widget class="QWidget" name="widget_cross" native="true">
-                <layout class="QHBoxLayout" name="widget_cross_layout">
-                 <property name="leftMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>0</number>
-                 </property>
-                 <item>
-                  <widget class="QGroupBox" name="gb_cross">
-                   <property name="minimumSize">
-                    <size>
-                     <width>160</width>
-                     <height>0</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>124</width>
-                     <height>16777215</height>
-                    </size>
-                   </property>
-                   <property name="title">
-                    <string>Cross</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignmentFlag::AlignCenter</set>
-                   </property>
-                   <layout class="QVBoxLayout" name="verticalLayout_5">
-                    <item>
-                     <widget class="QRightClickButton" name="CrossButton">
-                      <property name="focusPolicy">
-                       <enum>Qt::FocusPolicy::NoFocus</enum>
-                      </property>
-                      <property name="text">
-                       <string>unmapped</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
              </layout>
-            </widget>
-           </item>
-           <item>
-            <spacer name="verticalSpacer_2">
-             <property name="orientation">
-              <enum>Qt::Orientation::Vertical</enum>
-             </property>
-             <property name="sizeType">
-              <enum>QSizePolicy::Policy::Maximum</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>20</width>
-               <height>40</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item>
-            <widget class="QGroupBox" name="RightStickDeadZoneGB">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="title">
-              <string>Right Analog Halfmode</string>
-             </property>
-             <layout class="QVBoxLayout" name="verticalLayout_13">
-              <item>
-               <widget class="QRightClickButton" name="RHalfButton">
-                <property name="focusPolicy">
-                 <enum>Qt::FocusPolicy::NoFocus</enum>
-                </property>
-                <property name="text">
-                 <string>unmapped</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="label_3">
-                <property name="font">
-                 <font>
-                  <italic>true</italic>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>hold to move right stick at half-speed</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </item>
-           <item>
-            <widget class="QGroupBox" name="gb_right_stick">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="title">
-              <string>Right Stick</string>
-             </property>
-             <layout class="QVBoxLayout" name="verticalLayout_2">
-              <property name="leftMargin">
-               <number>5</number>
-              </property>
-              <property name="topMargin">
-               <number>5</number>
-              </property>
-              <property name="rightMargin">
-               <number>5</number>
-              </property>
-              <property name="bottomMargin">
-               <number>5</number>
-              </property>
-              <item>
-               <widget class="QWidget" name="widget_right_stick_up" native="true">
-                <layout class="QHBoxLayout" name="widget_right_stick_up_layout">
-                 <property name="leftMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>0</number>
-                 </property>
-                 <item>
-                  <widget class="QGroupBox" name="gb_right_stick_up">
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
-                   <property name="minimumSize">
-                    <size>
-                     <width>160</width>
-                     <height>0</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>124</width>
-                     <height>1231321</height>
-                    </size>
-                   </property>
-                   <property name="title">
-                    <string>Up</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignmentFlag::AlignCenter</set>
-                   </property>
-                   <layout class="QVBoxLayout" name="verticalLayout_7">
-                    <item>
-                     <widget class="QRightClickButton" name="RStickUpButton">
-                      <property name="minimumSize">
-                       <size>
-                        <width>0</width>
-                        <height>0</height>
-                       </size>
-                      </property>
-                      <property name="focusPolicy">
-                       <enum>Qt::FocusPolicy::NoFocus</enum>
-                      </property>
-                      <property name="text">
-                       <string>unmapped</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <layout class="QHBoxLayout" name="layout_right_stick_left_right">
-                <item>
-                 <widget class="QGroupBox" name="gb_right_stick_left">
-                  <property name="minimumSize">
-                   <size>
-                    <width>160</width>
-                    <height>0</height>
-                   </size>
-                  </property>
-                  <property name="title">
-                   <string>Left</string>
-                  </property>
-                  <property name="alignment">
-                   <set>Qt::AlignmentFlag::AlignCenter</set>
-                  </property>
-                  <layout class="QVBoxLayout" name="gb_right_stick_left_layout">
-                   <property name="leftMargin">
-                    <number>5</number>
-                   </property>
-                   <property name="topMargin">
-                    <number>5</number>
-                   </property>
-                   <property name="rightMargin">
-                    <number>5</number>
-                   </property>
-                   <property name="bottomMargin">
-                    <number>5</number>
-                   </property>
-                   <item>
-                    <widget class="QRightClickButton" name="RStickLeftButton">
-                     <property name="focusPolicy">
-                      <enum>Qt::FocusPolicy::NoFocus</enum>
-                     </property>
-                     <property name="text">
-                      <string>unmapped</string>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QGroupBox" name="gb_right_stick_right">
-                  <property name="minimumSize">
-                   <size>
-                    <width>160</width>
-                    <height>0</height>
-                   </size>
-                  </property>
-                  <property name="title">
-                   <string>Right</string>
-                  </property>
-                  <property name="alignment">
-                   <set>Qt::AlignmentFlag::AlignCenter</set>
-                  </property>
-                  <layout class="QVBoxLayout" name="gb_right_stick_right_layout">
-                   <property name="leftMargin">
-                    <number>5</number>
-                   </property>
-                   <property name="topMargin">
-                    <number>5</number>
-                   </property>
-                   <property name="rightMargin">
-                    <number>5</number>
-                   </property>
-                   <property name="bottomMargin">
-                    <number>5</number>
-                   </property>
-                   <item>
-                    <widget class="QRightClickButton" name="RStickRightButton">
-                     <property name="focusPolicy">
-                      <enum>Qt::FocusPolicy::NoFocus</enum>
-                     </property>
-                     <property name="text">
-                      <string>unmapped</string>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <widget class="QWidget" name="widget_right_stick_down" native="true">
-                <layout class="QHBoxLayout" name="widget_right_stick_down_layout">
-                 <property name="leftMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>0</number>
-                 </property>
-                 <item>
-                  <widget class="QGroupBox" name="gb_right_stick_down">
-                   <property name="minimumSize">
-                    <size>
-                     <width>160</width>
-                     <height>0</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>124</width>
-                     <height>2121</height>
-                    </size>
-                   </property>
-                   <property name="title">
-                    <string>Down</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignmentFlag::AlignCenter</set>
-                   </property>
-                   <layout class="QVBoxLayout" name="verticalLayout_6">
-                    <item>
-                     <widget class="QRightClickButton" name="RStickDownButton">
-                      <property name="focusPolicy">
-                       <enum>Qt::FocusPolicy::NoFocus</enum>
-                      </property>
-                      <property name="text">
-                       <string>unmapped</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </item>
-          </layout>
-         </item>
-        </layout>
-       </item>
-      </layout>
-     </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="footerButtonsLayout">
+          <item>
+           <widget class="QPushButton" name="HelpButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::FocusPolicy::NoFocus</enum>
+            </property>
+            <property name="text">
+             <string>Help</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="TextEditorButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::FocusPolicy::NoFocus</enum>
+            </property>
+            <property name="text">
+             <string>Text Editor</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="footerLayout">
+          <item>
+           <widget class="QLabel" name="unmapLabel">
+            <property name="font">
+             <font>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Tip: Unmap inputs with right-click</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QDialogButtonBox" name="buttonBox">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="standardButtons">
+             <set>QDialogButtonBox::StandardButton::Apply|QDialogButtonBox::StandardButton::Cancel|QDialogButtonBox::StandardButton::RestoreDefaults|QDialogButtonBox::StandardButton::Save</set>
+            </property>
+            <property name="centerButtons">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
     </widget>
-   </item>
-   <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_5">
-     <item>
-      <widget class="QLabel" name="label">
-       <property name="font">
-        <font>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>Tip: Unmap inputs with right-click</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QDialogButtonBox" name="buttonBox">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="standardButtons">
-        <set>QDialogButtonBox::StandardButton::Apply|QDialogButtonBox::StandardButton::Cancel|QDialogButtonBox::StandardButton::RestoreDefaults|QDialogButtonBox::StandardButton::Save</set>
-       </property>
-       <property name="centerButtons">
-        <bool>false</bool>
-       </property>
-      </widget>
-     </item>
-    </layout>
    </item>
   </layout>
  </widget>
@@ -2158,8 +2066,6 @@
    <header>src/qt_gui/right_click_button.h</header>
   </customwidget>
  </customwidgets>
- <resources>
-  <include location="../shadps4.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
