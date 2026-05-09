@@ -1323,10 +1323,6 @@ Please enter your keys and save them.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Controller Hotkeys</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Show FPS Counter</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1348,14 +1344,6 @@ Please enter your keys and save them.</source>
     </message>
     <message>
         <source>Toggle Pause</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Keyboard Hotkeys</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Renderdoc Capture (for debugging only)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1410,6 +1398,26 @@ Please enter your keys and save them.</source>
     </message>
     <message>
         <source>Volume Down</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hotkeys</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Placeholder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Capture Screenshot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Capture Screenshot w/ Overlays</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open Emulator Settings</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2852,10 +2860,6 @@ Select an emulator version from the right panel.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core=trace&quot; &quot;Lib.Pad=debug,Common.Filesystem=error&quot; &quot;critical&quot;\nLevels: trace, debug, info, warning, error, critical - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2873,6 +2877,10 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
         <source>Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
