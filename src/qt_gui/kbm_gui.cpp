@@ -38,6 +38,7 @@ KBMSettings::KBMSettings(std::shared_ptr<GameInfoClass> game_info_get,
     for (int i = 0; i < m_game_info->m_games.size(); i++) {
         ui->ProfileComboBox->addItem(QString::fromStdString(m_game_info->m_games[i].serial));
     }
+    ui->CopyCommonButton->setVisible(false);
 
     ButtonsList = {
         {ui->CrossButton, "cross"},
@@ -175,21 +176,14 @@ KBMSettings::KBMSettings(std::shared_ptr<GameInfoClass> game_info_get,
     });
 
     connect(ui->CopyCommonButton, &QPushButton::clicked, this, [this] {
-        if (ui->ProfileComboBox->currentText() == tr("Common Config")) {
-            QMessageBox::information(this, tr("Common Config Selected"),
-                                     // clang-format off
-tr("This button copies mappings from the Common Config to the currently selected profile, and cannot be used when the currently selected profile is the Common Config."));
-            // clang-format on
-        } else {
-            QMessageBox::StandardButton reply =
-                QMessageBox::question(this, tr("Copy values from Common Config"),
-                                      // clang-format off
+        QMessageBox::StandardButton reply =
+            QMessageBox::question(this, tr("Copy values from Common Config"),
+                                  // clang-format off
 tr("Do you want to overwrite existing mappings with the mappings from the Common Config?"),
-                                      // clang-format on
-                                      QMessageBox::Yes | QMessageBox::No);
-            if (reply == QMessageBox::Yes) {
-                SetUIValuestoMappings("default");
-            }
+                                  // clang-format on
+                                  QMessageBox::Yes | QMessageBox::No);
+        if (reply == QMessageBox::Yes) {
+            SetUIValuestoMappings("default");
         }
     });
 
@@ -500,6 +494,7 @@ void KBMSettings::SetUIValuestoMappings(std::string config_id) {
 void KBMSettings::GetGameTitle() {
     if (ui->ProfileComboBox->currentText() == tr("Common Config")) {
         ui->TitleLabel->setText(tr("Common Config"));
+        ui->CopyCommonButton->setVisible(false);
     } else {
         for (int i = 0; i < m_game_info->m_games.size(); i++) {
             if (m_game_info->m_games[i].serial ==
@@ -507,6 +502,7 @@ void KBMSettings::GetGameTitle() {
                 ui->TitleLabel->setText(QString::fromStdString(m_game_info->m_games[i].name));
             }
         }
+        ui->CopyCommonButton->setVisible(true);
     }
     config_id = (ui->ProfileComboBox->currentText() == tr("Common Config"))
                     ? "default"
