@@ -1330,10 +1330,6 @@ Please enter your keys and save them.</source>
       <translation>Персоналізувати гарячі клавіші</translation>
     </message>
     <message>
-      <source>Controller Hotkeys</source>
-      <translation>Гарячі клавіші контролера</translation>
-    </message>
-    <message>
       <source>Show FPS Counter</source>
       <translation>Показати лічильник к / с</translation>
     </message>
@@ -1356,14 +1352,6 @@ Please enter your keys and save them.</source>
     <message>
       <source>Toggle Pause</source>
       <translation>Відтворення / Пауза</translation>
-    </message>
-    <message>
-      <source>Keyboard Hotkeys</source>
-      <translation>Гарячі клавіші</translation>
-    </message>
-    <message>
-      <source>Renderdoc Capture (for debugging only)</source>
-      <translation>Захоплення Renderdoc (лише для налагодження)</translation>
     </message>
     <message>
       <source>Toggle Mouse to Joystick Emulation</source>
@@ -1420,6 +1408,26 @@ Please enter your keys and save them.</source>
     <message>
       <source>Volume Down</source>
       <translation>Зменшити гучність</translation>
+    </message>
+    <message>
+      <source>Hotkeys</source>
+      <translation type="unfinished">Hotkeys</translation>
+    </message>
+    <message>
+      <source>Placeholder</source>
+      <translation type="unfinished">Placeholder</translation>
+    </message>
+    <message>
+      <source>Capture Screenshot</source>
+      <translation type="unfinished">Capture Screenshot</translation>
+    </message>
+    <message>
+      <source>Capture Screenshot w/ Overlays</source>
+      <translation type="unfinished">Capture Screenshot w/ Overlays</translation>
+    </message>
+    <message>
+      <source>Open Emulator Settings</source>
+      <translation type="unfinished">Open Emulator Settings</translation>
     </message>
   </context>
   <context>
@@ -2866,10 +2874,6 @@ Select an emulator version from the right panel.</source>
       <translation>Додавання до журналу:\nДодати до наявних журналів.</translation>
     </message>
     <message>
-      <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core=trace&quot; &quot;Lib.Pad=debug,Common.Filesystem=error&quot; &quot;critical&quot;\nLevels: trace, debug, info, warning, error, critical - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
-      <translation>Фільтр журналу:\nФільтрує журнал, щоби виводити лише певну інформацію.\nПриклади: &quot;Core=trace&quot; &quot;Lib.Pad=debug,Common.Filesystem=error&quot; &quot;critical&quot;\nРівні: trace, debug, info, warning, error, critical — у такому порядку; вибір конкретного рівня вимикає всі попередні рівні у списку та записує всі наступні.</translation>
-    </message>
-    <message>
       <source>Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</source>
       <translation>Макс. тривалість пропуску журналу:\nІнтервал без запису однакових рядків (мс) — лише якщо увімкнено «Пропускати дублікати в журналах».</translation>
     </message>
@@ -2888,6 +2892,10 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</source>
       <translation>Тип журналювання:\nВиберіть між типами журналів wincolor або msvc.\nwincolor: Стандартне журналювання для Windows\nmsvc: журналювання для налагодження</translation>
+    </message>
+    <message>
+      <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
+      <translation type="unfinished">Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</translation>
     </message>
   </context>
   <context>
