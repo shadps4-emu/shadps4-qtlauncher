@@ -629,6 +629,7 @@ void SettingsDialog::closeEvent(QCloseEvent* event) {
     SDL_QuitSubSystem(SDL_INIT_AUDIO);
     SDL_Quit();
 
+    EmulatorSettings.Load();
     QDialog::closeEvent(event);
 }
 
