@@ -1329,10 +1329,6 @@ Bitte gib die Schlüssel ein und speicher diese.</translation>
       <translation>Hotkeys anpassen</translation>
     </message>
     <message>
-      <source>Controller Hotkeys</source>
-      <translation>Controller Hotkeys</translation>
-    </message>
-    <message>
       <source>Show FPS Counter</source>
       <translation>FPS anzeigen</translation>
     </message>
@@ -1355,14 +1351,6 @@ Bitte gib die Schlüssel ein und speicher diese.</translation>
     <message>
       <source>Toggle Pause</source>
       <translation>Anhalten/fortsetzen</translation>
-    </message>
-    <message>
-      <source>Keyboard Hotkeys</source>
-      <translation>Tastatur Hotkeys</translation>
-    </message>
-    <message>
-      <source>Renderdoc Capture (for debugging only)</source>
-      <translation>RenderDoc-Aufnahme (nur für Debugging erforderlich)</translation>
     </message>
     <message>
       <source>Toggle Mouse to Joystick Emulation</source>
@@ -1419,6 +1407,26 @@ Bitte gib die Schlüssel ein und speicher diese.</translation>
     <message>
       <source>Volume Down</source>
       <translation>Lautstärke reduzieren</translation>
+    </message>
+    <message>
+      <source>Hotkeys</source>
+      <translation type="unfinished">Hotkeys</translation>
+    </message>
+    <message>
+      <source>Placeholder</source>
+      <translation type="unfinished">Placeholder</translation>
+    </message>
+    <message>
+      <source>Capture Screenshot</source>
+      <translation type="unfinished">Capture Screenshot</translation>
+    </message>
+    <message>
+      <source>Capture Screenshot w/ Overlays</source>
+      <translation type="unfinished">Capture Screenshot w/ Overlays</translation>
+    </message>
+    <message>
+      <source>Open Emulator Settings</source>
+      <translation type="unfinished">Open Emulator Settings</translation>
     </message>
   </context>
   <context>
@@ -2868,10 +2876,6 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
       <translation>Protokoll anhängen:\nAn bereits vorhandenen Protokoll anhängen.</translation>
     </message>
     <message>
-      <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core=trace&quot; &quot;Lib.Pad=debug,Common.Filesystem=error&quot; &quot;critical&quot;\nLevels: trace, debug, info, warning, error, critical - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
-      <translation>Protokoll-Filter:\nFiltert das Protokoll so, dass nur bestimmte Informationen ausgegeben werden.\nBeispiele: &quot;Core=trace&quot; &quot;Lib.Pad=debug Common.Filesystem=error&quot; &quot;critical&quot;\n Ebenen: trace, debug, info, warning, error, critical - in dieser Reihenfolge, eine ausgewählte Ebene blendet alle niedrigeren Ebenen aus und zeigt alle höheren Ebenen an.</translation>
-    </message>
-    <message>
       <source>Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</source>
       <translation>Max. Überspringdauer der Protokollzeilen:\nDie max. Dauer in der verhindert wird das dieselben Protokollzeilen geschrieben werden (ms) - nur wenn &apos;Doppelte Protokollzeilen überspringen&apos; aktiviert ist.</translation>
     </message>
@@ -2890,6 +2894,10 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
     <message>
       <source>Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</source>
       <translation>Protokoll-Typ:\nWähle zwischen wincolor und msvc aus.\nwincolor: Standard Protokollierung für Windows\nmsvc: Protokollierung für Debugging</translation>
+    </message>
+    <message>
+      <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
+      <translation type="unfinished">Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</translation>
     </message>
   </context>
   <context>

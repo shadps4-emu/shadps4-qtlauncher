@@ -1330,10 +1330,6 @@ Si us plau, introdueix les teves claus per desar-les.</translation>
       <translation>Personalitza les dreceres de teclat</translation>
     </message>
     <message>
-      <source>Controller Hotkeys</source>
-      <translation>Dreceres del controlador</translation>
-    </message>
-    <message>
       <source>Show FPS Counter</source>
       <translation>Mostra el comptador de fotogrames per segon</translation>
     </message>
@@ -1356,14 +1352,6 @@ Si us plau, introdueix les teves claus per desar-les.</translation>
     <message>
       <source>Toggle Pause</source>
       <translation>Commuta la pausa</translation>
-    </message>
-    <message>
-      <source>Keyboard Hotkeys</source>
-      <translation>Dreceres de teclat</translation>
-    </message>
-    <message>
-      <source>Renderdoc Capture (for debugging only)</source>
-      <translation>Captura Renderdoc (per motius de depuració)</translation>
     </message>
     <message>
       <source>Toggle Mouse to Joystick Emulation</source>
@@ -1420,6 +1408,26 @@ Si us plau, introdueix les teves claus per desar-les.</translation>
     <message>
       <source>Volume Down</source>
       <translation>Abaixa el volum</translation>
+    </message>
+    <message>
+      <source>Hotkeys</source>
+      <translation type="unfinished">Hotkeys</translation>
+    </message>
+    <message>
+      <source>Placeholder</source>
+      <translation type="unfinished">Placeholder</translation>
+    </message>
+    <message>
+      <source>Capture Screenshot</source>
+      <translation type="unfinished">Capture Screenshot</translation>
+    </message>
+    <message>
+      <source>Capture Screenshot w/ Overlays</source>
+      <translation type="unfinished">Capture Screenshot w/ Overlays</translation>
+    </message>
+    <message>
+      <source>Open Emulator Settings</source>
+      <translation type="unfinished">Open Emulator Settings</translation>
     </message>
   </context>
   <context>
@@ -2865,10 +2873,6 @@ Selecciona una versió del panell dret.</translation>
       <translation>Annexar al registre:\nAnnexar als registres actuals.</translation>
     </message>
     <message>
-      <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core=trace&quot; &quot;Lib.Pad=debug,Common.Filesystem=error&quot; &quot;critical&quot;\nLevels: trace, debug, info, warning, error, critical - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
-      <translation>Filtre del registre:\nFiltra el registre per mostrar només la informació especificada.\nExemples: &quot;Core:Trace&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nNivells: Trace, Debug, Info, Warning, Error, Critical - en aquest ordre, un nivell específic silencia tots els nivells precedents de la llista i mostra només els nivells posteriors.</translation>
-    </message>
-    <message>
       <source>Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</source>
       <translation>Duració màxima per ignorar registres:\nInterval sense escriure les mateixes línies (ms) - només si està activada l'opció Ignora els registres duplicats.</translation>
     </message>
@@ -2887,6 +2891,10 @@ Selecciona una versió del panell dret.</translation>
     <message>
       <source>Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</source>
       <translation>Tipus de registre:\nSelecciona entre els tipus de registre wincolor o msvc.\nwincolor: Registre per defecte a Windows\nmsvc: Registre per depuració</translation>
+    </message>
+    <message>
+      <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
+      <translation type="unfinished">Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</translation>
     </message>
   </context>
   <context>

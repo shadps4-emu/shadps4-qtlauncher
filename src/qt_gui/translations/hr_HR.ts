@@ -1335,10 +1335,6 @@ sam izvještaj ne bi postao nevaljan:</translation>
       <translation>Uredi Kratice</translation>
     </message>
     <message>
-      <source>Controller Hotkeys</source>
-      <translation>Kratice Kontrolera</translation>
-    </message>
-    <message>
       <source>Show FPS Counter</source>
       <translation>Prikaz FPS Brojača</translation>
     </message>
@@ -1361,14 +1357,6 @@ sam izvještaj ne bi postao nevaljan:</translation>
     <message>
       <source>Toggle Pause</source>
       <translation>Uključi Pauzu</translation>
-    </message>
-    <message>
-      <source>Keyboard Hotkeys</source>
-      <translation>Tipkovničke Kratice</translation>
-    </message>
-    <message>
-      <source>Renderdoc Capture (for debugging only)</source>
-      <translation>Renderdoc Snimanje (samo za debuggiranje)</translation>
     </message>
     <message>
       <source>Toggle Mouse to Joystick Emulation</source>
@@ -1425,6 +1413,26 @@ sam izvještaj ne bi postao nevaljan:</translation>
     <message>
       <source>Volume Down</source>
       <translation>Glasnoća Niža</translation>
+    </message>
+    <message>
+      <source>Hotkeys</source>
+      <translation type="unfinished">Hotkeys</translation>
+    </message>
+    <message>
+      <source>Placeholder</source>
+      <translation type="unfinished">Placeholder</translation>
+    </message>
+    <message>
+      <source>Capture Screenshot</source>
+      <translation type="unfinished">Capture Screenshot</translation>
+    </message>
+    <message>
+      <source>Capture Screenshot w/ Overlays</source>
+      <translation type="unfinished">Capture Screenshot w/ Overlays</translation>
+    </message>
+    <message>
+      <source>Open Emulator Settings</source>
+      <translation type="unfinished">Open Emulator Settings</translation>
     </message>
   </context>
   <context>
@@ -2873,10 +2881,6 @@ Izaziva rušenje ili probleme u nekim igrama.</translation>
       <translation>Dodavanje zapisnika:\nDodavanje postojećim zapisnicima.</translation>
     </message>
     <message>
-      <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core=trace&quot; &quot;Lib.Pad=debug,Common.Filesystem=error&quot; &quot;critical&quot;\nLevels: trace, debug, info, warning, error, critical - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
-      <translation>Filter zapisnika:\nFiltrira zapisnik kako bi se ispisale samo određene informacije.\nPrimjeri: &quot;Core=trace&quot; &quot;Lib.Pad=debug,Common.Filesystem=error&quot; &quot;critical&quot;\nRazine: trace, debug, info, warning, error, critical - ovim redoslijedom, određena razina utišava sve razine koje joj prethode na popisu i zapisuje svaku razinu nakon nje.</translation>
-    </message>
-    <message>
       <source>Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</source>
       <translation>Zabilježi maksimalno trajanje preskakanja:\nInterval bez zapisivanja istih redaka (ms) - samo ako je omogućeno &apos;Preskoči duplikate u zapisniku&apos;.</translation>
     </message>
@@ -2895,6 +2899,10 @@ Izaziva rušenje ili probleme u nekim igrama.</translation>
     <message>
       <source>Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</source>
       <translation>Vrsta zapisnika:\nOdaberite između vrsta zapisnika wincolor ili msvc.\nwincolor: Zadano zapisivanje za Windows\nmsvc: Zapisivanje za otklanjanje pogrešaka</translation>
+    </message>
+    <message>
+      <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
+      <translation type="unfinished">Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</translation>
     </message>
   </context>
   <context>

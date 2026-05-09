@@ -1328,10 +1328,6 @@ Please enter your keys and save them.</source>
       <translation>自定义快捷键</translation>
     </message>
     <message>
-      <source>Controller Hotkeys</source>
-      <translation>控制器快捷键</translation>
-    </message>
-    <message>
       <source>Show FPS Counter</source>
       <translation>显示FPS计数器</translation>
     </message>
@@ -1354,14 +1350,6 @@ Please enter your keys and save them.</source>
     <message>
       <source>Toggle Pause</source>
       <translation>切换暂停</translation>
-    </message>
-    <message>
-      <source>Keyboard Hotkeys</source>
-      <translation>键盘快捷键</translation>
-    </message>
-    <message>
-      <source>Renderdoc Capture (for debugging only)</source>
-      <translation>Renderdoc 捕获(仅供调试)</translation>
     </message>
     <message>
       <source>Toggle Mouse to Joystick Emulation</source>
@@ -1418,6 +1406,26 @@ Please enter your keys and save them.</source>
     <message>
       <source>Volume Down</source>
       <translation>降低音量</translation>
+    </message>
+    <message>
+      <source>Hotkeys</source>
+      <translation type="unfinished">Hotkeys</translation>
+    </message>
+    <message>
+      <source>Placeholder</source>
+      <translation type="unfinished">Placeholder</translation>
+    </message>
+    <message>
+      <source>Capture Screenshot</source>
+      <translation type="unfinished">Capture Screenshot</translation>
+    </message>
+    <message>
+      <source>Capture Screenshot w/ Overlays</source>
+      <translation type="unfinished">Capture Screenshot w/ Overlays</translation>
+    </message>
+    <message>
+      <source>Open Emulator Settings</source>
+      <translation type="unfinished">Open Emulator Settings</translation>
     </message>
   </context>
   <context>
@@ -2865,10 +2873,6 @@ Select an emulator version from the right panel.</source>
       <translation>日志追加：\n追加到现有日志。</translation>
     </message>
     <message>
-      <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core=trace&quot; &quot;Lib.Pad=debug,Common.Filesystem=error&quot; &quot;critical&quot;\nLevels: trace, debug, info, warning, error, critical - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
-      <translation>日志过滤器：\n用于筛选日志内容，仅输出特定信息。\n示例："Core=trace" "Lib.Pad=debug,Common.Filesystem=error" "critica"\n级别顺序：trace, debug, info, warning, error, critical - 指定某个级别将屏蔽列表中该级别之前的所有级别，并记录该级别之后的所有级别。</translation>
-    </message>
-    <message>
       <source>Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</source>
       <translation>日志最大跳过时长：\n未写入相同行的间隔时间（毫秒）—— 仅在启用“日志跳过重复”时生效。</translation>
     </message>
@@ -2887,6 +2891,10 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</source>
       <translation>日志类型：\n在 wincolor 和 msvc 日志类型之间选择。\nwincolor：Windows 默认日志记录\nmsvc：调试用日志记录</translation>
+    </message>
+    <message>
+      <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
+      <translation type="unfinished">Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</translation>
     </message>
   </context>
   <context>
