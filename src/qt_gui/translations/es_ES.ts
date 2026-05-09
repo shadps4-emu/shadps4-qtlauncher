@@ -1330,10 +1330,6 @@ Debes introducir tus claves y guardarlas.</translation>
       <translation>Personalizar atajos</translation>
     </message>
     <message>
-      <source>Controller Hotkeys</source>
-      <translation>Atajos de mando</translation>
-    </message>
-    <message>
       <source>Show FPS Counter</source>
       <translation>Mostrar contador de FPS</translation>
     </message>
@@ -1356,14 +1352,6 @@ Debes introducir tus claves y guardarlas.</translation>
     <message>
       <source>Toggle Pause</source>
       <translation>Alternar pausa</translation>
-    </message>
-    <message>
-      <source>Keyboard Hotkeys</source>
-      <translation>Atajos de teclado</translation>
-    </message>
-    <message>
-      <source>Renderdoc Capture (for debugging only)</source>
-      <translation>Captura de Renderdoc (solo para depuración)</translation>
     </message>
     <message>
       <source>Toggle Mouse to Joystick Emulation</source>
@@ -1420,6 +1408,26 @@ Debes introducir tus claves y guardarlas.</translation>
     <message>
       <source>Volume Down</source>
       <translation>Bajar volumen</translation>
+    </message>
+    <message>
+      <source>Hotkeys</source>
+      <translation type="unfinished">Hotkeys</translation>
+    </message>
+    <message>
+      <source>Placeholder</source>
+      <translation type="unfinished">Placeholder</translation>
+    </message>
+    <message>
+      <source>Capture Screenshot</source>
+      <translation type="unfinished">Capture Screenshot</translation>
+    </message>
+    <message>
+      <source>Capture Screenshot w/ Overlays</source>
+      <translation type="unfinished">Capture Screenshot w/ Overlays</translation>
+    </message>
+    <message>
+      <source>Open Emulator Settings</source>
+      <translation type="unfinished">Open Emulator Settings</translation>
     </message>
   </context>
   <context>
@@ -2865,10 +2873,6 @@ Selecciona una versión del emulador en el panel derecho.</translation>
       <translation>Anexar registro:\nAnexa el registro a los ya existentes.</translation>
     </message>
     <message>
-      <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core=trace&quot; &quot;Lib.Pad=debug,Common.Filesystem=error&quot; &quot;critical&quot;\nLevels: trace, debug, info, warning, error, critical - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
-      <translation>Filtro del registro:\nFiltra el registro para que muestre solo información concreta.\nEjemplos: &quot;Core=trace&quot; &quot;Lib.Pad=debug,Common.Filesystem=error&quot; &quot;critical&quot;\nNiveles: trace, debug, info, warning, error, critical. Cada nivel silencia todos los niveles que vayan por delante y registra los que se encuentren por detrás, siguiendo este mismo orden.</translation>
-    </message>
-    <message>
       <source>Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</source>
       <translation>Duración máxima de omisiones del registro:\nEl intervalo de tiempo que se esperará para escribir líneas idénticas (en ms). Esta opción solo se aplicará si también está activada Omitir duplicados en el registro.</translation>
     </message>
@@ -2887,6 +2891,10 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     <message>
       <source>Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</source>
       <translation>Tipo de registro:\nSelecciona entre los tipos de registro wincolor o msvc.\nwincolor: El método de registro predeterminado de Windows.\nmsvc: registros con fines de depuración.</translation>
+    </message>
+    <message>
+      <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
+      <translation type="unfinished">Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</translation>
     </message>
   </context>
   <context>
