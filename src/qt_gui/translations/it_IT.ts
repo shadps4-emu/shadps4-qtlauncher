@@ -1330,10 +1330,6 @@ Inserisci le chiavi e salvale.</translation>
       <translation>Personalizza Scorciatoie</translation>
     </message>
     <message>
-      <source>Controller Hotkeys</source>
-      <translation>Scorciatoie Controller</translation>
-    </message>
-    <message>
       <source>Show FPS Counter</source>
       <translation>Mostra Contatore FPS</translation>
     </message>
@@ -1356,14 +1352,6 @@ Inserisci le chiavi e salvale.</translation>
     <message>
       <source>Toggle Pause</source>
       <translation>Attiva/Disattiva Pausa</translation>
-    </message>
-    <message>
-      <source>Keyboard Hotkeys</source>
-      <translation>Scorciatoie Da Tastiera</translation>
-    </message>
-    <message>
-      <source>Renderdoc Capture (for debugging only)</source>
-      <translation>Cattura Renderdoc (solo per debug)</translation>
     </message>
     <message>
       <source>Toggle Mouse to Joystick Emulation</source>
@@ -1420,6 +1408,26 @@ Inserisci le chiavi e salvale.</translation>
     <message>
       <source>Volume Down</source>
       <translation>Abbassa volume</translation>
+    </message>
+    <message>
+      <source>Hotkeys</source>
+      <translation type="unfinished">Hotkeys</translation>
+    </message>
+    <message>
+      <source>Placeholder</source>
+      <translation type="unfinished">Placeholder</translation>
+    </message>
+    <message>
+      <source>Capture Screenshot</source>
+      <translation type="unfinished">Capture Screenshot</translation>
+    </message>
+    <message>
+      <source>Capture Screenshot w/ Overlays</source>
+      <translation type="unfinished">Capture Screenshot w/ Overlays</translation>
+    </message>
+    <message>
+      <source>Open Emulator Settings</source>
+      <translation type="unfinished">Open Emulator Settings</translation>
     </message>
   </context>
   <context>
@@ -2865,10 +2873,6 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
       <translation>Aggiungi al Registro:\nAggiungi ai registri esistenti.</translation>
     </message>
     <message>
-      <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core=trace&quot; &quot;Lib.Pad=debug,Common.Filesystem=error&quot; &quot;critical&quot;\nLevels: trace, debug, info, warning, error, critical - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
-      <translation>Filtro Registro:\nFiltra il registro per stampare solo informazioni specifiche.\nEsempi: &quot;Core:Trace&quot; &quot;Lib.Pad=Debug Common.Filesystem=Error&quot; &quot;*:Critical&quot;\n Livelli: Trace, Debug, Info, Warning, Error, Critical - in questo ordine, un livello specifico silenzia tutti i livelli precedenti nell'elenco e registra ogni livello successivo.</translation>
-    </message>
-    <message>
       <source>Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</source>
       <translation>Durata Massima Salto Registro:\nIntervallo senza scrivere le stesse righe (in ms) - solo se &apos; Salta Duplicato Registro&apos; è abilitato.</translation>
     </message>
@@ -2887,6 +2891,10 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
     <message>
       <source>Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</source>
       <translation>Tipo di Registro:\nScegli tra i tipi di registro wincolor o msvc.\nwincolor: Registrazione predefinita per Windows\nmsvc: Registrazione per il debug</translation>
+    </message>
+    <message>
+      <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
+      <translation type="unfinished">Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</translation>
     </message>
   </context>
   <context>
