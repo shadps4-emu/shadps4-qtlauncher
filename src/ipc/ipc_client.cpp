@@ -37,7 +37,7 @@ void IpcClient::startEmulator(const QFileInfo& exe, const QStringList& args, con
 
     if (process->error() == QProcess::FailedToStart) {
         QMessageBox::critical(nullptr, "shadPS4",
-                      QString(tr("Could not find the emulator executable")));
+                              QString(tr("Could not find the emulator executable")));
     }
 }
 
@@ -275,8 +275,7 @@ void IpcClient::onProcessClosed() {
 
 void IpcClient::writeLine(const QString& text) {
     if (process == nullptr) {
-        QMessageBox::critical(nullptr, "shadPS4",
-                              QString(tr("No game is running")));
+        QMessageBox::critical(nullptr, "shadPS4", QString(tr("No game is running")));
         return;
     }
 
