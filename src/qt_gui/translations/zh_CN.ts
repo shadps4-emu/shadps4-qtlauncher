@@ -1436,7 +1436,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>No game is running</source>
-      <translation type="unfinished">No game is running</translation>
+      <translation>没有游戏正在运行</translation>
     </message>
   </context>
   <context>
