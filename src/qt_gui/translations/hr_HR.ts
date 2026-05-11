@@ -1441,6 +1441,10 @@ sam izvještaj ne bi postao nevaljan:</translation>
       <source>Could not find the emulator executable</source>
       <translation>Nepronađena izvršna datoteka emulatora</translation>
     </message>
+    <message>
+      <source>No game is running</source>
+      <translation type="unfinished">No game is running</translation>
+    </message>
   </context>
   <context>
     <name>KBMSettings</name>
