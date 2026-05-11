@@ -1438,7 +1438,7 @@ Debes introducir tus claves y guardarlas.</translation>
     </message>
     <message>
       <source>No game is running</source>
-      <translation type="unfinished">No game is running</translation>
+      <translation>No se está ejecutando un juego</translation>
     </message>
   </context>
   <context>
