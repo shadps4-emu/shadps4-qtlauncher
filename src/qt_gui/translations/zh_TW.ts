@@ -1432,6 +1432,10 @@ Please enter your keys and save them.</translation>
       <source>Could not find the emulator executable</source>
       <translation>找不到模擬器的執行檔</translation>
     </message>
+    <message>
+      <source>No game is running</source>
+      <translation type="unfinished">No game is running</translation>
+    </message>
   </context>
   <context>
     <name>KBMSettings</name>
