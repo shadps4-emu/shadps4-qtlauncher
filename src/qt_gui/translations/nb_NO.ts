@@ -1436,6 +1436,10 @@ Skriv inn nøklene og lagre dem.</translation>
       <source>Could not find the emulator executable</source>
       <translation>Fant ikke emulator-programfila</translation>
     </message>
+    <message>
+      <source>No game is running</source>
+      <translation type="unfinished">No game is running</translation>
+    </message>
   </context>
   <context>
     <name>KBMSettings</name>
