@@ -1411,15 +1411,15 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Hotkeys</source>
-      <translation type="unfinished">Hotkeys</translation>
+      <translation>Snabbtangenter</translation>
     </message>
     <message>
       <source>Placeholder</source>
-      <translation type="unfinished">Placeholder</translation>
+      <translation>Platshållare</translation>
     </message>
     <message>
       <source>Capture Screenshot</source>
-      <translation type="unfinished">Capture Screenshot</translation>
+      <translation>Fånga skärmbild</translation>
     </message>
     <message>
       <source>Capture Screenshot w/ Overlays</source>
