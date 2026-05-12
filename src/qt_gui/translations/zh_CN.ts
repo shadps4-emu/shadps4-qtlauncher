@@ -1409,7 +1409,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Hotkeys</source>
-      <translation>Hotkeys</translation>
+      <translation>热键</translation>
     </message>
     <message>
       <source>Placeholder</source>
