@@ -1438,7 +1438,7 @@ Si us plau, introdueix les teves claus per desar-les.</translation>
     </message>
     <message>
       <source>No game is running</source>
-      <translation type="unfinished">No game is running</translation>
+      <translation>No hi ha joc en funcionament</translation>
     </message>
   </context>
   <context>
