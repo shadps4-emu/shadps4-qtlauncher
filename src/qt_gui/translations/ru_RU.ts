@@ -1411,19 +1411,19 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Hotkeys</source>
-      <translation>Клавиши быстрого доступа</translation>
+      <translation>Горячие клавиши</translation>
     </message>
     <message>
       <source>Placeholder</source>
-      <translation>Поле для заполнения</translation>
+      <translation>Заглушка</translation>
     </message>
     <message>
       <source>Capture Screenshot</source>
-      <translation>Захват скриншота</translation>
+      <translation>Сделать скриншот</translation>
     </message>
     <message>
       <source>Capture Screenshot w/ Overlays</source>
-      <translation>Захват скриншота с оверлеями</translation>
+      <translation>Сделать скриншот с оверлеями</translation>
     </message>
     <message>
       <source>Open Emulator Settings</source>
@@ -1438,7 +1438,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>No game is running</source>
-      <translation type="unfinished">No game is running</translation>
+      <translation>Нет запущенной игры</translation>
     </message>
   </context>
   <context>
@@ -2898,7 +2898,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
-      <translation>Фильтр логов:\nФильтрует логи, чтобы показывать только определенную информацию.\nПримеры: &quot;Core:Trace&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nУровни: trace, debug, info, warning, error, critical - в этом порядке, конкретный уровень глушит все предыдущие уровни в списке и показывает все последующие уровни.</translation>
+      <translation>Фильтр логов:\nФильтрует логи, чтобы показывать только определенную информацию.\nПримеры: &quot;Core:Trace&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nУровни: trace, debug, info, warning, error, critical, off - в этом порядке, конкретный уровень глушит все предыдущие уровни в списке и показывает все последующие уровни.</translation>
     </message>
   </context>
   <context>
