@@ -1411,23 +1411,23 @@ Inserisci le chiavi e salvale.</translation>
     </message>
     <message>
       <source>Hotkeys</source>
-      <translation type="unfinished">Hotkeys</translation>
+      <translation>Scorciatoie</translation>
     </message>
     <message>
       <source>Placeholder</source>
-      <translation type="unfinished">Placeholder</translation>
+      <translation>Nome Provvisorio</translation>
     </message>
     <message>
       <source>Capture Screenshot</source>
-      <translation type="unfinished">Capture Screenshot</translation>
+      <translation>Cattura Screenshot</translation>
     </message>
     <message>
       <source>Capture Screenshot w/ Overlays</source>
-      <translation type="unfinished">Capture Screenshot w/ Overlays</translation>
+      <translation>Cattura Screenshot con Sovrimpressioni</translation>
     </message>
     <message>
       <source>Open Emulator Settings</source>
-      <translation type="unfinished">Open Emulator Settings</translation>
+      <translation>Apri Impostazioni Emulatore</translation>
     </message>
   </context>
   <context>
@@ -1435,6 +1435,10 @@ Inserisci le chiavi e salvale.</translation>
     <message>
       <source>Could not find the emulator executable</source>
       <translation>Impossibile trovare l'eseguibile dell'emulatore</translation>
+    </message>
+    <message>
+      <source>No game is running</source>
+      <translation>Nessun gioco in esecuzione</translation>
     </message>
   </context>
   <context>
@@ -2894,7 +2898,7 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
     </message>
     <message>
       <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
-      <translation type="unfinished">Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</translation>
+      <translation>Filtro Registro:\nFiltra il registro per stampare solo informazioni specifiche.\nEsempi: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\n Livelli: trace, debug, info, warning, error, critical - in questo ordine, un livello specifico silenzia tutti i livelli precedenti nell'elenco e registra ogni livello successivo.</translation>
     </message>
   </context>
   <context>

@@ -1438,6 +1438,10 @@ Please enter your keys and save them.</translation>
       <source>Could not find the emulator executable</source>
       <translation type="unfinished">Could not find the emulator executable</translation>
     </message>
+    <message>
+      <source>No game is running</source>
+      <translation type="unfinished">No game is running</translation>
+    </message>
   </context>
   <context>
     <name>KBMSettings</name>

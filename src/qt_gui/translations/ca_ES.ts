@@ -1436,6 +1436,10 @@ Si us plau, introdueix les teves claus per desar-les.</translation>
       <source>Could not find the emulator executable</source>
       <translation>No s'ha pogut trobar l'executable de l'emulador</translation>
     </message>
+    <message>
+      <source>No game is running</source>
+      <translation>No hi ha joc en funcionament</translation>
+    </message>
   </context>
   <context>
     <name>KBMSettings</name>

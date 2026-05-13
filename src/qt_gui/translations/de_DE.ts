@@ -1435,6 +1435,10 @@ Bitte gib die Schlüssel ein und speicher diese.</translation>
       <source>Could not find the emulator executable</source>
       <translation>Konnte die Emulator-Datei nicht finden</translation>
     </message>
+    <message>
+      <source>No game is running</source>
+      <translation type="unfinished">No game is running</translation>
+    </message>
   </context>
   <context>
     <name>KBMSettings</name>

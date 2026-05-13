@@ -1436,6 +1436,10 @@ Debes introducir tus claves y guardarlas.</translation>
       <source>Could not find the emulator executable</source>
       <translation>No se ha podido encontrar el ejecutable del emulador</translation>
     </message>
+    <message>
+      <source>No game is running</source>
+      <translation>No se está ejecutando un juego</translation>
+    </message>
   </context>
   <context>
     <name>KBMSettings</name>
