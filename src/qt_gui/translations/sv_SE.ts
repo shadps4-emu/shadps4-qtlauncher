@@ -702,23 +702,21 @@ Alla fält måste vara giltiga hex-strängar med jämn längd.</translation>
     </message>
     <message>
       <source>Debug Rif Keyset</source>
-      <translation type="unfinished">Debug Rif Keyset</translation>
+      <translation>Debug Rif nyckleringsset</translation>
     </message>
     <message>
       <source>RSA key components for debug RIF files.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for debug RIF files.
-All fields must be valid hex strings with even length.</translation>
+      <translation>RSA-nyckelkomponenter för felsökning av RIF-filer. Alla fält måste vara giltiga hexsträngar med jämn längd.</translation>
     </message>
     <message>
       <source>Pkg Derived Key3</source>
-      <translation type="unfinished">Pkg Derived Key3</translation>
+      <translation>Pakethärledd nyckel3</translation>
     </message>
     <message>
       <source>RSA key components for package decryption.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for package decryption.
-All fields must be valid hex strings with even length.</translation>
+      <translation>RSA-nyckelkomponenter för paket-dekryptering. Alla fält måste vara giltiga hexsträngar med jämn längd.</translation>
     </message>
     <message>
       <source>Close</source>
@@ -731,8 +729,8 @@ All fields must be valid hex strings with even length.</translation>
     <message>
       <source>No key file found or failed to load.
 Please enter your keys and save them.</source>
-      <translation type="unfinished">No key file found or failed to load.
-Please enter your keys and save them.</translation>
+      <translation>Ingen nycke lfil hittades eller så kunde den inte laddas.
+Ange dina nycklar och spara dem.</translation>
     </message>
     <message>
       <source>Validation Error</source>
@@ -792,15 +790,15 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Keys successfully loaded from JSON!</source>
-      <translation type="unfinished">Keys successfully loaded from JSON!</translation>
+      <translation>Nycklar laddades in i minnet från JSON!</translation>
     </message>
     <message>
       <source>Trophy Key contains invalid hex or has odd length.</source>
-      <translation type="unfinished">Trophy Key contains invalid hex or has odd length.</translation>
+      <translation>Trofényckeln innehåller en ogiltig hexl eller har en udda längd.</translation>
     </message>
     <message>
       <source>%1 contains invalid hex or has odd length.</source>
-      <translation type="unfinished">%1 contains invalid hex or has odd length.</translation>
+      <translation>%1 innehåller felaktig hex eller har udda längd.</translation>
     </message>
     <message>
       <source>Load Key</source>
@@ -1293,7 +1291,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>This game has no save folder to open!</source>
-      <translation type="unfinished">This game has no save folder to open!</translation>
+      <translation>Det här spelet har inga sparmappar att öppna!</translation>
     </message>
     <message>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
@@ -1423,7 +1421,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Capture Screenshot w/ Overlays</source>
-      <translation type="unfinished">Capture Screenshot w/ Overlays</translation>
+      <translation>Fångade skärmdump med överlägg</translation>
     </message>
     <message>
       <source>Open Emulator Settings</source>
@@ -2838,15 +2836,15 @@ Välj en emulatorversion från den högra panelen.</translation>
     </message>
     <message>
       <source>Log Sync</source>
-      <translation type="unfinished">Log Sync</translation>
+      <translation>Loggsynkronisering</translation>
     </message>
     <message>
       <source>Log Skip Duplicate</source>
-      <translation type="unfinished">Log Skip Duplicate</translation>
+      <translation>Logghopp över dubblett</translation>
     </message>
     <message>
       <source>Log Max Skip Duration</source>
-      <translation type="unfinished">Log Max Skip Duration</translation>
+      <translation>Logga max överhoppningstid</translation>
     </message>
     <message>
       <source> ms</source>
@@ -2882,19 +2880,19 @@ Välj en emulatorversion från den högra panelen.</translation>
     </message>
     <message>
       <source>Log Size Limit:\nMaximum size of log files (bytes).</source>
-      <translation type="unfinished">Log Size Limit:\nMaximum size of log files (bytes).</translation>
+      <translation>Loggstorleksgräns:\nMaximal storlek på loggfiler (byte).</translation>
     </message>
     <message>
       <source>Log Skip Duplicate:\nSave storage by avoiding writing log that is identical.</source>
-      <translation type="unfinished">Log Skip Duplicate:\nSave storage by avoiding writing log that is identical.</translation>
+      <translation>Loggöverhoppning av dubblett:\nSpara lagringsutrymme genom att undvika att skriva identiska loggar.</translation>
     </message>
     <message>
       <source>Log Sync:\nSwitch between sync (order) or async (performance).</source>
-      <translation type="unfinished">Log Sync:\nSwitch between sync (order) or async (performance).</translation>
+      <translation>Log Sync:\nVäxla mellan synk (ordning) eller async (prestanda).</translation>
     </message>
     <message>
       <source>Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</source>
-      <translation type="unfinished">Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</translation>
+      <translation>Loggtyp:\nVälj mellan loggtyperna wincolor eller msvc.\nwincolor: Standardloggning för Windows\nmsvc: Loggning för felsökning</translation>
     </message>
     <message>
       <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
