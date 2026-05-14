@@ -630,21 +630,21 @@
     <name>CryptoManagerDialog</name>
     <message>
       <source>Crypto Key Manager</source>
-      <translation type="unfinished">Crypto Key Manager</translation>
+      <translation>Kryptonyckel Hanterare</translation>
     </message>
     <message>
       <source>Trophy Key: Used for trophy decryption.
 Must be a valid hex string with even length.</source>
-      <translation type="unfinished">Trophy Key: Used for trophy decryption.
-Must be a valid hex string with even length.</translation>
+      <translation>Trofényckel: Används för trofédekryptering.
+Måste vara en giltig hex-sträng med jämn längd.</translation>
     </message>
     <message>
       <source>Enter Trophy Key</source>
-      <translation type="unfinished">Enter Trophy Key</translation>
+      <translation>Ange trofényckel</translation>
     </message>
     <message>
       <source>Trophy Key:</source>
-      <translation type="unfinished">Trophy Key:</translation>
+      <translation>Trofényckel:</translation>
     </message>
     <message>
       <source>Status: Not loaded</source>
@@ -652,11 +652,11 @@ Must be a valid hex string with even length.</translation>
     </message>
     <message>
       <source>Trophy Key</source>
-      <translation type="unfinished">Trophy Key</translation>
+      <translation>Trofényckel</translation>
     </message>
     <message>
       <source>Enter %1</source>
-      <translation type="unfinished">Enter %1</translation>
+      <translation>Ange %1</translation>
     </message>
     <message>
       <source>Exponent1</source>
@@ -692,13 +692,13 @@ Must be a valid hex string with even length.</translation>
     </message>
     <message>
       <source>Fake Keyset</source>
-      <translation type="unfinished">Fake Keyset</translation>
+      <translation>Falska Nyckel set</translation>
     </message>
     <message>
       <source>RSA key components for fake signing.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for fake signing.
-All fields must be valid hex strings with even length.</translation>
+      <translation>RSA-nyckelkomponenter för falsk signering.
+Alla fält måste vara giltiga hex-strängar med jämn längd.</translation>
     </message>
     <message>
       <source>Debug Rif Keyset</source>
@@ -1427,7 +1427,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Open Emulator Settings</source>
-      <translation type="unfinished">Open Emulator Settings</translation>
+      <translation>Öppna Emulator Inställningar</translation>
     </message>
   </context>
   <context>
@@ -1438,7 +1438,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>No game is running</source>
-      <translation type="unfinished">No game is running</translation>
+      <translation>Inget spel spelas</translation>
     </message>
   </context>
   <context>
@@ -2798,23 +2798,23 @@ Välj en emulatorversion från den högra panelen.</translation>
     </message>
     <message>
       <source>Select shadPS4 Home Path</source>
-      <translation type="unfinished">Select shadPS4 Home Path</translation>
+      <translation>Välj hemmapp för shadPS4</translation>
     </message>
     <message>
       <source>Select the system modules folder</source>
-      <translation type="unfinished">Select the system modules folder</translation>
+      <translation>Välj systemmodul mapp</translation>
     </message>
     <message>
       <source>Home Folder Location (Saves, Inputs, Trophy Data)</source>
-      <translation type="unfinished">Home Folder Location (Saves, Inputs, Trophy Data)</translation>
+      <translation>Hemmapps plats (Sparfiler, Inmatning, Troféer)</translation>
     </message>
     <message>
       <source>Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</source>
-      <translation type="unfinished">Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</translation>
+      <translation>Hemmappens plats:\nMappen där data, troféfiler och inmatningskonfigurationer sparas för alla användare.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the home folder.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the home folder.</translation>
+      <translation>Bläddra:\nBläddra efter en mapp att ange som hemmappen.</translation>
     </message>
     <message>
       <source>Audio</source>
@@ -2854,7 +2854,7 @@ Välj en emulatorversion från den högra panelen.</translation>
     </message>
     <message>
       <source>Log Size Limit</source>
-      <translation type="unfinished">Log Size Limit</translation>
+      <translation>Gräns för loggstorlek</translation>
     </message>
     <message>
       <source> B</source>
@@ -2862,23 +2862,23 @@ Välj en emulatorversion från den högra panelen.</translation>
     </message>
     <message>
       <source>Log Append</source>
-      <translation type="unfinished">Log Append</translation>
+      <translation>Lägg Till Logg</translation>
     </message>
     <message>
       <source>wincolor</source>
-      <translation type="unfinished">wincolor</translation>
+      <translation>wincolor</translation>
     </message>
     <message>
       <source>msvc</source>
-      <translation type="unfinished">msvc</translation>
+      <translation>msvc</translation>
     </message>
     <message>
       <source>Log Append:\nAppend to existing logs.</source>
-      <translation type="unfinished">Log Append:\nAppend to existing logs.</translation>
+      <translation>Logg bilaga:\nLägg till befintliga loggar.</translation>
     </message>
     <message>
       <source>Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</source>
-      <translation type="unfinished">Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</translation>
+      <translation>Log Max Skippa Varaktighet:\nIntervall utan att skriva samma rader (ms) - endast om &apos;Logg Skippa Dubblett&apos; aktiverat.</translation>
     </message>
     <message>
       <source>Log Size Limit:\nMaximum size of log files (bytes).</source>
