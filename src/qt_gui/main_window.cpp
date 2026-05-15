@@ -888,26 +888,20 @@ void MainWindow::CreateConnects() {
 
     // Manage Skylanders
     connect(ui->skylanderPortalAction, &QAction::triggered, this, [this]() {
-        if (EmulatorSettings.GetUsbDeviceBackend() == UsbBackendType::SkylandersPortal) {
-            skylander_dialog* sky_diag = skylander_dialog::get_dlg(this, m_ipc_client);
-            sky_diag->show();
-        }
+        skylander_dialog* sky_diag = skylander_dialog::get_dlg(this, m_ipc_client);
+        sky_diag->show();
     });
 
     // Manage Infinity Figures
     connect(ui->infinityFiguresAction, &QAction::triggered, this, [this]() {
-        if (EmulatorSettings.GetUsbDeviceBackend() == UsbBackendType::InfinityBase) {
-            infinity_dialog* inf_diag = infinity_dialog::get_dlg(this, m_ipc_client);
-            inf_diag->show();
-        }
+        infinity_dialog* inf_diag = infinity_dialog::get_dlg(this, m_ipc_client);
+        inf_diag->show();
     });
 
     // Manage Dimensions Toypad
     connect(ui->dimensionsToypadAction, &QAction::triggered, this, [this]() {
-        if (EmulatorSettings.GetUsbDeviceBackend() == UsbBackendType::DimensionsToypad) {
-            dimensions_dialog* dim_dialog = dimensions_dialog::get_dlg(this, m_ipc_client);
-            dim_dialog->show();
-        }
+        dimensions_dialog* dim_dialog = dimensions_dialog::get_dlg(this, m_ipc_client);
+        dim_dialog->show();
     });
 
     // Themes
