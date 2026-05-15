@@ -611,11 +611,11 @@
     </message>
     <message>
       <source>Min Deadzone (def:2 max:127)</source>
-      <translation>Minste dødsone (standard: 2, max: 127)</translation>
+      <translation>Minste dødsone (standard: 2, maks.: 127)</translation>
     </message>
     <message>
       <source>Max Deadzone (def:127 max:127)</source>
-      <translation>Maks dødsone (standard: 127, max: 127)</translation>
+      <translation>Maks. dødsone (standard: 127, maks.: 127)</translation>
     </message>
     <message>
       <source>Right Stick Deadzone</source>
@@ -804,11 +804,11 @@ Skriv inn nøklene og lagre dem.</translation>
     </message>
     <message>
       <source>Load Key</source>
-      <translation type="unfinished">Load Key</translation>
+      <translation>Last nøkkel</translation>
     </message>
     <message>
       <source>Save Key</source>
-      <translation type="unfinished">Save Key</translation>
+      <translation>Lagre nøkkel</translation>
     </message>
   </context>
   <context>
@@ -1297,7 +1297,7 @@ Skriv inn nøklene og lagre dem.</translation>
     </message>
     <message>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
-      <translation type="unfinished">A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</translation>
+      <translation>En trofénøkkel er nødvendig for å bruke troféviseren. Du kan skrive inn dette ved å trykke «Innstillinger» → «Håndter kryptografiske nøkler».</translation>
     </message>
   </context>
   <context>
@@ -1411,23 +1411,23 @@ Skriv inn nøklene og lagre dem.</translation>
     </message>
     <message>
       <source>Hotkeys</source>
-      <translation type="unfinished">Hotkeys</translation>
+      <translation>Hurtigtaster</translation>
     </message>
     <message>
       <source>Placeholder</source>
-      <translation type="unfinished">Placeholder</translation>
+      <translation>Plassholder</translation>
     </message>
     <message>
       <source>Capture Screenshot</source>
-      <translation type="unfinished">Capture Screenshot</translation>
+      <translation>Ta skjermbilde</translation>
     </message>
     <message>
       <source>Capture Screenshot w/ Overlays</source>
-      <translation type="unfinished">Capture Screenshot w/ Overlays</translation>
+      <translation>Ta skjermbilde med overlegg</translation>
     </message>
     <message>
       <source>Open Emulator Settings</source>
-      <translation type="unfinished">Open Emulator Settings</translation>
+      <translation>Åpne emulator-innstillinger</translation>
     </message>
   </context>
   <context>
@@ -1438,7 +1438,7 @@ Skriv inn nøklene og lagre dem.</translation>
     </message>
     <message>
       <source>No game is running</source>
-      <translation type="unfinished">No game is running</translation>
+      <translation>Ingen spill kjører</translation>
     </message>
   </context>
   <context>
@@ -2818,87 +2818,87 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Audio</source>
-      <translation type="unfinished">Audio</translation>
+      <translation>Lyd</translation>
     </message>
     <message>
       <source>Audio Backend</source>
-      <translation type="unfinished">Audio Backend</translation>
+      <translation>Lydmotor</translation>
     </message>
     <message>
       <source>Mic Device</source>
-      <translation type="unfinished">Mic Device</translation>
+      <translation>Mikrofonenhet</translation>
     </message>
     <message>
       <source>Devices</source>
-      <translation type="unfinished">Devices</translation>
+      <translation>Enheter</translation>
     </message>
     <message>
       <source>Camera</source>
-      <translation type="unfinished">Camera</translation>
+      <translation>Kamera</translation>
     </message>
     <message>
       <source>Log Sync</source>
-      <translation type="unfinished">Log Sync</translation>
+      <translation>Loggsynkronisering</translation>
     </message>
     <message>
       <source>Log Skip Duplicate</source>
-      <translation type="unfinished">Log Skip Duplicate</translation>
+      <translation>Logghopp over duplikat</translation>
     </message>
     <message>
       <source>Log Max Skip Duration</source>
-      <translation type="unfinished">Log Max Skip Duration</translation>
+      <translation>Maks. varighet for logghopping</translation>
     </message>
     <message>
       <source> ms</source>
-      <translation type="unfinished"> ms</translation>
+      <translation> ms</translation>
     </message>
     <message>
       <source>Log Size Limit</source>
-      <translation type="unfinished">Log Size Limit</translation>
+      <translation>Grense for loggstørrelse</translation>
     </message>
     <message>
       <source> B</source>
-      <translation type="unfinished"> B</translation>
+      <translation> B</translation>
     </message>
     <message>
       <source>Log Append</source>
-      <translation type="unfinished">Log Append</translation>
+      <translation>Tilføy i logg</translation>
     </message>
     <message>
       <source>wincolor</source>
-      <translation type="unfinished">wincolor</translation>
+      <translation>wincolor</translation>
     </message>
     <message>
       <source>msvc</source>
-      <translation type="unfinished">msvc</translation>
+      <translation>msvc</translation>
     </message>
     <message>
       <source>Log Append:\nAppend to existing logs.</source>
-      <translation type="unfinished">Log Append:\nAppend to existing logs.</translation>
+      <translation>Tilføy i logg:\nLegg til i eksisterende logger.</translation>
     </message>
     <message>
       <source>Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</source>
-      <translation type="unfinished">Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</translation>
+      <translation>Maks. varighet for logghopping:\nIntervall uten å skrive samme linjer (ms) – bare hvis «Logghopp over duplikat» er i bruk.</translation>
     </message>
     <message>
       <source>Log Size Limit:\nMaximum size of log files (bytes).</source>
-      <translation type="unfinished">Log Size Limit:\nMaximum size of log files (bytes).</translation>
+      <translation>Grense for loggstørrelse:\nMaksimal størrelse på loggfiler (byte).</translation>
     </message>
     <message>
       <source>Log Skip Duplicate:\nSave storage by avoiding writing log that is identical.</source>
-      <translation type="unfinished">Log Skip Duplicate:\nSave storage by avoiding writing log that is identical.</translation>
+      <translation>Logghopp over duplikat:\nBevar lagringsplass ved å ikke loggføre samme linjer tekst.</translation>
     </message>
     <message>
       <source>Log Sync:\nSwitch between sync (order) or async (performance).</source>
-      <translation type="unfinished">Log Sync:\nSwitch between sync (order) or async (performance).</translation>
+      <translation>Loggsynkronisering:\nBytt mellom synkron (sortering) eller asynkron (ytelse).</translation>
     </message>
     <message>
       <source>Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</source>
-      <translation type="unfinished">Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</translation>
+      <translation>Loggføringstype:\nVelg mellom wincolor eller msvc loggtyper.\nwincolor: Standardloggføring for Windows\nmsvc: Loggføring for feilsøking.</translation>
     </message>
     <message>
       <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
-      <translation type="unfinished">Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</translation>
+      <translation>Loggfilter:\nFiltrerer loggen for å kun skrive ut spesifikk informasjon.\nEksempler: «Core:Debug» «Lib.Pad:Debug Common.Filesystem:Error» «*:Critical» \nNivåer: Trace, debug, info, warning, error, critical – i denne rekkefølgen, et spesifikt nivå demper alle tidligere nivåer i lista og loggfører alle nivåer etter det.</translation>
     </message>
   </context>
   <context>
@@ -2948,7 +2948,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Select User:</source>
-      <translation type="unfinished">Select User:</translation>
+      <translation>Velg bruker:</translation>
     </message>
   </context>
   <context>
