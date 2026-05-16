@@ -46,7 +46,7 @@
     </message>
     <message>
       <source>Select Cheat File:</source>
-      <translation>Valitse Huijaustiedosto:</translation>
+      <translation>Valitse huijaustiedosto:</translation>
     </message>
     <message>
       <source>Repository:</source>
@@ -54,11 +54,11 @@
     </message>
     <message>
       <source>Download Cheats</source>
-      <translation>Lataa Huijaukset</translation>
+      <translation>Lataa huijaukset</translation>
     </message>
     <message>
       <source>Delete File</source>
-      <translation>Poista Tiedosto</translation>
+      <translation>Poista tiedosto</translation>
     </message>
     <message>
       <source>No files selected.</source>
@@ -74,7 +74,7 @@
     </message>
     <message>
       <source>Select Patch File:</source>
-      <translation>Valitse Paikkaustiedosto:</translation>
+      <translation>Valitse paikkaustiedosto:</translation>
     </message>
     <message>
       <source>Download Patches</source>
@@ -122,7 +122,7 @@
     </message>
     <message>
       <source>Success</source>
-      <translation>Onnistuminen</translation>
+      <translation>Onnistui</translation>
     </message>
     <message>
       <source>Options saved successfully.</source>
@@ -130,7 +130,7 @@
     </message>
     <message>
       <source>Invalid Source</source>
-      <translation>Virheellinen Lähde</translation>
+      <translation>Virheellinen lähde</translation>
     </message>
     <message>
       <source>The selected source is invalid.</source>
@@ -138,7 +138,7 @@
     </message>
     <message>
       <source>File Exists</source>
-      <translation>Olemassaoleva Tiedosto</translation>
+      <translation>Olemassa oleva tiedosto</translation>
     </message>
     <message>
       <source>File already exists. Do you want to replace it?</source>
@@ -154,7 +154,7 @@
     </message>
     <message>
       <source>Cheats Not Found</source>
-      <translation>Huijauksia Ei Löytynyt</translation>
+      <translation>Huijauksia ei löytynyt</translation>
     </message>
     <message>
       <source>No Cheats found for this game in this version of the selected repository,try another repository or a different version of the game.</source>
@@ -162,7 +162,7 @@
     </message>
     <message>
       <source>Cheats Downloaded Successfully</source>
-      <translation>Huijaukset Ladattu Onnistuneesti</translation>
+      <translation>Huijausten lataus onnistui</translation>
     </message>
     <message>
       <source>You have successfully downloaded the cheats for this version of the game from the selected repository. You can try downloading from another repository, if it is available it will also be possible to use it by selecting the file from the list.</source>
@@ -249,7 +249,7 @@
     <name>CheckUpdate</name>
     <message>
       <source>Auto Updater</source>
-      <translation>Automaattinen Päivitys</translation>
+      <translation>Automaattinen päivitys</translation>
     </message>
     <message>
       <source>Error</source>
@@ -273,7 +273,7 @@
     </message>
     <message>
       <source>No download URL found for the specified asset.</source>
-      <translation>Lataus-URL:ia ei löytynyt määritetylle omaisuudelle.</translation>
+      <translation>Lataus-URL-osoitetta ei löytynyt määritetylle omaisuudelle.</translation>
     </message>
     <message>
       <source>Your version is already up to date!</source>
@@ -281,11 +281,11 @@
     </message>
     <message>
       <source>Current Version</source>
-      <translation>Nykyinen Versio</translation>
+      <translation>Nykyinen versio</translation>
     </message>
     <message>
       <source>Latest Version</source>
-      <translation>Uusin Versio</translation>
+      <translation>Uusin versio</translation>
     </message>
     <message>
       <source>Do you want to update?</source>
@@ -293,11 +293,11 @@
     </message>
     <message>
       <source>Show Changelog</source>
-      <translation>Näytä Muutoshistoria</translation>
+      <translation>Näytä muutoshistoria</translation>
     </message>
     <message>
       <source>Check for Updates at Startup</source>
-      <translation>Tarkista Päivitykset Käynnistettäessä</translation>
+      <translation>Tarkista päivitykset käynnistettäessä</translation>
     </message>
     <message>
       <source>Update</source>
@@ -309,7 +309,7 @@
     </message>
     <message>
       <source>Hide Changelog</source>
-      <translation>Piilota Muutoshistoria</translation>
+      <translation>Piilota muutoshistoria</translation>
     </message>
     <message>
       <source>Changes</source>
@@ -321,7 +321,7 @@
     </message>
     <message>
       <source>Download Complete</source>
-      <translation>Lataus Valmis</translation>
+      <translation>Lataus valmis</translation>
     </message>
     <message>
       <source>The update has been downloaded, press OK to install.</source>
@@ -337,7 +337,7 @@
     </message>
     <message>
       <source>Failed to create the update script file</source>
-      <translation>Päivitysskripttitiedoston luominen epäonnistui</translation>
+      <translation>Päivitysskriptitiedoston luominen epäonnistui</translation>
     </message>
     <message>
       <source>Auto Updater - GUI</source>
@@ -352,7 +352,7 @@
     <name>CompatibilityInfoClass</name>
     <message>
       <source>Fetching compatibility data, please wait</source>
-      <translation>Haetaan yhteensopivuustietoja, odota</translation>
+      <translation>Haetaan yhteensopivuustietoja, odota hetki</translation>
     </message>
     <message>
       <source>Cancel</source>
@@ -384,7 +384,7 @@
     </message>
     <message>
       <source>Boots</source>
-      <translation>Sahat</translation>
+      <translation>Käynnistyy</translation>
     </message>
     <message>
       <source>Menus</source>
@@ -403,7 +403,7 @@
     <name>ControlSettings</name>
     <message>
       <source>Configure Controls</source>
-      <translation>Määritä Kontrollit</translation>
+      <translation>Määritä ohjainkomennot</translation>
     </message>
     <message>
       <source>D-Pad</source>
@@ -427,19 +427,19 @@
     </message>
     <message>
       <source>Left Stick</source>
-      <translation>Vasen Analogi</translation>
+      <translation>Vasen sauva</translation>
     </message>
     <message>
       <source>Config Selection</source>
-      <translation>Asetusten Valinta</translation>
+      <translation>Kokoonpanon valinta</translation>
     </message>
     <message>
       <source>Common Config</source>
-      <translation>Yleinen Asetus</translation>
+      <translation>Yleinen kokoonpano</translation>
     </message>
     <message>
       <source>Use per-game configs</source>
-      <translation>Käytä pelikohtaisia asetuksia</translation>
+      <translation>Käytä pelikohtaisia kokoonpanoja</translation>
     </message>
     <message>
       <source>Face Buttons</source>
@@ -447,7 +447,7 @@
     </message>
     <message>
       <source>Right Stick</source>
-      <translation>Oikea Analogi</translation>
+      <translation>Oikea sauva</translation>
     </message>
     <message>
       <source>Color Adjustment</source>
@@ -455,11 +455,11 @@
     </message>
     <message>
       <source>Override Lightbar Color</source>
-      <translation>Pakota Ohjaimen Valopalkin Väri</translation>
+      <translation>Korvaa ohjaimen valopalkin väri</translation>
     </message>
     <message>
       <source>Override Color</source>
-      <translation>Pakotettava Väri</translation>
+      <translation>Korvaava väri</translation>
     </message>
     <message>
       <source>Unable to Save</source>
@@ -475,11 +475,11 @@
     </message>
     <message>
       <source>Apply</source>
-      <translation>Ota Käyttöön</translation>
+      <translation>Käytä</translation>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation>Palauta Oletukset</translation>
+      <translation>Palauta oletusarvot</translation>
     </message>
     <message>
       <source>Cancel</source>
@@ -630,7 +630,7 @@
     <name>CryptoManagerDialog</name>
     <message>
       <source>Crypto Key Manager</source>
-      <translation type="unfinished">Crypto Key Manager</translation>
+      <translation>Salausavainten hallinta</translation>
     </message>
     <message>
       <source>Trophy Key: Used for trophy decryption.
@@ -660,35 +660,35 @@ On oltava kelvollinen, parillisen pituuden heksadesimaalimerkkijono.</translatio
     </message>
     <message>
       <source>Exponent1</source>
-      <translation type="unfinished">Exponent1</translation>
+      <translation>Eksponentti1</translation>
     </message>
     <message>
       <source>Exponent2</source>
-      <translation type="unfinished">Exponent2</translation>
+      <translation>Eksponentti2</translation>
     </message>
     <message>
       <source>Public Exponent</source>
-      <translation type="unfinished">Public Exponent</translation>
+      <translation>Julkinen eksponentti</translation>
     </message>
     <message>
       <source>Coefficient</source>
-      <translation type="unfinished">Coefficient</translation>
+      <translation>Kerroin</translation>
     </message>
     <message>
       <source>Modulus</source>
-      <translation type="unfinished">Modulus</translation>
+      <translation>Modulo</translation>
     </message>
     <message>
       <source>Prime 1</source>
-      <translation type="unfinished">Prime 1</translation>
+      <translation>Alkuluku 1</translation>
     </message>
     <message>
       <source>Prime 2</source>
-      <translation type="unfinished">Prime 2</translation>
+      <translation>Alkuluku 2</translation>
     </message>
     <message>
       <source>Private Exponent</source>
-      <translation type="unfinished">Private Exponent</translation>
+      <translation>Yksityinen eksponentti</translation>
     </message>
     <message>
       <source>Fake Keyset</source>
@@ -707,8 +707,8 @@ All fields must be valid hex strings with even length.</translation>
     <message>
       <source>RSA key components for debug RIF files.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for debug RIF files.
-All fields must be valid hex strings with even length.</translation>
+      <translation>RSA-avainkomponentit RIF-tiedostoille vianetsintää varten.
+Kaikissa kentissä on oltava kelvollinen, parillisen pituuden heksadesimaalimerkkijono.</translation>
     </message>
     <message>
       <source>Pkg Derived Key3</source>
@@ -717,8 +717,8 @@ All fields must be valid hex strings with even length.</translation>
     <message>
       <source>RSA key components for package decryption.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for package decryption.
-All fields must be valid hex strings with even length.</translation>
+      <translation>RSA-avainkomponentit pakettien salauksen purkuun.
+Kaikissa kentissä on oltava kelvollinen, parillisen pituuden heksadesimaalimerkkijono.</translation>
     </message>
     <message>
       <source>Close</source>
@@ -819,7 +819,7 @@ Syötä avaimet ja tallenna ne.</translation>
     </message>
     <message>
       <source>Use Per-Game configs</source>
-      <translation>Käytä Pelikohtaisia Asetuksia</translation>
+      <translation>Käytä pelikohtaisia kokoonpanoja</translation>
     </message>
     <message>
       <source>Error</source>
@@ -835,7 +835,7 @@ Syötä avaimet ja tallenna ne.</translation>
     </message>
     <message>
       <source>Save Changes</source>
-      <translation>Tallenna Muutokset</translation>
+      <translation>Tallenna muutokset</translation>
     </message>
     <message>
       <source>Do you want to save changes?</source>
@@ -1057,11 +1057,11 @@ Syötä avaimet ja tallenna ne.</translation>
     </message>
     <message>
       <source>Open Save Data Folder</source>
-      <translation>Avaa Tallennustiedostohakemisto</translation>
+      <translation>Avaa tallennustietokansio</translation>
     </message>
     <message>
       <source>Open Log Folder</source>
-      <translation>Avaa Lokihakemisto</translation>
+      <translation>Avaa lokikansio</translation>
     </message>
     <message>
       <source>Copy info...</source>
@@ -1069,7 +1069,7 @@ Syötä avaimet ja tallenna ne.</translation>
     </message>
     <message>
       <source>Copy Name</source>
-      <translation>Kopioi Nimi</translation>
+      <translation>Kopioi nimi</translation>
     </message>
     <message>
       <source>Copy Serial</source>
@@ -1093,15 +1093,15 @@ Syötä avaimet ja tallenna ne.</translation>
     </message>
     <message>
       <source>Delete Game</source>
-      <translation>Poista Peli</translation>
+      <translation>Poista peli</translation>
     </message>
     <message>
       <source>Delete Update</source>
-      <translation>Poista Päivitys</translation>
+      <translation>Poista päivitys</translation>
     </message>
     <message>
       <source>Delete DLC</source>
-      <translation>Poista Lisäsisältö</translation>
+      <translation>Poista DLC</translation>
     </message>
     <message>
       <source>Delete Trophy</source>
@@ -1133,7 +1133,7 @@ Syötä avaimet ja tallenna ne.</translation>
     </message>
     <message>
       <source>DLC</source>
-      <translation>Lisäsisältö</translation>
+      <translation>Lisäsisältö (DLC)</translation>
     </message>
     <message>
       <source>Delete %1</source>
@@ -1141,7 +1141,7 @@ Syötä avaimet ja tallenna ne.</translation>
     </message>
     <message>
       <source>Are you sure you want to delete %1&apos;s %2 directory?</source>
-      <translation>Haluatko varmasti poistaa %1n %2hakemiston?</translation>
+      <translation>Haluatko varmasti poistaa pelin %1 hakemiston %2?</translation>
     </message>
     <message>
       <source>Open Update Folder</source>
@@ -1415,7 +1415,7 @@ Syötä avaimet ja tallenna ne.</translation>
     </message>
     <message>
       <source>Placeholder</source>
-      <translation type="unfinished">Placeholder</translation>
+      <translation>Paikanpitäjä</translation>
     </message>
     <message>
       <source>Capture Screenshot</source>
@@ -1438,7 +1438,7 @@ Syötä avaimet ja tallenna ne.</translation>
     </message>
     <message>
       <source>No game is running</source>
-      <translation type="unfinished">No game is running</translation>
+      <translation>Peliä ei ole käynnissä</translation>
     </message>
   </context>
   <context>
@@ -1505,7 +1505,7 @@ Syötä avaimet ja tallenna ne.</translation>
     </message>
     <message>
       <source>Mouse to Joystick</source>
-      <translation>Hiiri Joystickinä</translation>
+      <translation>Hiiri ohjaussauvana</translation>
     </message>
     <message>
       <source>*press F7 ingame to activate</source>
@@ -1513,15 +1513,15 @@ Syötä avaimet ja tallenna ne.</translation>
     </message>
     <message>
       <source>Options</source>
-      <translation>Options</translation>
+      <translation>OPTIONS</translation>
     </message>
     <message>
       <source>Mouse Movement Parameters</source>
-      <translation>Hiiren Liikkeen Parametrit</translation>
+      <translation>Hiiren liikkeen parametrit</translation>
     </message>
     <message>
       <source>note: click Help Button/Special Keybindings for more information</source>
-      <translation>huomio: klikkaa apunappia/näppäintä saadaksesi lisää tietoa</translation>
+      <translation>Huomio: Lisätietoa saat osiosta Ohje -> Erityisnäppäinsidokset</translation>
     </message>
     <message>
       <source>Face Buttons</source>
@@ -1999,11 +1999,11 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Manage Cryptographic Keys</source>
-      <translation type="unfinished">Manage Cryptographic Keys</translation>
+      <translation>Hallinnoi salausavaimia</translation>
     </message>
     <message>
       <source>Manage Users</source>
-      <translation type="unfinished">Manage Users</translation>
+      <translation>Hallinnoi käyttäjiä</translation>
     </message>
   </context>
   <context>
@@ -2798,107 +2798,107 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Select shadPS4 Home Path</source>
-      <translation type="unfinished">Select shadPS4 Home Path</translation>
+      <translation>Valitse shadPS4:n kotipolku</translation>
     </message>
     <message>
       <source>Select the system modules folder</source>
-      <translation type="unfinished">Select the system modules folder</translation>
+      <translation>Valitse järjestelmämoduulien kansio</translation>
     </message>
     <message>
       <source>Home Folder Location (Saves, Inputs, Trophy Data)</source>
-      <translation type="unfinished">Home Folder Location (Saves, Inputs, Trophy Data)</translation>
+      <translation>Kotihakemiston sijainti (tallennukset, syötteet, trophy-tiedot)</translation>
     </message>
     <message>
       <source>Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</source>
-      <translation type="unfinished">Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</translation>
+      <translation>Kotihakemiston sijainti:\nKansio, johon tallennustiedot, trophy-tiedostot ja syöteasetukset tallennetaan kaikille käyttäjille.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the home folder.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the home folder.</translation>
+      <translation>Selaa:\nSelaa kansiota, jonka haluat asettaa kotihakemistoksi.</translation>
     </message>
     <message>
       <source>Audio</source>
-      <translation type="unfinished">Audio</translation>
+      <translation>Ääni</translation>
     </message>
     <message>
       <source>Audio Backend</source>
-      <translation type="unfinished">Audio Backend</translation>
+      <translation>Äänen taustajärjestelmä</translation>
     </message>
     <message>
       <source>Mic Device</source>
-      <translation type="unfinished">Mic Device</translation>
+      <translation>Mikrofonilaite</translation>
     </message>
     <message>
       <source>Devices</source>
-      <translation type="unfinished">Devices</translation>
+      <translation>Laitteet</translation>
     </message>
     <message>
       <source>Camera</source>
-      <translation type="unfinished">Camera</translation>
+      <translation>Kamera</translation>
     </message>
     <message>
       <source>Log Sync</source>
-      <translation type="unfinished">Log Sync</translation>
+      <translation>Lokin synkronointi</translation>
     </message>
     <message>
       <source>Log Skip Duplicate</source>
-      <translation type="unfinished">Log Skip Duplicate</translation>
+      <translation>Ohita kaksoiskappaleet lokista</translation>
     </message>
     <message>
       <source>Log Max Skip Duration</source>
-      <translation type="unfinished">Log Max Skip Duration</translation>
+      <translation>Lokin ohitusten enimmäiskesto</translation>
     </message>
     <message>
       <source> ms</source>
-      <translation type="unfinished"> ms</translation>
+      <translation> ms</translation>
     </message>
     <message>
       <source>Log Size Limit</source>
-      <translation type="unfinished">Log Size Limit</translation>
+      <translation>Lokin kokorajoitus</translation>
     </message>
     <message>
       <source> B</source>
-      <translation type="unfinished"> B</translation>
+      <translation> t</translation>
     </message>
     <message>
       <source>Log Append</source>
-      <translation type="unfinished">Log Append</translation>
+      <translation>Lokiin lisäys</translation>
     </message>
     <message>
       <source>wincolor</source>
-      <translation type="unfinished">wincolor</translation>
+      <translation>wincolor</translation>
     </message>
     <message>
       <source>msvc</source>
-      <translation type="unfinished">msvc</translation>
+      <translation>msvc</translation>
     </message>
     <message>
       <source>Log Append:\nAppend to existing logs.</source>
-      <translation type="unfinished">Log Append:\nAppend to existing logs.</translation>
+      <translation>Lokiin lisäys:\nLisää olemassa oleviin lokeihin.</translation>
     </message>
     <message>
       <source>Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</source>
-      <translation type="unfinished">Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</translation>
+      <translation>Lokin ohitusten enimmäiskesto:\nIdenttisten rivien kirjoittamisen välillä odotettava aikaväli (ms). Aktiivinen vain jos &apos;Ohita kaksoiskappaleet lokista&apos; on käytössä.</translation>
     </message>
     <message>
       <source>Log Size Limit:\nMaximum size of log files (bytes).</source>
-      <translation type="unfinished">Log Size Limit:\nMaximum size of log files (bytes).</translation>
+      <translation>Lokin kokorajoitus:\nLokitiedostojen enimmäiskoko (tavuina).</translation>
     </message>
     <message>
       <source>Log Skip Duplicate:\nSave storage by avoiding writing log that is identical.</source>
-      <translation type="unfinished">Log Skip Duplicate:\nSave storage by avoiding writing log that is identical.</translation>
+      <translation>Ohita kaksoiskappaleet lokista:\nSäästä tallennustilaa välttämällä identtisen lokin kirjoittamista.</translation>
     </message>
     <message>
       <source>Log Sync:\nSwitch between sync (order) or async (performance).</source>
-      <translation type="unfinished">Log Sync:\nSwitch between sync (order) or async (performance).</translation>
+      <translation>Lokin synkronointi:\nVaihda synkronoidun (parempi järjestys) tai asynkronisen (parempi suorituskyky) tilan välillä.</translation>
     </message>
     <message>
       <source>Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</source>
-      <translation type="unfinished">Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</translation>
+      <translation>Lokityyppi:\nValitse lokityypiksi wincolor tai msvc.\nwincolor: Oletuslokitus Windowsille\nmsvc: Lokitus vianetsintää varten</translation>
     </message>
     <message>
       <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
-      <translation type="unfinished">Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</translation>
+      <translation>Lokisuodatin:\nSuodattaa lokia tulostamaan vain määrättyä tietoa.\nEsimerkkejä: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nTasot: trace, debug, info, warning, error, critical - tässä järjestyksessä. Valittu taso vaientaa kaikki edeltävät tasot luettelossa ja kirjaa kaikki tasot sen jälkeen.</translation>
     </message>
   </context>
   <context>
@@ -2948,26 +2948,26 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Select User:</source>
-      <translation type="unfinished">Select User:</translation>
+      <translation>Valitse käyttäjä:</translation>
     </message>
   </context>
   <context>
     <name>UserManagerDialog</name>
     <message>
       <source>User Manager</source>
-      <translation type="unfinished">User Manager</translation>
+      <translation>Käyttäjähallinta</translation>
     </message>
     <message>
       <source>&amp;Create User</source>
-      <translation type="unfinished">&amp;Create User</translation>
+      <translation>&amp;Luo käyttäjä</translation>
     </message>
     <message>
       <source>&amp;Delete User</source>
-      <translation type="unfinished">&amp;Delete User</translation>
+      <translation>&amp;Poista käyttäjä</translation>
     </message>
     <message>
       <source>&amp;Rename User</source>
-      <translation type="unfinished">&amp;Rename User</translation>
+      <translation>&amp;Nimeä uudelleen</translation>
     </message>
     <message>
       <source>&amp;Set Default User</source>
@@ -2999,7 +2999,7 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>New User ID: %1</source>
-      <translation type="unfinished">New User ID: %1</translation>
+      <translation>Uusi käyttäjätunnus: %1</translation>
     </message>
     <message>
       <source>Username (3–16 chars, letters, numbers, _, -)</source>
@@ -3023,31 +3023,31 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Rename User</source>
-      <translation type="unfinished">Rename User</translation>
+      <translation>Nimeä uudelleen</translation>
     </message>
     <message>
       <source>Old Username: %1</source>
-      <translation type="unfinished">Old Username: %1</translation>
+      <translation>Vanha käyttäjänimi: %1</translation>
     </message>
     <message>
       <source>Set User Color</source>
-      <translation type="unfinished">Set User Color</translation>
+      <translation>Aseta käyttäjän väri</translation>
     </message>
     <message>
       <source>Select color:</source>
-      <translation type="unfinished">Select color:</translation>
+      <translation>Valitse väri:</translation>
     </message>
     <message>
       <source>Set Controller Port</source>
-      <translation type="unfinished">Set Controller Port</translation>
+      <translation>Aseta ohjainportti</translation>
     </message>
     <message>
       <source>Assign port (1-4) to this user:</source>
-      <translation type="unfinished">Assign port (1-4) to this user:</translation>
+      <translation>Määritä portti (1–4) tälle käyttäjälle:</translation>
     </message>
     <message>
       <source>&amp;Open User Directory</source>
-      <translation type="unfinished">&amp;Open User Directory</translation>
+      <translation>&amp;Avaa käyttäjän hakemisto</translation>
     </message>
   </context>
   <context>
