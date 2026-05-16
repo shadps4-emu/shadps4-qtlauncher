@@ -271,8 +271,6 @@ set(COMMON src/common/logging/classes.h
            src/common/aes.h
            src/common/assert.cpp
            src/common/assert.h
-           src/common/bitlocker.cpp
-           src/common/bitlocker.h
            src/common/bounded_threadsafe_queue.h
            src/common/versions.cpp
            src/common/versions.h
@@ -411,6 +409,13 @@ qt_add_executable(shadPS4QtLauncher
     src/images/shadPS4.icns
     src/main.cpp
 )
+
+if(WIN32)
+    target_sources(shadPS4QtLauncher PRIVATE
+            src/common/bitlocker.cpp
+            src/common/bitlocker.h
+    )
+endif()
 
 create_target_directory_groups(shadPS4QtLauncher)
 
