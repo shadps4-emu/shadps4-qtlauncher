@@ -63,8 +63,8 @@ void ScanDirectoryRecursively(const QString& dir, QStringList& filePaths, int cu
         }
 
         FveCleanup();
-#endif
     }
+#endif
 
     QFileInfoList entries = directory.entryInfoList(QDir::Dirs | QDir::NoDotAndDotDot);
 
