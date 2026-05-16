@@ -271,6 +271,8 @@ set(COMMON src/common/logging/classes.h
            src/common/aes.h
            src/common/assert.cpp
            src/common/assert.h
+           src/common/bitlocker.cpp
+           src/common/bitlocker.h
            src/common/bounded_threadsafe_queue.h
            src/common/versions.cpp
            src/common/versions.h

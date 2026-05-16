@@ -3,13 +3,22 @@
 
 #include <QProgressDialog>
 
+#if WIN32
+#include "common/bitlocker.h"
+#endif
+
 #include "common/path_util.h"
 #include "compatibility_info.h"
 #include "core/emulator_settings.h"
 #include "game_info.h"
 
+#include <QInputDialog>
+#include <QMessageBox>
+
 // Maximum depth to search for games in subdirectories
 const int max_recursion_depth = 5;
+
+static bool alreadyAskedBitlocker = false;
 
 void ScanDirectoryRecursively(const QString& dir, QStringList& filePaths, int current_depth = 0) {
     // Stop recursion if we've reached the maximum depth
@@ -18,6 +27,45 @@ void ScanDirectoryRecursively(const QString& dir, QStringList& filePaths, int cu
     }
 
     QDir directory(dir);
+
+#if WIN32
+    QFileInfo dirInfo(dir);
+    if (!dirInfo.isReadable() && !alreadyAskedBitlocker) {
+        QString drive = dir.split(":").first();
+
+        std::wstring wDrive = drive.toStdWString();
+        PCWSTR drivePtr = wDrive.c_str();
+
+        FveInit();
+
+        if (FveIsLocked(drivePtr)) {
+        promt:
+            bool ok;
+            QString key =
+                QInputDialog::getText(nullptr, QObject::tr("Drive Locked"),
+                                      QObject::tr("The drive %1: is locked. Please enter the "
+                                                  "BitLocker recovery key to access it:")
+                                          .arg(drive),
+                                      QLineEdit::Password, QString(), &ok);
+            if (!ok) {
+                alreadyAskedBitlocker = true;
+                return;
+            }
+
+            std::wstring wKey = key.toStdWString();
+
+            HRESULT hr = FveUnlock(drivePtr, wKey.c_str());
+            if (hr == 0x80310027) {
+                QMessageBox::critical(nullptr, QObject::tr("Error"),
+                                      QObject::tr("Incorrect recovery key. Please try again."));
+                goto promt;
+            }
+        }
+
+        FveCleanup();
+#endif
+    }
+
     QFileInfoList entries = directory.entryInfoList(QDir::Dirs | QDir::NoDotAndDotDot);
 
     for (const auto& entry : entries) {
