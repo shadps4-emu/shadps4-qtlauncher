@@ -43,8 +43,8 @@ void ScanDirectoryRecursively(const QString& dir, QStringList& filePaths, int cu
             bool ok;
             QString key =
                 QInputDialog::getText(nullptr, QObject::tr("Drive Locked"),
-                                      QObject::tr("The drive %1: is locked. Please enter the "
-                                                  "BitLocker recovery key to access it:")
+                                      QObject::tr("Drive %1: is locked. Please enter the "
+                                                  "BitLocker key to access it:")
                                           .arg(drive),
                                       QLineEdit::Password, QString(), &ok);
             if (!ok) {
