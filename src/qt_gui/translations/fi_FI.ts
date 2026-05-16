@@ -22,11 +22,11 @@
     <name>CheatsPatches</name>
     <message>
       <source>Cheats / Patches for </source>
-      <translation>Huijaukset/Paikkaukset pelille </translation>
+      <translation>Huijaukset/paikkaukset pelille </translation>
     </message>
     <message>
       <source>Cheats/Patches are experimental.\nUse with caution.\n\nDownload cheats individually by selecting the repository and clicking the download button.\nIn the Patches tab, you can download all patches at once, choose which ones you want to use, and save your selection.\n\nSince we do not develop the Cheats/Patches,\nplease report issues to the cheat author.\n\nCreated a new cheat? Visit:\n</source>
-      <translation>Huijaukset/Paikkaukset ovat kokeellisia.\nKäytä varoen.\n\nLataa huijaukset yksitellen valitsemalla repositorion ja napsauttamalla latauspainiketta.\nPaikkaukset-sivulla voit ladata kaikki paikkaukset kerralla, valita mitä haluat käyttää ja tallentaa valinnan.\n\nKoska me emme kehitä huijauksia/paikkauksia,\nilmoita ongelmista huijauksen tekijälle.\n\nLoitko uuden huijauksen? Käy osoitteessa:\n</translation>
+      <translation>Huijaukset/paikkaukset ovat kokeellisia.\nKäytä varoen.\n\nLataa huijaukset yksitellen valitsemalla repositorion ja napsauttamalla latauspainiketta.\nPaikkaukset-sivulla voit ladata kaikki paikkaukset kerralla, valita mitä haluat käyttää ja tallentaa valinnan.\n\nKoska me emme kehitä huijauksia/paikkauksia,\nilmoita ongelmista huijauksen tekijälle.\n\nLoitko uuden huijauksen? Käy osoitteessa:\n</translation>
     </message>
     <message>
       <source>No Image Available</source>
@@ -78,7 +78,7 @@
     </message>
     <message>
       <source>Download Patches</source>
-      <translation>Lataa Paikkaukset</translation>
+      <translation>Lataa paikkaukset</translation>
     </message>
     <message>
       <source>Save</source>
@@ -345,7 +345,7 @@
     </message>
     <message>
       <source>Update Available - GUI</source>
-      <translation>Päivitys Saatavilla - Käyttöliittymä</translation>
+      <translation>Päivitys saatavilla - Käyttöliittymä</translation>
     </message>
   </context>
   <context>
@@ -407,7 +407,7 @@
     </message>
     <message>
       <source>D-Pad</source>
-      <translation>D-Pad</translation>
+      <translation>Ristiohjain</translation>
     </message>
     <message>
       <source>Up</source>
@@ -443,7 +443,7 @@
     </message>
     <message>
       <source>Face Buttons</source>
-      <translation>Etunäppäimet</translation>
+      <translation>Toimintonäppäimet</translation>
     </message>
     <message>
       <source>Right Stick</source>
@@ -463,7 +463,7 @@
     </message>
     <message>
       <source>Unable to Save</source>
-      <translation>Tallentaminen Epäonnistui</translation>
+      <translation>Tallentaminen epäonnistui</translation>
     </message>
     <message>
       <source>Cannot bind axis values more than once</source>
@@ -692,17 +692,17 @@ On oltava kelvollinen, parillisen pituuden heksadesimaalimerkkijono.</translatio
     </message>
     <message>
       <source>Fake Keyset</source>
-      <translation type="unfinished">Fake Keyset</translation>
+      <translation>Väärennetty avainsarja</translation>
     </message>
     <message>
       <source>RSA key components for fake signing.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for fake signing.
-All fields must be valid hex strings with even length.</translation>
+      <translation>RSA-avainkomponentit väärennettyihin allekirjoituksiin.
+Kaikissa kentissä on oltava kelvollinen, parillisen pituuden heksadesimaalimerkkijono.</translation>
     </message>
     <message>
       <source>Debug Rif Keyset</source>
-      <translation type="unfinished">Debug Rif Keyset</translation>
+      <translation>RIF-avainsarja vianetsintään</translation>
     </message>
     <message>
       <source>RSA key components for debug RIF files.
@@ -712,7 +712,7 @@ Kaikissa kentissä on oltava kelvollinen, parillisen pituuden heksadesimaalimerk
     </message>
     <message>
       <source>Pkg Derived Key3</source>
-      <translation type="unfinished">Pkg Derived Key3</translation>
+      <translation>Paketista (pkg) johdettu avain 3</translation>
     </message>
     <message>
       <source>RSA key components for package decryption.
@@ -847,7 +847,7 @@ Syötä avaimet ja tallenna ne.</translation>
     </message>
     <message>
       <source>Do you want to reset your custom default config to the original default config?</source>
-      <translation>Haluatko nollata oletusasetuksiin tekemäsi muutokset?</translation>
+      <translation>Haluatko palauttaa tekemäsi muutokset oletusasetuksiin?</translation>
     </message>
     <message>
       <source>Do you want to reset this config to your custom default config?</source>
@@ -862,14 +862,14 @@ Syötä avaimet ja tallenna ne.</translation>
     <name>ElfViewer</name>
     <message>
       <source>Open Folder</source>
-      <translation>Avaa Hakemisto</translation>
+      <translation>Avaa kansio</translation>
     </message>
   </context>
   <context>
     <name>GameInfoClass</name>
     <message>
       <source>Loading game list, please wait :3</source>
-      <translation>Ole hyvä ja odota, ladataan pelilistaa :3</translation>
+      <translation>Ladataan peliluetteloa, odota hetki :3</translation>
     </message>
     <message>
       <source>Cancel</source>
@@ -919,7 +919,7 @@ Syötä avaimet ja tallenna ne.</translation>
     <name>GameListFrame</name>
     <message>
       <source>Icon</source>
-      <translation>Ikoni</translation>
+      <translation>Kuvake</translation>
     </message>
     <message>
       <source>Name</source>
@@ -955,7 +955,7 @@ Syötä avaimet ja tallenna ne.</translation>
     </message>
     <message>
       <source>Play Time</source>
-      <translation>Peliaika</translation>
+      <translation>Pelattu aika</translation>
     </message>
     <message>
       <source>Never Played</source>
@@ -995,7 +995,7 @@ Syötä avaimet ja tallenna ne.</translation>
     </message>
     <message>
       <source>Game can be completed with playable performance and no major glitches</source>
-      <translation>Pelillä on hyväksyttävä suorituskyky, eikä mitään suuria häiriöitä</translation>
+      <translation>Peli voidaan läpäistä hyväksyttävällä suorituskyvyllä ilman suuria häiriöitä</translation>
     </message>
     <message>
       <source>Click to see details on github</source>
@@ -1037,23 +1037,23 @@ Syötä avaimet ja tallenna ne.</translation>
     <name>GuiContextMenus</name>
     <message>
       <source>Cheats / Patches</source>
-      <translation>Huijaukset / Korjaukset</translation>
+      <translation>Huijaukset/paikkaukset</translation>
     </message>
     <message>
       <source>SFO Viewer</source>
-      <translation>SFO Selain</translation>
+      <translation>SFO-selain</translation>
     </message>
     <message>
       <source>Trophy Viewer</source>
-      <translation>Trophy Selain</translation>
+      <translation>Trophy-selain</translation>
     </message>
     <message>
       <source>Open Folder...</source>
-      <translation>Avaa Hakemisto...</translation>
+      <translation>Avaa kansio...</translation>
     </message>
     <message>
       <source>Open Game Folder</source>
-      <translation>Avaa Pelihakemisto</translation>
+      <translation>Avaa pelikansio</translation>
     </message>
     <message>
       <source>Open Save Data Folder</source>
@@ -1073,7 +1073,7 @@ Syötä avaimet ja tallenna ne.</translation>
     </message>
     <message>
       <source>Copy Serial</source>
-      <translation>Kopioi Sarjanumero</translation>
+      <translation>Kopioi sarjanumero</translation>
     </message>
     <message>
       <source>Copy Version</source>
@@ -1683,15 +1683,15 @@ Syötä avaimet ja tallenna ne.</translation>
     <name>MainWindow</name>
     <message>
       <source>Open/Add Elf Folder</source>
-      <translation>Avaa/Lisää Elf Hakemisto</translation>
+      <translation>Avaa/Lisää ELF-kansio</translation>
     </message>
     <message>
       <source>Boot Game</source>
-      <translation>Käynnistä Peli</translation>
+      <translation>Käynnistä peli</translation>
     </message>
     <message>
       <source>Check for Updates</source>
-      <translation>Tarkista Päivitykset</translation>
+      <translation>Tarkista päivitykset</translation>
     </message>
     <message>
       <source>About shadPS4</source>
@@ -1703,7 +1703,7 @@ Syötä avaimet ja tallenna ne.</translation>
     </message>
     <message>
       <source>Recent Games</source>
-      <translation>Viimeisimmät Pelit</translation>
+      <translation>Viimeisimmät pelit</translation>
     </message>
     <message>
       <source>Open shadPS4 Folder</source>
@@ -1723,11 +1723,11 @@ Syötä avaimet ja tallenna ne.</translation>
     </message>
     <message>
       <source>Show Game List</source>
-      <translation>Avaa pelilista</translation>
+      <translation>Avaa peliluettelo</translation>
     </message>
     <message>
       <source>Game List Refresh</source>
-      <translation>Päivitä pelilista</translation>
+      <translation>Päivitä peliluettelo</translation>
     </message>
     <message>
       <source>Tiny</source>
@@ -1755,7 +1755,7 @@ Syötä avaimet ja tallenna ne.</translation>
     </message>
     <message>
       <source>Elf Viewer</source>
-      <translation>Elf Selain</translation>
+      <translation>ELF-selain</translation>
     </message>
     <message>
       <source>Game Install Directory</source>
@@ -1763,11 +1763,11 @@ Syötä avaimet ja tallenna ne.</translation>
     </message>
     <message>
       <source>Download Cheats/Patches</source>
-      <translation>Lataa Huijaukset / Korjaukset</translation>
+      <translation>Lataa huijaukset/paikkaukaset</translation>
     </message>
     <message>
       <source>Dump Game List</source>
-      <translation>Kirjoita Pelilista Tiedostoon</translation>
+      <translation>Kirjoita peliluettelo tiedostoon</translation>
     </message>
     <message>
       <source>Trophy Viewer</source>
@@ -1791,11 +1791,11 @@ Syötä avaimet ja tallenna ne.</translation>
     </message>
     <message>
       <source>Game List Icons</source>
-      <translation>Pelilistan Ikonit</translation>
+      <translation>Peliluettelon kuvakkeet</translation>
     </message>
     <message>
       <source>Game List Mode</source>
-      <translation>Pelilistamuoto</translation>
+      <translation>Peliluettelon tila</translation>
     </message>
     <message>
       <source>Settings</source>
@@ -1811,7 +1811,7 @@ Syötä avaimet ja tallenna ne.</translation>
     </message>
     <message>
       <source>Help</source>
-      <translation>Apua</translation>
+      <translation>Ohje</translation>
     </message>
     <message>
       <source>Dark</source>
@@ -1839,19 +1839,19 @@ Syötä avaimet ja tallenna ne.</translation>
     </message>
     <message>
       <source>Game List</source>
-      <translation>Pelilista</translation>
+      <translation>Peliluettelo</translation>
     </message>
     <message>
       <source>Download Cheats For All Installed Games</source>
-      <translation>Lataa Huijaukset Kaikille Asennetuille Peleille</translation>
+      <translation>Lataa huijaukset kaikille asennetuille peleille</translation>
     </message>
     <message>
       <source>Download Patches For All Games</source>
-      <translation>Lataa Paikkaukset Kaikille Peleille</translation>
+      <translation>Lataa paikkaukset kaikille peleille</translation>
     </message>
     <message>
       <source>Download Complete</source>
-      <translation>Lataus Valmis</translation>
+      <translation>Lataus valmis</translation>
     </message>
     <message>
       <source>You have downloaded cheats for all the games you have installed.</source>
@@ -1859,11 +1859,11 @@ Syötä avaimet ja tallenna ne.</translation>
     </message>
     <message>
       <source>Patches Downloaded Successfully!</source>
-      <translation>Paikkaukset Ladattu Onnistuneesti!</translation>
+      <translation>Paikkausten lataus onnistui!</translation>
     </message>
     <message>
       <source>All Patches available for all games have been downloaded.</source>
-      <translation>Kaikki saatavilla olevat Paikkaukset kaikille peleille on ladattu.</translation>
+      <translation>Kaikki saatavilla olevat paikkaukset kaikille peleille on ladattu.</translation>
     </message>
     <message>
       <source>Games: </source>
@@ -1875,7 +1875,7 @@ Syötä avaimet ja tallenna ne.</translation>
     </message>
     <message>
       <source>Game Boot</source>
-      <translation>Pelin Käynnistys</translation>
+      <translation>Pelin käynnistys</translation>
     </message>
     <message>
       <source>Only one file can be selected!</source>
@@ -2014,7 +2014,7 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>General</source>
-      <translation>Yleinen</translation>
+      <translation>Yleiset</translation>
     </message>
     <message>
       <source>System</source>
@@ -2022,15 +2022,15 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Console Language</source>
-      <translation>Konsolin Kieli</translation>
+      <translation>Konsolin kieli</translation>
     </message>
     <message>
       <source>Default tab when opening settings</source>
-      <translation>Oletusvälilehti avattaessa asetuksia</translation>
+      <translation>Asetusten oletusvälilehti</translation>
     </message>
     <message>
       <source>Enable Discord Rich Presence</source>
-      <translation>Ota käyttöön Discord Rich Presence</translation>
+      <translation>Discord Rich Presence</translation>
     </message>
     <message>
       <source>Trophy</source>
@@ -2046,7 +2046,7 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Log Type</source>
-      <translation>Lokin Tyyppi</translation>
+      <translation>Lokityyppi</translation>
     </message>
     <message>
       <source>Log Filter</source>
@@ -2054,23 +2054,23 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Open Log Location</source>
-      <translation>Avaa lokin sijainti</translation>
+      <translation>Avaa lokisijainti</translation>
     </message>
     <message>
       <source>Input</source>
-      <translation>Syöttö</translation>
+      <translation>Syöte</translation>
     </message>
     <message>
       <source>Cursor</source>
-      <translation>Kursori</translation>
+      <translation>Osoitin</translation>
     </message>
     <message>
       <source>Hide Cursor</source>
-      <translation>Piilota Kursori</translation>
+      <translation>Piilota hiiren osoitin</translation>
     </message>
     <message>
       <source>Hide Cursor Idle Timeout</source>
-      <translation>Inaktiivisuuden Aikaraja Kursorin Piilottamiseen</translation>
+      <translation>Osoittimen toimettomuuden aikaraja</translation>
     </message>
     <message>
       <source>None</source>
@@ -2106,11 +2106,11 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Enable Shaders Dumping</source>
-      <translation>Ota Käyttöön Varjostinvedokset</translation>
+      <translation>Varjostimien vedostus</translation>
     </message>
     <message>
       <source>Enable NULL GPU</source>
-      <translation>Ota Käyttöön NULL GPU</translation>
+      <translation>NULL GPU</translation>
     </message>
     <message>
       <source>Enable HDR</source>
@@ -2122,7 +2122,7 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Game Folders</source>
-      <translation>Pelihakemistot</translation>
+      <translation>Pelikansiot</translation>
     </message>
     <message>
       <source>Add...</source>
@@ -2138,15 +2138,15 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Enable Debug Dumping</source>
-      <translation>Ota Käyttöön Virheenkorjausvedokset</translation>
+      <translation>Virheenkorjausvedostus</translation>
     </message>
     <message>
       <source>Enable Vulkan Validation Layers</source>
-      <translation>Ota Käyttöön Vulkan-validointikerrokset</translation>
+      <translation>Vulkan-validointikerrokset</translation>
     </message>
     <message>
       <source>Enable RenderDoc Debugging</source>
-      <translation>Ota Käyttöön RenderDoc Virheenkorjaus</translation>
+      <translation>RenderDoc-debuggaus</translation>
     </message>
     <message>
       <source>Enable Crash Diagnostics</source>
@@ -2174,15 +2174,15 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Check for Updates at Startup</source>
-      <translation>Tarkista Päivitykset Käynnistäessä</translation>
+      <translation>Tarkista päivitykset käynnistettäessä</translation>
     </message>
     <message>
       <source>Always Show Changelog</source>
-      <translation>Näytä aina muutoshistoria</translation>
+      <translation>Näytä muutoshistoria aina</translation>
     </message>
     <message>
       <source>Check for Updates</source>
-      <translation>Tarkista Päivitykset</translation>
+      <translation>Tarkista päivitykset</translation>
     </message>
     <message>
       <source>Title Music</source>
@@ -2206,23 +2206,23 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Play title music</source>
-      <translation>Soita Otsikkomusiikkia</translation>
+      <translation>Soita pelin taustamusiikki</translation>
     </message>
     <message>
       <source>Update Compatibility Database On Startup</source>
-      <translation>Päivitä Yhteensopivuustietokanta Käynnistäessä</translation>
+      <translation>Päivitä yhteensopivuustietokanta käynnistettäessä</translation>
     </message>
     <message>
       <source>Game Compatibility</source>
-      <translation>Peliyhteensopivuus</translation>
+      <translation>Pelin yhteensopivuus</translation>
     </message>
     <message>
       <source>Display Compatibility Data</source>
-      <translation>Näytä Yhteensopivuustiedot</translation>
+      <translation>Näytä yhteensopivuustiedot</translation>
     </message>
     <message>
       <source>Update Compatibility Database</source>
-      <translation>Päivitä Yhteensopivuustietokanta</translation>
+      <translation>Päivitä yhteensopivuustietokanta</translation>
     </message>
     <message>
       <source>Volume</source>
@@ -2234,11 +2234,11 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Apply</source>
-      <translation>Ota käyttöön</translation>
+      <translation>Käytä</translation>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation>Palauta Oletukset</translation>
+      <translation>Palauta oletusarvot</translation>
     </message>
     <message>
       <source>Close</source>
@@ -2246,23 +2246,23 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Point your mouse at an option to display its description.</source>
-      <translation>Siirrä hiiri vaihtoehdon päälle näyttääksesi sen kuvauksen.</translation>
+      <translation>Vie hiiren osoitin asetuksen päälle saadaksesi lisätietoja.</translation>
     </message>
     <message>
       <source>Console Language:\nSets the language that the PS4 game uses.\nIt&apos;s recommended to set this to a language the game supports, which will vary by region.</source>
-      <translation>Konsolin Kieli:\nAseta PS4-pelin käyttämä kieli.\nOn suositeltavaa asettaa tämä kieleksi, jota peli tukee, mikä vaihtelee alueittain.</translation>
+      <translation>Konsolin kieli:\nMäärittää PS4-pelin käyttämän kielen.\nOn suositeltavaa valita kieli, jota peli tukee, mikä voi vaihdella alueittain.</translation>
     </message>
     <message>
       <source>Emulator Language:\nSets the language of the emulator&apos;s user interface.</source>
-      <translation>Emulaattorin Kieli:\nAsettaa emulaattorin käyttöliittymän kielen.</translation>
+      <translation>Emulaattorin kieli:\nMäärittää emulaattorin käyttöliittymän kielen.</translation>
     </message>
     <message>
       <source>Show Splash Screen:\nShows the game&apos;s splash screen (a special image) while the game is starting.</source>
-      <translation>Näytä Aloitusnäyttö:\nNäyttää pelin aloitusnäytön (erityinen kuva) pelin käynnistyessä.</translation>
+      <translation>Näytä aloitusnäyttö:\nNäyttää pelin aloitusnäytön (erikoiskuvan) pelin käynnistyessä.</translation>
     </message>
     <message>
       <source>Enable Discord Rich Presence:\nDisplays the emulator icon and relevant information on your Discord profile.</source>
-      <translation>Ota käyttöön Discord Rich Presence:\nNäyttää emulaattorin kuvakkeen ja asiaankuuluvat tiedot Discord-profiilissasi.</translation>
+      <translation>Discord Rich Presence:\nNäyttää emulaattorin kuvakkeen ja olennaiset tiedot Discord-profiilissasi.</translation>
     </message>
     <message>
       <source>Background Image:\nControl the opacity of the game background image.</source>
@@ -2270,31 +2270,31 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Play Title Music:\nIf a game supports it, enable playing special music when selecting the game in the GUI.</source>
-      <translation>Soita Otsikkomusiikkia:\nJos peli tukee sitä, ota käyttöön erityisen musiikin soittaminen pelin valinnan yhteydessä käyttöliittymässä.</translation>
+      <translation>Soita pelin taustamusiikki:\nSoittaa taustamusiikkia valitessa peliä käyttöliittymässä, jos peli tukee sitä.</translation>
     </message>
     <message>
       <source>Disable Trophy Pop-ups:\nDisable in-game trophy notifications. Trophy progress can still be tracked using the Trophy Viewer (right-click the game in the main window).</source>
-      <translation>Poista Trophy Pop-upit Käytöstä:\nPoista trophy ilmoitukset pelin aikana. Trophyjen edistystä voi silti seurata Trophy Selainta käyttämällä (klikkaa peliä hiiren oikealla emulaattorin pääikkunassa).</translation>
+      <translation>Poista trophy-ilmoitukset:\nPoistaa trophy-ilmoitukset käytöstä pelin aikana. Trophyjen edistystä voi silti seurata Trophy-selaimella (napsauta peliä hiiren oikealla painikkella pääikkunassa).</translation>
     </message>
     <message>
       <source>Hide Cursor:\nChoose when the cursor will disappear:\nNever: You will always see the mouse.\nidle: Set a time for it to disappear after being idle.\nAlways: you will never see the mouse.</source>
-      <translation>Piilota kursori:\nValitse, milloin kursori häviää:\nEi koskaan: Näet hiiren aina.\nInaktiivinen: Aseta aika, jolloin se häviää oltuaan aktiivinen.\nAina: et koskaan näe hiirtä.</translation>
+      <translation>Piilota hiiren osoitin:\nValitse, milloin hiiren osoitin piilotetaan:\nEi koskaan: Osoitin näkyy aina.\nToimettomana: Määritä toimettomuuden aika, jonka jälkeen osoitin piilotetaan.\nAina: Osoitin ei näy koskaan.</translation>
     </message>
     <message>
       <source>Hide Idle Cursor Timeout:\nThe duration (seconds) after which the cursor that has been idle hides itself.</source>
-      <translation>Aseta aika, milloin hiiri häviää oltuaan aktiivinen.</translation>
+      <translation>Osoittimen toimettomuuden aikaraja:\nMääritä toimettomuuden aika (sekunteina), jonka jälkeen osoitin piilotetaan.</translation>
     </message>
     <message>
       <source>Display Compatibility Data:\nDisplays game compatibility information in table view. Enable &quot;Update Compatibility On Startup&quot; to get up-to-date information.</source>
-      <translation>Näytä Yhteensopivuustiedot:\nNäyttää pelien yhteensopivuustiedot listanäkymässä. Ota käyttöön &quot;Päivitä Yhteensopivuustietokanta Käynnistäessä&quot; saadaksesi ajantasaista tietoa.</translation>
+      <translation>Näytä yhteensopivuustiedot:\nNäyttää pelien yhteensopivuustiedot listanäkymässä. Ota käyttöön &quot;Päivitä yhteensopivuustietokanta käynnistettäessä&quot; saadaksesi ajantasaiset tiedot.</translation>
     </message>
     <message>
       <source>Update Compatibility On Startup:\nAutomatically update the compatibility database when shadPS4 starts.</source>
-      <translation>Päivitä Yhteensopivuustiedot Käynnistäessä:\nPäivitä yhteensopivuustiedot automaattisesti shadPS4:n käynnistyessä.</translation>
+      <translation>Päivitä yhteensopivuustiedot käynnistettäessä:\nPäivittää yhteensopivuustiedot automaattisesti shadPS4:n käynnistyessä.</translation>
     </message>
     <message>
       <source>Update Compatibility Database:\nImmediately update the compatibility database.</source>
-      <translation>Päivitä Yhteensopivuustietokanta:\nPäivitää yhteensopivuustietokannan heti.</translation>
+      <translation>Päivitä yhteensopivuustietokanta:\nPäivittää yhteensopivuustietokannan heti.</translation>
     </message>
     <message>
       <source>Never</source>
@@ -2302,7 +2302,7 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Idle</source>
-      <translation>Inaktiivinen</translation>
+      <translation>Toimettomana</translation>
     </message>
     <message>
       <source>Always</source>
@@ -2310,7 +2310,7 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Graphics Device:\nOn multiple GPU systems, select the GPU the emulator will use from the drop down list,\nor select &quot;Auto Select&quot; to automatically determine it.</source>
-      <translation>Näytönohjain:\nUseamman näytönohjaimen järjestelmissä, valitse pudotusvalikosta, mitä näytönohjainta emulaattori käyttää,\n tai valitse &quot;Auto Select&quot; automaattiseen määritykseen.</translation>
+      <translation>Näytönohjain:\nValitse, mitä näytönohjainta emulaattori käyttää useamman näytönohjaimen järjestelmissa, tai valitse &quot;Automaattinen&quot; määrittääksesi sen automaattisesti.</translation>
     </message>
     <message>
       <source>Width/Height:\nSets the size of the emulator window at launch, which can be resized during gameplay.\nThis is different from the in-game resolution.</source>
@@ -2322,7 +2322,7 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Game Folders:\nThe list of folders to check for installed games.</source>
-      <translation>Pelihakemistot:\nLista hakemistoista, joista pelejä haetaan.</translation>
+      <translation>Pelikansiot:\nLista hakemistoista, joista pelejä haetaan.</translation>
     </message>
     <message>
       <source>Add:\nAdd a folder to the list.</source>
@@ -2334,11 +2334,11 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Enable Debug Dumping:\nSaves the import and export symbols and file header information of the currently running PS4 program to a directory.</source>
-      <translation>Ota Käyttöön Virheenkorjausvedokset:\nTallentaa käynnissä olevan PS4-ohjelman tuonti- ja vientisymbolit ja tiedosto-otsikkotiedot hakemistoon.</translation>
+      <translation>Virheenkorjausvedostus:\nTallentaa käynnissä olevan PS4-ohjelman tuonti- ja vientisymbolit sekä tiedoston otsikkotiedot hakemistoon.</translation>
     </message>
     <message>
       <source>Enable RenderDoc Debugging:\nIf enabled, the emulator will provide compatibility with Renderdoc to allow capture and analysis of the currently rendered frame.</source>
-      <translation>Ota Käyttöön RenderDoc Virheenkorjaus:\nJos käytössä, emulaattori tarjoaa Renderdoc-yhteensopivuuden, mikä mahdollistaa renderöidyn kehyksen tallennuksen ja analysoinnin.</translation>
+      <translation>RenderDoc-debuggaus:\nKun tämä on käytössä, emulaattori tarjoaa RenderDoc-yhteensopivuuden, mikä mahdollistaa renderöidyn kuvan tallennuksen ja analysoinnin.</translation>
     </message>
     <message>
       <source>Collect Shaders:\nYou need this enabled to edit shaders with the debug menu (Ctrl + F10).</source>
@@ -2924,7 +2924,7 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     <name>TrophyViewer</name>
     <message>
       <source>Trophy Viewer</source>
-      <translation>Trophy Selain</translation>
+      <translation>Trophy-selain</translation>
     </message>
     <message>
       <source>Select Game:</source>
