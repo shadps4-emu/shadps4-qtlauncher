@@ -599,10 +599,8 @@ void MainWindow::CreateConnects() {
     });
 #endif
 
-    connect(ui->aboutAct, &QAction::triggered, this, [this]() {
-        auto aboutDialog = new AboutDialog(m_gui_settings, this);
-        aboutDialog->exec();
-    });
+    connect(ui->aboutAct, &QAction::triggered, this,
+            [this]() { auto aboutDialog = new AboutDialog(this); });
 
     connect(ui->configureHotkeys, &QAction::triggered, this, [this]() {
         auto hotkeyDialog =

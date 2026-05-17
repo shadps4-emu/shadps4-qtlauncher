@@ -37,10 +37,13 @@
         <file>images/fullscreen_icon.png</file>
         <file>images/refreshlist_icon.png</file>
         <file>images/favorite_icon.png</file>
-	<file>images/trophy_icon.png</file>
-	<file>images/hotkey.png</file>
-	<file>images/game_settings.png</file>
-	<file>images/key.png</file>
-	<file>images/users.png</file>
+        <file>images/trophy_icon.png</file>
+        <file>images/hotkey.png</file>
+        <file>images/game_settings.png</file>
+        <file>images/key.png</file>
+        <file>images/users.png</file>
+        <file>qml/AboutDialog.qml</file>
+        <file>qml/AboutIcon.qml</file>
+        <file>../LICENSE</file>
     </qresource>
 </RCC>
