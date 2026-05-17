@@ -621,192 +621,192 @@
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>提示：按滑鼠右鍵取消對應輸入</translation>
     </message>
   </context>
   <context>
     <name>CryptoManagerDialog</name>
     <message>
       <source>Crypto Key Manager</source>
-      <translation type="unfinished">Crypto Key Manager</translation>
+      <translation>加密金鑰管理程式</translation>
     </message>
     <message>
       <source>Trophy Key: Used for trophy decryption.
 Must be a valid hex string with even length.</source>
-      <translation type="unfinished">Trophy Key: Used for trophy decryption.
-Must be a valid hex string with even length.</translation>
+      <translation>獎盃金鑰：用於獎盃解密。
+必須是長度為偶數的有效十六進制字串。</translation>
     </message>
     <message>
       <source>Enter Trophy Key</source>
-      <translation type="unfinished">Enter Trophy Key</translation>
+      <translation>輸入獎盃金鑰</translation>
     </message>
     <message>
       <source>Trophy Key:</source>
-      <translation type="unfinished">Trophy Key:</translation>
+      <translation>獎盃金鑰：</translation>
     </message>
     <message>
       <source>Status: Not loaded</source>
-      <translation type="unfinished">Status: Not loaded</translation>
+      <translation>狀態：未載入</translation>
     </message>
     <message>
       <source>Trophy Key</source>
-      <translation type="unfinished">Trophy Key</translation>
+      <translation>獎盃金鑰</translation>
     </message>
     <message>
       <source>Enter %1</source>
-      <translation type="unfinished">Enter %1</translation>
+      <translation>輸入%1</translation>
     </message>
     <message>
       <source>Exponent1</source>
-      <translation type="unfinished">Exponent1</translation>
+      <translation>指數1</translation>
     </message>
     <message>
       <source>Exponent2</source>
-      <translation type="unfinished">Exponent2</translation>
+      <translation>指數2</translation>
     </message>
     <message>
       <source>Public Exponent</source>
-      <translation type="unfinished">Public Exponent</translation>
+      <translation>公開指數</translation>
     </message>
     <message>
       <source>Coefficient</source>
-      <translation type="unfinished">Coefficient</translation>
+      <translation>係數</translation>
     </message>
     <message>
       <source>Modulus</source>
-      <translation type="unfinished">Modulus</translation>
+      <translation>模數</translation>
     </message>
     <message>
       <source>Prime 1</source>
-      <translation type="unfinished">Prime 1</translation>
+      <translation>質數1</translation>
     </message>
     <message>
       <source>Prime 2</source>
-      <translation type="unfinished">Prime 2</translation>
+      <translation>質數2</translation>
     </message>
     <message>
       <source>Private Exponent</source>
-      <translation type="unfinished">Private Exponent</translation>
+      <translation>私密指數</translation>
     </message>
     <message>
       <source>Fake Keyset</source>
-      <translation type="unfinished">Fake Keyset</translation>
+      <translation>偽造金鑰集</translation>
     </message>
     <message>
       <source>RSA key components for fake signing.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for fake signing.
-All fields must be valid hex strings with even length.</translation>
+      <translation>用於偽造簽章的 RSA 密鑰元件。
+所有欄位必須是偶數長度的有效十六進位字串。</translation>
     </message>
     <message>
       <source>Debug Rif Keyset</source>
-      <translation type="unfinished">Debug Rif Keyset</translation>
+      <translation>偵錯 Rif 金鑰集</translation>
     </message>
     <message>
       <source>RSA key components for debug RIF files.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for debug RIF files.
-All fields must be valid hex strings with even length.</translation>
+      <translation>用於偵錯 RIF 檔案的 RSA 金鑰元件。
+所有欄位都必須是有效且長度為偶數的十六進位字串。</translation>
     </message>
     <message>
       <source>Pkg Derived Key3</source>
-      <translation type="unfinished">Pkg Derived Key3</translation>
+      <translation>套件衍生金鑰3</translation>
     </message>
     <message>
       <source>RSA key components for package decryption.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for package decryption.
-All fields must be valid hex strings with even length.</translation>
+      <translation>用於套件解密的 RSA 金鑰元件。
+所有欄位都必須是偶數長度的有效十六進位字串。</translation>
     </message>
     <message>
       <source>Close</source>
-      <translation type="unfinished">Close</translation>
+      <translation>關閉</translation>
     </message>
     <message>
       <source>Warning</source>
-      <translation type="unfinished">Warning</translation>
+      <translation>警告</translation>
     </message>
     <message>
       <source>No key file found or failed to load.
 Please enter your keys and save them.</source>
-      <translation type="unfinished">No key file found or failed to load.
-Please enter your keys and save them.</translation>
+      <translation>找不到金鑰檔案或載入失敗。
+請輸入您的金鑰並儲存。</translation>
     </message>
     <message>
       <source>Validation Error</source>
-      <translation type="unfinished">Validation Error</translation>
+      <translation>驗證錯誤</translation>
     </message>
     <message>
       <source>Success</source>
-      <translation type="unfinished">Success</translation>
+      <translation>成功</translation>
     </message>
     <message>
       <source>Keys saved successfully!</source>
-      <translation type="unfinished">Keys saved successfully!</translation>
+      <translation>金鑰儲存成功！</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>錯誤</translation>
     </message>
     <message>
       <source>Failed to save keys!</source>
-      <translation type="unfinished">Failed to save keys!</translation>
+      <translation>無法儲存金鑰！</translation>
     </message>
     <message>
       <source>Status: All fields empty</source>
-      <translation type="unfinished">Status: All fields empty</translation>
+      <translation>狀態：所有欄位均為空</translation>
     </message>
     <message>
       <source>Status: Invalid hex values</source>
-      <translation type="unfinished">Status: Invalid hex values</translation>
+      <translation>狀態：無效的十六進位值</translation>
     </message>
     <message>
       <source>Status: Incomplete</source>
-      <translation type="unfinished">Status: Incomplete</translation>
+      <translation>狀態：未完成</translation>
     </message>
     <message>
       <source>Status: Valid</source>
-      <translation type="unfinished">Status: Valid</translation>
+      <translation>狀態：有效</translation>
     </message>
     <message>
       <source>Invalid File</source>
-      <translation type="unfinished">Invalid File</translation>
+      <translation>無效的檔案</translation>
     </message>
     <message>
       <source>Only JSON files are supported.</source>
-      <translation type="unfinished">Only JSON files are supported.</translation>
+      <translation>僅支援 JSON 檔案。</translation>
     </message>
     <message>
       <source>Unable to open file.</source>
-      <translation type="unfinished">Unable to open file.</translation>
+      <translation>無法開啟檔案。</translation>
     </message>
     <message>
       <source>JSON Error</source>
-      <translation type="unfinished">JSON Error</translation>
+      <translation>JSON 錯誤</translation>
     </message>
     <message>
       <source>Invalid JSON format.</source>
-      <translation type="unfinished">Invalid JSON format.</translation>
+      <translation>無效的JSON格式。</translation>
     </message>
     <message>
       <source>Keys successfully loaded from JSON!</source>
-      <translation type="unfinished">Keys successfully loaded from JSON!</translation>
+      <translation>成功從 JSON 載入金鑰！</translation>
     </message>
     <message>
       <source>Trophy Key contains invalid hex or has odd length.</source>
-      <translation type="unfinished">Trophy Key contains invalid hex or has odd length.</translation>
+      <translation>獎盃金鑰包含無效的十六進位數或長度為奇數。</translation>
     </message>
     <message>
       <source>%1 contains invalid hex or has odd length.</source>
-      <translation type="unfinished">%1 contains invalid hex or has odd length.</translation>
+      <translation>%1 包含無效的十六進位值或長度為奇數。</translation>
     </message>
     <message>
       <source>Load Key</source>
-      <translation type="unfinished">Load Key</translation>
+      <translation>載入金鑰</translation>
     </message>
     <message>
       <source>Save Key</source>
-      <translation type="unfinished">Save Key</translation>
+      <translation>儲存金鑰</translation>
     </message>
   </context>
   <context>
@@ -1279,23 +1279,23 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Delete Shader Cache</source>
-      <translation type="unfinished">Delete Shader Cache</translation>
+      <translation>刪除著色器暫存檔</translation>
     </message>
     <message>
       <source>This game does not have any saved Shader Cache to delete!</source>
-      <translation type="unfinished">This game does not have any saved Shader Cache to delete!</translation>
+      <translation>此遊戲沒有可刪除的著色器暫存檔！</translation>
     </message>
     <message>
       <source>Shader Cache</source>
-      <translation type="unfinished">Shader Cache</translation>
+      <translation>著色器暫存檔</translation>
     </message>
     <message>
       <source>This game has no save folder to open!</source>
-      <translation type="unfinished">This game has no save folder to open!</translation>
+      <translation>此遊戲沒有可開啟的遊戲存檔資料夾！</translation>
     </message>
     <message>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
-      <translation type="unfinished">A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</translation>
+      <translation>使用獎盃檢視器需要一個獎盃金鑰。您可以點擊「設定」-「管理加密金鑰」來輸入此金鑰。</translation>
     </message>
   </context>
   <context>
@@ -1395,35 +1395,35 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>提示：按滑鼠右鍵取消對應輸入</translation>
     </message>
     <message>
       <source>Volume Up</source>
-      <translation type="unfinished">Volume Up</translation>
+      <translation>提高音量</translation>
     </message>
     <message>
       <source>Volume Down</source>
-      <translation type="unfinished">Volume Down</translation>
+      <translation>降低音量</translation>
     </message>
     <message>
       <source>Hotkeys</source>
-      <translation type="unfinished">Hotkeys</translation>
+      <translation>快捷鍵</translation>
     </message>
     <message>
       <source>Placeholder</source>
-      <translation type="unfinished">Placeholder</translation>
+      <translation>佔位符</translation>
     </message>
     <message>
       <source>Capture Screenshot</source>
-      <translation type="unfinished">Capture Screenshot</translation>
+      <translation>螢幕擷取畫面</translation>
     </message>
     <message>
       <source>Capture Screenshot w/ Overlays</source>
-      <translation type="unfinished">Capture Screenshot w/ Overlays</translation>
+      <translation>擷取附帶疊加層的螢幕截圖</translation>
     </message>
     <message>
       <source>Open Emulator Settings</source>
-      <translation type="unfinished">Open Emulator Settings</translation>
+      <translation>開啟模擬器設定</translation>
     </message>
   </context>
   <context>
@@ -1434,7 +1434,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>No game is running</source>
-      <translation type="unfinished">No game is running</translation>
+      <translation>沒有遊戲在執行</translation>
     </message>
   </context>
   <context>
@@ -1635,7 +1635,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>提示：按滑鼠右鍵取消對應輸入</translation>
     </message>
   </context>
   <context>
@@ -1993,11 +1993,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Manage Cryptographic Keys</source>
-      <translation type="unfinished">Manage Cryptographic Keys</translation>
+      <translation>管理加密金鑰</translation>
     </message>
     <message>
       <source>Manage Users</source>
-      <translation type="unfinished">Manage Users</translation>
+      <translation>管理使用者</translation>
     </message>
   </context>
   <context>
@@ -2756,143 +2756,143 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable Shader Cache</source>
-      <translation type="unfinished">Enable Shader Cache</translation>
+      <translation>啟用著色器暫存檔</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file</source>
-      <translation type="unfinished">Compress the Shader Cache files into a zip file</translation>
+      <translation>將著色器暫存檔壓縮成 zip 檔案</translation>
     </message>
     <message>
       <source>Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</source>
-      <translation type="unfinished">Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</translation>
+      <translation>啟用著色器暫存檔：\n儲存已編譯的著色器以避免重新編譯，減少延遲現象。</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
-      <translation type="unfinished">Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</translation>
+      <translation>將著色器暫存檔壓縮成一個 zip 檔案：\n著色器暫存檔現在儲存在單一的 zip 檔案中，而不是多個獨立的檔案裡。</translation>
     </message>
     <message>
       <source>Readbacks Mode</source>
-      <translation type="unfinished">Readbacks Mode</translation>
+      <translation>回溯模式</translation>
     </message>
     <message>
       <source>Disabled</source>
-      <translation type="unfinished">Disabled</translation>
+      <translation>已停用</translation>
     </message>
     <message>
       <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
-      <translation type="unfinished">Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</translation>
+      <translation>回溯：\n啟用 GPU 記憶體回溯和改寫。\n這是某些遊戲正常運作所需的。\n可能會引發 穩定性問題 及/或 效能問題。</translation>
     </message>
     <message>
       <source>Relaxed</source>
-      <translation type="unfinished">Relaxed</translation>
+      <translation>寛鬆</translation>
     </message>
     <message>
       <source>Precise</source>
-      <translation type="unfinished">Precise</translation>
+      <translation>精確</translation>
     </message>
     <message>
       <source>Select shadPS4 Home Path</source>
-      <translation type="unfinished">Select shadPS4 Home Path</translation>
+      <translation>選取 shadPS4 的主目錄路徑</translation>
     </message>
     <message>
       <source>Select the system modules folder</source>
-      <translation type="unfinished">Select the system modules folder</translation>
+      <translation>選取系統模組資料夾</translation>
     </message>
     <message>
       <source>Home Folder Location (Saves, Inputs, Trophy Data)</source>
-      <translation type="unfinished">Home Folder Location (Saves, Inputs, Trophy Data)</translation>
+      <translation>主資料夾位置 (遊戲存檔、輸入組態、獎盃資料)</translation>
     </message>
     <message>
       <source>Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</source>
-      <translation type="unfinished">Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</translation>
+      <translation>主資料夾位置：\n儲存所有使用者遊戲存檔、獎盃檔案和輸入組態的資料夾。</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the home folder.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the home folder.</translation>
+      <translation>瀏覽：\n瀏覽並設定一個資料夾作為主資料夾。</translation>
     </message>
     <message>
       <source>Audio</source>
-      <translation type="unfinished">Audio</translation>
+      <translation>音訊</translation>
     </message>
     <message>
       <source>Audio Backend</source>
-      <translation type="unfinished">Audio Backend</translation>
+      <translation>音訊後端</translation>
     </message>
     <message>
       <source>Mic Device</source>
-      <translation type="unfinished">Mic Device</translation>
+      <translation>麥克風裝置</translation>
     </message>
     <message>
       <source>Devices</source>
-      <translation type="unfinished">Devices</translation>
+      <translation>裝置</translation>
     </message>
     <message>
       <source>Camera</source>
-      <translation type="unfinished">Camera</translation>
+      <translation>相機</translation>
     </message>
     <message>
       <source>Log Sync</source>
-      <translation type="unfinished">Log Sync</translation>
+      <translation>日誌記錄同步</translation>
     </message>
     <message>
       <source>Log Skip Duplicate</source>
-      <translation type="unfinished">Log Skip Duplicate</translation>
+      <translation>日誌記錄跳過重複</translation>
     </message>
     <message>
       <source>Log Max Skip Duration</source>
-      <translation type="unfinished">Log Max Skip Duration</translation>
+      <translation>日誌記錄最大跳過時間間隔</translation>
     </message>
     <message>
       <source> ms</source>
-      <translation type="unfinished"> ms</translation>
+      <translation> 毫秒</translation>
     </message>
     <message>
       <source>Log Size Limit</source>
-      <translation type="unfinished">Log Size Limit</translation>
+      <translation>日誌記錄大小限制</translation>
     </message>
     <message>
       <source> B</source>
-      <translation type="unfinished"> B</translation>
+      <translation> B</translation>
     </message>
     <message>
       <source>Log Append</source>
-      <translation type="unfinished">Log Append</translation>
+      <translation>記錄記錄附加</translation>
     </message>
     <message>
       <source>wincolor</source>
-      <translation type="unfinished">wincolor</translation>
+      <translation>wincolor</translation>
     </message>
     <message>
       <source>msvc</source>
-      <translation type="unfinished">msvc</translation>
+      <translation>msvc</translation>
     </message>
     <message>
       <source>Log Append:\nAppend to existing logs.</source>
-      <translation type="unfinished">Log Append:\nAppend to existing logs.</translation>
+      <translation>日誌紀錄附加：\n附加至現有日誌記錄。</translation>
     </message>
     <message>
       <source>Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</source>
-      <translation type="unfinished">Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</translation>
+      <translation>日誌記錄最大跳過時間間隔：\n不寫入相同行的間隔時間 (毫秒) - 僅在啟用&apos;日誌記錄跳過重複項目&apos;時生效。</translation>
     </message>
     <message>
       <source>Log Size Limit:\nMaximum size of log files (bytes).</source>
-      <translation type="unfinished">Log Size Limit:\nMaximum size of log files (bytes).</translation>
+      <translation>日誌記錄大小上限：\n日誌記錄檔案的最大大小(位元組)。</translation>
     </message>
     <message>
       <source>Log Skip Duplicate:\nSave storage by avoiding writing log that is identical.</source>
-      <translation type="unfinished">Log Skip Duplicate:\nSave storage by avoiding writing log that is identical.</translation>
+      <translation>日誌記錄跳過重複：\n儲存日誌記錄時，若內容與之前相同則跳過寫入，以節省儲存空間。</translation>
     </message>
     <message>
       <source>Log Sync:\nSwitch between sync (order) or async (performance).</source>
-      <translation type="unfinished">Log Sync:\nSwitch between sync (order) or async (performance).</translation>
+      <translation>日誌記錄同步：\n在同步(順序)或非同步(效能)之間切換。</translation>
     </message>
     <message>
       <source>Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</source>
-      <translation type="unfinished">Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</translation>
+      <translation>日誌記錄類型：\n請在 wincolor 或 msvc 記錄類型之間選擇。\nwincolor：適用於 Windows 的預設記錄\nmsvc：適用於偵錯的記錄</translation>
     </message>
     <message>
       <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
-      <translation type="unfinished">Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</translation>
+      <translation>日誌記錄過濾器：\n過濾日誌記錄以僅列出特定資訊。 \n範例：{[=&quot;-=]}Core:Debug{[=&quot;-=]} {[=&quot;-=]}Lib.Pad:Debug Common.Filesystem:Error{[=&quot;-=]} {[=&quot;-=]}*:Critical{[=&quot;-=]}\n等級：Trace、Debug、Info、Warning、Error、Critical、Off - 按照此順序，指定等級之後會不列出列表中等級低於其的所有資訊，並記錄列出等級高於其/同級的資訊。</translation>
     </message>
   </context>
   <context>
@@ -2942,106 +2942,106 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Select User:</source>
-      <translation type="unfinished">Select User:</translation>
+      <translation>選取使用者：</translation>
     </message>
   </context>
   <context>
     <name>UserManagerDialog</name>
     <message>
       <source>User Manager</source>
-      <translation type="unfinished">User Manager</translation>
+      <translation>使用者管理程式</translation>
     </message>
     <message>
       <source>&amp;Create User</source>
-      <translation type="unfinished">&amp;Create User</translation>
+      <translation>&amp;建立使用者</translation>
     </message>
     <message>
       <source>&amp;Delete User</source>
-      <translation type="unfinished">&amp;Delete User</translation>
+      <translation>&amp;刪除使用者</translation>
     </message>
     <message>
       <source>&amp;Rename User</source>
-      <translation type="unfinished">&amp;Rename User</translation>
+      <translation>&amp;重新命名使用者</translation>
     </message>
     <message>
       <source>&amp;Set Default User</source>
-      <translation type="unfinished">&amp;Set Default User</translation>
+      <translation>&amp;設定預設使用者</translation>
     </message>
     <message>
       <source>&amp;Set Color</source>
-      <translation type="unfinished">&amp;Set Color</translation>
+      <translation>&amp;設定顏色</translation>
     </message>
     <message>
       <source>&amp;Set Controller Port</source>
-      <translation type="unfinished">&amp;Set Controller Port</translation>
+      <translation>&amp;設定控制器連接埠</translation>
     </message>
     <message>
       <source>&amp;Close</source>
-      <translation type="unfinished">&amp;Close</translation>
+      <translation>&amp;關閉</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>錯誤</translation>
     </message>
     <message>
       <source>Cannot add more users.</source>
-      <translation type="unfinished">Cannot add more users.</translation>
+      <translation>無法新增更多使用者。</translation>
     </message>
     <message>
       <source>Create New User</source>
-      <translation type="unfinished">Create New User</translation>
+      <translation>建立新使用者</translation>
     </message>
     <message>
       <source>New User ID: %1</source>
-      <translation type="unfinished">New User ID: %1</translation>
+      <translation>新使用者 ID：%1</translation>
     </message>
     <message>
       <source>Username (3–16 chars, letters, numbers, _, -)</source>
-      <translation type="unfinished">Username (3–16 chars, letters, numbers, _, -)</translation>
+      <translation>使用者名稱 (3–16個字元，包含字母、數字、_、-)</translation>
     </message>
     <message>
       <source>Invalid Username</source>
-      <translation type="unfinished">Invalid Username</translation>
+      <translation>無效的使用者名稱</translation>
     </message>
     <message>
       <source>Username must be 3–16 chars and valid.</source>
-      <translation type="unfinished">Username must be 3–16 chars and valid.</translation>
+      <translation>使用者名稱必須是 3 到 16 個字元而且是有效字元。</translation>
     </message>
     <message>
       <source>Delete Confirmation</source>
-      <translation type="unfinished">Delete Confirmation</translation>
+      <translation>刪除確認</translation>
     </message>
     <message>
       <source>Delete user ID %1?</source>
-      <translation type="unfinished">Delete user ID %1?</translation>
+      <translation>確定要刪除使用者 ID %1 嗎？</translation>
     </message>
     <message>
       <source>Rename User</source>
-      <translation type="unfinished">Rename User</translation>
+      <translation>重新命名使用者</translation>
     </message>
     <message>
       <source>Old Username: %1</source>
-      <translation type="unfinished">Old Username: %1</translation>
+      <translation>舊使用者名稱：%1</translation>
     </message>
     <message>
       <source>Set User Color</source>
-      <translation type="unfinished">Set User Color</translation>
+      <translation>設定使用者顏色</translation>
     </message>
     <message>
       <source>Select color:</source>
-      <translation type="unfinished">Select color:</translation>
+      <translation>選取顏色：</translation>
     </message>
     <message>
       <source>Set Controller Port</source>
-      <translation type="unfinished">Set Controller Port</translation>
+      <translation>設定控制器連接埠</translation>
     </message>
     <message>
       <source>Assign port (1-4) to this user:</source>
-      <translation type="unfinished">Assign port (1-4) to this user:</translation>
+      <translation>將連接埠(1-4)分配給此使用者：</translation>
     </message>
     <message>
       <source>&amp;Open User Directory</source>
-      <translation type="unfinished">&amp;Open User Directory</translation>
+      <translation>&amp;開啟使用者目錄</translation>
     </message>
   </context>
   <context>
@@ -3301,11 +3301,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release.</source>
-      <translation type="unfinished">Unable to get hash of latest pre-release.</translation>
+      <translation>無法取得最新預覽版的雜湊值。</translation>
     </message>
     <message>
       <source>Downloading Pre-release (Nightly), please wait...</source>
-      <translation type="unfinished">Downloading Pre-release (Nightly), please wait...</translation>
+      <translation>正在下載預覽版 (Nightly)，請稍候....</translation>
     </message>
   </context>
   <context>
