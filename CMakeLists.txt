@@ -410,6 +410,13 @@ qt_add_executable(shadPS4QtLauncher
     src/main.cpp
 )
 
+if(WIN32)
+    target_sources(shadPS4QtLauncher PRIVATE
+            src/common/bitlocker.cpp
+            src/common/bitlocker.h
+    )
+endif()
+
 create_target_directory_groups(shadPS4QtLauncher)
 
 target_link_libraries(shadPS4QtLauncher PRIVATE Vulkan::Headers fmt::fmt toml11::toml11 SDL3::SDL3 volk_headers spdlog::spdlog)
