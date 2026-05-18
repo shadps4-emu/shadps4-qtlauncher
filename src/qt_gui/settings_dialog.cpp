@@ -240,6 +240,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
     if (!SDL_Init(SDL_INIT_AUDIO)) {
         LOG_ERROR(Config, "SDL_INIT_AUDIO failed: {}", SDL_GetError());
     }
+    ui->audioBackendComboBox->setCurrentIndex(EmulatorSettings.GetAudioBackend());
     RefreshAudioDevices();
 
     InitializeEmulatorLanguages();
