@@ -161,7 +161,7 @@ int main(int argc, char* argv[]) {
     }
 
     // Initialize the main window
-    MainWindow* m_main_window = new MainWindow(nullptr);
+    MainWindow* m_main_window = new MainWindow(nullptr, !show_gui);
     if ((has_command_line_argument && show_gui) || !has_command_line_argument) {
         m_main_window->Init();
     }

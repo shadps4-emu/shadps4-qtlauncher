@@ -28,7 +28,7 @@ signals:
     void WindowResized(QResizeEvent* event);
 
 public:
-    explicit MainWindow(QWidget* parent = nullptr);
+    explicit MainWindow(QWidget* parent = nullptr, bool log_to_terminal = false);
     ~MainWindow();
     bool Init();
     void InstallDirectory();
@@ -42,7 +42,7 @@ public:
     void RestartGame();
     void LoadVersionComboBox();
     bool showLabels;
-    std::shared_ptr<IpcClient> m_ipc_client = std::make_shared<IpcClient>();
+    std::shared_ptr<IpcClient> m_ipc_client;
 
 private Q_SLOTS:
     void ConfigureGuiFromSettings();

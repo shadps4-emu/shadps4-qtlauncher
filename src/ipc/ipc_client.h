@@ -18,7 +18,7 @@ signals:
     void LogEntrySent(QString entry, QColor textColor);
 
 public:
-    explicit IpcClient(QObject* parent = nullptr);
+    explicit IpcClient(QObject* parent = nullptr, bool log_to_terminal = false);
     void startEmulator(const QFileInfo& exe, const QStringList& args,
                        const QString& workDir = QString(), bool disable_ipc = false);
     void startGame();
@@ -71,4 +71,5 @@ private:
 
     ParsingState parsingState;
     int argsCounter;
+    bool m_log_to_terminal;
 };
