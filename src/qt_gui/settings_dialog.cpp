@@ -1183,18 +1183,19 @@ void SettingsDialog::UpdateSettings(bool is_specific) {
     const std::string backend = ui->audioBackendComboBox->currentText().toStdString();
     EmulatorSettings.SetAudioBackend(ui->audioBackendComboBox->currentIndex());
     if (backend == "SDL") {
-        EmulatorSettings.SetSDLMainOutputDevice(ui->GenAudioComboBox->currentText().toStdString(),
-                                                is_specific);
-        EmulatorSettings.SetSDLPadSpkOutputDevice(ui->DsAudioComboBox->currentText().toStdString(),
-                                                  is_specific);
-        EmulatorSettings.SetSDLMicDevice(ui->micComboBox->currentText().toStdString(), is_specific);
+        EmulatorSettings.SetSDLMainOutputDevice(
+            ui->GenAudioComboBox->currentData().toString().toStdString(), is_specific);
+        EmulatorSettings.SetSDLPadSpkOutputDevice(
+            ui->DsAudioComboBox->currentData().toString().toStdString(), is_specific);
+        EmulatorSettings.SetSDLMicDevice(
+            ui->micComboBox->currentData().toString().toStdString(), is_specific);
     } else if (backend == "OpenAL") {
         EmulatorSettings.SetOpenALMainOutputDevice(
-            ui->GenAudioComboBox->currentText().toStdString(), is_specific);
+            ui->GenAudioComboBox->currentData().toString().toStdString(), is_specific);
         EmulatorSettings.SetOpenALPadSpkOutputDevice(
-            ui->DsAudioComboBox->currentText().toStdString(), is_specific);
-        EmulatorSettings.SetOpenALMicDevice(ui->micComboBox->currentText().toStdString(),
-                                            is_specific);
+            ui->DsAudioComboBox->currentData().toString().toStdString(), is_specific);
+        EmulatorSettings.SetOpenALMicDevice(
+            ui->micComboBox->currentData().toString().toStdString(), is_specific);
     }
 
     // Entries with no game-specific settings
