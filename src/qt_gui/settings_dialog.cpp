@@ -803,19 +803,18 @@ void SettingsDialog::LoadValuesFromConfig() {
     const QString backend = ui->audioBackendComboBox->currentText();
 
     if (backend == "SDL") {
-        ui->GenAudioComboBox->setCurrentIndex(ui->GenAudioComboBox->findData(
-            QString::fromStdString(EmulatorSettings.GetSDLMainOutputDevice())));
-        ui->DsAudioComboBox->setCurrentIndex(ui->DsAudioComboBox->findData(
-            QString::fromStdString(EmulatorSettings.GetSDLPadSpkOutputDevice())));
-        ui->micComboBox->setCurrentIndex(
-            ui->micComboBox->findData(QString::fromStdString(EmulatorSettings.GetSDLMicDevice())));
+        ui->GenAudioComboBox->setCurrentText(
+            QString::fromStdString(EmulatorSettings.GetSDLMainOutputDevice()));
+        ui->DsAudioComboBox->setCurrentText(
+            QString::fromStdString(EmulatorSettings.GetSDLPadSpkOutputDevice()));
+        ui->micComboBox->setCurrentText(QString::fromStdString(EmulatorSettings.GetSDLMicDevice()));
     } else if (backend == "OpenAL") {
-        ui->GenAudioComboBox->setCurrentIndex(ui->GenAudioComboBox->findData(
-            QString::fromStdString(EmulatorSettings.GetOpenALMainOutputDevice())));
-        ui->DsAudioComboBox->setCurrentIndex(ui->DsAudioComboBox->findData(
-            QString::fromStdString(EmulatorSettings.GetOpenALPadSpkOutputDevice())));
-        ui->micComboBox->setCurrentIndex(ui->micComboBox->findData(
-            QString::fromStdString(EmulatorSettings.GetOpenALMicDevice())));
+        ui->GenAudioComboBox->setCurrentText(
+            QString::fromStdString(EmulatorSettings.GetOpenALMainOutputDevice()));
+        ui->DsAudioComboBox->setCurrentText(
+            QString::fromStdString(EmulatorSettings.GetOpenALPadSpkOutputDevice()));
+        ui->micComboBox->setCurrentText(
+            QString::fromStdString(EmulatorSettings.GetOpenALMicDevice()));
     }
 
     QString chooseHomeTab = m_gui_settings->GetValue(gui::gen_homeTab).toString();
@@ -1399,19 +1398,18 @@ void SettingsDialog::RefreshAudioDevices() {
     }
 
     if (backend == "SDL") {
-        ui->GenAudioComboBox->setCurrentIndex(ui->GenAudioComboBox->findData(
-            QString::fromStdString(EmulatorSettings.GetSDLMainOutputDevice())));
-        ui->DsAudioComboBox->setCurrentIndex(ui->DsAudioComboBox->findData(
-            QString::fromStdString(EmulatorSettings.GetSDLPadSpkOutputDevice())));
-        ui->micComboBox->setCurrentIndex(
-            ui->micComboBox->findData(QString::fromStdString(EmulatorSettings.GetSDLMicDevice())));
+        ui->GenAudioComboBox->setCurrentText(
+            QString::fromStdString(EmulatorSettings.GetSDLMainOutputDevice()));
+        ui->DsAudioComboBox->setCurrentText(
+            QString::fromStdString(EmulatorSettings.GetSDLPadSpkOutputDevice()));
+        ui->micComboBox->setCurrentText(QString::fromStdString(EmulatorSettings.GetSDLMicDevice()));
     } else if (backend == "OpenAL") {
-        ui->GenAudioComboBox->setCurrentIndex(ui->GenAudioComboBox->findData(
-            QString::fromStdString(EmulatorSettings.GetOpenALMainOutputDevice())));
-        ui->DsAudioComboBox->setCurrentIndex(ui->DsAudioComboBox->findData(
-            QString::fromStdString(EmulatorSettings.GetOpenALPadSpkOutputDevice())));
-        ui->micComboBox->setCurrentIndex(ui->micComboBox->findData(
-            QString::fromStdString(EmulatorSettings.GetOpenALMicDevice())));
+        ui->GenAudioComboBox->setCurrentText(
+            QString::fromStdString(EmulatorSettings.GetOpenALMainOutputDevice()));
+        ui->DsAudioComboBox->setCurrentText(
+            QString::fromStdString(EmulatorSettings.GetOpenALPadSpkOutputDevice()));
+        ui->micComboBox->setCurrentText(
+            QString::fromStdString(EmulatorSettings.GetOpenALMicDevice()));
     }
 }
 
