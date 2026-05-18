@@ -1438,7 +1438,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>No game is running</source>
-      <translation type="unfinished">No game is running</translation>
+      <translation>Немає запущеної гри</translation>
     </message>
   </context>
   <context>

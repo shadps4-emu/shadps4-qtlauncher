@@ -3308,7 +3308,7 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release.</source>
-      <translation>En son ön sürümün hash bilgisi alınamadı.</translation>
+      <translation>En son ön sürümün hash değeri alınamadı.</translation>
     </message>
     <message>
       <source>Downloading Pre-release (Nightly), please wait...</source>

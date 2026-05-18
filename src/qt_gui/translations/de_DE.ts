@@ -1437,7 +1437,7 @@ Bitte gib die Schlüssel ein und speicher diese.</translation>
     </message>
     <message>
       <source>No game is running</source>
-      <translation type="unfinished">No game is running</translation>
+      <translation>Es läuft kein Spiel</translation>
     </message>
   </context>
   <context>
