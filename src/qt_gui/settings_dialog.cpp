@@ -1187,15 +1187,15 @@ void SettingsDialog::UpdateSettings(bool is_specific) {
             ui->GenAudioComboBox->currentData().toString().toStdString(), is_specific);
         EmulatorSettings.SetSDLPadSpkOutputDevice(
             ui->DsAudioComboBox->currentData().toString().toStdString(), is_specific);
-        EmulatorSettings.SetSDLMicDevice(
-            ui->micComboBox->currentData().toString().toStdString(), is_specific);
+        EmulatorSettings.SetSDLMicDevice(ui->micComboBox->currentData().toString().toStdString(),
+                                         is_specific);
     } else if (backend == "OpenAL") {
         EmulatorSettings.SetOpenALMainOutputDevice(
             ui->GenAudioComboBox->currentData().toString().toStdString(), is_specific);
         EmulatorSettings.SetOpenALPadSpkOutputDevice(
             ui->DsAudioComboBox->currentData().toString().toStdString(), is_specific);
-        EmulatorSettings.SetOpenALMicDevice(
-            ui->micComboBox->currentData().toString().toStdString(), is_specific);
+        EmulatorSettings.SetOpenALMicDevice(ui->micComboBox->currentData().toString().toStdString(),
+                                            is_specific);
     }
 
     // Entries with no game-specific settings
