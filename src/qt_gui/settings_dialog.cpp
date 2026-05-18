@@ -1389,9 +1389,13 @@ void SettingsDialog::RefreshAudioDevices() {
         }
     }
 
-    ui->DsAudioComboBox->addItems(playbackDeviceList);
-    ui->GenAudioComboBox->addItems(playbackDeviceList);
-    ui->micComboBox->addItems(recordingDeviceList);
+    for (const QString& name : playbackDeviceList) {
+        ui->DsAudioComboBox->addItem(name, name);
+        ui->GenAudioComboBox->addItem(name, name);
+    }
+    for (const QString& name : recordingDeviceList) {
+        ui->micComboBox->addItem(name, name);
+    }
 
     if (backend == "SDL") {
         ui->GenAudioComboBox->setCurrentText(
