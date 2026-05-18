@@ -32,7 +32,9 @@
 #include "skylander_dialog.h"
 #include "user_manager_dialog.h"
 
-MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
+MainWindow::MainWindow(QWidget* parent, bool log_to_terminal)
+    : QMainWindow(parent), ui(new Ui::MainWindow),
+      m_ipc_client(std::make_shared<IpcClient>(nullptr, log_to_terminal)) {
     ui->setupUi(this);
     installEventFilter(this);
     setAttribute(Qt::WA_DeleteOnClose);

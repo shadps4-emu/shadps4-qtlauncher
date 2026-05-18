@@ -1,6 +1,8 @@
 // SPDX-FileCopyrightText: Copyright 2025 shadPS4 Emulator Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
+#include <iostream>
+
 #include <QDir>
 #include <QMessageBox>
 #include <QProcessEnvironment>
@@ -9,7 +11,8 @@
 #include "common/logging/log.h"
 #include "ipc_client.h"
 
-IpcClient::IpcClient(QObject* parent) : QObject(parent) {}
+IpcClient::IpcClient(QObject* parent, bool log_to_terminal)
+    : QObject(parent), m_log_to_terminal(log_to_terminal) {}
 
 void IpcClient::startEmulator(const QFileInfo& exe, const QStringList& args, const QString& workDir,
                               bool disable_ipc) {
@@ -249,6 +252,15 @@ void IpcClient::onStdout() {
             color = Qt::cyan;
         } else {
             color = Qt::white;
+        }
+
+        if (entry.isEmpty() || entry == "\x1B[m") {
+            continue;
+        }
+
+        if (m_log_to_terminal) {
+            std::cout << entry.toStdString() << std::endl;
+            continue;
         }
 
         QRegularExpression ansiRegex(
