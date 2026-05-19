@@ -2010,19 +2010,19 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     <name>QObject</name>
     <message>
       <source>Drive Locked</source>
-      <translation type="unfinished">Drive Locked</translation>
+      <translation>Asema lukittu</translation>
     </message>
     <message>
       <source>Drive %1: is locked. Please enter the BitLocker key to access it:</source>
-      <translation type="unfinished">Drive %1: is locked. Please enter the BitLocker key to access it:</translation>
+      <translation>Asema %1: on lukittu. Syötä BitLocker-avain käyttääksesi sitä:</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Virhe</translation>
     </message>
     <message>
       <source>Incorrect recovery key. Please try again.</source>
-      <translation type="unfinished">Incorrect recovery key. Please try again.</translation>
+      <translation>Virheellinen palautusavain. Yritä uudelleen.</translation>
     </message>
   </context>
   <context>
