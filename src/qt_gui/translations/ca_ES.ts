@@ -2010,19 +2010,19 @@ Selecciona una versió del panell dret.</translation>
     <name>QObject</name>
     <message>
       <source>Drive Locked</source>
-      <translation type="unfinished">Drive Locked</translation>
+      <translation>Unitat bloquejada</translation>
     </message>
     <message>
       <source>Drive %1: is locked. Please enter the BitLocker key to access it:</source>
-      <translation type="unfinished">Drive %1: is locked. Please enter the BitLocker key to access it:</translation>
+      <translation>Unitat %1: està bloquejada. Cal que introdueixis la clau de BitLocker per accedir-hi:</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Error</translation>
     </message>
     <message>
       <source>Incorrect recovery key. Please try again.</source>
-      <translation type="unfinished">Incorrect recovery key. Please try again.</translation>
+      <translation>La clau de recuperació no és correcte. Torneu-ho a provar.</translation>
     </message>
   </context>
   <context>
