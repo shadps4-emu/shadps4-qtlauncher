@@ -1448,40 +1448,12 @@ Please enter your keys and save them.</translation>
       <translation>Configurar Comandos</translation>
     </message>
     <message>
-      <source>D-Pad</source>
-      <translation>Botões de Direção</translation>
-    </message>
-    <message>
-      <source>Up</source>
-      <translation>Cima</translation>
-    </message>
-    <message>
       <source>unmapped</source>
       <translation>não mapeado</translation>
     </message>
     <message>
-      <source>Left</source>
-      <translation>Esquerda</translation>
-    </message>
-    <message>
-      <source>Right</source>
-      <translation>Direita</translation>
-    </message>
-    <message>
-      <source>Down</source>
-      <translation>Baixo</translation>
-    </message>
-    <message>
       <source>Left Analog Halfmode</source>
       <translation>Meio Modo do Manípulo Esquerdo</translation>
-    </message>
-    <message>
-      <source>hold to move left stick at half-speed</source>
-      <translation>mantenha pressionado para mover o manípulo esquerdo à metade da velocidade</translation>
-    </message>
-    <message>
-      <source>Left Stick</source>
-      <translation>Manípulo Esquerdo</translation>
     </message>
     <message>
       <source>Config Selection</source>
@@ -1524,10 +1496,6 @@ Please enter your keys and save them.</translation>
       <translation>nota: clique no Botão de Ajuda/Special Keybindings para obter mais informações</translation>
     </message>
     <message>
-      <source>Face Buttons</source>
-      <translation>Botões Frontais</translation>
-    </message>
-    <message>
       <source>Triangle</source>
       <translation>Triângulo</translation>
     </message>
@@ -1548,14 +1516,6 @@ Please enter your keys and save them.</translation>
       <translation>Meio Modo do Manípulo Direito</translation>
     </message>
     <message>
-      <source>hold to move right stick at half-speed</source>
-      <translation>mantenha pressionado para mover o manípulo direito à metade da velocidade</translation>
-    </message>
-    <message>
-      <source>Right Stick</source>
-      <translation>Manípulo Direito</translation>
-    </message>
-    <message>
       <source>Speed Offset (def 0.125):</source>
       <translation>Deslocamento de Velocidade (def 0,125):</translation>
     </message>
@@ -1570,14 +1530,6 @@ Please enter your keys and save them.</translation>
     <message>
       <source>Speed Multiplier (def 1.0):</source>
       <translation>Multiplicador de Velocidade (def 1,0):</translation>
-    </message>
-    <message>
-      <source>Common Config Selected</source>
-      <translation>Configuração Comum Selecionada</translation>
-    </message>
-    <message>
-      <source>This button copies mappings from the Common Config to the currently selected profile, and cannot be used when the currently selected profile is the Common Config.</source>
-      <translation>Este botão copia mapeamentos da Configuração Comum para o perfil atualmente selecionado, e não pode ser usado quando o perfil atualmente selecionado é a Configuração Comum.</translation>
     </message>
     <message>
       <source>Copy values from Common Config</source>
@@ -1642,6 +1594,94 @@ Please enter your keys and save them.</translation>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
       <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+    </message>
+    <message>
+      <source>Output</source>
+      <translation type="unfinished">Output</translation>
+    </message>
+    <message>
+      <source>Input</source>
+      <translation type="unfinished">Input</translation>
+    </message>
+    <message>
+      <source>Alternate Input 1</source>
+      <translation type="unfinished">Alternate Input 1</translation>
+    </message>
+    <message>
+      <source>Alternate Input 2</source>
+      <translation type="unfinished">Alternate Input 2</translation>
+    </message>
+    <message>
+      <source>Dpad Up</source>
+      <translation type="unfinished">Dpad Up</translation>
+    </message>
+    <message>
+      <source>Dpad Down</source>
+      <translation type="unfinished">Dpad Down</translation>
+    </message>
+    <message>
+      <source>Dpad Left</source>
+      <translation type="unfinished">Dpad Left</translation>
+    </message>
+    <message>
+      <source>Dpad Right</source>
+      <translation type="unfinished">Dpad Right</translation>
+    </message>
+    <message>
+      <source>Left Stick Up</source>
+      <translation type="unfinished">Left Stick Up</translation>
+    </message>
+    <message>
+      <source>Left Stick Down</source>
+      <translation type="unfinished">Left Stick Down</translation>
+    </message>
+    <message>
+      <source>Left Stick Left</source>
+      <translation type="unfinished">Left Stick Left</translation>
+    </message>
+    <message>
+      <source>Left Stick Right</source>
+      <translation type="unfinished">Left Stick Right</translation>
+    </message>
+    <message>
+      <source>Right Stick Up</source>
+      <translation type="unfinished">Right Stick Up</translation>
+    </message>
+    <message>
+      <source>Right Stick Down</source>
+      <translation type="unfinished">Right Stick Down</translation>
+    </message>
+    <message>
+      <source>Right Stick Left</source>
+      <translation type="unfinished">Right Stick Left</translation>
+    </message>
+    <message>
+      <source>Right Stick Right</source>
+      <translation type="unfinished">Right Stick Right</translation>
+    </message>
+    <message>
+      <source>L1</source>
+      <translation type="unfinished">L1</translation>
+    </message>
+    <message>
+      <source>R1</source>
+      <translation type="unfinished">R1</translation>
+    </message>
+    <message>
+      <source>L2</source>
+      <translation type="unfinished">L2</translation>
+    </message>
+    <message>
+      <source>R2</source>
+      <translation type="unfinished">R2</translation>
+    </message>
+    <message>
+      <source>L3</source>
+      <translation type="unfinished">L3</translation>
+    </message>
+    <message>
+      <source>R3</source>
+      <translation type="unfinished">R3</translation>
     </message>
   </context>
   <context>
