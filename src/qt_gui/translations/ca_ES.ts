@@ -2007,6 +2007,25 @@ Selecciona una versió del panell dret.</translation>
     </message>
   </context>
   <context>
+    <name>QObject</name>
+    <message>
+      <source>Drive Locked</source>
+      <translation>Unitat bloquejada</translation>
+    </message>
+    <message>
+      <source>Drive %1: is locked. Please enter the BitLocker key to access it:</source>
+      <translation>Unitat %1: està bloquejada. Cal que introdueixis la clau de BitLocker per accedir-hi:</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation>Error</translation>
+    </message>
+    <message>
+      <source>Incorrect recovery key. Please try again.</source>
+      <translation>La clau de recuperació no és correcte. Torneu-ho a provar.</translation>
+    </message>
+  </context>
+  <context>
     <name>SettingsDialog</name>
     <message>
       <source>Settings</source>

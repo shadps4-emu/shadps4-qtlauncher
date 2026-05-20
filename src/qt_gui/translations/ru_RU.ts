@@ -2007,6 +2007,25 @@ Select an emulator version from the right panel.</source>
     </message>
   </context>
   <context>
+    <name>QObject</name>
+    <message>
+      <source>Drive Locked</source>
+      <translation>Диск заблокирован</translation>
+    </message>
+    <message>
+      <source>Drive %1: is locked. Please enter the BitLocker key to access it:</source>
+      <translation>Диск %1: заблокирован. Пожалуйста, введите ключ BitLocker для доступа к нему:</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation>Ошибка</translation>
+    </message>
+    <message>
+      <source>Incorrect recovery key. Please try again.</source>
+      <translation>Неверный ключ восстановления. Попробуйте еще раз.</translation>
+    </message>
+  </context>
+  <context>
     <name>SettingsDialog</name>
     <message>
       <source>Settings</source>

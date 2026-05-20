@@ -2007,6 +2007,25 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
     </message>
   </context>
   <context>
+    <name>QObject</name>
+    <message>
+      <source>Drive Locked</source>
+      <translation>Unità Bloccata</translation>
+    </message>
+    <message>
+      <source>Drive %1: is locked. Please enter the BitLocker key to access it:</source>
+      <translation>L' unità %1: è bloccata. Inserisci la chiave BitLocker per accedervi:</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation>Errore</translation>
+    </message>
+    <message>
+      <source>Incorrect recovery key. Please try again.</source>
+      <translation>Chiave di recupero errata. Per favore riprova.</translation>
+    </message>
+  </context>
+  <context>
     <name>SettingsDialog</name>
     <message>
       <source>Settings</source>

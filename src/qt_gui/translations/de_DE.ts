@@ -2006,6 +2006,25 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
     </message>
   </context>
   <context>
+    <name>QObject</name>
+    <message>
+      <source>Drive Locked</source>
+      <translation>Laufwerk gesperrt</translation>
+    </message>
+    <message>
+      <source>Drive %1: is locked. Please enter the BitLocker key to access it:</source>
+      <translation>Laufwerk %1: ist gesperrt. Bitte gebe den BitLocker-Schlüssel ein, um darauf zuzugreifen:</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation>Fehler</translation>
+    </message>
+    <message>
+      <source>Incorrect recovery key. Please try again.</source>
+      <translation>Der Wiederherstellungsschlüssel ist falsch. Bitte versuche es erneut.</translation>
+    </message>
+  </context>
+  <context>
     <name>SettingsDialog</name>
     <message>
       <source>Settings</source>
