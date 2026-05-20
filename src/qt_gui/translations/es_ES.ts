@@ -1448,40 +1448,12 @@ Debes introducir tus claves y guardarlas.</translation>
       <translation>Configurar controles</translation>
     </message>
     <message>
-      <source>D-Pad</source>
-      <translation>Botones de dirección</translation>
-    </message>
-    <message>
-      <source>Up</source>
-      <translation>Arriba</translation>
-    </message>
-    <message>
       <source>unmapped</source>
       <translation>sin asignar</translation>
     </message>
     <message>
-      <source>Left</source>
-      <translation>Izquierda</translation>
-    </message>
-    <message>
-      <source>Right</source>
-      <translation>Derecha</translation>
-    </message>
-    <message>
-      <source>Down</source>
-      <translation>Abajo</translation>
-    </message>
-    <message>
       <source>Left Analog Halfmode</source>
       <translation>Modo reducido del stick izquierdo</translation>
-    </message>
-    <message>
-      <source>hold to move left stick at half-speed</source>
-      <translation>Mantén para mover el stick izdo. a la mitad de la velocidad</translation>
-    </message>
-    <message>
-      <source>Left Stick</source>
-      <translation>Stick izquierdo</translation>
     </message>
     <message>
       <source>Config Selection</source>
@@ -1524,10 +1496,6 @@ Debes introducir tus claves y guardarlas.</translation>
       <translation>Nota: para más información, haz clic en Ayuda/Asignaciones especiales</translation>
     </message>
     <message>
-      <source>Face Buttons</source>
-      <translation>Botones de acción</translation>
-    </message>
-    <message>
       <source>Triangle</source>
       <translation>Triángulo</translation>
     </message>
@@ -1548,14 +1516,6 @@ Debes introducir tus claves y guardarlas.</translation>
       <translation>Modo reducido del stick derecho</translation>
     </message>
     <message>
-      <source>hold to move right stick at half-speed</source>
-      <translation>Mantén para mover el stick dcho. a la mitad de la velocidad</translation>
-    </message>
-    <message>
-      <source>Right Stick</source>
-      <translation>Stick derecho</translation>
-    </message>
-    <message>
       <source>Speed Offset (def 0.125):</source>
       <translation>Compensación de velocidad (predet.: 0,125):</translation>
     </message>
@@ -1570,14 +1530,6 @@ Debes introducir tus claves y guardarlas.</translation>
     <message>
       <source>Speed Multiplier (def 1.0):</source>
       <translation>Multiplicador de velocidad (predet.: 1,0):</translation>
-    </message>
-    <message>
-      <source>Common Config Selected</source>
-      <translation>Configuración estándar seleccionada</translation>
-    </message>
-    <message>
-      <source>This button copies mappings from the Common Config to the currently selected profile, and cannot be used when the currently selected profile is the Common Config.</source>
-      <translation>Este botón copia las asignaciones de la configuración estándar al perfil actual y no se puede usar cuando el perfil seleccionado sea la configuración estándar.</translation>
     </message>
     <message>
       <source>Copy values from Common Config</source>
@@ -1642,6 +1594,94 @@ Debes introducir tus claves y guardarlas.</translation>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
       <translation>Consejo: puedes desasignar acciones de entrada haciendo clic derecho</translation>
+    </message>
+    <message>
+      <source>Output</source>
+      <translation type="unfinished">Output</translation>
+    </message>
+    <message>
+      <source>Input</source>
+      <translation type="unfinished">Input</translation>
+    </message>
+    <message>
+      <source>Alternate Input 1</source>
+      <translation type="unfinished">Alternate Input 1</translation>
+    </message>
+    <message>
+      <source>Alternate Input 2</source>
+      <translation type="unfinished">Alternate Input 2</translation>
+    </message>
+    <message>
+      <source>Dpad Up</source>
+      <translation type="unfinished">Dpad Up</translation>
+    </message>
+    <message>
+      <source>Dpad Down</source>
+      <translation type="unfinished">Dpad Down</translation>
+    </message>
+    <message>
+      <source>Dpad Left</source>
+      <translation type="unfinished">Dpad Left</translation>
+    </message>
+    <message>
+      <source>Dpad Right</source>
+      <translation type="unfinished">Dpad Right</translation>
+    </message>
+    <message>
+      <source>Left Stick Up</source>
+      <translation type="unfinished">Left Stick Up</translation>
+    </message>
+    <message>
+      <source>Left Stick Down</source>
+      <translation type="unfinished">Left Stick Down</translation>
+    </message>
+    <message>
+      <source>Left Stick Left</source>
+      <translation type="unfinished">Left Stick Left</translation>
+    </message>
+    <message>
+      <source>Left Stick Right</source>
+      <translation type="unfinished">Left Stick Right</translation>
+    </message>
+    <message>
+      <source>Right Stick Up</source>
+      <translation type="unfinished">Right Stick Up</translation>
+    </message>
+    <message>
+      <source>Right Stick Down</source>
+      <translation type="unfinished">Right Stick Down</translation>
+    </message>
+    <message>
+      <source>Right Stick Left</source>
+      <translation type="unfinished">Right Stick Left</translation>
+    </message>
+    <message>
+      <source>Right Stick Right</source>
+      <translation type="unfinished">Right Stick Right</translation>
+    </message>
+    <message>
+      <source>L1</source>
+      <translation type="unfinished">L1</translation>
+    </message>
+    <message>
+      <source>R1</source>
+      <translation type="unfinished">R1</translation>
+    </message>
+    <message>
+      <source>L2</source>
+      <translation type="unfinished">L2</translation>
+    </message>
+    <message>
+      <source>R2</source>
+      <translation type="unfinished">R2</translation>
+    </message>
+    <message>
+      <source>L3</source>
+      <translation type="unfinished">L3</translation>
+    </message>
+    <message>
+      <source>R3</source>
+      <translation type="unfinished">R3</translation>
     </message>
   </context>
   <context>
@@ -2010,19 +2050,19 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     <name>QObject</name>
     <message>
       <source>Drive Locked</source>
-      <translation type="unfinished">Drive Locked</translation>
+      <translation>Unidad bloqueada</translation>
     </message>
     <message>
       <source>Drive %1: is locked. Please enter the BitLocker key to access it:</source>
-      <translation type="unfinished">Drive %1: is locked. Please enter the BitLocker key to access it:</translation>
+      <translation>La unidad %1: está bloqueada. Introduce su clave de BitLocker para acceder:</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Error</translation>
     </message>
     <message>
       <source>Incorrect recovery key. Please try again.</source>
-      <translation type="unfinished">Incorrect recovery key. Please try again.</translation>
+      <translation>Clave de recuperación incorrecta. Vuelve a intentarlo.</translation>
     </message>
   </context>
   <context>
