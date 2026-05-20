@@ -1439,39 +1439,11 @@ Please enter your keys and save them.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>D-Pad</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Up</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>unmapped</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Left</source>
-        <translation type="unfinished">Left</translation>
-    </message>
-    <message>
-        <source>Right</source>
-        <translation type="unfinished">Right</translation>
-    </message>
-    <message>
-        <source>Down</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Left Analog Halfmode</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>hold to move left stick at half-speed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Left Stick</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1515,10 +1487,6 @@ Please enter your keys and save them.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Face Buttons</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Triangle</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1539,14 +1507,6 @@ Please enter your keys and save them.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>hold to move right stick at half-speed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Right Stick</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Speed Offset (def 0.125):</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1560,14 +1520,6 @@ Please enter your keys and save them.</source>
     </message>
     <message>
         <source>Speed Multiplier (def 1.0):</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Common Config Selected</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>This button copies mappings from the Common Config to the currently selected profile, and cannot be used when the currently selected profile is the Common Config.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1630,6 +1582,94 @@ Please enter your keys and save them.</source>
     </message>
     <message>
         <source>Tip: Unmap inputs with right-click</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Output</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Input</source>
+        <translation type="unfinished">Input</translation>
+    </message>
+    <message>
+        <source>Alternate Input 1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Alternate Input 2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dpad Up</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dpad Down</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dpad Left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dpad Right</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Left Stick Up</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Left Stick Down</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Left Stick Left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Left Stick Right</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Right Stick Up</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Right Stick Down</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Right Stick Left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Right Stick Right</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>L1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>R1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>L2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>R2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>L3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>R3</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
