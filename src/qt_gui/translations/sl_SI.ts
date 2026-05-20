@@ -1448,40 +1448,12 @@ Please enter your keys and save them.</translation>
       <translation>Podešavanje kontrola</translation>
     </message>
     <message>
-      <source>D-Pad</source>
-      <translation type="unfinished">D-Pad</translation>
-    </message>
-    <message>
-      <source>Up</source>
-      <translation>Gore</translation>
-    </message>
-    <message>
       <source>unmapped</source>
       <translation>nije dodeljeno</translation>
     </message>
     <message>
-      <source>Left</source>
-      <translation>Levo</translation>
-    </message>
-    <message>
-      <source>Right</source>
-      <translation>Desno</translation>
-    </message>
-    <message>
-      <source>Down</source>
-      <translation>Dole</translation>
-    </message>
-    <message>
       <source>Left Analog Halfmode</source>
       <translation>Levi analogni polu režim</translation>
-    </message>
-    <message>
-      <source>hold to move left stick at half-speed</source>
-      <translation>držite za pomeranje leve palice polovičnom brzinom</translation>
-    </message>
-    <message>
-      <source>Left Stick</source>
-      <translation>Leva palica</translation>
     </message>
     <message>
       <source>Config Selection</source>
@@ -1524,10 +1496,6 @@ Please enter your keys and save them.</translation>
       <translation>napomena: kliknite na dugme Pomoć/Specijalne prečice za više informacija</translation>
     </message>
     <message>
-      <source>Face Buttons</source>
-      <translation>Glavna dugmad (Face Buttons)</translation>
-    </message>
-    <message>
       <source>Triangle</source>
       <translation>Trokut (Triangle)</translation>
     </message>
@@ -1548,14 +1516,6 @@ Please enter your keys and save them.</translation>
       <translation>Polu-režim desne analogne palice</translation>
     </message>
     <message>
-      <source>hold to move right stick at half-speed</source>
-      <translation>držite za pomeranje desnu palicu polovičnom brzinom</translation>
-    </message>
-    <message>
-      <source>Right Stick</source>
-      <translation>Desna palica</translation>
-    </message>
-    <message>
       <source>Speed Offset (def 0.125):</source>
       <translation>Pomak brzine (podrazumevano 0.125):</translation>
     </message>
@@ -1570,14 +1530,6 @@ Please enter your keys and save them.</translation>
     <message>
       <source>Speed Multiplier (def 1.0):</source>
       <translation>Multiplikator brzine (podrazumevano 1.0):</translation>
-    </message>
-    <message>
-      <source>Common Config Selected</source>
-      <translation>Izabrana zajednička konfiguracija</translation>
-    </message>
-    <message>
-      <source>This button copies mappings from the Common Config to the currently selected profile, and cannot be used when the currently selected profile is the Common Config.</source>
-      <translation>Ovo dugme kopira mapiranja iz zajedničke konfiguracije u trenutno izabrani profil i ne može se koristiti kada je trenutno izabrani profil zajednička konfiguracija.</translation>
     </message>
     <message>
       <source>Copy values from Common Config</source>
@@ -1642,6 +1594,94 @@ Please enter your keys and save them.</translation>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
       <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+    </message>
+    <message>
+      <source>Output</source>
+      <translation type="unfinished">Output</translation>
+    </message>
+    <message>
+      <source>Input</source>
+      <translation type="unfinished">Input</translation>
+    </message>
+    <message>
+      <source>Alternate Input 1</source>
+      <translation type="unfinished">Alternate Input 1</translation>
+    </message>
+    <message>
+      <source>Alternate Input 2</source>
+      <translation type="unfinished">Alternate Input 2</translation>
+    </message>
+    <message>
+      <source>Dpad Up</source>
+      <translation type="unfinished">Dpad Up</translation>
+    </message>
+    <message>
+      <source>Dpad Down</source>
+      <translation type="unfinished">Dpad Down</translation>
+    </message>
+    <message>
+      <source>Dpad Left</source>
+      <translation type="unfinished">Dpad Left</translation>
+    </message>
+    <message>
+      <source>Dpad Right</source>
+      <translation type="unfinished">Dpad Right</translation>
+    </message>
+    <message>
+      <source>Left Stick Up</source>
+      <translation type="unfinished">Left Stick Up</translation>
+    </message>
+    <message>
+      <source>Left Stick Down</source>
+      <translation type="unfinished">Left Stick Down</translation>
+    </message>
+    <message>
+      <source>Left Stick Left</source>
+      <translation type="unfinished">Left Stick Left</translation>
+    </message>
+    <message>
+      <source>Left Stick Right</source>
+      <translation type="unfinished">Left Stick Right</translation>
+    </message>
+    <message>
+      <source>Right Stick Up</source>
+      <translation type="unfinished">Right Stick Up</translation>
+    </message>
+    <message>
+      <source>Right Stick Down</source>
+      <translation type="unfinished">Right Stick Down</translation>
+    </message>
+    <message>
+      <source>Right Stick Left</source>
+      <translation type="unfinished">Right Stick Left</translation>
+    </message>
+    <message>
+      <source>Right Stick Right</source>
+      <translation type="unfinished">Right Stick Right</translation>
+    </message>
+    <message>
+      <source>L1</source>
+      <translation type="unfinished">L1</translation>
+    </message>
+    <message>
+      <source>R1</source>
+      <translation type="unfinished">R1</translation>
+    </message>
+    <message>
+      <source>L2</source>
+      <translation type="unfinished">L2</translation>
+    </message>
+    <message>
+      <source>R2</source>
+      <translation type="unfinished">R2</translation>
+    </message>
+    <message>
+      <source>L3</source>
+      <translation type="unfinished">L3</translation>
+    </message>
+    <message>
+      <source>R3</source>
+      <translation type="unfinished">R3</translation>
     </message>
   </context>
   <context>
