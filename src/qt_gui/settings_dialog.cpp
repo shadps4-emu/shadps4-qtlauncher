@@ -240,6 +240,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
     if (!SDL_Init(SDL_INIT_AUDIO)) {
         LOG_ERROR(Config, "SDL_INIT_AUDIO failed: {}", SDL_GetError());
     }
+    ui->audioBackendComboBox->setCurrentIndex(EmulatorSettings.GetAudioBackend());
     RefreshAudioDevices();
 
     InitializeEmulatorLanguages();
@@ -1181,19 +1182,20 @@ void SettingsDialog::UpdateSettings(bool is_specific) {
     EmulatorSettings.SetCopyGpuBuffers(ui->copyGPUBuffersCheckBox->isChecked(), is_specific);
 
     const std::string backend = ui->audioBackendComboBox->currentText().toStdString();
-    EmulatorSettings.SetAudioBackend(ui->audioBackendComboBox->currentIndex());
+    EmulatorSettings.SetAudioBackend(ui->audioBackendComboBox->currentIndex(), is_specific);
     if (backend == "SDL") {
-        EmulatorSettings.SetSDLMainOutputDevice(ui->GenAudioComboBox->currentText().toStdString(),
-                                                is_specific);
-        EmulatorSettings.SetSDLPadSpkOutputDevice(ui->DsAudioComboBox->currentText().toStdString(),
-                                                  is_specific);
-        EmulatorSettings.SetSDLMicDevice(ui->micComboBox->currentText().toStdString(), is_specific);
+        EmulatorSettings.SetSDLMainOutputDevice(
+            ui->GenAudioComboBox->currentData().toString().toStdString(), is_specific);
+        EmulatorSettings.SetSDLPadSpkOutputDevice(
+            ui->DsAudioComboBox->currentData().toString().toStdString(), is_specific);
+        EmulatorSettings.SetSDLMicDevice(ui->micComboBox->currentData().toString().toStdString(),
+                                         is_specific);
     } else if (backend == "OpenAL") {
         EmulatorSettings.SetOpenALMainOutputDevice(
-            ui->GenAudioComboBox->currentText().toStdString(), is_specific);
+            ui->GenAudioComboBox->currentData().toString().toStdString(), is_specific);
         EmulatorSettings.SetOpenALPadSpkOutputDevice(
-            ui->DsAudioComboBox->currentText().toStdString(), is_specific);
-        EmulatorSettings.SetOpenALMicDevice(ui->micComboBox->currentText().toStdString(),
+            ui->DsAudioComboBox->currentData().toString().toStdString(), is_specific);
+        EmulatorSettings.SetOpenALMicDevice(ui->micComboBox->currentData().toString().toStdString(),
                                             is_specific);
     }
 
@@ -1388,9 +1390,13 @@ void SettingsDialog::RefreshAudioDevices() {
         }
     }
 
-    ui->DsAudioComboBox->addItems(playbackDeviceList);
-    ui->GenAudioComboBox->addItems(playbackDeviceList);
-    ui->micComboBox->addItems(recordingDeviceList);
+    for (const QString& name : playbackDeviceList) {
+        ui->DsAudioComboBox->addItem(name, name);
+        ui->GenAudioComboBox->addItem(name, name);
+    }
+    for (const QString& name : recordingDeviceList) {
+        ui->micComboBox->addItem(name, name);
+    }
 
     if (backend == "SDL") {
         ui->GenAudioComboBox->setCurrentText(
