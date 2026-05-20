@@ -1453,40 +1453,12 @@ sam izvještaj ne bi postao nevaljan:</translation>
       <translation>Konfiguriraj Kontrole</translation>
     </message>
     <message>
-      <source>D-Pad</source>
-      <translation>D-Pad</translation>
-    </message>
-    <message>
-      <source>Up</source>
-      <translation>Gore</translation>
-    </message>
-    <message>
       <source>unmapped</source>
       <translation>nemapirano</translation>
     </message>
     <message>
-      <source>Left</source>
-      <translation>Lijevo</translation>
-    </message>
-    <message>
-      <source>Right</source>
-      <translation>Desno</translation>
-    </message>
-    <message>
-      <source>Down</source>
-      <translation>Dolje</translation>
-    </message>
-    <message>
       <source>Left Analog Halfmode</source>
       <translation>Lijevi Analogni Polumod</translation>
-    </message>
-    <message>
-      <source>hold to move left stick at half-speed</source>
-      <translation>pritisnite i pomičite lijevu palicu na pola-brzine</translation>
-    </message>
-    <message>
-      <source>Left Stick</source>
-      <translation>Lijeva Palica</translation>
     </message>
     <message>
       <source>Config Selection</source>
@@ -1529,10 +1501,6 @@ sam izvještaj ne bi postao nevaljan:</translation>
       <translation>napomena: kliknite Gumb Pomoć/Posebna Vezanja za više informacija</translation>
     </message>
     <message>
-      <source>Face Buttons</source>
-      <translation>Gumbi Lica</translation>
-    </message>
-    <message>
       <source>Triangle</source>
       <translation>Trokut</translation>
     </message>
@@ -1553,14 +1521,6 @@ sam izvještaj ne bi postao nevaljan:</translation>
       <translation>Desni Analogni Polumod</translation>
     </message>
     <message>
-      <source>hold to move right stick at half-speed</source>
-      <translation>pritisni za pomak desne palice na pola-brzine</translation>
-    </message>
-    <message>
-      <source>Right Stick</source>
-      <translation>Desna Palica</translation>
-    </message>
-    <message>
       <source>Speed Offset (def 0.125):</source>
       <translation>Brzina Offset(0,125):</translation>
     </message>
@@ -1575,14 +1535,6 @@ sam izvještaj ne bi postao nevaljan:</translation>
     <message>
       <source>Speed Multiplier (def 1.0):</source>
       <translation>Množitelj Brzine (def 1,0):</translation>
-    </message>
-    <message>
-      <source>Common Config Selected</source>
-      <translation>Zajednička konfiguracija Izabrana</translation>
-    </message>
-    <message>
-      <source>This button copies mappings from the Common Config to the currently selected profile, and cannot be used when the currently selected profile is the Common Config.</source>
-      <translation>Ovaj gumb kopira mapiranja iz zajedničke Konfiguracije na trenutno izabrani profil, i ne može se koristiti kad je trenutno izabran profil Zajednička Konfiguracija.</translation>
     </message>
     <message>
       <source>Copy values from Common Config</source>
@@ -1647,6 +1599,94 @@ sam izvještaj ne bi postao nevaljan:</translation>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
       <translation>Pomoć: Odmapiraj unos s desnim-klikom</translation>
+    </message>
+    <message>
+      <source>Output</source>
+      <translation type="unfinished">Output</translation>
+    </message>
+    <message>
+      <source>Input</source>
+      <translation type="unfinished">Input</translation>
+    </message>
+    <message>
+      <source>Alternate Input 1</source>
+      <translation type="unfinished">Alternate Input 1</translation>
+    </message>
+    <message>
+      <source>Alternate Input 2</source>
+      <translation type="unfinished">Alternate Input 2</translation>
+    </message>
+    <message>
+      <source>Dpad Up</source>
+      <translation type="unfinished">Dpad Up</translation>
+    </message>
+    <message>
+      <source>Dpad Down</source>
+      <translation type="unfinished">Dpad Down</translation>
+    </message>
+    <message>
+      <source>Dpad Left</source>
+      <translation type="unfinished">Dpad Left</translation>
+    </message>
+    <message>
+      <source>Dpad Right</source>
+      <translation type="unfinished">Dpad Right</translation>
+    </message>
+    <message>
+      <source>Left Stick Up</source>
+      <translation type="unfinished">Left Stick Up</translation>
+    </message>
+    <message>
+      <source>Left Stick Down</source>
+      <translation type="unfinished">Left Stick Down</translation>
+    </message>
+    <message>
+      <source>Left Stick Left</source>
+      <translation type="unfinished">Left Stick Left</translation>
+    </message>
+    <message>
+      <source>Left Stick Right</source>
+      <translation type="unfinished">Left Stick Right</translation>
+    </message>
+    <message>
+      <source>Right Stick Up</source>
+      <translation type="unfinished">Right Stick Up</translation>
+    </message>
+    <message>
+      <source>Right Stick Down</source>
+      <translation type="unfinished">Right Stick Down</translation>
+    </message>
+    <message>
+      <source>Right Stick Left</source>
+      <translation type="unfinished">Right Stick Left</translation>
+    </message>
+    <message>
+      <source>Right Stick Right</source>
+      <translation type="unfinished">Right Stick Right</translation>
+    </message>
+    <message>
+      <source>L1</source>
+      <translation type="unfinished">L1</translation>
+    </message>
+    <message>
+      <source>R1</source>
+      <translation type="unfinished">R1</translation>
+    </message>
+    <message>
+      <source>L2</source>
+      <translation type="unfinished">L2</translation>
+    </message>
+    <message>
+      <source>R2</source>
+      <translation type="unfinished">R2</translation>
+    </message>
+    <message>
+      <source>L3</source>
+      <translation type="unfinished">L3</translation>
+    </message>
+    <message>
+      <source>R3</source>
+      <translation type="unfinished">R3</translation>
     </message>
   </context>
   <context>
