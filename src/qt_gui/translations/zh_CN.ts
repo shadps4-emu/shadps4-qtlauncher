@@ -1446,40 +1446,12 @@ Please enter your keys and save them.</source>
       <translation>配置键鼠</translation>
     </message>
     <message>
-      <source>D-Pad</source>
-      <translation>十字键</translation>
-    </message>
-    <message>
-      <source>Up</source>
-      <translation>上</translation>
-    </message>
-    <message>
       <source>unmapped</source>
       <translation>未映射</translation>
     </message>
     <message>
-      <source>Left</source>
-      <translation>左</translation>
-    </message>
-    <message>
-      <source>Right</source>
-      <translation>右</translation>
-    </message>
-    <message>
-      <source>Down</source>
-      <translation>下</translation>
-    </message>
-    <message>
       <source>Left Analog Halfmode</source>
       <translation>左摇杆半速模式</translation>
-    </message>
-    <message>
-      <source>hold to move left stick at half-speed</source>
-      <translation>按住以半速移动左摇杆</translation>
-    </message>
-    <message>
-      <source>Left Stick</source>
-      <translation>左摇杆</translation>
     </message>
     <message>
       <source>Config Selection</source>
@@ -1522,10 +1494,6 @@ Please enter your keys and save them.</source>
       <translation>注意：点击帮助按钮 -> 获取更多关于映射特殊键位的信息</translation>
     </message>
     <message>
-      <source>Face Buttons</source>
-      <translation>功能键（动作键）</translation>
-    </message>
-    <message>
       <source>Triangle</source>
       <translation>三角</translation>
     </message>
@@ -1546,14 +1514,6 @@ Please enter your keys and save them.</source>
       <translation>右摇杆半速模式</translation>
     </message>
     <message>
-      <source>hold to move right stick at half-speed</source>
-      <translation>按住以半速移动右摇杆</translation>
-    </message>
-    <message>
-      <source>Right Stick</source>
-      <translation>右摇杆</translation>
-    </message>
-    <message>
       <source>Speed Offset (def 0.125):</source>
       <translation>速度偏移量（默认 0.125）：</translation>
     </message>
@@ -1568,14 +1528,6 @@ Please enter your keys and save them.</source>
     <message>
       <source>Speed Multiplier (def 1.0):</source>
       <translation>速度系数（默认 1.0）：</translation>
-    </message>
-    <message>
-      <source>Common Config Selected</source>
-      <translation>已选中通用配置</translation>
-    </message>
-    <message>
-      <source>This button copies mappings from the Common Config to the currently selected profile, and cannot be used when the currently selected profile is the Common Config.</source>
-      <translation>此按钮用于将通用配置中的映射复制到当前选定的配置文件，当前选定的配置文件为通用配置时无法使用。</translation>
     </message>
     <message>
       <source>Copy values from Common Config</source>
@@ -1640,6 +1592,94 @@ Please enter your keys and save them.</source>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
       <translation>提示：右键点击可解除输入映射</translation>
+    </message>
+    <message>
+      <source>Output</source>
+      <translation type="unfinished">Output</translation>
+    </message>
+    <message>
+      <source>Input</source>
+      <translation type="unfinished">Input</translation>
+    </message>
+    <message>
+      <source>Alternate Input 1</source>
+      <translation type="unfinished">Alternate Input 1</translation>
+    </message>
+    <message>
+      <source>Alternate Input 2</source>
+      <translation type="unfinished">Alternate Input 2</translation>
+    </message>
+    <message>
+      <source>Dpad Up</source>
+      <translation type="unfinished">Dpad Up</translation>
+    </message>
+    <message>
+      <source>Dpad Down</source>
+      <translation type="unfinished">Dpad Down</translation>
+    </message>
+    <message>
+      <source>Dpad Left</source>
+      <translation type="unfinished">Dpad Left</translation>
+    </message>
+    <message>
+      <source>Dpad Right</source>
+      <translation type="unfinished">Dpad Right</translation>
+    </message>
+    <message>
+      <source>Left Stick Up</source>
+      <translation type="unfinished">Left Stick Up</translation>
+    </message>
+    <message>
+      <source>Left Stick Down</source>
+      <translation type="unfinished">Left Stick Down</translation>
+    </message>
+    <message>
+      <source>Left Stick Left</source>
+      <translation type="unfinished">Left Stick Left</translation>
+    </message>
+    <message>
+      <source>Left Stick Right</source>
+      <translation type="unfinished">Left Stick Right</translation>
+    </message>
+    <message>
+      <source>Right Stick Up</source>
+      <translation type="unfinished">Right Stick Up</translation>
+    </message>
+    <message>
+      <source>Right Stick Down</source>
+      <translation type="unfinished">Right Stick Down</translation>
+    </message>
+    <message>
+      <source>Right Stick Left</source>
+      <translation type="unfinished">Right Stick Left</translation>
+    </message>
+    <message>
+      <source>Right Stick Right</source>
+      <translation type="unfinished">Right Stick Right</translation>
+    </message>
+    <message>
+      <source>L1</source>
+      <translation type="unfinished">L1</translation>
+    </message>
+    <message>
+      <source>R1</source>
+      <translation type="unfinished">R1</translation>
+    </message>
+    <message>
+      <source>L2</source>
+      <translation type="unfinished">L2</translation>
+    </message>
+    <message>
+      <source>R2</source>
+      <translation type="unfinished">R2</translation>
+    </message>
+    <message>
+      <source>L3</source>
+      <translation type="unfinished">L3</translation>
+    </message>
+    <message>
+      <source>R3</source>
+      <translation type="unfinished">R3</translation>
     </message>
   </context>
   <context>
