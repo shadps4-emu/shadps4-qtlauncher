@@ -1448,40 +1448,12 @@ Por favor, digite suas chaves e salve-as.</translation>
       <translation>Configurar Controles</translation>
     </message>
     <message>
-      <source>D-Pad</source>
-      <translation>Direcional</translation>
-    </message>
-    <message>
-      <source>Up</source>
-      <translation>Cima</translation>
-    </message>
-    <message>
       <source>unmapped</source>
       <translation>não mapeado</translation>
     </message>
     <message>
-      <source>Left</source>
-      <translation>Esquerda</translation>
-    </message>
-    <message>
-      <source>Right</source>
-      <translation>Direita</translation>
-    </message>
-    <message>
-      <source>Down</source>
-      <translation>Baixo</translation>
-    </message>
-    <message>
       <source>Left Analog Halfmode</source>
       <translation>Meio Analógico Esquerdo</translation>
-    </message>
-    <message>
-      <source>hold to move left stick at half-speed</source>
-      <translation>Segure para mover o analógico esquerdo pela metade da velocidade</translation>
-    </message>
-    <message>
-      <source>Left Stick</source>
-      <translation>Analógico Esquerdo</translation>
     </message>
     <message>
       <source>Config Selection</source>
@@ -1524,10 +1496,6 @@ Por favor, digite suas chaves e salve-as.</translation>
       <translation>Nota: clique no botão de Ajuda e Atalhos Especiais para obter mais informações</translation>
     </message>
     <message>
-      <source>Face Buttons</source>
-      <translation>Botões de Ação</translation>
-    </message>
-    <message>
       <source>Triangle</source>
       <translation>Triângulo</translation>
     </message>
@@ -1548,14 +1516,6 @@ Por favor, digite suas chaves e salve-as.</translation>
       <translation>Meio Analógico Direito</translation>
     </message>
     <message>
-      <source>hold to move right stick at half-speed</source>
-      <translation>Segure para mover o analógico direito pela metade da velocidade</translation>
-    </message>
-    <message>
-      <source>Right Stick</source>
-      <translation>Analógico Direito</translation>
-    </message>
-    <message>
       <source>Speed Offset (def 0.125):</source>
       <translation>Deslocamento de Velocidade (Pad 0,125):</translation>
     </message>
@@ -1570,14 +1530,6 @@ Por favor, digite suas chaves e salve-as.</translation>
     <message>
       <source>Speed Multiplier (def 1.0):</source>
       <translation>Multiplicador de Velocidade (Pad 1,0):</translation>
-    </message>
-    <message>
-      <source>Common Config Selected</source>
-      <translation>Configuração Comum Selecionada</translation>
-    </message>
-    <message>
-      <source>This button copies mappings from the Common Config to the currently selected profile, and cannot be used when the currently selected profile is the Common Config.</source>
-      <translation>Este botão copia os mapeamentos da Configuração Comum para o perfil atualmente selecionado, e não pode ser usado quando o perfil atualmente selecionado é a Configuração Comum.</translation>
     </message>
     <message>
       <source>Copy values from Common Config</source>
@@ -1642,6 +1594,94 @@ Por favor, digite suas chaves e salve-as.</translation>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
       <translation>Dica: Desmapear entradas com botão direito</translation>
+    </message>
+    <message>
+      <source>Output</source>
+      <translation>Saída</translation>
+    </message>
+    <message>
+      <source>Input</source>
+      <translation>Entrada</translation>
+    </message>
+    <message>
+      <source>Alternate Input 1</source>
+      <translation>Entrada Alternativa 1</translation>
+    </message>
+    <message>
+      <source>Alternate Input 2</source>
+      <translation>Entrada Alternativa 2</translation>
+    </message>
+    <message>
+      <source>Dpad Up</source>
+      <translation>Para Cima no Direcional</translation>
+    </message>
+    <message>
+      <source>Dpad Down</source>
+      <translation>Para Baixo no Direcional</translation>
+    </message>
+    <message>
+      <source>Dpad Left</source>
+      <translation>Esquerda no Direcional</translation>
+    </message>
+    <message>
+      <source>Dpad Right</source>
+      <translation>Direita no Direcional</translation>
+    </message>
+    <message>
+      <source>Left Stick Up</source>
+      <translation>Para Cima no Analógico Esquerdo</translation>
+    </message>
+    <message>
+      <source>Left Stick Down</source>
+      <translation>Para Baixo no Analógico Esquerdo</translation>
+    </message>
+    <message>
+      <source>Left Stick Left</source>
+      <translation>Esquerda no Analógico Esquerdo</translation>
+    </message>
+    <message>
+      <source>Left Stick Right</source>
+      <translation>Direita no Analógico Esquerdo</translation>
+    </message>
+    <message>
+      <source>Right Stick Up</source>
+      <translation>Para Cima no Analógico Direito</translation>
+    </message>
+    <message>
+      <source>Right Stick Down</source>
+      <translation>Para Baixo no Analógico Direito</translation>
+    </message>
+    <message>
+      <source>Right Stick Left</source>
+      <translation>Esquerda no Analógico Direito</translation>
+    </message>
+    <message>
+      <source>Right Stick Right</source>
+      <translation>Direita no Analógico Direito</translation>
+    </message>
+    <message>
+      <source>L1</source>
+      <translation>L1</translation>
+    </message>
+    <message>
+      <source>R1</source>
+      <translation>R1</translation>
+    </message>
+    <message>
+      <source>L2</source>
+      <translation>L2</translation>
+    </message>
+    <message>
+      <source>R2</source>
+      <translation>R2</translation>
+    </message>
+    <message>
+      <source>L3</source>
+      <translation>L3</translation>
+    </message>
+    <message>
+      <source>R3</source>
+      <translation>R3</translation>
     </message>
   </context>
   <context>

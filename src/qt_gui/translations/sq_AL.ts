@@ -1448,40 +1448,12 @@ Please enter your keys and save them.</translation>
       <translation>Konfiguro Kontrollet</translation>
     </message>
     <message>
-      <source>D-Pad</source>
-      <translation>Shigjetat</translation>
-    </message>
-    <message>
-      <source>Up</source>
-      <translation>Lartë</translation>
-    </message>
-    <message>
       <source>unmapped</source>
       <translation>pacaktuar</translation>
     </message>
     <message>
-      <source>Left</source>
-      <translation>Majtas</translation>
-    </message>
-    <message>
-      <source>Right</source>
-      <translation>Djathtas</translation>
-    </message>
-    <message>
-      <source>Down</source>
-      <translation>Poshtë</translation>
-    </message>
-    <message>
       <source>Left Analog Halfmode</source>
       <translation>Mënyra e gjysmuar për levën e majtë</translation>
-    </message>
-    <message>
-      <source>hold to move left stick at half-speed</source>
-      <translation>mbaj shtypur për të lëvizur levën e majtë me gjysmën e shpejtësisë</translation>
-    </message>
-    <message>
-      <source>Left Stick</source>
-      <translation>Leva e Majtë</translation>
     </message>
     <message>
       <source>Config Selection</source>
@@ -1524,10 +1496,6 @@ Please enter your keys and save them.</translation>
       <translation>shënim: kliko Butonin e Ndihmës/Caktimet e Tasteve të Veçantë për më shumë informacion</translation>
     </message>
     <message>
-      <source>Face Buttons</source>
-      <translation>Butonat Kryesore</translation>
-    </message>
-    <message>
       <source>Triangle</source>
       <translation>Trekëndësh</translation>
     </message>
@@ -1548,14 +1516,6 @@ Please enter your keys and save them.</translation>
       <translation>Mënyra e gjysmuar për levën e djathtë</translation>
     </message>
     <message>
-      <source>hold to move right stick at half-speed</source>
-      <translation>mbaj shtypur për të lëvizur levën e djathtë me gjysmën e shpejtësisë</translation>
-    </message>
-    <message>
-      <source>Right Stick</source>
-      <translation>Leva e Djathtë</translation>
-    </message>
-    <message>
       <source>Speed Offset (def 0.125):</source>
       <translation>Ofset i Shpejtësisë (paracaktuar 0.125):</translation>
     </message>
@@ -1570,14 +1530,6 @@ Please enter your keys and save them.</translation>
     <message>
       <source>Speed Multiplier (def 1.0):</source>
       <translation>Shumëzuesi i Shpejtësisë (paracaktuar 1.0):</translation>
-    </message>
-    <message>
-      <source>Common Config Selected</source>
-      <translation>Konfigurimi i Përbashkët i Zgjedhur</translation>
-    </message>
-    <message>
-      <source>This button copies mappings from the Common Config to the currently selected profile, and cannot be used when the currently selected profile is the Common Config.</source>
-      <translation>Ky buton kopjon caktimet nga Konfigurimi i Përbashkët në profilin e zgjedhur aktualisht, dhe nuk mund të përdoret kur profili i zgjedhur aktualisht është Konfigurimi i Përbashkët.</translation>
     </message>
     <message>
       <source>Copy values from Common Config</source>
@@ -1642,6 +1594,94 @@ Please enter your keys and save them.</translation>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
       <translation>Këshillë: Shkëput hyrjet me klikim të djathtë</translation>
+    </message>
+    <message>
+      <source>Output</source>
+      <translation type="unfinished">Output</translation>
+    </message>
+    <message>
+      <source>Input</source>
+      <translation type="unfinished">Input</translation>
+    </message>
+    <message>
+      <source>Alternate Input 1</source>
+      <translation type="unfinished">Alternate Input 1</translation>
+    </message>
+    <message>
+      <source>Alternate Input 2</source>
+      <translation type="unfinished">Alternate Input 2</translation>
+    </message>
+    <message>
+      <source>Dpad Up</source>
+      <translation type="unfinished">Dpad Up</translation>
+    </message>
+    <message>
+      <source>Dpad Down</source>
+      <translation type="unfinished">Dpad Down</translation>
+    </message>
+    <message>
+      <source>Dpad Left</source>
+      <translation type="unfinished">Dpad Left</translation>
+    </message>
+    <message>
+      <source>Dpad Right</source>
+      <translation type="unfinished">Dpad Right</translation>
+    </message>
+    <message>
+      <source>Left Stick Up</source>
+      <translation type="unfinished">Left Stick Up</translation>
+    </message>
+    <message>
+      <source>Left Stick Down</source>
+      <translation type="unfinished">Left Stick Down</translation>
+    </message>
+    <message>
+      <source>Left Stick Left</source>
+      <translation type="unfinished">Left Stick Left</translation>
+    </message>
+    <message>
+      <source>Left Stick Right</source>
+      <translation type="unfinished">Left Stick Right</translation>
+    </message>
+    <message>
+      <source>Right Stick Up</source>
+      <translation type="unfinished">Right Stick Up</translation>
+    </message>
+    <message>
+      <source>Right Stick Down</source>
+      <translation type="unfinished">Right Stick Down</translation>
+    </message>
+    <message>
+      <source>Right Stick Left</source>
+      <translation type="unfinished">Right Stick Left</translation>
+    </message>
+    <message>
+      <source>Right Stick Right</source>
+      <translation type="unfinished">Right Stick Right</translation>
+    </message>
+    <message>
+      <source>L1</source>
+      <translation type="unfinished">L1</translation>
+    </message>
+    <message>
+      <source>R1</source>
+      <translation type="unfinished">R1</translation>
+    </message>
+    <message>
+      <source>L2</source>
+      <translation type="unfinished">L2</translation>
+    </message>
+    <message>
+      <source>R2</source>
+      <translation type="unfinished">R2</translation>
+    </message>
+    <message>
+      <source>L3</source>
+      <translation type="unfinished">L3</translation>
+    </message>
+    <message>
+      <source>R3</source>
+      <translation type="unfinished">R3</translation>
     </message>
   </context>
   <context>

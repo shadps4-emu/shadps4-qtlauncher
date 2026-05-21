@@ -1444,40 +1444,12 @@ Please enter your keys and save them.</source>
       <translation>操控組態</translation>
     </message>
     <message>
-      <source>D-Pad</source>
-      <translation>十字方向鍵</translation>
-    </message>
-    <message>
-      <source>Up</source>
-      <translation>上</translation>
-    </message>
-    <message>
       <source>unmapped</source>
       <translation>鍵位未有對應</translation>
     </message>
     <message>
-      <source>Left</source>
-      <translation>左</translation>
-    </message>
-    <message>
-      <source>Right</source>
-      <translation>右</translation>
-    </message>
-    <message>
-      <source>Down</source>
-      <translation>下</translation>
-    </message>
-    <message>
       <source>Left Analog Halfmode</source>
       <translation>左類比搖桿半速模式</translation>
-    </message>
-    <message>
-      <source>hold to move left stick at half-speed</source>
-      <translation>按住可半速移動左搖桿</translation>
-    </message>
-    <message>
-      <source>Left Stick</source>
-      <translation>左搖桿</translation>
     </message>
     <message>
       <source>Config Selection</source>
@@ -1520,10 +1492,6 @@ Please enter your keys and save them.</source>
       <translation>注意：點擊 幫助 按鈕/特殊按鍵連結以取得更多資訊</translation>
     </message>
     <message>
-      <source>Face Buttons</source>
-      <translation>功能鍵（動作按鈕）</translation>
-    </message>
-    <message>
       <source>Triangle</source>
       <translation>三角</translation>
     </message>
@@ -1544,14 +1512,6 @@ Please enter your keys and save them.</source>
       <translation>右類比搖桿半速模式</translation>
     </message>
     <message>
-      <source>hold to move right stick at half-speed</source>
-      <translation>按住可半速移動右搖桿</translation>
-    </message>
-    <message>
-      <source>Right Stick</source>
-      <translation>右搖桿</translation>
-    </message>
-    <message>
       <source>Speed Offset (def 0.125):</source>
       <translation>速度偏移量（預設為 0.125）：</translation>
     </message>
@@ -1566,14 +1526,6 @@ Please enter your keys and save them.</source>
     <message>
       <source>Speed Multiplier (def 1.0):</source>
       <translation>速度倍數（預設為 1.0）：</translation>
-    </message>
-    <message>
-      <source>Common Config Selected</source>
-      <translation>已選取通用組態</translation>
-    </message>
-    <message>
-      <source>This button copies mappings from the Common Config to the currently selected profile, and cannot be used when the currently selected profile is the Common Config.</source>
-      <translation>此按鈕會將通用組態中的鍵位對應複製到目前選取的組態檔案，選取通用組態時無法使用此按鈕。</translation>
     </message>
     <message>
       <source>Copy values from Common Config</source>
@@ -1636,6 +1588,94 @@ Please enter your keys and save them.</source>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
       <translation>提示：按滑鼠右鍵取消對應輸入</translation>
+    </message>
+    <message>
+      <source>Output</source>
+      <translation type="unfinished">Output</translation>
+    </message>
+    <message>
+      <source>Input</source>
+      <translation type="unfinished">Input</translation>
+    </message>
+    <message>
+      <source>Alternate Input 1</source>
+      <translation type="unfinished">Alternate Input 1</translation>
+    </message>
+    <message>
+      <source>Alternate Input 2</source>
+      <translation type="unfinished">Alternate Input 2</translation>
+    </message>
+    <message>
+      <source>Dpad Up</source>
+      <translation type="unfinished">Dpad Up</translation>
+    </message>
+    <message>
+      <source>Dpad Down</source>
+      <translation type="unfinished">Dpad Down</translation>
+    </message>
+    <message>
+      <source>Dpad Left</source>
+      <translation type="unfinished">Dpad Left</translation>
+    </message>
+    <message>
+      <source>Dpad Right</source>
+      <translation type="unfinished">Dpad Right</translation>
+    </message>
+    <message>
+      <source>Left Stick Up</source>
+      <translation type="unfinished">Left Stick Up</translation>
+    </message>
+    <message>
+      <source>Left Stick Down</source>
+      <translation type="unfinished">Left Stick Down</translation>
+    </message>
+    <message>
+      <source>Left Stick Left</source>
+      <translation type="unfinished">Left Stick Left</translation>
+    </message>
+    <message>
+      <source>Left Stick Right</source>
+      <translation type="unfinished">Left Stick Right</translation>
+    </message>
+    <message>
+      <source>Right Stick Up</source>
+      <translation type="unfinished">Right Stick Up</translation>
+    </message>
+    <message>
+      <source>Right Stick Down</source>
+      <translation type="unfinished">Right Stick Down</translation>
+    </message>
+    <message>
+      <source>Right Stick Left</source>
+      <translation type="unfinished">Right Stick Left</translation>
+    </message>
+    <message>
+      <source>Right Stick Right</source>
+      <translation type="unfinished">Right Stick Right</translation>
+    </message>
+    <message>
+      <source>L1</source>
+      <translation type="unfinished">L1</translation>
+    </message>
+    <message>
+      <source>R1</source>
+      <translation type="unfinished">R1</translation>
+    </message>
+    <message>
+      <source>L2</source>
+      <translation type="unfinished">L2</translation>
+    </message>
+    <message>
+      <source>R2</source>
+      <translation type="unfinished">R2</translation>
+    </message>
+    <message>
+      <source>L3</source>
+      <translation type="unfinished">L3</translation>
+    </message>
+    <message>
+      <source>R3</source>
+      <translation type="unfinished">R3</translation>
     </message>
   </context>
   <context>

@@ -1448,40 +1448,12 @@ Syötä avaimet ja tallenna ne.</translation>
       <translation>Muokkaa ohjainasetuksia</translation>
     </message>
     <message>
-      <source>D-Pad</source>
-      <translation>Ristiohjain</translation>
-    </message>
-    <message>
-      <source>Up</source>
-      <translation>Ylös</translation>
-    </message>
-    <message>
       <source>unmapped</source>
       <translation>Ei määritetty</translation>
     </message>
     <message>
-      <source>Left</source>
-      <translation>Vasen</translation>
-    </message>
-    <message>
-      <source>Right</source>
-      <translation>Oikea</translation>
-    </message>
-    <message>
-      <source>Down</source>
-      <translation>Alas</translation>
-    </message>
-    <message>
       <source>Left Analog Halfmode</source>
       <translation>Vasemman sauvan puolitila</translation>
-    </message>
-    <message>
-      <source>hold to move left stick at half-speed</source>
-      <translation>Pidä painettuna käyttääksesi vasenta sauvaa puolinopeudella</translation>
-    </message>
-    <message>
-      <source>Left Stick</source>
-      <translation>Vasen sauva</translation>
     </message>
     <message>
       <source>Config Selection</source>
@@ -1524,10 +1496,6 @@ Syötä avaimet ja tallenna ne.</translation>
       <translation>Huomio: Lisätietoa saat osiosta Ohje -> Erityisnäppäinsidokset</translation>
     </message>
     <message>
-      <source>Face Buttons</source>
-      <translation>Toimintonäppäimet</translation>
-    </message>
-    <message>
       <source>Triangle</source>
       <translation>Kolmio</translation>
     </message>
@@ -1548,14 +1516,6 @@ Syötä avaimet ja tallenna ne.</translation>
       <translation>Oikean sauvan puolitila</translation>
     </message>
     <message>
-      <source>hold to move right stick at half-speed</source>
-      <translation>Pidä painettuna käyttääksesi oikeaa sauvaa puolinopeudella</translation>
-    </message>
-    <message>
-      <source>Right Stick</source>
-      <translation>Oikea sauva</translation>
-    </message>
-    <message>
       <source>Speed Offset (def 0.125):</source>
       <translation>Nopeuden poikkeama (oletus: 0.125):</translation>
     </message>
@@ -1570,14 +1530,6 @@ Syötä avaimet ja tallenna ne.</translation>
     <message>
       <source>Speed Multiplier (def 1.0):</source>
       <translation>Nopeuskerroin (oletus: 1.0):</translation>
-    </message>
-    <message>
-      <source>Common Config Selected</source>
-      <translation>Yleinen kokoonpano valittu</translation>
-    </message>
-    <message>
-      <source>This button copies mappings from the Common Config to the currently selected profile, and cannot be used when the currently selected profile is the Common Config.</source>
-      <translation>Kopioi määritykset yleisestä kokoonpanosta nykyiseen valittuun profiiliin. Ei voi käyttää, kun yleinen kokoonpano on valittuna profiilina.</translation>
     </message>
     <message>
       <source>Copy values from Common Config</source>
@@ -1642,6 +1594,94 @@ Syötä avaimet ja tallenna ne.</translation>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
       <translation>Vihje: Tyhjennä syöte hiiren oikealla painikkeella</translation>
+    </message>
+    <message>
+      <source>Output</source>
+      <translation type="unfinished">Output</translation>
+    </message>
+    <message>
+      <source>Input</source>
+      <translation type="unfinished">Input</translation>
+    </message>
+    <message>
+      <source>Alternate Input 1</source>
+      <translation type="unfinished">Alternate Input 1</translation>
+    </message>
+    <message>
+      <source>Alternate Input 2</source>
+      <translation type="unfinished">Alternate Input 2</translation>
+    </message>
+    <message>
+      <source>Dpad Up</source>
+      <translation type="unfinished">Dpad Up</translation>
+    </message>
+    <message>
+      <source>Dpad Down</source>
+      <translation type="unfinished">Dpad Down</translation>
+    </message>
+    <message>
+      <source>Dpad Left</source>
+      <translation type="unfinished">Dpad Left</translation>
+    </message>
+    <message>
+      <source>Dpad Right</source>
+      <translation type="unfinished">Dpad Right</translation>
+    </message>
+    <message>
+      <source>Left Stick Up</source>
+      <translation type="unfinished">Left Stick Up</translation>
+    </message>
+    <message>
+      <source>Left Stick Down</source>
+      <translation type="unfinished">Left Stick Down</translation>
+    </message>
+    <message>
+      <source>Left Stick Left</source>
+      <translation type="unfinished">Left Stick Left</translation>
+    </message>
+    <message>
+      <source>Left Stick Right</source>
+      <translation type="unfinished">Left Stick Right</translation>
+    </message>
+    <message>
+      <source>Right Stick Up</source>
+      <translation type="unfinished">Right Stick Up</translation>
+    </message>
+    <message>
+      <source>Right Stick Down</source>
+      <translation type="unfinished">Right Stick Down</translation>
+    </message>
+    <message>
+      <source>Right Stick Left</source>
+      <translation type="unfinished">Right Stick Left</translation>
+    </message>
+    <message>
+      <source>Right Stick Right</source>
+      <translation type="unfinished">Right Stick Right</translation>
+    </message>
+    <message>
+      <source>L1</source>
+      <translation type="unfinished">L1</translation>
+    </message>
+    <message>
+      <source>R1</source>
+      <translation type="unfinished">R1</translation>
+    </message>
+    <message>
+      <source>L2</source>
+      <translation type="unfinished">L2</translation>
+    </message>
+    <message>
+      <source>R2</source>
+      <translation type="unfinished">R2</translation>
+    </message>
+    <message>
+      <source>L3</source>
+      <translation type="unfinished">L3</translation>
+    </message>
+    <message>
+      <source>R3</source>
+      <translation type="unfinished">R3</translation>
     </message>
   </context>
   <context>
