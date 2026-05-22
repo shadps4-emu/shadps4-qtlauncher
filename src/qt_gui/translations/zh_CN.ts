@@ -1595,91 +1595,91 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Output</source>
-      <translation type="unfinished">Output</translation>
+      <translation>输出</translation>
     </message>
     <message>
       <source>Input</source>
-      <translation type="unfinished">Input</translation>
+      <translation>输入</translation>
     </message>
     <message>
       <source>Alternate Input 1</source>
-      <translation type="unfinished">Alternate Input 1</translation>
+      <translation>备用输入 1</translation>
     </message>
     <message>
       <source>Alternate Input 2</source>
-      <translation type="unfinished">Alternate Input 2</translation>
+      <translation>备用输入 2</translation>
     </message>
     <message>
       <source>Dpad Up</source>
-      <translation type="unfinished">Dpad Up</translation>
+      <translation>向上方向键</translation>
     </message>
     <message>
       <source>Dpad Down</source>
-      <translation type="unfinished">Dpad Down</translation>
+      <translation>向下方向键</translation>
     </message>
     <message>
       <source>Dpad Left</source>
-      <translation type="unfinished">Dpad Left</translation>
+      <translation>向左方向键</translation>
     </message>
     <message>
       <source>Dpad Right</source>
-      <translation type="unfinished">Dpad Right</translation>
+      <translation>向右方向键</translation>
     </message>
     <message>
       <source>Left Stick Up</source>
-      <translation type="unfinished">Left Stick Up</translation>
+      <translation>左摇杆 上</translation>
     </message>
     <message>
       <source>Left Stick Down</source>
-      <translation type="unfinished">Left Stick Down</translation>
+      <translation>左摇杆 下</translation>
     </message>
     <message>
       <source>Left Stick Left</source>
-      <translation type="unfinished">Left Stick Left</translation>
+      <translation>左摇杆 左</translation>
     </message>
     <message>
       <source>Left Stick Right</source>
-      <translation type="unfinished">Left Stick Right</translation>
+      <translation>左摇杆 右</translation>
     </message>
     <message>
       <source>Right Stick Up</source>
-      <translation type="unfinished">Right Stick Up</translation>
+      <translation>右摇杆上</translation>
     </message>
     <message>
       <source>Right Stick Down</source>
-      <translation type="unfinished">Right Stick Down</translation>
+      <translation>右摇杆下</translation>
     </message>
     <message>
       <source>Right Stick Left</source>
-      <translation type="unfinished">Right Stick Left</translation>
+      <translation>右摇杆左</translation>
     </message>
     <message>
       <source>Right Stick Right</source>
-      <translation type="unfinished">Right Stick Right</translation>
+      <translation>右摇杆右</translation>
     </message>
     <message>
       <source>L1</source>
-      <translation type="unfinished">L1</translation>
+      <translation>L1</translation>
     </message>
     <message>
       <source>R1</source>
-      <translation type="unfinished">R1</translation>
+      <translation>R1</translation>
     </message>
     <message>
       <source>L2</source>
-      <translation type="unfinished">L2</translation>
+      <translation>L2</translation>
     </message>
     <message>
       <source>R2</source>
-      <translation type="unfinished">R2</translation>
+      <translation>R2</translation>
     </message>
     <message>
       <source>L3</source>
-      <translation type="unfinished">L3</translation>
+      <translation>L3</translation>
     </message>
     <message>
       <source>R3</source>
-      <translation type="unfinished">R3</translation>
+      <translation>R3</translation>
     </message>
   </context>
   <context>
@@ -2048,19 +2048,19 @@ Select an emulator version from the right panel.</source>
     <name>QObject</name>
     <message>
       <source>Drive Locked</source>
-      <translation type="unfinished">Drive Locked</translation>
+      <translation>驱动器已锁定</translation>
     </message>
     <message>
       <source>Drive %1: is locked. Please enter the BitLocker key to access it:</source>
-      <translation type="unfinished">Drive %1: is locked. Please enter the BitLocker key to access it:</translation>
+      <translation>驱动器 %1: 已锁定。请输入 BitLocker 密钥以访问它：</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>错误</translation>
     </message>
     <message>
       <source>Incorrect recovery key. Please try again.</source>
-      <translation type="unfinished">Incorrect recovery key. Please try again.</translation>
+      <translation>恢复密钥不正确。请重试。</translation>
     </message>
   </context>
   <context>
