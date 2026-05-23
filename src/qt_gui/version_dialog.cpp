@@ -1,13 +1,16 @@
-// SPDX-FileCopyrightText: Copyright 2025 shadPS4 Emulator Project
+// SPDX-FileCopyrightText: Copyright 2026 shadPS4 Emulator Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include <QDir>
+#include <QDragEnterEvent>
+#include <QDropEvent>
 #include <QFileDialog>
 #include <QInputDialog>
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QMessageBox>
+#include <QMimeData>
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
 #include <QProcess>
@@ -29,6 +32,7 @@ VersionDialog::VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget
     : QDialog(parent), ui(new Ui::VersionDialog), m_gui_settings(std::move(gui_settings)) {
     ui->setupUi(this);
     this->setMinimumSize(670, 350);
+    setAcceptDrops(true);
 
     ui->checkOnStartupCheckBox->setChecked(
         m_gui_settings->GetValue(gui::vm_checkOnStartup).toBool());
@@ -95,40 +99,7 @@ VersionDialog::VersionDialog(std::shared_ptr<gui_settings> gui_settings, QWidget
                                                "Executable (*)");
 #endif
 
-        if (exePath.isEmpty())
-            return;
-
-        bool ok;
-        QString version_name =
-            QInputDialog::getText(this, tr("Version name"),
-                                  tr("Enter the name of this version as it appears in the list."),
-                                  QLineEdit::Normal, "", &ok);
-        if (!ok || version_name.trimmed().isEmpty())
-            return;
-
-        version_name = version_name.trimmed();
-
-        auto version_list = VersionManager::GetVersionList();
-
-        if (std::find_if(version_list.cbegin(), version_list.cend(), [version_name](auto i) {
-                return i.name == version_name.toStdString();
-            }) != version_list.cend()) {
-            QMessageBox::warning(this, tr("Error"), tr("A version with that name already exists."));
-            return;
-        }
-
-        VersionManager::Version new_version = {
-            .name = version_name.toStdString(),
-            .path = exePath.toStdString(),
-            .date = QDateTime::currentDateTime().toString("yyyy-MM-dd").toStdString(),
-            .codename = tr("Local").toStdString(),
-            .type = VersionManager::VersionType::Custom,
-        };
-        VersionManager::AddNewVersion(new_version);
-        m_gui_settings->SetValue(gui::vm_versionSelected, QString::fromStdString(new_version.path));
-
-        QMessageBox::information(this, tr("Success"), tr("Version added successfully."));
-        LoadInstalledList();
+        AddCustomExecutable(exePath);
     });
 
     connect(ui->deleteVersionButton, &QPushButton::clicked, this, [this]() {
@@ -239,6 +210,78 @@ void VersionDialog::onItemChanged(QTreeWidgetItem* item, int column) {
             item->setSelected(false);
         }
     }
+}
+void VersionDialog::dragEnterEvent(QDragEnterEvent* event) {
+    if (event->mimeData()->hasUrls()) {
+
+        const auto urls = event->mimeData()->urls();
+
+        if (!urls.isEmpty()) {
+
+            QString filePath = urls.first().toLocalFile();
+
+#ifdef Q_OS_WIN
+            if (filePath.endsWith(".exe", Qt::CaseInsensitive)) {
+                event->acceptProposedAction();
+            }
+#else
+            QFileInfo info(filePath);
+
+            if (info.isExecutable()) {
+                event->acceptProposedAction();
+            }
+#endif
+        }
+    }
+}
+
+void VersionDialog::dropEvent(QDropEvent* event) {
+    const auto urls = event->mimeData()->urls();
+
+    if (urls.isEmpty())
+        return;
+
+    QString exePath = urls.first().toLocalFile();
+    AddCustomExecutable(exePath);
+    event->acceptProposedAction();
+}
+
+void VersionDialog::AddCustomExecutable(const QString& exePath) {
+    if (exePath.isEmpty())
+        return;
+
+    bool ok;
+    QString version_name = QInputDialog::getText(
+        this, tr("Version name"), tr("Enter the name of this version as it appears in the list."),
+        QLineEdit::Normal, "", &ok);
+
+    if (!ok || version_name.trimmed().isEmpty())
+        return;
+
+    version_name = version_name.trimmed();
+
+    auto version_list = VersionManager::GetVersionList();
+
+    if (std::find_if(version_list.cbegin(), version_list.cend(), [version_name](auto i) {
+            return i.name == version_name.toStdString();
+        }) != version_list.cend()) {
+
+        QMessageBox::warning(this, tr("Error"), tr("A version with that name already exists."));
+        return;
+    }
+
+    VersionManager::Version new_version = {
+        .name = version_name.toStdString(),
+        .path = exePath.toStdString(),
+        .date = QDateTime::currentDateTime().toString("yyyy-MM-dd").toStdString(),
+        .codename = tr("Local").toStdString(),
+        .type = VersionManager::VersionType::Custom,
+    };
+
+    VersionManager::AddNewVersion(new_version);
+    m_gui_settings->SetValue(gui::vm_versionSelected, QString::fromStdString(new_version.path));
+    QMessageBox::information(this, tr("Success"), tr("Version added successfully."));
+    LoadInstalledList();
 }
 
 void VersionDialog::DownloadListVersion() {
