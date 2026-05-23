@@ -92,8 +92,8 @@ public:
         std::vector<User> activeUsers = UserSettings.GetUserManager().GetValidUsers();
 
         for (int i = 0; const auto& user : activeUsers) {
-            QString savelabel =
-                "User " + QString::number(i + 1) + ": " + QString::fromStdString(user.user_name);
+            QString savelabel = tr("User") + " " + QString::number(i + 1) + ": " +
+                                QString::fromStdString(user.user_name);
             QAction* action = new QAction(savelabel);
             openSaveDataMenu->addAction(action);
             openSaveActionList.append(action);
