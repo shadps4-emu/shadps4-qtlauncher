@@ -86,6 +86,7 @@ public:
         openFolderMenu->addAction(openGameFolder);
         openFolderMenu->addAction(openUpdateFolder);
         openFolderMenu->addAction(openLogFolder);
+        openFolderMenu->addMenu(openSaveDataMenu);
 
         QList<QAction*> openSaveActionList;
         std::vector<User> activeUsers = UserSettings.GetUserManager().GetValidUsers();
@@ -101,7 +102,6 @@ public:
 
         menu.addMenu(launchMenu);
         menu.addMenu(openFolderMenu);
-        menu.addMenu(openSaveDataMenu);
 
         QMenu* gameConfigMenu = new QMenu(tr("Game-specific Settings..."), widget);
         QAction gameConfigConfigure(tr("Configure Game-specific Settings"), widget);
