@@ -1613,19 +1613,19 @@ Debes introducir tus claves y guardarlas.</translation>
     </message>
     <message>
       <source>Dpad Up</source>
-      <translation>Botón de dirección arriba</translation>
+      <translation>Botón de dirección hacia arriba</translation>
     </message>
     <message>
       <source>Dpad Down</source>
-      <translation>Botón de dirección abajo</translation>
+      <translation>Botón de dirección hacia abajo</translation>
     </message>
     <message>
       <source>Dpad Left</source>
-      <translation>Botón de dirección izquierda</translation>
+      <translation>Botón de dirección hacia la izquierda</translation>
     </message>
     <message>
       <source>Dpad Right</source>
-      <translation>Botón de dirección derecha</translation>
+      <translation>Botón de dirección hacia la derecha</translation>
     </message>
     <message>
       <source>Left Stick Up</source>
