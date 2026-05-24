@@ -86,13 +86,14 @@ public:
         openFolderMenu->addAction(openGameFolder);
         openFolderMenu->addAction(openUpdateFolder);
         openFolderMenu->addAction(openLogFolder);
+        openFolderMenu->addMenu(openSaveDataMenu);
 
         QList<QAction*> openSaveActionList;
         std::vector<User> activeUsers = UserSettings.GetUserManager().GetValidUsers();
 
         for (int i = 0; const auto& user : activeUsers) {
-            QString savelabel =
-                "User " + QString::number(i + 1) + ": " + QString::fromStdString(user.user_name);
+            QString savelabel = tr("User") + " " + QString::number(i + 1) + ": " +
+                                QString::fromStdString(user.user_name);
             QAction* action = new QAction(savelabel);
             openSaveDataMenu->addAction(action);
             openSaveActionList.append(action);
@@ -101,7 +102,6 @@ public:
 
         menu.addMenu(launchMenu);
         menu.addMenu(openFolderMenu);
-        menu.addMenu(openSaveDataMenu);
 
         QMenu* gameConfigMenu = new QMenu(tr("Game-specific Settings..."), widget);
         QAction gameConfigConfigure(tr("Configure Game-specific Settings"), widget);
