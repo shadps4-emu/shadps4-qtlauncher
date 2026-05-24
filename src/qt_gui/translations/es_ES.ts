@@ -427,7 +427,7 @@
     </message>
     <message>
       <source>Left Stick</source>
-      <translation>Stick izquierdo</translation>
+      <translation>Joystick izquierdo</translation>
     </message>
     <message>
       <source>Config Selection</source>
@@ -447,7 +447,7 @@
     </message>
     <message>
       <source>Right Stick</source>
-      <translation>Stick derecho</translation>
+      <translation>Joystick derecho</translation>
     </message>
     <message>
       <source>Color Adjustment</source>
@@ -607,7 +607,7 @@
     </message>
     <message>
       <source>Left Stick Deadzone</source>
-      <translation>Zona muerta del stick izquierdo</translation>
+      <translation>Zona muerta del joystick izquierdo</translation>
     </message>
     <message>
       <source>Min Deadzone (def:2 max:127)</source>
@@ -619,7 +619,7 @@
     </message>
     <message>
       <source>Right Stick Deadzone</source>
-      <translation>Zona muerta del stick derecho</translation>
+      <translation>Zona muerta del joystick derecho</translation>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
@@ -1453,7 +1453,7 @@ Debes introducir tus claves y guardarlas.</translation>
     </message>
     <message>
       <source>Left Analog Halfmode</source>
-      <translation>Modo reducido del stick izquierdo</translation>
+      <translation>Modo reducido del joystick izquierdo</translation>
     </message>
     <message>
       <source>Config Selection</source>
@@ -1513,7 +1513,7 @@ Debes introducir tus claves y guardarlas.</translation>
     </message>
     <message>
       <source>Right Analog Halfmode</source>
-      <translation>Modo reducido del stick derecho</translation>
+      <translation>Modo reducido del joystick derecho</translation>
     </message>
     <message>
       <source>Speed Offset (def 0.125):</source>
@@ -1553,7 +1553,7 @@ Debes introducir tus claves y guardarlas.</translation>
     </message>
     <message>
       <source>Mousewheel cannot be mapped to stick outputs</source>
-      <translation>No se puede asignar la rueda del ratón a un stick</translation>
+      <translation>No se puede asignar la rueda del ratón a un joystick</translation>
     </message>
     <message>
       <source>Save</source>
@@ -1597,91 +1597,91 @@ Debes introducir tus claves y guardarlas.</translation>
     </message>
     <message>
       <source>Output</source>
-      <translation type="unfinished">Output</translation>
+      <translation>Salida</translation>
     </message>
     <message>
       <source>Input</source>
-      <translation type="unfinished">Input</translation>
+      <translation>Entrada</translation>
     </message>
     <message>
       <source>Alternate Input 1</source>
-      <translation type="unfinished">Alternate Input 1</translation>
+      <translation>Entrada alternativa 1</translation>
     </message>
     <message>
       <source>Alternate Input 2</source>
-      <translation type="unfinished">Alternate Input 2</translation>
+      <translation>Entrada alternativa 2</translation>
     </message>
     <message>
       <source>Dpad Up</source>
-      <translation type="unfinished">Dpad Up</translation>
+      <translation>Botón de dirección hacia arriba</translation>
     </message>
     <message>
       <source>Dpad Down</source>
-      <translation type="unfinished">Dpad Down</translation>
+      <translation>Botón de dirección hacia abajo</translation>
     </message>
     <message>
       <source>Dpad Left</source>
-      <translation type="unfinished">Dpad Left</translation>
+      <translation>Botón de dirección hacia la izquierda</translation>
     </message>
     <message>
       <source>Dpad Right</source>
-      <translation type="unfinished">Dpad Right</translation>
+      <translation>Botón de dirección hacia la derecha</translation>
     </message>
     <message>
       <source>Left Stick Up</source>
-      <translation type="unfinished">Left Stick Up</translation>
+      <translation>Joystick izquierdo hacia arriba</translation>
     </message>
     <message>
       <source>Left Stick Down</source>
-      <translation type="unfinished">Left Stick Down</translation>
+      <translation>Joystick izquierdo hacia abajo</translation>
     </message>
     <message>
       <source>Left Stick Left</source>
-      <translation type="unfinished">Left Stick Left</translation>
+      <translation>Joystick izquierdo hacia la izquierda</translation>
     </message>
     <message>
       <source>Left Stick Right</source>
-      <translation type="unfinished">Left Stick Right</translation>
+      <translation>Joystick izquierdo hacia la derecha</translation>
     </message>
     <message>
       <source>Right Stick Up</source>
-      <translation type="unfinished">Right Stick Up</translation>
+      <translation>Joystick derecho hacia arriba</translation>
     </message>
     <message>
       <source>Right Stick Down</source>
-      <translation type="unfinished">Right Stick Down</translation>
+      <translation>Joystick derecho hacia abajo</translation>
     </message>
     <message>
       <source>Right Stick Left</source>
-      <translation type="unfinished">Right Stick Left</translation>
+      <translation>Joystick derecho hacia la izquierda</translation>
     </message>
     <message>
       <source>Right Stick Right</source>
-      <translation type="unfinished">Right Stick Right</translation>
+      <translation>Joystick derecho hacia la derecha</translation>
     </message>
     <message>
       <source>L1</source>
-      <translation type="unfinished">L1</translation>
+      <translation>L1</translation>
     </message>
     <message>
       <source>R1</source>
-      <translation type="unfinished">R1</translation>
+      <translation>R1</translation>
     </message>
     <message>
       <source>L2</source>
-      <translation type="unfinished">L2</translation>
+      <translation>L2</translation>
     </message>
     <message>
       <source>R2</source>
-      <translation type="unfinished">R2</translation>
+      <translation>R2</translation>
     </message>
     <message>
       <source>L3</source>
-      <translation type="unfinished">L3</translation>
+      <translation>L3</translation>
     </message>
     <message>
       <source>R3</source>
-      <translation type="unfinished">R3</translation>
+      <translation>R3</translation>
     </message>
   </context>
   <context>
