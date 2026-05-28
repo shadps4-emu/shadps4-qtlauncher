@@ -276,7 +276,9 @@ public:
             if (!EmulatorSettings.IsLogEnable()) {
                 QDesktopServices::openUrl(QUrl::fromLocalFile(logPath));
             } else {
-                QString fileName = QString::fromStdString(m_games[itemID].serial) + ".log";
+                QString fileName = QString::fromStdString(EmulatorSettings.IsLogSeparate()
+                                                              ? m_games[itemID].serial + ".log"
+                                                              : "shad_log.txt");
                 QString filePath = logPath + "/" + fileName;
                 QStringList arguments;
                 if (QFile::exists(filePath)) {
