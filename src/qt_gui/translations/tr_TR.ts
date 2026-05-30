@@ -1411,7 +1411,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Hotkeys</source>
-      <translation type="unfinished">Hotkeys</translation>
+      <translation>Kısayol Tuşları</translation>
     </message>
     <message>
       <source>Placeholder</source>
@@ -1601,15 +1601,15 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Input</source>
-      <translation type="unfinished">Input</translation>
+      <translation>Giriş</translation>
     </message>
     <message>
       <source>Alternate Input 1</source>
-      <translation type="unfinished">Alternate Input 1</translation>
+      <translation>Alternatif Giriş 1</translation>
     </message>
     <message>
       <source>Alternate Input 2</source>
-      <translation type="unfinished">Alternate Input 2</translation>
+      <translation>Alternatif Giriş 2</translation>
     </message>
     <message>
       <source>Dpad Up</source>
@@ -2058,11 +2058,11 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Hata</translation>
     </message>
     <message>
       <source>Incorrect recovery key. Please try again.</source>
-      <translation type="unfinished">Incorrect recovery key. Please try again.</translation>
+      <translation>Kurtarma anahtarı yanlış. Lütfen tekrar deneyin.</translation>
     </message>
   </context>
   <context>
