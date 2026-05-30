@@ -630,7 +630,7 @@
     <name>CryptoManagerDialog</name>
     <message>
       <source>Crypto Key Manager</source>
-      <translation type="unfinished">Crypto Key Manager</translation>
+      <translation>مدیر کلید رمزنگاری</translation>
     </message>
     <message>
       <source>Trophy Key: Used for trophy decryption.
@@ -644,11 +644,11 @@ Must be a valid hex string with even length.</translation>
     </message>
     <message>
       <source>Trophy Key:</source>
-      <translation type="unfinished">Trophy Key:</translation>
+      <translation>کلید تروفی:</translation>
     </message>
     <message>
       <source>Status: Not loaded</source>
-      <translation type="unfinished">Status: Not loaded</translation>
+      <translation>وضعیت: بارگزاری نشده</translation>
     </message>
     <message>
       <source>Trophy Key</source>
@@ -656,31 +656,31 @@ Must be a valid hex string with even length.</translation>
     </message>
     <message>
       <source>Enter %1</source>
-      <translation type="unfinished">Enter %1</translation>
+      <translation>%1 را وارد کنید</translation>
     </message>
     <message>
       <source>Exponent1</source>
-      <translation type="unfinished">Exponent1</translation>
+      <translation>نمای عمومی</translation>
     </message>
     <message>
       <source>Exponent2</source>
-      <translation type="unfinished">Exponent2</translation>
+      <translation>ضریب</translation>
     </message>
     <message>
       <source>Public Exponent</source>
-      <translation type="unfinished">Public Exponent</translation>
+      <translation>پیمانه</translation>
     </message>
     <message>
       <source>Coefficient</source>
-      <translation type="unfinished">Coefficient</translation>
+      <translation>نمای خصوصی</translation>
     </message>
     <message>
       <source>Modulus</source>
-      <translation type="unfinished">Modulus</translation>
+      <translation>ماژول ها</translation>
     </message>
     <message>
       <source>Prime 1</source>
-      <translation type="unfinished">Prime 1</translation>
+      <translation>عدد اول ۱</translation>
     </message>
     <message>
       <source>Prime 2</source>
@@ -967,7 +967,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>m</source>
-      <translation type="unfinished">m</translation>
+      <translation>دقیقه</translation>
     </message>
     <message>
       <source>s</source>
@@ -1331,7 +1331,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Show FPS Counter</source>
-      <translation type="unfinished">Show FPS Counter</translation>
+      <translation>نمایش شمارنده FPS</translation>
     </message>
     <message>
       <source>unmapped</source>
