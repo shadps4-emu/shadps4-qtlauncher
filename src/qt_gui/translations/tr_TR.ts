@@ -1403,7 +1403,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Volume Up</source>
-      <translation>Sesi Yükselt</translation>
+      <translation>Sesi Aç</translation>
     </message>
     <message>
       <source>Volume Down</source>
@@ -1419,7 +1419,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Capture Screenshot</source>
-      <translation type="unfinished">Capture Screenshot</translation>
+      <translation>Ekran Görüntüsü Al</translation>
     </message>
     <message>
       <source>Capture Screenshot w/ Overlays</source>
@@ -1427,7 +1427,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Open Emulator Settings</source>
-      <translation type="unfinished">Open Emulator Settings</translation>
+      <translation>Emülatör Ayarlarını Aç</translation>
     </message>
   </context>
   <context>
@@ -1613,51 +1613,51 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Dpad Up</source>
-      <translation type="unfinished">Dpad Up</translation>
+      <translation>Yukarı Yön Düğmesi</translation>
     </message>
     <message>
       <source>Dpad Down</source>
-      <translation type="unfinished">Dpad Down</translation>
+      <translation>Aşağı Yön Düğmesi</translation>
     </message>
     <message>
       <source>Dpad Left</source>
-      <translation type="unfinished">Dpad Left</translation>
+      <translation>Sol Yön Düğmesi</translation>
     </message>
     <message>
       <source>Dpad Right</source>
-      <translation type="unfinished">Dpad Right</translation>
+      <translation>Sağ Yön Düğmesi</translation>
     </message>
     <message>
       <source>Left Stick Up</source>
-      <translation type="unfinished">Left Stick Up</translation>
+      <translation>Sol Analog Yukarı</translation>
     </message>
     <message>
       <source>Left Stick Down</source>
-      <translation type="unfinished">Left Stick Down</translation>
+      <translation>Sol Analog Aşağı</translation>
     </message>
     <message>
       <source>Left Stick Left</source>
-      <translation type="unfinished">Left Stick Left</translation>
+      <translation>Sol Analog Sol</translation>
     </message>
     <message>
       <source>Left Stick Right</source>
-      <translation type="unfinished">Left Stick Right</translation>
+      <translation>Sol Analog Sağ</translation>
     </message>
     <message>
       <source>Right Stick Up</source>
-      <translation type="unfinished">Right Stick Up</translation>
+      <translation>Sağ Analog Yukarı</translation>
     </message>
     <message>
       <source>Right Stick Down</source>
-      <translation type="unfinished">Right Stick Down</translation>
+      <translation>Sağ Analog Aşağı</translation>
     </message>
     <message>
       <source>Right Stick Left</source>
-      <translation type="unfinished">Right Stick Left</translation>
+      <translation>Sağ Analog Sol</translation>
     </message>
     <message>
       <source>Right Stick Right</source>
-      <translation type="unfinished">Right Stick Right</translation>
+      <translation>Sağ Analog Sağ</translation>
     </message>
     <message>
       <source>L1</source>
@@ -2837,7 +2837,7 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Readbacks Mode</source>
-      <translation type="unfinished">Readbacks Mode</translation>
+      <translation>Geri Okuma Modu</translation>
     </message>
     <message>
       <source>Disabled</source>
