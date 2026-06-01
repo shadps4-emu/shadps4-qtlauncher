@@ -6,14 +6,16 @@
 #include <QFile>
 #include <QMessageBox>
 #include <QXmlStreamReader>
-#include <SDL3/SDL_messagebox.h>
 #include <common/assert.h>
 #include <common/path_util.h>
 #include "emulator_settings.h"
+#include "qt_gui/main_window.h"
 #include "user_manager.h"
 #include "user_settings.h"
 
 namespace fs = std::filesystem;
+
+#define tr(...) MainWindow::tr(__VA_ARGS__)
 
 bool UserManager::AddUser(const User& user) {
     for (const auto& u : m_users.user) {
@@ -101,14 +103,16 @@ enum class TransferOption : s32 {
 TransferOption AskMigrationOption(QWidget* parent = nullptr) {
     QMessageBox msgbox(parent);
 
-    msgbox.setWindowTitle("Save Migration");
-    msgbox.setText("The shadPS4 save and trophy locations have been updated, and save/trophy "
-                   "files have been detected in the old location.\n"
-                   "Do you wish to copy them over, move them over, "
-#ifndef _WIN32
-                   "move and link back to the original location, "
+    // clang-format off
+    msgbox.setWindowTitle(tr("Save/Trophy Migration"));
+#ifdef _WIN32
+    msgbox.setText(tr("The shadPS4 save and trophy locations have been updated, and save/trophy files have been detected in the old location.\n") +
+                   tr("Do you wish to copy them over, move them over, or continue without doing anything?"));
+#else
+    msgbox.setText(tr("The shadPS4 save and trophy locations have been updated, and save/trophy files have been detected in the old location.\n") +
+                   tr("Do you wish to copy them over, move them over, move and link back to the original location, or continue without doing anything?"));
 #endif
-                   "or continue without doing anything?");
+    // clang-format on
 
     auto* copy_btn = (QAbstractButton*)msgbox.addButton("Copy", QMessageBox::AcceptRole);
     auto* move_btn = (QAbstractButton*)msgbox.addButton("Move", QMessageBox::AcceptRole);
