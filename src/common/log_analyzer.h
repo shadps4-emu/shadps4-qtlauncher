@@ -33,8 +33,8 @@ static inline constexpr char const* const is_valid_report_suite = R"(
 shadps4-emu
 #MatchValueEntry
 -The log type was not snyc.
-[Config] <Info> ^ emulator.cpp:# Run: General LogType: @
-sync
+[Config] <Info> ^ emulator.cpp:# Run: Log sync: @
+true
 #MatchValueEntry
 -PS4 Neo mode was turned on.
 [Config] <Info> ^ emulator.cpp:# Run: General isNeo: @
