@@ -3,19 +3,13 @@
 
 #include <filesystem>
 #include <iostream>
-#include <QFile>
-#include <QMessageBox>
-#include <QXmlStreamReader>
 #include <common/assert.h>
 #include <common/path_util.h>
 #include "emulator_settings.h"
-#include "qt_gui/main_window.h"
 #include "user_manager.h"
 #include "user_settings.h"
 
 namespace fs = std::filesystem;
-
-#define tr(...) MainWindow::tr(__VA_ARGS__)
 
 bool UserManager::AddUser(const User& user) {
     for (const auto& u : m_users.user) {
@@ -93,170 +87,6 @@ const std::vector<User>& UserManager::GetAllUsers() const {
     return m_users.user;
 }
 
-enum class TransferOption : s32 {
-    Copy = 0,
-    Move,
-    MoveAndLinkBack,
-    Nothing,
-    SdlCancelled = -1,
-};
-TransferOption AskMigrationOption(QWidget* parent = nullptr) {
-    QMessageBox msgbox(parent);
-
-    // clang-format off
-    msgbox.setWindowTitle(tr("Save/Trophy Migration"));
-#ifdef _WIN32
-    msgbox.setText(tr("The shadPS4 save and trophy locations have been updated, and save/trophy files have been detected in the old location.\n") +
-                   tr("Do you wish to copy them over, move them over, or continue without doing anything?"));
-#else
-    msgbox.setText(tr("The shadPS4 save and trophy locations have been updated, and save/trophy files have been detected in the old location.\n") +
-                   tr("Do you wish to copy them over, move them over, move and link back to the original location, or continue without doing anything?"));
-#endif
-    // clang-format on
-
-    auto* copy_btn = (QAbstractButton*)msgbox.addButton("Copy", QMessageBox::AcceptRole);
-    auto* move_btn = (QAbstractButton*)msgbox.addButton("Move", QMessageBox::AcceptRole);
-
-#ifndef _WIN32
-    auto* link_btn =
-        (QAbstractButton*)msgbox.addButton("Move and link back", QMessageBox::AcceptRole);
-#endif
-
-    auto* nothing_btn = (QAbstractButton*)msgbox.addButton("Do nothing", QMessageBox::RejectRole);
-
-    msgbox.exec();
-
-    auto* clicked = msgbox.clickedButton();
-
-    if (clicked == copy_btn)
-        return TransferOption::Copy;
-
-    if (clicked == move_btn)
-        return TransferOption::Move;
-
-#ifndef _WIN32
-    if (clicked == link_btn)
-        return TransferOption::MoveAndLinkBack;
-#endif
-
-    return TransferOption::Nothing;
-}
-
-static void MoveFolder(fs::path const& _from, fs::path const& _to) {
-    try {
-        fs::rename(_from, _to);
-    } catch (...) {
-        fs::copy(_from, _to, fs::copy_options::recursive);
-        fs::remove_all(_from);
-    }
-}
-
-static void CheckAndMigrateSaves(TransferOption option) {
-    auto const new_save_dir = EmulatorSettings.GetHomeDir() / "1000" / "savedata";
-    auto const old_save_dir =
-        Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "savedata" / "1";
-    if (fs::exists(old_save_dir) && !fs::is_empty(old_save_dir)) {
-        try {
-            switch (option) {
-            case TransferOption::Copy:
-                fs::copy(old_save_dir, new_save_dir, fs::copy_options::recursive);
-                break;
-            case TransferOption::Move:
-                MoveFolder(old_save_dir, new_save_dir);
-                break;
-            case TransferOption::MoveAndLinkBack:
-                MoveFolder(old_save_dir, new_save_dir);
-                fs::create_directory_symlink(new_save_dir, old_save_dir);
-                break;
-            case TransferOption::SdlCancelled:
-            case TransferOption::Nothing:
-                break;
-            default:
-                UNREACHABLE();
-            }
-        } catch (std::exception const& e) {
-            UNREACHABLE_MSG("Error while migrating saves: {}", e.what());
-        }
-    }
-}
-
-static void CheckAndMigrateTrophies(TransferOption option) {
-    auto const user_dir = EmulatorSettings.GetHomeDir() / "1000";
-    auto const old_trophy_base_dir =
-        Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "game_data";
-    auto const new_trophy_global_dir =
-        Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "trophy";
-    try {
-        for (auto const& entry : fs::directory_iterator(old_trophy_base_dir)) {
-            if (!entry.is_directory()) {
-                continue;
-            }
-            if (!fs::exists(entry.path() / "TrophyFiles")) {
-                continue;
-            }
-            for (auto const& subentry : fs::directory_iterator(entry.path() / "TrophyFiles")) {
-                if (!subentry.is_directory()) {
-                    continue;
-                }
-                auto const old_trophy_dir = subentry.path();
-                if (fs::exists(old_trophy_dir / "Xml")) {
-                    QFile file(
-                        QString::fromStdString((old_trophy_dir / "Xml" / "TROP.XML").string()));
-                    if (!file.open(QIODevice::ReadOnly)) {
-                        continue;
-                    }
-
-                    QXmlStreamReader xml(&file);
-
-                    std::string npcommid;
-
-                    while (!xml.atEnd()) {
-                        xml.readNext();
-
-                        if (xml.isStartElement() && xml.name() == u"npcommid") {
-                            npcommid = xml.readElementText().toStdString();
-                            break;
-                        }
-                    }
-
-                    if (xml.hasError() || npcommid.empty()) {
-                        continue;
-                    }
-                    if (fs::exists(user_dir / "trophy" / (npcommid + ".xml"))) {
-                        continue;
-                    }
-                    if (!fs::exists(new_trophy_global_dir / npcommid)) {
-                        fs::create_directories(new_trophy_global_dir / npcommid);
-                        fs::copy(old_trophy_dir, new_trophy_global_dir / npcommid,
-                                 fs::copy_options::recursive);
-                    }
-                    auto const old_trophy_file = old_trophy_dir / "Xml" / "TROP.XML";
-                    auto const new_trophy_file = user_dir / "trophy" / (npcommid + ".xml");
-                    switch (option) {
-                    case TransferOption::Copy:
-                        fs::copy_file(old_trophy_file, new_trophy_file);
-                        break;
-                    case TransferOption::Move:
-                        MoveFolder(old_trophy_file, new_trophy_file);
-                        break;
-                    case TransferOption::MoveAndLinkBack:
-                        MoveFolder(old_trophy_file, new_trophy_file);
-                        fs::create_symlink(new_trophy_file, old_trophy_file);
-                        break;
-                    case TransferOption::Nothing:
-                    case TransferOption::SdlCancelled:
-                        break;
-                    default:
-                        UNREACHABLE();
-                    }
-                }
-            }
-        }
-    } catch (std::exception const& e) {
-        UNREACHABLE_MSG("Error while migrating trophies: {}", e.what());
-    }
-}
-
 Users UserManager::CreateDefaultUsers() {
     Users default_users;
     default_users.user = {
@@ -314,11 +144,6 @@ Users UserManager::CreateDefaultUsers() {
             std::filesystem::create_directory(user_dir / "savedata");
             std::filesystem::create_directory(user_dir / "trophy");
             std::filesystem::create_directory(user_dir / "inputs");
-            if (u.user_id == 1000) {
-                TransferOption user_choice = AskMigrationOption();
-                CheckAndMigrateSaves(user_choice);
-                CheckAndMigrateTrophies(user_choice);
-            }
         }
     }
 
