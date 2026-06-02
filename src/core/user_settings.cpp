@@ -84,41 +84,37 @@ static void CheckAndMigrateSaves(TransferOption option) {
     auto const new_save_root = EmulatorSettings.GetHomeDir() / "1000" / "savedata";
     auto const old_save_root =
         Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "savedata" / "1";
-    try {
-        for (const auto& entry : fs::directory_iterator(old_save_root)) {
-            if (!entry.is_directory()) {
-                continue;
-            }
-            const auto old_game_dir = entry.path();
-            const auto new_game_dir = new_save_root / old_game_dir.filename();
-            const bool already_exists = fs::exists(new_game_dir);
-
-            switch (option) {
-            case TransferOption::Copy:
-                if (!already_exists) {
-                    fs::copy(old_game_dir, new_game_dir, fs::copy_options::recursive);
-                }
-                break;
-            case TransferOption::Move:
-                if (!already_exists) {
-                    MovePath(old_game_dir, new_game_dir);
-                }
-                break;
-            case TransferOption::MoveAndLinkBack:
-                if (!already_exists) {
-                    MovePath(old_game_dir, new_game_dir);
-                    fs::create_directory_symlink(new_game_dir, old_game_dir);
-                }
-                break;
-            case TransferOption::Nothing:
-            case TransferOption::SdlCancelled:
-                return;
-            default:
-                UNREACHABLE();
-            }
+    for (const auto& entry : fs::directory_iterator(old_save_root)) {
+        if (!entry.is_directory()) {
+            continue;
         }
-    } catch (std::exception const& e) {
-        UNREACHABLE_MSG("Error while migrating saves: {}", e.what());
+        const auto old_game_dir = entry.path();
+        const auto new_game_dir = new_save_root / old_game_dir.filename();
+        const bool already_exists = fs::exists(new_game_dir);
+
+        switch (option) {
+        case TransferOption::Copy:
+            if (!already_exists) {
+                fs::copy(old_game_dir, new_game_dir, fs::copy_options::recursive);
+            }
+            break;
+        case TransferOption::Move:
+            if (!already_exists) {
+                MovePath(old_game_dir, new_game_dir);
+            }
+            break;
+        case TransferOption::MoveAndLinkBack:
+            if (!already_exists) {
+                MovePath(old_game_dir, new_game_dir);
+                fs::create_directory_symlink(new_game_dir, old_game_dir);
+            }
+            break;
+        case TransferOption::Nothing:
+        case TransferOption::SdlCancelled:
+            return;
+        default:
+            UNREACHABLE();
+        }
     }
 }
 
@@ -208,13 +204,19 @@ void CheckSaveAndTrophyMigration() {
         EmulatorSettings.GetHomeDir() / "1000" / "savedata" / ".data_transfer.complete";
     auto const old_save_dir =
         Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "savedata" / "1";
-    if (fs::exists(old_save_dir) && !fs::is_empty(old_save_dir) &&
-        !fs::exists(migration_done_path)) {
-        TransferOption user_choice = AskMigrationOption();
-        CheckAndMigrateSaves(user_choice);
-        CheckAndMigrateTrophies(user_choice);
-        std::ofstream ofs(migration_done_path);
-        ofs << "";
+    try {
+        if (fs::exists(old_save_dir) && !fs::is_empty(old_save_dir) &&
+            !fs::exists(migration_done_path)) {
+            TransferOption user_choice = AskMigrationOption();
+            CheckAndMigrateSaves(user_choice);
+            CheckAndMigrateTrophies(user_choice);
+            std::ofstream ofs(migration_done_path);
+            ofs << "";
+        }
+    } catch (std::exception const& e) {
+        QMessageBox::information(nullptr, "Save/Trophy migration",
+                                 QString("Error while transferring data: %1").arg(e.what()));
+        UNREACHABLE();
     }
 }
 
