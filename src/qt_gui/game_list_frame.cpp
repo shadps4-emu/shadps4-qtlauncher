@@ -133,7 +133,8 @@ void GameListFrame::onCurrentCellChanged(int currentRow, int currentColumn, int 
 }
 
 void GameListFrame::PlayBackgroundMusic(QTableWidgetItem* item) {
-    if (!item || !m_gui_settings->GetValue(gui::gl_playBackgroundMusic).toBool()) {
+    if (!item || !m_gui_settings->GetValue(gui::gl_playBackgroundMusic).toBool() ||
+        EmulatorState::GetInstance()->IsGameRunning()) {
         BackgroundMusicPlayer::getInstance().stopMusic();
         return;
     }
