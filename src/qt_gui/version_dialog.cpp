@@ -567,7 +567,7 @@ tr("First you need to choose a location to save the versions in\n'Path to save v
                                             .arg(scriptFilePath);
                         process = "powershell.exe";
                         args << "-ExecutionPolicy" << "Bypass" << "-File" << scriptFilePath;
-#elif defined(Q_OS_LINUX) || defined(Q_OS_MACOS)
+#else
                     scriptFilePath = userPath + "/extract_update.sh";
                     scriptContent = QString(
                                         "#!/bin/bash\n"
