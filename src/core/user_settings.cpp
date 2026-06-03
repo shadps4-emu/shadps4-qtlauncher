@@ -81,9 +81,13 @@ static void MovePath(fs::path const& _from, fs::path const& _to) {
 }
 
 static void CheckAndMigrateSaves(TransferOption option) {
+    LOG_INFO(Loader, "Starting save migration");
     auto const new_save_root = EmulatorSettings.GetHomeDir() / "1000" / "savedata";
     auto const old_save_root =
         Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "savedata" / "1";
+    if (!std::filesystem::exists(old_save_root)) {
+        return;
+    }
     for (const auto& entry : fs::directory_iterator(old_save_root)) {
         if (!entry.is_directory()) {
             continue;
@@ -91,6 +95,7 @@ static void CheckAndMigrateSaves(TransferOption option) {
         const auto old_game_dir = entry.path();
         const auto new_game_dir = new_save_root / old_game_dir.filename();
         const bool already_exists = fs::exists(new_game_dir);
+        LOG_INFO(Loader, "Transferring {}", old_game_dir);
 
         switch (option) {
         case TransferOption::Copy:
@@ -116,9 +121,11 @@ static void CheckAndMigrateSaves(TransferOption option) {
             UNREACHABLE();
         }
     }
+    LOG_INFO(Loader, "Save migration complete");
 }
 
 static void CheckAndMigrateTrophies(TransferOption option) {
+    LOG_INFO(Loader, "Starting trophy migration");
     const auto user_dir = EmulatorSettings.GetHomeDir() / "1000";
     const auto old_trophy_base_dir =
         Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "game_data";
@@ -132,8 +139,9 @@ static void CheckAndMigrateTrophies(TransferOption option) {
         if (!entry.is_directory()) {
             continue;
         }
-
         const auto trophy_files_dir = entry.path() / "TrophyFiles";
+        LOG_INFO(Loader, "Transferring {}", trophy_files_dir);
+
         if (!fs::exists(trophy_files_dir)) {
             continue;
         }
@@ -144,6 +152,8 @@ static void CheckAndMigrateTrophies(TransferOption option) {
             }
 
             const auto old_trophy_dir = subentry.path();
+            LOG_INFO(Loader, "Transferring {}", old_trophy_dir);
+
             const auto xml_path = old_trophy_dir / "Xml" / "TROP.XML";
             if (!fs::exists(xml_path)) {
                 continue;
@@ -197,6 +207,7 @@ static void CheckAndMigrateTrophies(TransferOption option) {
             }
         }
     }
+    LOG_INFO(Loader, "Trophy migration complete");
 }
 
 void CheckSaveAndTrophyMigration() {
@@ -208,8 +219,11 @@ void CheckSaveAndTrophyMigration() {
         if (fs::exists(old_save_dir) && !fs::is_empty(old_save_dir) &&
             !fs::exists(migration_done_path)) {
             TransferOption user_choice = AskMigrationOption();
-            CheckAndMigrateSaves(user_choice);
-            CheckAndMigrateTrophies(user_choice);
+            if (user_choice != TransferOption::Nothing &&
+                user_choice != TransferOption::SdlCancelled) {
+                CheckAndMigrateSaves(user_choice);
+                CheckAndMigrateTrophies(user_choice);
+            }
             std::ofstream ofs(migration_done_path);
             ofs << "";
         }
