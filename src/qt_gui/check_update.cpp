@@ -411,6 +411,12 @@ void CheckUpdate::Install() {
     Common::FS::PathToQString(userPath, Common::FS::GetUserPath(Common::FS::PathType::UserDir));
 
     QString rootPath = QCoreApplication::applicationDirPath();
+#ifdef Q_OS_LINUX
+    const char* appimage_path = std::getenv("APPIMAGE");
+    if (appimage_path) {
+        rootPath = QString(std::filesystem::path(appimage_path).parent_path().c_str());
+    }
+#endif
 #ifdef Q_OS_MACOS
     Common::FS::PathToQString(rootPath, std::filesystem::current_path());
 #endif
