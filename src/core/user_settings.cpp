@@ -185,6 +185,7 @@ static void CheckAndMigrateTrophies(TransferOption option) {
 
             const auto new_trophy_dir = new_trophy_global_dir / npcommid;
             if (!fs::exists(new_trophy_dir)) {
+                fs::create_directories(new_trophy_dir);
                 fs::copy(old_trophy_dir, new_trophy_dir, fs::copy_options::recursive);
             }
 
