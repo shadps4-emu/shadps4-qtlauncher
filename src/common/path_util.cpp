@@ -137,7 +137,7 @@ static auto UserPaths = [] {
     std::unordered_map<PathType, fs::path> paths;
 
     const auto create_path = [&](PathType shad_path, const fs::path& new_path) {
-        std::filesystem::create_directory(new_path);
+        std::filesystem::create_directories(new_path);
         paths.insert_or_assign(shad_path, new_path);
     };
 
@@ -158,6 +158,7 @@ static auto UserPaths = [] {
     create_path(PathType::CacheDir, user_dir / CACHE_DIR);
     create_path(PathType::FontsDir, user_dir / FONTS_DIR);
     create_path(PathType::HomeDir, user_dir / HOME_DIR);
+    create_path(PathType::TrophyDir, user_dir / TROPHY_DIR);
 
     create_path(PathType::LauncherDir, launcher_dir);
     create_path(PathType::LauncherMetaData, launcher_dir / METADATA_DIR);

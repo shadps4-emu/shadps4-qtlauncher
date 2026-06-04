@@ -31,6 +31,7 @@ enum class PathType {
     LauncherMetaData, // Where launcher stores its game metadata.
     CacheDir,         // Where pipeline and shader cache is stored.
     FontsDir,         // Where dumped system fonts are stored.
+    TrophyDir,        // Where general trophy metadata is stored.
     HomeDir,          // PS4 home directory
 };
 
@@ -55,6 +56,7 @@ constexpr auto VERSION_DIR = "versions";
 constexpr auto CACHE_DIR = "cache";
 constexpr auto FONTS_DIR = "fonts";
 constexpr auto HOME_DIR = "home";
+constexpr auto TROPHY_DIR = "trophy";
 
 // Filenames
 constexpr auto LOG_FILE = "shad_log.txt";
