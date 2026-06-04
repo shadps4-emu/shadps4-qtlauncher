@@ -129,8 +129,7 @@ static void CheckAndMigrateTrophies(TransferOption option) {
     const auto user_dir = EmulatorSettings.GetHomeDir() / "1000";
     const auto old_trophy_base_dir =
         Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "game_data";
-    const auto new_trophy_global_dir =
-        Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "trophy";
+    const auto new_trophy_global_dir = Common::FS::GetUserPath(Common::FS::PathType::TrophyDir);
     if (!fs::exists(old_trophy_base_dir)) {
         return;
     }
@@ -185,6 +184,7 @@ static void CheckAndMigrateTrophies(TransferOption option) {
 
             const auto new_trophy_dir = new_trophy_global_dir / npcommid;
             if (!fs::exists(new_trophy_dir)) {
+                fs::create_directories(new_trophy_dir);
                 fs::copy(old_trophy_dir, new_trophy_dir, fs::copy_options::recursive);
             }
 
