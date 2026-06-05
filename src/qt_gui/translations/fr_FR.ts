@@ -692,7 +692,7 @@ doit être une chaîne hexadécimale valide de longueur égale.</translation>
     </message>
     <message>
       <source>Fake Keyset</source>
-      <translation type="unfinished">Fake Keyset</translation>
+      <translation/>
     </message>
     <message>
       <source>RSA key components for fake signing.
