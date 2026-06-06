@@ -43,7 +43,7 @@ private:
         }
     }
     QString GetColorName(int index) {
-        switch (index) {
+        switch (index - 1) {
         case 0:
             return "Blue";
         case 1:
