@@ -136,7 +136,7 @@ tr("The Auto Updater allows up to 60 update checks per hour.\\nYou have reached 
             return;
         }
 
-        QString currentRev = QString::fromStdString(Common::g_scm_rev);
+        QString currentRev = QString(Common::g_scm_rev);
         QString currentDate = Common::g_scm_date;
 
         QDateTime dateTime = QDateTime::fromString(latestDate, Qt::ISODate);
