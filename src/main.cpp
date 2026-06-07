@@ -192,6 +192,7 @@ int main(int argc, char* argv[]) {
     }
 
     if (!has_emulator_argument || show_gui) {
+        LOG_INFO(Loader, "Starting QtLauncher {}", Common::g_scm_rev);
         m_main_window->show();
     }
     return a.exec();
