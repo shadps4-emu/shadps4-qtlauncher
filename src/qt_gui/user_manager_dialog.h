@@ -29,7 +29,7 @@ private Q_SLOTS:
 
 private:
     QColor GetQColorFromIndex(int index) {
-        switch (index) {
+        switch (index - 1) {
         case 0:
             return Qt::blue;
         case 1:
