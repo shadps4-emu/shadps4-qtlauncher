@@ -3,7 +3,12 @@
 
 name: Build and Release
 
-on: [push, pull_request]
+on: 
+  push:
+    branches-ignore: [shadPS4QtLauncher-*]
+
+  pull_request:
+
 
 concurrency:
   group: ci-${{ github.event_name }}-${{ github.ref }}
