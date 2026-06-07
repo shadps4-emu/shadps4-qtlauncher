@@ -207,7 +207,7 @@ set(APP_VERSION "${GIT_REV_LIST_NUMBER}")
 configure_file("${CMAKE_CURRENT_SOURCE_DIR}/src/common/scm_rev.cpp.in" "${CMAKE_CURRENT_BINARY_DIR}/src/common/scm_rev.cpp" @ONLY)
 set_source_files_properties(src/shadps4.rc PROPERTIES COMPILE_DEFINITIONS "APP_VERSION=${APP_VERSION}")
 
-message("-- end git things, remote: ${GIT_REMOTE_NAME}, branch: ${GIT_BRANCH}, link: ${GIT_REMOTE_URL}")
+message("-- end git things, remote: ${GIT_REMOTE_NAME}, branch: ${GIT_BRANCH}, link: ${GIT_REMOTE_URL}, git rev: ${GIT_REV}")
 
 string(TOLOWER "${GIT_REMOTE_URL}" GIT_REMOTE_URL_LOWER)
 if(NOT GIT_REMOTE_URL_LOWER MATCHES "shadps4-emu/shadps4-qtlauncher" OR NOT GIT_BRANCH STREQUAL "main")
