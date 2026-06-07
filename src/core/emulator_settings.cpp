@@ -406,9 +406,6 @@ bool EmulatorSettingsImpl::Load(const std::string& serial) {
                     }
                 }
             }
-            if (GetConfigVersion() != Common::g_scm_rev) {
-                Save();
-            }
             return true;
         } else {
             // ── Per-game override file ─────────────────────────────────
