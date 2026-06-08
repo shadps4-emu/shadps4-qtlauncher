@@ -144,7 +144,7 @@ void UserManagerDialog::UpdateTable(bool mark_only) {
         // Color
         QTableWidgetItem* color_item = new QTableWidgetItem();
         color_item->setFlags(color_item->flags() & ~Qt::ItemIsEditable);
-        color_item->setData(Qt::DecorationRole, GetQColorFromIndex(u.user_color));
+        color_item->setData(Qt::DecorationRole, GetQColorFromIndex(u.user_color - 1));
         m_table->setItem(row, 2, color_item);
 
         // Controller port
@@ -188,14 +188,12 @@ u32 UserManagerDialog::GetUserKey() const {
 }
 
 void UserManagerDialog::OnUserCreate() {
-    int smallest = 1;
+    int new_uid = 0;
     for (auto& u : UserManagement.GetAllUsers()) {
-        if (u.user_id == smallest)
-            ++smallest;
-        else
-            break;
+        if (u.user_id >= new_uid)
+            new_uid = u.user_id + 1;
     }
-    if (smallest > 16) {
+    if (UserManagement.GetAllUsers().size() > 16) {
         QMessageBox::warning(this, tr("Error"), tr("Cannot add more users."));
         return;
     }
@@ -204,7 +202,7 @@ void UserManagerDialog::OnUserCreate() {
     dialog.setWindowTitle(tr("Create New User"));
     dialog.setModal(true);
     QVBoxLayout* layout = new QVBoxLayout(&dialog);
-    layout->addWidget(new QLabel(tr("New User ID: %1").arg(smallest)));
+    layout->addWidget(new QLabel(tr("New User ID: %1").arg(new_uid)));
     layout->addWidget(new QLabel(tr("Username (3–16 chars, letters, numbers, _, -)")));
     QLineEdit* edit = new QLineEdit(&dialog);
     edit->setValidator(
@@ -221,9 +219,9 @@ void UserManagerDialog::OnUserCreate() {
             return;
         }
         User u;
-        u.user_id = smallest;
+        u.user_id = new_uid;
         u.user_name = name.toStdString();
-        u.user_color = 0;
+        u.user_color = 1;
         u.player_index = -1;
         UserManagement.AddUser(u);
         UpdateTable();
@@ -299,9 +297,10 @@ void UserManagerDialog::OnUserSetColor() {
     QStringList colors = {"Blue", "Red", "Green", "Pink"};
     bool ok = false;
     QString color = QInputDialog::getItem(this, tr("Set User Color"), tr("Select color:"), colors,
-                                          user->user_color, false, &ok);
+                                          user->user_color - 1, false, &ok);
     if (ok) {
-        user->user_color = colors.indexOf(color);
+        user->user_color = colors.indexOf(color) + 1;
+        UserManagement.Save();
         UpdateTable();
     }
 }
