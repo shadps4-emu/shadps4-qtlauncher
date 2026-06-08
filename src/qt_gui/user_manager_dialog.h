@@ -29,7 +29,7 @@ private Q_SLOTS:
 
 private:
     QColor GetQColorFromIndex(int index) {
-        switch (index - 1) {
+        switch (index) {
         case 0:
             return Qt::blue;
         case 1:
@@ -43,7 +43,7 @@ private:
         }
     }
     QString GetColorName(int index) {
-        switch (index - 1) {
+        switch (index) {
         case 0:
             return "Blue";
         case 1:
