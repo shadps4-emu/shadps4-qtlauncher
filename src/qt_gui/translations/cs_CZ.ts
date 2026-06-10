@@ -1299,6 +1299,10 @@ Please enter your keys and save them.</translation>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
       <translation>K použití prohlížeče trofejí je nutný klíč trofeje. Lze jej zadat kliknutím na tlačítko Nastavení - Správa kryptografických klíčů.</translation>
     </message>
+    <message>
+      <source>User</source>
+      <translation type="unfinished">User</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
