@@ -1304,6 +1304,10 @@ sam izvještaj ne bi postao nevaljan:</translation>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
       <translation>Za korištenje Preglednika trofeja potreban je ključ trofeja. Može se unijeti klikom na Postavke - Upravljanje kriptografskim ključevima.</translation>
     </message>
+    <message>
+      <source>User</source>
+      <translation type="unfinished">User</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
