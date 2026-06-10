@@ -2177,7 +2177,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable HDR</source>
-      <translation>تشغيل HDR</translation>
+      <translation>تمكين HDR</translation>
     </message>
     <message>
       <source>Paths</source>
@@ -2213,7 +2213,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable Crash Diagnostics</source>
-      <translation>تشغيل تشخيص الأعطال</translation>
+      <translation>تمكين تشخيص الأعطال</translation>
     </message>
     <message>
       <source>Collect Shaders</source>
@@ -2992,7 +2992,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Select Game:</source>
-      <translation>اختر الُعْبَه:</translation>
+      <translation>إختر الُعْبَه:</translation>
     </message>
     <message>
       <source>Progress</source>
