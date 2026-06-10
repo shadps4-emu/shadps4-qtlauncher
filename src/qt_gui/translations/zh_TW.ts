@@ -1297,6 +1297,10 @@ Please enter your keys and save them.</source>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
       <translation>使用獎盃檢視器需要一個獎盃金鑰。您可以點擊「設定」-「管理加密金鑰」來輸入此金鑰。</translation>
     </message>
+    <message>
+      <source>User</source>
+      <translation type="unfinished">User</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
