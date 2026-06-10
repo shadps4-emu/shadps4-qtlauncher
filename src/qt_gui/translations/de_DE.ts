@@ -1300,7 +1300,7 @@ Bitte gib die Schlüssel ein und speicher diese.</translation>
     </message>
     <message>
       <source>User</source>
-      <translation type="unfinished">User</translation>
+      <translation>Benutzer</translation>
     </message>
   </context>
   <context>
