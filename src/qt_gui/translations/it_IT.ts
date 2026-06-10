@@ -1299,6 +1299,10 @@ Inserisci le chiavi e salvale.</translation>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
       <translation>È necessaria una chiave trofei per utilizzare il Visualizzatore Trofei. La chiave può essere inserita facendo clic su Impostazioni - Gestisci Chiavi Crittografiche.</translation>
     </message>
+    <message>
+      <source>User</source>
+      <translation type="unfinished">User</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
