@@ -1297,6 +1297,10 @@ Ange dina nycklar och spara dem.</translation>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
       <translation type="unfinished">A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</translation>
     </message>
+    <message>
+      <source>User</source>
+      <translation type="unfinished">User</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
