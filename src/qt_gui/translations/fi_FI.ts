@@ -1299,6 +1299,10 @@ Syötä avaimet ja tallenna ne.</translation>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
       <translation>Trophy-avain vaaditaan trophy-hallinnan käyttöön. Sen voi syöttää napsauttamalla Asetukset > Hallitse salausavaimia.</translation>
     </message>
+    <message>
+      <source>User</source>
+      <translation type="unfinished">User</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
