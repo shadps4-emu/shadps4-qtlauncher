@@ -1301,7 +1301,7 @@ Inserisci le chiavi e salvale.</translation>
     </message>
     <message>
       <source>User</source>
-      <translation type="unfinished">User</translation>
+      <translation>Utente</translation>
     </message>
   </context>
   <context>
