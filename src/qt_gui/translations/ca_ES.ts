@@ -1301,7 +1301,7 @@ Si us plau, introdueix les teves claus per desar-les.</translation>
     </message>
     <message>
       <source>User</source>
-      <translation type="unfinished">User</translation>
+      <translation>Usuari</translation>
     </message>
   </context>
   <context>
