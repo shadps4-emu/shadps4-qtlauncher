@@ -1301,7 +1301,7 @@ Debes introducir tus claves y guardarlas.</translation>
     </message>
     <message>
       <source>User</source>
-      <translation type="unfinished">User</translation>
+      <translation>Usuario</translation>
     </message>
   </context>
   <context>
