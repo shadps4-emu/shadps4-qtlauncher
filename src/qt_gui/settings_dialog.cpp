@@ -27,11 +27,13 @@
 #include "sdl_event_wrapper.h"
 #include "settings_dialog.h"
 #include "ui_settings_dialog.h"
-// #include "video_core/renderer_vulkan/vk_instance.h"
-// #include "video_core/renderer_vulkan/vk_presenter.h"
 
+#ifndef __APPLE__
 #define VOLK_IMPLEMENTATION
 #include "volk.h"
+#else
+#include "qt_gui/apple.h"
+#endif
 
 // extern std::unique_ptr<Vulkan::Presenter> presenter;
 
@@ -1415,6 +1417,7 @@ void SettingsDialog::RefreshAudioDevices() {
 }
 
 void SettingsDialog::GetPhysicalDevices() {
+#ifndef __APPLE__
     if (volkInitialize() != VK_SUCCESS) {
         qWarning() << "Failed to initialize Volk.";
         return;
@@ -1432,33 +1435,6 @@ void SettingsDialog::GetPhysicalDevices() {
     VkInstanceCreateInfo instInfo{};
     instInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
     instInfo.pApplicationInfo = &appInfo;
-
-#ifdef __APPLE__
-    const char* portabilityExtensionName = VK_KHR_PORTABILITY_ENUMERATION_EXTENSION_NAME;
-    const size_t portabilityExtensionNameLength = strlen(portabilityExtensionName);
-
-    uint32_t instanceExtensionCount = 0;
-    vkEnumerateInstanceExtensionProperties(nullptr, &instanceExtensionCount, nullptr);
-
-    if (instanceExtensionCount != 0) {
-        std::vector<VkExtensionProperties> instanceExtensions(instanceExtensionCount);
-        vkEnumerateInstanceExtensionProperties(nullptr, &instanceExtensionCount,
-                                               instanceExtensions.data());
-
-        const auto portabilityExtension = std::ranges::find_if(
-            instanceExtensions, [&portabilityExtensionName, &portabilityExtensionNameLength](
-                                    const VkExtensionProperties& ext) {
-                return strncmp(ext.extensionName, portabilityExtensionName,
-                               portabilityExtensionNameLength) == 0;
-            });
-
-        if (portabilityExtension != instanceExtensions.end()) {
-            instInfo.ppEnabledExtensionNames = &portabilityExtensionName;
-            instInfo.enabledExtensionCount = 1;
-            instInfo.flags = VK_INSTANCE_CREATE_ENUMERATE_PORTABILITY_BIT_KHR;
-        }
-    }
-#endif
 
     VkInstance instance;
     if (vkCreateInstance(&instInfo, nullptr, &instance) != VK_SUCCESS) {
@@ -1489,4 +1465,9 @@ void SettingsDialog::GetPhysicalDevices() {
     }
 
     vkDestroyInstance(instance, nullptr);
+#else
+    // Apple devices have a single GPU, query its name.
+    std::string gpuName = GetAppleGpuName();
+    m_physical_devices.push_back(QString::fromStdString(gpuName));
+#endif
 }

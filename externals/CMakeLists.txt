@@ -37,12 +37,6 @@ if (NOT TARGET SDL3::SDL3)
     add_subdirectory(sdl3)
 endif()
 
-# vulkan-headers
-if (NOT TARGET Vulkan::Headers)
-    set(VULKAN_HEADERS_ENABLE_MODULE OFF)
-    add_subdirectory(vulkan-headers)
-endif()
-
 # Toml11
 if (NOT TARGET toml11::toml11)
     add_subdirectory(toml11)
@@ -92,15 +86,13 @@ endif()
 set(JSON_BuildTests OFF CACHE INTERNAL "")
 add_subdirectory(json)
 
-#volk
-add_subdirectory(volk)
-
-# Apple-only dependencies
-if (APPLE)
-    # MoltenVK
-    if (NOT TARGET MoltenVK)
-        set(MVK_EXCLUDE_CEREAL ON)
-        set(MVK_EXCLUDE_SPIRV_TOOLS ON)
-        add_subdirectory(MoltenVK)
+if (NOT APPLE)
+    # vulkan-headers
+    if (NOT TARGET Vulkan::Headers)
+        set(VULKAN_HEADERS_ENABLE_MODULE OFF)
+        add_subdirectory(vulkan-headers)
     endif()
+
+    #volk
+    add_subdirectory(volk)
 endif()
