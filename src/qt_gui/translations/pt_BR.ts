@@ -1301,7 +1301,7 @@ Por favor, digite suas chaves e salve-as.</translation>
     </message>
     <message>
       <source>User</source>
-      <translation type="unfinished">User</translation>
+      <translation>Usuário</translation>
     </message>
   </context>
   <context>
