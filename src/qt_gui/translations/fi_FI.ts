@@ -1301,7 +1301,7 @@ Syötä avaimet ja tallenna ne.</translation>
     </message>
     <message>
       <source>User</source>
-      <translation type="unfinished">User</translation>
+      <translation>Käyttäjä</translation>
     </message>
   </context>
   <context>
