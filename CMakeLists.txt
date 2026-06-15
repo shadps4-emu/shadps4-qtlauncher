@@ -9,8 +9,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 if(APPLE)
     list(APPEND ADDITIONAL_LANGUAGES OBJC)
-    # Starting with 15.4, Rosetta 2 has support for all the necessary instruction sets.
-    set(CMAKE_OSX_DEPLOYMENT_TARGET 15.4 CACHE STRING "")
+    # Tracks the minimum for the main emulator.
+    set(CMAKE_OSX_DEPLOYMENT_TARGET 26.0 CACHE STRING "")
 endif()
 
 if (NOT CMAKE_BUILD_TYPE)
@@ -34,35 +34,6 @@ if(UNIX AND NOT APPLE)
 endif()
 
 option(ENABLE_UPDATER "Enables the options to updater" ON)
-
-# First, determine whether to use CMAKE_OSX_ARCHITECTURES or CMAKE_SYSTEM_PROCESSOR.
-if (APPLE AND CMAKE_OSX_ARCHITECTURES)
-    set(BASE_ARCHITECTURE "${CMAKE_OSX_ARCHITECTURES}")
-elseif (CMAKE_SYSTEM_PROCESSOR)
-    set(BASE_ARCHITECTURE "${CMAKE_SYSTEM_PROCESSOR}")
-else()
-    set(BASE_ARCHITECTURE "${CMAKE_HOST_SYSTEM_PROCESSOR}")
-endif()
-
-# Next, match common architecture strings down to a known common value.
-if (BASE_ARCHITECTURE MATCHES "(x86)|(X86)|(amd64)|(AMD64)")
-    set(ARCHITECTURE "x86_64")
-elseif (BASE_ARCHITECTURE MATCHES "(aarch64)|(AARCH64)|(arm64)|(ARM64)")
-    set(ARCHITECTURE "arm64")
-else()
-    message(FATAL_ERROR "Unsupported CPU architecture: ${BASE_ARCHITECTURE}")
-endif()
-
-if (APPLE AND ARCHITECTURE STREQUAL "x86_64" AND CMAKE_HOST_SYSTEM_PROCESSOR STREQUAL "arm64")
-    # Exclude ARM homebrew path to avoid conflicts when cross compiling.
-    list(APPEND CMAKE_IGNORE_PREFIX_PATH "/opt/homebrew")
-
-    # Need to reconfigure pkg-config to use the right architecture library paths.
-    # It's not ideal to override these but otherwise the build breaks just by having pkg-config installed.
-    set(ENV{PKG_CONFIG_DIR} "")
-    set(ENV{PKG_CONFIG_LIBDIR} "${CMAKE_SYSROOT}/usr/lib/pkgconfig:${CMAKE_SYSROOT}/usr/share/pkgconfig:${CMAKE_SYSROOT}/usr/local/lib/pkgconfig:${CMAKE_SYSROOT}/usr/local/share/pkgconfig")
-    set(ENV{PKG_CONFIG_SYSROOT_DIR} ${CMAKE_SYSROOT})
-endif()
 
 # This function should be passed a list of all files in a target. It will automatically generate file groups
 # following the directory hierarchy, so that the layout of the files in IDEs matches the one in the filesystem.
@@ -227,15 +198,6 @@ find_package(VulkanHeaders 1.4.329 CONFIG)
 find_package(OpenAL CONFIG)
 list(POP_BACK CMAKE_MODULE_PATH)
 
-if (CMAKE_CXX_COMPILER_ID STREQUAL "Clang" OR CMAKE_CXX_COMPILER_ID STREQUAL "AppleClang")
-    # libc++ requires -fexperimental-library to enable std::jthread and std::stop_token support.
-    include(CheckCXXSymbolExists)
-    check_cxx_symbol_exists(_LIBCPP_VERSION version LIBCPP)
-    if(LIBCPP)
-        add_compile_options(-fexperimental-library)
-    endif()
-endif()
-
 add_subdirectory(externals)
 include_directories(src)
 
@@ -397,6 +359,13 @@ set(QT_GUI src/qt_gui/about_dialog.cpp
            ${UPDATER}
 )
 
+if (APPLE)
+    set(QT_GUI ${QT_GUI}
+               src/qt_gui/apple.h
+               src/qt_gui/apple.mm
+    )
+endif()
+
 set(IPC src/ipc/ipc_client.cpp
         src/ipc/ipc_client.h
 )
@@ -419,34 +388,9 @@ endif()
 
 create_target_directory_groups(shadPS4QtLauncher)
 
-target_link_libraries(shadPS4QtLauncher PRIVATE Vulkan::Headers fmt::fmt toml11::toml11 SDL3::SDL3 volk_headers spdlog::spdlog)
-
-if (APPLE)
-    # Include MoltenVK, along with an ICD file so it can be found by the system Vulkan loader if used for loading layers.
-    set(MVK_BUNDLE_PATH "Resources/vulkan/icd.d")
-    set_property(TARGET shadPS4QtLauncher APPEND PROPERTY BUILD_RPATH "@executable_path/../${MVK_BUNDLE_PATH}")
-    set(MVK_DST ${CMAKE_CURRENT_BINARY_DIR}/shadPS4QtLauncher.app/Contents/${MVK_BUNDLE_PATH})
-
-    add_custom_command(
-        OUTPUT ${MVK_DST}
-        COMMAND ${CMAKE_COMMAND} -E make_directory ${MVK_DST})
-
-    set(MVK_DYLIB_SRC ${CMAKE_CURRENT_BINARY_DIR}/externals/MoltenVK/MoltenVK/libMoltenVK.dylib)
-    set(MVK_DYLIB_DST ${MVK_DST}/libMoltenVK.dylib)
-    set(MVK_ICD_SRC ${CMAKE_CURRENT_SOURCE_DIR}/externals/MoltenVK/MoltenVK/icd/MoltenVK_icd.json)
-    set(MVK_ICD_DST ${MVK_DST}/MoltenVK_icd.json)
-
-    add_custom_command(
-        OUTPUT ${MVK_ICD_DST}
-        DEPENDS ${MVK_ICD_SRC} ${MVK_DST}
-        COMMAND ${CMAKE_COMMAND} -E copy ${MVK_ICD_SRC} ${MVK_ICD_DST})
-    add_custom_command(
-        OUTPUT ${MVK_DYLIB_DST}
-        DEPENDS ${MVK_DYLIB_SRC} ${MVK_DST}
-        COMMAND ${CMAKE_COMMAND} -E copy ${MVK_DYLIB_SRC} ${MVK_DYLIB_DST})
-    add_custom_target(CopyMoltenVK DEPENDS ${MVK_ICD_DST} ${MVK_DYLIB_DST})
-    add_dependencies(CopyMoltenVK MoltenVK)
-    add_dependencies(shadPS4QtLauncher CopyMoltenVK)
+target_link_libraries(shadPS4QtLauncher PRIVATE fmt::fmt toml11::toml11 SDL3::SDL3 spdlog::spdlog)
+if (NOT APPLE)
+    target_link_libraries(shadPS4QtLauncher PRIVATE Vulkan::Headers volk_headers)
 endif()
 
 target_link_libraries(shadPS4QtLauncher PRIVATE Qt6::Widgets Qt6::Concurrent Qt6::Network Qt6::Multimedia nlohmann_json::nlohmann_json OpenAL::OpenAL)
