@@ -2377,7 +2377,7 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Width/Height:\nSets the size of the emulator window at launch, which can be resized during gameplay.\nThis is different from the in-game resolution.</source>
-      <translation>Genişlik/Yükseklik:\nEmülatör penceresinin açılışta boyutunu ayarlar; bu, oyun sırasında yeniden boyutlandırılabilir.\nBu, oyundaki çözünürlükten farklıdır.</translation>
+      <translation>Genişlik/Yükseklik:\nEmülatör penceresinin başlangıç boyutunu ayarlar, oyun sırasında yeniden boyutlandırılabilir.\nBu, oyun içi çözünürlükten farklıdır.</translation>
     </message>
     <message>
       <source>Enable HDR:\nEnables HDR in games that support it.\nYour monitor must have support for the BT2020 PQ color space and the RGB10A2 swapchain format.</source>
@@ -2717,7 +2717,7 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</source>
-      <translation>Null GPU'yu Etkinleştir:\nTeknik hata ayıklama amacıyla, oyunun render edilmesini grafik kartı yokmuş gibi devre dışı bırakır. Ekran siyah olacaktır.</translation>
+      <translation>Null GPU'yu Etkinleştir:\nTeknik hata ayıklama amacıyla, sanki grafik kartı yokmuş gibi oyunun görüntü işleme sürecini devre dışı bırakır. Ekran siyah olacaktır.</translation>
     </message>
     <message>
       <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
