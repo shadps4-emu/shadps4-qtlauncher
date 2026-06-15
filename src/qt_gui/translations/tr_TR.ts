@@ -1301,7 +1301,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>User</source>
-      <translation type="unfinished">User</translation>
+      <translation>Kullanıcı</translation>
     </message>
   </context>
   <context>
@@ -1442,7 +1442,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>No game is running</source>
-      <translation type="unfinished">No game is running</translation>
+      <translation>Çalışan oyun yok</translation>
     </message>
   </context>
   <context>
@@ -2581,7 +2581,7 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</source>
-      <translation type="unfinished">Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</translation>
+      <translation>Sunum Modu:\nVideo çıktısının ekranınıza nasıl aktarılacağını yapılandırır.\n\nMailbox: Kareler, ekranınız&apos;ın yenileme hızıyla senkronize edilir. Yeni kareler, bekleyen karelerin yerini alır. Gecikmeyi azaltır ancak sistem geride kalırsa kare atlayabilir.\nFifo: Kareler, ekranınız&apos;ın yenileme hızıyla senkronize edilir. Yeni kareler, bekleyen karelerin arkasında sıraya alınır. Tüm karelerin gösterilmesini sağlar ancak gecikmeyi artırabilir.\nImmediate: Kareler hazır olduğunda anında ekranınıza aktarılır. Görüntüde yırtılmalara neden olabilir.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
@@ -2845,19 +2845,19 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Disabled</source>
-      <translation type="unfinished">Disabled</translation>
+      <translation>Devre Dışı</translation>
     </message>
     <message>
       <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
-      <translation type="unfinished">Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</translation>
+      <translation>Geri Okumalar:\nGPU belleği geri okumalarını ve geri yazmalarını etkinleştir.\nBu, bazı oyunların düzgün çalışması için gereklidir.\nKararlılık ve/veya performans sorunlarına neden olabilir.</translation>
     </message>
     <message>
       <source>Relaxed</source>
-      <translation type="unfinished">Relaxed</translation>
+      <translation>Esnek</translation>
     </message>
     <message>
       <source>Precise</source>
-      <translation type="unfinished">Precise</translation>
+      <translation>Hassas</translation>
     </message>
     <message>
       <source>Select shadPS4 Home Path</source>
