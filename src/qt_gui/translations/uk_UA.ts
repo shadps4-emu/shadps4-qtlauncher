@@ -1301,7 +1301,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>User</source>
-      <translation type="unfinished">User</translation>
+      <translation>Користувач</translation>
     </message>
   </context>
   <context>
