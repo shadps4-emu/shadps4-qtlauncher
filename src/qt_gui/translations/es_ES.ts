@@ -1497,7 +1497,7 @@ Debes introducir tus claves y guardarlas.</translation>
     </message>
     <message>
       <source>note: click Help Button/Special Keybindings for more information</source>
-      <translation>Nota: para más información, haz clic en Ayuda/Asignaciones especiales</translation>
+      <translation>Nota: para más información, haz clic en el botón Ayuda -> Asignaciones especiales</translation>
     </message>
     <message>
       <source>Triangle</source>
@@ -3034,15 +3034,15 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>&amp;Set Default User</source>
-      <translation>&amp;Establecer usuario predeterminado</translation>
+      <translation>&amp;Asig. usuario predet.</translation>
     </message>
     <message>
       <source>&amp;Set Color</source>
-      <translation>&amp;Establecer color</translation>
+      <translation>&amp;Asignar color</translation>
     </message>
     <message>
       <source>&amp;Set Controller Port</source>
-      <translation>&amp;Establecer puerto de mando</translation>
+      <translation>&amp;Asig. puerto de mando</translation>
     </message>
     <message>
       <source>&amp;Close</source>
@@ -3094,7 +3094,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Set User Color</source>
-      <translation>Establecer color de usuario</translation>
+      <translation>Asignar color de usuario</translation>
     </message>
     <message>
       <source>Select color:</source>
@@ -3102,7 +3102,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Set Controller Port</source>
-      <translation>Establecer puerto de mando</translation>
+      <translation>Asignar puerto de mando</translation>
     </message>
     <message>
       <source>Assign port (1-4) to this user:</source>
