@@ -26,6 +26,7 @@ public:
     void checkUpdatePre(const bool showMessage);
     void DownloadListVersion();
     void InstallSelectedVersion();
+    void addExecutableFromDrop(const QString& exePath);
 
 private Q_SLOTS:
     void HandleResize(QResizeEvent* event);
@@ -34,6 +35,7 @@ private:
     Ui::VersionDialog* ui;
     std::shared_ptr<gui_settings> m_gui_settings;
     QNetworkAccessManager* networkManager;
+    QString m_pendingExecutablePath;
 
     void LoadInstalledList();
     QStringList LoadDownloadCache();
@@ -49,6 +51,7 @@ private:
 
 protected:
     void resizeEvent(QResizeEvent* event) override;
+    void showEvent(QShowEvent* event) override;
     void dragEnterEvent(QDragEnterEvent* event) override;
     void dropEvent(QDropEvent* event) override;
 };
