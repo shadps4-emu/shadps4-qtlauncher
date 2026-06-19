@@ -1288,7 +1288,7 @@ void MainWindow::dropEvent(QDropEvent* event) {
 
     if (!isExecutable)
         return;
-
+    // if a executable is dropped, launch version control
     event->acceptProposedAction();
     auto versionDialog = new VersionDialog(m_gui_settings, this);
     versionDialog->addExecutableFromDrop(filePath);
