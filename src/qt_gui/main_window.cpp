@@ -1281,8 +1281,7 @@ void MainWindow::dropEvent(QDropEvent* event) {
     isExecutable = filePath.endsWith(".exe", Qt::CaseInsensitive);
 #else
     QFileInfo info(filePath);
-    isExecutable = info.isExecutable() ||
-                   filePath.endsWith(".AppImage", Qt::CaseInsensitive) ||
+    isExecutable = info.isExecutable() || filePath.endsWith(".AppImage", Qt::CaseInsensitive) ||
                    filePath.endsWith(".appimage", Qt::CaseInsensitive);
 #endif
 
