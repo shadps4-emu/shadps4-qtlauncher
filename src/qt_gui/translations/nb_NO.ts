@@ -1301,7 +1301,7 @@ Skriv inn nøklene og lagre dem.</translation>
     </message>
     <message>
       <source>User</source>
-      <translation type="unfinished">User</translation>
+      <translation>Bruker</translation>
     </message>
   </context>
   <context>
