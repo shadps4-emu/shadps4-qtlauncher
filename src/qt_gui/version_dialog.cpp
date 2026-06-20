@@ -183,6 +183,20 @@ VersionDialog::~VersionDialog() {
     delete ui;
 }
 
+void VersionDialog::addExecutableFromDrop(const QString& exePath) {
+    m_pendingExecutablePath = exePath;
+}
+
+void VersionDialog::showEvent(QShowEvent* event) {
+    QDialog::showEvent(event);
+    if (!m_pendingExecutablePath.isEmpty()) {
+        QString path = m_pendingExecutablePath;
+        m_pendingExecutablePath.clear();
+        // Defer one event-loop tick so the dialog is fully painted before the prompt appears
+        QTimer::singleShot(0, this, [this, path]() { AddCustomExecutable(path); });
+    }
+}
+
 void VersionDialog::resizeEvent(QResizeEvent* event) {
     emit WindowResized(event);
     QDialog::resizeEvent(event);

@@ -1269,6 +1269,31 @@ void MainWindow::resizeEvent(QResizeEvent* event) {
     QMainWindow::resizeEvent(event);
 }
 
+void MainWindow::dropEvent(QDropEvent* event) {
+    const auto urls = event->mimeData()->urls();
+    if (urls.isEmpty())
+        return;
+
+    QString filePath = urls.first().toLocalFile();
+    bool isExecutable = false;
+
+#ifdef Q_OS_WIN
+    isExecutable = filePath.endsWith(".exe", Qt::CaseInsensitive);
+#else
+    QFileInfo info(filePath);
+    isExecutable = info.isExecutable() || filePath.endsWith(".AppImage", Qt::CaseInsensitive);
+#endif
+
+    if (!isExecutable)
+        return;
+    // if a executable is dropped, launch version control
+    event->acceptProposedAction();
+    auto versionDialog = new VersionDialog(m_gui_settings, this);
+    versionDialog->addExecutableFromDrop(filePath);
+    connect(versionDialog, &QDialog::finished, this, [this](int) { LoadVersionComboBox(); });
+    versionDialog->exec();
+}
+
 void MainWindow::HandleResize(QResizeEvent* event) {
     if (isTableList) {
         m_game_list_frame->RefreshListBackgroundImage();

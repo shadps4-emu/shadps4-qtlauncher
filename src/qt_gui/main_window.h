@@ -5,6 +5,7 @@
 
 #include <QActionGroup>
 #include <QDragEnterEvent>
+#include <QDropEvent>
 #include <QProcess>
 #include <QTranslator>
 
@@ -123,6 +124,8 @@ protected:
             event1->acceptProposedAction();
         }
     }
+
+    void dropEvent(QDropEvent* event) override;
 
     void resizeEvent(QResizeEvent* event) override;
 
