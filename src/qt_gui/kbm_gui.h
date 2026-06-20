@@ -69,13 +69,10 @@ private:
     QList<QPair<QRightClickButton*, std::string>> ButtonsList;
     std::string config_id;
     const std::vector<std::string> ControllerInputs = {
-        "cross",        "circle",    "square",      "triangle",    "l1",
-        "r1",           "l2",        "r2",          "l3",
-
-        "r3",           "options",   "pad_up",
-
-        "pad_down",
-
-        "pad_left",     "pad_right", "axis_left_x", "axis_left_y", "axis_right_x",
-        "axis_right_y", "back"};
+        "cross",        "circle",      "square",       "triangle",     "l1",       "r1",
+        "l2",           "r2",          "l3",           "r3",           "r4",       "l4",
+        "r5",           "l5",          "pad_up",       "pad_down",     "pad_left", "pad_right",
+        "axis_left_x",  "axis_left_y", "axis_right_x", "axis_right_y", "back",     "share",
+        "lpaddle_high", "lpaddle_low", "rpaddle_high", "rpaddle_low",  "qam",      "options",
+    };
 };
