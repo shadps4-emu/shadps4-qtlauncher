@@ -8,6 +8,7 @@
 #include <QClipboard>
 #include <QDesktopServices>
 #include <QMenu>
+#include <QSettings>
 #include <QMessageBox>
 #include <QTreeWidgetItem>
 
@@ -137,6 +138,8 @@ public:
         QAction openSfoViewer(tr("SFO Viewer"), widget);
         QAction createDefaultShortcut(tr("Create Shortcut for Selected Emulator Version"), widget);
         QAction createVersionShortcut(tr("Create Shortcut for Specified Emulator Version"), widget);
+        QAction addToSteamDefault(tr("Add with Selected Emulator Version"), widget);
+        QAction addToSteamVersion(tr("Add with Specified Emulator Version"), widget);
 
 #ifndef Q_OS_APPLE
         QMenu* shortcutMenu = new QMenu(tr("Create Shortcut"), widget);
@@ -144,6 +147,11 @@ public:
         shortcutMenu->addAction(&createDefaultShortcut);
         shortcutMenu->addAction(&createVersionShortcut);
 #endif
+        // Steam – available on Windows, Linux, and macOS
+        QMenu* steamMenu = new QMenu(tr("Add to Steam"), widget);
+        steamMenu->addAction(&addToSteamDefault);
+        steamMenu->addAction(&addToSteamVersion);
+        menu.addMenu(steamMenu);
         menu.addAction(toggleFavorite);
         menu.addAction(&openCheats);
         menu.addAction(&openTrophyViewer);
@@ -524,6 +532,19 @@ public:
             shortcutWindow->exec();
         }
 
+        if (selected == &addToSteamDefault) {
+            requestAddToSteam(m_games[itemID]);
+        }
+
+        if (selected == &addToSteamVersion) {
+            auto shortcutWindow = new ShortcutDialog(m_gui_settings);
+            QObject::connect(shortcutWindow, &ShortcutDialog::shortcutRequested, this,
+                             [=, this](QString version) {
+                                 requestAddToSteam(m_games[itemID], version);
+                             });
+            shortcutWindow->exec();
+        }
+
         // Handle the "Copy" actions
         if (selected == copyName) {
             QClipboard* clipboard = QGuiApplication::clipboard();
@@ -777,6 +798,249 @@ public:
     }
 
 private:
+    // --- Steam non-Steam game shortcut support ---
+
+    static void vdfWriteString(QByteArray& buf, const QByteArray& key, const QByteArray& value) {
+        buf += '\x01';
+        buf += key;
+        buf += '\x00';
+        buf += value;
+        buf += '\x00';
+    }
+
+    static void vdfWriteInt32(QByteArray& buf, const QByteArray& key, quint32 value) {
+        buf += '\x02';
+        buf += key;
+        buf += '\x00';
+        buf += static_cast<char>(value & 0xFF);
+        buf += static_cast<char>((value >> 8) & 0xFF);
+        buf += static_cast<char>((value >> 16) & 0xFF);
+        buf += static_cast<char>((value >> 24) & 0xFF);
+    }
+
+    static QByteArray buildSteamShortcutEntry(int index, const QString& appName,
+                                               const QString& exePath, const QString& startDir,
+                                               const QString& iconPath,
+                                               const QString& launchOptions) {
+        QByteArray e;
+        e += '\x00';
+        e += QByteArray::number(index);
+        e += '\x00';
+        vdfWriteString(e, "AppName", appName.toUtf8());
+        vdfWriteString(e, "Exe", ("\"" + exePath + "\"").toUtf8());
+        vdfWriteString(e, "StartDir", startDir.toUtf8());
+        vdfWriteString(e, "icon", iconPath.toUtf8());
+        vdfWriteString(e, "ShortcutPath", "");
+        vdfWriteString(e, "LaunchOptions", launchOptions.toUtf8());
+        vdfWriteInt32(e, "IsHidden", 0);
+        vdfWriteInt32(e, "AllowDesktopConfig", 1);
+        vdfWriteInt32(e, "AllowOverlay", 1);
+        vdfWriteInt32(e, "OpenVR", 0);
+        vdfWriteInt32(e, "Devkit", 0);
+        vdfWriteString(e, "DevkitGameID", "");
+        vdfWriteInt32(e, "DevkitOverrideAppID", 0);
+        vdfWriteInt32(e, "LastPlayTime", 0);
+        vdfWriteString(e, "FlatpakAppID", "");
+        // Empty tags object
+        e += '\x00';
+        e += "tags";
+        e += '\x00';
+        e += '\x08';
+        // End entry
+        e += '\x08';
+        return e;
+    }
+
+    static QString findSteamPath() {
+#ifdef Q_OS_WIN
+        const QStringList regKeys = {
+            "HKEY_CURRENT_USER\\SOFTWARE\\Valve\\Steam",
+            "HKEY_LOCAL_MACHINE\\SOFTWARE\\Valve\\Steam",
+            "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Valve\\Steam",
+        };
+        for (const QString& k : regKeys) {
+            QSettings reg(k, QSettings::NativeFormat);
+            // HKCU uses "SteamPath", HKLM uses "InstallPath"
+            for (const QString& valName : {"SteamPath", "InstallPath"}) {
+                QString path = reg.value(valName).toString();
+                if (!path.isEmpty() && QDir(path).exists())
+                    return path;
+            }
+        }
+        return {};
+#elif defined(Q_OS_MAC)
+        QString path = QDir::homePath() + "/Library/Application Support/Steam";
+        return QDir(path).exists() ? path : QString();
+#else // Linux
+        const QStringList candidates = {
+            QDir::homePath() + "/.steam/steam",
+            QDir::homePath() + "/.local/share/Steam",
+            QDir::homePath() + "/.steam/root",
+            qEnvironmentVariable("XDG_DATA_HOME",
+                                 QDir::homePath() + "/.local/share") + "/Steam",
+        };
+        for (const QString& c : candidates) {
+            if (QDir(c + "/userdata").exists())
+                return c;
+        }
+        return {};
+#endif
+    }
+
+    // Appends a non-Steam game entry to shortcuts.vdf for one Steam user directory.
+    bool addNonSteamGame(const QString& shortcutsPath, const QString& appName,
+                         const QString& exePath, const QString& startDir, const QString& iconPath,
+                         const QString& launchOptions) {
+        QByteArray data;
+        QFile file(shortcutsPath);
+        int nextIndex = 0;
+
+        if (file.exists() && file.open(QIODevice::ReadOnly)) {
+            data = file.readAll();
+            file.close();
+
+            // Duplicate check: search for the AppName key-value pair
+            QByteArray dupChk = "\x01AppName\x00" + appName.toUtf8() + "\x00";
+            if (data.contains(dupChk)) {
+                QMessageBox::information(nullptr, tr("Steam"),
+                                         tr("%1 is already in your Steam library.").arg(appName));
+                return true;
+            }
+
+            // Walk the top-level shortcuts object to find the next free index.
+            const QByteArray hdr = "\x00shortcuts\x00";
+            int pos = data.indexOf(hdr);
+            if (pos != -1) {
+                pos += hdr.size();
+                while (pos < data.size()) {
+                    if (static_cast<unsigned char>(data[pos]) != 0x00)
+                        break;
+                    int keyEnd = data.indexOf('\x00', pos + 1);
+                    if (keyEnd < 0)
+                        break;
+                    bool ok;
+                    int idx =
+                        QString::fromLatin1(data.mid(pos + 1, keyEnd - pos - 1)).toInt(&ok);
+                    if (!ok)
+                        break;
+                    nextIndex = idx + 1;
+                    pos = keyEnd + 1;
+                    // Depth-walk past this entry's contents
+                    int depth = 1;
+                    while (pos < data.size() && depth > 0) {
+                        auto t = static_cast<unsigned char>(data[pos]);
+                        if (t == 0x00) {
+                            int kEnd = data.indexOf('\x00', pos + 1);
+                            if (kEnd < 0) {
+                                pos = data.size();
+                                break;
+                            }
+                            pos = kEnd + 1;
+                            depth++;
+                        } else if (t == 0x01) {
+                            int kEnd = data.indexOf('\x00', pos + 1);
+                            int vEnd = kEnd >= 0 ? data.indexOf('\x00', kEnd + 1) : -1;
+                            if (kEnd < 0 || vEnd < 0) {
+                                pos = data.size();
+                                break;
+                            }
+                            pos = vEnd + 1;
+                        } else if (t == 0x02) {
+                            int kEnd = data.indexOf('\x00', pos + 1);
+                            if (kEnd < 0) {
+                                pos = data.size();
+                                break;
+                            }
+                            pos = kEnd + 1 + 4;
+                        } else if (t == 0x08) {
+                            depth--;
+                            pos++;
+                        } else {
+                            pos++;
+                        }
+                    }
+                }
+            }
+
+            // Strip trailing 0x08 terminators before appending
+            while (!data.isEmpty() && static_cast<unsigned char>(data.back()) == 0x08)
+                data.chop(1);
+        } else {
+            // No existing file – start fresh with the shortcuts root object header
+            data += '\x00';
+            data += "shortcuts";
+            data += '\x00';
+        }
+
+        data += buildSteamShortcutEntry(nextIndex, appName, exePath, startDir, iconPath,
+                                        launchOptions);
+        // Close shortcuts object, then top-level
+        data += '\x08';
+        data += '\x08';
+
+        QDir().mkpath(QFileInfo(shortcutsPath).absolutePath());
+        if (!file.open(QIODevice::WriteOnly))
+            return false;
+        file.write(data);
+        file.close();
+        return true;
+    }
+
+    void requestAddToSteam(const GameInfo& selectedInfo, QString emuPath = "") {
+        QString targetPath;
+        Common::FS::PathToQString(targetPath, selectedInfo.path);
+        QString ebootPath = targetPath + "/eboot.bin";
+
+        QString exePath = QCoreApplication::applicationFilePath();
+#ifdef Q_OS_WIN
+        exePath = exePath.replace("/", "\\");
+#endif
+        QString startDir = QFileInfo(exePath).absolutePath();
+
+        QString launchOptions;
+        if (emuPath.isEmpty()) {
+            launchOptions = QString("-d -g \"%1\"").arg(ebootPath);
+        } else {
+            launchOptions = QString("-e \"%1\" -g \"%2\"").arg(emuPath, ebootPath);
+        }
+
+        QString iconPath;
+        Common::FS::PathToQString(iconPath, selectedInfo.icon_path);
+        QString gameName = QString::fromStdString(selectedInfo.name);
+
+        QString steamPath = findSteamPath();
+        if (steamPath.isEmpty()) {
+            QMessageBox::critical(nullptr, tr("Error"), tr("Steam installation not found."));
+            return;
+        }
+
+        QStringList userDirs =
+            QDir(steamPath + "/userdata").entryList(QDir::Dirs | QDir::NoDotAndDotDot);
+        if (userDirs.isEmpty()) {
+            QMessageBox::critical(
+                nullptr, tr("Error"),
+                tr("No Steam user account found. Please log into Steam at least once."));
+            return;
+        }
+
+        bool anySuccess = false;
+        for (const QString& uid : userDirs) {
+            QString shortcutsPath =
+                steamPath + "/userdata/" + uid + "/config/shortcuts.vdf";
+            if (addNonSteamGame(shortcutsPath, gameName, exePath, startDir, iconPath,
+                                 launchOptions))
+                anySuccess = true;
+        }
+
+        if (anySuccess) {
+            QMessageBox::information(
+                nullptr, tr("Steam"),
+                tr("Added to Steam successfully. Restart Steam to see the changes."));
+        } else {
+            QMessageBox::critical(nullptr, tr("Error"), tr("Failed to add game to Steam."));
+        }
+    }
+
     void requestShortcut(const GameInfo& selectedInfo, QString emuPath = "") {
         // Path to shortcut/link
         QString linkPath;
