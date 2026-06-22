@@ -8,9 +8,9 @@
 #include <QClipboard>
 #include <QDesktopServices>
 #include <QMenu>
+#include <QMessageBox>
 #include <QSettings>
 #include <QThread>
-#include <QMessageBox>
 #include <QTreeWidgetItem>
 
 #include "background_music_player.h"
@@ -539,10 +539,9 @@ public:
 
         if (selected == &addToSteamVersion) {
             auto shortcutWindow = new ShortcutDialog(m_gui_settings);
-            QObject::connect(shortcutWindow, &ShortcutDialog::shortcutRequested, this,
-                             [=, this](QString version) {
-                                 requestAddToSteam(m_games[itemID], version);
-                             });
+            QObject::connect(
+                shortcutWindow, &ShortcutDialog::shortcutRequested, this,
+                [=, this](QString version) { requestAddToSteam(m_games[itemID], version); });
             shortcutWindow->exec();
         }
 
@@ -820,9 +819,9 @@ private:
     }
 
     static QByteArray buildSteamShortcutEntry(int index, const QString& appName,
-                                               const QString& exePath, const QString& startDir,
-                                               const QString& iconPath,
-                                               const QString& launchOptions) {
+                                              const QString& exePath, const QString& startDir,
+                                              const QString& iconPath,
+                                              const QString& launchOptions) {
         QByteArray e;
         e += '\x00';
         e += QByteArray::number(index);
@@ -879,8 +878,7 @@ private:
             QDir::homePath() + "/.steam/root",
             // Flatpak Steam (common on Arch and other distros)
             QDir::homePath() + "/.var/app/com.valvesoftware.Steam/data/Steam",
-            qEnvironmentVariable("XDG_DATA_HOME",
-                                 QDir::homePath() + "/.local/share") + "/Steam",
+            qEnvironmentVariable("XDG_DATA_HOME", QDir::homePath() + "/.local/share") + "/Steam",
         };
         for (const QString& c : candidates) {
             if (QDir(c + "/userdata").exists())
@@ -904,8 +902,7 @@ private:
 
             // Duplicate check: search for the AppName key-value pair.
             // Use explicit length to avoid strlen() truncating at the embedded \x00.
-            QByteArray dupChk =
-                QByteArray("\x01AppName\x00", 9) + appName.toUtf8() + '\x00';
+            QByteArray dupChk = QByteArray("\x01AppName\x00", 9) + appName.toUtf8() + '\x00';
             if (data.contains(dupChk)) {
                 QMessageBox::information(nullptr, tr("Steam"),
                                          tr("%1 is already in your Steam library.").arg(appName));
@@ -925,8 +922,7 @@ private:
                     if (keyEnd < 0)
                         break;
                     bool ok;
-                    int idx =
-                        QString::fromLatin1(data.mid(pos + 1, keyEnd - pos - 1)).toInt(&ok);
+                    int idx = QString::fromLatin1(data.mid(pos + 1, keyEnd - pos - 1)).toInt(&ok);
                     if (!ok)
                         break;
                     nextIndex = idx + 1;
@@ -981,8 +977,8 @@ private:
             data += '\x00';
         }
 
-        data += buildSteamShortcutEntry(nextIndex, appName, exePath, startDir, iconPath,
-                                        launchOptions);
+        data +=
+            buildSteamShortcutEntry(nextIndex, appName, exePath, startDir, iconPath, launchOptions);
         // Close shortcuts object, then top-level
         data += '\x08';
         data += '\x08';
@@ -1103,10 +1099,9 @@ private:
 
         bool anySuccess = false;
         for (const QString& uid : userDirs) {
-            QString shortcutsPath =
-                steamPath + "/userdata/" + uid + "/config/shortcuts.vdf";
+            QString shortcutsPath = steamPath + "/userdata/" + uid + "/config/shortcuts.vdf";
             if (addNonSteamGame(shortcutsPath, gameName, exePath, startDir, iconPath,
-                                 launchOptions))
+                                launchOptions))
                 anySuccess = true;
         }
 
