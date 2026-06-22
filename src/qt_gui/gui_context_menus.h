@@ -966,11 +966,14 @@ private:
                         }
                     }
                 }
+                // pos now sits exactly on the shortcuts-object closing \x08.
+                // Truncate here so all existing entry-closers stay intact.
+                data.truncate(pos);
+            } else {
+                // Malformed or header-less file: fall back to chopping trailing closers.
+                while (!data.isEmpty() && static_cast<unsigned char>(data.back()) == 0x08)
+                    data.chop(1);
             }
-
-            // Strip trailing 0x08 terminators before appending
-            while (!data.isEmpty() && static_cast<unsigned char>(data.back()) == 0x08)
-                data.chop(1);
         } else {
             // No existing file – start fresh with the shortcuts root object header
             data += '\x00';
