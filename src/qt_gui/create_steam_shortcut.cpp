@@ -39,8 +39,7 @@ void SteamShortcut::vdfWriteInt32(QByteArray& buf, const QByteArray& key, quint3
 }
 
 QByteArray SteamShortcut::buildSteamShortcutEntry(int index, const QString& appName,
-                                                   const QString& exePath,
-                                                   const QString& startDir,
+                                                   const QString& exePath, const QString& startDir,
                                                    const QString& iconPath,
                                                    const QString& launchOptions) {
     QByteArray e;
@@ -125,6 +124,7 @@ bool SteamShortcut::addNonSteamGame(const QString& shortcutsPath, const QString&
         data = file.readAll();
         file.close();
 
+        // Duplicate check: search for the AppName key-value pair.
         // Use explicit length to avoid strlen() truncating at the embedded \x00.
         QByteArray dupChk = QByteArray("\x01AppName\x00", 9) + appName.toUtf8() + '\x00';
         if (data.contains(dupChk)) {
@@ -267,6 +267,8 @@ void SteamShortcut::relaunchSteam(const QString& steamPath) {
 #endif
 }
 
+// --- Public entry point ---
+
 void SteamShortcut::requestAddToSteam(const GameInfo& selectedInfo, QString emuPath) {
     QString targetPath;
     Common::FS::PathToQString(targetPath, selectedInfo.path);
@@ -289,8 +291,11 @@ void SteamShortcut::requestAddToSteam(const GameInfo& selectedInfo, QString emuP
     Common::FS::PathToQString(iconPath, selectedInfo.icon_path);
     QString gameName = QString::fromStdString(selectedInfo.name);
     if (emuPath.isEmpty()) {
-        gameName += " [shadPS4 " + QString::fromUtf8(Common::g_version) + "]";
+        // Default: tag with the current build's version from scm_rev
+        gameName += " [shadPS4 " + QString::fromUtf8(Common::g_scm_app_version) + "]";
     } else {
+        // Specific version: use the folder name containing the chosen executable,
+        // which is the version string the user picked in ShortcutDialog (e.g. "0.10", "nightly")
         gameName += " [shadPS4 " + QFileInfo(emuPath).dir().dirName() + "]";
     }
 
