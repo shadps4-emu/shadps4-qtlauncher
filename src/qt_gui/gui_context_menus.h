@@ -1080,6 +1080,24 @@ private:
             return;
         }
 
+        const bool wasRunning = isSteamRunning();
+        if (wasRunning) {
+            const int reply = QMessageBox::question(
+                nullptr, tr("Steam is Running"),
+                tr("Steam is currently running. It will be closed and restarted to apply the "
+                   "shortcut. Continue?"),
+                QMessageBox::Yes | QMessageBox::No);
+            if (reply != QMessageBox::Yes)
+                return;
+
+            shutdownSteam(steamPath);
+            if (!waitForSteamExit()) {
+                QMessageBox::critical(nullptr, tr("Error"),
+                                      tr("Steam did not close in time. Shortcut was not added."));
+                return;
+            }
+        }
+
         bool anySuccess = false;
         for (const QString& uid : userDirs) {
             QString shortcutsPath =
@@ -1089,13 +1107,21 @@ private:
                 anySuccess = true;
         }
 
-        if (anySuccess) {
+        if (!anySuccess) {
+            QMessageBox::critical(nullptr, tr("Error"), tr("Failed to add game to Steam."));
+            if (wasRunning)
+                relaunchSteam(steamPath);
+            return;
+        }
+
+        if (wasRunning) {
+            relaunchSteam(steamPath);
+            QMessageBox::information(nullptr, tr("Steam"),
+                                     tr("Added to Steam successfully. Steam is restarting."));
+        } else {
             QMessageBox::information(
                 nullptr, tr("Steam"),
-                tr("Added to Steam successfully.\nSteam path: %1\n\nClose and relaunch Steam to see the changes.")
-                    .arg(steamPath));
-        } else {
-            QMessageBox::critical(nullptr, tr("Error"), tr("Failed to add game to Steam."));
+                tr("Added to Steam successfully. Launch Steam to see the changes."));
         }
     }
 
