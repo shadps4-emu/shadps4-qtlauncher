@@ -3,12 +3,13 @@
 
 #include <QCoreApplication>
 #include <QDir>
+#include <QElapsedTimer>
+#include <QEventLoop>
 #include <QFile>
 #include <QFileInfo>
 #include <QMessageBox>
 #include <QProcess>
 #include <QSettings>
-#include <QThread>
 
 #include "common/path_util.h"
 #include "common/scm_rev.h"
@@ -220,13 +221,13 @@ bool SteamShortcut::isSteamRunning() {
 #ifdef Q_OS_WIN
     QProcess p;
     p.start("tasklist", {"/FI", "IMAGENAME eq steam.exe", "/NH"});
-    p.waitForFinished(3000);
+    p.waitForFinished(1500);
     return p.readAllStandardOutput().toLower().contains("steam.exe");
 #else
     // Works for both native and Flatpak – both surface a process named "steam"
     QProcess p;
     p.start("pgrep", {"-x", "steam"});
-    p.waitForFinished(3000);
+    p.waitForFinished(1500);
     return p.exitCode() == 0;
 #endif
 }
@@ -243,11 +244,14 @@ void SteamShortcut::shutdownSteam(const QString& steamPath) {
 }
 
 // Polls until Steam has fully exited or the timeout expires.
-// processEvents() keeps the Qt event loop alive during the wait.
+// processEvents() with a max interval keeps the Qt event loop alive without
+// blocking the main thread long enough to trigger an OS "not responding" kill.
 bool SteamShortcut::waitForSteamExit(int timeoutMs) {
-    for (int elapsed = 0; elapsed < timeoutMs; elapsed += 500) {
-        QThread::msleep(500);
-        QCoreApplication::processEvents();
+    QElapsedTimer elapsed;
+    elapsed.start();
+    while (elapsed.elapsed() < timeoutMs) {
+        // Process pending events for up to 500 ms before the next poll.
+        QCoreApplication::processEvents(QEventLoop::AllEvents, 500);
         if (!isSteamRunning())
             return true;
     }
