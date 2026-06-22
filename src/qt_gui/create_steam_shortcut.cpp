@@ -39,9 +39,9 @@ void SteamShortcut::vdfWriteInt32(QByteArray& buf, const QByteArray& key, quint3
 }
 
 QByteArray SteamShortcut::buildSteamShortcutEntry(int index, const QString& appName,
-    const QString& exePath, const QString& startDir,
-    const QString& iconPath,
-    const QString& launchOptions) {
+                                                  const QString& exePath, const QString& startDir,
+                                                  const QString& iconPath,
+                                                  const QString& launchOptions) {
     QByteArray e;
     e += '\x00';
     e += QByteArray::number(index);
