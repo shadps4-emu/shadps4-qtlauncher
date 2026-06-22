@@ -530,6 +530,7 @@ public:
                 [=, this](QString version) { requestShortcut(m_games[itemID], version); });
 
             shortcutWindow->exec();
+            delete shortcutWindow;
         }
 
         if (selected == &addToSteamDefault) {
@@ -543,6 +544,7 @@ public:
                                  m_steam_shortcut.requestAddToSteam(m_games[itemID], version);
                              });
             shortcutWindow->exec();
+            delete shortcutWindow;
         }
 
         // Handle the "Copy" actions
