@@ -9,6 +9,7 @@
 #include <QFileInfo>
 #include <QMessageBox>
 #include <QProcess>
+#include <QRegularExpression>
 #include <QSettings>
 
 #include "common/path_util.h"
@@ -135,7 +136,7 @@ bool SteamShortcut::addNonSteamGame(const QString& shortcutsPath, const QString&
         }
 
         // Walk the top-level shortcuts object to find the next free index.
-        // Explicit length required – strlen() would stop at the leading \x00.
+        // Explicit length required - strlen() would stop at the leading \x00.
         const QByteArray hdr("\x00shortcuts\x00", 11);
         int pos = data.indexOf(hdr);
         if (pos != -1) {
@@ -196,7 +197,7 @@ bool SteamShortcut::addNonSteamGame(const QString& shortcutsPath, const QString&
                 data.chop(1);
         }
     } else {
-        // No existing file – start fresh with the shortcuts root object header
+        // No existing file - start fresh with the shortcuts root object header
         data += '\x00';
         data += "shortcuts";
         data += '\x00';
@@ -215,6 +216,113 @@ bool SteamShortcut::addNonSteamGame(const QString& shortcutsPath, const QString&
     return true;
 }
 
+// --- Non-Steam shortcut app-ID calculation ---
+
+// Standard CRC-32 (ISO 3309 / ITU-T V.42 polynomial, same as zlib).
+static quint32 crc32Bytes(const QByteArray& data) {
+    static quint32 table[256];
+    static bool ready = false;
+    if (!ready) {
+        for (quint32 i = 0; i < 256; i++) {
+            quint32 c = i;
+            for (int k = 0; k < 8; k++)
+                c = (c & 1) ? (0xEDB88320u ^ (c >> 1)) : (c >> 1);
+            table[i] = c;
+        }
+        ready = true;
+    }
+    quint32 crc = 0xFFFFFFFFu;
+    for (quint8 b : data)
+        crc = table[(crc ^ b) & 0xFF] ^ (crc >> 8);
+    return crc ^ 0xFFFFFFFFu;
+}
+
+// Derives the non-Steam shortcut ID that Steam computes internally.
+// Steam concatenates the exe path (with its surrounding quotes exactly as
+// stored in shortcuts.vdf) and the app name, then returns CRC-32 | 0x80000000.
+static quint32 shortcutAppId(const QString& exePath, const QString& appName) {
+    QByteArray key = ("\"" + exePath + "\"" + appName).toUtf8();
+    return crc32Bytes(key) | 0x80000000u;
+}
+
+// --- localconfig.vdf Steam Input disabler ---
+
+// Sets UseSteamControllerConfig = "0" for the given non-Steam app ID in
+// userDataPath/config/localconfig.vdf, which is what Steam reads for the
+// per-game "Enable Steam Input" toggle in Controller properties.
+bool SteamShortcut::disableSteamInputInLocalConfig(const QString& userDataPath, quint32 appId) {
+    const QString lcPath = userDataPath + "/config/localconfig.vdf";
+    QFile f(lcPath);
+    if (!f.exists())
+        return true; 
+
+    if (!f.open(QIODevice::ReadOnly | QIODevice::Text))
+        return false;
+    QString vdf = QString::fromUtf8(f.readAll());
+    f.close();
+
+    const QString idStr = QString::number(appId);
+
+
+    auto findClose = [&](int openBrace) -> int {
+        int depth = 1, i = openBrace + 1;
+        while (i < vdf.size() && depth > 0) {
+            if (vdf[i] == '{') ++depth;
+            else if (vdf[i] == '}') { if (--depth == 0) return i; }
+            ++i;
+        }
+        return -1;
+    };
+
+    // Returns {openBrace, closeBrace} for the first "key" block at or after startPos.
+    auto findBlock = [&](const QString& key, int startPos) -> std::pair<int, int> {
+        int kp = vdf.indexOf("\"" + key + "\"", startPos);
+        if (kp == -1) return {-1, -1};
+        int open = vdf.indexOf('{', kp + key.size() + 2);
+        if (open == -1) return {-1, -1};
+        return {open, findClose(open)};
+    };
+
+    // Navigate "Steam" -> "Apps" so we match the correct section and not
+    // any stray "Apps" key that might appear elsewhere in the file.
+    auto [steamOpen, steamClose] = findBlock("Steam", 0);
+    if (steamOpen == -1 || steamClose == -1) return false;
+
+    auto [appsOpen, appsClose] = findBlock("Apps", steamOpen);
+    if (appsOpen == -1 || appsClose == -1 || appsClose > steamClose) return false;
+
+    auto [idOpen, idClose] = findBlock(idStr, appsOpen);
+    const bool hasEntry = idOpen != -1 && idClose != -1 && idOpen < appsClose;
+
+    if (hasEntry) {
+        // Entry already exists - update or insert UseSteamControllerConfig inside it.
+        const QString block = vdf.mid(idOpen + 1, idClose - idOpen - 1);
+        const QRegularExpression re(R"("UseSteamControllerConfig"\s*"([^"]*)")",
+                                    QRegularExpression::MultilineOption);
+        const QRegularExpressionMatch m = re.match(block);
+        if (m.hasMatch()) {
+            vdf.replace(idOpen + 1 + m.capturedStart(1), m.capturedLength(1), "0");
+        } else {
+            vdf.insert(idClose,
+                       "\t\t\t\t\t\t\"UseSteamControllerConfig\"\t\t\"0\"\n\t\t\t\t\t");
+        }
+    } else {
+        const QString newBlock =
+            QString("\t\t\t\t\t\"%1\"\n"
+                    "\t\t\t\t\t{\n"
+                    "\t\t\t\t\t\t\"UseSteamControllerConfig\"\t\t\"0\"\n"
+                    "\t\t\t\t\t}\n")
+                .arg(idStr);
+        vdf.insert(appsClose, newBlock);
+    }
+
+    if (!f.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate))
+        return false;
+    f.write(vdf.toUtf8());
+    f.close();
+    return true;
+}
+
 // --- Steam process management ---
 
 bool SteamShortcut::isSteamRunning() {
@@ -224,7 +332,7 @@ bool SteamShortcut::isSteamRunning() {
     p.waitForFinished(1500);
     return p.readAllStandardOutput().toLower().contains("steam.exe");
 #else
-    // Works for both native and Flatpak – both surface a process named "steam"
+    // Works for both native and Flatpak - both surface a process named "steam"
     QProcess p;
     p.start("pgrep", {"-x", "steam"});
     p.waitForFinished(1500);
@@ -336,11 +444,21 @@ void SteamShortcut::requestAddToSteam(const GameInfo& selectedInfo, QString emuP
         }
     }
 
+    // Compute the shortcut app ID once - same formula Steam uses internally.
+    // This is needed to write the Steam Input setting to localconfig.vdf.
+    const quint32 appId = shortcutAppId(exePath, gameName);
+
     bool anySuccess = false;
     for (const QString& uid : userDirs) {
-        QString shortcutsPath = steamPath + "/userdata/" + uid + "/config/shortcuts.vdf";
-        if (addNonSteamGame(shortcutsPath, gameName, exePath, startDir, iconPath, launchOptions))
+        const QString userDataPath = steamPath + "/userdata/" + uid;
+        const QString shortcutsPath = userDataPath + "/config/shortcuts.vdf";
+        if (addNonSteamGame(shortcutsPath, gameName, exePath, startDir, iconPath, launchOptions)) {
             anySuccess = true;
+            // Write UseSteamControllerConfig = 0 to localconfig.vdf so the
+            // "Enable Steam Input" toggle in Steam's Controller properties is off.
+            // shadPS4 handles controllers natively and Steam Input causes crashes.
+            disableSteamInputInLocalConfig(userDataPath, appId);
+        }
     }
 
     if (!anySuccess) {
