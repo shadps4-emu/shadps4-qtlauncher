@@ -538,11 +538,10 @@ public:
 
         if (selected == &addToSteamVersion) {
             auto shortcutWindow = new ShortcutDialog(m_gui_settings);
-            QObject::connect(
-                shortcutWindow, &ShortcutDialog::shortcutRequested, this,
-                [=, this](QString version) {
-                    m_steam_shortcut.requestAddToSteam(m_games[itemID], version);
-                });
+            QObject::connect(shortcutWindow, &ShortcutDialog::shortcutRequested, this,
+                             [=, this](QString version) {
+                                 m_steam_shortcut.requestAddToSteam(m_games[itemID], version);
+                             });
             shortcutWindow->exec();
         }
 
