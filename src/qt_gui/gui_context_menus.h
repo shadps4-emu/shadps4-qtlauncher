@@ -1063,6 +1063,8 @@ private:
         QString iconPath;
         Common::FS::PathToQString(iconPath, selectedInfo.icon_path);
         QString gameName = QString::fromStdString(selectedInfo.name);
+        if (!emuPath.isEmpty())
+            gameName += " [" + QFileInfo(emuPath).baseName() + "]";
 
         QString steamPath = findSteamPath();
         if (steamPath.isEmpty()) {
