@@ -54,7 +54,7 @@ QByteArray SteamShortcut::buildSteamShortcutEntry(int index, const QString& appN
     vdfWriteString(e, "ShortcutPath", "");
     vdfWriteString(e, "LaunchOptions", launchOptions.toUtf8());
     vdfWriteInt32(e, "IsHidden", 0);
-    vdfWriteInt32(e, "AllowDesktopConfig", 0);
+    vdfWriteInt32(e, "AllowDesktopConfig", 1);
     vdfWriteInt32(e, "AllowOverlay", 1);
     vdfWriteInt32(e, "OpenVR", 0);
     vdfWriteInt32(e, "Devkit", 0);
