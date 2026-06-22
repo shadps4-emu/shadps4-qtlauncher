@@ -9,6 +9,7 @@
 #include <QDesktopServices>
 #include <QMenu>
 #include <QSettings>
+#include <QThread>
 #include <QMessageBox>
 #include <QTreeWidgetItem>
 
@@ -876,6 +877,8 @@ private:
             QDir::homePath() + "/.steam/steam",
             QDir::homePath() + "/.local/share/Steam",
             QDir::homePath() + "/.steam/root",
+            // Flatpak Steam (common on Arch and other distros)
+            QDir::homePath() + "/.var/app/com.valvesoftware.Steam/data/Steam",
             qEnvironmentVariable("XDG_DATA_HOME",
                                  QDir::homePath() + "/.local/share") + "/Steam",
         };
@@ -899,8 +902,10 @@ private:
             data = file.readAll();
             file.close();
 
-            // Duplicate check: search for the AppName key-value pair
-            QByteArray dupChk = "\x01AppName\x00" + appName.toUtf8() + "\x00";
+            // Duplicate check: search for the AppName key-value pair.
+            // Use explicit length to avoid strlen() truncating at the embedded \x00.
+            QByteArray dupChk =
+                QByteArray("\x01AppName\x00", 9) + appName.toUtf8() + '\x00';
             if (data.contains(dupChk)) {
                 QMessageBox::information(nullptr, tr("Steam"),
                                          tr("%1 is already in your Steam library.").arg(appName));
@@ -908,7 +913,8 @@ private:
             }
 
             // Walk the top-level shortcuts object to find the next free index.
-            const QByteArray hdr = "\x00shortcuts\x00";
+            // Explicit length required – strlen() would stop at the leading \x00.
+            const QByteArray hdr("\x00shortcuts\x00", 11);
             int pos = data.indexOf(hdr);
             if (pos != -1) {
                 pos += hdr.size();
@@ -986,6 +992,57 @@ private:
         return true;
     }
 
+    static bool isSteamRunning() {
+#ifdef Q_OS_WIN
+        QProcess p;
+        p.start("tasklist", {"/FI", "IMAGENAME eq steam.exe", "/NH"});
+        p.waitForFinished(3000);
+        return p.readAllStandardOutput().toLower().contains("steam.exe");
+#else
+        // Works for both native and Flatpak – both surface a process named "steam"
+        QProcess p;
+        p.start("pgrep", {"-x", "steam"});
+        p.waitForFinished(3000);
+        return p.exitCode() == 0;
+#endif
+    }
+
+    static void shutdownSteam(const QString& steamPath) {
+#ifdef Q_OS_WIN
+        QProcess::startDetached(steamPath + "/steam.exe", {"-shutdown"});
+#elif defined(Q_OS_MAC)
+        QProcess::startDetached("osascript", {"-e", R"(quit app "Steam")"});
+#else // Linux
+        if (!QProcess::startDetached("steam", {"-shutdown"}))
+            QProcess::startDetached("pkill", {"-x", "steam"});
+#endif
+    }
+
+    // Polls until Steam has fully exited or the timeout expires.
+    // processEvents() keeps the Qt event loop alive during the wait.
+    static bool waitForSteamExit(int timeoutMs = 15000) {
+        for (int elapsed = 0; elapsed < timeoutMs; elapsed += 500) {
+            QThread::msleep(500);
+            QCoreApplication::processEvents();
+            if (!isSteamRunning())
+                return true;
+        }
+        return !isSteamRunning();
+    }
+
+    static void relaunchSteam(const QString& steamPath) {
+#ifdef Q_OS_WIN
+        QProcess::startDetached(steamPath + "/steam.exe", {});
+#elif defined(Q_OS_MAC)
+        QProcess::startDetached("open", {"-a", "Steam"});
+#else // Linux
+        if (steamPath.contains("com.valvesoftware.Steam"))
+            QProcess::startDetached("flatpak", {"run", "com.valvesoftware.Steam"});
+        else
+            QProcess::startDetached("steam", {});
+#endif
+    }
+
     void requestAddToSteam(const GameInfo& selectedInfo, QString emuPath = "") {
         QString targetPath;
         Common::FS::PathToQString(targetPath, selectedInfo.path);
@@ -1035,7 +1092,8 @@ private:
         if (anySuccess) {
             QMessageBox::information(
                 nullptr, tr("Steam"),
-                tr("Added to Steam successfully. Restart Steam to see the changes."));
+                tr("Added to Steam successfully.\nSteam path: %1\n\nClose and relaunch Steam to see the changes.")
+                    .arg(steamPath));
         } else {
             QMessageBox::critical(nullptr, tr("Error"), tr("Failed to add game to Steam."));
         }
