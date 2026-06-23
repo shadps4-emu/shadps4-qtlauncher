@@ -274,6 +274,12 @@ void SteamShortcut::relaunchSteam(const QString& steamPath) {
 // --- Public entry point ---
 
 void SteamShortcut::requestAddToSteam(const GameInfo& selectedInfo, QString emuPath) {
+    if (m_gui_settings->GetValue(gui::vm_versionSelected).toString().isEmpty() || 
+        (!emuPath.isEmpty() && !QFile::exists(emuPath))) {
+        QMessageBox::critical(nullptr, tr("Error"), tr("No emulator version selected."));
+        return;
+    }
+
     QString targetPath;
     Common::FS::PathToQString(targetPath, selectedInfo.path);
     QString ebootPath = targetPath + "/eboot.bin";
