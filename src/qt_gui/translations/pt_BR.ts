@@ -411,7 +411,7 @@
     </message>
     <message>
       <source>Up</source>
-      <translation>Cima</translation>
+      <translation>Para Cima</translation>
     </message>
     <message>
       <source>Left</source>
@@ -423,7 +423,7 @@
     </message>
     <message>
       <source>Down</source>
-      <translation>Baixo</translation>
+      <translation>Para Baixo</translation>
     </message>
     <message>
       <source>Left Stick</source>
@@ -611,11 +611,11 @@
     </message>
     <message>
       <source>Min Deadzone (def:2 max:127)</source>
-      <translation>Zona Morta Minima (pad:2 max:127)</translation>
+      <translation>Zona Morta Mínima (padrão:2 máximo:127)</translation>
     </message>
     <message>
       <source>Max Deadzone (def:127 max:127)</source>
-      <translation>Zona Morta Máxima (pad:127 max:127)</translation>
+      <translation>Zona Morta Máxima (padrão:127 máximo:127)</translation>
     </message>
     <message>
       <source>Right Stick Deadzone</source>
@@ -847,11 +847,11 @@ Por favor, digite suas chaves e salve-as.</translation>
     </message>
     <message>
       <source>Do you want to reset your custom default config to the original default config?</source>
-      <translation>Você gostaria de redefinir sua configuração padrão personalizada de volta para a configuração padrão original?</translation>
+      <translation>Deseja redefinir sua configuração padrão personalizada de volta para a configuração padrão original?</translation>
     </message>
     <message>
       <source>Do you want to reset this config to your custom default config?</source>
-      <translation>Você gostaria de redefinir esta configuração para a sua configuração padrão personalizada?</translation>
+      <translation>Deseja redefinir esta configuração para a sua configuração padrão personalizada?</translation>
     </message>
     <message>
       <source>Reset to Default</source>
@@ -1141,7 +1141,7 @@ Por favor, digite suas chaves e salve-as.</translation>
     </message>
     <message>
       <source>Are you sure you want to delete %1&apos;s %2 directory?</source>
-      <translation>Tem certeza de que deseja excluir o diretório do %2 %1?</translation>
+      <translation>Tem certeza que deseja excluir %1 do diretório %2?</translation>
     </message>
     <message>
       <source>Open Update Folder</source>
@@ -1521,7 +1521,7 @@ Por favor, digite suas chaves e salve-as.</translation>
     </message>
     <message>
       <source>Speed Offset (def 0.125):</source>
-      <translation>Deslocamento de Velocidade (Pad 0,125):</translation>
+      <translation>Deslocamento de Velocidade (padrão 0,125):</translation>
     </message>
     <message>
       <source>Copy from Common Config</source>
@@ -1529,11 +1529,11 @@ Por favor, digite suas chaves e salve-as.</translation>
     </message>
     <message>
       <source>Deadzone Offset (def 0.50):</source>
-      <translation>Deslocamento da Zona Morta (Pad 0,50):</translation>
+      <translation>Deslocamento da Zona Morta (padrão 0,50):</translation>
     </message>
     <message>
       <source>Speed Multiplier (def 1.0):</source>
-      <translation>Multiplicador de Velocidade (Pad 1,0):</translation>
+      <translation>Multiplicador de Velocidade (padrão 1,0):</translation>
     </message>
     <message>
       <source>Copy values from Common Config</source>
@@ -1541,7 +1541,7 @@ Por favor, digite suas chaves e salve-as.</translation>
     </message>
     <message>
       <source>Do you want to overwrite existing mappings with the mappings from the Common Config?</source>
-      <translation>Você deseja substituir os mapeamentos existentes com os mapeamentos da Configuração Comum?</translation>
+      <translation>Deseja substituir os mapeamentos existentes com os mapeamentos da Configuração Comum?</translation>
     </message>
     <message>
       <source>Unable to Save</source>
@@ -1692,7 +1692,7 @@ Por favor, digite suas chaves e salve-as.</translation>
     <name>LogPresetsDialog</name>
     <message>
       <source>Log Filter Presets</source>
-      <translation>Predefinições do Filtro do Log</translation>
+      <translation>Predefinições do Filtro do Registro</translation>
     </message>
     <message>
       <source>Comment</source>
@@ -1979,7 +1979,7 @@ Por favor, digite suas chaves e salve-as.</translation>
     </message>
     <message>
       <source>Show Labels Under Icons</source>
-      <translation>Mostrar Rótulos Sob Ícones</translation>
+      <translation>Mostrar Rótulos Abaixo dos Ícones</translation>
     </message>
     <message>
       <source>Customize Hotkeys</source>
@@ -2541,11 +2541,11 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Enable Background Controller Input</source>
-      <translation>Ativar Controle em Segundo plano</translation>
+      <translation>Ativar Entrada do Controle em Segundo Plano</translation>
     </message>
     <message>
       <source>Enable Controller Background Input:\nAllow shadPS4 to detect controller inputs when the game window is not in focus.</source>
-      <translation>Ativar Controle em Segundo plano:\nPermitir que o shadPS4 detecte entradas do controle quando a janela do jogo não está em foco.</translation>
+      <translation>Ativar Entrada do Controle em Segundo Plano:\nPermitir que o shadPS4 detecte entradas do controle quando a janela do jogo não está em foco.</translation>
     </message>
     <message>
       <source>Crash Diagnostics:\nCreates a .yaml file with info about the Vulkan state at the time of crashing.\nUseful for debugging &apos;Device lost&apos; errors. If you have this enabled, you should enable Host AND Guest Debug Markers.\nYou need Vulkan Validation Layers enabled and the Vulkan SDK for this to work.</source>
@@ -3375,7 +3375,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Downloading Pre-release (Nightly), please wait...</source>
-      <translation>Baixando a versão de Pre-release(Nightly), por favor aguarde...</translation>
+      <translation>Baixando a versão de Pre-release (Nightly), por favor aguarde...</translation>
     </message>
   </context>
   <context>
