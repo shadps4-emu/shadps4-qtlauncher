@@ -12,7 +12,7 @@
 #include <QSettings>
 
 #include "common/path_util.h"
-#include "common/scm_rev.h"
+#include "common/versions.h"
 #include "create_steam_shortcut.h"
 
 SteamShortcut::SteamShortcut(std::shared_ptr<gui_settings> settings, QObject* parent)
@@ -271,6 +271,30 @@ void SteamShortcut::relaunchSteam(const QString& steamPath) {
 #endif
 }
 
+// --- Version label helpers ---
+
+// Produces a short display name from a VersionManager version name:
+//   "Pre-release (Nightly)" → "nightly"
+//   "v.0.16.0"             → "0.16"   (trailing ".0" patch stripped)
+//   "v.0.16.1"             → "0.16.1" (non-zero patch kept)
+//   anything else          → as-is
+static QString friendlyVersionName(const std::string& rawName) {
+    QString n = QString::fromStdString(rawName);
+    if (n.contains("nightly", Qt::CaseInsensitive) ||
+        n.contains("pre-release", Qt::CaseInsensitive))
+        return "nightly";
+    // strip leading "v." or "v"
+    if (n.startsWith("v.", Qt::CaseInsensitive))
+        n = n.mid(2);
+    else if (n.startsWith("v", Qt::CaseInsensitive))
+        n = n.mid(1);
+    // strip trailing ".0" patch only when it is exactly zero
+    const QStringList parts = n.split('.');
+    if (parts.size() == 3 && parts.last() == "0")
+        n = parts[0] + '.' + parts[1];
+    return n;
+}
+
 // --- Public entry point ---
 
 void SteamShortcut::requestAddToSteam(const GameInfo& selectedInfo, QString emuPath) {
@@ -294,14 +318,29 @@ void SteamShortcut::requestAddToSteam(const GameInfo& selectedInfo, QString emuP
     QString iconPath;
     Common::FS::PathToQString(iconPath, selectedInfo.icon_path);
     QString gameName = QString::fromStdString(selectedInfo.name);
-    if (emuPath.isEmpty()) {
-        // Default: tag with the current build's version from scm_rev
-        gameName += " [shadPS4 " + QString::fromUtf8(Common::g_scm_app_version) + "]";
-    } else {
-        // Specific version: use the folder name containing the chosen executable,
-        // which is the version string the user picked in ShortcutDialog (e.g. "0.10", "nightly")
-        gameName += " [shadPS4 " + QFileInfo(emuPath).dir().dirName() + "]";
+
+    // Resolve the emulator path we are actually launching so we can look it
+    // up in VersionManager regardless of whether a specific build was chosen.
+    const QString lookupPath =
+        emuPath.isEmpty() ? m_gui_settings->GetValue(gui::vm_versionSelected).toString() : emuPath;
+
+    QString versionLabel;
+    for (const auto& v : VersionManager::GetVersionList({})) {
+        if (QString::fromStdString(v.path) == lookupPath) {
+            // Custom versions use exactly the name the user chose at drop-in time.
+            // Release and Nightly names are formatted for brevity.
+            if (v.type == VersionManager::VersionType::Custom)
+                versionLabel = QString::fromStdString(v.name);
+            else
+                versionLabel = friendlyVersionName(v.name);
+            break;
+        }
     }
+    // Fallback for executables not registered in VersionManager at all
+    if (versionLabel.isEmpty())
+        versionLabel = QFileInfo(lookupPath).dir().dirName();
+
+    gameName += " [shadPS4 " + versionLabel + "]";
 
     QString steamPath = findSteamPath();
     if (steamPath.isEmpty()) {
