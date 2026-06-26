@@ -319,28 +319,27 @@ void SteamShortcut::requestAddToSteam(const GameInfo& selectedInfo, QString emuP
     Common::FS::PathToQString(iconPath, selectedInfo.icon_path);
     QString gameName = QString::fromStdString(selectedInfo.name);
 
-    // Resolve the emulator path we are actually launching so we can look it
-    // up in VersionManager regardless of whether a specific build was chosen.
-    const QString lookupPath =
-        emuPath.isEmpty() ? m_gui_settings->GetValue(gui::vm_versionSelected).toString() : emuPath;
-
-    QString versionLabel;
-    for (const auto& v : VersionManager::GetVersionList({})) {
-        if (QString::fromStdString(v.path) == lookupPath) {
-            // Custom versions use exactly the name the user chose at drop-in time.
-            // Release and Nightly names are formatted for brevity.
-            if (v.type == VersionManager::VersionType::Custom)
-                versionLabel = QString::fromStdString(v.name);
-            else
-                versionLabel = friendlyVersionName(v.name);
-            break;
+    if (emuPath.isEmpty()) {
+        gameName += " [shadPS4]";
+    } else {
+        QString versionLabel;
+        for (const auto& v : VersionManager::GetVersionList({})) {
+            if (QString::fromStdString(v.path) == emuPath) {
+                // Custom versions use exactly the name the user chose at drop-in time.
+                // Release and Nightly names are formatted for brevity.
+                if (v.type == VersionManager::VersionType::Custom)
+                    versionLabel = QString::fromStdString(v.name);
+                else
+                    versionLabel = friendlyVersionName(v.name);
+                break;
+            }
         }
-    }
-    // Fallback for executables not registered in VersionManager at all
-    if (versionLabel.isEmpty())
-        versionLabel = QFileInfo(lookupPath).dir().dirName();
+        // Fallback for executables not registered in VersionManager at all
+        if (versionLabel.isEmpty())
+            versionLabel = QFileInfo(emuPath).dir().dirName();
 
-    gameName += " [shadPS4 " + versionLabel + "]";
+        gameName += " [shadPS4 " + versionLabel + "]";
+    }
 
     QString steamPath = findSteamPath();
     if (steamPath.isEmpty()) {
