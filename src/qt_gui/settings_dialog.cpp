@@ -606,7 +606,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         ui->networkConnectedCheckBox->installEventFilter(this);
         ui->shaderCaheCheckBox->installEventFilter(this);
         ui->shaderCacheArchiveCheckBox->installEventFilter(this);
-        ui->psnSignInCheckBox->installEventFilter(this);
+        ui->shadnetCheckBox->installEventFilter(this);
         ui->dmemGroupBox->installEventFilter(this);
     }
 
@@ -718,7 +718,11 @@ void SettingsDialog::LoadValuesFromConfig() {
     ui->networkConnectedCheckBox->setChecked(EmulatorSettings.IsConnectedToNetwork());
     ui->shaderCaheCheckBox->setChecked(EmulatorSettings.IsPipelineCacheEnabled());
     ui->shaderCacheArchiveCheckBox->setChecked(EmulatorSettings.IsPipelineCacheArchived());
-    ui->psnSignInCheckBox->setChecked(EmulatorSettings.IsPSNSignedIn());
+    ui->shadnetCheckBox->setChecked(EmulatorSettings.IsShadNetEnabled());
+    ui->serverLineEdit->setText(QString::fromStdString(EmulatorSettings.GetShadNetServer()));
+    ui->signalingAddLineEdit->setText(QString::fromStdString(EmulatorSettings.GetSignalingAddr()));
+    ui->signalingPortSpinBox->setValue(EmulatorSettings.GetSignalingPort());
+    ui->upnpCheckBox->setChecked(EmulatorSettings.IsUPnPEnabled());
     ui->vblankSpinBox->setValue(EmulatorSettings.GetVblankFrequency());
     ui->dmemSpinBox->setValue(EmulatorSettings.GetExtraDmemInMBytes());
 
@@ -1069,8 +1073,8 @@ void SettingsDialog::updateNoteTextEdit(const QString& elementName) {
         text = tr("Enable Shader Cache:\\nStoring compiled shaders to avoid recompilations, reduce stuttering.");
     } else if (elementName == "shaderCacheArchiveCheckBox") {
         text = tr("Compress the Shader Cache files into a zip file:\\nThe shader cache files are stored within a single zip file instead of multiple separate files.");
-    } else if (elementName == "psnSignInCheckBox") {
-        text = tr("Set PSN Signed-in to True:\\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported.");
+    } else if (elementName == "shadnetCheckBox") {
+        text = tr("shadNet:\\nA PSN server replacement.\\nCompatibility is very limited at the moment.\\nYou can register at https://www.shadps4.net/shadNet/register/.");
     } else if (elementName == "readbacksGroupBox") {
         text = tr("Readbacks:\\nEnable GPU memory readbacks and writebacks.\\nThis is required for proper behavior in some games.\\nMight cause stability and/or performance issues.");
     } else if (elementName == "readbackLinearImagesCheckBox") {
@@ -1110,7 +1114,11 @@ void SettingsDialog::UpdateSettings(bool is_specific) {
     EmulatorSettings.SetPipelineCacheEnabled(ui->shaderCaheCheckBox->isChecked(), is_specific);
     EmulatorSettings.SetPipelineCacheArchived(ui->shaderCacheArchiveCheckBox->isChecked(),
                                               is_specific);
-    EmulatorSettings.SetPSNSignedIn(ui->psnSignInCheckBox->isChecked(), is_specific);
+    EmulatorSettings.SetShadNetEnabled(ui->shadnetCheckBox->isChecked(), is_specific);
+    EmulatorSettings.SetShadNetServer(ui->serverLineEdit->text().toStdString(), is_specific);
+    EmulatorSettings.SetSignalingAddr(ui->signalingAddLineEdit->text().toStdString(), is_specific);
+    EmulatorSettings.SetSignalingPort(static_cast<u16>(ui->signalingPortSpinBox->value()), is_specific);
+    EmulatorSettings.SetUPnPEnabled(ui->upnpCheckBox->isChecked(), is_specific);
     EmulatorSettings.SetVblankFrequency(ui->vblankSpinBox->value(), is_specific);
     EmulatorSettings.SetExtraDmemInMBytes(ui->dmemSpinBox->value(), is_specific);
 
