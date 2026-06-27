@@ -244,8 +244,6 @@ set(COMMON src/common/logging/classes.h
            src/common/path_util.h
            src/common/sha1.h
            src/common/types.h
-           src/common/memory_patcher.cpp
-           src/common/memory_patcher.h
            src/common/key_manager.cpp
            src/common/key_manager.h
            ${CMAKE_CURRENT_BINARY_DIR}/src/common/scm_rev.cpp
