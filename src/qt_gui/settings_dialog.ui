@@ -2565,33 +2565,19 @@
                 </widget>
                </item>
                <item row="4" column="0">
-                <widget class="QLabel" name="signalingPortLabel">
+                <widget class="QLabel" name="signalingInfoLabel">
                  <property name="text">
-                  <string>Signaling Port</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="3" column="0">
-                <widget class="QLabel" name="signalingAddLabel">
-                 <property name="text">
-                  <string>Signaling Address</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="3" column="1">
-                <widget class="QLineEdit" name="signalingAddLineEdit"/>
-               </item>
-               <item row="5" column="0">
-                <widget class="QCheckBox" name="upnpCheckBox">
-                 <property name="text">
-                  <string>Enable UPNP</string>
+                  <string>Signaling Info</string>
                  </property>
                 </widget>
                </item>
                <item row="4" column="1">
-                <widget class="QSpinBox" name="signalingPortSpinBox">
-                 <property name="maximum">
-                  <number>65535</number>
+                <widget class="QLineEdit" name="signalingInfoLineEdit"/>
+               </item>
+               <item row="6" column="0">
+                <widget class="QCheckBox" name="upnpCheckBox">
+                 <property name="text">
+                  <string>Enable UPNP</string>
                  </property>
                 </widget>
                </item>
@@ -2610,6 +2596,16 @@
                   <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
                  </property>
                 </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="servWebApiLabel">
+                 <property name="text">
+                  <string>WebAPI Server</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1">
+                <widget class="QLineEdit" name="servWebApiLineEdit"/>
                </item>
               </layout>
              </widget>

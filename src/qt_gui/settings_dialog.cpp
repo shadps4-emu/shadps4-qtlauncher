@@ -720,8 +720,8 @@ void SettingsDialog::LoadValuesFromConfig() {
     ui->shaderCacheArchiveCheckBox->setChecked(EmulatorSettings.IsPipelineCacheArchived());
     ui->shadnetCheckBox->setChecked(EmulatorSettings.IsShadNetEnabled());
     ui->serverLineEdit->setText(QString::fromStdString(EmulatorSettings.GetShadNetServer()));
-    ui->signalingAddLineEdit->setText(QString::fromStdString(EmulatorSettings.GetSignalingAddr()));
-    ui->signalingPortSpinBox->setValue(EmulatorSettings.GetSignalingPort());
+    ui->servWebApiLineEdit->setText(QString::fromStdString(EmulatorSettings.GetShadnetWebapiServer()));
+    ui->signalingInfoLineEdit->setText(QString::fromStdString(EmulatorSettings.GetSignalingInfo()));
     ui->upnpCheckBox->setChecked(EmulatorSettings.IsUPnPEnabled());
     ui->vblankSpinBox->setValue(EmulatorSettings.GetVblankFrequency());
     ui->dmemSpinBox->setValue(EmulatorSettings.GetExtraDmemInMBytes());
@@ -1116,8 +1116,8 @@ void SettingsDialog::UpdateSettings(bool is_specific) {
                                               is_specific);
     EmulatorSettings.SetShadNetEnabled(ui->shadnetCheckBox->isChecked(), is_specific);
     EmulatorSettings.SetShadNetServer(ui->serverLineEdit->text().toStdString(), is_specific);
-    EmulatorSettings.SetSignalingAddr(ui->signalingAddLineEdit->text().toStdString(), is_specific);
-    EmulatorSettings.SetSignalingPort(static_cast<u16>(ui->signalingPortSpinBox->value()), is_specific);
+    EmulatorSettings.SetSignalingInfo(ui->signalingInfoLineEdit->text().toStdString(), is_specific);
+    EmulatorSettings.SetShadnetWebapiServer(ui->servWebApiLineEdit->text().toStdString(), is_specific);
     EmulatorSettings.SetUPnPEnabled(ui->upnpCheckBox->isChecked(), is_specific);
     EmulatorSettings.SetVblankFrequency(ui->vblankSpinBox->value(), is_specific);
     EmulatorSettings.SetExtraDmemInMBytes(ui->dmemSpinBox->value(), is_specific);
