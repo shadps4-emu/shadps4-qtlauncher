@@ -231,14 +231,11 @@ struct GeneralSettings {
                                            &GeneralSettings::trophy_notification_side),
             make_override<GeneralSettings>("connected_to_network",
                                            &GeneralSettings::connected_to_network),
-            make_override<GeneralSettings>("shadnet_server",
-                                           &GeneralSettings::shadnet_server),
-            make_override<GeneralSettings>("signaling_info",
-                                           &GeneralSettings::signaling_info),
+            make_override<GeneralSettings>("shadnet_server", &GeneralSettings::shadnet_server),
+            make_override<GeneralSettings>("signaling_info", &GeneralSettings::signaling_info),
             make_override<GeneralSettings>("shadnet_webapi_server",
                                            &GeneralSettings::shadnet_webapi_server),
-            make_override<GeneralSettings>("enable_upnp",
-                                           &GeneralSettings::enable_upnp)};
+            make_override<GeneralSettings>("enable_upnp", &GeneralSettings::enable_upnp)};
     }
 };
 NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(GeneralSettings, install_dirs, addon_install_dir, home_dir,
