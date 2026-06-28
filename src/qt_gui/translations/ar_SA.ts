@@ -611,11 +611,11 @@
     </message>
     <message>
       <source>Min Deadzone (def:2 max:127)</source>
-      <translation type="unfinished">Min Deadzone (def:2 max:127)</translation>
+      <translation>أقل منطقة خمول (الافتراضي: 2، الحد الأقصى: 127)</translation>
     </message>
     <message>
       <source>Max Deadzone (def:127 max:127)</source>
-      <translation type="unfinished">Max Deadzone (def:127 max:127)</translation>
+      <translation>أعلى منطقة خمول (الافتراضي: 127، الحد الأقصى: 127)</translation>
     </message>
     <message>
       <source>Right Stick Deadzone</source>
@@ -623,36 +623,36 @@
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>تلميح: لإلغاء تعيين الإدخال، اضغط بزر الفأرة الأيمن.</translation>
     </message>
   </context>
   <context>
     <name>CryptoManagerDialog</name>
     <message>
       <source>Crypto Key Manager</source>
-      <translation type="unfinished">Crypto Key Manager</translation>
+      <translation>مدير مفاتيح التشفير</translation>
     </message>
     <message>
       <source>Trophy Key: Used for trophy decryption.
 Must be a valid hex string with even length.</source>
-      <translation type="unfinished">Trophy Key: Used for trophy decryption.
-Must be a valid hex string with even length.</translation>
+      <translation>مفتاح الكؤوس: يُستخدم لفك تشفير الكؤوس.
+يجب أن يكون نصًا سداسيًا صالحًا وبطول زوجي.</translation>
     </message>
     <message>
       <source>Enter Trophy Key</source>
-      <translation type="unfinished">Enter Trophy Key</translation>
+      <translation>أدخل مفتاح الكؤوس</translation>
     </message>
     <message>
       <source>Trophy Key:</source>
-      <translation type="unfinished">Trophy Key:</translation>
+      <translation>مفتاح الكؤوس:</translation>
     </message>
     <message>
       <source>Status: Not loaded</source>
-      <translation type="unfinished">Status: Not loaded</translation>
+      <translation>الحالة: لم يتم التحميل</translation>
     </message>
     <message>
       <source>Trophy Key</source>
-      <translation type="unfinished">Trophy Key</translation>
+      <translation>مفتاح الكؤوس</translation>
     </message>
     <message>
       <source>Enter %1</source>
@@ -660,65 +660,65 @@ Must be a valid hex string with even length.</translation>
     </message>
     <message>
       <source>Exponent1</source>
-      <translation type="unfinished">Exponent1</translation>
+      <translation>الأُس 1</translation>
     </message>
     <message>
       <source>Exponent2</source>
-      <translation type="unfinished">Exponent2</translation>
+      <translation>الأُس 2</translation>
     </message>
     <message>
       <source>Public Exponent</source>
-      <translation type="unfinished">Public Exponent</translation>
+      <translation>الأُس العام</translation>
     </message>
     <message>
       <source>Coefficient</source>
-      <translation type="unfinished">Coefficient</translation>
+      <translation>المعامل</translation>
     </message>
     <message>
       <source>Modulus</source>
-      <translation type="unfinished">Modulus</translation>
+      <translation>المقياس</translation>
     </message>
     <message>
       <source>Prime 1</source>
-      <translation type="unfinished">Prime 1</translation>
+      <translation>العدد الأولي 1</translation>
     </message>
     <message>
       <source>Prime 2</source>
-      <translation type="unfinished">Prime 2</translation>
+      <translation>العدد الأولي 2</translation>
     </message>
     <message>
       <source>Private Exponent</source>
-      <translation type="unfinished">Private Exponent</translation>
+      <translation>الأُس الخاص</translation>
     </message>
     <message>
       <source>Fake Keyset</source>
-      <translation type="unfinished">Fake Keyset</translation>
+      <translation>مجموعة مفاتيح مزيفة</translation>
     </message>
     <message>
       <source>RSA key components for fake signing.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for fake signing.
-All fields must be valid hex strings with even length.</translation>
+      <translation>مكوّنات مفتاح RSA للتوقيع المزيف.
+يجب أن تكون جميع الحقول نصوصًا سداسية صالحة وبطول زوجي.</translation>
     </message>
     <message>
       <source>Debug Rif Keyset</source>
-      <translation type="unfinished">Debug Rif Keyset</translation>
+      <translation>مجموعة مفاتيح RIF للتصحيح</translation>
     </message>
     <message>
       <source>RSA key components for debug RIF files.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for debug RIF files.
-All fields must be valid hex strings with even length.</translation>
+      <translation>مكوّنات مفتاح RSA لملفات RIF الخاصة بالتصحيح.
+يجب أن تكون جميع الحقول نصوصًا سداسية صالحة وبطول زوجي.</translation>
     </message>
     <message>
       <source>Pkg Derived Key3</source>
-      <translation type="unfinished">Pkg Derived Key3</translation>
+      <translation>المفتاح المشتق الثالث لـ PKG</translation>
     </message>
     <message>
       <source>RSA key components for package decryption.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for package decryption.
-All fields must be valid hex strings with even length.</translation>
+      <translation>مكوّنات مفتاح RSA لفك تشفير الحزمة.
+يجب أن تكون جميع الحقول نصوصًا سداسية صالحة وبطول زوجي.</translation>
     </message>
     <message>
       <source>Close</source>
@@ -731,12 +731,12 @@ All fields must be valid hex strings with even length.</translation>
     <message>
       <source>No key file found or failed to load.
 Please enter your keys and save them.</source>
-      <translation type="unfinished">No key file found or failed to load.
-Please enter your keys and save them.</translation>
+      <translation>لم يتم العثور على ملف مفاتيح، أو فشل تحميله.
+يرجى إدخال المفاتيح ثم حفظها.</translation>
     </message>
     <message>
       <source>Validation Error</source>
-      <translation type="unfinished">Validation Error</translation>
+      <translation>خطأ في التحقق</translation>
     </message>
     <message>
       <source>Success</source>
@@ -744,7 +744,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Keys saved successfully!</source>
-      <translation type="unfinished">Keys saved successfully!</translation>
+      <translation>تم حفظ المفاتيح بنجاح!</translation>
     </message>
     <message>
       <source>Error</source>
@@ -752,23 +752,23 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Failed to save keys!</source>
-      <translation type="unfinished">Failed to save keys!</translation>
+      <translation>فشل حفظ المفاتيح!</translation>
     </message>
     <message>
       <source>Status: All fields empty</source>
-      <translation type="unfinished">Status: All fields empty</translation>
+      <translation>الحالة: جميع الحقول فارغة</translation>
     </message>
     <message>
       <source>Status: Invalid hex values</source>
-      <translation type="unfinished">Status: Invalid hex values</translation>
+      <translation>الحالة: قيم سداسية غير صالحة</translation>
     </message>
     <message>
       <source>Status: Incomplete</source>
-      <translation type="unfinished">Status: Incomplete</translation>
+      <translation>الحالة: غير مكتمل</translation>
     </message>
     <message>
       <source>Status: Valid</source>
-      <translation type="unfinished">Status: Valid</translation>
+      <translation>الحالة: صالح</translation>
     </message>
     <message>
       <source>Invalid File</source>
@@ -776,39 +776,39 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Only JSON files are supported.</source>
-      <translation type="unfinished">Only JSON files are supported.</translation>
+      <translation>ملفات JSON فقط مدعومة.</translation>
     </message>
     <message>
       <source>Unable to open file.</source>
-      <translation type="unfinished">Unable to open file.</translation>
+      <translation>تعذر فتح الملف.</translation>
     </message>
     <message>
       <source>JSON Error</source>
-      <translation type="unfinished">JSON Error</translation>
+      <translation>خطأ JSON</translation>
     </message>
     <message>
       <source>Invalid JSON format.</source>
-      <translation type="unfinished">Invalid JSON format.</translation>
+      <translation>تنسيق JSON غير صالح.</translation>
     </message>
     <message>
       <source>Keys successfully loaded from JSON!</source>
-      <translation type="unfinished">Keys successfully loaded from JSON!</translation>
+      <translation>تم تحميل المفاتيح من JSON بنجاح!</translation>
     </message>
     <message>
       <source>Trophy Key contains invalid hex or has odd length.</source>
-      <translation type="unfinished">Trophy Key contains invalid hex or has odd length.</translation>
+      <translation>يحتوي مفتاح الكؤوس على قيمة سداسية غير صالحة أو بطول فردي.</translation>
     </message>
     <message>
       <source>%1 contains invalid hex or has odd length.</source>
-      <translation type="unfinished">%1 contains invalid hex or has odd length.</translation>
+      <translation>يحتوي %1 على قيمة سداسية غير صالحة أو بطول فردي.</translation>
     </message>
     <message>
       <source>Load Key</source>
-      <translation type="unfinished">Load Key</translation>
+      <translation>تحميل مفتاح</translation>
     </message>
     <message>
       <source>Save Key</source>
-      <translation type="unfinished">Save Key</translation>
+      <translation>حفظ المفتاح</translation>
     </message>
   </context>
   <context>
@@ -900,11 +900,11 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Directory with your dumped games</source>
-      <translation type="unfinished">Directory with your dumped games</translation>
+      <translation>مجلد الألعاب المستخرجة من جهازك</translation>
     </message>
     <message>
       <source>Directory with your dumped DLC&apos;s</source>
-      <translation type="unfinished">Directory with your dumped DLC&apos;s</translation>
+      <translation>مجلد محتويات DLC المستخرجة من جهازك</translation>
     </message>
     <message>
       <source>Directory with games</source>
@@ -912,7 +912,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Directory with DLC&apos;s</source>
-      <translation type="unfinished">Directory with DLC&apos;s</translation>
+      <translation>مجلد محتويات DLC</translation>
     </message>
   </context>
   <context>
@@ -1241,7 +1241,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
-      <translation type="unfinished">Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</translation>
+      <translation>تعذر إرسال التقرير، لأن أحدث سجل لهذه اللعبة فشل في الفحص التالي، ولذلك سيكون التقرير غير صالح:</translation>
     </message>
     <message>
       <source>Ok</source>
@@ -1281,27 +1281,27 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Delete Shader Cache</source>
-      <translation type="unfinished">Delete Shader Cache</translation>
+      <translation>حذف كاش الشيدرات</translation>
     </message>
     <message>
       <source>This game does not have any saved Shader Cache to delete!</source>
-      <translation type="unfinished">This game does not have any saved Shader Cache to delete!</translation>
+      <translation>لا يوجد لهذه اللعبة أي كاش شيدرات محفوظ لحذفه!</translation>
     </message>
     <message>
       <source>Shader Cache</source>
-      <translation type="unfinished">Shader Cache</translation>
+      <translation>كاش الشيدرات</translation>
     </message>
     <message>
       <source>This game has no save folder to open!</source>
-      <translation type="unfinished">This game has no save folder to open!</translation>
+      <translation>لا يوجد لهذه اللعبة مجلد حفظ لفتحه!</translation>
     </message>
     <message>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
-      <translation type="unfinished">A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</translation>
+      <translation>يتطلب استخدام عارض الكؤوس مفتاح الكؤوس. يمكنك إدخاله من الإعدادات - إدارة مفاتيح التشفير.</translation>
     </message>
     <message>
       <source>User</source>
-      <translation type="unfinished">User</translation>
+      <translation>المستخدم</translation>
     </message>
   </context>
   <context>
@@ -1359,15 +1359,15 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Toggle Mouse to Joystick Emulation</source>
-      <translation type="unfinished">Toggle Mouse to Joystick Emulation</translation>
+      <translation>تبديل محاكاة الفأرة كعصا تحكم</translation>
     </message>
     <message>
       <source>Toggle Mouse to Gyro Emulation</source>
-      <translation type="unfinished">Toggle Mouse to Gyro Emulation</translation>
+      <translation>تبديل محاكاة الفأرة كمستشعر حركة</translation>
     </message>
     <message>
       <source>Tip: Up to three simultaneous inputs can be assigned for each hotkey</source>
-      <translation type="unfinished">Tip: Up to three simultaneous inputs can be assigned for each hotkey</translation>
+      <translation>تلميح: يمكن تعيين حتى ثلاثة إدخالات متزامنة لكل مفتاح اختصار.</translation>
     </message>
     <message>
       <source>Save</source>
@@ -1393,7 +1393,7 @@ Please enter your keys and save them.</translation>
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-      <translation type="unfinished">Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
+      <translation>لا يمكن تعيين نفس الإدخال لأكثر من وظيفة. توجد إدخالات مكررة معيّنة للأزرار التالية:
 
 %1</translation>
     </message>
@@ -1403,7 +1403,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>تلميح: لإلغاء تعيين الإدخال، اضغط بزر الفأرة الأيمن.</translation>
     </message>
     <message>
       <source>Volume Up</source>
@@ -1415,34 +1415,34 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Hotkeys</source>
-      <translation type="unfinished">Hotkeys</translation>
+      <translation>مفاتيح الاختصار</translation>
     </message>
     <message>
       <source>Placeholder</source>
-      <translation type="unfinished">Placeholder</translation>
+      <translation>عنصر نائب</translation>
     </message>
     <message>
       <source>Capture Screenshot</source>
-      <translation type="unfinished">Capture Screenshot</translation>
+      <translation>التقاط صورة للشاشة</translation>
     </message>
     <message>
       <source>Capture Screenshot w/ Overlays</source>
-      <translation type="unfinished">Capture Screenshot w/ Overlays</translation>
+      <translation>التقاط صورة للشاشة مع الطبقات</translation>
     </message>
     <message>
       <source>Open Emulator Settings</source>
-      <translation type="unfinished">Open Emulator Settings</translation>
+      <translation>فتح إعدادات المحاكي</translation>
     </message>
   </context>
   <context>
     <name>IpcClient</name>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation type="unfinished">Could not find the emulator executable</translation>
+      <translation>تعذر العثور على ملف تشغيل المحاكي.</translation>
     </message>
     <message>
       <source>No game is running</source>
-      <translation type="unfinished">No game is running</translation>
+      <translation>لا توجد لعبة قيد التشغيل.</translation>
     </message>
   </context>
   <context>
@@ -1597,95 +1597,95 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>تلميح: لإلغاء تعيين الإدخال، اضغط بزر الفأرة الأيمن.</translation>
     </message>
     <message>
       <source>Output</source>
-      <translation type="unfinished">Output</translation>
+      <translation>الإخراج</translation>
     </message>
     <message>
       <source>Input</source>
-      <translation type="unfinished">Input</translation>
+      <translation>الإدخال</translation>
     </message>
     <message>
       <source>Alternate Input 1</source>
-      <translation type="unfinished">Alternate Input 1</translation>
+      <translation>الإدخال البديل 1</translation>
     </message>
     <message>
       <source>Alternate Input 2</source>
-      <translation type="unfinished">Alternate Input 2</translation>
+      <translation>الإدخال البديل 2</translation>
     </message>
     <message>
       <source>Dpad Up</source>
-      <translation type="unfinished">Dpad Up</translation>
+      <translation>زر الاتجاهات للأعلى</translation>
     </message>
     <message>
       <source>Dpad Down</source>
-      <translation type="unfinished">Dpad Down</translation>
+      <translation>زر الاتجاهات للأسفل</translation>
     </message>
     <message>
       <source>Dpad Left</source>
-      <translation type="unfinished">Dpad Left</translation>
+      <translation>زر الاتجاهات لليسار</translation>
     </message>
     <message>
       <source>Dpad Right</source>
-      <translation type="unfinished">Dpad Right</translation>
+      <translation>زر الاتجاهات لليمين</translation>
     </message>
     <message>
       <source>Left Stick Up</source>
-      <translation type="unfinished">Left Stick Up</translation>
+      <translation>العصا اليسرى للأعلى</translation>
     </message>
     <message>
       <source>Left Stick Down</source>
-      <translation type="unfinished">Left Stick Down</translation>
+      <translation>العصا اليسرى للأسفل</translation>
     </message>
     <message>
       <source>Left Stick Left</source>
-      <translation type="unfinished">Left Stick Left</translation>
+      <translation>العصا اليسرى لليسار</translation>
     </message>
     <message>
       <source>Left Stick Right</source>
-      <translation type="unfinished">Left Stick Right</translation>
+      <translation>العصا اليسرى لليمين</translation>
     </message>
     <message>
       <source>Right Stick Up</source>
-      <translation type="unfinished">Right Stick Up</translation>
+      <translation>العصا اليمنى للأعلى</translation>
     </message>
     <message>
       <source>Right Stick Down</source>
-      <translation type="unfinished">Right Stick Down</translation>
+      <translation>العصا اليمنى للأسفل</translation>
     </message>
     <message>
       <source>Right Stick Left</source>
-      <translation type="unfinished">Right Stick Left</translation>
+      <translation>العصا اليمنى لليسار</translation>
     </message>
     <message>
       <source>Right Stick Right</source>
-      <translation type="unfinished">Right Stick Right</translation>
+      <translation>العصا اليمنى لليمين</translation>
     </message>
     <message>
       <source>L1</source>
-      <translation type="unfinished">L1</translation>
+      <translation>L1</translation>
     </message>
     <message>
       <source>R1</source>
-      <translation type="unfinished">R1</translation>
+      <translation>R1</translation>
     </message>
     <message>
       <source>L2</source>
-      <translation type="unfinished">L2</translation>
+      <translation>L2</translation>
     </message>
     <message>
       <source>R2</source>
-      <translation type="unfinished">R2</translation>
+      <translation>R2</translation>
     </message>
     <message>
       <source>L3</source>
-      <translation type="unfinished">L3</translation>
+      <translation>L3</translation>
     </message>
     <message>
       <source>R3</source>
-      <translation type="unfinished">R3</translation>
+      <translation>R3</translation>
     </message>
   </context>
   <context>
@@ -1712,7 +1712,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Add a new preset after the selected row</source>
-      <translation type="unfinished">Add a new preset after the selected row</translation>
+      <translation>إضافة إعداد مسبق جديد بعد الصف المحدد</translation>
     </message>
     <message>
       <source>Remove selected presets</source>
@@ -2031,7 +2031,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Manage Dimensions Toypad</source>
-      <translation type="unfinished">Manage Dimensions Toypad</translation>
+      <translation>إدارة Dimensions Toypad</translation>
     </message>
     <message>
       <source>Game Log</source>
@@ -2043,7 +2043,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Manage Cryptographic Keys</source>
-      <translation type="unfinished">Manage Cryptographic Keys</translation>
+      <translation>إدارة مفاتيح التشفير</translation>
     </message>
     <message>
       <source>Manage Users</source>
@@ -2054,19 +2054,19 @@ Select an emulator version from the right panel.</source>
     <name>QObject</name>
     <message>
       <source>Drive Locked</source>
-      <translation type="unfinished">Drive Locked</translation>
+      <translation>محرك الأقراص مقفل</translation>
     </message>
     <message>
       <source>Drive %1: is locked. Please enter the BitLocker key to access it:</source>
-      <translation type="unfinished">Drive %1: is locked. Please enter the BitLocker key to access it:</translation>
+      <translation>محرك الأقراص %1: مقفل. يرجى إدخال مفتاح BitLocker للوصول إليه:</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>خطأ</translation>
     </message>
     <message>
       <source>Incorrect recovery key. Please try again.</source>
-      <translation type="unfinished">Incorrect recovery key. Please try again.</translation>
+      <translation>مفتاح الاسترداد غير صحيح. يرجى المحاولة مرة أخرى.</translation>
     </message>
   </context>
   <context>
@@ -2542,15 +2542,15 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable Background Controller Input</source>
-      <translation type="unfinished">Enable Background Controller Input</translation>
+      <translation>تفعيل إدخال يد التحكم في الخلفية</translation>
     </message>
     <message>
       <source>Enable Controller Background Input:\nAllow shadPS4 to detect controller inputs when the game window is not in focus.</source>
-      <translation type="unfinished">Enable Controller Background Input:\nAllow shadPS4 to detect controller inputs when the game window is not in focus.</translation>
+      <translation>تفعيل إدخال يد التحكم في الخلفية:\nيسمح لـ shadPS4 باكتشاف إدخالات يد التحكم عندما لا تكون نافذة اللعبة في الواجهة.</translation>
     </message>
     <message>
       <source>Crash Diagnostics:\nCreates a .yaml file with info about the Vulkan state at the time of crashing.\nUseful for debugging &apos;Device lost&apos; errors. If you have this enabled, you should enable Host AND Guest Debug Markers.\nYou need Vulkan Validation Layers enabled and the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Crash Diagnostics:\nCreates a .yaml file with info about the Vulkan state at the time of crashing.\nUseful for debugging &apos;Device lost&apos; errors. If you have this enabled, you should enable Host AND Guest Debug Markers.\nYou need Vulkan Validation Layers enabled and the Vulkan SDK for this to work.</translation>
+      <translation>تشخيص الأعطال:\nينشئ ملف .yaml يحتوي على معلومات عن حالة Vulkan وقت التعطل.\nمفيد لتصحيح أخطاء "Device lost". إذا فعّلت هذا الخيار، يفضّل تفعيل علامات تصحيح المضيف والضيف معًا.\nيتطلب ذلك تفعيل طبقات تحقق Vulkan وتثبيت Vulkan SDK.</translation>
     </message>
     <message>
       <source>Enable Logging</source>
@@ -2558,7 +2558,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable Logging:\nEnables logging.\nDo not change this if you do not know what you&apos;re doing!\nWhen asking for help, make sure this setting is ENABLED.</source>
-      <translation type="unfinished">Enable Logging:\nEnables logging.\nDo not change this if you do not know what you&apos;re doing!\nWhen asking for help, make sure this setting is ENABLED.</translation>
+      <translation>تفعيل التسجيل:\nيفعّل كتابة السجلات.\nلا تغيّر هذا الخيار إذا لم تكن تعرف ما تفعله!\nعند طلب المساعدة، تأكد أن هذا الخيار مفعّل.</translation>
     </message>
     <message>
       <source>Present Mode</source>
@@ -2574,7 +2574,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Immediate (No Vsync)</source>
-      <translation type="unfinished">Immediate (No Vsync)</translation>
+      <translation>فوري (بدون Vsync)</translation>
     </message>
     <message>
       <source>Select the DLC folder</source>
@@ -2582,11 +2582,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</source>
-      <translation type="unfinished">Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</translation>
+      <translation>وضع العرض:\nيضبط طريقة عرض مخرجات الفيديو على الشاشة.\n\nMailbox: تتم مزامنة الإطارات مع معدل تحديث الشاشة. تستبدل الإطارات الجديدة أي إطارات معلقة. يقلل زمن الاستجابة، لكنه قد يتجاوز بعض الإطارات عند التأخر.\nFifo: تتم مزامنة الإطارات مع معدل تحديث الشاشة. توضع الإطارات الجديدة في قائمة انتظار خلف الإطارات المعلقة. يضمن عرض كل الإطارات، لكنه قد يزيد زمن الاستجابة.\nImmediate: تُعرض الإطارات على الشاشة فور جاهزيتها. قد يؤدي ذلك إلى تمزق الصورة.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the DLC path.</translation>
+      <translation>استعراض:\nاستعرض مجلدًا لتعيينه كمسار DLC.</translation>
     </message>
     <message>
       <source>FSR Settings</source>
@@ -2598,7 +2598,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable RCAS (sharpening)</source>
-      <translation type="unfinished">Enable RCAS (sharpening)</translation>
+      <translation>تفعيل RCAS (زيادة الحدة)</translation>
     </message>
     <message>
       <source>RCAS Attenuation:</source>
@@ -2614,47 +2614,47 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Open Log Location:\nOpen the folder where the log file is saved.</source>
-      <translation type="unfinished">Open Log Location:\nOpen the folder where the log file is saved.</translation>
+      <translation>فتح موقع السجل:\nيفتح المجلد الذي يتم حفظ ملف السجل فيه.</translation>
     </message>
     <message>
       <source>Microphone:\nNone: Does not use the microphone.\nDefault Device: Will use the default device defined in the system.\nOr manually choose the microphone to be used from the list.</source>
-      <translation type="unfinished">Microphone:\nNone: Does not use the microphone.\nDefault Device: Will use the default device defined in the system.\nOr manually choose the microphone to be used from the list.</translation>
+      <translation>الميكروفون:\nلا شيء: لا يستخدم الميكروفون.\nالجهاز الافتراضي: يستخدم الجهاز الافتراضي المحدد في النظام.\nأو اختر الميكروفون يدويًا من القائمة.</translation>
     </message>
     <message>
       <source>Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</source>
-      <translation type="unfinished">Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</translation>
+      <translation>مستوى الصوت:\nيضبط صوت الألعاب على مستوى عام. النطاق من 0 إلى 500%، والافتراضي 100%.</translation>
     </message>
     <message>
       <source>Default tab when opening settings:\nChoose which tab will open, the default is General.</source>
-      <translation type="unfinished">Default tab when opening settings:\nChoose which tab will open, the default is General.</translation>
+      <translation>التبويب الافتراضي عند فتح الإعدادات:\nاختر التبويب الذي سيتم فتحه. الافتراضي هو عام.</translation>
     </message>
     <message>
       <source>Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</source>
-      <translation type="unfinished">Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</translation>
+      <translation>تفعيل التحكم بالحركة:\nعند تفعيله، سيتم استخدام التحكم بالحركة في يد التحكم إذا كان مدعومًا.</translation>
     </message>
     <message>
       <source>Vblank Frequency</source>
-      <translation type="unfinished">Vblank Frequency</translation>
+      <translation>تردد Vblank</translation>
     </message>
     <message>
       <source>Vblank Frequency:\nThe frame rate at which the emulator refreshes at (60hz is the baseline, whether the game runs at 30 or 60fps). Changing this may have adverse effects, such as increasing the game speed, or breaking critical game functionality that does not expect this to change!</source>
-      <translation type="unfinished">Vblank Frequency:\nThe frame rate at which the emulator refreshes at (60hz is the baseline, whether the game runs at 30 or 60fps). Changing this may have adverse effects, such as increasing the game speed, or breaking critical game functionality that does not expect this to change!</translation>
+      <translation>تردد Vblank:\nمعدل الإطارات الذي يحدّث به المحاكي (60Hz هو الأساس، سواء كانت اللعبة تعمل على 30 أو 60 إطارًا). تغيير هذا الخيار قد يسبب آثارًا غير مرغوبة، مثل زيادة سرعة اللعبة أو تعطيل وظائف أساسية لا تتوقع هذا التغيير!</translation>
     </message>
     <message>
       <source>Enable Direct Memory Access</source>
-      <translation type="unfinished">Enable Direct Memory Access</translation>
+      <translation>تفعيل الوصول المباشر للذاكرة</translation>
     </message>
     <message>
       <source>Enable Devkit Console Mode</source>
-      <translation type="unfinished">Enable Devkit Console Mode</translation>
+      <translation>تفعيل وضع جهاز التطوير</translation>
     </message>
     <message>
       <source>Set &quot;PSN signed-in&quot; to True</source>
-      <translation type="unfinished">Set &quot;PSN signed-in&quot; to True</translation>
+      <translation>تعيين "تم تسجيل الدخول إلى PSN" إلى True</translation>
     </message>
     <message>
       <source>Set &quot;Network Connected&quot; to True</source>
-      <translation type="unfinished">Set &quot;Network Connected&quot; to True</translation>
+      <translation>تعيين "الشبكة متصلة" إلى True</translation>
     </message>
     <message>
       <source>Miscellaneous</source>
@@ -2670,7 +2670,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Show Splash Screen When Launching Game</source>
-      <translation type="unfinished">Show Splash Screen When Launching Game</translation>
+      <translation>إظهار شاشة البداية عند تشغيل اللعبة</translation>
     </message>
     <message>
       <source>General Frontend Settings</source>
@@ -2682,27 +2682,27 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable Direct Memory Access:\nEnables arbitrary memory access from the GPU to CPU memory.</source>
-      <translation type="unfinished">Enable Direct Memory Access:\nEnables arbitrary memory access from the GPU to CPU memory.</translation>
+      <translation>تفعيل الوصول المباشر للذاكرة:\nيتيح وصولًا حرًا من GPU إلى ذاكرة CPU.</translation>
     </message>
     <message>
       <source>Enable PS4 Neo Mode:\nAdds support for PS4 Pro emulation and memory size. Currently causes instability in a large number of tested games.</source>
-      <translation type="unfinished">Enable PS4 Neo Mode:\nAdds support for PS4 Pro emulation and memory size. Currently causes instability in a large number of tested games.</translation>
+      <translation>تفعيل وضع PS4 Neo:\nيضيف دعم محاكاة PS4 Pro وحجم الذاكرة الخاص به. يسبب حاليًا عدم استقرار في عدد كبير من الألعاب المختبرة.</translation>
     </message>
     <message>
       <source>Enable Devkit Console Mode:\nAdds support for Devkit console memory size.</source>
-      <translation type="unfinished">Enable Devkit Console Mode:\nAdds support for Devkit console memory size.</translation>
+      <translation>تفعيل وضع جهاز التطوير:\nيضيف دعم حجم ذاكرة جهاز التطوير.</translation>
     </message>
     <message>
       <source>Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</source>
-      <translation type="unfinished">Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</translation>
+      <translation>تعيين الشبكة متصلة إلى True:\nيجبر الألعاب على اكتشاف اتصال شبكة نشط. القدرات الفعلية للعب عبر الإنترنت غير مدعومة حاليًا.</translation>
     </message>
     <message>
       <source>Set PSN Signed-in to True:\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported.</source>
-      <translation type="unfinished">Set PSN Signed-in to True:\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported.</translation>
+      <translation>تعيين تسجيل الدخول إلى PSN إلى True:\nيجبر الألعاب على اكتشاف تسجيل دخول نشط إلى PSN. قدرات PSN الفعلية غير مدعومة.</translation>
     </message>
     <message>
       <source>Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>تفعيل طبقات تحقق Vulkan:\nيفعّل نظامًا يتحقق من حالة عارض Vulkan ويسجل معلومات عن حالته الداخلية.\nسيؤدي ذلك إلى تقليل الأداء وقد يغيّر سلوك المحاكاة.\nيتطلب ذلك تثبيت Vulkan SDK.</translation>
     </message>
     <message>
       <source>Audio Device (general)</source>
@@ -2714,15 +2714,15 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
-      <translation type="unfinished">Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</translation>
+      <translation>تفعيل تفريغ الشيدرات:\nلأغراض التصحيح التقني، يحفظ شيدرات اللعبة في مجلد أثناء عرضها.</translation>
     </message>
     <message>
       <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</source>
-      <translation type="unfinished">Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</translation>
+      <translation>تفعيل Null GPU:\nلأغراض التصحيح التقني، يعطل عرض اللعبة كما لو لم تكن هناك بطاقة رسومية. ستكون الشاشة سوداء.</translation>
     </message>
     <message>
       <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
-      <translation type="unfinished">DLC Path:\nThe folder where game DLC is loaded from.</translation>
+      <translation>مسار DLC:\nالمجلد الذي يتم تحميل محتوى DLC الخاص باللعبة منه.</translation>
     </message>
     <message>
       <source>Additional DMem Allocation</source>
@@ -2730,15 +2730,15 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</source>
-      <translation type="unfinished">Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</translation>
+      <translation>تخصيص DMem إضافي:\nيفرض تخصيص مقدار محدد من DMem الإضافية. قد يسبب أعطالًا أو مشاكل في بعض الألعاب.</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</source>
-      <translation type="unfinished">PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</translation>
+      <translation>مسار وحدات نظام PS4:\nالمجلد الذي يتم تحميل وحدات نظام PS4 منه.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the sysmodules path.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the sysmodules path.</translation>
+      <translation>استعراض:\nاستعرض مجلدًا لتعيينه كمسار وحدات النظام.</translation>
     </message>
     <message>
       <source>Vulkan Validation (Requires Vulkan SDK)</source>
@@ -2750,27 +2750,27 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable Core Validation</source>
-      <translation type="unfinished">Enable Core Validation</translation>
+      <translation>تفعيل التحقق الأساسي</translation>
     </message>
     <message>
       <source>Enable Sync Validation</source>
-      <translation type="unfinished">Enable Sync Validation</translation>
+      <translation>تفعيل تحقق المزامنة</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation</source>
-      <translation type="unfinished">Enable GPU-Assisted Validation</translation>
+      <translation>تفعيل التحقق بمساعدة GPU</translation>
     </message>
     <message>
       <source>Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>تفعيل تحقق المزامنة:\nيفعّل نظامًا يتحقق من توقيت مهام عرض Vulkan.\nسيؤدي ذلك إلى تقليل الأداء وقد يغيّر سلوك المحاكاة.\nيتطلب ذلك تثبيت Vulkan SDK.</translation>
     </message>
     <message>
       <source>Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>تفعيل التحقق الأساسي:\nيفعّل وظائف التحقق الرئيسية الخاصة بالـ API.\nسيؤدي ذلك إلى تقليل الأداء وقد يغيّر سلوك المحاكاة.\nيتطلب ذلك تثبيت Vulkan SDK.</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>تفعيل التحقق بمساعدة GPU:\nيدمج داخل الشيدرات كودًا يتحقق من عملها بشكل صحيح.\nسيؤدي ذلك إلى تقليل الأداء وقد يغيّر سلوك المحاكاة.\nيتطلب ذلك تثبيت Vulkan SDK.</translation>
     </message>
     <message>
       <source>GUI Language</source>
@@ -2790,15 +2790,15 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
-      <translation type="unfinished">GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</translation>
+      <translation>تحديثات الواجهة:\nالإصدار الرسمي: إصدارات رسمية تصدر كل شهر، وقد تكون قديمة جدًا لكنها أكثر موثوقية وخضعت للاختبار.\nNightly: إصدارات تطويرية تحتوي على أحدث الميزات والإصلاحات، لكنها قد تتضمن أخطاء وتكون أقل استقرارًا.\n\n*ينطبق هذا التحديث على واجهة Qt فقط. لتحديث نواة المحاكي، يرجى استخدام قائمة "مدير الإصدارات".</translation>
     </message>
     <message>
       <source>Cannot create portable launcher folder</source>
-      <translation type="unfinished">Cannot create portable launcher folder</translation>
+      <translation>تعذر إنشاء مجلد المشغّل المحمول.</translation>
     </message>
     <message>
       <source>Portable launcherDir folder created</source>
-      <translation type="unfinished">Portable launcherDir folder created</translation>
+      <translation>تم إنشاء مجلد launcherDir المحمول.</translation>
     </message>
     <message>
       <source>USB Device</source>
@@ -2810,159 +2810,159 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Skylander Portal</source>
-      <translation type="unfinished">Skylander Portal</translation>
+      <translation>بوابة Skylander</translation>
     </message>
     <message>
       <source>Infinity Base</source>
-      <translation type="unfinished">Infinity Base</translation>
+      <translation>قاعدة Infinity</translation>
     </message>
     <message>
       <source>Dimensions Toypad</source>
-      <translation type="unfinished">Dimensions Toypad</translation>
+      <translation>لوحة Dimensions Toypad</translation>
     </message>
     <message>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
-      <translation type="unfinished">USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</translation>
+      <translation>جهاز USB:\nجهاز USB حقيقي: استخدم جهاز USB حقيقي متصل بالنظام.\nبوابة Skylander: حاكي Skylander Portal of Power.\nقاعدة Infinity: حاكي قاعدة Disney Infinity.\nلوحة Dimensions Toypad: حاكي Lego Dimensions Toypad.</translation>
     </message>
     <message>
       <source>Enable Shader Cache</source>
-      <translation type="unfinished">Enable Shader Cache</translation>
+      <translation>تفعيل كاش الشيدرات</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file</source>
-      <translation type="unfinished">Compress the Shader Cache files into a zip file</translation>
+      <translation>ضغط ملفات كاش الشيدرات داخل ملف zip</translation>
     </message>
     <message>
       <source>Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</source>
-      <translation type="unfinished">Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</translation>
+      <translation>تفعيل كاش الشيدرات:\nيحفظ الشيدرات المترجمة لتجنب إعادة ترجمتها وتقليل التقطيع.</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
-      <translation type="unfinished">Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</translation>
+      <translation>ضغط ملفات كاش الشيدرات داخل ملف zip:\nيتم حفظ ملفات كاش الشيدرات داخل ملف zip واحد بدلًا من ملفات منفصلة متعددة.</translation>
     </message>
     <message>
       <source>Readbacks Mode</source>
-      <translation type="unfinished">Readbacks Mode</translation>
+      <translation>وضع الاسترجاع</translation>
     </message>
     <message>
       <source>Disabled</source>
-      <translation type="unfinished">Disabled</translation>
+      <translation>معطل</translation>
     </message>
     <message>
       <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
-      <translation type="unfinished">Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</translation>
+      <translation>الاسترجاع:\nيفعّل قراءة وكتابة ذاكرة GPU.\nهذا مطلوب لعمل بعض الألعاب بشكل صحيح.\nقد يسبب مشاكل في الاستقرار و/أو الأداء.</translation>
     </message>
     <message>
       <source>Relaxed</source>
-      <translation type="unfinished">Relaxed</translation>
+      <translation>مرن</translation>
     </message>
     <message>
       <source>Precise</source>
-      <translation type="unfinished">Precise</translation>
+      <translation>دقيق</translation>
     </message>
     <message>
       <source>Select shadPS4 Home Path</source>
-      <translation type="unfinished">Select shadPS4 Home Path</translation>
+      <translation>اختر مسار مجلد shadPS4 الرئيسي</translation>
     </message>
     <message>
       <source>Select the system modules folder</source>
-      <translation type="unfinished">Select the system modules folder</translation>
+      <translation>اختر مجلد وحدات النظام</translation>
     </message>
     <message>
       <source>Home Folder Location (Saves, Inputs, Trophy Data)</source>
-      <translation type="unfinished">Home Folder Location (Saves, Inputs, Trophy Data)</translation>
+      <translation>موقع المجلد الرئيسي (الحفظ، الإدخالات، بيانات الكؤوس)</translation>
     </message>
     <message>
       <source>Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</source>
-      <translation type="unfinished">Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</translation>
+      <translation>موقع المجلد الرئيسي:\nالمجلد الذي يتم فيه حفظ بيانات الحفظ وملفات الكؤوس وإعدادات الإدخال لجميع المستخدمين.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the home folder.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the home folder.</translation>
+      <translation>استعراض:\nاستعرض مجلدًا لتعيينه كمجلد رئيسي.</translation>
     </message>
     <message>
       <source>Audio</source>
-      <translation type="unfinished">Audio</translation>
+      <translation>الصوت</translation>
     </message>
     <message>
       <source>Audio Backend</source>
-      <translation type="unfinished">Audio Backend</translation>
+      <translation>خلفية الصوت</translation>
     </message>
     <message>
       <source>Mic Device</source>
-      <translation type="unfinished">Mic Device</translation>
+      <translation>جهاز الميكروفون</translation>
     </message>
     <message>
       <source>Devices</source>
-      <translation type="unfinished">Devices</translation>
+      <translation>الأجهزة</translation>
     </message>
     <message>
       <source>Camera</source>
-      <translation type="unfinished">Camera</translation>
+      <translation>الكاميرا</translation>
     </message>
     <message>
       <source>Log Sync</source>
-      <translation type="unfinished">Log Sync</translation>
+      <translation>مزامنة السجل</translation>
     </message>
     <message>
       <source>Log Skip Duplicate</source>
-      <translation type="unfinished">Log Skip Duplicate</translation>
+      <translation>تخطي السجلات المكررة</translation>
     </message>
     <message>
       <source>Log Max Skip Duration</source>
-      <translation type="unfinished">Log Max Skip Duration</translation>
+      <translation>أقصى مدة لتخطي السجل</translation>
     </message>
     <message>
       <source> ms</source>
-      <translation type="unfinished"> ms</translation>
+      <translation> ms</translation>
     </message>
     <message>
       <source>Log Size Limit</source>
-      <translation type="unfinished">Log Size Limit</translation>
+      <translation>حد حجم السجل</translation>
     </message>
     <message>
       <source> B</source>
-      <translation type="unfinished"> B</translation>
+      <translation> B</translation>
     </message>
     <message>
       <source>Log Append</source>
-      <translation type="unfinished">Log Append</translation>
+      <translation>إلحاق السجل</translation>
     </message>
     <message>
       <source>wincolor</source>
-      <translation type="unfinished">wincolor</translation>
+      <translation>wincolor</translation>
     </message>
     <message>
       <source>msvc</source>
-      <translation type="unfinished">msvc</translation>
+      <translation>msvc</translation>
     </message>
     <message>
       <source>Log Append:\nAppend to existing logs.</source>
-      <translation type="unfinished">Log Append:\nAppend to existing logs.</translation>
+      <translation>إلحاق السجل:\nإضافة السجلات إلى السجلات الموجودة.</translation>
     </message>
     <message>
       <source>Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</source>
-      <translation type="unfinished">Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</translation>
+      <translation>أقصى مدة لتخطي السجل:\nالفاصل الزمني دون كتابة الأسطر نفسها (بالمللي ثانية) - يعمل فقط عند تفعيل "تخطي السجلات المكررة".</translation>
     </message>
     <message>
       <source>Log Size Limit:\nMaximum size of log files (bytes).</source>
-      <translation type="unfinished">Log Size Limit:\nMaximum size of log files (bytes).</translation>
+      <translation>حد حجم السجل:\nالحجم الأقصى لملفات السجل (بالبايت).</translation>
     </message>
     <message>
       <source>Log Skip Duplicate:\nSave storage by avoiding writing log that is identical.</source>
-      <translation type="unfinished">Log Skip Duplicate:\nSave storage by avoiding writing log that is identical.</translation>
+      <translation>تخطي السجلات المكررة:\nيوفر مساحة التخزين عبر تجنب كتابة السجلات المتطابقة.</translation>
     </message>
     <message>
       <source>Log Sync:\nSwitch between sync (order) or async (performance).</source>
-      <translation type="unfinished">Log Sync:\nSwitch between sync (order) or async (performance).</translation>
+      <translation>مزامنة السجل:\nالتبديل بين المزامنة (ترتيب السجلات) أو غير المتزامن (الأداء).</translation>
     </message>
     <message>
       <source>Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</source>
-      <translation type="unfinished">Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</translation>
+      <translation>نوع السجل:\nاختر بين نوعي السجل wincolor أو msvc.\nwincolor: التسجيل الافتراضي على Windows\nmsvc: تسجيل مخصص للتصحيح</translation>
     </message>
     <message>
       <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
-      <translation type="unfinished">Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</translation>
+      <translation>فلتر السجل:\nيفلتر السجل لطباعة معلومات محددة فقط.\nأمثلة: "Core:Debug" "Lib.Pad:Debug Common.Filesystem:Error" "*:Critical"\nالمستويات: trace، debug، info، warning، error، critical، off - بهذا الترتيب، أي مستوى محدد سيكتم جميع المستويات التي تسبقه في القائمة ويسجل كل مستوى بعده.</translation>
     </message>
   </context>
   <context>
@@ -3012,7 +3012,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Select User:</source>
-      <translation type="unfinished">Select User:</translation>
+      <translation>اختر المستخدم:</translation>
     </message>
   </context>
   <context>
@@ -3043,19 +3043,19 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>&amp;Set Controller Port</source>
-      <translation type="unfinished">&amp;Set Controller Port</translation>
+      <translation>&amp;تعيين منفذ يد التحكم</translation>
     </message>
     <message>
       <source>&amp;Close</source>
-      <translation type="unfinished">&amp;Close</translation>
+      <translation>&amp;إغلاق</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>خطأ</translation>
     </message>
     <message>
       <source>Cannot add more users.</source>
-      <translation type="unfinished">Cannot add more users.</translation>
+      <translation>لا يمكن إضافة المزيد من المستخدمين.</translation>
     </message>
     <message>
       <source>Create New User</source>
@@ -3063,11 +3063,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>New User ID: %1</source>
-      <translation type="unfinished">New User ID: %1</translation>
+      <translation>معرّف المستخدم الجديد: %1</translation>
     </message>
     <message>
       <source>Username (3–16 chars, letters, numbers, _, -)</source>
-      <translation type="unfinished">Username (3–16 chars, letters, numbers, _, -)</translation>
+      <translation>اسم المستخدم (3–16 حرفًا، أحرف، أرقام، _، -)</translation>
     </message>
     <message>
       <source>Invalid Username</source>
@@ -3075,15 +3075,15 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Username must be 3–16 chars and valid.</source>
-      <translation type="unfinished">Username must be 3–16 chars and valid.</translation>
+      <translation>يجب أن يكون اسم المستخدم صالحًا ويتكون من 3 إلى 16 حرفًا.</translation>
     </message>
     <message>
       <source>Delete Confirmation</source>
-      <translation type="unfinished">Delete Confirmation</translation>
+      <translation>تأكيد الحذف</translation>
     </message>
     <message>
       <source>Delete user ID %1?</source>
-      <translation type="unfinished">Delete user ID %1?</translation>
+      <translation>هل تريد حذف المستخدم بالمعرّف %1؟</translation>
     </message>
     <message>
       <source>Rename User</source>
@@ -3091,27 +3091,27 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Old Username: %1</source>
-      <translation type="unfinished">Old Username: %1</translation>
+      <translation>اسم المستخدم القديم: %1</translation>
     </message>
     <message>
       <source>Set User Color</source>
-      <translation type="unfinished">Set User Color</translation>
+      <translation>تعيين لون المستخدم</translation>
     </message>
     <message>
       <source>Select color:</source>
-      <translation type="unfinished">Select color:</translation>
+      <translation>اختر اللون:</translation>
     </message>
     <message>
       <source>Set Controller Port</source>
-      <translation type="unfinished">Set Controller Port</translation>
+      <translation>تعيين منفذ يد التحكم</translation>
     </message>
     <message>
       <source>Assign port (1-4) to this user:</source>
-      <translation type="unfinished">Assign port (1-4) to this user:</translation>
+      <translation>عيّن منفذًا من 1 إلى 4 لهذا المستخدم:</translation>
     </message>
     <message>
       <source>&amp;Open User Directory</source>
-      <translation type="unfinished">&amp;Open User Directory</translation>
+      <translation>&amp;فتح مجلد المستخدم</translation>
     </message>
   </context>
   <context>
@@ -3230,17 +3230,17 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Error accessing GitHub API</source>
-      <translation type="unfinished">Error accessing GitHub API</translation>
+      <translation>حدث خطأ أثناء الوصول إلى GitHub API.</translation>
     </message>
     <message>
       <source>First you need to choose a location to save the versions in
 &apos;Path to save versions&apos;</source>
-      <translation type="unfinished">First you need to choose a location to save the versions in
-&apos;Path to save versions&apos;</translation>
+      <translation>يجب أولاً اختيار موقع لحفظ الإصدارات من خلال
+"مسار حفظ الإصدارات"</translation>
     </message>
     <message>
       <source>Do you want to download the version</source>
-      <translation type="unfinished">Do you want to download the version</translation>
+      <translation>هل تريد تنزيل الإصدار</translation>
     </message>
     <message>
       <source>No files available for this platform.</source>
@@ -3260,11 +3260,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Failed to create zip extraction script</source>
-      <translation type="unfinished">Failed to create zip extraction script</translation>
+      <translation>فشل إنشاء سكربت استخراج zip.</translation>
     </message>
     <message>
       <source>The GitHub API response is not a valid JSON array.</source>
-      <translation type="unfinished">The GitHub API response is not a valid JSON array.</translation>
+      <translation>استجابة GitHub API ليست مصفوفة JSON صالحة.</translation>
     </message>
     <message>
       <source>Auto Updater - Emulator</source>
@@ -3332,11 +3332,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Pre-release updated successfully</source>
-      <translation type="unfinished">Pre-release updated successfully</translation>
+      <translation>تم تحديث الإصدار التجريبي بنجاح.</translation>
     </message>
     <message>
       <source>Failed to create the update script file</source>
-      <translation type="unfinished">Failed to create the update script file</translation>
+      <translation>فشل إنشاء ملف سكربت التحديث.</translation>
     </message>
     <message>
       <source>Always Show Changelog</source>
@@ -3372,22 +3372,22 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release.</source>
-      <translation type="unfinished">Unable to get hash of latest pre-release.</translation>
+      <translation>تعذر الحصول على هاش أحدث إصدار تجريبي.</translation>
     </message>
     <message>
       <source>Downloading Pre-release (Nightly), please wait...</source>
-      <translation type="unfinished">Downloading Pre-release (Nightly), please wait...</translation>
+      <translation>جارٍ تنزيل الإصدار التجريبي (Nightly)، يرجى الانتظار...</translation>
     </message>
   </context>
   <context>
     <name>dimensions_dialog</name>
     <message>
       <source>Dimensions Manager</source>
-      <translation type="unfinished">Dimensions Manager</translation>
+      <translation>مدير Dimensions</translation>
     </message>
     <message>
       <source>Active Dimensions Figures:</source>
-      <translation type="unfinished">Active Dimensions Figures:</translation>
+      <translation>شخصيات Dimensions النشطة:</translation>
     </message>
     <message>
       <source>None</source>
@@ -3411,46 +3411,46 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Unknown Figure</source>
-      <translation type="unfinished">Unknown Figure</translation>
+      <translation>شخصية غير معروفة</translation>
     </message>
     <message>
       <source>Select Dimensions File</source>
-      <translation type="unfinished">Select Dimensions File</translation>
+      <translation>اختر ملف Dimensions</translation>
     </message>
     <message>
       <source>Dimensions Figure (*.bin);;</source>
-      <translation type="unfinished">Dimensions Figure (*.bin);;</translation>
+      <translation>شخصية Dimensions (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to open the figure file!</source>
-      <translation type="unfinished">Failed to open the figure file!</translation>
+      <translation>فشل فتح ملف الشخصية!</translation>
     </message>
     <message>
       <source>Failed to open the figure file(%1)!
 File may already be in use on the base.</source>
-      <translation type="unfinished">Failed to open the figure file(%1)!
-File may already be in use on the base.</translation>
+      <translation>فشل فتح ملف الشخصية (%1)!
+قد يكون الملف قيد الاستخدام بالفعل على القاعدة.</translation>
     </message>
     <message>
       <source>Failed to read the figure file!</source>
-      <translation type="unfinished">Failed to read the figure file!</translation>
+      <translation>فشل قراءة ملف الشخصية!</translation>
     </message>
     <message>
       <source>Failed to read the figure file(%1)!
 File was too small.</source>
-      <translation type="unfinished">Failed to read the figure file(%1)!
-File was too small.</translation>
+      <translation>فشل قراءة ملف الشخصية (%1)!
+كان الملف صغيرًا جدًا.</translation>
     </message>
   </context>
   <context>
     <name>figure_creator_dialog</name>
     <message>
       <source>Figure Creator</source>
-      <translation type="unfinished">Figure Creator</translation>
+      <translation>منشئ الشخصيات</translation>
     </message>
     <message>
       <source>Filter by Series:</source>
-      <translation type="unfinished">Filter by Series:</translation>
+      <translation>تصفية حسب السلسلة:</translation>
     </message>
     <message>
       <source>All</source>
@@ -3462,7 +3462,7 @@ File was too small.</translation>
     </message>
     <message>
       <source>Figure Number:</source>
-      <translation type="unfinished">Figure Number:</translation>
+      <translation>رقم الشخصية:</translation>
     </message>
     <message>
       <source>Series:</source>
@@ -3482,28 +3482,28 @@ File was too small.</translation>
     </message>
     <message>
       <source>Figure number entered is invalid!</source>
-      <translation type="unfinished">Figure number entered is invalid!</translation>
+      <translation>رقم الشخصية الذي تم إدخاله غير صالح!</translation>
     </message>
     <message>
       <source>Series number entered is invalid!</source>
-      <translation type="unfinished">Series number entered is invalid!</translation>
+      <translation>رقم السلسلة الذي تم إدخاله غير صالح!</translation>
     </message>
     <message>
       <source>Create Figure File</source>
-      <translation type="unfinished">Create Figure File</translation>
+      <translation>إنشاء ملف شخصية</translation>
     </message>
     <message>
       <source>Infinity Figure (*.bin);;</source>
-      <translation type="unfinished">Infinity Figure (*.bin);;</translation>
+      <translation>شخصية Infinity (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to create figure file!</source>
-      <translation type="unfinished">Failed to create figure file!</translation>
+      <translation>فشل إنشاء ملف الشخصية!</translation>
     </message>
     <message>
       <source>Failed to create figure file:
 %1</source>
-      <translation type="unfinished">Failed to create figure file:
+      <translation>فشل إنشاء ملف الشخصية:
 %1</translation>
     </message>
   </context>
@@ -3515,19 +3515,19 @@ File was too small.</translation>
     </message>
     <message>
       <source>Active Infinity Figures:</source>
-      <translation type="unfinished">Active Infinity Figures:</translation>
+      <translation>شخصيات Infinity النشطة:</translation>
     </message>
     <message>
       <source>Play Set/Power Disc</source>
-      <translation type="unfinished">Play Set/Power Disc</translation>
+      <translation>مجموعة لعب/قرص قوة</translation>
     </message>
     <message>
       <source>Power Disc Two</source>
-      <translation type="unfinished">Power Disc Two</translation>
+      <translation>قرص القوة الثاني</translation>
     </message>
     <message>
       <source>Power Disc Three</source>
-      <translation type="unfinished">Power Disc Three</translation>
+      <translation>قرص القوة الثالث</translation>
     </message>
     <message>
       <source>Player One</source>
@@ -3535,11 +3535,11 @@ File was too small.</translation>
     </message>
     <message>
       <source>Player One Ability One</source>
-      <translation type="unfinished">Player One Ability One</translation>
+      <translation>قدرة اللاعب الأول 1</translation>
     </message>
     <message>
       <source>Player One Ability Two</source>
-      <translation type="unfinished">Player One Ability Two</translation>
+      <translation>قدرة اللاعب الأول 2</translation>
     </message>
     <message>
       <source>Player Two</source>
@@ -3547,11 +3547,11 @@ File was too small.</translation>
     </message>
     <message>
       <source>Player Two Ability One</source>
-      <translation type="unfinished">Player Two Ability One</translation>
+      <translation>قدرة اللاعب الثاني 1</translation>
     </message>
     <message>
       <source>Player Two Ability Two</source>
-      <translation type="unfinished">Player Two Ability Two</translation>
+      <translation>قدرة اللاعب الثاني 2</translation>
     </message>
     <message>
       <source>None</source>
@@ -3571,42 +3571,42 @@ File was too small.</translation>
     </message>
     <message>
       <source>Unknown Figure</source>
-      <translation type="unfinished">Unknown Figure</translation>
+      <translation>شخصية غير معروفة</translation>
     </message>
     <message>
       <source>Select Infinity File</source>
-      <translation type="unfinished">Select Infinity File</translation>
+      <translation>اختر ملف Infinity</translation>
     </message>
     <message>
       <source>Infinity Figure (*.bin);;</source>
-      <translation type="unfinished">Infinity Figure (*.bin);;</translation>
+      <translation>شخصية Infinity (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to open the figure file!</source>
-      <translation type="unfinished">Failed to open the figure file!</translation>
+      <translation>فشل فتح ملف الشخصية!</translation>
     </message>
     <message>
       <source>Failed to open the figure file(%1)!
 File may already be in use on the base.</source>
-      <translation type="unfinished">Failed to open the figure file(%1)!
-File may already be in use on the base.</translation>
+      <translation>فشل فتح ملف الشخصية (%1)!
+قد يكون الملف قيد الاستخدام بالفعل على القاعدة.</translation>
     </message>
     <message>
       <source>Failed to read the figure file!</source>
-      <translation type="unfinished">Failed to read the figure file!</translation>
+      <translation>فشل قراءة ملف الشخصية!</translation>
     </message>
     <message>
       <source>Failed to read the figure file(%1)!
 File was too small.</source>
-      <translation type="unfinished">Failed to read the figure file(%1)!
-File was too small.</translation>
+      <translation>فشل قراءة ملف الشخصية (%1)!
+كان الملف صغيرًا جدًا.</translation>
     </message>
   </context>
   <context>
     <name>minifig_creator_dialog</name>
     <message>
       <source>Figure Creator</source>
-      <translation type="unfinished">Figure Creator</translation>
+      <translation>منشئ الشخصيات</translation>
     </message>
     <message>
       <source>--Unknown--</source>
@@ -3614,7 +3614,7 @@ File was too small.</translation>
     </message>
     <message>
       <source>Figure Number:</source>
-      <translation type="unfinished">Figure Number:</translation>
+      <translation>رقم الشخصية:</translation>
     </message>
     <message>
       <source>Create</source>
@@ -3630,24 +3630,24 @@ File was too small.</translation>
     </message>
     <message>
       <source>Figure number entered is invalid!</source>
-      <translation type="unfinished">Figure number entered is invalid!</translation>
+      <translation>رقم الشخصية الذي تم إدخاله غير صالح!</translation>
     </message>
     <message>
       <source>Create Figure File</source>
-      <translation type="unfinished">Create Figure File</translation>
+      <translation>إنشاء ملف شخصية</translation>
     </message>
     <message>
       <source>Dimensions Figure (*.bin);;</source>
-      <translation type="unfinished">Dimensions Figure (*.bin);;</translation>
+      <translation>شخصية Dimensions (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to create minifig file!</source>
-      <translation type="unfinished">Failed to create minifig file!</translation>
+      <translation>فشل إنشاء ملف minifig!</translation>
     </message>
     <message>
       <source>Failed to create minifig file:
 %1</source>
-      <translation type="unfinished">Failed to create minifig file:
+      <translation>فشل إنشاء ملف minifig:
 %1</translation>
     </message>
   </context>
@@ -3655,7 +3655,7 @@ File was too small.</translation>
     <name>minifig_move_dialog</name>
     <message>
       <source>Figure Mover</source>
-      <translation type="unfinished">Figure Mover</translation>
+      <translation>ناقل الشخصيات</translation>
     </message>
     <message>
       <source>None</source>
@@ -3667,14 +3667,14 @@ File was too small.</translation>
     </message>
     <message>
       <source>Pick up and Place</source>
-      <translation type="unfinished">Pick up and Place</translation>
+      <translation>التقاط ووضع</translation>
     </message>
   </context>
   <context>
     <name>skylander_creator_dialog</name>
     <message>
       <source>Skylander Creator</source>
-      <translation type="unfinished">Skylander Creator</translation>
+      <translation>منشئ Skylander</translation>
     </message>
     <message>
       <source>--Unknown--</source>
@@ -3686,7 +3686,7 @@ File was too small.</translation>
     </message>
     <message>
       <source>Variant:</source>
-      <translation type="unfinished">Variant:</translation>
+      <translation>النوع:</translation>
     </message>
     <message>
       <source>Create</source>
@@ -3714,16 +3714,16 @@ File was too small.</translation>
     </message>
     <message>
       <source>Skylander Object (*.sky);;All Files (*)</source>
-      <translation type="unfinished">Skylander Object (*.sky);;All Files (*)</translation>
+      <translation>كائن Skylander (*.sky);;كل الملفات (*)</translation>
     </message>
     <message>
       <source>Failed to create skylander file!</source>
-      <translation type="unfinished">Failed to create skylander file!</translation>
+      <translation>فشل إنشاء ملف Skylander!</translation>
     </message>
     <message>
       <source>Failed to create skylander file:
 %1</source>
-      <translation type="unfinished">Failed to create skylander file:
+      <translation>فشل إنشاء ملف Skylander:
 %1</translation>
     </message>
   </context>
@@ -3735,7 +3735,7 @@ File was too small.</translation>
     </message>
     <message>
       <source>Active Portal Skylanders:</source>
-      <translation type="unfinished">Active Portal Skylanders:</translation>
+      <translation>Skylanders النشطة على البوابة:</translation>
     </message>
     <message>
       <source>Skylander %1</source>
@@ -3759,27 +3759,27 @@ File was too small.</translation>
     </message>
     <message>
       <source>Skylander (*.sky *.bin *.dmp *.dump);;All Files (*)</source>
-      <translation type="unfinished">Skylander (*.sky *.bin *.dmp *.dump);;All Files (*)</translation>
+      <translation>Skylander (*.sky *.bin *.dmp *.dump);;كل الملفات (*)</translation>
     </message>
     <message>
       <source>Failed to open the skylander file!</source>
-      <translation type="unfinished">Failed to open the skylander file!</translation>
+      <translation>فشل فتح ملف Skylander!</translation>
     </message>
     <message>
       <source>Failed to open the skylander file(%1)!
 File may already be in use on the portal.</source>
-      <translation type="unfinished">Failed to open the skylander file(%1)!
-File may already be in use on the portal.</translation>
+      <translation>فشل فتح ملف Skylander (%1)!
+قد يكون الملف قيد الاستخدام بالفعل على البوابة.</translation>
     </message>
     <message>
       <source>Failed to read the skylander file!</source>
-      <translation type="unfinished">Failed to read the skylander file!</translation>
+      <translation>فشل قراءة ملف Skylander!</translation>
     </message>
     <message>
       <source>Failed to read the skylander file(%1)!
 File was too small.</source>
-      <translation type="unfinished">Failed to read the skylander file(%1)!
-File was too small.</translation>
+      <translation>فشل قراءة ملف Skylander (%1)!
+كان الملف صغيرًا جدًا.</translation>
     </message>
     <message>
       <source>Unknown (Id:%1 Var:%2)</source>
