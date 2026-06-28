@@ -26,7 +26,8 @@ struct Users {
     std::vector<User> user{};
     std::string commit_hash{};
 };
-NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(User, user_id, user_color, user_name, player_index)
+NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(User, user_id, user_color, user_name, player_index, shadnet_npid,
+                                   shadnet_password, shadnet_token, shadnet_email, shadnet_enabled)
 NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(Users, user, commit_hash)
 
 using LoggedInUsers = std::array<User*, 4>;
