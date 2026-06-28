@@ -611,7 +611,7 @@
     </message>
     <message>
       <source>Min Deadzone (def:2 max:127)</source>
-      <translation>أدنى منطقة عدم استجابة (الافتراضي: 2، الحد الأقصى: 127)</translation>
+      <translation>أدنى منطقة عدم استجابة (الافتراضي:2 الحد الأقصى:127)</translation>
     </message>
     <message>
       <source>Max Deadzone (def:127 max:127)</source>
@@ -692,17 +692,17 @@ Must be a valid hex string with even length.</source>
     </message>
     <message>
       <source>Fake Keyset</source>
-      <translation/>
+      <translation>مفاتيح وهمية</translation>
     </message>
     <message>
       <source>RSA key components for fake signing.
 All fields must be valid hex strings with even length.</source>
-      <translation>مكوّنات مفتاح RSA للتوقيع الوهمي.
-يجب أن تكون جميع الحقول سلاسل سداسية عشرية صالحة وبطول زوجي.</translation>
+      <translation>مكونات مفتاح RSA للتوقيع الوهمي.
+يجب أن تكون جميع الحقول سلاسل Hex صحيحة وبعدد خانات زوجي.</translation>
     </message>
     <message>
       <source>Debug Rif Keyset</source>
-      <translation>مجموعة مفاتيح RIF للتصحيح</translation>
+      <translation>مجموعة مفاتيح Rif للتصحيح</translation>
     </message>
     <message>
       <source>RSA key components for debug RIF files.
@@ -712,12 +712,12 @@ All fields must be valid hex strings with even length.</source>
     </message>
     <message>
       <source>Pkg Derived Key3</source>
-      <translation>مفتاح PKG المشتق الثالث</translation>
+      <translation>مفتاح Pkg المشتق3</translation>
     </message>
     <message>
       <source>RSA key components for package decryption.
 All fields must be valid hex strings with even length.</source>
-      <translation>مكوّنات مفتاح RSA لفك تشفير الحزمة.
+      <translation>مكوّنات مفتاح RSA لفك تشفير الحُزْمَة.
 يجب أن تكون جميع الحقول سلاسل سداسية عشرية صالحة وبطول زوجي.</translation>
     </message>
     <message>
@@ -731,8 +731,8 @@ All fields must be valid hex strings with even length.</source>
     <message>
       <source>No key file found or failed to load.
 Please enter your keys and save them.</source>
-      <translation>لم يتم العثور على ملف مفاتيح أو تعذر تحميله.
-أدخل المفاتيح ثم احفظها.</translation>
+      <translation>لم يتم العثور على مِلَفّ المفاتيح أو فشل تحميله.
+يرجى إدخال مفاتيحك وحفظها.</translation>
     </message>
     <message>
       <source>Validation Error</source>
@@ -1281,15 +1281,15 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Delete Shader Cache</source>
-      <translation>حذف ذاكرة الشيدر المؤقتة</translation>
+      <translation>حذف التخزين المؤقت للمظللات</translation>
     </message>
     <message>
       <source>This game does not have any saved Shader Cache to delete!</source>
-      <translation>لا توجد لهذه اللعبة ذاكرة شيدرمؤقتة محفوظة لحذفها!</translation>
+      <translation>لا يوجد تخزين مؤقت للمظللات محفوظ لهذه اللعبة لحذفه!</translation>
     </message>
     <message>
       <source>Shader Cache</source>
-      <translation>ذاكرة الشيدرالمؤقتة</translation>
+      <translation>التخزين المؤقت للمظللات</translation>
     </message>
     <message>
       <source>This game has no save folder to open!</source>
@@ -1359,15 +1359,15 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Toggle Mouse to Joystick Emulation</source>
-      <translation>تبديل محاكاة الماوس كعصا تحكم</translation>
+      <translation>تبديل محاكاة الماوس لعصا التحكم</translation>
     </message>
     <message>
       <source>Toggle Mouse to Gyro Emulation</source>
-      <translation>تبديل محاكاة الماوس كمستشعر حركة</translation>
+      <translation>تبديل محاكاة الماوس للجيرو</translation>
     </message>
     <message>
       <source>Tip: Up to three simultaneous inputs can be assigned for each hotkey</source>
-      <translation>تلميح: يمكن تعيين حتى ثلاثة مدخلات متزامنة لكل مفتاح اختصار</translation>
+      <translation>تلميح: يمكن تعيين حتى ثلاث عمليات إدخال متزامنة لكل مفتاح اختصار</translation>
     </message>
     <message>
       <source>Save</source>
@@ -1438,11 +1438,11 @@ Please enter your keys and save them.</source>
     <name>IpcClient</name>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation>تعذّر العثور على ملف تشغيل المحاكي</translation>
+      <translation>تعذر العثور على مشغّل المحاكي</translation>
     </message>
     <message>
       <source>No game is running</source>
-      <translation>لا توجد لعبة قيد التشغيل</translation>
+      <translation>لا يوجد تطبيق قيد التشغيل</translation>
     </message>
   </context>
   <context>
@@ -1597,7 +1597,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation>تلميح: انقر بزر الفأرة الأيمن لإلغاء تعيين المدخلات</translation>
+      <translation>تلميح: انقر بزر الماوس الأيمن لإلغاء تعيين الإدخالات</translation>
     </message>
     <message>
       <source>Output</source>
@@ -2031,7 +2031,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Manage Dimensions Toypad</source>
-      <translation>إدارة لوحة Dimensions</translation>
+      <translation>إدارة ToyPad الخاص بـ Dimensions</translation>
     </message>
     <message>
       <source>Game Log</source>
@@ -2546,11 +2546,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable Controller Background Input:\nAllow shadPS4 to detect controller inputs when the game window is not in focus.</source>
-      <translation>تفعيل إدخال يد التحكم في الخلفية:\nيسمح لـ shadPS4 باكتشاف إدخالات يد التحكم عندما لا تكون نافذة اللعبة في الواجهة.</translation>
+      <translation>تفعيل إدخال يد التحكم في الخلفية:\nيسمح للمحاكي باكتشاف مدخلات يد التحكم عندما لا تكون نافذة اللعبة نشطة.</translation>
     </message>
     <message>
       <source>Crash Diagnostics:\nCreates a .yaml file with info about the Vulkan state at the time of crashing.\nUseful for debugging &apos;Device lost&apos; errors. If you have this enabled, you should enable Host AND Guest Debug Markers.\nYou need Vulkan Validation Layers enabled and the Vulkan SDK for this to work.</source>
-      <translation>تشخيص الأعطال:\nينشئ ملف .yaml يحتوي على معلومات عن حالة Vulkan وقت حدوث العطل.\nمفيد لتصحيح أخطاء &apos;Device lost&apos;. إذا فعّلت هذا الخيار، فينبغي تفعيل Host وGuest Debug Markers معًا.\nيتطلب ذلك تفعيل Vulkan Validation Layers وتثبيت Vulkan SDK.</translation>
+      <translation>تشخيص الأعطال:\nينشئ ملف YAML يحتوي على معلومات عن حالة Vulkan وقت حدوث العطل.\nمفيد لتصحيح أخطاء &apos;Device lost&apos;. إذا كان هذا مفعّلًا، فعليك تفعيل Host وGuest Debug Markers.\nيتطلب ذلك تفعيل Vulkan Validation Layers وتثبيت Vulkan SDK.</translation>
     </message>
     <message>
       <source>Enable Logging</source>
@@ -2558,7 +2558,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable Logging:\nEnables logging.\nDo not change this if you do not know what you&apos;re doing!\nWhen asking for help, make sure this setting is ENABLED.</source>
-      <translation>تفعيل التسجيل:\nيفعّل كتابة السجلات.\nلا تغيّر هذا الخيار إذا لم تكن تعرف ما&apos; الذي تفعله!\nعند طلب المساعدة، تأكد أن هذا الخيار مفعّل.</translation>
+      <translation>تفعيل التسجيل:\nيفعّل التسجيل.\nلا تغيّر هذا الإعداد إذا كنت لا تعرف ما&apos; تفعله!\nعند طلب المساعدة، تأكد من أن هذا الإعداد مفعّل.</translation>
     </message>
     <message>
       <source>Present Mode</source>
@@ -2574,7 +2574,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Immediate (No Vsync)</source>
-      <translation>فوري (بدون Vsync)</translation>
+      <translation>فوري (دون مزامنة عمودية)</translation>
     </message>
     <message>
       <source>Select the DLC folder</source>
@@ -2614,11 +2614,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Open Log Location:\nOpen the folder where the log file is saved.</source>
-      <translation>فتح موقع السجل:\nيفتح المجلد الذي يتم حفظ ملف السجل فيه.</translation>
+      <translation>فتح موقع السجل:\nيفتح المجلد الذي يُحفظ فيه ملف السجل.</translation>
     </message>
     <message>
       <source>Microphone:\nNone: Does not use the microphone.\nDefault Device: Will use the default device defined in the system.\nOr manually choose the microphone to be used from the list.</source>
-      <translation>الميكروفون:\nلا شيء: لا يستخدم الميكروفون.\nالجهاز الافتراضي: يستخدم الجهاز الافتراضي المحدد في النظام.\nأو اختر الميكروفون يدويًا من القائمة.</translation>
+      <translation>الميكروفون:\nبلا: لا يستخدم الميكروفون.\nالجهاز الافتراضي: يستخدم الجهاز الافتراضي المحدد في النظام.\nأو اختر يدويًا الميكروفون المراد استخدامه من القائمة.</translation>
     </message>
     <message>
       <source>Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</source>
@@ -2634,11 +2634,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Vblank Frequency</source>
-      <translation>تردد Vblank</translation>
+      <translation>معدل التحديث الداخلي</translation>
     </message>
     <message>
       <source>Vblank Frequency:\nThe frame rate at which the emulator refreshes at (60hz is the baseline, whether the game runs at 30 or 60fps). Changing this may have adverse effects, such as increasing the game speed, or breaking critical game functionality that does not expect this to change!</source>
-      <translation>تردد Vblank:\nمعدل الإطارات الذي يحدّث به المحاكي (60hz هو الأساس، سواء كانت اللعبة تعمل على 30 أو 60fps). تغيير هذا الخيار قد يسبب آثارًا غير مرغوبة، مثل زيادة سرعة اللعبة أو تعطيل وظائف أساسية لا تتوقع هذا التغيير!</translation>
+      <translation>تردد Vblank:\nمعدل الإطارات الذي يحدّث عنده المحاكي (60hz هو الأساس، سواء كانت اللعبة تعمل بمعدل 30 أو 60fps). قد يؤدي تغيير هذا إلى آثار سلبية، مثل زيادة سرعة اللعبة أو تعطيل وظائف أساسية في اللعبة لا تتوقع تغيير هذه القيمة!</translation>
     </message>
     <message>
       <source>Enable Direct Memory Access</source>
@@ -2686,7 +2686,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable PS4 Neo Mode:\nAdds support for PS4 Pro emulation and memory size. Currently causes instability in a large number of tested games.</source>
-      <translation>تفعيل وضع PS4 Neo:\nيضيف دعم محاكاة PS4 Pro وحجم الذاكرة الخاص به. يسبب حاليًا عدم استقرار في عدد كبير من الألعاب المختبرة.</translation>
+      <translation>تفعيل وضع PS4 Neo:\nيضيف دعمًا لمحاكاة PS4 Pro وحجم الذاكرة الخاص به. يتسبب حاليًا في عدم الاستقرار في عدد كبير من الألعاب التي تم اختبارها.</translation>
     </message>
     <message>
       <source>Enable Devkit Console Mode:\nAdds support for Devkit console memory size.</source>
@@ -2694,15 +2694,15 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</source>
-      <translation>تعيين الشبكة متصلة إلى True:\nيجبر الألعاب على اكتشاف اتصال شبكة نشط. القدرات الفعلية للعب عبر الإنترنت غير مدعومة حاليًا.</translation>
+      <translation>تعيين الاتصال بالشبكة إلى True:\nيجبر الألعاب على اكتشاف وجود اتصال نشط بالشبكة. إمكانات اللعب عبر الإنترنت غير مدعومة حاليًا.</translation>
     </message>
     <message>
       <source>Set PSN Signed-in to True:\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported.</source>
-      <translation>تعيين تسجيل الدخول إلى PSN إلى True:\nيجبر الألعاب على اكتشاف تسجيل دخول نشط إلى PSN. قدرات PSN الفعلية غير مدعومة.</translation>
+      <translation>تعيين تسجيل الدخول إلى PSN على True:\nيجبر الألعاب على اكتشاف وجود تسجيل دخول نشط إلى PSN. إمكانات PSN الفعلية غير مدعومة.</translation>
     </message>
     <message>
       <source>Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation>تفعيل طبقات تحقق Vulkan:\nيفعّل نظامًا يتحقق من حالة عارض Vulkan ويسجل معلومات عن حالته الداخلية.\nسيؤدي ذلك إلى تقليل الأداء وقد يغيّر سلوك المحاكاة.\nيتطلب ذلك تثبيت Vulkan SDK.</translation>
+      <translation>تفعيل طبقات التحقق من Vulkan:\nيفعّل نظامًا يتحقق من حالة عارض Vulkan ويسجّل معلومات عن حالته الداخلية.\nسيؤدي ذلك إلى تقليل الأداء، ومن المحتمل أن يغيّر سلوك المحاكاة.\nيتطلب ذلك تثبيت Vulkan SDK.</translation>
     </message>
     <message>
       <source>Audio Device (general)</source>
@@ -2714,11 +2714,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
-      <translation>تفعيل تفريغ الشيدرات:\nلأغراض التصحيح التقني، يحفظ شيدرات اللعبة&apos;s في مجلد أثناء عرضها.</translation>
+      <translation>تفعيل استخراج الشيدرات:\nلأغراض التصحيح التقني، يحفظ شيدرات اللعبة في مجلد أثناء عرضها.</translation>
     </message>
     <message>
       <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</source>
-      <translation>تفعيل Null GPU:\nلأغراض التصحيح التقني، يعطّل عرض اللعبة كما لو لم تكن هناك بطاقة رسومية. ستكون الشاشة سوداء.</translation>
+      <translation>تفعيل Null GPU:\nلأغراض التصحيح التقني، يعطّل عرض اللعبة كما لو لم تكن هناك بطاقة رسومات. ستكون الشاشة سوداء.</translation>
     </message>
     <message>
       <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
@@ -2730,7 +2730,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</source>
-      <translation>تخصيص DMem إضافي:\nيفرض تخصيص المقدار المحدد من DMem إضافي. قد يسبب أعطالًا أو مشاكل في بعض الألعاب.</translation>
+      <translation>تخصيص DMem إضافي:\nيفرض تخصيص مقدار محدد من DMem إضافي. قد يتسبب في تعطّل بعض الألعاب أو حدوث مشكلات بها.</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</source>
@@ -2762,15 +2762,15 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation>تفعيل تحقق المزامنة:\nيفعّل نظامًا يتحقق من توقيت مهام عرض Vulkan.\nسيؤدي ذلك إلى تقليل الأداء وقد يغيّر سلوك المحاكاة.\nيتطلب ذلك تثبيت Vulkan SDK.</translation>
+      <translation>تفعيل التحقق من المزامنة:\nيفعّل نظامًا يتحقق من توقيت مهام عرض Vulkan.\nسيؤدي ذلك إلى تقليل الأداء، ومن المحتمل أن يغيّر سلوك المحاكاة.\nيتطلب ذلك تثبيت Vulkan SDK.</translation>
     </message>
     <message>
       <source>Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation>تفعيل التحقق الأساسي:\nيفعّل وظائف التحقق الرئيسية الخاصة بالـ API.\nسيؤدي ذلك إلى تقليل الأداء وقد يغيّر سلوك المحاكاة.\nيتطلب ذلك تثبيت Vulkan SDK.</translation>
+      <translation>تفعيل التحقق الأساسي:\nيفعّل وظائف التحقق الرئيسية لواجهة API.\nسيؤدي ذلك إلى تقليل الأداء، ومن المحتمل أن يغيّر سلوك المحاكاة.\nيتطلب ذلك تثبيت Vulkan SDK.</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation>تفعيل التحقق بمساعدة GPU:\nيدمج داخل المظللات كودًا يتحقق من عملها بشكل صحيح.\nسيؤدي ذلك إلى تقليل الأداء وقد يغيّر سلوك المحاكاة.\nيتطلب ذلك تثبيت Vulkan SDK.</translation>
+      <translation>تفعيل التحقق بمساعدة GPU:\nيضيف تعليمات تحقق داخل الشيدرات للتأكد من أنها تعمل بشكل صحيح.\nسيؤدي ذلك إلى تقليل الأداء، ومن المحتمل أن يغيّر سلوك المحاكاة.\nيتطلب ذلك تثبيت Vulkan SDK.</translation>
     </message>
     <message>
       <source>GUI Language</source>
@@ -2798,7 +2798,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Portable launcherDir folder created</source>
-      <translation>تم إنشاء مجلد launcherDir المحمول</translation>
+      <translation>تم إنشاء مجلد المشغّل المحمول</translation>
     </message>
     <message>
       <source>USB Device</source>
@@ -2810,35 +2810,35 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Skylander Portal</source>
-      <translation>بوابة سكايلاندر</translation>
+      <translation>بوابة Skylanders</translation>
     </message>
     <message>
       <source>Infinity Base</source>
-      <translation>قاعدة إنفينيتي</translation>
+      <translation>Infinity Base</translation>
     </message>
     <message>
       <source>Dimensions Toypad</source>
-      <translation>لوحة ديمنشنز</translation>
+      <translation>ToyPad الخاص بـ Dimensions</translation>
     </message>
     <message>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
-      <translation>جهاز USB:\nجهاز USB حقيقي: استخدام جهاز USB حقيقي متصل بالنظام.\nبوابة Skylander: محاكاة Skylander Portal of Power.\nقاعدة Infinity: محاكاة قاعدة Disney Infinity.\nلوحة Dimensions: محاكاة Lego Dimensions Toypad.</translation>
+      <translation>جهاز USB:\nجهاز USB حقيقي: استخدام جهاز USB حقيقي متصل بالنظام.\nبوابة Skylanders: محاكاة Portal of Power الخاص بـ Skylanders.\nInfinity Base: محاكاة Infinity Base الخاصة بـ Disney Infinity.\nToy Pad الخاص بـ Dimensions: محاكاة Toy Pad الخاص بـ LEGO Dimensions.</translation>
     </message>
     <message>
       <source>Enable Shader Cache</source>
-      <translation>تفعيل ذاكرة الشيدر المؤقتة</translation>
+      <translation>تفعيل التخزين المؤقت للمظللات</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file</source>
-      <translation>ضغط ملفات ذاكرة الشيدر المؤقتة داخل ملف zip</translation>
+      <translation>ضغط ملفات التخزين المؤقت للمظللات في ملف zip</translation>
     </message>
     <message>
       <source>Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</source>
-      <translation>تفعيل ذاكرة الشيدر المؤقتة:\nتخزين الشيدرات المترجمة لتجنب إعادة ترجمتها وتقليل التقطيع.</translation>
+      <translation>تفعيل التخزين المؤقت للمظللات:\nتخزين المظللات المجمعة لتجنب إعادة بنائها، وتقليل التقطيع.</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
-      <translation>ضغط ملفات ذاكرة الشيدر المؤقتة داخل ملف ZIP:\nتُحفظ ملفات ذاكرة الشيدر المؤقتة داخل ملف ZIP واحد بدلًا من عدة ملفات منفصلة.</translation>
+      <translation>ضغط ملفات التخزين المؤقت للمظللات في ملف zip:\nيتم حفظ ملفات التخزين المؤقت للمظللات داخل ملف zip واحد بدلاً من عدة ملفات منفصلة.</translation>
     </message>
     <message>
       <source>Readbacks Mode</source>
@@ -2854,7 +2854,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Relaxed</source>
-      <translation>مرن</translation>
+      <translation>مخفف</translation>
     </message>
     <message>
       <source>Precise</source>
@@ -2862,7 +2862,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Select shadPS4 Home Path</source>
-      <translation>تحديد مسار مجلد shadPS4 الرئيسي</translation>
+      <translation>تحديد مسار مجلد المحاكي الرئيسي</translation>
     </message>
     <message>
       <source>Select the system modules folder</source>
@@ -2870,7 +2870,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Home Folder Location (Saves, Inputs, Trophy Data)</source>
-      <translation>موقع المجلد الرئيسي (الحفظ، إعدادات الإدخال، بيانات الكؤوس)</translation>
+      <translation>موقع مجلد البيانات الرئيسية (الحفظ، المدخلات، بيانات الكؤوس)</translation>
     </message>
     <message>
       <source>Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</source>
@@ -3415,11 +3415,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Select Dimensions File</source>
-      <translation>اختيار بيانات ديمنشنز</translation>
+      <translation>اختيار ملف Dimensions</translation>
     </message>
     <message>
       <source>Dimensions Figure (*.bin);;</source>
-      <translation>شخصية ديمنشنز (*.bin)؛؛</translation>
+      <translation>شخصية Dimension (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to open the figure file!</source>
