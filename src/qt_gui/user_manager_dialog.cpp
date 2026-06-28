@@ -12,7 +12,7 @@
 
 UserManagerDialog::UserManagerDialog(QWidget* parent) : QDialog(parent) {
     setWindowTitle(tr("User Manager"));
-    setMinimumSize(QSize(600, 400));
+    setMinimumSize(QSize(800, 400));
     setModal(true);
 
     // Table
@@ -21,10 +21,11 @@ UserManagerDialog::UserManagerDialog(QWidget* parent) : QDialog(parent) {
     m_table->setSelectionMode(QAbstractItemView::SingleSelection);
     m_table->setSelectionBehavior(QAbstractItemView::SelectRows);
     m_table->setContextMenuPolicy(Qt::CustomContextMenu);
-    m_table->setColumnCount(4); // User ID, Name, Color, Port
+    m_table->setColumnCount(5); // User ID, Name, Color, Port, ShadNet
     m_table->setCornerButtonEnabled(false);
     m_table->setAlternatingRowColors(true);
-    m_table->setHorizontalHeaderLabels({"User ID", "User Name", "Color", "Controller Port"});
+    m_table->setHorizontalHeaderLabels(
+        {"User ID", "User Name", "Color", "Controller Port", "ShadNet"});
     m_table->horizontalHeader()->setDefaultAlignment(Qt::AlignLeft);
     m_table->horizontalHeader()->setStretchLastSection(true);
     m_table->horizontalHeader()->setDefaultSectionSize(150);
@@ -49,6 +50,9 @@ UserManagerDialog::UserManagerDialog(QWidget* parent) : QDialog(parent) {
     push_set_controller = new QPushButton(tr("&Set Controller Port"), this);
     push_set_controller->setAutoDefault(false);
 
+    push_shadnet = new QPushButton(tr("Shad&Net..."), this);
+    push_shadnet->setAutoDefault(false);
+
     push_close = new QPushButton(tr("&Close"), this);
     push_close->setAutoDefault(false);
 
@@ -60,6 +64,7 @@ UserManagerDialog::UserManagerDialog(QWidget* parent) : QDialog(parent) {
     hbox_buttons->addWidget(push_set_default);
     hbox_buttons->addWidget(push_set_color);
     hbox_buttons->addWidget(push_set_controller);
+    hbox_buttons->addWidget(push_shadnet);
     hbox_buttons->addStretch();
     hbox_buttons->addWidget(push_close);
 
@@ -83,6 +88,7 @@ UserManagerDialog::UserManagerDialog(QWidget* parent) : QDialog(parent) {
         push_set_default->setEnabled(valid && key != m_active_user);
         push_set_color->setEnabled(valid);
         push_set_controller->setEnabled(valid);
+        push_shadnet->setEnabled(valid);
     };
 
     enable_buttons();
@@ -95,7 +101,7 @@ UserManagerDialog::UserManagerDialog(QWidget* parent) : QDialog(parent) {
     connect(push_set_color, &QAbstractButton::clicked, this, &UserManagerDialog::OnUserSetColor);
     connect(push_set_controller, &QAbstractButton::clicked, this,
             &UserManagerDialog::OnUserSetControllerPort);
-
+    connect(push_shadnet, &QAbstractButton::clicked, this, &UserManagerDialog::OnUserEditShadNet);
     connect(push_close, &QAbstractButton::clicked, this, &QDialog::accept);
     connect(m_table, &QTableWidget::itemSelectionChanged, this, enable_buttons);
     connect(m_table->horizontalHeader(), &QHeaderView::sectionClicked, this,
@@ -154,6 +160,20 @@ void UserManagerDialog::UpdateTable(bool mark_only) {
         controller_item->setFlags(controller_item->flags() & ~Qt::ItemIsEditable);
         m_table->setItem(row, 3, controller_item);
 
+        // ShadNet status
+        QString shadnet_text;
+        if (u.shadnet_enabled) {
+            shadnet_text = u.shadnet_npid.empty()
+                               ? tr("On")
+                               : tr("On (%1)").arg(QString::fromStdString(u.shadnet_npid));
+        } else {
+            shadnet_text = tr("Off");
+        }
+        QTableWidgetItem* shadnet_item = new QTableWidgetItem(shadnet_text);
+        shadnet_item->setData(Qt::UserRole, u.user_id);
+        shadnet_item->setFlags(shadnet_item->flags() & ~Qt::ItemIsEditable);
+        m_table->setItem(row, 4, shadnet_item);
+
         // Bold if active
         bool is_active = (m_active_user == u.user_id);
         if (is_active) {
@@ -161,6 +181,7 @@ void UserManagerDialog::UpdateTable(bool mark_only) {
             username_item->setFont(bold_font);
             color_item->setFont(bold_font);
             controller_item->setFont(bold_font);
+            shadnet_item->setFont(bold_font);
         }
     }
 
@@ -327,6 +348,73 @@ void UserManagerDialog::OnUserSetControllerPort() {
     }
 }
 
+
+void UserManagerDialog::OnUserEditShadNet() {
+    const u32 user_id = GetUserKey();
+    if (user_id == 0)
+        return;
+    User* user = UserManagement.GetUserByID(user_id);
+    if (!user)
+        return;
+
+    QDialog dialog(this);
+    dialog.setWindowTitle(tr("ShadNet Settings - %1").arg(QString::fromStdString(user->user_name)));
+    dialog.setMinimumWidth(360);
+
+    auto* enabled = new QCheckBox(tr("Enable ShadNet for this user"), &dialog);
+    enabled->setChecked(user->shadnet_enabled);
+
+    auto* npid = new QLineEdit(QString::fromStdString(user->shadnet_npid), &dialog);
+    npid->setPlaceholderText(tr("Account ID (NPID)"));
+
+    auto* password = new QLineEdit(QString::fromStdString(user->shadnet_password), &dialog);
+    password->setPlaceholderText(tr("Password"));
+    password->setEchoMode(QLineEdit::Password);
+
+    auto* show_pw = new QCheckBox(tr("Show password"), &dialog);
+    connect(show_pw, &QCheckBox::toggled, password, [password](bool on) {
+        password->setEchoMode(on ? QLineEdit::Normal : QLineEdit::Password);
+    });
+
+    // NPID/password only make sense when ShadNet is enabled.
+    auto* form_host = new QWidget(&dialog);
+    auto* form = new QFormLayout(form_host);
+    form->setContentsMargins(0, 0, 0, 0);
+    form->addRow(tr("Account ID (NPID):"), npid);
+    form->addRow(tr("Password:"), password);
+    form->addRow(QString(), show_pw);
+
+    auto sync_enabled = [form_host](bool on) { form_host->setEnabled(on); };
+    sync_enabled(enabled->isChecked());
+    connect(enabled, &QCheckBox::toggled, form_host, sync_enabled);
+
+    auto* buttons =
+        new QDialogButtonBox(QDialogButtonBox::Save | QDialogButtonBox::Cancel, &dialog);
+    connect(buttons, &QDialogButtonBox::accepted, &dialog, &QDialog::accept);
+    connect(buttons, &QDialogButtonBox::rejected, &dialog, &QDialog::reject);
+
+    auto* layout = new QVBoxLayout(&dialog);
+    layout->addWidget(enabled);
+    layout->addWidget(form_host);
+    layout->addStretch();
+    layout->addWidget(buttons);
+
+    if (dialog.exec() != QDialog::Accepted) {
+        return;
+    }
+
+    // Re-fetch in case the list changed while the modal was open.
+    user = UserManagement.GetUserByID(user_id);
+    if (!user) {
+        return;
+    }
+    user->shadnet_enabled = enabled->isChecked();
+    user->shadnet_npid = npid->text().trimmed().toStdString();
+    user->shadnet_password = password->text().toStdString();
+    UserManagement.Save();
+    UpdateTable();
+}
+
 void UserManagerDialog::OnSort(int logicalIndex) {
     if (logicalIndex < 0) {
         return;
@@ -358,6 +446,7 @@ void UserManagerDialog::ShowContextMenu(const QPoint& pos) {
     QAction* default_user_act = context_menu->addAction(tr("&Set Default User"));
     QAction* color_act = context_menu->addAction(tr("&Set Color"));
     QAction* port_act = context_menu->addAction(tr("&Set Controller Port"));
+    QAction* shadnet_act = context_menu->addAction(tr("Shad&Net Settings..."));
     QAction* show_dir_act = context_menu->addAction(tr("&Open User Directory"));
 
     bool enabled = key != m_active_user; // don't allow removing or setting default on active user
@@ -371,6 +460,7 @@ void UserManagerDialog::ShowContextMenu(const QPoint& pos) {
     connect(default_user_act, &QAction::triggered, this, &UserManagerDialog::OnUserSetDefault);
     connect(color_act, &QAction::triggered, this, &UserManagerDialog::OnUserSetColor);
     connect(port_act, &QAction::triggered, this, &UserManagerDialog::OnUserSetControllerPort);
+    connect(shadnet_act, &QAction::triggered, this, &UserManagerDialog::OnUserEditShadNet);
 
     connect(show_dir_act, &QAction::triggered, this, [this, key]() {
         QString userDirPath;
