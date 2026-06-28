@@ -660,39 +660,39 @@ Must be a valid hex string with even length.</source>
     </message>
     <message>
       <source>Exponent1</source>
-      <translation>الأُس 1</translation>
+      <translation>Exponent1</translation>
     </message>
     <message>
       <source>Exponent2</source>
-      <translation>الأُس 2</translation>
+      <translation>Exponent2</translation>
     </message>
     <message>
       <source>Public Exponent</source>
-      <translation>الأُس العام</translation>
+      <translation>Public Exponent</translation>
     </message>
     <message>
       <source>Coefficient</source>
-      <translation>المعامل</translation>
+      <translation>Coefficient</translation>
     </message>
     <message>
       <source>Modulus</source>
-      <translation>المقياس</translation>
+      <translation>Modulus</translation>
     </message>
     <message>
       <source>Prime 1</source>
-      <translation>العدد الأولي 1</translation>
+      <translation>Prime 1</translation>
     </message>
     <message>
       <source>Prime 2</source>
-      <translation>العدد الأولي 2</translation>
+      <translation>Prime 2</translation>
     </message>
     <message>
       <source>Private Exponent</source>
-      <translation>الأُس الخاص</translation>
+      <translation>Private Exponent</translation>
     </message>
     <message>
       <source>Fake Keyset</source>
-      <translation>مجموعة مفاتيح وهمية</translation>
+      <translation/>
     </message>
     <message>
       <source>RSA key components for fake signing.
@@ -904,7 +904,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Directory with your dumped DLC&apos;s</source>
-      <translation>مجلد محتويات DLC المستخرجة من جهازك</translation>
+      <translation>مجلد محتويات DLC&apos;s المستخرجة من جهازك</translation>
     </message>
     <message>
       <source>Directory with games</source>
@@ -912,7 +912,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Directory with DLC&apos;s</source>
-      <translation>مجلد محتويات DLC</translation>
+      <translation>مجلد يحتوي على DLC&apos;s</translation>
     </message>
   </context>
   <context>
@@ -1281,15 +1281,15 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Delete Shader Cache</source>
-      <translation>حذف ذاكرة المظللات المؤقتة</translation>
+      <translation>حذف ذاكرة الشيدر المؤقتة</translation>
     </message>
     <message>
       <source>This game does not have any saved Shader Cache to delete!</source>
-      <translation>لا توجد لهذه اللعبة ذاكرة مظللات مؤقتة محفوظة لحذفها!</translation>
+      <translation>لا توجد لهذه اللعبة ذاكرة شيدرمؤقتة محفوظة لحذفها!</translation>
     </message>
     <message>
       <source>Shader Cache</source>
-      <translation>ذاكرة المظللات المؤقتة</translation>
+      <translation>ذاكرة الشيدرالمؤقتة</translation>
     </message>
     <message>
       <source>This game has no save folder to open!</source>
@@ -2031,7 +2031,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Manage Dimensions Toypad</source>
-      <translation>إدارة Dimensions Toypad</translation>
+      <translation>إدارة لوحة ديمنشنز</translation>
     </message>
     <message>
       <source>Game Log</source>
@@ -2550,7 +2550,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Crash Diagnostics:\nCreates a .yaml file with info about the Vulkan state at the time of crashing.\nUseful for debugging &apos;Device lost&apos; errors. If you have this enabled, you should enable Host AND Guest Debug Markers.\nYou need Vulkan Validation Layers enabled and the Vulkan SDK for this to work.</source>
-      <translation>تشخيص الأعطال:\nينشئ ملف .yaml يحتوي على معلومات عن حالة Vulkan وقت التعطل.\nمفيد لتصحيح أخطاء Device lost. إذا فعّلت هذا الخيار، يفضّل تفعيل علامات تصحيح المضيف والضيف معًا.\nيتطلب ذلك تفعيل طبقات تحقق Vulkan وتثبيت Vulkan SDK.</translation>
+      <translation>تشخيص الأعطال:\nينشئ ملف .yaml يحتوي على معلومات عن حالة Vulkan وقت حدوث العطل.\nمفيد لتصحيح أخطاء &apos;Device lost&apos;. إذا كان هذا مفعّلًا، فعليك تفعيل Host وGuest Debug Markers.\nيتطلب ذلك تفعيل Vulkan Validation Layers وتثبيت Vulkan SDK.</translation>
     </message>
     <message>
       <source>Enable Logging</source>
@@ -2558,7 +2558,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable Logging:\nEnables logging.\nDo not change this if you do not know what you&apos;re doing!\nWhen asking for help, make sure this setting is ENABLED.</source>
-      <translation>تفعيل التسجيل:\nيفعّل كتابة السجلات.\nلا تغيّر هذا الخيار إذا لم تكن تعرف ما تفعله!\nعند طلب المساعدة، تأكد أن هذا الخيار مفعّل.</translation>
+      <translation>تفعيل التسجيل:\nيفعّل كتابة السجلات.\nلا تغيّر هذا الخيار إذا لم تكن تعرف ما&apos; الذي تفعله!\nعند طلب المساعدة، تأكد أن هذا الخيار مفعّل.</translation>
     </message>
     <message>
       <source>Present Mode</source>
@@ -2630,7 +2630,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</source>
-      <translation>تفعيل التحكم بالحركة:\nعند تفعيله، سيتم استخدام التحكم بالحركة في يد التحكم إذا كان مدعومًا.</translation>
+      <translation>تفعيل التحكم بالحركة:\nعند التفعيل، سيتم استخدام خاصية Controller&apos;s Motion Control إذا كانت مدعومة.</translation>
     </message>
     <message>
       <source>Vblank Frequency</source>
@@ -2650,11 +2650,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Set &quot;PSN signed-in&quot; to True</source>
-      <translation>تعيين "تم تسجيل الدخول إلى PSN" إلى True</translation>
+      <translation>تعيين &quot;PSN signed-in&quot; إلى True</translation>
     </message>
     <message>
       <source>Set &quot;Network Connected&quot; to True</source>
-      <translation>تعيين "الشبكة متصلة" إلى True</translation>
+      <translation>تعيين &quot;Network Connected&quot; إلى True</translation>
     </message>
     <message>
       <source>Miscellaneous</source>
@@ -2714,7 +2714,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
-      <translation>تفعيل تفريغ المظللات:\nلأغراض التصحيح التقني، يحفظ مظللات اللعبة في مجلد أثناء عرضها.</translation>
+      <translation>تفعيل استخراج الشيدرات:\nلأغراض التصحيح التقني، يحفظ شيدرات اللعبة&apos;s في مجلد أثناء عرضها.</translation>
     </message>
     <message>
       <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</source>
@@ -2790,7 +2790,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
-      <translation>تحديثات الواجهة:\nالإصدار الرسمي: إصدارات رسمية تصدر كل شهر، وقد تكون قديمة جدًا لكنها أكثر موثوقية وخضعت للاختبار.\nNightly: إصدارات تطويرية تحتوي على أحدث الميزات والإصلاحات، لكنها قد تتضمن أخطاء وتكون أقل استقرارًا.\n\n*ينطبق هذا التحديث على واجهة Qt فقط. لتحديث نواة المحاكي، يرجى استخدام قائمة مدير الإصدارات.</translation>
+      <translation>تحديثات الواجهة الرسومية:\nRelease: إصدارات رسمية تصدر كل شهر، وقد تكون قديمة جدًا، لكنها أكثر موثوقية وتم اختبارها بشكل أفضل.\nNightly: إصدارات تطويرية تتضمن أحدث الميزات والإصلاحات، لكنها قد تحتوي على أخطاء وتكون أقل استقرارًا.\n\n*ينطبق هذا التحديث على واجهة Qt فقط. لتحديث نواة المحاكي، يرجى استخدام قائمة &apos;Version Manager&apos;.</translation>
     </message>
     <message>
       <source>Cannot create portable launcher folder</source>
@@ -2810,35 +2810,35 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Skylander Portal</source>
-      <translation>بوابة Skylander</translation>
+      <translation>بوابة سكايلاندر</translation>
     </message>
     <message>
       <source>Infinity Base</source>
-      <translation>قاعدة Infinity</translation>
+      <translation>قاعدة إنفينيتي</translation>
     </message>
     <message>
       <source>Dimensions Toypad</source>
-      <translation>لوحة Dimensions Toypad</translation>
+      <translation>لوحة ديمنشنز</translation>
     </message>
     <message>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
-      <translation>جهاز USB:\nجهاز USB حقيقي: استخدم جهاز USB حقيقي متصل بالنظام.\nبوابة Skylander: حاكي Skylander Portal of Power.\nقاعدة Infinity: حاكي قاعدة Disney Infinity.\nلوحة Dimensions Toypad: حاكي Lego Dimensions Toypad.</translation>
+      <translation>جهاز USB:\nجهاز USB حقيقي: استخدام جهاز USB حقيقي متصل بالنظام.\nبوابة سكايلاندر: محاكاة بوابة القوة الخاصة بسكايلاندر.\nقاعدة إنفينيتي: محاكاة قاعدة ديزني إنفينيتي.\nلوحة ديمنشنز: محاكاة لوحة ليغو ديمنشنز.</translation>
     </message>
     <message>
       <source>Enable Shader Cache</source>
-      <translation>تفعيل ذاكرة المظللات المؤقتة</translation>
+      <translation>تفعيل ذاكرة الشيدر المؤقتة</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file</source>
-      <translation>ضغط ملفات ذاكرة المظللات المؤقتة داخل ملف zip</translation>
+      <translation>ضغط ملفات ذاكرة الشيدر المؤقتة داخل ملف zip</translation>
     </message>
     <message>
       <source>Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</source>
-      <translation>تفعيل ذاكرة المظللات المؤقتة:\nيحفظ المظللات المترجمة لتجنب إعادة ترجمتها وتقليل التقطيع.</translation>
+      <translation>تفعيل ذاكرة الشيدر المؤقتة:\nتخزين الشيدرات المترجمة لتجنب إعادة ترجمتها وتقليل التقطيع.</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
-      <translation>ضغط ملفات ذاكرة المظللات المؤقتة داخل ملف zip:\nيتم حفظ ملفات ذاكرة المظللات المؤقتة داخل ملف zip واحد بدلًا من ملفات منفصلة متعددة.</translation>
+      <translation>ضغط ملفات ذاكرة الشيدر المؤقتة داخل ملف zip:\nيتم تخزين ملفات ذاكرة الشيدر المؤقتة داخل ملف zip واحد بدلًا من عدة ملفات منفصلة.</translation>
     </message>
     <message>
       <source>Readbacks Mode</source>
@@ -2850,7 +2850,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
-      <translation>الاسترجاع:\nيفعّل قراءة وكتابة ذاكرة GPU.\nهذا مطلوب لعمل بعض الألعاب بشكل صحيح.\nقد يسبب مشاكل في الاستقرار و/أو الأداء.</translation>
+      <translation>عمليات القراءة الراجعة:\nتفعيل قراءة ذاكرة GPU والكتابة إليها.\nهذا مطلوب لكي تعمل بعض الألعاب بشكل صحيح.\nقد يسبب مشكلات في الاستقرار و/أو الأداء.</translation>
     </message>
     <message>
       <source>Relaxed</source>
@@ -2862,7 +2862,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Select shadPS4 Home Path</source>
-      <translation>اختر مسار مجلد shadPS4 الرئيسي</translation>
+      <translation>تحديد مسار المجلد الرئيسي</translation>
     </message>
     <message>
       <source>Select the system modules folder</source>
@@ -2870,11 +2870,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Home Folder Location (Saves, Inputs, Trophy Data)</source>
-      <translation>موقع المجلد الرئيسي (الحفظ، الإدخالات، بيانات الكؤوس)</translation>
+      <translation>موقع المجلد الرئيسي (الحفظ، إعدادات الإدخال، بيانات الكؤوس)</translation>
     </message>
     <message>
       <source>Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</source>
-      <translation>موقع المجلد الرئيسي:\nالمجلد الذي يتم فيه حفظ بيانات الحفظ وملفات الكؤوس وإعدادات الإدخال لجميع المستخدمين.</translation>
+      <translation>موقع المجلد الرئيسي:\nالمجلد الذي تُحفظ فيه بيانات الحفظ وملفات الكؤوس وإعدادات الإدخال لجميع المستخدمين.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the home folder.</source>
@@ -2942,7 +2942,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</source>
-      <translation>أقصى مدة لتخطي السجل:\nالفاصل الزمني دون كتابة الأسطر نفسها (بالمللي ثانية) - يعمل فقط عند تفعيل تخطي السجلات المكررة.</translation>
+      <translation>أقصى مدة لتخطي السجل:\nالفاصل الزمني دون كتابة الأسطر نفسها (ms) - يعمل فقط عند تفعيل &apos;Log Skip Duplicate&apos;.</translation>
     </message>
     <message>
       <source>Log Size Limit:\nMaximum size of log files (bytes).</source>
@@ -2962,7 +2962,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
-      <translation>فلتر السجل:\nيفلتر السجل لطباعة معلومات محددة فقط.\nأمثلة: "Core:Debug" "Lib.Pad:Debug Common.Filesystem:Error" "*:Critical"\nالمستويات: trace، debug، info، warning، error، critical، off - بهذا الترتيب، أي مستوى محدد سيكتم جميع المستويات التي تسبقه في القائمة ويسجل كل مستوى بعده.</translation>
+      <translation>فلتر السجل:\nيفلتر السجل لطباعة معلومات محددة فقط.\nأمثلة: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nالمستويات: trace، debug، info، warning، error، critical، off - بهذا الترتيب، أي مستوى محدد سيكتم جميع المستويات التي تسبقه في القائمة ويسجل كل مستوى بعده.</translation>
     </message>
   </context>
   <context>
@@ -3235,8 +3235,7 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>First you need to choose a location to save the versions in
 &apos;Path to save versions&apos;</source>
-      <translation>يجب أولًا اختيار موقع لحفظ الإصدارات من خلال
-مسار حفظ الإصدارات</translation>
+      <translation>يجب أولًا اختيار موقع لحفظ الإصدارات في\n&apos;مسار حفظ الإصدارات&apos;</translation>
     </message>
     <message>
       <source>Do you want to download the version</source>
@@ -3383,11 +3382,11 @@ Select an emulator version from the right panel.</source>
     <name>dimensions_dialog</name>
     <message>
       <source>Dimensions Manager</source>
-      <translation>مدير Dimensions</translation>
+      <translation>مدير ديمنشنز</translation>
     </message>
     <message>
       <source>Active Dimensions Figures:</source>
-      <translation>شخصيات Dimensions النشطة:</translation>
+      <translation>شخصيات ديمنشنز النشطة:</translation>
     </message>
     <message>
       <source>None</source>
@@ -3415,31 +3414,31 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Select Dimensions File</source>
-      <translation>اختر ملف Dimensions</translation>
+      <translation>اختيار بيانات ديمنشنز</translation>
     </message>
     <message>
       <source>Dimensions Figure (*.bin);;</source>
-      <translation>شخصية Dimensions (*.bin);;</translation>
+      <translation>شخصية ديمنشنز (*.bin)؛؛</translation>
     </message>
     <message>
       <source>Failed to open the figure file!</source>
-      <translation>فشل فتح ملف الشخصية!</translation>
+      <translation>فشل فتح بيانات الشخصية!</translation>
     </message>
     <message>
       <source>Failed to open the figure file(%1)!
 File may already be in use on the base.</source>
-      <translation>فشل فتح ملف الشخصية (%1)!
-قد يكون الملف قيد الاستخدام بالفعل على القاعدة.</translation>
+      <translation>فشل فتح بيانات الشخصية (%1)!
+قد تكون مستخدمة على القاعدة.</translation>
     </message>
     <message>
       <source>Failed to read the figure file!</source>
-      <translation>فشل قراءة ملف الشخصية!</translation>
+      <translation>فشل قراءة بيانات الشخصية!</translation>
     </message>
     <message>
       <source>Failed to read the figure file(%1)!
 File was too small.</source>
-      <translation>فشل قراءة ملف الشخصية (%1)!
-كان الملف صغيرًا جدًا.</translation>
+      <translation>فشل قراءة بيانات الشخصية (%1)!
+كان حجمها صغيرًا جدًا.</translation>
     </message>
   </context>
   <context>
@@ -3462,7 +3461,7 @@ File was too small.</source>
     </message>
     <message>
       <source>Figure Number:</source>
-      <translation>رقم الشخصية:</translation>
+      <translation>معرّف الشخصية:</translation>
     </message>
     <message>
       <source>Series:</source>
@@ -3482,28 +3481,28 @@ File was too small.</source>
     </message>
     <message>
       <source>Figure number entered is invalid!</source>
-      <translation>رقم الشخصية الذي تم إدخاله غير صالح!</translation>
+      <translation>معرّف الشخصية المُدخل غير صالح!</translation>
     </message>
     <message>
       <source>Series number entered is invalid!</source>
-      <translation>رقم السلسلة الذي تم إدخاله غير صالح!</translation>
+      <translation>معرّف السلسلة المُدخل غير صالح!</translation>
     </message>
     <message>
       <source>Create Figure File</source>
-      <translation>إنشاء ملف شخصية</translation>
+      <translation>إنشاء بيانات شخصية</translation>
     </message>
     <message>
       <source>Infinity Figure (*.bin);;</source>
-      <translation>شخصية Infinity (*.bin);;</translation>
+      <translation>شخصية إنفينيتي (*.bin)؛؛</translation>
     </message>
     <message>
       <source>Failed to create figure file!</source>
-      <translation>فشل إنشاء ملف الشخصية!</translation>
+      <translation>فشل إنشاء بيانات الشخصية!</translation>
     </message>
     <message>
       <source>Failed to create figure file:
 %1</source>
-      <translation>فشل إنشاء ملف الشخصية:
+      <translation>فشل إنشاء بيانات الشخصية:
 %1</translation>
     </message>
   </context>
@@ -3515,7 +3514,7 @@ File was too small.</source>
     </message>
     <message>
       <source>Active Infinity Figures:</source>
-      <translation>شخصيات Infinity النشطة:</translation>
+      <translation>شخصيات إنفينيتي النشطة:</translation>
     </message>
     <message>
       <source>Play Set/Power Disc</source>
@@ -3535,11 +3534,11 @@ File was too small.</source>
     </message>
     <message>
       <source>Player One Ability One</source>
-      <translation>قدرة اللاعب الأول 1</translation>
+      <translation>القدرة الأولى للاعب الأول</translation>
     </message>
     <message>
       <source>Player One Ability Two</source>
-      <translation>قدرة اللاعب الأول 2</translation>
+      <translation>القدرة الثانية للاعب الأول</translation>
     </message>
     <message>
       <source>Player Two</source>
@@ -3547,11 +3546,11 @@ File was too small.</source>
     </message>
     <message>
       <source>Player Two Ability One</source>
-      <translation>قدرة اللاعب الثاني 1</translation>
+      <translation>القدرة الأولى للاعب الثاني</translation>
     </message>
     <message>
       <source>Player Two Ability Two</source>
-      <translation>قدرة اللاعب الثاني 2</translation>
+      <translation>القدرة الثانية للاعب الثاني</translation>
     </message>
     <message>
       <source>None</source>
@@ -3575,31 +3574,31 @@ File was too small.</source>
     </message>
     <message>
       <source>Select Infinity File</source>
-      <translation>اختر ملف Infinity</translation>
+      <translation>اختيار بيانات إنفينيتي</translation>
     </message>
     <message>
       <source>Infinity Figure (*.bin);;</source>
-      <translation>شخصية Infinity (*.bin);;</translation>
+      <translation>شخصية إنفينيتي (*.bin)؛؛</translation>
     </message>
     <message>
       <source>Failed to open the figure file!</source>
-      <translation>فشل فتح ملف الشخصية!</translation>
+      <translation>فشل فتح بيانات الشخصية!</translation>
     </message>
     <message>
       <source>Failed to open the figure file(%1)!
 File may already be in use on the base.</source>
-      <translation>فشل فتح ملف الشخصية (%1)!
-قد يكون الملف قيد الاستخدام بالفعل على القاعدة.</translation>
+      <translation>فشل فتح بيانات الشخصية (%1)!
+قد تكون مستخدمة على القاعدة.</translation>
     </message>
     <message>
       <source>Failed to read the figure file!</source>
-      <translation>فشل قراءة ملف الشخصية!</translation>
+      <translation>فشل قراءة بيانات الشخصية!</translation>
     </message>
     <message>
       <source>Failed to read the figure file(%1)!
 File was too small.</source>
-      <translation>فشل قراءة ملف الشخصية (%1)!
-كان الملف صغيرًا جدًا.</translation>
+      <translation>فشل قراءة بيانات الشخصية (%1)!
+كان حجمها صغيرًا جدًا.</translation>
     </message>
   </context>
   <context>
@@ -3614,7 +3613,7 @@ File was too small.</source>
     </message>
     <message>
       <source>Figure Number:</source>
-      <translation>رقم الشخصية:</translation>
+      <translation>معرّف الشخصية:</translation>
     </message>
     <message>
       <source>Create</source>
@@ -3630,24 +3629,24 @@ File was too small.</source>
     </message>
     <message>
       <source>Figure number entered is invalid!</source>
-      <translation>رقم الشخصية الذي تم إدخاله غير صالح!</translation>
+      <translation>معرّف الشخصية المُدخل غير صالح!</translation>
     </message>
     <message>
       <source>Create Figure File</source>
-      <translation>إنشاء ملف شخصية</translation>
+      <translation>إنشاء بيانات شخصية</translation>
     </message>
     <message>
       <source>Dimensions Figure (*.bin);;</source>
-      <translation>شخصية Dimensions (*.bin);;</translation>
+      <translation>شخصية ديمنشنز (*.bin)؛؛</translation>
     </message>
     <message>
       <source>Failed to create minifig file!</source>
-      <translation>فشل إنشاء ملف minifig!</translation>
+      <translation>فشل إنشاء بيانات المجسم!</translation>
     </message>
     <message>
       <source>Failed to create minifig file:
 %1</source>
-      <translation>فشل إنشاء ملف minifig:
+      <translation>فشل إنشاء بيانات المجسم:
 %1</translation>
     </message>
   </context>
@@ -3674,7 +3673,7 @@ File was too small.</source>
     <name>skylander_creator_dialog</name>
     <message>
       <source>Skylander Creator</source>
-      <translation>منشئ Skylander</translation>
+      <translation>منشئ سكايلاندر</translation>
     </message>
     <message>
       <source>--Unknown--</source>
@@ -3714,16 +3713,16 @@ File was too small.</source>
     </message>
     <message>
       <source>Skylander Object (*.sky);;All Files (*)</source>
-      <translation>كائن Skylander (*.sky);;كل الملفات (*)</translation>
+      <translation>كائن سكايلاندر (*.sky);;كل الملفات (*)</translation>
     </message>
     <message>
       <source>Failed to create skylander file!</source>
-      <translation>فشل إنشاء ملف Skylander!</translation>
+      <translation>فشل إنشاء بيانات سكايلاندر!</translation>
     </message>
     <message>
       <source>Failed to create skylander file:
 %1</source>
-      <translation>فشل إنشاء ملف Skylander:
+      <translation>فشل إنشاء بيانات سكايلاندر:
 %1</translation>
     </message>
   </context>
@@ -3735,7 +3734,7 @@ File was too small.</source>
     </message>
     <message>
       <source>Active Portal Skylanders:</source>
-      <translation>Skylanders النشطة على البوابة:</translation>
+      <translation>سكايلاندرز النشطة على البوابة:</translation>
     </message>
     <message>
       <source>Skylander %1</source>
@@ -3759,27 +3758,27 @@ File was too small.</source>
     </message>
     <message>
       <source>Skylander (*.sky *.bin *.dmp *.dump);;All Files (*)</source>
-      <translation>Skylander (*.sky *.bin *.dmp *.dump);;كل الملفات (*)</translation>
+      <translation>سكايلاندر (*.sky *.bin *.dmp *.dump);;كل الملفات (*)</translation>
     </message>
     <message>
       <source>Failed to open the skylander file!</source>
-      <translation>فشل فتح ملف Skylander!</translation>
+      <translation>فشل فتح بيانات سكايلاندر!</translation>
     </message>
     <message>
       <source>Failed to open the skylander file(%1)!
 File may already be in use on the portal.</source>
-      <translation>فشل فتح ملف Skylander (%1)!
-قد يكون الملف قيد الاستخدام بالفعل على البوابة.</translation>
+      <translation>فشل فتح بيانات سكايلاندر (%1)!
+قد تكون مستخدمة على البوابة.</translation>
     </message>
     <message>
       <source>Failed to read the skylander file!</source>
-      <translation>فشل قراءة ملف Skylander!</translation>
+      <translation>فشل قراءة بيانات سكايلاندر!</translation>
     </message>
     <message>
       <source>Failed to read the skylander file(%1)!
 File was too small.</source>
-      <translation>فشل قراءة ملف Skylander (%1)!
-كان الملف صغيرًا جدًا.</translation>
+      <translation>فشل قراءة بيانات سكايلاندر (%1)!
+كان حجمها صغيرًا جدًا.</translation>
     </message>
     <message>
       <source>Unknown (Id:%1 Var:%2)</source>
