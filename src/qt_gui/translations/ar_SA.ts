@@ -611,11 +611,11 @@
     </message>
     <message>
       <source>Min Deadzone (def:2 max:127)</source>
-      <translation>أقل منطقة خمول (الافتراضي: 2، الحد الأقصى: 127)</translation>
+      <translation>أدنى منطقة خمول (الافتراضي: 2، الحد الأقصى: 127)</translation>
     </message>
     <message>
       <source>Max Deadzone (def:127 max:127)</source>
-      <translation>أعلى منطقة خمول (الافتراضي: 127، الحد الأقصى: 127)</translation>
+      <translation>أقصى منطقة خمول (الافتراضي: 127، الحد الأقصى: 127)</translation>
     </message>
     <message>
       <source>Right Stick Deadzone</source>
@@ -623,20 +623,20 @@
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation>تلميح: لإلغاء تعيين الإدخال، اضغط بزر الفأرة الأيمن.</translation>
+      <translation>تلميح: اضغط بزر الفأرة الأيمن لإلغاء تعيين الإدخال</translation>
     </message>
   </context>
   <context>
     <name>CryptoManagerDialog</name>
     <message>
       <source>Crypto Key Manager</source>
-      <translation>مدير مفاتيح التشفير</translation>
+      <translation>إدارة مفاتيح التشفير</translation>
     </message>
     <message>
       <source>Trophy Key: Used for trophy decryption.
 Must be a valid hex string with even length.</source>
       <translation>مفتاح الكؤوس: يُستخدم لفك تشفير الكؤوس.
-يجب أن يكون نصًا سداسيًا صالحًا وبطول زوجي.</translation>
+يجب أن تكون القيمة سلسلة سداسية عشرية صالحة وبطول زوجي.</translation>
     </message>
     <message>
       <source>Enter Trophy Key</source>
@@ -692,13 +692,13 @@ Must be a valid hex string with even length.</source>
     </message>
     <message>
       <source>Fake Keyset</source>
-      <translation>مجموعة مفاتيح مزيفة</translation>
+      <translation>مجموعة مفاتيح وهمية</translation>
     </message>
     <message>
       <source>RSA key components for fake signing.
 All fields must be valid hex strings with even length.</source>
-      <translation>مكوّنات مفتاح RSA للتوقيع المزيف.
-يجب أن تكون جميع الحقول نصوصًا سداسية صالحة وبطول زوجي.</translation>
+      <translation>مكوّنات مفتاح RSA للتوقيع الوهمي.
+يجب أن تكون جميع الحقول سلاسل سداسية عشرية صالحة وبطول زوجي.</translation>
     </message>
     <message>
       <source>Debug Rif Keyset</source>
@@ -708,17 +708,17 @@ All fields must be valid hex strings with even length.</source>
       <source>RSA key components for debug RIF files.
 All fields must be valid hex strings with even length.</source>
       <translation>مكوّنات مفتاح RSA لملفات RIF الخاصة بالتصحيح.
-يجب أن تكون جميع الحقول نصوصًا سداسية صالحة وبطول زوجي.</translation>
+يجب أن تكون جميع الحقول سلاسل سداسية عشرية صالحة وبطول زوجي.</translation>
     </message>
     <message>
       <source>Pkg Derived Key3</source>
-      <translation>المفتاح المشتق الثالث لـ PKG</translation>
+      <translation>مفتاح PKG المشتق الثالث</translation>
     </message>
     <message>
       <source>RSA key components for package decryption.
 All fields must be valid hex strings with even length.</source>
       <translation>مكوّنات مفتاح RSA لفك تشفير الحزمة.
-يجب أن تكون جميع الحقول نصوصًا سداسية صالحة وبطول زوجي.</translation>
+يجب أن تكون جميع الحقول سلاسل سداسية عشرية صالحة وبطول زوجي.</translation>
     </message>
     <message>
       <source>Close</source>
@@ -731,8 +731,8 @@ All fields must be valid hex strings with even length.</source>
     <message>
       <source>No key file found or failed to load.
 Please enter your keys and save them.</source>
-      <translation>لم يتم العثور على ملف مفاتيح، أو فشل تحميله.
-يرجى إدخال المفاتيح ثم حفظها.</translation>
+      <translation>لم يتم العثور على ملف مفاتيح أو تعذر تحميله.
+أدخل المفاتيح ثم احفظها.</translation>
     </message>
     <message>
       <source>Validation Error</source>
@@ -752,7 +752,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Failed to save keys!</source>
-      <translation>فشل حفظ المفاتيح!</translation>
+      <translation>تعذر حفظ المفاتيح!</translation>
     </message>
     <message>
       <source>Status: All fields empty</source>
@@ -760,7 +760,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Status: Invalid hex values</source>
-      <translation>الحالة: قيم سداسية غير صالحة</translation>
+      <translation>الحالة: قيم سداسية عشرية غير صالحة</translation>
     </message>
     <message>
       <source>Status: Incomplete</source>
@@ -776,11 +776,11 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Only JSON files are supported.</source>
-      <translation>ملفات JSON فقط مدعومة.</translation>
+      <translation>يتم دعم ملفات JSON فقط.</translation>
     </message>
     <message>
       <source>Unable to open file.</source>
-      <translation>تعذر فتح الملف.</translation>
+      <translation>تعذّر فتح الملف.</translation>
     </message>
     <message>
       <source>JSON Error</source>
@@ -796,15 +796,15 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Trophy Key contains invalid hex or has odd length.</source>
-      <translation>يحتوي مفتاح الكؤوس على قيمة سداسية غير صالحة أو بطول فردي.</translation>
+      <translation>يحتوي مفتاح الكؤوس على قيمة سداسية عشرية غير صالحة أو بطول فردي.</translation>
     </message>
     <message>
       <source>%1 contains invalid hex or has odd length.</source>
-      <translation>يحتوي %1 على قيمة سداسية غير صالحة أو بطول فردي.</translation>
+      <translation>يحتوي %1 على قيمة سداسية عشرية غير صالحة أو بطول فردي.</translation>
     </message>
     <message>
       <source>Load Key</source>
-      <translation>تحميل مفتاح</translation>
+      <translation>تحميل المفتاح</translation>
     </message>
     <message>
       <source>Save Key</source>
@@ -1241,7 +1241,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
-      <translation>تعذر إرسال التقرير، لأن أحدث سجل لهذه اللعبة فشل في الفحص التالي، ولذلك سيكون التقرير غير صالح:</translation>
+      <translation>تعذّر&apos;t إرسال التقرير، لأن أحدث سجل للعبة لم يجتز الفحص التالي، وسيكون تقريرًا غير صالح:</translation>
     </message>
     <message>
       <source>Ok</source>
@@ -1281,15 +1281,15 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Delete Shader Cache</source>
-      <translation>حذف كاش الشيدرات</translation>
+      <translation>حذف ذاكرة المظللات المؤقتة</translation>
     </message>
     <message>
       <source>This game does not have any saved Shader Cache to delete!</source>
-      <translation>لا يوجد لهذه اللعبة أي كاش شيدرات محفوظ لحذفه!</translation>
+      <translation>لا توجد لهذه اللعبة ذاكرة مظللات مؤقتة محفوظة لحذفها!</translation>
     </message>
     <message>
       <source>Shader Cache</source>
-      <translation>كاش الشيدرات</translation>
+      <translation>ذاكرة المظللات المؤقتة</translation>
     </message>
     <message>
       <source>This game has no save folder to open!</source>
@@ -1367,7 +1367,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Tip: Up to three simultaneous inputs can be assigned for each hotkey</source>
-      <translation>تلميح: يمكن تعيين حتى ثلاثة إدخالات متزامنة لكل مفتاح اختصار.</translation>
+      <translation>تلميح: يمكن تعيين حتى ثلاثة إدخالات متزامنة لكل مفتاح اختصار</translation>
     </message>
     <message>
       <source>Save</source>
@@ -1403,7 +1403,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation>تلميح: لإلغاء تعيين الإدخال، اضغط بزر الفأرة الأيمن.</translation>
+      <translation>تلميح: اضغط بزر الفأرة الأيمن لإلغاء تعيين الإدخال</translation>
     </message>
     <message>
       <source>Volume Up</source>
@@ -1438,11 +1438,11 @@ Please enter your keys and save them.</source>
     <name>IpcClient</name>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation>تعذر العثور على ملف تشغيل المحاكي.</translation>
+      <translation>تعذر العثور على ملف تشغيل المحاكي</translation>
     </message>
     <message>
       <source>No game is running</source>
-      <translation>لا توجد لعبة قيد التشغيل.</translation>
+      <translation>لا توجد لعبة قيد التشغيل</translation>
     </message>
   </context>
   <context>
@@ -1597,7 +1597,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation>تلميح: لإلغاء تعيين الإدخال، اضغط بزر الفأرة الأيمن.</translation>
+      <translation>تلميح: اضغط بزر الفأرة الأيمن لإلغاء تعيين الإدخال</translation>
     </message>
     <message>
       <source>Output</source>
@@ -2550,7 +2550,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Crash Diagnostics:\nCreates a .yaml file with info about the Vulkan state at the time of crashing.\nUseful for debugging &apos;Device lost&apos; errors. If you have this enabled, you should enable Host AND Guest Debug Markers.\nYou need Vulkan Validation Layers enabled and the Vulkan SDK for this to work.</source>
-      <translation>تشخيص الأعطال:\nينشئ ملف .yaml يحتوي على معلومات عن حالة Vulkan وقت التعطل.\nمفيد لتصحيح أخطاء "Device lost". إذا فعّلت هذا الخيار، يفضّل تفعيل علامات تصحيح المضيف والضيف معًا.\nيتطلب ذلك تفعيل طبقات تحقق Vulkan وتثبيت Vulkan SDK.</translation>
+      <translation>تشخيص الأعطال:\nينشئ ملف .yaml يحتوي على معلومات عن حالة Vulkan وقت التعطل.\nمفيد لتصحيح أخطاء Device lost. إذا فعّلت هذا الخيار، يفضّل تفعيل علامات تصحيح المضيف والضيف معًا.\nيتطلب ذلك تفعيل طبقات تحقق Vulkan وتثبيت Vulkan SDK.</translation>
     </message>
     <message>
       <source>Enable Logging</source>
@@ -2714,7 +2714,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
-      <translation>تفعيل تفريغ الشيدرات:\nلأغراض التصحيح التقني، يحفظ شيدرات اللعبة في مجلد أثناء عرضها.</translation>
+      <translation>تفعيل تفريغ المظللات:\nلأغراض التصحيح التقني، يحفظ مظللات اللعبة في مجلد أثناء عرضها.</translation>
     </message>
     <message>
       <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</source>
@@ -2770,7 +2770,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation>تفعيل التحقق بمساعدة GPU:\nيدمج داخل الشيدرات كودًا يتحقق من عملها بشكل صحيح.\nسيؤدي ذلك إلى تقليل الأداء وقد يغيّر سلوك المحاكاة.\nيتطلب ذلك تثبيت Vulkan SDK.</translation>
+      <translation>تفعيل التحقق بمساعدة GPU:\nيدمج داخل المظللات كودًا يتحقق من عملها بشكل صحيح.\nسيؤدي ذلك إلى تقليل الأداء وقد يغيّر سلوك المحاكاة.\nيتطلب ذلك تثبيت Vulkan SDK.</translation>
     </message>
     <message>
       <source>GUI Language</source>
@@ -2790,15 +2790,15 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
-      <translation>تحديثات الواجهة:\nالإصدار الرسمي: إصدارات رسمية تصدر كل شهر، وقد تكون قديمة جدًا لكنها أكثر موثوقية وخضعت للاختبار.\nNightly: إصدارات تطويرية تحتوي على أحدث الميزات والإصلاحات، لكنها قد تتضمن أخطاء وتكون أقل استقرارًا.\n\n*ينطبق هذا التحديث على واجهة Qt فقط. لتحديث نواة المحاكي، يرجى استخدام قائمة "مدير الإصدارات".</translation>
+      <translation>تحديثات الواجهة:\nالإصدار الرسمي: إصدارات رسمية تصدر كل شهر، وقد تكون قديمة جدًا لكنها أكثر موثوقية وخضعت للاختبار.\nNightly: إصدارات تطويرية تحتوي على أحدث الميزات والإصلاحات، لكنها قد تتضمن أخطاء وتكون أقل استقرارًا.\n\n*ينطبق هذا التحديث على واجهة Qt فقط. لتحديث نواة المحاكي، يرجى استخدام قائمة مدير الإصدارات.</translation>
     </message>
     <message>
       <source>Cannot create portable launcher folder</source>
-      <translation>تعذر إنشاء مجلد المشغّل المحمول.</translation>
+      <translation>تعذر إنشاء مجلد المشغّل المحمول</translation>
     </message>
     <message>
       <source>Portable launcherDir folder created</source>
-      <translation>تم إنشاء مجلد launcherDir المحمول.</translation>
+      <translation>تم إنشاء مجلد launcherDir المحمول</translation>
     </message>
     <message>
       <source>USB Device</source>
@@ -2826,19 +2826,19 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable Shader Cache</source>
-      <translation>تفعيل كاش الشيدرات</translation>
+      <translation>تفعيل ذاكرة المظللات المؤقتة</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file</source>
-      <translation>ضغط ملفات كاش الشيدرات داخل ملف zip</translation>
+      <translation>ضغط ملفات ذاكرة المظللات المؤقتة داخل ملف zip</translation>
     </message>
     <message>
       <source>Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</source>
-      <translation>تفعيل كاش الشيدرات:\nيحفظ الشيدرات المترجمة لتجنب إعادة ترجمتها وتقليل التقطيع.</translation>
+      <translation>تفعيل ذاكرة المظللات المؤقتة:\nيحفظ المظللات المترجمة لتجنب إعادة ترجمتها وتقليل التقطيع.</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
-      <translation>ضغط ملفات كاش الشيدرات داخل ملف zip:\nيتم حفظ ملفات كاش الشيدرات داخل ملف zip واحد بدلًا من ملفات منفصلة متعددة.</translation>
+      <translation>ضغط ملفات ذاكرة المظللات المؤقتة داخل ملف zip:\nيتم حفظ ملفات ذاكرة المظللات المؤقتة داخل ملف zip واحد بدلًا من ملفات منفصلة متعددة.</translation>
     </message>
     <message>
       <source>Readbacks Mode</source>
@@ -2942,7 +2942,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</source>
-      <translation>أقصى مدة لتخطي السجل:\nالفاصل الزمني دون كتابة الأسطر نفسها (بالمللي ثانية) - يعمل فقط عند تفعيل "تخطي السجلات المكررة".</translation>
+      <translation>أقصى مدة لتخطي السجل:\nالفاصل الزمني دون كتابة الأسطر نفسها (بالمللي ثانية) - يعمل فقط عند تفعيل تخطي السجلات المكررة.</translation>
     </message>
     <message>
       <source>Log Size Limit:\nMaximum size of log files (bytes).</source>
@@ -3230,13 +3230,13 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Error accessing GitHub API</source>
-      <translation>حدث خطأ أثناء الوصول إلى GitHub API.</translation>
+      <translation>حدث خطأ أثناء الوصول إلى GitHub API</translation>
     </message>
     <message>
       <source>First you need to choose a location to save the versions in
 &apos;Path to save versions&apos;</source>
-      <translation>يجب أولاً اختيار موقع لحفظ الإصدارات من خلال
-"مسار حفظ الإصدارات"</translation>
+      <translation>يجب أولًا اختيار موقع لحفظ الإصدارات من خلال
+مسار حفظ الإصدارات</translation>
     </message>
     <message>
       <source>Do you want to download the version</source>
@@ -3260,7 +3260,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Failed to create zip extraction script</source>
-      <translation>فشل إنشاء سكربت استخراج zip.</translation>
+      <translation>فشل إنشاء سكربت استخراج zip</translation>
     </message>
     <message>
       <source>The GitHub API response is not a valid JSON array.</source>
@@ -3332,11 +3332,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Pre-release updated successfully</source>
-      <translation>تم تحديث الإصدار التجريبي بنجاح.</translation>
+      <translation>تم تحديث الإصدار التجريبي بنجاح</translation>
     </message>
     <message>
       <source>Failed to create the update script file</source>
-      <translation>فشل إنشاء ملف سكربت التحديث.</translation>
+      <translation>فشل إنشاء ملف سكربت التحديث</translation>
     </message>
     <message>
       <source>Always Show Changelog</source>
