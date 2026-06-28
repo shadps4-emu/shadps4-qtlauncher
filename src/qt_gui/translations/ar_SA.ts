@@ -611,11 +611,11 @@
     </message>
     <message>
       <source>Min Deadzone (def:2 max:127)</source>
-      <translation>أدنى منطقة خمول (الافتراضي: 2، الحد الأقصى: 127)</translation>
+      <translation>أدنى منطقة عدم استجابة (الافتراضي: 2، الحد الأقصى: 127)</translation>
     </message>
     <message>
       <source>Max Deadzone (def:127 max:127)</source>
-      <translation>أقصى منطقة خمول (الافتراضي: 127، الحد الأقصى: 127)</translation>
+      <translation>أقصى منطقة عدم استجابة (الافتراضي: 127، الحد الأقصى: 127)</translation>
     </message>
     <message>
       <source>Right Stick Deadzone</source>
@@ -623,7 +623,7 @@
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation>تلميح: اضغط بزر الفأرة الأيمن لإلغاء تعيين الإدخال</translation>
+      <translation>تلميح: انقر بزر الفأرة الأيمن لإلغاء تعيين المدخلات</translation>
     </message>
   </context>
   <context>
@@ -660,23 +660,23 @@ Must be a valid hex string with even length.</source>
     </message>
     <message>
       <source>Exponent1</source>
-      <translation>Exponent1</translation>
+      <translation>الأس الأول</translation>
     </message>
     <message>
       <source>Exponent2</source>
-      <translation>Exponent2</translation>
+      <translation>الأس الثاني</translation>
     </message>
     <message>
       <source>Public Exponent</source>
-      <translation>Public Exponent</translation>
+      <translation>الأس العام</translation>
     </message>
     <message>
       <source>Coefficient</source>
-      <translation>Coefficient</translation>
+      <translation>المُعامِل</translation>
     </message>
     <message>
       <source>Modulus</source>
-      <translation>Modulus</translation>
+      <translation>المعيار</translation>
     </message>
     <message>
       <source>Prime 1</source>
@@ -688,7 +688,7 @@ Must be a valid hex string with even length.</source>
     </message>
     <message>
       <source>Private Exponent</source>
-      <translation>Private Exponent</translation>
+      <translation>الأس الخاص</translation>
     </message>
     <message>
       <source>Fake Keyset</source>
@@ -904,7 +904,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Directory with your dumped DLC&apos;s</source>
-      <translation>مجلد محتويات DLC&apos;s المستخرجة من جهازك</translation>
+      <translation>مجلد إضافات DLC المستخرجة من جهازك</translation>
     </message>
     <message>
       <source>Directory with games</source>
@@ -912,7 +912,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Directory with DLC&apos;s</source>
-      <translation>مجلد يحتوي على DLC&apos;s</translation>
+      <translation>مجلد إضافات DLC</translation>
     </message>
   </context>
   <context>
@@ -1241,7 +1241,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
-      <translation>تعذّر&apos;t إرسال التقرير، لأن أحدث سجل للعبة لم يجتز الفحص التالي، وسيكون تقريرًا غير صالح:</translation>
+      <translation>تعذّر إرسال التقرير، لأن أحدث سجل للعبة فشل في الفحص التالي، ولذلك سيكون التقرير غير صالح:</translation>
     </message>
     <message>
       <source>Ok</source>
@@ -1359,15 +1359,15 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Toggle Mouse to Joystick Emulation</source>
-      <translation>تبديل محاكاة الفأرة كعصا تحكم</translation>
+      <translation>تبديل محاكاة الماوس كعصا تحكم</translation>
     </message>
     <message>
       <source>Toggle Mouse to Gyro Emulation</source>
-      <translation>تبديل محاكاة الفأرة كمستشعر حركة</translation>
+      <translation>تبديل محاكاة الماوس كمستشعر حركة</translation>
     </message>
     <message>
       <source>Tip: Up to three simultaneous inputs can be assigned for each hotkey</source>
-      <translation>تلميح: يمكن تعيين حتى ثلاثة إدخالات متزامنة لكل مفتاح اختصار</translation>
+      <translation>تلميح: يمكن تعيين حتى ثلاثة مدخلات متزامنة لكل مفتاح اختصار</translation>
     </message>
     <message>
       <source>Save</source>
@@ -1393,7 +1393,7 @@ Please enter your keys and save them.</source>
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-      <translation>لا يمكن تعيين نفس الإدخال لأكثر من وظيفة. توجد إدخالات مكررة معيّنة للأزرار التالية:
+      <translation>لا يمكن تعيين الإدخال نفسه لأكثر من وظيفة. توجد إدخالات مكررة معيّنة للأزرار التالية:
 
 %1</translation>
     </message>
@@ -1403,7 +1403,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation>تلميح: اضغط بزر الفأرة الأيمن لإلغاء تعيين الإدخال</translation>
+      <translation>تلميح: انقر بزر الفأرة الأيمن لإلغاء تعيين المدخلات</translation>
     </message>
     <message>
       <source>Volume Up</source>
@@ -1427,7 +1427,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Capture Screenshot w/ Overlays</source>
-      <translation>التقاط صورة للشاشة مع الطبقات</translation>
+      <translation>التقاط لقطة شاشة مع الطبقات</translation>
     </message>
     <message>
       <source>Open Emulator Settings</source>
@@ -1438,7 +1438,7 @@ Please enter your keys and save them.</source>
     <name>IpcClient</name>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation>تعذر العثور على ملف تشغيل المحاكي</translation>
+      <translation>تعذّر العثور على ملف تشغيل المحاكي</translation>
     </message>
     <message>
       <source>No game is running</source>
@@ -1597,7 +1597,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation>تلميح: اضغط بزر الفأرة الأيمن لإلغاء تعيين الإدخال</translation>
+      <translation>تلميح: انقر بزر الفأرة الأيمن لإلغاء تعيين المدخلات</translation>
     </message>
     <message>
       <source>Output</source>
@@ -1605,7 +1605,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Input</source>
-      <translation>الإدخال</translation>
+      <translation>المدخلات</translation>
     </message>
     <message>
       <source>Alternate Input 1</source>
@@ -1617,19 +1617,19 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Dpad Up</source>
-      <translation>زر الاتجاهات للأعلى</translation>
+      <translation>لوحة الاتجاهات للأعلى</translation>
     </message>
     <message>
       <source>Dpad Down</source>
-      <translation>زر الاتجاهات للأسفل</translation>
+      <translation>لوحة الاتجاهات للأسفل</translation>
     </message>
     <message>
       <source>Dpad Left</source>
-      <translation>زر الاتجاهات لليسار</translation>
+      <translation>لوحة الاتجاهات لليسار</translation>
     </message>
     <message>
       <source>Dpad Right</source>
-      <translation>زر الاتجاهات لليمين</translation>
+      <translation>لوحة الاتجاهات لليمين</translation>
     </message>
     <message>
       <source>Left Stick Up</source>
@@ -2031,7 +2031,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Manage Dimensions Toypad</source>
-      <translation>إدارة لوحة ديمنشنز</translation>
+      <translation>إدارة لوحة Dimensions</translation>
     </message>
     <message>
       <source>Game Log</source>
@@ -2550,7 +2550,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Crash Diagnostics:\nCreates a .yaml file with info about the Vulkan state at the time of crashing.\nUseful for debugging &apos;Device lost&apos; errors. If you have this enabled, you should enable Host AND Guest Debug Markers.\nYou need Vulkan Validation Layers enabled and the Vulkan SDK for this to work.</source>
-      <translation>تشخيص الأعطال:\nينشئ ملف .yaml يحتوي على معلومات عن حالة Vulkan وقت حدوث العطل.\nمفيد لتصحيح أخطاء &apos;Device lost&apos;. إذا كان هذا مفعّلًا، فعليك تفعيل Host وGuest Debug Markers.\nيتطلب ذلك تفعيل Vulkan Validation Layers وتثبيت Vulkan SDK.</translation>
+      <translation>تشخيص الأعطال:\nينشئ ملف .yaml يحتوي على معلومات عن حالة Vulkan وقت حدوث العطل.\nمفيد لتصحيح أخطاء 'Device lost'. إذا فعّلت هذا الخيار، فينبغي تفعيل Host وGuest Debug Markers معًا.\nيتطلب ذلك تفعيل Vulkan Validation Layers وتثبيت Vulkan SDK.</translation>
     </message>
     <message>
       <source>Enable Logging</source>
@@ -2582,7 +2582,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</source>
-      <translation>وضع العرض:\nيضبط طريقة عرض مخرجات الفيديو على الشاشة.\n\nMailbox: تتم مزامنة الإطارات مع معدل تحديث الشاشة&apos;. تستبدل الإطارات الجديدة أي إطارات معلّقة. يقلّل زمن الاستجابة، لكنه قد يتجاوز بعض الإطارات عند التأخر.\nFifo: تتم مزامنة الإطارات مع معدل تحديث الشاشة&apos;. توضع الإطارات الجديدة في قائمة انتظار خلف الإطارات المعلّقة. يضمن عرض كل الإطارات، لكنه قد يزيد زمن الاستجابة.\nImmediate: تُعرض الإطارات على الشاشة فور جاهزيتها. قد يؤدي ذلك إلى تمزّق الصورة.</translation>
+      <translation>وضع العرض:\nيضبط طريقة تقديم مخرجات الفيديو على الشاشة.\n\nMailbox: تتزامن الإطارات مع معدل تحديث الشاشة. تستبدل الإطارات الجديدة أي إطارات معلّقة. يقلل ذلك زمن الاستجابة، لكنه قد يتجاوز بعض الإطارات عند التأخر.\nFifo: تتزامن الإطارات مع معدل تحديث الشاشة. توضع الإطارات الجديدة في قائمة انتظار خلف الإطارات المعلّقة. يضمن ذلك عرض كل الإطارات، لكنه قد يزيد زمن الاستجابة.\nImmediate: تُعرض الإطارات على الشاشة فور جاهزيتها. قد يؤدي ذلك إلى تمزّق الصورة.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
@@ -2622,7 +2622,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</source>
-      <translation>مستوى الصوت:\nيضبط صوت الألعاب على مستوى عام. النطاق من 0 إلى 500%، والافتراضي 100%.</translation>
+      <translation>مستوى الصوت:\nيضبط صوت الألعاب على مستوى عام. يتراوح النطاق من 0 إلى 500%، والقيمة الافتراضية 100%.</translation>
     </message>
     <message>
       <source>Default tab when opening settings:\nChoose which tab will open, the default is General.</source>
@@ -2630,7 +2630,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</source>
-      <translation>تفعيل التحكم بالحركة:\nعند التفعيل، سيتم استخدام خاصية Controller&apos;s Motion Control إذا كانت مدعومة.</translation>
+      <translation>تفعيل التحكم بالحركة:\nعند التفعيل، سيستخدم المحاكي تحكم الحركة في يد التحكم إذا كان مدعومًا.</translation>
     </message>
     <message>
       <source>Vblank Frequency</source>
@@ -2638,7 +2638,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Vblank Frequency:\nThe frame rate at which the emulator refreshes at (60hz is the baseline, whether the game runs at 30 or 60fps). Changing this may have adverse effects, such as increasing the game speed, or breaking critical game functionality that does not expect this to change!</source>
-      <translation>تردد Vblank:\nمعدل الإطارات الذي يحدّث به المحاكي (60Hz هو الأساس، سواء كانت اللعبة تعمل على 30 أو 60 إطارًا). تغيير هذا الخيار قد يسبب آثارًا غير مرغوبة، مثل زيادة سرعة اللعبة أو تعطيل وظائف أساسية لا تتوقع هذا التغيير!</translation>
+      <translation>تردد Vblank:\nمعدل الإطارات الذي يحدّث به المحاكي (60hz هو الأساس، سواء كانت اللعبة تعمل على 30 أو 60fps). تغيير هذا الخيار قد يسبب آثارًا غير مرغوبة، مثل زيادة سرعة اللعبة أو تعطيل وظائف أساسية لا تتوقع هذا التغيير!</translation>
     </message>
     <message>
       <source>Enable Direct Memory Access</source>
@@ -2650,11 +2650,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Set &quot;PSN signed-in&quot; to True</source>
-      <translation>تعيين &quot;PSN signed-in&quot; إلى True</translation>
+      <translation>تعيين "PSN signed-in" إلى True</translation>
     </message>
     <message>
       <source>Set &quot;Network Connected&quot; to True</source>
-      <translation>تعيين &quot;Network Connected&quot; إلى True</translation>
+      <translation>تعيين "Network Connected" إلى True</translation>
     </message>
     <message>
       <source>Miscellaneous</source>
@@ -2718,11 +2718,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</source>
-      <translation>تفعيل Null GPU:\nلأغراض التصحيح التقني، يعطل عرض اللعبة كما لو لم تكن هناك بطاقة رسومية. ستكون الشاشة سوداء.</translation>
+      <translation>تفعيل Null GPU:\nلأغراض التصحيح التقني، يعطّل عرض اللعبة كما لو لم تكن هناك بطاقة رسومية. ستكون الشاشة سوداء.</translation>
     </message>
     <message>
       <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
-      <translation>مسار DLC:\nالمجلد الذي يتم تحميل محتوى DLC الخاص باللعبة منه.</translation>
+      <translation>مسار DLC:\nالمجلد الذي يتم تحميل DLC الخاص باللعبة منه.</translation>
     </message>
     <message>
       <source>Additional DMem Allocation</source>
@@ -2730,7 +2730,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</source>
-      <translation>تخصيص DMem إضافي:\nيفرض تخصيص مقدار محدد من DMem الإضافية. قد يسبب أعطالًا أو مشاكل في بعض الألعاب.</translation>
+      <translation>تخصيص DMem إضافي:\nيفرض تخصيص المقدار المحدد من DMem إضافي. قد يسبب أعطالًا أو مشاكل في بعض الألعاب.</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</source>
@@ -2790,7 +2790,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
-      <translation>تحديثات الواجهة الرسومية:\nRelease: إصدارات رسمية تصدر كل شهر، وقد تكون قديمة جدًا، لكنها أكثر موثوقية وتم اختبارها بشكل أفضل.\nNightly: إصدارات تطويرية تتضمن أحدث الميزات والإصلاحات، لكنها قد تحتوي على أخطاء وتكون أقل استقرارًا.\n\n*ينطبق هذا التحديث على واجهة Qt فقط. لتحديث نواة المحاكي، يرجى استخدام قائمة &apos;Version Manager&apos;.</translation>
+      <translation>تحديثات الواجهة الرسومية:\nRelease: إصدارات رسمية تصدر كل شهر وقد تكون قديمة جدًا، لكنها أكثر موثوقية وخضعت للاختبار.\nNightly: إصدارات تطويرية تتضمن أحدث الميزات والإصلاحات، لكنها قد تحتوي على أخطاء وتكون أقل استقرارًا.\n\n*ينطبق هذا التحديث على واجهة Qt فقط. لتحديث نواة المحاكي، استخدم قائمة 'Version Manager'.</translation>
     </message>
     <message>
       <source>Cannot create portable launcher folder</source>
@@ -2822,7 +2822,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
-      <translation>جهاز USB:\nجهاز USB حقيقي: استخدام جهاز USB حقيقي متصل بالنظام.\nبوابة سكايلاندر: محاكاة بوابة القوة الخاصة بسكايلاندر.\nقاعدة إنفينيتي: محاكاة قاعدة ديزني إنفينيتي.\nلوحة ديمنشنز: محاكاة لوحة ليغو ديمنشنز.</translation>
+      <translation>جهاز USB:\nجهاز USB حقيقي: استخدام جهاز USB حقيقي متصل بالنظام.\nبوابة Skylander: محاكاة Skylander Portal of Power.\nقاعدة Infinity: محاكاة قاعدة Disney Infinity.\nلوحة Dimensions: محاكاة Lego Dimensions Toypad.</translation>
     </message>
     <message>
       <source>Enable Shader Cache</source>
@@ -2838,19 +2838,19 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
-      <translation>ضغط ملفات ذاكرة الشيدر المؤقتة داخل ملف zip:\nيتم تخزين ملفات ذاكرة الشيدر المؤقتة داخل ملف zip واحد بدلًا من عدة ملفات منفصلة.</translation>
+      <translation>ضغط ملفات ذاكرة الشيدر المؤقتة داخل ملف ZIP:\nتُحفظ ملفات ذاكرة الشيدر المؤقتة داخل ملف ZIP واحد بدلًا من عدة ملفات منفصلة.</translation>
     </message>
     <message>
       <source>Readbacks Mode</source>
-      <translation>وضع الاسترجاع</translation>
+      <translation>وضع القراءات الراجعة</translation>
     </message>
     <message>
       <source>Disabled</source>
-      <translation>معطل</translation>
+      <translation>معطّل</translation>
     </message>
     <message>
       <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
-      <translation>عمليات القراءة الراجعة:\nتفعيل قراءة ذاكرة GPU والكتابة إليها.\nهذا مطلوب لكي تعمل بعض الألعاب بشكل صحيح.\nقد يسبب مشكلات في الاستقرار و/أو الأداء.</translation>
+      <translation>القراءات الراجعة:\nتفعيل قراءة ذاكرة GPU والكتابة الراجعة إليها.\nهذا مطلوب لسلوك صحيح في بعض الألعاب.\nقد يسبب مشاكل في الاستقرار و/أو الأداء.</translation>
     </message>
     <message>
       <source>Relaxed</source>
@@ -2862,7 +2862,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Select shadPS4 Home Path</source>
-      <translation>تحديد مسار المجلد الرئيسي</translation>
+      <translation>تحديد مسار مجلد shadPS4 الرئيسي</translation>
     </message>
     <message>
       <source>Select the system modules folder</source>
@@ -2886,7 +2886,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Audio Backend</source>
-      <translation>خلفية الصوت</translation>
+      <translation>نظام الصوت</translation>
     </message>
     <message>
       <source>Mic Device</source>
@@ -2910,7 +2910,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Log Max Skip Duration</source>
-      <translation>أقصى مدة لتخطي السجل</translation>
+      <translation>أقصى مدة لتخطي السجلات</translation>
     </message>
     <message>
       <source> ms</source>
@@ -2926,7 +2926,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Log Append</source>
-      <translation>إلحاق السجل</translation>
+      <translation>إلحاق بالسجل</translation>
     </message>
     <message>
       <source>wincolor</source>
@@ -2942,7 +2942,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</source>
-      <translation>أقصى مدة لتخطي السجل:\nالفاصل الزمني دون كتابة الأسطر نفسها (ms) - يعمل فقط عند تفعيل &apos;Log Skip Duplicate&apos;.</translation>
+      <translation>أقصى مدة لتخطي السجلات:\nالفاصل الزمني دون كتابة الأسطر نفسها (ms) - يعمل فقط عند تفعيل 'Log Skip Duplicate'.</translation>
     </message>
     <message>
       <source>Log Size Limit:\nMaximum size of log files (bytes).</source>
@@ -2954,7 +2954,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Log Sync:\nSwitch between sync (order) or async (performance).</source>
-      <translation>مزامنة السجل:\nالتبديل بين المزامنة (ترتيب السجلات) أو غير المتزامن (الأداء).</translation>
+      <translation>مزامنة السجل:\nالتبديل بين المتزامن (ترتيب السجلات) وغير المتزامن (الأداء).</translation>
     </message>
     <message>
       <source>Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</source>
@@ -3235,7 +3235,8 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>First you need to choose a location to save the versions in
 &apos;Path to save versions&apos;</source>
-      <translation>يجب أولًا اختيار موقع لحفظ الإصدارات في\n&apos;مسار حفظ الإصدارات&apos;</translation>
+      <translation>يجب أولًا اختيار موقع لحفظ الإصدارات في
+'مسار حفظ الإصدارات'</translation>
     </message>
     <message>
       <source>Do you want to download the version</source>
@@ -3259,7 +3260,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Failed to create zip extraction script</source>
-      <translation>فشل إنشاء سكربت استخراج zip</translation>
+      <translation>فشل إنشاء سكربت استخراج ZIP</translation>
     </message>
     <message>
       <source>The GitHub API response is not a valid JSON array.</source>
@@ -3371,7 +3372,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release.</source>
-      <translation>تعذر الحصول على هاش أحدث إصدار تجريبي.</translation>
+      <translation>تعذّر الحصول على هاش أحدث إصدار تجريبي.</translation>
     </message>
     <message>
       <source>Downloading Pre-release (Nightly), please wait...</source>
@@ -3427,8 +3428,8 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Failed to open the figure file(%1)!
 File may already be in use on the base.</source>
-      <translation>فشل فتح بيانات الشخصية (%1)!
-قد تكون مستخدمة على القاعدة.</translation>
+      <translation>فشل فتح ملف الشخصية (%1)!
+قد يكون مستخدمًا بالفعل على القاعدة.</translation>
     </message>
     <message>
       <source>Failed to read the figure file!</source>
@@ -3437,8 +3438,8 @@ File may already be in use on the base.</source>
     <message>
       <source>Failed to read the figure file(%1)!
 File was too small.</source>
-      <translation>فشل قراءة بيانات الشخصية (%1)!
-كان حجمها صغيرًا جدًا.</translation>
+      <translation>فشل قراءة ملف الشخصية (%1)!
+كان حجم الملف صغيرًا جدًا.</translation>
     </message>
   </context>
   <context>
@@ -3587,8 +3588,8 @@ File was too small.</source>
     <message>
       <source>Failed to open the figure file(%1)!
 File may already be in use on the base.</source>
-      <translation>فشل فتح بيانات الشخصية (%1)!
-قد تكون مستخدمة على القاعدة.</translation>
+      <translation>فشل فتح ملف الشخصية (%1)!
+قد يكون مستخدمًا بالفعل على القاعدة.</translation>
     </message>
     <message>
       <source>Failed to read the figure file!</source>
@@ -3597,8 +3598,8 @@ File may already be in use on the base.</source>
     <message>
       <source>Failed to read the figure file(%1)!
 File was too small.</source>
-      <translation>فشل قراءة بيانات الشخصية (%1)!
-كان حجمها صغيرًا جدًا.</translation>
+      <translation>فشل قراءة ملف الشخصية (%1)!
+كان حجم الملف صغيرًا جدًا.</translation>
     </message>
   </context>
   <context>
@@ -3641,12 +3642,12 @@ File was too small.</source>
     </message>
     <message>
       <source>Failed to create minifig file!</source>
-      <translation>فشل إنشاء بيانات المجسم!</translation>
+      <translation>فشل إنشاء ملف المجسم!</translation>
     </message>
     <message>
       <source>Failed to create minifig file:
 %1</source>
-      <translation>فشل إنشاء بيانات المجسم:
+      <translation>فشل إنشاء ملف المجسم:
 %1</translation>
     </message>
   </context>
@@ -3685,7 +3686,7 @@ File was too small.</source>
     </message>
     <message>
       <source>Variant:</source>
-      <translation>النوع:</translation>
+      <translation>المتغيّر:</translation>
     </message>
     <message>
       <source>Create</source>
@@ -3767,8 +3768,8 @@ File was too small.</source>
     <message>
       <source>Failed to open the skylander file(%1)!
 File may already be in use on the portal.</source>
-      <translation>فشل فتح بيانات سكايلاندر (%1)!
-قد تكون مستخدمة على البوابة.</translation>
+      <translation>فشل فتح ملف Skylander (%1)!
+قد يكون مستخدمًا بالفعل على البوابة.</translation>
     </message>
     <message>
       <source>Failed to read the skylander file!</source>
@@ -3777,8 +3778,8 @@ File may already be in use on the portal.</source>
     <message>
       <source>Failed to read the skylander file(%1)!
 File was too small.</source>
-      <translation>فشل قراءة بيانات سكايلاندر (%1)!
-كان حجمها صغيرًا جدًا.</translation>
+      <translation>فشل قراءة ملف Skylander (%1)!
+كان حجم الملف صغيرًا جدًا.</translation>
     </message>
     <message>
       <source>Unknown (Id:%1 Var:%2)</source>
