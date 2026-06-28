@@ -2582,7 +2582,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</source>
-      <translation>وضع العرض:\nيضبط طريقة عرض مخرجات الفيديو على الشاشة.\n\nMailbox: تتم مزامنة الإطارات مع معدل تحديث الشاشة. تستبدل الإطارات الجديدة أي إطارات معلقة. يقلل زمن الاستجابة، لكنه قد يتجاوز بعض الإطارات عند التأخر.\nFifo: تتم مزامنة الإطارات مع معدل تحديث الشاشة. توضع الإطارات الجديدة في قائمة انتظار خلف الإطارات المعلقة. يضمن عرض كل الإطارات، لكنه قد يزيد زمن الاستجابة.\nImmediate: تُعرض الإطارات على الشاشة فور جاهزيتها. قد يؤدي ذلك إلى تمزق الصورة.</translation>
+      <translation>وضع العرض:\nيضبط طريقة عرض مخرجات الفيديو على الشاشة.\n\nMailbox: تتم مزامنة الإطارات مع معدل تحديث الشاشة&apos;. تستبدل الإطارات الجديدة أي إطارات معلّقة. يقلّل زمن الاستجابة، لكنه قد يتجاوز بعض الإطارات عند التأخر.\nFifo: تتم مزامنة الإطارات مع معدل تحديث الشاشة&apos;. توضع الإطارات الجديدة في قائمة انتظار خلف الإطارات المعلّقة. يضمن عرض كل الإطارات، لكنه قد يزيد زمن الاستجابة.\nImmediate: تُعرض الإطارات على الشاشة فور جاهزيتها. قد يؤدي ذلك إلى تمزّق الصورة.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
