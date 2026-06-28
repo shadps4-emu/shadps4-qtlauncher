@@ -203,6 +203,7 @@ struct GeneralSettings {
     Setting<std::string> shadnet_server{"srv.shadps4.net:31313"};
     Setting<std::string> signaling_info{""};
     Setting<std::string> shadnet_webapi_server{"http://srv.shadps4.net:31315"};
+    Setting<std::string> host_overrides{""}; 
     Setting<bool> enable_upnp{true};
     Setting<bool> trophy_popup_disabled{false};
     Setting<double> trophy_notification_duration{6.0};
@@ -235,6 +236,7 @@ struct GeneralSettings {
             make_override<GeneralSettings>("signaling_info", &GeneralSettings::signaling_info),
             make_override<GeneralSettings>("shadnet_webapi_server",
                                            &GeneralSettings::shadnet_webapi_server),
+            make_override<GeneralSettings>("host_overrides", &GeneralSettings::host_overrides),
             make_override<GeneralSettings>("enable_upnp", &GeneralSettings::enable_upnp)};
     }
 };
@@ -244,7 +246,8 @@ NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(GeneralSettings, install_dirs, addon_install_
                                    trophy_notification_duration, show_splash, enable_upnp,
                                    trophy_notification_side, connected_to_network,
                                    discord_rpc_enabled, show_fps_counter, console_language,
-                                   shadnet_server, signaling_info, shadnet_webapi_server)
+                                   shadnet_server, signaling_info, shadnet_webapi_server,
+                                   host_overrides)
 
 // -------------------------------
 // Log settings
@@ -614,6 +617,7 @@ public:
     SETTING_FORWARD(m_general, ShadNetServer, shadnet_server)
     SETTING_FORWARD(m_general, SignalingInfo, signaling_info)
     SETTING_FORWARD(m_general, ShadnetWebapiServer, shadnet_webapi_server)
+    SETTING_FORWARD(m_general, HostOverrides, host_overrides)
     SETTING_FORWARD_BOOL(m_general, UPnPEnabled, enable_upnp)
     SETTING_FORWARD_BOOL(m_general, DiscordRPCEnabled, discord_rpc_enabled)
     SETTING_FORWARD_BOOL(m_general, ShowFpsCounter, show_fps_counter)

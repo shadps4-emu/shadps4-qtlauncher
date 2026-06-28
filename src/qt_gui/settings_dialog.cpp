@@ -723,6 +723,7 @@ void SettingsDialog::LoadValuesFromConfig() {
     ui->servWebApiLineEdit->setText(
         QString::fromStdString(EmulatorSettings.GetShadnetWebapiServer()));
     ui->signalingInfoLineEdit->setText(QString::fromStdString(EmulatorSettings.GetSignalingInfo()));
+    ui->hostOverridesTextEdit->setText(QString::fromStdString(EmulatorSettings.GetHostOverrides()));
     ui->upnpCheckBox->setChecked(EmulatorSettings.IsUPnPEnabled());
     ui->vblankSpinBox->setValue(EmulatorSettings.GetVblankFrequency());
     ui->dmemSpinBox->setValue(EmulatorSettings.GetExtraDmemInMBytes());
@@ -1120,6 +1121,7 @@ void SettingsDialog::UpdateSettings(bool is_specific) {
     EmulatorSettings.SetSignalingInfo(ui->signalingInfoLineEdit->text().toStdString(), is_specific);
     EmulatorSettings.SetShadnetWebapiServer(ui->servWebApiLineEdit->text().toStdString(),
                                             is_specific);
+    EmulatorSettings.SetHostOverrides(ui->hostOverridesTextEdit->toPlainText().toStdString(), is_specific);
     EmulatorSettings.SetUPnPEnabled(ui->upnpCheckBox->isChecked(), is_specific);
     EmulatorSettings.SetVblankFrequency(ui->vblankSpinBox->value(), is_specific);
     EmulatorSettings.SetExtraDmemInMBytes(ui->dmemSpinBox->value(), is_specific);
