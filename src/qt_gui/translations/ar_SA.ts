@@ -1241,7 +1241,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
-      <translation>تعذّر إرسال التقرير، لأن أحدث سجل للعبة فشل في الفحص التالي، ولذلك سيكون التقرير غير صالح:</translation>
+      <translation>تعذّر&apos;t إرسال التقرير، لأن أحدث سجل للعبة لم يجتز الفحص التالي، ولذلك سيكون التقرير غير صالح:</translation>
     </message>
     <message>
       <source>Ok</source>
@@ -2550,7 +2550,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Crash Diagnostics:\nCreates a .yaml file with info about the Vulkan state at the time of crashing.\nUseful for debugging &apos;Device lost&apos; errors. If you have this enabled, you should enable Host AND Guest Debug Markers.\nYou need Vulkan Validation Layers enabled and the Vulkan SDK for this to work.</source>
-      <translation>تشخيص الأعطال:\nينشئ ملف .yaml يحتوي على معلومات عن حالة Vulkan وقت حدوث العطل.\nمفيد لتصحيح أخطاء 'Device lost'. إذا فعّلت هذا الخيار، فينبغي تفعيل Host وGuest Debug Markers معًا.\nيتطلب ذلك تفعيل Vulkan Validation Layers وتثبيت Vulkan SDK.</translation>
+      <translation>تشخيص الأعطال:\nينشئ ملف .yaml يحتوي على معلومات عن حالة Vulkan وقت حدوث العطل.\nمفيد لتصحيح أخطاء &apos;Device lost&apos;. إذا فعّلت هذا الخيار، فينبغي تفعيل Host وGuest Debug Markers معًا.\nيتطلب ذلك تفعيل Vulkan Validation Layers وتثبيت Vulkan SDK.</translation>
     </message>
     <message>
       <source>Enable Logging</source>
@@ -2582,7 +2582,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</source>
-      <translation>وضع العرض:\nيضبط طريقة تقديم مخرجات الفيديو على الشاشة.\n\nMailbox: تتزامن الإطارات مع معدل تحديث الشاشة. تستبدل الإطارات الجديدة أي إطارات معلّقة. يقلل ذلك زمن الاستجابة، لكنه قد يتجاوز بعض الإطارات عند التأخر.\nFifo: تتزامن الإطارات مع معدل تحديث الشاشة. توضع الإطارات الجديدة في قائمة انتظار خلف الإطارات المعلّقة. يضمن ذلك عرض كل الإطارات، لكنه قد يزيد زمن الاستجابة.\nImmediate: تُعرض الإطارات على الشاشة فور جاهزيتها. قد يؤدي ذلك إلى تمزّق الصورة.</translation>
+      <translation>وضع العرض:\nيضبط طريقة تقديم مخرجات الفيديو على الشاشة.\n\nMailbox: تتزامن الإطارات مع معدل تحديث الشاشة&apos;s. تستبدل الإطارات الجديدة أي إطارات معلّقة. يقلل ذلك زمن الاستجابة، لكنه قد يتجاوز بعض الإطارات عند التأخر.\nFifo: تتزامن الإطارات مع معدل تحديث الشاشة&apos;s. توضع الإطارات الجديدة في قائمة انتظار خلف الإطارات المعلّقة. يضمن ذلك عرض كل الإطارات، لكنه قد يزيد زمن الاستجابة.\nImmediate: تُعرض الإطارات على الشاشة فور جاهزيتها. قد يؤدي ذلك إلى تمزّق الصورة.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
@@ -2630,7 +2630,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</source>
-      <translation>تفعيل التحكم بالحركة:\nعند التفعيل، سيستخدم المحاكي تحكم الحركة في يد التحكم إذا كان مدعومًا.</translation>
+      <translation>تفعيل التحكم بالحركة:\nعند التفعيل، سيستخدم المحاكي التحكم بالحركة الخاص بيد التحكم&apos;s إذا كان مدعومًا.</translation>
     </message>
     <message>
       <source>Vblank Frequency</source>
@@ -2714,7 +2714,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
-      <translation>تفعيل استخراج الشيدرات:\nلأغراض التصحيح التقني، يحفظ شيدرات اللعبة&apos;s في مجلد أثناء عرضها.</translation>
+      <translation>تفعيل تفريغ الشيدرات:\nلأغراض التصحيح التقني، يحفظ شيدرات اللعبة&apos;s في مجلد أثناء عرضها.</translation>
     </message>
     <message>
       <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</source>
@@ -2790,7 +2790,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
-      <translation>تحديثات الواجهة الرسومية:\nRelease: إصدارات رسمية تصدر كل شهر وقد تكون قديمة جدًا، لكنها أكثر موثوقية وخضعت للاختبار.\nNightly: إصدارات تطويرية تتضمن أحدث الميزات والإصلاحات، لكنها قد تحتوي على أخطاء وتكون أقل استقرارًا.\n\n*ينطبق هذا التحديث على واجهة Qt فقط. لتحديث نواة المحاكي، استخدم قائمة 'Version Manager'.</translation>
+      <translation>تحديثات الواجهة الرسومية:\nRelease: إصدارات رسمية تصدر كل شهر وقد تكون قديمة جدًا، لكنها أكثر موثوقية وخضعت للاختبار.\nNightly: إصدارات تطويرية تتضمن أحدث الميزات والإصلاحات، لكنها قد تحتوي على أخطاء وتكون أقل استقرارًا.\n\n*ينطبق هذا التحديث على واجهة Qt فقط. لتحديث نواة المحاكي، استخدم قائمة &apos;Version Manager&apos;.</translation>
     </message>
     <message>
       <source>Cannot create portable launcher folder</source>
@@ -2942,7 +2942,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</source>
-      <translation>أقصى مدة لتخطي السجلات:\nالفاصل الزمني دون كتابة الأسطر نفسها (ms) - يعمل فقط عند تفعيل 'Log Skip Duplicate'.</translation>
+      <translation>أقصى مدة لتخطي السجلات:\nالفاصل الزمني دون كتابة الأسطر نفسها (ms) - يعمل فقط عند تفعيل &apos;Log Skip Duplicate&apos;.</translation>
     </message>
     <message>
       <source>Log Size Limit:\nMaximum size of log files (bytes).</source>
@@ -3236,7 +3236,7 @@ Select an emulator version from the right panel.</source>
       <source>First you need to choose a location to save the versions in
 &apos;Path to save versions&apos;</source>
       <translation>يجب أولًا اختيار موقع لحفظ الإصدارات في
-'مسار حفظ الإصدارات'</translation>
+&apos;مسار حفظ الإصدارات&apos;</translation>
     </message>
     <message>
       <source>Do you want to download the version</source>
