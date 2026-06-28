@@ -348,7 +348,6 @@ void UserManagerDialog::OnUserSetControllerPort() {
     }
 }
 
-
 void UserManagerDialog::OnUserEditShadNet() {
     const u32 user_id = GetUserKey();
     if (user_id == 0)
