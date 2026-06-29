@@ -698,11 +698,11 @@ Must be a valid hex string with even length.</source>
       <source>RSA key components for fake signing.
 All fields must be valid hex strings with even length.</source>
       <translation>مكونات مفتاح RSA للتوقيع الوهمي.
-يجب أن تكون جميع الحقول سلاسل Hex صحيحة وبعدد خانات زوجي.</translation>
+يجب أن تكون جميع الحقول سلاسل سداسية عشرية صحيحة وبطول زوجي.</translation>
     </message>
     <message>
       <source>Debug Rif Keyset</source>
-      <translation>مجموعة مفاتيح Rif للتصحيح</translation>
+      <translation>مجموعة مفاتيح Rif لتصحيح الأخطاء</translation>
     </message>
     <message>
       <source>RSA key components for debug RIF files.
@@ -712,7 +712,7 @@ All fields must be valid hex strings with even length.</source>
     </message>
     <message>
       <source>Pkg Derived Key3</source>
-      <translation>مفتاح Pkg المشتق3</translation>
+      <translation>مفتاح Pkg المشتق 3</translation>
     </message>
     <message>
       <source>RSA key components for package decryption.
@@ -1363,7 +1363,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Toggle Mouse to Gyro Emulation</source>
-      <translation>تبديل محاكاة الماوس للجيرو</translation>
+      <translation>تبديل محاكاة الفأرة كجيروسكوب</translation>
     </message>
     <message>
       <source>Tip: Up to three simultaneous inputs can be assigned for each hotkey</source>
@@ -2630,7 +2630,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</source>
-      <translation>تفعيل التحكم بالحركة:\nعند التفعيل، سيستخدم المحاكي التحكم بالحركة الخاص بيد التحكم&apos;s إذا كان مدعومًا.</translation>
+      <translation>تفعيل التحكم بالحركة:\nعند التفعيل، سيستخدم التحكم بالحركة الخاص بيد التحكم&apos; إذا كان مدعومًا.</translation>
     </message>
     <message>
       <source>Vblank Frequency</source>
