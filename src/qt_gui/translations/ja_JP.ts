@@ -2648,10 +2648,6 @@ Select an emulator version from the right panel.</translation>
       <translation>開発者コンソールモードを有効にする</translation>
     </message>
     <message>
-      <source>Set &quot;PSN signed-in&quot; to True</source>
-      <translation type="unfinished">Set &quot;PSN signed-in&quot; to True</translation>
-    </message>
-    <message>
       <source>Set &quot;Network Connected&quot; to True</source>
       <translation type="unfinished">Set &quot;Network Connected&quot; to True</translation>
     </message>
@@ -2694,10 +2690,6 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</source>
       <translation type="unfinished">Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</translation>
-    </message>
-    <message>
-      <source>Set PSN Signed-in to True:\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported.</source>
-      <translation type="unfinished">Set PSN Signed-in to True:\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported.</translation>
     </message>
     <message>
       <source>Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
@@ -2963,6 +2955,34 @@ Select an emulator version from the right panel.</translation>
       <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
       <translation type="unfinished">Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</translation>
     </message>
+    <message>
+      <source>Enable shadNet</source>
+      <translation type="unfinished">Enable shadNet</translation>
+    </message>
+    <message>
+      <source>ShadNet</source>
+      <translation type="unfinished">ShadNet</translation>
+    </message>
+    <message>
+      <source>Server</source>
+      <translation type="unfinished">Server</translation>
+    </message>
+    <message>
+      <source>Signaling Info</source>
+      <translation type="unfinished">Signaling Info</translation>
+    </message>
+    <message>
+      <source>Enable UPNP</source>
+      <translation type="unfinished">Enable UPNP</translation>
+    </message>
+    <message>
+      <source>WebAPI Server</source>
+      <translation type="unfinished">WebAPI Server</translation>
+    </message>
+    <message>
+      <source>shadNet:\nA PSN server replacement.\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadNet/register/.</source>
+      <translation type="unfinished">shadNet:\nA PSN server replacement.\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadNet/register/.</translation>
+    </message>
   </context>
   <context>
     <name>ShortcutDialog</name>
@@ -3111,6 +3131,54 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>&amp;Open User Directory</source>
       <translation type="unfinished">&amp;Open User Directory</translation>
+    </message>
+    <message>
+      <source>Shad&amp;Net...</source>
+      <translation type="unfinished">Shad&amp;Net...</translation>
+    </message>
+    <message>
+      <source>On</source>
+      <translation type="unfinished">On</translation>
+    </message>
+    <message>
+      <source>On (%1)</source>
+      <translation type="unfinished">On (%1)</translation>
+    </message>
+    <message>
+      <source>Off</source>
+      <translation type="unfinished">Off</translation>
+    </message>
+    <message>
+      <source>ShadNet Settings - %1</source>
+      <translation type="unfinished">ShadNet Settings - %1</translation>
+    </message>
+    <message>
+      <source>Enable ShadNet for this user</source>
+      <translation type="unfinished">Enable ShadNet for this user</translation>
+    </message>
+    <message>
+      <source>Account ID (NPID)</source>
+      <translation type="unfinished">Account ID (NPID)</translation>
+    </message>
+    <message>
+      <source>Password</source>
+      <translation type="unfinished">Password</translation>
+    </message>
+    <message>
+      <source>Show password</source>
+      <translation type="unfinished">Show password</translation>
+    </message>
+    <message>
+      <source>Account ID (NPID):</source>
+      <translation type="unfinished">Account ID (NPID):</translation>
+    </message>
+    <message>
+      <source>Password:</source>
+      <translation type="unfinished">Password:</translation>
+    </message>
+    <message>
+      <source>Shad&amp;Net Settings...</source>
+      <translation type="unfinished">Shad&amp;Net Settings...</translation>
     </message>
   </context>
   <context>
