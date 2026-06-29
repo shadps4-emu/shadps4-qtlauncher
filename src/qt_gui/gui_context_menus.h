@@ -23,6 +23,7 @@
 #include "core/emulator_state.h"
 #include "core/user_settings.h"
 #include "create_shortcut.h"
+#include "create_steam_shortcut.h"
 #include "game_info.h"
 #include "gui_settings.h"
 #include "ipc/ipc_client.h"
@@ -137,6 +138,8 @@ public:
         QAction openSfoViewer(tr("SFO Viewer"), widget);
         QAction createDefaultShortcut(tr("Create Shortcut for Selected Emulator Version"), widget);
         QAction createVersionShortcut(tr("Create Shortcut for Specified Emulator Version"), widget);
+        QAction addToSteamDefault(tr("Add with Selected Emulator Version"), widget);
+        QAction addToSteamVersion(tr("Add with Specified Emulator Version"), widget);
 
 #ifndef Q_OS_APPLE
         QMenu* shortcutMenu = new QMenu(tr("Create Shortcut"), widget);
@@ -144,6 +147,11 @@ public:
         shortcutMenu->addAction(&createDefaultShortcut);
         shortcutMenu->addAction(&createVersionShortcut);
 #endif
+        // Steam – available on Windows, Linux, and macOS
+        QMenu* steamMenu = new QMenu(tr("Add to Steam"), widget);
+        steamMenu->addAction(&addToSteamDefault);
+        steamMenu->addAction(&addToSteamVersion);
+        menu.addMenu(steamMenu);
         menu.addAction(toggleFavorite);
         menu.addAction(&openCheats);
         menu.addAction(&openTrophyViewer);
@@ -522,6 +530,21 @@ public:
                 [=, this](QString version) { requestShortcut(m_games[itemID], version); });
 
             shortcutWindow->exec();
+            delete shortcutWindow;
+        }
+
+        if (selected == &addToSteamDefault) {
+            m_steam_shortcut.requestAddToSteam(m_games[itemID]);
+        }
+
+        if (selected == &addToSteamVersion) {
+            auto shortcutWindow = new ShortcutDialog(m_gui_settings);
+            QObject::connect(shortcutWindow, &ShortcutDialog::shortcutRequested, this,
+                             [=, this](QString version) {
+                                 m_steam_shortcut.requestAddToSteam(m_games[itemID], version);
+                             });
+            shortcutWindow->exec();
+            delete shortcutWindow;
         }
 
         // Handle the "Copy" actions
@@ -777,6 +800,8 @@ public:
     }
 
 private:
+    SteamShortcut m_steam_shortcut{nullptr};
+
     void requestShortcut(const GameInfo& selectedInfo, QString emuPath = "") {
         // Path to shortcut/link
         QString linkPath;
