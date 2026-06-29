@@ -2646,10 +2646,6 @@ Select an emulator version from the right panel.</source>
       <translation>启用 Devkit 开发机模式</translation>
     </message>
     <message>
-      <source>Set &quot;PSN signed-in&quot; to True</source>
-      <translation>将“PSN登录状态”设为“已登录”</translation>
-    </message>
-    <message>
       <source>Set &quot;Network Connected&quot; to True</source>
       <translation>将“网络连接状态”设为“已连接”</translation>
     </message>
@@ -2692,10 +2688,6 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</source>
       <translation>将“网络连接状态”设为“已连接”：\n强制让游戏检测到网络处于连接状态（注意：并不实际支持真实的在线联网功能）。</translation>
-    </message>
-    <message>
-      <source>Set PSN Signed-in to True:\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported.</source>
-      <translation>将“PSN登录状态”设为“已登录”：\n强制让游戏检测到PSN处于登录状态（注意：并不实际支持真实的PSN网络功能）。</translation>
     </message>
     <message>
       <source>Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
@@ -2963,6 +2955,34 @@ Select an emulator version from the right panel.</source>
       <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
       <translation>日志筛选：\n筛选日志，仅打印特定信息。\n示例："Core:Debug" "Lib.Pad:Debug Common.Filesystem:Error" "*:Critical"\n级别顺序：trace、debug、info、warning、error、critical、off - 按此顺序，指定某一级别将静默列表中位于它之前的所有级别，并记录它之后的所有级别。</translation>
     </message>
+    <message>
+      <source>Enable shadNet</source>
+      <translation type="unfinished">Enable shadNet</translation>
+    </message>
+    <message>
+      <source>ShadNet</source>
+      <translation type="unfinished">ShadNet</translation>
+    </message>
+    <message>
+      <source>Server</source>
+      <translation type="unfinished">Server</translation>
+    </message>
+    <message>
+      <source>Signaling Info</source>
+      <translation type="unfinished">Signaling Info</translation>
+    </message>
+    <message>
+      <source>Enable UPNP</source>
+      <translation type="unfinished">Enable UPNP</translation>
+    </message>
+    <message>
+      <source>WebAPI Server</source>
+      <translation type="unfinished">WebAPI Server</translation>
+    </message>
+    <message>
+      <source>shadNet:\nA PSN server replacement.\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadNet/register/.</source>
+      <translation type="unfinished">shadNet:\nA PSN server replacement.\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadNet/register/.</translation>
+    </message>
   </context>
   <context>
     <name>ShortcutDialog</name>
@@ -3111,6 +3131,54 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>&amp;Open User Directory</source>
       <translation>&amp;打开用户文件夹</translation>
+    </message>
+    <message>
+      <source>Shad&amp;Net...</source>
+      <translation type="unfinished">Shad&amp;Net...</translation>
+    </message>
+    <message>
+      <source>On</source>
+      <translation type="unfinished">On</translation>
+    </message>
+    <message>
+      <source>On (%1)</source>
+      <translation type="unfinished">On (%1)</translation>
+    </message>
+    <message>
+      <source>Off</source>
+      <translation type="unfinished">Off</translation>
+    </message>
+    <message>
+      <source>ShadNet Settings - %1</source>
+      <translation type="unfinished">ShadNet Settings - %1</translation>
+    </message>
+    <message>
+      <source>Enable ShadNet for this user</source>
+      <translation type="unfinished">Enable ShadNet for this user</translation>
+    </message>
+    <message>
+      <source>Account ID (NPID)</source>
+      <translation type="unfinished">Account ID (NPID)</translation>
+    </message>
+    <message>
+      <source>Password</source>
+      <translation type="unfinished">Password</translation>
+    </message>
+    <message>
+      <source>Show password</source>
+      <translation type="unfinished">Show password</translation>
+    </message>
+    <message>
+      <source>Account ID (NPID):</source>
+      <translation type="unfinished">Account ID (NPID):</translation>
+    </message>
+    <message>
+      <source>Password:</source>
+      <translation type="unfinished">Password:</translation>
+    </message>
+    <message>
+      <source>Shad&amp;Net Settings...</source>
+      <translation type="unfinished">Shad&amp;Net Settings...</translation>
     </message>
   </context>
   <context>
