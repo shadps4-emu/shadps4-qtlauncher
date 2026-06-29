@@ -2635,10 +2635,6 @@ Select an emulator version from the right panel.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Set &quot;PSN signed-in&quot; to True</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Set &quot;Network Connected&quot; to True</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2680,10 +2676,6 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
         <source>Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Set PSN Signed-in to True:\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2950,6 +2942,34 @@ Select an emulator version from the right panel.</source>
         <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Enable shadNet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ShadNet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Signaling Info</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable UPNP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>WebAPI Server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>shadNet:\nA PSN server replacement.\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadNet/register/.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ShortcutDialog</name>
@@ -3097,6 +3117,54 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
         <source>&amp;Open User Directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shad&amp;Net...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>On</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>On (%1)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Off</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ShadNet Settings - %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable ShadNet for this user</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Account ID (NPID)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Account ID (NPID):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Password:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shad&amp;Net Settings...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
