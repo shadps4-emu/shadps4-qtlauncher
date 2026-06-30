@@ -2958,31 +2958,31 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable shadNet</source>
-      <translation type="unfinished">Enable shadNet</translation>
+      <translation>Увімкнути shadNet</translation>
     </message>
     <message>
       <source>ShadNet</source>
-      <translation type="unfinished">ShadNet</translation>
+      <translation>ShadNet</translation>
     </message>
     <message>
       <source>Server</source>
-      <translation type="unfinished">Server</translation>
+      <translation>Сервер</translation>
     </message>
     <message>
       <source>Signaling Info</source>
-      <translation type="unfinished">Signaling Info</translation>
+      <translation>Інформація про сигнал</translation>
     </message>
     <message>
       <source>Enable UPNP</source>
-      <translation type="unfinished">Enable UPNP</translation>
+      <translation>Увімкнути UPNP</translation>
     </message>
     <message>
       <source>WebAPI Server</source>
-      <translation type="unfinished">WebAPI Server</translation>
+      <translation>Сервер WebAPI</translation>
     </message>
     <message>
       <source>shadNet:\nA PSN server replacement.\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadNet/register/.</source>
-      <translation type="unfinished">shadNet:\nA PSN server replacement.\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadNet/register/.</translation>
+      <translation>shadNet:\nЗаміна серверів PSN.\nСумісність наразі дуже обмежена.\nВи можете зареєструватися за посиланням https://www.shadps4.net/shadNet/register/.</translation>
     </message>
   </context>
   <context>
@@ -3135,51 +3135,51 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Shad&amp;Net...</source>
-      <translation type="unfinished">Shad&amp;Net...</translation>
+      <translation>Shad&amp;Net...</translation>
     </message>
     <message>
       <source>On</source>
-      <translation type="unfinished">On</translation>
+      <translation>Увімк</translation>
     </message>
     <message>
       <source>On (%1)</source>
-      <translation type="unfinished">On (%1)</translation>
+      <translation>Увімк (%1)</translation>
     </message>
     <message>
       <source>Off</source>
-      <translation type="unfinished">Off</translation>
+      <translation>Вимк</translation>
     </message>
     <message>
       <source>ShadNet Settings - %1</source>
-      <translation type="unfinished">ShadNet Settings - %1</translation>
+      <translation>Налаштування ShadNet: %1</translation>
     </message>
     <message>
       <source>Enable ShadNet for this user</source>
-      <translation type="unfinished">Enable ShadNet for this user</translation>
+      <translation>Увімкнути ShadNet для цього користувача</translation>
     </message>
     <message>
       <source>Account ID (NPID)</source>
-      <translation type="unfinished">Account ID (NPID)</translation>
+      <translation>ID облікового запису (NPID)</translation>
     </message>
     <message>
       <source>Password</source>
-      <translation type="unfinished">Password</translation>
+      <translation>Пароль</translation>
     </message>
     <message>
       <source>Show password</source>
-      <translation type="unfinished">Show password</translation>
+      <translation>Показати пароль</translation>
     </message>
     <message>
       <source>Account ID (NPID):</source>
-      <translation type="unfinished">Account ID (NPID):</translation>
+      <translation>ID облікового запису (NPID):</translation>
     </message>
     <message>
       <source>Password:</source>
-      <translation type="unfinished">Password:</translation>
+      <translation>Пароль:</translation>
     </message>
     <message>
       <source>Shad&amp;Net Settings...</source>
-      <translation type="unfinished">Shad&amp;Net Settings...</translation>
+      <translation>Налаштування Shad&amp;Net...</translation>
     </message>
   </context>
   <context>
