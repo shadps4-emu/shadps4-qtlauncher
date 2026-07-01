@@ -1305,15 +1305,15 @@ Por favor, digite suas chaves e salve-as.</translation>
     </message>
     <message>
       <source>Add with Selected Emulator Version</source>
-      <translation type="unfinished">Add with Selected Emulator Version</translation>
+      <translation>Adicionar com a Versão do Emulador Selecionada</translation>
     </message>
     <message>
       <source>Add with Specified Emulator Version</source>
-      <translation type="unfinished">Add with Specified Emulator Version</translation>
+      <translation>Adicionar com a Versão do Emulador Designada</translation>
     </message>
     <message>
       <source>Add to Steam</source>
-      <translation type="unfinished">Add to Steam</translation>
+      <translation>Adicionar ao Steam</translation>
     </message>
   </context>
   <context>
@@ -3019,47 +3019,47 @@ Selecione uma versão do emulador no painel direito.</translation>
     <name>SteamShortcut</name>
     <message>
       <source>Steam</source>
-      <translation type="unfinished">Steam</translation>
+      <translation>Steam</translation>
     </message>
     <message>
       <source>%1 is already in your Steam library.</source>
-      <translation type="unfinished">%1 is already in your Steam library.</translation>
+      <translation>%1 já está na sua biblioteca do Steam.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Erro</translation>
     </message>
     <message>
       <source>Steam installation not found.</source>
-      <translation type="unfinished">Steam installation not found.</translation>
+      <translation>Instalação do Steam não encontrada.</translation>
     </message>
     <message>
       <source>No Steam user account found. Please log into Steam at least once.</source>
-      <translation type="unfinished">No Steam user account found. Please log into Steam at least once.</translation>
+      <translation>Nenhuma conta de usuário do Steam encontrada. Por favor, faça login no Steam pelo menos uma vez.</translation>
     </message>
     <message>
       <source>Steam is Running</source>
-      <translation type="unfinished">Steam is Running</translation>
+      <translation>O Steam está em Execução</translation>
     </message>
     <message>
       <source>Steam is currently running. It will be closed and restarted to apply the shortcut. Continue?</source>
-      <translation type="unfinished">Steam is currently running. It will be closed and restarted to apply the shortcut. Continue?</translation>
+      <translation>O Steam está em execução. Será fechado e reiniciado para aplicar o atalho. Continuar?</translation>
     </message>
     <message>
       <source>Steam did not close in time. Shortcut was not added.</source>
-      <translation type="unfinished">Steam did not close in time. Shortcut was not added.</translation>
+      <translation>O Steam não encerrou no prazo. O atalho não foi adicionado.</translation>
     </message>
     <message>
       <source>Failed to add game to Steam.</source>
-      <translation type="unfinished">Failed to add game to Steam.</translation>
+      <translation>Falha ao adicionar jogo ao Steam.</translation>
     </message>
     <message>
       <source>Added to Steam successfully. Steam is restarting.</source>
-      <translation type="unfinished">Added to Steam successfully. Steam is restarting.</translation>
+      <translation>Adicionado ao Steam com sucesso. O Steam está reiniciando.</translation>
     </message>
     <message>
       <source>Added to Steam successfully. Launch Steam to see the changes.</source>
-      <translation type="unfinished">Added to Steam successfully. Launch Steam to see the changes.</translation>
+      <translation>Adicionado ao Steam com sucesso. Abra o Steam para ver as alterações.</translation>
     </message>
   </context>
   <context>
