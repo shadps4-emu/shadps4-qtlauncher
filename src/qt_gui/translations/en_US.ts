@@ -1296,6 +1296,18 @@ Please enter your keys and save them.</source>
         <source>User</source>
         <translation type="unfinished">User</translation>
     </message>
+    <message>
+        <source>Add with Selected Emulator Version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add with Specified Emulator Version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add to Steam</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>HelpDialog</name>
@@ -2987,6 +2999,53 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
         <source>Select a version first</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SteamShortcut</name>
+    <message>
+        <source>Steam</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 is already in your Steam library.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation type="unfinished">Error</translation>
+    </message>
+    <message>
+        <source>Steam installation not found.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No Steam user account found. Please log into Steam at least once.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Steam is Running</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Steam is currently running. It will be closed and restarted to apply the shortcut. Continue?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Steam did not close in time. Shortcut was not added.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to add game to Steam.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Added to Steam successfully. Steam is restarting.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Added to Steam successfully. Launch Steam to see the changes.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
