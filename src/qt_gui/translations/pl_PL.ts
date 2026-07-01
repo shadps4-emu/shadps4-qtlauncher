@@ -1303,6 +1303,18 @@ Please enter your keys and save them.</translation>
       <source>User</source>
       <translation type="unfinished">User</translation>
     </message>
+    <message>
+      <source>Add with Selected Emulator Version</source>
+      <translation type="unfinished">Add with Selected Emulator Version</translation>
+    </message>
+    <message>
+      <source>Add with Specified Emulator Version</source>
+      <translation type="unfinished">Add with Specified Emulator Version</translation>
+    </message>
+    <message>
+      <source>Add to Steam</source>
+      <translation type="unfinished">Add to Steam</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -3001,6 +3013,53 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Select a version first</source>
       <translation>Najpierw wybierz wersję</translation>
+    </message>
+  </context>
+  <context>
+    <name>SteamShortcut</name>
+    <message>
+      <source>Steam</source>
+      <translation type="unfinished">Steam</translation>
+    </message>
+    <message>
+      <source>%1 is already in your Steam library.</source>
+      <translation type="unfinished">%1 is already in your Steam library.</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation type="unfinished">Error</translation>
+    </message>
+    <message>
+      <source>Steam installation not found.</source>
+      <translation type="unfinished">Steam installation not found.</translation>
+    </message>
+    <message>
+      <source>No Steam user account found. Please log into Steam at least once.</source>
+      <translation type="unfinished">No Steam user account found. Please log into Steam at least once.</translation>
+    </message>
+    <message>
+      <source>Steam is Running</source>
+      <translation type="unfinished">Steam is Running</translation>
+    </message>
+    <message>
+      <source>Steam is currently running. It will be closed and restarted to apply the shortcut. Continue?</source>
+      <translation type="unfinished">Steam is currently running. It will be closed and restarted to apply the shortcut. Continue?</translation>
+    </message>
+    <message>
+      <source>Steam did not close in time. Shortcut was not added.</source>
+      <translation type="unfinished">Steam did not close in time. Shortcut was not added.</translation>
+    </message>
+    <message>
+      <source>Failed to add game to Steam.</source>
+      <translation type="unfinished">Failed to add game to Steam.</translation>
+    </message>
+    <message>
+      <source>Added to Steam successfully. Steam is restarting.</source>
+      <translation type="unfinished">Added to Steam successfully. Steam is restarting.</translation>
+    </message>
+    <message>
+      <source>Added to Steam successfully. Launch Steam to see the changes.</source>
+      <translation type="unfinished">Added to Steam successfully. Launch Steam to see the changes.</translation>
     </message>
   </context>
   <context>
