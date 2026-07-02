@@ -13,7 +13,6 @@
 #ifdef ENABLE_UPDATER
 #include "check_update.h"
 #endif
-#include "common/memory_patcher.h"
 #include "common/path_util.h"
 #include "common/scm_rev.h"
 #include "common/versions.h"
@@ -1497,18 +1496,6 @@ void MainWindow::StartEmulatorExecutable(std::filesystem::path emuPath, QString 
 }
 
 void MainWindow::RunGame() {
-    auto gameInfo = GameInfoClass();
-    auto dir = last_game_path.parent_path();
-    auto info = gameInfo.readGameInfo(dir);
-    auto appVersion = info.version;
-    auto gameSerial = info.serial;
-    auto patches = MemoryPatcher::readPatches(gameSerial, appVersion);
-    for (auto patch : patches) {
-        m_ipc_client->sendMemoryPatches(patch.modName, patch.address, patch.value, patch.target,
-                                        patch.size, patch.maskOffset, patch.littleEndian,
-                                        patch.mask, patch.maskOffset);
-    }
-
     m_ipc_client->startGame();
 }
 
