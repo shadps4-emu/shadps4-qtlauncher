@@ -1297,6 +1297,22 @@ Please enter your keys and save them.</source>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
       <translation>使用獎盃檢視器需要一個獎盃金鑰。您可以點擊「設定」-「管理加密金鑰」來輸入此金鑰。</translation>
     </message>
+    <message>
+      <source>User</source>
+      <translation type="unfinished">User</translation>
+    </message>
+    <message>
+      <source>Add with Selected Emulator Version</source>
+      <translation type="unfinished">Add with Selected Emulator Version</translation>
+    </message>
+    <message>
+      <source>Add with Specified Emulator Version</source>
+      <translation type="unfinished">Add with Specified Emulator Version</translation>
+    </message>
+    <message>
+      <source>Add to Steam</source>
+      <translation type="unfinished">Add to Steam</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -2638,10 +2654,6 @@ Select an emulator version from the right panel.</source>
       <translation>啟用開發者主機模式</translation>
     </message>
     <message>
-      <source>Set &quot;PSN signed-in&quot; to True</source>
-      <translation>將「PSN 登入狀態」設定為「已登入」</translation>
-    </message>
-    <message>
       <source>Set &quot;Network Connected&quot; to True</source>
       <translation>將「網路連線狀態」設定為「已連線」</translation>
     </message>
@@ -2684,10 +2696,6 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</source>
       <translation>將「網路連線狀態」設定為「已連線」：\n強制遊戲偵測到網路處於連線的狀態。實際上尚未支援線上功能。</translation>
-    </message>
-    <message>
-      <source>Set PSN Signed-in to True:\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported.</source>
-      <translation>將「PSN 登入狀態」設定為「已登入」：強制遊戲偵測到 PSN 處於已登入的狀態。實際上尚未支援 PSN 功能。</translation>
     </message>
     <message>
       <source>Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
@@ -2953,6 +2961,34 @@ Select an emulator version from the right panel.</source>
       <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
       <translation>日誌記錄過濾器：\n過濾日誌記錄以僅列出特定資訊。 \n範例：{[=&quot;-=]}Core:Debug{[=&quot;-=]} {[=&quot;-=]}Lib.Pad:Debug Common.Filesystem:Error{[=&quot;-=]} {[=&quot;-=]}*:Critical{[=&quot;-=]}\n等級：Trace、Debug、Info、Warning、Error、Critical、Off - 按照此順序，指定等級之後會不列出列表中等級低於其的所有資訊，並記錄列出等級高於其/同級的資訊。</translation>
     </message>
+    <message>
+      <source>Enable shadNet</source>
+      <translation type="unfinished">Enable shadNet</translation>
+    </message>
+    <message>
+      <source>ShadNet</source>
+      <translation type="unfinished">ShadNet</translation>
+    </message>
+    <message>
+      <source>Server</source>
+      <translation type="unfinished">Server</translation>
+    </message>
+    <message>
+      <source>Signaling Info</source>
+      <translation type="unfinished">Signaling Info</translation>
+    </message>
+    <message>
+      <source>Enable UPNP</source>
+      <translation type="unfinished">Enable UPNP</translation>
+    </message>
+    <message>
+      <source>WebAPI Server</source>
+      <translation type="unfinished">WebAPI Server</translation>
+    </message>
+    <message>
+      <source>shadNet:\nA PSN server replacement.\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadNet/register/.</source>
+      <translation type="unfinished">shadNet:\nA PSN server replacement.\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadNet/register/.</translation>
+    </message>
   </context>
   <context>
     <name>ShortcutDialog</name>
@@ -2971,6 +3007,53 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Select a version first</source>
       <translation>請先選取一個版本</translation>
+    </message>
+  </context>
+  <context>
+    <name>SteamShortcut</name>
+    <message>
+      <source>Steam</source>
+      <translation type="unfinished">Steam</translation>
+    </message>
+    <message>
+      <source>%1 is already in your Steam library.</source>
+      <translation type="unfinished">%1 is already in your Steam library.</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation type="unfinished">Error</translation>
+    </message>
+    <message>
+      <source>Steam installation not found.</source>
+      <translation type="unfinished">Steam installation not found.</translation>
+    </message>
+    <message>
+      <source>No Steam user account found. Please log into Steam at least once.</source>
+      <translation type="unfinished">No Steam user account found. Please log into Steam at least once.</translation>
+    </message>
+    <message>
+      <source>Steam is Running</source>
+      <translation type="unfinished">Steam is Running</translation>
+    </message>
+    <message>
+      <source>Steam is currently running. It will be closed and restarted to apply the shortcut. Continue?</source>
+      <translation type="unfinished">Steam is currently running. It will be closed and restarted to apply the shortcut. Continue?</translation>
+    </message>
+    <message>
+      <source>Steam did not close in time. Shortcut was not added.</source>
+      <translation type="unfinished">Steam did not close in time. Shortcut was not added.</translation>
+    </message>
+    <message>
+      <source>Failed to add game to Steam.</source>
+      <translation type="unfinished">Failed to add game to Steam.</translation>
+    </message>
+    <message>
+      <source>Added to Steam successfully. Steam is restarting.</source>
+      <translation type="unfinished">Added to Steam successfully. Steam is restarting.</translation>
+    </message>
+    <message>
+      <source>Added to Steam successfully. Launch Steam to see the changes.</source>
+      <translation type="unfinished">Added to Steam successfully. Launch Steam to see the changes.</translation>
     </message>
   </context>
   <context>
@@ -3101,6 +3184,54 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>&amp;Open User Directory</source>
       <translation>&amp;開啟使用者目錄</translation>
+    </message>
+    <message>
+      <source>Shad&amp;Net...</source>
+      <translation type="unfinished">Shad&amp;Net...</translation>
+    </message>
+    <message>
+      <source>On</source>
+      <translation type="unfinished">On</translation>
+    </message>
+    <message>
+      <source>On (%1)</source>
+      <translation type="unfinished">On (%1)</translation>
+    </message>
+    <message>
+      <source>Off</source>
+      <translation type="unfinished">Off</translation>
+    </message>
+    <message>
+      <source>ShadNet Settings - %1</source>
+      <translation type="unfinished">ShadNet Settings - %1</translation>
+    </message>
+    <message>
+      <source>Enable ShadNet for this user</source>
+      <translation type="unfinished">Enable ShadNet for this user</translation>
+    </message>
+    <message>
+      <source>Account ID (NPID)</source>
+      <translation type="unfinished">Account ID (NPID)</translation>
+    </message>
+    <message>
+      <source>Password</source>
+      <translation type="unfinished">Password</translation>
+    </message>
+    <message>
+      <source>Show password</source>
+      <translation type="unfinished">Show password</translation>
+    </message>
+    <message>
+      <source>Account ID (NPID):</source>
+      <translation type="unfinished">Account ID (NPID):</translation>
+    </message>
+    <message>
+      <source>Password:</source>
+      <translation type="unfinished">Password:</translation>
+    </message>
+    <message>
+      <source>Shad&amp;Net Settings...</source>
+      <translation type="unfinished">Shad&amp;Net Settings...</translation>
     </message>
   </context>
   <context>

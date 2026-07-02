@@ -1298,6 +1298,22 @@ Bitte gib die Schlüssel ein und speicher diese.</translation>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
       <translation>Ein Trophäen-Schlüssel wird benötigt, um die Trophäenansicht verwenden zu können. Dies kann durch Klicken auf "Einstellungen" - "Kryptografische Schlüssel verwalten" eingetragen werden.</translation>
     </message>
+    <message>
+      <source>User</source>
+      <translation>Benutzer</translation>
+    </message>
+    <message>
+      <source>Add with Selected Emulator Version</source>
+      <translation>Mit ausgewählter Emulator-Version hinzufügen</translation>
+    </message>
+    <message>
+      <source>Add with Specified Emulator Version</source>
+      <translation>Mit einer bestimmten Emulator-Version hinzufügen</translation>
+    </message>
+    <message>
+      <source>Add to Steam</source>
+      <translation>Zu Steam hinzufügen</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -2647,10 +2663,6 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
       <translation>Devkit Konsolen-Modus aktivieren</translation>
     </message>
     <message>
-      <source>Set &quot;PSN signed-in&quot; to True</source>
-      <translation>Setze den PSN-Status als angemeldet</translation>
-    </message>
-    <message>
       <source>Set &quot;Network Connected&quot; to True</source>
       <translation>Setze die Netzwerkverbindung als verbunden</translation>
     </message>
@@ -2693,10 +2705,6 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
     <message>
       <source>Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</source>
       <translation>Setze die Netzwerkverbindung als verbunden:\nErzwingt Spiele die Erkennung einer aktiven Netzwerkverbindung. Online-Funktionen werden noch nicht unterstützt.</translation>
-    </message>
-    <message>
-      <source>Set PSN Signed-in to True:\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported.</source>
-      <translation>Setze den PSN-Status als angemeldet:\nErzwingt Spiele die Erkennung einer Anmeldung beim PlayStation-Network (PSN). PSN-Funktionen werden noch nicht unterstützt.</translation>
     </message>
     <message>
       <source>Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
@@ -2962,6 +2970,34 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
       <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
       <translation>Protokoll-Filter:\nFiltert das Protokoll so, dass nur bestimmte Informationen ausgegeben werden.\nBeispiele: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\n Ebenen: Trace, Debug, Info, Warning, Error, Critical, Off - in dieser Reihenfolge, eine ausgewählte Ebene blendet alle niedrigeren Ebenen aus und zeigt alle höheren Ebenen an.</translation>
     </message>
+    <message>
+      <source>Enable shadNet</source>
+      <translation>ShadNet aktivieren</translation>
+    </message>
+    <message>
+      <source>ShadNet</source>
+      <translation>ShadNet</translation>
+    </message>
+    <message>
+      <source>Server</source>
+      <translation>Server</translation>
+    </message>
+    <message>
+      <source>Signaling Info</source>
+      <translation type="unfinished">Signaling Info</translation>
+    </message>
+    <message>
+      <source>Enable UPNP</source>
+      <translation>UPNP aktivieren</translation>
+    </message>
+    <message>
+      <source>WebAPI Server</source>
+      <translation>WebAPI Server</translation>
+    </message>
+    <message>
+      <source>shadNet:\nA PSN server replacement.\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadNet/register/.</source>
+      <translation>ShadNet:\n Ersetzt den PSN-Server.\nDie Kompatibilität ist derzeit sehr begrenzt.\nEin Account kann hier erstellt werden: https://www.shadps4.net/shadnet/register/.</translation>
+    </message>
   </context>
   <context>
     <name>ShortcutDialog</name>
@@ -2980,6 +3016,53 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
     <message>
       <source>Select a version first</source>
       <translation>Wähle zuerst eine Version aus</translation>
+    </message>
+  </context>
+  <context>
+    <name>SteamShortcut</name>
+    <message>
+      <source>Steam</source>
+      <translation>Steam</translation>
+    </message>
+    <message>
+      <source>%1 is already in your Steam library.</source>
+      <translation>%1 ist bereits in deiner Steam-Bibliothek.</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation>Fehler</translation>
+    </message>
+    <message>
+      <source>Steam installation not found.</source>
+      <translation>Steam-Installation nicht gefunden.</translation>
+    </message>
+    <message>
+      <source>No Steam user account found. Please log into Steam at least once.</source>
+      <translation>Kein Steam-Account gefunden. Bitte melde dich mindestens einmal bei Steam an.</translation>
+    </message>
+    <message>
+      <source>Steam is Running</source>
+      <translation>Steam läuft bereits</translation>
+    </message>
+    <message>
+      <source>Steam is currently running. It will be closed and restarted to apply the shortcut. Continue?</source>
+      <translation>Steam läuft gerade. Steam wird geschlossen und neu gestartet, damit die Verknüpfung eingetragen werden kann. Fortfahren?</translation>
+    </message>
+    <message>
+      <source>Steam did not close in time. Shortcut was not added.</source>
+      <translation>Steam konnte sich nicht rechtzeitig schließen. Die Verknüpfung wurde nicht hinzugefügt.</translation>
+    </message>
+    <message>
+      <source>Failed to add game to Steam.</source>
+      <translation>Fehler beim Hinzufügen des Spiels zu Steam.</translation>
+    </message>
+    <message>
+      <source>Added to Steam successfully. Steam is restarting.</source>
+      <translation>Erfolgreich zu Steam hinzugefügt. Steam wird neu gestartet.</translation>
+    </message>
+    <message>
+      <source>Added to Steam successfully. Launch Steam to see the changes.</source>
+      <translation>Erfolgreich zu Steam hinzugefügt. Starte Steam, um die Änderungen zu sehen.</translation>
     </message>
   </context>
   <context>
@@ -3110,6 +3193,54 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
     <message>
       <source>&amp;Open User Directory</source>
       <translation>&amp;Benutzerverzeichnis öffnen</translation>
+    </message>
+    <message>
+      <source>Shad&amp;Net...</source>
+      <translation>Shad&amp;Net...</translation>
+    </message>
+    <message>
+      <source>On</source>
+      <translation>Aktiv</translation>
+    </message>
+    <message>
+      <source>On (%1)</source>
+      <translation>Aktiv (%1)</translation>
+    </message>
+    <message>
+      <source>Off</source>
+      <translation>Inaktiv</translation>
+    </message>
+    <message>
+      <source>ShadNet Settings - %1</source>
+      <translation>ShadNet-Einstellungen - %1</translation>
+    </message>
+    <message>
+      <source>Enable ShadNet for this user</source>
+      <translation>ShadNet für diesen Benutzer aktivieren</translation>
+    </message>
+    <message>
+      <source>Account ID (NPID)</source>
+      <translation>Account-ID (NPID)</translation>
+    </message>
+    <message>
+      <source>Password</source>
+      <translation>Passwort</translation>
+    </message>
+    <message>
+      <source>Show password</source>
+      <translation>Passwort anzeigen</translation>
+    </message>
+    <message>
+      <source>Account ID (NPID):</source>
+      <translation>Account-ID (NPID):</translation>
+    </message>
+    <message>
+      <source>Password:</source>
+      <translation>Passwort:</translation>
+    </message>
+    <message>
+      <source>Shad&amp;Net Settings...</source>
+      <translation>Shad&amp;Net-Einstellungen …</translation>
     </message>
   </context>
   <context>

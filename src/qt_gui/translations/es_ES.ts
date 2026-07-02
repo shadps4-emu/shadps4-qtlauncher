@@ -1299,6 +1299,22 @@ Debes introducir tus claves y guardarlas.</translation>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
       <translation>Se necesita una clave de trofeos para poder usar el visualizador de trofeos. Puedes introducirla en Utilidades - Gestor de claves criptográficas.</translation>
     </message>
+    <message>
+      <source>User</source>
+      <translation>Usuario</translation>
+    </message>
+    <message>
+      <source>Add with Selected Emulator Version</source>
+      <translation>Añadir con la versión seleccionada del emulador</translation>
+    </message>
+    <message>
+      <source>Add with Specified Emulator Version</source>
+      <translation>Añadir con la versión indicada del emulador</translation>
+    </message>
+    <message>
+      <source>Add to Steam</source>
+      <translation>Añadir a Steam</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -1493,7 +1509,7 @@ Debes introducir tus claves y guardarlas.</translation>
     </message>
     <message>
       <source>note: click Help Button/Special Keybindings for more information</source>
-      <translation>Nota: para más información, haz clic en Ayuda/Asignaciones especiales</translation>
+      <translation>Nota: para más información, haz clic en el botón Ayuda -> Asignaciones especiales</translation>
     </message>
     <message>
       <source>Triangle</source>
@@ -2644,10 +2660,6 @@ Selecciona una versión del emulador en el panel derecho.</translation>
       <translation>Habilitar modo kit de desarrollo</translation>
     </message>
     <message>
-      <source>Set &quot;PSN signed-in&quot; to True</source>
-      <translation>Cambia la opción «Inicio de sesión en PSN» a verdadero</translation>
-    </message>
-    <message>
       <source>Set &quot;Network Connected&quot; to True</source>
       <translation>Cambia la opción «Conexión a red» a verdadero</translation>
     </message>
@@ -2690,10 +2702,6 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     <message>
       <source>Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</source>
       <translation>Cambia la opción «Conexión a red» a verdadero:\nFuerza a los juegos a detectar una conexión de red activa. Las funciones reales de red aún no están soportadas.</translation>
-    </message>
-    <message>
-      <source>Set PSN Signed-in to True:\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported.</source>
-      <translation>Cambia la opción «Inicio de sesión en PSN» a verdadero:\nFuerza a los juegos a detectar una sesión iniciada en PSN. Las funciones reales de PSN aún no están soportadas.</translation>
     </message>
     <message>
       <source>Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
@@ -2959,6 +2967,34 @@ Selecciona una versión del emulador en el panel derecho.</translation>
       <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
       <translation>Filtro del registro:\nFiltra el registro para que muestre solo información concreta.\nEjemplos: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nNiveles: trace, debug, info, warning, error, critical, off (desactivado). Cada nivel silencia todos los niveles que vayan por delante y registra los que se encuentren por detrás, siguiendo este mismo orden.</translation>
     </message>
+    <message>
+      <source>Enable shadNet</source>
+      <translation>Habilitar ShadNet</translation>
+    </message>
+    <message>
+      <source>ShadNet</source>
+      <translation>ShadNet</translation>
+    </message>
+    <message>
+      <source>Server</source>
+      <translation>Servidor</translation>
+    </message>
+    <message>
+      <source>Signaling Info</source>
+      <translation>Información de señalización</translation>
+    </message>
+    <message>
+      <source>Enable UPNP</source>
+      <translation>Habilitar UPNP</translation>
+    </message>
+    <message>
+      <source>WebAPI Server</source>
+      <translation>Servidor WebAPI</translation>
+    </message>
+    <message>
+      <source>shadNet:\nA PSN server replacement.\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadNet/register/.</source>
+      <translation>shadNet:\nUn servidor sustituto de PSN.\nEn estos momentos, su compatibilidad es muy limitada.\nPuedes registrarte en https://www.shadps4.net/shadNet/register/.</translation>
+    </message>
   </context>
   <context>
     <name>ShortcutDialog</name>
@@ -2977,6 +3013,53 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     <message>
       <source>Select a version first</source>
       <translation>Debes seleccionar una versión</translation>
+    </message>
+  </context>
+  <context>
+    <name>SteamShortcut</name>
+    <message>
+      <source>Steam</source>
+      <translation>Steam</translation>
+    </message>
+    <message>
+      <source>%1 is already in your Steam library.</source>
+      <translation>%1 ya está en tu biblioteca de Steam.</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation>Error</translation>
+    </message>
+    <message>
+      <source>Steam installation not found.</source>
+      <translation>No se ha encontrado la instalación de Steam.</translation>
+    </message>
+    <message>
+      <source>No Steam user account found. Please log into Steam at least once.</source>
+      <translation>No se ha encontrado una cuenta de usuario de Steam. Debes iniciar sesión en Steam al menos una vez.</translation>
+    </message>
+    <message>
+      <source>Steam is Running</source>
+      <translation>Steam se está ejecutando</translation>
+    </message>
+    <message>
+      <source>Steam is currently running. It will be closed and restarted to apply the shortcut. Continue?</source>
+      <translation>Steam se está ejecutando. Se va a proceder a cerrar y reiniciar Steam para aplicar el acceso directo. ¿Quieres continuar?</translation>
+    </message>
+    <message>
+      <source>Steam did not close in time. Shortcut was not added.</source>
+      <translation>Steam no se ha cerrado a tiempo. No se ha añadido el acceso directo.</translation>
+    </message>
+    <message>
+      <source>Failed to add game to Steam.</source>
+      <translation>Error al añadir el juego a Steam.</translation>
+    </message>
+    <message>
+      <source>Added to Steam successfully. Steam is restarting.</source>
+      <translation>Juego añadido a Steam. Se está reiniciando Steam.</translation>
+    </message>
+    <message>
+      <source>Added to Steam successfully. Launch Steam to see the changes.</source>
+      <translation>Juego añadido a Steam. Ejecuta Steam para ver los cambios.</translation>
     </message>
   </context>
   <context>
@@ -3030,15 +3113,15 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>&amp;Set Default User</source>
-      <translation>&amp;Establecer usuario predeterminado</translation>
+      <translation>&amp;Asig. usuario predet.</translation>
     </message>
     <message>
       <source>&amp;Set Color</source>
-      <translation>&amp;Establecer color</translation>
+      <translation>&amp;Asignar color</translation>
     </message>
     <message>
       <source>&amp;Set Controller Port</source>
-      <translation>&amp;Establecer puerto de mando</translation>
+      <translation>&amp;Asig. puerto de mando</translation>
     </message>
     <message>
       <source>&amp;Close</source>
@@ -3090,7 +3173,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Set User Color</source>
-      <translation>Establecer color de usuario</translation>
+      <translation>Asignar color de usuario</translation>
     </message>
     <message>
       <source>Select color:</source>
@@ -3098,7 +3181,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Set Controller Port</source>
-      <translation>Establecer puerto de mando</translation>
+      <translation>Asignar puerto de mando</translation>
     </message>
     <message>
       <source>Assign port (1-4) to this user:</source>
@@ -3107,6 +3190,54 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     <message>
       <source>&amp;Open User Directory</source>
       <translation>&amp;Abrir directorio de usuarios</translation>
+    </message>
+    <message>
+      <source>Shad&amp;Net...</source>
+      <translation>Shad&amp;Net...</translation>
+    </message>
+    <message>
+      <source>On</source>
+      <translation>Activado</translation>
+    </message>
+    <message>
+      <source>On (%1)</source>
+      <translation>Activado (%1)</translation>
+    </message>
+    <message>
+      <source>Off</source>
+      <translation>Desactivado</translation>
+    </message>
+    <message>
+      <source>ShadNet Settings - %1</source>
+      <translation>Configuración de ShadNet - %1</translation>
+    </message>
+    <message>
+      <source>Enable ShadNet for this user</source>
+      <translation>Habilitar ShadNet para este usuario</translation>
+    </message>
+    <message>
+      <source>Account ID (NPID)</source>
+      <translation>ID de cuenta (NPID)</translation>
+    </message>
+    <message>
+      <source>Password</source>
+      <translation>Contraseña</translation>
+    </message>
+    <message>
+      <source>Show password</source>
+      <translation>Mostrar contraseña</translation>
+    </message>
+    <message>
+      <source>Account ID (NPID):</source>
+      <translation>ID de cuenta (NPID):</translation>
+    </message>
+    <message>
+      <source>Password:</source>
+      <translation>Contraseña:</translation>
+    </message>
+    <message>
+      <source>Shad&amp;Net Settings...</source>
+      <translation>Configuración de Shad&amp;Net...</translation>
     </message>
   </context>
   <context>

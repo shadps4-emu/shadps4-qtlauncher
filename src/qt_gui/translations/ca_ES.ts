@@ -1299,6 +1299,22 @@ Si us plau, introdueix les teves claus per desar-les.</translation>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
       <translation>Es necessita una clau de trofeu per fer servir el visualitzador de trofeus. Pot introduir la clau clicant a Configuració - Administrar claus criptogràfiques.</translation>
     </message>
+    <message>
+      <source>User</source>
+      <translation>Usuari</translation>
+    </message>
+    <message>
+      <source>Add with Selected Emulator Version</source>
+      <translation>Afegeix amb la versió seleccionada de l'emulador</translation>
+    </message>
+    <message>
+      <source>Add with Specified Emulator Version</source>
+      <translation>Afegeix amb la versió especificada de l'emulador</translation>
+    </message>
+    <message>
+      <source>Add to Steam</source>
+      <translation>Afegeix a Steam</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -2644,10 +2660,6 @@ Selecciona una versió del panell dret.</translation>
       <translation>Activa el mode consola de desenvolupador</translation>
     </message>
     <message>
-      <source>Set &quot;PSN signed-in&quot; to True</source>
-      <translation>Estableix l'inici de sessió de PSN a cert</translation>
-    </message>
-    <message>
       <source>Set &quot;Network Connected&quot; to True</source>
       <translation>Estableix la connexió a xarxa com a certa</translation>
     </message>
@@ -2690,10 +2702,6 @@ Selecciona una versió del panell dret.</translation>
     <message>
       <source>Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</source>
       <translation>Estableix la connexió a xarxa com a certa:\nForça els jocs a detectar una connexió a xarxa activa. Les funcions de connexió a xarxa no estan implementades actualment.</translation>
-    </message>
-    <message>
-      <source>Set PSN Signed-in to True:\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported.</source>
-      <translation>Estableix l'inici de sessió a PSN com a cert:\nForça els jocs a detectar un inici de sessió a PSN actiu. Les funcions de PSN no estan implementades actualment.</translation>
     </message>
     <message>
       <source>Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
@@ -2959,6 +2967,34 @@ Selecciona una versió del panell dret.</translation>
       <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
       <translation>Filtre del registre:\nFiltra el registre per mostrar només la informació especificada.\nExemples: &quot;Core:Trace&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nNivells: Trace, Debug, Info, Warning, Error, Critical - en aquest ordre, un nivell específic silencia tots els nivells precedents de la llista i mostra només els nivells posteriors.</translation>
     </message>
+    <message>
+      <source>Enable shadNet</source>
+      <translation>Activa shadNet</translation>
+    </message>
+    <message>
+      <source>ShadNet</source>
+      <translation>ShadNet</translation>
+    </message>
+    <message>
+      <source>Server</source>
+      <translation>Servidor</translation>
+    </message>
+    <message>
+      <source>Signaling Info</source>
+      <translation>Informació d'inici de sessió</translation>
+    </message>
+    <message>
+      <source>Enable UPNP</source>
+      <translation>Activa UPnP</translation>
+    </message>
+    <message>
+      <source>WebAPI Server</source>
+      <translation>Servidor WebAPI</translation>
+    </message>
+    <message>
+      <source>shadNet:\nA PSN server replacement.\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadNet/register/.</source>
+      <translation>shadNet:\nReemplaça a un servidor PSN.\nLa compatibilitat és limitada en aquest moment.\nEt pots registrar a https://www.shadps4.net/shadNet/register/.</translation>
+    </message>
   </context>
   <context>
     <name>ShortcutDialog</name>
@@ -2977,6 +3013,53 @@ Selecciona una versió del panell dret.</translation>
     <message>
       <source>Select a version first</source>
       <translation>Selecciona primer una versió</translation>
+    </message>
+  </context>
+  <context>
+    <name>SteamShortcut</name>
+    <message>
+      <source>Steam</source>
+      <translation>Steam</translation>
+    </message>
+    <message>
+      <source>%1 is already in your Steam library.</source>
+      <translation>%1 ja està a la teva llibreria de Steam.</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation>Error</translation>
+    </message>
+    <message>
+      <source>Steam installation not found.</source>
+      <translation>No s'ha trobat una instal·lació de Steam.</translation>
+    </message>
+    <message>
+      <source>No Steam user account found. Please log into Steam at least once.</source>
+      <translation>No s'ha trobat cap compte d'usuari de Steam. Inicia sessió a Steam, si us plau.</translation>
+    </message>
+    <message>
+      <source>Steam is Running</source>
+      <translation>Steam està en funcionament</translation>
+    </message>
+    <message>
+      <source>Steam is currently running. It will be closed and restarted to apply the shortcut. Continue?</source>
+      <translation>Steam ja està en funcionament. Es tancarà i reiniciarà per aplicar la drecera. Vols continuar?</translation>
+    </message>
+    <message>
+      <source>Steam did not close in time. Shortcut was not added.</source>
+      <translation>Steam no s'ha tancat a temps. No s'ha afegit la drecera.</translation>
+    </message>
+    <message>
+      <source>Failed to add game to Steam.</source>
+      <translation>Error en afegir el joc a Steam.</translation>
+    </message>
+    <message>
+      <source>Added to Steam successfully. Steam is restarting.</source>
+      <translation>S'ha afegit correctament a Steam. Steam s'està reinciant.</translation>
+    </message>
+    <message>
+      <source>Added to Steam successfully. Launch Steam to see the changes.</source>
+      <translation>S'ha afegit correctament a Steam. Inicia Steam per veure els canvis.</translation>
     </message>
   </context>
   <context>
@@ -3107,6 +3190,54 @@ Selecciona una versió del panell dret.</translation>
     <message>
       <source>&amp;Open User Directory</source>
       <translation>&amp;Obre la carpeta d'usuari</translation>
+    </message>
+    <message>
+      <source>Shad&amp;Net...</source>
+      <translation>Shad&amp;Net...</translation>
+    </message>
+    <message>
+      <source>On</source>
+      <translation>On</translation>
+    </message>
+    <message>
+      <source>On (%1)</source>
+      <translation>On (%1)</translation>
+    </message>
+    <message>
+      <source>Off</source>
+      <translation>Off</translation>
+    </message>
+    <message>
+      <source>ShadNet Settings - %1</source>
+      <translation>Configuració ShadNet - %1</translation>
+    </message>
+    <message>
+      <source>Enable ShadNet for this user</source>
+      <translation>Activa ShadNet per aquest usuari</translation>
+    </message>
+    <message>
+      <source>Account ID (NPID)</source>
+      <translation>ID del compte (NPID)</translation>
+    </message>
+    <message>
+      <source>Password</source>
+      <translation>Contrasenya</translation>
+    </message>
+    <message>
+      <source>Show password</source>
+      <translation>Mostra la contrasenya</translation>
+    </message>
+    <message>
+      <source>Account ID (NPID):</source>
+      <translation>ID del compte (NPID):</translation>
+    </message>
+    <message>
+      <source>Password:</source>
+      <translation>Contrasenya:</translation>
+    </message>
+    <message>
+      <source>Shad&amp;Net Settings...</source>
+      <translation>Configuració Shad&amp;Net...</translation>
     </message>
   </context>
   <context>
