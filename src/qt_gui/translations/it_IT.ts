@@ -2992,8 +2992,8 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
       <translation>Server WebAPI</translation>
     </message>
     <message>
-      <source>shadNet:\nA PSN server replacement.\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadNet/register/.</source>
-      <translation>shadNet:\nUn sostituto del server PSN.\nLa compatibilità è molto limitata al momento.\nPuoi registrarti su https://www.shadps4.net/shadNet/register/.</translation>
+      <source>shadNet:\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadnet/register/.</source>
+      <translation>shadNet:.\nLa compatibilità è molto limitata al momento.\nPuoi registrarti su https://www.shadps4.net/shadnet/register/.</translation>
     </message>
   </context>
   <context>
