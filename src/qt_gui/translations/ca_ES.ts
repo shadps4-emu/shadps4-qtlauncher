@@ -2993,7 +2993,7 @@ Selecciona una versió del panell dret.</translation>
     </message>
     <message>
       <source>shadNet:\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadnet/register/.</source>
-      <translation type="unfinished">shadNet:\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadnet/register/.</translation>
+      <translation>shadNet:\nLa compatibilitat és molt limitada ara mateix.\nEt pots registrar a https://www.shadps4.net/shadnet/register/.</translation>
     </message>
   </context>
   <context>
