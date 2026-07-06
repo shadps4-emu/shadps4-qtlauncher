@@ -2864,7 +2864,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Select shadPS4 Home Path</source>
-      <translation>Selecione o caminho da pasta inicial do shadPS4</translation>
+      <translation>Selecione o Caminho da Pasta Inicial do shadPS4</translation>
     </message>
     <message>
       <source>Select the system modules folder</source>
@@ -2872,39 +2872,39 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Home Folder Location (Saves, Inputs, Trophy Data)</source>
-      <translation type="unfinished">Home Folder Location (Saves, Inputs, Trophy Data)</translation>
+      <translation>Localização da Pasta Inicial (Gravações, Entradas, Dados de Troféus)</translation>
     </message>
     <message>
       <source>Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</source>
-      <translation type="unfinished">Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</translation>
+      <translation>Localização da Pasta Inicial:\nA pasta onde as gravações, os dados de troféus e as definições de entradas são armazenados para todos os utilizadores.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the home folder.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the home folder.</translation>
+      <translation>Procurar:\nProcure uma pasta para definir como psata inicial.</translation>
     </message>
     <message>
       <source>Audio</source>
-      <translation type="unfinished">Audio</translation>
+      <translation>Áudio</translation>
     </message>
     <message>
       <source>Audio Backend</source>
-      <translation type="unfinished">Audio Backend</translation>
+      <translation>Motor de Áudio</translation>
     </message>
     <message>
       <source>Mic Device</source>
-      <translation type="unfinished">Mic Device</translation>
+      <translation>Dispositivo de Microfone</translation>
     </message>
     <message>
       <source>Devices</source>
-      <translation type="unfinished">Devices</translation>
+      <translation>Dispositivos</translation>
     </message>
     <message>
       <source>Camera</source>
-      <translation type="unfinished">Camera</translation>
+      <translation>Câmara</translation>
     </message>
     <message>
       <source>Log Sync</source>
-      <translation type="unfinished">Log Sync</translation>
+      <translation>Sincronização de Registos</translation>
     </message>
     <message>
       <source>Log Skip Duplicate</source>
