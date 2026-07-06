@@ -2993,7 +2993,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>shadNet:\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadnet/register/.</source>
-      <translation type="unfinished">shadNet:\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadnet/register/.</translation>
+      <translation>shadNet:\n兼容性目前非常有限，\n您可以在 https://www.shadps4.net/sadNet/register/上注册。</translation>
     </message>
   </context>
   <context>
