@@ -2784,7 +2784,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>DLC Path</source>
-      <translation>Diretório das DLCs</translation>
+      <translation>Diretório de DLCs</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path</source>
@@ -3038,27 +3038,27 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Steam is Running</source>
-      <translation type="unfinished">Steam is Running</translation>
+      <translation>A Steam está a ser Executada</translation>
     </message>
     <message>
       <source>Steam is currently running. It will be closed and restarted to apply the shortcut. Continue?</source>
-      <translation type="unfinished">Steam is currently running. It will be closed and restarted to apply the shortcut. Continue?</translation>
+      <translation>A Steam está a ser executada. Será encerrada e reiniciada para aplicar o atalho. Deseja prosseguir?</translation>
     </message>
     <message>
       <source>Steam did not close in time. Shortcut was not added.</source>
-      <translation type="unfinished">Steam did not close in time. Shortcut was not added.</translation>
+      <translation>A Steam não encerrou a tempo. O atalho não foi adicionado.</translation>
     </message>
     <message>
       <source>Failed to add game to Steam.</source>
-      <translation type="unfinished">Failed to add game to Steam.</translation>
+      <translation>Falha ao adicionar o jogo à Steam.</translation>
     </message>
     <message>
       <source>Added to Steam successfully. Steam is restarting.</source>
-      <translation type="unfinished">Added to Steam successfully. Steam is restarting.</translation>
+      <translation>Adicionado à Steam com sucesso. A reiniciar a Steam.</translation>
     </message>
     <message>
       <source>Added to Steam successfully. Launch Steam to see the changes.</source>
-      <translation type="unfinished">Added to Steam successfully. Launch Steam to see the changes.</translation>
+      <translation>Adicionado à Steam com sucesso. Execute a Steam para ver as mudanças.</translation>
     </message>
   </context>
   <context>
@@ -3089,42 +3089,42 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Select User:</source>
-      <translation type="unfinished">Select User:</translation>
+      <translation>Selecionar Utilizador:</translation>
     </message>
   </context>
   <context>
     <name>UserManagerDialog</name>
     <message>
       <source>User Manager</source>
-      <translation type="unfinished">User Manager</translation>
+      <translation>Gestor de Utilizadores</translation>
     </message>
     <message>
       <source>&amp;Create User</source>
-      <translation type="unfinished">&amp;Create User</translation>
+      <translation>&amp;Criar Utilizador</translation>
     </message>
     <message>
       <source>&amp;Delete User</source>
-      <translation type="unfinished">&amp;Delete User</translation>
+      <translation>&amp;Eliminar Utilizador</translation>
     </message>
     <message>
       <source>&amp;Rename User</source>
-      <translation type="unfinished">&amp;Rename User</translation>
+      <translation>&amp;Renomear Utilizador</translation>
     </message>
     <message>
       <source>&amp;Set Default User</source>
-      <translation type="unfinished">&amp;Set Default User</translation>
+      <translation>&amp;Definir Utilizador Predefinido</translation>
     </message>
     <message>
       <source>&amp;Set Color</source>
-      <translation type="unfinished">&amp;Set Color</translation>
+      <translation>&amp;Definir Cor</translation>
     </message>
     <message>
       <source>&amp;Set Controller Port</source>
-      <translation type="unfinished">&amp;Set Controller Port</translation>
+      <translation>&amp;Definir Porta do Comando</translation>
     </message>
     <message>
       <source>&amp;Close</source>
-      <translation type="unfinished">&amp;Close</translation>
+      <translation>&amp;Fechar</translation>
     </message>
     <message>
       <source>Error</source>
@@ -3132,91 +3132,91 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Cannot add more users.</source>
-      <translation type="unfinished">Cannot add more users.</translation>
+      <translation>Não é possível adicionar mais utilizadores.</translation>
     </message>
     <message>
       <source>Create New User</source>
-      <translation type="unfinished">Create New User</translation>
+      <translation>Criar Utilizador</translation>
     </message>
     <message>
       <source>New User ID: %1</source>
-      <translation type="unfinished">New User ID: %1</translation>
+      <translation>Novo ID de Utilizador: %1</translation>
     </message>
     <message>
       <source>Username (3–16 chars, letters, numbers, _, -)</source>
-      <translation type="unfinished">Username (3–16 chars, letters, numbers, _, -)</translation>
+      <translation>Nome de utilizador (3–16 caracteres, letras, números, _, -)</translation>
     </message>
     <message>
       <source>Invalid Username</source>
-      <translation type="unfinished">Invalid Username</translation>
+      <translation>Nome de Utilizador Inválido</translation>
     </message>
     <message>
       <source>Username must be 3–16 chars and valid.</source>
-      <translation type="unfinished">Username must be 3–16 chars and valid.</translation>
+      <translation>O nome de utilizador deve ter entre 3 e 16 caracteres e ser válido.</translation>
     </message>
     <message>
       <source>Delete Confirmation</source>
-      <translation type="unfinished">Delete Confirmation</translation>
+      <translation>Confirmação de Eliminação</translation>
     </message>
     <message>
       <source>Delete user ID %1?</source>
-      <translation type="unfinished">Delete user ID %1?</translation>
+      <translation>Eliminar o utilizador com ID %1?</translation>
     </message>
     <message>
       <source>Rename User</source>
-      <translation type="unfinished">Rename User</translation>
+      <translation>Renomear Utilizador</translation>
     </message>
     <message>
       <source>Old Username: %1</source>
-      <translation type="unfinished">Old Username: %1</translation>
+      <translation>Nome de Utilizador Antigo: %1</translation>
     </message>
     <message>
       <source>Set User Color</source>
-      <translation type="unfinished">Set User Color</translation>
+      <translation>Definir Cor do Utilizador</translation>
     </message>
     <message>
       <source>Select color:</source>
-      <translation type="unfinished">Select color:</translation>
+      <translation>Selecionar cor:</translation>
     </message>
     <message>
       <source>Set Controller Port</source>
-      <translation type="unfinished">Set Controller Port</translation>
+      <translation>Definir Porta do Comando</translation>
     </message>
     <message>
       <source>Assign port (1-4) to this user:</source>
-      <translation type="unfinished">Assign port (1-4) to this user:</translation>
+      <translation>Atribuir porta (1-4) a este utilizador:</translation>
     </message>
     <message>
       <source>&amp;Open User Directory</source>
-      <translation type="unfinished">&amp;Open User Directory</translation>
+      <translation>&amp;Abrir o Diretório do Utilizador</translation>
     </message>
     <message>
       <source>Shad&amp;Net...</source>
-      <translation type="unfinished">Shad&amp;Net...</translation>
+      <translation>Shad&amp;Net...</translation>
     </message>
     <message>
       <source>On</source>
-      <translation type="unfinished">On</translation>
+      <translation>Ligado</translation>
     </message>
     <message>
       <source>On (%1)</source>
-      <translation type="unfinished">On (%1)</translation>
+      <translation>Ligado (%1)</translation>
     </message>
     <message>
       <source>Off</source>
-      <translation type="unfinished">Off</translation>
+      <translation>Desligado</translation>
     </message>
     <message>
       <source>ShadNet Settings - %1</source>
-      <translation type="unfinished">ShadNet Settings - %1</translation>
+      <translation>Definições da ShadNet - %1</translation>
     </message>
     <message>
       <source>Enable ShadNet for this user</source>
-      <translation type="unfinished">Enable ShadNet for this user</translation>
+      <translation>Ativar a ShadNet para este utilizador</translation>
     </message>
     <message>
       <source>Account ID (NPID)</source>
-      <translation type="unfinished">Account ID (NPID)</translation>
+      <translation>ID da Conta (NPID)</translation>
     </message>
     <message>
       <source>Password</source>
@@ -3228,38 +3228,38 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Account ID (NPID):</source>
-      <translation type="unfinished">Account ID (NPID):</translation>
+      <translation>ID da Conta (NPID):</translation>
     </message>
     <message>
       <source>Password:</source>
-      <translation type="unfinished">Password:</translation>
+      <translation>Palavra-passe:</translation>
     </message>
     <message>
       <source>Shad&amp;Net Settings...</source>
-      <translation type="unfinished">Shad&amp;Net Settings...</translation>
+      <translation>Definições da Shad&amp;Net...</translation>
     </message>
   </context>
   <context>
     <name>VersionDialog</name>
     <message>
       <source>Version Manager</source>
-      <translation type="unfinished">Version Manager</translation>
+      <translation>Gestor de Versões</translation>
     </message>
     <message>
       <source>Path to save versions</source>
-      <translation type="unfinished">Path to save versions</translation>
+      <translation>Caminho para guardar versões</translation>
     </message>
     <message>
       <source>Browse</source>
-      <translation type="unfinished">Browse</translation>
+      <translation>Procurar</translation>
     </message>
     <message>
       <source>Installed</source>
-      <translation type="unfinished">Installed</translation>
+      <translation>Instalada</translation>
     </message>
     <message>
       <source>Selected</source>
-      <translation type="unfinished">Selected</translation>
+      <translation>Selecionada</translation>
     </message>
     <message>
       <source>Version</source>
@@ -3275,39 +3275,39 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Add Custom</source>
-      <translation type="unfinished">Add Custom</translation>
+      <translation>Adicionar Versão Personalizada</translation>
     </message>
     <message>
       <source>Delete</source>
-      <translation type="unfinished">Delete</translation>
+      <translation>Eliminar</translation>
     </message>
     <message>
       <source>Refresh List</source>
-      <translation type="unfinished">Refresh List</translation>
+      <translation>Atualizar Lista</translation>
     </message>
     <message>
       <source>Download</source>
-      <translation type="unfinished">Download</translation>
+      <translation>Transferir</translation>
     </message>
     <message>
       <source>Check for Pre-release updates at startup</source>
-      <translation type="unfinished">Check for Pre-release updates at startup</translation>
+      <translation>Verificar atualizações de pré‑lançamento no arranque</translation>
     </message>
     <message>
       <source>Check for Pre-release Updates</source>
-      <translation type="unfinished">Check for Pre-release Updates</translation>
+      <translation>Verificar atualizações de pré‑lançamento</translation>
     </message>
     <message>
       <source>Select the folder where the emulator versions will be installed</source>
-      <translation type="unfinished">Select the folder where the emulator versions will be installed</translation>
+      <translation>Selecione a pasta onde as versões do emulador serão instaladas</translation>
     </message>
     <message>
       <source>Select executable</source>
-      <translation type="unfinished">Select executable</translation>
+      <translation>Selecionar o executável</translation>
     </message>
     <message>
       <source>Executable (*.exe)</source>
-      <translation type="unfinished">Executable (*.exe)</translation>
+      <translation>Executável (*.EXE)</translation>
     </message>
     <message>
       <source>Version name</source>
@@ -3315,7 +3315,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Enter the name of this version as it appears in the list.</source>
-      <translation type="unfinished">Enter the name of this version as it appears in the list.</translation>
+      <translation>Introduza o nome desta versão tal como aparece na lista.</translation>
     </message>
     <message>
       <source>Error</source>
@@ -3327,81 +3327,80 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Version added successfully.</source>
-      <translation type="unfinished">Version added successfully.</translation>
+      <translation>Versão adiciona com sucesso.</translation>
     </message>
     <message>
       <source>Failed to determine the folder path.</source>
-      <translation type="unfinished">Failed to determine the folder path.</translation>
+      <translation>Falha ao determinar o caminho da pasta.</translation>
     </message>
     <message>
       <source>Delete version</source>
-      <translation type="unfinished">Delete version</translation>
+      <translation>Eliminar a versão</translation>
     </message>
     <message>
       <source>Do you want to delete the version</source>
-      <translation type="unfinished">Do you want to delete the version</translation>
+      <translation>Deseja eliminar a versão</translation>
     </message>
     <message>
       <source>Version list update</source>
-      <translation type="unfinished">Version list update</translation>
+      <translation>Atualização da lista de versões</translation>
     </message>
     <message>
       <source>No news, the version list is already updated.</source>
-      <translation type="unfinished">No news, the version list is already updated.</translation>
+      <translation>Sem novidades, a lista de versões já está atualizada.</translation>
     </message>
     <message>
       <source>The latest versions have been added to the list for download.</source>
-      <translation type="unfinished">The latest versions have been added to the list for download.</translation>
+      <translation>As versões mais recentes foram adicionadas à lista para transferência.</translation>
     </message>
     <message>
       <source>Error accessing GitHub API</source>
-      <translation type="unfinished">Error accessing GitHub API</translation>
+      <translation>Erro de acesso à API do GitHub</translation>
     </message>
     <message>
       <source>First you need to choose a location to save the versions in
 &apos;Path to save versions&apos;</source>
-      <translation type="unfinished">First you need to choose a location to save the versions in
-&apos;Path to save versions&apos;</translation>
+      <translation>Primeiro tem de escolher uma localização para guardar as versões em &apos;Caminhos&apos;</translation>
     </message>
     <message>
       <source>Do you want to download the version</source>
-      <translation type="unfinished">Do you want to download the version</translation>
+      <translation>Deseja transferir a versão</translation>
     </message>
     <message>
       <source>No files available for this platform.</source>
-      <translation type="unfinished">No files available for this platform.</translation>
+      <translation>Nenhum ficheiro disponível para esta plataforma.</translation>
     </message>
     <message>
       <source>Downloading %1 , please wait...</source>
-      <translation type="unfinished">Downloading %1 , please wait...</translation>
+      <translation>A transferir a versão %1, por favor aguarde...</translation>
     </message>
     <message>
       <source>Could not save file.</source>
-      <translation type="unfinished">Could not save file.</translation>
+      <translation>Não foi possível guardar o ficheiro.</translation>
     </message>
     <message>
       <source>Version %1 has been downloaded and selected.</source>
-      <translation type="unfinished">Version %1 has been downloaded and selected.</translation>
+      <translation>A versão %1 foi transferida e selecionada.</translation>
     </message>
     <message>
       <source>Failed to create zip extraction script</source>
-      <translation type="unfinished">Failed to create zip extraction script</translation>
+      <translation>Falha ao criar o script de extração ZIP</translation>
     </message>
     <message>
       <source>The GitHub API response is not a valid JSON array.</source>
-      <translation type="unfinished">The GitHub API response is not a valid JSON array.</translation>
+      <translation>A resposta da API do GitHub não é um array JSON válido.</translation>
     </message>
     <message>
       <source>Auto Updater - Emulator</source>
-      <translation type="unfinished">Auto Updater - Emulator</translation>
+      <translation>Atualizador Automático - Emulador</translation>
     </message>
     <message>
       <source>You already have the latest pre-release version.</source>
-      <translation type="unfinished">You already have the latest pre-release version.</translation>
+      <translation>Já tem a última versão de pré-lançamento.</translation>
     </message>
     <message>
       <source>Update Available (Emulator)</source>
-      <translation type="unfinished">Update Available (Emulator)</translation>
+      <translation>Atualização Disponível (Emulador)</translation>
     </message>
     <message>
       <source>Current Version</source>
@@ -3425,51 +3424,51 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Show Changelog</source>
-      <translation type="unfinished">Show Changelog</translation>
+      <translation>Mostrar o Registo de Mudanças</translation>
     </message>
     <message>
       <source>Hide Changelog</source>
-      <translation type="unfinished">Hide Changelog</translation>
+      <translation>Esconder o Registo de Mudanças</translation>
     </message>
     <message>
       <source>Network error while fetching changelog</source>
-      <translation type="unfinished">Network error while fetching changelog</translation>
+      <translation>Erro de rede ao obter o registo de mudanças</translation>
     </message>
     <message>
       <source>Changes</source>
-      <translation type="unfinished">Changes</translation>
+      <translation>Mudanças</translation>
     </message>
     <message>
       <source>No download URL found for the specified asset.</source>
-      <translation type="unfinished">No download URL found for the specified asset.</translation>
+      <translation>Nenhum URL de transferência foi encontrado para o recurso especificado.</translation>
     </message>
     <message>
       <source>Network error while downloading</source>
-      <translation type="unfinished">Network error while downloading</translation>
+      <translation>Erro de rede durante a transferência</translation>
     </message>
     <message>
       <source>Failed to save download file</source>
-      <translation type="unfinished">Failed to save download file</translation>
+      <translation>Falha ao guardar o ficheiro de transferência</translation>
     </message>
     <message>
       <source>Complete installation</source>
-      <translation type="unfinished">Complete installation</translation>
+      <translation>Concluir a instalação</translation>
     </message>
     <message>
       <source>Pre-release updated successfully</source>
-      <translation type="unfinished">Pre-release updated successfully</translation>
+      <translation>Versão de pré-lançamento atualizada com sucesso</translation>
     </message>
     <message>
       <source>Failed to create the update script file</source>
-      <translation type="unfinished">Failed to create the update script file</translation>
+      <translation>Falha ao criar o ficheiro de script de atualização</translation>
     </message>
     <message>
       <source>Always Show Changelog</source>
-      <translation type="unfinished">Always Show Changelog</translation>
+      <translation>Mostrar Sempre o Histórico de Mudanças</translation>
     </message>
     <message>
       <source>No version selected. Please choose one from the list to delete.</source>
-      <translation type="unfinished">No version selected. Please choose one from the list to delete.</translation>
+      <translation>Nenhuma versão selecionada. Por favor, escolha uma da lista para eliminar.</translation>
     </message>
     <message>
       <source>Confirm Download</source>
@@ -3477,11 +3476,11 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Extraction failure.</source>
-      <translation type="unfinished">Extraction failure.</translation>
+      <translation>Falha na extração.</translation>
     </message>
     <message>
       <source>A version with that name already exists.</source>
-      <translation type="unfinished">A version with that name already exists.</translation>
+      <translation>Já existe uma versão com esse nome.</translation>
     </message>
     <message>
       <source>Local</source>
@@ -3489,198 +3488,34 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Failed to determine the folder to remove.</source>
-      <translation type="unfinished">Failed to determine the folder to remove.</translation>
+      <translation>Falha ao determinar a pasta a eliminar.</translation>
     </message>
     <message>
       <source>Failed to delete folder.</source>
-      <translation type="unfinished">Failed to delete folder.</translation>
+      <translation>Falha ao eliminar a pasta.</translation>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release.</source>
-      <translation type="unfinished">Unable to get hash of latest pre-release.</translation>
+      <translation>Não foi possível obter o hash da última versão de pré-lançamento.</translation>
     </message>
     <message>
       <source>Downloading Pre-release (Nightly), please wait...</source>
-      <translation type="unfinished">Downloading Pre-release (Nightly), please wait...</translation>
+      <translation>A transferir a versão de pré-lançamento (versão diária), por favor espere...</translation>
     </message>
   </context>
   <context>
     <name>dimensions_dialog</name>
     <message>
       <source>Dimensions Manager</source>
-      <translation type="unfinished">Dimensions Manager</translation>
+      <translation>Gestor do Dimensions</translation>
     </message>
     <message>
       <source>Active Dimensions Figures:</source>
-      <translation type="unfinished">Active Dimensions Figures:</translation>
+      <translation>Personagens do Dimensions Ativas:</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
-    </message>
-    <message>
-      <source>Clear</source>
-      <translation type="unfinished">Clear</translation>
-    </message>
-    <message>
-      <source>Create</source>
-      <translation type="unfinished">Create</translation>
-    </message>
-    <message>
-      <source>Load</source>
-      <translation type="unfinished">Load</translation>
-    </message>
-    <message>
-      <source>Move</source>
-      <translation type="unfinished">Move</translation>
-    </message>
-    <message>
-      <source>Unknown Figure</source>
-      <translation type="unfinished">Unknown Figure</translation>
-    </message>
-    <message>
-      <source>Select Dimensions File</source>
-      <translation type="unfinished">Select Dimensions File</translation>
-    </message>
-    <message>
-      <source>Dimensions Figure (*.bin);;</source>
-      <translation type="unfinished">Dimensions Figure (*.bin);;</translation>
-    </message>
-    <message>
-      <source>Failed to open the figure file!</source>
-      <translation type="unfinished">Failed to open the figure file!</translation>
-    </message>
-    <message>
-      <source>Failed to open the figure file(%1)!
-File may already be in use on the base.</source>
-      <translation type="unfinished">Failed to open the figure file(%1)!
-File may already be in use on the base.</translation>
-    </message>
-    <message>
-      <source>Failed to read the figure file!</source>
-      <translation type="unfinished">Failed to read the figure file!</translation>
-    </message>
-    <message>
-      <source>Failed to read the figure file(%1)!
-File was too small.</source>
-      <translation type="unfinished">Failed to read the figure file(%1)!
-File was too small.</translation>
-    </message>
-  </context>
-  <context>
-    <name>figure_creator_dialog</name>
-    <message>
-      <source>Figure Creator</source>
-      <translation type="unfinished">Figure Creator</translation>
-    </message>
-    <message>
-      <source>Filter by Series:</source>
-      <translation type="unfinished">Filter by Series:</translation>
-    </message>
-    <message>
-      <source>All</source>
-      <translation type="unfinished">All</translation>
-    </message>
-    <message>
-      <source>--Unknown--</source>
-      <translation type="unfinished">--Unknown--</translation>
-    </message>
-    <message>
-      <source>Figure Number:</source>
-      <translation type="unfinished">Figure Number:</translation>
-    </message>
-    <message>
-      <source>Series:</source>
-      <translation type="unfinished">Series:</translation>
-    </message>
-    <message>
-      <source>Create</source>
-      <translation>Criar</translation>
-    </message>
-    <message>
-      <source>Cancel</source>
-      <translation>Cancelar</translation>
-    </message>
-    <message>
-      <source>Error converting value</source>
-      <translation type="unfinished">Error converting value</translation>
-    </message>
-    <message>
-      <source>Figure number entered is invalid!</source>
-      <translation type="unfinished">Figure number entered is invalid!</translation>
-    </message>
-    <message>
-      <source>Series number entered is invalid!</source>
-      <translation type="unfinished">Series number entered is invalid!</translation>
-    </message>
-    <message>
-      <source>Create Figure File</source>
-      <translation type="unfinished">Create Figure File</translation>
-    </message>
-    <message>
-      <source>Infinity Figure (*.bin);;</source>
-      <translation type="unfinished">Infinity Figure (*.bin);;</translation>
-    </message>
-    <message>
-      <source>Failed to create figure file!</source>
-      <translation type="unfinished">Failed to create figure file!</translation>
-    </message>
-    <message>
-      <source>Failed to create figure file:
-%1</source>
-      <translation type="unfinished">Failed to create figure file:
-%1</translation>
-    </message>
-  </context>
-  <context>
-    <name>infinity_dialog</name>
-    <message>
-      <source>Infinity Manager</source>
-      <translation type="unfinished">Infinity Manager</translation>
-    </message>
-    <message>
-      <source>Active Infinity Figures:</source>
-      <translation type="unfinished">Active Infinity Figures:</translation>
-    </message>
-    <message>
-      <source>Play Set/Power Disc</source>
-      <translation type="unfinished">Play Set/Power Disc</translation>
-    </message>
-    <message>
-      <source>Power Disc Two</source>
-      <translation type="unfinished">Power Disc Two</translation>
-    </message>
-    <message>
-      <source>Power Disc Three</source>
-      <translation type="unfinished">Power Disc Three</translation>
-    </message>
-    <message>
-      <source>Player One</source>
-      <translation type="unfinished">Player One</translation>
-    </message>
-    <message>
-      <source>Player One Ability One</source>
-      <translation type="unfinished">Player One Ability One</translation>
-    </message>
-    <message>
-      <source>Player One Ability Two</source>
-      <translation type="unfinished">Player One Ability Two</translation>
-    </message>
-    <message>
-      <source>Player Two</source>
-      <translation type="unfinished">Player Two</translation>
-    </message>
-    <message>
-      <source>Player Two Ability One</source>
-      <translation type="unfinished">Player Two Ability One</translation>
-    </message>
-    <message>
-      <source>Player Two Ability Two</source>
-      <translation type="unfinished">Player Two Ability Two</translation>
-    </message>
-    <message>
-      <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Nenhum</translation>
     </message>
     <message>
       <source>Clear</source>
@@ -3692,54 +3527,70 @@ File was too small.</translation>
     </message>
     <message>
       <source>Load</source>
-      <translation type="unfinished">Load</translation>
+      <translation>Carregar</translation>
+    </message>
+    <message>
+      <source>Move</source>
+      <translation>Mover</translation>
     </message>
     <message>
       <source>Unknown Figure</source>
-      <translation type="unfinished">Unknown Figure</translation>
+      <translation>Personagem Desconhecida</translation>
     </message>
     <message>
-      <source>Select Infinity File</source>
-      <translation type="unfinished">Select Infinity File</translation>
+      <source>Select Dimensions File</source>
+      <translation>Selecionar Ficheiro do Dimensions</translation>
     </message>
     <message>
-      <source>Infinity Figure (*.bin);;</source>
-      <translation type="unfinished">Infinity Figure (*.bin);;</translation>
+      <source>Dimensions Figure (*.bin);;</source>
+      <translation>Personagem do Dimensions (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to open the figure file!</source>
-      <translation type="unfinished">Failed to open the figure file!</translation>
+      <translation>Falha ao abrir o ficheiro de personagem!</translation>
     </message>
     <message>
       <source>Failed to open the figure file(%1)!
 File may already be in use on the base.</source>
-      <translation type="unfinished">Failed to open the figure file(%1)!
-File may already be in use on the base.</translation>
+      <translation>Falha ao abrir o ficheiro de personagem (%1)!
+O ficheiro poderá estar a ser utilizado na base.</translation>
     </message>
     <message>
       <source>Failed to read the figure file!</source>
-      <translation type="unfinished">Failed to read the figure file!</translation>
+      <translation>Falha ao ler o ficheiro de personagem!</translation>
     </message>
     <message>
       <source>Failed to read the figure file(%1)!
 File was too small.</source>
-      <translation type="unfinished">Failed to read the figure file(%1)!
-File was too small.</translation>
+      <translation>Falha ao ler o ficheiro de personagem (%1)!
+O ficheiro é minúsculo.</translation>
     </message>
   </context>
   <context>
-    <name>minifig_creator_dialog</name>
+    <name>figure_creator_dialog</name>
     <message>
       <source>Figure Creator</source>
-      <translation type="unfinished">Figure Creator</translation>
+      <translation>Criador de Personagens</translation>
+    </message>
+    <message>
+      <source>Filter by Series:</source>
+      <translation>Filtrar por Série:</translation>
+    </message>
+    <message>
+      <source>All</source>
+      <translation>Todas</translation>
     </message>
     <message>
       <source>--Unknown--</source>
-      <translation type="unfinished">--Unknown--</translation>
+      <translation>--Desconhecido--</translation>
     </message>
     <message>
       <source>Figure Number:</source>
-      <translation type="unfinished">Figure Number:</translation>
+      <translation>Número da Personagem:</translation>
+    </message>
+    <message>
+      <source>Series:</source>
+      <translation>Série:</translation>
     </message>
     <message>
       <source>Create</source>
@@ -3751,28 +3602,176 @@ File was too small.</translation>
     </message>
     <message>
       <source>Error converting value</source>
-      <translation type="unfinished">Error converting value</translation>
+      <translation>Erro ao converter o valor</translation>
     </message>
     <message>
       <source>Figure number entered is invalid!</source>
-      <translation type="unfinished">Figure number entered is invalid!</translation>
+      <translation>O número da personagem inserido é inválido!</translation>
+    </message>
+    <message>
+      <source>Series number entered is invalid!</source>
+      <translation>O número de série inserido é inválido!</translation>
     </message>
     <message>
       <source>Create Figure File</source>
-      <translation type="unfinished">Create Figure File</translation>
+      <translation>Criar Ficheiro de Personagem</translation>
+    </message>
+    <message>
+      <source>Infinity Figure (*.bin);;</source>
+      <translation>Personagem do Infinito (*bin);;</translation>
+    </message>
+    <message>
+      <source>Failed to create figure file!</source>
+      <translation>Falha ao criar o ficheiro de personagem!</translation>
+    </message>
+    <message>
+      <source>Failed to create figure file:
+%1</source>
+      <translation>Falha ao criar o ficheiro de personagem:
+%1</translation>
+    </message>
+  </context>
+  <context>
+    <name>infinity_dialog</name>
+    <message>
+      <source>Infinity Manager</source>
+      <translation>Gestor do Infinito</translation>
+    </message>
+    <message>
+      <source>Active Infinity Figures:</source>
+      <translation>Personagens do Infinito Ativas:</translation>
+    </message>
+    <message>
+      <source>Play Set/Power Disc</source>
+      <translation>Conjunto de Jogo/Disco de Poder</translation>
+    </message>
+    <message>
+      <source>Power Disc Two</source>
+      <translation>Disco de Poder Dois</translation>
+    </message>
+    <message>
+      <source>Power Disc Three</source>
+      <translation>Disco de Poder Três</translation>
+    </message>
+    <message>
+      <source>Player One</source>
+      <translation>Jogador Um</translation>
+    </message>
+    <message>
+      <source>Player One Ability One</source>
+      <translation>Habilidade Um do Jogador Um</translation>
+    </message>
+    <message>
+      <source>Player One Ability Two</source>
+      <translation>Habilidade Dois do Jogador Um</translation>
+    </message>
+    <message>
+      <source>Player Two</source>
+      <translation>Jogador Dois</translation>
+    </message>
+    <message>
+      <source>Player Two Ability One</source>
+      <translation>Habilidade Um do Jogador Dois</translation>
+    </message>
+    <message>
+      <source>Player Two Ability Two</source>
+      <translation>Habilidade Dois do Jogador Dois</translation>
+    </message>
+    <message>
+      <source>None</source>
+      <translation>Nenhum</translation>
+    </message>
+    <message>
+      <source>Clear</source>
+      <translation>Limpar</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation>Criar</translation>
+    </message>
+    <message>
+      <source>Load</source>
+      <translation>Carregar</translation>
+    </message>
+    <message>
+      <source>Unknown Figure</source>
+      <translation>Personagem Desconhecida</translation>
+    </message>
+    <message>
+      <source>Select Infinity File</source>
+      <translation>Selecionar o Ficheiro do Infinito</translation>
+    </message>
+    <message>
+      <source>Infinity Figure (*.bin);;</source>
+      <translation>Personagem do Infinito (*.bin);;</translation>
+    </message>
+    <message>
+      <source>Failed to open the figure file!</source>
+      <translation>Falha ao abrir o ficheiro de personagem!</translation>
+    </message>
+    <message>
+      <source>Failed to open the figure file(%1)!
+File may already be in use on the base.</source>
+      <translation>Falha ao abrir o ficheiro de personagem (%1)!
+O ficheiro poderá estar a ser utilizado na base.</translation>
+    </message>
+    <message>
+      <source>Failed to read the figure file!</source>
+      <translation>Falha ao ler o ficheiro de personagem!</translation>
+    </message>
+    <message>
+      <source>Failed to read the figure file(%1)!
+File was too small.</source>
+      <translation>Falha ao ler o ficheiro de personagem (%1)!
+O ficheiro é minúsculo.</translation>
+    </message>
+  </context>
+  <context>
+    <name>minifig_creator_dialog</name>
+    <message>
+      <source>Figure Creator</source>
+      <translation>Criador de Personagens</translation>
+    </message>
+    <message>
+      <source>--Unknown--</source>
+      <translation>--Desconhecido--</translation>
+    </message>
+    <message>
+      <source>Figure Number:</source>
+      <translation>Número de Personagem:</translation>
+    </message>
+    <message>
+      <source>Create</source>
+      <translation>Criar</translation>
+    </message>
+    <message>
+      <source>Cancel</source>
+      <translation>Cancelar</translation>
+    </message>
+    <message>
+      <source>Error converting value</source>
+      <translation>Erro ao converter o valor</translation>
+    </message>
+    <message>
+      <source>Figure number entered is invalid!</source>
+      <translation>O número de personagem inserido é inválido!</translation>
+    </message>
+    <message>
+      <source>Create Figure File</source>
+      <translation>Criar Ficheiro de Personagem</translation>
     </message>
     <message>
       <source>Dimensions Figure (*.bin);;</source>
-      <translation type="unfinished">Dimensions Figure (*.bin);;</translation>
+      <translation>Personagem do Dimensions (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to create minifig file!</source>
-      <translation type="unfinished">Failed to create minifig file!</translation>
+      <translation>Falha ao criar um ficheiro minifig!</translation>
     </message>
     <message>
       <source>Failed to create minifig file:
 %1</source>
-      <translation type="unfinished">Failed to create minifig file:
+      <translation>Falha ao criar um ficheiro minifig:
 %1</translation>
     </message>
   </context>
@@ -3780,19 +3779,19 @@ File was too small.</translation>
     <name>minifig_move_dialog</name>
     <message>
       <source>Figure Mover</source>
-      <translation type="unfinished">Figure Mover</translation>
+      <translation>Movimentador de Personagens</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Nenhum</translation>
     </message>
     <message>
       <source>Move Here</source>
-      <translation type="unfinished">Move Here</translation>
+      <translation>Mover para cá</translation>
     </message>
     <message>
       <source>Pick up and Place</source>
-      <translation type="unfinished">Pick up and Place</translation>
+      <translation>Pegar e Posicionar</translation>
     </message>
   </context>
   <context>
@@ -3903,16 +3902,16 @@ O ficheiro poderá estar a ser utilizado no portal.</translation>
     <message>
       <source>Failed to read the skylander file(%1)!
 File was too small.</source>
-      <translation type="unfinished">Failed to read the skylander file(%1)!
-File was too small.</translation>
+      <translation>Falha ao ler o ficheiro de Skylander (%1)!
+O ficheiro é minúsculo.</translation>
     </message>
     <message>
       <source>Unknown (Id:%1 Var:%2)</source>
-      <translation type="unfinished">Unknown (Id:%1 Var:%2)</translation>
+      <translation>Desconhecido (ID: %1 Var: %2)</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Nenhum</translation>
     </message>
   </context>
 </TS>
