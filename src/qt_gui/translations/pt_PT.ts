@@ -1260,27 +1260,27 @@ Por favor, introduza as suas chaves e guarde-as.</translation>
     </message>
     <message>
       <source>Create Shortcut</source>
-      <translation type="unfinished">Create Shortcut</translation>
+      <translation>Criar Atalho</translation>
     </message>
     <message>
       <source>Shortcut creation</source>
-      <translation type="unfinished">Shortcut creation</translation>
+      <translation>Criação de atalho</translation>
     </message>
     <message>
       <source>Shortcut created successfully!</source>
-      <translation type="unfinished">Shortcut created successfully!</translation>
+      <translation>Atalho criado com sucesso!</translation>
     </message>
     <message>
       <source>Error creating shortcut!</source>
-      <translation type="unfinished">Error creating shortcut!</translation>
+      <translation>Erro ao criar o atalho!</translation>
     </message>
     <message>
       <source>Failed to convert icon.</source>
-      <translation type="unfinished">Failed to convert icon.</translation>
+      <translation>Falha ao converter o ícone.</translation>
     </message>
     <message>
       <source>Delete Shader Cache</source>
-      <translation type="unfinished">Delete Shader Cache</translation>
+      <translation>Eliminar o Cache de Sombreamento</translation>
     </message>
     <message>
       <source>This game does not have any saved Shader Cache to delete!</source>
@@ -1288,7 +1288,7 @@ Por favor, introduza as suas chaves e guarde-as.</translation>
     </message>
     <message>
       <source>Shader Cache</source>
-      <translation type="unfinished">Shader Cache</translation>
+      <translation>Cache de Sombreamento</translation>
     </message>
     <message>
       <source>This game has no save folder to open!</source>
@@ -1300,7 +1300,7 @@ Por favor, introduza as suas chaves e guarde-as.</translation>
     </message>
     <message>
       <source>User</source>
-      <translation type="unfinished">User</translation>
+      <translation>Utilizador</translation>
     </message>
     <message>
       <source>Add with Selected Emulator Version</source>
@@ -1312,7 +1312,7 @@ Por favor, introduza as suas chaves e guarde-as.</translation>
     </message>
     <message>
       <source>Add to Steam</source>
-      <translation type="unfinished">Add to Steam</translation>
+      <translation>Adicionar à Steam</translation>
     </message>
   </context>
   <context>
@@ -1342,15 +1342,15 @@ Por favor, introduza as suas chaves e guarde-as.</translation>
     <name>Hotkeys</name>
     <message>
       <source>Customize Hotkeys</source>
-      <translation type="unfinished">Customize Hotkeys</translation>
+      <translation>Personalizar as Teclas de Atalho</translation>
     </message>
     <message>
       <source>Show FPS Counter</source>
-      <translation type="unfinished">Show FPS Counter</translation>
+      <translation>Mostrar o Contador de FPS</translation>
     </message>
     <message>
       <source>unmapped</source>
-      <translation type="unfinished">unmapped</translation>
+      <translation>não associado</translation>
     </message>
     <message>
       <source>Quit Emulation</source>
@@ -1382,23 +1382,23 @@ Por favor, introduza as suas chaves e guarde-as.</translation>
     </message>
     <message>
       <source>Save</source>
-      <translation type="unfinished">Save</translation>
+      <translation>Guardar</translation>
     </message>
     <message>
       <source>Apply</source>
-      <translation type="unfinished">Apply</translation>
+      <translation>Aplicar</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Cancelar</translation>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation type="unfinished">Restore Defaults</translation>
+      <translation>Restaurar Predefinições</translation>
     </message>
     <message>
       <source>Unable to Save</source>
-      <translation type="unfinished">Unable to Save</translation>
+      <translation>Não foi possível Guardar</translation>
     </message>
     <message>
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
@@ -1418,7 +1418,7 @@ Por favor, introduza as suas chaves e guarde-as.</translation>
     </message>
     <message>
       <source>Volume Up</source>
-      <translation type="unfinished">Volume Up</translation>
+      <translation>Aumentar o Volume</translation>
     </message>
     <message>
       <source>Volume Down</source>
