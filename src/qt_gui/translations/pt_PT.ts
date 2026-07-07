@@ -1422,11 +1422,11 @@ Por favor, introduza as suas chaves e guarde-as.</translation>
     </message>
     <message>
       <source>Volume Down</source>
-      <translation type="unfinished">Volume Down</translation>
+      <translation>Diminuir o Volume</translation>
     </message>
     <message>
       <source>Hotkeys</source>
-      <translation type="unfinished">Hotkeys</translation>
+      <translation>Teclas de Atalho</translation>
     </message>
     <message>
       <source>Placeholder</source>
@@ -1596,15 +1596,15 @@ Por favor, introduza as suas chaves e guarde-as.</translation>
     </message>
     <message>
       <source>Touchpad Left</source>
-      <translation type="unfinished">Touchpad Left</translation>
+      <translation>Painel Tátil Esquerdo</translation>
     </message>
     <message>
       <source>Touchpad Center</source>
-      <translation type="unfinished">Touchpad Center</translation>
+      <translation>Painel Tátil Central</translation>
     </message>
     <message>
       <source>Touchpad Right</source>
-      <translation type="unfinished">Touchpad Right</translation>
+      <translation>Painel Tátil Direito</translation>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
@@ -2588,7 +2588,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Select the DLC folder</source>
-      <translation>Selecione a pasta de DLC's</translation>
+      <translation>Selecione a pasta de DLCs</translation>
     </message>
     <message>
       <source>Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</source>
@@ -2776,19 +2776,19 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>GUI Language</source>
-      <translation type="unfinished">GUI Language</translation>
+      <translation>Idioma da GUI</translation>
     </message>
     <message>
       <source>GUI Updates</source>
-      <translation type="unfinished">GUI Updates</translation>
+      <translation>Atualizações da GUI</translation>
     </message>
     <message>
       <source>DLC Path</source>
-      <translation type="unfinished">DLC Path</translation>
+      <translation>Diretório das DLCs</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path</source>
-      <translation type="unfinished">PS4 Sysmodules Path</translation>
+      <translation>Diretório dos Módulos de Sistema da PS4</translation>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
@@ -2800,7 +2800,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Portable launcherDir folder created</source>
-      <translation>Pasta launcherDir portátil criada</translation>
+      <translation>A pasta launcherDir portátil foi criada</translation>
     </message>
     <message>
       <source>USB Device</source>
@@ -2832,7 +2832,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file</source>
-      <translation>Comprimir os ficheiros da Cache de Sombreamento num ficheiro ZIP</translation>
+      <translation>Comprimir os ficheiros do Cache de Sombreamento num ficheiro ZIP</translation>
     </message>
     <message>
       <source>Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</source>
@@ -2840,7 +2840,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
-      <translation>Comprimir o Cache de Sombreamento num ficheiro ZIP:\nOs ficheiros da Cache de Sombreamento são armazenados num único ficheiro ZIP em vez de múltiplos ficheiros separados.</translation>
+      <translation>Comprimir o Cache de Sombreamento num ficheiro ZIP:\nOs ficheiros do Cache de Sombreamento são armazenados num único ficheiro ZIP em vez de múltiplos ficheiros separados.</translation>
     </message>
     <message>
       <source>Readbacks Mode</source>
@@ -2880,7 +2880,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the home folder.</source>
-      <translation>Procurar:\nProcure uma pasta para definir como psata inicial.</translation>
+      <translation>Procurar:\nProcure uma pasta para definir como pasta inicial.</translation>
     </message>
     <message>
       <source>Audio</source>
@@ -2916,7 +2916,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source> ms</source>
-      <translation type="unfinished"> ms</translation>
+      <translation> ms</translation>
     </message>
     <message>
       <source>Log Size Limit</source>
@@ -2924,7 +2924,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source> B</source>
-      <translation type="unfinished"> B</translation>
+      <translation> B</translation>
     </message>
     <message>
       <source>Log Append</source>
@@ -2968,15 +2968,15 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Enable shadNet</source>
-      <translation type="unfinished">Enable shadNet</translation>
+      <translation>Ativar a shadNet</translation>
     </message>
     <message>
       <source>ShadNet</source>
-      <translation type="unfinished">ShadNet</translation>
+      <translation>ShadNet</translation>
     </message>
     <message>
       <source>Server</source>
-      <translation type="unfinished">Server</translation>
+      <translation>Servidor</translation>
     </message>
     <message>
       <source>Signaling Info</source>
@@ -2999,7 +2999,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     <name>ShortcutDialog</name>
     <message>
       <source>Select Version</source>
-      <translation type="unfinished">Select Version</translation>
+      <translation>Selecionar a Versão</translation>
     </message>
     <message>
       <source>Select version for shortcut creation</source>
@@ -3128,7 +3128,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Erro</translation>
     </message>
     <message>
       <source>Cannot add more users.</source>
@@ -3220,11 +3220,11 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Password</source>
-      <translation type="unfinished">Password</translation>
+      <translation>Palavra-passe</translation>
     </message>
     <message>
       <source>Show password</source>
-      <translation type="unfinished">Show password</translation>
+      <translation>Mostrar a palavra-passe</translation>
     </message>
     <message>
       <source>Account ID (NPID):</source>
@@ -3263,15 +3263,15 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Version</source>
-      <translation type="unfinished">Version</translation>
+      <translation>Versão</translation>
     </message>
     <message>
       <source>Codename</source>
-      <translation type="unfinished">Codename</translation>
+      <translation>Nome de código</translation>
     </message>
     <message>
       <source>Date</source>
-      <translation type="unfinished">Date</translation>
+      <translation>Data</translation>
     </message>
     <message>
       <source>Add Custom</source>
@@ -3311,7 +3311,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Version name</source>
-      <translation type="unfinished">Version name</translation>
+      <translation>Nome da versão</translation>
     </message>
     <message>
       <source>Enter the name of this version as it appears in the list.</source>
@@ -3319,11 +3319,11 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Erro</translation>
     </message>
     <message>
       <source>Success</source>
-      <translation type="unfinished">Success</translation>
+      <translation>Sucesso</translation>
     </message>
     <message>
       <source>Version added successfully.</source>
@@ -3405,23 +3405,23 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Current Version</source>
-      <translation type="unfinished">Current Version</translation>
+      <translation>Versão Atual</translation>
     </message>
     <message>
       <source>Latest Version</source>
-      <translation type="unfinished">Latest Version</translation>
+      <translation>Última Versão</translation>
     </message>
     <message>
       <source>Do you want to update?</source>
-      <translation type="unfinished">Do you want to update?</translation>
+      <translation>Deseja atualizar?</translation>
     </message>
     <message>
       <source>Update</source>
-      <translation type="unfinished">Update</translation>
+      <translation>Atualizar</translation>
     </message>
     <message>
       <source>No</source>
-      <translation type="unfinished">No</translation>
+      <translation>Não</translation>
     </message>
     <message>
       <source>Show Changelog</source>
@@ -3473,7 +3473,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Confirm Download</source>
-      <translation type="unfinished">Confirm Download</translation>
+      <translation>Confirmar a Transferência</translation>
     </message>
     <message>
       <source>Extraction failure.</source>
@@ -3485,7 +3485,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Local</source>
-      <translation type="unfinished">Local</translation>
+      <translation>Local</translation>
     </message>
     <message>
       <source>Failed to determine the folder to remove.</source>
@@ -3595,11 +3595,11 @@ File was too small.</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Criar</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Cancelar</translation>
     </message>
     <message>
       <source>Error converting value</source>
@@ -3684,11 +3684,11 @@ File was too small.</translation>
     </message>
     <message>
       <source>Clear</source>
-      <translation type="unfinished">Clear</translation>
+      <translation>Limpar</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Criar</translation>
     </message>
     <message>
       <source>Load</source>
@@ -3743,11 +3743,11 @@ File was too small.</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Criar</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Cancelar</translation>
     </message>
     <message>
       <source>Error converting value</source>
@@ -3799,56 +3799,56 @@ File was too small.</translation>
     <name>skylander_creator_dialog</name>
     <message>
       <source>Skylander Creator</source>
-      <translation type="unfinished">Skylander Creator</translation>
+      <translation>Criador de Skylanders</translation>
     </message>
     <message>
       <source>--Unknown--</source>
-      <translation type="unfinished">--Unknown--</translation>
+      <translation>--Desconhecido--</translation>
     </message>
     <message>
       <source>ID:</source>
-      <translation type="unfinished">ID:</translation>
+      <translation>ID:</translation>
     </message>
     <message>
       <source>Variant:</source>
-      <translation type="unfinished">Variant:</translation>
+      <translation>Variante:</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Criar</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Cancelar</translation>
     </message>
     <message>
       <source>Error converting value</source>
-      <translation type="unfinished">Error converting value</translation>
+      <translation>Erro ao converter o valor</translation>
     </message>
     <message>
       <source>ID entered is invalid!</source>
-      <translation type="unfinished">ID entered is invalid!</translation>
+      <translation>O ID inserido é inválido!</translation>
     </message>
     <message>
       <source>Variant entered is invalid!</source>
-      <translation type="unfinished">Variant entered is invalid!</translation>
+      <translation>A variante inserida é inválida!</translation>
     </message>
     <message>
       <source>Create Skylander File</source>
-      <translation type="unfinished">Create Skylander File</translation>
+      <translation>Criar ficheiro de Skylander</translation>
     </message>
     <message>
       <source>Skylander Object (*.sky);;All Files (*)</source>
-      <translation type="unfinished">Skylander Object (*.sky);;All Files (*)</translation>
+      <translation>Objeto Skylander (*.sky);;Todos os Ficheiros (*)</translation>
     </message>
     <message>
       <source>Failed to create skylander file!</source>
-      <translation type="unfinished">Failed to create skylander file!</translation>
+      <translation>Falha ao criar um ficheiro Skylander!</translation>
     </message>
     <message>
       <source>Failed to create skylander file:
 %1</source>
-      <translation type="unfinished">Failed to create skylander file:
+      <translation>Falha ao criar um ficheiro Skylander:
 %1</translation>
     </message>
   </context>
@@ -3856,49 +3856,49 @@ File was too small.</translation>
     <name>skylander_dialog</name>
     <message>
       <source>Skylanders Manager</source>
-      <translation type="unfinished">Skylanders Manager</translation>
+      <translation>Gestor de Skylanders</translation>
     </message>
     <message>
       <source>Active Portal Skylanders:</source>
-      <translation type="unfinished">Active Portal Skylanders:</translation>
+      <translation>Portal de Skylanders Ativo:</translation>
     </message>
     <message>
       <source>Skylander %1</source>
-      <translation type="unfinished">Skylander %1</translation>
+      <translation>Skylander %1</translation>
     </message>
     <message>
       <source>Clear</source>
-      <translation type="unfinished">Clear</translation>
+      <translation>Limpar</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Criar</translation>
     </message>
     <message>
       <source>Load</source>
-      <translation type="unfinished">Load</translation>
+      <translation>Carregar</translation>
     </message>
     <message>
       <source>Select Skylander File</source>
-      <translation type="unfinished">Select Skylander File</translation>
+      <translation>Selecionar Ficheiro de Skylander</translation>
     </message>
     <message>
       <source>Skylander (*.sky *.bin *.dmp *.dump);;All Files (*)</source>
-      <translation type="unfinished">Skylander (*.sky *.bin *.dmp *.dump);;All Files (*)</translation>
+      <translation>Skylander (*.sky *.bin *.dmp *.dump);;Todos os Ficheiros (*)</translation>
     </message>
     <message>
       <source>Failed to open the skylander file!</source>
-      <translation type="unfinished">Failed to open the skylander file!</translation>
+      <translation>Falha ao abrir o ficheiro de Skylander!</translation>
     </message>
     <message>
       <source>Failed to open the skylander file(%1)!
 File may already be in use on the portal.</source>
-      <translation type="unfinished">Failed to open the skylander file(%1)!
-File may already be in use on the portal.</translation>
+      <translation>Falha ao abrir o ficheiro de Skylander (%1)!
+O ficheiro poderá estar a ser utilizado no portal.</translation>
     </message>
     <message>
       <source>Failed to read the skylander file!</source>
-      <translation type="unfinished">Failed to read the skylander file!</translation>
+      <translation>Falha ao ler o ficheiro de Skylander!</translation>
     </message>
     <message>
       <source>Failed to read the skylander file(%1)!
