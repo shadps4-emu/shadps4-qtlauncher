@@ -1296,7 +1296,7 @@ Por favor, introduza as suas chaves e guarde-as.</translation>
     </message>
     <message>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
-      <translation type="unfinished">A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</translation>
+      <translation>Uma chave de troféus é necessária para utilizar o Visualizador de Troféus. Pode ser introduzida através ao clicar na opção Gerir Chaves Criptográficas sob Definições.</translation>
     </message>
     <message>
       <source>User</source>
@@ -1304,11 +1304,11 @@ Por favor, introduza as suas chaves e guarde-as.</translation>
     </message>
     <message>
       <source>Add with Selected Emulator Version</source>
-      <translation type="unfinished">Add with Selected Emulator Version</translation>
+      <translation>Adicionar com a Versão Selecionada do Emulador</translation>
     </message>
     <message>
       <source>Add with Specified Emulator Version</source>
-      <translation type="unfinished">Add with Specified Emulator Version</translation>
+      <translation>Adicionar com uma Versão Específica do Emulador</translation>
     </message>
     <message>
       <source>Add to Steam</source>
@@ -1590,7 +1590,7 @@ Por favor, introduza as suas chaves e guarde-as.</translation>
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-      <translation type="unfinished">Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
+      <translation>Não é possível associar qualquer comando único mais do que uma vez. Existem comandos duplicados associados aos seguintes botões:
 
 %1</translation>
     </message>
@@ -2588,7 +2588,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Select the DLC folder</source>
-      <translation>Selecione a pasta de DLCs</translation>
+      <translation>Selecione a pasta dos DLCs</translation>
     </message>
     <message>
       <source>Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</source>
@@ -2596,7 +2596,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the DLC path.</translation>
+      <translation>Procurar:\nProcure uma pasta para definir como caminho dos DLCs.</translation>
     </message>
     <message>
       <source>FSR Settings</source>
@@ -2624,23 +2624,23 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Open Log Location:\nOpen the folder where the log file is saved.</source>
-      <translation type="unfinished">Open Log Location:\nOpen the folder where the log file is saved.</translation>
+      <translation>Abrir Localização do Registo:\nAbre a pasta onde o ficheiro de registo é guardado.</translation>
     </message>
     <message>
       <source>Microphone:\nNone: Does not use the microphone.\nDefault Device: Will use the default device defined in the system.\nOr manually choose the microphone to be used from the list.</source>
-      <translation type="unfinished">Microphone:\nNone: Does not use the microphone.\nDefault Device: Will use the default device defined in the system.\nOr manually choose the microphone to be used from the list.</translation>
+      <translation>Microfone:\nNenhum: Não utiliza o microfone.\nDispositivo Predefinido: Utilizará o dispositivo predefinido no sistema.\nOu escolha manualmente, a partir da lista, o microfone a utilizar.</translation>
     </message>
     <message>
       <source>Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</source>
-      <translation type="unfinished">Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</translation>
+      <translation>Volume:\nAjusta o volume dos jogos a nível global; o intervalo vai de 0 a 500%, sendo 100% o valor predefinido.</translation>
     </message>
     <message>
       <source>Default tab when opening settings:\nChoose which tab will open, the default is General.</source>
-      <translation type="unfinished">Default tab when opening settings:\nChoose which tab will open, the default is General.</translation>
+      <translation>Separador predefinido ao abrir as definições:\nEscolha qual separador abrirá; o predefinido é Geral.</translation>
     </message>
     <message>
       <source>Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</source>
-      <translation type="unfinished">Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</translation>
+      <translation>Ativar Controlos de Movimento:\nQuando ativada, utilizará o controlo por movimento do comando, caso seja suportado.</translation>
     </message>
     <message>
       <source>Vblank Frequency</source>
@@ -2648,7 +2648,8 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Vblank Frequency:\nThe frame rate at which the emulator refreshes at (60hz is the baseline, whether the game runs at 30 or 60fps). Changing this may have adverse effects, such as increasing the game speed, or breaking critical game functionality that does not expect this to change!</source>
-      <translation type="unfinished">Vblank Frequency:\nThe frame rate at which the emulator refreshes at (60hz is the baseline, whether the game runs at 30 or 60fps). Changing this may have adverse effects, such as increasing the game speed, or breaking critical game functionality that does not expect this to change!</translation>
+      <translation>Frequência do VBlank:\nA taxa de fotogramas à qual o emulador faz a atualização (60 Hz é a referência, independentemente de o jogo ser executado a 30 ou 60 FPS).
+Alterar este valor pode ter efeitos adversos, como aumentar a velocidade do jogo ou destruir funcionalidades críticas que não foram concebidas para lidar com esta alteração!</translation>
     </message>
     <message>
       <source>Enable Direct Memory Access</source>
@@ -2688,23 +2689,24 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Enable Direct Memory Access:\nEnables arbitrary memory access from the GPU to CPU memory.</source>
-      <translation type="unfinished">Enable Direct Memory Access:\nEnables arbitrary memory access from the GPU to CPU memory.</translation>
+      <translation>Ativar Acesso Direto de Memória:\nPermite acesso arbitrário da GPU à memória da CPU.</translation>
     </message>
     <message>
       <source>Enable PS4 Neo Mode:\nAdds support for PS4 Pro emulation and memory size. Currently causes instability in a large number of tested games.</source>
-      <translation type="unfinished">Enable PS4 Neo Mode:\nAdds support for PS4 Pro emulation and memory size. Currently causes instability in a large number of tested games.</translation>
+      <translation>Ativar Modo Neo da PS4:\nAdiciona suporte para a emulação da PS4 Pro e para o respetivo tamanho de memória.
+Atualmente provoca instabilidade numa abundância de jogos testados.</translation>
     </message>
     <message>
       <source>Enable Devkit Console Mode:\nAdds support for Devkit console memory size.</source>
-      <translation type="unfinished">Enable Devkit Console Mode:\nAdds support for Devkit console memory size.</translation>
+      <translation>Ativar Modo de Consola de Programador:\nAdiciona suporte para o tamanho de memória de consolas de programador.</translation>
     </message>
     <message>
       <source>Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</source>
-      <translation type="unfinished">Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</translation>
+      <translation>Definir Ligação de Rede como Ativa:\nForça os jogos a detetarem uma ligação de rede ativa. As funcionalidades reais de jogo online ainda não são suportadas.</translation>
     </message>
     <message>
       <source>Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Ativar Camadas de Validação da Vulkan:\nAtiva um sistema que valida o estado do renderizador Vulkan e regista informações sobre o seu estado interno.\nIsto reduzirá o desempenho e provavelmente alterará o comportamento da emulação.\nÉ necessário ter o Vulkan SDK instalado para que esta opção surta efeito.</translation>
     </message>
     <message>
       <source>Audio Device (general)</source>
@@ -2716,15 +2718,15 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
-      <translation type="unfinished">Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</translation>
+      <translation>Ativar Exportação de Sombreadores:\nPara efeitos de depuração técnica, guarda os sombreadores do jogo para uma pasta enquanto renderizam.</translation>
     </message>
     <message>
       <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</source>
-      <translation type="unfinished">Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</translation>
+      <translation>Ativar GPU NULL:\nPara fins de depuração técnica, guarda os sombreadores do jogo numa pasta à medida que são renderizados.</translation>
     </message>
     <message>
       <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
-      <translation type="unfinished">DLC Path:\nThe folder where game DLC is loaded from.</translation>
+      <translation>Caminho dos DLCs:\nA pasta donde os DLCs do jogo são carregados.</translation>
     </message>
     <message>
       <source>Additional DMem Allocation</source>
@@ -2732,15 +2734,15 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</source>
-      <translation type="unfinished">Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</translation>
+      <translation>Alocação Adicional de Memória Direta:\nForça a alocação da quantidade especificada de Memória Direta adicional. Faz alguns jogos fecharem ou apresentarem falhas.</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</source>
-      <translation type="unfinished">PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</translation>
+      <translation>Caminho dos Módulos de Sistema da PS4:\nA pasta donde os módulos de sistema da PS4 são carregados.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the sysmodules path.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the sysmodules path.</translation>
+      <translation>Procurar:\nProcure uma pasta para definir como caminho dos módulos de sistema.</translation>
     </message>
     <message>
       <source>Vulkan Validation (Requires Vulkan SDK)</source>
@@ -2764,15 +2766,15 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Ativar Validação de Sincronização:\nAtiva um sistema que valida a temporização das tarefas de renderização da Vulkan.\nIsto reduzirá o desempenho e provavelmente mudará o comportamento da emulação.\nPrecisa do Vulkan SDK para que esta opção surta efeito.</translation>
     </message>
     <message>
       <source>Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Ativar Validação do Núcleo:\nAtiva as funções da API principal de validação.\nIsto reduzirá o desempenho e provavelmente mudará o comportamento da emulação.\nPrecisa do Vulkan SDK para que esta opção surta efeito.</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Ativar Validação Assistida pela GPU:\nInstrumenta os sombreadores com código que valida se estão a comportarem-se corretamente.\nIsto reduzirá o desempenho e provavelmente alterará o comportamento da emulação.\nPrecisa do Vulkan SDK para que esta opção surta efeito.</translation>
     </message>
     <message>
       <source>GUI Language</source>
@@ -2792,7 +2794,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
-      <translation type="unfinished">GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</translation>
+      <translation>Atualizações da GUI:\nLançamento: Versões oficiais disponibilizadas todos os meses que poderão estar datadas, mas são fiáveis e testadas.\nPré-lançamento: Versões de desenvolvimento que têm todas as últimas funcionalidades e correções, mas poderão conter erros e ser instáveis.\n\n*Esta atualização aplica-se apenas à interface de utilizador Qt. Para atualizar o núcleo do emulador, por favor utilize o &apos;Gestor de Versões&apos;.</translation>
     </message>
     <message>
       <source>Cannot create portable launcher folder</source>
