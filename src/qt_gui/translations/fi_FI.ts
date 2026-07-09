@@ -1313,7 +1313,7 @@ Syötä avaimet ja tallenna ne.</translation>
     </message>
     <message>
       <source>Add to Steam</source>
-      <translation type="unfinished">Add to Steam</translation>
+      <translation>Lisää Steamiin</translation>
     </message>
   </context>
   <context>
@@ -2973,11 +2973,11 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>ShadNet</source>
-      <translation type="unfinished">ShadNet</translation>
+      <translation>ShadNet</translation>
     </message>
     <message>
       <source>Server</source>
-      <translation type="unfinished">Server</translation>
+      <translation>Palvelin</translation>
     </message>
     <message>
       <source>Signaling Info</source>
@@ -2993,7 +2993,7 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>shadNet:\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadnet/register/.</source>
-      <translation type="unfinished">shadNet:\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadnet/register/.</translation>
+      <translation>shadNet:\nYhteensopivuus on tällä hetkellä hyvin rajallinen.\nVoit rekisteröityä osoitteessa https://www.shadps4.net/shadnet/register/.</translation>
     </message>
   </context>
   <context>
@@ -3019,15 +3019,15 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     <name>SteamShortcut</name>
     <message>
       <source>Steam</source>
-      <translation type="unfinished">Steam</translation>
+      <translation>Steam</translation>
     </message>
     <message>
       <source>%1 is already in your Steam library.</source>
-      <translation type="unfinished">%1 is already in your Steam library.</translation>
+      <translation>%1 on jo Steam-kirjastossasi.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Virhe</translation>
     </message>
     <message>
       <source>Steam installation not found.</source>
