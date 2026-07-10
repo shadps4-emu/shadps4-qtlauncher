@@ -1240,7 +1240,7 @@ Por favor, introduza as suas chaves e guarde-as.</translation>
     </message>
     <message>
       <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
-      <translation type="unfinished">Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</translation>
+      <translation>Não foi possível submeter o relatório, porque o último registo do jogo falhou na verificação indicada e, por isso, o relatório é inválido:</translation>
     </message>
     <message>
       <source>Ok</source>
@@ -1378,7 +1378,7 @@ Por favor, introduza as suas chaves e guarde-as.</translation>
     </message>
     <message>
       <source>Tip: Up to three simultaneous inputs can be assigned for each hotkey</source>
-      <translation type="unfinished">Tip: Up to three simultaneous inputs can be assigned for each hotkey</translation>
+      <translation>Dica: Podem ser atribuídas até três entradas simultâneas a cada tecla de atalho</translation>
     </message>
     <message>
       <source>Save</source>
@@ -1404,7 +1404,7 @@ Por favor, introduza as suas chaves e guarde-as.</translation>
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-      <translation type="unfinished">Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
+      <translation>Não é possível associar qualquer comando único mais do que uma vez. Existem comandos duplicados associados aos seguintes botões:
 
 %1</translation>
     </message>
