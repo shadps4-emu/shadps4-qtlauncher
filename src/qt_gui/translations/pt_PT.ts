@@ -1370,7 +1370,7 @@ Por favor, introduza as suas chaves e guarde-as.</translation>
     </message>
     <message>
       <source>Toggle Mouse to Joystick Emulation</source>
-      <translation>Alternar Emulação de Rato para Joystick</translation>
+      <translation>Alternar Emulação de Rato para Manípulo</translation>
     </message>
     <message>
       <source>Toggle Mouse to Gyro Emulation</source>
@@ -1414,7 +1414,7 @@ Por favor, introduza as suas chaves e guarde-as.</translation>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation>Dica: Desassocie entradas com o clique direito do rato</translation>
+      <translation>Dica: Desassocie comandos com o clique direito do rato</translation>
     </message>
     <message>
       <source>Volume Up</source>
@@ -2786,7 +2786,7 @@ Atualmente provoca instabilidade numa abundância de jogos testados.</translatio
     </message>
     <message>
       <source>DLC Path</source>
-      <translation>Diretório de DLCs</translation>
+      <translation>Diretório dos DLCs</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path</source>
