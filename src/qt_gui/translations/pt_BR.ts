@@ -2881,7 +2881,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the home folder.</source>
-      <translation>Procurar:\nProcura uma pasta para definir como pasta raiz.</translation>
+      <translation>Buscar:\nBusca uma pasta para definir como pasta raiz.</translation>
     </message>
     <message>
       <source>Audio</source>
