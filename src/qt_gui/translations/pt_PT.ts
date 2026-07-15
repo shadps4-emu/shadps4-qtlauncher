@@ -15,7 +15,7 @@
     </message>
     <message>
       <source>This software should not be used to play games you have not legally obtained.</source>
-      <translation>Este programa não deve ser usado para jogar títulos não obtidos legalmente.</translation>
+      <translation>Este programa não deve ser utilizado para jogar títulos obtidos ilegalmente.</translation>
     </message>
   </context>
   <context>
@@ -1104,7 +1104,7 @@ Por favor, introduza as suas chaves e guarde-as.</translation>
     </message>
     <message>
       <source>Delete Trophy</source>
-      <translation>Eliminar Troféu</translation>
+      <translation>Eliminar Troféus</translation>
     </message>
     <message>
       <source>Compatibility...</source>
