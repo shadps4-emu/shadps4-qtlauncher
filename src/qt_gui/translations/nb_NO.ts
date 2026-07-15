@@ -3237,7 +3237,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Shad&amp;Net Settings...</source>
-      <translation>ShadNet-innstillinger …</translation>
+      <translation>Shad&amp;Net-innstillinger...</translation>
     </message>
   </context>
   <context>
