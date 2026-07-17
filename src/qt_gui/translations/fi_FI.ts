@@ -1305,11 +1305,11 @@ Syötä avaimet ja tallenna ne.</translation>
     </message>
     <message>
       <source>Add with Selected Emulator Version</source>
-      <translation type="unfinished">Add with Selected Emulator Version</translation>
+      <translation>Lisää valitun Emulaattori Version kanssa</translation>
     </message>
     <message>
       <source>Add with Specified Emulator Version</source>
-      <translation type="unfinished">Add with Specified Emulator Version</translation>
+      <translation>Lisää tietyn Emulaattori Version kanssa</translation>
     </message>
     <message>
       <source>Add to Steam</source>
@@ -2981,11 +2981,11 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Signaling Info</source>
-      <translation type="unfinished">Signaling Info</translation>
+      <translation>Signalointitiedot</translation>
     </message>
     <message>
       <source>Enable UPNP</source>
-      <translation type="unfinished">Enable UPNP</translation>
+      <translation>Ota UPNP käyttöön</translation>
     </message>
     <message>
       <source>WebAPI Server</source>
@@ -3217,7 +3217,7 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Account ID (NPID)</source>
-      <translation type="unfinished">Account ID (NPID)</translation>
+      <translation>Tilin ID (NPID)</translation>
     </message>
     <message>
       <source>Password</source>
@@ -3229,7 +3229,7 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Account ID (NPID):</source>
-      <translation type="unfinished">Account ID (NPID):</translation>
+      <translation>Tilin ID (NPID):</translation>
     </message>
     <message>
       <source>Password:</source>
