@@ -1299,6 +1299,22 @@ Inserisci le chiavi e salvale.</translation>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
       <translation>È necessaria una chiave trofei per utilizzare il Visualizzatore Trofei. La chiave può essere inserita facendo clic su Impostazioni - Gestisci Chiavi Crittografiche.</translation>
     </message>
+    <message>
+      <source>User</source>
+      <translation>Utente</translation>
+    </message>
+    <message>
+      <source>Add with Selected Emulator Version</source>
+      <translation>Aggiungi con la Versione dell'Emulatore Selezionato</translation>
+    </message>
+    <message>
+      <source>Add with Specified Emulator Version</source>
+      <translation>Aggiungi con la Versione dell'Emulatore Specificata</translation>
+    </message>
+    <message>
+      <source>Add to Steam</source>
+      <translation>Aggiungi a Steam</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -2644,10 +2660,6 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
       <translation>Abilita Modalità Console Devkit</translation>
     </message>
     <message>
-      <source>Set &quot;PSN signed-in&quot; to True</source>
-      <translation>Imposta &quot;accesso PSN&quot; come Abilitato</translation>
-    </message>
-    <message>
       <source>Set &quot;Network Connected&quot; to True</source>
       <translation>Imposta &quot;Connessione di Rete&quot; come Abilitato</translation>
     </message>
@@ -2690,10 +2702,6 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
     <message>
       <source>Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</source>
       <translation>Imposta Connessione alla Rete come Abilitata:\nForza i giochi a rilevare una connessione di rete attiva. Le funzionalità online non sono ancora supportate.</translation>
-    </message>
-    <message>
-      <source>Set PSN Signed-in to True:\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported.</source>
-      <translation>Imposta Connessione al PSN come Abilitata:\nForza i giochi a rilevare una connessione al PSN attiva. Le funzionalità PSN non sono ancora supportate.</translation>
     </message>
     <message>
       <source>Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
@@ -2959,6 +2967,34 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
       <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
       <translation>Filtro Registro:\nFiltra il registro per stampare solo informazioni specifiche.\nEsempi: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\n Livelli: trace, debug, info, warning, error, critical - in questo ordine, un livello specifico silenzia tutti i livelli precedenti nell'elenco e registra ogni livello successivo.</translation>
     </message>
+    <message>
+      <source>Enable shadNet</source>
+      <translation>Abilita shadNet</translation>
+    </message>
+    <message>
+      <source>ShadNet</source>
+      <translation>ShadNet</translation>
+    </message>
+    <message>
+      <source>Server</source>
+      <translation>Server</translation>
+    </message>
+    <message>
+      <source>Signaling Info</source>
+      <translation>Info Segnalazione</translation>
+    </message>
+    <message>
+      <source>Enable UPNP</source>
+      <translation>Abilita UPNP</translation>
+    </message>
+    <message>
+      <source>WebAPI Server</source>
+      <translation>Server WebAPI</translation>
+    </message>
+    <message>
+      <source>shadNet:\nA PSN server replacement.\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadNet/register/.</source>
+      <translation>shadNet:\nUn sostituto del server PSN.\nLa compatibilità è molto limitata al momento.\nPuoi registrarti su https://www.shadps4.net/shadNet/register/.</translation>
+    </message>
   </context>
   <context>
     <name>ShortcutDialog</name>
@@ -2977,6 +3013,53 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
     <message>
       <source>Select a version first</source>
       <translation>Seleziona prima una versione</translation>
+    </message>
+  </context>
+  <context>
+    <name>SteamShortcut</name>
+    <message>
+      <source>Steam</source>
+      <translation>Steam</translation>
+    </message>
+    <message>
+      <source>%1 is already in your Steam library.</source>
+      <translation>%1 è già nella tua libreria Steam.</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation>Errore</translation>
+    </message>
+    <message>
+      <source>Steam installation not found.</source>
+      <translation>Installazione di Steam non trovata.</translation>
+    </message>
+    <message>
+      <source>No Steam user account found. Please log into Steam at least once.</source>
+      <translation>Nessun account utente Steam trovato. Effettua il login su Steam almeno una volta.</translation>
+    </message>
+    <message>
+      <source>Steam is Running</source>
+      <translation>Steam è in Esecuzione</translation>
+    </message>
+    <message>
+      <source>Steam is currently running. It will be closed and restarted to apply the shortcut. Continue?</source>
+      <translation>Steam è attualmente in esecuzione. Sarà chiuso e riavviato per applicare la scorciatoia. Continuare?</translation>
+    </message>
+    <message>
+      <source>Steam did not close in time. Shortcut was not added.</source>
+      <translation>Steam non si è chiuso in tempo. Non è stata aggiunta alcuna scorciatoia.</translation>
+    </message>
+    <message>
+      <source>Failed to add game to Steam.</source>
+      <translation>Impossibile aggiungere il gioco a Steam.</translation>
+    </message>
+    <message>
+      <source>Added to Steam successfully. Steam is restarting.</source>
+      <translation>Aggiunto a Steam con successo. Steam è in fase di riavvio.</translation>
+    </message>
+    <message>
+      <source>Added to Steam successfully. Launch Steam to see the changes.</source>
+      <translation>Aggiunto a Steam con successo. Avvia Steam per vedere le modifiche.</translation>
     </message>
   </context>
   <context>
@@ -3107,6 +3190,54 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
     <message>
       <source>&amp;Open User Directory</source>
       <translation>&amp;Apri Cartella Utente</translation>
+    </message>
+    <message>
+      <source>Shad&amp;Net...</source>
+      <translation>Shad&amp;Net...</translation>
+    </message>
+    <message>
+      <source>On</source>
+      <translation>Attivo</translation>
+    </message>
+    <message>
+      <source>On (%1)</source>
+      <translation>Attivo (%1)</translation>
+    </message>
+    <message>
+      <source>Off</source>
+      <translation>Disattivo</translation>
+    </message>
+    <message>
+      <source>ShadNet Settings - %1</source>
+      <translation>Impostazioni ShadNet - %1</translation>
+    </message>
+    <message>
+      <source>Enable ShadNet for this user</source>
+      <translation>Abilita ShadNet per questo utente</translation>
+    </message>
+    <message>
+      <source>Account ID (NPID)</source>
+      <translation>ID Account (NPID)</translation>
+    </message>
+    <message>
+      <source>Password</source>
+      <translation>Password</translation>
+    </message>
+    <message>
+      <source>Show password</source>
+      <translation>Mostra password</translation>
+    </message>
+    <message>
+      <source>Account ID (NPID):</source>
+      <translation>ID Account (NPID):</translation>
+    </message>
+    <message>
+      <source>Password:</source>
+      <translation>Password:</translation>
+    </message>
+    <message>
+      <source>Shad&amp;Net Settings...</source>
+      <translation>Impostazioni Shad&amp;Net...</translation>
     </message>
   </context>
   <context>

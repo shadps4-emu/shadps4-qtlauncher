@@ -1299,6 +1299,22 @@ Please enter your keys and save them.</source>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
       <translation>Для використання Переглядача трофеїв потрібен ключ трофеїв. Його можна ввести, натиснувши Налаштування - Керування криптографічними ключами.</translation>
     </message>
+    <message>
+      <source>User</source>
+      <translation>Користувач</translation>
+    </message>
+    <message>
+      <source>Add with Selected Emulator Version</source>
+      <translation>Додати з вибраною версією емулятора</translation>
+    </message>
+    <message>
+      <source>Add with Specified Emulator Version</source>
+      <translation>Додати з вказаною версією емулятора</translation>
+    </message>
+    <message>
+      <source>Add to Steam</source>
+      <translation>Додати до Steam</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -2645,10 +2661,6 @@ Select an emulator version from the right panel.</source>
       <translation>Увімкнути режим консолі для розробників</translation>
     </message>
     <message>
-      <source>Set &quot;PSN signed-in&quot; to True</source>
-      <translation>Використовувати емуляцію доступу до PSN</translation>
-    </message>
-    <message>
       <source>Set &quot;Network Connected&quot; to True</source>
       <translation>Використовувати емуляцію доступу до мережі</translation>
     </message>
@@ -2691,10 +2703,6 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</source>
       <translation>Використовувати емуляцію доступу до мережі:\nЗмушує ігри визначати активне мережеве з’єднання. Фактичні онлайн-можливості ще не підтримуються.</translation>
-    </message>
-    <message>
-      <source>Set PSN Signed-in to True:\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported.</source>
-      <translation>Використовувати емуляцію доступу до PSN:\nЗмушує ігри виявляти активний вхід у PSN. Фактичні можливості PSN не підтримуються.</translation>
     </message>
     <message>
       <source>Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
@@ -2960,6 +2968,34 @@ Select an emulator version from the right panel.</source>
       <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
       <translation>Фільтр журналів:\nФільтрує журнал, щоб виводити лише певну інформацію.\nПриклади: «Core:Debug» «Lib.Pad:Debug Common.Filesystem:Error» «*:Critical»\nРівні: trace, debug, info, warning, error, critical, off — у такому порядку; вибір конкретного рівня вимикає всі попередні рівні в списку та записує кожен наступний рівень.</translation>
     </message>
+    <message>
+      <source>Enable shadNet</source>
+      <translation>Увімкнути shadNet</translation>
+    </message>
+    <message>
+      <source>ShadNet</source>
+      <translation>ShadNet</translation>
+    </message>
+    <message>
+      <source>Server</source>
+      <translation>Сервер</translation>
+    </message>
+    <message>
+      <source>Signaling Info</source>
+      <translation>Інформація про сигнал</translation>
+    </message>
+    <message>
+      <source>Enable UPNP</source>
+      <translation>Увімкнути UPNP</translation>
+    </message>
+    <message>
+      <source>WebAPI Server</source>
+      <translation>Сервер WebAPI</translation>
+    </message>
+    <message>
+      <source>shadNet:\nA PSN server replacement.\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadNet/register/.</source>
+      <translation>shadNet:\nЗаміна серверів PSN.\nСумісність наразі дуже обмежена.\nВи можете зареєструватися за посиланням https://www.shadps4.net/shadNet/register/.</translation>
+    </message>
   </context>
   <context>
     <name>ShortcutDialog</name>
@@ -2978,6 +3014,53 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Select a version first</source>
       <translation>Спочатку виберіть версію</translation>
+    </message>
+  </context>
+  <context>
+    <name>SteamShortcut</name>
+    <message>
+      <source>Steam</source>
+      <translation>Steam</translation>
+    </message>
+    <message>
+      <source>%1 is already in your Steam library.</source>
+      <translation>%1 уже у вашій бібліотеці Steam.</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation>Помилка</translation>
+    </message>
+    <message>
+      <source>Steam installation not found.</source>
+      <translation>Установлення Steam не знайдено.</translation>
+    </message>
+    <message>
+      <source>No Steam user account found. Please log into Steam at least once.</source>
+      <translation>Не знайдено жодного облікового запису Steam. Увійдіть в Steam хоча б один раз.</translation>
+    </message>
+    <message>
+      <source>Steam is Running</source>
+      <translation>Steam запущено</translation>
+    </message>
+    <message>
+      <source>Steam is currently running. It will be closed and restarted to apply the shortcut. Continue?</source>
+      <translation>Steam зараз запущено. Його буде закрито та перезапущено для застосування ярлика. Продовжити?</translation>
+    </message>
+    <message>
+      <source>Steam did not close in time. Shortcut was not added.</source>
+      <translation>Steam не закрився вчасно. Ярлик не було додано.</translation>
+    </message>
+    <message>
+      <source>Failed to add game to Steam.</source>
+      <translation>Не вдалося додати гру до Steam.</translation>
+    </message>
+    <message>
+      <source>Added to Steam successfully. Steam is restarting.</source>
+      <translation>Успішно додано до Steam. Steam перезапускається.</translation>
+    </message>
+    <message>
+      <source>Added to Steam successfully. Launch Steam to see the changes.</source>
+      <translation>Успішно додано до Steam. Запустіть Steam, щоби побачити зміни.</translation>
     </message>
   </context>
   <context>
@@ -3108,6 +3191,54 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>&amp;Open User Directory</source>
       <translation>&amp;Відкрити каталог користувачів</translation>
+    </message>
+    <message>
+      <source>Shad&amp;Net...</source>
+      <translation>Shad&amp;Net...</translation>
+    </message>
+    <message>
+      <source>On</source>
+      <translation>Увімк</translation>
+    </message>
+    <message>
+      <source>On (%1)</source>
+      <translation>Увімк (%1)</translation>
+    </message>
+    <message>
+      <source>Off</source>
+      <translation>Вимк</translation>
+    </message>
+    <message>
+      <source>ShadNet Settings - %1</source>
+      <translation>Налаштування ShadNet: %1</translation>
+    </message>
+    <message>
+      <source>Enable ShadNet for this user</source>
+      <translation>Увімкнути ShadNet для цього користувача</translation>
+    </message>
+    <message>
+      <source>Account ID (NPID)</source>
+      <translation>ID облікового запису (NPID)</translation>
+    </message>
+    <message>
+      <source>Password</source>
+      <translation>Пароль</translation>
+    </message>
+    <message>
+      <source>Show password</source>
+      <translation>Показати пароль</translation>
+    </message>
+    <message>
+      <source>Account ID (NPID):</source>
+      <translation>ID облікового запису (NPID):</translation>
+    </message>
+    <message>
+      <source>Password:</source>
+      <translation>Пароль:</translation>
+    </message>
+    <message>
+      <source>Shad&amp;Net Settings...</source>
+      <translation>Налаштування Shad&amp;Net...</translation>
     </message>
   </context>
   <context>

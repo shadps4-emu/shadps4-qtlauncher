@@ -59,7 +59,7 @@
       </size>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>8</number>
      </property>
      <property name="usesScrollButtons">
       <bool>true</bool>
@@ -77,7 +77,7 @@
          <x>0</x>
          <y>0</y>
          <width>946</width>
-         <height>505</height>
+         <height>504</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="generalTabVLayout" stretch="0,0">
@@ -368,7 +368,7 @@
          <x>0</x>
          <y>0</y>
          <width>946</width>
-         <height>505</height>
+         <height>504</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -929,7 +929,7 @@
          <x>0</x>
          <y>0</y>
          <width>946</width>
-         <height>505</height>
+         <height>504</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="graphicsTabVLayout" stretch="0,0">
@@ -1293,7 +1293,7 @@
          <x>0</x>
          <y>0</y>
          <width>946</width>
-         <height>505</height>
+         <height>504</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="userTabVLayout" stretch="0,1">
@@ -1514,7 +1514,7 @@
          <x>0</x>
          <y>0</y>
          <width>946</width>
-         <height>505</height>
+         <height>504</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="inputTabVLayout" stretch="0,0">
@@ -1803,7 +1803,7 @@
          <x>0</x>
          <y>0</y>
          <width>946</width>
-         <height>505</height>
+         <height>504</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="pathsTabLayout">
@@ -1947,7 +1947,7 @@
          <x>0</x>
          <y>0</y>
          <width>946</width>
-         <height>240</height>
+         <height>504</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -2147,7 +2147,7 @@
          <x>0</x>
          <y>0</y>
          <width>946</width>
-         <height>418</height>
+         <height>426</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -2377,7 +2377,7 @@
          <x>0</x>
          <y>0</y>
          <width>946</width>
-         <height>500</height>
+         <height>491</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -2475,9 +2475,9 @@
                 </widget>
                </item>
                <item>
-                <widget class="QCheckBox" name="psnSignInCheckBox">
+                <widget class="QCheckBox" name="shadnetCheckBox">
                  <property name="text">
-                  <string>Set &quot;PSN signed-in&quot; to True</string>
+                  <string>Enable shadNet</string>
                  </property>
                 </widget>
                </item>
@@ -2501,6 +2501,113 @@
                   <string>Compress the Shader Cache files into a zip file</string>
                  </property>
                 </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="shadnetGroupBox">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="title">
+               <string>ShadNet</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+              </property>
+              <layout class="QFormLayout" name="formLayout">
+               <property name="sizeConstraint">
+                <enum>QLayout::SizeConstraint::SetDefaultConstraint</enum>
+               </property>
+               <property name="fieldGrowthPolicy">
+                <enum>QFormLayout::FieldGrowthPolicy::AllNonFixedFieldsGrow</enum>
+               </property>
+               <property name="labelAlignment">
+                <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop</set>
+               </property>
+               <property name="horizontalSpacing">
+                <number>6</number>
+               </property>
+               <property name="verticalSpacing">
+                <number>6</number>
+               </property>
+               <property name="leftMargin">
+                <number>9</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>200</number>
+               </property>
+               <item row="1" column="0">
+                <widget class="QLabel" name="serverLabel">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Server</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <widget class="QLabel" name="signalingInfoLabel">
+                 <property name="text">
+                  <string>Signaling Info</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1">
+                <widget class="QLineEdit" name="signalingInfoLineEdit"/>
+               </item>
+               <item row="6" column="0">
+                <widget class="QCheckBox" name="upnpCheckBox">
+                 <property name="text">
+                  <string>Enable UPNP</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QLineEdit" name="serverLineEdit">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="servWebApiLabel">
+                 <property name="text">
+                  <string>WebAPI Server</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1">
+                <widget class="QLineEdit" name="servWebApiLineEdit"/>
                </item>
               </layout>
              </widget>

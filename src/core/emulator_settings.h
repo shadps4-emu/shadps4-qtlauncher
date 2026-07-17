@@ -199,7 +199,11 @@ struct GeneralSettings {
     Setting<bool> neo_mode{false};
     Setting<bool> dev_kit_mode{false};
     Setting<int> extra_dmem_in_mbytes{0};
-    Setting<bool> psn_signed_in{false};
+    Setting<bool> shad_net_enabled{false};
+    Setting<std::string> shadnet_server{"srv.shadps4.net:31313"};
+    Setting<std::string> signaling_info{""};
+    Setting<std::string> shadnet_webapi_server{"http://srv.shadps4.net:31315"};
+    Setting<bool> enable_upnp{true};
     Setting<bool> trophy_popup_disabled{false};
     Setting<double> trophy_notification_duration{6.0};
     Setting<std::string> trophy_notification_side{"right"};
@@ -217,7 +221,7 @@ struct GeneralSettings {
             make_override<GeneralSettings>("dev_kit_mode", &GeneralSettings::dev_kit_mode),
             make_override<GeneralSettings>("extra_dmem_in_mbytes",
                                            &GeneralSettings::extra_dmem_in_mbytes),
-            make_override<GeneralSettings>("psn_signed_in", &GeneralSettings::psn_signed_in),
+            make_override<GeneralSettings>("shad_net_enabled", &GeneralSettings::shad_net_enabled),
             make_override<GeneralSettings>("trophy_popup_disabled",
                                            &GeneralSettings::trophy_popup_disabled),
             make_override<GeneralSettings>("trophy_notification_duration",
@@ -226,15 +230,21 @@ struct GeneralSettings {
             make_override<GeneralSettings>("trophy_notification_side",
                                            &GeneralSettings::trophy_notification_side),
             make_override<GeneralSettings>("connected_to_network",
-                                           &GeneralSettings::connected_to_network)};
+                                           &GeneralSettings::connected_to_network),
+            make_override<GeneralSettings>("shadnet_server", &GeneralSettings::shadnet_server),
+            make_override<GeneralSettings>("signaling_info", &GeneralSettings::signaling_info),
+            make_override<GeneralSettings>("shadnet_webapi_server",
+                                           &GeneralSettings::shadnet_webapi_server),
+            make_override<GeneralSettings>("enable_upnp", &GeneralSettings::enable_upnp)};
     }
 };
 NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(GeneralSettings, install_dirs, addon_install_dir, home_dir,
                                    sys_modules_dir, font_dir, volume_slider, neo_mode, dev_kit_mode,
-                                   extra_dmem_in_mbytes, psn_signed_in, trophy_popup_disabled,
-                                   trophy_notification_duration, show_splash,
+                                   extra_dmem_in_mbytes, shad_net_enabled, trophy_popup_disabled,
+                                   trophy_notification_duration, show_splash, enable_upnp,
                                    trophy_notification_side, connected_to_network,
-                                   discord_rpc_enabled, show_fps_counter, console_language)
+                                   discord_rpc_enabled, show_fps_counter, console_language,
+                                   shadnet_server, signaling_info, shadnet_webapi_server)
 
 // -------------------------------
 // Log settings
@@ -594,13 +604,17 @@ public:
     SETTING_FORWARD_BOOL(m_general, Neo, neo_mode)
     SETTING_FORWARD_BOOL(m_general, DevKit, dev_kit_mode)
     SETTING_FORWARD(m_general, ExtraDmemInMBytes, extra_dmem_in_mbytes)
-    SETTING_FORWARD_BOOL(m_general, PSNSignedIn, psn_signed_in)
+    SETTING_FORWARD_BOOL(m_general, ShadNetEnabled, shad_net_enabled)
     SETTING_FORWARD_BOOL(m_general, TrophyPopupDisabled, trophy_popup_disabled)
     SETTING_FORWARD(m_general, TrophyNotificationDuration, trophy_notification_duration)
     SETTING_FORWARD(m_general, TrophyNotificationSide, trophy_notification_side)
     SETTING_FORWARD_BOOL(m_general, ShowSplash, show_splash)
     SETTING_FORWARD(m_general, AddonInstallDir, addon_install_dir)
     SETTING_FORWARD_BOOL(m_general, ConnectedToNetwork, connected_to_network)
+    SETTING_FORWARD(m_general, ShadNetServer, shadnet_server)
+    SETTING_FORWARD(m_general, SignalingInfo, signaling_info)
+    SETTING_FORWARD(m_general, ShadnetWebapiServer, shadnet_webapi_server)
+    SETTING_FORWARD_BOOL(m_general, UPnPEnabled, enable_upnp)
     SETTING_FORWARD_BOOL(m_general, DiscordRPCEnabled, discord_rpc_enabled)
     SETTING_FORWARD_BOOL(m_general, ShowFpsCounter, show_fps_counter)
     SETTING_FORWARD(m_general, ConsoleLanguage, console_language)

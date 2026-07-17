@@ -1296,6 +1296,18 @@ Please enter your keys and save them.</source>
         <source>User</source>
         <translation type="unfinished">User</translation>
     </message>
+    <message>
+        <source>Add with Selected Emulator Version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add with Specified Emulator Version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add to Steam</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>HelpDialog</name>
@@ -2635,10 +2647,6 @@ Select an emulator version from the right panel.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Set &quot;PSN signed-in&quot; to True</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Set &quot;Network Connected&quot; to True</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2680,10 +2688,6 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
         <source>Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Set PSN Signed-in to True:\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2950,6 +2954,34 @@ Select an emulator version from the right panel.</source>
         <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Enable shadNet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ShadNet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Signaling Info</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable UPNP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>WebAPI Server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>shadNet:\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadnet/register/.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ShortcutDialog</name>
@@ -2967,6 +2999,53 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
         <source>Select a version first</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SteamShortcut</name>
+    <message>
+        <source>Steam</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 is already in your Steam library.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation type="unfinished">Error</translation>
+    </message>
+    <message>
+        <source>Steam installation not found.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No Steam user account found. Please log into Steam at least once.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Steam is Running</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Steam is currently running. It will be closed and restarted to apply the shortcut. Continue?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Steam did not close in time. Shortcut was not added.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to add game to Steam.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Added to Steam successfully. Steam is restarting.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Added to Steam successfully. Launch Steam to see the changes.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3097,6 +3176,54 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
         <source>&amp;Open User Directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shad&amp;Net...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>On</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>On (%1)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Off</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ShadNet Settings - %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable ShadNet for this user</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Account ID (NPID)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Account ID (NPID):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Password:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shad&amp;Net Settings...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

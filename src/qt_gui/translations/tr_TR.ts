@@ -1299,6 +1299,22 @@ Please enter your keys and save them.</translation>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
       <translation type="unfinished">A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</translation>
     </message>
+    <message>
+      <source>User</source>
+      <translation>Kullanıcı</translation>
+    </message>
+    <message>
+      <source>Add with Selected Emulator Version</source>
+      <translation type="unfinished">Add with Selected Emulator Version</translation>
+    </message>
+    <message>
+      <source>Add with Specified Emulator Version</source>
+      <translation type="unfinished">Add with Specified Emulator Version</translation>
+    </message>
+    <message>
+      <source>Add to Steam</source>
+      <translation type="unfinished">Add to Steam</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -1438,7 +1454,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>No game is running</source>
-      <translation type="unfinished">No game is running</translation>
+      <translation>Çalışan oyun yok</translation>
     </message>
   </context>
   <context>
@@ -2373,7 +2389,7 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Width/Height:\nSets the size of the emulator window at launch, which can be resized during gameplay.\nThis is different from the in-game resolution.</source>
-      <translation>Genişlik/Yükseklik:\nEmülatör penceresinin açılışta boyutunu ayarlar; bu, oyun sırasında yeniden boyutlandırılabilir.\nBu, oyundaki çözünürlükten farklıdır.</translation>
+      <translation>Genişlik/Yükseklik:\nEmülatör penceresinin başlangıç boyutunu ayarlar, oyun sırasında yeniden boyutlandırılabilir.\nBu, oyun içi çözünürlükten farklıdır.</translation>
     </message>
     <message>
       <source>Enable HDR:\nEnables HDR in games that support it.\nYour monitor must have support for the BT2020 PQ color space and the RGB10A2 swapchain format.</source>
@@ -2577,7 +2593,7 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</source>
-      <translation type="unfinished">Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</translation>
+      <translation>Sunum Modu:\nVideo çıktısının ekranınıza nasıl aktarılacağını yapılandırır.\n\nMailbox: Kareler, ekranınız&apos;ın yenileme hızıyla senkronize edilir. Yeni kareler, bekleyen karelerin yerini alır. Gecikmeyi azaltır ancak sistem geride kalırsa kare atlayabilir.\nFifo: Kareler, ekranınız&apos;ın yenileme hızıyla senkronize edilir. Yeni kareler, bekleyen karelerin arkasında sıraya alınır. Tüm karelerin gösterilmesini sağlar ancak gecikmeyi artırabilir.\nImmediate: Kareler hazır olduğunda anında ekranınıza aktarılır. Görüntüde yırtılmalara neden olabilir.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
@@ -2644,10 +2660,6 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
       <translation>Devkit Konsol Modunu Etkinleştir</translation>
     </message>
     <message>
-      <source>Set &quot;PSN signed-in&quot; to True</source>
-      <translation>&quot;PSN Oturumu&quot;nu Açık Olarak Ayarla</translation>
-    </message>
-    <message>
       <source>Set &quot;Network Connected&quot; to True</source>
       <translation type="unfinished">Set &quot;Network Connected&quot; to True</translation>
     </message>
@@ -2692,10 +2704,6 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
       <translation>Ağ Bağlantısını Aktifleştir:\nOyunların aktif bir ağ bağlantısı olduğunu algılamasını sağlar. Gerçek çevrim içi özellikler henüz desteklenmemektedir.</translation>
     </message>
     <message>
-      <source>Set PSN Signed-in to True:\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported.</source>
-      <translation>PSN Oturumunu "Açık" Olarak Ayarla:\nOyunların aktif bir PSN oturumu algılamasını zorlar. Gerçek PSN özellikleri desteklenmez.</translation>
-    </message>
-    <message>
       <source>Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
       <translation>Vulkan Doğrulama Katmanlarını Etkinleştir:\nVulkan render edicisinin durumunu doğrulayan ve iç durumu hakkındaki bilgileri günlüğe kaydeden bir sistemi etkinleştirir.\nBu durum performansı düşürecek ve muhtemelen emülasyon davranışını değiştirecektir.\nBunun çalışması için Vulkan SDK'sine ihtiyacınız vardır.</translation>
     </message>
@@ -2713,7 +2721,7 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</source>
-      <translation>Null GPU'yu Etkinleştir:\nTeknik hata ayıklama amacıyla, oyunun render edilmesini grafik kartı yokmuş gibi devre dışı bırakır. Ekran siyah olacaktır.</translation>
+      <translation>Null GPU'yu Etkinleştir:\nTeknik hata ayıklama amacıyla, sanki grafik kartı yokmuş gibi oyunun görüntü işleme sürecini devre dışı bırakır. Ekran siyah olacaktır.</translation>
     </message>
     <message>
       <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
@@ -2841,19 +2849,19 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Disabled</source>
-      <translation type="unfinished">Disabled</translation>
+      <translation>Devre Dışı</translation>
     </message>
     <message>
       <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
-      <translation type="unfinished">Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</translation>
+      <translation>Geri Okumalar:\nGPU belleği geri okumalarını ve geri yazmalarını etkinleştir.\nBu, bazı oyunların düzgün çalışması için gereklidir.\nKararlılık ve/veya performans sorunlarına neden olabilir.</translation>
     </message>
     <message>
       <source>Relaxed</source>
-      <translation type="unfinished">Relaxed</translation>
+      <translation>Esnek</translation>
     </message>
     <message>
       <source>Precise</source>
-      <translation type="unfinished">Precise</translation>
+      <translation>Hassas</translation>
     </message>
     <message>
       <source>Select shadPS4 Home Path</source>
@@ -2959,6 +2967,34 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
       <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
       <translation type="unfinished">Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</translation>
     </message>
+    <message>
+      <source>Enable shadNet</source>
+      <translation type="unfinished">Enable shadNet</translation>
+    </message>
+    <message>
+      <source>ShadNet</source>
+      <translation type="unfinished">ShadNet</translation>
+    </message>
+    <message>
+      <source>Server</source>
+      <translation type="unfinished">Server</translation>
+    </message>
+    <message>
+      <source>Signaling Info</source>
+      <translation type="unfinished">Signaling Info</translation>
+    </message>
+    <message>
+      <source>Enable UPNP</source>
+      <translation type="unfinished">Enable UPNP</translation>
+    </message>
+    <message>
+      <source>WebAPI Server</source>
+      <translation type="unfinished">WebAPI Server</translation>
+    </message>
+    <message>
+      <source>shadNet:\nA PSN server replacement.\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadNet/register/.</source>
+      <translation type="unfinished">shadNet:\nA PSN server replacement.\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadNet/register/.</translation>
+    </message>
   </context>
   <context>
     <name>ShortcutDialog</name>
@@ -2977,6 +3013,53 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     <message>
       <source>Select a version first</source>
       <translation>Önce bir sürüm seçin</translation>
+    </message>
+  </context>
+  <context>
+    <name>SteamShortcut</name>
+    <message>
+      <source>Steam</source>
+      <translation type="unfinished">Steam</translation>
+    </message>
+    <message>
+      <source>%1 is already in your Steam library.</source>
+      <translation type="unfinished">%1 is already in your Steam library.</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation type="unfinished">Error</translation>
+    </message>
+    <message>
+      <source>Steam installation not found.</source>
+      <translation type="unfinished">Steam installation not found.</translation>
+    </message>
+    <message>
+      <source>No Steam user account found. Please log into Steam at least once.</source>
+      <translation type="unfinished">No Steam user account found. Please log into Steam at least once.</translation>
+    </message>
+    <message>
+      <source>Steam is Running</source>
+      <translation type="unfinished">Steam is Running</translation>
+    </message>
+    <message>
+      <source>Steam is currently running. It will be closed and restarted to apply the shortcut. Continue?</source>
+      <translation type="unfinished">Steam is currently running. It will be closed and restarted to apply the shortcut. Continue?</translation>
+    </message>
+    <message>
+      <source>Steam did not close in time. Shortcut was not added.</source>
+      <translation type="unfinished">Steam did not close in time. Shortcut was not added.</translation>
+    </message>
+    <message>
+      <source>Failed to add game to Steam.</source>
+      <translation type="unfinished">Failed to add game to Steam.</translation>
+    </message>
+    <message>
+      <source>Added to Steam successfully. Steam is restarting.</source>
+      <translation type="unfinished">Added to Steam successfully. Steam is restarting.</translation>
+    </message>
+    <message>
+      <source>Added to Steam successfully. Launch Steam to see the changes.</source>
+      <translation type="unfinished">Added to Steam successfully. Launch Steam to see the changes.</translation>
     </message>
   </context>
   <context>
@@ -3107,6 +3190,54 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     <message>
       <source>&amp;Open User Directory</source>
       <translation>&amp;Kullanıcı Dizinini Aç</translation>
+    </message>
+    <message>
+      <source>Shad&amp;Net...</source>
+      <translation type="unfinished">Shad&amp;Net...</translation>
+    </message>
+    <message>
+      <source>On</source>
+      <translation type="unfinished">On</translation>
+    </message>
+    <message>
+      <source>On (%1)</source>
+      <translation type="unfinished">On (%1)</translation>
+    </message>
+    <message>
+      <source>Off</source>
+      <translation type="unfinished">Off</translation>
+    </message>
+    <message>
+      <source>ShadNet Settings - %1</source>
+      <translation type="unfinished">ShadNet Settings - %1</translation>
+    </message>
+    <message>
+      <source>Enable ShadNet for this user</source>
+      <translation type="unfinished">Enable ShadNet for this user</translation>
+    </message>
+    <message>
+      <source>Account ID (NPID)</source>
+      <translation type="unfinished">Account ID (NPID)</translation>
+    </message>
+    <message>
+      <source>Password</source>
+      <translation type="unfinished">Password</translation>
+    </message>
+    <message>
+      <source>Show password</source>
+      <translation type="unfinished">Show password</translation>
+    </message>
+    <message>
+      <source>Account ID (NPID):</source>
+      <translation type="unfinished">Account ID (NPID):</translation>
+    </message>
+    <message>
+      <source>Password:</source>
+      <translation type="unfinished">Password:</translation>
+    </message>
+    <message>
+      <source>Shad&amp;Net Settings...</source>
+      <translation type="unfinished">Shad&amp;Net Settings...</translation>
     </message>
   </context>
   <context>

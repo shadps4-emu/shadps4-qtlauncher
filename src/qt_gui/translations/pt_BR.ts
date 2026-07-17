@@ -269,7 +269,7 @@
     </message>
     <message>
       <source>No pre-releases found.</source>
-      <translation>Nenhum Pre-Lançamento encontrado.</translation>
+      <translation>Nenhum pre-release encontrado.</translation>
     </message>
     <message>
       <source>No download URL found for the specified asset.</source>
@@ -411,7 +411,7 @@
     </message>
     <message>
       <source>Up</source>
-      <translation>Cima</translation>
+      <translation>Para Cima</translation>
     </message>
     <message>
       <source>Left</source>
@@ -423,7 +423,7 @@
     </message>
     <message>
       <source>Down</source>
-      <translation>Baixo</translation>
+      <translation>Para Baixo</translation>
     </message>
     <message>
       <source>Left Stick</source>
@@ -611,11 +611,11 @@
     </message>
     <message>
       <source>Min Deadzone (def:2 max:127)</source>
-      <translation>Zona Morta Minima (pad:2 max:127)</translation>
+      <translation>Zona Morta Mínima (padrão:2 máximo:127)</translation>
     </message>
     <message>
       <source>Max Deadzone (def:127 max:127)</source>
-      <translation>Zona Morta Máxima (pad:127 max:127)</translation>
+      <translation>Zona Morta Máxima (padrão:127 máximo:127)</translation>
     </message>
     <message>
       <source>Right Stick Deadzone</source>
@@ -847,11 +847,11 @@ Por favor, digite suas chaves e salve-as.</translation>
     </message>
     <message>
       <source>Do you want to reset your custom default config to the original default config?</source>
-      <translation>Você gostaria de redefinir sua configuração padrão personalizada de volta para a configuração padrão original?</translation>
+      <translation>Deseja redefinir sua configuração padrão personalizada de volta para a configuração padrão original?</translation>
     </message>
     <message>
       <source>Do you want to reset this config to your custom default config?</source>
-      <translation>Você gostaria de redefinir esta configuração para a sua configuração padrão personalizada?</translation>
+      <translation>Deseja redefinir esta configuração para a sua configuração padrão personalizada?</translation>
     </message>
     <message>
       <source>Reset to Default</source>
@@ -1141,7 +1141,7 @@ Por favor, digite suas chaves e salve-as.</translation>
     </message>
     <message>
       <source>Are you sure you want to delete %1&apos;s %2 directory?</source>
-      <translation>Tem certeza de que deseja excluir o diretório do %2 %1?</translation>
+      <translation>Tem certeza que deseja excluir %1 do diretório %2?</translation>
     </message>
     <message>
       <source>Open Update Folder</source>
@@ -1298,6 +1298,22 @@ Por favor, digite suas chaves e salve-as.</translation>
     <message>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
       <translation>É necessária uma chave de troféu para usar o Visualizador de Troféus. Você pode inseri-la clicando em Configurações - Gerenciar Chaves Criptográficas.</translation>
+    </message>
+    <message>
+      <source>User</source>
+      <translation>Usuário</translation>
+    </message>
+    <message>
+      <source>Add with Selected Emulator Version</source>
+      <translation>Adicionar com a Versão do Emulador Selecionada</translation>
+    </message>
+    <message>
+      <source>Add with Specified Emulator Version</source>
+      <translation>Adicionar com a Versão do Emulador Designada</translation>
+    </message>
+    <message>
+      <source>Add to Steam</source>
+      <translation>Adicionar ao Steam</translation>
     </message>
   </context>
   <context>
@@ -1517,7 +1533,7 @@ Por favor, digite suas chaves e salve-as.</translation>
     </message>
     <message>
       <source>Speed Offset (def 0.125):</source>
-      <translation>Deslocamento de Velocidade (Pad 0,125):</translation>
+      <translation>Deslocamento de Velocidade (padrão 0,125):</translation>
     </message>
     <message>
       <source>Copy from Common Config</source>
@@ -1525,11 +1541,11 @@ Por favor, digite suas chaves e salve-as.</translation>
     </message>
     <message>
       <source>Deadzone Offset (def 0.50):</source>
-      <translation>Deslocamento da Zona Morta (Pad 0,50):</translation>
+      <translation>Deslocamento da Zona Morta (padrão 0,50):</translation>
     </message>
     <message>
       <source>Speed Multiplier (def 1.0):</source>
-      <translation>Multiplicador de Velocidade (Pad 1,0):</translation>
+      <translation>Multiplicador de Velocidade (padrão 1,0):</translation>
     </message>
     <message>
       <source>Copy values from Common Config</source>
@@ -1537,7 +1553,7 @@ Por favor, digite suas chaves e salve-as.</translation>
     </message>
     <message>
       <source>Do you want to overwrite existing mappings with the mappings from the Common Config?</source>
-      <translation>Você deseja substituir os mapeamentos existentes com os mapeamentos da Configuração Comum?</translation>
+      <translation>Deseja substituir os mapeamentos existentes com os mapeamentos da Configuração Comum?</translation>
     </message>
     <message>
       <source>Unable to Save</source>
@@ -1688,7 +1704,7 @@ Por favor, digite suas chaves e salve-as.</translation>
     <name>LogPresetsDialog</name>
     <message>
       <source>Log Filter Presets</source>
-      <translation>Predefinições do Filtro do Log</translation>
+      <translation>Predefinições do Filtro do Registro</translation>
     </message>
     <message>
       <source>Comment</source>
@@ -1975,7 +1991,7 @@ Por favor, digite suas chaves e salve-as.</translation>
     </message>
     <message>
       <source>Show Labels Under Icons</source>
-      <translation>Mostrar Rótulos Sob Ícones</translation>
+      <translation>Mostrar Rótulos Abaixo dos Ícones</translation>
     </message>
     <message>
       <source>Customize Hotkeys</source>
@@ -2537,11 +2553,11 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Enable Background Controller Input</source>
-      <translation>Ativar Controle em Segundo plano</translation>
+      <translation>Ativar Entrada do Controle em Segundo Plano</translation>
     </message>
     <message>
       <source>Enable Controller Background Input:\nAllow shadPS4 to detect controller inputs when the game window is not in focus.</source>
-      <translation>Ativar Controle em Segundo plano:\nPermitir que o shadPS4 detecte entradas do controle quando a janela do jogo não está em foco.</translation>
+      <translation>Ativar Entrada do Controle em Segundo Plano:\nPermitir que o shadPS4 detecte entradas do controle quando a janela do jogo não está em foco.</translation>
     </message>
     <message>
       <source>Crash Diagnostics:\nCreates a .yaml file with info about the Vulkan state at the time of crashing.\nUseful for debugging &apos;Device lost&apos; errors. If you have this enabled, you should enable Host AND Guest Debug Markers.\nYou need Vulkan Validation Layers enabled and the Vulkan SDK for this to work.</source>
@@ -2644,10 +2660,6 @@ Selecione uma versão do emulador no painel direito.</translation>
       <translation>Habilitar o Modo Console Devkit</translation>
     </message>
     <message>
-      <source>Set &quot;PSN signed-in&quot; to True</source>
-      <translation>Definir &quot;PSN signed-in&quot; como Verdadeiro</translation>
-    </message>
-    <message>
       <source>Set &quot;Network Connected&quot; to True</source>
       <translation>Definir &quot;Network Connected&quot; como Verdadeiro</translation>
     </message>
@@ -2690,10 +2702,6 @@ Selecione uma versão do emulador no painel direito.</translation>
     <message>
       <source>Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</source>
       <translation>Definir Network Connected como Verdadeiro:\nForça os jogos a detectarem uma conexão de rede ativa. Recursos online reais ainda não são suportados.</translation>
-    </message>
-    <message>
-      <source>Set PSN Signed-in to True:\nForces games to detect an active PSN sign-in. Actual PSN capabilities are not supported.</source>
-      <translation>Definir PSN Signed-in como Verdadeiro:\nForça os jogos a detectarem um login ativo na PSN. Recursos reais da PSN não são suportados.</translation>
     </message>
     <message>
       <source>Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
@@ -2959,6 +2967,34 @@ Selecione uma versão do emulador no painel direito.</translation>
       <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
       <translation>Filtro do Registro:\nFiltra o registro para exibir apenas informações específicas.\nExemplos: &quot;Core:Trace&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nNíveis: trace, debug, info, warning, error, critical - nesta ordem, um nível específico silencia todos os níveis anteriores na lista e registra todos os níveis após este.</translation>
     </message>
+    <message>
+      <source>Enable shadNet</source>
+      <translation>Ativar shadNet</translation>
+    </message>
+    <message>
+      <source>ShadNet</source>
+      <translation>ShadNet</translation>
+    </message>
+    <message>
+      <source>Server</source>
+      <translation>Servidor</translation>
+    </message>
+    <message>
+      <source>Signaling Info</source>
+      <translation>Informações de Sinalização</translation>
+    </message>
+    <message>
+      <source>Enable UPNP</source>
+      <translation>Ativar UPnP</translation>
+    </message>
+    <message>
+      <source>WebAPI Server</source>
+      <translation>Servidor WebAPI</translation>
+    </message>
+    <message>
+      <source>shadNet:\nA PSN server replacement.\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadNet/register/.</source>
+      <translation>shadNet:\nUm substituto para o servidor PSN.\nA compatibilidade é bem limitada no momento.\nVocê pode se registrar em https://www.shadps4.net/shadNet/register/.</translation>
+    </message>
   </context>
   <context>
     <name>ShortcutDialog</name>
@@ -2977,6 +3013,53 @@ Selecione uma versão do emulador no painel direito.</translation>
     <message>
       <source>Select a version first</source>
       <translation>Primeiro selecione uma versão</translation>
+    </message>
+  </context>
+  <context>
+    <name>SteamShortcut</name>
+    <message>
+      <source>Steam</source>
+      <translation>Steam</translation>
+    </message>
+    <message>
+      <source>%1 is already in your Steam library.</source>
+      <translation>%1 já está na sua biblioteca do Steam.</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation>Erro</translation>
+    </message>
+    <message>
+      <source>Steam installation not found.</source>
+      <translation>Instalação do Steam não encontrada.</translation>
+    </message>
+    <message>
+      <source>No Steam user account found. Please log into Steam at least once.</source>
+      <translation>Nenhuma conta de usuário do Steam encontrada. Por favor, faça login no Steam pelo menos uma vez.</translation>
+    </message>
+    <message>
+      <source>Steam is Running</source>
+      <translation>O Steam está em Execução</translation>
+    </message>
+    <message>
+      <source>Steam is currently running. It will be closed and restarted to apply the shortcut. Continue?</source>
+      <translation>O Steam está em execução. Será fechado e reiniciado para aplicar o atalho. Continuar?</translation>
+    </message>
+    <message>
+      <source>Steam did not close in time. Shortcut was not added.</source>
+      <translation>O Steam não encerrou no prazo. O atalho não foi adicionado.</translation>
+    </message>
+    <message>
+      <source>Failed to add game to Steam.</source>
+      <translation>Falha ao adicionar jogo ao Steam.</translation>
+    </message>
+    <message>
+      <source>Added to Steam successfully. Steam is restarting.</source>
+      <translation>Adicionado ao Steam com sucesso. O Steam está reiniciando.</translation>
+    </message>
+    <message>
+      <source>Added to Steam successfully. Launch Steam to see the changes.</source>
+      <translation>Adicionado ao Steam com sucesso. Abra o Steam para ver as alterações.</translation>
     </message>
   </context>
   <context>
@@ -3107,6 +3190,54 @@ Selecione uma versão do emulador no painel direito.</translation>
     <message>
       <source>&amp;Open User Directory</source>
       <translation>&amp;Abrir Diretório do Usuário</translation>
+    </message>
+    <message>
+      <source>Shad&amp;Net...</source>
+      <translation>Shad&amp;Net...</translation>
+    </message>
+    <message>
+      <source>On</source>
+      <translation>Liga</translation>
+    </message>
+    <message>
+      <source>On (%1)</source>
+      <translation>Liga (%1)</translation>
+    </message>
+    <message>
+      <source>Off</source>
+      <translation>Desliga</translation>
+    </message>
+    <message>
+      <source>ShadNet Settings - %1</source>
+      <translation>Configurações da ShadNet - %1</translation>
+    </message>
+    <message>
+      <source>Enable ShadNet for this user</source>
+      <translation>Ativar ShadNet para este usuário</translation>
+    </message>
+    <message>
+      <source>Account ID (NPID)</source>
+      <translation>ID da Conta (NPID)</translation>
+    </message>
+    <message>
+      <source>Password</source>
+      <translation>Senha</translation>
+    </message>
+    <message>
+      <source>Show password</source>
+      <translation>Mostrar senha</translation>
+    </message>
+    <message>
+      <source>Account ID (NPID):</source>
+      <translation>ID da Conta (NPID):</translation>
+    </message>
+    <message>
+      <source>Password:</source>
+      <translation>Senha:</translation>
+    </message>
+    <message>
+      <source>Shad&amp;Net Settings...</source>
+      <translation>Configurações da Shad&amp;Net...</translation>
     </message>
   </context>
   <context>
@@ -3371,7 +3502,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Downloading Pre-release (Nightly), please wait...</source>
-      <translation>Baixando a versão de Pre-release(Nightly), por favor aguarde...</translation>
+      <translation>Baixando a versão de Pre-release (Nightly), por favor aguarde...</translation>
     </message>
   </context>
   <context>
