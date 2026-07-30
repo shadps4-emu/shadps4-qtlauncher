@@ -402,7 +402,8 @@ void MainWindow::CreateDockWindows(bool newDock) {
     QList<int> defaultSizes = {800, 200}; // these are proportionally adjusted by qt
     QList<int> sizes = gui_settings::Var2IntList(m_gui_settings->GetValue(
         gui::main_window, "dockWidgetSizes", QVariant::fromValue(defaultSizes)));
-    if (sizes[1] == 0) { // This happens if log is hidden when settings are saved
+    if (sizes.size() > 0 &&
+        sizes[1] == 0) { // This happens if log is hidden when settings are saved
         sizes = defaultSizes;
     }
 
