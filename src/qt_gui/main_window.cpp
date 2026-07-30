@@ -1482,7 +1482,7 @@ void MainWindow::StartEmulatorExecutable(std::filesystem::path emuPath, QString 
         }
 
         QStringList game_args{"--game", QString::fromStdWString(last_game_path.wstring())};
-        args.append(game_args);
+        args = game_args + args;
     }
 
     QFileInfo fileInfo(emuPath);
