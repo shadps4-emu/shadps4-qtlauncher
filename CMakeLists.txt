@@ -472,6 +472,7 @@ set_target_properties(shadPS4QtLauncher PROPERTIES
     MACOSX_BUNDLE_ICON_FILE "shadPS4.icns"
     MACOSX_BUNDLE_SHORT_VERSION_STRING "${APP_VERSION}"
 )
+set(MACOSX_BUNDLE_TYPE_EXTENSION "zar")
 
 set_source_files_properties(src/images/shadPS4.icns PROPERTIES
     MACOSX_PACKAGE_LOCATION Resources)
