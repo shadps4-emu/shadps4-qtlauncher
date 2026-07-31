@@ -19,6 +19,7 @@
 #include "common/versions.h"
 #include "control_settings.h"
 #include "core/emulator_state.h"
+#include "core/file_sys/game_backend.h"
 #include "crypto_key_dialog.h"
 #include "dimensions_dialog.h"
 #include "game_install_dialog.h"
@@ -1009,7 +1010,12 @@ void MainWindow::StartGameWithArgs(QStringList args) {
     if (gamePath != "") {
         AddRecentFiles(gamePath);
         const auto path = Common::FS::PathFromQString(gamePath);
-        if (!std::filesystem::exists(path)) {
+        const auto archive_root = path.parent_path();
+        const bool eboot_present =
+            Core::FileSys::IsZArchiveFile(archive_root)
+                ? Core::FileSys::ReadGameFile(archive_root, "eboot.bin").has_value()
+                : std::filesystem::exists(path);
+        if (!eboot_present) {
             QMessageBox::critical(nullptr, tr("Run Game"), QString(tr("Eboot.bin file not found")));
             return;
         }
@@ -1441,6 +1447,9 @@ void MainWindow::StartEmulatorExecutable(std::filesystem::path emuPath, QString 
     bool gameFound = false;
     if (std::filesystem::exists(Common::FS::PathFromQString(gameArg))) {
         last_game_path = Common::FS::PathFromQString(gameArg);
+        if (Core::FileSys::IsZArchiveFile(last_game_path)) {
+            last_game_path /= "eboot.bin";
+        }
         gameFound = true;
     } else {
         // In install folders, find game folder with same name as gameArg
@@ -1462,6 +1471,12 @@ void MainWindow::StartEmulatorExecutable(std::filesystem::path emuPath, QString 
                 for (const auto& entry : std::filesystem::directory_iterator(dir)) {
                     if (entry.is_directory()) {
                         if (entry.path().filename().string() == gameArg.toStdString()) {
+                            last_game_path = entry.path() / "eboot.bin";
+                            gameFound = true;
+                            break;
+                        }
+                    } else if (Core::FileSys::IsZArchiveFile(entry.path())) {
+                        if (entry.path().stem().string() == gameArg.toStdString()) {
                             last_game_path = entry.path() / "eboot.bin";
                             gameFound = true;
                             break;

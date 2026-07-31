@@ -10,6 +10,7 @@
 #include <QString>
 #include "common/path_util.h"
 #include "compatibility_info.h"
+#include "core/file_sys/game_backend.h"
 
 struct GameInfo {
     std::filesystem::path path;      // root path of game directory
@@ -64,6 +65,8 @@ public:
         QDirIterator it(dir.absolutePath(), QDirIterator::Subdirectories);
         qint64 total = 0;
 
+        const bool is_archive = Core::FileSys::IsZArchiveFile(game.path);
+
         // Cache path
         QDir cacheDir =
             QDir(Common::FS::GetUserPath(Common::FS::PathType::LauncherMetaData) / game.serial);
@@ -89,9 +92,23 @@ public:
         }
 
         // Cache is invalid or does not exist; calculate size
-        while (it.hasNext()) {
-            it.next();
-            total += it.fileInfo().size();
+        if (is_archive) {
+            total = static_cast<qint64>(Core::FileSys::GetGameRootSize(game.path));
+
+            const auto stem_path = Core::FileSys::StripZArchiveExtension(game.path);
+            for (const auto& suffix : {"-UPDATE", "-patch"}) {
+                std::filesystem::path overlay = stem_path;
+                overlay += suffix;
+                if (const auto resolved = Core::FileSys::ResolveGameRoot(overlay)) {
+                    total += static_cast<qint64>(Core::FileSys::GetGameRootSize(*resolved));
+                    break; // if an update is found don't also count -patch
+                }
+            }
+        } else {
+            while (it.hasNext()) {
+                it.next();
+                total += it.fileInfo().size();
+            }
         }
 
         game.size = FormatSize(total).toStdString();
