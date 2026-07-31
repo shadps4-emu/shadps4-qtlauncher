@@ -2993,8 +2993,8 @@ Select an emulator version from the right panel.</source>
       <translation>Сервер WebAPI</translation>
     </message>
     <message>
-      <source>shadNet:\nA PSN server replacement.\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadNet/register/.</source>
-      <translation>shadNet:\nЗаміна серверів PSN.\nСумісність наразі дуже обмежена.\nВи можете зареєструватися за посиланням https://www.shadps4.net/shadNet/register/.</translation>
+      <source>shadNet:\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadnet/register/.</source>
+      <translation>shadNet:\n Сумісність наразі дуже обмежена.\nВи можете зареєструватися за адресою https://www.shadps4.net/shadnet/register.</translation>
     </message>
   </context>
   <context>

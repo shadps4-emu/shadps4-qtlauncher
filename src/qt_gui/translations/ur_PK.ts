@@ -573,11 +573,11 @@
     </message>
     <message>
       <source>R1 and R2</source>
-      <translation type="unfinished">R1 and R2</translation>
+      <translation>R1 اور R2</translation>
     </message>
     <message>
       <source>ID: </source>
-      <translation type="unfinished">ID: </translation>
+      <translation>آئی ڈی:</translation>
     </message>
     <message>
       <source>Default Controller Selected</source>
@@ -597,15 +597,15 @@
     </message>
     <message>
       <source>RED</source>
-      <translation type="unfinished">RED</translation>
+      <translation>سرخ</translation>
     </message>
     <message>
       <source>GREEN</source>
-      <translation type="unfinished">GREEN</translation>
+      <translation>سبز</translation>
     </message>
     <message>
       <source>BLUE</source>
-      <translation type="unfinished">BLUE</translation>
+      <translation>نیلا</translation>
     </message>
     <message>
       <source>Left Stick Deadzone</source>
@@ -642,11 +642,11 @@ Must be a valid hex string with even length.</translation>
     </message>
     <message>
       <source>Enter Trophy Key</source>
-      <translation type="unfinished">Enter Trophy Key</translation>
+      <translation>ٹرافی کی درج کیجیے</translation>
     </message>
     <message>
       <source>Trophy Key:</source>
-      <translation type="unfinished">Trophy Key:</translation>
+      <translation>ٹرافی کی:</translation>
     </message>
     <message>
       <source>Status: Not loaded</source>
@@ -724,11 +724,11 @@ All fields must be valid hex strings with even length.</translation>
     </message>
     <message>
       <source>Close</source>
-      <translation type="unfinished">Close</translation>
+      <translation>بند کریں</translation>
     </message>
     <message>
       <source>Warning</source>
-      <translation type="unfinished">Warning</translation>
+      <translation>انتباہ</translation>
     </message>
     <message>
       <source>No key file found or failed to load.
@@ -742,7 +742,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Success</source>
-      <translation type="unfinished">Success</translation>
+      <translation>کامیابی</translation>
     </message>
     <message>
       <source>Keys saved successfully!</source>
@@ -750,7 +750,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>خرابی</translation>
     </message>
     <message>
       <source>Failed to save keys!</source>
@@ -837,7 +837,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Save Changes</source>
-      <translation type="unfinished">Save Changes</translation>
+      <translation>تبدیلیاں محفوظ کریں</translation>
     </message>
     <message>
       <source>Do you want to save changes?</source>
@@ -875,11 +875,11 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>منسوخ کریں</translation>
     </message>
     <message>
       <source>Loading...</source>
-      <translation type="unfinished">Loading...</translation>
+      <translation>لوڈ ہو رہا ہے...</translation>
     </message>
   </context>
   <context>
@@ -925,11 +925,11 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Name</source>
-      <translation type="unfinished">Name</translation>
+      <translation>نام</translation>
     </message>
     <message>
       <source>Serial</source>
-      <translation type="unfinished">Serial</translation>
+      <translation>سیریل</translation>
     </message>
     <message>
       <source>Compatibility</source>
@@ -937,7 +937,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Region</source>
-      <translation type="unfinished">Region</translation>
+      <translation>ریجن</translation>
     </message>
     <message>
       <source>Firmware</source>
@@ -945,11 +945,11 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Size</source>
-      <translation type="unfinished">Size</translation>
+      <translation>سائز</translation>
     </message>
     <message>
       <source>Version</source>
-      <translation type="unfinished">Version</translation>
+      <translation>ورژن</translation>
     </message>
     <message>
       <source>Path</source>
@@ -1016,23 +1016,23 @@ Please enter your keys and save them.</translation>
     <name>GameListUtils</name>
     <message>
       <source>B</source>
-      <translation type="unfinished">B</translation>
+      <translation>بائٹ</translation>
     </message>
     <message>
       <source>KB</source>
-      <translation type="unfinished">KB</translation>
+      <translation>کے بی</translation>
     </message>
     <message>
       <source>MB</source>
-      <translation type="unfinished">MB</translation>
+      <translation>ایم بی</translation>
     </message>
     <message>
       <source>GB</source>
-      <translation type="unfinished">GB</translation>
+      <translation>جی بی</translation>
     </message>
     <message>
       <source>TB</source>
-      <translation type="unfinished">TB</translation>
+      <translation>ٹی بی</translation>
     </message>
   </context>
   <context>
@@ -2995,8 +2995,8 @@ Select an emulator version from the right panel.</translation>
       <translation type="unfinished">WebAPI Server</translation>
     </message>
     <message>
-      <source>shadNet:\nA PSN server replacement.\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadNet/register/.</source>
-      <translation type="unfinished">shadNet:\nA PSN server replacement.\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadNet/register/.</translation>
+      <source>shadNet:\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadnet/register/.</source>
+      <translation type="unfinished">shadNet:\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadnet/register/.</translation>
     </message>
   </context>
   <context>

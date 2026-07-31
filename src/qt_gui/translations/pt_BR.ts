@@ -2333,7 +2333,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Show Splash Screen:\nShows the game&apos;s splash screen (a special image) while the game is starting.</source>
-      <translation>Mostrar Tela Inicial:\nExibe a tela inicial do jogo (imagem especial) enquanto o jogo está iniciando.</translation>
+      <translation>Mostrar Tela de Abertura:\nExibe a tela de abertura do jogo (imagem especial) enquanto o jogo está iniciando.</translation>
     </message>
     <message>
       <source>Enable Discord Rich Presence:\nDisplays the emulator icon and relevant information on your Discord profile.</source>
@@ -2881,7 +2881,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the home folder.</source>
-      <translation>Procurar:\nProcura uma pasta para definir como pasta raiz.</translation>
+      <translation>Buscar:\nBusca uma pasta para definir como pasta raiz.</translation>
     </message>
     <message>
       <source>Audio</source>
@@ -2941,7 +2941,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Log Append:\nAppend to existing logs.</source>
-      <translation>Anexar ao Registro\nAdiciona aos registros existentes.</translation>
+      <translation>Anexar ao Registro:\nAdiciona aos registros existentes.</translation>
     </message>
     <message>
       <source>Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</source>
@@ -2953,7 +2953,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Log Skip Duplicate:\nSave storage by avoiding writing log that is identical.</source>
-      <translation>Ignorar Registros Duplicados: \nEconomize espaço de armazenamento evitando gravar registros idênticos.</translation>
+      <translation>Ignorar Registros Duplicados:\nEconomize espaço de armazenamento evitando gravar registros idênticos.</translation>
     </message>
     <message>
       <source>Log Sync:\nSwitch between sync (order) or async (performance).</source>
@@ -2961,7 +2961,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</source>
-      <translation>Tipo de Registro:\nEscolha entre os tipos de registro wincolor ou msvc.\nwincolor: Registro padrão para Windows\nmsvc: Registro para depuração</translation>
+      <translation>Tipo de Registro:\nEscolha entre os tipos de registro wincolor ou msvc.\nwincolor: O monitoramento padrão do Windows\nmsvc: Monitoramento para depuração</translation>
     </message>
     <message>
       <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
@@ -2992,8 +2992,8 @@ Selecione uma versão do emulador no painel direito.</translation>
       <translation>Servidor WebAPI</translation>
     </message>
     <message>
-      <source>shadNet:\nA PSN server replacement.\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadNet/register/.</source>
-      <translation>shadNet:\nUm substituto para o servidor PSN.\nA compatibilidade é bem limitada no momento.\nVocê pode se registrar em https://www.shadps4.net/shadNet/register/.</translation>
+      <source>shadNet:\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadnet/register/.</source>
+      <translation>shadNet:\nA compatibilidade é muito limitada no momento.\nVocê pode se registrar em https://www.shadps4.net/shadnet/register/.</translation>
     </message>
   </context>
   <context>

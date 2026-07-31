@@ -630,7 +630,7 @@
     <name>CryptoManagerDialog</name>
     <message>
       <source>Crypto Key Manager</source>
-      <translation type="unfinished">Crypto Key Manager</translation>
+      <translation>Menedżer kluczy kryptograficznych</translation>
     </message>
     <message>
       <source>Trophy Key: Used for trophy decryption.
@@ -648,7 +648,7 @@ Must be a valid hex string with even length.</translation>
     </message>
     <message>
       <source>Status: Not loaded</source>
-      <translation type="unfinished">Status: Not loaded</translation>
+      <translation>Status: nie załadowany</translation>
     </message>
     <message>
       <source>Trophy Key</source>
@@ -722,77 +722,77 @@ All fields must be valid hex strings with even length.</translation>
     </message>
     <message>
       <source>Close</source>
-      <translation type="unfinished">Close</translation>
+      <translation>Zamknij</translation>
     </message>
     <message>
       <source>Warning</source>
-      <translation type="unfinished">Warning</translation>
+      <translation>Ostrzeżenie</translation>
     </message>
     <message>
       <source>No key file found or failed to load.
 Please enter your keys and save them.</source>
-      <translation type="unfinished">No key file found or failed to load.
-Please enter your keys and save them.</translation>
+      <translation>Nie znaleziono klucza lub nie udało się go załadować.
+Proszę wpisać klucze i je zapisać.</translation>
     </message>
     <message>
       <source>Validation Error</source>
-      <translation type="unfinished">Validation Error</translation>
+      <translation>Błąd walidacji</translation>
     </message>
     <message>
       <source>Success</source>
-      <translation type="unfinished">Success</translation>
+      <translation>Sukces</translation>
     </message>
     <message>
       <source>Keys saved successfully!</source>
-      <translation type="unfinished">Keys saved successfully!</translation>
+      <translation>Klucze zostały pomyślnie zapisane!</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Błąd</translation>
     </message>
     <message>
       <source>Failed to save keys!</source>
-      <translation type="unfinished">Failed to save keys!</translation>
+      <translation>Nie udało się zapisać kluczy!</translation>
     </message>
     <message>
       <source>Status: All fields empty</source>
-      <translation type="unfinished">Status: All fields empty</translation>
+      <translation>Status: wszystkie pola puste</translation>
     </message>
     <message>
       <source>Status: Invalid hex values</source>
-      <translation type="unfinished">Status: Invalid hex values</translation>
+      <translation>Status: nieprawidłowe wartości szesnastkowe</translation>
     </message>
     <message>
       <source>Status: Incomplete</source>
-      <translation type="unfinished">Status: Incomplete</translation>
+      <translation>Status: niekompletny</translation>
     </message>
     <message>
       <source>Status: Valid</source>
-      <translation type="unfinished">Status: Valid</translation>
+      <translation>Status: ważny</translation>
     </message>
     <message>
       <source>Invalid File</source>
-      <translation type="unfinished">Invalid File</translation>
+      <translation>Nieprawidłowy plik</translation>
     </message>
     <message>
       <source>Only JSON files are supported.</source>
-      <translation type="unfinished">Only JSON files are supported.</translation>
+      <translation>Obsługiwane są tylko pliki JSON.</translation>
     </message>
     <message>
       <source>Unable to open file.</source>
-      <translation type="unfinished">Unable to open file.</translation>
+      <translation>Nie można otworzyć pliku.</translation>
     </message>
     <message>
       <source>JSON Error</source>
-      <translation type="unfinished">JSON Error</translation>
+      <translation>Błąd JSON</translation>
     </message>
     <message>
       <source>Invalid JSON format.</source>
-      <translation type="unfinished">Invalid JSON format.</translation>
+      <translation>Nieprawidłowy format JSON.</translation>
     </message>
     <message>
       <source>Keys successfully loaded from JSON!</source>
-      <translation type="unfinished">Keys successfully loaded from JSON!</translation>
+      <translation>Klucze zostały pomyślnie załadowane z JSON!</translation>
     </message>
     <message>
       <source>Trophy Key contains invalid hex or has odd length.</source>
@@ -804,11 +804,11 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Load Key</source>
-      <translation type="unfinished">Load Key</translation>
+      <translation>Załaduj klucz</translation>
     </message>
     <message>
       <source>Save Key</source>
-      <translation type="unfinished">Save Key</translation>
+      <translation>Zapisz klucz</translation>
     </message>
   </context>
   <context>
@@ -1285,7 +1285,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>This game does not have any saved Shader Cache to delete!</source>
-      <translation type="unfinished">This game does not have any saved Shader Cache to delete!</translation>
+      <translation>W tej grze nie ma żadnych zapisanych shaderów w pamięci podręcznej, które można by usunąć!</translation>
     </message>
     <message>
       <source>Shader Cache</source>
@@ -1293,7 +1293,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>This game has no save folder to open!</source>
-      <translation type="unfinished">This game has no save folder to open!</translation>
+      <translation>W tej grze nie ma folderu z zapisem gry, który można by otworzyć!</translation>
     </message>
     <message>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
@@ -1301,7 +1301,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>User</source>
-      <translation type="unfinished">User</translation>
+      <translation>Użytkownik</translation>
     </message>
     <message>
       <source>Add with Selected Emulator Version</source>
@@ -1313,7 +1313,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Add to Steam</source>
-      <translation type="unfinished">Add to Steam</translation>
+      <translation>Dodać do Steam</translation>
     </message>
   </context>
   <context>
@@ -1363,19 +1363,19 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Toggle Fullscreen</source>
-      <translation type="unfinished">Toggle Fullscreen</translation>
+      <translation>Przełącz na pełny ekran</translation>
     </message>
     <message>
       <source>Toggle Pause</source>
-      <translation type="unfinished">Toggle Pause</translation>
+      <translation>Przełącz pauzę</translation>
     </message>
     <message>
       <source>Toggle Mouse to Joystick Emulation</source>
-      <translation type="unfinished">Toggle Mouse to Joystick Emulation</translation>
+      <translation>Przełącz emulację myszy na joystick</translation>
     </message>
     <message>
       <source>Toggle Mouse to Gyro Emulation</source>
-      <translation type="unfinished">Toggle Mouse to Gyro Emulation</translation>
+      <translation>Przełącz myszkę na emulację żyroskopu</translation>
     </message>
     <message>
       <source>Tip: Up to three simultaneous inputs can be assigned for each hotkey</source>
@@ -1419,15 +1419,15 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Volume Up</source>
-      <translation type="unfinished">Volume Up</translation>
+      <translation>Zwiększ głośność</translation>
     </message>
     <message>
       <source>Volume Down</source>
-      <translation type="unfinished">Volume Down</translation>
+      <translation>Zmniejsz głośność</translation>
     </message>
     <message>
       <source>Hotkeys</source>
-      <translation type="unfinished">Hotkeys</translation>
+      <translation>Klawisze skrótu</translation>
     </message>
     <message>
       <source>Placeholder</source>
@@ -1435,7 +1435,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Capture Screenshot</source>
-      <translation type="unfinished">Capture Screenshot</translation>
+      <translation>Zrób zrzut ekranu</translation>
     </message>
     <message>
       <source>Capture Screenshot w/ Overlays</source>
@@ -1443,18 +1443,18 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Open Emulator Settings</source>
-      <translation type="unfinished">Open Emulator Settings</translation>
+      <translation>Otwórz ustawienia emulatora</translation>
     </message>
   </context>
   <context>
     <name>IpcClient</name>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation type="unfinished">Could not find the emulator executable</translation>
+      <translation>Nie można znaleźć pliku wykonywalnego emulatora</translation>
     </message>
     <message>
       <source>No game is running</source>
-      <translation type="unfinished">No game is running</translation>
+      <translation>Brak uruchomionej gry</translation>
     </message>
   </context>
   <context>
@@ -1613,98 +1613,98 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Output</source>
-      <translation type="unfinished">Output</translation>
+      <translation>Wyjście</translation>
     </message>
     <message>
       <source>Input</source>
-      <translation type="unfinished">Input</translation>
+      <translation>Wejście</translation>
     </message>
     <message>
       <source>Alternate Input 1</source>
-      <translation type="unfinished">Alternate Input 1</translation>
+      <translation>Alternatywne wejście 1</translation>
     </message>
     <message>
       <source>Alternate Input 2</source>
-      <translation type="unfinished">Alternate Input 2</translation>
+      <translation>Alternatywne wejście 2</translation>
     </message>
     <message>
       <source>Dpad Up</source>
-      <translation type="unfinished">Dpad Up</translation>
+      <translation>Dpad w górę</translation>
     </message>
     <message>
       <source>Dpad Down</source>
-      <translation type="unfinished">Dpad Down</translation>
+      <translation>Dpad w dół</translation>
     </message>
     <message>
       <source>Dpad Left</source>
-      <translation type="unfinished">Dpad Left</translation>
+      <translation>Dpad w lewo</translation>
     </message>
     <message>
       <source>Dpad Right</source>
-      <translation type="unfinished">Dpad Right</translation>
+      <translation>Dpad w prawo</translation>
     </message>
     <message>
       <source>Left Stick Up</source>
-      <translation type="unfinished">Left Stick Up</translation>
+      <translation>Lewy drążek w górę</translation>
     </message>
     <message>
       <source>Left Stick Down</source>
-      <translation type="unfinished">Left Stick Down</translation>
+      <translation>Lewy drążek w dół</translation>
     </message>
     <message>
       <source>Left Stick Left</source>
-      <translation type="unfinished">Left Stick Left</translation>
+      <translation>Lewy drążek w lewo</translation>
     </message>
     <message>
       <source>Left Stick Right</source>
-      <translation type="unfinished">Left Stick Right</translation>
+      <translation>Lewy drążek w prawo</translation>
     </message>
     <message>
       <source>Right Stick Up</source>
-      <translation type="unfinished">Right Stick Up</translation>
+      <translation>Prawy drążek w górę</translation>
     </message>
     <message>
       <source>Right Stick Down</source>
-      <translation type="unfinished">Right Stick Down</translation>
+      <translation>Prawy drążek w dół</translation>
     </message>
     <message>
       <source>Right Stick Left</source>
-      <translation type="unfinished">Right Stick Left</translation>
+      <translation>Prawy drążek w lewo</translation>
     </message>
     <message>
       <source>Right Stick Right</source>
-      <translation type="unfinished">Right Stick Right</translation>
+      <translation>Prawy drążek w prawo</translation>
     </message>
     <message>
       <source>L1</source>
-      <translation type="unfinished">L1</translation>
+      <translation>L1</translation>
     </message>
     <message>
       <source>R1</source>
-      <translation type="unfinished">R1</translation>
+      <translation>R1</translation>
     </message>
     <message>
       <source>L2</source>
-      <translation type="unfinished">L2</translation>
+      <translation>L2</translation>
     </message>
     <message>
       <source>R2</source>
-      <translation type="unfinished">R2</translation>
+      <translation>R2</translation>
     </message>
     <message>
       <source>L3</source>
-      <translation type="unfinished">L3</translation>
+      <translation>L3</translation>
     </message>
     <message>
       <source>R3</source>
-      <translation type="unfinished">R3</translation>
+      <translation>R3</translation>
     </message>
   </context>
   <context>
     <name>LogPresetsDialog</name>
     <message>
       <source>Log Filter Presets</source>
-      <translation type="unfinished">Log Filter Presets</translation>
+      <translation>Ustawienia wstępne filtrów dziennika</translation>
     </message>
     <message>
       <source>Comment</source>
@@ -1724,15 +1724,15 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Add a new preset after the selected row</source>
-      <translation type="unfinished">Add a new preset after the selected row</translation>
+      <translation>Dodaj nowy preset po wybranym wierszu</translation>
     </message>
     <message>
       <source>Remove selected presets</source>
-      <translation type="unfinished">Remove selected presets</translation>
+      <translation>Usuń wybrane ustawienia wstępne</translation>
     </message>
     <message>
       <source>Load the selected preset</source>
-      <translation type="unfinished">Load the selected preset</translation>
+      <translation>Załaduj wybrany preset</translation>
     </message>
   </context>
   <context>
@@ -2009,13 +2009,13 @@ Please enter your keys and save them.</translation>
       <source>No emulator version was selected.
 The Version Manager menu will then open.
 Select an emulator version from the right panel.</source>
-      <translation type="unfinished">No emulator version was selected.
-The Version Manager menu will then open.
-Select an emulator version from the right panel.</translation>
+      <translation>Nie wybrano żadnej wersji emulatora.
+Następnie otworzy się menu menedżera wersji.
+Wybierz wersję emulatora z prawego panelu.</translation>
     </message>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation type="unfinished">Could not find the emulator executable</translation>
+      <translation>Nie można znaleźć pliku wykonywalnego emulatora</translation>
     </message>
     <message>
       <source>Run Emulator</source>
@@ -2617,7 +2617,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Load Presets...</source>
-      <translation type="unfinished">Load Presets...</translation>
+      <translation>Załaduj ustawienia wstępne...</translation>
     </message>
     <message>
       <source>Log</source>
@@ -2625,7 +2625,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Open Log Location:\nOpen the folder where the log file is saved.</source>
-      <translation type="unfinished">Open Log Location:\nOpen the folder where the log file is saved.</translation>
+      <translation>Otwórz lokalizację dziennika:\nOtwórz folder, w którym zapisany jest plik dziennika.</translation>
     </message>
     <message>
       <source>Microphone:\nNone: Does not use the microphone.\nDefault Device: Will use the default device defined in the system.\nOr manually choose the microphone to be used from the list.</source>
@@ -2901,7 +2901,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Camera</source>
-      <translation type="unfinished">Camera</translation>
+      <translation>Kamera</translation>
     </message>
     <message>
       <source>Log Sync</source>
@@ -2937,7 +2937,7 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>msvc</source>
-      <translation type="unfinished">msvc</translation>
+      <translation>msvc</translation>
     </message>
     <message>
       <source>Log Append:\nAppend to existing logs.</source>
@@ -2969,15 +2969,15 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Enable shadNet</source>
-      <translation type="unfinished">Enable shadNet</translation>
+      <translation>Włącz shadNet</translation>
     </message>
     <message>
       <source>ShadNet</source>
-      <translation type="unfinished">ShadNet</translation>
+      <translation>ShadNet</translation>
     </message>
     <message>
       <source>Server</source>
-      <translation type="unfinished">Server</translation>
+      <translation>Serwer</translation>
     </message>
     <message>
       <source>Signaling Info</source>
@@ -2985,15 +2985,15 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Enable UPNP</source>
-      <translation type="unfinished">Enable UPNP</translation>
+      <translation>Włącz UPNP</translation>
     </message>
     <message>
       <source>WebAPI Server</source>
-      <translation type="unfinished">WebAPI Server</translation>
+      <translation>Serwer WebAPI</translation>
     </message>
     <message>
-      <source>shadNet:\nA PSN server replacement.\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadNet/register/.</source>
-      <translation type="unfinished">shadNet:\nA PSN server replacement.\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadNet/register/.</translation>
+      <source>shadNet:\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadnet/register/.</source>
+      <translation type="unfinished">shadNet:\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadnet/register/.</translation>
     </message>
   </context>
   <context>
@@ -3019,7 +3019,7 @@ Select an emulator version from the right panel.</translation>
     <name>SteamShortcut</name>
     <message>
       <source>Steam</source>
-      <translation type="unfinished">Steam</translation>
+      <translation>Steam</translation>
     </message>
     <message>
       <source>%1 is already in your Steam library.</source>
@@ -3027,19 +3027,19 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Błąd</translation>
     </message>
     <message>
       <source>Steam installation not found.</source>
-      <translation type="unfinished">Steam installation not found.</translation>
+      <translation>Instalacja Steam nieznaleziona.</translation>
     </message>
     <message>
       <source>No Steam user account found. Please log into Steam at least once.</source>
-      <translation type="unfinished">No Steam user account found. Please log into Steam at least once.</translation>
+      <translation>Nie znaleziono konta użytkownika Steam. Proszę zalogować się do Steam przynajmniej raz.</translation>
     </message>
     <message>
       <source>Steam is Running</source>
-      <translation type="unfinished">Steam is Running</translation>
+      <translation>Steam jest uruchomiony</translation>
     </message>
     <message>
       <source>Steam is currently running. It will be closed and restarted to apply the shortcut. Continue?</source>
@@ -3051,15 +3051,15 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Failed to add game to Steam.</source>
-      <translation type="unfinished">Failed to add game to Steam.</translation>
+      <translation>Błąd dodania gry do Steam.</translation>
     </message>
     <message>
       <source>Added to Steam successfully. Steam is restarting.</source>
-      <translation type="unfinished">Added to Steam successfully. Steam is restarting.</translation>
+      <translation>Dodani do Steam pomyślnie. Steam uruchamia się ponownie.</translation>
     </message>
     <message>
       <source>Added to Steam successfully. Launch Steam to see the changes.</source>
-      <translation type="unfinished">Added to Steam successfully. Launch Steam to see the changes.</translation>
+      <translation>Dodani do Steam pomyślnie. Uruchom Steam, żeby zobaczyć zmiany.</translation>
     </message>
   </context>
   <context>
@@ -3090,14 +3090,14 @@ Select an emulator version from the right panel.</translation>
     </message>
     <message>
       <source>Select User:</source>
-      <translation type="unfinished">Select User:</translation>
+      <translation>Wybierz użytkownika:</translation>
     </message>
   </context>
   <context>
     <name>UserManagerDialog</name>
     <message>
       <source>User Manager</source>
-      <translation type="unfinished">User Manager</translation>
+      <translation>Menedżer użytkowników</translation>
     </message>
     <message>
       <source>&amp;Create User</source>

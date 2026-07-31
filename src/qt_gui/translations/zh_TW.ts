@@ -1299,19 +1299,19 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>User</source>
-      <translation type="unfinished">User</translation>
+      <translation>使用者</translation>
     </message>
     <message>
       <source>Add with Selected Emulator Version</source>
-      <translation type="unfinished">Add with Selected Emulator Version</translation>
+      <translation>新增選取的模擬器版本</translation>
     </message>
     <message>
       <source>Add with Specified Emulator Version</source>
-      <translation type="unfinished">Add with Specified Emulator Version</translation>
+      <translation>新增指定的模擬器版本</translation>
     </message>
     <message>
       <source>Add to Steam</source>
-      <translation type="unfinished">Add to Steam</translation>
+      <translation>新增到 Steam</translation>
     </message>
   </context>
   <context>
@@ -2963,31 +2963,31 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable shadNet</source>
-      <translation type="unfinished">Enable shadNet</translation>
+      <translation>啟用 ShadNet</translation>
     </message>
     <message>
       <source>ShadNet</source>
-      <translation type="unfinished">ShadNet</translation>
+      <translation>ShadNet</translation>
     </message>
     <message>
       <source>Server</source>
-      <translation type="unfinished">Server</translation>
+      <translation>伺服器</translation>
     </message>
     <message>
       <source>Signaling Info</source>
-      <translation type="unfinished">Signaling Info</translation>
+      <translation>訊號資訊</translation>
     </message>
     <message>
       <source>Enable UPNP</source>
-      <translation type="unfinished">Enable UPNP</translation>
+      <translation>啟用連接埠轉送(UPnP)</translation>
     </message>
     <message>
       <source>WebAPI Server</source>
-      <translation type="unfinished">WebAPI Server</translation>
+      <translation>WebAPI 伺服器</translation>
     </message>
     <message>
-      <source>shadNet:\nA PSN server replacement.\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadNet/register/.</source>
-      <translation type="unfinished">shadNet:\nA PSN server replacement.\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadNet/register/.</translation>
+      <source>shadNet:\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadnet/register/.</source>
+      <translation>shadNet:\n目前相容性非常有限。\n你可以在 https://www.shadps4.net/shadnet/register/ 進行註冊。</translation>
     </message>
   </context>
   <context>
@@ -3013,47 +3013,47 @@ Select an emulator version from the right panel.</source>
     <name>SteamShortcut</name>
     <message>
       <source>Steam</source>
-      <translation type="unfinished">Steam</translation>
+      <translation>Steam</translation>
     </message>
     <message>
       <source>%1 is already in your Steam library.</source>
-      <translation type="unfinished">%1 is already in your Steam library.</translation>
+      <translation>%1 已存在於你的 Steam 資料庫中。</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>錯誤</translation>
     </message>
     <message>
       <source>Steam installation not found.</source>
-      <translation type="unfinished">Steam installation not found.</translation>
+      <translation>找不到 Steam 安裝。</translation>
     </message>
     <message>
       <source>No Steam user account found. Please log into Steam at least once.</source>
-      <translation type="unfinished">No Steam user account found. Please log into Steam at least once.</translation>
+      <translation>找不到 Steam 使用者帳戶。請至少登入 Steam 一次。</translation>
     </message>
     <message>
       <source>Steam is Running</source>
-      <translation type="unfinished">Steam is Running</translation>
+      <translation>Steam 正在執行</translation>
     </message>
     <message>
       <source>Steam is currently running. It will be closed and restarted to apply the shortcut. Continue?</source>
-      <translation type="unfinished">Steam is currently running. It will be closed and restarted to apply the shortcut. Continue?</translation>
+      <translation>Steam 目前正在執行。將會關閉它並重新啟動，以便套用捷徑。是否要繼續？</translation>
     </message>
     <message>
       <source>Steam did not close in time. Shortcut was not added.</source>
-      <translation type="unfinished">Steam did not close in time. Shortcut was not added.</translation>
+      <translation>未能及時關閉 Steam。未能新增捷徑。</translation>
     </message>
     <message>
       <source>Failed to add game to Steam.</source>
-      <translation type="unfinished">Failed to add game to Steam.</translation>
+      <translation>無法將遊戲新增至 Steam。</translation>
     </message>
     <message>
       <source>Added to Steam successfully. Steam is restarting.</source>
-      <translation type="unfinished">Added to Steam successfully. Steam is restarting.</translation>
+      <translation>已成功新增至 Steam。Steam 將會重新啟動。</translation>
     </message>
     <message>
       <source>Added to Steam successfully. Launch Steam to see the changes.</source>
-      <translation type="unfinished">Added to Steam successfully. Launch Steam to see the changes.</translation>
+      <translation>已成功新增至 Steam。請啟動 Steam 以確認變更。</translation>
     </message>
   </context>
   <context>
@@ -3187,51 +3187,51 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Shad&amp;Net...</source>
-      <translation type="unfinished">Shad&amp;Net...</translation>
+      <translation>Shad&amp;Net...</translation>
     </message>
     <message>
       <source>On</source>
-      <translation type="unfinished">On</translation>
+      <translation>開</translation>
     </message>
     <message>
       <source>On (%1)</source>
-      <translation type="unfinished">On (%1)</translation>
+      <translation>開 (%1)</translation>
     </message>
     <message>
       <source>Off</source>
-      <translation type="unfinished">Off</translation>
+      <translation>關</translation>
     </message>
     <message>
       <source>ShadNet Settings - %1</source>
-      <translation type="unfinished">ShadNet Settings - %1</translation>
+      <translation>ShadNet 設定 - %1</translation>
     </message>
     <message>
       <source>Enable ShadNet for this user</source>
-      <translation type="unfinished">Enable ShadNet for this user</translation>
+      <translation>為此使用者啟用 ShadNet</translation>
     </message>
     <message>
       <source>Account ID (NPID)</source>
-      <translation type="unfinished">Account ID (NPID)</translation>
+      <translation>帳戶 ID (NPID)</translation>
     </message>
     <message>
       <source>Password</source>
-      <translation type="unfinished">Password</translation>
+      <translation>密碼</translation>
     </message>
     <message>
       <source>Show password</source>
-      <translation type="unfinished">Show password</translation>
+      <translation>顯示密碼</translation>
     </message>
     <message>
       <source>Account ID (NPID):</source>
-      <translation type="unfinished">Account ID (NPID):</translation>
+      <translation>帳戶 ID (NPID)：</translation>
     </message>
     <message>
       <source>Password:</source>
-      <translation type="unfinished">Password:</translation>
+      <translation>密碼：</translation>
     </message>
     <message>
       <source>Shad&amp;Net Settings...</source>
-      <translation type="unfinished">Shad&amp;Net Settings...</translation>
+      <translation>Shad&amp;Net 設定...</translation>
     </message>
   </context>
   <context>

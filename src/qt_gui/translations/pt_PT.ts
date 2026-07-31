@@ -11,11 +11,11 @@
     </message>
     <message>
       <source>shadPS4 is an experimental open-source emulator for the PlayStation 4.</source>
-      <translation>shadPS4 é um emulador de código aberto experimental para o PlayStation 4.</translation>
+      <translation>shadPS4 é um emulador de código aberto experimental para a PlayStation 4.</translation>
     </message>
     <message>
       <source>This software should not be used to play games you have not legally obtained.</source>
-      <translation>Este programa não deve ser usado para jogar títulos não obtidos legalmente.</translation>
+      <translation>Este programa não deve ser utilizado para jogar títulos obtidos ilegalmente.</translation>
     </message>
   </context>
   <context>
@@ -341,11 +341,11 @@
     </message>
     <message>
       <source>Auto Updater - GUI</source>
-      <translation type="unfinished">Auto Updater - GUI</translation>
+      <translation>Atualizador Automático - GUI</translation>
     </message>
     <message>
       <source>Update Available - GUI</source>
-      <translation type="unfinished">Update Available - GUI</translation>
+      <translation>Atualização Disponível - GUI</translation>
     </message>
   </context>
   <context>
@@ -487,328 +487,327 @@
     </message>
     <message>
       <source>unmapped</source>
-      <translation type="unfinished">unmapped</translation>
+      <translation>não associado</translation>
     </message>
     <message>
       <source>Options</source>
-      <translation type="unfinished">Options</translation>
+      <translation>Opções</translation>
     </message>
     <message>
       <source>Touchpad Left</source>
-      <translation type="unfinished">Touchpad Left</translation>
+      <translation>Painel Tátil Esquerdo</translation>
     </message>
     <message>
       <source>Touchpad Center</source>
-      <translation type="unfinished">Touchpad Center</translation>
+      <translation>Painel Tátil Central</translation>
     </message>
     <message>
       <source>Touchpad Right</source>
-      <translation type="unfinished">Touchpad Right</translation>
+      <translation>Painel Tátil Direito</translation>
     </message>
     <message>
       <source>Triangle</source>
-      <translation type="unfinished">Triangle</translation>
+      <translation>Triângulo</translation>
     </message>
     <message>
       <source>Square</source>
-      <translation type="unfinished">Square</translation>
+      <translation>Quadrado</translation>
     </message>
     <message>
       <source>Circle</source>
-      <translation type="unfinished">Circle</translation>
+      <translation>Círculo</translation>
     </message>
     <message>
       <source>Cross</source>
-      <translation type="unfinished">Cross</translation>
+      <translation>Cruz</translation>
     </message>
     <message>
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-      <translation type="unfinished">Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
+      <translation>Não é possível associar qualquer comando único mais do que uma vez. Existem comandos duplicados associados aos seguintes botões:
 
 %1</translation>
     </message>
     <message>
       <source>Press a button</source>
-      <translation type="unfinished">Press a button</translation>
+      <translation>Pressione um botão</translation>
     </message>
     <message>
       <source>Move analog stick</source>
-      <translation type="unfinished">Move analog stick</translation>
+      <translation>Mova o manípulo</translation>
     </message>
     <message>
       <source>L1 and L2</source>
-      <translation type="unfinished">L1 and L2</translation>
+      <translation>L1 e L2</translation>
     </message>
     <message>
       <source>Active Gamepad</source>
-      <translation type="unfinished">Active Gamepad</translation>
+      <translation>Comando Ativo</translation>
     </message>
     <message>
       <source>Gamepad ID</source>
-      <translation type="unfinished">Gamepad ID</translation>
+      <translation>ID do Comando</translation>
     </message>
     <message>
       <source>Default Gamepad</source>
-      <translation type="unfinished">Default Gamepad</translation>
+      <translation>Comando Predefinido</translation>
     </message>
     <message>
       <source>No default selected</source>
-      <translation type="unfinished">No default selected</translation>
+      <translation>Nenhum comando predefinido selecionado</translation>
     </message>
     <message>
       <source>n/a</source>
-      <translation type="unfinished">n/a</translation>
+      <translation>n/a</translation>
     </message>
     <message>
       <source>Set Active Gamepad as Default</source>
-      <translation type="unfinished">Set Active Gamepad as Default</translation>
+      <translation>Definir Comando Ativo como Predefinido</translation>
     </message>
     <message>
       <source>Remove Default Gamepad</source>
-      <translation type="unfinished">Remove Default Gamepad</translation>
+      <translation>Remover Comando Predefinido</translation>
     </message>
     <message>
       <source>R1 and R2</source>
-      <translation type="unfinished">R1 and R2</translation>
+      <translation>R1 e R2</translation>
     </message>
     <message>
       <source>ID: </source>
-      <translation type="unfinished">ID: </translation>
+      <translation>ID: </translation>
     </message>
     <message>
       <source>Default Controller Selected</source>
-      <translation type="unfinished">Default Controller Selected</translation>
+      <translation>Comando Predefinido Selecionado</translation>
     </message>
     <message>
       <source>Active controller set as default</source>
-      <translation type="unfinished">Active controller set as default</translation>
+      <translation>Comando ativo definido como predefinido</translation>
     </message>
     <message>
       <source>Default Controller Removed</source>
-      <translation type="unfinished">Default Controller Removed</translation>
+      <translation>Comando Predefinido Removido</translation>
     </message>
     <message>
       <source>Default controller setting removed</source>
-      <translation type="unfinished">Default controller setting removed</translation>
+      <translation>Definição de comando predefinido removida</translation>
     </message>
     <message>
       <source>RED</source>
-      <translation type="unfinished">RED</translation>
+      <translation>VERMELHO</translation>
     </message>
     <message>
       <source>GREEN</source>
-      <translation type="unfinished">GREEN</translation>
+      <translation>VERDE</translation>
     </message>
     <message>
       <source>BLUE</source>
-      <translation type="unfinished">BLUE</translation>
+      <translation>AZUL</translation>
     </message>
     <message>
       <source>Left Stick Deadzone</source>
-      <translation type="unfinished">Left Stick Deadzone</translation>
+      <translation>Zona morta do manípulo esquerdo</translation>
     </message>
     <message>
       <source>Min Deadzone (def:2 max:127)</source>
-      <translation type="unfinished">Min Deadzone (def:2 max:127)</translation>
+      <translation>Zona morta mínima (predefinição:2 máximo:127)</translation>
     </message>
     <message>
       <source>Max Deadzone (def:127 max:127)</source>
-      <translation type="unfinished">Max Deadzone (def:127 max:127)</translation>
+      <translation>Zona morta máxima (predefinição:127 máximo:127)</translation>
     </message>
     <message>
       <source>Right Stick Deadzone</source>
-      <translation type="unfinished">Right Stick Deadzone</translation>
+      <translation>Zona morta do manípulo direito</translation>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Dica: Desassocie comandos com o clique direito do rato</translation>
     </message>
   </context>
   <context>
     <name>CryptoManagerDialog</name>
     <message>
       <source>Crypto Key Manager</source>
-      <translation type="unfinished">Crypto Key Manager</translation>
+      <translation>Gestor de Chaves Criptográficas</translation>
     </message>
     <message>
       <source>Trophy Key: Used for trophy decryption.
 Must be a valid hex string with even length.</source>
-      <translation type="unfinished">Trophy Key: Used for trophy decryption.
-Must be a valid hex string with even length.</translation>
+      <translation>Chave de Troféus: Utilizada para a desencriptação de troféus. Deve ser uma cadeia hexadecimal válida com comprimento par.</translation>
     </message>
     <message>
       <source>Enter Trophy Key</source>
-      <translation type="unfinished">Enter Trophy Key</translation>
+      <translation>Introduza a Chave de Troféus</translation>
     </message>
     <message>
       <source>Trophy Key:</source>
-      <translation type="unfinished">Trophy Key:</translation>
+      <translation>Chave de Troféus:</translation>
     </message>
     <message>
       <source>Status: Not loaded</source>
-      <translation type="unfinished">Status: Not loaded</translation>
+      <translation>Estado: Não carregada</translation>
     </message>
     <message>
       <source>Trophy Key</source>
-      <translation type="unfinished">Trophy Key</translation>
+      <translation>Chave de Troféus</translation>
     </message>
     <message>
       <source>Enter %1</source>
-      <translation type="unfinished">Enter %1</translation>
+      <translation>Introduza a %1</translation>
     </message>
     <message>
       <source>Exponent1</source>
-      <translation type="unfinished">Exponent1</translation>
+      <translation>Expoente1</translation>
     </message>
     <message>
       <source>Exponent2</source>
-      <translation type="unfinished">Exponent2</translation>
+      <translation>Expoente2</translation>
     </message>
     <message>
       <source>Public Exponent</source>
-      <translation type="unfinished">Public Exponent</translation>
+      <translation>Expoente Público</translation>
     </message>
     <message>
       <source>Coefficient</source>
-      <translation type="unfinished">Coefficient</translation>
+      <translation>Coeficiente</translation>
     </message>
     <message>
       <source>Modulus</source>
-      <translation type="unfinished">Modulus</translation>
+      <translation>Módulo</translation>
     </message>
     <message>
       <source>Prime 1</source>
-      <translation type="unfinished">Prime 1</translation>
+      <translation>Primo 1</translation>
     </message>
     <message>
       <source>Prime 2</source>
-      <translation type="unfinished">Prime 2</translation>
+      <translation>Primo 2</translation>
     </message>
     <message>
       <source>Private Exponent</source>
-      <translation type="unfinished">Private Exponent</translation>
+      <translation>Expoente Privado</translation>
     </message>
     <message>
       <source>Fake Keyset</source>
-      <translation type="unfinished">Fake Keyset</translation>
+      <translation>Conjunto de Chaves Falso</translation>
     </message>
     <message>
       <source>RSA key components for fake signing.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for fake signing.
-All fields must be valid hex strings with even length.</translation>
+      <translation>Componentes de chave RSA para assinatura falsa.
+Todos os campos devem ser cadeias hexadecimais válidas com comprimento par.</translation>
     </message>
     <message>
       <source>Debug Rif Keyset</source>
-      <translation type="unfinished">Debug Rif Keyset</translation>
+      <translation>Conjunto de Chaves RIF de Depuração</translation>
     </message>
     <message>
       <source>RSA key components for debug RIF files.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for debug RIF files.
-All fields must be valid hex strings with even length.</translation>
+      <translation>Componentes de chave RSA para ficheiros RIF de depuração.
+Todos os campos devem ser cadeias hexadecimais válidas com comprimento par.</translation>
     </message>
     <message>
       <source>Pkg Derived Key3</source>
-      <translation type="unfinished">Pkg Derived Key3</translation>
+      <translation>Chave Derivada de PKG 3</translation>
     </message>
     <message>
       <source>RSA key components for package decryption.
 All fields must be valid hex strings with even length.</source>
-      <translation type="unfinished">RSA key components for package decryption.
-All fields must be valid hex strings with even length.</translation>
+      <translation>Componentes de chave RSA para desencriptação de pacotes.
+Todos os campos devem ser cadeias hexadecimais válidas com comprimento par.</translation>
     </message>
     <message>
       <source>Close</source>
-      <translation type="unfinished">Close</translation>
+      <translation>Fechar</translation>
     </message>
     <message>
       <source>Warning</source>
-      <translation type="unfinished">Warning</translation>
+      <translation>Aviso</translation>
     </message>
     <message>
       <source>No key file found or failed to load.
 Please enter your keys and save them.</source>
-      <translation type="unfinished">No key file found or failed to load.
-Please enter your keys and save them.</translation>
+      <translation>Nenhum ficheiro de chaves encontrado ou falha ao carregar.
+Por favor, introduza as suas chaves e guarde-as.</translation>
     </message>
     <message>
       <source>Validation Error</source>
-      <translation type="unfinished">Validation Error</translation>
+      <translation>Erro de Validação</translation>
     </message>
     <message>
       <source>Success</source>
-      <translation type="unfinished">Success</translation>
+      <translation>Sucesso</translation>
     </message>
     <message>
       <source>Keys saved successfully!</source>
-      <translation type="unfinished">Keys saved successfully!</translation>
+      <translation>Chaves guardadas com sucesso!</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Erro</translation>
     </message>
     <message>
       <source>Failed to save keys!</source>
-      <translation type="unfinished">Failed to save keys!</translation>
+      <translation>Falha ao guardar as chaves!</translation>
     </message>
     <message>
       <source>Status: All fields empty</source>
-      <translation type="unfinished">Status: All fields empty</translation>
+      <translation>Estado: Todos os campos vazios</translation>
     </message>
     <message>
       <source>Status: Invalid hex values</source>
-      <translation type="unfinished">Status: Invalid hex values</translation>
+      <translation>Estado: Valores hexadecimais inválidos</translation>
     </message>
     <message>
       <source>Status: Incomplete</source>
-      <translation type="unfinished">Status: Incomplete</translation>
+      <translation>Estado: Incompleto</translation>
     </message>
     <message>
       <source>Status: Valid</source>
-      <translation type="unfinished">Status: Valid</translation>
+      <translation>Estado: Válido</translation>
     </message>
     <message>
       <source>Invalid File</source>
-      <translation type="unfinished">Invalid File</translation>
+      <translation>Ficheiro Inválido</translation>
     </message>
     <message>
       <source>Only JSON files are supported.</source>
-      <translation type="unfinished">Only JSON files are supported.</translation>
+      <translation>Apenas ficheiros JSON são suportados.</translation>
     </message>
     <message>
       <source>Unable to open file.</source>
-      <translation type="unfinished">Unable to open file.</translation>
+      <translation>Não foi possível abrir o ficheiro.</translation>
     </message>
     <message>
       <source>JSON Error</source>
-      <translation type="unfinished">JSON Error</translation>
+      <translation>Erro de JSON</translation>
     </message>
     <message>
       <source>Invalid JSON format.</source>
-      <translation type="unfinished">Invalid JSON format.</translation>
+      <translation>Formato JSON inválido.</translation>
     </message>
     <message>
       <source>Keys successfully loaded from JSON!</source>
-      <translation type="unfinished">Keys successfully loaded from JSON!</translation>
+      <translation>Chaves lidas com sucesso a partir do JSON!</translation>
     </message>
     <message>
       <source>Trophy Key contains invalid hex or has odd length.</source>
-      <translation type="unfinished">Trophy Key contains invalid hex or has odd length.</translation>
+      <translation>A Chave de Troféus contém hex inválido ou tem comprimento ímpar.</translation>
     </message>
     <message>
       <source>%1 contains invalid hex or has odd length.</source>
-      <translation type="unfinished">%1 contains invalid hex or has odd length.</translation>
+      <translation>A %1 contém hex inválido ou tem comprimento ímpar.</translation>
     </message>
     <message>
       <source>Load Key</source>
-      <translation type="unfinished">Load Key</translation>
+      <translation>Ler Chave</translation>
     </message>
     <message>
       <source>Save Key</source>
-      <translation type="unfinished">Save Key</translation>
+      <translation>Guardar Chave</translation>
     </message>
   </context>
   <context>
@@ -896,23 +895,23 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Directory to install emulator versions</source>
-      <translation type="unfinished">Directory to install emulator versions</translation>
+      <translation>Diretório para instalar versões do emulador</translation>
     </message>
     <message>
       <source>Directory with your dumped games</source>
-      <translation type="unfinished">Directory with your dumped games</translation>
+      <translation>Diretório com os seus jogos extraídos</translation>
     </message>
     <message>
       <source>Directory with your dumped DLC&apos;s</source>
-      <translation type="unfinished">Directory with your dumped DLC&apos;s</translation>
+      <translation>Diretório com os seus DLC&apos;s extraídos</translation>
     </message>
     <message>
       <source>Directory with games</source>
-      <translation type="unfinished">Directory with games</translation>
+      <translation>Diretório com jogos</translation>
     </message>
     <message>
       <source>Directory with DLC&apos;s</source>
-      <translation type="unfinished">Directory with DLC&apos;s</translation>
+      <translation>Diretório com DLC&apos;s</translation>
     </message>
   </context>
   <context>
@@ -1007,7 +1006,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Favorite</source>
-      <translation type="unfinished">Favorite</translation>
+      <translation>Favorito</translation>
     </message>
   </context>
   <context>
@@ -1105,7 +1104,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Delete Trophy</source>
-      <translation>Eliminar Troféu</translation>
+      <translation>Eliminar Troféus</translation>
     </message>
     <message>
       <source>Compatibility...</source>
@@ -1181,139 +1180,139 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Remove from Favorites</source>
-      <translation type="unfinished">Remove from Favorites</translation>
+      <translation>Remover dos Favoritos</translation>
     </message>
     <message>
       <source>Add to Favorites</source>
-      <translation type="unfinished">Add to Favorites</translation>
+      <translation>Adicionar aos Favoritos</translation>
     </message>
     <message>
       <source>Game-specific Settings...</source>
-      <translation type="unfinished">Game-specific Settings...</translation>
+      <translation>Definições Específicas do Jogo...</translation>
     </message>
     <message>
       <source>Configure Game-specific Settings</source>
-      <translation type="unfinished">Configure Game-specific Settings</translation>
+      <translation>Configurar Definições Específicas do Jogo</translation>
     </message>
     <message>
       <source>Create Game-specific Settings from Global Settings</source>
-      <translation type="unfinished">Create Game-specific Settings from Global Settings</translation>
+      <translation>Criar Definições Específicas do Jogo a partir das Definições Globais</translation>
     </message>
     <message>
       <source>Delete Game-specific Settings</source>
-      <translation type="unfinished">Delete Game-specific Settings</translation>
+      <translation>Eliminar Definições Específicas do Jogo</translation>
     </message>
     <message>
       <source>Update Database</source>
-      <translation type="unfinished">Update Database</translation>
+      <translation>Atualizar Base de Dados</translation>
     </message>
     <message>
       <source>View Report</source>
-      <translation type="unfinished">View Report</translation>
+      <translation>Ver Relatório</translation>
     </message>
     <message>
       <source>Submit a Report</source>
-      <translation type="unfinished">Submit a Report</translation>
+      <translation>Submeter um Relatório</translation>
     </message>
     <message>
       <source>Confirm deletion</source>
-      <translation type="unfinished">Confirm deletion</translation>
+      <translation>Confirmar eliminação</translation>
     </message>
     <message>
       <source>Delete game-specific settings?</source>
-      <translation type="unfinished">Delete game-specific settings?</translation>
+      <translation>Eliminar definições específicas do jogo?</translation>
     </message>
     <message>
       <source>Launch...</source>
-      <translation type="unfinished">Launch...</translation>
+      <translation>Iniciar...</translation>
     </message>
     <message>
       <source>Launch with game specific configs (default)</source>
-      <translation type="unfinished">Launch with game specific configs (default)</translation>
+      <translation>Iniciar com definições específicas do jogo (predefinição)</translation>
     </message>
     <message>
       <source>Launch with global config only</source>
-      <translation type="unfinished">Launch with global config only</translation>
+      <translation>Iniciar apenas com a definição global</translation>
     </message>
     <message>
       <source>Launch with default settings</source>
-      <translation type="unfinished">Launch with default settings</translation>
+      <translation>Iniciar com as definições predefinidas</translation>
     </message>
     <message>
       <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
-      <translation type="unfinished">Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</translation>
+      <translation>Não foi possível submeter o relatório, porque o último registo do jogo falhou na verificação indicada e, por isso, o relatório é inválido:</translation>
     </message>
     <message>
       <source>Ok</source>
-      <translation type="unfinished">Ok</translation>
+      <translation>Ok</translation>
     </message>
     <message>
       <source>Info</source>
-      <translation type="unfinished">Info</translation>
+      <translation>Informação</translation>
     </message>
     <message>
       <source>Create Shortcut for Selected Emulator Version</source>
-      <translation type="unfinished">Create Shortcut for Selected Emulator Version</translation>
+      <translation>Criar Atalho para a Versão Selecionada do Emulador</translation>
     </message>
     <message>
       <source>Create Shortcut for Specified Emulator Version</source>
-      <translation type="unfinished">Create Shortcut for Specified Emulator Version</translation>
+      <translation>Criar Atalho para a Versão Especificada do Emulador</translation>
     </message>
     <message>
       <source>Create Shortcut</source>
-      <translation type="unfinished">Create Shortcut</translation>
+      <translation>Criar Atalho</translation>
     </message>
     <message>
       <source>Shortcut creation</source>
-      <translation type="unfinished">Shortcut creation</translation>
+      <translation>Criação de atalho</translation>
     </message>
     <message>
       <source>Shortcut created successfully!</source>
-      <translation type="unfinished">Shortcut created successfully!</translation>
+      <translation>Atalho criado com sucesso!</translation>
     </message>
     <message>
       <source>Error creating shortcut!</source>
-      <translation type="unfinished">Error creating shortcut!</translation>
+      <translation>Erro ao criar o atalho!</translation>
     </message>
     <message>
       <source>Failed to convert icon.</source>
-      <translation type="unfinished">Failed to convert icon.</translation>
+      <translation>Falha ao converter o ícone.</translation>
     </message>
     <message>
       <source>Delete Shader Cache</source>
-      <translation type="unfinished">Delete Shader Cache</translation>
+      <translation>Eliminar o Cache de Sombreamento</translation>
     </message>
     <message>
       <source>This game does not have any saved Shader Cache to delete!</source>
-      <translation type="unfinished">This game does not have any saved Shader Cache to delete!</translation>
+      <translation>Este jogo não tem nenhum Cache de Sombreamento guardado para eliminar!</translation>
     </message>
     <message>
       <source>Shader Cache</source>
-      <translation type="unfinished">Shader Cache</translation>
+      <translation>Cache de Sombreamento</translation>
     </message>
     <message>
       <source>This game has no save folder to open!</source>
-      <translation type="unfinished">This game has no save folder to open!</translation>
+      <translation>Este jogo não tem uma pasta de dados guardados para abrir!</translation>
     </message>
     <message>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
-      <translation type="unfinished">A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</translation>
+      <translation>Uma chave de troféus é necessária para utilizar o Visualizador de Troféus. Pode ser introduzida através ao clicar na opção Gerir Chaves Criptográficas sob Definições.</translation>
     </message>
     <message>
       <source>User</source>
-      <translation type="unfinished">User</translation>
+      <translation>Utilizador</translation>
     </message>
     <message>
       <source>Add with Selected Emulator Version</source>
-      <translation type="unfinished">Add with Selected Emulator Version</translation>
+      <translation>Adicionar com a Versão Selecionada do Emulador</translation>
     </message>
     <message>
       <source>Add with Specified Emulator Version</source>
-      <translation type="unfinished">Add with Specified Emulator Version</translation>
+      <translation>Adicionar com uma Versão Específica do Emulador</translation>
     </message>
     <message>
       <source>Add to Steam</source>
-      <translation type="unfinished">Add to Steam</translation>
+      <translation>Adicionar à Steam</translation>
     </message>
   </context>
   <context>
@@ -1343,118 +1342,118 @@ Please enter your keys and save them.</translation>
     <name>Hotkeys</name>
     <message>
       <source>Customize Hotkeys</source>
-      <translation type="unfinished">Customize Hotkeys</translation>
+      <translation>Personalizar as Teclas de Atalho</translation>
     </message>
     <message>
       <source>Show FPS Counter</source>
-      <translation type="unfinished">Show FPS Counter</translation>
+      <translation>Mostrar o Contador de FPS</translation>
     </message>
     <message>
       <source>unmapped</source>
-      <translation type="unfinished">unmapped</translation>
+      <translation>não associado</translation>
     </message>
     <message>
       <source>Quit Emulation</source>
-      <translation type="unfinished">Quit Emulation</translation>
+      <translation>Encerrar a Emulação</translation>
     </message>
     <message>
       <source>Reload Button Mappings</source>
-      <translation type="unfinished">Reload Button Mappings</translation>
+      <translation>Atualizar Associações de Botões</translation>
     </message>
     <message>
       <source>Toggle Fullscreen</source>
-      <translation type="unfinished">Toggle Fullscreen</translation>
+      <translation>Alternar Ecrã Inteiro</translation>
     </message>
     <message>
       <source>Toggle Pause</source>
-      <translation type="unfinished">Toggle Pause</translation>
+      <translation>Alternar Pausa</translation>
     </message>
     <message>
       <source>Toggle Mouse to Joystick Emulation</source>
-      <translation type="unfinished">Toggle Mouse to Joystick Emulation</translation>
+      <translation>Alternar Emulação de Rato para Manípulo</translation>
     </message>
     <message>
       <source>Toggle Mouse to Gyro Emulation</source>
-      <translation type="unfinished">Toggle Mouse to Gyro Emulation</translation>
+      <translation>Alternar Emulação de Rato para Giroscópio</translation>
     </message>
     <message>
       <source>Tip: Up to three simultaneous inputs can be assigned for each hotkey</source>
-      <translation type="unfinished">Tip: Up to three simultaneous inputs can be assigned for each hotkey</translation>
+      <translation>Dica: Podem ser atribuídas até três entradas simultâneas a cada tecla de atalho</translation>
     </message>
     <message>
       <source>Save</source>
-      <translation type="unfinished">Save</translation>
+      <translation>Guardar</translation>
     </message>
     <message>
       <source>Apply</source>
-      <translation type="unfinished">Apply</translation>
+      <translation>Aplicar</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Cancelar</translation>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation type="unfinished">Restore Defaults</translation>
+      <translation>Restaurar Predefinições</translation>
     </message>
     <message>
       <source>Unable to Save</source>
-      <translation type="unfinished">Unable to Save</translation>
+      <translation>Não foi possível Guardar</translation>
     </message>
     <message>
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-      <translation type="unfinished">Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
+      <translation>Não é possível associar qualquer comando único mais do que uma vez. Existem comandos duplicados associados aos seguintes botões:
 
 %1</translation>
     </message>
     <message>
       <source>Waiting for inputs</source>
-      <translation type="unfinished">Waiting for inputs</translation>
+      <translation>A aguardar entradas</translation>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Dica: Desassocie comandos com o clique direito do rato</translation>
     </message>
     <message>
       <source>Volume Up</source>
-      <translation type="unfinished">Volume Up</translation>
+      <translation>Aumentar o Volume</translation>
     </message>
     <message>
       <source>Volume Down</source>
-      <translation type="unfinished">Volume Down</translation>
+      <translation>Diminuir o Volume</translation>
     </message>
     <message>
       <source>Hotkeys</source>
-      <translation type="unfinished">Hotkeys</translation>
+      <translation>Teclas de Atalho</translation>
     </message>
     <message>
       <source>Placeholder</source>
-      <translation type="unfinished">Placeholder</translation>
+      <translation>Provisório</translation>
     </message>
     <message>
       <source>Capture Screenshot</source>
-      <translation type="unfinished">Capture Screenshot</translation>
+      <translation>Capturar o Ecrã</translation>
     </message>
     <message>
       <source>Capture Screenshot w/ Overlays</source>
-      <translation type="unfinished">Capture Screenshot w/ Overlays</translation>
+      <translation>Capturar o Ecrã c/ Sobreposições</translation>
     </message>
     <message>
       <source>Open Emulator Settings</source>
-      <translation type="unfinished">Open Emulator Settings</translation>
+      <translation>Abrir Definições do Emulador</translation>
     </message>
   </context>
   <context>
     <name>IpcClient</name>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation type="unfinished">Could not find the emulator executable</translation>
+      <translation>Não foi possível encontrar o executável do emulador</translation>
     </message>
     <message>
       <source>No game is running</source>
-      <translation type="unfinished">No game is running</translation>
+      <translation>Nenhum jogo está em execução</translation>
     </message>
   </context>
   <context>
@@ -1591,120 +1590,120 @@ Please enter your keys and save them.</translation>
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-      <translation type="unfinished">Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
+      <translation>Não é possível associar qualquer comando único mais do que uma vez. Existem comandos duplicados associados aos seguintes botões:
 
 %1</translation>
     </message>
     <message>
       <source>Touchpad Left</source>
-      <translation type="unfinished">Touchpad Left</translation>
+      <translation>Painel Tátil Esquerdo</translation>
     </message>
     <message>
       <source>Touchpad Center</source>
-      <translation type="unfinished">Touchpad Center</translation>
+      <translation>Painel Tátil Central</translation>
     </message>
     <message>
       <source>Touchpad Right</source>
-      <translation type="unfinished">Touchpad Right</translation>
+      <translation>Painel Tátil Direito</translation>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation type="unfinished">Tip: Unmap inputs with right-click</translation>
+      <translation>Dica: Desassocie comandos com o clique direito do rato</translation>
     </message>
     <message>
       <source>Output</source>
-      <translation type="unfinished">Output</translation>
+      <translation>Saída</translation>
     </message>
     <message>
       <source>Input</source>
-      <translation type="unfinished">Input</translation>
+      <translation>Entrada</translation>
     </message>
     <message>
       <source>Alternate Input 1</source>
-      <translation type="unfinished">Alternate Input 1</translation>
+      <translation>Entrada alternativa 1</translation>
     </message>
     <message>
       <source>Alternate Input 2</source>
-      <translation type="unfinished">Alternate Input 2</translation>
+      <translation>Entrada alternativa 2</translation>
     </message>
     <message>
       <source>Dpad Up</source>
-      <translation type="unfinished">Dpad Up</translation>
+      <translation>Direcional Cima</translation>
     </message>
     <message>
       <source>Dpad Down</source>
-      <translation type="unfinished">Dpad Down</translation>
+      <translation>Direcional Baixo</translation>
     </message>
     <message>
       <source>Dpad Left</source>
-      <translation type="unfinished">Dpad Left</translation>
+      <translation>Direcional Esquerda</translation>
     </message>
     <message>
       <source>Dpad Right</source>
-      <translation type="unfinished">Dpad Right</translation>
+      <translation>Direcional Direita</translation>
     </message>
     <message>
       <source>Left Stick Up</source>
-      <translation type="unfinished">Left Stick Up</translation>
+      <translation>Manípulo Esquerdo Cima</translation>
     </message>
     <message>
       <source>Left Stick Down</source>
-      <translation type="unfinished">Left Stick Down</translation>
+      <translation>Manípulo Esquerdo Cima</translation>
     </message>
     <message>
       <source>Left Stick Left</source>
-      <translation type="unfinished">Left Stick Left</translation>
+      <translation>Manípulo Esquerdo Esquerda</translation>
     </message>
     <message>
       <source>Left Stick Right</source>
-      <translation type="unfinished">Left Stick Right</translation>
+      <translation>Manípulo Esquerdo Direita</translation>
     </message>
     <message>
       <source>Right Stick Up</source>
-      <translation type="unfinished">Right Stick Up</translation>
+      <translation>Manípulo Direito Cima</translation>
     </message>
     <message>
       <source>Right Stick Down</source>
-      <translation type="unfinished">Right Stick Down</translation>
+      <translation>Manípulo Direito Baixo</translation>
     </message>
     <message>
       <source>Right Stick Left</source>
-      <translation type="unfinished">Right Stick Left</translation>
+      <translation>Manípulo Direito Esquerda</translation>
     </message>
     <message>
       <source>Right Stick Right</source>
-      <translation type="unfinished">Right Stick Right</translation>
+      <translation>Manípulo Direito Direita</translation>
     </message>
     <message>
       <source>L1</source>
-      <translation type="unfinished">L1</translation>
+      <translation>L1</translation>
     </message>
     <message>
       <source>R1</source>
-      <translation type="unfinished">R1</translation>
+      <translation>R1</translation>
     </message>
     <message>
       <source>L2</source>
-      <translation type="unfinished">L2</translation>
+      <translation>L2</translation>
     </message>
     <message>
       <source>R2</source>
-      <translation type="unfinished">R2</translation>
+      <translation>R2</translation>
     </message>
     <message>
       <source>L3</source>
-      <translation type="unfinished">L3</translation>
+      <translation>L3</translation>
     </message>
     <message>
       <source>R3</source>
-      <translation type="unfinished">R3</translation>
+      <translation>R3</translation>
     </message>
   </context>
   <context>
     <name>LogPresetsDialog</name>
     <message>
       <source>Log Filter Presets</source>
-      <translation type="unfinished">Log Filter Presets</translation>
+      <translation>Predefinições de Filtro de Registo</translation>
     </message>
     <message>
       <source>Comment</source>
@@ -2043,42 +2042,42 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Manage Dimensions Toypad</source>
-      <translation type="unfinished">Manage Dimensions Toypad</translation>
+      <translation>Gerir Toypad do Dimensions</translation>
     </message>
     <message>
       <source>Game Log</source>
-      <translation type="unfinished">Game Log</translation>
+      <translation>Registo de Jogo</translation>
     </message>
     <message>
       <source>Show Game Log</source>
-      <translation type="unfinished">Show Game Log</translation>
+      <translation>Mostrar Registo de Jogo</translation>
     </message>
     <message>
       <source>Manage Cryptographic Keys</source>
-      <translation type="unfinished">Manage Cryptographic Keys</translation>
+      <translation>Gerir Chaves Criptográficas</translation>
     </message>
     <message>
       <source>Manage Users</source>
-      <translation type="unfinished">Manage Users</translation>
+      <translation>Gerir Utilizadores</translation>
     </message>
   </context>
   <context>
     <name>QObject</name>
     <message>
       <source>Drive Locked</source>
-      <translation type="unfinished">Drive Locked</translation>
+      <translation>Unidade Bloqueada</translation>
     </message>
     <message>
       <source>Drive %1: is locked. Please enter the BitLocker key to access it:</source>
-      <translation type="unfinished">Drive %1: is locked. Please enter the BitLocker key to access it:</translation>
+      <translation>A Unidade %1 está bloqueada. Por favor, introduza a chave BitLocker para aceder:</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Erro</translation>
     </message>
     <message>
       <source>Incorrect recovery key. Please try again.</source>
-      <translation type="unfinished">Incorrect recovery key. Please try again.</translation>
+      <translation>Chave de recuperação incorreta. Por favor, tente novamente.</translation>
     </message>
   </context>
   <context>
@@ -2149,11 +2148,11 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Nenhum</translation>
     </message>
     <message>
       <source>Default Device</source>
-      <translation type="unfinished">Default Device</translation>
+      <translation>Dispositivo Predefinido</translation>
     </message>
     <message>
       <source>s</source>
@@ -2245,7 +2244,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Enable Readback Linear Images</source>
-      <translation type="unfinished">Enable Readback Linear Images</translation>
+      <translation>Ativar Leitura de Imagens Lineares</translation>
     </message>
     <message>
       <source>Check for Updates at Startup</source>
@@ -2421,7 +2420,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</source>
-      <translation type="unfinished">Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</translation>
+      <translation>Ativar Leitura de Imagens Lineares:\nPermite a transferência assíncrona de imagens lineares modificadas pela GPU.\nPode corrigir problemas em alguns jogos.</translation>
     </message>
     <message>
       <source>Copy GPU Buffers:\nGets around race conditions involving GPU submits.\nMay or may not help with PM4 type 0 crashes.</source>
@@ -2545,521 +2544,523 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Experimental Features</source>
-      <translation type="unfinished">Experimental Features</translation>
+      <translation>Funcionalidades Experimentais</translation>
     </message>
     <message>
       <source>WARNING: These features are experimental and should not be enabled unless you were told to, or a game requires it. Please ask in the shadPS4 Discord server if you have any questions.</source>
-      <translation type="unfinished">WARNING: These features are experimental and should not be enabled unless you were told to, or a game requires it. Please ask in the shadPS4 Discord server if you have any questions.</translation>
+      <translation>AVISO: Estas funcionalidades são experimentais e não devem ser ativadas a menos que lhe tenha sido indicado ou que um jogo o exija. Caso tenha dúvidas, por favor pergunte no servidor Discord do shadPS4.</translation>
     </message>
     <message>
       <source>Enable Background Controller Input</source>
-      <translation type="unfinished">Enable Background Controller Input</translation>
+      <translation>Ativar Entrada de Comando em Segundo Plano</translation>
     </message>
     <message>
       <source>Enable Controller Background Input:\nAllow shadPS4 to detect controller inputs when the game window is not in focus.</source>
-      <translation type="unfinished">Enable Controller Background Input:\nAllow shadPS4 to detect controller inputs when the game window is not in focus.</translation>
+      <translation>Ativar Entrada de Comando em Segundo Plano:\nPermite que o shadPS4 detete entradas do comando mesmo quando a janela do jogo não está em foco.</translation>
     </message>
     <message>
       <source>Crash Diagnostics:\nCreates a .yaml file with info about the Vulkan state at the time of crashing.\nUseful for debugging &apos;Device lost&apos; errors. If you have this enabled, you should enable Host AND Guest Debug Markers.\nYou need Vulkan Validation Layers enabled and the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Crash Diagnostics:\nCreates a .yaml file with info about the Vulkan state at the time of crashing.\nUseful for debugging &apos;Device lost&apos; errors. If you have this enabled, you should enable Host AND Guest Debug Markers.\nYou need Vulkan Validation Layers enabled and the Vulkan SDK for this to work.</translation>
+      <translation>Diagnósticos de Avaria:\nCria um ficheiro .yaml com informação acerca do estado Vulkan no momento da avaria.\nÚtil para depurar erros de &apos;Dispositivo perdido&apos;. Se tiver esta opção ativada, deve ativar também os marcadores de depuração do Anfitrião e do Convidado.\nÉ necessário ter as camadas de validação Vulkan ativadas e o Vulkan SDK instalado para que isto funcione.</translation>
     </message>
     <message>
       <source>Enable Logging</source>
-      <translation type="unfinished">Enable Logging</translation>
+      <translation>Ativar Registo</translation>
     </message>
     <message>
       <source>Enable Logging:\nEnables logging.\nDo not change this if you do not know what you&apos;re doing!\nWhen asking for help, make sure this setting is ENABLED.</source>
-      <translation type="unfinished">Enable Logging:\nEnables logging.\nDo not change this if you do not know what you&apos;re doing!\nWhen asking for help, make sure this setting is ENABLED.</translation>
+      <translation>Ativar Registo:\nAtiva o registo.\nNão altere esta opção se não souber exatamente o que está a fazer!\nAo pedir ajuda, certifique‑se de que esta definição está ATIVADA.</translation>
     </message>
     <message>
       <source>Present Mode</source>
-      <translation type="unfinished">Present Mode</translation>
+      <translation>Modo de Apresentação</translation>
     </message>
     <message>
       <source>Mailbox (Vsync)</source>
-      <translation type="unfinished">Mailbox (Vsync)</translation>
+      <translation>Mailbox (VSync)</translation>
     </message>
     <message>
       <source>Fifo (Vsync)</source>
-      <translation type="unfinished">Fifo (Vsync)</translation>
+      <translation>FIFO (VSync)</translation>
     </message>
     <message>
       <source>Immediate (No Vsync)</source>
-      <translation type="unfinished">Immediate (No Vsync)</translation>
+      <translation>Imediato (Sem VSync)</translation>
     </message>
     <message>
       <source>Select the DLC folder</source>
-      <translation type="unfinished">Select the DLC folder</translation>
+      <translation>Selecione a pasta dos DLCs</translation>
     </message>
     <message>
       <source>Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</source>
-      <translation type="unfinished">Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</translation>
+      <translation>Modo de Apresentação:\nConfigura a forma como a saída de vídeo será apresentada no seu ecrã.\n\nMailbox: Os fotogramas sincronizam com a taxa de atualização do ecrã. Novos fotogramas substituem quaisquer fotogramas pendentes. Reduz a latência, mas pode causar perda de fotogramas se o desempenho ficar atrás.\nFIFO: Os fotogramas sincronizam com a taxa de atualização do ecrã. Novos fotogramas são colocados em fila atrás dos fotogramas pendentes. Garante que todos os fotogramas são apresentados, mas pode aumentar a latência.\nImediato: Os fotogramas são apresentados imediatamente no ecrã assim que estão prontos. Pode resultar em rasgões visuais.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the DLC path.</translation>
+      <translation>Procurar:\nProcure uma pasta para definir como caminho dos DLCs.</translation>
     </message>
     <message>
       <source>FSR Settings</source>
-      <translation type="unfinished">FSR Settings</translation>
+      <translation>Definições do FSR</translation>
     </message>
     <message>
       <source>Enable FSR</source>
-      <translation type="unfinished">Enable FSR</translation>
+      <translation>Ativar FSR</translation>
     </message>
     <message>
       <source>Enable RCAS (sharpening)</source>
-      <translation type="unfinished">Enable RCAS (sharpening)</translation>
+      <translation>Ativar RCAS (aumento da nitidez)</translation>
     </message>
     <message>
       <source>RCAS Attenuation:</source>
-      <translation type="unfinished">RCAS Attenuation:</translation>
+      <translation>Atenuação do RCAS:</translation>
     </message>
     <message>
       <source>Load Presets...</source>
-      <translation type="unfinished">Load Presets...</translation>
+      <translation>Carregar Predefinições...</translation>
     </message>
     <message>
       <source>Log</source>
-      <translation type="unfinished">Log</translation>
+      <translation>Registo</translation>
     </message>
     <message>
       <source>Open Log Location:\nOpen the folder where the log file is saved.</source>
-      <translation type="unfinished">Open Log Location:\nOpen the folder where the log file is saved.</translation>
+      <translation>Abrir Localização do Registo:\nAbre a pasta onde o ficheiro de registo é guardado.</translation>
     </message>
     <message>
       <source>Microphone:\nNone: Does not use the microphone.\nDefault Device: Will use the default device defined in the system.\nOr manually choose the microphone to be used from the list.</source>
-      <translation type="unfinished">Microphone:\nNone: Does not use the microphone.\nDefault Device: Will use the default device defined in the system.\nOr manually choose the microphone to be used from the list.</translation>
+      <translation>Microfone:\nNenhum: Não utiliza o microfone.\nDispositivo Predefinido: Utilizará o dispositivo predefinido no sistema.\nOu escolha manualmente, a partir da lista, o microfone a utilizar.</translation>
     </message>
     <message>
       <source>Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</source>
-      <translation type="unfinished">Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</translation>
+      <translation>Volume:\nAjusta o volume dos jogos a nível global; o intervalo vai de 0 a 500%, sendo 100% o valor predefinido.</translation>
     </message>
     <message>
       <source>Default tab when opening settings:\nChoose which tab will open, the default is General.</source>
-      <translation type="unfinished">Default tab when opening settings:\nChoose which tab will open, the default is General.</translation>
+      <translation>Separador predefinido ao abrir as definições:\nEscolha qual separador abrirá; o predefinido é Geral.</translation>
     </message>
     <message>
       <source>Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</source>
-      <translation type="unfinished">Enable Motion Controls:\nWhen enabled it will use the controller&apos;s motion control if supported.</translation>
+      <translation>Ativar Controlos de Movimento:\nQuando ativada, utilizará o controlo por movimento do comando, caso seja suportado.</translation>
     </message>
     <message>
       <source>Vblank Frequency</source>
-      <translation type="unfinished">Vblank Frequency</translation>
+      <translation>Frequência do VBlank</translation>
     </message>
     <message>
       <source>Vblank Frequency:\nThe frame rate at which the emulator refreshes at (60hz is the baseline, whether the game runs at 30 or 60fps). Changing this may have adverse effects, such as increasing the game speed, or breaking critical game functionality that does not expect this to change!</source>
-      <translation type="unfinished">Vblank Frequency:\nThe frame rate at which the emulator refreshes at (60hz is the baseline, whether the game runs at 30 or 60fps). Changing this may have adverse effects, such as increasing the game speed, or breaking critical game functionality that does not expect this to change!</translation>
+      <translation>Frequência do VBlank:\nA taxa de fotogramas à qual o emulador faz a atualização (60 Hz é a referência, independentemente de o jogo ser executado a 30 ou 60 FPS).
+Alterar este valor pode ter efeitos adversos, como aumentar a velocidade do jogo ou destruir funcionalidades críticas que não foram concebidas para lidar com esta alteração!</translation>
     </message>
     <message>
       <source>Enable Direct Memory Access</source>
-      <translation type="unfinished">Enable Direct Memory Access</translation>
+      <translation>Ativar Acesso Direto à Memória</translation>
     </message>
     <message>
       <source>Enable Devkit Console Mode</source>
-      <translation type="unfinished">Enable Devkit Console Mode</translation>
+      <translation>Ativar Modo de Consola de Programador</translation>
     </message>
     <message>
       <source>Set &quot;Network Connected&quot; to True</source>
-      <translation type="unfinished">Set &quot;Network Connected&quot; to True</translation>
+      <translation>Definir &quot;Ligação de Rede&quot; como Verdadeiro</translation>
     </message>
     <message>
       <source>Miscellaneous</source>
-      <translation type="unfinished">Miscellaneous</translation>
+      <translation>Diversos</translation>
     </message>
     <message>
       <source>Frontend</source>
-      <translation type="unfinished">Frontend</translation>
+      <translation>Interface</translation>
     </message>
     <message>
       <source>Experimental</source>
-      <translation type="unfinished">Experimental</translation>
+      <translation>Experimentais</translation>
     </message>
     <message>
       <source>Show Splash Screen When Launching Game</source>
-      <translation type="unfinished">Show Splash Screen When Launching Game</translation>
+      <translation>Mostrar Ecrã Inicial Ao Iniciar o Jogo</translation>
     </message>
     <message>
       <source>General Frontend Settings</source>
-      <translation type="unfinished">General Frontend Settings</translation>
+      <translation>Definições Gerais da Interface</translation>
     </message>
     <message>
       <source>Enable PS4 Neo Mode</source>
-      <translation type="unfinished">Enable PS4 Neo Mode</translation>
+      <translation>Ativar o Modo Neo da PS4</translation>
     </message>
     <message>
       <source>Enable Direct Memory Access:\nEnables arbitrary memory access from the GPU to CPU memory.</source>
-      <translation type="unfinished">Enable Direct Memory Access:\nEnables arbitrary memory access from the GPU to CPU memory.</translation>
+      <translation>Ativar Acesso Direto de Memória:\nPermite acesso arbitrário da GPU à memória da CPU.</translation>
     </message>
     <message>
       <source>Enable PS4 Neo Mode:\nAdds support for PS4 Pro emulation and memory size. Currently causes instability in a large number of tested games.</source>
-      <translation type="unfinished">Enable PS4 Neo Mode:\nAdds support for PS4 Pro emulation and memory size. Currently causes instability in a large number of tested games.</translation>
+      <translation>Ativar Modo Neo da PS4:\nAdiciona suporte para a emulação da PS4 Pro e para o respetivo tamanho de memória.
+Atualmente provoca instabilidade numa abundância de jogos testados.</translation>
     </message>
     <message>
       <source>Enable Devkit Console Mode:\nAdds support for Devkit console memory size.</source>
-      <translation type="unfinished">Enable Devkit Console Mode:\nAdds support for Devkit console memory size.</translation>
+      <translation>Ativar Modo de Consola de Programador:\nAdiciona suporte para o tamanho de memória de consolas de programador.</translation>
     </message>
     <message>
       <source>Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</source>
-      <translation type="unfinished">Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</translation>
+      <translation>Definir Ligação de Rede como Ativa:\nForça os jogos a detetarem uma ligação de rede ativa. As funcionalidades reais de jogo online ainda não são suportadas.</translation>
     </message>
     <message>
       <source>Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Ativar Camadas de Validação da Vulkan:\nAtiva um sistema que valida o estado do renderizador Vulkan e regista informações sobre o seu estado interno.\nIsto reduzirá o desempenho e provavelmente alterará o comportamento da emulação.\nÉ necessário ter o Vulkan SDK instalado para que esta opção surta efeito.</translation>
     </message>
     <message>
       <source>Audio Device (general)</source>
-      <translation type="unfinished">Audio Device (general)</translation>
+      <translation>Dispositivo de Áudio (geral)</translation>
     </message>
     <message>
       <source>Audio Device (DS4 speaker)</source>
-      <translation type="unfinished">Audio Device (DS4 speaker)</translation>
+      <translation>Dispositivo de Áudio (altifalante do DS4)</translation>
     </message>
     <message>
       <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
-      <translation type="unfinished">Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</translation>
+      <translation>Ativar Exportação de Sombreadores:\nPara efeitos de depuração técnica, guarda os sombreadores do jogo para uma pasta enquanto renderizam.</translation>
     </message>
     <message>
       <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</source>
-      <translation type="unfinished">Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</translation>
+      <translation>Ativar GPU NULL:\nPara fins de depuração técnica, guarda os sombreadores do jogo numa pasta à medida que são renderizados.</translation>
     </message>
     <message>
       <source>DLC Path:\nThe folder where game DLC is loaded from.</source>
-      <translation type="unfinished">DLC Path:\nThe folder where game DLC is loaded from.</translation>
+      <translation>Caminho dos DLCs:\nA pasta donde os DLCs do jogo são carregados.</translation>
     </message>
     <message>
       <source>Additional DMem Allocation</source>
-      <translation type="unfinished">Additional DMem Allocation</translation>
+      <translation>Alocação Adicional de DMem</translation>
     </message>
     <message>
       <source>Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</source>
-      <translation type="unfinished">Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</translation>
+      <translation>Alocação Adicional de Memória Direta:\nForça a alocação da quantidade especificada de Memória Direta adicional. Faz alguns jogos fecharem ou apresentarem falhas.</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</source>
-      <translation type="unfinished">PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</translation>
+      <translation>Caminho dos Módulos de Sistema da PS4:\nA pasta donde os módulos de sistema da PS4 são carregados.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the sysmodules path.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the sysmodules path.</translation>
+      <translation>Procurar:\nProcure uma pasta para definir como caminho dos módulos de sistema.</translation>
     </message>
     <message>
       <source>Vulkan Validation (Requires Vulkan SDK)</source>
-      <translation type="unfinished">Vulkan Validation (Requires Vulkan SDK)</translation>
+      <translation>Validação da Vulkan (Requer o Vulkan SDK)</translation>
     </message>
     <message>
       <source>Validation Layers</source>
-      <translation type="unfinished">Validation Layers</translation>
+      <translation>Camadas de Validação</translation>
     </message>
     <message>
       <source>Enable Core Validation</source>
-      <translation type="unfinished">Enable Core Validation</translation>
+      <translation>Ativar Validação do Núcleo</translation>
     </message>
     <message>
       <source>Enable Sync Validation</source>
-      <translation type="unfinished">Enable Sync Validation</translation>
+      <translation>Ativar Validação de Sincronização</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation</source>
-      <translation type="unfinished">Enable GPU-Assisted Validation</translation>
+      <translation>Ativar Validação Assistida pela GPU</translation>
     </message>
     <message>
       <source>Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Ativar Validação de Sincronização:\nAtiva um sistema que valida a temporização das tarefas de renderização da Vulkan.\nIsto reduzirá o desempenho e provavelmente mudará o comportamento da emulação.\nPrecisa do Vulkan SDK para que esta opção surta efeito.</translation>
     </message>
     <message>
       <source>Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable Core Validation:\nEnables the main API validation functions.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Ativar Validação do Núcleo:\nAtiva as funções da API principal de validação.\nIsto reduzirá o desempenho e provavelmente mudará o comportamento da emulação.\nPrecisa do Vulkan SDK para que esta opção surta efeito.</translation>
     </message>
     <message>
       <source>Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
-      <translation type="unfinished">Enable GPU-Assisted Validation:\nInstruments shaders with code that validates if they are behaving correctly.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</translation>
+      <translation>Ativar Validação Assistida pela GPU:\nInstrumenta os sombreadores com código que valida se estão a comportarem-se corretamente.\nIsto reduzirá o desempenho e provavelmente alterará o comportamento da emulação.\nPrecisa do Vulkan SDK para que esta opção surta efeito.</translation>
     </message>
     <message>
       <source>GUI Language</source>
-      <translation type="unfinished">GUI Language</translation>
+      <translation>Idioma da GUI</translation>
     </message>
     <message>
       <source>GUI Updates</source>
-      <translation type="unfinished">GUI Updates</translation>
+      <translation>Atualizações da GUI</translation>
     </message>
     <message>
       <source>DLC Path</source>
-      <translation type="unfinished">DLC Path</translation>
+      <translation>Diretório dos DLCs</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path</source>
-      <translation type="unfinished">PS4 Sysmodules Path</translation>
+      <translation>Diretório dos Módulos de Sistema da PS4</translation>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
-      <translation type="unfinished">GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</translation>
+      <translation>Atualizações da GUI:\nLançamento: Versões oficiais disponibilizadas todos os meses que poderão estar datadas, mas são fiáveis e testadas.\nPré-lançamento: Versões de desenvolvimento que têm todas as últimas funcionalidades e correções, mas poderão conter erros e ser instáveis.\n\n*Esta atualização aplica-se apenas à interface de utilizador Qt. Para atualizar o núcleo do emulador, por favor utilize o &apos;Gestor de Versões&apos;.</translation>
     </message>
     <message>
       <source>Cannot create portable launcher folder</source>
-      <translation type="unfinished">Cannot create portable launcher folder</translation>
+      <translation>Não é possível criar a pasta do inicializador portátil</translation>
     </message>
     <message>
       <source>Portable launcherDir folder created</source>
-      <translation type="unfinished">Portable launcherDir folder created</translation>
+      <translation>A pasta launcherDir portátil foi criada</translation>
     </message>
     <message>
       <source>USB Device</source>
-      <translation type="unfinished">USB Device</translation>
+      <translation>Dispositivo USB</translation>
     </message>
     <message>
       <source>Real USB Device</source>
-      <translation type="unfinished">Real USB Device</translation>
+      <translation>Dispositivo USB Real</translation>
     </message>
     <message>
       <source>Skylander Portal</source>
-      <translation type="unfinished">Skylander Portal</translation>
+      <translation>Portal do Skylanders</translation>
     </message>
     <message>
       <source>Infinity Base</source>
-      <translation type="unfinished">Infinity Base</translation>
+      <translation>Base Infinity da Disney</translation>
     </message>
     <message>
       <source>Dimensions Toypad</source>
-      <translation type="unfinished">Dimensions Toypad</translation>
+      <translation>Toypad do Dimensions</translation>
     </message>
     <message>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
-      <translation type="unfinished">USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</translation>
+      <translation>Dispositivo USB:\nDispositivo USB Real: Utilize um dispositivo USB real ligado ao sistema.\nPortal do Skylanders: emule um Portal de Poder do Skylanders.\nBase Infinity da Disney: Emule uma Base Infinity da Disney.\nToypad do Dimensions: Emule um Toypad do Lego Dimensions.</translation>
     </message>
     <message>
       <source>Enable Shader Cache</source>
-      <translation type="unfinished">Enable Shader Cache</translation>
+      <translation>Ativar Cache de Sombreamento</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file</source>
-      <translation type="unfinished">Compress the Shader Cache files into a zip file</translation>
+      <translation>Comprimir os ficheiros do Cache de Sombreamento num ficheiro ZIP</translation>
     </message>
     <message>
       <source>Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</source>
-      <translation type="unfinished">Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</translation>
+      <translation>Ativar Cache de Sombreamento:\nArmazena sombreamentos compilados para evitar recompilações e reduzir interrupções.</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</source>
-      <translation type="unfinished">Compress the Shader Cache files into a zip file:\nThe shader cache files are stored within a single zip file instead of multiple separate files.</translation>
+      <translation>Comprimir o Cache de Sombreamento num ficheiro ZIP:\nOs ficheiros do Cache de Sombreamento são armazenados num único ficheiro ZIP em vez de múltiplos ficheiros separados.</translation>
     </message>
     <message>
       <source>Readbacks Mode</source>
-      <translation type="unfinished">Readbacks Mode</translation>
+      <translation>Modo de Leituras de Retorno</translation>
     </message>
     <message>
       <source>Disabled</source>
-      <translation type="unfinished">Disabled</translation>
+      <translation>Desativado</translation>
     </message>
     <message>
       <source>Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</source>
-      <translation type="unfinished">Readbacks:\nEnable GPU memory readbacks and writebacks.\nThis is required for proper behavior in some games.\nMight cause stability and/or performance issues.</translation>
+      <translation>Leituras de Retorno:\nAtiva leituras e escritas de retorno da memória da GPU.\nIsto é necessário para garantir o comportamento correto em alguns jogos.\nPode causar problemas de estabilidade e/ou desempenho.</translation>
     </message>
     <message>
       <source>Relaxed</source>
-      <translation type="unfinished">Relaxed</translation>
+      <translation>Relaxado</translation>
     </message>
     <message>
       <source>Precise</source>
-      <translation type="unfinished">Precise</translation>
+      <translation>Preciso</translation>
     </message>
     <message>
       <source>Select shadPS4 Home Path</source>
-      <translation type="unfinished">Select shadPS4 Home Path</translation>
+      <translation>Selecione o Caminho da Pasta Inicial do shadPS4</translation>
     </message>
     <message>
       <source>Select the system modules folder</source>
-      <translation type="unfinished">Select the system modules folder</translation>
+      <translation>Selecione a pasta dos módulos do sistema</translation>
     </message>
     <message>
       <source>Home Folder Location (Saves, Inputs, Trophy Data)</source>
-      <translation type="unfinished">Home Folder Location (Saves, Inputs, Trophy Data)</translation>
+      <translation>Localização da Pasta Inicial (Gravações, Entradas, Dados de Troféus)</translation>
     </message>
     <message>
       <source>Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</source>
-      <translation type="unfinished">Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</translation>
+      <translation>Localização da Pasta Inicial:\nA pasta onde as gravações, os dados de troféus e as definições de entradas são armazenados para todos os utilizadores.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the home folder.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the home folder.</translation>
+      <translation>Procurar:\nProcure uma pasta para definir como pasta inicial.</translation>
     </message>
     <message>
       <source>Audio</source>
-      <translation type="unfinished">Audio</translation>
+      <translation>Áudio</translation>
     </message>
     <message>
       <source>Audio Backend</source>
-      <translation type="unfinished">Audio Backend</translation>
+      <translation>Motor de Áudio</translation>
     </message>
     <message>
       <source>Mic Device</source>
-      <translation type="unfinished">Mic Device</translation>
+      <translation>Dispositivo de Microfone</translation>
     </message>
     <message>
       <source>Devices</source>
-      <translation type="unfinished">Devices</translation>
+      <translation>Dispositivos</translation>
     </message>
     <message>
       <source>Camera</source>
-      <translation type="unfinished">Camera</translation>
+      <translation>Câmara</translation>
     </message>
     <message>
       <source>Log Sync</source>
-      <translation type="unfinished">Log Sync</translation>
+      <translation>Sincronização de Registos</translation>
     </message>
     <message>
       <source>Log Skip Duplicate</source>
-      <translation type="unfinished">Log Skip Duplicate</translation>
+      <translation>Ignorar Duplicações do Registo</translation>
     </message>
     <message>
       <source>Log Max Skip Duration</source>
-      <translation type="unfinished">Log Max Skip Duration</translation>
+      <translation>Duração Máxima de Ignorância do Registo</translation>
     </message>
     <message>
       <source> ms</source>
-      <translation type="unfinished"> ms</translation>
+      <translation> ms</translation>
     </message>
     <message>
       <source>Log Size Limit</source>
-      <translation type="unfinished">Log Size Limit</translation>
+      <translation>Limite do Tamanho do Registo</translation>
     </message>
     <message>
       <source> B</source>
-      <translation type="unfinished"> B</translation>
+      <translation> B</translation>
     </message>
     <message>
       <source>Log Append</source>
-      <translation type="unfinished">Log Append</translation>
+      <translation>Anexação do Registo</translation>
     </message>
     <message>
       <source>wincolor</source>
-      <translation type="unfinished">wincolor</translation>
+      <translation>wincolor</translation>
     </message>
     <message>
       <source>msvc</source>
-      <translation type="unfinished">msvc</translation>
+      <translation>msvc</translation>
     </message>
     <message>
       <source>Log Append:\nAppend to existing logs.</source>
-      <translation type="unfinished">Log Append:\nAppend to existing logs.</translation>
+      <translation>Inserção de Registo:\nAcrescenta informação no final de registos existentes.</translation>
     </message>
     <message>
       <source>Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</source>
-      <translation type="unfinished">Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</translation>
+      <translation>Duração Máxima de Evitar Duplicação de Registos:\nIntervalo sem escrever as mesmas linhas (ms) - apenas se &apos;Evitar Duplicação de Registo&apos; estiver ativada.</translation>
     </message>
     <message>
       <source>Log Size Limit:\nMaximum size of log files (bytes).</source>
-      <translation type="unfinished">Log Size Limit:\nMaximum size of log files (bytes).</translation>
+      <translation>Limite de Tamanho do Registo:\nTamanho máximo dos ficheiros de registo (bytes).</translation>
     </message>
     <message>
       <source>Log Skip Duplicate:\nSave storage by avoiding writing log that is identical.</source>
-      <translation type="unfinished">Log Skip Duplicate:\nSave storage by avoiding writing log that is identical.</translation>
+      <translation>Evitar Duplicação de Registo:\nGuarda armazenamento ao evitar escrever registos idênticos.</translation>
     </message>
     <message>
       <source>Log Sync:\nSwitch between sync (order) or async (performance).</source>
-      <translation type="unfinished">Log Sync:\nSwitch between sync (order) or async (performance).</translation>
+      <translation>Sincronização de Registo:\nAlterne entre síncrono (ordem) ou assíncrono (desempenho).</translation>
     </message>
     <message>
       <source>Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</source>
-      <translation type="unfinished">Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</translation>
+      <translation>Tipo de Registo:\nEscolha entre tipos de registo wincolor ou msvc.\nwincolor: Registo predefinido para o Windows\nmsvc: Registo para depuração</translation>
     </message>
     <message>
       <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
-      <translation type="unfinished">Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</translation>
+      <translation>Filtro de Registo:\nFiltra o registo de modo a mostrar apenas informação específica.\nExemplos: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nNíveis: trace, debug, info, warning, error, critical, off - nesta ordem, um nível específico silencia todos os níveis anteriores e regista todos os níveis subsequentes.</translation>
     </message>
     <message>
       <source>Enable shadNet</source>
-      <translation type="unfinished">Enable shadNet</translation>
+      <translation>Ativar a shadNet</translation>
     </message>
     <message>
       <source>ShadNet</source>
-      <translation type="unfinished">ShadNet</translation>
+      <translation>ShadNet</translation>
     </message>
     <message>
       <source>Server</source>
-      <translation type="unfinished">Server</translation>
+      <translation>Servidor</translation>
     </message>
     <message>
       <source>Signaling Info</source>
-      <translation type="unfinished">Signaling Info</translation>
+      <translation>Informação de Sinalização</translation>
     </message>
     <message>
       <source>Enable UPNP</source>
-      <translation type="unfinished">Enable UPNP</translation>
+      <translation>Ativar UPNP</translation>
     </message>
     <message>
       <source>WebAPI Server</source>
-      <translation type="unfinished">WebAPI Server</translation>
+      <translation>Servidor WebAPI</translation>
     </message>
     <message>
-      <source>shadNet:\nA PSN server replacement.\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadNet/register/.</source>
-      <translation type="unfinished">shadNet:\nA PSN server replacement.\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadNet/register/.</translation>
+      <source>shadNet:\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadnet/register/.</source>
+      <translation>shadNet:\nA compatibilidade é reduzida no momento.\nPode registar-se em https://www.shadps4.net/shadnet/register/.</translation>
     </message>
   </context>
   <context>
     <name>ShortcutDialog</name>
     <message>
       <source>Select Version</source>
-      <translation type="unfinished">Select Version</translation>
+      <translation>Selecionar a Versão</translation>
     </message>
     <message>
       <source>Select version for shortcut creation</source>
-      <translation type="unfinished">Select version for shortcut creation</translation>
+      <translation>Selecione uma versão para a criação do atalho</translation>
     </message>
     <message>
       <source>No Version Selected</source>
-      <translation type="unfinished">No Version Selected</translation>
+      <translation>Nenhuma Versão Selecionada</translation>
     </message>
     <message>
       <source>Select a version first</source>
-      <translation type="unfinished">Select a version first</translation>
+      <translation>Selecione uma versão primeiro</translation>
     </message>
   </context>
   <context>
     <name>SteamShortcut</name>
     <message>
       <source>Steam</source>
-      <translation type="unfinished">Steam</translation>
+      <translation>Steam</translation>
     </message>
     <message>
       <source>%1 is already in your Steam library.</source>
-      <translation type="unfinished">%1 is already in your Steam library.</translation>
+      <translation>%1 já está na sua biblioteca da Steam.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Erro</translation>
     </message>
     <message>
       <source>Steam installation not found.</source>
-      <translation type="unfinished">Steam installation not found.</translation>
+      <translation>A Instalação da Steam não foi encontrada.</translation>
     </message>
     <message>
       <source>No Steam user account found. Please log into Steam at least once.</source>
-      <translation type="unfinished">No Steam user account found. Please log into Steam at least once.</translation>
+      <translation>Nenhuma conta da Steam foi encontrada. Por favor, inicie sessão na Steam pelo menos uma vez.</translation>
     </message>
     <message>
       <source>Steam is Running</source>
-      <translation type="unfinished">Steam is Running</translation>
+      <translation>A Steam está a ser Executada</translation>
     </message>
     <message>
       <source>Steam is currently running. It will be closed and restarted to apply the shortcut. Continue?</source>
-      <translation type="unfinished">Steam is currently running. It will be closed and restarted to apply the shortcut. Continue?</translation>
+      <translation>A Steam está a ser executada. Será encerrada e reiniciada para aplicar o atalho. Deseja prosseguir?</translation>
     </message>
     <message>
       <source>Steam did not close in time. Shortcut was not added.</source>
-      <translation type="unfinished">Steam did not close in time. Shortcut was not added.</translation>
+      <translation>A Steam não encerrou a tempo. O atalho não foi adicionado.</translation>
     </message>
     <message>
       <source>Failed to add game to Steam.</source>
-      <translation type="unfinished">Failed to add game to Steam.</translation>
+      <translation>Falha ao adicionar o jogo à Steam.</translation>
     </message>
     <message>
       <source>Added to Steam successfully. Steam is restarting.</source>
-      <translation type="unfinished">Added to Steam successfully. Steam is restarting.</translation>
+      <translation>Adicionado à Steam com sucesso. A reiniciar a Steam.</translation>
     </message>
     <message>
       <source>Added to Steam successfully. Launch Steam to see the changes.</source>
-      <translation type="unfinished">Added to Steam successfully. Launch Steam to see the changes.</translation>
+      <translation>Adicionado à Steam com sucesso. Execute a Steam para ver as mudanças.</translation>
     </message>
   </context>
   <context>
@@ -3090,546 +3091,545 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Select User:</source>
-      <translation type="unfinished">Select User:</translation>
+      <translation>Selecionar Utilizador:</translation>
     </message>
   </context>
   <context>
     <name>UserManagerDialog</name>
     <message>
       <source>User Manager</source>
-      <translation type="unfinished">User Manager</translation>
+      <translation>Gestor de Utilizadores</translation>
     </message>
     <message>
       <source>&amp;Create User</source>
-      <translation type="unfinished">&amp;Create User</translation>
+      <translation>&amp;Criar Utilizador</translation>
     </message>
     <message>
       <source>&amp;Delete User</source>
-      <translation type="unfinished">&amp;Delete User</translation>
+      <translation>&amp;Eliminar Utilizador</translation>
     </message>
     <message>
       <source>&amp;Rename User</source>
-      <translation type="unfinished">&amp;Rename User</translation>
+      <translation>&amp;Renomear Utilizador</translation>
     </message>
     <message>
       <source>&amp;Set Default User</source>
-      <translation type="unfinished">&amp;Set Default User</translation>
+      <translation>&amp;Definir Utilizador Predefinido</translation>
     </message>
     <message>
       <source>&amp;Set Color</source>
-      <translation type="unfinished">&amp;Set Color</translation>
+      <translation>&amp;Definir Cor</translation>
     </message>
     <message>
       <source>&amp;Set Controller Port</source>
-      <translation type="unfinished">&amp;Set Controller Port</translation>
+      <translation>&amp;Definir Porta do Comando</translation>
     </message>
     <message>
       <source>&amp;Close</source>
-      <translation type="unfinished">&amp;Close</translation>
+      <translation>&amp;Fechar</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Erro</translation>
     </message>
     <message>
       <source>Cannot add more users.</source>
-      <translation type="unfinished">Cannot add more users.</translation>
+      <translation>Não é possível adicionar mais utilizadores.</translation>
     </message>
     <message>
       <source>Create New User</source>
-      <translation type="unfinished">Create New User</translation>
+      <translation>Criar Utilizador</translation>
     </message>
     <message>
       <source>New User ID: %1</source>
-      <translation type="unfinished">New User ID: %1</translation>
+      <translation>Novo ID de Utilizador: %1</translation>
     </message>
     <message>
       <source>Username (3–16 chars, letters, numbers, _, -)</source>
-      <translation type="unfinished">Username (3–16 chars, letters, numbers, _, -)</translation>
+      <translation>Nome de utilizador (3–16 caracteres, letras, números, _, -)</translation>
     </message>
     <message>
       <source>Invalid Username</source>
-      <translation type="unfinished">Invalid Username</translation>
+      <translation>Nome de Utilizador Inválido</translation>
     </message>
     <message>
       <source>Username must be 3–16 chars and valid.</source>
-      <translation type="unfinished">Username must be 3–16 chars and valid.</translation>
+      <translation>O nome de utilizador deve ter entre 3 e 16 caracteres e ser válido.</translation>
     </message>
     <message>
       <source>Delete Confirmation</source>
-      <translation type="unfinished">Delete Confirmation</translation>
+      <translation>Confirmação de Eliminação</translation>
     </message>
     <message>
       <source>Delete user ID %1?</source>
-      <translation type="unfinished">Delete user ID %1?</translation>
+      <translation>Eliminar o utilizador com ID %1?</translation>
     </message>
     <message>
       <source>Rename User</source>
-      <translation type="unfinished">Rename User</translation>
+      <translation>Renomear Utilizador</translation>
     </message>
     <message>
       <source>Old Username: %1</source>
-      <translation type="unfinished">Old Username: %1</translation>
+      <translation>Nome de Utilizador Antigo: %1</translation>
     </message>
     <message>
       <source>Set User Color</source>
-      <translation type="unfinished">Set User Color</translation>
+      <translation>Definir Cor do Utilizador</translation>
     </message>
     <message>
       <source>Select color:</source>
-      <translation type="unfinished">Select color:</translation>
+      <translation>Selecionar cor:</translation>
     </message>
     <message>
       <source>Set Controller Port</source>
-      <translation type="unfinished">Set Controller Port</translation>
+      <translation>Definir Porta do Comando</translation>
     </message>
     <message>
       <source>Assign port (1-4) to this user:</source>
-      <translation type="unfinished">Assign port (1-4) to this user:</translation>
+      <translation>Atribuir porta (1-4) a este utilizador:</translation>
     </message>
     <message>
       <source>&amp;Open User Directory</source>
-      <translation type="unfinished">&amp;Open User Directory</translation>
+      <translation>&amp;Abrir o Diretório do Utilizador</translation>
     </message>
     <message>
       <source>Shad&amp;Net...</source>
-      <translation type="unfinished">Shad&amp;Net...</translation>
+      <translation>Shad&amp;Net...</translation>
     </message>
     <message>
       <source>On</source>
-      <translation type="unfinished">On</translation>
+      <translation>Ligado</translation>
     </message>
     <message>
       <source>On (%1)</source>
-      <translation type="unfinished">On (%1)</translation>
+      <translation>Ligado (%1)</translation>
     </message>
     <message>
       <source>Off</source>
-      <translation type="unfinished">Off</translation>
+      <translation>Desligado</translation>
     </message>
     <message>
       <source>ShadNet Settings - %1</source>
-      <translation type="unfinished">ShadNet Settings - %1</translation>
+      <translation>Definições da ShadNet - %1</translation>
     </message>
     <message>
       <source>Enable ShadNet for this user</source>
-      <translation type="unfinished">Enable ShadNet for this user</translation>
+      <translation>Ativar a ShadNet para este utilizador</translation>
     </message>
     <message>
       <source>Account ID (NPID)</source>
-      <translation type="unfinished">Account ID (NPID)</translation>
+      <translation>ID da Conta (NPID)</translation>
     </message>
     <message>
       <source>Password</source>
-      <translation type="unfinished">Password</translation>
+      <translation>Palavra-passe</translation>
     </message>
     <message>
       <source>Show password</source>
-      <translation type="unfinished">Show password</translation>
+      <translation>Mostrar a palavra-passe</translation>
     </message>
     <message>
       <source>Account ID (NPID):</source>
-      <translation type="unfinished">Account ID (NPID):</translation>
+      <translation>ID da Conta (NPID):</translation>
     </message>
     <message>
       <source>Password:</source>
-      <translation type="unfinished">Password:</translation>
+      <translation>Palavra-passe:</translation>
     </message>
     <message>
       <source>Shad&amp;Net Settings...</source>
-      <translation type="unfinished">Shad&amp;Net Settings...</translation>
+      <translation>Definições da Shad&amp;Net...</translation>
     </message>
   </context>
   <context>
     <name>VersionDialog</name>
     <message>
       <source>Version Manager</source>
-      <translation type="unfinished">Version Manager</translation>
+      <translation>Gestor de Versões</translation>
     </message>
     <message>
       <source>Path to save versions</source>
-      <translation type="unfinished">Path to save versions</translation>
+      <translation>Caminho para guardar versões</translation>
     </message>
     <message>
       <source>Browse</source>
-      <translation type="unfinished">Browse</translation>
+      <translation>Procurar</translation>
     </message>
     <message>
       <source>Installed</source>
-      <translation type="unfinished">Installed</translation>
+      <translation>Instalada</translation>
     </message>
     <message>
       <source>Selected</source>
-      <translation type="unfinished">Selected</translation>
+      <translation>Selecionada</translation>
     </message>
     <message>
       <source>Version</source>
-      <translation type="unfinished">Version</translation>
+      <translation>Versão</translation>
     </message>
     <message>
       <source>Codename</source>
-      <translation type="unfinished">Codename</translation>
+      <translation>Nome de código</translation>
     </message>
     <message>
       <source>Date</source>
-      <translation type="unfinished">Date</translation>
+      <translation>Data</translation>
     </message>
     <message>
       <source>Add Custom</source>
-      <translation type="unfinished">Add Custom</translation>
+      <translation>Adicionar Versão Personalizada</translation>
     </message>
     <message>
       <source>Delete</source>
-      <translation type="unfinished">Delete</translation>
+      <translation>Eliminar</translation>
     </message>
     <message>
       <source>Refresh List</source>
-      <translation type="unfinished">Refresh List</translation>
+      <translation>Atualizar Lista</translation>
     </message>
     <message>
       <source>Download</source>
-      <translation type="unfinished">Download</translation>
+      <translation>Transferir</translation>
     </message>
     <message>
       <source>Check for Pre-release updates at startup</source>
-      <translation type="unfinished">Check for Pre-release updates at startup</translation>
+      <translation>Verificar atualizações de pré‑lançamento no arranque</translation>
     </message>
     <message>
       <source>Check for Pre-release Updates</source>
-      <translation type="unfinished">Check for Pre-release Updates</translation>
+      <translation>Verificar atualizações de pré‑lançamento</translation>
     </message>
     <message>
       <source>Select the folder where the emulator versions will be installed</source>
-      <translation type="unfinished">Select the folder where the emulator versions will be installed</translation>
+      <translation>Selecione a pasta onde as versões do emulador serão instaladas</translation>
     </message>
     <message>
       <source>Select executable</source>
-      <translation type="unfinished">Select executable</translation>
+      <translation>Selecionar o executável</translation>
     </message>
     <message>
       <source>Executable (*.exe)</source>
-      <translation type="unfinished">Executable (*.exe)</translation>
+      <translation>Executável (*.EXE)</translation>
     </message>
     <message>
       <source>Version name</source>
-      <translation type="unfinished">Version name</translation>
+      <translation>Nome da versão</translation>
     </message>
     <message>
       <source>Enter the name of this version as it appears in the list.</source>
-      <translation type="unfinished">Enter the name of this version as it appears in the list.</translation>
+      <translation>Introduza o nome desta versão tal como aparece na lista.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Erro</translation>
     </message>
     <message>
       <source>Success</source>
-      <translation type="unfinished">Success</translation>
+      <translation>Sucesso</translation>
     </message>
     <message>
       <source>Version added successfully.</source>
-      <translation type="unfinished">Version added successfully.</translation>
+      <translation>Versão adiciona com sucesso.</translation>
     </message>
     <message>
       <source>Failed to determine the folder path.</source>
-      <translation type="unfinished">Failed to determine the folder path.</translation>
+      <translation>Falha ao determinar o caminho da pasta.</translation>
     </message>
     <message>
       <source>Delete version</source>
-      <translation type="unfinished">Delete version</translation>
+      <translation>Eliminar a versão</translation>
     </message>
     <message>
       <source>Do you want to delete the version</source>
-      <translation type="unfinished">Do you want to delete the version</translation>
+      <translation>Deseja eliminar a versão</translation>
     </message>
     <message>
       <source>Version list update</source>
-      <translation type="unfinished">Version list update</translation>
+      <translation>Atualização da lista de versões</translation>
     </message>
     <message>
       <source>No news, the version list is already updated.</source>
-      <translation type="unfinished">No news, the version list is already updated.</translation>
+      <translation>Sem novidades, a lista de versões já está atualizada.</translation>
     </message>
     <message>
       <source>The latest versions have been added to the list for download.</source>
-      <translation type="unfinished">The latest versions have been added to the list for download.</translation>
+      <translation>As versões mais recentes foram adicionadas à lista para transferência.</translation>
     </message>
     <message>
       <source>Error accessing GitHub API</source>
-      <translation type="unfinished">Error accessing GitHub API</translation>
+      <translation>Erro de acesso à API do GitHub</translation>
     </message>
     <message>
       <source>First you need to choose a location to save the versions in
 &apos;Path to save versions&apos;</source>
-      <translation type="unfinished">First you need to choose a location to save the versions in
-&apos;Path to save versions&apos;</translation>
+      <translation>Primeiro tem de escolher uma localização para guardar as versões em &apos;Caminhos&apos;</translation>
     </message>
     <message>
       <source>Do you want to download the version</source>
-      <translation type="unfinished">Do you want to download the version</translation>
+      <translation>Deseja transferir a versão</translation>
     </message>
     <message>
       <source>No files available for this platform.</source>
-      <translation type="unfinished">No files available for this platform.</translation>
+      <translation>Nenhum ficheiro disponível para esta plataforma.</translation>
     </message>
     <message>
       <source>Downloading %1 , please wait...</source>
-      <translation type="unfinished">Downloading %1 , please wait...</translation>
+      <translation>A transferir a versão %1, por favor aguarde...</translation>
     </message>
     <message>
       <source>Could not save file.</source>
-      <translation type="unfinished">Could not save file.</translation>
+      <translation>Não foi possível guardar o ficheiro.</translation>
     </message>
     <message>
       <source>Version %1 has been downloaded and selected.</source>
-      <translation type="unfinished">Version %1 has been downloaded and selected.</translation>
+      <translation>A versão %1 foi transferida e selecionada.</translation>
     </message>
     <message>
       <source>Failed to create zip extraction script</source>
-      <translation type="unfinished">Failed to create zip extraction script</translation>
+      <translation>Falha ao criar o script de extração ZIP</translation>
     </message>
     <message>
       <source>The GitHub API response is not a valid JSON array.</source>
-      <translation type="unfinished">The GitHub API response is not a valid JSON array.</translation>
+      <translation>A resposta da API do GitHub não é um array JSON válido.</translation>
     </message>
     <message>
       <source>Auto Updater - Emulator</source>
-      <translation type="unfinished">Auto Updater - Emulator</translation>
+      <translation>Atualizador Automático - Emulador</translation>
     </message>
     <message>
       <source>You already have the latest pre-release version.</source>
-      <translation type="unfinished">You already have the latest pre-release version.</translation>
+      <translation>Já tem a última versão de pré-lançamento.</translation>
     </message>
     <message>
       <source>Update Available (Emulator)</source>
-      <translation type="unfinished">Update Available (Emulator)</translation>
+      <translation>Atualização Disponível (Emulador)</translation>
     </message>
     <message>
       <source>Current Version</source>
-      <translation type="unfinished">Current Version</translation>
+      <translation>Versão Atual</translation>
     </message>
     <message>
       <source>Latest Version</source>
-      <translation type="unfinished">Latest Version</translation>
+      <translation>Última Versão</translation>
     </message>
     <message>
       <source>Do you want to update?</source>
-      <translation type="unfinished">Do you want to update?</translation>
+      <translation>Deseja atualizar?</translation>
     </message>
     <message>
       <source>Update</source>
-      <translation type="unfinished">Update</translation>
+      <translation>Atualizar</translation>
     </message>
     <message>
       <source>No</source>
-      <translation type="unfinished">No</translation>
+      <translation>Não</translation>
     </message>
     <message>
       <source>Show Changelog</source>
-      <translation type="unfinished">Show Changelog</translation>
+      <translation>Mostrar o Registo de Mudanças</translation>
     </message>
     <message>
       <source>Hide Changelog</source>
-      <translation type="unfinished">Hide Changelog</translation>
+      <translation>Esconder o Registo de Mudanças</translation>
     </message>
     <message>
       <source>Network error while fetching changelog</source>
-      <translation type="unfinished">Network error while fetching changelog</translation>
+      <translation>Erro de rede ao obter o registo de mudanças</translation>
     </message>
     <message>
       <source>Changes</source>
-      <translation type="unfinished">Changes</translation>
+      <translation>Mudanças</translation>
     </message>
     <message>
       <source>No download URL found for the specified asset.</source>
-      <translation type="unfinished">No download URL found for the specified asset.</translation>
+      <translation>Nenhum URL de transferência foi encontrado para o recurso especificado.</translation>
     </message>
     <message>
       <source>Network error while downloading</source>
-      <translation type="unfinished">Network error while downloading</translation>
+      <translation>Erro de rede durante a transferência</translation>
     </message>
     <message>
       <source>Failed to save download file</source>
-      <translation type="unfinished">Failed to save download file</translation>
+      <translation>Falha ao guardar o ficheiro de transferência</translation>
     </message>
     <message>
       <source>Complete installation</source>
-      <translation type="unfinished">Complete installation</translation>
+      <translation>Concluir a instalação</translation>
     </message>
     <message>
       <source>Pre-release updated successfully</source>
-      <translation type="unfinished">Pre-release updated successfully</translation>
+      <translation>Versão de pré-lançamento atualizada com sucesso</translation>
     </message>
     <message>
       <source>Failed to create the update script file</source>
-      <translation type="unfinished">Failed to create the update script file</translation>
+      <translation>Falha ao criar o ficheiro de script de atualização</translation>
     </message>
     <message>
       <source>Always Show Changelog</source>
-      <translation type="unfinished">Always Show Changelog</translation>
+      <translation>Mostrar Sempre o Histórico de Mudanças</translation>
     </message>
     <message>
       <source>No version selected. Please choose one from the list to delete.</source>
-      <translation type="unfinished">No version selected. Please choose one from the list to delete.</translation>
+      <translation>Nenhuma versão selecionada. Por favor, escolha uma da lista para eliminar.</translation>
     </message>
     <message>
       <source>Confirm Download</source>
-      <translation type="unfinished">Confirm Download</translation>
+      <translation>Confirmar a Transferência</translation>
     </message>
     <message>
       <source>Extraction failure.</source>
-      <translation type="unfinished">Extraction failure.</translation>
+      <translation>Falha na extração.</translation>
     </message>
     <message>
       <source>A version with that name already exists.</source>
-      <translation type="unfinished">A version with that name already exists.</translation>
+      <translation>Já existe uma versão com esse nome.</translation>
     </message>
     <message>
       <source>Local</source>
-      <translation type="unfinished">Local</translation>
+      <translation>Local</translation>
     </message>
     <message>
       <source>Failed to determine the folder to remove.</source>
-      <translation type="unfinished">Failed to determine the folder to remove.</translation>
+      <translation>Falha ao determinar a pasta a eliminar.</translation>
     </message>
     <message>
       <source>Failed to delete folder.</source>
-      <translation type="unfinished">Failed to delete folder.</translation>
+      <translation>Falha ao eliminar a pasta.</translation>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release.</source>
-      <translation type="unfinished">Unable to get hash of latest pre-release.</translation>
+      <translation>Não foi possível obter o hash da última versão de pré-lançamento.</translation>
     </message>
     <message>
       <source>Downloading Pre-release (Nightly), please wait...</source>
-      <translation type="unfinished">Downloading Pre-release (Nightly), please wait...</translation>
+      <translation>A transferir a versão de pré-lançamento (versão diária), por favor espere...</translation>
     </message>
   </context>
   <context>
     <name>dimensions_dialog</name>
     <message>
       <source>Dimensions Manager</source>
-      <translation type="unfinished">Dimensions Manager</translation>
+      <translation>Gestor do Dimensions</translation>
     </message>
     <message>
       <source>Active Dimensions Figures:</source>
-      <translation type="unfinished">Active Dimensions Figures:</translation>
+      <translation>Personagens do Dimensions Ativas:</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Nenhum</translation>
     </message>
     <message>
       <source>Clear</source>
-      <translation type="unfinished">Clear</translation>
+      <translation>Limpar</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Criar</translation>
     </message>
     <message>
       <source>Load</source>
-      <translation type="unfinished">Load</translation>
+      <translation>Carregar</translation>
     </message>
     <message>
       <source>Move</source>
-      <translation type="unfinished">Move</translation>
+      <translation>Mover</translation>
     </message>
     <message>
       <source>Unknown Figure</source>
-      <translation type="unfinished">Unknown Figure</translation>
+      <translation>Personagem Desconhecida</translation>
     </message>
     <message>
       <source>Select Dimensions File</source>
-      <translation type="unfinished">Select Dimensions File</translation>
+      <translation>Selecionar Ficheiro do Dimensions</translation>
     </message>
     <message>
       <source>Dimensions Figure (*.bin);;</source>
-      <translation type="unfinished">Dimensions Figure (*.bin);;</translation>
+      <translation>Personagem do Dimensions (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to open the figure file!</source>
-      <translation type="unfinished">Failed to open the figure file!</translation>
+      <translation>Falha ao abrir o ficheiro de personagem!</translation>
     </message>
     <message>
       <source>Failed to open the figure file(%1)!
 File may already be in use on the base.</source>
-      <translation type="unfinished">Failed to open the figure file(%1)!
-File may already be in use on the base.</translation>
+      <translation>Falha ao abrir o ficheiro de personagem (%1)!
+O ficheiro poderá estar a ser utilizado na base.</translation>
     </message>
     <message>
       <source>Failed to read the figure file!</source>
-      <translation type="unfinished">Failed to read the figure file!</translation>
+      <translation>Falha ao ler o ficheiro de personagem!</translation>
     </message>
     <message>
       <source>Failed to read the figure file(%1)!
 File was too small.</source>
-      <translation type="unfinished">Failed to read the figure file(%1)!
-File was too small.</translation>
+      <translation>Falha ao ler o ficheiro de personagem (%1)!
+O ficheiro é minúsculo.</translation>
     </message>
   </context>
   <context>
     <name>figure_creator_dialog</name>
     <message>
       <source>Figure Creator</source>
-      <translation type="unfinished">Figure Creator</translation>
+      <translation>Criador de Personagens</translation>
     </message>
     <message>
       <source>Filter by Series:</source>
-      <translation type="unfinished">Filter by Series:</translation>
+      <translation>Filtrar por Série:</translation>
     </message>
     <message>
       <source>All</source>
-      <translation type="unfinished">All</translation>
+      <translation>Todas</translation>
     </message>
     <message>
       <source>--Unknown--</source>
-      <translation type="unfinished">--Unknown--</translation>
+      <translation>--Desconhecido--</translation>
     </message>
     <message>
       <source>Figure Number:</source>
-      <translation type="unfinished">Figure Number:</translation>
+      <translation>Número da Personagem:</translation>
     </message>
     <message>
       <source>Series:</source>
-      <translation type="unfinished">Series:</translation>
+      <translation>Série:</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Criar</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Cancelar</translation>
     </message>
     <message>
       <source>Error converting value</source>
-      <translation type="unfinished">Error converting value</translation>
+      <translation>Erro ao converter o valor</translation>
     </message>
     <message>
       <source>Figure number entered is invalid!</source>
-      <translation type="unfinished">Figure number entered is invalid!</translation>
+      <translation>O número da personagem inserido é inválido!</translation>
     </message>
     <message>
       <source>Series number entered is invalid!</source>
-      <translation type="unfinished">Series number entered is invalid!</translation>
+      <translation>O número de série inserido é inválido!</translation>
     </message>
     <message>
       <source>Create Figure File</source>
-      <translation type="unfinished">Create Figure File</translation>
+      <translation>Criar Ficheiro de Personagem</translation>
     </message>
     <message>
       <source>Infinity Figure (*.bin);;</source>
-      <translation type="unfinished">Infinity Figure (*.bin);;</translation>
+      <translation>Personagem do Infinito (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to create figure file!</source>
-      <translation type="unfinished">Failed to create figure file!</translation>
+      <translation>Falha ao criar o ficheiro de personagem!</translation>
     </message>
     <message>
       <source>Failed to create figure file:
 %1</source>
-      <translation type="unfinished">Failed to create figure file:
+      <translation>Falha ao criar o ficheiro de personagem:
 %1</translation>
     </message>
   </context>
@@ -3637,143 +3637,143 @@ File was too small.</translation>
     <name>infinity_dialog</name>
     <message>
       <source>Infinity Manager</source>
-      <translation type="unfinished">Infinity Manager</translation>
+      <translation>Gestor do Infinito</translation>
     </message>
     <message>
       <source>Active Infinity Figures:</source>
-      <translation type="unfinished">Active Infinity Figures:</translation>
+      <translation>Personagens do Infinito Ativas:</translation>
     </message>
     <message>
       <source>Play Set/Power Disc</source>
-      <translation type="unfinished">Play Set/Power Disc</translation>
+      <translation>Conjunto de Jogo/Disco de Poder</translation>
     </message>
     <message>
       <source>Power Disc Two</source>
-      <translation type="unfinished">Power Disc Two</translation>
+      <translation>Disco de Poder Dois</translation>
     </message>
     <message>
       <source>Power Disc Three</source>
-      <translation type="unfinished">Power Disc Three</translation>
+      <translation>Disco de Poder Três</translation>
     </message>
     <message>
       <source>Player One</source>
-      <translation type="unfinished">Player One</translation>
+      <translation>Jogador Um</translation>
     </message>
     <message>
       <source>Player One Ability One</source>
-      <translation type="unfinished">Player One Ability One</translation>
+      <translation>Habilidade Um do Jogador Um</translation>
     </message>
     <message>
       <source>Player One Ability Two</source>
-      <translation type="unfinished">Player One Ability Two</translation>
+      <translation>Habilidade Dois do Jogador Um</translation>
     </message>
     <message>
       <source>Player Two</source>
-      <translation type="unfinished">Player Two</translation>
+      <translation>Jogador Dois</translation>
     </message>
     <message>
       <source>Player Two Ability One</source>
-      <translation type="unfinished">Player Two Ability One</translation>
+      <translation>Habilidade Um do Jogador Dois</translation>
     </message>
     <message>
       <source>Player Two Ability Two</source>
-      <translation type="unfinished">Player Two Ability Two</translation>
+      <translation>Habilidade Dois do Jogador Dois</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Nenhum</translation>
     </message>
     <message>
       <source>Clear</source>
-      <translation type="unfinished">Clear</translation>
+      <translation>Limpar</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Criar</translation>
     </message>
     <message>
       <source>Load</source>
-      <translation type="unfinished">Load</translation>
+      <translation>Carregar</translation>
     </message>
     <message>
       <source>Unknown Figure</source>
-      <translation type="unfinished">Unknown Figure</translation>
+      <translation>Personagem Desconhecida</translation>
     </message>
     <message>
       <source>Select Infinity File</source>
-      <translation type="unfinished">Select Infinity File</translation>
+      <translation>Selecionar o Ficheiro do Infinito</translation>
     </message>
     <message>
       <source>Infinity Figure (*.bin);;</source>
-      <translation type="unfinished">Infinity Figure (*.bin);;</translation>
+      <translation>Personagem do Infinito (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to open the figure file!</source>
-      <translation type="unfinished">Failed to open the figure file!</translation>
+      <translation>Falha ao abrir o ficheiro de personagem!</translation>
     </message>
     <message>
       <source>Failed to open the figure file(%1)!
 File may already be in use on the base.</source>
-      <translation type="unfinished">Failed to open the figure file(%1)!
-File may already be in use on the base.</translation>
+      <translation>Falha ao abrir o ficheiro de personagem (%1)!
+O ficheiro poderá estar a ser utilizado na base.</translation>
     </message>
     <message>
       <source>Failed to read the figure file!</source>
-      <translation type="unfinished">Failed to read the figure file!</translation>
+      <translation>Falha ao ler o ficheiro de personagem!</translation>
     </message>
     <message>
       <source>Failed to read the figure file(%1)!
 File was too small.</source>
-      <translation type="unfinished">Failed to read the figure file(%1)!
-File was too small.</translation>
+      <translation>Falha ao ler o ficheiro de personagem (%1)!
+O ficheiro é minúsculo.</translation>
     </message>
   </context>
   <context>
     <name>minifig_creator_dialog</name>
     <message>
       <source>Figure Creator</source>
-      <translation type="unfinished">Figure Creator</translation>
+      <translation>Criador de Personagens</translation>
     </message>
     <message>
       <source>--Unknown--</source>
-      <translation type="unfinished">--Unknown--</translation>
+      <translation>--Desconhecido--</translation>
     </message>
     <message>
       <source>Figure Number:</source>
-      <translation type="unfinished">Figure Number:</translation>
+      <translation>Número de Personagem:</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Criar</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Cancelar</translation>
     </message>
     <message>
       <source>Error converting value</source>
-      <translation type="unfinished">Error converting value</translation>
+      <translation>Erro ao converter o valor</translation>
     </message>
     <message>
       <source>Figure number entered is invalid!</source>
-      <translation type="unfinished">Figure number entered is invalid!</translation>
+      <translation>O número de personagem inserido é inválido!</translation>
     </message>
     <message>
       <source>Create Figure File</source>
-      <translation type="unfinished">Create Figure File</translation>
+      <translation>Criar Ficheiro de Personagem</translation>
     </message>
     <message>
       <source>Dimensions Figure (*.bin);;</source>
-      <translation type="unfinished">Dimensions Figure (*.bin);;</translation>
+      <translation>Personagem do Dimensions (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to create minifig file!</source>
-      <translation type="unfinished">Failed to create minifig file!</translation>
+      <translation>Falha ao criar um ficheiro minifig!</translation>
     </message>
     <message>
       <source>Failed to create minifig file:
 %1</source>
-      <translation type="unfinished">Failed to create minifig file:
+      <translation>Falha ao criar um ficheiro minifig:
 %1</translation>
     </message>
   </context>
@@ -3781,75 +3781,75 @@ File was too small.</translation>
     <name>minifig_move_dialog</name>
     <message>
       <source>Figure Mover</source>
-      <translation type="unfinished">Figure Mover</translation>
+      <translation>Movimentador de Personagens</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Nenhum</translation>
     </message>
     <message>
       <source>Move Here</source>
-      <translation type="unfinished">Move Here</translation>
+      <translation>Mover para cá</translation>
     </message>
     <message>
       <source>Pick up and Place</source>
-      <translation type="unfinished">Pick up and Place</translation>
+      <translation>Pegar e Posicionar</translation>
     </message>
   </context>
   <context>
     <name>skylander_creator_dialog</name>
     <message>
       <source>Skylander Creator</source>
-      <translation type="unfinished">Skylander Creator</translation>
+      <translation>Criador de Skylanders</translation>
     </message>
     <message>
       <source>--Unknown--</source>
-      <translation type="unfinished">--Unknown--</translation>
+      <translation>--Desconhecido--</translation>
     </message>
     <message>
       <source>ID:</source>
-      <translation type="unfinished">ID:</translation>
+      <translation>ID:</translation>
     </message>
     <message>
       <source>Variant:</source>
-      <translation type="unfinished">Variant:</translation>
+      <translation>Variante:</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Criar</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Cancelar</translation>
     </message>
     <message>
       <source>Error converting value</source>
-      <translation type="unfinished">Error converting value</translation>
+      <translation>Erro ao converter o valor</translation>
     </message>
     <message>
       <source>ID entered is invalid!</source>
-      <translation type="unfinished">ID entered is invalid!</translation>
+      <translation>O ID inserido é inválido!</translation>
     </message>
     <message>
       <source>Variant entered is invalid!</source>
-      <translation type="unfinished">Variant entered is invalid!</translation>
+      <translation>A variante inserida é inválida!</translation>
     </message>
     <message>
       <source>Create Skylander File</source>
-      <translation type="unfinished">Create Skylander File</translation>
+      <translation>Criar ficheiro de Skylander</translation>
     </message>
     <message>
       <source>Skylander Object (*.sky);;All Files (*)</source>
-      <translation type="unfinished">Skylander Object (*.sky);;All Files (*)</translation>
+      <translation>Objeto Skylander (*.sky);;Todos os Ficheiros (*)</translation>
     </message>
     <message>
       <source>Failed to create skylander file!</source>
-      <translation type="unfinished">Failed to create skylander file!</translation>
+      <translation>Falha ao criar um ficheiro Skylander!</translation>
     </message>
     <message>
       <source>Failed to create skylander file:
 %1</source>
-      <translation type="unfinished">Failed to create skylander file:
+      <translation>Falha ao criar um ficheiro Skylander:
 %1</translation>
     </message>
   </context>
@@ -3857,63 +3857,63 @@ File was too small.</translation>
     <name>skylander_dialog</name>
     <message>
       <source>Skylanders Manager</source>
-      <translation type="unfinished">Skylanders Manager</translation>
+      <translation>Gestor de Skylanders</translation>
     </message>
     <message>
       <source>Active Portal Skylanders:</source>
-      <translation type="unfinished">Active Portal Skylanders:</translation>
+      <translation>Portal de Skylanders Ativo:</translation>
     </message>
     <message>
       <source>Skylander %1</source>
-      <translation type="unfinished">Skylander %1</translation>
+      <translation>Skylander %1</translation>
     </message>
     <message>
       <source>Clear</source>
-      <translation type="unfinished">Clear</translation>
+      <translation>Limpar</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation type="unfinished">Create</translation>
+      <translation>Criar</translation>
     </message>
     <message>
       <source>Load</source>
-      <translation type="unfinished">Load</translation>
+      <translation>Carregar</translation>
     </message>
     <message>
       <source>Select Skylander File</source>
-      <translation type="unfinished">Select Skylander File</translation>
+      <translation>Selecionar Ficheiro de Skylander</translation>
     </message>
     <message>
       <source>Skylander (*.sky *.bin *.dmp *.dump);;All Files (*)</source>
-      <translation type="unfinished">Skylander (*.sky *.bin *.dmp *.dump);;All Files (*)</translation>
+      <translation>Skylander (*.sky *.bin *.dmp *.dump);;Todos os Ficheiros (*)</translation>
     </message>
     <message>
       <source>Failed to open the skylander file!</source>
-      <translation type="unfinished">Failed to open the skylander file!</translation>
+      <translation>Falha ao abrir o ficheiro de Skylander!</translation>
     </message>
     <message>
       <source>Failed to open the skylander file(%1)!
 File may already be in use on the portal.</source>
-      <translation type="unfinished">Failed to open the skylander file(%1)!
-File may already be in use on the portal.</translation>
+      <translation>Falha ao abrir o ficheiro de Skylander (%1)!
+O ficheiro poderá estar a ser utilizado no portal.</translation>
     </message>
     <message>
       <source>Failed to read the skylander file!</source>
-      <translation type="unfinished">Failed to read the skylander file!</translation>
+      <translation>Falha ao ler o ficheiro de Skylander!</translation>
     </message>
     <message>
       <source>Failed to read the skylander file(%1)!
 File was too small.</source>
-      <translation type="unfinished">Failed to read the skylander file(%1)!
-File was too small.</translation>
+      <translation>Falha ao ler o ficheiro de Skylander (%1)!
+O ficheiro é minúsculo.</translation>
     </message>
     <message>
       <source>Unknown (Id:%1 Var:%2)</source>
-      <translation type="unfinished">Unknown (Id:%1 Var:%2)</translation>
+      <translation>Desconhecido (ID: %1 Var: %2)</translation>
     </message>
     <message>
       <source>None</source>
-      <translation type="unfinished">None</translation>
+      <translation>Nenhum</translation>
     </message>
   </context>
 </TS>

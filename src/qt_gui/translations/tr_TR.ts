@@ -630,7 +630,7 @@
     <name>CryptoManagerDialog</name>
     <message>
       <source>Crypto Key Manager</source>
-      <translation type="unfinished">Crypto Key Manager</translation>
+      <translation>Şifresel Anahtar Yöneticisi</translation>
     </message>
     <message>
       <source>Trophy Key: Used for trophy decryption.
@@ -731,8 +731,8 @@ All fields must be valid hex strings with even length.</translation>
     <message>
       <source>No key file found or failed to load.
 Please enter your keys and save them.</source>
-      <translation type="unfinished">No key file found or failed to load.
-Please enter your keys and save them.</translation>
+      <translation>Anahtar dosyası bulunamadı veya yüklenemedi.
+Lütfen anahtarlarınızı girin ve kaydedin.</translation>
     </message>
     <message>
       <source>Validation Error</source>
@@ -752,7 +752,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Failed to save keys!</source>
-      <translation type="unfinished">Failed to save keys!</translation>
+      <translation>Anahtarlar kaydedilemedi!</translation>
     </message>
     <message>
       <source>Status: All fields empty</source>
@@ -804,11 +804,11 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Load Key</source>
-      <translation type="unfinished">Load Key</translation>
+      <translation>Anahtar Yükle</translation>
     </message>
     <message>
       <source>Save Key</source>
-      <translation type="unfinished">Save Key</translation>
+      <translation>Anahtarı Kaydet</translation>
     </message>
   </context>
   <context>
@@ -904,7 +904,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Directory with your dumped DLC&apos;s</source>
-      <translation>Dump edilmiş DLC'lerinizin bulunduğu dizin&amp;apos</translation>
+      <translation>Dump edilmiş DLC'lerinizin bulunduğu dizin</translation>
     </message>
     <message>
       <source>Directory with games</source>
@@ -1305,15 +1305,15 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Add with Selected Emulator Version</source>
-      <translation type="unfinished">Add with Selected Emulator Version</translation>
+      <translation>Seçili Emülatör Sürümüyle Ekle</translation>
     </message>
     <message>
       <source>Add with Specified Emulator Version</source>
-      <translation type="unfinished">Add with Specified Emulator Version</translation>
+      <translation>Belirtilen Emülatör Sürümüyle Ekle</translation>
     </message>
     <message>
       <source>Add to Steam</source>
-      <translation type="unfinished">Add to Steam</translation>
+      <translation>Steam'e Ekle</translation>
     </message>
   </context>
   <context>
@@ -2035,7 +2035,7 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Manage Skylanders</source>
-      <translation>Skylanders Yönet</translation>
+      <translation>Skylander'ları Yönet</translation>
     </message>
     <message>
       <source>Manage Infinity Figures</source>
@@ -2213,7 +2213,7 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Enable Debug Dumping</source>
-      <translation>Hata Ayıklama Dökümü Etkinleştir</translation>
+      <translation>Hata Ayıklama Dökümünü Etkinleştir</translation>
     </message>
     <message>
       <source>Enable Vulkan Validation Layers</source>
@@ -2969,31 +2969,31 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Enable shadNet</source>
-      <translation type="unfinished">Enable shadNet</translation>
+      <translation>shadNet'i Etkinleştir</translation>
     </message>
     <message>
       <source>ShadNet</source>
-      <translation type="unfinished">ShadNet</translation>
+      <translation>ShadNet</translation>
     </message>
     <message>
       <source>Server</source>
-      <translation type="unfinished">Server</translation>
+      <translation>Sunucu</translation>
     </message>
     <message>
       <source>Signaling Info</source>
-      <translation type="unfinished">Signaling Info</translation>
+      <translation>Sinyal Bilgisi</translation>
     </message>
     <message>
       <source>Enable UPNP</source>
-      <translation type="unfinished">Enable UPNP</translation>
+      <translation>UPNP'yi Etkinleştir</translation>
     </message>
     <message>
       <source>WebAPI Server</source>
-      <translation type="unfinished">WebAPI Server</translation>
+      <translation>WebAPI Sunucusu</translation>
     </message>
     <message>
-      <source>shadNet:\nA PSN server replacement.\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadNet/register/.</source>
-      <translation type="unfinished">shadNet:\nA PSN server replacement.\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadNet/register/.</translation>
+      <source>shadNet:\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadnet/register/.</source>
+      <translation>shadNet:\nŞu anda uyumluluk oldukça sınırlıdır.\nhttps://www.shadps4.net/shadnet/register/ adresinden kayıt olabilirsiniz.</translation>
     </message>
   </context>
   <context>
@@ -3019,19 +3019,19 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     <name>SteamShortcut</name>
     <message>
       <source>Steam</source>
-      <translation type="unfinished">Steam</translation>
+      <translation>Steam</translation>
     </message>
     <message>
       <source>%1 is already in your Steam library.</source>
-      <translation type="unfinished">%1 is already in your Steam library.</translation>
+      <translation>%1 zaten Steam kütüphanenizde mevcut.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Hata</translation>
     </message>
     <message>
       <source>Steam installation not found.</source>
-      <translation type="unfinished">Steam installation not found.</translation>
+      <translation>Steam kurulumu bulunamadı.</translation>
     </message>
     <message>
       <source>No Steam user account found. Please log into Steam at least once.</source>
@@ -3039,27 +3039,27 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Steam is Running</source>
-      <translation type="unfinished">Steam is Running</translation>
+      <translation>Steam Çalışıyor</translation>
     </message>
     <message>
       <source>Steam is currently running. It will be closed and restarted to apply the shortcut. Continue?</source>
-      <translation type="unfinished">Steam is currently running. It will be closed and restarted to apply the shortcut. Continue?</translation>
+      <translation>Steam şu anda çalışıyor. Kısayolu uygulamak için kapatılacak ve yeniden başlatılacaktır. Devam etmek istiyor musunuz?</translation>
     </message>
     <message>
       <source>Steam did not close in time. Shortcut was not added.</source>
-      <translation type="unfinished">Steam did not close in time. Shortcut was not added.</translation>
+      <translation>Steam zamanında kapanmadı. Kısayol eklenmedi.</translation>
     </message>
     <message>
       <source>Failed to add game to Steam.</source>
-      <translation type="unfinished">Failed to add game to Steam.</translation>
+      <translation>Oyun Steam'e eklenemedi.</translation>
     </message>
     <message>
       <source>Added to Steam successfully. Steam is restarting.</source>
-      <translation type="unfinished">Added to Steam successfully. Steam is restarting.</translation>
+      <translation>Steam'e başarıyla eklendi. Steam yeniden başlatılıyor.</translation>
     </message>
     <message>
       <source>Added to Steam successfully. Launch Steam to see the changes.</source>
-      <translation type="unfinished">Added to Steam successfully. Launch Steam to see the changes.</translation>
+      <translation>Steam'e başarıyla eklendi. Değişiklikleri görmek için Steam'i başlatın.</translation>
     </message>
   </context>
   <context>
@@ -3185,7 +3185,7 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Assign port (1-4) to this user:</source>
-      <translation type="unfinished">Assign port (1-4) to this user:</translation>
+      <translation>Bu kullanıcıya (1-4) numaralı port atayın:</translation>
     </message>
     <message>
       <source>&amp;Open User Directory</source>
@@ -3193,51 +3193,51 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>Shad&amp;Net...</source>
-      <translation type="unfinished">Shad&amp;Net...</translation>
+      <translation>Shad&amp;Net...</translation>
     </message>
     <message>
       <source>On</source>
-      <translation type="unfinished">On</translation>
+      <translation>Açık</translation>
     </message>
     <message>
       <source>On (%1)</source>
-      <translation type="unfinished">On (%1)</translation>
+      <translation>Açık (%1)</translation>
     </message>
     <message>
       <source>Off</source>
-      <translation type="unfinished">Off</translation>
+      <translation>Kapalı</translation>
     </message>
     <message>
       <source>ShadNet Settings - %1</source>
-      <translation type="unfinished">ShadNet Settings - %1</translation>
+      <translation>ShadNet Ayarları - %1</translation>
     </message>
     <message>
       <source>Enable ShadNet for this user</source>
-      <translation type="unfinished">Enable ShadNet for this user</translation>
+      <translation>Bu kullanıcı için ShadNet'i etkinleştir</translation>
     </message>
     <message>
       <source>Account ID (NPID)</source>
-      <translation type="unfinished">Account ID (NPID)</translation>
+      <translation>Hesap ID'si (NPID)</translation>
     </message>
     <message>
       <source>Password</source>
-      <translation type="unfinished">Password</translation>
+      <translation>Şifre</translation>
     </message>
     <message>
       <source>Show password</source>
-      <translation type="unfinished">Show password</translation>
+      <translation>Şifreyi göster</translation>
     </message>
     <message>
       <source>Account ID (NPID):</source>
-      <translation type="unfinished">Account ID (NPID):</translation>
+      <translation>Hesap ID'si (NPID):</translation>
     </message>
     <message>
       <source>Password:</source>
-      <translation type="unfinished">Password:</translation>
+      <translation>Şifre:</translation>
     </message>
     <message>
       <source>Shad&amp;Net Settings...</source>
-      <translation type="unfinished">Shad&amp;Net Settings...</translation>
+      <translation>Shad&amp;Net Ayarları...</translation>
     </message>
   </context>
   <context>

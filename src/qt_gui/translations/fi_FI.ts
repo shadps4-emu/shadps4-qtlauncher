@@ -1305,15 +1305,15 @@ Syötä avaimet ja tallenna ne.</translation>
     </message>
     <message>
       <source>Add with Selected Emulator Version</source>
-      <translation type="unfinished">Add with Selected Emulator Version</translation>
+      <translation>Lisää valitun Emulaattori Version kanssa</translation>
     </message>
     <message>
       <source>Add with Specified Emulator Version</source>
-      <translation type="unfinished">Add with Specified Emulator Version</translation>
+      <translation>Lisää tietyn Emulaattori Version kanssa</translation>
     </message>
     <message>
       <source>Add to Steam</source>
-      <translation type="unfinished">Add to Steam</translation>
+      <translation>Lisää Steamiin</translation>
     </message>
   </context>
   <context>
@@ -2969,31 +2969,31 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Enable shadNet</source>
-      <translation type="unfinished">Enable shadNet</translation>
+      <translation>shadNet</translation>
     </message>
     <message>
       <source>ShadNet</source>
-      <translation type="unfinished">ShadNet</translation>
+      <translation>ShadNet</translation>
     </message>
     <message>
       <source>Server</source>
-      <translation type="unfinished">Server</translation>
+      <translation>Palvelin</translation>
     </message>
     <message>
       <source>Signaling Info</source>
-      <translation type="unfinished">Signaling Info</translation>
+      <translation>Signalointitiedot</translation>
     </message>
     <message>
       <source>Enable UPNP</source>
-      <translation type="unfinished">Enable UPNP</translation>
+      <translation>Ota UPNP käyttöön</translation>
     </message>
     <message>
       <source>WebAPI Server</source>
-      <translation type="unfinished">WebAPI Server</translation>
+      <translation>WebAPI-palvelin</translation>
     </message>
     <message>
-      <source>shadNet:\nA PSN server replacement.\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadNet/register/.</source>
-      <translation type="unfinished">shadNet:\nA PSN server replacement.\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadNet/register/.</translation>
+      <source>shadNet:\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadnet/register/.</source>
+      <translation>shadNet:\nYhteensopivuus on tällä hetkellä hyvin rajallinen.\nVoit rekisteröityä osoitteessa https://www.shadps4.net/shadnet/register/.</translation>
     </message>
   </context>
   <context>
@@ -3019,47 +3019,47 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     <name>SteamShortcut</name>
     <message>
       <source>Steam</source>
-      <translation type="unfinished">Steam</translation>
+      <translation>Steam</translation>
     </message>
     <message>
       <source>%1 is already in your Steam library.</source>
-      <translation type="unfinished">%1 is already in your Steam library.</translation>
+      <translation>%1 on jo Steam-kirjastossasi.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Virhe</translation>
     </message>
     <message>
       <source>Steam installation not found.</source>
-      <translation type="unfinished">Steam installation not found.</translation>
+      <translation>Steamia ei löytynyt asennettuna.</translation>
     </message>
     <message>
       <source>No Steam user account found. Please log into Steam at least once.</source>
-      <translation type="unfinished">No Steam user account found. Please log into Steam at least once.</translation>
+      <translation>Steam-käyttäjätiliä ei löytynyt. Kirjaudu Steamiin ainakin kerran.</translation>
     </message>
     <message>
       <source>Steam is Running</source>
-      <translation type="unfinished">Steam is Running</translation>
+      <translation>Steam on käynnissä</translation>
     </message>
     <message>
       <source>Steam is currently running. It will be closed and restarted to apply the shortcut. Continue?</source>
-      <translation type="unfinished">Steam is currently running. It will be closed and restarted to apply the shortcut. Continue?</translation>
+      <translation>Steam on käynnissä. Se suljetaan ja käynnistetään uudelleen, jotta pikakuvake voidaan ottaa käyttöön. Jatketaanko?</translation>
     </message>
     <message>
       <source>Steam did not close in time. Shortcut was not added.</source>
-      <translation type="unfinished">Steam did not close in time. Shortcut was not added.</translation>
+      <translation>Steam ei sulkeutunut ajoissa. Pikakuvaketta ei lisätty.</translation>
     </message>
     <message>
       <source>Failed to add game to Steam.</source>
-      <translation type="unfinished">Failed to add game to Steam.</translation>
+      <translation>Pelin lisääminen Steamiin epäonnistui.</translation>
     </message>
     <message>
       <source>Added to Steam successfully. Steam is restarting.</source>
-      <translation type="unfinished">Added to Steam successfully. Steam is restarting.</translation>
+      <translation>Lisääminen Steamiin onnistui. Steam käynnistyy uudelleen.</translation>
     </message>
     <message>
       <source>Added to Steam successfully. Launch Steam to see the changes.</source>
-      <translation type="unfinished">Added to Steam successfully. Launch Steam to see the changes.</translation>
+      <translation>Lisääminen Steamiin onnistui. Käynnistä Steam nähdäksesi muutokset.</translation>
     </message>
   </context>
   <context>
@@ -3193,51 +3193,51 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Shad&amp;Net...</source>
-      <translation type="unfinished">Shad&amp;Net...</translation>
+      <translation>Shad&amp;Net...</translation>
     </message>
     <message>
       <source>On</source>
-      <translation type="unfinished">On</translation>
+      <translation>Päällä</translation>
     </message>
     <message>
       <source>On (%1)</source>
-      <translation type="unfinished">On (%1)</translation>
+      <translation>Päällä (%1)</translation>
     </message>
     <message>
       <source>Off</source>
-      <translation type="unfinished">Off</translation>
+      <translation>Pois</translation>
     </message>
     <message>
       <source>ShadNet Settings - %1</source>
-      <translation type="unfinished">ShadNet Settings - %1</translation>
+      <translation>ShadNet-asetukset - %1</translation>
     </message>
     <message>
       <source>Enable ShadNet for this user</source>
-      <translation type="unfinished">Enable ShadNet for this user</translation>
+      <translation>Salli ShadNet tälle käyttäjälle</translation>
     </message>
     <message>
       <source>Account ID (NPID)</source>
-      <translation type="unfinished">Account ID (NPID)</translation>
+      <translation>Tilin ID (NPID)</translation>
     </message>
     <message>
       <source>Password</source>
-      <translation type="unfinished">Password</translation>
+      <translation>Salasana</translation>
     </message>
     <message>
       <source>Show password</source>
-      <translation type="unfinished">Show password</translation>
+      <translation>Näytä salasana</translation>
     </message>
     <message>
       <source>Account ID (NPID):</source>
-      <translation type="unfinished">Account ID (NPID):</translation>
+      <translation>Tilin ID (NPID):</translation>
     </message>
     <message>
       <source>Password:</source>
-      <translation type="unfinished">Password:</translation>
+      <translation>Salasana:</translation>
     </message>
     <message>
       <source>Shad&amp;Net Settings...</source>
-      <translation type="unfinished">Shad&amp;Net Settings...</translation>
+      <translation>Shad&amp;Net-asetukset...</translation>
     </message>
   </context>
   <context>

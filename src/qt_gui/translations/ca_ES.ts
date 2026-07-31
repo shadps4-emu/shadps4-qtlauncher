@@ -2992,8 +2992,8 @@ Selecciona una versió del panell dret.</translation>
       <translation>Servidor WebAPI</translation>
     </message>
     <message>
-      <source>shadNet:\nA PSN server replacement.\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadNet/register/.</source>
-      <translation>shadNet:\nReemplaça a un servidor PSN.\nLa compatibilitat és limitada en aquest moment.\nEt pots registrar a https://www.shadps4.net/shadNet/register/.</translation>
+      <source>shadNet:\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadnet/register/.</source>
+      <translation>shadNet:\nLa compatibilitat és molt limitada ara mateix.\nEt pots registrar a https://www.shadps4.net/shadnet/register/.</translation>
     </message>
   </context>
   <context>
