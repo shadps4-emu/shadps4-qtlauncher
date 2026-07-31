@@ -108,40 +108,43 @@ void ResetEntries() {
 bool DetectLogTypeAndSetupEntries(std::filesystem::path const& path) {
     entries.clear();
     enum LogType {
-        Release,
+        LatestRelease,
         Nightly,
         Old,
     };
-    LogType type;
+    LogType type = Old;
     std::ifstream log(path);
     if (!log.is_open()) {
+        std::cerr << "Invalid file path!\n";
         return false;
     }
     bool is_valid = true;
-    std::string first_line;
-    std::getline(log, first_line);
-    first_line = trim(first_line);
+    std::string version_line;
     Entry version_test =
-        Entry("[Loader] <Info> ^ emulator.cpp:# Run: Starting shadps4 emulator +", "", "");
-    version_test.ProcessLine(first_line);
-    if (version_test.occurrence_count == 1) {
-        type = version_test.parsed_data[0].contains("WIP") ? Nightly : Release;
-    } else {
-        version_test = Entry("[Loader] <Info> emulator.cpp:# Starting shadps4 emulator +", "", "");
-        version_test.ProcessLine(first_line);
-        if (version_test.occurrence_count != 1) {
-            // likely not a shadPS4 log file at all, or log filters were used
-            is_valid = false;
-        }
-        type = Old;
+    Entry("[Loader] <Info> ^ emulator.cpp:# Run: Starting shadps4 emulator +", "", "");
+    Entry old_version_test =
+    Entry("[Loader] <Info> emulator.cpp:# Starting shadps4 emulator +", "", "");
+    for (int i = 0;
+         i < 20 && version_test.occurrence_count == 0 && old_version_test.occurrence_count == 0;
+    i++) {
+        std::getline(log, version_line);
+        version_line = trim(version_line);
+        version_test.ProcessLine(version_line);
+        old_version_test.ProcessLine(version_line);
     }
-    if (!is_valid) {
-        return false;
+    if (version_test.occurrence_count == 1) {
+        type = version_test.parsed_data[0].contains("WIP") ? Nightly : LatestRelease;
+    } else if (old_version_test.occurrence_count != 0) {
+        type = Old;
+    } else {
+        is_valid = false;
+    }
+    if (is_valid) {
+        std::istringstream ds(is_valid_report_suite);
+        LoadSuiteFromInput(ds);
     }
 
-    std::istringstream ds(is_valid_report_suite);
-    LoadSuiteFromInput(ds);
-    return true;
+    return is_valid;
 }
 
 bool ProcessFile(std::filesystem::path const& path) {
