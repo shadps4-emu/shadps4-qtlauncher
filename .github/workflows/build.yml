@@ -84,7 +84,7 @@ jobs:
         modules: qtmultimedia
 
     - name: Cache CMake Configuration
-      uses: actions/cache@v4
+      uses: actions/cache@v6
       env:
           cache-name: ${{ runner.os }}-qt-ninja-cache-cmake-configuration
       with:
@@ -151,7 +151,7 @@ jobs:
         modules: qtmultimedia
 
     - name: Cache CMake Configuration
-      uses: actions/cache@v4 
+      uses: actions/cache@v6 
       env: 
           cache-name: ${{ runner.os }}-qt-cache-cmake-configuration
       with: 
@@ -220,7 +220,7 @@ jobs:
         cache: true
 
     - name: Cache CMake Configuration
-      uses: actions/cache@v4 
+      uses: actions/cache@v6 
       env: 
           cache-name: ${{ runner.os }}-qt-cache-cmake-configuration
       with: 
@@ -281,7 +281,7 @@ jobs:
         cache: true
         
     - name: Cache CMake Configuration
-      uses: actions/cache@v4 
+      uses: actions/cache@v6 
       env: 
           cache-name: ${{ runner.os }}-qt-gcc-cache-cmake-configuration
       with: 
