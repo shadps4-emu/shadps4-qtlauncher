@@ -10,6 +10,7 @@
 #include "common/path_util.h"
 #include "compatibility_info.h"
 #include "core/emulator_settings.h"
+#include "core/file_sys/game_backend.h"
 #include "game_info.h"
 
 #include <QInputDialog>
@@ -79,6 +80,25 @@ void ScanDirectoryRecursively(const QString& dir, QStringList& filePaths, int cu
             // If not a game directory, recursively scan it with increased depth
             ScanDirectoryRecursively(entry.absoluteFilePath(), filePaths, current_depth + 1);
         }
+    }
+
+    const QFileInfoList archives =
+        directory.entryInfoList(QStringList{"*.zar"}, QDir::Files | QDir::NoDotAndDotDot);
+
+    for (const auto& archive : archives) {
+        const QString stem = archive.completeBaseName();
+        if (stem.endsWith("-UPDATE") || stem.endsWith("-patch")) {
+            continue;
+        }
+
+        const auto archive_path = Common::FS::PathFromQString(archive.absoluteFilePath());
+        if (!Core::FileSys::IsZArchiveFile(archive_path)) {
+            continue;
+        }
+        if (!Core::FileSys::ReadGameFile(archive_path, "sce_sys/param.sfo").has_value()) {
+            continue;
+        }
+        filePaths.append(archive.absoluteFilePath());
     }
 }
 
