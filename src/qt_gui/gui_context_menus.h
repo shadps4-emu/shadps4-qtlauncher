@@ -237,9 +237,8 @@ public:
         if (selected == openGameFolder) {
             // A ".zar" game is a file, not a directory, so open its parent folder.
             const auto game_path = m_games[itemID].path;
-            const auto open_target = Core::FileSys::IsZArchiveFile(game_path)
-                                         ? game_path.parent_path()
-                                         : game_path;
+            const auto open_target =
+                Core::FileSys::IsZArchiveFile(game_path) ? game_path.parent_path() : game_path;
             QString folderPath;
             Common::FS::PathToQString(folderPath, open_target);
             QDesktopServices::openUrl(QUrl::fromLocalFile(folderPath));

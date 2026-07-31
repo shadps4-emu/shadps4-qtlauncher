@@ -135,8 +135,8 @@ u64 GetGameRootSize(const std::filesystem::path& game_root) {
     }
 
     u64 total = 0;
-    for (std::filesystem::recursive_directory_iterator it(
-             game_root, std::filesystem::directory_options::skip_permission_denied, ec),
+    for (std::filesystem::recursive_directory_iterator
+             it(game_root, std::filesystem::directory_options::skip_permission_denied, ec),
          end;
          it != end; it.increment(ec)) {
         if (ec) {
