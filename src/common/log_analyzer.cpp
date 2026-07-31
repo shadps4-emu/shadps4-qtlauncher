@@ -121,12 +121,12 @@ bool DetectLogTypeAndSetupEntries(std::filesystem::path const& path) {
     bool is_valid = true;
     std::string version_line;
     Entry version_test =
-    Entry("[Loader] <Info> ^ emulator.cpp:# Run: Starting shadps4 emulator +", "", "");
+        Entry("[Loader] <Info> ^ emulator.cpp:# Run: Starting shadps4 emulator +", "", "");
     Entry old_version_test =
-    Entry("[Loader] <Info> emulator.cpp:# Starting shadps4 emulator +", "", "");
+        Entry("[Loader] <Info> emulator.cpp:# Starting shadps4 emulator +", "", "");
     for (int i = 0;
          i < 20 && version_test.occurrence_count == 0 && old_version_test.occurrence_count == 0;
-    i++) {
+         i++) {
         std::getline(log, version_line);
         version_line = trim(version_line);
         version_test.ProcessLine(version_line);
