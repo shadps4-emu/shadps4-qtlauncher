@@ -260,6 +260,12 @@ set(CORE src/core/file_format/elf.cpp
          src/core/file_format/psf.h
          src/core/file_format/trp.cpp
          src/core/file_format/trp.h
+         src/core/file_sys/game_backend.cpp
+         src/core/file_sys/game_backend.h
+         src/core/file_sys/backends/host_directory_backend.cpp
+         src/core/file_sys/backends/host_directory_backend.h
+         src/core/file_sys/backends/zarchive_backend.cpp
+         src/core/file_sys/backends/zarchive_backend.h
          src/core/emulator_state.cpp
          src/core/emulator_state.h
          src/core/emulator_settings.cpp
@@ -390,7 +396,7 @@ endif()
 
 create_target_directory_groups(shadPS4QtLauncher)
 
-target_link_libraries(shadPS4QtLauncher PRIVATE fmt::fmt toml11::toml11 SDL3::SDL3 spdlog::spdlog)
+target_link_libraries(shadPS4QtLauncher PRIVATE fmt::fmt toml11::toml11 SDL3::SDL3 spdlog::spdlog ZArchive::zarchive)
 if (NOT APPLE)
     target_link_libraries(shadPS4QtLauncher PRIVATE Vulkan::Headers volk_headers)
 endif()
