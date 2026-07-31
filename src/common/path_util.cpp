@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: Copyright 2024 shadPS4 Emulator Project
+// SPDX-FileCopyrightText: Copyright 2024-2026 shadPS4 Emulator Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include <fstream>
@@ -6,6 +6,7 @@
 #include "common/logging/log.h"
 #include "common/path_util.h"
 #include "common/types.h"
+#include "core/file_sys/game_backend.h"
 
 #ifdef __APPLE__
 #include <CoreFoundation/CFBundle.h>
@@ -247,6 +248,13 @@ std::optional<fs::path> FindGameByID(const fs::path& dir, const std::string& gam
         auto eboot_path = dir / "eboot.bin";
         if (fs::exists(eboot_path)) {
             return eboot_path;
+        }
+    }
+
+    if (const auto zar_candidate = dir / (game_id + ".zar");
+        Core::FileSys::IsZArchiveFile(zar_candidate)) {
+        if (Core::FileSys::ReadGameFile(zar_candidate, "sce_sys/param.sfo").has_value()) {
+            return zar_candidate / "eboot.bin";
         }
     }
 

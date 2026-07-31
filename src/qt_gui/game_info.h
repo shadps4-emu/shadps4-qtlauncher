@@ -7,6 +7,7 @@
 #include <QtConcurrent>
 
 #include "core/file_format/psf.h"
+#include "core/file_sys/game_backend.h"
 #include "game_list_utils.h"
 #include "gui_settings.h"
 
@@ -24,13 +25,17 @@ public:
                                  std::filesystem::path& update_folder,
                                  std::filesystem::path& patch_folder,
                                  std::filesystem::path& game_folder) {
-        if (std::filesystem::exists(update_folder / "sce_sys" / sceItem)) {
-            gameItem = update_folder / "sce_sys" / sceItem;
-        } else if (std::filesystem::exists(patch_folder / "sce_sys" / sceItem)) {
-            gameItem = patch_folder / "sce_sys" / sceItem;
-        } else {
-            gameItem = game_folder / "sce_sys" / sceItem;
+        const std::string rel_path = "sce_sys/" + sceItem;
+
+        for (const auto& candidate : {update_folder, patch_folder, game_folder}) {
+            if (const auto root = Core::FileSys::ResolveGameRoot(candidate)) {
+                if (const auto resolved = Core::FileSys::ResolveGameFilePath(*root, rel_path)) {
+                    gameItem = *resolved;
+                    return;
+                }
+            }
         }
+        gameItem = game_folder / "sce_sys" / sceItem;
     }
 
     static bool CompareStrings(GameInfo& a, GameInfo& b) {
@@ -44,9 +49,10 @@ public:
         GameInfo game;
         game.path = filePath;
         std::filesystem::path param_sfo_path;
-        std::filesystem::path game_update_path = filePath;
+        const std::filesystem::path stem_path = Core::FileSys::StripZArchiveExtension(filePath);
+        std::filesystem::path game_update_path = stem_path;
         game_update_path += "-UPDATE";
-        std::filesystem::path game_patch_path = filePath;
+        std::filesystem::path game_patch_path = stem_path;
         game_patch_path += "-patch";
         SceUpdateChecker("param.sfo", param_sfo_path, game_update_path, game_patch_path, game.path);
 

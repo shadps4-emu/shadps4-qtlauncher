@@ -21,6 +21,7 @@
 #include "compatibility_info.h"
 #include "core/emulator_settings.h"
 #include "core/emulator_state.h"
+#include "core/file_sys/game_backend.h"
 #include "core/user_settings.h"
 #include "create_shortcut.h"
 #include "create_steam_shortcut.h"
@@ -234,26 +235,37 @@ public:
         }
 
         if (selected == openGameFolder) {
+            // A ".zar" game is a file, not a directory, so open its parent folder.
+            const auto game_path = m_games[itemID].path;
+            const auto open_target =
+                Core::FileSys::IsZArchiveFile(game_path) ? game_path.parent_path() : game_path;
             QString folderPath;
-            Common::FS::PathToQString(folderPath, m_games[itemID].path);
+            Common::FS::PathToQString(folderPath, open_target);
             QDesktopServices::openUrl(QUrl::fromLocalFile(folderPath));
         }
 
         if (selected == openUpdateFolder) {
-            QString open_update_path;
-            Common::FS::PathToQString(open_update_path, m_games[itemID].path);
-            open_update_path += "-UPDATE";
-            if (std::filesystem::exists(Common::FS::PathFromQString(open_update_path))) {
+            const auto stem_path = Core::FileSys::StripZArchiveExtension(m_games[itemID].path);
+            std::optional<std::filesystem::path> update_root;
+            for (const auto& suffix : {"-UPDATE", "-patch"}) {
+                std::filesystem::path overlay = stem_path;
+                overlay += suffix;
+                if (const auto resolved = Core::FileSys::ResolveGameRoot(overlay)) {
+                    update_root = *resolved;
+                    break;
+                }
+            }
+
+            if (update_root.has_value()) {
+                if (Core::FileSys::IsZArchiveFile(*update_root)) {
+                    update_root = update_root->parent_path();
+                }
+                QString open_update_path;
+                Common::FS::PathToQString(open_update_path, *update_root);
                 QDesktopServices::openUrl(QUrl::fromLocalFile(open_update_path));
             } else {
-                Common::FS::PathToQString(open_update_path, m_games[itemID].path);
-                open_update_path += "-patch";
-                if (std::filesystem::exists(Common::FS::PathFromQString(open_update_path))) {
-                    QDesktopServices::openUrl(QUrl::fromLocalFile(open_update_path));
-                } else {
-                    QMessageBox::critical(nullptr, tr("Error"),
-                                          QString(tr("This game has no update folder to open!")));
-                }
+                QMessageBox::critical(nullptr, tr("Error"),
+                                      QString(tr("This game has no update folder to open!")));
             }
         }
 
@@ -334,18 +346,23 @@ public:
             PSF psf;
             QString gameName = QString::fromStdString(m_games[itemID].name);
             std::filesystem::path game_folder_path = m_games[itemID].path;
-            std::filesystem::path game_update_path = game_folder_path;
-            game_update_path += "-UPDATE";
-            if (std::filesystem::exists(game_update_path)) {
-                game_folder_path = game_update_path;
-            } else {
-                game_update_path = game_folder_path;
-                game_update_path += "-patch";
-                if (std::filesystem::exists(game_update_path)) {
-                    game_folder_path = game_update_path;
+            const std::filesystem::path stem_path =
+                Core::FileSys::StripZArchiveExtension(game_folder_path);
+            for (const auto& suffix : {"-UPDATE", "-patch"}) {
+                std::filesystem::path overlay = stem_path;
+                overlay += suffix;
+                if (const auto resolved = Core::FileSys::ResolveGameRoot(overlay)) {
+                    game_folder_path = *resolved;
+                    break;
                 }
             }
-            if (psf.Open(game_folder_path / "sce_sys" / "param.sfo")) {
+            // Archive entries are extracted to the cache so PSF::Open sees a real file.
+            std::filesystem::path sfo_path = game_folder_path / "sce_sys" / "param.sfo";
+            if (const auto resolved =
+                    Core::FileSys::ResolveGameFilePath(game_folder_path, "sce_sys/param.sfo")) {
+                sfo_path = *resolved;
+            }
+            if (psf.Open(sfo_path)) {
                 int rows = psf.GetEntries().size();
                 QTableWidget* tableWidget = new QTableWidget(rows, 2);
                 tableWidget->setAttribute(Qt::WA_DeleteOnClose);
@@ -616,9 +633,20 @@ public:
             QString folder_path, game_update_path, dlc_path, trophy_data_path, shader_cache_path,
                 shader_cache_zip_path;
             Common::FS::PathToQString(folder_path, m_games[itemID].path);
-            game_update_path = folder_path + "-UPDATE";
-            if (!std::filesystem::exists(Common::FS::PathFromQString(game_update_path))) {
-                game_update_path = folder_path + "-patch";
+            {
+                const auto stem_path = Core::FileSys::StripZArchiveExtension(m_games[itemID].path);
+                std::filesystem::path fallback = stem_path;
+                fallback += "-patch";
+                auto update_root = fallback;
+                for (const auto& suffix : {"-UPDATE", "-patch"}) {
+                    std::filesystem::path overlay = stem_path;
+                    overlay += suffix;
+                    if (const auto resolved = Core::FileSys::ResolveGameRoot(overlay)) {
+                        update_root = *resolved;
+                        break;
+                    }
+                }
+                Common::FS::PathToQString(game_update_path, update_root);
             }
             Common::FS::PathToQString(
                 dlc_path, EmulatorSettings.GetAddonInstallDir() /
@@ -695,7 +723,13 @@ public:
                         .arg(gameName, message_type),
                     QMessageBox::Yes | QMessageBox::No);
                 if (reply == QMessageBox::Yes) {
-                    dir.removeRecursively();
+                    const auto target = Common::FS::PathFromQString(folder_path);
+                    if (Core::FileSys::IsZArchiveFile(target)) {
+                        std::error_code ec;
+                        std::filesystem::remove(target, ec);
+                    } else {
+                        dir.removeRecursively();
+                    }
                     if (selected == deleteGame) {
                         widget->removeRow(itemID);
                         m_games.removeAt(itemID);
