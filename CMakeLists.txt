@@ -465,6 +465,7 @@ set_target_properties(shadPS4QtLauncher PROPERTIES
     MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/dist/MacOSBundleInfo.plist.in"
     MACOSX_BUNDLE_ICON_FILE "shadPS4.icns"
     MACOSX_BUNDLE_SHORT_VERSION_STRING "${APP_VERSION}"
+    MACOSX_BUNDLE_TYPE_EXTENSION "zar"
 )
 
 set_source_files_properties(src/images/shadPS4.icns PROPERTIES
