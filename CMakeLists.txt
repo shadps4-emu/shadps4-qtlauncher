@@ -196,6 +196,7 @@ find_package(SDL3 3.1.2 CONFIG)
 find_package(toml11 4.2.0 CONFIG)
 find_package(VulkanHeaders 1.4.329 CONFIG)
 find_package(OpenAL CONFIG)
+find_package(ZArchive 0.1.2 MODULE)
 list(POP_BACK CMAKE_MODULE_PATH)
 
 add_subdirectory(externals)
