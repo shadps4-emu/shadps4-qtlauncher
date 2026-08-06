@@ -164,7 +164,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
     // to do: unhide when implemented
     ui->homeFolderGroupBox->setVisible(false);
 
-#ifndef Q_OS_WIN
+#ifndef _WIN32
     ui->redZoneGroupBox->setVisible(false);
 #endif
 
