@@ -95,7 +95,7 @@ static void CheckAndMigrateSaves(TransferOption option) {
         const auto old_game_dir = entry.path();
         const auto new_game_dir = new_save_root / old_game_dir.filename();
         const bool already_exists = fs::exists(new_game_dir);
-        LOG_INFO(Loader, "Transferring {}", old_game_dir);
+        LOG_INFO(Loader, "Transferring {}", old_game_dir.string());
 
         switch (option) {
         case TransferOption::Copy:
@@ -139,7 +139,7 @@ static void CheckAndMigrateTrophies(TransferOption option) {
             continue;
         }
         const auto trophy_files_dir = entry.path() / "TrophyFiles";
-        LOG_INFO(Loader, "Transferring {}", trophy_files_dir);
+        LOG_INFO(Loader, "Transferring {}", trophy_files_dir.string());
 
         if (!fs::exists(trophy_files_dir)) {
             continue;
@@ -151,7 +151,7 @@ static void CheckAndMigrateTrophies(TransferOption option) {
             }
 
             const auto old_trophy_dir = subentry.path();
-            LOG_INFO(Loader, "Transferring {}", old_trophy_dir);
+            LOG_INFO(Loader, "Transferring {}", old_trophy_dir.string());
 
             const auto xml_path = old_trophy_dir / "Xml" / "TROP.XML";
             if (!fs::exists(xml_path)) {

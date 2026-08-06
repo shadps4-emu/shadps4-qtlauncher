@@ -721,11 +721,13 @@ void SettingsDialog::LoadValuesFromConfig() {
     ui->shadnetCheckBox->setChecked(EmulatorSettings.IsShadNetEnabled());
     ui->serverLineEdit->setText(QString::fromStdString(EmulatorSettings.GetShadNetServer()));
     ui->servWebApiLineEdit->setText(
-        QString::fromStdString(EmulatorSettings.GetShadnetWebapiServer()));
+        QString::fromStdString(EmulatorSettings.GetShadNetWebApiServer()));
     ui->signalingInfoLineEdit->setText(QString::fromStdString(EmulatorSettings.GetSignalingInfo()));
     ui->upnpCheckBox->setChecked(EmulatorSettings.IsUPnPEnabled());
     ui->vblankSpinBox->setValue(EmulatorSettings.GetVblankFrequency());
     ui->dmemSpinBox->setValue(EmulatorSettings.GetExtraDmemInMBytes());
+    ui->redZoneComboBox->setCurrentIndex(
+        static_cast<int>(EmulatorSettings.GetWindowsGuestRedZoneProtectionMode()));
 
     // First options is auto selection -1, so gpuId on the GUI will always have to subtract 1
     // when setting and add 1 when getting to select the correct gpu in Qt
@@ -1118,11 +1120,14 @@ void SettingsDialog::UpdateSettings(bool is_specific) {
     EmulatorSettings.SetShadNetEnabled(ui->shadnetCheckBox->isChecked(), is_specific);
     EmulatorSettings.SetShadNetServer(ui->serverLineEdit->text().toStdString(), is_specific);
     EmulatorSettings.SetSignalingInfo(ui->signalingInfoLineEdit->text().toStdString(), is_specific);
-    EmulatorSettings.SetShadnetWebapiServer(ui->servWebApiLineEdit->text().toStdString(),
+    EmulatorSettings.SetShadNetWebApiServer(ui->servWebApiLineEdit->text().toStdString(),
                                             is_specific);
     EmulatorSettings.SetUPnPEnabled(ui->upnpCheckBox->isChecked(), is_specific);
     EmulatorSettings.SetVblankFrequency(ui->vblankSpinBox->value(), is_specific);
     EmulatorSettings.SetExtraDmemInMBytes(ui->dmemSpinBox->value(), is_specific);
+    EmulatorSettings.SetWindowsGuestRedZoneProtectionMode(
+        static_cast<WindowsGuestRedZoneProtectionMode>(ui->redZoneComboBox->currentIndex()),
+        is_specific);
 
     EmulatorSettings.SetFullScreen(
         screenModeMap.value(ui->displayModeComboBox->currentText()) != "Windowed", is_specific);
