@@ -89,7 +89,6 @@ std::optional<T> get_optional(const toml::value& v, const std::string& key) {
 
 void EmulatorSettingsImpl::PrintChangedSummary(const std::vector<std::string>& changed) {
     if (changed.empty()) {
-        LOG_DEBUG(Config, "No game-specific overrides applied");
         return;
     }
     LOG_DEBUG(Config, "Game-specific overrides applied:");
@@ -100,7 +99,10 @@ void EmulatorSettingsImpl::PrintChangedSummary(const std::vector<std::string>& c
 // ── Singleton ────────────────────────────────────────────────────────
 EmulatorSettingsImpl::EmulatorSettingsImpl() = default;
 
-EmulatorSettingsImpl::~EmulatorSettingsImpl() = default;
+EmulatorSettingsImpl::~EmulatorSettingsImpl() {
+    if (m_loaded)
+        Save();
+}
 
 std::shared_ptr<EmulatorSettingsImpl> EmulatorSettingsImpl::GetInstance() {
     std::lock_guard lock(s_mutex);
@@ -209,6 +211,17 @@ void EmulatorSettingsImpl::SetFontsDir(const std::filesystem::path& dir) {
     m_general.font_dir.value = dir;
 }
 
+std::filesystem::path EmulatorSettingsImpl::GetAddonInstallDir() {
+    if (m_general.addon_install_dir.value.empty()) {
+        return Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "addcont";
+    }
+    return m_general.addon_install_dir.value;
+}
+
+void EmulatorSettingsImpl::SetAddonInstallDir(const std::filesystem::path& dir) {
+    m_general.addon_install_dir.value = dir;
+}
+
 // ── Game-specific override management ────────────────────────────────
 void EmulatorSettingsImpl::ClearGameSpecificOverrides() {
     ClearGroupOverrides(m_general);
@@ -216,9 +229,10 @@ void EmulatorSettingsImpl::ClearGameSpecificOverrides() {
     ClearGroupOverrides(m_debug);
     ClearGroupOverrides(m_input);
     ClearGroupOverrides(m_audio);
+    // Windows static guest red-zone protection
+    ClearGroupOverrides(m_windows_guest_red_zone_protection);
     ClearGroupOverrides(m_gpu);
     ClearGroupOverrides(m_vulkan);
-    LOG_DEBUG(Config, "All game-specific overrides cleared");
 }
 
 void EmulatorSettingsImpl::ResetGameSpecificValue(const std::string& key) {
@@ -241,6 +255,9 @@ void EmulatorSettingsImpl::ResetGameSpecificValue(const std::string& key) {
     if (tryGroup(m_input))
         return;
     if (tryGroup(m_audio))
+        return;
+    // Windows static guest red-zone protection
+    if (tryGroup(m_windows_guest_red_zone_protection))
         return;
     if (tryGroup(m_gpu))
         return;
@@ -277,6 +294,12 @@ bool EmulatorSettingsImpl::Save(const std::string& serial) {
             json audioObj = json::object();
             SaveGroupGameSpecific(m_audio, audioObj);
             j["Audio"] = audioObj;
+
+            // Windows static guest red-zone protection
+            json windowsGuestRedZoneProtectionObj = json::object();
+            SaveGroupGameSpecific(m_windows_guest_red_zone_protection,
+                                  windowsGuestRedZoneProtectionObj);
+            j["WindowsGuestRedZoneProtection"] = windowsGuestRedZoneProtectionObj;
 
             json gpuObj = json::object();
             SaveGroupGameSpecific(m_gpu, gpuObj);
@@ -345,12 +368,14 @@ bool EmulatorSettingsImpl::Save(const std::string& serial) {
 // ── Load ──────────────────────────────────────────────────────────────
 
 bool EmulatorSettingsImpl::Load(const std::string& serial) {
+    // A newly loaded profile replaces, rather than extends, the previous profile.
+    ClearGameSpecificOverrides(); // Windows static guest red-zone protection
+
     try {
         if (serial.empty()) {
             // ── Global config ──────────────────────────────────────────
             const auto userDir = Common::FS::GetUserPath(Common::FS::PathType::UserDir);
             const auto configPath = userDir / "config.json";
-            LOG_DEBUG(Config, "Loading global config from: {}", configPath.string());
 
             if (std::ifstream in{configPath}; in.good()) {
                 json gj;
@@ -371,8 +396,6 @@ bool EmulatorSettingsImpl::Load(const std::string& serial) {
                 mergeGroup(m_audio, "Audio");
                 mergeGroup(m_gpu, "GPU");
                 mergeGroup(m_vulkan, "Vulkan");
-
-                LOG_DEBUG(Config, "Global config loaded successfully");
             } else {
                 if (std::filesystem::exists(Common::FS::GetUserPath(Common::FS::PathType::UserDir) /
                                             "config.toml")) {
@@ -395,6 +418,7 @@ bool EmulatorSettingsImpl::Load(const std::string& serial) {
                     SDL_ShowMessageBox(&msg_box, &result);
                     if (result == 0) {
                         if (TransferSettings()) {
+                            m_loaded = true;
                             Save();
                             return true;
                         } else {
@@ -405,10 +429,13 @@ bool EmulatorSettingsImpl::Load(const std::string& serial) {
                         }
                     }
                 }
+                SetDefaultValues();
+                Save();
             }
             if (GetConfigVersion() != Common::g_scm_rev) {
                 Save();
             }
+            m_loaded = true;
             return true;
         } else {
             // ── Per-game override file ─────────────────────────────────
@@ -417,16 +444,13 @@ bool EmulatorSettingsImpl::Load(const std::string& serial) {
             // base configuration.
             const auto gamePath =
                 Common::FS::GetUserPath(Common::FS::PathType::CustomConfigs) / (serial + ".json");
-            LOG_DEBUG(Config, "Applying game config: {}", gamePath.string());
 
             if (!std::filesystem::exists(gamePath)) {
-                LOG_DEBUG(Config, "No game-specific config found for {}", serial);
                 return false;
             }
 
             std::ifstream in(gamePath);
             if (!in) {
-                LOG_ERROR(Config, "Failed to open game config: {}", gamePath.string());
                 return false;
             }
 
@@ -449,6 +473,10 @@ bool EmulatorSettingsImpl::Load(const std::string& serial) {
                 ApplyGroupOverrides(m_input, gj.at("Input"), changed);
             if (gj.contains("Audio"))
                 ApplyGroupOverrides(m_audio, gj.at("Audio"), changed);
+            // Windows static guest red-zone protection
+            if (gj.contains("WindowsGuestRedZoneProtection"))
+                ApplyGroupOverrides(m_windows_guest_red_zone_protection,
+                                    gj.at("WindowsGuestRedZoneProtection"), changed);
             if (gj.contains("GPU"))
                 ApplyGroupOverrides(m_gpu, gj.at("GPU"), changed);
             if (gj.contains("Vulkan"))
@@ -470,6 +498,8 @@ void EmulatorSettingsImpl::SetDefaultValues() {
     m_debug = DebugSettings{};
     m_input = InputSettings{};
     m_audio = AudioSettings{};
+    // Windows static guest red-zone protection
+    m_windows_guest_red_zone_protection = WindowsGuestRedZoneProtectionSettings{};
     m_gpu = GPUSettings{};
     m_vulkan = VulkanSettings{};
 }
@@ -526,6 +556,29 @@ bool EmulatorSettingsImpl::TransferSettings() {
 #endif
     }
 
+    if (og_data.contains("General")) {
+        const toml::value& general = og_data.at("General");
+        auto& s = m_log;
+
+        setFromToml(s.filter, general, "logFilter");
+        setFromToml(s.skip_duplicate, general, "isIdenticalLogGrouped");
+        Setting<std::string> logType("sync");
+        setFromToml(logType, general, "logType");
+        if (logType.get() == "sync") {
+            s.sync = true;
+        } else {
+            s.sync = false;
+        }
+    }
+
+    if (og_data.contains("Debug")) {
+        const toml::value& debug = og_data.at("Debug");
+        auto& s = m_log;
+
+        setFromToml(s.enable, debug, "logEnabled");
+        setFromToml(s.separate, debug, "isSeparateLogFilesEnabled");
+    }
+
     if (og_data.contains("Input")) {
         const toml::value& input = og_data.at("Input");
         auto& s = m_input;
@@ -537,6 +590,8 @@ bool EmulatorSettingsImpl::TransferSettings() {
         setFromToml(s.motion_controls_enabled, input, "isMotionControlsEnabled");
         setFromToml(s.use_unified_input_config, input, "useUnifiedInputConfig");
         setFromToml(s.background_controller_input, input, "backgroundControllerInput");
+        setFromToml(s.ime_accessibility_enabled, input, "imeAccessibilityEnabled");
+        setFromToml(s.ime_url_mail_short_panel, input, "imeUrlMailShortPanel");
         setFromToml(s.usb_device_backend, input, "usbDeviceBackend");
     }
 
@@ -653,6 +708,41 @@ bool EmulatorSettingsImpl::TransferSettings() {
             LOG_WARNING(Config, "Failed to transfer addon install directory: {}", e.what());
         }
     }
+    if (og_data.contains("General")) {
+        const toml::value& general = og_data.at("General");
+        auto& s = m_general;
+        // Transfer sysmodules install directory
+        try {
+            std::string sysmodules_install_dir_str;
+            if (general.contains("sysModulesPath")) {
+                const auto& sysmodule_value = general.at("sysModulesPath");
+                if (sysmodule_value.is_string()) {
+                    sysmodules_install_dir_str = toml::get<std::string>(sysmodule_value);
+                    if (!sysmodules_install_dir_str.empty()) {
+                        s.sys_modules_dir.value = std::filesystem::path{sysmodules_install_dir_str};
+                    }
+                }
+            }
+        } catch (const std::exception& e) {
+            LOG_WARNING(Config, "Failed to transfer sysmodules install directory: {}", e.what());
+        }
+
+        // Transfer font install directory
+        try {
+            std::string font_install_dir_str;
+            if (general.contains("fontsPath")) {
+                const auto& font_value = general.at("fontsPath");
+                if (font_value.is_string()) {
+                    font_install_dir_str = toml::get<std::string>(font_value);
+                    if (!font_install_dir_str.empty()) {
+                        s.font_dir.value = std::filesystem::path{font_install_dir_str};
+                    }
+                }
+            }
+        } catch (const std::exception& e) {
+            LOG_WARNING(Config, "Failed to transfer font install directory: {}", e.what());
+        }
+    }
 
     return true;
 }
@@ -668,6 +758,8 @@ std::vector<std::string> EmulatorSettingsImpl::GetAllOverrideableKeys() const {
     addGroup(m_debug.GetOverrideableFields());
     addGroup(m_input.GetOverrideableFields());
     addGroup(m_audio.GetOverrideableFields());
+    // Windows static guest red-zone protection
+    addGroup(m_windows_guest_red_zone_protection.GetOverrideableFields());
     addGroup(m_gpu.GetOverrideableFields());
     addGroup(m_vulkan.GetOverrideableFields());
     return keys;
