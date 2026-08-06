@@ -164,6 +164,10 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
     // to do: unhide when implemented
     ui->homeFolderGroupBox->setVisible(false);
 
+#ifndef Q_OS_WIN
+    ui->redZoneGroupBox->setVisible(false);
+#endif
+
     ui->buttonBox->button(QDialogButtonBox::StandardButton::Close)->setFocus();
 
     logTypeMap = {{tr("wincolor"), "wincolor"}, {tr("msvc"), "msvc"}};
