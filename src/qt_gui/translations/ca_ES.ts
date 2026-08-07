@@ -2997,11 +2997,11 @@ Selecciona una versió del panell dret.</translation>
     </message>
     <message>
       <source>Red Zone Protection</source>
-      <translation type="unfinished">Red Zone Protection</translation>
+      <translation>Protecció de la zona vermella</translation>
     </message>
     <message>
       <source>Static Patching</source>
-      <translation type="unfinished">Static Patching</translation>
+      <translation>Correcció estàtica</translation>
     </message>
   </context>
   <context>
