@@ -843,7 +843,11 @@ private:
         // Eboot path
         QString targetPath;
         Common::FS::PathToQString(targetPath, selectedInfo.path);
+
         QString ebootPath = targetPath + "/eboot.bin";
+        if (Core::FileSys::IsZArchiveFile(selectedInfo.path)) {
+            ebootPath = targetPath;
+        }
 
         // Get the full path to the icon
         QString iconPath;
