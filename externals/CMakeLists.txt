@@ -97,8 +97,9 @@ if (NOT APPLE)
     add_subdirectory(volk)
 endif()
 
-# zstd (dependency of ZArchive)
-if (NOT TARGET libzstd_static)
+# ZArchive (.zar archive support)
+if (NOT TARGET ZArchive::zarchive)
+    # zstd (dependency of ZArchive)
     set(ZSTD_BUILD_PROGRAMS OFF CACHE BOOL "" FORCE)
     set(ZSTD_BUILD_SHARED OFF CACHE BOOL "" FORCE)
     set(ZSTD_BUILD_STATIC ON CACHE BOOL "" FORCE)
@@ -106,10 +107,7 @@ if (NOT TARGET libzstd_static)
     set(ZSTD_LEGACY_SUPPORT OFF CACHE BOOL "" FORCE)
     set(ZSTD_MULTITHREAD_SUPPORT OFF CACHE BOOL "" FORCE)
     add_subdirectory(zstd/build/cmake)
-endif()
 
-# ZArchive (.zar archive support)
-if (NOT TARGET zarchive)
     add_library(zarchive STATIC
         zarchive/src/zarchivereader.cpp
         zarchive/src/zarchivewriter.cpp
