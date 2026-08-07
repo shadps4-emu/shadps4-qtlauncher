@@ -988,26 +988,32 @@ void MainWindow::StartGameWithArgs(QStringList args) {
     BackgroundMusicPlayer::getInstance().stopMusic();
     QString gamePath = "";
     int table_mode = m_gui_settings->GetValue(gui::gl_mode).toInt();
+
+    int itemID;
     if (table_mode == 0) {
         if (m_game_list_frame->currentItem()) {
-            int itemID = m_game_list_frame->currentItem()->row();
+            itemID = m_game_list_frame->currentItem()->row();
             Common::FS::PathToQString(gamePath, m_game_info->m_games[itemID].path / "eboot.bin");
             runningGameSerial = m_game_info->m_games[itemID].serial;
         }
     } else if (table_mode == 1) {
         if (m_game_grid_frame->cellClicked) {
-            int itemID = (m_game_grid_frame->crtRow * m_game_grid_frame->columnCnt) +
-                         m_game_grid_frame->crtColumn;
+            itemID = (m_game_grid_frame->crtRow * m_game_grid_frame->columnCnt) +
+                     m_game_grid_frame->crtColumn;
             Common::FS::PathToQString(gamePath, m_game_info->m_games[itemID].path / "eboot.bin");
             runningGameSerial = m_game_info->m_games[itemID].serial;
         }
     } else {
         if (m_elf_viewer->currentItem()) {
-            int itemID = m_elf_viewer->currentItem()->row();
+            itemID = m_elf_viewer->currentItem()->row();
             gamePath = m_elf_viewer->m_elf_list[itemID];
         }
     }
     if (gamePath != "") {
+        if (Core ::FileSys::IsZArchiveFile(m_game_info->m_games[itemID].path)) {
+            gamePath.chop(10);
+        }
+
         AddRecentFiles(gamePath);
         const auto path = Common::FS::PathFromQString(gamePath);
         const auto archive_root = path.parent_path();
@@ -1114,7 +1120,7 @@ void MainWindow::SaveWindowState() {
 void MainWindow::BootGame() {
     QFileDialog dialog;
     dialog.setFileMode(QFileDialog::ExistingFile);
-    dialog.setNameFilter(tr("ELF files (*.bin *.elf *.oelf)"));
+    dialog.setNameFilter(tr("bootable files (*.bin *.elf *.oelf *.zar)"));
     if (dialog.exec()) {
         QStringList fileNames = dialog.selectedFiles();
         int nFiles = fileNames.size();
