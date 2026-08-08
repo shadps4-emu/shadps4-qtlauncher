@@ -15,6 +15,7 @@
 struct GameInfo {
     std::filesystem::path path;      // root path of game directory
                                      // (normally directory that contains eboot.bin)
+    std::filesystem::path update_path;
     std::filesystem::path icon_path; // path of icon0.png
     std::filesystem::path pic_path;  // path of pic1.png
     std::filesystem::path snd0_path; // path of snd0.at9

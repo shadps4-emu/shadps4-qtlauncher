@@ -29,6 +29,7 @@ public:
                            std::shared_ptr<IpcClient> ipc_client, QWidget* parent = nullptr);
 Q_SIGNALS:
     void GameListFrameClosed();
+    void RequestRefreshList();
 
 public Q_SLOTS:
     void SetListBackgroundImage(QTableWidgetItem* item);

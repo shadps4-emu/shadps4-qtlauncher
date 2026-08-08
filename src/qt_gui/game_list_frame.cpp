@@ -118,6 +118,9 @@ GameListFrame::GameListFrame(std::shared_ptr<gui_settings> gui_settings,
     connect(this->horizontalHeader(), &QHeaderView::customContextMenuRequested, this,
             &GameListFrame::ShowHeaderContextMenu);
 
+    connect(&m_gui_context_menus, &GuiContextMenus::RequestGameListRefresh, this,
+            &GameListFrame::RequestRefreshList);
+
     ToggleColumnVisibility();
 }
 

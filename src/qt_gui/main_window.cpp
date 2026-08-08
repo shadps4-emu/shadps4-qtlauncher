@@ -373,6 +373,8 @@ void MainWindow::CreateDockWindows(bool newDock) {
         slider_pos = m_gui_settings->GetValue(gui::gl_slider_pos).toInt();
         ui->sizeSlider->setSliderPosition(slider_pos); // set slider pos at start;
         isTableList = true;
+        connect(m_game_list_frame.data(), &GameListFrame::RequestRefreshList, this,
+                &MainWindow::RefreshGameTable);
     } else if (table_mode == 1) { // Grid
         m_game_list_frame->hide();
         m_elf_viewer->hide();
@@ -387,6 +389,8 @@ void MainWindow::CreateDockWindows(bool newDock) {
         slider_pos = m_gui_settings->GetValue(gui::gg_slider_pos).toInt();
         ui->sizeSlider->setSliderPosition(slider_pos); // set slider pos at start;
         isTableList = false;
+        connect(m_game_grid_frame.data(), &GameGridFrame::RequestRefreshGrid, this,
+                &MainWindow::RefreshGameTable);
     } else {
         m_game_list_frame->hide();
         m_game_grid_frame->hide();
