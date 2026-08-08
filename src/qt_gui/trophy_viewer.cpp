@@ -15,6 +15,7 @@
 #include "common/path_util.h"
 #include "core/emulator_settings.h"
 #include "core/file_format/npbind.h"
+#include "core/file_sys/game_backend.h"
 #include "core/user_settings.h"
 #include "main_window_themes.h"
 #include "trophy_viewer.h"
@@ -181,6 +182,10 @@ TrophyViewer::TrophyViewer(std::shared_ptr<gui_settings> gui_settings, QString t
     gameTrpPath_ = gameTrpPath;
     std::filesystem::path npbindPath =
         Common::FS::PathFromQString(gameTrpPath) / "sce_sys" / "npbind.dat";
+    if (const auto resolved = Core::FileSys::ResolveGameFilePath(
+            Common::FS::PathFromQString(gameTrpPath), "sce_sys/npbind.dat")) {
+        npbindPath = *resolved;
+    }
 
     NPBindFile npbind;
     if (!npbind.Load(npbindPath.string())) {
