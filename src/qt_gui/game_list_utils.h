@@ -13,8 +13,8 @@
 #include "core/file_sys/game_backend.h"
 
 struct GameInfo {
-    std::filesystem::path path;      // root path of game directory
-                                     // (normally directory that contains eboot.bin)
+    std::filesystem::path path; // root path of game directory
+                                // (normally directory that contains eboot.bin)
     std::filesystem::path update_path;
     std::filesystem::path icon_path; // path of icon0.png
     std::filesystem::path pic_path;  // path of pic1.png
