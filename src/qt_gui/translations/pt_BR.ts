@@ -1320,7 +1320,7 @@ Por favor, digite suas chaves e salve-as.</translation>
     <name>HelpDialog</name>
     <message>
       <source>Quickstart</source>
-      <translation>Introdução</translation>
+      <translation>Início Rápido</translation>
     </message>
     <message>
       <source>FAQ</source>
@@ -1355,7 +1355,7 @@ Por favor, digite suas chaves e salve-as.</translation>
     </message>
     <message>
       <source>Quit Emulation</source>
-      <translation>Sair da emulação</translation>
+      <translation>Sair da Emulação</translation>
     </message>
     <message>
       <source>Reload Button Mappings</source>
@@ -1739,7 +1739,7 @@ Por favor, digite suas chaves e salve-as.</translation>
     <name>MainWindow</name>
     <message>
       <source>Open/Add Elf Folder</source>
-      <translation>Abrir/Adicionar pasta Elf</translation>
+      <translation>Abrir/Adicionar Pasta Elf</translation>
     </message>
     <message>
       <source>Boot Game</source>
@@ -1787,7 +1787,7 @@ Por favor, digite suas chaves e salve-as.</translation>
     </message>
     <message>
       <source>Tiny</source>
-      <translation>Muito pequeno</translation>
+      <translation>Minúsculo</translation>
     </message>
     <message>
       <source>Small</source>
@@ -1843,7 +1843,7 @@ Por favor, digite suas chaves e salve-as.</translation>
     </message>
     <message>
       <source>View</source>
-      <translation>Ver</translation>
+      <translation>Visualizar</translation>
     </message>
     <message>
       <source>Game List Icons</source>
@@ -2489,7 +2489,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Separate Log Files</source>
-      <translation>Separar Arquivos de Registro</translation>
+      <translation>Arquivos de Registro Separados</translation>
     </message>
     <message>
       <source>Separate Log Files:\nWrites a separate logfile for each game.</source>
@@ -2985,7 +2985,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Enable UPNP</source>
-      <translation>Ativar UPnP</translation>
+      <translation>Habilitar UPnP</translation>
     </message>
     <message>
       <source>WebAPI Server</source>
