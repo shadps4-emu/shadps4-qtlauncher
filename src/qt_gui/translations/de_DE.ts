@@ -2998,6 +2998,14 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
       <source>shadNet:\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadnet/register/.</source>
       <translation>ShadNet: \nDie Kompatibilität ist derzeit sehr begrenzt.\nEin Account kann hier erstellt werden: https://www.shadps4.net/shadnet/register/.</translation>
     </message>
+    <message>
+      <source>Red Zone Protection</source>
+      <translation>Red Zone Schutz</translation>
+    </message>
+    <message>
+      <source>Static Patching</source>
+      <translation>Statisches Patching</translation>
+    </message>
   </context>
   <context>
     <name>ShortcutDialog</name>

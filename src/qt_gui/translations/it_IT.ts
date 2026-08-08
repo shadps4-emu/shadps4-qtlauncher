@@ -2995,6 +2995,14 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
       <source>shadNet:\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadnet/register/.</source>
       <translation>shadNet:.\nLa compatibilità è molto limitata al momento.\nPuoi registrarti su https://www.shadps4.net/shadnet/register/.</translation>
     </message>
+    <message>
+      <source>Red Zone Protection</source>
+      <translation>Protezione Zona Rossa</translation>
+    </message>
+    <message>
+      <source>Static Patching</source>
+      <translation>Patch Statica</translation>
+    </message>
   </context>
   <context>
     <name>ShortcutDialog</name>
