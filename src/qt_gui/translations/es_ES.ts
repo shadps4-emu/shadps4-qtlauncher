@@ -2361,7 +2361,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Display Compatibility Data:\nDisplays game compatibility information in table view. Enable &quot;Update Compatibility On Startup&quot; to get up-to-date information.</source>
-      <translation>Mostrar datos de compatibilidad:\nMuestra información sobre la compatibilidad de los juegos en la vista de tabla. Habilita la opción «Actualizar base de datos de compatibilidad al iniciar» para tener esta información al día.</translation>
+      <translation>Mostrar datos de compatibilidad:\nMuestra información sobre la compatibilidad de los juegos en la vista de tabla. Habilita la opción &quot;Actualizar base de datos de compatibilidad al iniciar&quot; para tener esta información al día.</translation>
     </message>
     <message>
       <source>Update Compatibility On Startup:\nAutomatically update the compatibility database when shadPS4 starts.</source>
@@ -2385,7 +2385,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Graphics Device:\nOn multiple GPU systems, select the GPU the emulator will use from the drop down list,\nor select &quot;Auto Select&quot; to automatically determine it.</source>
-      <translation>Dispositivo de gráficos:\nSi tienes un equipo con varias GPU, selecciona en la lista desplegable la GPU que uitilizará el emulador o «Selección automática» para elegirla automáticamente.</translation>
+      <translation>Dispositivo de gráficos:\nSi tienes un equipo con varias GPU, selecciona en la lista desplegable la GPU que uitilizará el emulador o &quot;Selección automática&quot; para elegirla automáticamente.</translation>
     </message>
     <message>
       <source>Width/Height:\nSets the size of the emulator window at launch, which can be resized during gameplay.\nThis is different from the in-game resolution.</source>
@@ -2521,15 +2521,15 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Portable User Folder</source>
-      <translation>Carpeta de usuario «portable»</translation>
+      <translation>Carpeta de usuario &quot;portable&quot;</translation>
     </message>
     <message>
       <source>Create Portable User Folder from Common User Folder</source>
-      <translation>Crear carpeta de usuario «portable» a partir de la estándar</translation>
+      <translation>Crear carpeta de usuario &quot;portable&quot; a partir de la estándar</translation>
     </message>
     <message>
       <source>Portable user folder:\nStores shadPS4 settings and data that will be applied only to the shadPS4 build located in the current folder. Restart the app after creating the portable user folder to begin using it.</source>
-      <translation>Carpeta de usuario «portable»:\nAlmacena en la carpeta actual la configuración de shadPS4 y los datos que se aplicarán solo a la versión de shadPS4 que se encuentre en dicha carpeta. Reinicia la aplicación una vez hayas creado la carpeta de usuario «portable» para empezar a usarla.</translation>
+      <translation>Carpeta de usuario &quot;portable&quot;:\nAlmacena en la carpeta actual la configuración de shadPS4 y los datos que se aplicarán solo a la versión de shadPS4 que se encuentre en dicha carpeta. Reinicia la aplicación una vez hayas creado la carpeta de usuario «portable» para empezar a usarla.</translation>
     </message>
     <message>
       <source>%1 already exists</source>
@@ -2561,7 +2561,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Crash Diagnostics:\nCreates a .yaml file with info about the Vulkan state at the time of crashing.\nUseful for debugging &apos;Device lost&apos; errors. If you have this enabled, you should enable Host AND Guest Debug Markers.\nYou need Vulkan Validation Layers enabled and the Vulkan SDK for this to work.</source>
-      <translation>Diagnóstico de fallos:\nCrea un archivo .yaml con información sobre el estado de Vulkan en el momento del cuelgue.\nÚtil para depurar errores de tipo «Dispositivo perdido». Si activas esta opción, deberías habilitar los marcadores de depuración de host Y TAMBIÉN de invitado.\nNecesitas activar las capas de validación de Vulkan y el SDK de Vulkan para que funcione.</translation>
+      <translation>Diagnóstico de fallos:\nCrea un archivo .yaml con información sobre el estado de Vulkan en el momento del cuelgue.\nÚtil para depurar errores de tipo &quot;Dispositivo perdido&quot;. Si activas esta opción, deberías habilitar los marcadores de depuración de host Y TAMBIÉN de invitado.\nNecesitas activar las capas de validación de Vulkan y el SDK de Vulkan para que funcione.</translation>
     </message>
     <message>
       <source>Enable Logging</source>
