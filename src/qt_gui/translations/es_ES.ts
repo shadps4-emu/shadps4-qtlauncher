@@ -2997,11 +2997,11 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Red Zone Protection</source>
-      <translation type="unfinished">Red Zone Protection</translation>
+      <translation>Protección de zona roja</translation>
     </message>
     <message>
       <source>Static Patching</source>
-      <translation type="unfinished">Static Patching</translation>
+      <translation>Parches estáticos</translation>
     </message>
   </context>
   <context>
