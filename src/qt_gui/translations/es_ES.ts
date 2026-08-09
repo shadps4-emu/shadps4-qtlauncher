@@ -2529,7 +2529,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Portable user folder:\nStores shadPS4 settings and data that will be applied only to the shadPS4 build located in the current folder. Restart the app after creating the portable user folder to begin using it.</source>
-      <translation>Carpeta de usuario &quot;portable&quot;:\nAlmacena en la carpeta actual la configuración de shadPS4 y los datos que se aplicarán solo a la versión de shadPS4 que se encuentre en dicha carpeta. Reinicia la aplicación una vez hayas creado la carpeta de usuario «portable» para empezar a usarla.</translation>
+      <translation>Carpeta de usuario &quot;portable&quot;:\nAlmacena en la carpeta actual la configuración de shadPS4 y los datos que se aplicarán solo a la versión de shadPS4 que se encuentre en dicha carpeta. Reinicia la aplicación una vez hayas creado la carpeta de usuario &quot;portable&quot; para empezar a usarla.</translation>
     </message>
     <message>
       <source>%1 already exists</source>
@@ -2577,7 +2577,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Mailbox (Vsync)</source>
-      <translation>«Mailbox» (con sincronía vertical)</translation>
+      <translation>Tipo mailbox (con sincronía vertical)</translation>
     </message>
     <message>
       <source>Fifo (Vsync)</source>
@@ -2593,7 +2593,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</source>
-      <translation>Modo de presentación:\nConfigura la presentación de la salida de vídeo en tu pantalla.\n\n«Mailbox»: los fotogramas se sincronizarán con la frecuencia de actualización de tu pantalla. Los fotogramas nuevos sustituirán a cualquier fotograma que esté pendiente de mostrar. Reducirá la latencia, pero podría omitir fotogramas si el renderizado se retrasa.\nFIFO: los fotogramas se sincronizarán con la frecuencia de actualización de tu pantalla. Los fotogramas nuevos se mostrarán después de los fotogramas que queden pendientes. Garantizará que se muestren todos los fotogramas, pero podría aumentar la latencia.\nInmediata: los fotogramas se mostrarán en pantalla en cuanto estén listos. Podría provocar fragmentación en la imagen.</translation>
+      <translation>Modo de presentación:\nConfigura la presentación de la salida de vídeo en tu pantalla.\n\nTipo mailbox: los fotogramas se sincronizarán con la frecuencia de actualización de tu pantalla. Los fotogramas nuevos sustituirán a cualquier fotograma que esté pendiente de mostrar. Reducirá la latencia, pero podría omitir fotogramas si el renderizado se retrasa.\nFIFO: los fotogramas se sincronizarán con la frecuencia de actualización de tu pantalla. Los fotogramas nuevos se mostrarán después de los fotogramas que queden pendientes. Garantizará que se muestren todos los fotogramas, pero podría aumentar la latencia.\nInmediata: los fotogramas se mostrarán en pantalla en cuanto estén listos. Podría provocar fragmentación en la imagen.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
@@ -2661,7 +2661,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Set &quot;Network Connected&quot; to True</source>
-      <translation>Cambia la opción «Conexión a red» a verdadero</translation>
+      <translation>Cambia la opción &quot;Conexión a red&quot; a verdadero</translation>
     </message>
     <message>
       <source>Miscellaneous</source>
@@ -2701,7 +2701,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</source>
-      <translation>Cambia la opción «Conexión a red» a verdadero:\nFuerza a los juegos a detectar una conexión de red activa. Las funciones reales de red aún no están soportadas.</translation>
+      <translation>Cambia la opción &quot;Conexión a red&quot; a verdadero:\nFuerza a los juegos a detectar una conexión de red activa. Las funciones reales de red aún no están soportadas.</translation>
     </message>
     <message>
       <source>Enable Vulkan Validation Layers:\nEnables a system that validates the state of the Vulkan renderer and logs information about its internal state.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
@@ -2793,15 +2793,15 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
-      <translation>Actualizaciones de la interfaz:\nPrincipal: las versiones oficiales mensuales podrían estar muy obsoletas, pero son más fiables y han sido más testadas.\n«Nightly»: versiones de desarrollo con las últimas características y correcciones, pero que pueden contener fallos y ser menos estables.\n\n* Esta actualización solo se aplica a la interfaz de usuario Qt. Para actualizar el núcleo del emulador debes utilizar el gestor de versiones.</translation>
+      <translation>Actualizaciones de la interfaz:\nPrincipal: las versiones oficiales mensuales podrían estar muy obsoletas, pero son más fiables y han sido más testadas.\n&quot;Nightly&quot;: versiones de desarrollo con las últimas características y correcciones, pero que pueden contener fallos y ser menos estables.\n\n* Esta actualización solo se aplica a la interfaz de usuario Qt. Para actualizar el núcleo del emulador debes utilizar el gestor de versiones.</translation>
     </message>
     <message>
       <source>Cannot create portable launcher folder</source>
-      <translation>No se ha podido crear la carpeta «portable» del lanzador</translation>
+      <translation>No se ha podido crear la carpeta &quot;portable&quot; del lanzador</translation>
     </message>
     <message>
       <source>Portable launcherDir folder created</source>
-      <translation>Carpeta «portable» de launcherDir creada</translation>
+      <translation>Carpeta &quot;portable&quot; de launcherDir creada</translation>
     </message>
     <message>
       <source>USB Device</source>
@@ -2889,7 +2889,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>Audio Backend</source>
-      <translation>«Back-end» de audio</translation>
+      <translation>Back-end de audio</translation>
     </message>
     <message>
       <source>Mic Device</source>
@@ -3370,7 +3370,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
       <source>First you need to choose a location to save the versions in
 &apos;Path to save versions&apos;</source>
       <translation>Debes elegir una ubicación para guardar las versiones
-en «Ruta de versiones guardadas»</translation>
+en &quot;Ruta de versiones guardadas&quot;</translation>
     </message>
     <message>
       <source>Do you want to download the version</source>
@@ -3506,11 +3506,11 @@ en «Ruta de versiones guardadas»</translation>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release.</source>
-      <translation>No se ha podido obtener el «hash» de la última versión prelanzamiento.</translation>
+      <translation>No se ha podido obtener el hash de la última versión prelanzamiento.</translation>
     </message>
     <message>
       <source>Downloading Pre-release (Nightly), please wait...</source>
-      <translation>Descargando versión prelanzamiento («nightly»), espera...</translation>
+      <translation>Descargando versión prelanzamiento (&quot;nightly&quot;), espera...</translation>
     </message>
   </context>
   <context>
