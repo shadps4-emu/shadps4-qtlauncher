@@ -1704,7 +1704,7 @@ Por favor, digite suas chaves e salve-as.</translation>
     <name>LogPresetsDialog</name>
     <message>
       <source>Log Filter Presets</source>
-      <translation>Predefinições do Filtro do Registro</translation>
+      <translation>Predefinições do Filtro do Log</translation>
     </message>
     <message>
       <source>Comment</source>
@@ -2489,7 +2489,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Separate Log Files</source>
-      <translation>Arquivos de Registro Separados</translation>
+      <translation>Separar Arquivos de Log</translation>
     </message>
     <message>
       <source>Separate Log Files:\nWrites a separate logfile for each game.</source>
@@ -2905,15 +2905,15 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Log Sync</source>
-      <translation>Sincronização de Registro</translation>
+      <translation>Sincronização de Log</translation>
     </message>
     <message>
       <source>Log Skip Duplicate</source>
-      <translation>Ignorar Registros Duplicados</translation>
+      <translation>Ignorar Duplicadas no Log</translation>
     </message>
     <message>
       <source>Log Max Skip Duration</source>
-      <translation>Duração Máxima para Ignorar Registros</translation>
+      <translation>Duração Máxima para Ignorar Log</translation>
     </message>
     <message>
       <source> ms</source>
@@ -2921,7 +2921,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Log Size Limit</source>
-      <translation>Tamanho Limite do Registro</translation>
+      <translation>Tamanho Limite do Log</translation>
     </message>
     <message>
       <source> B</source>
@@ -2929,7 +2929,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Log Append</source>
-      <translation>Anexar ao Registro</translation>
+      <translation>Anexar ao Log</translation>
     </message>
     <message>
       <source>wincolor</source>
@@ -2941,31 +2941,31 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Log Append:\nAppend to existing logs.</source>
-      <translation>Anexar ao Registro:\nAdiciona aos registros existentes.</translation>
+      <translation>Anexar ao Log:\nAdiciona aos logs existentes.</translation>
     </message>
     <message>
       <source>Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</source>
-      <translation>Duração Máxima para Ignorar Registros:\nIntervalo sem escrever as mesmas linhas (ms) - somente se &apos;Ignorar Registros Duplicados&apos; estiver ativado.</translation>
+      <translation>Duração Máxima para Ignorar Log:\nIntervalo sem escrever as mesmas linhas (ms) - somente se &apos;Ignorar Duplicadas no Log&apos; estiver ativado.</translation>
     </message>
     <message>
       <source>Log Size Limit:\nMaximum size of log files (bytes).</source>
-      <translation>Tamanho Limite do Registro:\nTamanho máximo dos arquivos de registro (em bytes).</translation>
+      <translation>Tamanho Limite do Log:\nTamanho máximo dos arquivos de log (em bytes).</translation>
     </message>
     <message>
       <source>Log Skip Duplicate:\nSave storage by avoiding writing log that is identical.</source>
-      <translation>Ignorar Registros Duplicados:\nEconomize espaço de armazenamento evitando gravar registros idênticos.</translation>
+      <translation>Ignorar Duplicadas no Log:\nEconomize espaço de armazenamento evitando gravar registros idênticos.</translation>
     </message>
     <message>
       <source>Log Sync:\nSwitch between sync (order) or async (performance).</source>
-      <translation>Sincronização de Registro:\nAlternar entre síncrono (ordem) ou assíncrono (desempenho).</translation>
+      <translation>Sincronização de Log:\nAlternar entre síncrono (ordem) ou assíncrono (desempenho).</translation>
     </message>
     <message>
       <source>Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</source>
-      <translation>Tipo de Registro:\nEscolha entre os tipos de registro wincolor ou msvc.\nwincolor: O monitoramento padrão do Windows\nmsvc: Monitoramento para depuração</translation>
+      <translation>Tipo de Log:\nEscolha entre os tipos de registro wincolor ou msvc.\nwincolor: O monitoramento padrão do Windows\nmsvc: Monitoramento para depuração</translation>
     </message>
     <message>
       <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
-      <translation>Filtro do Registro:\nFiltra o registro para exibir apenas informações específicas.\nExemplos: &quot;Core:Trace&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nNíveis: trace, debug, info, warning, error, critical - nesta ordem, um nível específico silencia todos os níveis anteriores na lista e registra todos os níveis após este.</translation>
+      <translation>Filtro do Log:\nFiltra o log para exibir apenas informações específicas.\nExemplos: &quot;Core:Trace&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nNíveis: trace, debug, info, warning, error, critical - nesta ordem, um nível específico silencia todos os níveis anteriores na lista e registra todos os níveis após este.</translation>
     </message>
     <message>
       <source>Enable shadNet</source>
