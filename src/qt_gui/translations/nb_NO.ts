@@ -407,7 +407,7 @@
     </message>
     <message>
       <source>D-Pad</source>
-      <translation>Navigasjonsknapper</translation>
+      <translation>Styrekors</translation>
     </message>
     <message>
       <source>Up</source>
@@ -491,7 +491,7 @@
     </message>
     <message>
       <source>Options</source>
-      <translation>Options</translation>
+      <translation>Valg</translation>
     </message>
     <message>
       <source>Touchpad Left</source>
@@ -1501,7 +1501,7 @@ Skriv inn nøklene og lagre dem.</translation>
     </message>
     <message>
       <source>Options</source>
-      <translation>Options</translation>
+      <translation>Valg</translation>
     </message>
     <message>
       <source>Mouse Movement Parameters</source>
@@ -1629,19 +1629,19 @@ Skriv inn nøklene og lagre dem.</translation>
     </message>
     <message>
       <source>Dpad Up</source>
-      <translation>Navigasjonsknapp opp</translation>
+      <translation>Styrekors opp</translation>
     </message>
     <message>
       <source>Dpad Down</source>
-      <translation>Navigasjonsknapp ned</translation>
+      <translation>Styrekors ned</translation>
     </message>
     <message>
       <source>Dpad Left</source>
-      <translation>Navigasjonsknapp venstre</translation>
+      <translation>Styrekors venstre</translation>
     </message>
     <message>
       <source>Dpad Right</source>
-      <translation>Navigasjonsknapp høyre</translation>
+      <translation>Styrekors høyre</translation>
     </message>
     <message>
       <source>Left Stick Up</source>
