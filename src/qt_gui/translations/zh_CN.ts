@@ -2997,11 +2997,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Red Zone Protection</source>
-      <translation type="unfinished">Red Zone Protection</translation>
+      <translation>红色区域保护</translation>
     </message>
     <message>
       <source>Static Patching</source>
-      <translation type="unfinished">Static Patching</translation>
+      <translation>静态修补中</translation>
     </message>
   </context>
   <context>
