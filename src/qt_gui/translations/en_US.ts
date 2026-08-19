@@ -1915,10 +1915,6 @@ Please enter your keys and save them.</source>
         <translation>Games: </translation>
     </message>
     <message>
-        <source>ELF files (*.bin *.elf *.oelf)</source>
-        <translation>ELF files (*.bin *.elf *.oelf)</translation>
-    </message>
-    <message>
         <source>Game Boot</source>
         <translation>Game Boot</translation>
     </message>
@@ -2046,6 +2042,10 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
         <source>Manage Users</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
