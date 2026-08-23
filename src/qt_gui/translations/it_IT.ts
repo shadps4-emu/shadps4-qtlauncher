@@ -2059,7 +2059,7 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
     </message>
     <message>
       <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
-      <translation type="unfinished">bootable files (*.bin *.elf *.oelf *.zar)</translation>
+      <translation>file avviabili (*.bin *.elf *.oelf *.zar)</translation>
     </message>
   </context>
   <context>
