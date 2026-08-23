@@ -1926,10 +1926,6 @@ Inserisci le chiavi e salvale.</translation>
       <translation>Giochi: </translation>
     </message>
     <message>
-      <source>ELF files (*.bin *.elf *.oelf)</source>
-      <translation>File ELF (*.bin *.elf *.oelf)</translation>
-    </message>
-    <message>
       <source>Game Boot</source>
       <translation>Avvia Gioco</translation>
     </message>
@@ -2060,6 +2056,10 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
     <message>
       <source>Manage Users</source>
       <translation>Gestione utenti</translation>
+    </message>
+    <message>
+      <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
+      <translation type="unfinished">bootable files (*.bin *.elf *.oelf *.zar)</translation>
     </message>
   </context>
   <context>
