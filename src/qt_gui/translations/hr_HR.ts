@@ -1931,10 +1931,6 @@ sam izvještaj ne bi postao nevaljan:</translation>
       <translation>Igre: </translation>
     </message>
     <message>
-      <source>ELF files (*.bin *.elf *.oelf)</source>
-      <translation>ELF datoteke (*.bin *.elf *.oelf)</translation>
-    </message>
-    <message>
       <source>Game Boot</source>
       <translation>Pokretanje Igre</translation>
     </message>
@@ -2065,6 +2061,10 @@ Izaberite verziju emulatora s desne liste.</translation>
     <message>
       <source>Manage Users</source>
       <translation>Upravljajte korisnicima</translation>
+    </message>
+    <message>
+      <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
+      <translation type="unfinished">bootable files (*.bin *.elf *.oelf *.zar)</translation>
     </message>
   </context>
   <context>
