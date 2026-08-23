@@ -1926,10 +1926,6 @@ Lütfen anahtarlarınızı girin ve kaydedin.</translation>
       <translation>Oyunlar: </translation>
     </message>
     <message>
-      <source>ELF files (*.bin *.elf *.oelf)</source>
-      <translation>ELF Dosyaları (*.bin *.elf *.oelf)</translation>
-    </message>
-    <message>
       <source>Game Boot</source>
       <translation>Oyun Başlat</translation>
     </message>
@@ -2060,6 +2056,10 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     <message>
       <source>Manage Users</source>
       <translation>Kullanıcıları Yönet</translation>
+    </message>
+    <message>
+      <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
+      <translation type="unfinished">bootable files (*.bin *.elf *.oelf *.zar)</translation>
     </message>
   </context>
   <context>
