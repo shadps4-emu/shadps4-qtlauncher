@@ -1926,10 +1926,6 @@ Si us plau, introdueix les teves claus per desar-les.</translation>
       <translation>Jocs: </translation>
     </message>
     <message>
-      <source>ELF files (*.bin *.elf *.oelf)</source>
-      <translation>Fitxers ELF (*.bin *.elf *.oelf)</translation>
-    </message>
-    <message>
       <source>Game Boot</source>
       <translation>Executa el joc</translation>
     </message>
@@ -2060,6 +2056,10 @@ Selecciona una versió del panell dret.</translation>
     <message>
       <source>Manage Users</source>
       <translation>Gestiona els usuaris</translation>
+    </message>
+    <message>
+      <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
+      <translation type="unfinished">bootable files (*.bin *.elf *.oelf *.zar)</translation>
     </message>
   </context>
   <context>
