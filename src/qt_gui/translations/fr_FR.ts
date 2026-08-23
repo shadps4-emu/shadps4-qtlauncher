@@ -1926,10 +1926,6 @@ Veuillez entrer vos clés et les sauvegarder.</translation>
       <translation>Jeux: </translation>
     </message>
     <message>
-      <source>ELF files (*.bin *.elf *.oelf)</source>
-      <translation>Fichiers ELF (*.bin *.elf *.oelf)</translation>
-    </message>
-    <message>
       <source>Game Boot</source>
       <translation>Démarrer un jeu</translation>
     </message>
@@ -2060,6 +2056,10 @@ Select an emulator version from the right panel.</translation>
     <message>
       <source>Manage Users</source>
       <translation type="unfinished">Manage Users</translation>
+    </message>
+    <message>
+      <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
+      <translation type="unfinished">bootable files (*.bin *.elf *.oelf *.zar)</translation>
     </message>
   </context>
   <context>
