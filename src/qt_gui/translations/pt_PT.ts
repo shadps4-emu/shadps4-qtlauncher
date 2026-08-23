@@ -1925,10 +1925,6 @@ Por favor, introduza as suas chaves e guarde-as.</translation>
       <translation>Jogos: </translation>
     </message>
     <message>
-      <source>ELF files (*.bin *.elf *.oelf)</source>
-      <translation>Ficheiros ELF (*.bin *.elf *.oelf)</translation>
-    </message>
-    <message>
       <source>Game Boot</source>
       <translation>Arranque do Jogo</translation>
     </message>
@@ -2059,6 +2055,10 @@ Selecione uma versão do emulador no painel direito.</translation>
     <message>
       <source>Manage Users</source>
       <translation>Gerir Utilizadores</translation>
+    </message>
+    <message>
+      <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
+      <translation type="unfinished">bootable files (*.bin *.elf *.oelf *.zar)</translation>
     </message>
   </context>
   <context>

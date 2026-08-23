@@ -1926,10 +1926,6 @@ Debes introducir tus claves y guardarlas.</translation>
       <translation>Juegos: </translation>
     </message>
     <message>
-      <source>ELF files (*.bin *.elf *.oelf)</source>
-      <translation>Archivos ELF (*.bin *.elf *.oelf)</translation>
-    </message>
-    <message>
       <source>Game Boot</source>
       <translation>Inicio del juego</translation>
     </message>
@@ -2060,6 +2056,10 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     <message>
       <source>Manage Users</source>
       <translation>Gestor de usuarios</translation>
+    </message>
+    <message>
+      <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
+      <translation type="unfinished">bootable files (*.bin *.elf *.oelf *.zar)</translation>
     </message>
   </context>
   <context>

@@ -1920,10 +1920,6 @@ Please enter your keys and save them.</source>
       <translation>遊戲： </translation>
     </message>
     <message>
-      <source>ELF files (*.bin *.elf *.oelf)</source>
-      <translation>ELF 檔案 (*.bin *.elf *.oelf)</translation>
-    </message>
-    <message>
       <source>Game Boot</source>
       <translation>遊戲啟動</translation>
     </message>
@@ -2054,6 +2050,10 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Manage Users</source>
       <translation>管理使用者</translation>
+    </message>
+    <message>
+      <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
+      <translation type="unfinished">bootable files (*.bin *.elf *.oelf *.zar)</translation>
     </message>
   </context>
   <context>

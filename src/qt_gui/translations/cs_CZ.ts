@@ -1926,10 +1926,6 @@ Please enter your keys and save them.</translation>
       <translation>Hry: </translation>
     </message>
     <message>
-      <source>ELF files (*.bin *.elf *.oelf)</source>
-      <translation>Soubory ELF (*.bin *.elf *.oelf)</translation>
-    </message>
-    <message>
       <source>Game Boot</source>
       <translation>Spuštění hry</translation>
     </message>
@@ -2060,6 +2056,10 @@ Vyberte verzi emulátoru z nabídky pravého panelu.</translation>
     <message>
       <source>Manage Users</source>
       <translation>Správa uživatelů</translation>
+    </message>
+    <message>
+      <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
+      <translation type="unfinished">bootable files (*.bin *.elf *.oelf *.zar)</translation>
     </message>
   </context>
   <context>

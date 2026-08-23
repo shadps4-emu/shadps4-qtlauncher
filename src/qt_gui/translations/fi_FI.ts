@@ -1926,10 +1926,6 @@ Syötä avaimet ja tallenna ne.</translation>
       <translation>Pelit: </translation>
     </message>
     <message>
-      <source>ELF files (*.bin *.elf *.oelf)</source>
-      <translation>ELF-tiedostot (*.bin *.elf *.oelf)</translation>
-    </message>
-    <message>
       <source>Game Boot</source>
       <translation>Pelin käynnistys</translation>
     </message>
@@ -2060,6 +2056,10 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     <message>
       <source>Manage Users</source>
       <translation>Hallinnoi käyttäjiä</translation>
+    </message>
+    <message>
+      <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
+      <translation type="unfinished">bootable files (*.bin *.elf *.oelf *.zar)</translation>
     </message>
   </context>
   <context>

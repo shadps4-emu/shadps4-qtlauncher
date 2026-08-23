@@ -1926,10 +1926,6 @@ Proszę wpisać klucze i je zapisać.</translation>
       <translation>Gry: </translation>
     </message>
     <message>
-      <source>ELF files (*.bin *.elf *.oelf)</source>
-      <translation>Pliki ELF (*.bin *.elf *.oelf)</translation>
-    </message>
-    <message>
       <source>Game Boot</source>
       <translation>Uruchomienie gry</translation>
     </message>
@@ -2060,6 +2056,10 @@ Wybierz wersję emulatora z prawego panelu.</translation>
     <message>
       <source>Manage Users</source>
       <translation type="unfinished">Manage Users</translation>
+    </message>
+    <message>
+      <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
+      <translation type="unfinished">bootable files (*.bin *.elf *.oelf *.zar)</translation>
     </message>
   </context>
   <context>

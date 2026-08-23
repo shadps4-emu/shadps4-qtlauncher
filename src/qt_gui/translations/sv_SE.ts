@@ -1924,10 +1924,6 @@ Ange dina nycklar och spara dem.</translation>
       <translation>Spel: </translation>
     </message>
     <message>
-      <source>ELF files (*.bin *.elf *.oelf)</source>
-      <translation>ELF-filer (*.bin *.elf *.oelf)</translation>
-    </message>
-    <message>
       <source>Game Boot</source>
       <translation>Starta spel</translation>
     </message>
@@ -2058,6 +2054,10 @@ Välj en emulatorversion från den högra panelen.</translation>
     <message>
       <source>Manage Users</source>
       <translation>Hantera användare</translation>
+    </message>
+    <message>
+      <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
+      <translation type="unfinished">bootable files (*.bin *.elf *.oelf *.zar)</translation>
     </message>
   </context>
   <context>

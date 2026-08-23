@@ -1917,10 +1917,6 @@ Please enter your keys and save them.</source>
       <translation>بازی ها:</translation>
     </message>
     <message>
-      <source>ELF files (*.bin *.elf *.oelf)</source>
-      <translation>ELF فایل های (*.bin *.elf *.oelf) </translation>
-    </message>
-    <message>
       <source>Game Boot</source>
       <translation>اجرای بازی</translation>
     </message>
@@ -2049,6 +2045,10 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Manage Users</source>
       <translation>مدیریت کاربران</translation>
+    </message>
+    <message>
+      <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
+      <translation type="unfinished">bootable files (*.bin *.elf *.oelf *.zar)</translation>
     </message>
   </context>
   <context>
