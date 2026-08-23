@@ -407,7 +407,7 @@
     </message>
     <message>
       <source>D-Pad</source>
-      <translation>Navigasjonsknapper</translation>
+      <translation>Styrekors</translation>
     </message>
     <message>
       <source>Up</source>
@@ -427,7 +427,7 @@
     </message>
     <message>
       <source>Left Stick</source>
-      <translation>Venstre analog</translation>
+      <translation>Venstre tommelspak</translation>
     </message>
     <message>
       <source>Config Selection</source>
@@ -447,7 +447,7 @@
     </message>
     <message>
       <source>Right Stick</source>
-      <translation>Høyre analog</translation>
+      <translation>Høyre tommelspak</translation>
     </message>
     <message>
       <source>Color Adjustment</source>
@@ -491,7 +491,7 @@
     </message>
     <message>
       <source>Options</source>
-      <translation>Options</translation>
+      <translation>Valg</translation>
     </message>
     <message>
       <source>Touchpad Left</source>
@@ -507,7 +507,7 @@
     </message>
     <message>
       <source>Triangle</source>
-      <translation>Triangel</translation>
+      <translation>Trekant</translation>
     </message>
     <message>
       <source>Square</source>
@@ -535,11 +535,11 @@
     </message>
     <message>
       <source>Move analog stick</source>
-      <translation>Flytt på analog stikke</translation>
+      <translation>Flytt på tommelspak</translation>
     </message>
     <message>
       <source>L1 and L2</source>
-      <translation>L1 og L2</translation>
+      <translation>Venstre skulder- og avtrekkerknapp</translation>
     </message>
     <message>
       <source>Active Gamepad</source>
@@ -571,7 +571,7 @@
     </message>
     <message>
       <source>R1 and R2</source>
-      <translation>R1 og R2</translation>
+      <translation>Høyre skulder- og avtrekkerknapp</translation>
     </message>
     <message>
       <source>ID: </source>
@@ -607,7 +607,7 @@
     </message>
     <message>
       <source>Left Stick Deadzone</source>
-      <translation>Venstre analog dødsone</translation>
+      <translation>Venstre tommelspak dødsone</translation>
     </message>
     <message>
       <source>Min Deadzone (def:2 max:127)</source>
@@ -619,7 +619,7 @@
     </message>
     <message>
       <source>Right Stick Deadzone</source>
-      <translation>Høyre analog dødsone</translation>
+      <translation>Høyre tommelspak dødsone</translation>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
@@ -1469,7 +1469,7 @@ Skriv inn nøklene og lagre dem.</translation>
     </message>
     <message>
       <source>Left Analog Halfmode</source>
-      <translation>Venstre analog halvmodus</translation>
+      <translation>Venstre tommelspak halvmodus</translation>
     </message>
     <message>
       <source>Config Selection</source>
@@ -1501,7 +1501,7 @@ Skriv inn nøklene og lagre dem.</translation>
     </message>
     <message>
       <source>Options</source>
-      <translation>Options</translation>
+      <translation>Valg</translation>
     </message>
     <message>
       <source>Mouse Movement Parameters</source>
@@ -1513,7 +1513,7 @@ Skriv inn nøklene og lagre dem.</translation>
     </message>
     <message>
       <source>Triangle</source>
-      <translation>Triangel</translation>
+      <translation>Trekant</translation>
     </message>
     <message>
       <source>Square</source>
@@ -1529,7 +1529,7 @@ Skriv inn nøklene og lagre dem.</translation>
     </message>
     <message>
       <source>Right Analog Halfmode</source>
-      <translation>Høyre analog halvmodus</translation>
+      <translation>Høyre tommelspak halvmodus</translation>
     </message>
     <message>
       <source>Speed Offset (def 0.125):</source>
@@ -1569,7 +1569,7 @@ Skriv inn nøklene og lagre dem.</translation>
     </message>
     <message>
       <source>Mousewheel cannot be mapped to stick outputs</source>
-      <translation>Musehjulet kan ikke tildeles analogstikkene</translation>
+      <translation>Musehjulet kan ikke tildeles tommelspakene</translation>
     </message>
     <message>
       <source>Save</source>
@@ -1629,51 +1629,51 @@ Skriv inn nøklene og lagre dem.</translation>
     </message>
     <message>
       <source>Dpad Up</source>
-      <translation>Navigasjonsknapp opp</translation>
+      <translation>Styrekors opp</translation>
     </message>
     <message>
       <source>Dpad Down</source>
-      <translation>Navigasjonsknapp ned</translation>
+      <translation>Styrekors ned</translation>
     </message>
     <message>
       <source>Dpad Left</source>
-      <translation>Navigasjonsknapp venstre</translation>
+      <translation>Styrekors venstre</translation>
     </message>
     <message>
       <source>Dpad Right</source>
-      <translation>Navigasjonsknapp høyre</translation>
+      <translation>Styrekors høyre</translation>
     </message>
     <message>
       <source>Left Stick Up</source>
-      <translation>Venstre analog opp</translation>
+      <translation>Venstre tommelspak opp</translation>
     </message>
     <message>
       <source>Left Stick Down</source>
-      <translation>Venstre analog ned</translation>
+      <translation>Venstre tommelspak ned</translation>
     </message>
     <message>
       <source>Left Stick Left</source>
-      <translation>Venstre analog venstre</translation>
+      <translation>Venstre tommelspak venstre</translation>
     </message>
     <message>
       <source>Left Stick Right</source>
-      <translation>Venstre analog høyre</translation>
+      <translation>Venstre tommelspak høyre</translation>
     </message>
     <message>
       <source>Right Stick Up</source>
-      <translation>Høyre analog opp</translation>
+      <translation>Høyre tommelspak opp</translation>
     </message>
     <message>
       <source>Right Stick Down</source>
-      <translation>Høyre analog ned</translation>
+      <translation>Høyre tommelspak ned</translation>
     </message>
     <message>
       <source>Right Stick Left</source>
-      <translation>Høyre analog venstre</translation>
+      <translation>Høyre tommelspak venstre</translation>
     </message>
     <message>
       <source>Right Stick Right</source>
-      <translation>Høyre analog høyre</translation>
+      <translation>Høyre tommelspak høyre</translation>
     </message>
     <message>
       <source>L1</source>
@@ -2997,11 +2997,11 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Red Zone Protection</source>
-      <translation type="unfinished">Red Zone Protection</translation>
+      <translation>Rød sone beskyttelse</translation>
     </message>
     <message>
       <source>Static Patching</source>
-      <translation type="unfinished">Static Patching</translation>
+      <translation>Statisk retting</translation>
     </message>
   </context>
   <context>

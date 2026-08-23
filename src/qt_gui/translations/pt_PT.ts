@@ -1998,7 +1998,7 @@ Por favor, introduza as suas chaves e guarde-as.</translation>
     </message>
     <message>
       <source>Version Manager</source>
-      <translation>Gerenciador de Versões</translation>
+      <translation>Gestor de Versões</translation>
     </message>
     <message>
       <source>No Version Selected</source>
@@ -2009,7 +2009,7 @@ Por favor, introduza as suas chaves e guarde-as.</translation>
 The Version Manager menu will then open.
 Select an emulator version from the right panel.</source>
       <translation>Nenhuma versão do emulador foi selecionada.
-O menu do Gerenciador de Versões irá abrir.
+O menu do Gestor de Versões abrirá.
 Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
@@ -2998,11 +2998,11 @@ Atualmente provoca instabilidade numa abundância de jogos testados.</translatio
     </message>
     <message>
       <source>Red Zone Protection</source>
-      <translation type="unfinished">Red Zone Protection</translation>
+      <translation>Proteção da Zona Vermelha</translation>
     </message>
     <message>
       <source>Static Patching</source>
-      <translation type="unfinished">Static Patching</translation>
+      <translation>Correção Estática</translation>
     </message>
   </context>
   <context>
