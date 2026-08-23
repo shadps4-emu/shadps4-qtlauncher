@@ -1926,10 +1926,6 @@ Skriv inn nøklene og lagre dem.</translation>
       <translation>Spill: </translation>
     </message>
     <message>
-      <source>ELF files (*.bin *.elf *.oelf)</source>
-      <translation>ELF-filer (*.bin *.elf *.oelf)</translation>
-    </message>
-    <message>
       <source>Game Boot</source>
       <translation>Spilloppstart</translation>
     </message>
@@ -2060,6 +2056,10 @@ Velg en emulatorversjon fra høyre panel.</translation>
     <message>
       <source>Manage Users</source>
       <translation>Håndter brukere</translation>
+    </message>
+    <message>
+      <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
+      <translation type="unfinished">bootable files (*.bin *.elf *.oelf *.zar)</translation>
     </message>
   </context>
   <context>
