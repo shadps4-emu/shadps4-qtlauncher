@@ -52,9 +52,26 @@ public:
         const std::filesystem::path stem_path = Core::FileSys::StripZArchiveExtension(filePath);
         std::filesystem::path game_update_path = stem_path;
         game_update_path += "-UPDATE";
+        std::filesystem::path zar_update_path = game_update_path;
+        zar_update_path += ".zar";
+
         std::filesystem::path game_patch_path = stem_path;
         game_patch_path += "-patch";
+        std::filesystem::path zar_patch_path = game_patch_path;
+        zar_patch_path += ".zar";
         SceUpdateChecker("param.sfo", param_sfo_path, game_update_path, game_patch_path, game.path);
+
+        if (std::filesystem::exists(game_update_path)) {
+            game.update_path = game_update_path;
+        } else if (std::filesystem::exists(game_patch_path)) {
+            game.update_path = game_patch_path;
+        } else if (std::filesystem::exists(zar_update_path)) {
+            game.update_path = zar_update_path;
+        } else if (std::filesystem::exists(zar_patch_path)) {
+            game.update_path = zar_patch_path;
+        } else {
+            game.update_path = "";
+        }
 
         PSF psf;
         if (psf.Open(param_sfo_path)) {

@@ -263,6 +263,8 @@ set(CORE src/core/file_format/elf.cpp
          src/core/file_format/trp.h
          src/core/file_sys/game_backend.cpp
          src/core/file_sys/game_backend.h
+         src/core/file_sys/zar_packer.cpp
+         src/core/file_sys/zar_packer.h
          src/core/file_sys/backends/host_directory_backend.cpp
          src/core/file_sys/backends/host_directory_backend.h
          src/core/file_sys/backends/zarchive_backend.cpp

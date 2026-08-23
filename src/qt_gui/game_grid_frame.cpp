@@ -44,6 +44,9 @@ GameGridFrame::GameGridFrame(std::shared_ptr<gui_settings> gui_settings,
             });
         PopulateGameGrid(m_game_info->m_games, false);
     });
+
+    connect(&m_gui_context_menus, &GuiContextMenus::RequestGameListRefresh, this,
+            &GameGridFrame::RequestRefreshGrid);
 }
 
 void GameGridFrame::onCurrentCellChanged(int currentRow, int currentColumn, int previousRow,
