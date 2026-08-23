@@ -1926,10 +1926,6 @@ Please enter your keys and save them.</source>
       <translation> :الألعاب</translation>
     </message>
     <message>
-      <source>ELF files (*.bin *.elf *.oelf)</source>
-      <translation>ELF (*.bin *.elf *.oelf) ملفات</translation>
-    </message>
-    <message>
       <source>Game Boot</source>
       <translation>تشغيل اللعبة</translation>
     </message>
@@ -2060,6 +2056,10 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Manage Users</source>
       <translation>إدارة المستخدمين</translation>
+    </message>
+    <message>
+      <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
+      <translation type="unfinished">bootable files (*.bin *.elf *.oelf *.zar)</translation>
     </message>
   </context>
   <context>
