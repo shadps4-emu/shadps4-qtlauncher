@@ -1925,10 +1925,6 @@ Bitte gib die Schlüssel ein und speicher diese.</translation>
       <translation>Spiele: </translation>
     </message>
     <message>
-      <source>ELF files (*.bin *.elf *.oelf)</source>
-      <translation>ELF-Dateien (*.bin *.elf *.oelf)</translation>
-    </message>
-    <message>
       <source>Game Boot</source>
       <translation>Spiel-Start</translation>
     </message>
@@ -2059,6 +2055,10 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
     <message>
       <source>Manage Users</source>
       <translation>Benutzer verwalten</translation>
+    </message>
+    <message>
+      <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
+      <translation type="unfinished">bootable files (*.bin *.elf *.oelf *.zar)</translation>
     </message>
   </context>
   <context>
