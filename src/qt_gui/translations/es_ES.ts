@@ -2059,7 +2059,7 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     </message>
     <message>
       <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
-      <translation type="unfinished">bootable files (*.bin *.elf *.oelf *.zar)</translation>
+      <translation>Archivos ejecutables (*.bin *.elf *.oelf *.zar)</translation>
     </message>
   </context>
   <context>
