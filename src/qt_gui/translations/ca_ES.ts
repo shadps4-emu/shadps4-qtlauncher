@@ -2059,7 +2059,7 @@ Selecciona una versió del panell dret.</translation>
     </message>
     <message>
       <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
-      <translation type="unfinished">bootable files (*.bin *.elf *.oelf *.zar)</translation>
+      <translation>Fitxers executables (*.bin *.elf *.oelf *.zar)</translation>
     </message>
   </context>
   <context>
