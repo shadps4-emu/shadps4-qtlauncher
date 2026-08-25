@@ -796,11 +796,11 @@ Proszę wpisać klucze i je zapisać.</translation>
     </message>
     <message>
       <source>Trophy Key contains invalid hex or has odd length.</source>
-      <translation type="unfinished">Trophy Key contains invalid hex or has odd length.</translation>
+      <translation>Klucz Trofeum zawiera nieprawidłowy hex lub ma nieparzystą długość.</translation>
     </message>
     <message>
       <source>%1 contains invalid hex or has odd length.</source>
-      <translation type="unfinished">%1 contains invalid hex or has odd length.</translation>
+      <translation>%1 zawiera nieprawidłowy hex lub ma nieparzystą długość.</translation>
     </message>
     <message>
       <source>Load Key</source>
@@ -912,7 +912,7 @@ Proszę wpisać klucze i je zapisać.</translation>
     </message>
     <message>
       <source>Directory with DLC&apos;s</source>
-      <translation type="unfinished">Directory with DLC&apos;s</translation>
+      <translation>Katalog z DLC</translation>
     </message>
   </context>
   <context>
@@ -1257,7 +1257,7 @@ Proszę wpisać klucze i je zapisać.</translation>
     </message>
     <message>
       <source>Create Shortcut for Specified Emulator Version</source>
-      <translation type="unfinished">Create Shortcut for Specified Emulator Version</translation>
+      <translation>Utwórz skrót dla określonej wersji emulatora</translation>
     </message>
     <message>
       <source>Create Shortcut</source>
@@ -1297,7 +1297,7 @@ Proszę wpisać klucze i je zapisać.</translation>
     </message>
     <message>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
-      <translation type="unfinished">A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</translation>
+      <translation>Klucz trofeum jest wymagany do korzystania z przeglądarki trofeów. Można go wprowadzić klikając w Ustawienia - Zarządzaj kluczami kryptograficznymi.</translation>
     </message>
     <message>
       <source>User</source>
@@ -1305,11 +1305,11 @@ Proszę wpisać klucze i je zapisać.</translation>
     </message>
     <message>
       <source>Add with Selected Emulator Version</source>
-      <translation type="unfinished">Add with Selected Emulator Version</translation>
+      <translation>Dodaj z wybraną wersją emulatora</translation>
     </message>
     <message>
       <source>Add with Specified Emulator Version</source>
-      <translation type="unfinished">Add with Specified Emulator Version</translation>
+      <translation>Dodaj z określoną wersją emulatora</translation>
     </message>
     <message>
       <source>Add to Steam</source>
@@ -1379,7 +1379,7 @@ Proszę wpisać klucze i je zapisać.</translation>
     </message>
     <message>
       <source>Tip: Up to three simultaneous inputs can be assigned for each hotkey</source>
-      <translation type="unfinished">Tip: Up to three simultaneous inputs can be assigned for each hotkey</translation>
+      <translation>Wskazówka: Dla każdego skrótu można przypisać trzy wejścia</translation>
     </message>
     <message>
       <source>Save</source>
@@ -1405,9 +1405,7 @@ Proszę wpisać klucze i je zapisać.</translation>
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-      <translation type="unfinished">Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
-
-%1</translation>
+      <translation>Nie można Przypisać unikalnych wejść więcej niż jeden raz. Z duplikowane wejścia są zmapowane do następujących przycisków:</translation>
     </message>
     <message>
       <source>Waiting for inputs</source>
@@ -2653,11 +2651,11 @@ Wybierz wersję emulatora z prawego panelu.</translation>
     </message>
     <message>
       <source>Enable Direct Memory Access</source>
-      <translation type="unfinished">Enable Direct Memory Access</translation>
+      <translation>Włącz bezpośredni dostęp do pamięci</translation>
     </message>
     <message>
       <source>Enable Devkit Console Mode</source>
-      <translation type="unfinished">Enable Devkit Console Mode</translation>
+      <translation>Włącz tryb konsoli Devkit</translation>
     </message>
     <message>
       <source>Set &quot;Network Connected&quot; to True</source>
@@ -2677,7 +2675,7 @@ Wybierz wersję emulatora z prawego panelu.</translation>
     </message>
     <message>
       <source>Show Splash Screen When Launching Game</source>
-      <translation type="unfinished">Show Splash Screen When Launching Game</translation>
+      <translation>Pokaż ekran powitalny podczas uruchamiania gry</translation>
     </message>
     <message>
       <source>General Frontend Settings</source>
@@ -2685,7 +2683,7 @@ Wybierz wersję emulatora z prawego panelu.</translation>
     </message>
     <message>
       <source>Enable PS4 Neo Mode</source>
-      <translation type="unfinished">Enable PS4 Neo Mode</translation>
+      <translation>Włącz tryb PS4 Neo</translation>
     </message>
     <message>
       <source>Enable Direct Memory Access:\nEnables arbitrary memory access from the GPU to CPU memory.</source>
@@ -2833,7 +2831,7 @@ Wybierz wersję emulatora z prawego panelu.</translation>
     </message>
     <message>
       <source>Compress the Shader Cache files into a zip file</source>
-      <translation type="unfinished">Compress the Shader Cache files into a zip file</translation>
+      <translation>Kompresuj pliki pamięci podręcznej Shadera do pliku zip</translation>
     </message>
     <message>
       <source>Enable Shader Cache:\nStoring compiled shaders to avoid recompilations, reduce stuttering.</source>
@@ -2889,7 +2887,7 @@ Wybierz wersję emulatora z prawego panelu.</translation>
     </message>
     <message>
       <source>Audio Backend</source>
-      <translation type="unfinished">Audio Backend</translation>
+      <translation>Backend Dźwięku</translation>
     </message>
     <message>
       <source>Mic Device</source>
@@ -3109,47 +3107,47 @@ Wybierz wersję emulatora z prawego panelu.</translation>
     </message>
     <message>
       <source>&amp;Create User</source>
-      <translation type="unfinished">&amp;Create User</translation>
+      <translation>&amp;Utwórz użytkownika</translation>
     </message>
     <message>
       <source>&amp;Delete User</source>
-      <translation type="unfinished">&amp;Delete User</translation>
+      <translation>&amp;Usuń użytkownika</translation>
     </message>
     <message>
       <source>&amp;Rename User</source>
-      <translation type="unfinished">&amp;Rename User</translation>
+      <translation>&amp;Zmień nazwę użytkownika</translation>
     </message>
     <message>
       <source>&amp;Set Default User</source>
-      <translation type="unfinished">&amp;Set Default User</translation>
+      <translation>&amp;Ustaw domyślnego użytkownika</translation>
     </message>
     <message>
       <source>&amp;Set Color</source>
-      <translation type="unfinished">&amp;Set Color</translation>
+      <translation>&amp;Ustaw kolor</translation>
     </message>
     <message>
       <source>&amp;Set Controller Port</source>
-      <translation type="unfinished">&amp;Set Controller Port</translation>
+      <translation>&amp;Ustaw port kontrolera</translation>
     </message>
     <message>
       <source>&amp;Close</source>
-      <translation type="unfinished">&amp;Close</translation>
+      <translation>&amp;Zamknij</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Błąd</translation>
     </message>
     <message>
       <source>Cannot add more users.</source>
-      <translation type="unfinished">Cannot add more users.</translation>
+      <translation>Nie można dodać więcej użytkowników.</translation>
     </message>
     <message>
       <source>Create New User</source>
-      <translation type="unfinished">Create New User</translation>
+      <translation>Utwórz nowego użytkownika</translation>
     </message>
     <message>
       <source>New User ID: %1</source>
-      <translation type="unfinished">New User ID: %1</translation>
+      <translation>Nowy identyfikator użytkownika: %1</translation>
     </message>
     <message>
       <source>Username (3–16 chars, letters, numbers, _, -)</source>
@@ -3324,7 +3322,7 @@ Wybierz wersję emulatora z prawego panelu.</translation>
     </message>
     <message>
       <source>Enter the name of this version as it appears in the list.</source>
-      <translation type="unfinished">Enter the name of this version as it appears in the list.</translation>
+      <translation>Wprowadź nazwę tej wersji jak pojawia się na liście.</translation>
     </message>
     <message>
       <source>Error</source>
@@ -3352,11 +3350,11 @@ Wybierz wersję emulatora z prawego panelu.</translation>
     </message>
     <message>
       <source>Version list update</source>
-      <translation type="unfinished">Version list update</translation>
+      <translation>Aktualizacja listy wersji</translation>
     </message>
     <message>
       <source>No news, the version list is already updated.</source>
-      <translation type="unfinished">No news, the version list is already updated.</translation>
+      <translation>Brak wiadomości, lista wersji jest już zaktualizowana.</translation>
     </message>
     <message>
       <source>The latest versions have been added to the list for download.</source>
@@ -3406,7 +3404,7 @@ Wybierz wersję emulatora z prawego panelu.</translation>
     </message>
     <message>
       <source>You already have the latest pre-release version.</source>
-      <translation type="unfinished">You already have the latest pre-release version.</translation>
+      <translation>Posiadasz już najnowszą przedpremierową wersję.</translation>
     </message>
     <message>
       <source>Update Available (Emulator)</source>
@@ -3458,15 +3456,15 @@ Wybierz wersję emulatora z prawego panelu.</translation>
     </message>
     <message>
       <source>Failed to save download file</source>
-      <translation type="unfinished">Failed to save download file</translation>
+      <translation>Nie udało się zapisać pliku pobierania</translation>
     </message>
     <message>
       <source>Complete installation</source>
-      <translation type="unfinished">Complete installation</translation>
+      <translation>Zakończ Instalację</translation>
     </message>
     <message>
       <source>Pre-release updated successfully</source>
-      <translation type="unfinished">Pre-release updated successfully</translation>
+      <translation>Wersja przedpremierowa zaktualizowana pomyślnie</translation>
     </message>
     <message>
       <source>Failed to create the update script file</source>
@@ -3494,11 +3492,11 @@ Wybierz wersję emulatora z prawego panelu.</translation>
     </message>
     <message>
       <source>Local</source>
-      <translation type="unfinished">Local</translation>
+      <translation>Lokalnie</translation>
     </message>
     <message>
       <source>Failed to determine the folder to remove.</source>
-      <translation type="unfinished">Failed to determine the folder to remove.</translation>
+      <translation>Nie udało się określić folderu do usunięcia.</translation>
     </message>
     <message>
       <source>Failed to delete folder.</source>
@@ -3510,7 +3508,7 @@ Wybierz wersję emulatora z prawego panelu.</translation>
     </message>
     <message>
       <source>Downloading Pre-release (Nightly), please wait...</source>
-      <translation type="unfinished">Downloading Pre-release (Nightly), please wait...</translation>
+      <translation>Pobieranie wersji Przedpremierowej (Nightly), proszę czekać...</translation>
     </message>
   </context>
   <context>
@@ -3797,11 +3795,11 @@ File was too small.</translation>
     </message>
     <message>
       <source>Move Here</source>
-      <translation type="unfinished">Move Here</translation>
+      <translation>Przenieś tutaj</translation>
     </message>
     <message>
       <source>Pick up and Place</source>
-      <translation type="unfinished">Pick up and Place</translation>
+      <translation>Podnieś i umieść</translation>
     </message>
   </context>
   <context>
@@ -3812,7 +3810,7 @@ File was too small.</translation>
     </message>
     <message>
       <source>--Unknown--</source>
-      <translation type="unfinished">--Unknown--</translation>
+      <translation>--Nieznane--</translation>
     </message>
     <message>
       <source>ID:</source>
@@ -3832,7 +3830,7 @@ File was too small.</translation>
     </message>
     <message>
       <source>Error converting value</source>
-      <translation type="unfinished">Error converting value</translation>
+      <translation>Wystąpił błąd podczas konwersji wartości</translation>
     </message>
     <message>
       <source>ID entered is invalid!</source>
