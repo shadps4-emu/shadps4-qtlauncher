@@ -82,6 +82,16 @@ public:
         return (size[size.size() - 2] == 'G') ? num * 1024 : num;
     }
 
+    static int parsePlayTime(const std::string& time) {
+        int hours = 0;
+        int minutes = 0;
+        int seconds = 0;
+        if (sscanf(time.c_str(), "%d:%d:%d", &hours, &minutes, &seconds) != 3) {
+            return 0;
+        }
+        return hours * 3600 + minutes * 60 + seconds;
+    }
+
     static bool CompareStringsAscending(GameInfo a, GameInfo b, int columnIndex) {
         switch (columnIndex) {
         case 1: {
@@ -103,7 +113,7 @@ public:
         case 7:
             return a.version < b.version;
         case 8:
-            return a.play_time < b.play_time;
+            return parsePlayTime(a.play_time) < parsePlayTime(b.play_time);
         case 9:
             return a.path < b.path;
         default:
@@ -132,7 +142,7 @@ public:
         case 7:
             return a.version > b.version;
         case 8:
-            return a.play_time > b.play_time;
+            return parsePlayTime(a.play_time) > parsePlayTime(b.play_time);
         case 9:
             return a.path > b.path;
         default:
