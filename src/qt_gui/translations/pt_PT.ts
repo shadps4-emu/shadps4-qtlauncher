@@ -1386,19 +1386,19 @@ Deseja continuar?</translation>
     </message>
     <message>
       <source>Packing: %1</source>
-      <translation type="unfinished">Packing: %1</translation>
+      <translation>A comprimir: %1</translation>
     </message>
     <message>
       <source>
 
 This game has a separate update/patch folder. Only the base game will be archived; the update/patch folder will not be included and will be left as-is. Use &quot;Convert Update to ZArchive&quot; separately if you&apos;d like to archive it too.</source>
-      <translation type="unfinished">
+      <translation>
 
-This game has a separate update/patch folder. Only the base game will be archived; the update/patch folder will not be included and will be left as-is. Use &quot;Convert Update to ZArchive&quot; separately if you&apos;d like to archive it too.</translation>
+Este jogo tem uma atualização/pasta de correções separada. Apenas o jogo base será comprimido. A pasta de atualização/correções não será incluída permanecerá intacta. Utilize &quot;Converter Atualização para ZArchive&quot; separadamente caso deseja comprimí-la também.</translation>
     </message>
     <message>
       <source>Convert to ZArchive</source>
-      <translation type="unfinished">Convert to ZArchive</translation>
+      <translation>Converter para ZArchive</translation>
     </message>
   </context>
   <context>
