@@ -1377,29 +1377,29 @@ Continuare?</translation>
       <source>Conversion finished. Delete the original folder now to free up disk space?
 
 %1</source>
-      <translation type="unfinished">Conversion finished. Delete the original folder now to free up disk space?
+      <translation>Conversione terminata. Eliminare ora la cartella originale per liberare spazio su disco?
 
 %1</translation>
     </message>
     <message>
       <source>The archive was created, but the original folder could not be fully deleted. You can remove it manually.</source>
-      <translation type="unfinished">The archive was created, but the original folder could not be fully deleted. You can remove it manually.</translation>
+      <translation>L'archivio è stato creato, ma la cartella originale non può essere completamente eliminata. È possibile rimuoverla manualmente.</translation>
     </message>
     <message>
       <source>Packing: %1</source>
-      <translation type="unfinished">Packing: %1</translation>
+      <translation>Compattando: %1</translation>
     </message>
     <message>
       <source>
 
 This game has a separate update/patch folder. Only the base game will be archived; the update/patch folder will not be included and will be left as-is. Use &quot;Convert Update to ZArchive&quot; separately if you&apos;d like to archive it too.</source>
-      <translation type="unfinished">
+      <translation>
 
-This game has a separate update/patch folder. Only the base game will be archived; the update/patch folder will not be included and will be left as-is. Use &quot;Convert Update to ZArchive&quot; separately if you&apos;d like to archive it too.</translation>
+Questo gioco ha una cartella di aggiornamento/patch separata. Solo il gioco di base sarà archiviato; la cartella di aggiornamento/patch non sarà inclusa e sarà lasciata così come é. Usa &quot;Converti l'aggiornamento in ZArchive&quot; separatamente se vuoi archiviarla.</translation>
     </message>
     <message>
       <source>Convert to ZArchive</source>
-      <translation type="unfinished">Convert to ZArchive</translation>
+      <translation>Converti in ZArchive</translation>
     </message>
   </context>
   <context>
