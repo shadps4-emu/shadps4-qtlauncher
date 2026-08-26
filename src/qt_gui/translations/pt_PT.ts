@@ -2058,7 +2058,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
-      <translation type="unfinished">bootable files (*.bin *.elf *.oelf *.zar)</translation>
+      <translation>ficheiros executáveis (*.bin *.elf *.oelf *.zar)</translation>
     </message>
   </context>
   <context>
