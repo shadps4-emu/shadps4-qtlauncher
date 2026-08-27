@@ -3548,7 +3548,7 @@ Atualmente provoca instabilidade numa abundância de jogos testados.</translatio
     </message>
     <message>
       <source>Complete installation</source>
-      <translation>Concluir a instalação</translation>
+      <translation>Instalação concluída</translation>
     </message>
     <message>
       <source>Pre-release updated successfully</source>
