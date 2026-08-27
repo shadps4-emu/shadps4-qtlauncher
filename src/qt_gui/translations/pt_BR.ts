@@ -2209,7 +2209,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Log Filter</source>
-      <translation>Filtro do Registro</translation>
+      <translation>Filtro do Log</translation>
     </message>
     <message>
       <source>Open Log Location</source>
