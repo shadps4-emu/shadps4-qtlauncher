@@ -6,26 +6,20 @@
 
 #include <memory>
 #include <QCheckBox>
-#include <QComboBox>
-#include <QGroupBox>
 #include <QJsonArray>
-#include <QJsonDocument>
-#include <QJsonObject>
-#include <QLabel>
-#include <QListView>
 #include <QMap>
 #include <QNetworkAccessManager>
 #include <QPixmap>
-#include <QPushButton>
-#include <QScrollArea>
 #include <QString>
-#include <QTabWidget>
-#include <QTextEdit>
-#include <QVBoxLayout>
 #include <QVector>
 #include <QWidget>
+
 #include "gui_settings.h"
 #include "ipc/ipc_client.h"
+
+namespace Ui {
+class CheatsPatches;
+}
 
 class CheatsPatches : public QWidget {
     Q_OBJECT
@@ -68,7 +62,7 @@ private:
     void updateNoteTextEdit(const QString& patchName);
 
     // Network Manager
-    QNetworkAccessManager* manager;
+    QNetworkAccessManager* manager = nullptr;
 
     // Patch Info Structures
     struct MemoryMod {
@@ -98,25 +92,19 @@ private:
     QString m_gameVersion;
     QString m_gameSize;
     QPixmap m_gameImage;
+
     QString m_cheatFilePath;
+
     QMap<QString, Cheat> m_cheats;
     QMap<QString, PatchInfo> m_patchInfos;
+
     QVector<QCheckBox*> m_cheatCheckBoxes;
+
     std::shared_ptr<gui_settings> m_gui_settings;
     std::shared_ptr<IpcClient> m_ipc_client;
 
-    // UI Elements
-    QVBoxLayout* rightLayout;
-    QVBoxLayout* patchesGroupBoxLayout;
-    QGroupBox* patchesGroupBox;
-    QVBoxLayout* patchesLayout;
-    QTextEdit* instructionsTextEdit;
-    QListView* listView_selectFile;
-    QItemSelectionModel* selectionModel;
-    QComboBox* patchesComboBox;
-    QListView* patchesListView;
+    std::unique_ptr<Ui::CheatsPatches> ui;
 
-    // Strings
     QString defaultTextEdit_MSG;
     QString CheatsNotFound_MSG;
     QString CheatsDownloadedSuccessfully_MSG;
