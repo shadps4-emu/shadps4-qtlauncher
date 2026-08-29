@@ -3,13 +3,15 @@
 
 #pragma once
 
+#include <cstdint>
 #include <functional>
+#include <string>
+#include <unordered_map>
+#include <vector>
 
 #include <QColor>
 #include <QFileInfo>
 #include <QProcess>
-
-#include "common/memory_patcher.h"
 
 class IpcClient : public QObject {
     Q_OBJECT
@@ -35,9 +37,7 @@ public:
     void setActiveController(std::string GUID);
     void sendMemoryPatches(std::string modNameStr, std::string offsetStr, std::string valueStr,
                            std::string targetStr, std::string sizeStr, bool isOffset,
-                           bool littleEndian,
-                           MemoryPatcher::PatchMask patchMask = MemoryPatcher::PatchMask::None,
-                           int maskOffset = 0);
+                           bool littleEndian, int patchMask = 0, int maskOffset = 0);
     void loadSkylander(std::string file_name, int slot);
     void removeSkylander(int slot);
     void loadInfinityFigure(std::string file_name, int slot);

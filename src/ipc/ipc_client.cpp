@@ -102,8 +102,7 @@ void IpcClient::setActiveController(std::string GUID) {
 
 void IpcClient::sendMemoryPatches(std::string modNameStr, std::string offsetStr,
                                   std::string valueStr, std::string targetStr, std::string sizeStr,
-                                  bool isOffset, bool littleEndian,
-                                  MemoryPatcher::PatchMask patchMask, int maskOffset) {
+                                  bool isOffset, bool littleEndian, int patchMask, int maskOffset) {
     writeLine("PATCH_MEMORY");
     writeLine(QString::fromStdString(modNameStr));
     writeLine(QString::fromStdString(offsetStr));
@@ -112,7 +111,7 @@ void IpcClient::sendMemoryPatches(std::string modNameStr, std::string offsetStr,
     writeLine(QString::fromStdString(sizeStr));
     writeLine(isOffset ? "1" : "0");
     writeLine(littleEndian ? "1" : "0");
-    writeLine(QString::number(static_cast<int>(patchMask)));
+    writeLine(QString::number(patchMask));
     writeLine(QString::number(maskOffset));
 }
 

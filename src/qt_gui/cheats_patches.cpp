@@ -28,8 +28,6 @@
 #include <QXmlStreamReader>
 
 #include "cheats_patches.h"
-#include "common/logging/log.h"
-#include "common/memory_patcher.h"
 #include "common/path_util.h"
 #include "core/emulator_state.h"
 
@@ -1126,7 +1124,7 @@ void CheatsPatches::addPatchesToLayout(const QString& filePath) {
             QString patchName;
             QString patchAuthor;
             QString patchNote;
-            QJsonArray patchLines;
+            bool hasPatchLines = false;
             bool isEnabled = false;
 
             while (!xmlReader.atEnd() && !xmlReader.hasError()) {
@@ -1151,26 +1149,19 @@ void CheatsPatches::addPatchesToLayout(const QString& filePath) {
                                 attributes.value("isEnabled").toString() == QStringLiteral("true");
                         }
                     } else if (xmlReader.name() == QStringLiteral("PatchList")) {
-                        QJsonArray linesArray;
                         while (!xmlReader.atEnd() &&
                                !(xmlReader.tokenType() == QXmlStreamReader::EndElement &&
                                  xmlReader.name() == QStringLiteral("PatchList"))) {
                             xmlReader.readNext();
                             if (xmlReader.tokenType() == QXmlStreamReader::StartElement &&
                                 xmlReader.name() == QStringLiteral("Line")) {
-                                QXmlStreamAttributes attributes = xmlReader.attributes();
-                                QJsonObject lineObject;
-                                lineObject["Type"] = attributes.value("Type").toString();
-                                lineObject["Address"] = attributes.value("Address").toString();
-                                lineObject["Value"] = attributes.value("Value").toString();
-                                linesArray.append(lineObject);
+                                hasPatchLines = true;
                             }
                         }
-                        patchLines = linesArray;
                     }
                 }
 
-                if (!patchName.isEmpty() && !patchLines.isEmpty()) {
+                if (!patchName.isEmpty() && hasPatchLines) {
                     QCheckBox* patchCheckBox = new QCheckBox(patchName);
                     patchCheckBox->setProperty("patchName", patchName);
                     patchCheckBox->setChecked(isEnabled);
@@ -1180,19 +1171,15 @@ void CheatsPatches::addPatchesToLayout(const QString& filePath) {
                     patchInfo.name = patchName;
                     patchInfo.author = patchAuthor;
                     patchInfo.note = patchNote;
-                    patchInfo.linesArray = patchLines;
                     patchInfo.serial = m_gameSerial;
                     m_patchInfos[patchName] = patchInfo;
 
                     patchCheckBox->installEventFilter(this);
 
-                    connect(patchCheckBox, &QCheckBox::toggled,
-                            [this, patchName](bool checked) { applyPatch(patchName, checked); });
-
                     patchName.clear();
                     patchAuthor.clear();
                     patchNote.clear();
-                    patchLines = QJsonArray();
+                    hasPatchLines = false;
                     patchAdded = true;
                 }
             }
@@ -1222,13 +1209,6 @@ void CheatsPatches::updateNoteTextEdit(const QString& patchName) {
                            .arg(patchInfo.name)
                            .arg(patchInfo.author)
                            .arg(patchInfo.note);
-
-        foreach (const QJsonValue& value, patchInfo.linesArray) {
-            QJsonObject lineObject = value.toObject();
-            QString type = lineObject["Type"].toString();
-            QString address = lineObject["Address"].toString();
-            QString patchValue = lineObject["Value"].toString();
-        }
         text.replace("\\n", "\n");
         instructionsTextEdit->setText(text);
     }
@@ -1270,62 +1250,6 @@ void CheatsPatches::applyCheat(const QString& modName, bool enabled) {
 
         m_ipc_client->sendMemoryPatches(modNameStr, offsetStr, valueStr, "", "", !isHintPresent,
                                         false);
-    }
-}
-
-void CheatsPatches::applyPatch(const QString& patchName, bool enabled) {
-    if (!enabled)
-        return;
-    if (m_patchInfos.contains(patchName)) {
-        const PatchInfo& patchInfo = m_patchInfos[patchName];
-
-        foreach (const QJsonValue& value, patchInfo.linesArray) {
-            QJsonObject lineObject = value.toObject();
-            QString type = lineObject["Type"].toString();
-            QString address = lineObject["Address"].toString();
-            QString patchValue = lineObject["Value"].toString();
-            QString maskOffsetStr = lineObject["Offset"].toString();
-
-            patchValue = QString::fromStdString(
-                MemoryPatcher::convertValueToHex(type.toStdString(), patchValue.toStdString()));
-
-            bool littleEndian = false;
-
-            if (type == "bytes16" || type == "bytes32" || type == "bytes64") {
-                littleEndian = true;
-            }
-
-            MemoryPatcher::PatchMask patchMask = MemoryPatcher::PatchMask::None;
-            int maskOffsetValue = 0;
-
-            if (type == "mask")
-                patchMask = MemoryPatcher::PatchMask::Mask;
-
-            if (type == "mask_jump32")
-                patchMask = MemoryPatcher::PatchMask::Mask_Jump32;
-
-            if ((type == "mask" || type == "mask_jump32") && !maskOffsetStr.toStdString().empty()) {
-                maskOffsetValue = std::stoi(maskOffsetStr.toStdString(), 0, 10);
-            }
-
-            /* if (MemoryPatcher::g_eboot_address == 0) {
-                MemoryPatcher::patchInfo addingPatch;
-                addingPatch.gameSerial = patchInfo.serial.toStdString();
-                addingPatch.modNameStr = patchName.toStdString();
-                addingPatch.offsetStr = address.toStdString();
-                addingPatch.valueStr = patchValue.toStdString();
-                addingPatch.isOffset = false;
-                addingPatch.littleEndian = littleEndian;
-                addingPatch.patchMask = patchMask;
-                addingPatch.maskOffset = maskOffsetValue;
-
-                MemoryPatcher::AddPatchToQueue(addingPatch);
-                continue;
-            }
-            MemoryPatcher::PatchMemory(patchName.toStdString(), address.toStdString(),
-                                       patchValue.toStdString(), "", "", false, littleEndian,
-                                       patchMask); */
-        }
     }
 }
 

@@ -62,7 +62,6 @@ private:
     void addPatchesToLayout(const QString& serial);
 
     void applyCheat(const QString& modName, bool enabled);
-    void applyPatch(const QString& patchName, bool enabled);
 
     void uncheckAllCheatCheckBoxes();
     void updateNoteTextEdit(const QString& patchName);
@@ -88,7 +87,6 @@ private:
         QString name;
         QString author;
         QString note;
-        QJsonArray linesArray;
         QString serial;
     };
 
