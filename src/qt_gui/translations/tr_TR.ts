@@ -1341,7 +1341,7 @@ Lütfen anahtarlarınızı girin ve kaydedin.</translation>
     </message>
     <message>
       <source>ZArchive Files (*.zar)</source>
-      <translation type="unfinished">ZArchive Files (*.zar)</translation>
+      <translation>ZArchive Dosyaları (*.zar)</translation>
     </message>
     <message>
       <source>%1 already exists. Overwrite it?</source>
@@ -3129,7 +3129,7 @@ Sağ panelden bir emülatör sürümü seçin.</translation>
     </message>
     <message>
       <source>No Steam user account found. Please log into Steam at least once.</source>
-      <translation type="unfinished">No Steam user account found. Please log into Steam at least once.</translation>
+      <translation>Steam kullanıcı hesabı bulunamadı. Lütfen en az bir kez Steam'e giriş yapın.</translation>
     </message>
     <message>
       <source>Steam is Running</source>
