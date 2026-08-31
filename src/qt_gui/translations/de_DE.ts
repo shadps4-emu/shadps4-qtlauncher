@@ -1314,6 +1314,92 @@ Bitte gib die Schlüssel ein und speicher diese.</translation>
       <source>Add to Steam</source>
       <translation>Zu Steam hinzufügen</translation>
     </message>
+    <message>
+      <source>Zar Compression</source>
+      <translation>ZAR-Komprimierung</translation>
+    </message>
+    <message>
+      <source>Compress game to zar</source>
+      <translation>Spiel zu ZAR komprimieren</translation>
+    </message>
+    <message>
+      <source>Compress update to zar</source>
+      <translation>Update zu ZAR komprimieren</translation>
+    </message>
+    <message>
+      <source>This is already packed as a ZArchive.</source>
+      <translation>Das ist bereits als ZArchiv gepackt.</translation>
+    </message>
+    <message>
+      <source>This folder could not be found on disk.</source>
+      <translation>Dieser Ordner konnte nicht auf dem Datenträger gefunden werden.</translation>
+    </message>
+    <message>
+      <source>Convert %1 to ZArchive</source>
+      <translation>%1 in ZArchiv konvertieren</translation>
+    </message>
+    <message>
+      <source>ZArchive Files (*.zar)</source>
+      <translation>ZArchiv-Dateien (*.zar)</translation>
+    </message>
+    <message>
+      <source>%1 already exists. Overwrite it?</source>
+      <translation>%1 existiert bereits. Überschreiben?</translation>
+    </message>
+    <message>
+      <source>This will pack &quot;%1&quot; into a single read-only .zar archive. Depending on the size this can take a while, and the archive will temporarily need as much free disk space as the original.
+
+The original folder is left untouched until conversion succeeds, you&apos;ll be asked afterward whether to delete it.</source>
+      <translation>Dies wird &quot;%1&quot; in ein einzelnes schreibgeschütztes .zar-Archiv packen. Abhängig von der Größe kann dies eine Weile dauern und das Archiv benötigt vorübergehend so viel freien Speicherplatz wie das Original.
+
+Der Originalordner bleibt unberührt, bis die Konvertierung erfolgreich ist. Sie werden danach gefragt, ob Sie ihn löschen wollen.</translation>
+    </message>
+    <message>
+      <source>
+
+Continue?</source>
+      <translation>
+
+Fortfahren?</translation>
+    </message>
+    <message>
+      <source>Cancel</source>
+      <translation>Abbrechen</translation>
+    </message>
+    <message>
+      <source>Failed to convert to ZArchive:
+%1</source>
+      <translation>Fehler beim Konvertieren ins ZArchiv:
+%1</translation>
+    </message>
+    <message>
+      <source>Conversion finished. Delete the original folder now to free up disk space?
+
+%1</source>
+      <translation>Konvertierung abgeschlossen. Soll der ursprüngliche Ordner gelöscht werden, um Speicherplatz freizugeben?
+
+%1</translation>
+    </message>
+    <message>
+      <source>The archive was created, but the original folder could not be fully deleted. You can remove it manually.</source>
+      <translation>Das Archiv wurde erstellt, aber der ursprüngliche Ordner konnte nicht vollständig gelöscht werden. Es kann manuell entfernt werden.</translation>
+    </message>
+    <message>
+      <source>Packing: %1</source>
+      <translation>Packe: %1</translation>
+    </message>
+    <message>
+      <source>
+
+This game has a separate update/patch folder. Only the base game will be archived; the update/patch folder will not be included and will be left as-is. Use &quot;Convert Update to ZArchive&quot; separately if you&apos;d like to archive it too.</source>
+      <translation>
+
+Dieses Spiel hat einen separaten Update/Patch-Ordner. Nur das Basisspiel wird archiviert; der Update/Patch-Ordner wird nicht enthalten sein und bleibt unverändert. Wähle &quot;Update in ZArchiv konvertieren&quot; separat aus, wenn das Update auch archiviert werden soll.</translation>
+    </message>
+    <message>
+      <source>Convert to ZArchive</source>
+      <translation>In ZArchiv konvertieren</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -2058,7 +2144,7 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
     </message>
     <message>
       <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
-      <translation type="unfinished">bootable files (*.bin *.elf *.oelf *.zar)</translation>
+      <translation>Startfähige Datei (*.bin *.elf *.oelf *.zar)</translation>
     </message>
   </context>
   <context>

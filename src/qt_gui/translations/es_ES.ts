@@ -1315,6 +1315,92 @@ Debes introducir tus claves y guardarlas.</translation>
       <source>Add to Steam</source>
       <translation>Añadir a Steam</translation>
     </message>
+    <message>
+      <source>Zar Compression</source>
+      <translation>Compresión zar</translation>
+    </message>
+    <message>
+      <source>Compress game to zar</source>
+      <translation>Comprimir juego a zar</translation>
+    </message>
+    <message>
+      <source>Compress update to zar</source>
+      <translation>Comprimir actualización a zar</translation>
+    </message>
+    <message>
+      <source>This is already packed as a ZArchive.</source>
+      <translation>Ya está convertido a ZArchive.</translation>
+    </message>
+    <message>
+      <source>This folder could not be found on disk.</source>
+      <translation>No se ha podido encontrar esta carpeta en el disco.</translation>
+    </message>
+    <message>
+      <source>Convert %1 to ZArchive</source>
+      <translation>Convertir %1 a ZArchive</translation>
+    </message>
+    <message>
+      <source>ZArchive Files (*.zar)</source>
+      <translation>Archivos ZArchive (*.zar)</translation>
+    </message>
+    <message>
+      <source>%1 already exists. Overwrite it?</source>
+      <translation>%1 ya existe. ¿Deseas sobrescribirlo?</translation>
+    </message>
+    <message>
+      <source>This will pack &quot;%1&quot; into a single read-only .zar archive. Depending on the size this can take a while, and the archive will temporarily need as much free disk space as the original.
+
+The original folder is left untouched until conversion succeeds, you&apos;ll be asked afterward whether to delete it.</source>
+      <translation>Se va a empaquetar &quot;%1&quot; en un archivo .zar de solo lectura. Este proceso puede tardar un tiempo en función del tamaño y el archivo necesitará el mismo espacio libre en disco que el original.
+
+La carpeta original no se alterará hasta que la conversión haya terminado correctamente, entonces se te preguntará si deseas eliminarla.</translation>
+    </message>
+    <message>
+      <source>
+
+Continue?</source>
+      <translation>
+
+¿Deseas continuar?</translation>
+    </message>
+    <message>
+      <source>Cancel</source>
+      <translation>Cancelar</translation>
+    </message>
+    <message>
+      <source>Failed to convert to ZArchive:
+%1</source>
+      <translation>Error al convertir a ZArchive:
+%1</translation>
+    </message>
+    <message>
+      <source>Conversion finished. Delete the original folder now to free up disk space?
+
+%1</source>
+      <translation>Conversión terminada. ¿Deseas eliminar la carpeta original para liberar espacio?
+
+%1</translation>
+    </message>
+    <message>
+      <source>The archive was created, but the original folder could not be fully deleted. You can remove it manually.</source>
+      <translation>Se ha creado el archivo pero no se ha podido borrar la carpeta original en su totalidad. Puedes eliminarla a mano.</translation>
+    </message>
+    <message>
+      <source>Packing: %1</source>
+      <translation>Comprimiendo: %1</translation>
+    </message>
+    <message>
+      <source>
+
+This game has a separate update/patch folder. Only the base game will be archived; the update/patch folder will not be included and will be left as-is. Use &quot;Convert Update to ZArchive&quot; separately if you&apos;d like to archive it too.</source>
+      <translation>
+
+Este juego tiene una carpeta de actualizaciones/parches aparte. Solo se archivará el juego base, no se incluirá la carpeta de actualizaciones/parches y se dejará como está. Si deseas archivar esta última carpeta también, selecciona &quot;Convertir actualización a ZArchive&quot; más adelante.-</translation>
+    </message>
+    <message>
+      <source>Convert to ZArchive</source>
+      <translation>Convertir a ZArchive</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>

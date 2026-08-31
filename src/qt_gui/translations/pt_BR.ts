@@ -1315,6 +1315,90 @@ Por favor, digite suas chaves e salve-as.</translation>
       <source>Add to Steam</source>
       <translation>Adicionar ao Steam</translation>
     </message>
+    <message>
+      <source>Zar Compression</source>
+      <translation>Compressão Zar</translation>
+    </message>
+    <message>
+      <source>Compress game to zar</source>
+      <translation>Compactar jogo como zar</translation>
+    </message>
+    <message>
+      <source>Compress update to zar</source>
+      <translation>Compactar atualização como zar</translation>
+    </message>
+    <message>
+      <source>This is already packed as a ZArchive.</source>
+      <translation>Isto já está empacotado como um ZArchive.</translation>
+    </message>
+    <message>
+      <source>This folder could not be found on disk.</source>
+      <translation>Não foi possível encontrar esta pasta no disco.</translation>
+    </message>
+    <message>
+      <source>Convert %1 to ZArchive</source>
+      <translation>Converter %1 para ZArchive</translation>
+    </message>
+    <message>
+      <source>ZArchive Files (*.zar)</source>
+      <translation>Arquivos ZArchive (*.zar)</translation>
+    </message>
+    <message>
+      <source>%1 already exists. Overwrite it?</source>
+      <translation>%1 já existe. Sobrescrevê-lo?</translation>
+    </message>
+    <message>
+      <source>This will pack &quot;%1&quot; into a single read-only .zar archive. Depending on the size this can take a while, and the archive will temporarily need as much free disk space as the original.
+
+The original folder is left untouched until conversion succeeds, you&apos;ll be asked afterward whether to delete it.</source>
+      <translation>Isso compactará &quot;%1&quot; em um único arquivo .zar de somente leitura. Dependendo do tamanho, o processo pode levar algum tempo e exigirá temporariamente tanto espaço livre em disco quanto o arquivo original.
+
+A pasta original permanece inalterada até que a conversão seja concluída com sucesso; em seguida, será perguntado se deseja excluí-la.</translation>
+    </message>
+    <message>
+      <source>
+
+Continue?</source>
+      <translation>
+
+Continuar?</translation>
+    </message>
+    <message>
+      <source>Cancel</source>
+      <translation>Cancelar</translation>
+    </message>
+    <message>
+      <source>Failed to convert to ZArchive:
+%1</source>
+      <translation>Falha ao converter para ZArchive:
+%1</translation>
+    </message>
+    <message>
+      <source>Conversion finished. Delete the original folder now to free up disk space?
+
+%1</source>
+      <translation>Conversão concluída. Deseja excluir imediatamente a pasta original para liberar espaço em disco?
+
+%1</translation>
+    </message>
+    <message>
+      <source>The archive was created, but the original folder could not be fully deleted. You can remove it manually.</source>
+      <translation>O arquivamento foi criado, mas não foi possível excluir a pasta original completamente. Você pode removê-la manualmente.</translation>
+    </message>
+    <message>
+      <source>Packing: %1</source>
+      <translation>Empacotando: %1</translation>
+    </message>
+    <message>
+      <source>
+
+This game has a separate update/patch folder. Only the base game will be archived; the update/patch folder will not be included and will be left as-is. Use &quot;Convert Update to ZArchive&quot; separately if you&apos;d like to archive it too.</source>
+      <translation>Este jogo possui uma pasta separada para atualizações/patches. Apenas o jogo base será arquivado; a pasta de atualizações/patches não será incluída e permanecerá como está. Utilize &quot;Converter Atualização para ZArchive&quot; separadamente caso também deseje arquivá-la.</translation>
+    </message>
+    <message>
+      <source>Convert to ZArchive</source>
+      <translation>Converter para ZArchive</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -2125,7 +2209,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Log Filter</source>
-      <translation>Filtro do Registro</translation>
+      <translation>Filtro do Log</translation>
     </message>
     <message>
       <source>Open Log Location</source>

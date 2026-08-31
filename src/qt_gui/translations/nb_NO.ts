@@ -1315,6 +1315,92 @@ Skriv inn nøklene og lagre dem.</translation>
       <source>Add to Steam</source>
       <translation>Legg til i Steam</translation>
     </message>
+    <message>
+      <source>Zar Compression</source>
+      <translation>Zar-komprimering</translation>
+    </message>
+    <message>
+      <source>Compress game to zar</source>
+      <translation>Komprimer spill til zar</translation>
+    </message>
+    <message>
+      <source>Compress update to zar</source>
+      <translation>Komprimer oppdatering til zar</translation>
+    </message>
+    <message>
+      <source>This is already packed as a ZArchive.</source>
+      <translation>Dette er allerede pakket som en ZArchive.</translation>
+    </message>
+    <message>
+      <source>This folder could not be found on disk.</source>
+      <translation>Klarte ikke finne mappa på disk.</translation>
+    </message>
+    <message>
+      <source>Convert %1 to ZArchive</source>
+      <translation>Konverter %1 til ZArchive</translation>
+    </message>
+    <message>
+      <source>ZArchive Files (*.zar)</source>
+      <translation>ZAarchive-filer (*.zar)</translation>
+    </message>
+    <message>
+      <source>%1 already exists. Overwrite it?</source>
+      <translation>%1 finnes allerede. Overskriv den?</translation>
+    </message>
+    <message>
+      <source>This will pack &quot;%1&quot; into a single read-only .zar archive. Depending on the size this can take a while, and the archive will temporarily need as much free disk space as the original.
+
+The original folder is left untouched until conversion succeeds, you&apos;ll be asked afterward whether to delete it.</source>
+      <translation>Dette vil pakke «%1» til en enkel skrivebeskyttet .zar-arkiv. Avhengig av størrelsen kan dette ta en stund, og arkivet vil midlertidig kreve like mye ledig diskplass som originalen.
+
+Opphavsmappa vil være urørt fremtil fullførelse, du blir spurt etterpå om du vil slette mappa.</translation>
+    </message>
+    <message>
+      <source>
+
+Continue?</source>
+      <translation>
+
+Fortsett?</translation>
+    </message>
+    <message>
+      <source>Cancel</source>
+      <translation>Avbryt</translation>
+    </message>
+    <message>
+      <source>Failed to convert to ZArchive:
+%1</source>
+      <translation>Klarte ikke konvertere til ZArchive:
+%1</translation>
+    </message>
+    <message>
+      <source>Conversion finished. Delete the original folder now to free up disk space?
+
+%1</source>
+      <translation>Konvertering fullført. Slett opphavsmappa nå for å frigjøre diskplass?
+
+%1</translation>
+    </message>
+    <message>
+      <source>The archive was created, but the original folder could not be fully deleted. You can remove it manually.</source>
+      <translation>Arkivet ble opprettet, men opphavsmappa kunne ikke slettes. Du kan fjerne den manuelt.</translation>
+    </message>
+    <message>
+      <source>Packing: %1</source>
+      <translation>Pakker: %1</translation>
+    </message>
+    <message>
+      <source>
+
+This game has a separate update/patch folder. Only the base game will be archived; the update/patch folder will not be included and will be left as-is. Use &quot;Convert Update to ZArchive&quot; separately if you&apos;d like to archive it too.</source>
+      <translation>
+
+Dette spillet har en separat oppdatering/rettelse-mappe. Kun spillet kan arkiveres; oppdatering/ rettelse-mappe inkluderes ikke og blir værende. Bruk «Komprimer oppdatering til zar» for seg, hvis du ønsker å arkivere den også.</translation>
+    </message>
+    <message>
+      <source>Convert to ZArchive</source>
+      <translation>Konverter til ZArchive</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>

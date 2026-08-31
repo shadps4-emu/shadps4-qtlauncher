@@ -1315,6 +1315,90 @@ Please enter your keys and save them.</source>
       <source>Add to Steam</source>
       <translation>Додати до Steam</translation>
     </message>
+    <message>
+      <source>Zar Compression</source>
+      <translation>Стиснення Zar</translation>
+    </message>
+    <message>
+      <source>Compress game to zar</source>
+      <translation>Стиснути гру в zar</translation>
+    </message>
+    <message>
+      <source>Compress update to zar</source>
+      <translation>Стиснути оновлення до zar</translation>
+    </message>
+    <message>
+      <source>This is already packed as a ZArchive.</source>
+      <translation>Цей файл уже стиснуто як ZArchive.</translation>
+    </message>
+    <message>
+      <source>This folder could not be found on disk.</source>
+      <translation>Цю теку не знайдено на диску.</translation>
+    </message>
+    <message>
+      <source>Convert %1 to ZArchive</source>
+      <translation>Конвертувати %1 в ZArchive</translation>
+    </message>
+    <message>
+      <source>ZArchive Files (*.zar)</source>
+      <translation>Файли ZArchive (*.zar)</translation>
+    </message>
+    <message>
+      <source>%1 already exists. Overwrite it?</source>
+      <translation>%1 вже існує. Перезаписати його?</translation>
+    </message>
+    <message>
+      <source>This will pack &quot;%1&quot; into a single read-only .zar archive. Depending on the size this can take a while, and the archive will temporarily need as much free disk space as the original.
+
+The original folder is left untouched until conversion succeeds, you&apos;ll be asked afterward whether to delete it.</source>
+      <translation>Це запакує «%1» в один архів .zar лише для читання. Залежно від розміру це може зайняти певний час, а для створення архіву тимчасово знадобиться стільки ж вільного місця на диску, скільки займає оригінал.</translation>
+    </message>
+    <message>
+      <source>
+
+Continue?</source>
+      <translation>
+
+Продовжити?</translation>
+    </message>
+    <message>
+      <source>Cancel</source>
+      <translation>Скасувати</translation>
+    </message>
+    <message>
+      <source>Failed to convert to ZArchive:
+%1</source>
+      <translation>Не вдалося конвертувати в ZArchive:
+%1</translation>
+    </message>
+    <message>
+      <source>Conversion finished. Delete the original folder now to free up disk space?
+
+%1</source>
+      <translation>Конвертацію завершено. Видалити вихідну теку зараз, щоб звільнити місце на диску?
+
+%1</translation>
+    </message>
+    <message>
+      <source>The archive was created, but the original folder could not be fully deleted. You can remove it manually.</source>
+      <translation>Архів було створено, але вихідну теку не вдалося повністю видалити. Ви можете видалити її вручну.</translation>
+    </message>
+    <message>
+      <source>Packing: %1</source>
+      <translation>Пакування: %1</translation>
+    </message>
+    <message>
+      <source>
+
+This game has a separate update/patch folder. Only the base game will be archived; the update/patch folder will not be included and will be left as-is. Use &quot;Convert Update to ZArchive&quot; separately if you&apos;d like to archive it too.</source>
+      <translation>
+
+Ця гра має окрему теку для оновлень/виправлень. Буде архівовано лише базову гру; теку з оновленнями/виправленнями не буде включено і залишиться без змін. Скористайтеся функцією «Конвертувати оновлення в ZArchive» окремо, якщо ви також хочете її архівувати.</translation>
+    </message>
+    <message>
+      <source>Convert to ZArchive</source>
+      <translation>Конвертувати в ZArchive</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
@@ -2059,7 +2143,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
-      <translation type="unfinished">bootable files (*.bin *.elf *.oelf *.zar)</translation>
+      <translation>завантажувальні файли (*.bin *.elf *.oelf *.zar)</translation>
     </message>
   </context>
   <context>

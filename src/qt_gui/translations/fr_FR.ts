@@ -1315,6 +1315,92 @@ Veuillez entrer vos clés et les sauvegarder.</translation>
       <source>Add to Steam</source>
       <translation type="unfinished">Add to Steam</translation>
     </message>
+    <message>
+      <source>Zar Compression</source>
+      <translation type="unfinished">Zar Compression</translation>
+    </message>
+    <message>
+      <source>Compress game to zar</source>
+      <translation type="unfinished">Compress game to zar</translation>
+    </message>
+    <message>
+      <source>Compress update to zar</source>
+      <translation type="unfinished">Compress update to zar</translation>
+    </message>
+    <message>
+      <source>This is already packed as a ZArchive.</source>
+      <translation type="unfinished">This is already packed as a ZArchive.</translation>
+    </message>
+    <message>
+      <source>This folder could not be found on disk.</source>
+      <translation type="unfinished">This folder could not be found on disk.</translation>
+    </message>
+    <message>
+      <source>Convert %1 to ZArchive</source>
+      <translation type="unfinished">Convert %1 to ZArchive</translation>
+    </message>
+    <message>
+      <source>ZArchive Files (*.zar)</source>
+      <translation type="unfinished">ZArchive Files (*.zar)</translation>
+    </message>
+    <message>
+      <source>%1 already exists. Overwrite it?</source>
+      <translation type="unfinished">%1 already exists. Overwrite it?</translation>
+    </message>
+    <message>
+      <source>This will pack &quot;%1&quot; into a single read-only .zar archive. Depending on the size this can take a while, and the archive will temporarily need as much free disk space as the original.
+
+The original folder is left untouched until conversion succeeds, you&apos;ll be asked afterward whether to delete it.</source>
+      <translation type="unfinished">This will pack &quot;%1&quot; into a single read-only .zar archive. Depending on the size this can take a while, and the archive will temporarily need as much free disk space as the original.
+
+The original folder is left untouched until conversion succeeds, you&apos;ll be asked afterward whether to delete it.</translation>
+    </message>
+    <message>
+      <source>
+
+Continue?</source>
+      <translation type="unfinished">
+
+Continue?</translation>
+    </message>
+    <message>
+      <source>Cancel</source>
+      <translation type="unfinished">Cancel</translation>
+    </message>
+    <message>
+      <source>Failed to convert to ZArchive:
+%1</source>
+      <translation type="unfinished">Failed to convert to ZArchive:
+%1</translation>
+    </message>
+    <message>
+      <source>Conversion finished. Delete the original folder now to free up disk space?
+
+%1</source>
+      <translation type="unfinished">Conversion finished. Delete the original folder now to free up disk space?
+
+%1</translation>
+    </message>
+    <message>
+      <source>The archive was created, but the original folder could not be fully deleted. You can remove it manually.</source>
+      <translation type="unfinished">The archive was created, but the original folder could not be fully deleted. You can remove it manually.</translation>
+    </message>
+    <message>
+      <source>Packing: %1</source>
+      <translation type="unfinished">Packing: %1</translation>
+    </message>
+    <message>
+      <source>
+
+This game has a separate update/patch folder. Only the base game will be archived; the update/patch folder will not be included and will be left as-is. Use &quot;Convert Update to ZArchive&quot; separately if you&apos;d like to archive it too.</source>
+      <translation type="unfinished">
+
+This game has a separate update/patch folder. Only the base game will be archived; the update/patch folder will not be included and will be left as-is. Use &quot;Convert Update to ZArchive&quot; separately if you&apos;d like to archive it too.</translation>
+    </message>
+    <message>
+      <source>Convert to ZArchive</source>
+      <translation type="unfinished">Convert to ZArchive</translation>
+    </message>
   </context>
   <context>
     <name>HelpDialog</name>
