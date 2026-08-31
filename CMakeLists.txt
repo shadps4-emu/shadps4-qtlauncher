@@ -299,6 +299,7 @@ set(QT_GUI src/qt_gui/about_dialog.cpp
            src/qt_gui/background_music_player.h
            src/qt_gui/cheats_patches.cpp
            src/qt_gui/cheats_patches.h
+           src/qt_gui/cheats_patches.ui
            src/qt_gui/compatibility_info.cpp
            src/qt_gui/compatibility_info.h
            src/qt_gui/control_settings.cpp
