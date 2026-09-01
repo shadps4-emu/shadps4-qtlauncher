@@ -67,11 +67,8 @@
       </item>
       <item>
        <widget class="QLabel" name="gameNameLabel">
-        <property name="toolTip">
-         <string notr="true"/>
-        </property>
         <property name="text">
-         <string>Game Name</string>
+         <string notr="true">Game Name</string>
         </property>
         <property name="wordWrap">
          <bool>true</bool>
