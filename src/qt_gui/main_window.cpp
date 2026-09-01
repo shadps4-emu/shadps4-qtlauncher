@@ -1039,34 +1039,33 @@ void MainWindow::StartGame() {
     StartGameWithArgs({});
 }
 
-bool isTable;
 void MainWindow::SearchGameTable(const QString& text) {
     if (isTableList) {
-        if (isTable != true) {
-            m_game_info->m_games = m_game_info->m_games_backup;
-            m_game_list_frame->PopulateGameList();
-            isTable = true;
-        }
-        for (int row = 0; row < m_game_list_frame->rowCount(); row++) {
-            QString game_name = QString::fromStdString(m_game_info->m_games[row].name);
-            bool match = (game_name.contains(text, Qt::CaseInsensitive)); // Check only in column 1
+        const int rowCount = m_game_list_frame->rowCount();
+
+        for (int row = 0; row < rowCount; ++row) {
+            const auto& game = m_game_info->m_games[row];
+            const bool match =
+                QString::fromStdString(game.name).contains(text, Qt::CaseInsensitive);
+
             m_game_list_frame->setRowHidden(row, !match);
         }
     } else {
-        isTable = false;
-        m_game_info->m_games = m_game_info->m_games_backup;
-        m_game_grid_frame->PopulateGameGrid(m_game_info->m_games, false);
+        const auto& games = m_game_info->m_games_backup;
 
         QVector<GameInfo> filteredGames;
-        for (const auto& gameInfo : m_game_info->m_games) {
-            QString game_name = QString::fromStdString(gameInfo.name);
-            if (game_name.contains(text, Qt::CaseInsensitive)) {
+        filteredGames.reserve(games.size());
+
+        for (const auto& gameInfo : games) {
+            const QString gameName = QString::fromStdString(gameInfo.name);
+
+            if (gameName.contains(text, Qt::CaseInsensitive)) {
                 filteredGames.push_back(gameInfo);
             }
         }
-        std::sort(filteredGames.begin(), filteredGames.end(), m_game_info->CompareStrings);
-        m_game_info->m_games = filteredGames;
-        m_game_grid_frame->PopulateGameGrid(filteredGames, true);
+
+        m_game_info->m_games = std::move(filteredGames);
+        m_game_grid_frame->PopulateGameGrid(m_game_info->m_games, true);
     }
 }
 
