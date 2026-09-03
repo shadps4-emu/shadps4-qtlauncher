@@ -2091,9 +2091,9 @@ This game has a separate update/patch folder. Only the base game will be archive
       <source>No emulator version was selected.
 The Version Manager menu will then open.
 Select an emulator version from the right panel.</source>
-      <translation type="unfinished">No emulator version was selected.
-The Version Manager menu will then open.
-Select an emulator version from the right panel.</translation>
+      <translation>エミュレータのバージョンが選択されていません。
+バージョン管理メニューが開きます。
+右側のパネルからエミュレータのバージョンを選択してください。</translation>
     </message>
     <message>
       <source>Could not find the emulator executable</source>
