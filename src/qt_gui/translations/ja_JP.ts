@@ -1313,7 +1313,7 @@ Please enter your keys and save them.</translation>
     </message>
     <message>
       <source>Add to Steam</source>
-      <translation type="unfinished">Add to Steam</translation>
+      <translation>Steam に追加</translation>
     </message>
     <message>
       <source>Zar Compression</source>
@@ -1445,7 +1445,7 @@ This game has a separate update/patch folder. Only the base game will be archive
     </message>
     <message>
       <source>Reload Button Mappings</source>
-      <translation type="unfinished">Reload Button Mappings</translation>
+      <translation>ボタンマッピングの再読み込み</translation>
     </message>
     <message>
       <source>Toggle Fullscreen</source>
@@ -1505,11 +1505,11 @@ This game has a separate update/patch folder. Only the base game will be archive
     </message>
     <message>
       <source>Volume Up</source>
-      <translation type="unfinished">Volume Up</translation>
+      <translation>音量を上げる</translation>
     </message>
     <message>
       <source>Volume Down</source>
-      <translation type="unfinished">Volume Down</translation>
+      <translation>音量を下げる</translation>
     </message>
     <message>
       <source>Hotkeys</source>
@@ -1521,7 +1521,7 @@ This game has a separate update/patch folder. Only the base game will be archive
     </message>
     <message>
       <source>Capture Screenshot</source>
-      <translation type="unfinished">Capture Screenshot</translation>
+      <translation>スクリーンショットを撮影</translation>
     </message>
     <message>
       <source>Capture Screenshot w/ Overlays</source>
@@ -1529,7 +1529,7 @@ This game has a separate update/patch folder. Only the base game will be archive
     </message>
     <message>
       <source>Open Emulator Settings</source>
-      <translation type="unfinished">Open Emulator Settings</translation>
+      <translation>エミュレーターの設定を開く</translation>
     </message>
   </context>
   <context>
@@ -2081,7 +2081,7 @@ This game has a separate update/patch folder. Only the base game will be archive
     </message>
     <message>
       <source>Version Manager</source>
-      <translation type="unfinished">Version Manager</translation>
+      <translation>バージョンマネージャー</translation>
     </message>
     <message>
       <source>No Version Selected</source>
@@ -2097,7 +2097,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation type="unfinished">Could not find the emulator executable</translation>
+      <translation>エミュレータの実行ファイルが見つかりませんでした</translation>
     </message>
     <message>
       <source>Run Emulator</source>
@@ -2141,11 +2141,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Manage Users</source>
-      <translation type="unfinished">Manage Users</translation>
+      <translation>ユーザーの管理</translation>
     </message>
     <message>
       <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
-      <translation type="unfinished">bootable files (*.bin *.elf *.oelf *.zar)</translation>
+      <translation>ブート可能ファイル (*.bin *.elf *.oelf *.zar)</translation>
     </message>
   </context>
   <context>
@@ -3055,11 +3055,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable shadNet</source>
-      <translation type="unfinished">Enable shadNet</translation>
+      <translation>ShadNet を有効にする</translation>
     </message>
     <message>
       <source>ShadNet</source>
-      <translation type="unfinished">ShadNet</translation>
+      <translation>ShadNet</translation>
     </message>
     <message>
       <source>Server</source>
@@ -3117,7 +3117,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>%1 is already in your Steam library.</source>
-      <translation type="unfinished">%1 is already in your Steam library.</translation>
+      <translation>%1 は既に Steam ライブラリにあります。</translation>
     </message>
     <message>
       <source>Error</source>
@@ -3195,31 +3195,31 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>&amp;Create User</source>
-      <translation type="unfinished">&amp;Create User</translation>
+      <translation>&amp;ユーザーを作成</translation>
     </message>
     <message>
       <source>&amp;Delete User</source>
-      <translation type="unfinished">&amp;Delete User</translation>
+      <translation>&amp;ユーザーを削除</translation>
     </message>
     <message>
       <source>&amp;Rename User</source>
-      <translation type="unfinished">&amp;Rename User</translation>
+      <translation>&amp;ユーザー名を変更</translation>
     </message>
     <message>
       <source>&amp;Set Default User</source>
-      <translation type="unfinished">&amp;Set Default User</translation>
+      <translation>&amp;デフォルトのユーザーを設定</translation>
     </message>
     <message>
       <source>&amp;Set Color</source>
-      <translation type="unfinished">&amp;Set Color</translation>
+      <translation>&amp;色を設定</translation>
     </message>
     <message>
       <source>&amp;Set Controller Port</source>
-      <translation type="unfinished">&amp;Set Controller Port</translation>
+      <translation>&amp;コントローラーのポートを設定</translation>
     </message>
     <message>
       <source>&amp;Close</source>
-      <translation type="unfinished">&amp;Close</translation>
+      <translation>&amp;閉じる</translation>
     </message>
     <message>
       <source>Error</source>
@@ -3227,27 +3227,27 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Cannot add more users.</source>
-      <translation type="unfinished">Cannot add more users.</translation>
+      <translation>これ以上ユーザーを追加することはできません。</translation>
     </message>
     <message>
       <source>Create New User</source>
-      <translation type="unfinished">Create New User</translation>
+      <translation>新しいユーザーを作成</translation>
     </message>
     <message>
       <source>New User ID: %1</source>
-      <translation type="unfinished">New User ID: %1</translation>
+      <translation>新しいユーザーID: %1</translation>
     </message>
     <message>
       <source>Username (3–16 chars, letters, numbers, _, -)</source>
-      <translation type="unfinished">Username (3–16 chars, letters, numbers, _, -)</translation>
+      <translation>ユーザー名 (3～16文字、文字、数字、_, -)</translation>
     </message>
     <message>
       <source>Invalid Username</source>
-      <translation type="unfinished">Invalid Username</translation>
+      <translation>無効なユーザー名です</translation>
     </message>
     <message>
       <source>Username must be 3–16 chars and valid.</source>
-      <translation type="unfinished">Username must be 3–16 chars and valid.</translation>
+      <translation>ユーザー名は3～16文字で、有効なものである必要があります。</translation>
     </message>
     <message>
       <source>Delete Confirmation</source>
@@ -3255,83 +3255,83 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Delete user ID %1?</source>
-      <translation type="unfinished">Delete user ID %1?</translation>
+      <translation>ユーザーID %1 を削除してもよろしいですか？</translation>
     </message>
     <message>
       <source>Rename User</source>
-      <translation type="unfinished">Rename User</translation>
+      <translation>ユーザー名を変更</translation>
     </message>
     <message>
       <source>Old Username: %1</source>
-      <translation type="unfinished">Old Username: %1</translation>
+      <translation>古いユーザー名: %1</translation>
     </message>
     <message>
       <source>Set User Color</source>
-      <translation type="unfinished">Set User Color</translation>
+      <translation>ユーザーの色を設定</translation>
     </message>
     <message>
       <source>Select color:</source>
-      <translation type="unfinished">Select color:</translation>
+      <translation>色を選択：</translation>
     </message>
     <message>
       <source>Set Controller Port</source>
-      <translation type="unfinished">Set Controller Port</translation>
+      <translation>コントローラーのポートを設定</translation>
     </message>
     <message>
       <source>Assign port (1-4) to this user:</source>
-      <translation type="unfinished">Assign port (1-4) to this user:</translation>
+      <translation>このユーザーにポート (1-4) を割り当てる：</translation>
     </message>
     <message>
       <source>&amp;Open User Directory</source>
-      <translation type="unfinished">&amp;Open User Directory</translation>
+      <translation>&amp;ユーザーディレクトリを開く</translation>
     </message>
     <message>
       <source>Shad&amp;Net...</source>
-      <translation type="unfinished">Shad&amp;Net...</translation>
+      <translation>Shad&amp;Net…</translation>
     </message>
     <message>
       <source>On</source>
-      <translation type="unfinished">On</translation>
+      <translation>オン</translation>
     </message>
     <message>
       <source>On (%1)</source>
-      <translation type="unfinished">On (%1)</translation>
+      <translation>オン (%1)</translation>
     </message>
     <message>
       <source>Off</source>
-      <translation type="unfinished">Off</translation>
+      <translation>オフ</translation>
     </message>
     <message>
       <source>ShadNet Settings - %1</source>
-      <translation type="unfinished">ShadNet Settings - %1</translation>
+      <translation>ShadNet 設定 - %1</translation>
     </message>
     <message>
       <source>Enable ShadNet for this user</source>
-      <translation type="unfinished">Enable ShadNet for this user</translation>
+      <translation>このユーザーで ShadNet を有効にする</translation>
     </message>
     <message>
       <source>Account ID (NPID)</source>
-      <translation type="unfinished">Account ID (NPID)</translation>
+      <translation>アカウント ID (NPID)</translation>
     </message>
     <message>
       <source>Password</source>
-      <translation type="unfinished">Password</translation>
+      <translation>パスワード</translation>
     </message>
     <message>
       <source>Show password</source>
-      <translation type="unfinished">Show password</translation>
+      <translation>パスワードを表示</translation>
     </message>
     <message>
       <source>Account ID (NPID):</source>
-      <translation type="unfinished">Account ID (NPID):</translation>
+      <translation>アカウント ID (NPID)：</translation>
     </message>
     <message>
       <source>Password:</source>
-      <translation type="unfinished">Password:</translation>
+      <translation>パスワード：</translation>
     </message>
     <message>
       <source>Shad&amp;Net Settings...</source>
-      <translation type="unfinished">Shad&amp;Net Settings...</translation>
+      <translation>Shad&amp;Net の設定…</translation>
     </message>
   </context>
   <context>
@@ -3342,7 +3342,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Path to save versions</source>
-      <translation type="unfinished">Path to save versions</translation>
+      <translation>バージョンを保存するパス</translation>
     </message>
     <message>
       <source>Browse</source>
@@ -3350,7 +3350,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Installed</source>
-      <translation type="unfinished">Installed</translation>
+      <translation>インストール済み</translation>
     </message>
     <message>
       <source>Selected</source>
@@ -3370,39 +3370,39 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Add Custom</source>
-      <translation type="unfinished">Add Custom</translation>
+      <translation>カスタムを追加</translation>
     </message>
     <message>
       <source>Delete</source>
-      <translation type="unfinished">Delete</translation>
+      <translation>削除</translation>
     </message>
     <message>
       <source>Refresh List</source>
-      <translation type="unfinished">Refresh List</translation>
+      <translation>リストの更新</translation>
     </message>
     <message>
       <source>Download</source>
-      <translation type="unfinished">Download</translation>
+      <translation>ダウンロード</translation>
     </message>
     <message>
       <source>Check for Pre-release updates at startup</source>
-      <translation type="unfinished">Check for Pre-release updates at startup</translation>
+      <translation>起動時にプレリリースの更新を確認</translation>
     </message>
     <message>
       <source>Check for Pre-release Updates</source>
-      <translation type="unfinished">Check for Pre-release Updates</translation>
+      <translation>プレリリースの更新を確認</translation>
     </message>
     <message>
       <source>Select the folder where the emulator versions will be installed</source>
-      <translation type="unfinished">Select the folder where the emulator versions will be installed</translation>
+      <translation>エミュレーターの各バージョンをインストールするフォルダーを選択</translation>
     </message>
     <message>
       <source>Select executable</source>
-      <translation type="unfinished">Select executable</translation>
+      <translation>実行ファイルを選択</translation>
     </message>
     <message>
       <source>Executable (*.exe)</source>
-      <translation type="unfinished">Executable (*.exe)</translation>
+      <translation>実行可能ファイル (*.exe)</translation>
     </message>
     <message>
       <source>Version name</source>
@@ -3422,7 +3422,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Version added successfully.</source>
-      <translation type="unfinished">Version added successfully.</translation>
+      <translation>バージョンが正常に追加されました。</translation>
     </message>
     <message>
       <source>Failed to determine the folder path.</source>
@@ -3430,7 +3430,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Delete version</source>
-      <translation type="unfinished">Delete version</translation>
+      <translation>バージョンを削除</translation>
     </message>
     <message>
       <source>Do you want to delete the version</source>
@@ -3455,8 +3455,7 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>First you need to choose a location to save the versions in
 &apos;Path to save versions&apos;</source>
-      <translation type="unfinished">First you need to choose a location to save the versions in
-&apos;Path to save versions&apos;</translation>
+      <translation>最初に &apos;バージョンを保存するパス&apos; でバージョンを保存する場所を選択する必要があります。</translation>
     </message>
     <message>
       <source>Do you want to download the version</source>
@@ -3476,7 +3475,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Version %1 has been downloaded and selected.</source>
-      <translation type="unfinished">Version %1 has been downloaded and selected.</translation>
+      <translation>バージョン %1 はダウンロードされ、選択されました。</translation>
     </message>
     <message>
       <source>Failed to create zip extraction script</source>
@@ -3492,7 +3491,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>You already have the latest pre-release version.</source>
-      <translation type="unfinished">You already have the latest pre-release version.</translation>
+      <translation>既に最新のプレリリースバージョンがインストールされています。</translation>
     </message>
     <message>
       <source>Update Available (Emulator)</source>
@@ -3564,11 +3563,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>No version selected. Please choose one from the list to delete.</source>
-      <translation type="unfinished">No version selected. Please choose one from the list to delete.</translation>
+      <translation>削除するバージョンが選択されていません。リストから削除するバージョンを選択してください。</translation>
     </message>
     <message>
       <source>Confirm Download</source>
-      <translation type="unfinished">Confirm Download</translation>
+      <translation>ダウンロードの確認</translation>
     </message>
     <message>
       <source>Extraction failure.</source>
@@ -3596,7 +3595,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Downloading Pre-release (Nightly), please wait...</source>
-      <translation type="unfinished">Downloading Pre-release (Nightly), please wait...</translation>
+      <translation>プレリリース (Nightly) をダウンロードしています。お待ちください...</translation>
     </message>
   </context>
   <context>
