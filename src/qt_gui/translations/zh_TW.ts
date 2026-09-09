@@ -3075,7 +3075,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Red Zone Protection</source>
-      <translation>紅色區域保護</translation>
+      <translation>紅色高風險區域保護措施</translation>
     </message>
     <message>
       <source>Static Patching</source>
