@@ -54,6 +54,8 @@ private Q_SLOTS:
     void HandleResize(QResizeEvent* event);
     void OnLanguageChanged(const QString& locale);
     void toggleLabelsUnderIcons();
+    void SetCustomBackgroundImage();
+    void ClearCustomBackgroundImage();
 
 private:
     Ui_MainWindow* ui;

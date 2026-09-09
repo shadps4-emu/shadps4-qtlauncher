@@ -21,6 +21,7 @@
 #include "core/emulator_state.h"
 #include "core/file_sys/game_backend.h"
 #include "crypto_key_dialog.h"
+#include "custom_background_provider.h"
 #include "dimensions_dialog.h"
 #include "game_install_dialog.h"
 #include "hotkeys.h"
@@ -469,6 +470,10 @@ void MainWindow::CreateConnects() {
     connect(ui->showGameListAct, &QAction::triggered, this, &MainWindow::ShowGameList);
     connect(ui->toggleLabelsAct, &QAction::toggled, this, &MainWindow::toggleLabelsUnderIcons);
     connect(ui->fullscreenButton, &QPushButton::clicked, this, &MainWindow::toggleFullscreen);
+    connect(ui->setCustomBackgroundImageAct, &QAction::triggered, this,
+            &MainWindow::SetCustomBackgroundImage);
+    connect(ui->clearCustomBackgroundImageAct, &QAction::triggered, this,
+            &MainWindow::ClearCustomBackgroundImage);
 
     connect(ui->showLogAct, &QAction::triggered, this, [this](bool state) {
         if (state) {
@@ -1113,6 +1118,46 @@ void MainWindow::ConfigureGuiFromSettings() {
 
     BackgroundMusicPlayer::getInstance().setVolume(
         m_gui_settings->GetValue(gui::gl_backgroundMusicVolume).toInt());
+
+    const QString customBackgroundPath =
+        m_gui_settings->GetValue(gui::gl_customBackgroundImagePath).toString();
+    if (!customBackgroundPath.isEmpty() &&
+        !CustomBackgroundProvider::getInstance().SetImagePath(customBackgroundPath)) {
+        // The stored image can no longer be loaded (e.g. it was moved or
+        // deleted); forget it instead of silently failing on every startup.
+        m_gui_settings->SetValue(gui::gl_customBackgroundImagePath, QString(""));
+    }
+    ui->clearCustomBackgroundImageAct->setEnabled(CustomBackgroundProvider::getInstance().IsSet());
+}
+
+void MainWindow::SetCustomBackgroundImage() {
+    QFileDialog dialog;
+    dialog.setFileMode(QFileDialog::ExistingFile);
+    dialog.setNameFilter(tr("Image Files (*.png *.jpg *.jpeg *.bmp *.gif)"));
+    if (!dialog.exec()) {
+        return;
+    }
+
+    const QStringList fileNames = dialog.selectedFiles();
+    if (fileNames.isEmpty()) {
+        return;
+    }
+
+    const QString path = fileNames.first();
+    if (!CustomBackgroundProvider::getInstance().SetImagePath(path)) {
+        QMessageBox::critical(this, tr("Custom Background Image"),
+                              tr("Could not load the selected image."));
+        return;
+    }
+
+    m_gui_settings->SetValue(gui::gl_customBackgroundImagePath, path);
+    ui->clearCustomBackgroundImageAct->setEnabled(true);
+}
+
+void MainWindow::ClearCustomBackgroundImage() {
+    CustomBackgroundProvider::getInstance().Clear();
+    m_gui_settings->SetValue(gui::gl_customBackgroundImagePath, QString(""));
+    ui->clearCustomBackgroundImageAct->setEnabled(false);
 }
 
 void MainWindow::SaveWindowState() {

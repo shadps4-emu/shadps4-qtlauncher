@@ -25,6 +25,8 @@ public:
     QAction* setIconSizeMediumAct;
     QAction* setIconSizeLargeAct;
     QAction* toggleLabelsAct;
+    QAction* setCustomBackgroundImageAct;
+    QAction* clearCustomBackgroundImageAct;
     QAction* setlistModeListAct;
     QAction* setlistModeGridAct;
     QAction* setlistElfAct;
@@ -122,6 +124,13 @@ public:
 
         toggleLabelsAct = new QAction(MainWindow);
         toggleLabelsAct->setObjectName("toggleLabelsAct");
+
+        setCustomBackgroundImageAct = new QAction(MainWindow);
+        setCustomBackgroundImageAct->setObjectName("setCustomBackgroundImageAct");
+
+        clearCustomBackgroundImageAct = new QAction(MainWindow);
+        clearCustomBackgroundImageAct->setObjectName("clearCustomBackgroundImageAct");
+        clearCustomBackgroundImageAct->setEnabled(false);
         toggleLabelsAct->setCheckable(true);
 
         setIconSizeTinyAct = new QAction(MainWindow);
@@ -347,6 +356,9 @@ public:
         menuView->addAction(menuGame_List_Mode->menuAction());
         menuView->addAction(menuGame_List_Icons->menuAction());
         menuView->addAction(toggleLabelsAct);
+        menuView->addSeparator();
+        menuView->addAction(setCustomBackgroundImageAct);
+        menuView->addAction(clearCustomBackgroundImageAct);
         menuView->addAction(menuThemes->menuAction());
         menuThemes->addAction(setThemeDark);
         menuThemes->addAction(setThemeLight);
@@ -470,6 +482,10 @@ public:
         toolBar->setWindowTitle(QCoreApplication::translate("MainWindow", "toolBar", nullptr));
         toggleLabelsAct->setText(
             QCoreApplication::translate("MainWindow", "Show Labels Under Icons"));
+        setCustomBackgroundImageAct->setText(
+            QCoreApplication::translate("MainWindow", "Set Custom Background Image...", nullptr));
+        clearCustomBackgroundImageAct->setText(QCoreApplication::translate(
+            "MainWindow", "Clear Custom Background Image", nullptr));
     } // retranslateUi
 };
 

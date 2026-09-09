@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include "common/path_util.h"
+#include "custom_background_provider.h"
 #include "game_grid_frame.h"
 #include "main_window.h"
 #include "qt_gui/compatibility_info.h"
@@ -27,6 +28,10 @@ GameGridFrame::GameGridFrame(std::shared_ptr<gui_settings> gui_settings,
     this->verticalHeader()->setVisible(false);
     this->setContextMenuPolicy(Qt::CustomContextMenu);
     PopulateGameGrid(m_game_info->m_games, false);
+    RefreshGridBackgroundImage();
+
+    connect(&CustomBackgroundProvider::getInstance(), &CustomBackgroundProvider::FrameChanged,
+            this, &GameGridFrame::RefreshGridBackgroundImage);
 
     connect(this, &QTableWidget::currentCellChanged, this, &GameGridFrame::onCurrentCellChanged);
 
@@ -56,6 +61,7 @@ void GameGridFrame::onCurrentCellChanged(int currentRow, int currentColumn, int 
         cellClicked = false;
         validCellSelected = false;
         BackgroundMusicPlayer::getInstance().stopMusic();
+        RefreshGridBackgroundImage();
         return;
     }
 
@@ -68,6 +74,7 @@ void GameGridFrame::onCurrentCellChanged(int currentRow, int currentColumn, int 
         cellClicked = false;
         validCellSelected = false;
         BackgroundMusicPlayer::getInstance().stopMusic();
+        RefreshGridBackgroundImage();
         return;
     }
 
@@ -76,6 +83,7 @@ void GameGridFrame::onCurrentCellChanged(int currentRow, int currentColumn, int 
         cellClicked = false;
         validCellSelected = false;
         BackgroundMusicPlayer::getInstance().stopMusic();
+        RefreshGridBackgroundImage();
         return;
     }
 
@@ -221,11 +229,20 @@ void GameGridFrame::SetGridBackgroundImage(int row, int column) {
 
 void GameGridFrame::RefreshGridBackgroundImage() {
     QPalette palette;
-    if (!backgroundImage.isNull() &&
-        m_gui_settings->GetValue(gui::gl_showBackgroundImage).toBool()) {
+    QImage imageToShow;
+
+    if (!validCellSelected && CustomBackgroundProvider::getInstance().IsSet()) {
+        // No game selected: show the user's custom background image instead.
+        imageToShow = CustomBackgroundProvider::getInstance().CurrentFrame();
+    } else if (!backgroundImage.isNull() &&
+               m_gui_settings->GetValue(gui::gl_showBackgroundImage).toBool()) {
+        imageToShow = backgroundImage;
+    }
+
+    if (!imageToShow.isNull()) {
         QSize widgetSize = size();
         QPixmap scaledPixmap =
-            QPixmap::fromImage(backgroundImage)
+            QPixmap::fromImage(imageToShow)
                 .scaled(widgetSize, Qt::KeepAspectRatioByExpanding, Qt::SmoothTransformation);
         int x = (widgetSize.width() - scaledPixmap.width()) / 2;
         int y = (widgetSize.height() - scaledPixmap.height()) / 2;

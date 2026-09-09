@@ -54,6 +54,7 @@ private:
     QTableWidgetItem* m_current_item = nullptr;
     int m_last_opacity = -1; // Track last opacity to avoid unnecessary recomputation
     std::filesystem::path m_current_game_path; // Track current game path to detect changes
+    bool m_hasSelection = false; // Whether a game is currently selected
     std::shared_ptr<gui_settings> m_gui_settings;
 
 public:

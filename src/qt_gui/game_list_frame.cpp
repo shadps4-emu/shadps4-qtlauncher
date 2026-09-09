@@ -4,6 +4,7 @@
 #include <QToolTip>
 #include "common/logging/log.h"
 #include "common/path_util.h"
+#include "custom_background_provider.h"
 #include "game_list_frame.h"
 #include "game_list_utils.h"
 #include "main_window.h"
@@ -56,6 +57,10 @@ GameListFrame::GameListFrame(std::shared_ptr<gui_settings> gui_settings,
     this->horizontalHeader()->setSectionResizeMode(11, QHeaderView::Stretch);
     this->setColumnHidden(11, true);
     PopulateGameList();
+    RefreshListBackgroundImage();
+
+    connect(&CustomBackgroundProvider::getInstance(), &CustomBackgroundProvider::FrameChanged,
+            this, &GameListFrame::RefreshListBackgroundImage);
 
     connect(this, &QTableWidget::currentCellChanged, this, &GameListFrame::onCurrentCellChanged);
     connect(this->verticalScrollBar(), &QScrollBar::valueChanged, this,
@@ -128,9 +133,13 @@ void GameListFrame::onCurrentCellChanged(int currentRow, int currentColumn, int 
                                          int previousColumn) {
     QTableWidgetItem* item = this->item(currentRow, currentColumn);
     if (!item) {
+        // No game selected: fall back to the custom background image, if any.
+        m_hasSelection = false;
+        RefreshListBackgroundImage();
         return;
     }
     m_current_item = item; // Store current item
+    m_hasSelection = true;
     SetListBackgroundImage(item);
     PlayBackgroundMusic(item);
 }
@@ -245,11 +254,20 @@ void GameListFrame::SetListBackgroundImage(QTableWidgetItem* item) {
 
 void GameListFrame::RefreshListBackgroundImage() {
     QPalette palette;
-    if (!backgroundImage.isNull() &&
-        m_gui_settings->GetValue(gui::gl_showBackgroundImage).toBool()) {
+    QImage imageToShow;
+
+    if (!m_hasSelection && CustomBackgroundProvider::getInstance().IsSet()) {
+        // No game selected: show the user's custom background image instead.
+        imageToShow = CustomBackgroundProvider::getInstance().CurrentFrame();
+    } else if (!backgroundImage.isNull() &&
+               m_gui_settings->GetValue(gui::gl_showBackgroundImage).toBool()) {
+        imageToShow = backgroundImage;
+    }
+
+    if (!imageToShow.isNull()) {
         QSize widgetSize = size();
         QPixmap scaledPixmap =
-            QPixmap::fromImage(backgroundImage)
+            QPixmap::fromImage(imageToShow)
                 .scaled(widgetSize, Qt::KeepAspectRatioByExpanding, Qt::SmoothTransformation);
         int x = (widgetSize.width() - scaledPixmap.width()) / 2;
         int y = (widgetSize.height() - scaledPixmap.height()) / 2;

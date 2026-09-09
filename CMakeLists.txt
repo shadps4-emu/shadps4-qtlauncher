@@ -305,6 +305,8 @@ set(QT_GUI src/qt_gui/about_dialog.cpp
            src/qt_gui/control_settings.cpp
            src/qt_gui/control_settings.h
            src/qt_gui/control_settings.ui
+           src/qt_gui/custom_background_provider.cpp
+           src/qt_gui/custom_background_provider.h
            src/qt_gui/kbm_gui.cpp	   
            src/qt_gui/kbm_gui.h
            src/qt_gui/kbm_gui.ui
