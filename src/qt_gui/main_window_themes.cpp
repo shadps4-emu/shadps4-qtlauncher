@@ -191,7 +191,16 @@ void WindowThemes::SetWindowTheme(Theme theme, QLineEdit* mw_searchbar) {
                             "border-radius: 4px; padding: 5px; }"
 
                             "QCheckBox::indicator:unchecked {"
-                            "border: 1px solid #808080; border-radius: 4px; }");
+                            "border: 1px solid #808080; border-radius: 4px; }"
+
+                            // Once a stylesheet is set anywhere in the app, Qt's CSS
+                            // style engine takes over background painting for every
+                            // widget and ignores ad-hoc setPalette() calls, including
+                            // the per-game and custom background images drawn onto
+                            // these two widgets. Explicitly deferring to the current
+                            // palette's Base brush here restores that behavior.
+                            "GameListFrame, GameGridFrame {"
+                            "background: palette(base); }");
         break;
     }
 }

@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright 2025 shadPS4 Emulator Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
+#include <algorithm>
 #include "common/path_util.h"
 #include "custom_background_provider.h"
 #include "game_grid_frame.h"
@@ -230,10 +231,12 @@ void GameGridFrame::SetGridBackgroundImage(int row, int column) {
 void GameGridFrame::RefreshGridBackgroundImage() {
     QPalette palette;
     QImage imageToShow;
+    bool isCustomBackground = false;
 
     if (!validCellSelected && CustomBackgroundProvider::getInstance().IsSet()) {
         // No game selected: show the user's custom background image instead.
         imageToShow = CustomBackgroundProvider::getInstance().CurrentFrame();
+        isCustomBackground = true;
     } else if (!backgroundImage.isNull() &&
                m_gui_settings->GetValue(gui::gl_showBackgroundImage).toBool()) {
         imageToShow = backgroundImage;
@@ -249,6 +252,11 @@ void GameGridFrame::RefreshGridBackgroundImage() {
         QPixmap finalPixmap(widgetSize);
         finalPixmap.fill(Qt::transparent);
         QPainter painter(&finalPixmap);
+        if (isCustomBackground) {
+            const int opacity =
+                m_gui_settings->GetValue(gui::gl_customBackgroundImageOpacity).toInt();
+            painter.setOpacity(std::clamp(opacity, 0, 100) / 100.0);
+        }
         painter.drawPixmap(x, y, scaledPixmap);
         palette.setBrush(QPalette::Base, QBrush(finalPixmap));
     }

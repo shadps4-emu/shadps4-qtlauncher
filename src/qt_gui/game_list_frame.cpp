@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include <QToolTip>
+#include <algorithm>
 #include "common/logging/log.h"
 #include "common/path_util.h"
 #include "custom_background_provider.h"
@@ -255,10 +256,12 @@ void GameListFrame::SetListBackgroundImage(QTableWidgetItem* item) {
 void GameListFrame::RefreshListBackgroundImage() {
     QPalette palette;
     QImage imageToShow;
+    bool isCustomBackground = false;
 
     if (!m_hasSelection && CustomBackgroundProvider::getInstance().IsSet()) {
         // No game selected: show the user's custom background image instead.
         imageToShow = CustomBackgroundProvider::getInstance().CurrentFrame();
+        isCustomBackground = true;
     } else if (!backgroundImage.isNull() &&
                m_gui_settings->GetValue(gui::gl_showBackgroundImage).toBool()) {
         imageToShow = backgroundImage;
@@ -274,6 +277,11 @@ void GameListFrame::RefreshListBackgroundImage() {
         QPixmap finalPixmap(widgetSize);
         finalPixmap.fill(Qt::transparent);
         QPainter painter(&finalPixmap);
+        if (isCustomBackground) {
+            const int opacity =
+                m_gui_settings->GetValue(gui::gl_customBackgroundImageOpacity).toInt();
+            painter.setOpacity(std::clamp(opacity, 0, 100) / 100.0);
+        }
         painter.drawPixmap(x, y, scaledPixmap);
         palette.setBrush(QPalette::Base, QBrush(finalPixmap));
     }

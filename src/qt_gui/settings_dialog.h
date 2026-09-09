@@ -38,6 +38,7 @@ signals:
     void LanguageChanged(const QString& locale);
     void CompatibilityChanged();
     void BackgroundOpacityChanged(int opacity);
+    void CustomBackgroundOpacityChanged(int opacity);
 
 private:
     void LoadValuesFromConfig();

@@ -80,6 +80,7 @@ QMap<QString, QString> micMap;
 QMap<int, QString> audioBackendMap;
 
 int backgroundImageOpacitySlider_backup;
+int customBackgroundImageOpacitySlider_backup;
 int bgm_volume_backup;
 
 static std::vector<QString> m_physical_devices;
@@ -274,6 +275,9 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         } else if (button == ui->buttonBox->button(QDialogButtonBox::Close)) {
             ui->backgroundImageOpacitySlider->setValue(backgroundImageOpacitySlider_backup);
             emit BackgroundOpacityChanged(backgroundImageOpacitySlider_backup);
+            ui->customBackgroundImageOpacitySlider->setValue(
+                customBackgroundImageOpacitySlider_backup);
+            emit CustomBackgroundOpacityChanged(customBackgroundImageOpacitySlider_backup);
             ui->BGMVolumeSlider->setValue(bgm_volume_backup);
             BackgroundMusicPlayer::getInstance().setVolume(bgm_volume_backup);
             SyncRealTimeWidgetstoConfig();
@@ -339,6 +343,9 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
     {
         connect(ui->backgroundImageOpacitySlider, &QSlider::valueChanged, this,
                 [this](int value) { emit BackgroundOpacityChanged(value); });
+
+        connect(ui->customBackgroundImageOpacitySlider, &QSlider::valueChanged, this,
+                [this](int value) { emit CustomBackgroundOpacityChanged(value); });
 
         connect(ui->BGMVolumeSlider, &QSlider::valueChanged, this,
                 [](int value) { BackgroundMusicPlayer::getInstance().setVolume(value); });
@@ -535,6 +542,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
 
         // GUI
         ui->GUIBackgroundImageGroupBox->installEventFilter(this);
+        ui->GUICustomBackgroundImageGroupBox->installEventFilter(this);
         ui->GUIMusicGroupBox->installEventFilter(this);
         ui->enableCompatibilityCheckBox->installEventFilter(this);
         ui->checkCompatibilityOnStartupCheckBox->installEventFilter(this);
@@ -622,6 +630,8 @@ void SettingsDialog::closeEvent(QCloseEvent* event) {
     if (!is_game_saving) {
         ui->backgroundImageOpacitySlider->setValue(backgroundImageOpacitySlider_backup);
         emit BackgroundOpacityChanged(backgroundImageOpacitySlider_backup);
+        ui->customBackgroundImageOpacitySlider->setValue(customBackgroundImageOpacitySlider_backup);
+        emit CustomBackgroundOpacityChanged(customBackgroundImageOpacitySlider_backup);
         ui->BGMVolumeSlider->setValue(bgm_volume_backup);
         BackgroundMusicPlayer::getInstance().setVolume(bgm_volume_backup);
         SyncRealTimeWidgetstoConfig();
@@ -693,9 +703,13 @@ void SettingsDialog::LoadValuesFromConfig() {
             m_gui_settings->GetValue(gui::gl_backgroundImageOpacity).toInt());
         ui->showBackgroundImageCheckBox->setChecked(
             m_gui_settings->GetValue(gui::gl_showBackgroundImage).toBool());
+        ui->customBackgroundImageOpacitySlider->setValue(
+            m_gui_settings->GetValue(gui::gl_customBackgroundImageOpacity).toInt());
 
         backgroundImageOpacitySlider_backup =
             m_gui_settings->GetValue(gui::gl_backgroundImageOpacity).toInt();
+        customBackgroundImageOpacitySlider_backup =
+            m_gui_settings->GetValue(gui::gl_customBackgroundImageOpacity).toInt();
         bgm_volume_backup = m_gui_settings->GetValue(gui::gl_backgroundMusicVolume).toInt();
 
 #ifdef ENABLE_UPDATER
@@ -934,6 +948,8 @@ void SettingsDialog::updateNoteTextEdit(const QString& elementName) {
 #endif
     } else if (elementName == "GUIBackgroundImageGroupBox") {
         text = tr("Background Image:\\nControl the opacity of the game background image.");
+    } else if (elementName == "GUICustomBackgroundImageGroupBox") {
+        text = tr("Custom Background Image:\\nControl the opacity of the custom background image or GIF set from the View menu.");
     } else if (elementName == "GUIMusicGroupBox") {
         text = tr("Play Title Music:\\nIf a game supports it, enable playing special music when selecting the game in the GUI.");
     } else if (elementName == "enableHDRCheckBox") {
@@ -1249,6 +1265,10 @@ void SettingsDialog::UpdateSettings(bool is_specific) {
         m_gui_settings->SetValue(gui::gl_backgroundImageOpacity,
                                  std::clamp(ui->backgroundImageOpacitySlider->value(), 0, 100));
         emit BackgroundOpacityChanged(ui->backgroundImageOpacitySlider->value());
+        m_gui_settings->SetValue(
+            gui::gl_customBackgroundImageOpacity,
+            std::clamp(ui->customBackgroundImageOpacitySlider->value(), 0, 100));
+        emit CustomBackgroundOpacityChanged(ui->customBackgroundImageOpacitySlider->value());
         m_gui_settings->SetValue(gui::gen_homeTab,
                                  chooseHomeTabMap.value(ui->chooseHomeTabComboBox->currentText()));
     }
@@ -1298,6 +1318,7 @@ void SettingsDialog::SetDefaultValues() {
     if (!is_game_specific) {
         m_gui_settings->SetValue(gui::gl_showBackgroundImage, true);
         m_gui_settings->SetValue(gui::gl_backgroundImageOpacity, 50);
+        m_gui_settings->SetValue(gui::gl_customBackgroundImageOpacity, 100);
         m_gui_settings->SetValue(gui::gl_playBackgroundMusic, false);
         m_gui_settings->SetValue(gui::gl_backgroundMusicVolume, 50);
         m_gui_settings->SetValue(gui::gen_checkForUpdates, false);

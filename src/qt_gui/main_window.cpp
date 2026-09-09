@@ -547,6 +547,18 @@ void MainWindow::CreateConnects() {
                     }
                 });
 
+        connect(settingsDialog, &SettingsDialog::CustomBackgroundOpacityChanged, this,
+                [this](int opacity) {
+                    m_gui_settings->SetValue(gui::gl_customBackgroundImageOpacity,
+                                             std::clamp(opacity, 0, 100));
+                    if (m_game_list_frame) {
+                        m_game_list_frame->RefreshListBackgroundImage();
+                    }
+                    if (m_game_grid_frame) {
+                        m_game_grid_frame->RefreshGridBackgroundImage();
+                    }
+                });
+
         settingsDialog->exec();
     });
 
@@ -579,6 +591,18 @@ void MainWindow::CreateConnects() {
                             m_game_grid_frame->SetGridBackgroundImage(m_game_grid_frame->crtRow,
                                                                       m_game_grid_frame->crtColumn);
                         }
+                    }
+                });
+
+        connect(settingsDialog, &SettingsDialog::CustomBackgroundOpacityChanged, this,
+                [this](int opacity) {
+                    m_gui_settings->SetValue(gui::gl_customBackgroundImageOpacity,
+                                             std::clamp(opacity, 0, 100));
+                    if (m_game_list_frame) {
+                        m_game_list_frame->RefreshListBackgroundImage();
+                    }
+                    if (m_game_grid_frame) {
+                        m_game_grid_frame->RefreshGridBackgroundImage();
                     }
                 });
 

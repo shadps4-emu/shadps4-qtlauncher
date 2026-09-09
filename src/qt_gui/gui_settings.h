@@ -46,6 +46,9 @@ const gui_value gl_backgroundImageOpacity = gui_value(game_list, "backgroundImag
 const gui_value gl_playBackgroundMusic = gui_value(game_list, "playBackgroundMusic", true);
 const gui_value gl_backgroundMusicVolume = gui_value(game_list, "backgroundMusicVolume", 50);
 const gui_value gl_VolumeSlider = gui_value(game_list, "volumeSlider", 100);
+// Opacity (0-100) applied to the custom background image/GIF set from the View menu.
+const gui_value gl_customBackgroundImageOpacity =
+    gui_value(game_list, "customBackgroundImageOpacity", 100);
 // Path to a user-selected custom background image (static or GIF) shown
 // when no game is selected. Empty means no custom background is set.
 const gui_value gl_customBackgroundImagePath =
