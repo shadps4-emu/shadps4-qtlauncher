@@ -343,23 +343,23 @@ void GameListFrame::SetCompatibilityItem(int row, int column, CompatibilityEntry
         status_explanation = tr("Compatibility is untested");
         break;
     case CompatibilityStatus::Nothing:
-        color = QStringLiteral("#212121");
+        color = QStringLiteral("#FB2C36");
         status_explanation = tr("Game does not initialize properly / crashes the emulator");
         break;
     case CompatibilityStatus::Boots:
-        color = QStringLiteral("#828282");
+        color = QStringLiteral("#F0B100");
         status_explanation = tr("Game boots, but only displays a blank screen");
         break;
     case CompatibilityStatus::Menus:
-        color = QStringLiteral("#FF0000");
+        color = QStringLiteral("#8E51FF");
         status_explanation = tr("Game displays an image but does not go past the menu");
         break;
     case CompatibilityStatus::Ingame:
-        color = QStringLiteral("#F2D624");
+        color = QStringLiteral("#2B7FFF");
         status_explanation = tr("Game has game-breaking glitches or unplayable performance");
         break;
     case CompatibilityStatus::Playable:
-        color = QStringLiteral("#47D35C");
+        color = QStringLiteral("#00C950");
         status_explanation =
             tr("Game can be completed with playable performance and no major glitches");
         break;
