@@ -1365,7 +1365,7 @@ Continue?</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>İptal</translation>
     </message>
     <message>
       <source>Failed to convert to ZArchive:
