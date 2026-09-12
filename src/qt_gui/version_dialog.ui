@@ -120,6 +120,9 @@
          </item>
          <item>
           <widget class="QTreeWidget" name="installedTreeWidget">
+           <property name="selectionMode">
+            <enum>QAbstractItemView::SelectionMode::ExtendedSelection</enum>
+           </property>
            <column>
             <property name="text">
              <string>Selected</string>
