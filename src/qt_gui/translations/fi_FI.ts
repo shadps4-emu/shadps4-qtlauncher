@@ -1351,55 +1351,55 @@ Syötä avaimet ja tallenna ne.</translation>
       <source>This will pack &quot;%1&quot; into a single read-only .zar archive. Depending on the size this can take a while, and the archive will temporarily need as much free disk space as the original.
 
 The original folder is left untouched until conversion succeeds, you&apos;ll be asked afterward whether to delete it.</source>
-      <translation type="unfinished">This will pack &quot;%1&quot; into a single read-only .zar archive. Depending on the size this can take a while, and the archive will temporarily need as much free disk space as the original.
+      <translation>Tämä pakkaa pelin &quot;%1&quot; yksittäiseksi vain luettavaksi ZAR-arkistoksi. Koosta riippuen toimenpide voi kestää jonkin aikaa, ja arkisto tarvitsee tilapäisesti yhtä paljon vapaata levytilaa kuin alkuperäinen kansio.
 
-The original folder is left untouched until conversion succeeds, you&apos;ll be asked afterward whether to delete it.</translation>
+Alkuperäinen kansio jätetään koskemattomaksi, kunnes muuntaminen on valmis. Sen jälkeen voit valita, poistetaanko se.</translation>
     </message>
     <message>
       <source>
 
 Continue?</source>
-      <translation type="unfinished">
+      <translation>
 
-Continue?</translation>
+Jatka?</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Peruuta</translation>
     </message>
     <message>
       <source>Failed to convert to ZArchive:
 %1</source>
-      <translation type="unfinished">Failed to convert to ZArchive:
+      <translation>ZArchiveksi muuntaminen epäonnistui:
 %1</translation>
     </message>
     <message>
       <source>Conversion finished. Delete the original folder now to free up disk space?
 
 %1</source>
-      <translation type="unfinished">Conversion finished. Delete the original folder now to free up disk space?
+      <translation>Muuntaminen valmis. Poistetaanko alkuperäinen kansio levytilan vapauttamiseksi?
 
 %1</translation>
     </message>
     <message>
       <source>The archive was created, but the original folder could not be fully deleted. You can remove it manually.</source>
-      <translation type="unfinished">The archive was created, but the original folder could not be fully deleted. You can remove it manually.</translation>
+      <translation>Arkisto luotiin, mutta alkuperäistä kansiota ei voitu täysin poistaa. Voit poistaa sen manuaalisesti.</translation>
     </message>
     <message>
       <source>Packing: %1</source>
-      <translation type="unfinished">Packing: %1</translation>
+      <translation>Pakataan: %1</translation>
     </message>
     <message>
       <source>
 
 This game has a separate update/patch folder. Only the base game will be archived; the update/patch folder will not be included and will be left as-is. Use &quot;Convert Update to ZArchive&quot; separately if you&apos;d like to archive it too.</source>
-      <translation type="unfinished">
+      <translation>
 
-This game has a separate update/patch folder. Only the base game will be archived; the update/patch folder will not be included and will be left as-is. Use &quot;Convert Update to ZArchive&quot; separately if you&apos;d like to archive it too.</translation>
+Tällä pelillä on erillinen päivitys-/paikkauskansio. Vain pohjapeli arkistoidaan; päivitys-/paikkauskansiota ei oteta mukaan ja se jätetään sikseen. Suorita &quot;Muunna päivitys ZArchiveksi&quot; erikseen, jos haluat arkistoida myös sen.</translation>
     </message>
     <message>
       <source>Convert to ZArchive</source>
-      <translation type="unfinished">Convert to ZArchive</translation>
+      <translation>Muunna ZArchiveksi</translation>
     </message>
   </context>
   <context>
@@ -2145,7 +2145,7 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
-      <translation type="unfinished">bootable files (*.bin *.elf *.oelf *.zar)</translation>
+      <translation>Käynnistettävät tiedostot (*.bin *.elf *.oelf *.zar)</translation>
     </message>
   </context>
   <context>
@@ -3083,11 +3083,11 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     </message>
     <message>
       <source>Red Zone Protection</source>
-      <translation type="unfinished">Red Zone Protection</translation>
+      <translation>Punaisen alueen suojaus</translation>
     </message>
     <message>
       <source>Static Patching</source>
-      <translation type="unfinished">Static Patching</translation>
+      <translation>Staattinen paikkaus</translation>
     </message>
   </context>
   <context>
