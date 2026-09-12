@@ -1315,89 +1315,87 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Zar Compression</source>
-      <translation type="unfinished">Zar Compression</translation>
+      <translation>Zar壓縮</translation>
     </message>
     <message>
       <source>Compress game to zar</source>
-      <translation type="unfinished">Compress game to zar</translation>
+      <translation>將遊戲壓縮成zar格式</translation>
     </message>
     <message>
       <source>Compress update to zar</source>
-      <translation type="unfinished">Compress update to zar</translation>
+      <translation>將更新檔壓縮成zar格式</translation>
     </message>
     <message>
       <source>This is already packed as a ZArchive.</source>
-      <translation type="unfinished">This is already packed as a ZArchive.</translation>
+      <translation>這個已經封裝成 ZArchive 檔案。</translation>
     </message>
     <message>
       <source>This folder could not be found on disk.</source>
-      <translation type="unfinished">This folder could not be found on disk.</translation>
+      <translation>在磁碟上找不到這個資料夾。</translation>
     </message>
     <message>
       <source>Convert %1 to ZArchive</source>
-      <translation type="unfinished">Convert %1 to ZArchive</translation>
+      <translation>將 %1 轉換成 ZArchive 檔案</translation>
     </message>
     <message>
       <source>ZArchive Files (*.zar)</source>
-      <translation type="unfinished">ZArchive Files (*.zar)</translation>
+      <translation>ZArchive檔案 (*.zar)</translation>
     </message>
     <message>
       <source>%1 already exists. Overwrite it?</source>
-      <translation type="unfinished">%1 already exists. Overwrite it?</translation>
+      <translation>已存在 %1 ，確定要覆蓋嗎？</translation>
     </message>
     <message>
       <source>This will pack &quot;%1&quot; into a single read-only .zar archive. Depending on the size this can take a while, and the archive will temporarily need as much free disk space as the original.
 
 The original folder is left untouched until conversion succeeds, you&apos;ll be asked afterward whether to delete it.</source>
-      <translation type="unfinished">This will pack &quot;%1&quot; into a single read-only .zar archive. Depending on the size this can take a while, and the archive will temporarily need as much free disk space as the original.
+      <translation>這個操作將會把&quot;%1&quot;壓縮成一個唯讀的 .zar 檔案。根據檔案大小，這個過程可能要花一些時間，檔案壓縮時會需要用到跟原始檔案一樣多的可用磁碟空間。
 
-The original folder is left untouched until conversion succeeds, you&apos;ll be asked afterward whether to delete it.</translation>
+原始資料夾在轉換成功後並不會被刪除，&apos;轉換成功後會先詢問您是否要刪除它。</translation>
     </message>
     <message>
       <source>
 
 Continue?</source>
-      <translation type="unfinished">
+      <translation>
 
-Continue?</translation>
+要繼續嗎？</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>取消</translation>
     </message>
     <message>
       <source>Failed to convert to ZArchive:
 %1</source>
-      <translation type="unfinished">Failed to convert to ZArchive:
+      <translation>無法轉換成 ZArchive 檔案：
 %1</translation>
     </message>
     <message>
       <source>Conversion finished. Delete the original folder now to free up disk space?
 
 %1</source>
-      <translation type="unfinished">Conversion finished. Delete the original folder now to free up disk space?
+      <translation>轉換完成。現在要刪除原始資料夾以釋放磁碟空間嗎？
 
 %1</translation>
     </message>
     <message>
       <source>The archive was created, but the original folder could not be fully deleted. You can remove it manually.</source>
-      <translation type="unfinished">The archive was created, but the original folder could not be fully deleted. You can remove it manually.</translation>
+      <translation>已建立封存檔，但無法徹底刪除原始資料夾。你可以手動移除它。</translation>
     </message>
     <message>
       <source>Packing: %1</source>
-      <translation type="unfinished">Packing: %1</translation>
+      <translation>正在封裝：%1</translation>
     </message>
     <message>
       <source>
 
 This game has a separate update/patch folder. Only the base game will be archived; the update/patch folder will not be included and will be left as-is. Use &quot;Convert Update to ZArchive&quot; separately if you&apos;d like to archive it too.</source>
-      <translation type="unfinished">
-
-This game has a separate update/patch folder. Only the base game will be archived; the update/patch folder will not be included and will be left as-is. Use &quot;Convert Update to ZArchive&quot; separately if you&apos;d like to archive it too.</translation>
+      <translation>這款遊戲含有獨立的更新檔/修補檔資料夾。只會封存遊戲本體，更新檔/修補檔資料夾並不會包含在內，維持原狀。如果你&apos;也想封存這種資料夾&apos;，請分別使用&quot;將更新檔轉換成 ZArchive&quot;這個功能。</translation>
     </message>
     <message>
       <source>Convert to ZArchive</source>
-      <translation type="unfinished">Convert to ZArchive</translation>
+      <translation>轉換成 ZArchive 檔案</translation>
     </message>
   </context>
   <context>
@@ -2139,7 +2137,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
-      <translation type="unfinished">bootable files (*.bin *.elf *.oelf *.zar)</translation>
+      <translation>可啟動檔案 (*.bin *.elf *.oelf *.zar)</translation>
     </message>
   </context>
   <context>
@@ -3077,11 +3075,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Red Zone Protection</source>
-      <translation type="unfinished">Red Zone Protection</translation>
+      <translation>紅色高風險區域保護措施</translation>
     </message>
     <message>
       <source>Static Patching</source>
-      <translation type="unfinished">Static Patching</translation>
+      <translation>正在靜態修補</translation>
     </message>
   </context>
   <context>

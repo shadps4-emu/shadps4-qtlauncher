@@ -1333,7 +1333,7 @@ Lütfen anahtarlarınızı girin ve kaydedin.</translation>
     </message>
     <message>
       <source>This folder could not be found on disk.</source>
-      <translation type="unfinished">This folder could not be found on disk.</translation>
+      <translation>Bu klasör diskte bulunamadı.</translation>
     </message>
     <message>
       <source>Convert %1 to ZArchive</source>
@@ -1365,7 +1365,7 @@ Continue?</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>İptal</translation>
     </message>
     <message>
       <source>Failed to convert to ZArchive:
