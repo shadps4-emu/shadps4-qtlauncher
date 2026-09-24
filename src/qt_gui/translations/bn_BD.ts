@@ -226,7 +226,7 @@
     </message>
     <message>
         <source>Directory does not exist:</source>
-        <translation>ডিরেক্টরিটি বিদ্যমান নেই:</translation>
+        <translation>অবস্থানি বিদ্যমান নেই:</translation>
     </message>
     <message>
         <source>Failed to open files.json for reading.</source>
@@ -884,7 +884,7 @@ Please enter your keys and save them.</source>
     <name>GameInstallDialog</name>
     <message>
         <source>shadPS4 - Choose directory</source>
-        <translation>shadPS4 - ডিরেক্টরি নির্বাচন করুন</translation>
+        <translation>shadPS4 - অবস্থান নির্বাচন করুন</translation>
     </message>
     <message>
         <source>Browse</source>
@@ -896,23 +896,23 @@ Please enter your keys and save them.</source>
     </message>
     <message>
         <source>Directory to install emulator versions</source>
-        <translation>এমুলেটরের সংস্করণ ইনস্টল করার ডিরেক্টরি</translation>
+        <translation>এমুলেটরের সংস্করণ ইনস্টল করার অবস্থান</translation>
     </message>
     <message>
         <source>Directory with your dumped games</source>
-        <translation>আপনার ডাম্প করা গেমগুলোর ডিরেক্টরি</translation>
+        <translation>আপনার ডাম্প করা গেমগুলোর অবস্থান</translation>
     </message>
     <message>
         <source>Directory with your dumped DLC&apos;s</source>
-        <translation>আপনার ডাম্প করা DLC-গুলোর ডিরেক্টরি</translation>
+        <translation>আপনার ডাম্প করা DLC-গুলোর অবস্থান</translation>
     </message>
     <message>
         <source>Directory with games</source>
-        <translation>গেমগুলোর ডিরেক্টরি</translation>
+        <translation>গেমগুলোর অবস্থান</translation>
     </message>
     <message>
         <source>Directory with DLC&apos;s</source>
-        <translation>DLC-গুলোর ডিরেক্টরি</translation>
+        <translation>DLC-গুলোর অবস্থান</translation>
     </message>
 </context>
 <context>
@@ -1141,7 +1141,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
         <source>Are you sure you want to delete %1&apos;s %2 directory?</source>
-        <translation>আপনি কি %1-এর %2 ডিরেক্টরি মুছতে চান?</translation>
+        <translation>আপনি কি %1-এর %2 অবস্থান মুছতে চান?</translation>
     </message>
     <message>
         <source>Open Update Folder</source>
@@ -1901,7 +1901,7 @@ This game has a separate update/patch folder. Only the base game will be archive
     </message>
     <message>
         <source>Game Install Directory</source>
-        <translation>গেম ইনস্টল ডিরেক্টরি</translation>
+        <translation>গেম ইনস্টল অবস্থান</translation>
     </message>
     <message>
         <source>Download Cheats/Patches</source>
@@ -2495,7 +2495,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
         <source>Enable Debug Dumping:\nSaves the import and export symbols and file header information of the currently running PS4 program to a directory.</source>
-        <translation>ডিবাগ ডাম্পিং সক্রিয় করুন:\nবর্তমানে চলমান PS4 প্রোগ্রামের import/export symbols এবং file header তথ্য একটি ডিরেক্টরিতে সংরক্ষণ করে।</translation>
+        <translation>ডিবাগ ডাম্পিং সক্রিয় করুন:\nবর্তমানে চলমান PS4 প্রোগ্রামের import/export symbols এবং file header তথ্য একটি অবস্থানতে সংরক্ষণ করে।</translation>
     </message>
     <message>
         <source>Enable RenderDoc Debugging:\nIf enabled, the emulator will provide compatibility with Renderdoc to allow capture and analysis of the currently rendered frame.</source>
@@ -2539,7 +2539,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
         <source>Directory to install games</source>
-        <translation>গেম ইনস্টল করার ডিরেক্টরি</translation>
+        <translation>গেম ইনস্টল করার অবস্থান</translation>
     </message>
     <message>
         <source>Video</source>
@@ -3283,7 +3283,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
         <source>&amp;Open User Directory</source>
-        <translation>&amp;ব্যবহারকারী ডিরেক্টরি খুলুন</translation>
+        <translation>&amp;ব্যবহারকারী অবস্থান খুলুন</translation>
     </message>
     <message>
         <source>Shad&amp;Net...</source>
