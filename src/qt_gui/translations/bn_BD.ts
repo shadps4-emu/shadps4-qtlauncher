@@ -1007,7 +1007,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
         <source>Favorite</source>
-        <translation type="unfinished"></translation>
+        <translation>প্রিয়</translation>
     </message>
 </context>
 <context>
