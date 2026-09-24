@@ -7,996 +7,1003 @@
     <name>AboutDialog</name>
     <message>
         <source>About shadPS4</source>
-        <translation>About shadPS4</translation>
+        <translation>শ্যাডপিএস৪ সম্পর্কে</translation>
     </message>
     <message>
         <source>shadPS4 is an experimental open-source emulator for the PlayStation 4.</source>
-        <translation>shadPS4 is an experimental open-source emulator for the PlayStation 4.</translation>
+        <translation>শ্যাডপিএস৪ হলো প্লেস্টেশন ৪-এর জন্য একটি পরীক্ষামূলক ওপেন সোর্স এমুলেটর।</translation>
     </message>
     <message>
         <source>This software should not be used to play games you have not legally obtained.</source>
-        <translation>This software should not be used to play games you have not legally obtained.</translation>
+        <translation>এই সফটওয়্যারটি এমন গেম খেলার জন্য ব্যবহার করা উচিত নয়, যা আপনি আইনিভাবে অধিগ্রহণ করেননি।</translation>
     </message>
 </context>
 <context>
     <name>CheatsPatches</name>
     <message>
         <source>Cheats / Patches for </source>
-        <translation>Cheats / Patches for </translation>
+        <translation>চিট / প্যাচের জন্য </translation>
     </message>
     <message>
-        <source>Cheats/Patches are experimental.\nUse with caution.\n\nDownload cheats individually by selecting the repository and clicking the download button.\nIn the Patches tab, you can download all patches at once, choose which ones you want to use, and save your selection.\n\nSince we do not develop the Cheats/Patches,\nplease report issues to the cheat author.\n\nCreated a new cheat? Visit:\n</source>
-        <translation>Cheats/Patches are experimental.\nUse with caution.\n\nDownload cheats individually by selecting the repository and clicking the download button.\nIn the Patches tab, you can download all patches at once, choose which ones you want to use, and save your selection.\n\nSince we do not develop the Cheats/Patches,\nplease report issues to the cheat author.\n\nCreated a new cheat? Visit:\n</translation>
+        <source>Cheats/Patches are experimental.\nUse with caution.\n\nDownload cheats individually by selecting the repository and clicking the download button.\nIn the Patches tab, you can downl[...]
+        <translation>চিট/প্যাচগুলো পরীক্ষামূলক।\nসাবধানে ব্যবহার করুন।\n\nরেপোজিটরি নির্বাচন করে ডাউনলোড বাটনে ক্লিক করলে আপনি আলাদা আলাদা চিট ডাউনলোড করতে পারবেন।\nপ্যাচ ট্যাবে, আপনি...</translation>
     </message>
     <message>
         <source>No Image Available</source>
-        <translation>No Image Available</translation>
+        <translation>কোনো ছবি নেই</translation>
     </message>
     <message>
         <source>Serial: </source>
-        <translation>Serial: </translation>
+        <translation>সিরিয়াল: </translation>
     </message>
     <message>
         <source>Version: </source>
-        <translation>Version: </translation>
+        <translation>সংস্করণ: </translation>
     </message>
     <message>
         <source>Size: </source>
-        <translation>Size: </translation>
+        <translation>আকার: </translation>
     </message>
     <message>
         <source>Select Cheat File:</source>
-        <translation>Select Cheat File:</translation>
+        <translation>চিট ফাইল নির্বাচন করুন:</translation>
     </message>
     <message>
         <source>Repository:</source>
-        <translation>Repository:</translation>
+        <translation>রেপোজিটরি:</translation>
     </message>
     <message>
         <source>Download Cheats</source>
-        <translation>Download Cheats</translation>
+        <translation>চিট ডাউনলোড করুন</translation>
     </message>
     <message>
         <source>Delete File</source>
-        <translation>Delete File</translation>
+        <translation>ফাইল মুছুন</translation>
     </message>
     <message>
         <source>No files selected.</source>
-        <translation>No files selected.</translation>
+        <translation>কোনো ফাইল নির্বাচিত নেই।</translation>
     </message>
     <message>
         <source>You can delete the cheats you don&apos;t want after downloading them.</source>
-        <translation>You can delete the cheats you don&apos;t want after downloading them.</translation>
+        <translation>ডাউনলোড করার পরে আপনি চান না এমন চিট মুছে দিতে পারেন।</translation>
     </message>
     <message>
         <source>Do you want to delete the selected file?\n%1</source>
-        <translation>Do you want to delete the selected file?\n%1</translation>
+        <translation>আপনি কি নির্বাচিত ফাইলটি মুছে দিতে চান?\n%1</translation>
     </message>
     <message>
         <source>Select Patch File:</source>
-        <translation>Select Patch File:</translation>
+        <translation>প্যাচ ফাইল নির্বাচন করুন:</translation>
     </message>
     <message>
         <source>Download Patches</source>
-        <translation>Download Patches</translation>
+        <translation>প্যাচ ডাউনলোড করুন</translation>
     </message>
     <message>
         <source>Save</source>
-        <translation>Save</translation>
+        <translation>সংরক্ষণ</translation>
     </message>
     <message>
         <source>Cheats</source>
-        <translation>Cheats</translation>
+        <translation>চিট</translation>
     </message>
     <message>
         <source>Patches</source>
-        <translation>Patches</translation>
+        <translation>প্যাচ</translation>
     </message>
     <message>
         <source>Error</source>
-        <translation>Error</translation>
+        <translation>ত্রুটি</translation>
     </message>
     <message>
         <source>No patch selected.</source>
-        <translation>No patch selected.</translation>
+        <translation>কোনো প্যাচ নির্বাচন করা হয়নি।</translation>
     </message>
     <message>
         <source>Unable to open files.json for reading.</source>
-        <translation>Unable to open files.json for reading.</translation>
+        <translation>files.json পড়ার জন্য খুলতে অক্ষম।</translation>
     </message>
     <message>
         <source>No patch file found for the current serial.</source>
-        <translation>No patch file found for the current serial.</translation>
+        <translation>বর্তমান সিরিয়ালের জন্য কোনো প্যাচ ফাইল পাওয়া যায়নি।</translation>
     </message>
     <message>
         <source>Unable to open the file for reading.</source>
-        <translation>Unable to open the file for reading.</translation>
+        <translation>ফাইলটি পড়ার জন্য খুলতে অক্ষম।</translation>
     </message>
     <message>
         <source>Unable to open the file for writing.</source>
-        <translation>Unable to open the file for writing.</translation>
+        <translation>ফাইলটি লেখার জন্য খুলতে অক্ষম।</translation>
     </message>
     <message>
         <source>Failed to parse XML: </source>
-        <translation>Failed to parse XML: </translation>
+        <translation>XML পার্স করতে ব্যর্থ: </translation>
     </message>
     <message>
         <source>Success</source>
-        <translation>Success</translation>
+        <translation>সফল</translation>
     </message>
     <message>
         <source>Options saved successfully.</source>
-        <translation>Options saved successfully.</translation>
+        <translation>অপশন সফলভাবে সংরক্ষিত হয়েছে।</translation>
     </message>
     <message>
         <source>Invalid Source</source>
-        <translation>Invalid Source</translation>
+        <translation>অবৈধ উৎস</translation>
     </message>
     <message>
         <source>The selected source is invalid.</source>
-        <translation>The selected source is invalid.</translation>
+        <translation>নির্বাচিত উৎসটি অবৈধ।</translation>
     </message>
     <message>
         <source>File Exists</source>
-        <translation>File Exists</translation>
+        <translation>ফাইলটি বিদ্যমান</translation>
     </message>
     <message>
         <source>File already exists. Do you want to replace it?</source>
-        <translation>File already exists. Do you want to replace it?</translation>
+        <translation>ফাইলটি ইতিমধ্যে বিদ্যমান। আপনি কি এটি প্রতিস্থাপন করতে চান?</translation>
     </message>
     <message>
         <source>Failed to save file:</source>
-        <translation>Failed to save file:</translation>
+        <translation>ফাইল সংরক্ষণ করতে ব্যর্থ:</translation>
     </message>
     <message>
         <source>Failed to download file:</source>
-        <translation>Failed to download file:</translation>
+        <translation>ফাইল ডাউনলোড করতে ব্যর্থ:</translation>
     </message>
     <message>
         <source>Cheats Not Found</source>
-        <translation>Cheats Not Found</translation>
+        <translation>চিট পাওয়া যায়নি</translation>
     </message>
     <message>
         <source>No Cheats found for this game in this version of the selected repository,try another repository or a different version of the game.</source>
-        <translation>No Cheats found for this game in this version of the selected repository,try another repository or a different version of the game.</translation>
+        <translation>নির্বাচিত রেপোজিটরির এই সংস্করণে এই গেমের জন্য কোনো চিট পাওয়া যায়নি, অন্য রেপোজিটরি বা গেমের ভিন্ন সংস্করণ চেষ্টা করুন।</translation>
     </message>
     <message>
         <source>Cheats Downloaded Successfully</source>
-        <translation>Cheats Downloaded Successfully</translation>
+        <translation>চিট সফলভাবে ডাউনলোড হয়েছে</translation>
     </message>
     <message>
-        <source>You have successfully downloaded the cheats for this version of the game from the selected repository. You can try downloading from another repository, if it is available it will also be possible to use it by selecting the file from the list.</source>
-        <translation>You have successfully downloaded the cheats for this version of the game from the selected repository. You can try downloading from another repository, if it is available it will also be possible to use it by selecting the file from the list.</translation>
+        <source>You have successfully downloaded the cheats for this version of the game from the selected repository. You can try downloading from another repository, if it is available it will also [...]
+        <translation>আপনি নির্বাচিত রেপোজিটরি থেকে এই গেমের এই সংস্করণের চিট সফলভাবে ডাউনলোড করেছেন। আপনি অন্য রেপোজিটরি থেকেও ডাউনলোড করার চেষ্টা করতে পারেন, যদি তা উপলব্ধ থাকে তাহলে সেটিও ...</translation>
     </message>
     <message>
         <source>Failed to save:</source>
-        <translation>Failed to save:</translation>
+        <translation>সংরক্ষণ করতে ব্যর্থ:</translation>
     </message>
     <message>
         <source>Failed to download:</source>
-        <translation>Failed to download:</translation>
+        <translation>ডাউনলোড করতে ব্যর্থ:</translation>
     </message>
     <message>
         <source>Download Complete</source>
-        <translation>Download Complete</translation>
+        <translation>ডাউনলোড সম্পূর্ণ</translation>
     </message>
     <message>
-        <source>Patches Downloaded Successfully! All Patches available for all games have been downloaded, there is no need to download them individually for each game as happens in Cheats. If the patch does not appear, it may be that it does not exist for the specific serial and version of the game.</source>
-        <translation>Patches Downloaded Successfully! All Patches available for all games have been downloaded, there is no need to download them individually for each game as happens in Cheats. If the patch does not appear, it may be that it does not exist for the specific serial and version of the game.</translation>
+        <source>Patches Downloaded Successfully! All Patches available for all games have been downloaded, there is no need to download them individually for each game as happens in Cheats. If the pat[...]
+        <translation>প্যাচ সফলভাবে ডাউনলোড হয়েছে! সমস্ত গেমের জন্য উপলব্ধ সকল প্যাচ ডাউনলোড করা হয়েছে, প্রতিটি গেমের জন্য আলাদা আলাদা ডাউনলোড করার প্রয়োজন নেই, যেমন চিটে হয়। যদি প্যাচ...</translation>
     </message>
     <message>
         <source>Failed to parse JSON data from HTML.</source>
-        <translation>Failed to parse JSON data from HTML.</translation>
+        <translation>HTML থেকে JSON ডাটা পার্স করতে ব্যর্থ।</translation>
     </message>
     <message>
         <source>Failed to retrieve HTML page.</source>
-        <translation>Failed to retrieve HTML page.</translation>
+        <translation>HTML পৃষ্ঠা পাওয়া যায়নি।</translation>
     </message>
     <message>
         <source>The game is in version: %1</source>
-        <translation>The game is in version: %1</translation>
+        <translation>গেমটির সংস্করণ: %1</translation>
     </message>
     <message>
         <source>The downloaded patch only works on version: %1</source>
-        <translation>The downloaded patch only works on version: %1</translation>
+        <translation>ডাউনলোড করা প্যাচটি শুধুমাত্র সংস্করণে কাজ করে: %1</translation>
     </message>
     <message>
         <source>You may need to update your game.</source>
-        <translation>You may need to update your game.</translation>
+        <translation>আপনাকে আপনার গেম আপডেট করতে হতে পারে।</translation>
     </message>
     <message>
         <source>Incompatibility Notice</source>
-        <translation>Incompatibility Notice</translation>
+        <translation>অসামঞ্জস্যতার নোটিশ</translation>
     </message>
     <message>
         <source>Failed to open file:</source>
-        <translation>Failed to open file:</translation>
+        <translation>ফাইল খুলতে ব্যর্থ:</translation>
     </message>
     <message>
         <source>XML ERROR:</source>
-        <translation>XML ERROR:</translation>
+        <translation>XML ত্রুটি:</translation>
     </message>
     <message>
         <source>Failed to open files.json for writing</source>
-        <translation>Failed to open files.json for writing</translation>
+        <translation>files.json লেখার জন্য খুলতে ব্যর্থ</translation>
     </message>
     <message>
         <source>Author: </source>
-        <translation>Author: </translation>
+        <translation>লেখক: </translation>
     </message>
     <message>
         <source>Directory does not exist:</source>
-        <translation>Directory does not exist:</translation>
+        <translation>ডিরেক্টরি অস্তিত্ব নেই:</translation>
     </message>
     <message>
         <source>Failed to open files.json for reading.</source>
-        <translation>Failed to open files.json for reading.</translation>
+        <translation>files.json পড়ার জন্য খুলতে ব্যর্থ।</translation>
     </message>
     <message>
         <source>Name:</source>
-        <translation>Name:</translation>
+        <translation>নাম:</translation>
     </message>
     <message>
         <source>Can&apos;t apply cheats before the game is started</source>
-        <translation>Can&apos;t apply cheats before the game is started.</translation>
+        <translation>গেম শুরু হওয়ার আগে চিট প্রয়োগ করা যাবে না</translation>
     </message>
     <message>
         <source>Close</source>
-        <translation type="unfinished">Close</translation>
+        <translation type="unfinished">বন্ধ</translation>
     </message>
 </context>
 <context>
     <name>CheckUpdate</name>
     <message>
         <source>Auto Updater</source>
-        <translation>Auto Updater</translation>
+        <translation>স্বয়ংক্রিয় আপডেটার</translation>
     </message>
     <message>
         <source>Error</source>
-        <translation>Error</translation>
+        <translation>ত্রুটি</translation>
     </message>
     <message>
         <source>Network error:</source>
-        <translation>Network error:</translation>
+        <translation>নেটওয়ার্ক ত্রুটি:</translation>
     </message>
     <message>
         <source>The Auto Updater allows up to 60 update checks per hour.\nYou have reached this limit. Please try again later.</source>
-        <translation>The Auto Updater allows up to 60 update checks per hour.\nYou have reached this limit. Please try again later.</translation>
+        <translation>স্বয়ংক্রিয় আপডেটার প্রতি ঘণ্টায় সর্বোচ্চ ৬০টি আপডেট চেক করতে পারে।\nআপনি এই সীমা পৌঁছে গেছেন। অনুগ্রহ করে পরে আবার চেষ্টা করুন।</translation>
     </message>
     <message>
         <source>Failed to parse update information.</source>
-        <translation>Failed to parse update information.</translation>
+        <translation>আপডেট তথ্য পার্স করতে ব্যর্থ।</translation>
     </message>
     <message>
         <source>No pre-releases found.</source>
-        <translation>No pre-releases found.</translation>
+        <translation>কোনো প্রি-রিলিজ পাওয়া যায়নি।</translation>
     </message>
     <message>
         <source>No download URL found for the specified asset.</source>
-        <translation>No download URL found for the specified asset.</translation>
+        <translation>নির্দিষ্ট অ্যাসেটের জন্য কোনো ডাউনলোড URL পাওয়া যায়নি।</translation>
     </message>
     <message>
         <source>Your version is already up to date!</source>
-        <translation>Your version is already up to date!</translation>
+        <translation>আপনার সংস্করণটি ইতিমধ্যেই আপ টু ডেট!</translation>
     </message>
     <message>
         <source>Current Version</source>
-        <translation>Current Version</translation>
+        <translation>বর্তমান সংস্করণ</translation>
     </message>
     <message>
         <source>Latest Version</source>
-        <translation>Latest Version</translation>
+        <translation>সর্বশেষ সংস্করণ</translation>
     </message>
     <message>
         <source>Do you want to update?</source>
-        <translation>Do you want to update?</translation>
+        <translation>আপনি কি আপডেট করতে চান?</translation>
     </message>
     <message>
         <source>Show Changelog</source>
-        <translation>Show Changelog</translation>
+        <translation>চেঞ্জলগ দেখান</translation>
     </message>
     <message>
         <source>Check for Updates at Startup</source>
-        <translation>Check for Updates at Startup</translation>
+        <translation>স্টার্টআপে আপডেট পরীক্ষা করুন</translation>
     </message>
     <message>
         <source>Update</source>
-        <translation>Update</translation>
+        <translation>আপডেট</translation>
     </message>
     <message>
         <source>No</source>
-        <translation>No</translation>
+        <translation>না</translation>
     </message>
     <message>
         <source>Hide Changelog</source>
-        <translation>Hide Changelog</translation>
+        <translation>চেঞ্জলগ লুকান</translation>
     </message>
     <message>
         <source>Changes</source>
-        <translation>Changes</translation>
+        <translation>পরিবর্তন</translation>
     </message>
     <message>
         <source>Network error occurred while trying to access the URL</source>
-        <translation>Network error occurred while trying to access the URL</translation>
+        <translation>URL অ্যাক্সেস করার চেষ্টা করার সময় নেটওয়ার্ক ত্রুটি ঘটেছে</translation>
     </message>
     <message>
         <source>Download Complete</source>
-        <translation>Download Complete</translation>
+        <translation>ডাউনলোড সম্পূর্ণ</translation>
     </message>
     <message>
         <source>The update has been downloaded, press OK to install.</source>
-        <translation>The update has been downloaded, press OK to install.</translation>
+        <translation>আপডেট ডাউনলোড হয়ে গেছে, ইনস্টল করতে OK চাপুন।</translation>
     </message>
     <message>
         <source>Failed to save the update file at</source>
-        <translation>Failed to save the update file at</translation>
+        <translation>আপডেট ফাইল সংরক্ষণ করতে ব্যর্থ হয়েছে:</translation>
     </message>
     <message>
         <source>Starting Update...</source>
-        <translation>Starting Update...</translation>
+        <translation>আপডেট শুরু হচ্ছে...</translation>
     </message>
     <message>
         <source>Failed to create the update script file</source>
-        <translation>Failed to create the update script file</translation>
+        <translation>আপডেট স্ক্রিপ্ট ফাইল তৈরি করতে ব্যর্থ</translation>
     </message>
     <message>
         <source>Auto Updater - GUI</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">স্বয়ংক্রিয় আপডেটার - GUI</translation>
     </message>
     <message>
         <source>Update Available - GUI</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">আপডেট উপলব্ধ - GUI</translation>
     </message>
 </context>
 <context>
     <name>CompatibilityInfoClass</name>
     <message>
         <source>Fetching compatibility data, please wait</source>
-        <translation>Fetching compatibility data, please wait</translation>
+        <translation>সামঞ্জস্যতার ডেটা আনতে হচ্ছে, দয়া করে অপেক্ষা করুন</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation>Cancel</translation>
+        <translation>বাতিল</translation>
     </message>
     <message>
         <source>Loading...</source>
-        <translation>Loading...</translation>
+        <translation>লোড হচ্ছে...</translation>
     </message>
     <message>
         <source>Error</source>
-        <translation>Error</translation>
+        <translation>ত্রুটি</translation>
     </message>
     <message>
         <source>Unable to update compatibility data! Try again later.</source>
-        <translation>Unable to update compatibility data! Try again later.</translation>
+        <translation>সামঞ্জস্যতার ডেটা আপডেট করতে অক্ষম! পরে আবার চেষ্টা করুন।</translation>
     </message>
     <message>
         <source>Unable to open compatibility_data.json for writing.</source>
-        <translation>Unable to open compatibility_data.json for writing.</translation>
+        <translation>compatibility_data.json লেখার জন্য খুলতে অক্ষম।</translation>
     </message>
     <message>
         <source>Unknown</source>
-        <translation>Unknown</translation>
+        <translation>অজানা</translation>
     </message>
     <message>
         <source>Nothing</source>
-        <translation>Nothing</translation>
+        <translation>কিছুই না</translation>
     </message>
     <message>
         <source>Boots</source>
-        <translation>Boots</translation>
+        <translation>বুট হয়</translation>
     </message>
     <message>
         <source>Menus</source>
-        <translation>Menus</translation>
+        <translation>মেনু</translation>
     </message>
     <message>
         <source>Ingame</source>
-        <translation>Ingame</translation>
+        <translation>ইনগেম</translation>
     </message>
     <message>
         <source>Playable</source>
-        <translation>Playable</translation>
+        <translation>খেলতে পারা যায়</translation>
     </message>
 </context>
 <context>
     <name>ControlSettings</name>
     <message>
         <source>Configure Controls</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">কন্ট্রোল কনফিগার করুন</translation>
     </message>
     <message>
         <source>D-Pad</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ডি-প্যাড</translation>
     </message>
     <message>
         <source>Up</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">উপরে</translation>
     </message>
     <message>
         <source>Left</source>
-        <translation type="unfinished">Left</translation>
+        <translation type="unfinished">বাম</translation>
     </message>
     <message>
         <source>Right</source>
-        <translation type="unfinished">Right</translation>
+        <translation type="unfinished">ডান</translation>
     </message>
     <message>
         <source>Down</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">নিচে</translation>
     </message>
     <message>
         <source>Left Stick</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">বাম স্টিক</translation>
     </message>
     <message>
         <source>Config Selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">কনফিগারেশন নির্বাচন</translation>
     </message>
     <message>
         <source>Common Config</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">সাধারণ কনফিগারেশন</translation>
     </message>
     <message>
         <source>Use per-game configs</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">প্রতি-গেম কনফিগারেশন ব্যবহার করুন</translation>
     </message>
     <message>
         <source>Face Buttons</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ফেস বাটন</translation>
     </message>
     <message>
         <source>Right Stick</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ডান স্টিক</translation>
     </message>
     <message>
         <source>Color Adjustment</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">রঙ সামঞ্জস্য</translation>
     </message>
     <message>
         <source>Override Lightbar Color</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">লাইটবার রঙ ওভাররাইড করুন</translation>
     </message>
     <message>
         <source>Override Color</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">রঙ ওভাররাইড করুন</translation>
     </message>
     <message>
         <source>Unable to Save</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">সংরক্ষণ করা যায়নি</translation>
     </message>
     <message>
         <source>Cannot bind axis values more than once</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">অক্ষের মান একবারের বেশি বাঁধা যাবে না</translation>
     </message>
     <message>
         <source>Save</source>
-        <translation type="unfinished">Save</translation>
+        <translation type="unfinished">সংরক্ষণ</translation>
     </message>
     <message>
         <source>Apply</source>
-        <translation type="unfinished">Apply</translation>
+        <translation type="unfinished">প্রয়োগ</translation>
     </message>
     <message>
         <source>Restore Defaults</source>
-        <translation type="unfinished">Restore Defaults</translation>
+        <translation type="unfinished">ডিফল্ট পুনরুদ্ধার</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished">Cancel</translation>
+        <translation type="unfinished">বাতিল</translation>
     </message>
     <message>
         <source>unmapped</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">অমানচিত্রিত</translation>
     </message>
     <message>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">অপশন</translation>
     </message>
     <message>
         <source>Touchpad Left</source>
-        <translation type="unfinished">Touchpad Left</translation>
+        <translation type="unfinished">টাচপ্যাড বাম</translation>
     </message>
     <message>
         <source>Touchpad Center</source>
-        <translation type="unfinished">Touchpad Center</translation>
+        <translation type="unfinished">টাচপ্যাড কেন্দ্র</translation>
     </message>
     <message>
         <source>Touchpad Right</source>
-        <translation type="unfinished">Touchpad Right</translation>
+        <translation type="unfinished">টাচপ্যাড ডান</translation>
     </message>
     <message>
         <source>Triangle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ট্রায়াঙ্গেল</translation>
     </message>
     <message>
         <source>Square</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">স্কয়ার</translation>
     </message>
     <message>
         <source>Circle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">সার্কেল</translation>
     </message>
     <message>
         <source>Cross</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ক্রস</translation>
     </message>
     <message>
         <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">কোনো অনন্য ইনপুট একবারের বেশি বেঁধে দেওয়া যাবে না। নকল ইনপুটগুলো নিম্নলিখিত বাটনে মানচিত্রিত হয়েছে:
+
+%1</translation>
     </message>
     <message>
         <source>Press a button</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">একটি বাটন চাপুন</translation>
     </message>
     <message>
         <source>Move analog stick</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">অ্যানালগ স্টিক সরান</translation>
     </message>
     <message>
         <source>L1 and L2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">L1 এবং L2</translation>
     </message>
     <message>
         <source>Active Gamepad</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">সক্রিয় গেমপ্যাড</translation>
     </message>
     <message>
         <source>Gamepad ID</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">গেমপ্যাড আইডি</translation>
     </message>
     <message>
         <source>Default Gamepad</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ডিফল্ট গেমপ্যাড</translation>
     </message>
     <message>
         <source>No default selected</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">কোনো ডিফল্ট নির্বাচিত নেই</translation>
     </message>
     <message>
         <source>n/a</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">প্রযোজ্য নয়</translation>
     </message>
     <message>
         <source>Set Active Gamepad as Default</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">সক্রিয় গেমপ্যাডকে ডিফল্ট হিসেবে সেট করুন</translation>
     </message>
     <message>
         <source>Remove Default Gamepad</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ডিফল্ট গেমপ্যাড সরান</translation>
     </message>
     <message>
         <source>R1 and R2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">R1 এবং R2</translation>
     </message>
     <message>
         <source>ID: </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">আইডি: </translation>
     </message>
     <message>
         <source>Default Controller Selected</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ডিফল্ট কন্ট্রোলার নির্বাচিত</translation>
     </message>
     <message>
         <source>Active controller set as default</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">সক্রিয় কন্ট্রোলার ডিফল্ট হিসেবে সেট করা হয়েছে</translation>
     </message>
     <message>
         <source>Default Controller Removed</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ডিফল্ট কন্ট্রোলার সরানো হয়েছে</translation>
     </message>
     <message>
         <source>Default controller setting removed</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ডিফল্ট কন্ট্রোলার সেটিং সরানো হয়েছে</translation>
     </message>
     <message>
         <source>RED</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">লাল</translation>
     </message>
     <message>
         <source>GREEN</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">সবুজ</translation>
     </message>
     <message>
         <source>BLUE</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">নীল</translation>
     </message>
     <message>
         <source>Left Stick Deadzone</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">বাম স্টিক ডেডজোন</translation>
     </message>
     <message>
         <source>Min Deadzone (def:2 max:127)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">সর্বনিম্ন ডেডজোন (ডিফ:2 সর্বোচ্চ:127)</translation>
     </message>
     <message>
         <source>Max Deadzone (def:127 max:127)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">সর্বোচ্চ ডেডজোন (ডিফ:127 সর্বোচ্চ:127)</translation>
     </message>
     <message>
         <source>Right Stick Deadzone</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ডান স্টিক ডেডজোন</translation>
     </message>
     <message>
         <source>Tip: Unmap inputs with right-click</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">টিপ: রাইট-ক্লিক দিয়ে ইনপুট আনম্যাপ করুন</translation>
     </message>
 </context>
 <context>
     <name>CryptoManagerDialog</name>
     <message>
         <source>Crypto Key Manager</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ক্রিপ্টো কি ম্যানেজার</translation>
     </message>
     <message>
         <source>Trophy Key: Used for trophy decryption.
 Must be a valid hex string with even length.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ট্রফি কী: ট্রফি ডিক্রিপশনের জন্য ব্যবহৃত।
+এটি অবশ্যই জোড়া দৈর্ঘ্যের বৈধ হেক্স স্ট্রিং হতে হবে।</translation>
     </message>
     <message>
         <source>Enter Trophy Key</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ট্রফি কী লিখুন</translation>
     </message>
     <message>
         <source>Trophy Key:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ট্রফি কী:</translation>
     </message>
     <message>
         <source>Status: Not loaded</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">অবস্থা: লোড করা হয়নি</translation>
     </message>
     <message>
         <source>Trophy Key</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ট্রফি কী</translation>
     </message>
     <message>
         <source>Enter %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%1 লিখুন</translation>
     </message>
     <message>
         <source>Exponent1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">এক্সপোনেন্ট 1</translation>
     </message>
     <message>
         <source>Exponent2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">এক্সপোনেন্ট 2</translation>
     </message>
     <message>
         <source>Public Exponent</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">পাবলিক এক্সপোনেন্ট</translation>
     </message>
     <message>
         <source>Coefficient</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">সহগ</translation>
     </message>
     <message>
         <source>Modulus</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">মডিউলাস</translation>
     </message>
     <message>
         <source>Prime 1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">প্রাইম 1</translation>
     </message>
     <message>
         <source>Prime 2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">প্রাইম 2</translation>
     </message>
     <message>
         <source>Private Exponent</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">প্রাইভেট এক্সপোনেন্ট</translation>
     </message>
     <message>
         <source>Fake Keyset</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ফেক কীসেট</translation>
     </message>
     <message>
         <source>RSA key components for fake signing.
 All fields must be valid hex strings with even length.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ফেক সাইনিংয়ের জন্য RSA কী উপাদান।
+সব ক্ষেত্রের বৈধ হেক্স স্ট্রিং এবং জোড়া দৈর্ঘ্য থাকতে হবে।</translation>
     </message>
     <message>
         <source>Debug Rif Keyset</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ডিবাগ RIF কীসেট</translation>
     </message>
     <message>
         <source>RSA key components for debug RIF files.
 All fields must be valid hex strings with even length.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ডিবাগ RIF ফাইলের জন্য RSA কী উপাদান।
+সব ক্ষেত্রের বৈধ হেক্স স্ট্রিং এবং জোড়া দৈর্ঘ্য থাকতে হবে।</translation>
     </message>
     <message>
         <source>Pkg Derived Key3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">PKG ডেরিভড কী 3</translation>
     </message>
     <message>
         <source>RSA key components for package decryption.
 All fields must be valid hex strings with even length.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">প্যাকেজ ডিক্রিপশনের জন্য RSA কী উপাদান।
+সব ক্ষেত্রের বৈধ হেক্স স্ট্রিং এবং জোড়া দৈর্ঘ্য থাকতে হবে।</translation>
     </message>
     <message>
         <source>Close</source>
-        <translation type="unfinished">Close</translation>
+        <translation type="unfinished">বন্ধ</translation>
     </message>
     <message>
         <source>Warning</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">সতর্কতা</translation>
     </message>
     <message>
         <source>No key file found or failed to load.
 Please enter your keys and save them.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">কোনো কী ফাইল পাওয়া যায়নি বা লোড করতে ব্যর্থ হয়েছে।
+অনুগ্রহ করে আপনার কী লিখুন এবং সংরক্ষণ করুন।</translation>
     </message>
     <message>
         <source>Validation Error</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ভ্যালিডেশন ত্রুটি</translation>
     </message>
     <message>
         <source>Success</source>
-        <translation type="unfinished">Success</translation>
+        <translation type="unfinished">সফল</translation>
     </message>
     <message>
         <source>Keys saved successfully!</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">কী সফলভাবে সংরক্ষিত হয়েছে!</translation>
     </message>
     <message>
         <source>Error</source>
-        <translation type="unfinished">Error</translation>
+        <translation type="unfinished">ত্রুটি</translation>
     </message>
     <message>
         <source>Failed to save keys!</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">কী সংরক্ষণ করতে ব্যর্থ হয়েছে!</translation>
     </message>
     <message>
         <source>Status: All fields empty</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">অবস্থা: সব ক্ষেত্র ফাঁকা</translation>
     </message>
     <message>
         <source>Status: Invalid hex values</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">অবস্থা: অবৈধ হেক্স মান</translation>
     </message>
     <message>
         <source>Status: Incomplete</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">অবস্থা: অসম্পূর্ণ</translation>
     </message>
     <message>
         <source>Status: Valid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">অবস্থা: বৈধ</translation>
     </message>
     <message>
         <source>Invalid File</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">অবৈধ ফাইল</translation>
     </message>
     <message>
         <source>Only JSON files are supported.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">শুধু JSON ফাইল সমর্থিত।</translation>
     </message>
     <message>
         <source>Unable to open file.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ফাইল খুলতে অক্ষম।</translation>
     </message>
     <message>
         <source>JSON Error</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">JSON ত্রুটি</translation>
     </message>
     <message>
         <source>Invalid JSON format.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">অবৈধ JSON ফরম্যাট।</translation>
     </message>
     <message>
         <source>Keys successfully loaded from JSON!</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">JSON থেকে কী সফলভাবে লোড হয়েছে!</translation>
     </message>
     <message>
         <source>Trophy Key contains invalid hex or has odd length.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ট্রফি কীটিতে অবৈধ হেক্স আছে অথবা বিজোড় দৈর্ঘ্য আছে।</translation>
     </message>
     <message>
         <source>%1 contains invalid hex or has odd length.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%1-এ অবৈধ হেক্স আছে অথবা বিজোড় দৈর্ঘ্য আছে।</translation>
     </message>
     <message>
         <source>Load Key</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">কী লোড করুন</translation>
     </message>
     <message>
         <source>Save Key</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">কী সংরক্ষণ করুন</translation>
     </message>
 </context>
 <context>
     <name>EditorDialog</name>
     <message>
         <source>Edit Keyboard + Mouse and Controller input bindings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">কীবোর্ড + মাউস ও কন্ট্রোলার ইনপুট বাইন্ডিং সম্পাদনা করুন</translation>
     </message>
     <message>
         <source>Use Per-Game configs</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">প্রতি-গেম কনফিগারেশন ব্যবহার করুন</translation>
     </message>
     <message>
         <source>Error</source>
-        <translation type="unfinished">Error</translation>
+        <translation type="unfinished">ত্রুটি</translation>
     </message>
     <message>
         <source>Could not open the file for reading</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ফাইলটি পড়ার জন্য খুলতে পারেনি</translation>
     </message>
     <message>
         <source>Could not open the file for writing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ফাইলটি লেখার জন্য খুলতে পারেনি</translation>
     </message>
     <message>
         <source>Save Changes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">পরিবর্তন সংরক্ষণ করুন</translation>
     </message>
     <message>
         <source>Do you want to save changes?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">আপনি কি পরিবর্তন সংরক্ষণ করতে চান?</translation>
     </message>
     <message>
         <source>Help</source>
-        <translation type="unfinished">Help</translation>
+        <translation type="unfinished">সহায়তা</translation>
     </message>
     <message>
         <source>Do you want to reset your custom default config to the original default config?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">আপনি কি আপনার কাস্টম ডিফল্ট কনফিগারেশনকে মূল ডিফল্ট কনফিগারেশনে ফিরিয়ে দিতে চান?</translation>
     </message>
     <message>
         <source>Do you want to reset this config to your custom default config?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">আপনি কি এই কনফিগারেশনটিকে আপনার কাস্টম ডিফল্ট কনফিগারেশনে রিসেট করতে চান?</translation>
     </message>
     <message>
         <source>Reset to Default</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ডিফল্টে রিসেট করুন</translation>
     </message>
 </context>
 <context>
     <name>ElfViewer</name>
     <message>
         <source>Open Folder</source>
-        <translation>Open Folder</translation>
+        <translation>ফোল্ডার খুলুন</translation>
     </message>
 </context>
 <context>
     <name>GameInfoClass</name>
     <message>
         <source>Loading game list, please wait :3</source>
-        <translation>Loading game list, please wait :3</translation>
+        <translation>গেমের তালিকা লোড হচ্ছে, দয়া করে অপেক্ষা করুন :3</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation>Cancel</translation>
+        <translation>বাতিল</translation>
     </message>
     <message>
         <source>Loading...</source>
-        <translation>Loading...</translation>
+        <translation>লোড হচ্ছে...</translation>
     </message>
 </context>
 <context>
     <name>GameInstallDialog</name>
     <message>
         <source>shadPS4 - Choose directory</source>
-        <translation>shadPS4 - Choose directory</translation>
+        <translation>শ্যাডপিএস৪ - ডিরেক্টরি নির্বাচন করুন</translation>
     </message>
     <message>
         <source>Browse</source>
-        <translation>Browse</translation>
+        <translation>ব্রাউজ করুন</translation>
     </message>
     <message>
         <source>Error</source>
-        <translation>Error</translation>
+        <translation>ত্রুটি</translation>
     </message>
     <message>
         <source>Directory to install emulator versions</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ইমিউলেটর সংস্করণ ইনস্টল করার ডিরেক্টরি</translation>
     </message>
     <message>
         <source>Directory with your dumped games</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">আপনার ডাম্প করা গেমসমূহের ডিরেক্টরি</translation>
     </message>
     <message>
         <source>Directory with your dumped DLC&apos;s</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">আপনার ডাম্প করা DLC-এর ডিরেক্টরি</translation>
     </message>
     <message>
         <source>Directory with games</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">গেমের ডিরেক্টরি</translation>
     </message>
     <message>
         <source>Directory with DLC&apos;s</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">DLC-এর ডিরেক্টরি</translation>
     </message>
 </context>
 <context>
     <name>GameListFrame</name>
     <message>
         <source>Icon</source>
-        <translation>Icon</translation>
+        <translation>আইকন</translation>
     </message>
     <message>
         <source>Name</source>
-        <translation>Name</translation>
+        <translation>নাম</translation>
     </message>
     <message>
         <source>Serial</source>
-        <translation>Serial</translation>
+        <translation>সিরিয়াল</translation>
     </message>
     <message>
         <source>Compatibility</source>
-        <translation>Compatibility</translation>
+        <translation>সামঞ্জস্যতা</translation>
     </message>
     <message>
         <source>Region</source>
-        <translation>Region</translation>
+        <translation>অঞ্চল</translation>
     </message>
     <message>
         <source>Firmware</source>
-        <translation>Firmware</translation>
+        <translation>ফার্মওয়্যার</translation>
     </message>
     <message>
         <source>Size</source>
-        <translation>Size</translation>
+        <translation>আকার</translation>
     </message>
     <message>
         <source>Version</source>
-        <translation>Version</translation>
+        <translation>সংস্করণ</translation>
     </message>
     <message>
         <source>Path</source>
-        <translation>Path</translation>
+        <translation>পথ</translation>
     </message>
     <message>
         <source>Play Time</source>
-        <translation>Play Time</translation>
+        <translation>খেলার সময়</translation>
     </message>
     <message>
         <source>Never Played</source>
-        <translation>Never Played</translation>
+        <translation>কখনো খেলেনি</translation>
     </message>
     <message>
         <source>h</source>
-        <translation>h</translation>
+        <translation>ঘ</translation>
     </message>
     <message>
         <source>m</source>
-        <translation>m</translation>
+        <translation>মি</translation>
     </message>
     <message>
         <source>s</source>
-        <translation>s</translation>
+        <translation>সে</translation>
     </message>
     <message>
         <source>Compatibility is untested</source>
-        <translation>Compatibility is untested</translation>
+        <translation>সামঞ্জস্যতা পরীক্ষা করা হয়নি</translation>
     </message>
     <message>
         <source>Game does not initialize properly / crashes the emulator</source>
-        <translation>Game does not initialize properly / crashes the emulator</translation>
+        <translation>গেমটি সঠিকভাবে শুরু হয় না / ইমিউলেটর ক্র্যাশ করে</translation>
     </message>
     <message>
         <source>Game boots, but only displays a blank screen</source>
-        <translation>Game boots, but only displays a blank screen</translation>
+        <translation>গেম বুট হয়, কিন্তু শুধু ফাঁকা স্ক্রিন দেখায়</translation>
     </message>
     <message>
         <source>Game displays an image but does not go past the menu</source>
-        <translation>Game displays an image but does not go past the menu</translation>
+        <translation>গেমটি চিত্র দেখায়, কিন্তু মেনু পেরিয়ে যায় না</translation>
     </message>
     <message>
         <source>Game has game-breaking glitches or unplayable performance</source>
-        <translation>Game has game-breaking glitches or unplayable performance</translation>
+        <translation>গেমে খেলার ব্যাঘাত ঘটায় এমন ত্রুটি বা খেলা না যায় এমন পারফরম্যান্স আছে</translation>
     </message>
     <message>
         <source>Game can be completed with playable performance and no major glitches</source>
-        <translation>Game can be completed with playable performance and no major glitches</translation>
+        <translation>গেম খেলার যোগ্য পারফরম্যান্সে সম্পূর্ণ করা যেতে পারে এবং কোনো বড় ত্রুটি নেই</translation>
     </message>
     <message>
         <source>Click to see details on github</source>
-        <translation>Click to see details on GitHub</translation>
+        <translation>GitHub-এ বিস্তারিত দেখতে ক্লিক করুন</translation>
     </message>
     <message>
         <source>Last updated</source>
-        <translation>Last updated</translation>
+        <translation>সর্বশেষ আপডেট</translation>
     </message>
     <message>
         <source>Favorite</source>
@@ -1007,747 +1014,756 @@ Please enter your keys and save them.</source>
     <name>GameListUtils</name>
     <message>
         <source>B</source>
-        <translation>B</translation>
+        <translation>বি</translation>
     </message>
     <message>
         <source>KB</source>
-        <translation>KB</translation>
+        <translation>কেবি</translation>
     </message>
     <message>
         <source>MB</source>
-        <translation>MB</translation>
+        <translation>মেবি</translation>
     </message>
     <message>
         <source>GB</source>
-        <translation>GB</translation>
+        <translation>গেবি</translation>
     </message>
     <message>
         <source>TB</source>
-        <translation>TB</translation>
+        <translation>টেবি</translation>
     </message>
 </context>
 <context>
-    <name>GuiContextMenus</name>
+    <name>GUIContextMenus</name>
     <message>
         <source>Cheats / Patches</source>
-        <translation>Cheats / Patches</translation>
+        <translation>চিট / প্যাচ</translation>
     </message>
     <message>
         <source>SFO Viewer</source>
-        <translation>SFO Viewer</translation>
+        <translation>এসএফও ভিউয়ার</translation>
     </message>
     <message>
         <source>Trophy Viewer</source>
-        <translation>Trophy Viewer</translation>
+        <translation>ট্রফি ভিউয়ার</translation>
     </message>
     <message>
         <source>Open Folder...</source>
-        <translation>Open Folder...</translation>
+        <translation>ফোল্ডার খুলুন...</translation>
     </message>
     <message>
         <source>Open Game Folder</source>
-        <translation>Open Game Folder</translation>
+        <translation>গেম ফোল্ডার খুলুন</translation>
     </message>
     <message>
         <source>Open Save Data Folder</source>
-        <translation>Open Save Data Folder</translation>
+        <translation>সেভ ডাটা ফোল্ডার খুলুন</translation>
     </message>
     <message>
         <source>Open Log Folder</source>
-        <translation>Open Log Folder</translation>
+        <translation>লগ ফোল্ডার খুলুন</translation>
     </message>
     <message>
         <source>Copy info...</source>
-        <translation>Copy info...</translation>
+        <translation>তথ্য কপি করুন...</translation>
     </message>
     <message>
         <source>Copy Name</source>
-        <translation>Copy Name</translation>
+        <translation>নাম কপি করুন</translation>
     </message>
     <message>
         <source>Copy Serial</source>
-        <translation>Copy Serial</translation>
+        <translation>সিরিয়াল কপি করুন</translation>
     </message>
     <message>
         <source>Copy Version</source>
-        <translation>Copy Version</translation>
+        <translation>সংস্করণ কপি করুন</translation>
     </message>
     <message>
         <source>Copy Size</source>
-        <translation>Copy Size</translation>
+        <translation>আকার কপি করুন</translation>
     </message>
     <message>
         <source>Copy All</source>
-        <translation>Copy All</translation>
+        <translation>সব কপি করুন</translation>
     </message>
     <message>
         <source>Delete...</source>
-        <translation>Delete...</translation>
+        <translation>মুছুন...</translation>
     </message>
     <message>
         <source>Delete Game</source>
-        <translation>Delete Game</translation>
+        <translation>গেম মুছুন</translation>
     </message>
     <message>
         <source>Delete Update</source>
-        <translation>Delete Update</translation>
+        <translation>আপডেট মুছুন</translation>
     </message>
     <message>
         <source>Delete DLC</source>
-        <translation>Delete DLC</translation>
+        <translation>ডিএলসি মুছুন</translation>
     </message>
     <message>
         <source>Delete Trophy</source>
-        <translation>Delete Trophy</translation>
+        <translation>ট্রফি মুছুন</translation>
     </message>
     <message>
         <source>Compatibility...</source>
-        <translation>Compatibility...</translation>
+        <translation>সামঞ্জস্যতা...</translation>
     </message>
     <message>
         <source>Error</source>
-        <translation>Error</translation>
+        <translation>ত্রুটি</translation>
     </message>
     <message>
         <source>Game</source>
-        <translation>Game</translation>
+        <translation>গেম</translation>
     </message>
     <message>
         <source>This game has no update to delete!</source>
-        <translation>This game has no update to delete!</translation>
+        <translation>এই গেমের মুছে দেওয়ার মতো কোনো আপডেট নেই!</translation>
     </message>
     <message>
         <source>Update</source>
-        <translation>Update</translation>
+        <translation>আপডেট</translation>
     </message>
     <message>
         <source>This game has no DLC to delete!</source>
-        <translation>This game has no DLC to delete!</translation>
+        <translation>এই গেমের মুছে দেওয়ার মতো কোনো DLC নেই!</translation>
     </message>
     <message>
         <source>DLC</source>
-        <translation>DLC</translation>
+        <translation>ডিএলসি</translation>
     </message>
     <message>
         <source>Delete %1</source>
-        <translation>Delete %1</translation>
+        <translation>%1 মুছুন</translation>
     </message>
     <message>
         <source>Are you sure you want to delete %1&apos;s %2 directory?</source>
-        <translation>Are you sure you want to delete %1&apos;s %2 directory?</translation>
+        <translation>আপনি কি নিশ্চিত যে %1-এর %2 ডিরেক্টরি মুছে দিতে চান?</translation>
     </message>
     <message>
         <source>Open Update Folder</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">আপডেট ফোল্ডার খুলুন</translation>
     </message>
     <message>
         <source>Delete Save Data</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">সেভ ডাটা মুছুন</translation>
     </message>
     <message>
         <source>This game has no update folder to open!</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">এই গেমের খুলতে কোনো আপডেট ফোল্ডার নেই!</translation>
     </message>
     <message>
         <source>No log file found for this game!</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">এই গেমের জন্য কোনো লগ ফাইল পাওয়া যায়নি!</translation>
     </message>
     <message>
         <source>This game has no save data to delete!</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">এই গেমের মুছে দেওয়ার মতো কোনো সেভ ডাটা নেই!</translation>
     </message>
     <message>
         <source>This game has no saved trophies to delete!</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">এই গেমের মুছে দেওয়ার মতো কোনো সংরক্ষিত ট্রফি নেই!</translation>
     </message>
     <message>
         <source>Save Data</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">সেভ ডাটা</translation>
     </message>
     <message>
         <source>Trophy</source>
-        <translation type="unfinished">Trophy</translation>
+        <translation type="unfinished">ট্রফি</translation>
     </message>
     <message>
         <source>SFO Viewer for </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">এর জন্য SFO ভিউয়ার </translation>
     </message>
     <message>
         <source>Remove from Favorites</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">পছন্দের তালিকা থেকে সরান</translation>
     </message>
     <message>
         <source>Add to Favorites</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">পছন্দের তালিকায় যোগ করুন</translation>
     </message>
     <message>
         <source>Game-specific Settings...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">গেম-নির্দিষ্ট সেটিংস...</translation>
     </message>
     <message>
         <source>Configure Game-specific Settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">গেম-নির্দিষ্ট সেটিংস কনফিগার করুন</translation>
     </message>
     <message>
         <source>Create Game-specific Settings from Global Settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">গ্লোবাল সেটিংস থেকে গেম-নির্দিষ্ট সেটিংস তৈরি করুন</translation>
     </message>
     <message>
         <source>Delete Game-specific Settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">গেম-নির্দিষ্ট সেটিংস মুছুন</translation>
     </message>
     <message>
         <source>Update Database</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ডেটাবেস আপডেট করুন</translation>
     </message>
     <message>
         <source>View Report</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">রিপোর্ট দেখুন</translation>
     </message>
     <message>
         <source>Submit a Report</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">একটি রিপোর্ট জমা দিন</translation>
     </message>
     <message>
         <source>Confirm deletion</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">মুছে ফেলার নিশ্চিতকরণ</translation>
     </message>
     <message>
         <source>Delete game-specific settings?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">গেম-নির্দিষ্ট সেটিংস মুছে দিতে চান?</translation>
     </message>
     <message>
         <source>Launch...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">চালু করুন...</translation>
     </message>
     <message>
         <source>Launch with game specific configs (default)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">গেম-নির্দিষ্ট কনফিগারেশনসহ চালু করুন (ডিফল্ট)</translation>
     </message>
     <message>
         <source>Launch with global config only</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">শুধু গ্লোবাল কনফিগারেশনসহ চালু করুন</translation>
     </message>
     <message>
         <source>Launch with default settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ডিফল্ট সেটিংসসহ চালু করুন</translation>
     </message>
     <message>
         <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">সর্বশেষ লগের জন্য রিপোর্ট জমা দিতে ব্যর্থ হয়েছে, কারণ গেমের জন্য লেটেস্ট লগ নিম্নলিখিত চেকে ব্যর্থ হয়েছে, তাই এটি অবৈধ রিপোর্ট হবে:</translation>
     </message>
     <message>
-        <source>Ok</source>
-        <translation type="unfinished"></translation>
+        <source>OK</source>
+        <translation type="unfinished">ঠিক আছে</translation>
     </message>
     <message>
         <source>Info</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">তথ্য</translation>
     </message>
     <message>
         <source>Create Shortcut for Selected Emulator Version</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">নির্বাচিত ইমিউলেটর সংস্করণের জন্য শর্টকাট তৈরি করুন</translation>
     </message>
     <message>
         <source>Create Shortcut for Specified Emulator Version</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">নির্দিষ্ট ইমিউলেটর সংস্করণের জন্য শর্টকাট তৈরি করুন</translation>
     </message>
     <message>
         <source>Create Shortcut</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">শর্টকাট তৈরি করুন</translation>
     </message>
     <message>
         <source>Shortcut creation</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">শর্টকাট তৈরি</translation>
     </message>
     <message>
         <source>Shortcut created successfully!</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">শর্টকাট সফলভাবে তৈরি হয়েছে!</translation>
     </message>
     <message>
         <source>Error creating shortcut!</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">শর্টকাট তৈরি করতে ত্রুটি হয়েছে!</translation>
     </message>
     <message>
         <source>Failed to convert icon.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">আইকন রূপান্তর করতে ব্যর্থ হয়েছে।</translation>
     </message>
     <message>
         <source>Delete Shader Cache</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">শেডার ক্যাশ মুছুন</translation>
     </message>
     <message>
         <source>This game does not have any saved Shader Cache to delete!</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">এই গেমের মুছে দেওয়ার মতো কোনো সেভড শেডার ক্যাশ নেই!</translation>
     </message>
     <message>
         <source>Shader Cache</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">শেডার ক্যাশ</translation>
     </message>
     <message>
         <source>This game has no save folder to open!</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">এই গেমের খুলতে কোনো সেভ ফোল্ডার নেই!</translation>
     </message>
     <message>
         <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ট্রফি ভিউয়ার ব্যবহার করতে একটি ট্রফি কী প্রয়োজন। এটি Settings - Manage Cryptographic keys-এ ক্লিক করে ইনপুট করা যেতে পারে।</translation>
     </message>
     <message>
         <source>User</source>
-        <translation type="unfinished">User</translation>
+        <translation type="unfinished">ব্যবহারকারী</translation>
     </message>
     <message>
         <source>Add with Selected Emulator Version</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">নির্বাচিত ইমিউলেটর সংস্করণসহ যোগ করুন</translation>
     </message>
     <message>
         <source>Add with Specified Emulator Version</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">নির্দিষ্ট ইমিউলেটর সংস্করণসহ যোগ করুন</translation>
     </message>
     <message>
         <source>Add to Steam</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">স্টীমে যোগ করুন</translation>
     </message>
     <message>
-        <source>Zar Compression</source>
-        <translation type="unfinished"></translation>
+        <source>Zip Compression</source>
+        <translation type="unfinished">জিপ কম্প্রেশন</translation>
     </message>
     <message>
-        <source>Compress game to zar</source>
-        <translation type="unfinished"></translation>
+        <source>Compress game to zip</source>
+        <translation type="unfinished">গেমকে জিপে কম্প্রেস করুন</translation>
     </message>
     <message>
-        <source>Compress update to zar</source>
-        <translation type="unfinished"></translation>
+        <source>Compress update to zip</source>
+        <translation type="unfinished">আপডেটকে জিপে কম্প্রেস করুন</translation>
     </message>
     <message>
-        <source>This is already packed as a ZArchive.</source>
-        <translation type="unfinished"></translation>
+        <source>This is already packaged as a Zip Archive.</source>
+        <translation type="unfinished">এটি ইতিমধ্যেই জিপ আর্কাইভ হিসেবে প্যাকেজ করা আছে।</translation>
     </message>
     <message>
         <source>This folder could not be found on disk.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">এই ফোল্ডারটি ডিস্কে পাওয়া যায়নি।</translation>
     </message>
     <message>
-        <source>Convert %1 to ZArchive</source>
-        <translation type="unfinished"></translation>
+        <source>Convert %1 to ZipArchive</source>
+        <translation type="unfinished">%1-কে জিপ আর্কাইভে রূপান্তর করুন</translation>
     </message>
     <message>
-        <source>ZArchive Files (*.zar)</source>
-        <translation type="unfinished"></translation>
+        <source>ZipArchive Files (*.zip)</source>
+        <translation type="unfinished">জিপ আর্কাইভ ফাইল (*.zip)</translation>
     </message>
     <message>
         <source>%1 already exists. Overwrite it?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%1 ইতিমধ্যে বিদ্যমান। এটি প্রতিস্থাপন করবেন?</translation>
     </message>
     <message>
-        <source>This will pack &quot;%1&quot; into a single read-only .zar archive. Depending on the size this can take a while, and the archive will temporarily need as much free disk space as the original.
+        <source>This will pack %1 into a single read-only .zip archive. Depending on the size this can take a while, and the archive will temporarily need as much free disk space as the original.
 
 The original folder is left untouched until conversion succeeds, you&apos;ll be asked afterward whether to delete it.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">এটি %1-কে একটি একক রিড-ওনলি .zip আর্কাইভে প্যাক করে দিবে। আকারের উপর নির্ভর করে এটি কিছুটা সময় নিতে পারে, এবং আর্কাইভের জন্য আসল ফোল্ডারের সমান ফ্রি ডিস্ক স্পেস অস্থায়ীভাবে দরকার হবে।
+
+মূল ফোল্ডারটি রূপান্তর সফল না হওয়া পর্যন্ত untouched অবস্থায় রাখা হবে, রূপান্তর শেষে আপনাকে এটি মুছে দিতে হবে কিনা জিজ্ঞেস করা হবে।</translation>
     </message>
     <message>
         <source>
 
 Continue?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">
+
+চালিয়ে যান?</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished">Cancel</translation>
+        <translation type="unfinished">বাতিল</translation>
     </message>
     <message>
-        <source>Failed to convert to ZArchive:
+        <source>Failed to convert to ZipArchive:
 %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">জিপ আর্কাইভে রূপান্তর করতে ব্যর্থ হয়েছে:
+%1</translation>
     </message>
     <message>
         <source>Conversion finished. Delete the original folder now to free up disk space?
 
 %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">রূপান্তর সম্পন্ন হয়েছে। ডিস্ক স্পেস খালি করতে এখন মূল ফোল্ডারটি মুছে দিন?
+
+%1</translation>
     </message>
     <message>
         <source>The archive was created, but the original folder could not be fully deleted. You can remove it manually.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">আর্কাইভটি তৈরি হয়েছে, তবে মূল ফোল্ডারকে সম্পূর্ণভাবে মুছে ফেলা যায়নি। আপনি এটি ম্যানুয়ালি সরিয়ে দিতে পারেন।</translation>
     </message>
     <message>
         <source>Packing: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">প্যাকিং: %1</translation>
     </message>
     <message>
         <source>
 
-This game has a separate update/patch folder. Only the base game will be archived; the update/patch folder will not be included and will be left as-is. Use &quot;Convert Update to ZArchive&quot; separately if you&apos;d like to archive it too.</source>
-        <translation type="unfinished"></translation>
+This game has a separate update/patch folder. Only the base game will be archived; the update/patch folder will not be included and will be left as-is. Use "Convert Update to ZipArchive" separately if you&apos;d like to archive it too.</source>
+        <translation type="unfinished">
+
+এই গেমের আলাদা আপডেট/প্যাচ ফোল্ডার আছে। শুধুমাত্র বেস গেমটি আর্কাইভ করা হবে; আপডেট/প্যাচ ফোল্ডারটি অন্তর্ভুক্ত করা হবে না এবং 그대로 রয়ে যাবে। এটিও আর্কাইভ করতে চাইলে আলাদাভাবে "Convert Update to ZipArchive" ব্যবহার করুন।</translation>
     </message>
     <message>
-        <source>Convert to ZArchive</source>
-        <translation type="unfinished"></translation>
+        <source>Convert to ZipArchive</source>
+        <translation type="unfinished">জিপ আর্কাইভে রূপান্তর করুন</translation>
     </message>
 </context>
 <context>
     <name>HelpDialog</name>
     <message>
         <source>Quickstart</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">দ্রুত শুরু</translation>
     </message>
     <message>
         <source>FAQ</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">প্রায়শই জিজ্ঞাসিত প্রশ্ন</translation>
     </message>
     <message>
         <source>Syntax</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">বিন্যাস</translation>
     </message>
     <message>
         <source>Special Bindings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">বিশেষ বাইন্ডিং</translation>
     </message>
     <message>
         <source>Keybindings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">কী-বাইন্ডিং</translation>
     </message>
 </context>
 <context>
     <name>Hotkeys</name>
     <message>
         <source>Customize Hotkeys</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">হটকি কাস্টমাইজ করুন</translation>
     </message>
     <message>
         <source>Show FPS Counter</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">FPS কাউন্টার দেখান</translation>
     </message>
     <message>
         <source>unmapped</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">অমানচিত্রিত</translation>
     </message>
     <message>
-        <source>Quit Emulation</source>
-        <translation type="unfinished"></translation>
+        <source>Quit Emulator</source>
+        <translation type="unfinished">ইমিউলেটর বন্ধ করুন</translation>
     </message>
     <message>
         <source>Reload Button Mappings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">বাটন ম্যাপিং রিলোড করুন</translation>
     </message>
     <message>
         <source>Toggle Fullscreen</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ফুলস্ক্রিন টগল করুন</translation>
     </message>
     <message>
         <source>Toggle Pause</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">পজ টগল করুন</translation>
     </message>
     <message>
         <source>Toggle Mouse to Joystick Emulation</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Toggle Mouse to Gyro Emulation</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">মাউসকে জয়স্টিক ইমিউলেশনে টগল করুন</translation>
     </message>
     <message>
         <source>Tip: Up to three simultaneous inputs can be assigned for each hotkey</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">টিপ: প্রতিটি হটকির জন্য সর্বোচ্চ তিনটি একই সময়ের ইনপুট বরাদ্দ করা যেতে পারে</translation>
     </message>
     <message>
         <source>Save</source>
-        <translation type="unfinished">Save</translation>
+        <translation type="unfinished">সংরক্ষণ</translation>
     </message>
     <message>
         <source>Apply</source>
-        <translation type="unfinished">Apply</translation>
+        <translation type="unfinished">প্রয়োগ</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished">Cancel</translation>
+        <translation type="unfinished">বাতিল</translation>
     </message>
     <message>
         <source>Restore Defaults</source>
-        <translation type="unfinished">Restore Defaults</translation>
+        <translation type="unfinished">ডিফল্ট পুনরুদ্ধার করুন</translation>
     </message>
     <message>
         <source>Unable to Save</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">সংরক্ষণ করা যায়নি</translation>
     </message>
     <message>
         <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">কোনো অনন্য ইনপুট একবারের বেশি বেঁধে দেওয়া যাবে না। নকল ইনপুটগুলো নিম্নলিখিত বাটনে মানচিত্রিত হয়েছে:
+
+%1</translation>
     </message>
     <message>
         <source>Waiting for inputs</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ইনপুটের জন্য অপেক্ষা করছে</translation>
     </message>
     <message>
         <source>Tip: Unmap inputs with right-click</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">টিপ: রাইট-ক্লিক দিয়ে ইনপুট আনম্যাপ করুন</translation>
     </message>
     <message>
         <source>Volume Up</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ভলিউম বাড়ান</translation>
     </message>
     <message>
         <source>Volume Down</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ভলিউম কমান</translation>
     </message>
     <message>
         <source>Hotkeys</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">হটকি</translation>
     </message>
     <message>
         <source>Placeholder</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">প্লেসহোল্ডার</translation>
     </message>
     <message>
         <source>Capture Screenshot</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">স্ক্রিনশট ক্যাপচার করুন</translation>
     </message>
     <message>
         <source>Capture Screenshot w/ Overlays</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ওভারলে সহ স্ক্রিনশট ক্যাপচার করুন</translation>
     </message>
     <message>
         <source>Open Emulator Settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ইমিউলেটর সেটিংস খুলুন</translation>
     </message>
 </context>
 <context>
     <name>IpcClient</name>
     <message>
         <source>Could not find the emulator executable</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ইমিউলেটর এক্সিকিউটেবল খুঁজে পাওয়া যায়নি</translation>
     </message>
     <message>
         <source>No game is running</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">কোনো গেম চলছে না</translation>
     </message>
 </context>
 <context>
-    <name>KBMSettings</name>
+    <name>KBSettings</name>
     <message>
         <source>Configure Controls</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">কন্ট্রোল কনফিগার করুন</translation>
     </message>
     <message>
         <source>unmapped</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">অমানচিত্রিত</translation>
     </message>
     <message>
         <source>Left Analog Halfmode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">বাম অ্যানালগ হাফমোড</translation>
     </message>
     <message>
         <source>Config Selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">কনফিগারেশন নির্বাচন</translation>
     </message>
     <message>
         <source>Common Config</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">সাধারণ কনফিগারেশন</translation>
     </message>
     <message>
         <source>Use per-game configs</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">প্রতি-গেম কনফিগারেশন ব্যবহার করুন</translation>
     </message>
     <message>
         <source>Text Editor</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">টেক্সট এডিটর</translation>
     </message>
     <message>
         <source>Help</source>
-        <translation type="unfinished">Help</translation>
+        <translation type="unfinished">সহায়তা</translation>
     </message>
     <message>
         <source>Mouse to Joystick</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">মাউস থেকে জয়স্টিক</translation>
     </message>
     <message>
         <source>*press F7 ingame to activate</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">*ইনগেমে সক্রিয় করতে F7 চাপুন</translation>
     </message>
     <message>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">অপশন</translation>
     </message>
     <message>
         <source>Mouse Movement Parameters</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">মাউস চলাচলের পরামিতি</translation>
     </message>
     <message>
         <source>note: click Help Button/Special Keybindings for more information</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">নোট: আরও তথ্যের জন্য Help Button/Special Keybindings-এ ক্লিক করুন</translation>
     </message>
     <message>
         <source>Triangle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ট্রায়াঙ্গেল</translation>
     </message>
     <message>
         <source>Square</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">স্কয়ার</translation>
     </message>
     <message>
         <source>Circle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">সার্কেল</translation>
     </message>
     <message>
         <source>Cross</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ক্রস</translation>
     </message>
     <message>
         <source>Right Analog Halfmode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ডান অ্যানালগ হাফমোড</translation>
     </message>
     <message>
         <source>Speed Offset (def 0.125):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">স্পিড অফসেট (ডিফ 0.125):</translation>
     </message>
     <message>
         <source>Copy from Common Config</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">কমন কনফিগার থেকে কপি করুন</translation>
     </message>
     <message>
         <source>Deadzone Offset (def 0.50):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ডেডজোন অফসেট (ডিফ 0.50):</translation>
     </message>
     <message>
         <source>Speed Multiplier (def 1.0):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">স্পিড মাল্টিপ্লায়ার (ডিফ 1.0):</translation>
     </message>
     <message>
         <source>Copy values from Common Config</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">কমন কনফিগার থেকে মান কপি করুন</translation>
     </message>
     <message>
         <source>Do you want to overwrite existing mappings with the mappings from the Common Config?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">আপনি কি কমন কনফিগার থেকে আসা ম্যাপিং দিয়ে বিদ্যমান ম্যাপিং ওভাররাইট করতে চান?</translation>
     </message>
     <message>
         <source>Unable to Save</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">সংরক্ষণ করা যায়নি</translation>
     </message>
     <message>
         <source>Press a key</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">একটি কী চাপুন</translation>
     </message>
     <message>
         <source>Cannot set mapping</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ম্যাপিং সেট করা যায়নি</translation>
     </message>
     <message>
         <source>Mousewheel cannot be mapped to stick outputs</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">মাউসহুইলকে স্টিক আউটপুটে ম্যাপ করা যায় না</translation>
     </message>
     <message>
         <source>Save</source>
-        <translation type="unfinished">Save</translation>
+        <translation type="unfinished">সংরক্ষণ</translation>
     </message>
     <message>
         <source>Apply</source>
-        <translation type="unfinished">Apply</translation>
+        <translation type="unfinished">প্রয়োগ</translation>
     </message>
     <message>
         <source>Restore Defaults</source>
-        <translation type="unfinished">Restore Defaults</translation>
+        <translation type="unfinished">ডিফল্ট পুনরুদ্ধার করুন</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished">Cancel</translation>
+        <translation type="unfinished">বাতিল</translation>
     </message>
     <message>
         <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">কোনো অনন্য ইনপুট একবারের বেশি বেঁধে দেওয়া যাবে না। নকল ইনপুটগুলো নিম্নলিখিত বাটনে মানচিত্রিত হয়েছে:
+
+%1</translation>
     </message>
     <message>
         <source>Touchpad Left</source>
-        <translation type="unfinished">Touchpad Left</translation>
+        <translation type="unfinished">টাচপ্যাড বাম</translation>
     </message>
     <message>
         <source>Touchpad Center</source>
-        <translation type="unfinished">Touchpad Center</translation>
+        <translation type="unfinished">টাচপ্যাড কেন্দ্র</translation>
     </message>
     <message>
         <source>Touchpad Right</source>
-        <translation type="unfinished">Touchpad Right</translation>
+        <translation type="unfinished">টাচপ্যাড ডান</translation>
     </message>
     <message>
         <source>Tip: Unmap inputs with right-click</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">টিপ: রাইট-ক্লিক দিয়ে ইনপুট আনম্যাপ করুন</translation>
     </message>
     <message>
         <source>Output</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">আউটপুট</translation>
     </message>
     <message>
         <source>Input</source>
-        <translation type="unfinished">Input</translation>
+        <translation type="unfinished">ইনপুট</translation>
     </message>
     <message>
         <source>Alternate Input 1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">বিকল্প ইনপুট 1</translation>
     </message>
     <message>
         <source>Alternate Input 2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">বিকল্প ইনপুট 2</translation>
     </message>
     <message>
-        <source>Dpad Up</source>
-        <translation type="unfinished"></translation>
+        <source>DPad Up</source>
+        <translation type="unfinished">ডি-প্যাড উপরে</translation>
     </message>
     <message>
-        <source>Dpad Down</source>
-        <translation type="unfinished"></translation>
+        <source>DPad Down</source>
+        <translation type="unfinished">ডি-প্যাড নিচে</translation>
     </message>
     <message>
-        <source>Dpad Left</source>
-        <translation type="unfinished"></translation>
+        <source>DPad Left</source>
+        <translation type="unfinished">ডি-প্যাড বাম</translation>
     </message>
     <message>
-        <source>Dpad Right</source>
-        <translation type="unfinished"></translation>
+        <source>DPad Right</source>
+        <translation type="unfinished">ডি-প্যাড ডান</translation>
     </message>
     <message>
         <source>Left Stick Up</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">বাম স্টিক উপরে</translation>
     </message>
     <message>
         <source>Left Stick Down</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">বাম স্টিক নিচে</translation>
     </message>
     <message>
         <source>Left Stick Left</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">বাম স্টিক বাম</translation>
     </message>
     <message>
         <source>Left Stick Right</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">বাম স্টিক ডান</translation>
     </message>
     <message>
         <source>Right Stick Up</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ডান স্টিক উপরে</translation>
     </message>
     <message>
         <source>Right Stick Down</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ডান স্টিক নিচে</translation>
     </message>
     <message>
         <source>Right Stick Left</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ডান স্টিক বাম</translation>
     </message>
     <message>
         <source>Right Stick Right</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ডান স্টিক ডান</translation>
     </message>
     <message>
         <source>L1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">L1</translation>
     </message>
     <message>
         <source>R1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">R1</translation>
     </message>
     <message>
         <source>L2</source>
