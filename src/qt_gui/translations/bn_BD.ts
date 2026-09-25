@@ -7,11 +7,11 @@
     <name>AboutDialog</name>
     <message>
       <source>About shadPS4</source>
-      <translation type="unfinished">About shadPS4</translation>
+      <translation>shadPS4 সম্পর্কে</translation>
     </message>
     <message>
       <source>shadPS4 is an experimental open-source emulator for the PlayStation 4.</source>
-      <translation type="unfinished">shadPS4 is an experimental open-source emulator for the PlayStation 4.</translation>
+      <translation>shadPS4 একটি পরীক্ষামূলক ওপেন-সোর্স PlayStation 4 এমুলেটর।</translation>
     </message>
     <message>
       <source>This software should not be used to play games you have not legally obtained.</source>
