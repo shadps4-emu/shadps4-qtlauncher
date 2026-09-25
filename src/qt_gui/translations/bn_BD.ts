@@ -356,7 +356,7 @@
     </message>
     <message>
       <source>Cancel</source>
-      <translation>বাতিল</translation>
+      <translation>বাতিল করুন</translation>
     </message>
     <message>
       <source>Loading...</source>
@@ -396,7 +396,7 @@
     </message>
     <message>
       <source>Playable</source>
-      <translation>খেলাযোগ্য</translation>
+      <translation>খেলা যোগ্য</translation>
     </message>
   </context>
   <context>
@@ -407,27 +407,27 @@
     </message>
     <message>
       <source>D-Pad</source>
-      <translation>ডি-প্যাড</translation>
+      <translation>D-Pad</translation>
     </message>
     <message>
       <source>Up</source>
-      <translation>উপরে</translation>
+      <translation>Up</translation>
     </message>
     <message>
       <source>Left</source>
-      <translation>বামে</translation>
+      <translation>Left</translation>
     </message>
     <message>
       <source>Right</source>
-      <translation>ডানে</translation>
+      <translation>Right</translation>
     </message>
     <message>
       <source>Down</source>
-      <translation>নিচে</translation>
+      <translation>Down</translation>
     </message>
     <message>
       <source>Left Stick</source>
-      <translation>বাম স্টিক</translation>
+      <translation>Left Stick</translation>
     </message>
     <message>
       <source>Config Selection</source>
@@ -447,7 +447,7 @@
     </message>
     <message>
       <source>Right Stick</source>
-      <translation>ডান স্টিক</translation>
+      <translation>Right Stick</translation>
     </message>
     <message>
       <source>Color Adjustment</source>
@@ -475,15 +475,15 @@
     </message>
     <message>
       <source>Apply</source>
-      <translation>প্রয়োগ</translation>
+      <translation>প্রয়োগ করুন</translation>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation>ডিফল্ট পুনরুদ্ধার</translation>
+      <translation>Defaults পুনরুদ্ধার করুন</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation>বাতিল</translation>
+      <translation>বাতিল করুন</translation>
     </message>
     <message>
       <source>unmapped</source>
@@ -495,27 +495,27 @@
     </message>
     <message>
       <source>Touchpad Left</source>
-      <translation>টাচপ্যাড বাম</translation>
+      <translation>Touchpad Left</translation>
     </message>
     <message>
       <source>Touchpad Center</source>
-      <translation>টাচপ্যাড কেন্দ্র</translation>
+      <translation>Touchpad Center</translation>
     </message>
     <message>
       <source>Touchpad Right</source>
-      <translation>টাচপ্যাড ডান</translation>
+      <translation>Touchpad Right</translation>
     </message>
     <message>
       <source>Triangle</source>
-      <translation>ত্রিভুজ</translation>
+      <translation>Triangle</translation>
     </message>
     <message>
       <source>Square</source>
-      <translation>চতুর্ভুজ</translation>
+      <translation>Square</translation>
     </message>
     <message>
       <source>Circle</source>
-      <translation>বৃত্ত</translation>
+      <translation>Circle</translation>
     </message>
     <message>
       <source>Cross</source>
@@ -535,7 +535,7 @@
     </message>
     <message>
       <source>Move analog stick</source>
-      <translation>অ্যানালগ স্টিক নাড়ুন</translation>
+      <translation>Analog stick নাড়ুন</translation>
     </message>
     <message>
       <source>L1 and L2</source>
@@ -543,19 +543,19 @@
     </message>
     <message>
       <source>Active Gamepad</source>
-      <translation>সক্রিয় গেমপ্যাড</translation>
+      <translation>সক্রিয় Gamepad</translation>
     </message>
     <message>
       <source>Gamepad ID</source>
-      <translation>গেমপ্যাড ID</translation>
+      <translation>Gamepad ID</translation>
     </message>
     <message>
       <source>Default Gamepad</source>
-      <translation>ডিফল্ট গেমপ্যাড</translation>
+      <translation>Default Gamepad</translation>
     </message>
     <message>
       <source>No default selected</source>
-      <translation>কোনো ডিফল্ট নির্বাচন করা হয়নি</translation>
+      <translation>কোনো default নির্বাচন করা হয়নি</translation>
     </message>
     <message>
       <source>n/a</source>
@@ -563,11 +563,11 @@
     </message>
     <message>
       <source>Set Active Gamepad as Default</source>
-      <translation>সক্রিয় গেমপ্যাডকে ডিফল্ট হিসেবে সেট করুন</translation>
+      <translation>সক্রিয় Gamepad কে Default হিসেবে সেট করুন</translation>
     </message>
     <message>
       <source>Remove Default Gamepad</source>
-      <translation>ডিফল্ট গেমপ্যাড সরান</translation>
+      <translation>Default Gamepad কে সরান</translation>
     </message>
     <message>
       <source>R1 and R2</source>
@@ -579,19 +579,19 @@
     </message>
     <message>
       <source>Default Controller Selected</source>
-      <translation>ডিফল্ট কন্ট্রোলার নির্বাচন করা হয়েছে</translation>
+      <translation>Default Controller নির্বাচন করা হয়েছে</translation>
     </message>
     <message>
       <source>Active controller set as default</source>
-      <translation>সক্রিয় কন্ট্রোলার ডিফল্ট হিসেবে সেট করা হয়েছে</translation>
+      <translation>সক্রিয় controller কে default হিসেবে সেট করা হয়েছে</translation>
     </message>
     <message>
       <source>Default Controller Removed</source>
-      <translation>ডিফল্ট কন্ট্রোলার সরানো হয়েছে</translation>
+      <translation>Default Controller সরানো হয়েছে</translation>
     </message>
     <message>
       <source>Default controller setting removed</source>
-      <translation>ডিফল্ট কন্ট্রোলার সেটিং সরানো হয়েছে</translation>
+      <translation>Default controller setting সরানো হয়েছে</translation>
     </message>
     <message>
       <source>RED</source>
@@ -607,23 +607,23 @@
     </message>
     <message>
       <source>Left Stick Deadzone</source>
-      <translation>বাম স্টিক ডেডজোন</translation>
+      <translation>Left Stick Deadzone</translation>
     </message>
     <message>
       <source>Min Deadzone (def:2 max:127)</source>
-      <translation>সর্বনিম্ন ডেডজোন (ডিফ:2 সর্বোচ্চ:127)</translation>
+      <translation>সর্বনিম্ন Deadzone (def:2 সর্বোচ্চ:127)</translation>
     </message>
     <message>
       <source>Max Deadzone (def:127 max:127)</source>
-      <translation>সর্বোচ্চ ডেডজোন (ডিফ:127 সর্বোচ্চ:127)</translation>
+      <translation>সর্বোচ্চ Deadzone (def:127 সর্বোচ্চ:127)</translation>
     </message>
     <message>
       <source>Right Stick Deadzone</source>
-      <translation>ডান স্টিক ডেডজোন</translation>
+      <translation>Right Stick Deadzone</translation>
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation>টিপ: রাইট-ক্লিক করে ইনপুটের ম্যাপ সরান</translation>
+      <translation>পরামর্শ: right-click করে ইনপুট আনম্যাপ করুন</translation>
     </message>
   </context>
   <context>
@@ -660,15 +660,15 @@ Must be a valid hex string with even length.</source>
     </message>
     <message>
       <source>Exponent1</source>
-      <translation>এক্সপোনেন্ট1</translation>
+      <translation>Exponent1</translation>
     </message>
     <message>
       <source>Exponent2</source>
-      <translation>এক্সপোনেন্ট2</translation>
+      <translation>Exponent2</translation>
     </message>
     <message>
       <source>Public Exponent</source>
-      <translation>পাবলিক এক্সপোনেন্ট</translation>
+      <translation>Public Exponent</translation>
     </message>
     <message>
       <source>Coefficient</source>
@@ -3055,7 +3055,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable shadNet</source>
-      <translation>shadNet সক্রিয় করুন</translation>
+      <translation>shadNet চালু করুন</translation>
     </message>
     <message>
       <source>ShadNet</source>
