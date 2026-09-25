@@ -11,7 +11,7 @@
     </message>
     <message>
       <source>shadPS4 is an experimental open-source emulator for the PlayStation 4.</source>
-      <translation>shadPS4 হলো PlayStation 4-এর একটি পরীক্ষামূলক ওপেন-সোর্স এমুলেটর।</translation>
+      <translation>shadPS4 হলো PlayStation 4 এর একটি পরীক্ষামূলক ওপেন-সোর্স এমুলেটর।</translation>
     </message>
     <message>
       <source>This software should not be used to play games you have not legally obtained.</source>
@@ -22,11 +22,11 @@
     <name>CheatsPatches</name>
     <message>
       <source>Cheats / Patches for </source>
-      <translation>চিট / প্যাচ: </translation>
+      <translation>চিট / প্যাচের জন্য </translation>
     </message>
     <message>
       <source>Cheats/Patches are experimental.\nUse with caution.\n\nDownload cheats individually by selecting the repository and clicking the download button.\nIn the Patches tab, you can download all patches at once, choose which ones you want to use, and save your selection.\n\nSince we do not develop the Cheats/Patches,\nplease report issues to the cheat author.\n\nCreated a new cheat? Visit:\n</source>
-      <translation>চিট/প্যাচ পরীক্ষামূলক।\nসতর্কতার সাথে ব্যবহার করুন।\n\nরিপোজিটরি নির্বাচন করে ডাউনলোড বোতামে ক্লিক করে আলাদাভাবে চিট ডাউনলোড করুন।\nপ্যাচ ট্যাবে আপনি একসাথে সব প্যাচ ডাউনলোড করতে, ব্যবহার করতে চান এমনগুলো বেছে নিতে এবং আপনার নির্বাচন সংরক্ষণ করতে পারবেন।\n\nআমরা চিট/প্যাচ তৈরি করি না, তাই\nসমস্যা হলে চিটের লেখককে জানান।\n\nনতুন কোনো চিট তৈরি করেছেন? এখানে যান:\n</translation>
+      <translation>চিট/প্যাচ পরীক্ষামূলক।\nসতর্কতার সাথে ব্যবহার করুন।\n\nরিপোজিটরি নির্বাচন করে ডাউনলোড বোতামে ক্লিক করে আলাদাভাবে চিট ডাউনলোড করুন।\nপ্যাচ ট্যাবে, আপনি একসাথে সব প্যাচ ডাউনলোড করতে পারেন, কোনগুলো ব্যবহার করতে চান তা নির্বাচন করতে পারেন, এবং আপনার নির্বাচন সংরক্ষণ করতে পারেন।\n\nআমরা চিট/প্যাচ তৈরি করি না,\nতাই সমস্যা হলে চিটের লেখককে জানান।\n\nনতুন চিট তৈরি করেছেন? এখানে যান:\n</translation>
     </message>
     <message>
       <source>No Image Available</source>
@@ -82,7 +82,7 @@
     </message>
     <message>
       <source>Save</source>
-      <translation>সংরক্ষণ</translation>
+      <translation>সংরক্ষণ করুন</translation>
     </message>
     <message>
       <source>Cheats</source>
@@ -158,7 +158,7 @@
     </message>
     <message>
       <source>No Cheats found for this game in this version of the selected repository,try another repository or a different version of the game.</source>
-      <translation>নির্বাচিত রিপোজিটরির এই সংস্করণে এই গেমের কোনো চিট পাওয়া যায়নি। অন্য রিপোজিটরি বা গেমের অন্য সংস্করণ চেষ্টা করুন।</translation>
+      <translation>নির্বাচিত রিপোজিটরির এই সংস্করণে এই গেমের কোনো চিট পাওয়া যায়নি, অন্য রিপোজিটরি বা গেমের অন্য সংস্করণ চেষ্টা করুন।</translation>
     </message>
     <message>
       <source>Cheats Downloaded Successfully</source>
@@ -166,7 +166,7 @@
     </message>
     <message>
       <source>You have successfully downloaded the cheats for this version of the game from the selected repository. You can try downloading from another repository, if it is available it will also be possible to use it by selecting the file from the list.</source>
-      <translation>নির্বাচিত রিপোজিটরি থেকে আপনি এই গেমের সংস্করণের চিট সফলভাবে ডাউনলোড করেছেন। অন্য রিপোজিটরি থেকেও ডাউনলোড করতে পারেন; উপলভ্য থাকলে তালিকা থেকে ফাইল নির্বাচন করে সেটিও ব্যবহার করা যাবে।</translation>
+      <translation>নির্বাচিত রিপোজিটরি থেকে আপনি এই গেমের সংস্করণের চিট সফলভাবে ডাউনলোড করেছেন। অন্য রিপোজিটরি থেকেও ডাউনলোড করতে পারেন, উপলভ্য থাকলে তালিকা থেকে ফাইল নির্বাচন করে সেটিও ব্যবহার করা যাবে।</translation>
     </message>
     <message>
       <source>Failed to save:</source>
@@ -178,11 +178,11 @@
     </message>
     <message>
       <source>Download Complete</source>
-      <translation>ডাউনলোড সম্পন্ন</translation>
+      <translation>ডাউনলোড সম্পূর্ণ</translation>
     </message>
     <message>
       <source>Patches Downloaded Successfully! All Patches available for all games have been downloaded, there is no need to download them individually for each game as happens in Cheats. If the patch does not appear, it may be that it does not exist for the specific serial and version of the game.</source>
-      <translation>প্যাচ সফলভাবে ডাউনলোড হয়েছে! সব গেমের জন্য উপলভ্য সব প্যাচ ডাউনলোড করা হয়েছে। চিটের মতো প্রতিটি গেমের জন্য আলাদাভাবে ডাউনলোড করার প্রয়োজন নেই। প্যাচটি দেখা না গেলে নির্দিষ্ট সিরিয়াল ও গেমের সংস্করণের জন্য সেটি নাও থাকতে পারে।</translation>
+      <translation>প্যাচ সফলভাবে ডাউনলোড হয়েছে! সব গেমের জন্য উপলভ্য সব প্যাচ ডাউনলোড করা হয়েছে, চিটের মতো প্রতিটি গেমের জন্য আলাদাভাবে ডাউনলোড করার প্রয়োজন নেই। প্যাচ দেখা না গেলে, নির্দিষ্ট সিরিয়াল ও গেমের সংস্করণের জন্য সেটি নাও থাকতে পারে।</translation>
     </message>
     <message>
       <source>Failed to parse JSON data from HTML.</source>
@@ -190,7 +190,7 @@
     </message>
     <message>
       <source>Failed to retrieve HTML page.</source>
-      <translation>HTML পেজ সংগ্রহ করতে ব্যর্থ।</translation>
+      <translation>HTML পৃষ্ঠা পুনরুদ্ধার করতে ব্যর্থ।</translation>
     </message>
     <message>
       <source>The game is in version: %1</source>
@@ -198,7 +198,7 @@
     </message>
     <message>
       <source>The downloaded patch only works on version: %1</source>
-      <translation>ডাউনলোড করা প্যাচটি শুধু %1 সংস্করণে কাজ করে</translation>
+      <translation>ডাউনলোড করা প্যাচটি শুধুমাত্র %1 সংস্করণে কাজ করে</translation>
     </message>
     <message>
       <source>You may need to update your game.</source>
@@ -226,7 +226,7 @@
     </message>
     <message>
       <source>Directory does not exist:</source>
-      <translation>অবস্থানি বিদ্যমান নেই:</translation>
+      <translation>অবস্থান বিদ্যমান নেই:</translation>
     </message>
     <message>
       <source>Failed to open files.json for reading.</source>
@@ -242,7 +242,7 @@
     </message>
     <message>
       <source>Close</source>
-      <translation>বন্ধ</translation>
+      <translation>বন্ধ করুন</translation>
     </message>
   </context>
   <context>
@@ -277,7 +277,7 @@
     </message>
     <message>
       <source>Your version is already up to date!</source>
-      <translation>আপনার সংস্করণটি ইতিমধ্যে সর্বশেষ।</translation>
+      <translation>আপনার সংস্করণটি ইতিমধ্যেই সর্বশেষ আপডেটেড!</translation>
     </message>
     <message>
       <source>Current Version</source>
@@ -317,11 +317,11 @@
     </message>
     <message>
       <source>Network error occurred while trying to access the URL</source>
-      <translation>URL-এ প্রবেশের চেষ্টা করার সময় নেটওয়ার্ক ত্রুটি ঘটেছে</translation>
+      <translation>URL এ প্রবেশের চেষ্টা করার সময় নেটওয়ার্ক ত্রুটি ঘটেছে</translation>
     </message>
     <message>
       <source>Download Complete</source>
-      <translation>ডাউনলোড সম্পন্ন</translation>
+      <translation>ডাউনলোড সম্পূর্ণ</translation>
     </message>
     <message>
       <source>The update has been downloaded, press OK to install.</source>
@@ -329,7 +329,7 @@
     </message>
     <message>
       <source>Failed to save the update file at</source>
-      <translation>আপডেট ফাইল সংরক্ষণ করতে ব্যর্থ, অবস্থান:</translation>
+      <translation>আপডেট ফাইলটি সংরক্ষণ করতে ব্যর্থ, অবস্থান</translation>
     </message>
     <message>
       <source>Starting Update...</source>
@@ -345,7 +345,7 @@
     </message>
     <message>
       <source>Update Available - GUI</source>
-      <translation>আপডেট উপলভ্য - GUI</translation>
+      <translation>আপডেট পাওয়া গেছে - GUI</translation>
     </message>
   </context>
   <context>
@@ -491,7 +491,7 @@
     </message>
     <message>
       <source>Options</source>
-      <translation>অপশন</translation>
+      <translation>বিকল্পসমূহ</translation>
     </message>
     <message>
       <source>Touchpad Left</source>
@@ -519,7 +519,7 @@
     </message>
     <message>
       <source>Cross</source>
-      <translation>ক্রস</translation>
+      <translation>Cross</translation>
     </message>
     <message>
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
@@ -635,8 +635,8 @@
     <message>
       <source>Trophy Key: Used for trophy decryption.
 Must be a valid hex string with even length.</source>
-      <translation>ট্রফি ডিক্রিপশনের জন্য ব্যবহৃত ট্রফি কী।
-সমান দৈর্ঘ্যের একটি বৈধ হেক্স স্ট্রিং হতে হবে.</translation>
+      <translation>ট্রফি কী: ট্রফি ডিক্রিপশনের জন্য ব্যবহৃত।
+অবশ্যই একটি সঠিক hex string হতে হবে যার দৈর্ঘ্য জোড় সংখ্যা।</translation>
     </message>
     <message>
       <source>Enter Trophy Key</source>
@@ -702,7 +702,7 @@ All fields must be valid hex strings with even length.</source>
     </message>
     <message>
       <source>Debug Rif Keyset</source>
-      <translation>ডিবাগ RIF কীসেট</translation>
+      <translation>ডিবাগ Rif Keyset</translation>
     </message>
     <message>
       <source>RSA key components for debug RIF files.
@@ -732,7 +732,7 @@ All fields must be valid hex strings with even length.</source>
       <source>No key file found or failed to load.
 Please enter your keys and save them.</source>
       <translation>কোনো কী ফাইল পাওয়া যায়নি বা লোড করতে ব্যর্থ হয়েছে।
-আপনার কী লিখে সেগুলো সংরক্ষণ করুন.</translation>
+আপনার কী লিখে সেগুলো সংরক্ষণ করুন।</translation>
     </message>
     <message>
       <source>Validation Error</source>
@@ -904,7 +904,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Directory with your dumped DLC&apos;s</source>
-      <translation>আপনার ডাম্প করা DLC-গুলোর অবস্থান</translation>
+      <translation>আপনার ডাম্প করা DLC গুলোর অবস্থান</translation>
     </message>
     <message>
       <source>Directory with games</source>
@@ -912,7 +912,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Directory with DLC&apos;s</source>
-      <translation>DLC-গুলোর অবস্থান</translation>
+      <translation>DLC গুলোর অবস্থান</translation>
     </message>
   </context>
   <context>
@@ -963,7 +963,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>h</source>
-      <translation>ঘ</translation>
+      <translation>h</translation>
     </message>
     <message>
       <source>m</source>
@@ -999,7 +999,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Click to see details on github</source>
-      <translation>GitHub-এ বিস্তারিত দেখতে ক্লিক করুন</translation>
+      <translation>GitHub এ বিস্তারিত দেখতে ক্লিক করুন</translation>
     </message>
     <message>
       <source>Last updated</source>
@@ -1141,7 +1141,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Are you sure you want to delete %1&apos;s %2 directory?</source>
-      <translation>আপনি কি %1-এর %2 অবস্থান মুছতে চান?</translation>
+      <translation>আপনি কি নিশ্চিত যে আপনি %1এর %2 অবস্থান মুছতে চান?</translation>
     </message>
     <message>
       <source>Open Update Folder</source>
@@ -1177,7 +1177,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>SFO Viewer for </source>
-      <translation>এর জন্য SFO ভিউয়ার: </translation>
+      <translation>SFO ভিউয়ার এর জন্য </translation>
     </message>
     <message>
       <source>Remove from Favorites</source>
@@ -1351,7 +1351,7 @@ Please enter your keys and save them.</source>
       <source>This will pack &quot;%1&quot; into a single read-only .zar archive. Depending on the size this can take a while, and the archive will temporarily need as much free disk space as the original.
 
 The original folder is left untouched until conversion succeeds, you&apos;ll be asked afterward whether to delete it.</source>
-      <translation>এটি &quot;%1&quot;-কে একটি একক read-only .zar আর্কাইভে প্যাক করবে। আকারের ওপর নির্ভর করে কিছু সময় লাগতে পারে এবং আর্কাইভটির জন্য সাময়িকভাবে মূল ফোল্ডারের সমান খালি ডিস্ক স্পেস প্রয়োজন হবে।
+      <translation>এটি &quot;%1&quot;কে একটি একক read-only .zar আর্কাইভে প্যাক করবে। আকারের ওপর নির্ভর করে কিছু সময় লাগতে পারে এবং আর্কাইভটির জন্য সাময়িকভাবে মূল ফোল্ডারের সমান খালি ডিস্ক স্পেস প্রয়োজন হবে।
 
 রূপান্তর সফল না হওয়া পর্যন্ত মূল ফোল্ডার অপরিবর্তিত থাকবে; এরপর এটি মুছবেন কি না জিজ্ঞাসা করা হবে।</translation>
     </message>
@@ -1857,7 +1857,7 @@ This game has a separate update/patch folder. Only the base game will be archive
     </message>
     <message>
       <source>Exit shadPS4</source>
-      <translation>shadPS4 থেকে প্রস্থান</translation>
+      <translation>ShadPS4 বন্ধ করুন</translation>
     </message>
     <message>
       <source>Exit the application.</source>
@@ -2443,7 +2443,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Hide Idle Cursor Timeout:\nThe duration (seconds) after which the cursor that has been idle hides itself.</source>
-      <translation>নিষ্ক্রিয় কার্সর লুকানোর সময়সীমা:\nকার্সর নিষ্ক্রিয় থাকার পর কত সেকেন্ডে লুকাবে।</translation>
+      <translation>নিষ্ক্রিয় কার্সর লুকানোর সময়সীমা:\nকার্সর নিষ্ক্রিয় থাকার পর লুকাবে (কত সেকেন্ডে)।</translation>
     </message>
     <message>
       <source>Display Compatibility Data:\nDisplays game compatibility information in table view. Enable &quot;Update Compatibility On Startup&quot; to get up-to-date information.</source>
@@ -2671,7 +2671,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Immediate (No Vsync)</source>
-      <translation type="unfinished">Immediate (No Vsync)</translation>
+      <translation>Immediate (No Vsync)</translation>
     </message>
     <message>
       <source>Select the DLC folder</source>
@@ -2679,7 +2679,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</source>
-      <translation>প্রেজেন্ট মোড:\nভিডিও আউটপুট কীভাবে স্ক্রিনে দেখানো হবে তা কনফিগার করে।\n\nMailbox: ফ্রেমগুলো স্ক্রিনের refresh rate-এর সাথে সিঙ্ক হয়। নতুন ফ্রেম pending ফ্রেম প্রতিস্থাপন করবে। latency কমায়, তবে পিছিয়ে থাকলে কিছু ফ্রেম বাদ পড়তে পারে।\nFifo: ফ্রেমগুলো স্ক্রিনের refresh rate-এর সাথে সিঙ্ক হয়। নতুন ফ্রেম pending ফ্রেমের পেছনে queue হবে। সব ফ্রেম দেখানো নিশ্চিত করে, তবে latency বাড়তে পারে।\nImmediate: প্রস্তুত হলেই ফ্রেম স্ক্রিনে দেখানো হয়। tearing হতে পারে।</translation>
+      <translation>প্রেজেন্ট মোড:\nভিডিও আউটপুট কীভাবে স্ক্রিনে দেখানো হবে তা বিন্যস্ত করে।\n\nMailbox: ফ্রেমগুলো স্ক্রিনের refresh rate এর সাথে সমন্বয় করে। নতুন ফ্রেম pending ফ্রেমকে প্রতিস্থাপন করবে। latency কমায়, তবে পিছিয়ে থাকলে কিছু ফ্রেম বাদ পড়তে পারে।\nFifo: ফ্রেমগুলো স্ক্রিনের refresh rate-এর সাথে সমন্বয় করে। নতুন ফ্রেম pending ফ্রেমের পেছনে queue হবে। সব ফ্রেম দেখানো নিশ্চিত করে, তবে latency বাড়তে পারে।\nImmediate: প্রস্তুত হলেই ফ্রেম স্ক্রিনে দেখানো হয়। tearing হতে পারে।</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
@@ -2699,7 +2699,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>RCAS Attenuation:</source>
-      <translation type="unfinished">RCAS Attenuation:</translation>
+      <translation>RCAS Attenuation:</translation>
     </message>
     <message>
       <source>Load Presets...</source>
@@ -2731,7 +2731,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Vblank Frequency</source>
-      <translation type="unfinished">Vblank Frequency</translation>
+      <translation>Vblank Frequency</translation>
     </message>
     <message>
       <source>Vblank Frequency:\nThe frame rate at which the emulator refreshes at (60hz is the baseline, whether the game runs at 30 or 60fps). Changing this may have adverse effects, such as increasing the game speed, or breaking critical game functionality that does not expect this to change!</source>
@@ -2803,7 +2803,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
-      <translation>শেডার ডাম্পিং সক্রিয় করুন:\nপ্রযুক্তিগত ডিবাগিংয়ের জন্য রেন্ডার হওয়ার সময় গেমের শেডারগুলো একটি ফোল্ডারে সংরক্ষণ করে।</translation>
+      <translation>Shaders Dumping সক্রিয় করুন:\nপ্রযুক্তিগত ডিবাগিংয়ের জন্য রেন্ডার হওয়ার সময় গেমের শেডারগুলো একটি ফোল্ডারে সংরক্ষণ করে।</translation>
     </message>
     <message>
       <source>Enable Null GPU:\nFor the sake of technical debugging, disables game rendering as if there were no graphics card. The screen will be black.</source>
@@ -2835,7 +2835,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Validation Layers</source>
-      <translation type="unfinished">Validation Layers</translation>
+      <translation>Validation Layers</translation>
     </message>
     <message>
       <source>Enable Core Validation</source>
@@ -2871,11 +2871,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>DLC Path</source>
-      <translation type="unfinished">DLC Path</translation>
+      <translation>DLC এর অবস্থান</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path</source>
-      <translation type="unfinished">PS4 Sysmodules Path</translation>
+      <translation>PS4 Sysmodules এর অবস্থান</translation>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
@@ -2899,15 +2899,15 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Skylander Portal</source>
-      <translation type="unfinished">Skylander Portal</translation>
+      <translation>Skylander Portal</translation>
     </message>
     <message>
       <source>Infinity Base</source>
-      <translation type="unfinished">Infinity Base</translation>
+      <translation>Infinity Base</translation>
     </message>
     <message>
       <source>Dimensions Toypad</source>
-      <translation type="unfinished">Dimensions Toypad</translation>
+      <translation>Dimensions Toypad</translation>
     </message>
     <message>
       <source>USB Device:\nReal USB Device: Use a real USB Device attached to the system.\nSkylander Portal: Emulate a Skylander Portal of Power.\nInfinity Base: Emulate a Disney Infinity Base.\nDimensions Toypad: Emulate a Lego Dimensions Toypad.</source>
@@ -2943,15 +2943,15 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Relaxed</source>
-      <translation type="unfinished">Relaxed</translation>
+      <translation>Relaxed</translation>
     </message>
     <message>
       <source>Precise</source>
-      <translation type="unfinished">Precise</translation>
+      <translation>Precise</translation>
     </message>
     <message>
       <source>Select shadPS4 Home Path</source>
-      <translation>shadPS4 Home Path নির্বাচন করুন</translation>
+      <translation>ShadPS4 হোম এর অবস্থান নির্বাচন করুন</translation>
     </message>
     <message>
       <source>Select the system modules folder</source>
@@ -2959,7 +2959,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Home Folder Location (Saves, Inputs, Trophy Data)</source>
-      <translation type="unfinished">Home Folder Location (Saves, Inputs, Trophy Data)</translation>
+      <translation>হোম ফোল্ডার এর অবস্থান (Saves, Inputs, Trophy Data)</translation>
     </message>
     <message>
       <source>Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</source>
@@ -3003,7 +3003,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source> ms</source>
-      <translation type="unfinished"> ms</translation>
+      <translation> ms</translation>
     </message>
     <message>
       <source>Log Size Limit</source>
@@ -3011,7 +3011,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source> B</source>
-      <translation type="unfinished"> B</translation>
+      <translation> B</translation>
     </message>
     <message>
       <source>Log Append</source>
@@ -3019,11 +3019,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>wincolor</source>
-      <translation type="unfinished">wincolor</translation>
+      <translation>wincolor</translation>
     </message>
     <message>
       <source>msvc</source>
-      <translation type="unfinished">msvc</translation>
+      <translation>msvc</translation>
     </message>
     <message>
       <source>Log Append:\nAppend to existing logs.</source>
@@ -3059,7 +3059,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>ShadNet</source>
-      <translation type="unfinished">ShadNet</translation>
+      <translation>ShadNet</translation>
     </message>
     <message>
       <source>Server</source>
@@ -3083,11 +3083,11 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Red Zone Protection</source>
-      <translation type="unfinished">Red Zone Protection</translation>
+      <translation>Red Zone Protection</translation>
     </message>
     <message>
       <source>Static Patching</source>
-      <translation type="unfinished">Static Patching</translation>
+      <translation>Static Patching</translation>
     </message>
   </context>
   <context>
@@ -3113,7 +3113,7 @@ Select an emulator version from the right panel.</source>
     <name>SteamShortcut</name>
     <message>
       <source>Steam</source>
-      <translation type="unfinished">Steam</translation>
+      <translation>Steam</translation>
     </message>
     <message>
       <source>%1 is already in your Steam library.</source>
@@ -3287,7 +3287,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Shad&amp;Net...</source>
-      <translation type="unfinished">Shad&amp;Net...</translation>
+      <translation>Shad&amp;Net...</translation>
     </message>
     <message>
       <source>On</source>
@@ -3639,7 +3639,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Dimensions Figure (*.bin);;</source>
-      <translation type="unfinished">Dimensions Figure (*.bin);;</translation>
+      <translation>Dimensions Figure (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to open the figure file!</source>
@@ -3666,7 +3666,7 @@ File was too small.</source>
     <name>figure_creator_dialog</name>
     <message>
       <source>Figure Creator</source>
-      <translation type="unfinished">Figure Creator</translation>
+      <translation>Figure Creator</translation>
     </message>
     <message>
       <source>Filter by Series:</source>
@@ -3686,7 +3686,7 @@ File was too small.</source>
     </message>
     <message>
       <source>Series:</source>
-      <translation type="unfinished">Series:</translation>
+      <translation>Series:</translation>
     </message>
     <message>
       <source>Create</source>
@@ -3714,7 +3714,7 @@ File was too small.</source>
     </message>
     <message>
       <source>Infinity Figure (*.bin);;</source>
-      <translation type="unfinished">Infinity Figure (*.bin);;</translation>
+      <translation>Infinity Figure (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to create figure file!</source>
@@ -3739,39 +3739,39 @@ File was too small.</source>
     </message>
     <message>
       <source>Play Set/Power Disc</source>
-      <translation type="unfinished">Play Set/Power Disc</translation>
+      <translation>Play Set/Power Disc</translation>
     </message>
     <message>
       <source>Power Disc Two</source>
-      <translation type="unfinished">Power Disc Two</translation>
+      <translation>Power Disc Two</translation>
     </message>
     <message>
       <source>Power Disc Three</source>
-      <translation type="unfinished">Power Disc Three</translation>
+      <translation>Power Disc Three</translation>
     </message>
     <message>
       <source>Player One</source>
-      <translation type="unfinished">Player One</translation>
+      <translation>Player One</translation>
     </message>
     <message>
       <source>Player One Ability One</source>
-      <translation type="unfinished">Player One Ability One</translation>
+      <translation>Player One Ability One</translation>
     </message>
     <message>
       <source>Player One Ability Two</source>
-      <translation type="unfinished">Player One Ability Two</translation>
+      <translation>Player One Ability Two</translation>
     </message>
     <message>
       <source>Player Two</source>
-      <translation type="unfinished">Player Two</translation>
+      <translation>Player Two</translation>
     </message>
     <message>
       <source>Player Two Ability One</source>
-      <translation type="unfinished">Player Two Ability One</translation>
+      <translation>Player Two Ability One</translation>
     </message>
     <message>
       <source>Player Two Ability Two</source>
-      <translation type="unfinished">Player Two Ability Two</translation>
+      <translation>Player Two Ability Two</translation>
     </message>
     <message>
       <source>None</source>
@@ -3799,7 +3799,7 @@ File was too small.</source>
     </message>
     <message>
       <source>Infinity Figure (*.bin);;</source>
-      <translation type="unfinished">Infinity Figure (*.bin);;</translation>
+      <translation>Infinity Figure (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to open the figure file!</source>
@@ -3826,7 +3826,7 @@ File was too small.</source>
     <name>minifig_creator_dialog</name>
     <message>
       <source>Figure Creator</source>
-      <translation type="unfinished">Figure Creator</translation>
+      <translation>Figure Creator</translation>
     </message>
     <message>
       <source>--Unknown--</source>
@@ -3858,7 +3858,7 @@ File was too small.</source>
     </message>
     <message>
       <source>Dimensions Figure (*.bin);;</source>
-      <translation type="unfinished">Dimensions Figure (*.bin);;</translation>
+      <translation>Dimensions Figure (*.bin);;</translation>
     </message>
     <message>
       <source>Failed to create minifig file!</source>
@@ -3875,7 +3875,7 @@ File was too small.</source>
     <name>minifig_move_dialog</name>
     <message>
       <source>Figure Mover</source>
-      <translation type="unfinished">Figure Mover</translation>
+      <translation>Figure Mover</translation>
     </message>
     <message>
       <source>None</source>
@@ -3894,7 +3894,7 @@ File was too small.</source>
     <name>skylander_creator_dialog</name>
     <message>
       <source>Skylander Creator</source>
-      <translation type="unfinished">Skylander Creator</translation>
+      <translation>Skylander Creator</translation>
     </message>
     <message>
       <source>--Unknown--</source>
@@ -3902,11 +3902,11 @@ File was too small.</source>
     </message>
     <message>
       <source>ID:</source>
-      <translation type="unfinished">ID:</translation>
+      <translation>ID:</translation>
     </message>
     <message>
       <source>Variant:</source>
-      <translation type="unfinished">Variant:</translation>
+      <translation>Variant:</translation>
     </message>
     <message>
       <source>Create</source>
@@ -3934,7 +3934,7 @@ File was too small.</source>
     </message>
     <message>
       <source>Skylander Object (*.sky);;All Files (*)</source>
-      <translation type="unfinished">Skylander Object (*.sky);;All Files (*)</translation>
+      <translation>Skylander Object (*.sky);;All Files (*)</translation>
     </message>
     <message>
       <source>Failed to create skylander file!</source>
@@ -3959,7 +3959,7 @@ File was too small.</source>
     </message>
     <message>
       <source>Skylander %1</source>
-      <translation type="unfinished">Skylander %1</translation>
+      <translation>Skylander %1</translation>
     </message>
     <message>
       <source>Clear</source>
@@ -3979,7 +3979,7 @@ File was too small.</source>
     </message>
     <message>
       <source>Skylander (*.sky *.bin *.dmp *.dump);;All Files (*)</source>
-      <translation type="unfinished">Skylander (*.sky *.bin *.dmp *.dump);;All Files (*)</translation>
+      <translation>Skylander (*.sky *.bin *.dmp *.dump);;All Files (*)</translation>
     </message>
     <message>
       <source>Failed to open the skylander file!</source>
