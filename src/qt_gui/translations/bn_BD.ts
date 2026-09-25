@@ -672,33 +672,33 @@ Must be a valid hex string with even length.</source>
     </message>
     <message>
       <source>Coefficient</source>
-      <translation>কো-এফিশিয়েন্ট</translation>
+      <translation>Coefficient</translation>
     </message>
     <message>
       <source>Modulus</source>
-      <translation>মডুলাস</translation>
+      <translation>Modulus</translation>
     </message>
     <message>
       <source>Prime 1</source>
-      <translation>প্রাইম ১</translation>
+      <translation>Prime 1</translation>
     </message>
     <message>
       <source>Prime 2</source>
-      <translation>প্রাইম ২</translation>
+      <translation>Prime 2</translation>
     </message>
     <message>
       <source>Private Exponent</source>
-      <translation>প্রাইভেট এক্সপোনেন্ট</translation>
+      <translation>Private Exponent</translation>
     </message>
     <message>
       <source>Fake Keyset</source>
-      <translation>ফেক কীসেট</translation>
+      <translation>নকল Keyset</translation>
     </message>
     <message>
       <source>RSA key components for fake signing.
 All fields must be valid hex strings with even length.</source>
-      <translation>ফেক সাইনিংয়ের জন্য RSA কী কম্পোনেন্ট।
-সব ফিল্ডে সমান দৈর্ঘ্যের বৈধ হেক্স স্ট্রিং থাকতে হবে.</translation>
+      <translation>নকল signing এর জন্য RSA key components।
+সব ফিল্ডে সমান দৈর্ঘ্যের বৈধ hex strings থাকতে হবে।</translation>
     </message>
     <message>
       <source>Debug Rif Keyset</source>
@@ -707,8 +707,8 @@ All fields must be valid hex strings with even length.</source>
     <message>
       <source>RSA key components for debug RIF files.
 All fields must be valid hex strings with even length.</source>
-      <translation>ডিবাগ RIF ফাইলের জন্য RSA কী কম্পোনেন্ট।
-সব ফিল্ডে সমান দৈর্ঘ্যের বৈধ হেক্স স্ট্রিং থাকতে হবে.</translation>
+      <translation>ডিবাগ RIF ফাইলের জন্য RSA key components।
+সব ফিল্ডে সমান দৈর্ঘ্যের বৈধ hex strings থাকতে হবে।</translation>
     </message>
     <message>
       <source>Pkg Derived Key3</source>
@@ -717,12 +717,12 @@ All fields must be valid hex strings with even length.</source>
     <message>
       <source>RSA key components for package decryption.
 All fields must be valid hex strings with even length.</source>
-      <translation>প্যাকেজ ডিক্রিপশনের জন্য RSA কী কম্পোনেন্ট।
-সব ফিল্ডে সমান দৈর্ঘ্যের বৈধ হেক্স স্ট্রিং থাকতে হবে.</translation>
+      <translation>প্যাকেজ decryption এর জন্য RSA key components।
+সব ফিল্ডে সমান দৈর্ঘ্যের বৈধ hex strings থাকতে হবে।</translation>
     </message>
     <message>
       <source>Close</source>
-      <translation>বন্ধ</translation>
+      <translation>বন্ধ করুন</translation>
     </message>
     <message>
       <source>Warning</source>
@@ -736,7 +736,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Validation Error</source>
-      <translation>ভ্যালিডেশন ত্রুটি</translation>
+      <translation>Validation ত্রুটি</translation>
     </message>
     <message>
       <source>Success</source>
@@ -744,7 +744,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Keys saved successfully!</source>
-      <translation>কীগুলো সফলভাবে সংরক্ষণ করা হয়েছে!</translation>
+      <translation>Key গুলো সফলভাবে সংরক্ষণ করা হয়েছে!</translation>
     </message>
     <message>
       <source>Error</source>
@@ -752,23 +752,23 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Failed to save keys!</source>
-      <translation>কী সংরক্ষণ করতে ব্যর্থ!</translation>
+      <translation>Key গুলো সংরক্ষণ করতে ব্যর্থ!</translation>
     </message>
     <message>
       <source>Status: All fields empty</source>
-      <translation>স্ট্যাটাস: সব ফিল্ড খালি</translation>
+      <translation>অবস্থা: সব ফিল্ড খালি</translation>
     </message>
     <message>
       <source>Status: Invalid hex values</source>
-      <translation>স্ট্যাটাস: অবৈধ হেক্স মান</translation>
+      <translation>অবস্থা: অবৈধ hex মান</translation>
     </message>
     <message>
       <source>Status: Incomplete</source>
-      <translation>স্ট্যাটাস: অসম্পূর্ণ</translation>
+      <translation>অবস্থা: অসম্পূর্ণ</translation>
     </message>
     <message>
       <source>Status: Valid</source>
-      <translation>স্ট্যাটাস: বৈধ</translation>
+      <translation>অবস্থা: বৈধ</translation>
     </message>
     <message>
       <source>Invalid File</source>
@@ -931,7 +931,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Compatibility</source>
-      <translation>সামঞ্জস্যতা</translation>
+      <translation>Compatibility</translation>
     </message>
     <message>
       <source>Region</source>
@@ -939,7 +939,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Firmware</source>
-      <translation>ফার্মওয়্যার</translation>
+      <translation>Firmware</translation>
     </message>
     <message>
       <source>Size</source>
@@ -951,7 +951,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Path</source>
-      <translation>পাথ</translation>
+      <translation>অবস্থান</translation>
     </message>
     <message>
       <source>Play Time</source>
@@ -967,15 +967,15 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>m</source>
-      <translation>মি</translation>
+      <translation>m</translation>
     </message>
     <message>
       <source>s</source>
-      <translation>সে</translation>
+      <translation>s</translation>
     </message>
     <message>
       <source>Compatibility is untested</source>
-      <translation>সামঞ্জস্যতা পরীক্ষা করা হয়নি</translation>
+      <translation>Compatibility পরীক্ষা করা হয়নি</translation>
     </message>
     <message>
       <source>Game does not initialize properly / crashes the emulator</source>
@@ -1041,11 +1041,11 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>SFO Viewer</source>
-      <translation>SFO ভিউয়ার</translation>
+      <translation>SFO Viewer</translation>
     </message>
     <message>
       <source>Trophy Viewer</source>
-      <translation>ট্রফি ভিউয়ার</translation>
+      <translation>Trophy Viewer</translation>
     </message>
     <message>
       <source>Open Folder...</source>
@@ -1057,7 +1057,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Open Save Data Folder</source>
-      <translation>সেভ ডেটা ফোল্ডার খুলুন</translation>
+      <translation>Save Data Folder খুলুন</translation>
     </message>
     <message>
       <source>Open Log Folder</source>
