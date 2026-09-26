@@ -11,7 +11,7 @@
     </message>
     <message>
       <source>shadPS4 is an experimental open-source emulator for the PlayStation 4.</source>
-      <translation>shadPS4 হলো PlayStation 4 এর একটি পরীক্ষামূলক ওপেন-সোর্স এমুলেটর।</translation>
+      <translation>shadPS4 হলো PlayStation 4 এর একটি পরীক্ষামূলক open-source emulator।</translation>
     </message>
     <message>
       <source>This software should not be used to play games you have not legally obtained.</source>
