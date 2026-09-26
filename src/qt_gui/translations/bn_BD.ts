@@ -2149,7 +2149,7 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>ত্রুটি</translation>
     </message>
     <message>
       <source>Rosetta 2 is not installed.
