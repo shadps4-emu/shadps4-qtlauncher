@@ -2147,6 +2147,18 @@ Select an emulator version from the right panel.</source>
       <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
       <translation>বুটযোগ্য ফাইল (*.bin *.elf *.oelf *.zar)</translation>
     </message>
+    <message>
+      <source>Error</source>
+      <translation>ত্রুটি</translation>
+    </message>
+    <message>
+      <source>Rosetta 2 is not installed.
+
+Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rosetta&apos;.</source>
+      <translation>Rosetta 2 install করা নেই।
+
+দয়া করে Terminal থেকে softwareupdate --install-rosetta ব্যবহার করে Rosetta 2 install করুন।</translation>
+    </message>
   </context>
   <context>
     <name>QObject</name>

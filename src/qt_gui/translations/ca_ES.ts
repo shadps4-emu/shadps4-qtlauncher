@@ -2147,6 +2147,18 @@ Selecciona una versió del panell dret.</translation>
       <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
       <translation>Fitxers executables (*.bin *.elf *.oelf *.zar)</translation>
     </message>
+    <message>
+      <source>Error</source>
+      <translation>Error</translation>
+    </message>
+    <message>
+      <source>Rosetta 2 is not installed.
+
+Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rosetta&apos;.</source>
+      <translation>Rosetta 2 no està instal·lat.
+
+Instal·la el programari Rosetta 2, si us plau, des del Terminal fent servir &apos;softwareupdate -install-rosetta&apos;.</translation>
+    </message>
   </context>
   <context>
     <name>QObject</name>
