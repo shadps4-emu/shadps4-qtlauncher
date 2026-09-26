@@ -53,16 +53,16 @@ public:
                         std::shared_ptr<CompatibilityInfoClass> m_compat_info,
                         std::shared_ptr<gui_settings> settings,
                         std::shared_ptr<IpcClient> m_ipc_client, QTableWidget* widget, bool isList,
-                        std::function<void(QStringList)> launch_func) {
+                        int gameIndex, std::function<void(QStringList)> launch_func) {
 
         QPoint global_pos = widget->viewport()->mapToGlobal(pos);
         std::shared_ptr<gui_settings> m_gui_settings = std::move(settings);
-        int itemID = 0;
         int changedFavorite = 0;
-        if (isList) {
-            itemID = widget->currentRow();
-        } else {
-            itemID = widget->currentRow() * widget->columnCount() + widget->currentColumn();
+
+        int itemID = gameIndex;
+
+        if (itemID < 0 || itemID >= m_games.size()) {
+            return changedFavorite;
         }
 
         // Do not show the menu if no item is selected
@@ -641,12 +641,16 @@ public:
         }
 
         if (selected == &openCheats) {
-            QString gameName = QString::fromStdString(m_games[itemID].name);
-            QString gameSerial = QString::fromStdString(m_games[itemID].serial);
-            QString gameVersion = QString::fromStdString(m_games[itemID].version);
-            QString gameSize = QString::fromStdString(m_games[itemID].size);
+            if (gameIndex < 0 || gameIndex >= m_games.size()) {
+                return changedFavorite;
+            }
+            QString gameName = QString::fromStdString(m_games[gameIndex].name);
+            QString gameSerial = QString::fromStdString(m_games[gameIndex].serial);
+            QString gameVersion = QString::fromStdString(m_games[gameIndex].version);
+            QString gameSize = QString::fromStdString(m_games[gameIndex].size);
+
             QString iconPath;
-            Common::FS::PathToQString(iconPath, m_games[itemID].icon_path);
+            Common::FS::PathToQString(iconPath, m_games[gameIndex].icon_path);
             QPixmap gameImage(iconPath);
             CheatsPatches* cheatsPatches =
                 new CheatsPatches(m_gui_settings, m_ipc_client, gameName, gameSerial, gameVersion,
