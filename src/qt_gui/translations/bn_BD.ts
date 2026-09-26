@@ -2155,9 +2155,9 @@ Select an emulator version from the right panel.</source>
       <source>Rosetta 2 is not installed.
 
 Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rosetta&apos;.</source>
-      <translation type="unfinished">Rosetta 2 is not installed.
+      <translation>Rosetta 2 install করা নেই।
 
-Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rosetta&apos;.</translation>
+দয়া করে Terminal থেকে 'softwareupdate --install-rosetta' ব্যবহার করে Rosetta 2 install করুন।</translation>
     </message>
   </context>
   <context>
