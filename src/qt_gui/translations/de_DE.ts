@@ -2148,15 +2148,15 @@ Wähle eine Emulator-Version aus dem rechten Fenster.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Fehler</translation>
     </message>
     <message>
       <source>Rosetta 2 is not installed.
 
 Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rosetta&apos;.</source>
-      <translation type="unfinished">Rosetta 2 is not installed.
+      <translation>Rosetta 2 ist nicht installiert.
 
-Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rosetta&apos;.</translation>
+Bitte installiere Rosetta 2 im Terminal mit dem Befehl &apos;softwareupdate --install-rosetta&apos;.</translation>
     </message>
   </context>
   <context>
