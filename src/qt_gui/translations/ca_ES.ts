@@ -2149,15 +2149,15 @@ Selecciona una versió del panell dret.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Error</translation>
     </message>
     <message>
       <source>Rosetta 2 is not installed.
 
 Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rosetta&apos;.</source>
-      <translation type="unfinished">Rosetta 2 is not installed.
+      <translation>Rosetta 2 no està instal·lat.
 
-Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rosetta&apos;.</translation>
+Instal·la el programari Rosetta 2, si us plau, des del Terminal fent servir &apos;softwareupdate -install-rosetta&apos;.</translation>
     </message>
   </context>
   <context>
