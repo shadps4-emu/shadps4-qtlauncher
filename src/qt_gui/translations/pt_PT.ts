@@ -2148,7 +2148,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Erro</translation>
     </message>
     <message>
       <source>Rosetta 2 is not installed.
