@@ -56,7 +56,6 @@ public:
     std::vector<std::string> parsedArgs;
     std::unordered_map<std::string, bool> supportedCapabilities{
         {"memory_patch", false},
-        {"no_auto_patch", false},
         {"emu_control", false},
     };
 
