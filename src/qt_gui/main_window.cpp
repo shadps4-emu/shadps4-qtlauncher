@@ -1025,7 +1025,7 @@ void MainWindow::StartGameWithArgs(QStringList args) {
         }
     }
     if (gamePath != "") {
-        if (Core ::FileSys::IsZArchiveFile(m_game_info->m_games[itemID].path)) {
+        if (Core::FileSys::IsZArchiveFile(m_game_info->m_games[itemID].path)) {
             gamePath.chop(10);
         }
 
@@ -1538,11 +1538,13 @@ void MainWindow::RunGame() {
     auto info = gameInfo.readGameInfo(dir);
     auto appVersion = info.version;
     auto gameSerial = info.serial;
-    auto patches = MemoryPatcher::readPatches(gameSerial, appVersion);
-    for (auto patch : patches) {
-        m_ipc_client->sendMemoryPatches(patch.modName, patch.address, patch.value, patch.target,
-                                        patch.size, patch.maskOffset, patch.littleEndian,
-                                        patch.mask, patch.maskOffset);
+    if (!m_ipc_client->supportedCapabilities["no_auto_patch"]) {
+        auto patches = MemoryPatcher::readPatches(gameSerial, appVersion);
+        for (auto patch : patches) {
+            m_ipc_client->sendMemoryPatches(patch.modName, patch.address, patch.value, patch.target,
+                                            patch.size, patch.maskOffset, patch.littleEndian,
+                                            patch.mask, patch.maskOffset);
+        }
     }
 
     m_ipc_client->startGame();

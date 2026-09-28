@@ -199,6 +199,9 @@ void IpcClient::onStderr() {
         } else if (s == "ENABLE_MEMORY_PATCH") {
             supportedCapabilities["memory_patch"] = true;
             LOG_INFO(IPC, "Feature detected: 'memory_patch'");
+        } else if (s == "NO_AUTO_PATCH") {
+            supportedCapabilities["no_auto_patch"] = true;
+            LOG_INFO(IPC, "Feature detected: 'no_auto_patch'");
         } else if (s == "ENABLE_EMU_CONTROL") {
             supportedCapabilities["emu_control"] = true;
             LOG_INFO(IPC, "Feature detected: 'emu_control'");
