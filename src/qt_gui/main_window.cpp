@@ -1025,7 +1025,7 @@ void MainWindow::StartGameWithArgs(QStringList args) {
         }
     }
     if (gamePath != "") {
-        if (Core ::FileSys::IsZArchiveFile(m_game_info->m_games[itemID].path)) {
+        if (Core::FileSys::IsZArchiveFile(m_game_info->m_games[itemID].path)) {
             gamePath.chop(10);
         }
 
@@ -1534,7 +1534,10 @@ void MainWindow::StartEmulatorExecutable(std::filesystem::path emuPath, QString 
 
 void MainWindow::RunGame() {
     auto gameInfo = GameInfoClass();
-    auto dir = last_game_path.parent_path();
+    auto dir = last_game_path;
+    if (dir.stem() == "eboot") {
+        dir = dir.parent_path();
+    }
     auto info = gameInfo.readGameInfo(dir);
     auto appVersion = info.version;
     auto gameSerial = info.serial;
