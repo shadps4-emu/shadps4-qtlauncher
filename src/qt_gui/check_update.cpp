@@ -559,8 +559,7 @@ void CheckUpdate::Install() {
         "sleep 2\n"
         "tar -xzf \"%2/shadPS4QtLauncher-macos-qt.tar.gz\" -C \"%3\"\n"
         "sleep 2\n"
-        "rm \"%3/update.sh\"\n"
-        "chmod +x \"%3/shadps4.app/Contents/MacOS/shadps4\"\n"
+        "chmod +x \"%3/shadPS4QtLauncher.app/Contents/MacOS/shadPS4QtLauncher\"\n"
         "open \"%3/shadPS4QtLauncher.app\"\n"
         "rm -r \"%2\"\n");
 
@@ -575,7 +574,9 @@ void CheckUpdate::Install() {
     QFile scriptFile(scriptFileName);
     if (scriptFile.open(QIODevice::WriteOnly | QIODevice::Text)) {
         QTextStream out(&scriptFile);
+#ifndef Q_OS_MAC
         scriptFile.write("\xEF\xBB\xBF");
+#endif
 #ifdef Q_OS_WIN
         out << scriptContent.arg(binaryStartingUpdate).arg(tempDirPath).arg(rootPath);
 #endif
