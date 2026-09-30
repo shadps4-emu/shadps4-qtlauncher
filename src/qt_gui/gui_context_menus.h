@@ -46,7 +46,7 @@
 class GuiContextMenus : public QObject {
     Q_OBJECT
 signals:
-    void RequestGameListRefresh();
+    void RequestGameListRefresh(const QString& serial);
 
 public:
     int RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_games,
@@ -241,10 +241,12 @@ public:
             return changedFavorite;
         }
 
-        auto convertPathToZArchiveHandler = [widget, this](const std::filesystem::path& source_path,
-                                                           const QString& display_name,
-                                                           const QString& dialog_title,
-                                                           const QString& extra_note) {
+        const QString game_serial = QString::fromStdString(m_games[itemID].serial);
+        auto convertPathToZArchiveHandler = [widget, this,
+                                             game_serial](const std::filesystem::path& source_path,
+                                                          const QString& display_name,
+                                                          const QString& dialog_title,
+                                                          const QString& extra_note) {
             if (Core::FileSys::IsZArchiveFile(source_path)) {
                 QMessageBox::information(widget, dialog_title,
                                          tr("This is already packed as a ZArchive."));
@@ -321,49 +323,49 @@ public:
             QPointer<QProgressDialog> progress_guard(progress);
             auto* watcher = new QFutureWatcher<ConvertZarResult>(widget);
 
-            connect(
-                watcher, &QFutureWatcher<ConvertZarResult>::finished, widget,
-                [widget, watcher, progress_guard, source_path, output_path, dialog_title, this]() {
-                    const ConvertZarResult result = watcher->result();
-                    watcher->deleteLater();
+            connect(watcher, &QFutureWatcher<ConvertZarResult>::finished, widget,
+                    [widget, watcher, progress_guard, source_path, output_path, dialog_title,
+                     game_serial, this]() {
+                        const ConvertZarResult result = watcher->result();
+                        watcher->deleteLater();
 
-                    if (progress_guard) {
-                        progress_guard->close();
-                    }
-
-                    if (!result.success) {
-                        if (result.error_message != "Canceled") {
-                            QMessageBox::critical(
-                                widget, dialog_title,
-                                tr("Failed to convert to ZArchive:\n%1")
-                                    .arg(QString::fromStdString(result.error_message)));
+                        if (progress_guard) {
+                            progress_guard->close();
                         }
-                        return;
-                    }
 
-                    QString source_qpath;
-                    Common::FS::PathToQString(source_qpath, source_path);
-                    const auto delete_reply = QMessageBox::question(
-                        widget, dialog_title,
-                        tr("Conversion finished. Delete the original folder now to free "
-                           "up disk space?\n\n%1")
-                            .arg(source_qpath),
-                        QMessageBox::Yes | QMessageBox::No);
-                    if (delete_reply == QMessageBox::Yes) {
-                        BackgroundMusicPlayer::getInstance().stopMusic();
-
-                        std::error_code remove_ec;
-                        std::filesystem::remove_all(source_path, remove_ec);
-                        if (remove_ec) {
-                            QMessageBox::warning(
-                                widget, dialog_title,
-                                tr("The archive was created, but the original folder could "
-                                   "not be fully deleted. You can remove it manually."));
+                        if (!result.success) {
+                            if (result.error_message != "Canceled") {
+                                QMessageBox::critical(
+                                    widget, dialog_title,
+                                    tr("Failed to convert to ZArchive:\n%1")
+                                        .arg(QString::fromStdString(result.error_message)));
+                            }
+                            return;
                         }
-                    }
 
-                    emit RequestGameListRefresh();
-                });
+                        QString source_qpath;
+                        Common::FS::PathToQString(source_qpath, source_path);
+                        const auto delete_reply = QMessageBox::question(
+                            widget, dialog_title,
+                            tr("Conversion finished. Delete the original folder now to free "
+                               "up disk space?\n\n%1")
+                                .arg(source_qpath),
+                            QMessageBox::Yes | QMessageBox::No);
+                        if (delete_reply == QMessageBox::Yes) {
+                            BackgroundMusicPlayer::getInstance().stopMusic();
+
+                            std::error_code remove_ec;
+                            std::filesystem::remove_all(source_path, remove_ec);
+                            if (remove_ec) {
+                                QMessageBox::warning(
+                                    widget, dialog_title,
+                                    tr("The archive was created, but the original folder could "
+                                       "not be fully deleted. You can remove it manually."));
+                            }
+                        }
+
+                        emit RequestGameListRefresh(game_serial);
+                    });
 
             auto future = QtConcurrent::run(
                 [source_path, output_path, cancel_flag, progress_guard]() -> ConvertZarResult {

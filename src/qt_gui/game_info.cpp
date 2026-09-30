@@ -105,7 +105,8 @@ void ScanDirectoryRecursively(const QString& dir, QStringList& filePaths, int cu
 GameInfoClass::GameInfoClass() = default;
 GameInfoClass::~GameInfoClass() = default;
 
-void GameInfoClass::GetGameInfo(QWidget* parent) {
+void GameInfoClass::GetGameInfo(QWidget* parent, bool force_size_refresh,
+                                const std::string& force_size_serial) {
     QStringList filePaths;
     for (const auto& installLoc : EmulatorSettings.GetGameInstallDirs()) {
         QString installDir;
@@ -117,21 +118,22 @@ void GameInfoClass::GetGameInfo(QWidget* parent) {
                   return readGameInfo(Common::FS::PathFromQString(path));
               }).results();
 
-    // used to retrieve values after performing a search
-    m_games_backup = m_games;
-
     // Progress bar, please be patient :)
     QProgressDialog dialog(tr("Loading game list, please wait :3"), tr("Cancel"), 0, 0, parent);
     dialog.setWindowTitle(tr("Loading..."));
 
     QFutureWatcher<void> futureWatcher;
-    GameListUtils game_util;
-    bool finished = false;
     futureWatcher.setFuture(
-        QtConcurrent::map(m_games, [&](GameInfo& game) { GameListUtils::GetFolderSize(game); }));
+        QtConcurrent::map(m_games, [force_size_refresh, force_size_serial](GameInfo& game) {
+            GameListUtils::GetFolderSize(
+                game, force_size_refresh ||
+                          (!force_size_serial.empty() && game.serial == force_size_serial));
+        }));
     connect(&futureWatcher, &QFutureWatcher<void>::finished, [&]() {
         dialog.reset();
         std::sort(m_games.begin(), m_games.end(), CompareStrings);
+        // Grid searches must use the calculated sizes and tooltips too.
+        m_games_backup = m_games;
     });
     connect(&dialog, &QProgressDialog::canceled, &futureWatcher, &QFutureWatcher<void>::cancel);
     dialog.setRange(0, m_games.size());

@@ -16,7 +16,8 @@ class GameInfoClass : public QObject {
 public:
     GameInfoClass();
     ~GameInfoClass();
-    void GetGameInfo(QWidget* parent = nullptr);
+    void GetGameInfo(QWidget* parent = nullptr, bool force_size_refresh = false,
+                     const std::string& force_size_serial = {});
     QVector<GameInfo> m_games;
     QVector<GameInfo> m_games_backup;
     std::shared_ptr<gui_settings> m_gui_settings;
