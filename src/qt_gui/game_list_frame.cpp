@@ -39,7 +39,7 @@ GameListFrame::GameListFrame(std::shared_ptr<gui_settings> gui_settings,
     this->setColumnWidth(3, 120); // Serial
     this->setColumnWidth(4, 90);  // Region
     this->setColumnWidth(5, 90);  // Firmware
-    this->setColumnWidth(6, 90);  // Size
+    this->setColumnWidth(6, 150); // Size and archive savings
     this->setColumnWidth(7, 90);  // Version
     this->setColumnWidth(8, 120); // Play Time
     this->setColumnWidth(10, 90); // Favorite
@@ -167,7 +167,8 @@ void GameListFrame::PopulateGameList(bool isInitialPopulation) {
         SetTableItem(i, 3, QString::fromStdString(m_game_info->m_games[i].serial));
         SetRegionFlag(i, 4, QString::fromStdString(m_game_info->m_games[i].region));
         SetTableItem(i, 5, QString::fromStdString(m_game_info->m_games[i].fw));
-        SetTableItem(i, 6, QString::fromStdString(m_game_info->m_games[i].size));
+        SetTableItem(i, 6, QString::fromStdString(m_game_info->m_games[i].size),
+                     m_game_info->m_games[i].storage_tooltip);
         SetTableItem(i, 7, QString::fromStdString(m_game_info->m_games[i].version));
         SetFavoriteIcon(i, 10);
 
@@ -414,7 +415,7 @@ void GameListFrame::SetCompatibilityItem(int row, int column, CompatibilityEntry
     return;
 }
 
-void GameListFrame::SetTableItem(int row, int column, QString itemStr) {
+void GameListFrame::SetTableItem(int row, int column, QString itemStr, QString tooltip) {
     QTableWidgetItem* item = new QTableWidgetItem();
     QWidget* widget = new QWidget(this);
     QVBoxLayout* layout = new QVBoxLayout(widget);
@@ -431,6 +432,9 @@ void GameListFrame::SetTableItem(int row, int column, QString itemStr) {
     label->setGraphicsEffect(shadowEffect); // Apply shadow effect to the QLabel
 
     layout->addWidget(label);
+    if (column == 6) {
+        widget->setToolTip(tooltip.isEmpty() ? itemStr : tooltip);
+    }
     if (column != 8 && column != 1 && column != 9)
         layout->setAlignment(Qt::AlignCenter);
     widget->setLayout(layout);
