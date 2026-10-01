@@ -2145,6 +2145,18 @@ Select an emulator version from the right panel.</source>
       <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
       <translation>可启动文件 (*.bin *.elf *.oelf *.zar)</translation>
     </message>
+    <message>
+      <source>Error</source>
+      <translation>错误</translation>
+    </message>
+    <message>
+      <source>Rosetta 2 is not installed.
+
+Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rosetta&apos;.</source>
+      <translation>Rosetta 2 未安装。
+
+请从终端使用 “softwareupdate --install-rosetta” 安装 Rosetta 2。</translation>
+    </message>
   </context>
   <context>
     <name>QObject</name>

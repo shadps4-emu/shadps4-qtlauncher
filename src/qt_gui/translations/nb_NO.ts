@@ -2147,6 +2147,18 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
       <translation>oppstartsfiler (*.bin *.elf *.oelf *.zar)</translation>
     </message>
+    <message>
+      <source>Error</source>
+      <translation>Feil</translation>
+    </message>
+    <message>
+      <source>Rosetta 2 is not installed.
+
+Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rosetta&apos;.</source>
+      <translation>Rosetta 2 er ikke installert.
+
+Installer Rosetta 2 fra terminalen med «softwareupdate --install-rosetta».</translation>
+    </message>
   </context>
   <context>
     <name>QObject</name>
