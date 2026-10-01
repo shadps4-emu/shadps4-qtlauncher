@@ -2,8 +2,10 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include <QDockWidget>
+#include <QFile>
+#include <QJsonDocument>
+#include <QJsonObject>
 #include <QKeyEvent>
-#include <QPlainTextEdit>
 #include <QProgressDialog>
 #include <QStatusBar>
 
@@ -158,6 +160,7 @@ void MainWindow::StopGame() {
 
 void MainWindow::onGameClosed() {
     EmulatorState::GetInstance()->SetGameRunning(false);
+    ui->logDisplay->FinishSource();
     is_paused = false;
 
     // swap the pause button back to the play button on close
@@ -354,11 +357,8 @@ void MainWindow::CreateDockWindows(bool newDock) {
     QVBoxLayout* dockLayout = new QVBoxLayout(this);
 
     ui->splitter = new QSplitter(Qt::Vertical);
-    ui->logDisplay = new QTextEdit(ui->splitter);
-    ui->logDisplay->setText(tr("Game Log"));
-    ui->logDisplay->setReadOnly(true);
-
     if (newDock) {
+        ui->logDisplay = new LogFileViewer(ui->splitter);
         m_dock_widget.reset(new QDockWidget(tr("Game List"), this));
         m_game_list_frame.reset(
             new GameListFrame(m_gui_settings, m_game_info, m_compat_info, m_ipc_client, this));
@@ -410,9 +410,6 @@ void MainWindow::CreateDockWindows(bool newDock) {
         isTableList = false;
     }
 
-    QPalette logPalette = ui->logDisplay->palette();
-    logPalette.setColor(QPalette::Base, Qt::black);
-    ui->logDisplay->setPalette(logPalette);
     ui->splitter->addWidget(ui->logDisplay);
 
     QList<int> defaultSizes = {800, 200}; // these are proportionally adjusted by qt
@@ -988,15 +985,73 @@ void MainWindow::CreateConnects() {
             isIconBlack = false;
         }
     });
-
-    QObject::connect(m_ipc_client.get(), &IpcClient::LogEntrySent, this, &MainWindow::PrintLog);
 }
 
-void MainWindow::PrintLog(QString entry, QColor textColor) {
-    ui->logDisplay->setTextColor(textColor);
-    ui->logDisplay->append(entry);
-    QScrollBar* sb = ui->logDisplay->verticalScrollBar();
-    sb->setValue(sb->maximum());
+void MainWindow::FollowGameLog(const QString& work_dir) {
+    const auto portable_dir = Common::FS::PathFromQString(work_dir) / Common::FS::PORTABLE_DIR;
+    std::filesystem::path user_dir;
+    if (std::filesystem::exists(portable_dir)) {
+        user_dir = portable_dir;
+    } else {
+#ifdef _WIN32
+        user_dir =
+            std::filesystem::path(qEnvironmentVariable("APPDATA").toStdWString()) / "shadPS4";
+#elif defined(__APPLE__)
+        user_dir = Common::FS::PathFromQString(QDir::homePath()) / "Library" /
+                   "Application Support" / "shadPS4";
+#else
+        const QString xdg = qEnvironmentVariable("XDG_DATA_HOME");
+        user_dir =
+            Common::FS::PathFromQString(xdg.isEmpty() ? QDir::homePath() + "/.local/share" : xdg) /
+            "shadPS4";
+#endif
+    }
+
+    std::string serial;
+    if (!last_game_path.empty()) {
+        const auto root = Core::FileSys::IsZArchiveFile(last_game_path)
+                              ? last_game_path
+                              : last_game_path.parent_path();
+        if (const auto bytes = Core::FileSys::ReadGameFile(root, "sce_sys/param.sfo")) {
+            PSF game_psf;
+            if (game_psf.Open(*bytes)) {
+                if (const auto title_id = game_psf.GetString("TITLE_ID")) {
+                    serial = *title_id;
+                }
+            }
+        }
+    }
+
+    bool separate = EmulatorSettings.IsLogSeparate();
+    bool append = EmulatorSettings.IsLogAppend();
+    auto read_log_settings = [&](const std::filesystem::path& config_path) {
+        QString config_name;
+        Common::FS::PathToQString(config_name, config_path);
+        QFile config(config_name);
+        if (!config.open(QIODevice::ReadOnly)) {
+            return;
+        }
+        const auto settings =
+            QJsonDocument::fromJson(config.readAll()).object().value("Log").toObject();
+        if (settings.value("separate").isBool()) {
+            separate = settings.value("separate").toBool();
+        }
+        if (settings.value("append").isBool()) {
+            append = settings.value("append").toBool();
+        }
+    };
+    if (user_dir != Common::FS::GetUserPath(Common::FS::PathType::UserDir)) {
+        read_log_settings(user_dir / "config.json");
+    }
+    if (!serial.empty()) {
+        read_log_settings(user_dir / Common::FS::CUSTOM_CONFIGS / (serial + ".json"));
+    }
+
+    const auto filename = separate && !serial.empty() ? serial + ".log" : "shad_log.txt";
+    const auto path = user_dir / Common::FS::LOG_DIR / filename;
+    QString log_path;
+    Common::FS::PathToQString(log_path, path);
+    ui->logDisplay->SetSource(log_path, !append);
 }
 
 void MainWindow::StartGameWithArgs(QStringList args) {
@@ -1452,6 +1507,7 @@ tr("No emulator version was selected.\nThe Version Manager menu will then open.\
     last_game_path = path;
 
     QString workDir = QDir::currentPath();
+    FollowGameLog(workDir);
     m_ipc_client->startEmulator(fileInfo, final_args, workDir);
     m_ipc_client->setActiveController(GamepadSelect::GetSelectedGamepad());
 }
@@ -1465,6 +1521,7 @@ void MainWindow::StartEmulatorExecutable(std::filesystem::path emuPath, QString 
     }
 
     bool gameFound = false;
+    last_game_path.clear();
     if (std::filesystem::exists(Common::FS::PathFromQString(gameArg))) {
         last_game_path = Common::FS::PathFromQString(gameArg);
         if (Core::FileSys::IsZArchiveFile(last_game_path)) {
@@ -1529,6 +1586,7 @@ void MainWindow::StartEmulatorExecutable(std::filesystem::path emuPath, QString 
 
     EmulatorState::GetInstance()->SetGameRunning(true);
     QString workDir = QDir::currentPath();
+    FollowGameLog(workDir);
     m_ipc_client->startEmulator(fileInfo, args, workDir, disable_ipc);
 }
 
@@ -1566,6 +1624,7 @@ void MainWindow::RestartEmulator() {
     QFileInfo fileInfo(exe);
     QString workDir = fileInfo.absolutePath();
 
+    FollowGameLog(workDir);
     m_ipc_client->startEmulator(fileInfo, args, workDir);
 }
 
