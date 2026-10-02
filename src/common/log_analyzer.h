@@ -52,6 +52,13 @@ false
 #ShouldntExistEntry
 -Patches were used.
 [Loader] <Info> ^ memory_patcher.cpp:# PatchMemory: Applied patch: *
+
+#ShouldExistEntry
+-No CPU info was found.
+[Config] <Info> ^ emulator.cpp:# Run: CPU Model: +
+#ShouldExistEntry
+-No GPU info was found.
+[Render_Vulkan] <Info> ^ vk_instance.cpp:# CollectDeviceParameters: GPU_Model: +
 )";
 
 inline int entry_id_counter = 1;

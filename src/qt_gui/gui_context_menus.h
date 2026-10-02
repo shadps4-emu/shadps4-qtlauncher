@@ -984,16 +984,19 @@ public:
                 QUrl url = QUrl("https://github.com/shadps4-compatibility/"
                                 "shadps4-game-compatibility/issues/new");
                 QUrlQuery query;
-                query.addQueryItem("template", QString("game_compatibility.yml"));
+                auto add_q_item = [&query](char const* id, std::string const& val) {
+                    query.addQueryItem(id, QString::fromStdString(val));
+                };
                 query.addQueryItem(
                     "title", QString("%1 - %2").arg(QString::fromStdString(m_games[itemID].serial),
-                                                    QString::fromStdString(m_games[itemID].name)));
-                query.addQueryItem("game-name", QString::fromStdString(m_games[itemID].name));
-                query.addQueryItem("game-serial", QString::fromStdString(m_games[itemID].serial));
-                query.addQueryItem("game-version", QString::fromStdString(m_games[itemID].version));
-                query.addQueryItem(
-                    "emulator-version",
-                    QString::fromStdString(*LogAnalyzer::entries[1]->GetParsedData()));
+                                                    (m_games[itemID].name)));
+                add_q_item("template", "game_compatibility.yml");
+                add_q_item("game-name", (m_games[itemID].name));
+                add_q_item("game-serial", m_games[itemID].serial);
+                add_q_item("game-version", m_games[itemID].version);
+                add_q_item("emulator-version", *LogAnalyzer::entries[1]->GetParsedData());
+                add_q_item("processor", *LogAnalyzer::entries[9]->GetParsedData());
+                add_q_item("graphics-card", *LogAnalyzer::entries[10]->GetParsedData());
                 url.setQuery(query);
 
                 QDesktopServices::openUrl(url);
