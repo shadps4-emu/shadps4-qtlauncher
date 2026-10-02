@@ -35,16 +35,20 @@ GameGridFrame::GameGridFrame(std::shared_ptr<gui_settings> gui_settings,
     connect(this->horizontalScrollBar(), &QScrollBar::valueChanged, this,
             &GameGridFrame::RefreshGridBackgroundImage);
     connect(this, &QTableWidget::customContextMenuRequested, this, [=, this](const QPoint& pos) {
-        int changedFavorite = m_gui_context_menus.RequestGameMenu(
+        const int itemID = currentRow() * columnCount() + currentColumn();
+        const int changedFavorite = m_gui_context_menus.RequestGameMenu(
             pos, m_game_info->m_games, m_compat_info, m_gui_settings, m_ipc_client, this, false,
+            itemID,
             [mw = QPointer<MainWindow>(qobject_cast<MainWindow*>(this->window()))](
                 const QStringList& args) {
                 if (mw)
                     mw->StartGameWithArgs(args);
             });
-        PopulateGameGrid(m_game_info->m_games, false);
-    });
 
+        if (changedFavorite) {
+            PopulateGameGrid(m_game_info->m_games, false);
+        }
+    });
     connect(&m_gui_context_menus, &GuiContextMenus::RequestGameListRefresh, this,
             &GameGridFrame::RequestRefreshGrid);
 }

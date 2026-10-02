@@ -3,14 +3,15 @@
 
 #pragma once
 
-#include <algorithm> // std::transform
-#include <cctype>    // std::tolower
+#include <filesystem>
+#include <memory>
+#include <string>
 
-#include <QNetworkAccessManager>
-#include <QNetworkReply>
-#include <QNetworkRequest>
-#include <QPainter>
-#include <QScrollBar>
+#include <QHash>
+#include <QImage>
+#include <QSet>
+#include <QString>
+#include <QTableWidget>
 
 #include "background_music_player.h"
 #include "compatibility_info.h"
@@ -44,17 +45,34 @@ public Q_SLOTS:
 private:
     void SetTableItem(int row, int column, QString itemStr);
     void SetRegionFlag(int row, int column, QString itemStr);
+    void UpdateFavoriteStateForAllItems();
+    void UpdateFavoriteVisual(int row);
     void SetFavoriteIcon(int row, int column);
-    void SetCompatibilityItem(int row, int column, CompatibilityEntry entry);
+    void SetCompatibilityItem(int row, int column, CompatibilityEntry entry, int gameIndex);
+
     QString GetPlayTime(const std::string& serial);
+
+    void SortTable(int columnIndex, bool ascending);
+    void UpdateFavoriteCache();
+    void LoadPlayTimeCache();
+
     QList<QAction*> m_columnActs;
+
     GameInfoClass* game_inf_get = nullptr;
+
     bool ListSortedAsc = true;
     int sortColumn = 1;
-    QTableWidgetItem* m_current_item = nullptr;
+
+    int m_current_game_index = -1;
+    int m_current_column = -1;
+
     int m_last_opacity = -1; // Track last opacity to avoid unnecessary recomputation
     std::filesystem::path m_current_game_path; // Track current game path to detect changes
+
     std::shared_ptr<gui_settings> m_gui_settings;
+
+    QSet<QString> m_favorite_serials;
+    QHash<QString, QString> m_play_time_cache;
 
 public:
     void PopulateGameList(bool isInitialPopulation = true);
@@ -72,83 +90,5 @@ public:
 
     int icon_size;
     std::string last_favorite;
-
-    static float parseAsFloat(const std::string& str, const int& offset) {
-        return std::stof(str.substr(0, str.size() - offset));
-    }
-
-    static float parseSizeMB(const std::string& size) {
-        float num = parseAsFloat(size, 3);
-        return (size[size.size() - 2] == 'G') ? num * 1024 : num;
-    }
-
-    static int parsePlayTime(const std::string& time) {
-        int hours = 0;
-        int minutes = 0;
-        int seconds = 0;
-        if (sscanf(time.c_str(), "%d:%d:%d", &hours, &minutes, &seconds) != 3) {
-            return 0;
-        }
-        return hours * 3600 + minutes * 60 + seconds;
-    }
-
-    static bool CompareStringsAscending(GameInfo a, GameInfo b, int columnIndex) {
-        switch (columnIndex) {
-        case 1: {
-            std::string name_a = a.name, name_b = b.name;
-            std::transform(name_a.begin(), name_a.end(), name_a.begin(), ::tolower);
-            std::transform(name_b.begin(), name_b.end(), name_b.begin(), ::tolower);
-            return name_a < name_b;
-        }
-        case 2:
-            return a.compatibility.status < b.compatibility.status;
-        case 3:
-            return a.serial.substr(4) < b.serial.substr(4);
-        case 4:
-            return a.region < b.region;
-        case 5:
-            return parseAsFloat(a.fw, 0) < parseAsFloat(b.fw, 0);
-        case 6:
-            return parseSizeMB(b.size) < parseSizeMB(a.size);
-        case 7:
-            return a.version < b.version;
-        case 8:
-            return parsePlayTime(a.play_time) < parsePlayTime(b.play_time);
-        case 9:
-            return a.path < b.path;
-        default:
-            return false;
-        }
-    }
-
-    static bool CompareStringsDescending(GameInfo a, GameInfo b, int columnIndex) {
-        switch (columnIndex) {
-        case 1: {
-            std::string name_a = a.name, name_b = b.name;
-            std::transform(name_a.begin(), name_a.end(), name_a.begin(), ::tolower);
-            std::transform(name_b.begin(), name_b.end(), name_b.begin(), ::tolower);
-            return name_a > name_b;
-        }
-        case 2:
-            return a.compatibility.status > b.compatibility.status;
-        case 3:
-            return a.serial.substr(4) > b.serial.substr(4);
-        case 4:
-            return a.region > b.region;
-        case 5:
-            return parseAsFloat(a.fw, 0) > parseAsFloat(b.fw, 0);
-        case 6:
-            return parseSizeMB(b.size) > parseSizeMB(a.size);
-        case 7:
-            return a.version > b.version;
-        case 8:
-            return parsePlayTime(a.play_time) > parsePlayTime(b.play_time);
-        case 9:
-            return a.path > b.path;
-        default:
-            return false;
-        }
-    }
-
-    bool CompareWithFavorite(GameInfo a, GameInfo b, int columnIndex, bool ascending);
+    int GetGameIndexForRow(int row) const;
 };

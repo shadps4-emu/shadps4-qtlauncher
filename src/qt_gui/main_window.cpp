@@ -1007,8 +1007,16 @@ void MainWindow::StartGameWithArgs(QStringList args) {
     int itemID;
     if (table_mode == 0) {
         if (m_game_list_frame->currentItem()) {
-            itemID = m_game_list_frame->currentItem()->row();
+            const int row = m_game_list_frame->currentItem()->row();
+
+            itemID = m_game_list_frame->GetGameIndexForRow(row);
+
+            if (itemID < 0 || itemID >= static_cast<int>(m_game_info->m_games.size())) {
+                return;
+            }
+
             Common::FS::PathToQString(gamePath, m_game_info->m_games[itemID].path / "eboot.bin");
+
             runningGameSerial = m_game_info->m_games[itemID].serial;
         }
     } else if (table_mode == 1) {
@@ -1055,29 +1063,40 @@ void MainWindow::SearchGameTable(const QString& text) {
         const int rowCount = m_game_list_frame->rowCount();
 
         for (int row = 0; row < rowCount; ++row) {
-            const auto& game = m_game_info->m_games[row];
+            const int gameIndex = m_game_list_frame->GetGameIndexForRow(row);
+
+            if (gameIndex < 0 || gameIndex >= static_cast<int>(m_game_info->m_games.size())) {
+                m_game_list_frame->setRowHidden(row, true);
+                continue;
+            }
+
+            const auto& game = m_game_info->m_games[gameIndex];
+
             const bool match =
                 QString::fromStdString(game.name).contains(text, Qt::CaseInsensitive);
 
             m_game_list_frame->setRowHidden(row, !match);
         }
-    } else {
-        const auto& games = m_game_info->m_games_backup;
 
-        QVector<GameInfo> filteredGames;
-        filteredGames.reserve(games.size());
-
-        for (const auto& gameInfo : games) {
-            const QString gameName = QString::fromStdString(gameInfo.name);
-
-            if (gameName.contains(text, Qt::CaseInsensitive)) {
-                filteredGames.push_back(gameInfo);
-            }
-        }
-
-        m_game_info->m_games = std::move(filteredGames);
-        m_game_grid_frame->PopulateGameGrid(m_game_info->m_games, true);
+        return;
     }
+
+    const auto& games = m_game_info->m_games_backup;
+
+    QVector<GameInfo> filteredGames;
+    filteredGames.reserve(games.size());
+
+    for (const auto& gameInfo : games) {
+        const QString gameName = QString::fromStdString(gameInfo.name);
+
+        if (gameName.contains(text, Qt::CaseInsensitive)) {
+            filteredGames.push_back(gameInfo);
+        }
+    }
+
+    m_game_info->m_games = std::move(filteredGames);
+
+    m_game_grid_frame->PopulateGameGrid(m_game_info->m_games, true);
 }
 
 void MainWindow::ShowGameList() {
@@ -1090,17 +1109,25 @@ void MainWindow::ShowGameList() {
 };
 
 void MainWindow::RefreshGameTable() {
-    // m_game_info->m_games.clear();
     m_game_info->GetGameInfo(this);
-    m_game_list_frame->clearContents();
-    m_game_list_frame->PopulateGameList();
-    m_game_grid_frame->clearContents();
-    m_game_grid_frame->PopulateGameGrid(m_game_info->m_games, false);
+
+    const int table_mode = m_gui_settings->GetValue(gui::gl_mode).toInt();
+
+    if (table_mode == 0) {
+        // List mode
+        m_game_list_frame->clearContents();
+        m_game_list_frame->PopulateGameList();
+        m_game_list_frame->ToggleColumnVisibility();
+    } else if (table_mode == 1) {
+        // Grid mode
+        m_game_grid_frame->clearContents();
+        m_game_grid_frame->PopulateGameGrid(m_game_info->m_games, false);
+    }
     statusBar->clearMessage();
-    int numGames = m_game_info->m_games.size();
-    QString statusMessage = tr("Games: ") + QString::number(numGames);
+
+    const int numGames = m_game_info->m_games.size();
+    const QString statusMessage = tr("Games: ") + QString::number(numGames);
     statusBar->showMessage(statusMessage);
-    m_game_list_frame->ToggleColumnVisibility();
 }
 
 void MainWindow::ConfigureGuiFromSettings() {

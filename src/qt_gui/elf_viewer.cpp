@@ -3,6 +3,8 @@
 
 #include "elf_viewer.h"
 
+#include <QScrollBar>
+
 ElfViewer::ElfViewer(std::shared_ptr<gui_settings> gui_settings, QWidget* parent)
     : QTableWidget(parent), m_gui_settings(std::move(gui_settings)) {
 
