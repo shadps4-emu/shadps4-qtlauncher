@@ -68,7 +68,7 @@ private:
     void LoadGameLists();
     void onGameClosed();
     void RunGame();
-    void PrintLog(QString entry, QColor textColor);
+    void FollowGameLog(const QString& work_dir);
 
 #ifdef ENABLE_UPDATER
     void CheckUpdateMain(bool checkSave);
