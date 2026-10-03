@@ -197,9 +197,9 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
     QAction* viewCompatibilityReport = new QAction(tr("View Report"), widget);
     QAction* submitCompatibilityReport = new QAction(tr("Submit a Report"), widget);
 
-    compatibilityMenu->addAction(updateCompatibility);
     compatibilityMenu->addAction(viewCompatibilityReport);
     compatibilityMenu->addAction(submitCompatibilityReport);
+    compatibilityMenu->addAction(updateCompatibility);
 
     menu.addMenu(compatibilityMenu);
 
