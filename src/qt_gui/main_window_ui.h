@@ -3,10 +3,10 @@
 
 #pragma once
 
+#include <QComboBox>
+#include <QHBoxLayout>
 #include <QMainWindow>
 #include <QMenuBar>
-#include <QHBoxLayout>
-#include <QComboBox>
 #include <QPushButton>
 #include <QSplitter>
 #include <QTextEdit>

@@ -636,9 +636,9 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
             KeyManager::GetInstance()->GetAllKeys().TrophyKeySet.ReleaseTrophyKey;
 
         if (user_key_vec.size() != 16) {
-                // turn clang format off to maintain one string line for easy translations
-                // clang-format off
-                QMessageBox::critical(nullptr, tr("Error"), tr("A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys."));
+            // turn clang format off to maintain one string line for easy translations
+            // clang-format off
+            QMessageBox::critical(nullptr, tr("Error"), tr("A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys."));
             // clang-format on
             return changedFavorite;
         }
@@ -952,14 +952,11 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
             return changedFavorite;
         }
         if (m_games[itemID].compatibility.issue_number == "") {
-            QUrl url = QUrl("https://github.com/kalaposfos13/"
+            QUrl url = QUrl("https://github.com/shadps4-compatibility/"
                             "shadps4-game-compatibility/issues/new");
             QUrlQuery query;
             auto add_q_item = [&query](char const* id, std::string const& val) {
                 query.addQueryItem(id, QString::fromStdString(val));
-            };
-            auto add_checkbox = [&query](char const* label) {
-                query.addQueryItem(label, "true");
             };
 
             query.addQueryItem(

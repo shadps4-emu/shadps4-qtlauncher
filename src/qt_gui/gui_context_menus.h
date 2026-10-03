@@ -9,9 +9,9 @@
 #include <QDesktopServices>
 #include <QFileDialog>
 #include <QMenu>
-#include <QTableWidget>
 #include <QMessageBox>
 #include <QProgressDialog>
+#include <QTableWidget>
 #include <QTreeWidgetItem>
 
 #include "create_steam_shortcut.h"
