@@ -3,13 +3,21 @@
 
 #pragma once
 
-#include <unordered_map>
+#include <algorithm>
+#include <vector>
+
+#include <QCryptographicHash>
 #include <QDir>
-#include <QDirIterator>
+#include <QFile>
 #include <QImage>
+#include <QSaveFile>
 #include <QString>
+#include <QStringList>
+#include <QTextStream>
+
 #include "common/path_util.h"
 #include "compatibility_info.h"
+#include "core/emulator_settings.h"
 #include "core/file_sys/game_backend.h"
 
 struct GameInfo {
@@ -21,6 +29,8 @@ struct GameInfo {
     std::filesystem::path snd0_path; // path of snd0.at9
     QImage icon;
     std::string size;
+    u64 stored_size{};
+    QString storage_tooltip;
     // variables extracted from param.sfo
     std::string name = "Unknown";
     std::string serial = "Unknown";
@@ -36,7 +46,7 @@ struct GameInfo {
 class GameListUtils : public QObject {
     Q_OBJECT
 public:
-    static QString FormatSize(qint64 size) {
+    static QString FormatSize(u64 size) {
         static const QStringList suffixes = {tr("B"), tr("KB"), tr("MB"), tr("GB"), tr("TB")};
         int suffixIndex = 0;
 
@@ -59,66 +69,189 @@ public:
         return sizeString + " " + suffixes[suffixIndex];
     }
 
-    static void GetFolderSize(GameInfo& game) {
-        QString dirPath;
-        Common::FS::PathToQString(dirPath, game.path);
-        QDir dir(dirPath);
-        QDirIterator it(dir.absolutePath(), QDirIterator::Subdirectories);
-        qint64 total = 0;
+    struct StorageInfo {
+        u64 stored_size{};
+        u64 content_size{};
+        bool contains_archive{};
+    };
 
-        const bool is_archive = Core::FileSys::IsZArchiveFile(game.path);
+    struct StorageEntry {
+        QString name;
+        StorageInfo storage;
+    };
 
-        // Cache path
+    static std::vector<std::filesystem::path> GetGameRoots(const GameInfo& game) {
+        std::vector<std::filesystem::path> roots{game.path};
+        const auto stem_path = Core::FileSys::StripZArchiveExtension(game.path);
+        for (const auto& suffix : {"-UPDATE", "-patch"}) {
+            std::filesystem::path overlay = stem_path;
+            overlay += suffix;
+            std::error_code ec;
+            if (std::filesystem::is_directory(overlay, ec) && !ec) {
+                roots.push_back(overlay);
+            }
+            overlay += ".zar";
+            if (Core::FileSys::IsZArchiveFile(overlay)) {
+                roots.push_back(overlay);
+            }
+        }
+        return roots;
+    }
+
+    static QString FormatStorage(const StorageInfo& storage) {
+        QString result = FormatSize(storage.stored_size);
+        if (storage.contains_archive && storage.content_size > 0) {
+            const double saved = 100.0 * (1.0 - static_cast<double>(storage.stored_size) /
+                                                    static_cast<double>(storage.content_size));
+            result += saved >= 0.0 ? tr(" (-%1%)").arg(QString::number(saved, 'f', 1))
+                                   : tr(" (+%1%)").arg(QString::number(-saved, 'f', 1));
+        }
+        return result;
+    }
+
+    static QString GetStorageTooltip(const std::vector<StorageEntry>& entries) {
+        QStringList lines;
+        for (const auto& entry : entries) {
+            lines << tr("%1: %2").arg(entry.name, FormatStorage(entry.storage));
+        }
+        return lines.join('\n');
+    }
+
+    static StorageEntry MeasureStorageEntry(const std::filesystem::path& root) {
+        const bool is_archive = Core::FileSys::IsZArchiveFile(root);
+        const u64 stored_size = Core::FileSys::GetGameRootSize(root);
+        const u64 content_size =
+            is_archive ? Core::FileSys::GetGameRootContentSize(root) : stored_size;
+        QString name;
+        Common::FS::PathToQString(name, root.filename());
+        return {name, {stored_size, content_size, is_archive}};
+    }
+
+    static void GetFolderSize(GameInfo& game, bool force_recalculate = false) {
         QDir cacheDir =
             QDir(Common::FS::GetUserPath(Common::FS::PathType::LauncherMetaData) / game.serial);
         if (!cacheDir.exists()) {
             cacheDir.mkpath(".");
         }
-        QFile size_cache_file(cacheDir.absoluteFilePath("size_cache.txt"));
-        QFileInfo cacheInfo(size_cache_file);
-        QFileInfo dirInfo(dirPath);
+        QString game_path;
+        Common::FS::PathToQString(game_path, game.path);
+        const QString cache_name =
+            "size_cache_" +
+            QString::fromLatin1(
+                QCryptographicHash::hash(game_path.toUtf8(), QCryptographicHash::Sha256).toHex()) +
+            ".txt";
+        QFile size_cache_file(cacheDir.absoluteFilePath(cache_name));
+        // Older launchers read only this per-serial file. The path-keyed cache above keeps
+        // separate folder and .zar installs of the same serial from replacing each other.
+        QFile legacy_cache_file(cacheDir.absoluteFilePath("size_cache.txt"));
+        QFile* read_cache_file = size_cache_file.exists() ? &size_cache_file : &legacy_cache_file;
 
-        // Check if cache file exists and is valid
-        if (size_cache_file.exists() && cacheInfo.lastModified() >= dirInfo.lastModified()) {
-            if (size_cache_file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-                QTextStream in(&size_cache_file);
-                QString cachedSize = in.readLine();
-                size_cache_file.close();
-
-                if (!cachedSize.isEmpty()) {
-                    game.size = cachedSize.toStdString();
-                    return;
+        // Keep the first line readable by older launchers. Older cache formats lack a complete
+        // breakdown, so migrate them by calculating once; complete caches need no size scan.
+        if (!force_recalculate && read_cache_file->open(QIODevice::ReadOnly | QIODevice::Text)) {
+            QTextStream in(read_cache_file);
+            in.readLine();
+            const QString version = in.readLine();
+            const QString cached_path = in.readLine();
+            const bool valid_header = version == "v4" && cached_path == game_path;
+            bool stored_ok = false;
+            bool content_ok = false;
+            const u64 stored_size = in.readLine().toULongLong(&stored_ok);
+            const u64 content_size = in.readLine().toULongLong(&content_ok);
+            const QString archive_line = in.readLine();
+            bool count_ok = false;
+            const uint count = in.readLine().toUInt(&count_ok);
+            std::vector<StorageEntry> entries;
+            bool valid_entries = valid_header && stored_ok && content_ok &&
+                                 (archive_line == "0" || archive_line == "1") && count_ok &&
+                                 count > 0 && count <= 4096;
+            if (valid_entries) {
+                entries.reserve(count);
+                for (uint index = 0; index < count; ++index) {
+                    const QString name = in.readLine();
+                    bool entry_stored_ok = false;
+                    bool entry_content_ok = false;
+                    const u64 entry_stored = in.readLine().toULongLong(&entry_stored_ok);
+                    const u64 entry_content = in.readLine().toULongLong(&entry_content_ok);
+                    const QString entry_archive = in.readLine();
+                    if (name.isEmpty() || !entry_stored_ok || !entry_content_ok ||
+                        (entry_archive != "0" && entry_archive != "1")) {
+                        valid_entries = false;
+                        break;
+                    }
+                    entries.push_back({name, {entry_stored, entry_content, entry_archive == "1"}});
                 }
+            }
+            read_cache_file->close();
+
+            if (valid_entries) {
+                game.stored_size = stored_size;
+                game.size =
+                    FormatStorage({stored_size, content_size, archive_line == "1"}).toStdString();
+                game.storage_tooltip = GetStorageTooltip(entries);
+                return;
             }
         }
 
-        // Cache is invalid or does not exist; calculate size
-        if (is_archive) {
-            total = static_cast<qint64>(Core::FileSys::GetGameRootSize(game.path));
-
-            const auto stem_path = Core::FileSys::StripZArchiveExtension(game.path);
-            for (const auto& suffix : {"-UPDATE", "-patch"}) {
-                std::filesystem::path overlay = stem_path;
-                overlay += suffix;
-                if (const auto resolved = Core::FileSys::ResolveGameRoot(overlay)) {
-                    total += static_cast<qint64>(Core::FileSys::GetGameRootSize(*resolved));
-                    break; // if an update is found don't also count -patch
-                }
-            }
-        } else {
-            while (it.hasNext()) {
-                it.next();
-                total += it.fileInfo().size();
+        const auto roots = GetGameRoots(game);
+        StorageInfo storage;
+        std::vector<StorageEntry> entries;
+        for (size_t index = 0; index < roots.size(); ++index) {
+            const auto& root = roots[index];
+            entries.push_back(MeasureStorageEntry(root));
+            // Only the selected update contributes to the Size column. Keep every installed
+            // update in the tooltip, including alternative folder/archive variants.
+            if (index == 0 || root == game.update_path) {
+                const auto& entry_storage = entries.back().storage;
+                storage.stored_size += entry_storage.stored_size;
+                storage.content_size += entry_storage.content_size;
+                storage.contains_archive |= entry_storage.contains_archive;
             }
         }
 
-        game.size = FormatSize(total).toStdString();
+        const auto dlc_dir = EmulatorSettings.GetAddonInstallDir() / game.serial;
+        std::error_code ec;
+        std::vector<std::filesystem::path> dlc_roots;
+        for (std::filesystem::directory_iterator
+                 it(dlc_dir, std::filesystem::directory_options::skip_permission_denied, ec),
+             end;
+             !ec && it != end; it.increment(ec)) {
+            std::error_code entry_ec;
+            if (it->is_directory(entry_ec) || Core::FileSys::IsZArchiveFile(it->path())) {
+                dlc_roots.push_back(it->path());
+            }
+        }
+        std::ranges::sort(dlc_roots);
+        for (const auto& root : dlc_roots) {
+            entries.push_back(MeasureStorageEntry(root));
+        }
+        game.stored_size = storage.stored_size;
+        game.size = FormatStorage(storage).toStdString();
+        game.storage_tooltip = GetStorageTooltip(entries);
 
-        // Save new cache
-        if (size_cache_file.open(QIODevice::WriteOnly | QIODevice::Text)) {
-            QTextStream out(&size_cache_file);
-            out << QString::fromStdString(game.size) << "\n";
-            size_cache_file.close();
+        QString cache_contents;
+        QTextStream out(&cache_contents);
+        out << FormatSize(storage.stored_size) << "\n"
+            << "v4\n"
+            << game_path << "\n"
+            << storage.stored_size << "\n"
+            << storage.content_size << "\n"
+            << (storage.contains_archive ? "1" : "0") << "\n"
+            << entries.size() << "\n";
+        for (const auto& entry : entries) {
+            out << entry.name << "\n"
+                << entry.storage.stored_size << "\n"
+                << entry.storage.content_size << "\n"
+                << (entry.storage.contains_archive ? "1" : "0") << "\n";
+        }
+        out.flush();
+        const QByteArray cache_bytes = cache_contents.toUtf8();
+        for (const auto& cache_path : {size_cache_file.fileName(), legacy_cache_file.fileName()}) {
+            QSaveFile cache_file(cache_path);
+            if (cache_file.open(QIODevice::WriteOnly)) {
+                cache_file.write(cache_bytes);
+                cache_file.commit();
+            }
         }
     }
 
