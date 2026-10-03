@@ -203,8 +203,11 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
 
     menu.addMenu(compatibilityMenu);
 
-    viewCompatibilityReport->setEnabled(m_games[itemID].compatibility.status !=
-                                        CompatibilityStatus::Unknown);
+    bool const compat_entry_exists =
+        m_games[itemID].compatibility.status != CompatibilityStatus::Unknown;
+
+    viewCompatibilityReport->setVisible(compat_entry_exists);
+    submitCompatibilityReport->setVisible(!compat_entry_exists);
 
     QMenu* zarMenu = new QMenu(tr("Zar Compression"), widget);
     QAction* packGameZar = new QAction(tr("Compress game to zar"), widget);
