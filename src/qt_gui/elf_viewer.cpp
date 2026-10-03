@@ -1,6 +1,7 @@
-// SPDX-FileCopyrightText: Copyright 2024 shadPS4 Emulator Project
+// SPDX-FileCopyrightText: Copyright 2024-2026 shadPS4 Emulator Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
+#include <QHeaderView>
 #include "elf_viewer.h"
 
 ElfViewer::ElfViewer(std::shared_ptr<gui_settings> gui_settings, QWidget* parent)
