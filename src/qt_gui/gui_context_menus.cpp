@@ -963,7 +963,7 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
                 "title", QString("%1 - %2").arg(QString::fromStdString(m_games[itemID].serial),
                                                 (m_games[itemID].name)));
             add_q_item("template", "game_compatibility.yml");
-            add_q_item("game-name", (m_games[itemID].name));
+            add_q_item("game-name", m_games[itemID].name);
             add_q_item("game-serial", m_games[itemID].serial);
             add_q_item("game-version", m_games[itemID].version);
             add_q_item("emulator-version", *LogAnalyzer::entries[1]->GetParsedData());
