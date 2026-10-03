@@ -1,6 +1,7 @@
-// SPDX-FileCopyrightText: Copyright 2025 shadPS4 Emulator Project
+// SPDX-FileCopyrightText: Copyright 2025-2026 shadPS4 Emulator Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
+#include <QComboBox>
 #include <QDockWidget>
 #include <QKeyEvent>
 #include <QPlainTextEdit>
@@ -31,6 +32,7 @@
 #include "main_window.h"
 #include "settings_dialog.h"
 #include "skylander_dialog.h"
+#include "trophy_viewer.h"
 #include "user_manager_dialog.h"
 
 MainWindow::MainWindow(QWidget* parent, bool log_to_terminal)

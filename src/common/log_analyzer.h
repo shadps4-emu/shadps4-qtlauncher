@@ -58,7 +58,7 @@ false
 [Config] <Info> ^ emulator.cpp:# Run: CPU Model: +
 #ShouldExistEntry
 -No GPU info was found.
-[Render_Vulkan] <Info> ^ vk_instance.cpp:# CollectDeviceParameters: GPU_Model: +
+# <Info> ^ vk_instance.cpp:# CollectDeviceParameters: GPU_Model: +
 )";
 
 inline int entry_id_counter = 1;
