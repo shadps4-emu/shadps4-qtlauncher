@@ -428,7 +428,7 @@ void TrophyViewer::PopulateTrophyWidget(QString title, QString user) {
 
         QFileInfoList dirList = dir.entryInfoList(QDir::Dirs | QDir::NoDotAndDotDot);
         if (dirList.isEmpty()) {
-            LOG_WARNING(Loader, "error");
+            LOG_WARNING(Loader, "Empty trophy data folder");
             continue;
         }
 
@@ -465,7 +465,7 @@ void TrophyViewer::PopulateTrophyWidget(QString title, QString user) {
         Common::FS::PathToQString(userXmlPath, user_trophy_file);
         QFile userFile(userXmlPath);
         if (!userFile.open(QFile::ReadOnly | QFile::Text)) {
-            LOG_WARNING(Loader, "error");
+            LOG_WARNING(Loader, "Could not open user trophy XML file");
             continue;
         }
 
