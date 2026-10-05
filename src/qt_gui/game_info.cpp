@@ -74,7 +74,7 @@ void ScanDirectoryRecursively(const QString& dir, QStringList& filePaths, int cu
         }
 
         // Check if this directory contains a PS4 game (has sce_sys/param.sfo and eboot.bin)
-        if (QFile::exists(entry.filePath() + "/sce_sys/param.sfo") ||
+        if (QFile::exists(entry.filePath() + "/sce_sys/param.sfo") &&
             QFile::exists(entry.filePath() + "/eboot.bin")) {
             filePaths.append(entry.absoluteFilePath());
         } else {
