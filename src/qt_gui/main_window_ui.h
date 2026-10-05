@@ -11,12 +11,12 @@
 #include <QSplitter>
 #include <QToolBar>
 
-#include "log_file_viewer.h"
+#include "log_viewer.h"
 
 class Ui_MainWindow {
 public:
     QSplitter* splitter;
-    LogFileViewer* logDisplay;
+    LogViewer* logDisplay;
     QAction* bootGameAct;
     QAction* addElfFolderAct;
     QAction* shadFolderAct;

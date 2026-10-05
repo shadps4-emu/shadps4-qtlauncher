@@ -13,6 +13,9 @@
 class IpcClient : public QObject {
     Q_OBJECT
 
+signals:
+    void LogDataReceived(const QByteArray& bytes);
+
 public:
     explicit IpcClient(QObject* parent = nullptr, bool log_to_terminal = false);
     void startEmulator(const QFileInfo& exe, const QStringList& args,

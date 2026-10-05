@@ -162,7 +162,7 @@ void MainWindow::StopGame() {
 
 void MainWindow::onGameClosed() {
     EmulatorState::GetInstance()->SetGameRunning(false);
-    ui->logDisplay->FinishSource();
+    ui->logDisplay->FinishOutput();
     is_paused = false;
 
     // swap the pause button back to the play button on close
@@ -361,7 +361,7 @@ void MainWindow::CreateDockWindows(bool newDock) {
 
     ui->splitter = new QSplitter(Qt::Vertical);
     if (newDock) {
-        ui->logDisplay = new LogFileViewer(ui->splitter);
+        ui->logDisplay = new LogViewer(ui->splitter);
         m_dock_widget.reset(new QDockWidget(tr("Game List"), this));
         m_game_list_frame.reset(
             new GameListFrame(m_gui_settings, m_game_info, m_compat_info, m_ipc_client, this));
@@ -988,9 +988,11 @@ void MainWindow::CreateConnects() {
             isIconBlack = false;
         }
     });
+    connect(m_ipc_client.get(), &IpcClient::LogDataReceived, this,
+            [this](const QByteArray& bytes) { ui->logDisplay->AppendOutput(bytes); });
 }
 
-void MainWindow::FollowGameLog(const QString& work_dir) {
+void MainWindow::PrepareGameLog(const QString& work_dir) {
     const auto portable_dir = Common::FS::PathFromQString(work_dir) / Common::FS::PORTABLE_DIR;
     std::filesystem::path user_dir;
     if (std::filesystem::exists(portable_dir)) {
@@ -1026,7 +1028,6 @@ void MainWindow::FollowGameLog(const QString& work_dir) {
     }
 
     bool separate = EmulatorSettings.IsLogSeparate();
-    bool append = EmulatorSettings.IsLogAppend();
     auto read_log_settings = [&](const std::filesystem::path& config_path) {
         QString config_name;
         Common::FS::PathToQString(config_name, config_path);
@@ -1038,9 +1039,6 @@ void MainWindow::FollowGameLog(const QString& work_dir) {
             QJsonDocument::fromJson(config.readAll()).object().value("Log").toObject();
         if (settings.value("separate").isBool()) {
             separate = settings.value("separate").toBool();
-        }
-        if (settings.value("append").isBool()) {
-            append = settings.value("append").toBool();
         }
     };
     if (user_dir != Common::FS::GetUserPath(Common::FS::PathType::UserDir)) {
@@ -1054,7 +1052,7 @@ void MainWindow::FollowGameLog(const QString& work_dir) {
     const auto path = user_dir / Common::FS::LOG_DIR / filename;
     QString log_path;
     Common::FS::PathToQString(log_path, path);
-    ui->logDisplay->SetSource(log_path, !append);
+    ui->logDisplay->SetLogPath(log_path);
 }
 
 void MainWindow::StartGameWithArgs(QStringList args) {
@@ -1510,7 +1508,7 @@ tr("No emulator version was selected.\nThe Version Manager menu will then open.\
     last_game_path = path;
 
     QString workDir = QDir::currentPath();
-    FollowGameLog(workDir);
+    PrepareGameLog(workDir);
     m_ipc_client->startEmulator(fileInfo, final_args, workDir);
     m_ipc_client->setActiveController(GamepadSelect::GetSelectedGamepad());
 }
@@ -1589,7 +1587,7 @@ void MainWindow::StartEmulatorExecutable(std::filesystem::path emuPath, QString 
 
     EmulatorState::GetInstance()->SetGameRunning(true);
     QString workDir = QDir::currentPath();
-    FollowGameLog(workDir);
+    PrepareGameLog(workDir);
     m_ipc_client->startEmulator(fileInfo, args, workDir, disable_ipc);
 }
 
@@ -1627,7 +1625,7 @@ void MainWindow::RestartEmulator() {
     QFileInfo fileInfo(exe);
     QString workDir = fileInfo.absolutePath();
 
-    FollowGameLog(workDir);
+    PrepareGameLog(workDir);
     m_ipc_client->startEmulator(fileInfo, args, workDir);
 }
 

@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright 2025 shadPS4 Emulator Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
+#include <algorithm>
 #include <iostream>
 
 #include <QDir>
@@ -23,11 +24,7 @@ void IpcClient::startEmulator(const QFileInfo& exe, const QStringList& args, con
     process = new QProcess(this);
 
     connect(process, &QProcess::readyReadStandardError, this, [this] { onStderr(); });
-    if (m_log_to_terminal) {
-        connect(process, &QProcess::readyReadStandardOutput, this, [this] { onStdout(); });
-    } else {
-        process->setStandardOutputFile(QProcess::nullDevice());
-    }
+    connect(process, &QProcess::readyReadStandardOutput, this, [this] { onStdout(); });
     connect(process, &QProcess::finished, this, [this] { onProcessClosed(); });
 
     process->setProcessChannelMode(QProcess::SeparateChannels);
@@ -237,11 +234,24 @@ void IpcClient::onStderr() {
 }
 
 void IpcClient::onStdout() {
-    const QByteArray data = process->readAllStandardOutput();
-    std::cout.write(data.constData(), data.size()).flush();
+    constexpr qint64 chunk_bytes = 64 * 1024;
+    qint64 remaining = process ? process->bytesAvailable() : 0;
+    while (remaining > 0) {
+        const QByteArray data = process->read(std::min(chunk_bytes, remaining));
+        if (data.isEmpty()) {
+            break;
+        }
+        remaining -= data.size();
+        if (m_log_to_terminal) {
+            std::cout.write(data.constData(), data.size()).flush();
+        } else {
+            emit LogDataReceived(data);
+        }
+    }
 }
 
 void IpcClient::onProcessClosed() {
+    onStdout();
     gameClosedFunc();
     if (process) {
         process->disconnect();
