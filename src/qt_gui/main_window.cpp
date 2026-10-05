@@ -278,6 +278,7 @@ void MainWindow::AddUiWidgets() {
     searchSliderLayout->setContentsMargins(0, 0, 6, 6);
     searchSliderLayout->setSpacing(2);
     ui->mw_searchbar->setFixedWidth(150);
+    ui->mw_searchbar->setClearButtonEnabled(true);
 
     searchSliderLayout->addWidget(ui->sizeSliderContainer);
     searchSliderLayout->addWidget(ui->mw_searchbar);
