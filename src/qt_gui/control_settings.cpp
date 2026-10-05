@@ -221,7 +221,8 @@ void ControlSettings::SaveControllerConfig(bool CloseOnSave) {
         bool controllerInputdetected = false;
         for (std::string input : ControllerInputs) {
             // Needed to avoid detecting backspace while detecting back
-            if (input_string.contains(input) && !input_string.contains("backspace")) {
+            if (input_string.contains(input) && !input_string.contains("backspace") &&
+                !input_string.contains("sidebuttonback")) {
                 controllerInputdetected = true;
                 break;
             }

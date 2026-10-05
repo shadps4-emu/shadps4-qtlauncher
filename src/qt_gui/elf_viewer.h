@@ -1,9 +1,12 @@
-// SPDX-FileCopyrightText: Copyright 2024 shadPS4 Emulator Project
+// SPDX-FileCopyrightText: Copyright 2024-2026 shadPS4 Emulator Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #pragma once
 
 #include <QFileDialog>
+#include <QGraphicsDropShadowEffect>
+#include <QLabel>
+#include <QVBoxLayout>
 
 #include "core/file_format/elf.h"
 #include "game_list_frame.h"

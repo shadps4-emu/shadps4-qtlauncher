@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: Copyright 2025 shadPS4 Emulator Project
+# SPDX-FileCopyrightText: Copyright 2025-2026 shadPS4 Emulator Project
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 # Version 3.24 needed for FetchContent OVERRIDE_FIND_PACKAGE
@@ -311,6 +311,7 @@ set(QT_GUI src/qt_gui/about_dialog.cpp
            src/qt_gui/main_window_ui.h
            src/qt_gui/main_window.cpp
            src/qt_gui/main_window.h
+           src/qt_gui/gui_context_menus.cpp
            src/qt_gui/gui_context_menus.h
            src/qt_gui/game_list_utils.h
            src/qt_gui/game_info.cpp

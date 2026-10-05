@@ -12,6 +12,7 @@
 #include <common/scm_rev.h>
 #include "common/assert.h"
 #include "common/logging/log.h"
+#include "emulator_settings.h"
 #include "qt_gui/main_window.h"
 #include "user_settings.h"
 
