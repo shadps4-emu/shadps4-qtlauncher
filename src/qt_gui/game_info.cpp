@@ -73,8 +73,9 @@ void ScanDirectoryRecursively(const QString& dir, QStringList& filePaths, int cu
             continue;
         }
 
-        // Check if this directory contains a PS4 game (has sce_sys/param.sfo)
-        if (QFile::exists(entry.filePath() + "/sce_sys/param.sfo")) {
+        // Check if this directory contains a PS4 game (has sce_sys/param.sfo and eboot.bin)
+        if (QFile::exists(entry.filePath() + "/sce_sys/param.sfo") ||
+            QFile::exists(entry.filePath() + "/eboot.bin")) {
             filePaths.append(entry.absoluteFilePath());
         } else {
             // If not a game directory, recursively scan it with increased depth
@@ -95,7 +96,8 @@ void ScanDirectoryRecursively(const QString& dir, QStringList& filePaths, int cu
         if (!Core::FileSys::IsZArchiveFile(archive_path)) {
             continue;
         }
-        if (!Core::FileSys::ReadGameFile(archive_path, "sce_sys/param.sfo").has_value()) {
+        if (!Core::FileSys::ReadGameFile(archive_path, "sce_sys/param.sfo").has_value() ||
+            !Core::FileSys::ReadGameFile(archive_path, "eboot.bin").has_value()) {
             continue;
         }
         filePaths.append(archive.absoluteFilePath());
