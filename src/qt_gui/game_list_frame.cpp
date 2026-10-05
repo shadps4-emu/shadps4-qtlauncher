@@ -39,7 +39,7 @@ GameListFrame::GameListFrame(std::shared_ptr<gui_settings> gui_settings,
     this->setColumnWidth(3, 120); // Serial
     this->setColumnWidth(4, 90);  // Region
     this->setColumnWidth(5, 90);  // Firmware
-    this->setColumnWidth(6, 150); // Size and archive savings
+    this->setColumnWidth(6, 90);  // Size
     this->setColumnWidth(7, 90);  // Version
     this->setColumnWidth(8, 120); // Play Time
     this->setColumnWidth(10, 90); // Favorite

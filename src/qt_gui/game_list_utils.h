@@ -111,9 +111,14 @@ public:
 
     static QString GetStorageTooltip(const std::vector<StorageEntry>& entries) {
         QStringList lines;
+        StorageInfo total;
         for (const auto& entry : entries) {
             lines << tr("%1: %2").arg(entry.name, FormatStorage(entry.storage));
+            total.stored_size += entry.storage.stored_size;
+            total.content_size += entry.storage.content_size;
+            total.contains_archive |= entry.storage.contains_archive;
         }
+        lines << "" << tr("Total: %1").arg(FormatStorage(total));
         return lines.join('\n');
     }
 
@@ -186,8 +191,7 @@ public:
 
             if (valid_entries) {
                 game.stored_size = stored_size;
-                game.size =
-                    FormatStorage({stored_size, content_size, archive_line == "1"}).toStdString();
+                game.size = FormatSize(stored_size).toStdString();
                 game.storage_tooltip = GetStorageTooltip(entries);
                 return;
             }
@@ -226,7 +230,7 @@ public:
             entries.push_back(MeasureStorageEntry(root));
         }
         game.stored_size = storage.stored_size;
-        game.size = FormatStorage(storage).toStdString();
+        game.size = FormatSize(storage.stored_size).toStdString();
         game.storage_tooltip = GetStorageTooltip(entries);
 
         QString cache_contents;
