@@ -1096,7 +1096,7 @@ void MainWindow::RefreshGameTable() {
     // m_game_info->m_games.clear();
     m_game_info->GetGameInfo(this);
     m_game_list_frame->clearContents();
-    m_game_list_frame->PopulateGameList();
+    m_game_list_frame->PopulateGameList(false);
     m_game_grid_frame->clearContents();
     m_game_grid_frame->PopulateGameGrid(m_game_info->m_games, false);
     statusBar->clearMessage();
