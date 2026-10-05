@@ -103,8 +103,8 @@ public:
         if (storage.contains_archive && storage.content_size > 0) {
             const double saved = 100.0 * (1.0 - static_cast<double>(storage.stored_size) /
                                                     static_cast<double>(storage.content_size));
-            result += saved >= 0.0 ? tr(" (-%1%)").arg(QString::number(saved, 'f', 1))
-                                   : tr(" (+%1%)").arg(QString::number(-saved, 'f', 1));
+            result += saved >= 0.0 ? QStringLiteral(" (-%1%)").arg(QString::number(saved, 'f', 1))
+                                   : QStringLiteral(" (+%1%)").arg(QString::number(-saved, 'f', 1));
         }
         return result;
     }
@@ -113,7 +113,7 @@ public:
         QStringList lines;
         StorageInfo total;
         for (const auto& entry : entries) {
-            lines << tr("%1: %2").arg(entry.name, FormatStorage(entry.storage));
+            lines << QStringLiteral("%1: %2").arg(entry.name, FormatStorage(entry.storage));
             total.stored_size += entry.storage.stored_size;
             total.content_size += entry.storage.content_size;
             total.contains_archive |= entry.storage.contains_archive;
