@@ -93,6 +93,7 @@ std::vector<DirEntry> ZArchiveGameBackend::ListDir(std::string_view rel_path) co
         entries.push_back(DirEntry{
             .name = std::string(entry.name.data(), entry.name.size()),
             .is_directory = entry.isDirectory,
+            .size = entry.isDirectory ? 0ull : static_cast<u64>(entry.size),
         });
     }
     return entries;

@@ -51,6 +51,8 @@ private Q_SLOTS:
     void SearchGameTable(const QString& text);
     void ShowGameList();
     void RefreshGameTable();
+    void ForceRefreshGameTable();
+    void RefreshGameTableForSerial(const QString& serial);
     void HandleResize(QResizeEvent* event);
     void OnLanguageChanged(const QString& locale);
     void toggleLabelsUnderIcons();
@@ -66,6 +68,7 @@ private:
     void CreateRecentGameActions();
     void CreateDockWindows(bool newDock);
     void LoadGameLists();
+    void ReloadGameTable(bool force_size_refresh, const QString& force_size_serial = {});
     void onGameClosed();
     void RunGame();
     void PrepareGameLog(const QString& work_dir);

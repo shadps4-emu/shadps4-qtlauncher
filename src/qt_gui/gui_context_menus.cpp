@@ -226,10 +226,12 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
         return changedFavorite;
     }
 
-    auto convertPathToZArchiveHandler = [widget, this](const std::filesystem::path& source_path,
-                                                       const QString& display_name,
-                                                       const QString& dialog_title,
-                                                       const QString& extra_note) {
+    const QString game_serial = QString::fromStdString(m_games[itemID].serial);
+    auto convertPathToZArchiveHandler = [widget, this,
+                                         game_serial](const std::filesystem::path& source_path,
+                                                      const QString& display_name,
+                                                      const QString& dialog_title,
+                                                      const QString& extra_note) {
         if (Core::FileSys::IsZArchiveFile(source_path)) {
             QMessageBox::information(widget, dialog_title,
                                      tr("This is already packed as a ZArchive."));
@@ -306,7 +308,8 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
         auto* watcher = new QFutureWatcher<ConvertZarResult>(widget);
 
         connect(watcher, &QFutureWatcher<ConvertZarResult>::finished, widget,
-                [widget, watcher, progress_guard, source_path, output_path, dialog_title, this]() {
+                [widget, watcher, progress_guard, source_path, output_path, dialog_title,
+                 game_serial, this]() {
                     const ConvertZarResult result = watcher->result();
                     watcher->deleteLater();
 
@@ -345,7 +348,7 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
                         }
                     }
 
-                    emit RequestGameListRefresh();
+                    emit RequestGameListRefresh(game_serial);
                 });
 
         auto future = QtConcurrent::run(

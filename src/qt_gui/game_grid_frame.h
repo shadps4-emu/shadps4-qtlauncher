@@ -18,7 +18,7 @@ class GameGridFrame : public QTableWidget {
 
 Q_SIGNALS:
     void GameGridFrameClosed();
-    void RequestRefreshGrid();
+    void RequestRefreshGrid(const QString& serial);
 
 public Q_SLOTS:
     void SetGridBackgroundImage(int row, int column);

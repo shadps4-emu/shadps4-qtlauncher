@@ -12,6 +12,23 @@
 
 namespace Core::FileSys {
 
+namespace {
+
+u64 GetBackendContentSize(const IGameBackend& backend, const std::string& rel_dir) {
+    u64 total = 0;
+    for (const auto& entry : backend.ListDir(rel_dir)) {
+        if (entry.is_directory) {
+            const std::string child = rel_dir.empty() ? entry.name : rel_dir + "/" + entry.name;
+            total += GetBackendContentSize(backend, child);
+        } else {
+            total += entry.size;
+        }
+    }
+    return total;
+}
+
+} // namespace
+
 bool IsZArchiveFile(const std::filesystem::path& path) {
     std::error_code ec;
     return path.extension() == ".zar" && std::filesystem::is_regular_file(path, ec) && !ec;
@@ -66,6 +83,14 @@ std::optional<std::vector<u8>> ReadGameFile(const std::filesystem::path& game_ro
         return std::nullopt;
     }
     return backend->ReadFile(rel_path);
+}
+
+bool Exists(const std::filesystem::path& game_root, std::string_view rel_path) {
+    const auto backend = OpenGameBackend(game_root);
+    if (!backend) {
+        return false;
+    }
+    return backend->Exists(rel_path);
 }
 
 std::optional<std::filesystem::path> ResolveGameFilePath(const std::filesystem::path& game_root,
@@ -151,6 +176,15 @@ u64 GetGameRootSize(const std::filesystem::path& game_root) {
         }
     }
     return total;
+}
+
+u64 GetGameRootContentSize(const std::filesystem::path& game_root) {
+    if (!IsZArchiveFile(game_root)) {
+        return GetGameRootSize(game_root);
+    }
+
+    const auto backend = OpenGameBackend(game_root);
+    return backend ? GetBackendContentSize(*backend, "") : 0ull;
 }
 
 } // namespace Core::FileSys
