@@ -96,8 +96,8 @@ void ScanDirectoryRecursively(const QString& dir, QStringList& filePaths, int cu
         if (!Core::FileSys::IsZArchiveFile(archive_path)) {
             continue;
         }
-        if (!Core::FileSys::ReadGameFile(archive_path, "sce_sys/param.sfo").has_value() ||
-            !Core::FileSys::ReadGameFile(archive_path, "eboot.bin").has_value()) {
+        if (!Core::FileSys::Exists(archive_path, "sce_sys/param.sfo") ||
+            !Core::FileSys::Exists(archive_path, "eboot.bin")) {
             continue;
         }
         filePaths.append(archive.absoluteFilePath());
