@@ -60,6 +60,8 @@ public:
 [[nodiscard]] std::optional<std::vector<u8>> ReadGameFile(const std::filesystem::path& game_root,
                                                           std::string_view rel_path);
 
+[[nodiscard]] bool Exists(const std::filesystem::path& game_root, std::string_view rel_path);
+
 // Returns a real path on the host filesystem for rel_path inside game_root.
 // For directory-backed games this is just game_root / rel_path; for archives
 // the entry is extracted into the cache directory first so that code which

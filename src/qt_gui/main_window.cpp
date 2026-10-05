@@ -1108,7 +1108,7 @@ void MainWindow::ReloadGameTable(bool force_size_refresh, const QString& force_s
     // m_game_info->m_games.clear();
     m_game_info->GetGameInfo(this, force_size_refresh, force_size_serial.toStdString());
     m_game_list_frame->clearContents();
-    m_game_list_frame->PopulateGameList();
+    m_game_list_frame->PopulateGameList(false);
     m_game_grid_frame->clearContents();
     m_game_grid_frame->PopulateGameGrid(m_game_info->m_games, false);
     statusBar->clearMessage();
