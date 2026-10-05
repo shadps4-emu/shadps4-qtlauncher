@@ -339,12 +339,6 @@ void TrophyViewer::SelectionChanged(int gameIndex, QString user) {
         return;
     }
 
-    while (tabWidget->count() > 0) {
-        QWidget* widget = tabWidget->widget(0);
-        tabWidget->removeTab(0);
-        delete widget;
-    }
-
     const TrophyGameInfo& selectedGame = allTrophyGames_[gameIndex];
     currentGameName_ = selectedGame.name;
     gameTrpPath_ = selectedGame.gameTrpPath;
@@ -353,9 +347,14 @@ void TrophyViewer::SelectionChanged(int gameIndex, QString user) {
 
     std::filesystem::path npbindPath =
         Common::FS::PathFromQString(gameTrpPath_) / "sce_sys" / "npbind.dat";
+    if (const auto resolved = Core::FileSys::ResolveGameFilePath(
+            Common::FS::PathFromQString(gameTrpPath_), "sce_sys/npbind.dat")) {
+        npbindPath = *resolved;
+    }
 
     NPBindFile npbind;
     if (!npbind.Load(npbindPath.string())) {
+        npCommIds.clear();
         LOG_WARNING(Common_Filesystem, "Failed to load npbind.dat file");
     } else {
         npCommIds = npbind.GetNpCommIds();
@@ -382,6 +381,12 @@ void TrophyViewer::reopenLeftDock() {
 }
 
 void TrophyViewer::PopulateTrophyWidget(QString title, QString user) {
+    while (tabWidget->count() > 0) {
+        QWidget* widget = tabWidget->widget(0);
+        tabWidget->removeTab(0);
+        delete widget;
+    }
+
     int index = 0;
     for (const auto& npCommId : npCommIds) {
         auto trophyFilesPath =
@@ -422,8 +427,10 @@ void TrophyViewer::PopulateTrophyWidget(QString title, QString user) {
         }
 
         QFileInfoList dirList = dir.entryInfoList(QDir::Dirs | QDir::NoDotAndDotDot);
-        if (dirList.isEmpty())
-            return;
+        if (dirList.isEmpty()) {
+            LOG_WARNING(Loader, "error");
+            continue;
+        }
 
         QString trpDir = trophyDirQt;
 
@@ -458,7 +465,8 @@ void TrophyViewer::PopulateTrophyWidget(QString title, QString user) {
         Common::FS::PathToQString(userXmlPath, user_trophy_file);
         QFile userFile(userXmlPath);
         if (!userFile.open(QFile::ReadOnly | QFile::Text)) {
-            return;
+            LOG_WARNING(Loader, "error");
+            continue;
         }
 
         QXmlStreamReader usrFileReader(&userFile);
