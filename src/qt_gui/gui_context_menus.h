@@ -20,7 +20,7 @@
 class GuiContextMenus : public QObject {
     Q_OBJECT
 signals:
-    void RequestGameListRefresh();
+    void RequestGameListRefresh(const QString& serial);
 
 public:
     int RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_games,

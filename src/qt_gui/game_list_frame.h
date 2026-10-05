@@ -31,7 +31,7 @@ public:
                            std::shared_ptr<IpcClient> ipc_client, QWidget* parent = nullptr);
 Q_SIGNALS:
     void GameListFrameClosed();
-    void RequestRefreshList();
+    void RequestRefreshList(const QString& serial);
 
 public Q_SLOTS:
     void SetListBackgroundImage(QTableWidgetItem* item);
@@ -44,7 +44,7 @@ public Q_SLOTS:
                               int previousColumn);
 
 private:
-    void SetTableItem(int row, int column, QString itemStr);
+    void SetTableItem(int row, int column, QString itemStr, QString tooltip = {});
     void SetRegionFlag(int row, int column, QString itemStr);
     void SetFavoriteIcon(int row, int column);
     void SetCompatibilityItem(int row, int column, CompatibilityEntry entry);
@@ -79,11 +79,6 @@ public:
         return std::stof(str.substr(0, str.size() - offset));
     }
 
-    static float parseSizeMB(const std::string& size) {
-        float num = parseAsFloat(size, 3);
-        return (size[size.size() - 2] == 'G') ? num * 1024 : num;
-    }
-
     static int parsePlayTime(const std::string& time) {
         int hours = 0;
         int minutes = 0;
@@ -111,7 +106,7 @@ public:
         case 5:
             return parseAsFloat(a.fw, 0) < parseAsFloat(b.fw, 0);
         case 6:
-            return parseSizeMB(b.size) < parseSizeMB(a.size);
+            return b.stored_size < a.stored_size;
         case 7:
             return a.version < b.version;
         case 8:
@@ -140,7 +135,7 @@ public:
         case 5:
             return parseAsFloat(a.fw, 0) > parseAsFloat(b.fw, 0);
         case 6:
-            return parseSizeMB(b.size) > parseSizeMB(a.size);
+            return b.stored_size > a.stored_size;
         case 7:
             return a.version > b.version;
         case 8:

@@ -17,6 +17,7 @@ namespace Core::FileSys {
 struct DirEntry {
     std::string name;
     bool is_directory{false};
+    u64 size{0};
 };
 
 class IGameBackend {
@@ -71,5 +72,10 @@ public:
 // Total size in bytes of a game root: the archive's own file size for .zar,
 // otherwise the recursive size of the directory.
 [[nodiscard]] u64 GetGameRootSize(const std::filesystem::path& game_root);
+
+// Total uncompressed content size in bytes. For directory-backed games this is
+// identical to GetGameRootSize; for .zar archives it sums the original sizes
+// recorded for every file in the archive.
+[[nodiscard]] u64 GetGameRootContentSize(const std::filesystem::path& game_root);
 
 } // namespace Core::FileSys
