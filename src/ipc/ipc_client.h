@@ -5,9 +5,9 @@
 
 #include <functional>
 
-#include <QColor>
 #include <QFileInfo>
 #include <QProcess>
+#include <QTemporaryDir>
 
 #include "common/memory_patcher.h"
 
@@ -15,10 +15,11 @@ class IpcClient : public QObject {
     Q_OBJECT
 
 signals:
-    void LogEntrySent(QString entry, QColor textColor);
+    void LogFileReady(const QString& path);
 
 public:
     explicit IpcClient(QObject* parent = nullptr, bool log_to_terminal = false);
+    ~IpcClient() override;
     void startEmulator(const QFileInfo& exe, const QStringList& args,
                        const QString& workDir = QString(), bool disable_ipc = false);
     void startGame();
@@ -62,13 +63,13 @@ public:
 private:
     void onStderr();
     void onStdout();
-    void PrintOutput(QByteArray data);
     void onProcessClosed();
     void writeLine(const QString& text);
 
     QProcess* process = nullptr;
     QByteArray buffer;
-    QByteArray stdout_buffer;
+    QTemporaryDir log_directory;
+    quint64 log_session = 0;
     bool pendingRestart = false;
 
     ParsingState parsingState;

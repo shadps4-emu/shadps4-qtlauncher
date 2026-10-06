@@ -1,18 +1,28 @@
 // SPDX-FileCopyrightText: Copyright 2025 shadPS4 Emulator Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
+#include <algorithm>
 #include <iostream>
 
 #include <QDir>
+#include <QFile>
 #include <QMessageBox>
 #include <QProcessEnvironment>
-#include <QRegularExpression>
 
 #include "common/logging/log.h"
 #include "ipc_client.h"
 
 IpcClient::IpcClient(QObject* parent, bool log_to_terminal)
-    : QObject(parent), m_log_to_terminal(log_to_terminal) {}
+    : QObject(parent), log_directory(QDir::tempPath() + "/shadps4-launcher-log-XXXXXX"),
+      m_log_to_terminal(log_to_terminal) {}
+
+IpcClient::~IpcClient() {
+    // Close redirected output before the session directory is removed.
+    if (process) {
+        process->disconnect();
+        delete process;
+    }
+}
 
 void IpcClient::startEmulator(const QFileInfo& exe, const QStringList& args, const QString& workDir,
                               bool disable_ipc) {
@@ -22,7 +32,20 @@ void IpcClient::startEmulator(const QFileInfo& exe, const QStringList& args, con
         process = nullptr;
     }
     process = new QProcess(this);
-    stdout_buffer.clear();
+    if (!m_log_to_terminal) {
+        const QString path = log_directory.filePath(QString("session-%1.log").arg(++log_session));
+        QFile capture(path);
+        if (!log_directory.isValid() || !capture.open(QIODevice::WriteOnly)) {
+            QMessageBox::critical(nullptr, tr("Game Log"),
+                                  tr("Could not create the console log capture."));
+            gameClosedFunc();
+            return;
+        }
+        capture.close();
+        // Let the child write directly to disk, without buffering its output in the GUI.
+        process->setStandardOutputFile(path);
+        emit LogFileReady(path);
+    }
 
     connect(process, &QProcess::readyReadStandardError, this, [this] { onStderr(); });
     connect(process, &QProcess::readyReadStandardOutput, this, [this] { onStdout(); });
@@ -235,63 +258,23 @@ void IpcClient::onStderr() {
 }
 
 void IpcClient::onStdout() {
-    QByteArray data = process->readAllStandardOutput();
-    if (!m_log_to_terminal) {
-        stdout_buffer.append(data);
-        const qsizetype newline = stdout_buffer.lastIndexOf('\n');
-        if (newline < 0) {
-            return;
-        }
-        data = stdout_buffer.left(newline + 1);
-        stdout_buffer.remove(0, newline + 1);
+    if (!process || !m_log_to_terminal) {
+        return;
     }
-    PrintOutput(std::move(data));
-}
-
-void IpcClient::PrintOutput(QByteArray data) {
-    QColor color;
-    QString dataString = QString::fromUtf8(data);
-    QStringList entries = dataString.split('\n');
-
-    for (QString& entry : entries) {
-        if (entry.contains("<Warning>")) {
-            color = Qt::yellow;
-        } else if (entry.contains("<Error>")) {
-            color = Qt::red;
-        } else if (entry.contains("<Critical>")) {
-            color = Qt::magenta;
-        } else if (entry.contains("<Trace>")) {
-            color = Qt::gray;
-        } else if (entry.contains("<Debug>")) {
-            color = Qt::cyan;
-        } else {
-            color = Qt::white;
+    constexpr qint64 chunk_bytes = 64 * 1024;
+    qint64 remaining = process->bytesAvailable();
+    while (remaining > 0) {
+        const QByteArray data = process->read(std::min(chunk_bytes, remaining));
+        if (data.isEmpty()) {
+            break;
         }
-
-        if (entry.isEmpty() || entry == "\x1B[m") {
-            continue;
-        }
-
-        if (m_log_to_terminal) {
-            std::cout << entry.toStdString() << std::endl;
-            continue;
-        }
-
-        static const QRegularExpression ansiRegex(
-            R"(\x1B\[[0-9;]*[mK])"); // ANSI escape codes from UNIX terminals
-        entry = entry.replace(ansiRegex, "");
-
-        if (!entry.isEmpty())
-            emit LogEntrySent(entry.trimmed(), color);
+        remaining -= data.size();
+        std::cout.write(data.constData(), data.size()).flush();
     }
 }
 
 void IpcClient::onProcessClosed() {
     onStdout();
-    if (!stdout_buffer.isEmpty()) {
-        PrintOutput(std::move(stdout_buffer));
-        stdout_buffer.clear();
-    }
     gameClosedFunc();
     if (process) {
         process->disconnect();
