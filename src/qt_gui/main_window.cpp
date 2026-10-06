@@ -3,8 +3,9 @@
 
 #include <QComboBox>
 #include <QDockWidget>
+#include <QJsonDocument>
+#include <QJsonObject>
 #include <QKeyEvent>
-#include <QPlainTextEdit>
 #include <QProgressDialog>
 #include <QStatusBar>
 
@@ -992,9 +993,74 @@ void MainWindow::CreateConnects() {
             isIconBlack = false;
         }
     });
+}
 
-    connect(m_ipc_client.get(), &IpcClient::LogFileReady, this,
-            [this](const QString& path) { ui->logDisplay->SetSource(path, false); });
+void MainWindow::PrepareLogFile(const QString& work_dir, const QStringList& args) {
+    QString user_dir = QDir(work_dir).absoluteFilePath(Common::FS::PORTABLE_DIR);
+    if (!QFileInfo(user_dir).isDir()) {
+#ifdef _WIN32
+        user_dir = qEnvironmentVariable("APPDATA") + "/shadPS4";
+#elif defined(__APPLE__)
+        user_dir = QDir::homePath() + "/Library/Application Support/shadPS4";
+#else
+        const QString xdg = qEnvironmentVariable("XDG_DATA_HOME");
+        user_dir = (xdg.isEmpty() ? QDir::homePath() + "/.local/share" : xdg) + "/shadPS4";
+#endif
+    }
+
+    QString game_path;
+    for (int i = 0; i < args.size(); ++i) {
+        if ((args[i] == "--game" || args[i] == "-g") && i + 1 < args.size()) {
+            game_path = args[++i];
+        } else if (args[i].startsWith("--game=")) {
+            game_path = args[i].mid(7);
+        }
+    }
+    QString serial;
+    if (!game_path.isEmpty()) {
+        auto root = Common::FS::PathFromQString(QDir(work_dir).absoluteFilePath(game_path));
+        if (!Core::FileSys::ResolveGameRoot(root)) {
+            root = root.parent_path();
+        }
+        if (const auto bytes = Core::FileSys::ReadGameFile(root, "sce_sys/param.sfo")) {
+            PSF game_psf;
+            if (game_psf.Open(*bytes)) {
+                if (const auto id = game_psf.GetString("TITLE_ID")) {
+                    serial = QString::fromUtf8(id->data(), static_cast<qsizetype>(id->size()));
+                }
+            }
+        }
+    }
+
+    bool enabled = true;
+    bool separate = false;
+    const auto read_settings = [&](const QString& path) {
+        QFile config(path);
+        if (config.open(QIODevice::ReadOnly)) {
+            const auto log =
+                QJsonDocument::fromJson(config.readAll()).object().value("Log").toObject();
+            if (const auto value = log.value("enable"); value.isBool()) {
+                enabled = value.toBool();
+            }
+            if (const auto value = log.value("separate"); value.isBool()) {
+                separate = value.toBool();
+            }
+        }
+    };
+    const bool global = args.contains("--config-global");
+    if (!args.contains("--config-clean") || global) {
+        read_settings(QDir(user_dir).filePath("config.json"));
+        if (!serial.isEmpty() && !global) {
+            read_settings(QDir(user_dir).filePath(QString::fromLatin1(Common::FS::CUSTOM_CONFIGS) +
+                                                  "/" + serial + ".json"));
+        }
+    }
+    const QString filename = game_path.isEmpty()             ? "shadps4.log"
+                             : separate && !serial.isEmpty() ? serial + ".log"
+                                                             : Common::FS::LOG_FILE;
+    const QString path =
+        QDir(user_dir).filePath(QString::fromLatin1(Common::FS::LOG_DIR) + "/" + filename);
+    ui->logDisplay->SetSource(enabled ? path : QString(), true);
 }
 
 void MainWindow::StartGameWithArgs(QStringList args) {
@@ -1462,6 +1528,7 @@ tr("No emulator version was selected.\nThe Version Manager menu will then open.\
     last_game_path = path;
 
     QString workDir = QDir::currentPath();
+    PrepareLogFile(workDir, final_args);
     m_ipc_client->startEmulator(fileInfo, final_args, workDir);
     m_ipc_client->setActiveController(GamepadSelect::GetSelectedGamepad());
 }
@@ -1540,6 +1607,7 @@ void MainWindow::StartEmulatorExecutable(std::filesystem::path emuPath, QString 
 
     EmulatorState::GetInstance()->SetGameRunning(true);
     QString workDir = QDir::currentPath();
+    PrepareLogFile(workDir, args);
     m_ipc_client->startEmulator(fileInfo, args, workDir, disable_ipc);
 }
 
@@ -1577,6 +1645,7 @@ void MainWindow::RestartEmulator() {
     QFileInfo fileInfo(exe);
     QString workDir = fileInfo.absolutePath();
 
+    PrepareLogFile(workDir, args);
     m_ipc_client->startEmulator(fileInfo, args, workDir);
 }
 

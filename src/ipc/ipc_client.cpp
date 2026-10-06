@@ -4,8 +4,6 @@
 #include <algorithm>
 #include <iostream>
 
-#include <QDir>
-#include <QFile>
 #include <QMessageBox>
 #include <QProcessEnvironment>
 
@@ -13,16 +11,7 @@
 #include "ipc_client.h"
 
 IpcClient::IpcClient(QObject* parent, bool log_to_terminal)
-    : QObject(parent), log_directory(QDir::tempPath() + "/shadps4-launcher-log-XXXXXX"),
-      m_log_to_terminal(log_to_terminal) {}
-
-IpcClient::~IpcClient() {
-    // Close redirected output before the session directory is removed.
-    if (process) {
-        process->disconnect();
-        delete process;
-    }
-}
+    : QObject(parent), m_log_to_terminal(log_to_terminal) {}
 
 void IpcClient::startEmulator(const QFileInfo& exe, const QStringList& args, const QString& workDir,
                               bool disable_ipc) {
@@ -33,18 +22,8 @@ void IpcClient::startEmulator(const QFileInfo& exe, const QStringList& args, con
     }
     process = new QProcess(this);
     if (!m_log_to_terminal) {
-        const QString path = log_directory.filePath(QString("session-%1.log").arg(++log_session));
-        QFile capture(path);
-        if (!log_directory.isValid() || !capture.open(QIODevice::WriteOnly)) {
-            QMessageBox::critical(nullptr, tr("Game Log"),
-                                  tr("Could not create the console log capture."));
-            gameClosedFunc();
-            return;
-        }
-        capture.close();
-        // Let the child write directly to disk, without buffering its output in the GUI.
-        process->setStandardOutputFile(path);
-        emit LogFileReady(path);
+        // The viewer reads the emulator's log file; discard duplicate console output.
+        process->setStandardOutputFile(QProcess::nullDevice());
     }
 
     connect(process, &QProcess::readyReadStandardError, this, [this] { onStderr(); });

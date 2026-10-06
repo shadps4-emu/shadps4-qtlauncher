@@ -6,6 +6,7 @@
 #include <memory>
 #include <utility>
 
+#include <QAbstractTextDocumentLayout>
 #include <QAction>
 #include <QApplication>
 #include <QDesktopServices>
@@ -38,6 +39,81 @@ constexpr int max_line_bytes = 16 * 1024;
 constexpr qsizetype window_characters = 128 * 1024;
 constexpr qsizetype sample_bytes = 256;
 
+class LogTextEdit : public QPlainTextEdit {
+public:
+    explicit LogTextEdit(QWidget* parent) : QPlainTextEdit(parent) {
+        document()->setDocumentMargin(0);
+        connect(document()->documentLayout(), &QAbstractTextDocumentLayout::documentSizeChanged,
+                this, [this]() { QueueAlignment(); });
+        connect(verticalScrollBar(), &QScrollBar::rangeChanged, this,
+                [this]() { QueueAlignment(); });
+    }
+
+    void SetFollowTail(bool enabled) {
+        follow_tail = enabled;
+        QueueAlignment();
+    }
+
+    bool IsAligning() const {
+        return aligning;
+    }
+
+protected:
+    void resizeEvent(QResizeEvent* event) override {
+        QPlainTextEdit::resizeEvent(event);
+        QueueAlignment();
+    }
+
+private:
+    void QueueAlignment() {
+        if (alignment_pending || aligning) {
+            return;
+        }
+        alignment_pending = true;
+        QTimer::singleShot(0, this, [this]() {
+            alignment_pending = false;
+            aligning = true;
+            const auto aligned = qScopeGuard([this]() { aligning = false; });
+            if (document()->isEmpty()) {
+                setViewportMargins(0, 0, 0, 0);
+                verticalScrollBar()->setValue(0);
+                return;
+            }
+            const QTextCursor anchor = cursorForPosition(QPoint(0, 0));
+            const int anchor_y = cursorRect(anchor).top() + viewportMargins().top();
+            const bool at_bottom = verticalScrollBar()->value() == verticalScrollBar()->maximum();
+            constexpr int padding = 4;
+            setViewportMargins(padding, 0, padding, padding);
+            QTextCursor end(document());
+            end.movePosition(QTextCursor::End);
+            // Materialize wrapped lines before Qt calculates the bottom scroll position.
+            cursorRect(end);
+            verticalScrollBar()->setValue(verticalScrollBar()->maximum());
+            // Keep one pixel beyond the final line so Qt counts it as fully visible.
+            const int gap = viewport()->height() - cursorRect(end).bottom() - 2;
+            const int top = std::clamp(gap, 0, std::max(0, viewport()->height() - 1));
+            if (top > 0) {
+                setViewportMargins(padding, top, padding, padding);
+                verticalScrollBar()->setValue(verticalScrollBar()->maximum());
+            }
+            if (!follow_tail && !at_bottom) {
+                // Alignment must preserve the reader's position when browsing older output.
+                cursorRect(anchor);
+                const QTextBlock block = anchor.block();
+                const QTextLine line =
+                    block.layout()->lineForTextPosition(anchor.positionInBlock());
+                const int above = qRound((anchor_y - viewportMargins().top()) /
+                                         std::max<qreal>(1, line.height()));
+                verticalScrollBar()->setValue(block.firstLineNumber() + line.lineNumber() - above);
+            }
+        });
+    }
+
+    bool follow_tail = true;
+    bool alignment_pending = false;
+    bool aligning = false;
+};
+
 QString DecodeLine(const QByteArray& bytes, bool truncated) {
     static const QRegularExpression ansi(R"(\x1B\[[0-9;]*[mK])");
     QString line = QString::fromUtf8(bytes).remove(ansi);
@@ -54,19 +130,19 @@ QString DecodeLine(const QByteArray& bytes, bool truncated) {
 }
 
 QColor LineColor(const QString& line) {
-    if (line.contains("<Warning>")) {
+    if (line.contains(QLatin1StringView("<Warning>"))) {
         return Qt::yellow;
     }
-    if (line.contains("<Error>")) {
+    if (line.contains(QLatin1StringView("<Error>"))) {
         return Qt::red;
     }
-    if (line.contains("<Critical>")) {
+    if (line.contains(QLatin1StringView("<Critical>"))) {
         return Qt::magenta;
     }
-    if (line.contains("<Trace>")) {
+    if (line.contains(QLatin1StringView("<Trace>"))) {
         return Qt::gray;
     }
-    if (line.contains("<Debug>")) {
+    if (line.contains(QLatin1StringView("<Debug>"))) {
         return Qt::cyan;
     }
     return Qt::white;
@@ -86,13 +162,13 @@ void LogFileReader::ResetIndex() {
     reset_pending = true;
 }
 
-void LogFileReader::SetSource(const QString& source, int source_generation, bool wait_for_change) {
-    path = source;
+void LogFileReader::SetSource(const QFileInfo& source, int source_generation,
+                              bool wait_for_change) {
+    path = source.filePath();
     generation = source_generation;
-    const QFileInfo info(path);
-    observed_size = info.exists() ? info.size() : -1;
-    modified = info.lastModified();
-    waiting = wait_for_change && info.exists();
+    observed_size = source.exists() ? source.size() : -1;
+    modified = source.lastModified();
+    waiting = wait_for_change && source.exists();
     finished = false;
     range_count = 0;
     ResetIndex();
@@ -133,18 +209,22 @@ void LogFileReader::Poll() {
         }
         waiting = false;
     }
+    QFile file(path);
     bool replaced = size < scanned;
-    if (size == scanned && scanned > 0 && timestamp != modified && observed_size >= 0) {
+    if (!replaced && scanned > 0 && observed_size >= 0 &&
+        (size != observed_size || timestamp != modified)) {
         // A writer can update timestamps without changing bytes; do not rewind the live tail.
-        QFile sample(path);
-        if (!sample.open(QIODevice::ReadOnly)) {
+        // A truncated log can also grow past the old size between polls. Check its prefix.
+        if (!file.open(QIODevice::ReadOnly)) {
             return;
         }
-        replaced = sample.read(indexed_head.size()) != indexed_head;
-        if (!sample.seek(scanned - indexed_tail.size())) {
-            return;
+        replaced = file.read(indexed_head.size()) != indexed_head;
+        if (!replaced) {
+            if (!file.seek(scanned - indexed_tail.size())) {
+                return;
+            }
+            replaced = file.read(indexed_tail.size()) != indexed_tail;
         }
-        replaced |= sample.read(indexed_tail.size()) != indexed_tail;
     }
     if (replaced) {
         ResetIndex();
@@ -156,8 +236,7 @@ void LogFileReader::Poll() {
     if (scanned == size && range_count == 0 && !reset_pending && current_rows == reported_rows) {
         return;
     }
-    QFile file(path);
-    if (!file.open(QIODevice::ReadOnly) || !file.seek(scanned)) {
+    if ((!file.isOpen() && !file.open(QIODevice::ReadOnly)) || !file.seek(scanned)) {
         return;
     }
     const qint64 previous_rows = completed_rows;
@@ -282,12 +361,13 @@ void LogFileReader::ReadRange() {
 }
 
 LogFileViewer::LogFileViewer(QWidget* parent) : QWidget(parent) {
-    text = new QPlainTextEdit(this);
+    text = new LogTextEdit(this);
     text->setReadOnly(true);
     text->setUndoRedoEnabled(false);
     text->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     QPalette colors = text->palette();
     colors.setColor(QPalette::Base, Qt::black);
+    colors.setColor(QPalette::Window, Qt::black);
     colors.setColor(QPalette::Text, Qt::white);
     text->setPalette(colors);
     scroll = new QScrollBar(Qt::Vertical, this);
@@ -305,14 +385,16 @@ LogFileViewer::LogFileViewer(QWidget* parent) : QWidget(parent) {
             [this]() { SetAutoScroll(scroll->sliderPosition() == scroll->maximum()); });
     connect(scroll, &QScrollBar::valueChanged, this, [this](int) { ScrollToRow(ScrollRow()); });
     connect(text->verticalScrollBar(), &QScrollBar::valueChanged, this, [this](int) {
-        if (!applying && !auto_scroll->isChecked()) {
+        if (!applying && !static_cast<LogTextEdit*>(text)->IsAligning() &&
+            !auto_scroll->isChecked()) {
             UpdateAnchor();
             RequestWindow();
         }
     });
     connect(text->verticalScrollBar(), &QScrollBar::rangeChanged, this, [this](int, int maximum) {
         // Wrapping and resizing can finish layout after the buffered append.
-        if (!applying && auto_scroll->isChecked()) {
+        if (!applying && !static_cast<LogTextEdit*>(text)->IsAligning() &&
+            auto_scroll->isChecked()) {
             text->verticalScrollBar()->setValue(maximum);
         }
     });
@@ -386,10 +468,15 @@ void LogFileViewer::SetSource(const QString& source, bool wait_for_change) {
     text->clear();
     applying = false;
     UpdateScrollRange();
-    QMetaObject::invokeMethod(
-        reader, [reader = reader, source, generation = generation, wait_for_change]() {
-            reader->SetSource(source, generation, wait_for_change);
-        });
+    QFileInfo info(source);
+    if (wait_for_change) {
+        // Snapshot before launch so a fast writer cannot become the old-file baseline.
+        info.stat();
+    }
+    QMetaObject::invokeMethod(reader,
+                              [reader = reader, info, generation = generation, wait_for_change]() {
+                                  reader->SetSource(info, generation, wait_for_change);
+                              });
 }
 
 void LogFileViewer::RefreshSource() {
@@ -440,6 +527,7 @@ void LogFileViewer::UpdateScrollRange() {
 void LogFileViewer::SetAutoScroll(bool enabled) {
     const QSignalBlocker blocker(auto_scroll);
     auto_scroll->setChecked(enabled);
+    static_cast<LogTextEdit*>(text)->SetFollowTail(enabled);
     if (!enabled) {
         UpdateAnchor();
     }

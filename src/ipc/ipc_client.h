@@ -7,19 +7,14 @@
 
 #include <QFileInfo>
 #include <QProcess>
-#include <QTemporaryDir>
 
 #include "common/memory_patcher.h"
 
 class IpcClient : public QObject {
     Q_OBJECT
 
-signals:
-    void LogFileReady(const QString& path);
-
 public:
     explicit IpcClient(QObject* parent = nullptr, bool log_to_terminal = false);
-    ~IpcClient() override;
     void startEmulator(const QFileInfo& exe, const QStringList& args,
                        const QString& workDir = QString(), bool disable_ipc = false);
     void startGame();
@@ -68,8 +63,6 @@ private:
 
     QProcess* process = nullptr;
     QByteArray buffer;
-    QTemporaryDir log_directory;
-    quint64 log_session = 0;
     bool pendingRestart = false;
 
     ParsingState parsingState;

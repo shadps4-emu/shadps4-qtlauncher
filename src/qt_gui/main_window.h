@@ -76,6 +76,7 @@ private:
     void CheckUpdateMain(bool checkSave);
 #endif
     void CreateConnects();
+    void PrepareLogFile(const QString& work_dir, const QStringList& args);
     void SetLastUsedTheme();
     void SetLastIconSizeBullet();
     void SetUiIcons(bool isWhite);

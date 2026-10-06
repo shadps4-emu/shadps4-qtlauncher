@@ -12,6 +12,7 @@
 #include <QWidget>
 
 class QAction;
+class QFileInfo;
 class QScrollBar;
 class QPlainTextEdit;
 class QTextCursor;
@@ -19,7 +20,7 @@ class QTextCursor;
 class LogFileReader : public QObject {
     Q_OBJECT
 public:
-    void SetSource(const QString& path, int generation, bool wait_for_change);
+    void SetSource(const QFileInfo& source, int generation, bool wait_for_change);
     void RequestRange(int generation, quint64 request, qint64 first, int count, qint64 anchor);
     void Poll();
     void Finish();
