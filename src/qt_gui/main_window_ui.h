@@ -9,14 +9,13 @@
 #include <QMenuBar>
 #include <QPushButton>
 #include <QSplitter>
+#include <QTextEdit>
 #include <QToolBar>
-
-#include "log_viewer.h"
 
 class Ui_MainWindow {
 public:
     QSplitter* splitter;
-    LogViewer* logDisplay;
+    QTextEdit* logDisplay;
     QAction* bootGameAct;
     QAction* addElfFolderAct;
     QAction* shadFolderAct;

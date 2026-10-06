@@ -5,6 +5,7 @@
 
 #include <functional>
 
+#include <QColor>
 #include <QFileInfo>
 #include <QProcess>
 
@@ -14,7 +15,7 @@ class IpcClient : public QObject {
     Q_OBJECT
 
 signals:
-    void LogDataReceived(const QByteArray& bytes);
+    void LogEntrySent(QString entry, QColor textColor);
 
 public:
     explicit IpcClient(QObject* parent = nullptr, bool log_to_terminal = false);
@@ -61,11 +62,13 @@ public:
 private:
     void onStderr();
     void onStdout();
+    void PrintOutput(QByteArray data);
     void onProcessClosed();
     void writeLine(const QString& text);
 
     QProcess* process = nullptr;
     QByteArray buffer;
+    QByteArray stdout_buffer;
     bool pendingRestart = false;
 
     ParsingState parsingState;

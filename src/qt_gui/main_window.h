@@ -3,10 +3,14 @@
 
 #pragma once
 
+#include <utility>
+
 #include <QActionGroup>
 #include <QDragEnterEvent>
 #include <QDropEvent>
 #include <QProcess>
+#include <QQueue>
+#include <QTimer>
 #include <QTranslator>
 
 #include "background_music_player.h"
@@ -71,7 +75,16 @@ private:
     void ReloadGameTable(bool force_size_refresh, const QString& force_size_serial = {});
     void onGameClosed();
     void RunGame();
-    void PrepareGameLog(const QString& work_dir);
+    void PrintLog(QString entry, QColor textColor);
+    void FlushLog();
+    void ClearLog();
+    void CreateLogContextMenu();
+    void PrepareLogFile(const QString& work_dir, const QStringList& args);
+    QTimer log_timer;
+    QQueue<std::pair<QString, QColor>> pending_log;
+    qsizetype pending_log_characters = 0;
+    bool log_auto_scroll = true;
+    QString log_file_path;
 
 #ifdef ENABLE_UPDATER
     void CheckUpdateMain(bool checkSave);
