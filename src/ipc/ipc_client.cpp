@@ -1,12 +1,11 @@
 // SPDX-FileCopyrightText: Copyright 2025 shadPS4 Emulator Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
+#include <algorithm>
 #include <iostream>
 
-#include <QDir>
 #include <QMessageBox>
 #include <QProcessEnvironment>
-#include <QRegularExpression>
 
 #include "common/logging/log.h"
 #include "ipc_client.h"
@@ -22,6 +21,10 @@ void IpcClient::startEmulator(const QFileInfo& exe, const QStringList& args, con
         process = nullptr;
     }
     process = new QProcess(this);
+    if (!m_log_to_terminal) {
+        // The viewer reads the emulator's log file; discard duplicate console output.
+        process->setStandardOutputFile(QProcess::nullDevice());
+    }
 
     connect(process, &QProcess::readyReadStandardError, this, [this] { onStderr(); });
     connect(process, &QProcess::readyReadStandardOutput, this, [this] { onStdout(); });
@@ -234,45 +237,23 @@ void IpcClient::onStderr() {
 }
 
 void IpcClient::onStdout() {
-    QColor color;
-    QByteArray data = process->readAllStandardOutput();
-    QString dataString = QString::fromUtf8(data);
-    QStringList entries = dataString.split('\n');
-
-    for (QString& entry : entries) {
-        if (entry.contains("<Warning>")) {
-            color = Qt::yellow;
-        } else if (entry.contains("<Error>")) {
-            color = Qt::red;
-        } else if (entry.contains("<Critical>")) {
-            color = Qt::magenta;
-        } else if (entry.contains("<Trace>")) {
-            color = Qt::gray;
-        } else if (entry.contains("<Debug>")) {
-            color = Qt::cyan;
-        } else {
-            color = Qt::white;
+    if (!process || !m_log_to_terminal) {
+        return;
+    }
+    constexpr qint64 chunk_bytes = 64 * 1024;
+    qint64 remaining = process->bytesAvailable();
+    while (remaining > 0) {
+        const QByteArray data = process->read(std::min(chunk_bytes, remaining));
+        if (data.isEmpty()) {
+            break;
         }
-
-        if (entry.isEmpty() || entry == "\x1B[m") {
-            continue;
-        }
-
-        if (m_log_to_terminal) {
-            std::cout << entry.toStdString() << std::endl;
-            continue;
-        }
-
-        QRegularExpression ansiRegex(
-            R"(\x1B\[[0-9;]*[mK])"); // ANSI escape codes from UNIX terminals
-        entry = entry.replace(ansiRegex, "");
-
-        if (!entry.isEmpty())
-            emit LogEntrySent(entry.trimmed(), color);
+        remaining -= data.size();
+        std::cout.write(data.constData(), data.size()).flush();
     }
 }
 
 void IpcClient::onProcessClosed() {
+    onStdout();
     gameClosedFunc();
     if (process) {
         process->disconnect();
