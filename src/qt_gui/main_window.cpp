@@ -1110,6 +1110,7 @@ void MainWindow::ReloadGameTable(bool force_size_refresh, const QString& force_s
     QString statusMessage = tr("Games: ") + QString::number(numGames);
     statusBar->showMessage(statusMessage);
     m_game_list_frame->ToggleColumnVisibility();
+    SearchGameTable(ui->mw_searchbar->text());
 }
 
 void MainWindow::ConfigureGuiFromSettings() {
