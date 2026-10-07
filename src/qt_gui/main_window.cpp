@@ -1115,31 +1115,25 @@ void MainWindow::StartGame() {
 }
 
 void MainWindow::SearchGameTable(const QString& text) {
+    const auto& games = m_game_info->m_games_backup;
+
+    QVector<GameInfo> filteredGames;
+    filteredGames.reserve(games.size());
+
+    for (const auto& gameInfo : games) {
+        const QString gameName = QString::fromStdString(gameInfo.name);
+
+        if (gameName.contains(text, Qt::CaseInsensitive)) {
+            filteredGames.push_back(gameInfo);
+        }
+    }
+
+    m_game_info->m_games = std::move(filteredGames);
+
     if (isTableList) {
-        const int rowCount = m_game_list_frame->rowCount();
-
-        for (int row = 0; row < rowCount; ++row) {
-            const auto& game = m_game_info->m_games[row];
-            const bool match =
-                QString::fromStdString(game.name).contains(text, Qt::CaseInsensitive);
-
-            m_game_list_frame->setRowHidden(row, !match);
-        }
+        m_game_list_frame->clearContents();
+        m_game_list_frame->PopulateGameList(false);
     } else {
-        const auto& games = m_game_info->m_games_backup;
-
-        QVector<GameInfo> filteredGames;
-        filteredGames.reserve(games.size());
-
-        for (const auto& gameInfo : games) {
-            const QString gameName = QString::fromStdString(gameInfo.name);
-
-            if (gameName.contains(text, Qt::CaseInsensitive)) {
-                filteredGames.push_back(gameInfo);
-            }
-        }
-
-        m_game_info->m_games = std::move(filteredGames);
         m_game_grid_frame->PopulateGameGrid(m_game_info->m_games, true);
     }
 }
@@ -1177,6 +1171,7 @@ void MainWindow::ReloadGameTable(bool force_size_refresh, const QString& force_s
     QString statusMessage = tr("Games: ") + QString::number(numGames);
     statusBar->showMessage(statusMessage);
     m_game_list_frame->ToggleColumnVisibility();
+    SearchGameTable(ui->mw_searchbar->text());
 }
 
 void MainWindow::ConfigureGuiFromSettings() {
