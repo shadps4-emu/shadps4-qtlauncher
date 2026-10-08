@@ -1025,6 +1025,10 @@ Please enter your keys and save them.</source>
         <source>TB</source>
         <translation>TB</translation>
     </message>
+    <message>
+        <source>Total: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>GuiContextMenus</name>
