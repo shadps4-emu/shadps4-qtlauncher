@@ -22,6 +22,7 @@ void IpcClient::startEmulator(const QFileInfo& exe, const QStringList& args, con
         process = nullptr;
     }
     process = new QProcess(this);
+    stdout_buffer.clear();
 
     connect(process, &QProcess::readyReadStandardError, this, [this] { onStderr(); });
     connect(process, &QProcess::readyReadStandardOutput, this, [this] { onStdout(); });
@@ -234,8 +235,21 @@ void IpcClient::onStderr() {
 }
 
 void IpcClient::onStdout() {
-    QColor color;
     QByteArray data = process->readAllStandardOutput();
+    if (!m_log_to_terminal) {
+        stdout_buffer.append(data);
+        const qsizetype newline = stdout_buffer.lastIndexOf('\n');
+        if (newline < 0) {
+            return;
+        }
+        data = stdout_buffer.left(newline + 1);
+        stdout_buffer.remove(0, newline + 1);
+    }
+    PrintOutput(std::move(data));
+}
+
+void IpcClient::PrintOutput(QByteArray data) {
+    QColor color;
     QString dataString = QString::fromUtf8(data);
     QStringList entries = dataString.split('\n');
 
@@ -263,7 +277,7 @@ void IpcClient::onStdout() {
             continue;
         }
 
-        QRegularExpression ansiRegex(
+        static const QRegularExpression ansiRegex(
             R"(\x1B\[[0-9;]*[mK])"); // ANSI escape codes from UNIX terminals
         entry = entry.replace(ansiRegex, "");
 
@@ -273,6 +287,11 @@ void IpcClient::onStdout() {
 }
 
 void IpcClient::onProcessClosed() {
+    onStdout();
+    if (!stdout_buffer.isEmpty()) {
+        PrintOutput(std::move(stdout_buffer));
+        stdout_buffer.clear();
+    }
     gameClosedFunc();
     if (process) {
         process->disconnect();
