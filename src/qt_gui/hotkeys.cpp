@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include <fstream>
+#include <map>
 #include <QKeyEvent>
 #include <QMessageBox>
 #include <QPainter>
@@ -164,11 +165,14 @@ void Hotkeys::SetDefault() {
 
 void Hotkeys::SaveHotkeys(bool CloseOnSave) {
     std::vector<std::string> lines, inputs;
+    std::map<std::string, bool> hotkey_is_mapped;
 
     auto add_mapping = [&](const QString& buttonText, const std::string& output_name) {
+        bool& is_mapped = hotkey_is_mapped[output_name];
         if (buttonText.toStdString() != "unmapped") {
             lines.push_back(output_name + " = " + buttonText.toStdString());
             inputs.push_back(buttonText.toStdString());
+            is_mapped = true;
         }
     };
 
@@ -214,6 +218,13 @@ void Hotkeys::SaveHotkeys(bool CloseOnSave) {
 
     add_mapping(ui->mouseJoystickButton->text(), "hotkey_toggle_mouse_to_joystick");
     add_mapping(ui->mouseGyroButton->text(), "hotkey_toggle_mouse_to_gyro");
+
+    // The emulator restores the default binding of any hotkey missing from the file
+    for (const auto& [output_name, is_mapped] : hotkey_is_mapped) {
+        if (!is_mapped) {
+            lines.push_back(output_name + " = unmapped");
+        }
+    }
 
     auto hotkey_file = Input::GetFoolproofInputConfigFile("global");
     std::fstream file(hotkey_file);
