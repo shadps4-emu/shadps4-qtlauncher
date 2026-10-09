@@ -90,7 +90,7 @@ void ScanDirectoryRecursively(const QString& dir, QStringList& filePaths, int cu
             const auto psf_data = Core::FileSys::ReadGameFile(entry_path, "sce_sys/param.sfo");
             if (psf_data && psf.Open(*psf_data)) {
                 const auto category = psf.GetString("CATEGORY");
-                if (category && category->compare("gd") == 0) {
+                if (category && category->substr(0, 3) == "gd") {
                     // If this is a game directory, add it to the list
                     filePaths.append(entry.absoluteFilePath());
                 }
