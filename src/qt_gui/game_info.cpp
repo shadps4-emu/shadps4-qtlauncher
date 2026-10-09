@@ -81,21 +81,22 @@ void ScanDirectoryRecursively(const QString& dir, QStringList& filePaths, int cu
             continue;
         }
 
+        // Check if the folder/archive has a param.sfo and eboot.bin
         const auto entry_path = Common::FS::PathFromQString(entry.absoluteFilePath());
         if (Core::FileSys::Exists(entry_path, "sce_sys/param.sfo") ||
             Core::FileSys::Exists(entry_path, "eboot.bin")) {
-            // Check the param.sfo to see what type of game folder this is
+            // Check the param.sfo to see what type of dump this is
             PSF psf;
             auto& psf_data = Core::FileSys::ReadGameFile(entry_path, "sce_sys/param.sfo");
             if (psf_data && psf.Open(*psf_data)) {
                 const auto& category = psf.GetString("CATEGORY");
                 if (category && category->compare("gd") == 0) {
-                    // Only add game paths
+                    // If this is a game directory, add it to the list
                     filePaths.append(entry.absoluteFilePath());
                 }
             }
         } else if (!is_zar) {
-            // If not a game directory and not a zar, recursively scan it with increased depth
+            // If this is a folder, but not a game directory, scan this folder for dumps
             ScanDirectoryRecursively(entry.absoluteFilePath(), filePaths, current_depth + 1);
         }
     }
