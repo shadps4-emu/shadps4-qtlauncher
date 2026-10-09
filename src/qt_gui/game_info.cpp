@@ -29,7 +29,7 @@ void ScanDirectoryRecursively(const QString& dir, QStringList& filePaths, int cu
 
     QDir directory(dir);
 
-#if WIN32
+#if _WIN32
     QFileInfo dirInfo(dir);
     if (!dirInfo.isReadable() && !alreadyAskedBitlocker) {
         QString drive = dir.split(":").first();
@@ -40,7 +40,7 @@ void ScanDirectoryRecursively(const QString& dir, QStringList& filePaths, int cu
         FveInit();
 
         if (FveIsLocked(drivePtr)) {
-        promt:
+        prompt:
             bool ok;
             QString key = QInputDialog::getText(nullptr, QObject::tr("Drive Locked"),
                                                 QObject::tr("Drive %1: is locked. Please enter the "
@@ -58,7 +58,7 @@ void ScanDirectoryRecursively(const QString& dir, QStringList& filePaths, int cu
             if (hr == 0x80310027) {
                 QMessageBox::critical(nullptr, QObject::tr("Error"),
                                       QObject::tr("Incorrect recovery key. Please try again."));
-                goto promt;
+                goto prompt;
             }
         }
 
@@ -66,41 +66,38 @@ void ScanDirectoryRecursively(const QString& dir, QStringList& filePaths, int cu
     }
 #endif
 
-    QFileInfoList entries = directory.entryInfoList(QDir::Dirs | QDir::NoDotAndDotDot);
+    QFileInfoList entries = directory.entryInfoList(QDir::Dirs | QDir::NoDotAndDotDot)
+                                .append(directory.entryInfoList(
+                                    QStringList{"*.zar"}, QDir::Files | QDir::NoDotAndDotDot));
 
     for (const auto& entry : entries) {
-        if (entry.fileName().endsWith("-UPDATE") || entry.fileName().endsWith("-patch")) {
+        if (entry.completeBaseName().endsWith("-UPDATE") ||
+            entry.completeBaseName().endsWith("-patch")) {
             continue;
         }
 
-        // Check if this directory contains a PS4 game (has sce_sys/param.sfo and eboot.bin)
-        if (QFile::exists(entry.filePath() + "/sce_sys/param.sfo") &&
-            QFile::exists(entry.filePath() + "/eboot.bin")) {
-            filePaths.append(entry.absoluteFilePath());
-        } else {
-            // If not a game directory, recursively scan it with increased depth
+        const bool is_zar = entry.fileName().endsWith(".zar");
+        if (is_zar && !Core::FileSys::IsZArchiveFile(archive_path)) {
+            continue;
+        }
+
+        const auto entry_path = Common::FS::PathFromQString(entry.absoluteFilePath());
+        if (Core::FileSys::Exists(entry_path, "sce_sys/param.sfo") ||
+            Core::FileSys::Exists(entry_path, "eboot.bin")) {
+            // Check the param.sfo to see what type of game folder this is
+            PSF psf;
+            auto& psf_data = Core::FileSys::ReadGameFile(entry_path, "sce_sys/param.sfo");
+            if (psf_data && psf.Open(*psf_data)) {
+                const auto& category = psf.GetString("CATEGORY");
+                if (category && category->compare("gd") == 0) {
+                    // Only add game paths
+                    filePaths.append(entry.absoluteFilePath());
+                }
+            }
+        } else if (!is_zar) {
+            // If not a game directory and not a zar, recursively scan it with increased depth
             ScanDirectoryRecursively(entry.absoluteFilePath(), filePaths, current_depth + 1);
         }
-    }
-
-    const QFileInfoList archives =
-        directory.entryInfoList(QStringList{"*.zar"}, QDir::Files | QDir::NoDotAndDotDot);
-
-    for (const auto& archive : archives) {
-        const QString stem = archive.completeBaseName();
-        if (stem.endsWith("-UPDATE") || stem.endsWith("-patch")) {
-            continue;
-        }
-
-        const auto archive_path = Common::FS::PathFromQString(archive.absoluteFilePath());
-        if (!Core::FileSys::IsZArchiveFile(archive_path)) {
-            continue;
-        }
-        if (!Core::FileSys::Exists(archive_path, "sce_sys/param.sfo") ||
-            !Core::FileSys::Exists(archive_path, "eboot.bin")) {
-            continue;
-        }
-        filePaths.append(archive.absoluteFilePath());
     }
 }
 
