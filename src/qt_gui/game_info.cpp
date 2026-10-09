@@ -66,9 +66,9 @@ void ScanDirectoryRecursively(const QString& dir, QStringList& filePaths, int cu
     }
 #endif
 
-    QFileInfoList entries = directory.entryInfoList(QDir::Dirs | QDir::NoDotAndDotDot)
-                                .append(directory.entryInfoList(
-                                    QStringList{"*.zar"}, QDir::Files | QDir::NoDotAndDotDot));
+    QFileInfoList entries = directory.entryInfoList(QDir::Dirs | QDir::NoDotAndDotDot);
+    entries.append(
+        directory.entryInfoList(QStringList{"*.zar"}, QDir::Files | QDir::NoDotAndDotDot));
 
     for (const auto& entry : entries) {
         if (entry.completeBaseName().endsWith("-UPDATE") ||
@@ -77,19 +77,19 @@ void ScanDirectoryRecursively(const QString& dir, QStringList& filePaths, int cu
         }
 
         const bool is_zar = entry.fileName().endsWith(".zar");
-        if (is_zar && !Core::FileSys::IsZArchiveFile(archive_path)) {
+        const auto entry_path = Common::FS::PathFromQString(entry.absoluteFilePath());
+        if (is_zar && !Core::FileSys::IsZArchiveFile(entry_path)) {
             continue;
         }
 
         // Check if the folder/archive has a param.sfo and eboot.bin
-        const auto entry_path = Common::FS::PathFromQString(entry.absoluteFilePath());
         if (Core::FileSys::Exists(entry_path, "sce_sys/param.sfo") ||
             Core::FileSys::Exists(entry_path, "eboot.bin")) {
             // Check the param.sfo to see what type of dump this is
             PSF psf;
-            auto& psf_data = Core::FileSys::ReadGameFile(entry_path, "sce_sys/param.sfo");
+            const auto psf_data = Core::FileSys::ReadGameFile(entry_path, "sce_sys/param.sfo");
             if (psf_data && psf.Open(*psf_data)) {
-                const auto& category = psf.GetString("CATEGORY");
+                const auto category = psf.GetString("CATEGORY");
                 if (category && category->compare("gd") == 0) {
                     // If this is a game directory, add it to the list
                     filePaths.append(entry.absoluteFilePath());
