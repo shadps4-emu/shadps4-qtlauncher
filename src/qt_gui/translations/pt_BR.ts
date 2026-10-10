@@ -2145,6 +2145,18 @@ Selecione uma versão do emulador no painel direito.</translation>
       <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
       <translation>arquivos inicializáveis (*.bin *.elf *.oelf *.zar)</translation>
     </message>
+    <message>
+      <source>Error</source>
+      <translation>Erro</translation>
+    </message>
+    <message>
+      <source>Rosetta 2 is not installed.
+
+Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rosetta&apos;.</source>
+      <translation>O Rosetta 2 não está instalado.
+
+Por favor, instale o Rosetta 2 via Terminal usando &apos;softwareupdate --install-rosetta&apos;.</translation>
+    </message>
   </context>
   <context>
     <name>QObject</name>
@@ -3289,15 +3301,15 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>On</source>
-      <translation>Liga</translation>
+      <translation>Ativo</translation>
     </message>
     <message>
       <source>On (%1)</source>
-      <translation>Liga (%1)</translation>
+      <translation>Ativo (%1)</translation>
     </message>
     <message>
       <source>Off</source>
-      <translation>Desliga</translation>
+      <translation>Desativado</translation>
     </message>
     <message>
       <source>ShadNet Settings - %1</source>

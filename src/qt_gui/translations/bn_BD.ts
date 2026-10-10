@@ -15,7 +15,7 @@
     </message>
     <message>
       <source>This software should not be used to play games you have not legally obtained.</source>
-      <translation>এই সফটওয়্যার ব্যবহার করে আইনগতভাবে অর্জন করেননি এমন গেম খেলা উচিত নয়।</translation>
+      <translation>এই সফটওয়্যার ব্যবহার করে আইনগতভাবে অর্জন করেননি এমন গেম খেলা উচিত না।</translation>
     </message>
   </context>
   <context>
@@ -50,7 +50,7 @@
     </message>
     <message>
       <source>Repository:</source>
-      <translation>রিপোজিটরি:</translation>
+      <translation>Repository:</translation>
     </message>
     <message>
       <source>Download Cheats</source>
@@ -74,11 +74,11 @@
     </message>
     <message>
       <source>Select Patch File:</source>
-      <translation>প্যাচ ফাইল নির্বাচন করুন:</translation>
+      <translation>Patch ফাইল নির্বাচন করুন:</translation>
     </message>
     <message>
       <source>Download Patches</source>
-      <translation>প্যাচ ডাউনলোড করুন</translation>
+      <translation>Patches ডাউনলোড করুন</translation>
     </message>
     <message>
       <source>Save</source>
@@ -86,11 +86,11 @@
     </message>
     <message>
       <source>Cheats</source>
-      <translation>চিট</translation>
+      <translation>Cheats</translation>
     </message>
     <message>
       <source>Patches</source>
-      <translation>প্যাচ</translation>
+      <translation>Patches</translation>
     </message>
     <message>
       <source>Error</source>
@@ -98,7 +98,7 @@
     </message>
     <message>
       <source>No patch selected.</source>
-      <translation>কোনো প্যাচ নির্বাচন করা হয়নি।</translation>
+      <translation>কোনো Patch নির্বাচন করা হয়নি।</translation>
     </message>
     <message>
       <source>Unable to open files.json for reading.</source>
@@ -835,7 +835,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Save Changes</source>
-      <translation>পরিবর্তন সংরক্ষণ করুন</translation>
+      <translation>পরিবর্তনগুলো সংরক্ষণ করুন</translation>
     </message>
     <message>
       <source>Do you want to save changes?</source>
@@ -847,15 +847,15 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Do you want to reset your custom default config to the original default config?</source>
-      <translation>আপনার কাস্টম ডিফল্ট কনফিগকে মূল ডিফল্ট কনফিগে রিসেট করতে চান?</translation>
+      <translation>আপনার custom default config কে মূল original default config এ reset করতে চান?</translation>
     </message>
     <message>
       <source>Do you want to reset this config to your custom default config?</source>
-      <translation>এই কনফিগকে আপনার কাস্টম ডিফল্ট কনফিগে রিসেট করতে চান?</translation>
+      <translation>এই config কে আপনার custom default config এ reset করতে চান?</translation>
     </message>
     <message>
       <source>Reset to Default</source>
-      <translation>ডিফল্টে রিসেট করুন</translation>
+      <translation>Default এ reset করুন</translation>
     </message>
   </context>
   <context>
@@ -869,7 +869,7 @@ Please enter your keys and save them.</source>
     <name>GameInfoClass</name>
     <message>
       <source>Loading game list, please wait :3</source>
-      <translation>গেমের তালিকা লোড হচ্ছে, অনুগ্রহ করে অপেক্ষা করুন :3</translation>
+      <translation>Game এর তালিকা load হচ্ছে, দয়া করে অপেক্ষা করুন :3</translation>
     </message>
     <message>
       <source>Cancel</source>
@@ -877,7 +877,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Loading...</source>
-      <translation>লোড হচ্ছে...</translation>
+      <translation>Load হচ্ছে...</translation>
     </message>
   </context>
   <context>
@@ -888,7 +888,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Browse</source>
-      <translation>ব্রাউজ</translation>
+      <translation>Browse</translation>
     </message>
     <message>
       <source>Error</source>
@@ -1093,7 +1093,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Delete Game</source>
-      <translation>গেম মুছুন</translation>
+      <translation>Game মুছুন</translation>
     </message>
     <message>
       <source>Delete Update</source>
@@ -1105,7 +1105,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Delete Trophy</source>
-      <translation>ট্রফি মুছুন</translation>
+      <translation>Trophy মুছুন</translation>
     </message>
     <message>
       <source>Compatibility...</source>
@@ -2146,6 +2146,18 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
       <translation>বুটযোগ্য ফাইল (*.bin *.elf *.oelf *.zar)</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation>ত্রুটি</translation>
+    </message>
+    <message>
+      <source>Rosetta 2 is not installed.
+
+Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rosetta&apos;.</source>
+      <translation>Rosetta 2 install করা নেই।
+
+দয়া করে Terminal থেকে softwareupdate --install-rosetta ব্যবহার করে Rosetta 2 install করুন।</translation>
     </message>
   </context>
   <context>

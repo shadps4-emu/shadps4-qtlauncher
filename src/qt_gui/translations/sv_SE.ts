@@ -1295,109 +1295,109 @@ Ange dina nycklar och spara dem.</translation>
     </message>
     <message>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
-      <translation type="unfinished">A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</translation>
+      <translation>En trofényckel krävs för att använda trofévisaren. Du kan ange den via Inställningar – Hantera kryptografiska nycklar.</translation>
     </message>
     <message>
       <source>User</source>
-      <translation type="unfinished">User</translation>
+      <translation>Användare</translation>
     </message>
     <message>
       <source>Add with Selected Emulator Version</source>
-      <translation type="unfinished">Add with Selected Emulator Version</translation>
+      <translation>Lägg till med vald emulatorversion</translation>
     </message>
     <message>
       <source>Add with Specified Emulator Version</source>
-      <translation type="unfinished">Add with Specified Emulator Version</translation>
+      <translation>Lägg till med angiven emulatorversion</translation>
     </message>
     <message>
       <source>Add to Steam</source>
-      <translation type="unfinished">Add to Steam</translation>
+      <translation>Lägg till i Steam</translation>
     </message>
     <message>
       <source>Zar Compression</source>
-      <translation type="unfinished">Zar Compression</translation>
+      <translation>ZAR-komprimering</translation>
     </message>
     <message>
       <source>Compress game to zar</source>
-      <translation type="unfinished">Compress game to zar</translation>
+      <translation>Komprimera spelet till ZAR</translation>
     </message>
     <message>
       <source>Compress update to zar</source>
-      <translation type="unfinished">Compress update to zar</translation>
+      <translation>Komprimera uppdateringen till ZAR</translation>
     </message>
     <message>
       <source>This is already packed as a ZArchive.</source>
-      <translation type="unfinished">This is already packed as a ZArchive.</translation>
+      <translation>Det här är redan packat som ett ZArchive-arkiv.</translation>
     </message>
     <message>
       <source>This folder could not be found on disk.</source>
-      <translation type="unfinished">This folder could not be found on disk.</translation>
+      <translation>Mappen hittades inte på disken.</translation>
     </message>
     <message>
       <source>Convert %1 to ZArchive</source>
-      <translation type="unfinished">Convert %1 to ZArchive</translation>
+      <translation>Konvertera %1 till ZArchive</translation>
     </message>
     <message>
       <source>ZArchive Files (*.zar)</source>
-      <translation type="unfinished">ZArchive Files (*.zar)</translation>
+      <translation>ZArchive-filer (*.zar)</translation>
     </message>
     <message>
       <source>%1 already exists. Overwrite it?</source>
-      <translation type="unfinished">%1 already exists. Overwrite it?</translation>
+      <translation>%1 finns redan. Vill du skriva över den?</translation>
     </message>
     <message>
       <source>This will pack &quot;%1&quot; into a single read-only .zar archive. Depending on the size this can take a while, and the archive will temporarily need as much free disk space as the original.
 
 The original folder is left untouched until conversion succeeds, you&apos;ll be asked afterward whether to delete it.</source>
-      <translation type="unfinished">This will pack &quot;%1&quot; into a single read-only .zar archive. Depending on the size this can take a while, and the archive will temporarily need as much free disk space as the original.
+      <translation>Det här packar ”%1” i ett skrivskyddat .zar-arkiv. Beroende på storleken kan det ta en stund och arkivet behöver tillfälligt lika mycket ledigt diskutrymme som originalet.
 
-The original folder is left untouched until conversion succeeds, you&apos;ll be asked afterward whether to delete it.</translation>
+Originalmappen lämnas orörd tills konverteringen har lyckats. Därefter får du frågan om den ska tas bort.</translation>
     </message>
     <message>
       <source>
 
 Continue?</source>
-      <translation type="unfinished">
+      <translation>
 
-Continue?</translation>
+Fortsätt?</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Avbryt</translation>
     </message>
     <message>
       <source>Failed to convert to ZArchive:
 %1</source>
-      <translation type="unfinished">Failed to convert to ZArchive:
+      <translation>Kunde inte konvertera till ZArchive:
 %1</translation>
     </message>
     <message>
       <source>Conversion finished. Delete the original folder now to free up disk space?
 
 %1</source>
-      <translation type="unfinished">Conversion finished. Delete the original folder now to free up disk space?
+      <translation>Konverteringen är klar. Ta bort originalmappen nu för att frigöra diskutrymme?
 
 %1</translation>
     </message>
     <message>
       <source>The archive was created, but the original folder could not be fully deleted. You can remove it manually.</source>
-      <translation type="unfinished">The archive was created, but the original folder could not be fully deleted. You can remove it manually.</translation>
+      <translation>Arkivet skapades, men originalmappen kunde inte tas bort helt. Du kan ta bort den manuellt.</translation>
     </message>
     <message>
       <source>Packing: %1</source>
-      <translation type="unfinished">Packing: %1</translation>
+      <translation>Packar: %1</translation>
     </message>
     <message>
       <source>
 
 This game has a separate update/patch folder. Only the base game will be archived; the update/patch folder will not be included and will be left as-is. Use &quot;Convert Update to ZArchive&quot; separately if you&apos;d like to archive it too.</source>
-      <translation type="unfinished">
+      <translation>
 
-This game has a separate update/patch folder. Only the base game will be archived; the update/patch folder will not be included and will be left as-is. Use &quot;Convert Update to ZArchive&quot; separately if you&apos;d like to archive it too.</translation>
+Det här spelet har en separat mapp för uppdateringar/korrigeringar. Bara grundspelet arkiveras. Mappen med uppdateringar/korrigeringar tas inte med utan lämnas som den är. Använd "Konvertera uppdatering till ZArchive" separat om du också vill arkivera den.</translation>
     </message>
     <message>
       <source>Convert to ZArchive</source>
-      <translation type="unfinished">Convert to ZArchive</translation>
+      <translation>Konvertera till ZArchive</translation>
     </message>
   </context>
   <context>
@@ -1697,91 +1697,91 @@ This game has a separate update/patch folder. Only the base game will be archive
     </message>
     <message>
       <source>Output</source>
-      <translation type="unfinished">Output</translation>
+      <translation>Utdata</translation>
     </message>
     <message>
       <source>Input</source>
-      <translation type="unfinished">Input</translation>
+      <translation>Indata</translation>
     </message>
     <message>
       <source>Alternate Input 1</source>
-      <translation type="unfinished">Alternate Input 1</translation>
+      <translation>Alternativ indata 1</translation>
     </message>
     <message>
       <source>Alternate Input 2</source>
-      <translation type="unfinished">Alternate Input 2</translation>
+      <translation>Alternativ indata 2</translation>
     </message>
     <message>
       <source>Dpad Up</source>
-      <translation type="unfinished">Dpad Up</translation>
+      <translation>Styrkors upp</translation>
     </message>
     <message>
       <source>Dpad Down</source>
-      <translation type="unfinished">Dpad Down</translation>
+      <translation>Styrkors ned</translation>
     </message>
     <message>
       <source>Dpad Left</source>
-      <translation type="unfinished">Dpad Left</translation>
+      <translation>Styrkors vänster</translation>
     </message>
     <message>
       <source>Dpad Right</source>
-      <translation type="unfinished">Dpad Right</translation>
+      <translation>Styrkors höger</translation>
     </message>
     <message>
       <source>Left Stick Up</source>
-      <translation type="unfinished">Left Stick Up</translation>
+      <translation>Vänster styrspak upp</translation>
     </message>
     <message>
       <source>Left Stick Down</source>
-      <translation type="unfinished">Left Stick Down</translation>
+      <translation>Vänster styrspak ned</translation>
     </message>
     <message>
       <source>Left Stick Left</source>
-      <translation type="unfinished">Left Stick Left</translation>
+      <translation>Vänster styrspak vänster</translation>
     </message>
     <message>
       <source>Left Stick Right</source>
-      <translation type="unfinished">Left Stick Right</translation>
+      <translation>Vänster styrspak höger</translation>
     </message>
     <message>
       <source>Right Stick Up</source>
-      <translation type="unfinished">Right Stick Up</translation>
+      <translation>Höger styrspak upp</translation>
     </message>
     <message>
       <source>Right Stick Down</source>
-      <translation type="unfinished">Right Stick Down</translation>
+      <translation>Höger styrspak ned</translation>
     </message>
     <message>
       <source>Right Stick Left</source>
-      <translation type="unfinished">Right Stick Left</translation>
+      <translation>Höger styrspak vänster</translation>
     </message>
     <message>
       <source>Right Stick Right</source>
-      <translation type="unfinished">Right Stick Right</translation>
+      <translation>Höger styrspak höger</translation>
     </message>
     <message>
       <source>L1</source>
-      <translation type="unfinished">L1</translation>
+      <translation>L1</translation>
     </message>
     <message>
       <source>R1</source>
-      <translation type="unfinished">R1</translation>
+      <translation>R1</translation>
     </message>
     <message>
       <source>L2</source>
-      <translation type="unfinished">L2</translation>
+      <translation>L2</translation>
     </message>
     <message>
       <source>R2</source>
-      <translation type="unfinished">R2</translation>
+      <translation>R2</translation>
     </message>
     <message>
       <source>L3</source>
-      <translation type="unfinished">L3</translation>
+      <translation>L3</translation>
     </message>
     <message>
       <source>R3</source>
-      <translation type="unfinished">R3</translation>
+      <translation>R3</translation>
     </message>
   </context>
   <context>
@@ -2143,26 +2143,38 @@ Välj en emulatorversion från den högra panelen.</translation>
     </message>
     <message>
       <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
-      <translation type="unfinished">bootable files (*.bin *.elf *.oelf *.zar)</translation>
+      <translation>startbara filer (*.bin *.elf *.oelf *.zar)</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation>Fel</translation>
+    </message>
+    <message>
+      <source>Rosetta 2 is not installed.
+
+Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rosetta&apos;.</source>
+      <translation>Rosetta 2 är inte installerat.
+
+Installera Rosetta 2 via Terminal med 'softwareupdate --install-rosetta'.</translation>
     </message>
   </context>
   <context>
     <name>QObject</name>
     <message>
       <source>Drive Locked</source>
-      <translation type="unfinished">Drive Locked</translation>
+      <translation>Låst enhet</translation>
     </message>
     <message>
       <source>Drive %1: is locked. Please enter the BitLocker key to access it:</source>
-      <translation type="unfinished">Drive %1: is locked. Please enter the BitLocker key to access it:</translation>
+      <translation>Enhet %1: är låst. Ange BitLocker-nyckeln för att komma åt den:</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Fel</translation>
     </message>
     <message>
       <source>Incorrect recovery key. Please try again.</source>
-      <translation type="unfinished">Incorrect recovery key. Please try again.</translation>
+      <translation>Felaktig återställningsnyckel. Försök igen.</translation>
     </message>
   </context>
   <context>
@@ -3049,43 +3061,43 @@ Välj en emulatorversion från den högra panelen.</translation>
     </message>
     <message>
       <source>Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</source>
-      <translation type="unfinished">Log Filter:\nFilters the log to only print specific information.\nExamples: &quot;Core:Debug&quot; &quot;Lib.Pad:Debug Common.Filesystem:Error&quot; &quot;*:Critical&quot;\nLevels: trace, debug, info, warning, error, critical, off - in this order, a specific level silences all levels preceding it in the list and logs every level after it.</translation>
+      <translation>Loggfilter:\nFiltrerar loggen så att bara specifik information skrivs ut.\nExempel: "Core:Debug" "Lib.Pad:Debug Common.Filesystem:Error" "*:Critical"\nNivåer: trace, debug, info, warning, error, critical, off – i den här ordningen. En specifik nivå tystar alla nivåer före den i listan och loggar alla nivåer efter den.</translation>
     </message>
     <message>
       <source>Enable shadNet</source>
-      <translation type="unfinished">Enable shadNet</translation>
+      <translation>Aktivera shadNet</translation>
     </message>
     <message>
       <source>ShadNet</source>
-      <translation type="unfinished">ShadNet</translation>
+      <translation>ShadNet</translation>
     </message>
     <message>
       <source>Server</source>
-      <translation type="unfinished">Server</translation>
+      <translation>Server</translation>
     </message>
     <message>
       <source>Signaling Info</source>
-      <translation type="unfinished">Signaling Info</translation>
+      <translation>Signalinformation</translation>
     </message>
     <message>
       <source>Enable UPNP</source>
-      <translation type="unfinished">Enable UPNP</translation>
+      <translation>Aktivera UPNP</translation>
     </message>
     <message>
       <source>WebAPI Server</source>
-      <translation type="unfinished">WebAPI Server</translation>
+      <translation>WebAPI-server</translation>
     </message>
     <message>
       <source>shadNet:\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadnet/register/.</source>
-      <translation type="unfinished">shadNet:\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadnet/register/.</translation>
+      <translation>shadNet:\nKompatibiliteten är för närvarande mycket begränsad.\nDu kan registrera dig på https://www.shadps4.net/shadnet/register/.</translation>
     </message>
     <message>
       <source>Red Zone Protection</source>
-      <translation type="unfinished">Red Zone Protection</translation>
+      <translation>Skydd för röd zon</translation>
     </message>
     <message>
       <source>Static Patching</source>
-      <translation type="unfinished">Static Patching</translation>
+      <translation>Statisk patchning</translation>
     </message>
   </context>
   <context>
@@ -3111,47 +3123,47 @@ Välj en emulatorversion från den högra panelen.</translation>
     <name>SteamShortcut</name>
     <message>
       <source>Steam</source>
-      <translation type="unfinished">Steam</translation>
+      <translation>Steam</translation>
     </message>
     <message>
       <source>%1 is already in your Steam library.</source>
-      <translation type="unfinished">%1 is already in your Steam library.</translation>
+      <translation>%1 finns redan i ditt Steam-bibliotek.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Fel</translation>
     </message>
     <message>
       <source>Steam installation not found.</source>
-      <translation type="unfinished">Steam installation not found.</translation>
+      <translation>Steam-installationen hittades inte.</translation>
     </message>
     <message>
       <source>No Steam user account found. Please log into Steam at least once.</source>
-      <translation type="unfinished">No Steam user account found. Please log into Steam at least once.</translation>
+      <translation>Inget Steam-användarkonto hittades. Logga in på Steam minst en gång.</translation>
     </message>
     <message>
       <source>Steam is Running</source>
-      <translation type="unfinished">Steam is Running</translation>
+      <translation>Steam körs</translation>
     </message>
     <message>
       <source>Steam is currently running. It will be closed and restarted to apply the shortcut. Continue?</source>
-      <translation type="unfinished">Steam is currently running. It will be closed and restarted to apply the shortcut. Continue?</translation>
+      <translation>Steam körs just nu. Det stängs och startas om för att lägga till genvägen. Fortsätt?</translation>
     </message>
     <message>
       <source>Steam did not close in time. Shortcut was not added.</source>
-      <translation type="unfinished">Steam did not close in time. Shortcut was not added.</translation>
+      <translation>Steam stängdes inte i tid. Genvägen lades inte till.</translation>
     </message>
     <message>
       <source>Failed to add game to Steam.</source>
-      <translation type="unfinished">Failed to add game to Steam.</translation>
+      <translation>Det gick inte att lägga till spelet i Steam.</translation>
     </message>
     <message>
       <source>Added to Steam successfully. Steam is restarting.</source>
-      <translation type="unfinished">Added to Steam successfully. Steam is restarting.</translation>
+      <translation>Spelet lades till i Steam. Steam startas om.</translation>
     </message>
     <message>
       <source>Added to Steam successfully. Launch Steam to see the changes.</source>
-      <translation type="unfinished">Added to Steam successfully. Launch Steam to see the changes.</translation>
+      <translation>Spelet lades till i Steam. Starta Steam för att se ändringarna.</translation>
     </message>
   </context>
   <context>
@@ -3285,51 +3297,51 @@ Välj en emulatorversion från den högra panelen.</translation>
     </message>
     <message>
       <source>Shad&amp;Net...</source>
-      <translation type="unfinished">Shad&amp;Net...</translation>
+      <translation>Shad&amp;Net...</translation>
     </message>
     <message>
       <source>On</source>
-      <translation type="unfinished">On</translation>
+      <translation>På</translation>
     </message>
     <message>
       <source>On (%1)</source>
-      <translation type="unfinished">On (%1)</translation>
+      <translation>På (%1)</translation>
     </message>
     <message>
       <source>Off</source>
-      <translation type="unfinished">Off</translation>
+      <translation>Av</translation>
     </message>
     <message>
       <source>ShadNet Settings - %1</source>
-      <translation type="unfinished">ShadNet Settings - %1</translation>
+      <translation>ShadNet-inställningar – %1</translation>
     </message>
     <message>
       <source>Enable ShadNet for this user</source>
-      <translation type="unfinished">Enable ShadNet for this user</translation>
+      <translation>Aktivera ShadNet för den här användaren</translation>
     </message>
     <message>
       <source>Account ID (NPID)</source>
-      <translation type="unfinished">Account ID (NPID)</translation>
+      <translation>Konto-id (NPID)</translation>
     </message>
     <message>
       <source>Password</source>
-      <translation type="unfinished">Password</translation>
+      <translation>Lösenord</translation>
     </message>
     <message>
       <source>Show password</source>
-      <translation type="unfinished">Show password</translation>
+      <translation>Visa lösenord</translation>
     </message>
     <message>
       <source>Account ID (NPID):</source>
-      <translation type="unfinished">Account ID (NPID):</translation>
+      <translation>Konto-id (NPID):</translation>
     </message>
     <message>
       <source>Password:</source>
-      <translation type="unfinished">Password:</translation>
+      <translation>Lösenord:</translation>
     </message>
     <message>
       <source>Shad&amp;Net Settings...</source>
-      <translation type="unfinished">Shad&amp;Net Settings...</translation>
+      <translation>Shad&amp;Net-inställningar...</translation>
     </message>
   </context>
   <context>
