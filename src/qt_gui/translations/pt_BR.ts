@@ -3301,15 +3301,15 @@ Por favor, instale o Rosetta 2 via Terminal usando &apos;softwareupdate --instal
     </message>
     <message>
       <source>On</source>
-      <translation>Liga</translation>
+      <translation>Ativo</translation>
     </message>
     <message>
       <source>On (%1)</source>
-      <translation>Liga (%1)</translation>
+      <translation>Ativo (%1)</translation>
     </message>
     <message>
       <source>Off</source>
-      <translation>Desliga</translation>
+      <translation>Desativado</translation>
     </message>
     <message>
       <source>ShadNet Settings - %1</source>
