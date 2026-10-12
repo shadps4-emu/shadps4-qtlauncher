@@ -1031,6 +1031,10 @@ Bitte gib die Schlüssel ein und speicher diese.</translation>
       <source>TB</source>
       <translation>TB</translation>
     </message>
+    <message>
+      <source>Total: %1</source>
+      <translation type="unfinished">Total: %1</translation>
+    </message>
   </context>
   <context>
     <name>GuiContextMenus</name>
@@ -2329,10 +2333,6 @@ Bitte installiere Rosetta 2 im Terminal mit dem Befehl &apos;softwareupdate --in
       <translation>Sammle Shader</translation>
     </message>
     <message>
-      <source>Copy GPU Buffers</source>
-      <translation>Kopiere GPU Puffer</translation>
-    </message>
-    <message>
       <source>Host Debug Markers</source>
       <translation>Host-Debug-Markierer</translation>
     </message>
@@ -2761,10 +2761,6 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
       <translation>Devkit Konsolen-Modus aktivieren</translation>
     </message>
     <message>
-      <source>Set &quot;Network Connected&quot; to True</source>
-      <translation>Setze die Netzwerkverbindung als verbunden</translation>
-    </message>
-    <message>
       <source>Miscellaneous</source>
       <translation>Sonstiges</translation>
     </message>
@@ -3073,10 +3069,6 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
       <translation>ShadNet aktivieren</translation>
     </message>
     <message>
-      <source>ShadNet</source>
-      <translation>ShadNet</translation>
-    </message>
-    <message>
       <source>Server</source>
       <translation>Server</translation>
     </message>
@@ -3097,12 +3089,36 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
       <translation>ShadNet: \nDie Kompatibilität ist derzeit sehr begrenzt.\nEin Account kann hier erstellt werden: https://www.shadps4.net/shadnet/register/.</translation>
     </message>
     <message>
-      <source>Red Zone Protection</source>
-      <translation>Red Zone Schutz</translation>
+      <source>Red Zone CPU Patches</source>
+      <translation type="unfinished">Red Zone CPU Patches</translation>
     </message>
     <message>
-      <source>Static Patching</source>
-      <translation>Statisches Patching</translation>
+      <source>Enable Red Zone CPU Patches</source>
+      <translation type="unfinished">Enable Red Zone CPU Patches</translation>
+    </message>
+    <message>
+      <source>Network</source>
+      <translation type="unfinished">Network</translation>
+    </message>
+    <message>
+      <source>Network Settings</source>
+      <translation type="unfinished">Network Settings</translation>
+    </message>
+    <message>
+      <source>Set Network Connected Status as True</source>
+      <translation type="unfinished">Set Network Connected Status as True</translation>
+    </message>
+    <message>
+      <source>Disable HTTPS</source>
+      <translation type="unfinished">Disable HTTPS</translation>
+    </message>
+    <message>
+      <source>P2P Port</source>
+      <translation type="unfinished">P2P Port</translation>
+    </message>
+    <message>
+      <source>Copy GPU Command Buffers</source>
+      <translation type="unfinished">Copy GPU Command Buffers</translation>
     </message>
   </context>
   <context>
