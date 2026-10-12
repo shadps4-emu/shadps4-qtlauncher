@@ -1032,6 +1032,10 @@ Si us plau, introdueix les teves claus per desar-les.</translation>
       <source>TB</source>
       <translation>TB</translation>
     </message>
+    <message>
+      <source>Total: %1</source>
+      <translation type="unfinished">Total: %1</translation>
+    </message>
   </context>
   <context>
     <name>GuiContextMenus</name>
@@ -2330,10 +2334,6 @@ Instal·la el programari Rosetta 2, si us plau, des del Terminal fent servir &ap
       <translation>Recopila Shaders</translation>
     </message>
     <message>
-      <source>Copy GPU Buffers</source>
-      <translation>Copia la memòria intermèdia de la GPU</translation>
-    </message>
-    <message>
       <source>Host Debug Markers</source>
       <translation>Marcardors de depuració</translation>
     </message>
@@ -2758,10 +2758,6 @@ Instal·la el programari Rosetta 2, si us plau, des del Terminal fent servir &ap
       <translation>Activa el mode consola de desenvolupador</translation>
     </message>
     <message>
-      <source>Set &quot;Network Connected&quot; to True</source>
-      <translation>Estableix la connexió a xarxa com a certa</translation>
-    </message>
-    <message>
       <source>Miscellaneous</source>
       <translation>Miscel·lània</translation>
     </message>
@@ -3070,10 +3066,6 @@ Instal·la el programari Rosetta 2, si us plau, des del Terminal fent servir &ap
       <translation>Activa shadNet</translation>
     </message>
     <message>
-      <source>ShadNet</source>
-      <translation>ShadNet</translation>
-    </message>
-    <message>
       <source>Server</source>
       <translation>Servidor</translation>
     </message>
@@ -3094,12 +3086,36 @@ Instal·la el programari Rosetta 2, si us plau, des del Terminal fent servir &ap
       <translation>shadNet:\nLa compatibilitat és molt limitada ara mateix.\nEt pots registrar a https://www.shadps4.net/shadnet/register/.</translation>
     </message>
     <message>
-      <source>Red Zone Protection</source>
-      <translation>Protecció de la zona vermella</translation>
+      <source>Red Zone CPU Patches</source>
+      <translation type="unfinished">Red Zone CPU Patches</translation>
     </message>
     <message>
-      <source>Static Patching</source>
-      <translation>Correcció estàtica</translation>
+      <source>Enable Red Zone CPU Patches</source>
+      <translation type="unfinished">Enable Red Zone CPU Patches</translation>
+    </message>
+    <message>
+      <source>Network</source>
+      <translation type="unfinished">Network</translation>
+    </message>
+    <message>
+      <source>Network Settings</source>
+      <translation type="unfinished">Network Settings</translation>
+    </message>
+    <message>
+      <source>Set Network Connected Status as True</source>
+      <translation type="unfinished">Set Network Connected Status as True</translation>
+    </message>
+    <message>
+      <source>Disable HTTPS</source>
+      <translation type="unfinished">Disable HTTPS</translation>
+    </message>
+    <message>
+      <source>P2P Port</source>
+      <translation type="unfinished">P2P Port</translation>
+    </message>
+    <message>
+      <source>Copy GPU Command Buffers</source>
+      <translation type="unfinished">Copy GPU Command Buffers</translation>
     </message>
   </context>
   <context>
