@@ -1032,6 +1032,10 @@ Please enter your keys and save them.</source>
       <source>TB</source>
       <translation>ТБ</translation>
     </message>
+    <message>
+      <source>Total: %1</source>
+      <translation type="unfinished">Total: %1</translation>
+    </message>
   </context>
   <context>
     <name>GuiContextMenus</name>
@@ -2330,10 +2334,6 @@ Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rose
       <translation>Собирать шейдеры</translation>
     </message>
     <message>
-      <source>Copy GPU Buffers</source>
-      <translation>Копировать буферы GPU</translation>
-    </message>
-    <message>
       <source>Host Debug Markers</source>
       <translation>Маркеры отладки хоста</translation>
     </message>
@@ -2758,10 +2758,6 @@ Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rose
       <translation>Включить режим консоли Devkit</translation>
     </message>
     <message>
-      <source>Set &quot;Network Connected&quot; to True</source>
-      <translation>Установить &quot;Сеть подключена&quot; на True</translation>
-    </message>
-    <message>
       <source>Miscellaneous</source>
       <translation>Прочее</translation>
     </message>
@@ -3070,10 +3066,6 @@ Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rose
       <translation>Включить shadNet</translation>
     </message>
     <message>
-      <source>ShadNet</source>
-      <translation>ShadNet</translation>
-    </message>
-    <message>
       <source>Server</source>
       <translation>Сервер</translation>
     </message>
@@ -3094,12 +3086,36 @@ Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rose
       <translation>shadNet:\nСовместимость в данный момент очень ограничена.\nВы можете зарегистрироваться на https://www.shadps4.net/shadnet/register/.</translation>
     </message>
     <message>
-      <source>Red Zone Protection</source>
-      <translation>Защита красной зоны</translation>
+      <source>Red Zone CPU Patches</source>
+      <translation type="unfinished">Red Zone CPU Patches</translation>
     </message>
     <message>
-      <source>Static Patching</source>
-      <translation>Статическое исправление</translation>
+      <source>Enable Red Zone CPU Patches</source>
+      <translation type="unfinished">Enable Red Zone CPU Patches</translation>
+    </message>
+    <message>
+      <source>Network</source>
+      <translation type="unfinished">Network</translation>
+    </message>
+    <message>
+      <source>Network Settings</source>
+      <translation type="unfinished">Network Settings</translation>
+    </message>
+    <message>
+      <source>Set Network Connected Status as True</source>
+      <translation type="unfinished">Set Network Connected Status as True</translation>
+    </message>
+    <message>
+      <source>Disable HTTPS</source>
+      <translation type="unfinished">Disable HTTPS</translation>
+    </message>
+    <message>
+      <source>P2P Port</source>
+      <translation type="unfinished">P2P Port</translation>
+    </message>
+    <message>
+      <source>Copy GPU Command Buffers</source>
+      <translation type="unfinished">Copy GPU Command Buffers</translation>
     </message>
   </context>
   <context>
