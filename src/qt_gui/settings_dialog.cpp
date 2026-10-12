@@ -448,6 +448,20 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
                 ui->sysmodulesPath->setText(sysmodules_path_string);
             }
         });
+
+        connect(ui->browse_fonts, &QPushButton::clicked, this, [this]() {
+            QString initial_path;
+            Common::FS::PathToQString(initial_path, EmulatorSettings.GetFontsDir());
+
+            const QString fonts_path_string = QFileDialog::getExistingDirectory(
+                this, tr("Select the fonts folder"), initial_path);
+
+            const auto file_path = Common::FS::PathFromQString(fonts_path_string);
+            if (!file_path.empty()) {
+                EmulatorSettings.SetFontsDir(file_path);
+                ui->fontsPath->setText(fonts_path_string);
+            }
+        });
     }
 
     // LOG TAB
@@ -566,6 +580,9 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         ui->homeFolderGroupBox->installEventFilter(this);
         ui->sysmodulesGroupBox->installEventFilter(this);
         ui->browse_sysmodules->installEventFilter(this);
+        ui->fontsGroupBox->installEventFilter(this);
+        ui->fontsPath->installEventFilter(this);
+        ui->browse_fonts->installEventFilter(this);
         ui->homeFolderPath->installEventFilter(this);
         ui->currentDLCFolder->installEventFilter(this);
         ui->homeFolderButton->installEventFilter(this);
@@ -701,6 +718,10 @@ void SettingsDialog::LoadValuesFromConfig() {
         QString sysmodules_path_string;
         Common::FS::PathToQString(sysmodules_path_string, sysmodules_path);
         ui->sysmodulesPath->setText(sysmodules_path_string);
+
+        QString fonts_path_string;
+        Common::FS::PathToQString(fonts_path_string, EmulatorSettings.GetFontsDir());
+        ui->fontsPath->setText(fonts_path_string);
 
         ui->removeFolderButton->setEnabled(!ui->gameFoldersListWidget->selectedItems().isEmpty());
 
@@ -1035,6 +1056,10 @@ void SettingsDialog::updateNoteTextEdit(const QString& elementName) {
         text = tr("PS4 Sysmodules Path:\\nThe folder where PS4 sysmodules are loaded from.");
     } else if (elementName == "browse_sysmodules") {
         text = tr("Browse:\\nBrowse for a folder to set as the sysmodules path.");
+    } else if (elementName == "fontsGroupBox" || elementName == "fontsPath") {
+        text = tr("PS4 Fonts Path:\\nThe folder where PS4 system fonts are loaded from.");
+    } else if (elementName == "browse_fonts") {
+        text = tr("Browse:\\nBrowse for a folder to set as the fonts path.");
     }
 
     // DLC Folder
