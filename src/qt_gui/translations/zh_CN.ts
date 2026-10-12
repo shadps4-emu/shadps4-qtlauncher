@@ -1030,6 +1030,10 @@ Please enter your keys and save them.</source>
       <source>TB</source>
       <translation>TB</translation>
     </message>
+    <message>
+      <source>Total: %1</source>
+      <translation type="unfinished">Total: %1</translation>
+    </message>
   </context>
   <context>
     <name>GuiContextMenus</name>
@@ -2328,10 +2332,6 @@ Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rose
       <translation>收集着色器</translation>
     </message>
     <message>
-      <source>Copy GPU Buffers</source>
-      <translation>复制 GPU 缓冲区</translation>
-    </message>
-    <message>
       <source>Host Debug Markers</source>
       <translation>Host 调试标记</translation>
     </message>
@@ -2756,10 +2756,6 @@ Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rose
       <translation>启用 Devkit 开发机模式</translation>
     </message>
     <message>
-      <source>Set &quot;Network Connected&quot; to True</source>
-      <translation>将“网络连接状态”设为“已连接”</translation>
-    </message>
-    <message>
       <source>Miscellaneous</source>
       <translation>其他</translation>
     </message>
@@ -3070,10 +3066,6 @@ Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rose
       <translation>启用shadNet</translation>
     </message>
     <message>
-      <source>ShadNet</source>
-      <translation>ShadNet</translation>
-    </message>
-    <message>
       <source>Server</source>
       <translation>服务器</translation>
     </message>
@@ -3094,12 +3086,36 @@ Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rose
       <translation>shadNet:\n兼容性目前非常有限，\n您可以在 https://www.shadps4.net/sadNet/register/上注册。</translation>
     </message>
     <message>
-      <source>Red Zone Protection</source>
-      <translation>红色区域保护</translation>
+      <source>Red Zone CPU Patches</source>
+      <translation type="unfinished">Red Zone CPU Patches</translation>
     </message>
     <message>
-      <source>Static Patching</source>
-      <translation>静态修补中</translation>
+      <source>Enable Red Zone CPU Patches</source>
+      <translation type="unfinished">Enable Red Zone CPU Patches</translation>
+    </message>
+    <message>
+      <source>Network</source>
+      <translation type="unfinished">Network</translation>
+    </message>
+    <message>
+      <source>Network Settings</source>
+      <translation type="unfinished">Network Settings</translation>
+    </message>
+    <message>
+      <source>Set Network Connected Status as True</source>
+      <translation type="unfinished">Set Network Connected Status as True</translation>
+    </message>
+    <message>
+      <source>Disable HTTPS</source>
+      <translation type="unfinished">Disable HTTPS</translation>
+    </message>
+    <message>
+      <source>P2P Port</source>
+      <translation type="unfinished">P2P Port</translation>
+    </message>
+    <message>
+      <source>Copy GPU Command Buffers</source>
+      <translation type="unfinished">Copy GPU Command Buffers</translation>
     </message>
   </context>
   <context>
