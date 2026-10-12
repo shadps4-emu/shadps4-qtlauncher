@@ -1034,7 +1034,7 @@ Proszę wpisać klucze i je zapisać.</translation>
     </message>
     <message>
       <source>Total: %1</source>
-      <translation type="unfinished">Total: %1</translation>
+      <translation>Łącznie: %1</translation>
     </message>
   </context>
   <context>
@@ -2151,15 +2151,15 @@ Wybierz wersję emulatora z prawego panelu.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>Błąd</translation>
     </message>
     <message>
       <source>Rosetta 2 is not installed.
 
 Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rosetta&apos;.</source>
-      <translation type="unfinished">Rosetta 2 is not installed.
+      <translation>Rosetta 2 nie jest zainstalowany.
 
-Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rosetta&apos;.</translation>
+Zainstaluj Rosetta 2 z Terminala za pomocą &apos;aktualizacji oprogramowania --install-rosetta&apos;.</translation>
     </message>
   </context>
   <context>
@@ -3085,35 +3085,35 @@ Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rose
     </message>
     <message>
       <source>Red Zone CPU Patches</source>
-      <translation type="unfinished">Red Zone CPU Patches</translation>
+      <translation>Poprawki CPU dla strefy Red Zone</translation>
     </message>
     <message>
       <source>Enable Red Zone CPU Patches</source>
-      <translation type="unfinished">Enable Red Zone CPU Patches</translation>
+      <translation>Włącz poprawki CPU dla strefy Red Zone</translation>
     </message>
     <message>
       <source>Network</source>
-      <translation type="unfinished">Network</translation>
+      <translation>Sieć</translation>
     </message>
     <message>
       <source>Network Settings</source>
-      <translation type="unfinished">Network Settings</translation>
+      <translation>Ustawienia sieciowe</translation>
     </message>
     <message>
       <source>Set Network Connected Status as True</source>
-      <translation type="unfinished">Set Network Connected Status as True</translation>
+      <translation>Ustaw status połączenia z siecią jako aktywną</translation>
     </message>
     <message>
       <source>Disable HTTPS</source>
-      <translation type="unfinished">Disable HTTPS</translation>
+      <translation>Wyłącz HTTPS</translation>
     </message>
     <message>
       <source>P2P Port</source>
-      <translation type="unfinished">P2P Port</translation>
+      <translation>Port P2P</translation>
     </message>
     <message>
       <source>Copy GPU Command Buffers</source>
-      <translation type="unfinished">Copy GPU Command Buffers</translation>
+      <translation>Kopiowanie buforów poleceń GPU</translation>
     </message>
   </context>
   <context>
