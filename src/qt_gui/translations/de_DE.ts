@@ -1033,7 +1033,7 @@ Bitte gib die Schlüssel ein und speicher diese.</translation>
     </message>
     <message>
       <source>Total: %1</source>
-      <translation type="unfinished">Total: %1</translation>
+      <translation>Gesamt: %1</translation>
     </message>
   </context>
   <context>
@@ -3090,35 +3090,35 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
     </message>
     <message>
       <source>Red Zone CPU Patches</source>
-      <translation type="unfinished">Red Zone CPU Patches</translation>
+      <translation>Red Zone CPU-Patches</translation>
     </message>
     <message>
       <source>Enable Red Zone CPU Patches</source>
-      <translation type="unfinished">Enable Red Zone CPU Patches</translation>
+      <translation>Red Zone CPU-Patches aktivieren</translation>
     </message>
     <message>
       <source>Network</source>
-      <translation type="unfinished">Network</translation>
+      <translation>Netzwerk</translation>
     </message>
     <message>
       <source>Network Settings</source>
-      <translation type="unfinished">Network Settings</translation>
+      <translation>Netzwerkeinstellungen</translation>
     </message>
     <message>
       <source>Set Network Connected Status as True</source>
-      <translation type="unfinished">Set Network Connected Status as True</translation>
+      <translation>Netzwerkverbindungsstatus als wahr ("true") festlegen</translation>
     </message>
     <message>
       <source>Disable HTTPS</source>
-      <translation type="unfinished">Disable HTTPS</translation>
+      <translation>HTTPS deaktivieren</translation>
     </message>
     <message>
       <source>P2P Port</source>
-      <translation type="unfinished">P2P Port</translation>
+      <translation>P2P-Port</translation>
     </message>
     <message>
       <source>Copy GPU Command Buffers</source>
-      <translation type="unfinished">Copy GPU Command Buffers</translation>
+      <translation>GPU Befehlspuffer kopieren</translation>
     </message>
   </context>
   <context>
