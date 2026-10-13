@@ -161,9 +161,6 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         ui->chooseHomeTabComboBox->removeItem(9);
     }
 
-    // to do: unhide when implemented
-    ui->homeFolderGroupBox->setVisible(false);
-
 #ifndef _WIN32
     ui->redZoneGroupBox->setVisible(false);
 #endif
