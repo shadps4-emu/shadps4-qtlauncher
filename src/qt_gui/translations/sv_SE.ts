@@ -707,7 +707,8 @@ Alla fält måste vara giltiga hex-strängar med jämn längd.</translation>
     <message>
       <source>RSA key components for debug RIF files.
 All fields must be valid hex strings with even length.</source>
-      <translation>RSA-nyckelkomponenter för felsökning av RIF-filer. Alla fält måste vara giltiga hexsträngar med jämn längd.</translation>
+      <translation>RSA-nyckelkomponenter för felsökning av RIF-filer.
+Alla fält måste vara giltiga hexsträngar med jämn längd.</translation>
     </message>
     <message>
       <source>Pkg Derived Key3</source>
@@ -716,7 +717,8 @@ All fields must be valid hex strings with even length.</source>
     <message>
       <source>RSA key components for package decryption.
 All fields must be valid hex strings with even length.</source>
-      <translation>RSA-nyckelkomponenter för paket-dekryptering. Alla fält måste vara giltiga hexsträngar med jämn längd.</translation>
+      <translation>RSA-nyckelkomponenter för paketdekryptering.
+Alla fält måste vara giltiga hexsträngar med jämn längd.</translation>
     </message>
     <message>
       <source>Close</source>
