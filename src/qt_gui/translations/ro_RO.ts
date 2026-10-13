@@ -1034,7 +1034,7 @@ Introduceți cheile și salvați-le.</translation>
     </message>
     <message>
       <source>Total: %1</source>
-      <translation type="unfinished">Total: %1</translation>
+      <translation>Total: %1</translation>
     </message>
   </context>
   <context>
@@ -3087,35 +3087,35 @@ Instalați Rosetta 2 din Terminal cu „softwareupdate --install-rosetta”.</tr
     </message>
     <message>
       <source>Red Zone CPU Patches</source>
-      <translation type="unfinished">Red Zone CPU Patches</translation>
+      <translation>Patch-uri CPU pentru zona roșie</translation>
     </message>
     <message>
       <source>Enable Red Zone CPU Patches</source>
-      <translation type="unfinished">Enable Red Zone CPU Patches</translation>
+      <translation>Activează patch-urile CPU pentru zona roșie</translation>
     </message>
     <message>
       <source>Network</source>
-      <translation type="unfinished">Network</translation>
+      <translation>Rețea</translation>
     </message>
     <message>
       <source>Network Settings</source>
-      <translation type="unfinished">Network Settings</translation>
+      <translation>Setări de rețea</translation>
     </message>
     <message>
       <source>Set Network Connected Status as True</source>
-      <translation type="unfinished">Set Network Connected Status as True</translation>
+      <translation>Setează starea „Network Connected” la adevărat</translation>
     </message>
     <message>
       <source>Disable HTTPS</source>
-      <translation type="unfinished">Disable HTTPS</translation>
+      <translation>Dezactivează HTTPS</translation>
     </message>
     <message>
       <source>P2P Port</source>
-      <translation type="unfinished">P2P Port</translation>
+      <translation>Port P2P</translation>
     </message>
     <message>
       <source>Copy GPU Command Buffers</source>
-      <translation type="unfinished">Copy GPU Command Buffers</translation>
+      <translation>Copiază bufferele de comenzi GPU</translation>
     </message>
   </context>
   <context>
