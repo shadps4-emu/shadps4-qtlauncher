@@ -563,7 +563,7 @@
     </message>
     <message>
       <source>Set Active Gamepad as Default</source>
-      <translation>Defina o Controle Ativo como Padrão</translation>
+      <translation>Definir Controle Ativo como Padrão</translation>
     </message>
     <message>
       <source>Remove Default Gamepad</source>
@@ -2131,7 +2131,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Game Log</source>
-      <translation>Registro do Jogo</translation>
+      <translation>Log do Jogo</translation>
     </message>
     <message>
       <source>Show Game Log</source>
@@ -2221,7 +2221,7 @@ Por favor, instale o Rosetta 2 via Terminal usando &apos;softwareupdate --instal
     </message>
     <message>
       <source>Log Type</source>
-      <translation>Tipo de Registro</translation>
+      <translation>Tipo de Log</translation>
     </message>
     <message>
       <source>Log Filter</source>
@@ -2697,7 +2697,7 @@ Por favor, instale o Rosetta 2 via Terminal usando &apos;softwareupdate --instal
     </message>
     <message>
       <source>FSR Settings</source>
-      <translation>Configurações FSR</translation>
+      <translation>Configurações de FSR</translation>
     </message>
     <message>
       <source>Enable FSR</source>
@@ -2773,7 +2773,7 @@ Por favor, instale o Rosetta 2 via Terminal usando &apos;softwareupdate --instal
     </message>
     <message>
       <source>General Frontend Settings</source>
-      <translation>Configurações gerais da Interface</translation>
+      <translation>Configurações Gerais do Frontend</translation>
     </message>
     <message>
       <source>Enable PS4 Neo Mode</source>
