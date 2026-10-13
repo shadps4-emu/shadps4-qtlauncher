@@ -1299,7 +1299,7 @@ Ange dina nycklar och spara dem.</translation>
     </message>
     <message>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
-      <translation>En trofényckel krävs för att använda trofévisaren. Du kan ange den via Inställningar – Hantera kryptografiska nycklar.</translation>
+      <translation>En trofényckel krävs för att använda trofévisaren. Du kan ange den via Inställningar: Hantera kryptografiska nycklar.</translation>
     </message>
     <message>
       <source>User</source>
@@ -3265,7 +3265,7 @@ Installera Rosetta 2 via Terminal med 'softwareupdate --install-rosetta'.</trans
     </message>
     <message>
       <source>Username (3–16 chars, letters, numbers, _, -)</source>
-      <translation>Användarnamn (3–16 tecken, bokstäver, siffror, _, -)</translation>
+      <translation>Användarnamn (3 till 16 tecken, bokstäver, siffror, _, -)</translation>
     </message>
     <message>
       <source>Invalid Username</source>
@@ -3329,7 +3329,7 @@ Installera Rosetta 2 via Terminal med 'softwareupdate --install-rosetta'.</trans
     </message>
     <message>
       <source>ShadNet Settings - %1</source>
-      <translation>ShadNet-inställningar – %1</translation>
+      <translation>ShadNet-inställningar: %1</translation>
     </message>
     <message>
       <source>Enable ShadNet for this user</source>
