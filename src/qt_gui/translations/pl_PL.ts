@@ -26,7 +26,7 @@
     </message>
     <message>
       <source>Cheats/Patches are experimental.\nUse with caution.\n\nDownload cheats individually by selecting the repository and clicking the download button.\nIn the Patches tab, you can download all patches at once, choose which ones you want to use, and save your selection.\n\nSince we do not develop the Cheats/Patches,\nplease report issues to the cheat author.\n\nCreated a new cheat? Visit:\n</source>
-      <translation>Cheaty/Patche są eksperymentalne.\nUżywaj ich ostrożnie.\n\nPobierz cheaty pojedynczo, wybierając repozytorium i klikając przycisk pobierania.\nNa zakładce Patches możesz pobrać wszystkie patche jednocześnie, wybrać, które chcesz używać, i zapisać wybór.\n\nPonieważ nie rozwijamy Cheats/Patches,\nproszę zgłosić problemy do autora cheatu.\n\nStworzyłeś nowy cheat? Odwiedź:\n</translation>
+      <translation>Kody i poprawki są eksperymentalne.\nUżywaj ich ostrożnie.\n\nPobieraj kody pojedynczo, wybierając repozytorium i klikając przycisk pobierania.\nNa karcie Poprawki możesz pobrać wszystkie poprawki jednocześnie, wybrać te, których chcesz używać, i zapisać wybór.\n\nPonieważ nie tworzymy kodów ani poprawek,\nwszelkie problemy zgłaszaj ich autorom.\n\nStworzyłeś nowy kod? Odwiedź:\n</translation>
     </message>
     <message>
       <source>No Image Available</source>
@@ -238,7 +238,7 @@
     </message>
     <message>
       <source>Can&apos;t apply cheats before the game is started</source>
-      <translation>Nie można zastosować kodów przed uruchomieniem gry.</translation>
+      <translation>Nie można zastosować kodów przed uruchomieniem gry</translation>
     </message>
     <message>
       <source>Close</source>
@@ -525,7 +525,7 @@
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-      <translation>Nie można zbindować unikalnych akcji więcej niż raz. Zduplikowane akcje są przepisane do następujących przycisków:
+      <translation>Nie można przypisać unikalnych wejść więcej niż raz. Zduplikowane wejścia są przypisane do następujących przycisków:
 
 %1</translation>
     </message>
@@ -648,7 +648,7 @@ Musi być prawidłowym ciągiem znaków hex o parzystej długości.</translation
     </message>
     <message>
       <source>Status: Not loaded</source>
-      <translation>Status: nie załadowany</translation>
+      <translation>Status: niezaładowany</translation>
     </message>
     <message>
       <source>Trophy Key</source>
@@ -796,7 +796,7 @@ Proszę wpisać klucze i je zapisać.</translation>
     </message>
     <message>
       <source>Trophy Key contains invalid hex or has odd length.</source>
-      <translation>Klucz Trofeum zawiera nieprawidłowy hex lub ma nieparzystą długość.</translation>
+      <translation>Klucz trofeum zawiera nieprawidłowy hex lub ma nieparzystą długość.</translation>
     </message>
     <message>
       <source>%1 contains invalid hex or has odd length.</source>
@@ -843,7 +843,7 @@ Proszę wpisać klucze i je zapisać.</translation>
     </message>
     <message>
       <source>Help</source>
-      <translation>Pomóc</translation>
+      <translation>Pomoc</translation>
     </message>
     <message>
       <source>Do you want to reset your custom default config to the original default config?</source>
@@ -855,7 +855,7 @@ Proszę wpisać klucze i je zapisać.</translation>
     </message>
     <message>
       <source>Reset to Default</source>
-      <translation>Zresetować do domyślnych</translation>
+      <translation>Przywróć domyślne</translation>
     </message>
   </context>
   <context>
@@ -959,7 +959,7 @@ Proszę wpisać klucze i je zapisać.</translation>
     </message>
     <message>
       <source>Never Played</source>
-      <translation>Nigdy nie grane</translation>
+      <translation>Nigdy niegrana</translation>
     </message>
     <message>
       <source>h</source>
@@ -1245,7 +1245,7 @@ Proszę wpisać klucze i je zapisać.</translation>
     </message>
     <message>
       <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
-      <translation>Nie udało się wysłać raportu, ponieważ w najnowszym pliku dzienika dla tej gry wystąpił błąd konfiguracji i klasyfikuje go jako niewłaściwy:</translation>
+      <translation>Nie udało się wysłać raportu, ponieważ w najnowszym pliku dziennika dla tej gry wystąpił błąd konfiguracji i klasyfikuje go jako niewłaściwy:</translation>
     </message>
     <message>
       <source>Ok</source>
@@ -1317,7 +1317,7 @@ Proszę wpisać klucze i je zapisać.</translation>
     </message>
     <message>
       <source>Add to Steam</source>
-      <translation>Dodać do Steam</translation>
+      <translation>Dodaj do Steam</translation>
     </message>
     <message>
       <source>Zar Compression</source>
@@ -1422,7 +1422,7 @@ Ta gra posiada oddzielny folder aktualizacji/łatki. Tylko podstawowa wersja gry
     </message>
     <message>
       <source>Special Bindings</source>
-      <translation>Specjalne wiązania</translation>
+      <translation>Specjalne przypisania</translation>
     </message>
     <message>
       <source>Keybindings</source>
@@ -1445,7 +1445,7 @@ Ta gra posiada oddzielny folder aktualizacji/łatki. Tylko podstawowa wersja gry
     </message>
     <message>
       <source>Quit Emulation</source>
-      <translation>Zakończ emmulację</translation>
+      <translation>Zakończ emulację</translation>
     </message>
     <message>
       <source>Reload Button Mappings</source>
@@ -1469,7 +1469,7 @@ Ta gra posiada oddzielny folder aktualizacji/łatki. Tylko podstawowa wersja gry
     </message>
     <message>
       <source>Tip: Up to three simultaneous inputs can be assigned for each hotkey</source>
-      <translation>Wskazówka: Dla każdego skrótu można przypisać trzy wejścia</translation>
+      <translation>Wskazówka: Do każdego skrótu można przypisać do trzech wejść jednocześnie</translation>
     </message>
     <message>
       <source>Save</source>
@@ -1495,7 +1495,9 @@ Ta gra posiada oddzielny folder aktualizacji/łatki. Tylko podstawowa wersja gry
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-      <translation>Nie można Przypisać unikalnych wejść więcej niż jeden raz. Z duplikowane wejścia są zmapowane do następujących przycisków:</translation>
+      <translation>Nie można przypisać unikalnych wejść więcej niż raz. Zduplikowane wejścia są przypisane do następujących przycisków:
+
+%1</translation>
     </message>
     <message>
       <source>Waiting for inputs</source>
@@ -1527,7 +1529,7 @@ Ta gra posiada oddzielny folder aktualizacji/łatki. Tylko podstawowa wersja gry
     </message>
     <message>
       <source>Capture Screenshot w/ Overlays</source>
-      <translation>Przechwyć zrzut ekranu z/ Nakładkami</translation>
+      <translation>Zrób zrzut ekranu z nakładkami</translation>
     </message>
     <message>
       <source>Open Emulator Settings</source>
@@ -1585,7 +1587,7 @@ Ta gra posiada oddzielny folder aktualizacji/łatki. Tylko podstawowa wersja gry
     </message>
     <message>
       <source>*press F7 ingame to activate</source>
-      <translation>*naciśnij F7 w grze aby aktywować</translation>
+      <translation>*naciśnij F7 w grze, aby aktywować</translation>
     </message>
     <message>
       <source>Options</source>
@@ -1633,7 +1635,7 @@ Ta gra posiada oddzielny folder aktualizacji/łatki. Tylko podstawowa wersja gry
     </message>
     <message>
       <source>Speed Multiplier (def 1.0):</source>
-      <translation>Mnożnik prędkości (def1.0):</translation>
+      <translation>Mnożnik prędkości (def 1.0):</translation>
     </message>
     <message>
       <source>Copy values from Common Config</source>
@@ -1679,7 +1681,7 @@ Ta gra posiada oddzielny folder aktualizacji/łatki. Tylko podstawowa wersja gry
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-      <translation>Nie można zbindować unikalnych akcji więcej niż raz. Zduplikowane akcje są przepisane do następujących przycisków:
+      <translation>Nie można przypisać unikalnych wejść więcej niż raz. Zduplikowane wejścia są przypisane do następujących przycisków:
 
 %1</translation>
     </message>
@@ -2453,7 +2455,7 @@ Zainstaluj Rosetta 2 z Terminala za pomocą &apos;aktualizacji oprogramowania --
     </message>
     <message>
       <source>Hide Idle Cursor Timeout:\nThe duration (seconds) after which the cursor that has been idle hides itself.</source>
-      <translation>Ustaw czas, po którym mysz zniknie po bezczynności.</translation>
+      <translation>Czas ukrywania bezczynnego kursora:\nCzas (w sekundach), po którym bezczynny kursor zostanie ukryty.</translation>
     </message>
     <message>
       <source>Display Compatibility Data:\nDisplays game compatibility information in table view. Enable &quot;Update Compatibility On Startup&quot; to get up-to-date information.</source>
@@ -2621,7 +2623,7 @@ Zainstaluj Rosetta 2 z Terminala za pomocą &apos;aktualizacji oprogramowania --
     </message>
     <message>
       <source>Create Portable User Folder from Common User Folder</source>
-      <translation>Utwórz przenośny folder użytkownika ze folderu użytkownika udostępnianego</translation>
+      <translation>Utwórz przenośny folder użytkownika ze wspólnego folderu użytkownika</translation>
     </message>
     <message>
       <source>Portable user folder:\nStores shadPS4 settings and data that will be applied only to the shadPS4 build located in the current folder. Restart the app after creating the portable user folder to begin using it.</source>
@@ -2673,7 +2675,7 @@ Zainstaluj Rosetta 2 z Terminala za pomocą &apos;aktualizacji oprogramowania --
     </message>
     <message>
       <source>Mailbox (Vsync)</source>
-      <translation>Skrzynka pocztowa (Vsync)</translation>
+      <translation>Mailbox (Vsync)</translation>
     </message>
     <message>
       <source>Fifo (Vsync)</source>
@@ -2805,7 +2807,7 @@ Zainstaluj Rosetta 2 z Terminala za pomocą &apos;aktualizacji oprogramowania --
     </message>
     <message>
       <source>Audio Device (DS4 speaker)</source>
-      <translation>Urządzenie dziękowe (Głośnik DualShock 4)</translation>
+      <translation>Urządzenie dźwiękowe (głośnik DualShock 4)</translation>
     </message>
     <message>
       <source>Enable Shaders Dumping:\nFor the sake of technical debugging, saves the game&apos;s shaders to a folder as they render.</source>
@@ -2853,7 +2855,7 @@ Zainstaluj Rosetta 2 z Terminala za pomocą &apos;aktualizacji oprogramowania --
     </message>
     <message>
       <source>Enable GPU-Assisted Validation</source>
-      <translation>Włącz weryfikacje wspomaganą przez kartę graficzną</translation>
+      <translation>Włącz weryfikację wspomaganą przez kartę graficzną</translation>
     </message>
     <message>
       <source>Enable Sync Validation:\nEnables a system that validates the timing of Vulkan rendering tasks.\nThis will reduce performance and likely change the behavior of emulation.\nYou need the Vulkan SDK for this to work.</source>
@@ -2885,7 +2887,7 @@ Zainstaluj Rosetta 2 z Terminala za pomocą &apos;aktualizacji oprogramowania --
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
-      <translation>Aktualizacje GUI:\nWydanie: Oficjalne wersje wydawane każdego miesiąca, które mogą być bardzo nieaktualne, ale są bardziej wiarygodne i przetestowane.\nR: Wersje programistyczne, które mają wszystkie najnowsze funkcje i poprawki, ale mogą zawierać błędy i są mniej stabilne.\n\n*Ta aktualizacja dotyczy tylko interfejsu użytkownika Qt. Aby zaktualizować rdzeń emulatora, użyj menedżera wersji.</translation>
+      <translation>Aktualizacje GUI:\nWydanie: Oficjalne wersje wydawane co miesiąc, które mogą być nieaktualne, ale są bardziej niezawodne i przetestowane.\nNightly: Wersje rozwojowe, które zawierają najnowsze funkcje i poprawki, ale mogą zawierać błędy i być mniej stabilne.\n\n*Ta aktualizacja dotyczy wyłącznie interfejsu użytkownika Qt. Aby zaktualizować rdzeń emulatora, skorzystaj z menu „Menedżer wersji”.</translation>
     </message>
     <message>
       <source>Cannot create portable launcher folder</source>
@@ -3021,7 +3023,7 @@ Zainstaluj Rosetta 2 z Terminala za pomocą &apos;aktualizacji oprogramowania --
     </message>
     <message>
       <source>Log Append</source>
-      <translation>Logi dołączone</translation>
+      <translation>Dopisywanie do dziennika</translation>
     </message>
     <message>
       <source>wincolor</source>
@@ -3120,7 +3122,7 @@ Zainstaluj Rosetta 2 z Terminala za pomocą &apos;aktualizacji oprogramowania --
     <name>ShortcutDialog</name>
     <message>
       <source>Select Version</source>
-      <translation>Wybierz wersje</translation>
+      <translation>Wybierz wersję</translation>
     </message>
     <message>
       <source>Select version for shortcut creation</source>
@@ -3293,7 +3295,7 @@ Zainstaluj Rosetta 2 z Terminala za pomocą &apos;aktualizacji oprogramowania --
     </message>
     <message>
       <source>Set User Color</source>
-      <translation>Ustaw kolor Użytkownika</translation>
+      <translation>Ustaw kolor użytkownika</translation>
     </message>
     <message>
       <source>Select color:</source>
@@ -3301,7 +3303,7 @@ Zainstaluj Rosetta 2 z Terminala za pomocą &apos;aktualizacji oprogramowania --
     </message>
     <message>
       <source>Set Controller Port</source>
-      <translation>Wybierz port Kontrolera</translation>
+      <translation>Wybierz port kontrolera</translation>
     </message>
     <message>
       <source>Assign port (1-4) to this user:</source>
@@ -3309,7 +3311,7 @@ Zainstaluj Rosetta 2 z Terminala za pomocą &apos;aktualizacji oprogramowania --
     </message>
     <message>
       <source>&amp;Open User Directory</source>
-      <translation>&amp;Otwórz Katalog użytkownika</translation>
+      <translation>&amp;Otwórz katalog użytkownika</translation>
     </message>
     <message>
       <source>Shad&amp;Net...</source>
@@ -3506,7 +3508,7 @@ Zainstaluj Rosetta 2 z Terminala za pomocą &apos;aktualizacji oprogramowania --
     </message>
     <message>
       <source>Failed to create zip extraction script</source>
-      <translation>Nie udało się utworzyć skryptu wypakowywującego plik zip</translation>
+      <translation>Nie udało się utworzyć skryptu wypakowującego plik zip</translation>
     </message>
     <message>
       <source>The GitHub API response is not a valid JSON array.</source>
@@ -4005,7 +4007,7 @@ Plik był za mały.</translation>
     </message>
     <message>
       <source>Skylander (*.sky *.bin *.dmp *.dump);;All Files (*)</source>
-      <translation>Skylander (*.sky *.bin *.dmp *.dump);Wszystkie pliki (*)</translation>
+      <translation>Skylander (*.sky *.bin *.dmp *.dump);;Wszystkie pliki (*)</translation>
     </message>
     <message>
       <source>Failed to open the skylander file!</source>
