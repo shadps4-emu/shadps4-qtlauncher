@@ -1034,7 +1034,7 @@ Skriv inn nøklene og lagre dem.</translation>
     </message>
     <message>
       <source>Total: %1</source>
-      <translation type="unfinished">Total: %1</translation>
+      <translation>Totalt: %1</translation>
     </message>
   </context>
   <context>
@@ -2831,7 +2831,7 @@ Installer Rosetta 2 fra terminalen med «softwareupdate --install-rosetta».</tr
     </message>
     <message>
       <source>PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</source>
-      <translation>PS4 «Sysmodules»-mappe:\nMappa hvor PS4-systemmoduler lastes fra.</translation>
+      <translation>Sti for PS4-systemmoduler:\nMappa hvor PS4-systemmoduler lastes fra.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the sysmodules path.</source>
@@ -2883,7 +2883,7 @@ Installer Rosetta 2 fra terminalen med «softwareupdate --install-rosetta».</tr
     </message>
     <message>
       <source>PS4 Sysmodules Path</source>
-      <translation>PS4 «sys_modules»-mappe</translation>
+      <translation>Sti for PS4-systemmoduler</translation>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
@@ -2967,11 +2967,11 @@ Installer Rosetta 2 fra terminalen med «softwareupdate --install-rosetta».</tr
     </message>
     <message>
       <source>Home Folder Location (Saves, Inputs, Trophy Data)</source>
-      <translation>Hjemmemappe-plassering (lagret spilldata, inndata og trofédata)</translation>
+      <translation>Sti for hjem (lagret spilldata, inndata og trofédata)</translation>
     </message>
     <message>
       <source>Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</source>
-      <translation>Hjemmemappe-plassering\nMappa hvor lagret spilldata, troféfiler og inndataoppsett lagres for alle brukere.</translation>
+      <translation>Sti for hjem\nMappa hvor lagret spilldata, troféfiler og inndataoppsett lagres for alle brukere.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the home folder.</source>
@@ -3087,35 +3087,35 @@ Installer Rosetta 2 fra terminalen med «softwareupdate --install-rosetta».</tr
     </message>
     <message>
       <source>Red Zone CPU Patches</source>
-      <translation type="unfinished">Red Zone CPU Patches</translation>
+      <translation>Retting av prosessorens rødsone</translation>
     </message>
     <message>
       <source>Enable Red Zone CPU Patches</source>
-      <translation type="unfinished">Enable Red Zone CPU Patches</translation>
+      <translation>Bruk retting av prosessorens rødsone</translation>
     </message>
     <message>
       <source>Network</source>
-      <translation type="unfinished">Network</translation>
+      <translation>Nettverk</translation>
     </message>
     <message>
       <source>Network Settings</source>
-      <translation type="unfinished">Network Settings</translation>
+      <translation>Nettverksinnstillinger</translation>
     </message>
     <message>
       <source>Set Network Connected Status as True</source>
-      <translation type="unfinished">Set Network Connected Status as True</translation>
+      <translation>Bruk emulering av nettverkstilgang</translation>
     </message>
     <message>
       <source>Disable HTTPS</source>
-      <translation type="unfinished">Disable HTTPS</translation>
+      <translation>Slå av HTTPS</translation>
     </message>
     <message>
       <source>P2P Port</source>
-      <translation type="unfinished">P2P Port</translation>
+      <translation>P2P-port</translation>
     </message>
     <message>
       <source>Copy GPU Command Buffers</source>
-      <translation type="unfinished">Copy GPU Command Buffers</translation>
+      <translation>Kopier GPU-kommandobuffere</translation>
     </message>
   </context>
   <context>
