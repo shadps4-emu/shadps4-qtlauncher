@@ -1160,16 +1160,22 @@ bool GuiContextMenus::createShortcutLinux(const QString& linkPath, const std::st
         return false;
     }
 
+    QString exePath = QCoreApplication::applicationFilePath();
+#ifdef Q_OS_LINUX
+    // Inside an AppImage the binary runs from a temporary mount that is gone once it exits
+    if (const QString appImage = qEnvironmentVariable("APPIMAGE"); !appImage.isEmpty())
+        exePath = appImage;
+#endif
+
     QTextStream out(&shortcutFile);
     out << "[Desktop Entry]\n";
     out << "Version=1.0\n";
     out << "Name=" << QString::fromStdString(name) << "\n";
     if (emuPath == "") {
-        out << "Exec=" << QCoreApplication::applicationFilePath() << " -d -g" << " \"" << targetPath
-            << "\"\n";
+        out << "Exec=\"" << exePath << "\" -d -g" << " \"" << targetPath << "\"\n";
     } else {
-        out << "Exec=" << QCoreApplication::applicationFilePath() << " -e" << " \"" << emuPath
-            << "\"" << " -g" << " \"" << targetPath << "\"\n";
+        out << "Exec=\"" << exePath << "\" -e" << " \"" << emuPath << "\"" << " -g" << " \""
+            << targetPath << "\"\n";
     }
     out << "Icon=" << iconPath << "\n";
     out << "Terminal=false\n";
