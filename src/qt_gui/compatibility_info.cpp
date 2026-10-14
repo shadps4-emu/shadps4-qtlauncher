@@ -19,7 +19,11 @@ CompatibilityInfoClass::CompatibilityInfoClass()
 CompatibilityInfoClass::~CompatibilityInfoClass() = default;
 
 void CompatibilityInfoClass::UpdateCompatibilityDatabase(QWidget* parent, bool forced) {
-    if (!forced && LoadCompatibilityFile())
+    // Skip the download if the file was fetched less than an hour ago
+    QFileInfo check_file(m_compatibility_filename);
+    const auto modified_delta = QDateTime::currentDateTime() - check_file.lastModified();
+    if (!forced && std::chrono::duration_cast<std::chrono::minutes>(modified_delta).count() <= 60 &&
+        LoadCompatibilityFile())
         return;
 
     QUrl url("https://github.com/shadps4-compatibility/shadps4-game-compatibility/releases/latest/"
@@ -117,9 +121,7 @@ CompatibilityEntry CompatibilityInfoClass::GetCompatibilityInfo(const std::strin
 bool CompatibilityInfoClass::LoadCompatibilityFile() {
     // Returns true if compatibility is loaded succescfully
     QFileInfo check_file(m_compatibility_filename);
-    const auto modified_delta = QDateTime::currentDateTime() - check_file.lastModified();
-    if (!check_file.exists() || !check_file.isFile() ||
-        std::chrono::duration_cast<std::chrono::minutes>(modified_delta).count() > 60) {
+    if (!check_file.exists() || !check_file.isFile()) {
         return false;
     }
 
