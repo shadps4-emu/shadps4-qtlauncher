@@ -190,7 +190,7 @@ public:
         keyManager->setObjectName("keyManager");
         keyManager->setIcon(QIcon(":images/key.png"));
         userManager = new QAction(MainWindow);
-        userManager->setObjectName("keyManager");
+        userManager->setObjectName("userManager");
         userManager->setIcon(QIcon(":images/users.png"));
         setThemeDark = new QAction(MainWindow);
         setThemeDark->setObjectName("setThemeDark");
