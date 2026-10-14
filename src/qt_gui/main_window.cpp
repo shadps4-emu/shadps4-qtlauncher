@@ -366,9 +366,11 @@ void MainWindow::CreateDockWindows(bool newDock) {
         m_game_list_frame.reset(
             new GameListFrame(m_gui_settings, m_game_info, m_compat_info, m_ipc_client, this));
         m_game_list_frame->setObjectName("gamelist");
+        m_game_list_frame->installEventFilter(this);
         m_game_grid_frame.reset(
             new GameGridFrame(m_gui_settings, m_game_info, m_compat_info, m_ipc_client, this));
         m_game_grid_frame->setObjectName("gamegridlist");
+        m_game_grid_frame->installEventFilter(this);
         m_elf_viewer.reset(new ElfViewer(m_gui_settings, this));
         m_elf_viewer->setObjectName("elflist");
     }
@@ -477,6 +479,34 @@ void MainWindow::CheckUpdateMain(bool checkSave) {
 void MainWindow::CreateConnects() {
     connect(this, &MainWindow::WindowResized, this, &MainWindow::HandleResize);
     connect(ui->mw_searchbar, &QLineEdit::textChanged, this, &MainWindow::SearchGameTable);
+    ui->refreshGameListAct->setShortcut(QKeySequence::Refresh);
+
+    auto* searchFocusAct = new QAction(this);
+    searchFocusAct->setShortcut(QKeySequence::Find);
+    connect(searchFocusAct, &QAction::triggered, this, [this]() {
+        ui->mw_searchbar->setFocus();
+        ui->mw_searchbar->selectAll();
+    });
+    addAction(searchFocusAct);
+
+    connect(ui->mw_searchbar, &QLineEdit::returnPressed, this, [this]() {
+        QTableWidget* activeTable = isTableList ? static_cast<QTableWidget*>(m_game_list_frame.data())
+                                               : static_cast<QTableWidget*>(m_game_grid_frame.data());
+        if (activeTable) {
+            for (int r = 0; r < activeTable->rowCount(); ++r) {
+                if (!activeTable->isRowHidden(r)) {
+                    for (int c = 0; c < activeTable->columnCount(); ++c) {
+                        if (activeTable->item(r, c) != nullptr || activeTable->cellWidget(r, c) != nullptr) {
+                            activeTable->setFocus();
+                            activeTable->setCurrentCell(r, c);
+                            return;
+                        }
+                    }
+                }
+            }
+        }
+    });
+
     connect(ui->exitAct, &QAction::triggered, this, &QWidget::close);
     connect(ui->refreshGameListAct, &QAction::triggered, this, &MainWindow::ForceRefreshGameTable);
     connect(ui->refreshButton, &QPushButton::clicked, this, &MainWindow::ForceRefreshGameTable);
@@ -1419,10 +1449,12 @@ bool MainWindow::eventFilter(QObject* obj, QEvent* event) {
     if (event->type() == QEvent::KeyPress) {
         QKeyEvent* keyEvent = static_cast<QKeyEvent*>(event);
         if (keyEvent->key() == Qt::Key_Enter || keyEvent->key() == Qt::Key_Return) {
-            auto tblMode = m_gui_settings->GetValue(gui::gl_mode).toInt();
-            if (tblMode != 2 && (tblMode != 1 || m_game_grid_frame->IsValidCellSelected())) {
-                StartGame();
-                return true;
+            if (obj != ui->mw_searchbar) {
+                auto tblMode = m_gui_settings->GetValue(gui::gl_mode).toInt();
+                if (tblMode != 2 && (tblMode != 1 || m_game_grid_frame->IsValidCellSelected())) {
+                    StartGame();
+                    return true;
+                }
             }
         }
     }
