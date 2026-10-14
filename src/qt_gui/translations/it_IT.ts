@@ -1034,7 +1034,7 @@ Inserisci le chiavi e salvale.</translation>
     </message>
     <message>
       <source>Total: %1</source>
-      <translation type="unfinished">Total: %1</translation>
+      <translation>Totale: %1</translation>
     </message>
   </context>
   <context>
@@ -3087,35 +3087,35 @@ Si prega di installare Rosetta 2 dal Terminale utilizzando &apos;softwareupdate 
     </message>
     <message>
       <source>Red Zone CPU Patches</source>
-      <translation type="unfinished">Red Zone CPU Patches</translation>
+      <translation>Patch CPU Zona Rossa</translation>
     </message>
     <message>
       <source>Enable Red Zone CPU Patches</source>
-      <translation type="unfinished">Enable Red Zone CPU Patches</translation>
+      <translation>Abilita Patch CPU Della Zona Rossa</translation>
     </message>
     <message>
       <source>Network</source>
-      <translation type="unfinished">Network</translation>
+      <translation>Rete</translation>
     </message>
     <message>
       <source>Network Settings</source>
-      <translation type="unfinished">Network Settings</translation>
+      <translation>Impostazioni di rete</translation>
     </message>
     <message>
       <source>Set Network Connected Status as True</source>
-      <translation type="unfinished">Set Network Connected Status as True</translation>
+      <translation>Imposta Stato Connessione come Abilitato</translation>
     </message>
     <message>
       <source>Disable HTTPS</source>
-      <translation type="unfinished">Disable HTTPS</translation>
+      <translation>Disabilita HTTPS</translation>
     </message>
     <message>
       <source>P2P Port</source>
-      <translation type="unfinished">P2P Port</translation>
+      <translation>Porta P2P</translation>
     </message>
     <message>
       <source>Copy GPU Command Buffers</source>
-      <translation type="unfinished">Copy GPU Command Buffers</translation>
+      <translation>Copia Buffer Di Comando Gpu</translation>
     </message>
   </context>
   <context>
