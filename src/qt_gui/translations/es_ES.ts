@@ -1032,6 +1032,10 @@ Debes introducir tus claves y guardarlas.</translation>
       <source>TB</source>
       <translation>TB</translation>
     </message>
+    <message>
+      <source>Total: %1</source>
+      <translation>Total: %1</translation>
+    </message>
   </context>
   <context>
     <name>GuiContextMenus</name>
@@ -2147,6 +2151,18 @@ Selecciona una versión del emulador en el panel derecho.</translation>
       <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
       <translation>Archivos ejecutables (*.bin *.elf *.oelf *.zar)</translation>
     </message>
+    <message>
+      <source>Error</source>
+      <translation>Error</translation>
+    </message>
+    <message>
+      <source>Rosetta 2 is not installed.
+
+Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rosetta&apos;.</source>
+      <translation>No se ha instalado Rosetta 2.
+
+Debes instalar Rosetta 2 escribiendo en la terminal &apos;softwareupdate --install-rosetta&apos;.</translation>
+    </message>
   </context>
   <context>
     <name>QObject</name>
@@ -2316,10 +2332,6 @@ Selecciona una versión del emulador en el panel derecho.</translation>
     <message>
       <source>Collect Shaders</source>
       <translation>Recopilar shaders</translation>
-    </message>
-    <message>
-      <source>Copy GPU Buffers</source>
-      <translation>Copiar búferes de GPU</translation>
     </message>
     <message>
       <source>Host Debug Markers</source>
@@ -2746,10 +2758,6 @@ Selecciona una versión del emulador en el panel derecho.</translation>
       <translation>Habilitar modo kit de desarrollo</translation>
     </message>
     <message>
-      <source>Set &quot;Network Connected&quot; to True</source>
-      <translation>Cambia la opción &quot;Conexión a red&quot; a verdadero</translation>
-    </message>
-    <message>
       <source>Miscellaneous</source>
       <translation>Miscelánea</translation>
     </message>
@@ -3058,10 +3066,6 @@ Selecciona una versión del emulador en el panel derecho.</translation>
       <translation>Habilitar ShadNet</translation>
     </message>
     <message>
-      <source>ShadNet</source>
-      <translation>ShadNet</translation>
-    </message>
-    <message>
       <source>Server</source>
       <translation>Servidor</translation>
     </message>
@@ -3082,12 +3086,36 @@ Selecciona una versión del emulador en el panel derecho.</translation>
       <translation>shadNet:\nEn estos momentos, su compatibilidad es muy limitada.\nPuedes registrarte en https://www.shadps4.net/shadnet/register/.</translation>
     </message>
     <message>
-      <source>Red Zone Protection</source>
-      <translation>Protección de zona roja</translation>
+      <source>Red Zone CPU Patches</source>
+      <translation>Parches para zona roja de la CPU</translation>
     </message>
     <message>
-      <source>Static Patching</source>
-      <translation>Parches estáticos</translation>
+      <source>Enable Red Zone CPU Patches</source>
+      <translation>Activar parches para zona roja de la CPU</translation>
+    </message>
+    <message>
+      <source>Network</source>
+      <translation>Red</translation>
+    </message>
+    <message>
+      <source>Network Settings</source>
+      <translation>Configuración de red</translation>
+    </message>
+    <message>
+      <source>Set Network Connected Status as True</source>
+      <translation>Cambia la opción Conexión a red a verdadero</translation>
+    </message>
+    <message>
+      <source>Disable HTTPS</source>
+      <translation>Desactivar HTTPS</translation>
+    </message>
+    <message>
+      <source>P2P Port</source>
+      <translation>Puerto P2P</translation>
+    </message>
+    <message>
+      <source>Copy GPU Command Buffers</source>
+      <translation>Copiar búferes de comandos de la GPU</translation>
     </message>
   </context>
   <context>

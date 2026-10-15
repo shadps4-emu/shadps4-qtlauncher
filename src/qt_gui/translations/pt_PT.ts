@@ -1031,6 +1031,10 @@ Por favor, introduza as suas chaves e guarde-as.</translation>
       <source>TB</source>
       <translation>TB</translation>
     </message>
+    <message>
+      <source>Total: %1</source>
+      <translation type="unfinished">Total: %1</translation>
+    </message>
   </context>
   <context>
     <name>GuiContextMenus</name>
@@ -2146,6 +2150,18 @@ Selecione uma versão do emulador no painel direito.</translation>
       <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
       <translation>ficheiros executáveis (*.bin *.elf *.oelf *.zar)</translation>
     </message>
+    <message>
+      <source>Error</source>
+      <translation>Erro</translation>
+    </message>
+    <message>
+      <source>Rosetta 2 is not installed.
+
+Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rosetta&apos;.</source>
+      <translation>A aplicação Rosetta 2 não está instalada.
+
+Por favor, instale a aplicação Rosetta 2 a partir do Terminal com o comando &apos;softwareupdate --install-rosetta&apos;.</translation>
+    </message>
   </context>
   <context>
     <name>QObject</name>
@@ -2315,10 +2331,6 @@ Selecione uma versão do emulador no painel direito.</translation>
     <message>
       <source>Collect Shaders</source>
       <translation>Recolher Shaders</translation>
-    </message>
-    <message>
-      <source>Copy GPU Buffers</source>
-      <translation>Copiar Buffers da GPU</translation>
     </message>
     <message>
       <source>Host Debug Markers</source>
@@ -2746,10 +2758,6 @@ Alterar este valor pode ter efeitos adversos, como aumentar a velocidade do jogo
       <translation>Ativar Modo de Consola de Programador</translation>
     </message>
     <message>
-      <source>Set &quot;Network Connected&quot; to True</source>
-      <translation>Definir &quot;Ligação de Rede&quot; como Verdadeiro</translation>
-    </message>
-    <message>
       <source>Miscellaneous</source>
       <translation>Diversos</translation>
     </message>
@@ -3059,10 +3067,6 @@ Atualmente provoca instabilidade numa abundância de jogos testados.</translatio
       <translation>Ativar a shadNet</translation>
     </message>
     <message>
-      <source>ShadNet</source>
-      <translation>ShadNet</translation>
-    </message>
-    <message>
       <source>Server</source>
       <translation>Servidor</translation>
     </message>
@@ -3083,12 +3087,36 @@ Atualmente provoca instabilidade numa abundância de jogos testados.</translatio
       <translation>shadNet:\nA compatibilidade é reduzida no momento.\nPode registar-se em https://www.shadps4.net/shadnet/register/.</translation>
     </message>
     <message>
-      <source>Red Zone Protection</source>
-      <translation>Proteção da Zona Vermelha</translation>
+      <source>Red Zone CPU Patches</source>
+      <translation type="unfinished">Red Zone CPU Patches</translation>
     </message>
     <message>
-      <source>Static Patching</source>
-      <translation>Correção Estática</translation>
+      <source>Enable Red Zone CPU Patches</source>
+      <translation type="unfinished">Enable Red Zone CPU Patches</translation>
+    </message>
+    <message>
+      <source>Network</source>
+      <translation type="unfinished">Network</translation>
+    </message>
+    <message>
+      <source>Network Settings</source>
+      <translation type="unfinished">Network Settings</translation>
+    </message>
+    <message>
+      <source>Set Network Connected Status as True</source>
+      <translation type="unfinished">Set Network Connected Status as True</translation>
+    </message>
+    <message>
+      <source>Disable HTTPS</source>
+      <translation type="unfinished">Disable HTTPS</translation>
+    </message>
+    <message>
+      <source>P2P Port</source>
+      <translation type="unfinished">P2P Port</translation>
+    </message>
+    <message>
+      <source>Copy GPU Command Buffers</source>
+      <translation type="unfinished">Copy GPU Command Buffers</translation>
     </message>
   </context>
   <context>

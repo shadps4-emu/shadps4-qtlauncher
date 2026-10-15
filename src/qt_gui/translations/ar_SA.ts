@@ -1032,6 +1032,10 @@ Please enter your keys and save them.</source>
       <source>TB</source>
       <translation>تيرابايت</translation>
     </message>
+    <message>
+      <source>Total: %1</source>
+      <translation type="unfinished">Total: %1</translation>
+    </message>
   </context>
   <context>
     <name>GuiContextMenus</name>
@@ -2147,6 +2151,18 @@ Select an emulator version from the right panel.</source>
       <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
       <translation type="unfinished">bootable files (*.bin *.elf *.oelf *.zar)</translation>
     </message>
+    <message>
+      <source>Error</source>
+      <translation type="unfinished">Error</translation>
+    </message>
+    <message>
+      <source>Rosetta 2 is not installed.
+
+Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rosetta&apos;.</source>
+      <translation type="unfinished">Rosetta 2 is not installed.
+
+Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rosetta&apos;.</translation>
+    </message>
   </context>
   <context>
     <name>QObject</name>
@@ -2316,10 +2332,6 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Collect Shaders</source>
       <translation>جمع الشيدرات </translation>
-    </message>
-    <message>
-      <source>Copy GPU Buffers</source>
-      <translation>نسخ مخازن الرسوميات</translation>
     </message>
     <message>
       <source>Host Debug Markers</source>
@@ -2747,10 +2759,6 @@ Select an emulator version from the right panel.</source>
       <translation>تفعيل وضع جهاز التطوير</translation>
     </message>
     <message>
-      <source>Set &quot;Network Connected&quot; to True</source>
-      <translation>تعيين "Network Connected" إلى True</translation>
-    </message>
-    <message>
       <source>Miscellaneous</source>
       <translation>خيارات متنوعة</translation>
     </message>
@@ -3059,10 +3067,6 @@ Select an emulator version from the right panel.</source>
       <translation type="unfinished">Enable shadNet</translation>
     </message>
     <message>
-      <source>ShadNet</source>
-      <translation type="unfinished">ShadNet</translation>
-    </message>
-    <message>
       <source>Server</source>
       <translation type="unfinished">Server</translation>
     </message>
@@ -3083,12 +3087,36 @@ Select an emulator version from the right panel.</source>
       <translation type="unfinished">shadNet:\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadnet/register/.</translation>
     </message>
     <message>
-      <source>Red Zone Protection</source>
-      <translation type="unfinished">Red Zone Protection</translation>
+      <source>Red Zone CPU Patches</source>
+      <translation type="unfinished">Red Zone CPU Patches</translation>
     </message>
     <message>
-      <source>Static Patching</source>
-      <translation type="unfinished">Static Patching</translation>
+      <source>Enable Red Zone CPU Patches</source>
+      <translation type="unfinished">Enable Red Zone CPU Patches</translation>
+    </message>
+    <message>
+      <source>Network</source>
+      <translation type="unfinished">Network</translation>
+    </message>
+    <message>
+      <source>Network Settings</source>
+      <translation type="unfinished">Network Settings</translation>
+    </message>
+    <message>
+      <source>Set Network Connected Status as True</source>
+      <translation type="unfinished">Set Network Connected Status as True</translation>
+    </message>
+    <message>
+      <source>Disable HTTPS</source>
+      <translation type="unfinished">Disable HTTPS</translation>
+    </message>
+    <message>
+      <source>P2P Port</source>
+      <translation type="unfinished">P2P Port</translation>
+    </message>
+    <message>
+      <source>Copy GPU Command Buffers</source>
+      <translation type="unfinished">Copy GPU Command Buffers</translation>
     </message>
   </context>
   <context>

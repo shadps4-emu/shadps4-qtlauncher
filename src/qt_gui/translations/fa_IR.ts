@@ -1025,6 +1025,10 @@ Please enter your keys and save them.</source>
       <source>TB</source>
       <translation>TB</translation>
     </message>
+    <message>
+      <source>Total: %1</source>
+      <translation type="unfinished">Total: %1</translation>
+    </message>
   </context>
   <context>
     <name>GuiContextMenus</name>
@@ -2136,6 +2140,18 @@ Select an emulator version from the right panel.</source>
       <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
       <translation type="unfinished">bootable files (*.bin *.elf *.oelf *.zar)</translation>
     </message>
+    <message>
+      <source>Error</source>
+      <translation type="unfinished">Error</translation>
+    </message>
+    <message>
+      <source>Rosetta 2 is not installed.
+
+Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rosetta&apos;.</source>
+      <translation type="unfinished">Rosetta 2 is not installed.
+
+Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rosetta&apos;.</translation>
+    </message>
   </context>
   <context>
     <name>QObject</name>
@@ -2305,10 +2321,6 @@ Select an emulator version from the right panel.</source>
     <message>
       <source>Collect Shaders</source>
       <translation>جمع آوری شیدرها</translation>
-    </message>
-    <message>
-      <source>Copy GPU Buffers</source>
-      <translation>کپی بافرهای GPU</translation>
     </message>
     <message>
       <source>Host Debug Markers</source>
@@ -2771,10 +2783,6 @@ Immediate: فریم‌ها به محض آماده شدن فوراً روی صف�
       <translation>فعال‌سازی حالت کنسول Devkit</translation>
     </message>
     <message>
-      <source>Set &quot;Network Connected&quot; to True</source>
-      <translation>تنظیم «Network Connected» روی True</translation>
-    </message>
-    <message>
       <source>Miscellaneous</source>
       <translation>متفرقه</translation>
     </message>
@@ -3085,10 +3093,6 @@ Immediate: فریم‌ها به محض آماده شدن فوراً روی صف�
       <translation type="unfinished">Enable shadNet</translation>
     </message>
     <message>
-      <source>ShadNet</source>
-      <translation type="unfinished">ShadNet</translation>
-    </message>
-    <message>
       <source>Server</source>
       <translation type="unfinished">Server</translation>
     </message>
@@ -3109,12 +3113,36 @@ Immediate: فریم‌ها به محض آماده شدن فوراً روی صف�
       <translation type="unfinished">shadNet:\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadnet/register/.</translation>
     </message>
     <message>
-      <source>Red Zone Protection</source>
-      <translation type="unfinished">Red Zone Protection</translation>
+      <source>Red Zone CPU Patches</source>
+      <translation type="unfinished">Red Zone CPU Patches</translation>
     </message>
     <message>
-      <source>Static Patching</source>
-      <translation type="unfinished">Static Patching</translation>
+      <source>Enable Red Zone CPU Patches</source>
+      <translation type="unfinished">Enable Red Zone CPU Patches</translation>
+    </message>
+    <message>
+      <source>Network</source>
+      <translation type="unfinished">Network</translation>
+    </message>
+    <message>
+      <source>Network Settings</source>
+      <translation type="unfinished">Network Settings</translation>
+    </message>
+    <message>
+      <source>Set Network Connected Status as True</source>
+      <translation type="unfinished">Set Network Connected Status as True</translation>
+    </message>
+    <message>
+      <source>Disable HTTPS</source>
+      <translation type="unfinished">Disable HTTPS</translation>
+    </message>
+    <message>
+      <source>P2P Port</source>
+      <translation type="unfinished">P2P Port</translation>
+    </message>
+    <message>
+      <source>Copy GPU Command Buffers</source>
+      <translation type="unfinished">Copy GPU Command Buffers</translation>
     </message>
   </context>
   <context>

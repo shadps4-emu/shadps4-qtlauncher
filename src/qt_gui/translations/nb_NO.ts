@@ -1032,6 +1032,10 @@ Skriv inn nøklene og lagre dem.</translation>
       <source>TB</source>
       <translation>TB</translation>
     </message>
+    <message>
+      <source>Total: %1</source>
+      <translation>Totalt: %1</translation>
+    </message>
   </context>
   <context>
     <name>GuiContextMenus</name>
@@ -2147,6 +2151,18 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
       <translation>oppstartsfiler (*.bin *.elf *.oelf *.zar)</translation>
     </message>
+    <message>
+      <source>Error</source>
+      <translation>Feil</translation>
+    </message>
+    <message>
+      <source>Rosetta 2 is not installed.
+
+Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rosetta&apos;.</source>
+      <translation>Rosetta 2 er ikke installert.
+
+Installer Rosetta 2 fra terminalen med «softwareupdate --install-rosetta».</translation>
+    </message>
   </context>
   <context>
     <name>QObject</name>
@@ -2316,10 +2332,6 @@ Velg en emulatorversjon fra høyre panel.</translation>
     <message>
       <source>Collect Shaders</source>
       <translation>Lagre skyggeleggere</translation>
-    </message>
-    <message>
-      <source>Copy GPU Buffers</source>
-      <translation>Kopier GPU-buffere</translation>
     </message>
     <message>
       <source>Host Debug Markers</source>
@@ -2746,10 +2758,6 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <translation>Bruk utvikler-konsollmodus</translation>
     </message>
     <message>
-      <source>Set &quot;Network Connected&quot; to True</source>
-      <translation>Bruk emulering av nettverkstilgang</translation>
-    </message>
-    <message>
       <source>Miscellaneous</source>
       <translation>Diverse</translation>
     </message>
@@ -2823,7 +2831,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</source>
-      <translation>PS4 «Sysmodules»-mappe:\nMappa hvor PS4-systemmoduler lastes fra.</translation>
+      <translation>Sti for PS4-systemmoduler:\nMappa hvor PS4-systemmoduler lastes fra.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the sysmodules path.</source>
@@ -2875,7 +2883,7 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path</source>
-      <translation>PS4 «sys_modules»-mappe</translation>
+      <translation>Sti for PS4-systemmoduler</translation>
     </message>
     <message>
       <source>GUI Updates:\nRelease: Official versions released every month that may be very outdated, but are more reliable and tested.\nNightly: Development versions that have all the latest features and fixes, but may contain bugs and are less stable.\n\n*This update applies only to the Qt user interface. To update the emulator core, please use the &apos;Version Manager&apos; menu.</source>
@@ -2959,11 +2967,11 @@ Velg en emulatorversjon fra høyre panel.</translation>
     </message>
     <message>
       <source>Home Folder Location (Saves, Inputs, Trophy Data)</source>
-      <translation>Hjemmemappe-plassering (lagret spilldata, inndata og trofédata)</translation>
+      <translation>Sti for hjem (lagret spilldata, inndata og trofédata)</translation>
     </message>
     <message>
       <source>Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</source>
-      <translation>Hjemmemappe-plassering\nMappa hvor lagret spilldata, troféfiler og inndataoppsett lagres for alle brukere.</translation>
+      <translation>Sti for hjem\nMappa hvor lagret spilldata, troféfiler og inndataoppsett lagres for alle brukere.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the home folder.</source>
@@ -3058,10 +3066,6 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <translation>Bruk ShadNet</translation>
     </message>
     <message>
-      <source>ShadNet</source>
-      <translation>ShadNet</translation>
-    </message>
-    <message>
       <source>Server</source>
       <translation>Tjener</translation>
     </message>
@@ -3082,12 +3086,36 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <translation>ShadNet:\nKompatibilitet er veldig begrenset for øyeblikket.\nDu kan registrere deg på https://www.shadps4.net/shadnet/register/.</translation>
     </message>
     <message>
-      <source>Red Zone Protection</source>
-      <translation>Rød sone beskyttelse</translation>
+      <source>Red Zone CPU Patches</source>
+      <translation>Retting av prosessorens rødsone</translation>
     </message>
     <message>
-      <source>Static Patching</source>
-      <translation>Statisk retting</translation>
+      <source>Enable Red Zone CPU Patches</source>
+      <translation>Bruk retting av prosessorens rødsone</translation>
+    </message>
+    <message>
+      <source>Network</source>
+      <translation>Nettverk</translation>
+    </message>
+    <message>
+      <source>Network Settings</source>
+      <translation>Nettverksinnstillinger</translation>
+    </message>
+    <message>
+      <source>Set Network Connected Status as True</source>
+      <translation>Bruk emulering av nettverkstilgang</translation>
+    </message>
+    <message>
+      <source>Disable HTTPS</source>
+      <translation>Slå av HTTPS</translation>
+    </message>
+    <message>
+      <source>P2P Port</source>
+      <translation>P2P-port</translation>
+    </message>
+    <message>
+      <source>Copy GPU Command Buffers</source>
+      <translation>Kopier GPU-kommandobuffere</translation>
     </message>
   </context>
   <context>
