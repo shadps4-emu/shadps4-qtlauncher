@@ -265,6 +265,7 @@ void GameListFrame::RefreshListBackgroundImage() {
     QColor transparentColor = QColor(135, 206, 235, 40);
     palette.setColor(QPalette::Highlight, transparentColor);
     this->setPalette(palette);
+    this->viewport()->setPalette(palette);
 }
 
 void GameListFrame::resizeEvent(QResizeEvent* event) {
