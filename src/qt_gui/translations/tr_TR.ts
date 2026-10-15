@@ -3095,11 +3095,11 @@ Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rose
     </message>
     <message>
       <source>Network</source>
-      <translation type="unfinished">Network</translation>
+      <translation>Ağ</translation>
     </message>
     <message>
       <source>Network Settings</source>
-      <translation type="unfinished">Network Settings</translation>
+      <translation>Ağ Ayarları</translation>
     </message>
     <message>
       <source>Set Network Connected Status as True</source>
