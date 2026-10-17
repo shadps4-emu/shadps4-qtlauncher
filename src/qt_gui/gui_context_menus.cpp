@@ -967,7 +967,7 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
 
             query.addQueryItem(
                 "title", QString("%1 - %2").arg(QString::fromStdString(m_games[itemID].serial),
-                                                (m_games[itemID].name)));
+                                                QString::fromStdString(m_games[itemID].name)));
             add_q_item("template", "game_compatibility.yml");
             add_q_item("game-name", m_games[itemID].name);
             add_q_item("game-serial", m_games[itemID].serial);
