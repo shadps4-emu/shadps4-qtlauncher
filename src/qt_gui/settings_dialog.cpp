@@ -1519,6 +1519,7 @@ void SettingsDialog::GetPhysicalDevices() {
         vkGetPhysicalDeviceProperties(devices[i], &props);
         QString name = QString::fromUtf8(props.deviceName, -1);
         m_physical_devices.push_back(name);
+        qDebug() << "QtLauncher GPU index:" << i << "name:" << name;
     }
 
     vkDestroyInstance(instance, nullptr);
