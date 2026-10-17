@@ -3,10 +3,14 @@
 
 #include <QComboBox>
 #include <QDockWidget>
+#include <QJsonDocument>
+#include <QJsonObject>
 #include <QKeyEvent>
 #include <QPlainTextEdit>
 #include <QProgressDialog>
 #include <QStatusBar>
+#include <QTextCursor>
+#include <QTextDocument>
 
 #include "about_dialog.h"
 #include "cheats_patches.h"
@@ -35,10 +39,20 @@
 #include "trophy_viewer.h"
 #include "user_manager_dialog.h"
 
+namespace {
+constexpr int retained_log_lines = 10000;
+constexpr qsizetype max_pending_log_characters = 2 * 1024 * 1024;
+constexpr qsizetype log_batch_characters = 256 * 1024;
+constexpr int log_batch_lines = 256;
+} // namespace
+
 MainWindow::MainWindow(QWidget* parent, bool log_to_terminal)
     : QMainWindow(parent), ui(new Ui::MainWindow),
       m_ipc_client(std::make_shared<IpcClient>(nullptr, log_to_terminal)) {
     ui->setupUi(this);
+    log_timer.setSingleShot(true);
+    log_timer.setInterval(16);
+    connect(&log_timer, &QTimer::timeout, this, &MainWindow::FlushLog);
     installEventFilter(this);
     setAttribute(Qt::WA_DeleteOnClose);
     m_gui_settings = std::make_shared<gui_settings>();
@@ -360,6 +374,8 @@ void MainWindow::CreateDockWindows(bool newDock) {
     ui->logDisplay = new QTextEdit(ui->splitter);
     ui->logDisplay->setText(tr("Game Log"));
     ui->logDisplay->setReadOnly(true);
+    ui->logDisplay->document()->setMaximumBlockCount(retained_log_lines);
+    CreateLogContextMenu();
 
     if (newDock) {
         m_dock_widget.reset(new QDockWidget(tr("Game List"), this));
@@ -996,10 +1012,152 @@ void MainWindow::CreateConnects() {
 }
 
 void MainWindow::PrintLog(QString entry, QColor textColor) {
-    ui->logDisplay->setTextColor(textColor);
-    ui->logDisplay->append(entry);
+    pending_log_characters += entry.size();
+    pending_log.enqueue({std::move(entry), textColor});
+    // Keep recent output when the emulator produces more than the UI can display.
+    while (pending_log.size() > retained_log_lines ||
+           pending_log_characters > max_pending_log_characters) {
+        pending_log_characters -= pending_log.dequeue().first.size();
+    }
+    if (!log_timer.isActive()) {
+        log_timer.start();
+    }
+}
+
+void MainWindow::FlushLog() {
     QScrollBar* sb = ui->logDisplay->verticalScrollBar();
-    sb->setValue(sb->maximum());
+    const int scroll_position = sb->value();
+    QTextCursor cursor(ui->logDisplay->document());
+    cursor.movePosition(QTextCursor::End);
+    cursor.beginEditBlock();
+    qsizetype characters = 0;
+    int lines = 0;
+    while (!pending_log.isEmpty() && lines < log_batch_lines && characters < log_batch_characters) {
+        auto [entry, color] = pending_log.dequeue();
+        pending_log_characters -= entry.size();
+        characters += entry.size();
+        QTextCharFormat format;
+        format.setForeground(color);
+        if (!ui->logDisplay->document()->isEmpty()) {
+            cursor.insertBlock();
+        }
+        cursor.insertText(entry, format);
+        ++lines;
+    }
+    cursor.endEditBlock();
+    sb->setValue(log_auto_scroll ? sb->maximum() : scroll_position);
+    if (!pending_log.isEmpty()) {
+        log_timer.start();
+    }
+}
+
+void MainWindow::ClearLog() {
+    log_timer.stop();
+    pending_log.clear();
+    pending_log_characters = 0;
+    ui->logDisplay->clear();
+}
+
+void MainWindow::CreateLogContextMenu() {
+    QTextEdit* log_display = ui->logDisplay;
+    QScrollBar* scroll = log_display->verticalScrollBar();
+    connect(scroll, &QScrollBar::sliderPressed, this, [this]() { log_auto_scroll = false; });
+    connect(scroll, &QScrollBar::sliderReleased, this,
+            [this, scroll]() { log_auto_scroll = scroll->sliderPosition() == scroll->maximum(); });
+    connect(scroll, &QScrollBar::actionTriggered, this, [this, scroll](int) {
+        if (!scroll->isSliderDown()) {
+            log_auto_scroll = scroll->sliderPosition() == scroll->maximum();
+        }
+    });
+    log_display->setContextMenuPolicy(Qt::CustomContextMenu);
+    connect(log_display, &QWidget::customContextMenuRequested, this,
+            [this, log_display](const QPoint& position) {
+                const auto menu = std::unique_ptr<QMenu>(log_display->createStandardContextMenu());
+                menu->addSeparator();
+                QAction* auto_scroll = menu->addAction(tr("Auto-scroll"));
+                auto_scroll->setCheckable(true);
+                auto_scroll->setChecked(log_auto_scroll);
+                connect(auto_scroll, &QAction::toggled, this, [this, log_display](bool enabled) {
+                    log_auto_scroll = enabled;
+                    if (enabled) {
+                        QScrollBar* sb = log_display->verticalScrollBar();
+                        sb->setValue(sb->maximum());
+                    }
+                });
+                QAction* open_log = menu->addAction(tr("Open Log File"), this, [this]() {
+                    if (!QDesktopServices::openUrl(QUrl::fromLocalFile(log_file_path))) {
+                        QMessageBox::warning(this, tr("Open Log File"),
+                                             tr("Could not open the log file."));
+                    }
+                });
+                open_log->setEnabled(QFileInfo(log_file_path).isFile());
+                menu->exec(log_display->viewport()->mapToGlobal(position));
+            });
+}
+
+void MainWindow::PrepareLogFile(const QString& work_dir, const QStringList& args) {
+    QString user_dir = QDir(work_dir).absoluteFilePath(Common::FS::PORTABLE_DIR);
+    if (!QFileInfo(user_dir).isDir()) {
+#ifdef _WIN32
+        user_dir = qEnvironmentVariable("APPDATA") + "/shadPS4";
+#elif defined(__APPLE__)
+        user_dir = QDir::homePath() + "/Library/Application Support/shadPS4";
+#else
+        const QString xdg = qEnvironmentVariable("XDG_DATA_HOME");
+        user_dir = (xdg.isEmpty() ? QDir::homePath() + "/.local/share" : xdg) + "/shadPS4";
+#endif
+    }
+
+    QString game_path;
+    for (int i = 0; i < args.size(); ++i) {
+        if ((args[i] == "--game" || args[i] == "-g") && i + 1 < args.size()) {
+            game_path = args[++i];
+        } else if (args[i].startsWith("--game=")) {
+            game_path = args[i].mid(7);
+        }
+    }
+    QString serial;
+    if (!game_path.isEmpty()) {
+        auto root = Common::FS::PathFromQString(QDir(work_dir).absoluteFilePath(game_path));
+        if (!Core::FileSys::ResolveGameRoot(root)) {
+            root = root.parent_path();
+        }
+        if (const auto bytes = Core::FileSys::ReadGameFile(root, "sce_sys/param.sfo")) {
+            PSF game_psf;
+            if (game_psf.Open(*bytes)) {
+                if (const auto id = game_psf.GetString("TITLE_ID")) {
+                    serial = QString::fromUtf8(id->data(), static_cast<qsizetype>(id->size()));
+                }
+            }
+        }
+    }
+
+    bool separate = false;
+    const auto read_settings = [&](const QString& path) {
+        QFile config(path);
+        if (config.open(QIODevice::ReadOnly)) {
+            const auto value = QJsonDocument::fromJson(config.readAll())
+                                   .object()
+                                   .value("Log")
+                                   .toObject()
+                                   .value("separate");
+            if (value.isBool()) {
+                separate = value.toBool();
+            }
+        }
+    };
+    if (!args.contains("--config-clean")) {
+        read_settings(QDir(user_dir).filePath("config.json"));
+        if (!serial.isEmpty() && !args.contains("--config-global")) {
+            read_settings(QDir(user_dir).filePath(QString::fromLatin1(Common::FS::CUSTOM_CONFIGS) +
+                                                  "/" + serial + ".json"));
+        }
+    }
+    const QString filename = game_path.isEmpty()             ? "shadps4.log"
+                             : separate && !serial.isEmpty() ? serial + ".log"
+                                                             : Common::FS::LOG_FILE;
+    log_file_path =
+        QDir(user_dir).filePath(QString::fromLatin1(Common::FS::LOG_DIR) + "/" + filename);
 }
 
 void MainWindow::StartGameWithArgs(QStringList args) {
@@ -1462,6 +1620,8 @@ tr("No emulator version was selected.\nThe Version Manager menu will then open.\
     last_game_path = path;
 
     QString workDir = QDir::currentPath();
+    ClearLog();
+    PrepareLogFile(workDir, final_args);
     m_ipc_client->startEmulator(fileInfo, final_args, workDir);
     m_ipc_client->setActiveController(GamepadSelect::GetSelectedGamepad());
 }
@@ -1539,6 +1699,8 @@ void MainWindow::StartEmulatorExecutable(std::filesystem::path emuPath, QString 
 
     EmulatorState::GetInstance()->SetGameRunning(true);
     QString workDir = QDir::currentPath();
+    ClearLog();
+    PrepareLogFile(workDir, args);
     m_ipc_client->startEmulator(fileInfo, args, workDir, disable_ipc);
 }
 
@@ -1576,6 +1738,8 @@ void MainWindow::RestartEmulator() {
     QFileInfo fileInfo(exe);
     QString workDir = fileInfo.absolutePath();
 
+    ClearLog();
+    PrepareLogFile(workDir, args);
     m_ipc_client->startEmulator(fileInfo, args, workDir);
 }
 
