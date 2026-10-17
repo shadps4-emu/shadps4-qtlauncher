@@ -69,12 +69,14 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
     QMenu* openFolderMenu = new QMenu(tr("Open Folder..."), widget);
     QAction* openGameFolder = new QAction(tr("Open Game Folder"), widget);
     QAction* openUpdateFolder = new QAction(tr("Open Update Folder"), widget);
+    QAction* openModsFolder = new QAction(tr("Open Mods Folder"), widget);
     QMenu* openSaveDataMenu = new QMenu(tr("Open Save Data Folder"), widget);
 
     QAction* openLogFolder = new QAction(tr("Open Log Folder"), widget);
 
     openFolderMenu->addAction(openGameFolder);
     openFolderMenu->addAction(openUpdateFolder);
+    openFolderMenu->addAction(openModsFolder);
     openFolderMenu->addAction(openLogFolder);
     openFolderMenu->addMenu(openSaveDataMenu);
 
@@ -447,6 +449,22 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
         } else {
             QMessageBox::critical(nullptr, tr("Error"),
                                   QString(tr("This game has no update folder to open!")));
+        }
+    }
+
+    if (selected == openModsFolder) {
+        auto mods_path = Core::FileSys::StripZArchiveExtension(m_games[itemID].path);
+        mods_path += "-mods";
+        if (auto mods_root = Core::FileSys::ResolveGameRoot(mods_path)) {
+            if (Core::FileSys::IsZArchiveFile(*mods_root)) {
+                mods_root = mods_root->parent_path();
+            }
+            QString folder_path;
+            Common::FS::PathToQString(folder_path, *mods_root);
+            QDesktopServices::openUrl(QUrl::fromLocalFile(folder_path));
+        } else {
+            QMessageBox::critical(nullptr, tr("Error"),
+                                  tr("This game has no mods folder to open!"));
         }
     }
 
