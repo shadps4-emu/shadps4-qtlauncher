@@ -166,8 +166,9 @@ void Hotkeys::SaveHotkeys(bool CloseOnSave) {
     std::vector<std::string> lines, inputs;
 
     auto add_mapping = [&](const QString& buttonText, const std::string& output_name) {
+        // Unmapped hotkeys are written too, the emulator restores the default of a missing one
+        lines.push_back(output_name + " = " + buttonText.toStdString());
         if (buttonText.toStdString() != "unmapped") {
-            lines.push_back(output_name + " = " + buttonText.toStdString());
             inputs.push_back(buttonText.toStdString());
         }
     };
