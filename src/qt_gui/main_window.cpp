@@ -1500,13 +1500,17 @@ void MainWindow::StartEmulatorExecutable(std::filesystem::path emuPath, QString 
             if (enabled && std::filesystem::exists(dir)) {
                 for (const auto& entry : std::filesystem::directory_iterator(dir)) {
                     if (entry.is_directory()) {
-                        if (entry.path().filename().string() == gameArg.toStdString()) {
+                        QString entry_name;
+                        Common::FS::PathToQString(entry_name, entry.path().filename());
+                        if (entry_name == gameArg) {
                             last_game_path = entry.path() / "eboot.bin";
                             gameFound = true;
                             break;
                         }
                     } else if (Core::FileSys::IsZArchiveFile(entry.path())) {
-                        if (entry.path().stem().string() == gameArg.toStdString()) {
+                        QString entry_name;
+                        Common::FS::PathToQString(entry_name, entry.path().stem());
+                        if (entry_name == gameArg) {
                             last_game_path = entry.path() / "eboot.bin";
                             gameFound = true;
                             break;
