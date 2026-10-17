@@ -571,7 +571,13 @@ tr("First you need to choose a location to save the versions in\n'Path to save v
                             folderName = QString("%1 - %2").arg(releaseName, datePart);
                         }
 
-                        QString destFolder = QDir(userPath).filePath(folderName);
+                        QString folderNameSanitized = folderName;
+                        folderNameSanitized.replace(QRegularExpression(R"([<>:"/\\|?*])"), "-");
+                        while (folderNameSanitized.endsWith(' ') ||
+                               folderNameSanitized.endsWith('.')) {
+                            folderNameSanitized.chop(1);
+                        }
+                        QString destFolder = QDir(userPath).filePath(folderNameSanitized);
 
                         // extract ZIP
                         QString scriptFilePath;
@@ -625,14 +631,16 @@ tr("First you need to choose a location to save the versions in\n'Path to save v
 
                             QTimer::singleShot(
                                 4000, this,
-                                [this, folderName, progressDialog, versionName, release]() {
+                                [this, folderName, folderNameSanitized, progressDialog, versionName,
+                                 release]() {
                                     progressDialog->close();
                                     progressDialog->deleteLater();
 
                                     QString userPath =
                                         m_gui_settings->GetValue(gui::vm_versionPath).toString();
                                     QString executablePath =
-                                        m_gui_settings->GetVersionExecutablePath(folderName);
+                                        m_gui_settings->GetVersionExecutablePath(
+                                            folderNameSanitized);
 
                                     QMessageBox::information(
                                         this, tr("Confirm Download"),
