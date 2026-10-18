@@ -680,7 +680,7 @@ void LogFileViewer::ApplyRange(int source_generation, quint64 request, qint64 fi
     QScrollBar* native_scroll = text->verticalScrollBar();
     if (auto_scroll->isChecked() || target_row == rows - 1) {
         native_scroll->setValue(native_scroll->maximum());
-    } else if (incremental) {
+    } else if (incremental && target_row == anchor_row) {
         PositionCursor(anchor, anchor_y);
     } else if (target_row >= first && target_row < first + lines.size()) {
         const QTextBlock block =
@@ -689,7 +689,7 @@ void LogFileViewer::ApplyRange(int source_generation, quint64 request, qint64 fi
         if (target_row == anchor_row) {
             target.setPosition(block.position() + std::min(anchor_column, block.length() - 1));
         }
-        PositionCursor(target, anchor_y);
+        PositionCursor(target, target_row == anchor_row ? anchor_y : 0);
     }
     text->setUpdatesEnabled(true);
     applying = false;
@@ -705,21 +705,21 @@ bool LogFileViewer::eventFilter(QObject* object, QEvent* event) {
         if (wheel->modifiers() & (Qt::ControlModifier | Qt::AltModifier)) {
             return QWidget::eventFilter(object, event);
         }
-        const int pixels = !wheel->pixelDelta().isNull()
-                               ? wheel->pixelDelta().y()
-                               : wheel->angleDelta().y() * QApplication::wheelScrollLines() *
-                                     text->fontMetrics().height() / 120;
-        if (pixels == 0) {
+        const qreal lines = !wheel->pixelDelta().isNull()
+                                ? static_cast<qreal>(wheel->pixelDelta().y()) /
+                                      std::max(1, text->fontMetrics().lineSpacing())
+                                : static_cast<qreal>(wheel->angleDelta().y()) / 120 *
+                                      QApplication::wheelScrollLines();
+        if (lines == 0) {
             return QWidget::eventFilter(object, event);
         }
         SetAutoScroll(false);
         QScrollBar* native_scroll = text->verticalScrollBar();
-        wheel_remainder +=
-            static_cast<qreal>(pixels) / std::max(1, text->fontMetrics().lineSpacing());
+        wheel_remainder += lines;
         const int steps = static_cast<int>(wheel_remainder);
         wheel_remainder -= steps;
         const int next = native_scroll->value() - steps;
-        if (pixels < 0 && next >= native_scroll->maximum() &&
+        if (lines < 0 && next >= native_scroll->maximum() &&
             cached_first + cached_lines.size() >= rows) {
             SetAutoScroll(true);
             return true;

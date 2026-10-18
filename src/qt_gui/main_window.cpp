@@ -1023,14 +1023,7 @@ void MainWindow::CreateConnects() {
 void MainWindow::PrepareLogFile(const QString& work_dir, const QStringList& args) {
     QString user_dir = QDir(work_dir).absoluteFilePath(Common::FS::PORTABLE_DIR);
     if (!QFileInfo(user_dir).isDir()) {
-#ifdef _WIN32
-        user_dir = qEnvironmentVariable("APPDATA") + "/shadPS4";
-#elif defined(__APPLE__)
-        user_dir = QDir::homePath() + "/Library/Application Support/shadPS4";
-#else
-        const QString xdg = qEnvironmentVariable("XDG_DATA_HOME");
-        user_dir = (xdg.isEmpty() ? QDir::homePath() + "/.local/share" : xdg) + "/shadPS4";
-#endif
+        Common::FS::PathToQString(user_dir, Common::FS::GetUserPath(Common::FS::PathType::UserDir));
     }
 
     QString game_path;
