@@ -835,6 +835,31 @@ void MainWindow::CreateConnects() {
         panelDialog->exec();
     });
 
+    // Update files.json (Patches)
+    connect(ui->updateFilesJsonAct, &QAction::triggered, this, [this]() {
+        QDir patchesDir(Common::FS::GetUserPath(Common::FS::PathType::PatchesDir));
+
+        if (!patchesDir.exists()) {
+            QMessageBox::warning(this, tr("Error"), tr("Patches directory does not exist."));
+            return;
+        }
+        const QString empty;
+        CheatsPatches cheatsPatches(m_gui_settings, m_ipc_client, empty, empty, empty, empty, empty,
+                                    nullptr);
+        const QStringList folders = patchesDir.entryList(QDir::Dirs | QDir::NoDotAndDotDot);
+        int processed = 0;
+        for (const QString& folder : folders) {
+            QDir subDir(patchesDir.filePath(folder));
+            const QStringList xmlFiles = subDir.entryList(QStringList() << "*.xml", QDir::Files);
+            if (xmlFiles.isEmpty())
+                continue;
+            cheatsPatches.createFilesJson(folder);
+            ++processed;
+        }
+        QMessageBox::information(this, tr("Update files.json"),
+                                 tr("Processing complete.\nFolders processed: %1").arg(processed));
+    });
+
     // Dump game list.
     connect(ui->dumpGameListAct, &QAction::triggered, this, [&] {
         QString filePath = qApp->applicationDirPath().append("/GameList.txt");
@@ -1430,6 +1455,7 @@ void MainWindow::SetUiIcons(bool isWhite) {
 #endif
     ui->downloadCheatsPatchesAct->setIcon(
         RecolorIcon(ui->downloadCheatsPatchesAct->icon(), isWhite));
+    ui->updateFilesJsonAct->setIcon(RecolorIcon(ui->updateFilesJsonAct->icon(), isWhite));
     ui->dumpGameListAct->setIcon(RecolorIcon(ui->dumpGameListAct->icon(), isWhite));
     ui->aboutAct->setIcon(RecolorIcon(ui->aboutAct->icon(), isWhite));
     ui->setlistModeListAct->setIcon(RecolorIcon(ui->setlistModeListAct->icon(), isWhite));
