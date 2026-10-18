@@ -985,7 +985,7 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
 
             query.addQueryItem(
                 "title", QString("%1 - %2").arg(QString::fromStdString(m_games[itemID].serial),
-                                                (m_games[itemID].name)));
+                                                QString::fromStdString(m_games[itemID].name)));
             add_q_item("template", "game_compatibility.yml");
             add_q_item("game-name", m_games[itemID].name);
             add_q_item("game-serial", m_games[itemID].serial);
@@ -1178,16 +1178,22 @@ bool GuiContextMenus::createShortcutLinux(const QString& linkPath, const std::st
         return false;
     }
 
+    QString exePath = QCoreApplication::applicationFilePath();
+#ifdef Q_OS_LINUX
+    // Inside an AppImage the binary runs from a temporary mount that is gone once it exits
+    if (const QString appImage = qEnvironmentVariable("APPIMAGE"); !appImage.isEmpty())
+        exePath = appImage;
+#endif
+
     QTextStream out(&shortcutFile);
     out << "[Desktop Entry]\n";
     out << "Version=1.0\n";
     out << "Name=" << QString::fromStdString(name) << "\n";
     if (emuPath == "") {
-        out << "Exec=" << QCoreApplication::applicationFilePath() << " -d -g" << " \"" << targetPath
-            << "\"\n";
+        out << "Exec=\"" << exePath << "\" -d -g" << " \"" << targetPath << "\"\n";
     } else {
-        out << "Exec=" << QCoreApplication::applicationFilePath() << " -e" << " \"" << emuPath
-            << "\"" << " -g" << " \"" << targetPath << "\"\n";
+        out << "Exec=\"" << exePath << "\" -e" << " \"" << emuPath << "\"" << " -g" << " \""
+            << targetPath << "\"\n";
     }
     out << "Icon=" << iconPath << "\n";
     out << "Terminal=false\n";
