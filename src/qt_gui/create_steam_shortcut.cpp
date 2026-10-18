@@ -309,6 +309,10 @@ void SteamShortcut::requestAddToSteam(const GameInfo& selectedInfo, QString emuP
     QString exePath = QCoreApplication::applicationFilePath();
 #ifdef Q_OS_WIN
     exePath = exePath.replace("/", "\\");
+#elif defined(Q_OS_LINUX)
+    // Inside an AppImage the binary runs from a temporary mount that is gone once it exits
+    if (const QString appImage = qEnvironmentVariable("APPIMAGE"); !appImage.isEmpty())
+        exePath = appImage;
 #endif
     QString startDir = QFileInfo(exePath).absolutePath();
 

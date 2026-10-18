@@ -34,6 +34,7 @@ public:
     QAction* setlistElfAct;
     QAction* gameInstallPathAct;
     QAction* downloadCheatsPatchesAct;
+    QAction* updateFilesJsonAct;
     QAction* dumpGameListAct;
     QAction* trophyViewerAct;
     QAction* skylanderPortalAction;
@@ -157,6 +158,9 @@ public:
         downloadCheatsPatchesAct = new QAction(MainWindow);
         downloadCheatsPatchesAct->setObjectName("downloadCheatsPatchesAct");
         downloadCheatsPatchesAct->setIcon(QIcon(":images/update_icon.png"));
+        updateFilesJsonAct = new QAction(MainWindow);
+        updateFilesJsonAct->setObjectName("updateFilesJsonAct");
+        updateFilesJsonAct->setIcon(QIcon(":images/restart_game_icon.png"));
         dumpGameListAct = new QAction(MainWindow);
         dumpGameListAct->setObjectName("dumpGameList");
         dumpGameListAct->setIcon(QIcon(":images/dump_icon.png"));
@@ -374,6 +378,7 @@ public:
         menuSettings->addAction(userManager);
         menuSettings->addAction(menuUtils->menuAction());
         menuUtils->addAction(downloadCheatsPatchesAct);
+        menuUtils->addAction(updateFilesJsonAct);
         menuUtils->addAction(dumpGameListAct);
         menuUtils->addAction(trophyViewerAct);
         menuUtils->addAction(skylanderPortalAction);
@@ -441,6 +446,8 @@ public:
             QCoreApplication::translate("MainWindow", "Game Install Directory", nullptr));
         downloadCheatsPatchesAct->setText(
             QCoreApplication::translate("MainWindow", "Download Cheats/Patches", nullptr));
+        updateFilesJsonAct->setText(
+            QCoreApplication::translate("MainWindow", "Update files.json (Patches)", nullptr));
         dumpGameListAct->setText(
             QCoreApplication::translate("MainWindow", "Dump Game List", nullptr));
         trophyViewerAct->setText(
