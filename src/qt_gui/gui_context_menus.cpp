@@ -119,15 +119,15 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
     launchMenu->addAction(launchWithGlobalConfig);
     launchMenu->addAction(launchCleanly);
 
-    // "Open Folder..." submenu
-    QMenu* openFolderMenu = new QMenu(tr("Open Folder..."), widget);
-    QAction* openGameFolder = new QAction(tr("Open Game Folder"), widget);
-    QAction* openUpdateFolder = new QAction(tr("Open Update Folder"), widget);
-    QAction* openModsFolder = new QAction(tr("Open Mods Folder"), widget);
-    QAction* open_dlc_folder = new QAction(tr("Open DLC Folder"), widget);
-    QMenu* openSaveDataMenu = new QMenu(tr("Open Save Data Folder"), widget);
+    // "Open Path..." submenu
+    QMenu* openFolderMenu = new QMenu(tr("Open Path..."), widget);
+    QAction* openGameFolder = new QAction(tr("Open Game Path"), widget);
+    QAction* openUpdateFolder = new QAction(tr("Open Update Path"), widget);
+    QAction* openModsFolder = new QAction(tr("Open Mods Path"), widget);
+    QAction* open_dlc_folder = new QAction(tr("Open DLC Path"), widget);
+    QMenu* openSaveDataMenu = new QMenu(tr("Open Save Data Path"), widget);
 
-    QAction* openLogFolder = new QAction(tr("Open Log Folder"), widget);
+    QAction* openLogFolder = new QAction(tr("Open Log Path"), widget);
 
     const auto stem_path = Core::FileSys::StripZArchiveExtension(m_games[itemID].path);
     std::optional<std::filesystem::path> update_root;
@@ -499,7 +499,7 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
     if (selected == openGameFolder) {
         const auto game_root = Core::FileSys::ResolveGameRoot(m_games[itemID].path);
         if (!game_root) {
-            QMessageBox::critical(widget, tr("Error"), tr("This game has no game folder to open!"));
+            QMessageBox::critical(widget, tr("Error"), tr("This game has no game path to open!"));
             return changedFavorite;
         }
         ShowInFileManager(*game_root, widget);
@@ -509,7 +509,7 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
         const auto current_update_root = Core::FileSys::ResolveGameRoot(*update_root);
         if (!current_update_root) {
             QMessageBox::critical(nullptr, tr("Error"),
-                                  tr("This game has no update folder to open!"));
+                                  tr("This game has no update path to open!"));
             return changedFavorite;
         }
         ShowInFileManager(*current_update_root, widget);
@@ -518,8 +518,7 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
     if (selected == openModsFolder && mods_root) {
         const auto current_mods_root = Core::FileSys::ResolveGameRoot(mods_path);
         if (!current_mods_root) {
-            QMessageBox::critical(nullptr, tr("Error"),
-                                  tr("This game has no mods folder to open!"));
+            QMessageBox::critical(nullptr, tr("Error"), tr("This game has no mods path to open!"));
             return changedFavorite;
         }
         ShowInFileManager(*current_mods_root, widget);
@@ -528,7 +527,7 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
     if (selected == open_dlc_folder) {
         std::error_code ec;
         if (!std::filesystem::is_directory(dlc_root, ec)) {
-            QMessageBox::critical(widget, tr("Error"), tr("This game has no DLC folder to open!"));
+            QMessageBox::critical(widget, tr("Error"), tr("This game has no DLC path to open!"));
             return changedFavorite;
         }
         ShowInFileManager(dlc_root, widget);
@@ -540,7 +539,7 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
             if (!std::filesystem::exists(EmulatorSettings.GetHomeDir() / std::to_string(user_id) /
                                          "savedata" / m_games[itemID].save_dir)) {
                 QMessageBox::critical(nullptr, tr("Error"),
-                                      QString(tr("This game has no save folder to open!")));
+                                      QString(tr("This game has no save path to open!")));
             } else {
                 QString saveDataPath;
                 Common::FS::PathToQString(saveDataPath, EmulatorSettings.GetHomeDir() /
@@ -594,7 +593,7 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
 
                 QPushButton* okButton = msgBox.addButton(QMessageBox::Ok);
                 QPushButton* openFolderButton =
-                    msgBox.addButton(tr("Open Log Folder"), QMessageBox::ActionRole);
+                    msgBox.addButton(tr("Open Log Path"), QMessageBox::ActionRole);
 
                 msgBox.exec();
 
