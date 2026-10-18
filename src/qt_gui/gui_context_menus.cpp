@@ -124,6 +124,7 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
     QAction* openGameFolder = new QAction(tr("Open Game Folder"), widget);
     QAction* openUpdateFolder = new QAction(tr("Open Update Folder"), widget);
     QAction* openModsFolder = new QAction(tr("Open Mods Folder"), widget);
+    QAction* open_dlc_folder = new QAction(tr("Open DLC Folder"), widget);
     QMenu* openSaveDataMenu = new QMenu(tr("Open Save Data Folder"), widget);
 
     QAction* openLogFolder = new QAction(tr("Open Log Folder"), widget);
@@ -142,6 +143,8 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
     auto mods_path = stem_path;
     mods_path += "-mods";
     const auto mods_root = Core::FileSys::ResolveGameRoot(mods_path);
+    const auto dlc_root = EmulatorSettings.GetAddonInstallDir() / m_games[itemID].serial;
+    std::error_code dlc_ec;
 
     openFolderMenu->addAction(openGameFolder);
     if (update_root) {
@@ -149,6 +152,9 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
     }
     if (mods_root) {
         openFolderMenu->addAction(openModsFolder);
+    }
+    if (std::filesystem::is_directory(dlc_root, dlc_ec)) {
+        openFolderMenu->addAction(open_dlc_folder);
     }
     openFolderMenu->addAction(openLogFolder);
     openFolderMenu->addMenu(openSaveDataMenu);
@@ -517,6 +523,15 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
             return changedFavorite;
         }
         ShowInFileManager(*current_mods_root, widget);
+    }
+
+    if (selected == open_dlc_folder) {
+        std::error_code ec;
+        if (!std::filesystem::is_directory(dlc_root, ec)) {
+            QMessageBox::critical(widget, tr("Error"), tr("This game has no DLC folder to open!"));
+            return changedFavorite;
+        }
+        ShowInFileManager(dlc_root, widget);
     }
 
     for (int i = 0; const auto& action : openSaveActionList) {
