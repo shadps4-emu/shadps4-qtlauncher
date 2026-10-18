@@ -2106,6 +2106,29 @@
           </layout>
          </widget>
         </item>
+        <item>
+         <widget class="QGroupBox" name="fontsGroupBox">
+          <property name="title">
+           <string>PS4 Fonts Path</string>
+          </property>
+          <layout class="QHBoxLayout" name="fontsLayout">
+           <item>
+            <widget class="QLineEdit" name="fontsPath">
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="browse_fonts">
+             <property name="text">
+              <string>Browse</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
        </layout>
       </widget>
      </widget>

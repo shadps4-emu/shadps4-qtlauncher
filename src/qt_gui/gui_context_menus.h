@@ -3,6 +3,7 @@
 
 #pragma once
 
+#include <filesystem>
 #include <functional>
 
 #include <QClipboard>
@@ -33,6 +34,8 @@ public:
 
 private:
     SteamShortcut m_steam_shortcut{nullptr};
+
+    void ShowInFileManager(const std::filesystem::path& path, QWidget* parent);
 
     void requestShortcut(const GameInfo& selectedInfo, QString emuPath = "");
 
