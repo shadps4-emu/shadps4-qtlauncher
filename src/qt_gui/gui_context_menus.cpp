@@ -31,6 +31,60 @@
 #include <wrl/client.h>
 #endif
 
+void GuiContextMenus::ShowInFileManager(const std::filesystem::path& path, QWidget* parent) {
+    QString file_path;
+    Common::FS::PathToQString(file_path, path);
+    const auto fallback = [parent, file_path]() {
+        if (!QDesktopServices::openUrl(QUrl::fromLocalFile(QFileInfo(file_path).absolutePath()))) {
+            QMessageBox::critical(parent, tr("Error"),
+                                  tr("Unable to open the file manager for:\n%1").arg(file_path));
+        }
+    };
+
+#ifdef Q_OS_WIN
+    const HRESULT initialized = CoInitialize(nullptr);
+    if (SUCCEEDED(initialized)) {
+        const auto native_path =
+            QDir::toNativeSeparators(QFileInfo(file_path).absoluteFilePath()).toStdWString();
+        auto* item = ILCreateFromPathW(native_path.c_str());
+        const bool opened = item && SUCCEEDED(SHOpenFolderAndSelectItems(item, 0, nullptr, 0));
+        CoTaskMemFree(item);
+        CoUninitialize();
+        if (opened) {
+            return;
+        }
+    }
+#elif defined(Q_OS_MAC)
+    if (QProcess::startDetached("open", {"-R", file_path})) {
+        return;
+    }
+#elif defined(Q_OS_LINUX)
+    auto* process = new QProcess(parent);
+    connect(process, &QProcess::finished, process, [process, fallback](int exit_code) {
+        if (exit_code != 0 || process->exitStatus() != QProcess::NormalExit) {
+            fallback();
+        }
+        process->deleteLater();
+    });
+    connect(process, &QProcess::errorOccurred, process,
+            [process, fallback](QProcess::ProcessError error) {
+                if (error == QProcess::FailedToStart) {
+                    fallback();
+                    process->deleteLater();
+                }
+            });
+    const auto url = QUrl::fromLocalFile(QFileInfo(file_path).absoluteFilePath())
+                         .toString(QUrl::FullyEncoded)
+                         .replace(",", "%2C");
+    process->start("dbus-send",
+                   {"--session", "--print-reply", "--reply-timeout=3000",
+                    "--dest=org.freedesktop.FileManager1", "/org/freedesktop/FileManager1",
+                    "org.freedesktop.FileManager1.ShowItems", "array:string:" + url, "string:"});
+    return;
+#endif
+    fallback();
+}
+
 int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_games,
                                      std::shared_ptr<CompatibilityInfoClass> m_compat_info,
                                      std::shared_ptr<gui_settings> settings,
@@ -65,16 +119,43 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
     launchMenu->addAction(launchWithGlobalConfig);
     launchMenu->addAction(launchCleanly);
 
-    // "Open Folder..." submenu
-    QMenu* openFolderMenu = new QMenu(tr("Open Folder..."), widget);
-    QAction* openGameFolder = new QAction(tr("Open Game Folder"), widget);
-    QAction* openUpdateFolder = new QAction(tr("Open Update Folder"), widget);
-    QMenu* openSaveDataMenu = new QMenu(tr("Open Save Data Folder"), widget);
+    // "Open Path..." submenu
+    QMenu* openFolderMenu = new QMenu(tr("Open Path..."), widget);
+    QAction* openGameFolder = new QAction(tr("Open Game Path"), widget);
+    QAction* openUpdateFolder = new QAction(tr("Open Update Path"), widget);
+    QAction* openModsFolder = new QAction(tr("Open Mods Path"), widget);
+    QAction* open_dlc_folder = new QAction(tr("Open DLC Path"), widget);
+    QMenu* openSaveDataMenu = new QMenu(tr("Open Save Data Path"), widget);
 
-    QAction* openLogFolder = new QAction(tr("Open Log Folder"), widget);
+    QAction* openLogFolder = new QAction(tr("Open Log Path"), widget);
+
+    const auto stem_path = Core::FileSys::StripZArchiveExtension(m_games[itemID].path);
+    std::optional<std::filesystem::path> update_root;
+    for (const auto& suffix : {"-UPDATE", "-patch"}) {
+        std::filesystem::path overlay = stem_path;
+        overlay += suffix;
+        if (const auto resolved = Core::FileSys::ResolveGameRoot(overlay)) {
+            update_root = *resolved;
+            break;
+        }
+    }
+
+    auto mods_path = stem_path;
+    mods_path += "-mods";
+    const auto mods_root = Core::FileSys::ResolveGameRoot(mods_path);
+    const auto dlc_root = EmulatorSettings.GetAddonInstallDir() / m_games[itemID].serial;
+    std::error_code dlc_ec;
 
     openFolderMenu->addAction(openGameFolder);
-    openFolderMenu->addAction(openUpdateFolder);
+    if (update_root) {
+        openFolderMenu->addAction(openUpdateFolder);
+    }
+    if (mods_root) {
+        openFolderMenu->addAction(openModsFolder);
+    }
+    if (std::filesystem::is_directory(dlc_root, dlc_ec)) {
+        openFolderMenu->addAction(open_dlc_folder);
+    }
     openFolderMenu->addAction(openLogFolder);
     openFolderMenu->addMenu(openSaveDataMenu);
 
@@ -416,38 +497,40 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
     }
 
     if (selected == openGameFolder) {
-        // A ".zar" game is a file, not a directory, so open its parent folder.
-        const auto game_path = m_games[itemID].path;
-        const auto open_target =
-            Core::FileSys::IsZArchiveFile(game_path) ? game_path.parent_path() : game_path;
-        QString folderPath;
-        Common::FS::PathToQString(folderPath, open_target);
-        QDesktopServices::openUrl(QUrl::fromLocalFile(folderPath));
+        const auto game_root = Core::FileSys::ResolveGameRoot(m_games[itemID].path);
+        if (!game_root) {
+            QMessageBox::critical(widget, tr("Error"), tr("This game has no game path to open!"));
+            return changedFavorite;
+        }
+        ShowInFileManager(*game_root, widget);
     }
 
-    if (selected == openUpdateFolder) {
-        const auto stem_path = Core::FileSys::StripZArchiveExtension(m_games[itemID].path);
-        std::optional<std::filesystem::path> update_root;
-        for (const auto& suffix : {"-UPDATE", "-patch"}) {
-            std::filesystem::path overlay = stem_path;
-            overlay += suffix;
-            if (const auto resolved = Core::FileSys::ResolveGameRoot(overlay)) {
-                update_root = *resolved;
-                break;
-            }
-        }
-
-        if (update_root.has_value()) {
-            if (Core::FileSys::IsZArchiveFile(*update_root)) {
-                update_root = update_root->parent_path();
-            }
-            QString open_update_path;
-            Common::FS::PathToQString(open_update_path, *update_root);
-            QDesktopServices::openUrl(QUrl::fromLocalFile(open_update_path));
-        } else {
+    if (selected == openUpdateFolder && update_root) {
+        const auto current_update_root = Core::FileSys::ResolveGameRoot(*update_root);
+        if (!current_update_root) {
             QMessageBox::critical(nullptr, tr("Error"),
-                                  QString(tr("This game has no update folder to open!")));
+                                  tr("This game has no update path to open!"));
+            return changedFavorite;
         }
+        ShowInFileManager(*current_update_root, widget);
+    }
+
+    if (selected == openModsFolder && mods_root) {
+        const auto current_mods_root = Core::FileSys::ResolveGameRoot(mods_path);
+        if (!current_mods_root) {
+            QMessageBox::critical(nullptr, tr("Error"), tr("This game has no mods path to open!"));
+            return changedFavorite;
+        }
+        ShowInFileManager(*current_mods_root, widget);
+    }
+
+    if (selected == open_dlc_folder) {
+        std::error_code ec;
+        if (!std::filesystem::is_directory(dlc_root, ec)) {
+            QMessageBox::critical(widget, tr("Error"), tr("This game has no DLC path to open!"));
+            return changedFavorite;
+        }
+        ShowInFileManager(dlc_root, widget);
     }
 
     for (int i = 0; const auto& action : openSaveActionList) {
@@ -456,7 +539,7 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
             if (!std::filesystem::exists(EmulatorSettings.GetHomeDir() / std::to_string(user_id) /
                                          "savedata" / m_games[itemID].save_dir)) {
                 QMessageBox::critical(nullptr, tr("Error"),
-                                      QString(tr("This game has no save folder to open!")));
+                                      QString(tr("This game has no save path to open!")));
             } else {
                 QString saveDataPath;
                 Common::FS::PathToQString(saveDataPath, EmulatorSettings.GetHomeDir() /
@@ -510,7 +593,7 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
 
                 QPushButton* okButton = msgBox.addButton(QMessageBox::Ok);
                 QPushButton* openFolderButton =
-                    msgBox.addButton(tr("Open Log Folder"), QMessageBox::ActionRole);
+                    msgBox.addButton(tr("Open Log Path"), QMessageBox::ActionRole);
 
                 msgBox.exec();
 
