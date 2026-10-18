@@ -74,9 +74,28 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
 
     QAction* openLogFolder = new QAction(tr("Open Log Folder"), widget);
 
+    const auto stem_path = Core::FileSys::StripZArchiveExtension(m_games[itemID].path);
+    std::optional<std::filesystem::path> update_root;
+    for (const auto& suffix : {"-UPDATE", "-patch"}) {
+        std::filesystem::path overlay = stem_path;
+        overlay += suffix;
+        if (const auto resolved = Core::FileSys::ResolveGameRoot(overlay)) {
+            update_root = *resolved;
+            break;
+        }
+    }
+
+    auto mods_path = stem_path;
+    mods_path += "-mods";
+    const auto mods_root = Core::FileSys::ResolveGameRoot(mods_path);
+
     openFolderMenu->addAction(openGameFolder);
-    openFolderMenu->addAction(openUpdateFolder);
-    openFolderMenu->addAction(openModsFolder);
+    if (update_root) {
+        openFolderMenu->addAction(openUpdateFolder);
+    }
+    if (mods_root) {
+        openFolderMenu->addAction(openModsFolder);
+    }
     openFolderMenu->addAction(openLogFolder);
     openFolderMenu->addMenu(openSaveDataMenu);
 
@@ -427,45 +446,20 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
         QDesktopServices::openUrl(QUrl::fromLocalFile(folderPath));
     }
 
-    if (selected == openUpdateFolder) {
-        const auto stem_path = Core::FileSys::StripZArchiveExtension(m_games[itemID].path);
-        std::optional<std::filesystem::path> update_root;
-        for (const auto& suffix : {"-UPDATE", "-patch"}) {
-            std::filesystem::path overlay = stem_path;
-            overlay += suffix;
-            if (const auto resolved = Core::FileSys::ResolveGameRoot(overlay)) {
-                update_root = *resolved;
-                break;
-            }
-        }
-
-        if (update_root.has_value()) {
-            if (Core::FileSys::IsZArchiveFile(*update_root)) {
-                update_root = update_root->parent_path();
-            }
-            QString open_update_path;
-            Common::FS::PathToQString(open_update_path, *update_root);
-            QDesktopServices::openUrl(QUrl::fromLocalFile(open_update_path));
-        } else {
-            QMessageBox::critical(nullptr, tr("Error"),
-                                  QString(tr("This game has no update folder to open!")));
-        }
+    if (selected == openUpdateFolder && update_root) {
+        const auto open_target =
+            Core::FileSys::IsZArchiveFile(*update_root) ? update_root->parent_path() : *update_root;
+        QString folder_path;
+        Common::FS::PathToQString(folder_path, open_target);
+        QDesktopServices::openUrl(QUrl::fromLocalFile(folder_path));
     }
 
-    if (selected == openModsFolder) {
-        auto mods_path = Core::FileSys::StripZArchiveExtension(m_games[itemID].path);
-        mods_path += "-mods";
-        if (auto mods_root = Core::FileSys::ResolveGameRoot(mods_path)) {
-            if (Core::FileSys::IsZArchiveFile(*mods_root)) {
-                mods_root = mods_root->parent_path();
-            }
-            QString folder_path;
-            Common::FS::PathToQString(folder_path, *mods_root);
-            QDesktopServices::openUrl(QUrl::fromLocalFile(folder_path));
-        } else {
-            QMessageBox::critical(nullptr, tr("Error"),
-                                  tr("This game has no mods folder to open!"));
-        }
+    if (selected == openModsFolder && mods_root) {
+        const auto open_target =
+            Core::FileSys::IsZArchiveFile(*mods_root) ? mods_root->parent_path() : *mods_root;
+        QString folder_path;
+        Common::FS::PathToQString(folder_path, open_target);
+        QDesktopServices::openUrl(QUrl::fromLocalFile(folder_path));
     }
 
     for (int i = 0; const auto& action : openSaveActionList) {
