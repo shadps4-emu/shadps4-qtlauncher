@@ -62,11 +62,13 @@ public:
 private:
     void onStderr();
     void onStdout();
+    void PrintOutput(QByteArray data);
     void onProcessClosed();
     void writeLine(const QString& text);
 
     QProcess* process = nullptr;
     QByteArray buffer;
+    QByteArray stdout_buffer;
     bool pendingRestart = false;
 
     ParsingState parsingState;
