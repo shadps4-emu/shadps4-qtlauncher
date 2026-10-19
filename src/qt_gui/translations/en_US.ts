@@ -1045,22 +1045,6 @@ Please enter your keys and save them.</source>
         <translation>Trophy Viewer</translation>
     </message>
     <message>
-        <source>Open Folder...</source>
-        <translation>Open Folder...</translation>
-    </message>
-    <message>
-        <source>Open Game Folder</source>
-        <translation>Open Game Folder</translation>
-    </message>
-    <message>
-        <source>Open Save Data Folder</source>
-        <translation>Open Save Data Folder</translation>
-    </message>
-    <message>
-        <source>Open Log Folder</source>
-        <translation>Open Log Folder</translation>
-    </message>
-    <message>
         <source>Copy info...</source>
         <translation>Copy info...</translation>
     </message>
@@ -1141,15 +1125,7 @@ Please enter your keys and save them.</source>
         <translation>Are you sure you want to delete %1&apos;s %2 directory?</translation>
     </message>
     <message>
-        <source>Open Update Folder</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Delete Save Data</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>This game has no update folder to open!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1289,10 +1265,6 @@ Please enter your keys and save them.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>This game has no save folder to open!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1387,6 +1359,59 @@ This game has a separate update/patch folder. Only the base game will be archive
     </message>
     <message>
         <source>Convert to ZArchive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to open the file manager for:
+%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open Path...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open Game Path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open Update Path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open Mods Path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open DLC Path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open Save Data Path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open Log Path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This game has no game path to open!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This game has no update path to open!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This game has no mods path to open!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This game has no DLC path to open!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This game has no save path to open!</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2137,6 +2162,23 @@ Select an emulator version from the right panel.</source>
         <source>Rosetta 2 is not installed.
 
 Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rosetta&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Patches directory does not exist.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Update files.json</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Processing complete.
+Folders processed: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Update files.json (Patches)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3091,6 +3133,22 @@ Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rose
     </message>
     <message>
         <source>Copy GPU Command Buffers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PS4 Fonts Path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select the fonts folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PS4 Fonts Path:\nThe folder where PS4 system fonts are loaded from.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Browse:\nBrowse for a folder to set as the fonts path.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
