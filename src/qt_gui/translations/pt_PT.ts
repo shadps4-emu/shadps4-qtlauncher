@@ -2506,7 +2506,7 @@ Por favor, instale a aplicação Rosetta 2 a partir do Terminal com o comando &a
     </message>
     <message>
       <source>Enable Debug Dumping:\nSaves the import and export symbols and file header information of the currently running PS4 program to a directory.</source>
-      <translation>Ativar Dumping da Depuração:\nArmazena os símbolos de importação, exportação e informações do cabeçalho de ficheiros do atual programa PS4 num diretório.</translation>
+      <translation>Ativar Exportação da Depuração:\nArmazena os símbolos de importação, exportação e informações do cabeçalho de ficheiros do programa da PS4 que está a ser executado num diretório.</translation>
     </message>
     <message>
       <source>Enable RenderDoc Debugging:\nIf enabled, the emulator will provide compatibility with Renderdoc to allow capture and analysis of the currently rendered frame.</source>
