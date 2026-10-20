@@ -1032,6 +1032,10 @@ Si us plau, introdueix les teves claus per desar-les.</translation>
       <source>TB</source>
       <translation>TB</translation>
     </message>
+    <message>
+      <source>Total: %1</source>
+      <translation>Total: %1</translation>
+    </message>
   </context>
   <context>
     <name>GuiContextMenus</name>
@@ -2147,6 +2151,18 @@ Selecciona una versió del panell dret.</translation>
       <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
       <translation>Fitxers executables (*.bin *.elf *.oelf *.zar)</translation>
     </message>
+    <message>
+      <source>Error</source>
+      <translation>Error</translation>
+    </message>
+    <message>
+      <source>Rosetta 2 is not installed.
+
+Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rosetta&apos;.</source>
+      <translation>Rosetta 2 no està instal·lat.
+
+Instal·la el programari Rosetta 2, si us plau, des del Terminal fent servir &apos;softwareupdate -install-rosetta&apos;.</translation>
+    </message>
   </context>
   <context>
     <name>QObject</name>
@@ -2316,10 +2332,6 @@ Selecciona una versió del panell dret.</translation>
     <message>
       <source>Collect Shaders</source>
       <translation>Recopila Shaders</translation>
-    </message>
-    <message>
-      <source>Copy GPU Buffers</source>
-      <translation>Copia la memòria intermèdia de la GPU</translation>
     </message>
     <message>
       <source>Host Debug Markers</source>
@@ -2746,10 +2758,6 @@ Selecciona una versió del panell dret.</translation>
       <translation>Activa el mode consola de desenvolupador</translation>
     </message>
     <message>
-      <source>Set &quot;Network Connected&quot; to True</source>
-      <translation>Estableix la connexió a xarxa com a certa</translation>
-    </message>
-    <message>
       <source>Miscellaneous</source>
       <translation>Miscel·lània</translation>
     </message>
@@ -3058,10 +3066,6 @@ Selecciona una versió del panell dret.</translation>
       <translation>Activa shadNet</translation>
     </message>
     <message>
-      <source>ShadNet</source>
-      <translation>ShadNet</translation>
-    </message>
-    <message>
       <source>Server</source>
       <translation>Servidor</translation>
     </message>
@@ -3082,12 +3086,36 @@ Selecciona una versió del panell dret.</translation>
       <translation>shadNet:\nLa compatibilitat és molt limitada ara mateix.\nEt pots registrar a https://www.shadps4.net/shadnet/register/.</translation>
     </message>
     <message>
-      <source>Red Zone Protection</source>
-      <translation>Protecció de la zona vermella</translation>
+      <source>Red Zone CPU Patches</source>
+      <translation>Correccions de la zona vermella del processador</translation>
     </message>
     <message>
-      <source>Static Patching</source>
-      <translation>Correcció estàtica</translation>
+      <source>Enable Red Zone CPU Patches</source>
+      <translation>Activa les correccions de la zona vermella del processador</translation>
+    </message>
+    <message>
+      <source>Network</source>
+      <translation>Xarxa</translation>
+    </message>
+    <message>
+      <source>Network Settings</source>
+      <translation>Configuració de xarxa</translation>
+    </message>
+    <message>
+      <source>Set Network Connected Status as True</source>
+      <translation>Estableix l'estat de xarxa connectada com a cert</translation>
+    </message>
+    <message>
+      <source>Disable HTTPS</source>
+      <translation>Deshabilita HTTPS</translation>
+    </message>
+    <message>
+      <source>P2P Port</source>
+      <translation>Port P2P</translation>
+    </message>
+    <message>
+      <source>Copy GPU Command Buffers</source>
+      <translation>Copia les comandes de la memòria intermèdia de la targeta gràfica</translation>
     </message>
   </context>
   <context>

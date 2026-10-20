@@ -1031,6 +1031,10 @@ Por favor, introduza as suas chaves e guarde-as.</translation>
       <source>TB</source>
       <translation>TB</translation>
     </message>
+    <message>
+      <source>Total: %1</source>
+      <translation>Total: %1</translation>
+    </message>
   </context>
   <context>
     <name>GuiContextMenus</name>
@@ -2146,6 +2150,18 @@ Selecione uma versão do emulador no painel direito.</translation>
       <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
       <translation>ficheiros executáveis (*.bin *.elf *.oelf *.zar)</translation>
     </message>
+    <message>
+      <source>Error</source>
+      <translation>Erro</translation>
+    </message>
+    <message>
+      <source>Rosetta 2 is not installed.
+
+Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rosetta&apos;.</source>
+      <translation>A aplicação Rosetta 2 não está instalada.
+
+Por favor, instale a aplicação Rosetta 2 a partir do Terminal com o comando &apos;softwareupdate --install-rosetta&apos;.</translation>
+    </message>
   </context>
   <context>
     <name>QObject</name>
@@ -2315,10 +2331,6 @@ Selecione uma versão do emulador no painel direito.</translation>
     <message>
       <source>Collect Shaders</source>
       <translation>Recolher Shaders</translation>
-    </message>
-    <message>
-      <source>Copy GPU Buffers</source>
-      <translation>Copiar Buffers da GPU</translation>
     </message>
     <message>
       <source>Host Debug Markers</source>
@@ -2494,7 +2506,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Enable Debug Dumping:\nSaves the import and export symbols and file header information of the currently running PS4 program to a directory.</source>
-      <translation>Ativar Dumping da Depuração:\nArmazena os símbolos de importação, exportação e informações do cabeçalho de ficheiros do atual programa PS4 num diretório.</translation>
+      <translation>Ativar Exportação da Depuração:\nArmazena os símbolos de importação, exportação e informações do cabeçalho de ficheiros do programa da PS4 que está a ser executado num diretório.</translation>
     </message>
     <message>
       <source>Enable RenderDoc Debugging:\nIf enabled, the emulator will provide compatibility with Renderdoc to allow capture and analysis of the currently rendered frame.</source>
@@ -2744,10 +2756,6 @@ Alterar este valor pode ter efeitos adversos, como aumentar a velocidade do jogo
     <message>
       <source>Enable Devkit Console Mode</source>
       <translation>Ativar Modo de Consola de Programador</translation>
-    </message>
-    <message>
-      <source>Set &quot;Network Connected&quot; to True</source>
-      <translation>Definir &quot;Ligação de Rede&quot; como Verdadeiro</translation>
     </message>
     <message>
       <source>Miscellaneous</source>
@@ -3059,10 +3067,6 @@ Atualmente provoca instabilidade numa abundância de jogos testados.</translatio
       <translation>Ativar a shadNet</translation>
     </message>
     <message>
-      <source>ShadNet</source>
-      <translation>ShadNet</translation>
-    </message>
-    <message>
       <source>Server</source>
       <translation>Servidor</translation>
     </message>
@@ -3083,12 +3087,36 @@ Atualmente provoca instabilidade numa abundância de jogos testados.</translatio
       <translation>shadNet:\nA compatibilidade é reduzida no momento.\nPode registar-se em https://www.shadps4.net/shadnet/register/.</translation>
     </message>
     <message>
-      <source>Red Zone Protection</source>
-      <translation>Proteção da Zona Vermelha</translation>
+      <source>Red Zone CPU Patches</source>
+      <translation>Correções da Zona Vermelha da CPU</translation>
     </message>
     <message>
-      <source>Static Patching</source>
-      <translation>Correção Estática</translation>
+      <source>Enable Red Zone CPU Patches</source>
+      <translation>Ativar Correções da Zona Vermelha da CPU</translation>
+    </message>
+    <message>
+      <source>Network</source>
+      <translation>Rede</translation>
+    </message>
+    <message>
+      <source>Network Settings</source>
+      <translation>Definições de Rede</translation>
+    </message>
+    <message>
+      <source>Set Network Connected Status as True</source>
+      <translation>Definir Estado de Conexão da Rede como Verdadeiro</translation>
+    </message>
+    <message>
+      <source>Disable HTTPS</source>
+      <translation>Desativar HTTPS</translation>
+    </message>
+    <message>
+      <source>P2P Port</source>
+      <translation>Porta P2P</translation>
+    </message>
+    <message>
+      <source>Copy GPU Command Buffers</source>
+      <translation>Copiar Memórias Intermédias de Comandos da GPU</translation>
     </message>
   </context>
   <context>
