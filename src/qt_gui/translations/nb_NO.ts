@@ -2299,7 +2299,7 @@ Installer Rosetta 2 fra terminalen med «softwareupdate --install-rosetta».</tr
     </message>
     <message>
       <source>Game Folders</source>
-      <translation>Spillmapper</translation>
+      <translation>Sti for spill</translation>
     </message>
     <message>
       <source>Add...</source>
@@ -2495,7 +2495,7 @@ Installer Rosetta 2 fra terminalen med «softwareupdate --install-rosetta».</tr
     </message>
     <message>
       <source>Game Folders:\nThe list of folders to check for installed games.</source>
-      <translation>Spillmapper:\nListe over mapper som brukes for å se etter installerte spill.</translation>
+      <translation>Sti for spill:\nListe over mapper som brukes for å se etter installerte spill.</translation>
     </message>
     <message>
       <source>Add:\nAdd a folder to the list.</source>
