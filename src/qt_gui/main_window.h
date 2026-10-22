@@ -107,6 +107,7 @@ private:
     QScopedPointer<ElfViewer> m_elf_viewer;
     // Status Bar.
     QScopedPointer<QStatusBar> statusBar;
+    QLabel* statusLabel = nullptr;
 
     PSF psf;
 

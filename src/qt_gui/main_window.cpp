@@ -109,11 +109,13 @@ bool MainWindow::Init() {
     auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
     statusBar.reset(new QStatusBar);
     this->setStatusBar(statusBar.data());
+    statusLabel = new QLabel(statusBar.data());
+    statusBar->addWidget(statusLabel);
     // Update status bar
     int numGames = m_game_info->m_games.size();
     QString statusMessage = tr("Games: ") + QString::number(numGames) + " (" +
                             QString::number(duration.count()) + "ms)";
-    statusBar->showMessage(statusMessage);
+    statusLabel->setText(statusMessage);
 
     return true;
 }
@@ -1130,10 +1132,9 @@ void MainWindow::ReloadGameTable(bool force_size_refresh, const QString& force_s
     m_game_list_frame->PopulateGameList(false);
     m_game_grid_frame->clearContents();
     m_game_grid_frame->PopulateGameGrid(m_game_info->m_games, false);
-    statusBar->clearMessage();
     int numGames = m_game_info->m_games.size();
     QString statusMessage = tr("Games: ") + QString::number(numGames);
-    statusBar->showMessage(statusMessage);
+    statusLabel->setText(statusMessage);
     m_game_list_frame->ToggleColumnVisibility();
     SearchGameTable(ui->mw_searchbar->text());
 }
