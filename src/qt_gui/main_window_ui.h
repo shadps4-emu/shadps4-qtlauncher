@@ -399,7 +399,6 @@ public:
     } // setupUi
 
     void retranslateUi(QMainWindow* MainWindow) {
-        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "shadPS4", nullptr));
         addElfFolderAct->setText(
             QCoreApplication::translate("MainWindow", "Open/Add Elf Folder", nullptr));
         bootGameAct->setText(QCoreApplication::translate("MainWindow", "Boot Game", nullptr));
