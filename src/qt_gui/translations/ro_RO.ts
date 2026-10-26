@@ -1052,22 +1052,6 @@ Introduceți cheile și salvați-le.</translation>
       <translation>Vizualizator de trofee</translation>
     </message>
     <message>
-      <source>Open Folder...</source>
-      <translation>Deschide Folder...</translation>
-    </message>
-    <message>
-      <source>Open Game Folder</source>
-      <translation>Deschide Folder Joc</translation>
-    </message>
-    <message>
-      <source>Open Save Data Folder</source>
-      <translation>Deschide Folder Date Salvate</translation>
-    </message>
-    <message>
-      <source>Open Log Folder</source>
-      <translation>Deschide Folder Jurnal</translation>
-    </message>
-    <message>
       <source>Copy info...</source>
       <translation>Copiază informațiile...</translation>
     </message>
@@ -1148,16 +1132,8 @@ Introduceți cheile și salvați-le.</translation>
       <translation>Sigur doriți să ștergeți dosarul %2 al jocului %1?</translation>
     </message>
     <message>
-      <source>Open Update Folder</source>
-      <translation>Deschide dosarul actualizării</translation>
-    </message>
-    <message>
       <source>Delete Save Data</source>
       <translation>Șterge Salvare Date</translation>
-    </message>
-    <message>
-      <source>This game has no update folder to open!</source>
-      <translation>Acest joc nu are folderul de actualizări pentru a fi deschis!</translation>
     </message>
     <message>
       <source>No log file found for this game!</source>
@@ -1296,10 +1272,6 @@ Introduceți cheile și salvați-le.</translation>
       <translation>Cache-ul shaderelor</translation>
     </message>
     <message>
-      <source>This game has no save folder to open!</source>
-      <translation>Acest joc nu are niciun dosar de salvări de deschis!</translation>
-    </message>
-    <message>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
       <translation>Vizualizatorul de trofee necesită o cheie pentru trofee. O puteți introduce din Setări – Gestionare chei criptografice.</translation>
     </message>
@@ -1404,6 +1376,60 @@ Acest joc are un dosar separat pentru actualizare/patch. Va fi arhivat doar jocu
     <message>
       <source>Convert to ZArchive</source>
       <translation>Convertește în ZArchive</translation>
+    </message>
+    <message>
+      <source>Unable to open the file manager for:
+%1</source>
+      <translation type="unfinished">Unable to open the file manager for:
+%1</translation>
+    </message>
+    <message>
+      <source>Open Path...</source>
+      <translation type="unfinished">Open Path...</translation>
+    </message>
+    <message>
+      <source>Open Game Path</source>
+      <translation type="unfinished">Open Game Path</translation>
+    </message>
+    <message>
+      <source>Open Update Path</source>
+      <translation type="unfinished">Open Update Path</translation>
+    </message>
+    <message>
+      <source>Open Mods Path</source>
+      <translation type="unfinished">Open Mods Path</translation>
+    </message>
+    <message>
+      <source>Open DLC Path</source>
+      <translation type="unfinished">Open DLC Path</translation>
+    </message>
+    <message>
+      <source>Open Save Data Path</source>
+      <translation type="unfinished">Open Save Data Path</translation>
+    </message>
+    <message>
+      <source>Open Log Path</source>
+      <translation type="unfinished">Open Log Path</translation>
+    </message>
+    <message>
+      <source>This game has no game path to open!</source>
+      <translation type="unfinished">This game has no game path to open!</translation>
+    </message>
+    <message>
+      <source>This game has no update path to open!</source>
+      <translation type="unfinished">This game has no update path to open!</translation>
+    </message>
+    <message>
+      <source>This game has no mods path to open!</source>
+      <translation type="unfinished">This game has no mods path to open!</translation>
+    </message>
+    <message>
+      <source>This game has no DLC path to open!</source>
+      <translation type="unfinished">This game has no DLC path to open!</translation>
+    </message>
+    <message>
+      <source>This game has no save path to open!</source>
+      <translation type="unfinished">This game has no save path to open!</translation>
     </message>
   </context>
   <context>
@@ -2162,6 +2188,24 @@ Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rose
       <translation>Rosetta 2 nu este instalat.
 
 Instalați Rosetta 2 din Terminal cu „softwareupdate --install-rosetta”.</translation>
+    </message>
+    <message>
+      <source>Patches directory does not exist.</source>
+      <translation type="unfinished">Patches directory does not exist.</translation>
+    </message>
+    <message>
+      <source>Update files.json</source>
+      <translation type="unfinished">Update files.json</translation>
+    </message>
+    <message>
+      <source>Processing complete.
+Folders processed: %1</source>
+      <translation type="unfinished">Processing complete.
+Folders processed: %1</translation>
+    </message>
+    <message>
+      <source>Update files.json (Patches)</source>
+      <translation type="unfinished">Update files.json (Patches)</translation>
     </message>
   </context>
   <context>
@@ -3116,6 +3160,22 @@ Instalați Rosetta 2 din Terminal cu „softwareupdate --install-rosetta”.</tr
     <message>
       <source>Copy GPU Command Buffers</source>
       <translation>Copiază bufferele de comenzi GPU</translation>
+    </message>
+    <message>
+      <source>PS4 Fonts Path</source>
+      <translation type="unfinished">PS4 Fonts Path</translation>
+    </message>
+    <message>
+      <source>Select the fonts folder</source>
+      <translation type="unfinished">Select the fonts folder</translation>
+    </message>
+    <message>
+      <source>PS4 Fonts Path:\nThe folder where PS4 system fonts are loaded from.</source>
+      <translation type="unfinished">PS4 Fonts Path:\nThe folder where PS4 system fonts are loaded from.</translation>
+    </message>
+    <message>
+      <source>Browse:\nBrowse for a folder to set as the fonts path.</source>
+      <translation type="unfinished">Browse:\nBrowse for a folder to set as the fonts path.</translation>
     </message>
   </context>
   <context>
