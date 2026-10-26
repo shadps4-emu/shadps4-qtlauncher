@@ -563,7 +563,7 @@
     </message>
     <message>
       <source>Set Active Gamepad as Default</source>
-      <translation>Defina o Controle Ativo como Padrão</translation>
+      <translation>Definir Controle Ativo como Padrão</translation>
     </message>
     <message>
       <source>Remove Default Gamepad</source>
@@ -1031,6 +1031,10 @@ Por favor, digite suas chaves e salve-as.</translation>
     <message>
       <source>TB</source>
       <translation>TB</translation>
+    </message>
+    <message>
+      <source>Total: %1</source>
+      <translation>Total: %1</translation>
     </message>
   </context>
   <context>
@@ -2127,7 +2131,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Game Log</source>
-      <translation>Registro do Jogo</translation>
+      <translation>Log do Jogo</translation>
     </message>
     <message>
       <source>Show Game Log</source>
@@ -2144,6 +2148,18 @@ Selecione uma versão do emulador no painel direito.</translation>
     <message>
       <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
       <translation>arquivos inicializáveis (*.bin *.elf *.oelf *.zar)</translation>
+    </message>
+    <message>
+      <source>Error</source>
+      <translation>Erro</translation>
+    </message>
+    <message>
+      <source>Rosetta 2 is not installed.
+
+Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rosetta&apos;.</source>
+      <translation>O Rosetta 2 não está instalado.
+
+Por favor, instale o Rosetta 2 via Terminal usando &apos;softwareupdate --install-rosetta&apos;.</translation>
     </message>
   </context>
   <context>
@@ -2205,7 +2221,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>Log Type</source>
-      <translation>Tipo de Registro</translation>
+      <translation>Tipo de Log</translation>
     </message>
     <message>
       <source>Log Filter</source>
@@ -2314,10 +2330,6 @@ Selecione uma versão do emulador no painel direito.</translation>
     <message>
       <source>Collect Shaders</source>
       <translation>Coletar Shaders</translation>
-    </message>
-    <message>
-      <source>Copy GPU Buffers</source>
-      <translation>Copiar Buffers de GPU</translation>
     </message>
     <message>
       <source>Host Debug Markers</source>
@@ -2685,7 +2697,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>FSR Settings</source>
-      <translation>Configurações FSR</translation>
+      <translation>Configurações de FSR</translation>
     </message>
     <message>
       <source>Enable FSR</source>
@@ -2744,10 +2756,6 @@ Selecione uma versão do emulador no painel direito.</translation>
       <translation>Habilitar o Modo Console Devkit</translation>
     </message>
     <message>
-      <source>Set &quot;Network Connected&quot; to True</source>
-      <translation>Definir &quot;Network Connected&quot; como Verdadeiro</translation>
-    </message>
-    <message>
       <source>Miscellaneous</source>
       <translation>Diversos</translation>
     </message>
@@ -2765,7 +2773,7 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>General Frontend Settings</source>
-      <translation>Configurações gerais da Interface</translation>
+      <translation>Configurações Gerais do Frontend</translation>
     </message>
     <message>
       <source>Enable PS4 Neo Mode</source>
@@ -3056,10 +3064,6 @@ Selecione uma versão do emulador no painel direito.</translation>
       <translation>Ativar shadNet</translation>
     </message>
     <message>
-      <source>ShadNet</source>
-      <translation>ShadNet</translation>
-    </message>
-    <message>
       <source>Server</source>
       <translation>Servidor</translation>
     </message>
@@ -3080,12 +3084,36 @@ Selecione uma versão do emulador no painel direito.</translation>
       <translation>shadNet:\nA compatibilidade é muito limitada no momento.\nVocê pode se registrar em https://www.shadps4.net/shadnet/register/.</translation>
     </message>
     <message>
-      <source>Red Zone Protection</source>
-      <translation>Proteção da Zona Vermelha</translation>
+      <source>Red Zone CPU Patches</source>
+      <translation>Correções de Zona Vermelha da CPU</translation>
     </message>
     <message>
-      <source>Static Patching</source>
-      <translation>Correção Estática</translation>
+      <source>Enable Red Zone CPU Patches</source>
+      <translation>Habilitar Correções de Zona Vermelha da CPU</translation>
+    </message>
+    <message>
+      <source>Network</source>
+      <translation>Rede</translation>
+    </message>
+    <message>
+      <source>Network Settings</source>
+      <translation>Configurações de Rede</translation>
+    </message>
+    <message>
+      <source>Set Network Connected Status as True</source>
+      <translation>Definir Status de Rede Conectada como Verdadeiro</translation>
+    </message>
+    <message>
+      <source>Disable HTTPS</source>
+      <translation>Desabilitar HTTPS</translation>
+    </message>
+    <message>
+      <source>P2P Port</source>
+      <translation>Porta P2P</translation>
+    </message>
+    <message>
+      <source>Copy GPU Command Buffers</source>
+      <translation>Copiar Buffers de Comandos da GPU</translation>
     </message>
   </context>
   <context>
@@ -3289,15 +3317,15 @@ Selecione uma versão do emulador no painel direito.</translation>
     </message>
     <message>
       <source>On</source>
-      <translation>Liga</translation>
+      <translation>Ativo</translation>
     </message>
     <message>
       <source>On (%1)</source>
-      <translation>Liga (%1)</translation>
+      <translation>Ativo (%1)</translation>
     </message>
     <message>
       <source>Off</source>
-      <translation>Desliga</translation>
+      <translation>Desativado</translation>
     </message>
     <message>
       <source>ShadNet Settings - %1</source>

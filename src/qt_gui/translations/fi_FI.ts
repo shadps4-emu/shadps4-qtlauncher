@@ -1032,6 +1032,10 @@ Syötä avaimet ja tallenna ne.</translation>
       <source>TB</source>
       <translation>Tt</translation>
     </message>
+    <message>
+      <source>Total: %1</source>
+      <translation type="unfinished">Total: %1</translation>
+    </message>
   </context>
   <context>
     <name>GuiContextMenus</name>
@@ -2147,6 +2151,18 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
       <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
       <translation>Käynnistettävät tiedostot (*.bin *.elf *.oelf *.zar)</translation>
     </message>
+    <message>
+      <source>Error</source>
+      <translation type="unfinished">Error</translation>
+    </message>
+    <message>
+      <source>Rosetta 2 is not installed.
+
+Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rosetta&apos;.</source>
+      <translation type="unfinished">Rosetta 2 is not installed.
+
+Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rosetta&apos;.</translation>
+    </message>
   </context>
   <context>
     <name>QObject</name>
@@ -2316,10 +2332,6 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
     <message>
       <source>Collect Shaders</source>
       <translation>Kerää varjostimet</translation>
-    </message>
-    <message>
-      <source>Copy GPU Buffers</source>
-      <translation>Kopioi näytönohjainpuskurit</translation>
     </message>
     <message>
       <source>Host Debug Markers</source>
@@ -2746,10 +2758,6 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
       <translation>Devkit-konsolitila</translation>
     </message>
     <message>
-      <source>Set &quot;Network Connected&quot; to True</source>
-      <translation>Pakota verkkoyhteys</translation>
-    </message>
-    <message>
       <source>Miscellaneous</source>
       <translation>Sekalaiset</translation>
     </message>
@@ -3058,10 +3066,6 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
       <translation>shadNet</translation>
     </message>
     <message>
-      <source>ShadNet</source>
-      <translation>ShadNet</translation>
-    </message>
-    <message>
       <source>Server</source>
       <translation>Palvelin</translation>
     </message>
@@ -3082,12 +3086,36 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
       <translation>shadNet:\nYhteensopivuus on tällä hetkellä hyvin rajallinen.\nVoit rekisteröityä osoitteessa https://www.shadps4.net/shadnet/register/.</translation>
     </message>
     <message>
-      <source>Red Zone Protection</source>
-      <translation>Punaisen alueen suojaus</translation>
+      <source>Red Zone CPU Patches</source>
+      <translation type="unfinished">Red Zone CPU Patches</translation>
     </message>
     <message>
-      <source>Static Patching</source>
-      <translation>Staattinen paikkaus</translation>
+      <source>Enable Red Zone CPU Patches</source>
+      <translation type="unfinished">Enable Red Zone CPU Patches</translation>
+    </message>
+    <message>
+      <source>Network</source>
+      <translation type="unfinished">Network</translation>
+    </message>
+    <message>
+      <source>Network Settings</source>
+      <translation type="unfinished">Network Settings</translation>
+    </message>
+    <message>
+      <source>Set Network Connected Status as True</source>
+      <translation type="unfinished">Set Network Connected Status as True</translation>
+    </message>
+    <message>
+      <source>Disable HTTPS</source>
+      <translation type="unfinished">Disable HTTPS</translation>
+    </message>
+    <message>
+      <source>P2P Port</source>
+      <translation type="unfinished">P2P Port</translation>
+    </message>
+    <message>
+      <source>Copy GPU Command Buffers</source>
+      <translation type="unfinished">Copy GPU Command Buffers</translation>
     </message>
   </context>
   <context>
