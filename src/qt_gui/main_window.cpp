@@ -490,13 +490,15 @@ void MainWindow::CreateConnects() {
     addAction(searchFocusAct);
 
     connect(ui->mw_searchbar, &QLineEdit::returnPressed, this, [this]() {
-        QTableWidget* activeTable = isTableList ? static_cast<QTableWidget*>(m_game_list_frame.data())
-                                               : static_cast<QTableWidget*>(m_game_grid_frame.data());
+        QTableWidget* activeTable = isTableList
+                                        ? static_cast<QTableWidget*>(m_game_list_frame.data())
+                                        : static_cast<QTableWidget*>(m_game_grid_frame.data());
         if (activeTable) {
             for (int r = 0; r < activeTable->rowCount(); ++r) {
                 if (!activeTable->isRowHidden(r)) {
                     for (int c = 0; c < activeTable->columnCount(); ++c) {
-                        if (activeTable->item(r, c) != nullptr || activeTable->cellWidget(r, c) != nullptr) {
+                        if (activeTable->item(r, c) != nullptr ||
+                            activeTable->cellWidget(r, c) != nullptr) {
                             activeTable->setFocus();
                             activeTable->setCurrentCell(r, c);
                             return;
