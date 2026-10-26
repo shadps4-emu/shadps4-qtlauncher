@@ -3171,11 +3171,11 @@ Mapper behandlet: %1</translation>
     </message>
     <message>
       <source>PS4 Fonts Path:\nThe folder where PS4 system fonts are loaded from.</source>
-      <translation type="unfinished">PS4 Fonts Path:\nThe folder where PS4 system fonts are loaded from.</translation>
+      <translation>Sti for PS4-skriftfiler:\nMappa hvor PS4-skriftfilene lastes fra.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the fonts path.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the fonts path.</translation>
+      <translation>Endre mappe:\nLet etter ei mappe for å angi den som stien for skriftfilene.</translation>
     </message>
   </context>
   <context>
