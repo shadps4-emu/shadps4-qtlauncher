@@ -1380,56 +1380,56 @@ Dette spillet har en separat oppdatering/rettelse-mappe. Kun spillet kan arkiver
     <message>
       <source>Unable to open the file manager for:
 %1</source>
-      <translation type="unfinished">Unable to open the file manager for:
+      <translation>Klarte ikke åpne filbehandler for:
 %1</translation>
     </message>
     <message>
       <source>Open Path...</source>
-      <translation type="unfinished">Open Path...</translation>
+      <translation>Åpne sti …</translation>
     </message>
     <message>
       <source>Open Game Path</source>
-      <translation type="unfinished">Open Game Path</translation>
+      <translation>Åpne sti til spill</translation>
     </message>
     <message>
       <source>Open Update Path</source>
-      <translation type="unfinished">Open Update Path</translation>
+      <translation>Åpne sti til oppdatering</translation>
     </message>
     <message>
       <source>Open Mods Path</source>
-      <translation type="unfinished">Open Mods Path</translation>
+      <translation>Åpne sti til modifikasjoner</translation>
     </message>
     <message>
       <source>Open DLC Path</source>
-      <translation type="unfinished">Open DLC Path</translation>
+      <translation>Åpne sti til nedlastbart innhold</translation>
     </message>
     <message>
       <source>Open Save Data Path</source>
-      <translation type="unfinished">Open Save Data Path</translation>
+      <translation>Åpne sti til lagrede data</translation>
     </message>
     <message>
       <source>Open Log Path</source>
-      <translation type="unfinished">Open Log Path</translation>
+      <translation>Åpne sti til logg</translation>
     </message>
     <message>
       <source>This game has no game path to open!</source>
-      <translation type="unfinished">This game has no game path to open!</translation>
+      <translation>Dette spillet har ingen sti for spill å åpne!</translation>
     </message>
     <message>
       <source>This game has no update path to open!</source>
-      <translation type="unfinished">This game has no update path to open!</translation>
+      <translation>Dette spillet har ingen sti for oppdatering å åpne!</translation>
     </message>
     <message>
       <source>This game has no mods path to open!</source>
-      <translation type="unfinished">This game has no mods path to open!</translation>
+      <translation>Dette spillet har ingen sti for modifikasjoner å åpne!</translation>
     </message>
     <message>
       <source>This game has no DLC path to open!</source>
-      <translation type="unfinished">This game has no DLC path to open!</translation>
+      <translation>Dette spillet har ingen sti for nedlastbart innhold å åpne!</translation>
     </message>
     <message>
       <source>This game has no save path to open!</source>
-      <translation type="unfinished">This game has no save path to open!</translation>
+      <translation>Dette spillet har ingen sti for lagrede data å åpne!</translation>
     </message>
   </context>
   <context>
@@ -2191,21 +2191,21 @@ Installer Rosetta 2 fra terminalen med «softwareupdate --install-rosetta».</tr
     </message>
     <message>
       <source>Patches directory does not exist.</source>
-      <translation type="unfinished">Patches directory does not exist.</translation>
+      <translation>Mappa for rettelser finnes ikke.</translation>
     </message>
     <message>
       <source>Update files.json</source>
-      <translation type="unfinished">Update files.json</translation>
+      <translation>Oppdater files.json</translation>
     </message>
     <message>
       <source>Processing complete.
 Folders processed: %1</source>
-      <translation type="unfinished">Processing complete.
-Folders processed: %1</translation>
+      <translation>Behandling fullført.
+Mapper behandlet: %1</translation>
     </message>
     <message>
       <source>Update files.json (Patches)</source>
-      <translation type="unfinished">Update files.json (Patches)</translation>
+      <translation>Oppdater files.json (rettelser)</translation>
     </message>
   </context>
   <context>
@@ -3163,11 +3163,11 @@ Folders processed: %1</translation>
     </message>
     <message>
       <source>PS4 Fonts Path</source>
-      <translation type="unfinished">PS4 Fonts Path</translation>
+      <translation>Sti for PS4-skriftfiler</translation>
     </message>
     <message>
       <source>Select the fonts folder</source>
-      <translation type="unfinished">Select the fonts folder</translation>
+      <translation>Velg mappa for skriftfiler</translation>
     </message>
     <message>
       <source>PS4 Fonts Path:\nThe folder where PS4 system fonts are loaded from.</source>
