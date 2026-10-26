@@ -1052,22 +1052,6 @@ Ange dina nycklar och spara dem.</translation>
       <translation>Trofé-visare</translation>
     </message>
     <message>
-      <source>Open Folder...</source>
-      <translation>Öppna mapp...</translation>
-    </message>
-    <message>
-      <source>Open Game Folder</source>
-      <translation>Öppna spelmapp</translation>
-    </message>
-    <message>
-      <source>Open Save Data Folder</source>
-      <translation>Öppna mapp för sparat data</translation>
-    </message>
-    <message>
-      <source>Open Log Folder</source>
-      <translation>Öppna loggmapp</translation>
-    </message>
-    <message>
       <source>Copy info...</source>
       <translation>Kopiera till...</translation>
     </message>
@@ -1148,16 +1132,8 @@ Ange dina nycklar och spara dem.</translation>
       <translation>Är du säker på att du vill ta bort %1s %2-katalog?</translation>
     </message>
     <message>
-      <source>Open Update Folder</source>
-      <translation>Öppna uppdateringsmapp</translation>
-    </message>
-    <message>
       <source>Delete Save Data</source>
       <translation>Ta bort sparat data</translation>
-    </message>
-    <message>
-      <source>This game has no update folder to open!</source>
-      <translation>Detta spel har ingen uppdateringsmapp att öppna!</translation>
     </message>
     <message>
       <source>No log file found for this game!</source>
@@ -1296,10 +1272,6 @@ Ange dina nycklar och spara dem.</translation>
       <translation>Shadercache</translation>
     </message>
     <message>
-      <source>This game has no save folder to open!</source>
-      <translation>Det här spelet har inga sparmappar att öppna!</translation>
-    </message>
-    <message>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
       <translation>En trofényckel krävs för att använda trofévisaren. Du kan ange den via Inställningar: Hantera kryptografiska nycklar.</translation>
     </message>
@@ -1404,6 +1376,60 @@ Det här spelet har en separat mapp för uppdateringar/korrigeringar. Bara grund
     <message>
       <source>Convert to ZArchive</source>
       <translation>Konvertera till ZArchive</translation>
+    </message>
+    <message>
+      <source>Unable to open the file manager for:
+%1</source>
+      <translation type="unfinished">Unable to open the file manager for:
+%1</translation>
+    </message>
+    <message>
+      <source>Open Path...</source>
+      <translation type="unfinished">Open Path...</translation>
+    </message>
+    <message>
+      <source>Open Game Path</source>
+      <translation type="unfinished">Open Game Path</translation>
+    </message>
+    <message>
+      <source>Open Update Path</source>
+      <translation type="unfinished">Open Update Path</translation>
+    </message>
+    <message>
+      <source>Open Mods Path</source>
+      <translation type="unfinished">Open Mods Path</translation>
+    </message>
+    <message>
+      <source>Open DLC Path</source>
+      <translation type="unfinished">Open DLC Path</translation>
+    </message>
+    <message>
+      <source>Open Save Data Path</source>
+      <translation type="unfinished">Open Save Data Path</translation>
+    </message>
+    <message>
+      <source>Open Log Path</source>
+      <translation type="unfinished">Open Log Path</translation>
+    </message>
+    <message>
+      <source>This game has no game path to open!</source>
+      <translation type="unfinished">This game has no game path to open!</translation>
+    </message>
+    <message>
+      <source>This game has no update path to open!</source>
+      <translation type="unfinished">This game has no update path to open!</translation>
+    </message>
+    <message>
+      <source>This game has no mods path to open!</source>
+      <translation type="unfinished">This game has no mods path to open!</translation>
+    </message>
+    <message>
+      <source>This game has no DLC path to open!</source>
+      <translation type="unfinished">This game has no DLC path to open!</translation>
+    </message>
+    <message>
+      <source>This game has no save path to open!</source>
+      <translation type="unfinished">This game has no save path to open!</translation>
     </message>
   </context>
   <context>
@@ -2162,6 +2188,24 @@ Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rose
       <translation>Rosetta 2 är inte installerat.
 
 Installera Rosetta 2 via Terminal med 'softwareupdate --install-rosetta'.</translation>
+    </message>
+    <message>
+      <source>Patches directory does not exist.</source>
+      <translation type="unfinished">Patches directory does not exist.</translation>
+    </message>
+    <message>
+      <source>Update files.json</source>
+      <translation type="unfinished">Update files.json</translation>
+    </message>
+    <message>
+      <source>Processing complete.
+Folders processed: %1</source>
+      <translation type="unfinished">Processing complete.
+Folders processed: %1</translation>
+    </message>
+    <message>
+      <source>Update files.json (Patches)</source>
+      <translation type="unfinished">Update files.json (Patches)</translation>
     </message>
   </context>
   <context>
@@ -3116,6 +3160,22 @@ Installera Rosetta 2 via Terminal med 'softwareupdate --install-rosetta'.</trans
     <message>
       <source>Copy GPU Command Buffers</source>
       <translation>Kopiera GPU-kommandobuffertar</translation>
+    </message>
+    <message>
+      <source>PS4 Fonts Path</source>
+      <translation type="unfinished">PS4 Fonts Path</translation>
+    </message>
+    <message>
+      <source>Select the fonts folder</source>
+      <translation type="unfinished">Select the fonts folder</translation>
+    </message>
+    <message>
+      <source>PS4 Fonts Path:\nThe folder where PS4 system fonts are loaded from.</source>
+      <translation type="unfinished">PS4 Fonts Path:\nThe folder where PS4 system fonts are loaded from.</translation>
+    </message>
+    <message>
+      <source>Browse:\nBrowse for a folder to set as the fonts path.</source>
+      <translation type="unfinished">Browse:\nBrowse for a folder to set as the fonts path.</translation>
     </message>
   </context>
   <context>

@@ -1052,22 +1052,6 @@ Proszę wpisać klucze i je zapisać.</translation>
       <translation>Menedżer trofeów</translation>
     </message>
     <message>
-      <source>Open Folder...</source>
-      <translation>Otwórz Folder...</translation>
-    </message>
-    <message>
-      <source>Open Game Folder</source>
-      <translation>Otwórz Katalog Gry</translation>
-    </message>
-    <message>
-      <source>Open Save Data Folder</source>
-      <translation>Otwórz folder zapisanych danych</translation>
-    </message>
-    <message>
-      <source>Open Log Folder</source>
-      <translation>Otwórz Folder Dziennika</translation>
-    </message>
-    <message>
       <source>Copy info...</source>
       <translation>Kopiuj informacje...</translation>
     </message>
@@ -1148,16 +1132,8 @@ Proszę wpisać klucze i je zapisać.</translation>
       <translation>Czy na pewno chcesz usunąć katalog %1 z %2?</translation>
     </message>
     <message>
-      <source>Open Update Folder</source>
-      <translation>Otwórz folder aktualizacji</translation>
-    </message>
-    <message>
       <source>Delete Save Data</source>
       <translation>Usuń zapisane dane</translation>
-    </message>
-    <message>
-      <source>This game has no update folder to open!</source>
-      <translation>Ta gra nie ma folderu aktualizacji do otwarcia!</translation>
     </message>
     <message>
       <source>No log file found for this game!</source>
@@ -1296,10 +1272,6 @@ Proszę wpisać klucze i je zapisać.</translation>
       <translation>Pamięć podręczna cieni</translation>
     </message>
     <message>
-      <source>This game has no save folder to open!</source>
-      <translation>W tej grze nie ma folderu z zapisem gry, który można by otworzyć!</translation>
-    </message>
-    <message>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
       <translation>Klucz trofeum jest wymagany do korzystania z przeglądarki trofeów. Można go wprowadzić klikając w Ustawienia - Zarządzaj kluczami kryptograficznymi.</translation>
     </message>
@@ -1404,6 +1376,60 @@ Ta gra posiada oddzielny folder aktualizacji/łatki. Tylko podstawowa wersja gry
     <message>
       <source>Convert to ZArchive</source>
       <translation>Konwertuj do ZArchive</translation>
+    </message>
+    <message>
+      <source>Unable to open the file manager for:
+%1</source>
+      <translation type="unfinished">Unable to open the file manager for:
+%1</translation>
+    </message>
+    <message>
+      <source>Open Path...</source>
+      <translation type="unfinished">Open Path...</translation>
+    </message>
+    <message>
+      <source>Open Game Path</source>
+      <translation type="unfinished">Open Game Path</translation>
+    </message>
+    <message>
+      <source>Open Update Path</source>
+      <translation type="unfinished">Open Update Path</translation>
+    </message>
+    <message>
+      <source>Open Mods Path</source>
+      <translation type="unfinished">Open Mods Path</translation>
+    </message>
+    <message>
+      <source>Open DLC Path</source>
+      <translation type="unfinished">Open DLC Path</translation>
+    </message>
+    <message>
+      <source>Open Save Data Path</source>
+      <translation type="unfinished">Open Save Data Path</translation>
+    </message>
+    <message>
+      <source>Open Log Path</source>
+      <translation type="unfinished">Open Log Path</translation>
+    </message>
+    <message>
+      <source>This game has no game path to open!</source>
+      <translation type="unfinished">This game has no game path to open!</translation>
+    </message>
+    <message>
+      <source>This game has no update path to open!</source>
+      <translation type="unfinished">This game has no update path to open!</translation>
+    </message>
+    <message>
+      <source>This game has no mods path to open!</source>
+      <translation type="unfinished">This game has no mods path to open!</translation>
+    </message>
+    <message>
+      <source>This game has no DLC path to open!</source>
+      <translation type="unfinished">This game has no DLC path to open!</translation>
+    </message>
+    <message>
+      <source>This game has no save path to open!</source>
+      <translation type="unfinished">This game has no save path to open!</translation>
     </message>
   </context>
   <context>
@@ -2162,6 +2188,24 @@ Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rose
       <translation>Rosetta 2 nie jest zainstalowany.
 
 Zainstaluj Rosetta 2 z Terminala za pomocą &apos;aktualizacji oprogramowania --install-rosetta&apos;.</translation>
+    </message>
+    <message>
+      <source>Patches directory does not exist.</source>
+      <translation type="unfinished">Patches directory does not exist.</translation>
+    </message>
+    <message>
+      <source>Update files.json</source>
+      <translation type="unfinished">Update files.json</translation>
+    </message>
+    <message>
+      <source>Processing complete.
+Folders processed: %1</source>
+      <translation type="unfinished">Processing complete.
+Folders processed: %1</translation>
+    </message>
+    <message>
+      <source>Update files.json (Patches)</source>
+      <translation type="unfinished">Update files.json (Patches)</translation>
     </message>
   </context>
   <context>
@@ -3116,6 +3160,22 @@ Zainstaluj Rosetta 2 z Terminala za pomocą &apos;aktualizacji oprogramowania --
     <message>
       <source>Copy GPU Command Buffers</source>
       <translation>Kopiowanie buforów poleceń GPU</translation>
+    </message>
+    <message>
+      <source>PS4 Fonts Path</source>
+      <translation type="unfinished">PS4 Fonts Path</translation>
+    </message>
+    <message>
+      <source>Select the fonts folder</source>
+      <translation type="unfinished">Select the fonts folder</translation>
+    </message>
+    <message>
+      <source>PS4 Fonts Path:\nThe folder where PS4 system fonts are loaded from.</source>
+      <translation type="unfinished">PS4 Fonts Path:\nThe folder where PS4 system fonts are loaded from.</translation>
+    </message>
+    <message>
+      <source>Browse:\nBrowse for a folder to set as the fonts path.</source>
+      <translation type="unfinished">Browse:\nBrowse for a folder to set as the fonts path.</translation>
     </message>
   </context>
   <context>

@@ -1052,22 +1052,6 @@ Skriv inn nøklene og lagre dem.</translation>
       <translation>Troféviser</translation>
     </message>
     <message>
-      <source>Open Folder...</source>
-      <translation>Åpne mappe …</translation>
-    </message>
-    <message>
-      <source>Open Game Folder</source>
-      <translation>Åpne spillmappa</translation>
-    </message>
-    <message>
-      <source>Open Save Data Folder</source>
-      <translation>Åpne lagrede datamappa</translation>
-    </message>
-    <message>
-      <source>Open Log Folder</source>
-      <translation>Åpne loggmappa</translation>
-    </message>
-    <message>
       <source>Copy info...</source>
       <translation>Kopier info …</translation>
     </message>
@@ -1148,16 +1132,8 @@ Skriv inn nøklene og lagre dem.</translation>
       <translation>Er du sikker på at du vil slette %1&apos;s %2 mappa?</translation>
     </message>
     <message>
-      <source>Open Update Folder</source>
-      <translation>Åpne oppdateringsmappa</translation>
-    </message>
-    <message>
       <source>Delete Save Data</source>
       <translation>Slett lagret data</translation>
-    </message>
-    <message>
-      <source>This game has no update folder to open!</source>
-      <translation>Dette spillet har ingen oppdateringsmappe å åpne!</translation>
     </message>
     <message>
       <source>No log file found for this game!</source>
@@ -1296,10 +1272,6 @@ Skriv inn nøklene og lagre dem.</translation>
       <translation>Skyggelegger hurtiglager</translation>
     </message>
     <message>
-      <source>This game has no save folder to open!</source>
-      <translation>Dette spillet har ingen lagret datamappe å åpne!</translation>
-    </message>
-    <message>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
       <translation>En trofénøkkel er nødvendig for å bruke troféviseren. Du kan skrive inn dette ved å trykke «Innstillinger» → «Håndter kryptografiske nøkler».</translation>
     </message>
@@ -1404,6 +1376,60 @@ Dette spillet har en separat oppdatering/rettelse-mappe. Kun spillet kan arkiver
     <message>
       <source>Convert to ZArchive</source>
       <translation>Konverter til ZArchive</translation>
+    </message>
+    <message>
+      <source>Unable to open the file manager for:
+%1</source>
+      <translation>Klarte ikke åpne filbehandler for:
+%1</translation>
+    </message>
+    <message>
+      <source>Open Path...</source>
+      <translation>Åpne sti …</translation>
+    </message>
+    <message>
+      <source>Open Game Path</source>
+      <translation>Åpne sti til spill</translation>
+    </message>
+    <message>
+      <source>Open Update Path</source>
+      <translation>Åpne sti til oppdatering</translation>
+    </message>
+    <message>
+      <source>Open Mods Path</source>
+      <translation>Åpne sti til modifikasjoner</translation>
+    </message>
+    <message>
+      <source>Open DLC Path</source>
+      <translation>Åpne sti til nedlastbart innhold</translation>
+    </message>
+    <message>
+      <source>Open Save Data Path</source>
+      <translation>Åpne sti til lagrede data</translation>
+    </message>
+    <message>
+      <source>Open Log Path</source>
+      <translation>Åpne sti til logg</translation>
+    </message>
+    <message>
+      <source>This game has no game path to open!</source>
+      <translation>Dette spillet har ingen sti for spill å åpne!</translation>
+    </message>
+    <message>
+      <source>This game has no update path to open!</source>
+      <translation>Dette spillet har ingen sti for oppdatering å åpne!</translation>
+    </message>
+    <message>
+      <source>This game has no mods path to open!</source>
+      <translation>Dette spillet har ingen sti for modifikasjoner å åpne!</translation>
+    </message>
+    <message>
+      <source>This game has no DLC path to open!</source>
+      <translation>Dette spillet har ingen sti for nedlastbart innhold å åpne!</translation>
+    </message>
+    <message>
+      <source>This game has no save path to open!</source>
+      <translation>Dette spillet har ingen sti for lagrede data å åpne!</translation>
     </message>
   </context>
   <context>
@@ -2162,6 +2188,24 @@ Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rose
       <translation>Rosetta 2 er ikke installert.
 
 Installer Rosetta 2 fra terminalen med «softwareupdate --install-rosetta».</translation>
+    </message>
+    <message>
+      <source>Patches directory does not exist.</source>
+      <translation>Mappa for rettelser finnes ikke.</translation>
+    </message>
+    <message>
+      <source>Update files.json</source>
+      <translation>Oppdater files.json</translation>
+    </message>
+    <message>
+      <source>Processing complete.
+Folders processed: %1</source>
+      <translation>Behandling fullført.
+Mapper behandlet: %1</translation>
+    </message>
+    <message>
+      <source>Update files.json (Patches)</source>
+      <translation>Oppdater files.json (rettelser)</translation>
     </message>
   </context>
   <context>
@@ -3116,6 +3160,22 @@ Installer Rosetta 2 fra terminalen med «softwareupdate --install-rosetta».</tr
     <message>
       <source>Copy GPU Command Buffers</source>
       <translation>Kopier GPU-kommandobuffere</translation>
+    </message>
+    <message>
+      <source>PS4 Fonts Path</source>
+      <translation>Sti for PS4-skriftfiler</translation>
+    </message>
+    <message>
+      <source>Select the fonts folder</source>
+      <translation>Velg mappa for skriftfiler</translation>
+    </message>
+    <message>
+      <source>PS4 Fonts Path:\nThe folder where PS4 system fonts are loaded from.</source>
+      <translation type="unfinished">PS4 Fonts Path:\nThe folder where PS4 system fonts are loaded from.</translation>
+    </message>
+    <message>
+      <source>Browse:\nBrowse for a folder to set as the fonts path.</source>
+      <translation type="unfinished">Browse:\nBrowse for a folder to set as the fonts path.</translation>
     </message>
   </context>
   <context>

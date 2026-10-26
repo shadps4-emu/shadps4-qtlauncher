@@ -1050,22 +1050,6 @@ Please enter your keys and save them.</source>
       <translation>奖杯查看器</translation>
     </message>
     <message>
-      <source>Open Folder...</source>
-      <translation>打开文件夹...</translation>
-    </message>
-    <message>
-      <source>Open Game Folder</source>
-      <translation>打开游戏文件夹</translation>
-    </message>
-    <message>
-      <source>Open Save Data Folder</source>
-      <translation>打开存档数据文件夹</translation>
-    </message>
-    <message>
-      <source>Open Log Folder</source>
-      <translation>打开日志文件夹</translation>
-    </message>
-    <message>
       <source>Copy info...</source>
       <translation>复制信息...</translation>
     </message>
@@ -1146,16 +1130,8 @@ Please enter your keys and save them.</source>
       <translation>您确定要删除 %1 的%2目录？</translation>
     </message>
     <message>
-      <source>Open Update Folder</source>
-      <translation>打开更新文件夹</translation>
-    </message>
-    <message>
       <source>Delete Save Data</source>
       <translation>删除存档数据</translation>
-    </message>
-    <message>
-      <source>This game has no update folder to open!</source>
-      <translation>这个游戏没有可打开的更新文件夹！</translation>
     </message>
     <message>
       <source>No log file found for this game!</source>
@@ -1294,10 +1270,6 @@ Please enter your keys and save them.</source>
       <translation>着色器缓存</translation>
     </message>
     <message>
-      <source>This game has no save folder to open!</source>
-      <translation>此游戏没有可打开的存档文件夹！</translation>
-    </message>
-    <message>
       <source>A trophy key is required to use the Trophy Viewer. This can be inputted by clicking Settings - Manage Cryptographic keys.</source>
       <translation>使用奖杯查看器需要提供奖杯密钥。可通过点击“设置”->“管理加密密钥”来输入。</translation>
     </message>
@@ -1402,6 +1374,60 @@ This game has a separate update/patch folder. Only the base game will be archive
     <message>
       <source>Convert to ZArchive</source>
       <translation>转换为 ZArchive</translation>
+    </message>
+    <message>
+      <source>Unable to open the file manager for:
+%1</source>
+      <translation type="unfinished">Unable to open the file manager for:
+%1</translation>
+    </message>
+    <message>
+      <source>Open Path...</source>
+      <translation type="unfinished">Open Path...</translation>
+    </message>
+    <message>
+      <source>Open Game Path</source>
+      <translation type="unfinished">Open Game Path</translation>
+    </message>
+    <message>
+      <source>Open Update Path</source>
+      <translation type="unfinished">Open Update Path</translation>
+    </message>
+    <message>
+      <source>Open Mods Path</source>
+      <translation type="unfinished">Open Mods Path</translation>
+    </message>
+    <message>
+      <source>Open DLC Path</source>
+      <translation type="unfinished">Open DLC Path</translation>
+    </message>
+    <message>
+      <source>Open Save Data Path</source>
+      <translation type="unfinished">Open Save Data Path</translation>
+    </message>
+    <message>
+      <source>Open Log Path</source>
+      <translation type="unfinished">Open Log Path</translation>
+    </message>
+    <message>
+      <source>This game has no game path to open!</source>
+      <translation type="unfinished">This game has no game path to open!</translation>
+    </message>
+    <message>
+      <source>This game has no update path to open!</source>
+      <translation type="unfinished">This game has no update path to open!</translation>
+    </message>
+    <message>
+      <source>This game has no mods path to open!</source>
+      <translation type="unfinished">This game has no mods path to open!</translation>
+    </message>
+    <message>
+      <source>This game has no DLC path to open!</source>
+      <translation type="unfinished">This game has no DLC path to open!</translation>
+    </message>
+    <message>
+      <source>This game has no save path to open!</source>
+      <translation type="unfinished">This game has no save path to open!</translation>
     </message>
   </context>
   <context>
@@ -2160,6 +2186,24 @@ Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rose
       <translation>Rosetta 2 未安装。
 
 请从终端使用 “softwareupdate --install-rosetta” 安装 Rosetta 2。</translation>
+    </message>
+    <message>
+      <source>Patches directory does not exist.</source>
+      <translation type="unfinished">Patches directory does not exist.</translation>
+    </message>
+    <message>
+      <source>Update files.json</source>
+      <translation type="unfinished">Update files.json</translation>
+    </message>
+    <message>
+      <source>Processing complete.
+Folders processed: %1</source>
+      <translation type="unfinished">Processing complete.
+Folders processed: %1</translation>
+    </message>
+    <message>
+      <source>Update files.json (Patches)</source>
+      <translation type="unfinished">Update files.json (Patches)</translation>
     </message>
   </context>
   <context>
@@ -3116,6 +3160,22 @@ Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rose
     <message>
       <source>Copy GPU Command Buffers</source>
       <translation type="unfinished">Copy GPU Command Buffers</translation>
+    </message>
+    <message>
+      <source>PS4 Fonts Path</source>
+      <translation type="unfinished">PS4 Fonts Path</translation>
+    </message>
+    <message>
+      <source>Select the fonts folder</source>
+      <translation type="unfinished">Select the fonts folder</translation>
+    </message>
+    <message>
+      <source>PS4 Fonts Path:\nThe folder where PS4 system fonts are loaded from.</source>
+      <translation type="unfinished">PS4 Fonts Path:\nThe folder where PS4 system fonts are loaded from.</translation>
+    </message>
+    <message>
+      <source>Browse:\nBrowse for a folder to set as the fonts path.</source>
+      <translation type="unfinished">Browse:\nBrowse for a folder to set as the fonts path.</translation>
     </message>
   </context>
   <context>
