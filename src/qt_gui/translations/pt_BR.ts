@@ -1378,56 +1378,56 @@ This game has a separate update/patch folder. Only the base game will be archive
     <message>
       <source>Unable to open the file manager for:
 %1</source>
-      <translation type="unfinished">Unable to open the file manager for:
+      <translation>Não foi possível abrir o gerenciador de arquivos para:
 %1</translation>
     </message>
     <message>
       <source>Open Path...</source>
-      <translation type="unfinished">Open Path...</translation>
+      <translation>Abrir Caminho...</translation>
     </message>
     <message>
       <source>Open Game Path</source>
-      <translation type="unfinished">Open Game Path</translation>
+      <translation>Abrir Caminho do Jogo</translation>
     </message>
     <message>
       <source>Open Update Path</source>
-      <translation type="unfinished">Open Update Path</translation>
+      <translation>Abrir Caminho da Atualização</translation>
     </message>
     <message>
       <source>Open Mods Path</source>
-      <translation type="unfinished">Open Mods Path</translation>
+      <translation>Abrir Caminho dos Mods</translation>
     </message>
     <message>
       <source>Open DLC Path</source>
-      <translation type="unfinished">Open DLC Path</translation>
+      <translation>Abrir Caminho da DLC</translation>
     </message>
     <message>
       <source>Open Save Data Path</source>
-      <translation type="unfinished">Open Save Data Path</translation>
+      <translation>Abrir Caminho dos Dados Salvos</translation>
     </message>
     <message>
       <source>Open Log Path</source>
-      <translation type="unfinished">Open Log Path</translation>
+      <translation>Abrir Caminho do Log</translation>
     </message>
     <message>
       <source>This game has no game path to open!</source>
-      <translation type="unfinished">This game has no game path to open!</translation>
+      <translation>Este jogo não possui caminho de jogo para abrir!</translation>
     </message>
     <message>
       <source>This game has no update path to open!</source>
-      <translation type="unfinished">This game has no update path to open!</translation>
+      <translation>Este jogo não possui caminho de atualização para abrir!</translation>
     </message>
     <message>
       <source>This game has no mods path to open!</source>
-      <translation type="unfinished">This game has no mods path to open!</translation>
+      <translation>Este jogo não possui caminho de mods para abrir!</translation>
     </message>
     <message>
       <source>This game has no DLC path to open!</source>
-      <translation type="unfinished">This game has no DLC path to open!</translation>
+      <translation>Este jogo não possui caminho de DLC para abrir!</translation>
     </message>
     <message>
       <source>This game has no save path to open!</source>
-      <translation type="unfinished">This game has no save path to open!</translation>
+      <translation>Este jogo não possui caminho de jogo salvo para abrir!</translation>
     </message>
   </context>
   <context>
@@ -2189,21 +2189,21 @@ Por favor, instale o Rosetta 2 via Terminal usando &apos;softwareupdate --instal
     </message>
     <message>
       <source>Patches directory does not exist.</source>
-      <translation type="unfinished">Patches directory does not exist.</translation>
+      <translation>Diretório de patches não existe.</translation>
     </message>
     <message>
       <source>Update files.json</source>
-      <translation type="unfinished">Update files.json</translation>
+      <translation>Atualizar files.json</translation>
     </message>
     <message>
       <source>Processing complete.
 Folders processed: %1</source>
-      <translation type="unfinished">Processing complete.
-Folders processed: %1</translation>
+      <translation>Processamento concluído.
+Pastas processadas: %1</translation>
     </message>
     <message>
       <source>Update files.json (Patches)</source>
-      <translation type="unfinished">Update files.json (Patches)</translation>
+      <translation>Atualizar files.json (Patches)</translation>
     </message>
   </context>
   <context>
@@ -3161,19 +3161,19 @@ Folders processed: %1</translation>
     </message>
     <message>
       <source>PS4 Fonts Path</source>
-      <translation type="unfinished">PS4 Fonts Path</translation>
+      <translation>Caminho de Fontes do PS4</translation>
     </message>
     <message>
       <source>Select the fonts folder</source>
-      <translation type="unfinished">Select the fonts folder</translation>
+      <translation>Selecionar a pasta de fontes</translation>
     </message>
     <message>
       <source>PS4 Fonts Path:\nThe folder where PS4 system fonts are loaded from.</source>
-      <translation type="unfinished">PS4 Fonts Path:\nThe folder where PS4 system fonts are loaded from.</translation>
+      <translation>Caminho de Fontes do PS4:\nA pasta de onde as fontes de sistema do PS4 são carregadas.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the fonts path.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the fonts path.</translation>
+      <translation>Procurar:\nBusca uma pasta para definir como o caminho de fontes.</translation>
     </message>
   </context>
   <context>
