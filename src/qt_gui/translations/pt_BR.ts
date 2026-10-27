@@ -3009,7 +3009,7 @@ Pastas processadas: %1</translation>
     </message>
     <message>
       <source>Home Folder Location (Saves, Inputs, Trophy Data)</source>
-      <translation>Local da Pasta Raiz (Dados de Jogos Salvos, Entradas, Troféis)</translation>
+      <translation>Local da Pasta Raiz (Dados de Saves, Entradas e Troféus)</translation>
     </message>
     <message>
       <source>Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</source>
