@@ -630,7 +630,7 @@
     <name>CryptoManagerDialog</name>
     <message>
       <source>Crypto Key Manager</source>
-      <translation type="unfinished">Crypto Key Manager</translation>
+      <translation/>
     </message>
     <message>
       <source>Trophy Key: Used for trophy decryption.
