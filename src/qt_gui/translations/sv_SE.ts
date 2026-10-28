@@ -66,11 +66,11 @@
     </message>
     <message>
       <source>You can delete the cheats you don&apos;t want after downloading them.</source>
-      <translation>Du kan ta bort fusk som du inte vill ha efter de hämtats ner.</translation>
+      <translation>Du kan ta bort de fusk du inte vill ha när du har hämtat dem.</translation>
     </message>
     <message>
       <source>Do you want to delete the selected file?\n%1</source>
-      <translation>Vill du ta bort markerade filen?\n%1</translation>
+      <translation>Vill du ta bort den markerade filen?\n%1</translation>
     </message>
     <message>
       <source>Select Patch File:</source>
@@ -166,7 +166,7 @@
     </message>
     <message>
       <source>You have successfully downloaded the cheats for this version of the game from the selected repository. You can try downloading from another repository, if it is available it will also be possible to use it by selecting the file from the list.</source>
-      <translation>Du har hämtat ner fusken för denna version av spelet från valt förråd. Du kan försöka att hämta från andra förråd, om de är tillgängliga så kan det vara möjligt att använda det genom att välja det genom att välja filen från listan.</translation>
+      <translation>Du har hämtat fusk för den här spelversionen från det valda förrådet. Du kan också hämta från ett annat förråd och, om fusk finns där, använda det genom att välja filen i listan.</translation>
     </message>
     <message>
       <source>Failed to save:</source>
@@ -182,7 +182,7 @@
     </message>
     <message>
       <source>Patches Downloaded Successfully! All Patches available for all games have been downloaded, there is no need to download them individually for each game as happens in Cheats. If the patch does not appear, it may be that it does not exist for the specific serial and version of the game.</source>
-      <translation>Patchhämtningen är färdig! Alla patchar tillgängliga för alla spel har hämtats och de behövs inte hämtas individuellt för varje spel som med fusk. Om patchen inte dyker upp kan det bero på att den inte finns för det specifika serienumret och versionen av spelet.</translation>
+      <translation>Patcharna har hämtats! Alla tillgängliga patchar för alla spel har hämtats. Till skillnad från fusk behöver de inte hämtas separat för varje spel. Om en patch inte visas kan det bero på att den saknas för spelets serienummer och version.</translation>
     </message>
     <message>
       <source>Failed to parse JSON data from HTML.</source>
@@ -269,7 +269,7 @@
     </message>
     <message>
       <source>No pre-releases found.</source>
-      <translation>Inga förutgåva hittades.</translation>
+      <translation>Inga förhandsutgåvor hittades.</translation>
     </message>
     <message>
       <source>No download URL found for the specified asset.</source>
@@ -392,7 +392,7 @@
     </message>
     <message>
       <source>Ingame</source>
-      <translation>Problem</translation>
+      <translation>I spelet</translation>
     </message>
     <message>
       <source>Playable</source>
@@ -487,7 +487,7 @@
     </message>
     <message>
       <source>unmapped</source>
-      <translation>omappad</translation>
+      <translation>inte tilldelad</translation>
     </message>
     <message>
       <source>Options</source>
@@ -525,7 +525,7 @@
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-      <translation>Det går inte att binda samma unika inmatning mer än en gång. Dubbletta inmatningar är mappade till följande knappar:
+      <translation>Samma inmatning kan inte tilldelas mer än en gång. Följande knappar har samma inmatning:
 
 %1</translation>
     </message>
@@ -623,14 +623,14 @@
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation>Tips: Avmappa inmatningar med högerklick</translation>
+      <translation>Tips: Ta bort tilldelningar med högerklick</translation>
     </message>
   </context>
   <context>
     <name>CryptoManagerDialog</name>
     <message>
       <source>Crypto Key Manager</source>
-      <translation>Kryptonyckel Hanterare</translation>
+      <translation>Hanterare för kryptonycklar</translation>
     </message>
     <message>
       <source>Trophy Key: Used for trophy decryption.
@@ -692,7 +692,7 @@ Måste vara en giltig hex-sträng med jämn längd.</translation>
     </message>
     <message>
       <source>Fake Keyset</source>
-      <translation>Falska Nyckel set</translation>
+      <translation>Nyckeluppsättning för falsk signering</translation>
     </message>
     <message>
       <source>RSA key components for fake signing.
@@ -702,7 +702,7 @@ Alla fält måste vara giltiga hex-strängar med jämn längd.</translation>
     </message>
     <message>
       <source>Debug Rif Keyset</source>
-      <translation>Debug Rif nyckleringsset</translation>
+      <translation>Nyckeluppsättning för RIF-felsökning</translation>
     </message>
     <message>
       <source>RSA key components for debug RIF files.
@@ -731,7 +731,7 @@ Alla fält måste vara giltiga hexsträngar med jämn längd.</translation>
     <message>
       <source>No key file found or failed to load.
 Please enter your keys and save them.</source>
-      <translation>Ingen nycke lfil hittades eller så kunde den inte laddas.
+      <translation>Ingen nyckelfil hittades eller kunde läsas in.
 Ange dina nycklar och spara dem.</translation>
     </message>
     <message>
@@ -796,11 +796,11 @@ Ange dina nycklar och spara dem.</translation>
     </message>
     <message>
       <source>Trophy Key contains invalid hex or has odd length.</source>
-      <translation>Trofényckeln innehåller en ogiltig hexl eller har en udda längd.</translation>
+      <translation>Trofényckeln innehåller ogiltiga hexadecimala tecken eller har udda längd.</translation>
     </message>
     <message>
       <source>%1 contains invalid hex or has odd length.</source>
-      <translation>%1 innehåller felaktig hex eller har udda längd.</translation>
+      <translation>%1 innehåller ogiltiga hexadecimala tecken eller har udda längd.</translation>
     </message>
     <message>
       <source>Load Key</source>
@@ -819,7 +819,7 @@ Ange dina nycklar och spara dem.</translation>
     </message>
     <message>
       <source>Use Per-Game configs</source>
-      <translation>Använd konfigurationer per-spel</translation>
+      <translation>Använd konfigurationer per spel</translation>
     </message>
     <message>
       <source>Error</source>
@@ -847,7 +847,7 @@ Ange dina nycklar och spara dem.</translation>
     </message>
     <message>
       <source>Do you want to reset your custom default config to the original default config?</source>
-      <translation>Vill du återställa din anpassade standardkonfiguration till ursprungliga standardkonfigurationen?</translation>
+      <translation>Vill du återställa din anpassade standardkonfiguration till den ursprungliga standardkonfigurationen?</translation>
     </message>
     <message>
       <source>Do you want to reset this config to your custom default config?</source>
@@ -975,7 +975,7 @@ Ange dina nycklar och spara dem.</translation>
     </message>
     <message>
       <source>Compatibility is untested</source>
-      <translation>Kompatibilitet är otestat</translation>
+      <translation>Kompatibiliteten är otestad</translation>
     </message>
     <message>
       <source>Game does not initialize properly / crashes the emulator</source>
@@ -1049,11 +1049,11 @@ Ange dina nycklar och spara dem.</translation>
     </message>
     <message>
       <source>Trophy Viewer</source>
-      <translation>Trofé-visare</translation>
+      <translation>Trofévisare</translation>
     </message>
     <message>
       <source>Copy info...</source>
-      <translation>Kopiera till...</translation>
+      <translation>Kopiera information…</translation>
     </message>
     <message>
       <source>Copy Name</source>
@@ -1073,7 +1073,7 @@ Ange dina nycklar och spara dem.</translation>
     </message>
     <message>
       <source>Copy All</source>
-      <translation>Kopiera alla</translation>
+      <translation>Kopiera allt</translation>
     </message>
     <message>
       <source>Delete...</source>
@@ -1133,7 +1133,7 @@ Ange dina nycklar och spara dem.</translation>
     </message>
     <message>
       <source>Delete Save Data</source>
-      <translation>Ta bort sparat data</translation>
+      <translation>Ta bort sparade data</translation>
     </message>
     <message>
       <source>No log file found for this game!</source>
@@ -1141,7 +1141,7 @@ Ange dina nycklar och spara dem.</translation>
     </message>
     <message>
       <source>This game has no save data to delete!</source>
-      <translation>Detta spel har inget sparat data att ta bort!</translation>
+      <translation>Det här spelet har inga sparade data att ta bort!</translation>
     </message>
     <message>
       <source>This game has no saved trophies to delete!</source>
@@ -1149,7 +1149,7 @@ Ange dina nycklar och spara dem.</translation>
     </message>
     <message>
       <source>Save Data</source>
-      <translation>Sparat data</translation>
+      <translation>Sparade data</translation>
     </message>
     <message>
       <source>Trophy</source>
@@ -1205,7 +1205,7 @@ Ange dina nycklar och spara dem.</translation>
     </message>
     <message>
       <source>Launch...</source>
-      <translation>Starta...</translation>
+      <translation>Starta…</translation>
     </message>
     <message>
       <source>Launch with game specific configs (default)</source>
@@ -1221,7 +1221,7 @@ Ange dina nycklar och spara dem.</translation>
     </message>
     <message>
       <source>Couldn&apos;t submit report, because the latest log for the game failed on the following check, and therefore would be an invalid report:</source>
-      <translation>Det gick inte att skicka rapporten eftersom den senaste loggen för spelet misslyckades vid följande kontroll och därför skulle vara en felaktig rapport:</translation>
+      <translation>Det gick inte att skicka rapporten eftersom spelets senaste logg inte klarade följande kontroll. Rapporten skulle därför vara ogiltig:</translation>
     </message>
     <message>
       <source>Ok</source>
@@ -1257,7 +1257,7 @@ Ange dina nycklar och spara dem.</translation>
     </message>
     <message>
       <source>Failed to convert icon.</source>
-      <translation>Misslyckades med att konvertera ikon.</translation>
+      <translation>Kunde inte konvertera ikonen.</translation>
     </message>
     <message>
       <source>Delete Shader Cache</source>
@@ -1384,7 +1384,7 @@ Det här spelet har en separat mapp för uppdateringar/korrigeringar. Bara grund
     </message>
     <message>
       <source>Open Path...</source>
-      <translation>Öppna sökväg…</translation>
+      <translation>Öppna sökväg...</translation>
     </message>
     <message>
       <source>Open Game Path</source>
@@ -1466,7 +1466,7 @@ Det här spelet har en separat mapp för uppdateringar/korrigeringar. Bara grund
     </message>
     <message>
       <source>unmapped</source>
-      <translation>omappad</translation>
+      <translation>inte tilldelad</translation>
     </message>
     <message>
       <source>Quit Emulation</source>
@@ -1530,7 +1530,7 @@ Det här spelet har en separat mapp för uppdateringar/korrigeringar. Bara grund
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation>Tips: Avmappa inmatningar med högerklick</translation>
+      <translation>Tips: Ta bort tilldelningar med högerklick</translation>
     </message>
     <message>
       <source>Volume Up</source>
@@ -1550,15 +1550,15 @@ Det här spelet har en separat mapp för uppdateringar/korrigeringar. Bara grund
     </message>
     <message>
       <source>Capture Screenshot</source>
-      <translation>Fånga skärmbild</translation>
+      <translation>Ta skärmbild</translation>
     </message>
     <message>
       <source>Capture Screenshot w/ Overlays</source>
-      <translation>Fångade skärmdump med överlägg</translation>
+      <translation>Ta skärmbild med överlägg</translation>
     </message>
     <message>
       <source>Open Emulator Settings</source>
-      <translation>Öppna Emulator Inställningar</translation>
+      <translation>Öppna emulatorinställningar</translation>
     </message>
   </context>
   <context>
@@ -1569,7 +1569,7 @@ Det här spelet har en separat mapp för uppdateringar/korrigeringar. Bara grund
     </message>
     <message>
       <source>No game is running</source>
-      <translation>Inget spel spelas</translation>
+      <translation>Inget spel körs</translation>
     </message>
   </context>
   <context>
@@ -1580,7 +1580,7 @@ Det här spelet har en separat mapp för uppdateringar/korrigeringar. Bara grund
     </message>
     <message>
       <source>unmapped</source>
-      <translation>inte mappad</translation>
+      <translation>inte tilldelad</translation>
     </message>
     <message>
       <source>Left Analog Halfmode</source>
@@ -1596,7 +1596,7 @@ Det här spelet har en separat mapp för uppdateringar/korrigeringar. Bara grund
     </message>
     <message>
       <source>Use per-game configs</source>
-      <translation>Använd konfiguration per-spel</translation>
+      <translation>Använd konfigurationer per spel</translation>
     </message>
     <message>
       <source>Text Editor</source>
@@ -1706,7 +1706,7 @@ Det här spelet har en separat mapp för uppdateringar/korrigeringar. Bara grund
       <source>Cannot bind any unique input more than once. Duplicate inputs mapped to the following buttons:
 
 %1</source>
-      <translation>Det går inte att binda samma unika inmatning mer än en gång. Dubbla inmatningar har mappats till följande knappar:
+      <translation>Samma inmatning kan inte tilldelas mer än en gång. Följande knappar har samma inmatning:
 
 %1</translation>
     </message>
@@ -1724,7 +1724,7 @@ Det här spelet har en separat mapp för uppdateringar/korrigeringar. Bara grund
     </message>
     <message>
       <source>Tip: Unmap inputs with right-click</source>
-      <translation>Tips: Avmappa inmatningar med högerklick</translation>
+      <translation>Tips: Ta bort tilldelningar med högerklick</translation>
     </message>
     <message>
       <source>Output</source>
@@ -1847,7 +1847,7 @@ Det här spelet har en separat mapp för uppdateringar/korrigeringar. Bara grund
     </message>
     <message>
       <source>Load the selected preset</source>
-      <translation>Läs in markerade förvalet</translation>
+      <translation>Läs in det markerade förvalet</translation>
     </message>
   </context>
   <context>
@@ -1946,7 +1946,7 @@ Det här spelet har en separat mapp för uppdateringar/korrigeringar. Bara grund
     </message>
     <message>
       <source>No games found. Please add your games to your library first.</source>
-      <translation>Inga spel hittades. Lägg till dina spel till biblioteket först.</translation>
+      <translation>Inga spel hittades. Lägg först till spelen i biblioteket.</translation>
     </message>
     <message>
       <source>Search...</source>
@@ -2026,15 +2026,15 @@ Det här spelet har en separat mapp för uppdateringar/korrigeringar. Bara grund
     </message>
     <message>
       <source>You have downloaded cheats for all the games you have installed.</source>
-      <translation>Du har hämtat fusk till alla spelen som du har installerade.</translation>
+      <translation>Du har hämtat fusk för alla spel som du har installerat.</translation>
     </message>
     <message>
       <source>Patches Downloaded Successfully!</source>
-      <translation>Patchar hämtades ner!</translation>
+      <translation>Patcharna har hämtats!</translation>
     </message>
     <message>
       <source>All Patches available for all games have been downloaded.</source>
-      <translation>Alla patchar tillgängliga för alla spel har hämtats ner.</translation>
+      <translation>Alla tillgängliga patchar för alla spel har hämtats.</translation>
     </message>
     <message>
       <source>Games: </source>
@@ -2126,7 +2126,7 @@ Välj en emulatorversion från den högra panelen.</translation>
     </message>
     <message>
       <source>Could not find the emulator executable</source>
-      <translation>Kunde inte hitta körbar emulatorfil</translation>
+      <translation>Kunde inte hitta emulatorns körbara fil</translation>
     </message>
     <message>
       <source>Run Emulator</source>
@@ -2138,7 +2138,7 @@ Välj en emulatorversion från den högra panelen.</translation>
     </message>
     <message>
       <source>Invalid game argument provided</source>
-      <translation>Ogiltigt spelargument tillhandahölls</translation>
+      <translation>Ogiltigt spelargument angavs</translation>
     </message>
     <message>
       <source>None</source>
@@ -2241,7 +2241,7 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>Console Language</source>
-      <translation>Konsollspråk</translation>
+      <translation>Konsolspråk</translation>
     </message>
     <message>
       <source>Default tab when opening settings</source>
@@ -2257,7 +2257,7 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>Open the custom trophy images/sounds folder</source>
-      <translation>Öppna mappen för anpassade trofébilder/ljud</translation>
+      <translation>Öppna mappen för anpassade trofébilder och ljud</translation>
     </message>
     <message>
       <source>Logger</source>
@@ -2289,7 +2289,7 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>Hide Cursor Idle Timeout</source>
-      <translation>Dölj muspekare vid overksam</translation>
+      <translation>Tid innan muspekaren döljs vid inaktivitet</translation>
     </message>
     <message>
       <source>None</source>
@@ -2325,7 +2325,7 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>Enable Shaders Dumping</source>
-      <translation>Aktivera Shaders Dumping</translation>
+      <translation>Aktivera dumpning av shaderprogram</translation>
     </message>
     <message>
       <source>Enable NULL GPU</source>
@@ -2425,7 +2425,7 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>Update Compatibility Database On Startup</source>
-      <translation>Uppdatera databas vid uppstart</translation>
+      <translation>Uppdatera kompatibilitetsdatabasen vid uppstart</translation>
     </message>
     <message>
       <source>Game Compatibility</source>
@@ -2465,7 +2465,7 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>Console Language:\nSets the language that the PS4 game uses.\nIt&apos;s recommended to set this to a language the game supports, which will vary by region.</source>
-      <translation>Konsollspråk:\nStäller in språket som PS4-spelet använder.\nDet rekommenderas att ställa in detta till ett språk som spelet har stöd för, vilket kan skilja sig mellan regioner.</translation>
+      <translation>Konsolspråk:\nAnger vilket språk PS4-spelet använder.\nVälj helst ett språk som spelet har stöd för. Tillgängliga språk kan variera mellan regioner.</translation>
     </message>
     <message>
       <source>Emulator Language:\nSets the language of the emulator&apos;s user interface.</source>
@@ -2485,11 +2485,11 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>Play Title Music:\nIf a game supports it, enable playing special music when selecting the game in the GUI.</source>
-      <translation>Spela upp titelmusik:\nOm ett spel har stöd för det kan speciell musik spelas upp från spelet i gränssnittet.</translation>
+      <translation>Spela titelmusik:\nSpela upp spelets titelmusik när det väljs i gränssnittet, om spelet har stöd för det.</translation>
     </message>
     <message>
       <source>Disable Trophy Pop-ups:\nDisable in-game trophy notifications. Trophy progress can still be tracked using the Trophy Viewer (right-click the game in the main window).</source>
-      <translation>Inaktivera popup för troféer:\nInaktivera troféeaviseringar i spel. Troféförlopp kan fortfarande följas med Troféevisaren (högerklicka på spelet i huvudfönstret)</translation>
+      <translation>Inaktivera troféaviseringar:\nInaktivera troféaviseringar i spelet. Du kan fortfarande följa dina troféer i trofévisaren genom att högerklicka på spelet i huvudfönstret.</translation>
     </message>
     <message>
       <source>Hide Cursor:\nChoose when the cursor will disappear:\nNever: You will always see the mouse.\nidle: Set a time for it to disappear after being idle.\nAlways: you will never see the mouse.</source>
@@ -2497,7 +2497,7 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>Hide Idle Cursor Timeout:\nThe duration (seconds) after which the cursor that has been idle hides itself.</source>
-      <translation>Dölj pekare vid overksam:\nLängden (sekunder) efter vilken som muspekaren som har varit overksam döljer sig själv.</translation>
+      <translation>Tid innan muspekaren döljs:\nAntal sekunder som muspekaren ska vara inaktiv innan den döljs.</translation>
     </message>
     <message>
       <source>Display Compatibility Data:\nDisplays game compatibility information in table view. Enable &quot;Update Compatibility On Startup&quot; to get up-to-date information.</source>
@@ -2517,7 +2517,7 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>Idle</source>
-      <translation>Overksam</translation>
+      <translation>Inaktiv</translation>
     </message>
     <message>
       <source>Always</source>
@@ -2525,11 +2525,11 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>Graphics Device:\nOn multiple GPU systems, select the GPU the emulator will use from the drop down list,\nor select &quot;Auto Select&quot; to automatically determine it.</source>
-      <translation>Grafikenhet:\nFör system med flera GPUer kan du välja den GPU som emulatorn ska använda från rullgardinsmenyn,\neller välja &quot;Auto Select&quot; för att automatiskt bestämma det.</translation>
+      <translation>Grafikenhet:\nOm systemet har flera grafikprocessorer kan du välja vilken emulatorn ska använda i listan,\neller välja ”Välj automatiskt” för att låta emulatorn välja.</translation>
     </message>
     <message>
       <source>Width/Height:\nSets the size of the emulator window at launch, which can be resized during gameplay.\nThis is different from the in-game resolution.</source>
-      <translation>Bredd/Höjd:\nStäller in storleken för emulatorfönstret vid uppstart, som kan storleksändras under spelning.\nDetta är inte det samma som spelupplösningen.</translation>
+      <translation>Bredd/höjd:\nAnger emulatorfönstrets storlek vid start. Storleken kan ändras medan du spelar.\nDetta skiljer sig från spelets upplösning.</translation>
     </message>
     <message>
       <source>Enable HDR:\nEnables HDR in games that support it.\nYour monitor must have support for the BT2020 PQ color space and the RGB10A2 swapchain format.</source>
@@ -2541,7 +2541,7 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>Add:\nAdd a folder to the list.</source>
-      <translation>Lägg till:\Lägg till en mapp till listan.</translation>
+      <translation>Lägg till:\nLägg till en mapp i listan.</translation>
     </message>
     <message>
       <source>Remove:\nRemove a folder from the list.</source>
@@ -2549,11 +2549,11 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>Enable Debug Dumping:\nSaves the import and export symbols and file header information of the currently running PS4 program to a directory.</source>
-      <translation>Aktivera felsökningsdumpning:\nSparar import och export av symboler och fil-header-information för aktuellt körande PS4-program till en katalog.</translation>
+      <translation>Aktivera felsökningsdumpning:\nSparar det körande PS4-programmets import- och exportsymboler samt filhuvudinformation i en katalog.</translation>
     </message>
     <message>
       <source>Enable RenderDoc Debugging:\nIf enabled, the emulator will provide compatibility with Renderdoc to allow capture and analysis of the currently rendered frame.</source>
-      <translation>Aktivera RenderDoc-felsökning:\nOm aktiverad kommer emulatorn att tillhandahålla kompatibilitet med Renderdoc för att tillåta fångst och analys för aktuell renderad bildruta.</translation>
+      <translation>Aktivera RenderDoc-felsökning:\nGör emulatorn kompatibel med RenderDoc så att den aktuella bildrutan kan fångas och analyseras.</translation>
     </message>
     <message>
       <source>Collect Shaders:\nYou need this enabled to edit shaders with the debug menu (Ctrl + F10).</source>
@@ -2565,7 +2565,7 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>Copy GPU Buffers:\nGets around race conditions involving GPU submits.\nMay or may not help with PM4 type 0 crashes.</source>
-      <translation>Kopiera GPU-buffertar:\nGör att man kan komma runt race conditions som involverar GPU submits.\nKan eller kan inte hjälpa med PM4 type 0-kraschar.</translation>
+      <translation>Kopiera GPU-buffertar:\nUndviker kapplöpningstillstånd vid överföringar till grafikprocessorn.\nKan i vissa fall hjälpa vid krascher av typen PM4 typ 0.</translation>
     </message>
     <message>
       <source>Host Debug Markers:\nInserts emulator-side information like markers for specific AMDGPU commands around Vulkan commands, as well as giving resources debug names.\nIf you have this enabled, you should enable Crash Diagnostics.\nUseful for programs like RenderDoc.</source>
@@ -2713,7 +2713,7 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>Present Mode</source>
-      <translation>Nuvarande läge</translation>
+      <translation>Presentationsläge</translation>
     </message>
     <message>
       <source>Mailbox (Vsync)</source>
@@ -2733,7 +2733,7 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>Present Mode:\nConfigures how video output will be presented to your screen.\n\nMailbox: Frames synchronize with your screen&apos;s refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\nFifo: Frames synchronize with your screen&apos;s refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\nImmediate: Frames immediately present to your screen when ready. May result in tearing.</source>
-      <translation>Nuvarande läge:\nKonfigurerar hur videoutgången ska visas på skärmen.\n\nMailbox: Bildrutorna synkroniseras med skärmens uppdateringsfrekvens. Nya bildrutor ersätter alla väntande bildrutor. Minskar fördröjningen men kan hoppa över bildrutor om det uppstår fördröjning.\nFifo: Bildrutorna synkroniseras med skärmens uppdateringsfrekvens. Nya bildrutor placeras i kö bakom väntande bildrutor. Säkerställer att alla bildrutor visas men kan öka fördröjningen.\nOmedelbar: Bildrutorna visas omedelbart på skärmen när de är klara. Kan resultera i tearing.</translation>
+      <translation>Presentationsläge:\nAnger hur bildrutorna visas på skärmen.\n\nMailbox: Bildrutorna synkroniseras med skärmens uppdateringsfrekvens. Nya bildrutor ersätter väntande bildrutor. Det minskar fördröjningen men kan göra att bildrutor hoppas över.\nFifo: Bildrutorna synkroniseras med skärmens uppdateringsfrekvens. Nya bildrutor köas bakom väntande bildrutor. Alla bildrutor visas, men fördröjningen kan öka.\nOmedelbar: Bildrutorna visas direkt när de är klara. Det kan orsaka bildslitningar.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the DLC path.</source>
@@ -2773,7 +2773,7 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>Volume:\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.</source>
-      <translation>Volym:\nJustera volymen för spel på global nivå, intervallet går från 0 till 500% med standardvärdet 100%.</translation>
+      <translation>Volym:\nJusterar volymen för alla spel mellan 0 och 500 %. Standardvärdet är 100 %.</translation>
     </message>
     <message>
       <source>Default tab when opening settings:\nChoose which tab will open, the default is General.</source>
@@ -2833,7 +2833,7 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>Enable Devkit Console Mode:\nAdds support for Devkit console memory size.</source>
-      <translation>Aktivera Devkit-konsolläge:\nLägger till stöd för Devkit-konsollens minnesstorlek.</translation>
+      <translation>Aktivera Devkit-konsolläge:\nLägger till stöd för utvecklingskonsolens minnesstorlek.</translation>
     </message>
     <message>
       <source>Set Network Connected to True:\nForces games to detect an active network connection. Actual online capabilities are not yet supported.</source>
@@ -2869,7 +2869,7 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>Additional DMem Allocation:\nForces allocation of the specified amount of additional DMem. Crashes or causes issues in some games.</source>
-      <translation>Ytterligare DMem-allokering:\nTvingar allokering av den angivna mängden ytterligare DMem. Kraschar eller orsakar problem i vissa spel.</translation>
+      <translation>Ytterligare DMem-allokering:\nTvingar fram allokering av den angivna mängden extra DMem. Kan orsaka krascher eller andra problem i vissa spel.</translation>
     </message>
     <message>
       <source>PS4 Sysmodules Path:\nThe folder where PS4 sysmodules are loaded from.</source>
@@ -3005,15 +3005,15 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>Select the system modules folder</source>
-      <translation>Välj systemmodul mapp</translation>
+      <translation>Välj systemmodulmapp</translation>
     </message>
     <message>
       <source>Home Folder Location (Saves, Inputs, Trophy Data)</source>
-      <translation>Hemmapps plats (Sparfiler, Inmatning, Troféer)</translation>
+      <translation>Hemmappens plats (sparfiler, inmatning, trofédata)</translation>
     </message>
     <message>
       <source>Home Folder Location:\nThe folder where save data, trophy files, and input configs are stored for all users.</source>
-      <translation>Hemmappens plats:\nMappen där data, troféfiler och inmatningskonfigurationer sparas för alla användare.</translation>
+      <translation>Hemmappens plats:\nMappen där sparfiler, troféfiler och inmatningskonfigurationer lagras för alla användare.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the home folder.</source>
@@ -3045,11 +3045,11 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>Log Skip Duplicate</source>
-      <translation>Logghopp över dubblett</translation>
+      <translation>Hoppa över identiska loggrader</translation>
     </message>
     <message>
       <source>Log Max Skip Duration</source>
-      <translation>Logga max överhoppningstid</translation>
+      <translation>Maximal tid för överhoppning av loggrader</translation>
     </message>
     <message>
       <source> ms</source>
@@ -3065,7 +3065,7 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>Log Append</source>
-      <translation>Lägg Till Logg</translation>
+      <translation>Fortsätt skriva i befintlig logg</translation>
     </message>
     <message>
       <source>wincolor</source>
@@ -3077,11 +3077,11 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>Log Append:\nAppend to existing logs.</source>
-      <translation>Logg bilaga:\nLägg till befintliga loggar.</translation>
+      <translation>Fortsätt skriva i loggen:\nLägg till i befintliga loggar.</translation>
     </message>
     <message>
       <source>Log Max Skip Duration:\nInterval without writing same lines (ms) - only if &apos;Log Skip Duplicate&apos; enabled.</source>
-      <translation>Log Max Skippa Varaktighet:\nIntervall utan att skriva samma rader (ms) - endast om &apos;Logg Skippa Dubblett&apos; aktiverat.</translation>
+      <translation>Maximal tid för överhoppning av loggrader:\nTidsintervall då identiska rader inte skrivs (ms). Gäller endast om &apos;Hoppa över identiska loggrader&apos; är aktiverat.</translation>
     </message>
     <message>
       <source>Log Size Limit:\nMaximum size of log files (bytes).</source>
@@ -3089,11 +3089,11 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>Log Skip Duplicate:\nSave storage by avoiding writing log that is identical.</source>
-      <translation>Loggöverhoppning av dubblett:\nSpara lagringsutrymme genom att undvika att skriva identiska loggar.</translation>
+      <translation>Hoppa över identiska loggrader:\nSpara lagringsutrymme genom att inte skriva identiska loggrader.</translation>
     </message>
     <message>
       <source>Log Sync:\nSwitch between sync (order) or async (performance).</source>
-      <translation>Log Sync:\nVäxla mellan synk (ordning) eller async (prestanda).</translation>
+      <translation>Loggsynkronisering:\nVälj mellan synkron loggning (ordning) och asynkron loggning (prestanda).</translation>
     </message>
     <message>
       <source>Log Type:\nChoose between wincolor or msvc log types.\nwincolor: Default logging for Windows\nmsvc: Logging for debugging</source>
@@ -3113,7 +3113,7 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>Signaling Info</source>
-      <translation>Signalinformation</translation>
+      <translation>Signaleringsinformation</translation>
     </message>
     <message>
       <source>Enable UPNP</source>
@@ -3254,15 +3254,15 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>Progress</source>
-      <translation>Förlopp</translation>
+      <translation>Framsteg</translation>
     </message>
     <message>
       <source>Show Earned Trophies</source>
-      <translation>Visa förtjänade troféer</translation>
+      <translation>Visa erhållna troféer</translation>
     </message>
     <message>
       <source>Show Not Earned Trophies</source>
-      <translation>Visa icke-förtjänade troféer</translation>
+      <translation>Visa troféer som inte har erhållits</translation>
     </message>
     <message>
       <source>Show Hidden Trophies</source>
@@ -3333,7 +3333,7 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>Username must be 3–16 chars and valid.</source>
-      <translation>Användarnamn måste innehålla 3-16 tecken och vara giltigt.</translation>
+      <translation>Användarnamnet måste vara giltigt och innehålla 3 till 16 tecken.</translation>
     </message>
     <message>
       <source>Delete Confirmation</source>
@@ -3365,7 +3365,7 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>Assign port (1-4) to this user:</source>
-      <translation>Tilldela port (1-4) till denna användare:</translation>
+      <translation>Tilldela den här användaren en port (1 till 4):</translation>
     </message>
     <message>
       <source>&amp;Open User Directory</source>
@@ -3468,15 +3468,15 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>Download</source>
-      <translation>Hämta ner</translation>
+      <translation>Hämta</translation>
     </message>
     <message>
       <source>Check for Pre-release updates at startup</source>
-      <translation>Kontrollera om det finns förhandsutgivna uppdateringar vid start</translation>
+      <translation>Sök efter uppdateringar av förhandsversioner vid start</translation>
     </message>
     <message>
       <source>Check for Pre-release Updates</source>
-      <translation>Leta efter förhandsutgivna uppdateringar</translation>
+      <translation>Sök efter uppdateringar av förhandsversioner</translation>
     </message>
     <message>
       <source>Select the folder where the emulator versions will be installed</source>
@@ -3496,7 +3496,7 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>Enter the name of this version as it appears in the list.</source>
-      <translation>Ange namnet för denna version som den visas i listan.</translation>
+      <translation>Ange versionsnamnet som det visas i listan.</translation>
     </message>
     <message>
       <source>Error</source>
@@ -3512,7 +3512,7 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>Failed to determine the folder path.</source>
-      <translation>Misslyckades med att fastställa mappsökvägen.</translation>
+      <translation>Det gick inte att fastställa sökvägen till mappen.</translation>
     </message>
     <message>
       <source>Delete version</source>
@@ -3528,11 +3528,11 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>No news, the version list is already updated.</source>
-      <translation>Inga nyheter. Versionslistan är redan uppdaterad.</translation>
+      <translation>Inget nytt. Versionslistan är redan aktuell.</translation>
     </message>
     <message>
       <source>The latest versions have been added to the list for download.</source>
-      <translation>De senaste versionerna har lagts till i listan för hämtningar.</translation>
+      <translation>De senaste versionerna har lagts till i listan över versioner som kan hämtas.</translation>
     </message>
     <message>
       <source>Error accessing GitHub API</source>
@@ -3545,7 +3545,7 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>Do you want to download the version</source>
-      <translation>Vill du hämta ner versionen</translation>
+      <translation>Vill du hämta versionen</translation>
     </message>
     <message>
       <source>No files available for this platform.</source>
@@ -3553,7 +3553,7 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>Downloading %1 , please wait...</source>
-      <translation>Hämtar ner %1, vänta...</translation>
+      <translation>Hämtar %1, vänta…</translation>
     </message>
     <message>
       <source>Could not save file.</source>
@@ -3561,11 +3561,11 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>Version %1 has been downloaded and selected.</source>
-      <translation>Version %1 har hämtats ner och valts.</translation>
+      <translation>Version %1 har hämtats och valts.</translation>
     </message>
     <message>
       <source>Failed to create zip extraction script</source>
-      <translation>Misslyckades med att skapa skript för zip-extrahering</translation>
+      <translation>Det gick inte att skapa skriptet för att packa upp zip-filen</translation>
     </message>
     <message>
       <source>The GitHub API response is not a valid JSON array.</source>
@@ -3577,7 +3577,7 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>You already have the latest pre-release version.</source>
-      <translation>Du har redan den senaste förutgåvan.</translation>
+      <translation>Du har redan den senaste förhandsversionen.</translation>
     </message>
     <message>
       <source>Update Available (Emulator)</source>
@@ -3621,7 +3621,7 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>No download URL found for the specified asset.</source>
-      <translation>Ingen hämtnings-URL hittades för angiven tillgång.</translation>
+      <translation>Ingen hämtningsadress hittades för den angivna filen.</translation>
     </message>
     <message>
       <source>Network error while downloading</source>
@@ -3637,7 +3637,7 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>Pre-release updated successfully</source>
-      <translation>Förutgåvan uppdaterades</translation>
+      <translation>Förhandsversionen har uppdaterats</translation>
     </message>
     <message>
       <source>Failed to create the update script file</source>
@@ -3677,11 +3677,11 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>Unable to get hash of latest pre-release.</source>
-      <translation>Kunde inte få hash för senaste förutgåvan.</translation>
+      <translation>Det gick inte att hämta hashvärdet för den senaste förhandsversionen.</translation>
     </message>
     <message>
       <source>Downloading Pre-release (Nightly), please wait...</source>
-      <translation>Hämtar ner förutgåva (Nightly), vänta...</translation>
+      <translation>Hämtar förhandsversionen (Nightly), vänta…</translation>
     </message>
   </context>
   <context>
@@ -3728,7 +3728,7 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>Failed to open the figure file!</source>
-      <translation>Misslyckades med att öppna figurfilen!</translation>
+      <translation>Det gick inte att öppna figurfilen!</translation>
     </message>
     <message>
       <source>Failed to open the figure file(%1)!
@@ -3738,7 +3738,7 @@ Filen kanske redan används på plattan.</translation>
     </message>
     <message>
       <source>Failed to read the figure file!</source>
-      <translation>Misslyckades med att läsa figurfilen!</translation>
+      <translation>Det gick inte att läsa figurfilen!</translation>
     </message>
     <message>
       <source>Failed to read the figure file(%1)!
@@ -3840,11 +3840,11 @@ Filen är för liten.</translation>
     </message>
     <message>
       <source>Player One Ability One</source>
-      <translation>Spelare ett förmåga ett</translation>
+      <translation>Spelare ett: förmåga ett</translation>
     </message>
     <message>
       <source>Player One Ability Two</source>
-      <translation>Spelare ett förmåga två</translation>
+      <translation>Spelare ett: förmåga två</translation>
     </message>
     <message>
       <source>Player Two</source>
@@ -3852,11 +3852,11 @@ Filen är för liten.</translation>
     </message>
     <message>
       <source>Player Two Ability One</source>
-      <translation>Spelare två förmåga ett</translation>
+      <translation>Spelare två: förmåga ett</translation>
     </message>
     <message>
       <source>Player Two Ability Two</source>
-      <translation>Spelare två förmåga två</translation>
+      <translation>Spelare två: förmåga två</translation>
     </message>
     <message>
       <source>None</source>
@@ -3888,7 +3888,7 @@ Filen är för liten.</translation>
     </message>
     <message>
       <source>Failed to open the figure file!</source>
-      <translation>Misslyckades med att öppna figurfilen!</translation>
+      <translation>Det gick inte att öppna figurfilen!</translation>
     </message>
     <message>
       <source>Failed to open the figure file(%1)!
@@ -3898,7 +3898,7 @@ Filen kanske redan används på plattan.</translation>
     </message>
     <message>
       <source>Failed to read the figure file!</source>
-      <translation>Misslyckades med att läsa figurfilen!</translation>
+      <translation>Det gick inte att läsa figurfilen!</translation>
     </message>
     <message>
       <source>Failed to read the figure file(%1)!
@@ -3947,7 +3947,7 @@ Filen är för liten.</translation>
     </message>
     <message>
       <source>Failed to create minifig file!</source>
-      <translation>Misslyckades med att skapa minifig-fil!</translation>
+      <translation>Det gick inte att skapa minifigurfilen!</translation>
     </message>
     <message>
       <source>Failed to create minifig file:
@@ -3979,7 +3979,7 @@ Filen är för liten.</translation>
     <name>skylander_creator_dialog</name>
     <message>
       <source>Skylander Creator</source>
-      <translation>Skylander Creator</translation>
+      <translation>Skylander-skapare</translation>
     </message>
     <message>
       <source>--Unknown--</source>
@@ -4023,12 +4023,12 @@ Filen är för liten.</translation>
     </message>
     <message>
       <source>Failed to create skylander file!</source>
-      <translation>Misslyckades med att skapa skylander-fil!</translation>
+      <translation>Det gick inte att skapa Skylander-filen!</translation>
     </message>
     <message>
       <source>Failed to create skylander file:
 %1</source>
-      <translation>Misslyckades med att skapa skylander-fil:
+      <translation>Det gick inte att skapa Skylander-filen:
 %1</translation>
     </message>
   </context>
@@ -4040,7 +4040,7 @@ Filen är för liten.</translation>
     </message>
     <message>
       <source>Active Portal Skylanders:</source>
-      <translation>Aktiv portal för Skylanders:</translation>
+      <translation>Aktiva Skylanders på portalen:</translation>
     </message>
     <message>
       <source>Skylander %1</source>
@@ -4068,23 +4068,23 @@ Filen är för liten.</translation>
     </message>
     <message>
       <source>Failed to open the skylander file!</source>
-      <translation>Misslyckades med att öppna skylander-filen!</translation>
+      <translation>Det gick inte att öppna Skylander-filen!</translation>
     </message>
     <message>
       <source>Failed to open the skylander file(%1)!
 File may already be in use on the portal.</source>
-      <translation>Misslyckades med att öppna skylander-filen(%1)!
-Filen kanske redan används i portalen.</translation>
+      <translation>Det gick inte att öppna Skylander-filen (%1)!
+Filen kanske redan används på portalen.</translation>
     </message>
     <message>
       <source>Failed to read the skylander file!</source>
-      <translation>Misslyckades med att läsa skylander-filen!</translation>
+      <translation>Det gick inte att läsa Skylander-filen!</translation>
     </message>
     <message>
       <source>Failed to read the skylander file(%1)!
 File was too small.</source>
-      <translation>Misslyckades med att läsa skylander-filen(%1)!
-Filen är för liten.</translation>
+      <translation>Det gick inte att läsa Skylander-filen (%1)!
+Filen var för liten.</translation>
     </message>
     <message>
       <source>Unknown (Id:%1 Var:%2)</source>
