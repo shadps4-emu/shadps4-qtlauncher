@@ -26,7 +26,8 @@
     </message>
     <message>
       <source>Cheats/Patches are experimental.\nUse with caution.\n\nDownload cheats individually by selecting the repository and clicking the download button.\nIn the Patches tab, you can download all patches at once, choose which ones you want to use, and save your selection.\n\nSince we do not develop the Cheats/Patches,\nplease report issues to the cheat author.\n\nCreated a new cheat? Visit:\n</source>
-      <translation>Cheats/Patches são experimentais.\nUse com caução.\n\nTransfira os cheats individualmente selecionando o repositório e clicando no botão de transferência.\nNa aba Patches, poderá transferir todos os Patches de uma vez, escolher o qual deseja usar e guardar as suas definições.\n\nComo nós não desenvolvemos os Cheats/Patches,\npor favor, reporte os problemas relacionados com o cheat ao autor deste.\n\nCriou um novo cheat? Visite:\n</translation>
+      <translation>Batotas/Correções são experimentais.\nUse-as com cuidado.\n\nTransfira as batotas individualmente ao selecionar o repositório e clicar no botão de transferência.\nNo separador Correções, poderá transferir todas as correções de uma só vez, escolher qual deseja usar e guardar as suas definições.\n\nComo nós não programamos as Batotas/Correções,\npor favor, reporte os problemas relacionados ao autor das batotas.\n\nCriou uma batota?
+Visite:\n</translation>
     </message>
     <message>
       <source>No Image Available</source>
