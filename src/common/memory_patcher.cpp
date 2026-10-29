@@ -46,14 +46,14 @@ std::string convertValueToHex(const std::string type, const std::string valueStr
             float f;
             uint32_t i;
         } floatUnion;
-        floatUnion.f = std::stof(valueStr);
+        floatUnion.f = QString::fromStdString(valueStr).toFloat();
         result = toHex(std::byteswap(floatUnion.i), sizeof(floatUnion.i));
     } else if (type == "float64") {
         union {
             double d;
             uint64_t i;
         } doubleUnion;
-        doubleUnion.d = std::stod(valueStr);
+        doubleUnion.d = QString::fromStdString(valueStr).toDouble();
         result = toHex(std::byteswap(doubleUnion.i), sizeof(doubleUnion.i));
     } else if (type == "utf8") {
         std::vector<unsigned char> byteArray =
