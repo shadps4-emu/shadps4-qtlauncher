@@ -6,13 +6,12 @@
 #include <QFileDialog>
 #include <QGraphicsDropShadowEffect>
 #include <QLabel>
-#include <QVBoxLayout>
-#include <QWidget>
+#include <QScrollBar>
 #include <QStringList>
 #include <QTableWidget>
 #include <QTableWidgetItem>
-#include <QGraphicsDropShadowEffect>
-#include <QScrollBar>
+#include <QVBoxLayout>
+#include <QWidget>
 
 #include "core/file_format/elf.h"
 #include "gui_settings.h"
