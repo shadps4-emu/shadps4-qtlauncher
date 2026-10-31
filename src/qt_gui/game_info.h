@@ -79,9 +79,6 @@ public:
         if (psf.Open(param_sfo_path)) {
             SceUpdateChecker("icon0.png", game.icon_path, game_update_path, game_patch_path,
                              game.path);
-            QString iconpath;
-            Common::FS::PathToQString(iconpath, game.icon_path);
-            game.icon = QImage(iconpath);
             SceUpdateChecker("pic1.png", game.pic_path, game_update_path, game_patch_path,
                              game.path);
             SceUpdateChecker("snd0.at9", game.snd0_path, game_update_path, game_patch_path,

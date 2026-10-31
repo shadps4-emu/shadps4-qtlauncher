@@ -132,7 +132,7 @@ void GameGridFrame::PopulateGameGrid(QVector<GameInfo> m_games_search, bool from
         image_container->setFixedSize(icon_size, icon_size);
 
         QLabel* image_label = new QLabel(image_container);
-        QImage icon = m_games_[gameCounter].icon.scaled(
+        QImage icon = m_games_[gameCounter].icon().scaled(
             QSize(icon_size, icon_size), Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
         image_label->setFixedSize(icon.width(), icon.height());
         image_label->setPixmap(QPixmap::fromImage(icon));
