@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: Copyright 2024 shadPS4 Emulator Project
+// SPDX-FileCopyrightText: Copyright 2024-2026 shadPS4 Emulator Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #pragma once
@@ -27,7 +27,16 @@ struct GameInfo {
     std::filesystem::path icon_path; // path of icon0.png
     std::filesystem::path pic_path;  // path of pic1.png
     std::filesystem::path snd0_path; // path of snd0.at9
-    QImage icon;
+    mutable std::shared_ptr<QImage> icon_;
+    const QImage& icon() const {
+        if (!icon_) {
+            QString iconpath;
+            Common::FS::PathToQString(iconpath, icon_path);
+            auto img = std::make_shared<QImage>(iconpath);
+            icon_ = std::move(img);
+        }
+        return *icon_;
+    }
     std::string size;
     u64 stored_size{};
     QString storage_tooltip;

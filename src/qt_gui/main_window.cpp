@@ -8,6 +8,7 @@
 #include <QKeyEvent>
 #include <QProgressDialog>
 #include <QStatusBar>
+#include <QTimer>
 
 #include "about_dialog.h"
 #include "cheats_patches.h"
@@ -1169,25 +1170,23 @@ void MainWindow::StartGame() {
 }
 
 void MainWindow::SearchGameTable(const QString& text) {
-    const auto& games = m_game_info->m_games_backup;
-
-    QVector<GameInfo> filteredGames;
-    filteredGames.reserve(games.size());
-
-    for (const auto& gameInfo : games) {
-        const QString gameName = QString::fromStdString(gameInfo.name);
-
-        if (gameName.contains(text, Qt::CaseInsensitive)) {
-            filteredGames.push_back(gameInfo);
-        }
-    }
-
-    m_game_info->m_games = std::move(filteredGames);
-
     if (isTableList) {
-        m_game_list_frame->clearContents();
-        m_game_list_frame->PopulateGameList(false);
+        m_game_list_frame->SearchGameTable(text);
     } else {
+        const auto& games = m_game_info->m_games_backup;
+
+        QVector<GameInfo> filteredGames;
+        filteredGames.reserve(games.size());
+
+        for (const auto& gameInfo : games) {
+            const QString gameName = QString::fromStdString(gameInfo.name);
+
+            if (gameName.contains(text, Qt::CaseInsensitive)) {
+                filteredGames.push_back(gameInfo);
+            }
+        }
+
+        m_game_info->m_games = std::move(filteredGames);
         m_game_grid_frame->PopulateGameGrid(m_game_info->m_games, true);
     }
 }
@@ -1245,8 +1244,10 @@ void MainWindow::ConfigureGuiFromSettings() {
     bool showLog = m_gui_settings->GetValue(gui::mw_showLog).toBool();
     ui->showLogAct->setChecked(showLog);
 
-    BackgroundMusicPlayer::getInstance().setVolume(
-        m_gui_settings->GetValue(gui::gl_backgroundMusicVolume).toInt());
+    QTimer::singleShot(0, [this]() {
+        BackgroundMusicPlayer::getInstance().setVolume(
+            m_gui_settings->GetValue(gui::gl_backgroundMusicVolume).toInt());
+    });
 }
 
 void MainWindow::SaveWindowState() {
