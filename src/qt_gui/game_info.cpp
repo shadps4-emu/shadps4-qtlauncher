@@ -74,9 +74,13 @@ void ScanDirectoryRecursively(const QString& dir, QStringList& filePaths, int cu
         }
 
         // Check if this directory contains a PS4 game (has sce_sys/param.sfo and eboot.bin)
-        if (QFile::exists(entry.filePath() + "/sce_sys/param.sfo") &&
-            QFile::exists(entry.filePath() + "/eboot.bin")) {
-            filePaths.append(entry.absoluteFilePath());
+        if (QFile::exists(entry.filePath() + "/sce_sys/param.sfo")) {
+            // If only param.sfo is present, the folder likely is a patch folder where eboot.bin was
+            // not updated, or a DLC folder that got put in the wrong place, in either case, don't
+            // register it, but don't recursively check its contents either
+            if (QFile::exists(entry.filePath() + "/eboot.bin")) {
+                filePaths.append(entry.absoluteFilePath());
+            }
         } else {
             // If not a game directory, recursively scan it with increased depth
             ScanDirectoryRecursively(entry.absoluteFilePath(), filePaths, current_depth + 1);
