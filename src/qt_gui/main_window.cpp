@@ -1112,7 +1112,9 @@ void MainWindow::PrepareLogFile(const QString& work_dir, const QStringList& args
                                                              : Common::FS::LOG_FILE;
     const QString path =
         QDir(user_dir).filePath(QString::fromLatin1(Common::FS::LOG_DIR) + "/" + filename);
-    ui->logDisplay->SetSource(enabled ? path : QString(), true);
+    if (ui && ui->logDisplay) {
+        ui->logDisplay->SetSource(enabled ? path : QString(), true);
+    }
 }
 
 void MainWindow::StartGameWithArgs(QStringList args) {
