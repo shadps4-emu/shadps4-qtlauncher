@@ -8,6 +8,7 @@
 #include <QKeyEvent>
 #include <QProgressDialog>
 #include <QStatusBar>
+#include <QTimer>
 
 #include "about_dialog.h"
 #include "cheats_patches.h"
@@ -1245,8 +1246,10 @@ void MainWindow::ConfigureGuiFromSettings() {
     bool showLog = m_gui_settings->GetValue(gui::mw_showLog).toBool();
     ui->showLogAct->setChecked(showLog);
 
-    BackgroundMusicPlayer::getInstance().setVolume(
-        m_gui_settings->GetValue(gui::gl_backgroundMusicVolume).toInt());
+    QTimer::singleShot(0, [this]() {
+        BackgroundMusicPlayer::getInstance().setVolume(
+            m_gui_settings->GetValue(gui::gl_backgroundMusicVolume).toInt());
+    });
 }
 
 void MainWindow::SaveWindowState() {
