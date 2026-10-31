@@ -7,9 +7,15 @@
 #include <QGraphicsDropShadowEffect>
 #include <QLabel>
 #include <QVBoxLayout>
+#include <QWidget>
+#include <QStringList>
+#include <QTableWidget>
+#include <QTableWidgetItem>
+#include <QGraphicsDropShadowEffect>
+#include <QScrollBar>
 
 #include "core/file_format/elf.h"
-#include "game_list_frame.h"
+#include "gui_settings.h"
 
 class ElfViewer : public QTableWidget {
     Q_OBJECT

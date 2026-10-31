@@ -418,3 +418,5 @@ FodyWeavers.xsd
 # JetBrains
 .idea
 cmake-build-*
+
+/perf.data*
