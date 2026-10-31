@@ -1034,7 +1034,7 @@ Lütfen anahtarlarınızı girin ve kaydedin.</translation>
     </message>
     <message>
       <source>Total: %1</source>
-      <translation type="unfinished">Total: %1</translation>
+      <translation>Toplam: %1</translation>
     </message>
   </context>
   <context>
