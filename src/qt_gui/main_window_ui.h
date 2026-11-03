@@ -16,7 +16,7 @@
 class Ui_MainWindow {
 public:
     QSplitter* splitter;
-    LogFileViewer* logDisplay;
+    LogFileViewer* logDisplay = nullptr;
     QAction* bootGameAct;
     QAction* addElfFolderAct;
     QAction* shadFolderAct;
