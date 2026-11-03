@@ -1032,7 +1032,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Total: %1</source>
-      <translation type="unfinished">Total: %1</translation>
+      <translation>總共：%1</translation>
     </message>
   </context>
   <context>
@@ -1376,12 +1376,12 @@ This game has a separate update/patch folder. Only the base game will be archive
     <message>
       <source>Unable to open the file manager for:
 %1</source>
-      <translation type="unfinished">Unable to open the file manager for:
+      <translation>無法開啟檔案管理員：
 %1</translation>
     </message>
     <message>
       <source>Open Path...</source>
-      <translation type="unfinished">Open Path...</translation>
+      <translation>開啟路徑……</translation>
     </message>
     <message>
       <source>Open Game Path</source>
