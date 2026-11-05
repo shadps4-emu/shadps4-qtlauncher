@@ -33,4 +33,5 @@ private:
     QLineEdit* m_gamesDirectory;
     QLineEdit* m_addonsDirectory;
     QLineEdit* m_versionDirectory;
+    std::filesystem::path m_initialGamesDirectory;
 };
