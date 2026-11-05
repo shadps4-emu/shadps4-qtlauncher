@@ -1698,7 +1698,7 @@ void MainWindow::RestartEmulator() {
     }
 
     QFileInfo fileInfo(exe);
-    QString workDir = fileInfo.absolutePath();
+    QString workDir = QDir::currentPath();
 
     PrepareLogFile(workDir, args);
     m_ipc_client->startEmulator(fileInfo, args, workDir);
