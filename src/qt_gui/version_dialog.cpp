@@ -604,7 +604,7 @@ tr("First you need to choose a location to save the versions in\n'Path to save v
                     scriptContent = QString(
                                         "#!/bin/bash\n"
                                         "mkdir -p \"%1\"\n"
-                                        "unzip -o \"%2\" -d \"%1\"\n"
+                                        "unzip -o \"%2\" -d \"%1\" || bsdtar -xf \"%2\" -C \"%1\"\n"
                                         "rm \"%2\"\n"
                                         "rm \"%3\"\n"
                                         "clear\n")
@@ -1220,7 +1220,7 @@ void VersionDialog::showDownloadDialog(const QString& tagName, const QString& do
         scriptFilePath = userPath + "/extract_pre_release.sh";
         scriptContent = QString("#!/bin/bash\n"
                                 "mkdir -p \"%1\"\n"
-                                "unzip -o \"%2\" -d \"%1\"\n"
+                                "unzip -o \"%2\" -d \"%1\" || bsdtar -xf \"%2\" -C \"%1\"\n"
                                 "rm \"%2\"\n"
                                 "rm \"%3\"\n"
                                 "clear\n")
