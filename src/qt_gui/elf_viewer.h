@@ -6,10 +6,15 @@
 #include <QFileDialog>
 #include <QGraphicsDropShadowEffect>
 #include <QLabel>
+#include <QScrollBar>
+#include <QStringList>
+#include <QTableWidget>
+#include <QTableWidgetItem>
 #include <QVBoxLayout>
+#include <QWidget>
 
 #include "core/file_format/elf.h"
-#include "game_list_frame.h"
+#include "gui_settings.h"
 
 class ElfViewer : public QTableWidget {
     Q_OBJECT
