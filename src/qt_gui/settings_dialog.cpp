@@ -1,6 +1,8 @@
 // SPDX-FileCopyrightText: Copyright 2025-2026 shadPS4 Emulator Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
+#include <algorithm>
+#include <cstring>
 #include <iostream>
 #include <vector>
 #include <AL/al.h>
@@ -1514,14 +1516,61 @@ void SettingsDialog::GetPhysicalDevices() {
     appInfo.engineVersion = VK_MAKE_VERSION(1, 0, 0);
     appInfo.apiVersion = VK_API_VERSION_1_3;
 
+    // Query available instance extensions to enable surface extensions matching
+    // the emulator's presentation context. This ensures implicit device selection
+    // layers (such as VK_LAYER_MESA_device_select) evaluate display primaries and
+    // enumerate physical devices in the exact same order as shadPS4 core.
+    uint32_t extCount = 0;
+    std::vector<const char*> enabledExtensions;
+    if (vkEnumerateInstanceExtensionProperties(nullptr, &extCount, nullptr) == VK_SUCCESS &&
+        extCount > 0) {
+        std::vector<VkExtensionProperties> availableExts(extCount);
+        if (vkEnumerateInstanceExtensionProperties(nullptr, &extCount, availableExts.data()) ==
+            VK_SUCCESS) {
+            auto isExtAvailable = [&](const char* name) {
+                return std::any_of(
+                    availableExts.begin(), availableExts.end(),
+                    [&](const VkExtensionProperties& p) { return std::strcmp(p.extensionName, name) == 0; });
+            };
+
+            if (isExtAvailable("VK_KHR_surface")) {
+                enabledExtensions.push_back("VK_KHR_surface");
+            }
+#if defined(__linux__) || defined(__unix__)
+            if (isExtAvailable("VK_KHR_wayland_surface")) {
+                enabledExtensions.push_back("VK_KHR_wayland_surface");
+            }
+            if (isExtAvailable("VK_KHR_xcb_surface")) {
+                enabledExtensions.push_back("VK_KHR_xcb_surface");
+            }
+            if (isExtAvailable("VK_KHR_xlib_surface")) {
+                enabledExtensions.push_back("VK_KHR_xlib_surface");
+            }
+#endif
+#ifdef _WIN32
+            if (isExtAvailable("VK_KHR_win32_surface")) {
+                enabledExtensions.push_back("VK_KHR_win32_surface");
+            }
+#endif
+        }
+    }
+
     VkInstanceCreateInfo instInfo{};
     instInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
     instInfo.pApplicationInfo = &appInfo;
+    instInfo.enabledExtensionCount = static_cast<uint32_t>(enabledExtensions.size());
+    instInfo.ppEnabledExtensionNames =
+        enabledExtensions.empty() ? nullptr : enabledExtensions.data();
 
-    VkInstance instance;
+    VkInstance instance = VK_NULL_HANDLE;
     if (vkCreateInstance(&instInfo, nullptr, &instance) != VK_SUCCESS) {
-        qWarning() << "Failed to create Vulkan instance.";
-        return;
+        // Fallback without extensions if custom instance creation failed
+        instInfo.enabledExtensionCount = 0;
+        instInfo.ppEnabledExtensionNames = nullptr;
+        if (vkCreateInstance(&instInfo, nullptr, &instance) != VK_SUCCESS) {
+            qWarning() << "Failed to create Vulkan instance.";
+            return;
+        }
     }
 
     // Load instance-based function pointers
