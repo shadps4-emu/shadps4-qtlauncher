@@ -652,7 +652,7 @@ void SettingsDialog::closeEvent(QCloseEvent* event) {
 
 void SettingsDialog::LoadValuesFromConfig() {
     std::filesystem::path gs_config_file =
-        Common::FS::GetUserPath(Common::FS::PathType::CustomConfigs) / (gs_serial);
+        Common::FS::GetUserPath(Common::FS::PathType::CustomConfigs) / (gs_serial + ".json");
 
     std::error_code error;
     bool is_newly_created = false;
