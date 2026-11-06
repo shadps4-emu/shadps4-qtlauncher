@@ -1,6 +1,9 @@
 // SPDX-FileCopyrightText: Copyright 2026 shadPS4 Emulator Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
+#include <QJsonDocument>
+#include <QJsonObject>
+
 #include "gui_context_menus.h"
 
 #include "background_music_player.h"
@@ -30,6 +33,38 @@
 #include <shobjidl.h>
 #include <wrl/client.h>
 #endif
+
+namespace {
+
+struct GameLogSettings {
+    bool enabled;
+    std::filesystem::path file;
+};
+
+// The emulator applies the game-specific config before it opens the log, so Log "enable" and
+// "separate" can differ from the global settings for this game.
+GameLogSettings GetGameLogSettings(const std::string& serial) {
+    bool enabled = EmulatorSettings.IsLogEnable();
+    bool separate = EmulatorSettings.IsLogSeparate();
+    QString config_path;
+    Common::FS::PathToQString(config_path,
+                              Common::FS::GetUserPath(Common::FS::PathType::CustomConfigs) /
+                                  (serial + ".json"));
+    QFile config(config_path);
+    if (config.open(QIODevice::ReadOnly)) {
+        const auto log = QJsonDocument::fromJson(config.readAll()).object().value("Log").toObject();
+        if (const auto value = log.value("enable"); value.isBool()) {
+            enabled = value.toBool();
+        }
+        if (const auto value = log.value("separate"); value.isBool()) {
+            separate = value.toBool();
+        }
+    }
+    return {enabled, Common::FS::GetUserPath(Common::FS::PathType::LogDir) /
+                         (separate ? serial + ".log" : "shad_log.txt")};
+}
+
+} // namespace
 
 void GuiContextMenus::ShowInFileManager(const std::filesystem::path& path, QWidget* parent) {
     QString file_path;
@@ -557,15 +592,12 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
     if (selected == openLogFolder) {
         QString logPath;
         Common::FS::PathToQString(logPath, Common::FS::GetUserPath(Common::FS::PathType::LogDir));
-        if (!EmulatorSettings.IsLogEnable()) {
+        const auto log_settings = GetGameLogSettings(m_games[itemID].serial);
+        if (!log_settings.enabled) {
             QDesktopServices::openUrl(QUrl::fromLocalFile(logPath));
         } else {
-            QString fileName = QString::fromStdString(EmulatorSettings.IsLogSeparate()
-                                                          ? m_games[itemID].serial + ".log"
-                                                          : "shad_log.txt");
-            QString filePath = logPath + "/" + fileName;
-            if (QFile::exists(filePath)) {
-                ShowInFileManager(Common::FS::PathFromQString(filePath), widget);
+            if (std::filesystem::exists(log_settings.file)) {
+                ShowInFileManager(log_settings.file, widget);
             } else {
                 QMessageBox msgBox;
                 msgBox.setIcon(QMessageBox::Information);
@@ -989,9 +1021,7 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
     }
 
     if (selected == submitCompatibilityReport) {
-        std::filesystem::path log_file_path =
-            (Common::FS::GetUserPath(Common::FS::PathType::LogDir) /
-             (EmulatorSettings.IsLogSeparate() ? m_games[itemID].serial + ".log" : "shad_log.txt"));
+        const std::filesystem::path log_file_path = GetGameLogSettings(m_games[itemID].serial).file;
         bool is_valid_file = LogAnalyzer::ProcessFile(log_file_path);
         std::optional<std::string> report_result = std::nullopt;
         if (is_valid_file) {
