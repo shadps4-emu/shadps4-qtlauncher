@@ -1796,6 +1796,21 @@ This game has a separate update/patch folder. Only the base game will be archive
     </message>
 </context>
 <context>
+    <name>LogFileViewer</name>
+    <message>
+        <source>Auto-scroll</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open Log File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Could not open the log file.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>LogPresetsDialog</name>
     <message>
         <source>Log Filter Presets</source>
@@ -2041,10 +2056,6 @@ This game has a separate update/patch folder. Only the base game will be archive
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>shadPS4</source>
-        <translation type="unfinished">shadPS4</translation>
-    </message>
-    <message>
         <source>Play</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2135,10 +2146,6 @@ Select an emulator version from the right panel.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Game Log</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Show Game Log</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2198,6 +2205,10 @@ Folders processed: %1</source>
     </message>
     <message>
         <source>Incorrect recovery key. Please try again.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source> [line truncated; see log file]</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
