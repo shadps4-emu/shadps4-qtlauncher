@@ -943,10 +943,6 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
                     tr("This game does not have any saved Shader Cache to delete!"));
                 error = true;
             } else {
-                if (has_dir)
-                    std::filesystem::remove_all(dir_path);
-                if (has_zip)
-                    std::filesystem::remove(zip_path);
                 folder_path = shader_cache_path;
                 message_type = tr("Shader Cache");
             }
@@ -961,6 +957,10 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
                 QMessageBox::Yes | QMessageBox::No);
             if (reply == QMessageBox::Yes) {
                 const auto target = Common::FS::PathFromQString(folder_path);
+                if (selected == deleteShaderCache) {
+                    std::error_code ec;
+                    std::filesystem::remove(Common::FS::PathFromQString(shader_cache_zip_path), ec);
+                }
                 if (Core::FileSys::IsZArchiveFile(target)) {
                     std::error_code ec;
                     std::filesystem::remove(target, ec);
