@@ -284,6 +284,8 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
 
     menu.addMenu(compatibilityMenu);
 
+    // Only the list view fills in the compatibility data, so look it up for the grid view too
+    m_games[itemID].compatibility = m_compat_info->GetCompatibilityInfo(m_games[itemID].serial);
     bool const compat_entry_exists =
         m_games[itemID].compatibility.status != CompatibilityStatus::Unknown;
 

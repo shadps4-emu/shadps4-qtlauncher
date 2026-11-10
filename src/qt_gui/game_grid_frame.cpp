@@ -275,7 +275,7 @@ void GameGridFrame::SetGameConfigIcon(QWidget* parentWidget, QVector<GameInfo> m
     std::string serialStr = m_games_[gameCounter].serial;
 
     bool hasGameConfig = std::filesystem::exists(
-        Common::FS::GetUserPath(Common::FS::PathType::CustomConfigs) / (serialStr + ".toml"));
+        Common::FS::GetUserPath(Common::FS::PathType::CustomConfigs) / (serialStr + ".json"));
 
     QLabel* label = new QLabel(parentWidget);
     label->setPixmap(QPixmap(":images/game_settings.png")
