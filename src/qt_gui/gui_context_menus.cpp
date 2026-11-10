@@ -886,9 +886,7 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
             }
             Common::FS::PathToQString(game_update_path, update_root);
         }
-        Common::FS::PathToQString(
-            dlc_path, EmulatorSettings.GetAddonInstallDir() /
-                          Common::FS::PathFromQString(folder_path).parent_path().filename());
+        Common::FS::PathToQString(dlc_path, dlc_root);
         Common::FS::PathToQString(trophy_data_path,
                                   Common::FS::GetUserPath(Common::FS::PathType::MetaDataDir) /
                                       m_games[itemID].serial / "TrophyFiles");
