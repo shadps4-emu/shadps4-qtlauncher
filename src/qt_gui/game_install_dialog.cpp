@@ -65,10 +65,10 @@ QWidget* GameInstallDialog::SetupGamesDirectory() {
     // Input.
     m_gamesDirectory = new QLineEdit();
     QString install_dir;
-    std::filesystem::path install_path = EmulatorSettings.GetGameInstallDirs().empty()
-                                             ? ""
-                                             : EmulatorSettings.GetGameInstallDirs().front();
-    Common::FS::PathToQString(install_dir, install_path);
+    m_initialGamesDirectory = EmulatorSettings.GetGameInstallDirs().empty()
+                                  ? ""
+                                  : EmulatorSettings.GetGameInstallDirs().front();
+    Common::FS::PathToQString(install_dir, m_initialGamesDirectory);
     m_gamesDirectory->setText(install_dir);
     m_gamesDirectory->setMinimumWidth(400);
 
@@ -191,7 +191,11 @@ void GameInstallDialog::Save() {
 #endif
 
     // Save the directories
-    EmulatorSettings.AddGameInstallDir(Common::FS::PathFromQString(gamesDirectory));
+    const auto new_games_path = Common::FS::PathFromQString(gamesDirectory);
+    if (!m_initialGamesDirectory.empty() && m_initialGamesDirectory != new_games_path) {
+        EmulatorSettings.RemoveGameInstallDir(m_initialGamesDirectory);
+    }
+    EmulatorSettings.AddGameInstallDir(new_games_path);
     EmulatorSettings.SetAddonInstallDir(Common::FS::PathFromQString(addonsDirectory));
 #ifndef HIDE_VERSION_MANAGER
     m_gui_settings->SetValue(gui::vm_versionPath, versionDirectory);
