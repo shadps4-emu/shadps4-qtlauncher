@@ -1117,7 +1117,7 @@ void SettingsDialog::updateNoteTextEdit(const QString& elementName) {
         text = tr("Enable Devkit Console Mode:\\nAdds support for Devkit console memory size.");
     } else if (elementName == "networkConnectedCheckBox") {
         text = tr("Set Network Connected to True:\\nForces games to detect an active network connection. Actual online capabilities are not yet supported.");
-    } else if (elementName == "shaderCaheCheckBox") {
+    } else if (elementName == "shaderCacheCheckBox") {
         text = tr("Enable Shader Cache:\\nStoring compiled shaders to avoid recompilations, reduce stuttering.");
     } else if (elementName == "shaderCacheArchiveCheckBox") {
         text = tr("Compress the Shader Cache files into a zip file:\\nThe shader cache files are stored within a single zip file instead of multiple separate files.");
