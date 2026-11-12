@@ -2686,6 +2686,13 @@
                  </property>
                 </widget>
                </item>
+               <item>
+                <widget class="QCheckBox" name="patchShadersCheckBox">
+                 <property name="text">
+                  <string>Enable Shader Patches</string>
+                 </property>
+                </widget>
+               </item>
               </layout>
              </widget>
             </item>
