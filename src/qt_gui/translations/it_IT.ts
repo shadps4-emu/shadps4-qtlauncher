@@ -1380,56 +1380,56 @@ Questo gioco ha una cartella di aggiornamento/patch separata. Solo il gioco di b
     <message>
       <source>Unable to open the file manager for:
 %1</source>
-      <translation type="unfinished">Unable to open the file manager for:
+      <translation>Impossibile aprire il gestore file per:
 %1</translation>
     </message>
     <message>
       <source>Open Path...</source>
-      <translation type="unfinished">Open Path...</translation>
+      <translation>Apri Percorso...</translation>
     </message>
     <message>
       <source>Open Game Path</source>
-      <translation type="unfinished">Open Game Path</translation>
+      <translation>Apri Percorso Gioco</translation>
     </message>
     <message>
       <source>Open Update Path</source>
-      <translation type="unfinished">Open Update Path</translation>
+      <translation>Apri Percorso Aggiornamento</translation>
     </message>
     <message>
       <source>Open Mods Path</source>
-      <translation type="unfinished">Open Mods Path</translation>
+      <translation>Apri Percorso Mods</translation>
     </message>
     <message>
       <source>Open DLC Path</source>
-      <translation type="unfinished">Open DLC Path</translation>
+      <translation>Apri Percorso DLC</translation>
     </message>
     <message>
       <source>Open Save Data Path</source>
-      <translation type="unfinished">Open Save Data Path</translation>
+      <translation>Apri Cartella Dati di Salvataggio</translation>
     </message>
     <message>
       <source>Open Log Path</source>
-      <translation type="unfinished">Open Log Path</translation>
+      <translation>Apri Percorso Registro</translation>
     </message>
     <message>
       <source>This game has no game path to open!</source>
-      <translation type="unfinished">This game has no game path to open!</translation>
+      <translation>Questo gioco non ha nessun percorso di gioco da aprire!</translation>
     </message>
     <message>
       <source>This game has no update path to open!</source>
-      <translation type="unfinished">This game has no update path to open!</translation>
+      <translation>Questo gioco non ha alcun percorso di aggiornamento da aprire!</translation>
     </message>
     <message>
       <source>This game has no mods path to open!</source>
-      <translation type="unfinished">This game has no mods path to open!</translation>
+      <translation>Questo gioco non ha alcun percorso di mod da aprire!</translation>
     </message>
     <message>
       <source>This game has no DLC path to open!</source>
-      <translation type="unfinished">This game has no DLC path to open!</translation>
+      <translation>Questo gioco non ha alcun percorso DLC da aprire!</translation>
     </message>
     <message>
       <source>This game has no save path to open!</source>
-      <translation type="unfinished">This game has no save path to open!</translation>
+      <translation>Questo gioco non ha nessun percorso di salvataggio da aprire!</translation>
     </message>
   </context>
   <context>
@@ -2191,21 +2191,21 @@ Si prega di installare Rosetta 2 dal Terminale utilizzando &apos;softwareupdate 
     </message>
     <message>
       <source>Patches directory does not exist.</source>
-      <translation type="unfinished">Patches directory does not exist.</translation>
+      <translation>La cartella delle patch non esiste.</translation>
     </message>
     <message>
       <source>Update files.json</source>
-      <translation type="unfinished">Update files.json</translation>
+      <translation>Aggiorna files.json</translation>
     </message>
     <message>
       <source>Processing complete.
 Folders processed: %1</source>
-      <translation type="unfinished">Processing complete.
-Folders processed: %1</translation>
+      <translation>Elaborazione completata.
+Cartelle elaborate: %1</translation>
     </message>
     <message>
       <source>Update files.json (Patches)</source>
-      <translation type="unfinished">Update files.json (Patches)</translation>
+      <translation>Aggiorna files.json (Patch)</translation>
     </message>
   </context>
   <context>
@@ -3163,19 +3163,19 @@ Folders processed: %1</translation>
     </message>
     <message>
       <source>PS4 Fonts Path</source>
-      <translation type="unfinished">PS4 Fonts Path</translation>
+      <translation>Percorso Font PS4</translation>
     </message>
     <message>
       <source>Select the fonts folder</source>
-      <translation type="unfinished">Select the fonts folder</translation>
+      <translation>Seleziona la cartella dei font</translation>
     </message>
     <message>
       <source>PS4 Fonts Path:\nThe folder where PS4 system fonts are loaded from.</source>
-      <translation type="unfinished">PS4 Fonts Path:\nThe folder where PS4 system fonts are loaded from.</translation>
+      <translation>Percorso Font PS4:\nLa cartella da cui vengono caricati i font di sistema PS4.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the fonts path.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the fonts path.</translation>
+      <translation>Esplora:\nEsplora una cartella da impostare come percorso dei font.</translation>
     </message>
   </context>
   <context>
