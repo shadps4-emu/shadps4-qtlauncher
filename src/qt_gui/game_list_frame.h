@@ -76,7 +76,7 @@ public:
     std::string last_favorite;
 
     static float parseAsFloat(const std::string& str, const int& offset) {
-        return std::stof(str.substr(0, str.size() - offset));
+        return QString::fromStdString(str.substr(0, str.size() - offset)).toFloat();
     }
 
     static int parsePlayTime(const std::string& time) {
