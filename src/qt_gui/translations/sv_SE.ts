@@ -2557,7 +2557,7 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>Collect Shaders:\nYou need this enabled to edit shaders with the debug menu (Ctrl + F10).</source>
-      <translation>Samla shaders:\nDu behöver aktivera detta för att redigera shaders med felsökningsmenyn (Ctrl + F10)</translation>
+      <translation>Samla in shaders:\nDu måste aktivera detta för att kunna redigera shaders via felsökningsmenyn (Ctrl + F10).</translation>
     </message>
     <message>
       <source>Enable Readback Linear Images:\nEnables async downloading of GPU modified linear images.\nMight fix issues in some games.</source>
@@ -2569,7 +2569,7 @@ Folders processed: %1</source>
     </message>
     <message>
       <source>Host Debug Markers:\nInserts emulator-side information like markers for specific AMDGPU commands around Vulkan commands, as well as giving resources debug names.\nIf you have this enabled, you should enable Crash Diagnostics.\nUseful for programs like RenderDoc.</source>
-      <translation>Felsökningsmarkörer för värd:\nInfogar informationsliknande markörer i emulatorn för specifika AMDGPU-kommandon runt Vulkan-kommandon, så väl som ger resurser felsökningsnamn.\nOm du har detta aktiverat bör du aktivera Kraschdiagnostik.\nAnvändbart för  program som RenderDoc.</translation>
+      <translation>Värdens felsökningsmarkörer:\nLägger in emulatorinformation, till exempel markörer för specifika AMDGPU-kommandon runt Vulkan-kommandon och ger resurser felsökningsnamn.\nOm detta är aktiverat bör du även aktivera kraschdiagnostik.\nAnvändbart i program som RenderDoc.</translation>
     </message>
     <message>
       <source>Guest Debug Markers:\nInserts any debug markers the game itself has added to the command buffer.\nIf you have this enabled, you should enable Crash Diagnostics.\nUseful for programs like RenderDoc.</source>
