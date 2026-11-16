@@ -1027,7 +1027,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Total: %1</source>
-      <translation type="unfinished">Total: %1</translation>
+      <translation>مجموع: %1</translation>
     </message>
   </context>
   <context>
@@ -1270,159 +1270,159 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>User</source>
-      <translation type="unfinished">User</translation>
+      <translation>کاربر</translation>
     </message>
     <message>
       <source>Add with Selected Emulator Version</source>
-      <translation type="unfinished">Add with Selected Emulator Version</translation>
+      <translation>افزودن با نسخهٔ انتخاب‌شدهٔ شبیه‌ساز</translation>
     </message>
     <message>
       <source>Add with Specified Emulator Version</source>
-      <translation type="unfinished">Add with Specified Emulator Version</translation>
+      <translation>افزودن با نسخهٔ مشخص‌شدهٔ شبیه‌ساز</translation>
     </message>
     <message>
       <source>Add to Steam</source>
-      <translation type="unfinished">Add to Steam</translation>
+      <translation>افزودن به Steam</translation>
     </message>
     <message>
       <source>Zar Compression</source>
-      <translation type="unfinished">Zar Compression</translation>
+      <translation>فشرده‌سازی Zar</translation>
     </message>
     <message>
       <source>Compress game to zar</source>
-      <translation type="unfinished">Compress game to zar</translation>
+      <translation>فشرده‌سازی بازی به zar</translation>
     </message>
     <message>
       <source>Compress update to zar</source>
-      <translation type="unfinished">Compress update to zar</translation>
+      <translation>فشرده‌سازی به‌روزرسانی به zar</translation>
     </message>
     <message>
       <source>This is already packed as a ZArchive.</source>
-      <translation type="unfinished">This is already packed as a ZArchive.</translation>
+      <translation>این مورد از قبل به‌صورت ZArchive بسته‌بندی شده است.</translation>
     </message>
     <message>
       <source>This folder could not be found on disk.</source>
-      <translation type="unfinished">This folder could not be found on disk.</translation>
+      <translation>این پوشه روی دیسک پیدا نشد.</translation>
     </message>
     <message>
       <source>Convert %1 to ZArchive</source>
-      <translation type="unfinished">Convert %1 to ZArchive</translation>
+      <translation>تبدیل %1 به ZArchive</translation>
     </message>
     <message>
       <source>ZArchive Files (*.zar)</source>
-      <translation type="unfinished">ZArchive Files (*.zar)</translation>
+      <translation>فایل‌های ZArchive (*.zar)</translation>
     </message>
     <message>
       <source>%1 already exists. Overwrite it?</source>
-      <translation type="unfinished">%1 already exists. Overwrite it?</translation>
+      <translation>%1 از قبل وجود دارد. بازنویسی شود؟</translation>
     </message>
     <message>
       <source>This will pack &quot;%1&quot; into a single read-only .zar archive. Depending on the size this can take a while, and the archive will temporarily need as much free disk space as the original.
 
 The original folder is left untouched until conversion succeeds, you&apos;ll be asked afterward whether to delete it.</source>
-      <translation type="unfinished">This will pack &quot;%1&quot; into a single read-only .zar archive. Depending on the size this can take a while, and the archive will temporarily need as much free disk space as the original.
+      <translation>این کار &quot;%1&quot; را در یک آرشیو .zar فقط‌خواندنی بسته‌بندی می‌کند. بسته به حجم، این کار ممکن است مدتی طول بکشد و آرشیو موقتاً به همان اندازهٔ فضای آزاد دیسک نیاز داشته باشد.
 
-The original folder is left untouched until conversion succeeds, you&apos;ll be asked afterward whether to delete it.</translation>
+پوشهٔ اصلی تا موفقیت تبدیل دست‌نخورده می‌ماند و پس از آن از شما پرسیده می‌شود که آیا آن را حذف کنید یا نه.</translation>
     </message>
     <message>
       <source>
 
 Continue?</source>
-      <translation type="unfinished">
+      <translation>
 
-Continue?</translation>
+ادامه می‌دهید؟</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>لغو</translation>
     </message>
     <message>
       <source>Failed to convert to ZArchive:
 %1</source>
-      <translation type="unfinished">Failed to convert to ZArchive:
+      <translation>تبدیل به ZArchive ناموفق بود:
 %1</translation>
     </message>
     <message>
       <source>Conversion finished. Delete the original folder now to free up disk space?
 
 %1</source>
-      <translation type="unfinished">Conversion finished. Delete the original folder now to free up disk space?
+      <translation>تبدیل تمام شد. برای آزاد کردن فضای دیسک، پوشهٔ اصلی همین حالا حذف شود؟
 
 %1</translation>
     </message>
     <message>
       <source>The archive was created, but the original folder could not be fully deleted. You can remove it manually.</source>
-      <translation type="unfinished">The archive was created, but the original folder could not be fully deleted. You can remove it manually.</translation>
+      <translation>آرشیو ساخته شد، اما پوشهٔ اصلی به‌طور کامل حذف نشد. می‌توانید آن را دستی حذف کنید.</translation>
     </message>
     <message>
       <source>Packing: %1</source>
-      <translation type="unfinished">Packing: %1</translation>
+      <translation>در حال بسته‌بندی: %1</translation>
     </message>
     <message>
       <source>
 
 This game has a separate update/patch folder. Only the base game will be archived; the update/patch folder will not be included and will be left as-is. Use &quot;Convert Update to ZArchive&quot; separately if you&apos;d like to archive it too.</source>
-      <translation type="unfinished">
+      <translation>
 
-This game has a separate update/patch folder. Only the base game will be archived; the update/patch folder will not be included and will be left as-is. Use &quot;Convert Update to ZArchive&quot; separately if you&apos;d like to archive it too.</translation>
+این بازی پوشهٔ به‌روزرسانی/پچ جداگانه دارد. فقط بازی پایه آرشیو می‌شود؛ پوشهٔ به‌روزرسانی/پچ شامل نمی‌شود و دست‌نخورده می‌ماند. اگر می‌خواهید آن را هم آرشیو کنید، جداگانه از &quot;تبدیل به‌روزرسانی به ZArchive&quot; استفاده کنید.</translation>
     </message>
     <message>
       <source>Convert to ZArchive</source>
-      <translation type="unfinished">Convert to ZArchive</translation>
+      <translation>تبدیل به ZArchive</translation>
     </message>
     <message>
       <source>Unable to open the file manager for:
 %1</source>
-      <translation type="unfinished">Unable to open the file manager for:
+      <translation>باز کردن مدیر فایل برای این مورد ممکن نشد:
 %1</translation>
     </message>
     <message>
       <source>Open Path...</source>
-      <translation type="unfinished">Open Path...</translation>
+      <translation>باز کردن مسیر...</translation>
     </message>
     <message>
       <source>Open Game Path</source>
-      <translation type="unfinished">Open Game Path</translation>
+      <translation>باز کردن مسیر بازی</translation>
     </message>
     <message>
       <source>Open Update Path</source>
-      <translation type="unfinished">Open Update Path</translation>
+      <translation>باز کردن مسیر به‌روزرسانی</translation>
     </message>
     <message>
       <source>Open Mods Path</source>
-      <translation type="unfinished">Open Mods Path</translation>
+      <translation>باز کردن مسیر مادها</translation>
     </message>
     <message>
       <source>Open DLC Path</source>
-      <translation type="unfinished">Open DLC Path</translation>
+      <translation>باز کردن مسیر DLC</translation>
     </message>
     <message>
       <source>Open Save Data Path</source>
-      <translation type="unfinished">Open Save Data Path</translation>
+      <translation>باز کردن مسیر داده‌های ذخیره</translation>
     </message>
     <message>
       <source>Open Log Path</source>
-      <translation type="unfinished">Open Log Path</translation>
+      <translation>باز کردن مسیر گزارش</translation>
     </message>
     <message>
       <source>This game has no game path to open!</source>
-      <translation type="unfinished">This game has no game path to open!</translation>
+      <translation>این بازی مسیر بازی برای باز کردن ندارد!</translation>
     </message>
     <message>
       <source>This game has no update path to open!</source>
-      <translation type="unfinished">This game has no update path to open!</translation>
+      <translation>این بازی مسیر به‌روزرسانی برای باز کردن ندارد!</translation>
     </message>
     <message>
       <source>This game has no mods path to open!</source>
-      <translation type="unfinished">This game has no mods path to open!</translation>
+      <translation>این بازی مسیر مادها برای باز کردن ندارد!</translation>
     </message>
     <message>
       <source>This game has no DLC path to open!</source>
-      <translation type="unfinished">This game has no DLC path to open!</translation>
+      <translation>این بازی مسیر DLC برای باز کردن ندارد!</translation>
     </message>
     <message>
       <source>This game has no save path to open!</source>
-      <translation type="unfinished">This game has no save path to open!</translation>
+      <translation>این بازی مسیر ذخیره برای باز کردن ندارد!</translation>
     </message>
   </context>
   <context>
@@ -2164,37 +2164,37 @@ Select an emulator version from the right panel.</source>
     </message>
     <message>
       <source>bootable files (*.bin *.elf *.oelf *.zar)</source>
-      <translation type="unfinished">bootable files (*.bin *.elf *.oelf *.zar)</translation>
+      <translation>فایل‌های قابل بوت (*.bin *.elf *.oelf *.zar)</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>خطا</translation>
     </message>
     <message>
       <source>Rosetta 2 is not installed.
 
 Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rosetta&apos;.</source>
-      <translation type="unfinished">Rosetta 2 is not installed.
+      <translation>Rosetta 2 نصب نیست.
 
-Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rosetta&apos;.</translation>
+لطفاً Rosetta 2 را از ترمینال با دستور &apos;softwareupdate --install-rosetta&apos; نصب کنید.</translation>
     </message>
     <message>
       <source>Patches directory does not exist.</source>
-      <translation type="unfinished">Patches directory does not exist.</translation>
+      <translation>پوشهٔ پچ‌ها وجود ندارد.</translation>
     </message>
     <message>
       <source>Update files.json</source>
-      <translation type="unfinished">Update files.json</translation>
+      <translation>به‌روزرسانی files.json</translation>
     </message>
     <message>
       <source>Processing complete.
 Folders processed: %1</source>
-      <translation type="unfinished">Processing complete.
-Folders processed: %1</translation>
+      <translation>پردازش کامل شد.
+پوشه‌های پردازش‌شده: %1</translation>
     </message>
     <message>
       <source>Update files.json (Patches)</source>
-      <translation type="unfinished">Update files.json (Patches)</translation>
+      <translation>به‌روزرسانی files.json (پچ‌ها)</translation>
     </message>
   </context>
   <context>
@@ -3134,75 +3134,75 @@ Immediate: فریم‌ها به محض آماده شدن فوراً روی صف�
     </message>
     <message>
       <source>Enable shadNet</source>
-      <translation type="unfinished">Enable shadNet</translation>
+      <translation>فعال کردن shadNet</translation>
     </message>
     <message>
       <source>Server</source>
-      <translation type="unfinished">Server</translation>
+      <translation>سرور</translation>
     </message>
     <message>
       <source>Signaling Info</source>
-      <translation type="unfinished">Signaling Info</translation>
+      <translation>اطلاعات سیگنالینگ</translation>
     </message>
     <message>
       <source>Enable UPNP</source>
-      <translation type="unfinished">Enable UPNP</translation>
+      <translation>فعال کردن UPNP</translation>
     </message>
     <message>
       <source>WebAPI Server</source>
-      <translation type="unfinished">WebAPI Server</translation>
+      <translation>سرور WebAPI</translation>
     </message>
     <message>
       <source>shadNet:\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadnet/register/.</source>
-      <translation type="unfinished">shadNet:\nCompatibility is very limited at the moment.\nYou can register at https://www.shadps4.net/shadnet/register/.</translation>
+      <translation>shadNet:\nسازگاری در حال حاضر بسیار محدود است.\nمی‌توانید در https://www.shadps4.net/shadnet/register/ ثبت‌نام کنید.</translation>
     </message>
     <message>
       <source>Red Zone CPU Patches</source>
-      <translation type="unfinished">Red Zone CPU Patches</translation>
+      <translation>پچ‌های Red Zone پردازنده</translation>
     </message>
     <message>
       <source>Enable Red Zone CPU Patches</source>
-      <translation type="unfinished">Enable Red Zone CPU Patches</translation>
+      <translation>فعال کردن پچ‌های Red Zone پردازنده</translation>
     </message>
     <message>
       <source>Network</source>
-      <translation type="unfinished">Network</translation>
+      <translation>شبکه</translation>
     </message>
     <message>
       <source>Network Settings</source>
-      <translation type="unfinished">Network Settings</translation>
+      <translation>تنظیمات شبکه</translation>
     </message>
     <message>
       <source>Set Network Connected Status as True</source>
-      <translation type="unfinished">Set Network Connected Status as True</translation>
+      <translation>تنظیم وضعیت اتصال شبکه روی True</translation>
     </message>
     <message>
       <source>Disable HTTPS</source>
-      <translation type="unfinished">Disable HTTPS</translation>
+      <translation>غیرفعال کردن HTTPS</translation>
     </message>
     <message>
       <source>P2P Port</source>
-      <translation type="unfinished">P2P Port</translation>
+      <translation>درگاه P2P</translation>
     </message>
     <message>
       <source>Copy GPU Command Buffers</source>
-      <translation type="unfinished">Copy GPU Command Buffers</translation>
+      <translation>کپی بافرهای فرمان GPU</translation>
     </message>
     <message>
       <source>PS4 Fonts Path</source>
-      <translation type="unfinished">PS4 Fonts Path</translation>
+      <translation>مسیر فونت‌های PS4</translation>
     </message>
     <message>
       <source>Select the fonts folder</source>
-      <translation type="unfinished">Select the fonts folder</translation>
+      <translation>پوشهٔ فونت‌ها را انتخاب کنید</translation>
     </message>
     <message>
       <source>PS4 Fonts Path:\nThe folder where PS4 system fonts are loaded from.</source>
-      <translation type="unfinished">PS4 Fonts Path:\nThe folder where PS4 system fonts are loaded from.</translation>
+      <translation>مسیر فونت‌های PS4:\nپوشه‌ای که فونت‌های سیستم PS4 از آن بارگذاری می‌شوند.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the fonts path.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the fonts path.</translation>
+      <translation>مرور:\nپوشه‌ای را برای تعیین به‌عنوان مسیر فونت‌ها مرور کنید.</translation>
     </message>
   </context>
   <context>
@@ -3228,47 +3228,47 @@ Immediate: فریم‌ها به محض آماده شدن فوراً روی صف�
     <name>SteamShortcut</name>
     <message>
       <source>Steam</source>
-      <translation type="unfinished">Steam</translation>
+      <translation>Steam</translation>
     </message>
     <message>
       <source>%1 is already in your Steam library.</source>
-      <translation type="unfinished">%1 is already in your Steam library.</translation>
+      <translation>%1 از قبل در کتابخانهٔ Steam شما هست.</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation type="unfinished">Error</translation>
+      <translation>خطا</translation>
     </message>
     <message>
       <source>Steam installation not found.</source>
-      <translation type="unfinished">Steam installation not found.</translation>
+      <translation>نصب Steam پیدا نشد.</translation>
     </message>
     <message>
       <source>No Steam user account found. Please log into Steam at least once.</source>
-      <translation type="unfinished">No Steam user account found. Please log into Steam at least once.</translation>
+      <translation>هیچ حساب کاربری Steam پیدا نشد. لطفاً حداقل یک‌بار وارد Steam شوید.</translation>
     </message>
     <message>
       <source>Steam is Running</source>
-      <translation type="unfinished">Steam is Running</translation>
+      <translation>Steam در حال اجراست</translation>
     </message>
     <message>
       <source>Steam is currently running. It will be closed and restarted to apply the shortcut. Continue?</source>
-      <translation type="unfinished">Steam is currently running. It will be closed and restarted to apply the shortcut. Continue?</translation>
+      <translation>Steam هم‌اکنون در حال اجراست. برای اعمال میانبر بسته و دوباره اجرا می‌شود. ادامه می‌دهید؟</translation>
     </message>
     <message>
       <source>Steam did not close in time. Shortcut was not added.</source>
-      <translation type="unfinished">Steam did not close in time. Shortcut was not added.</translation>
+      <translation>Steam به‌موقع بسته نشد. میانبر اضافه نشد.</translation>
     </message>
     <message>
       <source>Failed to add game to Steam.</source>
-      <translation type="unfinished">Failed to add game to Steam.</translation>
+      <translation>افزودن بازی به Steam ناموفق بود.</translation>
     </message>
     <message>
       <source>Added to Steam successfully. Steam is restarting.</source>
-      <translation type="unfinished">Added to Steam successfully. Steam is restarting.</translation>
+      <translation>با موفقیت به Steam اضافه شد. Steam در حال راه‌اندازی مجدد است.</translation>
     </message>
     <message>
       <source>Added to Steam successfully. Launch Steam to see the changes.</source>
-      <translation type="unfinished">Added to Steam successfully. Launch Steam to see the changes.</translation>
+      <translation>با موفقیت به Steam اضافه شد. برای دیدن تغییرات، Steam را اجرا کنید.</translation>
     </message>
   </context>
   <context>
@@ -3402,51 +3402,51 @@ Immediate: فریم‌ها به محض آماده شدن فوراً روی صف�
     </message>
     <message>
       <source>Shad&amp;Net...</source>
-      <translation type="unfinished">Shad&amp;Net...</translation>
+      <translation>ShadNet...</translation>
     </message>
     <message>
       <source>On</source>
-      <translation type="unfinished">On</translation>
+      <translation>روشن</translation>
     </message>
     <message>
       <source>On (%1)</source>
-      <translation type="unfinished">On (%1)</translation>
+      <translation>روشن (%1)</translation>
     </message>
     <message>
       <source>Off</source>
-      <translation type="unfinished">Off</translation>
+      <translation>خاموش</translation>
     </message>
     <message>
       <source>ShadNet Settings - %1</source>
-      <translation type="unfinished">ShadNet Settings - %1</translation>
+      <translation>تنظیمات ShadNet - %1</translation>
     </message>
     <message>
       <source>Enable ShadNet for this user</source>
-      <translation type="unfinished">Enable ShadNet for this user</translation>
+      <translation>فعال کردن ShadNet برای این کاربر</translation>
     </message>
     <message>
       <source>Account ID (NPID)</source>
-      <translation type="unfinished">Account ID (NPID)</translation>
+      <translation>شناسهٔ حساب (NPID)</translation>
     </message>
     <message>
       <source>Password</source>
-      <translation type="unfinished">Password</translation>
+      <translation>رمز عبور</translation>
     </message>
     <message>
       <source>Show password</source>
-      <translation type="unfinished">Show password</translation>
+      <translation>نمایش رمز عبور</translation>
     </message>
     <message>
       <source>Account ID (NPID):</source>
-      <translation type="unfinished">Account ID (NPID):</translation>
+      <translation>شناسهٔ حساب (NPID):</translation>
     </message>
     <message>
       <source>Password:</source>
-      <translation type="unfinished">Password:</translation>
+      <translation>رمز عبور:</translation>
     </message>
     <message>
       <source>Shad&amp;Net Settings...</source>
-      <translation type="unfinished">Shad&amp;Net Settings...</translation>
+      <translation>تنظیمات ShadNet...</translation>
     </message>
   </context>
   <context>
