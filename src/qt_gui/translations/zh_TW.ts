@@ -1376,7 +1376,7 @@ This game has a separate update/patch folder. Only the base game will be archive
     <message>
       <source>Unable to open the file manager for:
 %1</source>
-      <translation>無法開啟檔案管理員：
+      <translation>無法開啟檔案管理程式：
 %1</translation>
     </message>
     <message>
