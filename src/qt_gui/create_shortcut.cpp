@@ -2,12 +2,11 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include <QDialogButtonBox>
-#include <QDirIterator>
 #include <QLabel>
 #include <QMessageBox>
 #include <QVBoxLayout>
 
-#include "common/path_util.h"
+#include "common/versions.h"
 #include "create_shortcut.h"
 
 ShortcutDialog::ShortcutDialog(std::shared_ptr<gui_settings> settings, QWidget* parent)
@@ -25,12 +24,9 @@ void ShortcutDialog::setupUI() {
         new QLabel(QString("<b>%1</b>").arg(tr("Select version for shortcut creation")));
 
     listWidget = new QListWidget(this);
-    QString versionFolder = m_gui_settings->GetValue(gui::vm_versionPath).toString();
-    QDirIterator versions(versionFolder, QDir::Dirs | QDir::NoDotAndDotDot);
-
-    while (versions.hasNext()) {
-        versions.next();
-        new QListWidgetItem(versions.fileName(), listWidget);
+    for (const auto& v : VersionManager::GetVersionList()) {
+        auto* item = new QListWidgetItem(QString::fromStdString(v.name), listWidget);
+        item->setData(Qt::UserRole, QString::fromStdString(v.path));
     }
 
     QDialogButtonBox* buttonBox =
@@ -50,8 +46,7 @@ void ShortcutDialog::createShortcut() {
         return;
     }
 
-    const QString selectedVersion = listWidget->currentItem()->text();
-    const QString executablePath = m_gui_settings->GetVersionExecutablePath(selectedVersion);
+    const QString executablePath = listWidget->currentItem()->data(Qt::UserRole).toString();
     emit shortcutRequested(executablePath);
     QWidget::close();
 }
