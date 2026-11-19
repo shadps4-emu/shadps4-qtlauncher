@@ -574,10 +574,9 @@ void CheckUpdate::Install() {
     QFile scriptFile(scriptFileName);
     if (scriptFile.open(QIODevice::WriteOnly | QIODevice::Text)) {
         QTextStream out(&scriptFile);
-#ifndef Q_OS_MAC
-        scriptFile.write("\xEF\xBB\xBF");
-#endif
 #ifdef Q_OS_WIN
+        // Only the PowerShell script gets a BOM: bash reads it as part of the "#!/bin/bash" line.
+        scriptFile.write("\xEF\xBB\xBF");
         out << scriptContent.arg(binaryStartingUpdate).arg(tempDirPath).arg(rootPath);
 #endif
 #if defined(Q_OS_LINUX) || defined(Q_OS_MAC)
