@@ -105,6 +105,8 @@ void GameGridFrame::PopulateGameGrid(QVector<GameInfo> m_games_search, bool from
     if (fromSearch) {
         SortByFavorite(&m_games_search);
         m_games_ = m_games_search;
+        // Launching and the context menu look games up by tile position in m_games.
+        m_game_info->m_games = m_games_search;
     } else {
         SortByFavorite(&(m_game_info->m_games));
         m_games_ = m_game_info->m_games;
