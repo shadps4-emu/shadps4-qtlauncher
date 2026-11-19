@@ -1034,7 +1034,7 @@ Please enter your keys and save them.</source>
     </message>
     <message>
       <source>Total: %1</source>
-      <translation type="unfinished">Total: %1</translation>
+      <translation>Всего: %1</translation>
     </message>
   </context>
   <context>
@@ -1380,56 +1380,56 @@ This game has a separate update/patch folder. Only the base game will be archive
     <message>
       <source>Unable to open the file manager for:
 %1</source>
-      <translation type="unfinished">Unable to open the file manager for:
+      <translation>Невозможно открыть файловый менеджер для:
 %1</translation>
     </message>
     <message>
       <source>Open Path...</source>
-      <translation type="unfinished">Open Path...</translation>
+      <translation>Открыть путь...</translation>
     </message>
     <message>
       <source>Open Game Path</source>
-      <translation type="unfinished">Open Game Path</translation>
+      <translation>Открыть путь к игре</translation>
     </message>
     <message>
       <source>Open Update Path</source>
-      <translation type="unfinished">Open Update Path</translation>
+      <translation>Открыть путь к обновлению</translation>
     </message>
     <message>
       <source>Open Mods Path</source>
-      <translation type="unfinished">Open Mods Path</translation>
+      <translation>Открыть путь к модам</translation>
     </message>
     <message>
       <source>Open DLC Path</source>
-      <translation type="unfinished">Open DLC Path</translation>
+      <translation>Открыть путь к DLC</translation>
     </message>
     <message>
       <source>Open Save Data Path</source>
-      <translation type="unfinished">Open Save Data Path</translation>
+      <translation>Открыть папку сохранений</translation>
     </message>
     <message>
       <source>Open Log Path</source>
-      <translation type="unfinished">Open Log Path</translation>
+      <translation>Открыть путь к логам</translation>
     </message>
     <message>
       <source>This game has no game path to open!</source>
-      <translation type="unfinished">This game has no game path to open!</translation>
+      <translation>Для этой игры нет пути к исполняемому файлу!</translation>
     </message>
     <message>
       <source>This game has no update path to open!</source>
-      <translation type="unfinished">This game has no update path to open!</translation>
+      <translation>Для этой игры в папке нет доступных обновлений!</translation>
     </message>
     <message>
       <source>This game has no mods path to open!</source>
-      <translation type="unfinished">This game has no mods path to open!</translation>
+      <translation>Для этой игры в папке нет доступных модов!</translation>
     </message>
     <message>
       <source>This game has no DLC path to open!</source>
-      <translation type="unfinished">This game has no DLC path to open!</translation>
+      <translation>Для этой игры в папке нет доступных DLC!</translation>
     </message>
     <message>
       <source>This game has no save path to open!</source>
-      <translation type="unfinished">This game has no save path to open!</translation>
+      <translation>Для этой игры в папке нет доступных сохранений!</translation>
     </message>
   </context>
   <context>
@@ -2191,21 +2191,21 @@ Please install Rosetta 2 from Terminal using &apos;softwareupdate --install-rose
     </message>
     <message>
       <source>Patches directory does not exist.</source>
-      <translation type="unfinished">Patches directory does not exist.</translation>
+      <translation>Каталог патчей не существует.</translation>
     </message>
     <message>
       <source>Update files.json</source>
-      <translation type="unfinished">Update files.json</translation>
+      <translation>Обновить files.json</translation>
     </message>
     <message>
       <source>Processing complete.
 Folders processed: %1</source>
-      <translation type="unfinished">Processing complete.
-Folders processed: %1</translation>
+      <translation>Обработка завершена.
+Обработано папок: %1</translation>
     </message>
     <message>
       <source>Update files.json (Patches)</source>
-      <translation type="unfinished">Update files.json (Patches)</translation>
+      <translation>Обновить files.json (Патчи)</translation>
     </message>
   </context>
   <context>
@@ -3131,11 +3131,11 @@ Folders processed: %1</translation>
     </message>
     <message>
       <source>Red Zone CPU Patches</source>
-      <translation type="unfinished">Red Zone CPU Patches</translation>
+      <translation>Патчи Red Zone CPU</translation>
     </message>
     <message>
       <source>Enable Red Zone CPU Patches</source>
-      <translation type="unfinished">Enable Red Zone CPU Patches</translation>
+      <translation>Включить патчи Red Zone CPU</translation>
     </message>
     <message>
       <source>Network</source>
@@ -3159,7 +3159,7 @@ Folders processed: %1</translation>
     </message>
     <message>
       <source>Copy GPU Command Buffers</source>
-      <translation type="unfinished">Copy GPU Command Buffers</translation>
+      <translation>Копировать буфер команд GPU</translation>
     </message>
     <message>
       <source>PS4 Fonts Path</source>
@@ -3167,15 +3167,15 @@ Folders processed: %1</translation>
     </message>
     <message>
       <source>Select the fonts folder</source>
-      <translation type="unfinished">Select the fonts folder</translation>
+      <translation>Выберите папку шрифтов</translation>
     </message>
     <message>
       <source>PS4 Fonts Path:\nThe folder where PS4 system fonts are loaded from.</source>
-      <translation type="unfinished">PS4 Fonts Path:\nThe folder where PS4 system fonts are loaded from.</translation>
+      <translation>Путь к шрифтам PS4:\nПапка, из которой загружаются системные шрифты PS4.</translation>
     </message>
     <message>
       <source>Browse:\nBrowse for a folder to set as the fonts path.</source>
-      <translation type="unfinished">Browse:\nBrowse for a folder to set as the fonts path.</translation>
+      <translation>Обзор:\nВыберите папку, которую нужно назначить в качестве пути к шрифтам.</translation>
     </message>
   </context>
   <context>
