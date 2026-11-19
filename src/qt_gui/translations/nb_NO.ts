@@ -1820,15 +1820,15 @@ Dette spillet har en separat oppdatering/rettelse-mappe. Kun spillet kan arkiver
     <name>LogFileViewer</name>
     <message>
       <source>Auto-scroll</source>
-      <translation type="unfinished">Auto-scroll</translation>
+      <translation>Automatisk rulling</translation>
     </message>
     <message>
       <source>Open Log File</source>
-      <translation type="unfinished">Open Log File</translation>
+      <translation>Åpne loggfil</translation>
     </message>
     <message>
       <source>Could not open the log file.</source>
-      <translation type="unfinished">Could not open the log file.</translation>
+      <translation>Klarte ikke åpne loggfila.</translation>
     </message>
   </context>
   <context>
@@ -2235,7 +2235,7 @@ Mapper behandlet: %1</translation>
     </message>
     <message>
       <source> [line truncated; see log file]</source>
-      <translation type="unfinished"> [line truncated; see log file]</translation>
+      <translation>[Linja er forkortet, se loggfila]</translation>
     </message>
   </context>
   <context>
