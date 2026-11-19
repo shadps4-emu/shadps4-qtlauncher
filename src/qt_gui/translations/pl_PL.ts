@@ -1385,19 +1385,19 @@ Ta gra posiada oddzielny folder aktualizacji/łatki. Tylko podstawowa wersja gry
     </message>
     <message>
       <source>Open Path...</source>
-      <translation type="unfinished">Open Path...</translation>
+      <translation>Otwórz ścieżkę...</translation>
     </message>
     <message>
       <source>Open Game Path</source>
-      <translation type="unfinished">Open Game Path</translation>
+      <translation>Otwórz ścieżkę gry</translation>
     </message>
     <message>
       <source>Open Update Path</source>
-      <translation type="unfinished">Open Update Path</translation>
+      <translation>Otwórz ścieżkę aktualizacji</translation>
     </message>
     <message>
       <source>Open Mods Path</source>
-      <translation type="unfinished">Open Mods Path</translation>
+      <translation>Otwórz ścieżkę modów</translation>
     </message>
     <message>
       <source>Open DLC Path</source>
@@ -1405,11 +1405,11 @@ Ta gra posiada oddzielny folder aktualizacji/łatki. Tylko podstawowa wersja gry
     </message>
     <message>
       <source>Open Save Data Path</source>
-      <translation type="unfinished">Open Save Data Path</translation>
+      <translation>Otwórz scieżkę zapisanych danych</translation>
     </message>
     <message>
       <source>Open Log Path</source>
-      <translation type="unfinished">Open Log Path</translation>
+      <translation>Otwórz ścieżkę plików dziennika</translation>
     </message>
     <message>
       <source>This game has no game path to open!</source>
