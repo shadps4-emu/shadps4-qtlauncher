@@ -620,6 +620,7 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         ui->networkConnectedCheckBox->installEventFilter(this);
         ui->shaderCacheCheckBox->installEventFilter(this);
         ui->shaderCacheArchiveCheckBox->installEventFilter(this);
+        ui->patchShadersCheckBox->installEventFilter(this);
         ui->shadnetCheckBox->installEventFilter(this);
         ui->dmemGroupBox->installEventFilter(this);
     }
@@ -861,6 +862,7 @@ void SettingsDialog::LoadValuesFromConfig() {
 
     ui->shaderCacheCheckBox->setChecked(EmulatorSettings.IsPipelineCacheEnabled());
     ui->shaderCacheArchiveCheckBox->setChecked(EmulatorSettings.IsPipelineCacheArchived());
+    ui->patchShadersCheckBox->setChecked(EmulatorSettings.IsPatchShaders());
     ui->vblankSpinBox->setValue(EmulatorSettings.GetVblankFrequency());
     ui->dmemSpinBox->setValue(EmulatorSettings.GetExtraDmemInMBytes());
 
@@ -1121,6 +1123,8 @@ void SettingsDialog::updateNoteTextEdit(const QString& elementName) {
         text = tr("Enable Shader Cache:\\nStoring compiled shaders to avoid recompilations, reduce stuttering.");
     } else if (elementName == "shaderCacheArchiveCheckBox") {
         text = tr("Compress the Shader Cache files into a zip file:\\nThe shader cache files are stored within a single zip file instead of multiple separate files.");
+    } else if (elementName == "patchShadersCheckBox") {
+        text = tr("Enable Shader Patches:\\nLoads replacement shaders (.spv) from the shader/patch folder of the user folder instead of the translated ones. Some game patches need this.");
     } else if (elementName == "shadnetCheckBox") {
         text = tr("shadNet:\\nCompatibility is very limited at the moment.\\nYou can register at https://www.shadps4.net/shadnet/register/.");
     } else if (elementName == "readbacksGroupBox") {
@@ -1277,6 +1281,7 @@ void SettingsDialog::UpdateSettings(bool is_specific) {
     EmulatorSettings.SetPipelineCacheEnabled(ui->shaderCacheCheckBox->isChecked(), is_specific);
     EmulatorSettings.SetPipelineCacheArchived(ui->shaderCacheArchiveCheckBox->isChecked(),
                                               is_specific);
+    EmulatorSettings.SetPatchShaders(ui->patchShadersCheckBox->isChecked(), is_specific);
 
     EmulatorSettings.SetVblankFrequency(ui->vblankSpinBox->value(), is_specific);
     EmulatorSettings.SetExtraDmemInMBytes(ui->dmemSpinBox->value(), is_specific);
