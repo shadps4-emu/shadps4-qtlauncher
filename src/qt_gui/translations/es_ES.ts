@@ -1820,15 +1820,15 @@ Este juego tiene una carpeta de actualizaciones/parches aparte. Solo se archivar
     <name>LogFileViewer</name>
     <message>
       <source>Auto-scroll</source>
-      <translation type="unfinished">Auto-scroll</translation>
+      <translation>Desplazamiento automático</translation>
     </message>
     <message>
       <source>Open Log File</source>
-      <translation type="unfinished">Open Log File</translation>
+      <translation>Abrir archivo de registro</translation>
     </message>
     <message>
       <source>Could not open the log file.</source>
-      <translation type="unfinished">Could not open the log file.</translation>
+      <translation>No se ha podido abrir el archivo de registro.</translation>
     </message>
   </context>
   <context>
@@ -2235,7 +2235,7 @@ Carpetas procesadas: %1</translation>
     </message>
     <message>
       <source> [line truncated; see log file]</source>
-      <translation type="unfinished"> [line truncated; see log file]</translation>
+      <translation> [línea recortada, ver archivo de registro]</translation>
     </message>
   </context>
   <context>
