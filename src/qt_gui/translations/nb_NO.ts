@@ -1817,6 +1817,21 @@ Dette spillet har en separat oppdatering/rettelse-mappe. Kun spillet kan arkiver
     </message>
   </context>
   <context>
+    <name>LogFileViewer</name>
+    <message>
+      <source>Auto-scroll</source>
+      <translation type="unfinished">Auto-scroll</translation>
+    </message>
+    <message>
+      <source>Open Log File</source>
+      <translation type="unfinished">Open Log File</translation>
+    </message>
+    <message>
+      <source>Could not open the log file.</source>
+      <translation type="unfinished">Could not open the log file.</translation>
+    </message>
+  </context>
+  <context>
     <name>LogPresetsDialog</name>
     <message>
       <source>Log Filter Presets</source>
@@ -2062,10 +2077,6 @@ Dette spillet har en separat oppdatering/rettelse-mappe. Kun spillet kan arkiver
       <translation>Spillet kjører allerede!</translation>
     </message>
     <message>
-      <source>shadPS4</source>
-      <translation>shadPS4</translation>
-    </message>
-    <message>
       <source>Play</source>
       <translation>Spill</translation>
     </message>
@@ -2158,10 +2169,6 @@ Velg en emulatorversjon fra høyre panel.</translation>
       <translation>Håndter Dimensions-lekebase</translation>
     </message>
     <message>
-      <source>Game Log</source>
-      <translation>Spill logg</translation>
-    </message>
-    <message>
       <source>Show Game Log</source>
       <translation>Vis spill logg</translation>
     </message>
@@ -2225,6 +2232,10 @@ Mapper behandlet: %1</translation>
     <message>
       <source>Incorrect recovery key. Please try again.</source>
       <translation>Feil gjenopprettingsnøkkel. Prøv på nytt.</translation>
+    </message>
+    <message>
+      <source> [line truncated; see log file]</source>
+      <translation type="unfinished"> [line truncated; see log file]</translation>
     </message>
   </context>
   <context>
