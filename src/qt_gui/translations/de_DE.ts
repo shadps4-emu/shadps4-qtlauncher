@@ -1819,15 +1819,15 @@ Dieses Spiel hat einen separaten Update/Patch-Ordner. Nur das Basisspiel wird ar
     <name>LogFileViewer</name>
     <message>
       <source>Auto-scroll</source>
-      <translation type="unfinished">Auto-scroll</translation>
+      <translation>Automatisches Scrollen</translation>
     </message>
     <message>
       <source>Open Log File</source>
-      <translation type="unfinished">Open Log File</translation>
+      <translation>Protokolldatei öffnen</translation>
     </message>
     <message>
       <source>Could not open the log file.</source>
-      <translation type="unfinished">Could not open the log file.</translation>
+      <translation>Konnte die Protokolldatei nicht öffnen.</translation>
     </message>
   </context>
   <context>
@@ -2234,7 +2234,7 @@ Ordner verarbeitet: %1</translation>
     </message>
     <message>
       <source> [line truncated; see log file]</source>
-      <translation type="unfinished"> [line truncated; see log file]</translation>
+      <translation> [Zeile gekürzt; siehe Protokolldatei]</translation>
     </message>
   </context>
   <context>
