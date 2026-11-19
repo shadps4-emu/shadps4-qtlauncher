@@ -3139,23 +3139,23 @@ Folders processed: %1</translation>
     </message>
     <message>
       <source>Network</source>
-      <translation type="unfinished">Network</translation>
+      <translation>Сеть</translation>
     </message>
     <message>
       <source>Network Settings</source>
-      <translation type="unfinished">Network Settings</translation>
+      <translation>Настройки сети</translation>
     </message>
     <message>
       <source>Set Network Connected Status as True</source>
-      <translation type="unfinished">Set Network Connected Status as True</translation>
+      <translation>Установить статус сетевого подключения как Активное</translation>
     </message>
     <message>
       <source>Disable HTTPS</source>
-      <translation type="unfinished">Disable HTTPS</translation>
+      <translation>Отключить HTTPS</translation>
     </message>
     <message>
       <source>P2P Port</source>
-      <translation type="unfinished">P2P Port</translation>
+      <translation>Порт P2P</translation>
     </message>
     <message>
       <source>Copy GPU Command Buffers</source>
@@ -3163,7 +3163,7 @@ Folders processed: %1</translation>
     </message>
     <message>
       <source>PS4 Fonts Path</source>
-      <translation type="unfinished">PS4 Fonts Path</translation>
+      <translation>Путь к шрифтам PS4</translation>
     </message>
     <message>
       <source>Select the fonts folder</source>
