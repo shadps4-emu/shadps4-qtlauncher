@@ -1817,6 +1817,21 @@ Acest joc are un dosar separat pentru actualizare/patch. Va fi arhivat doar jocu
     </message>
   </context>
   <context>
+    <name>LogFileViewer</name>
+    <message>
+      <source>Auto-scroll</source>
+      <translation type="unfinished">Auto-scroll</translation>
+    </message>
+    <message>
+      <source>Open Log File</source>
+      <translation type="unfinished">Open Log File</translation>
+    </message>
+    <message>
+      <source>Could not open the log file.</source>
+      <translation type="unfinished">Could not open the log file.</translation>
+    </message>
+  </context>
+  <context>
     <name>LogPresetsDialog</name>
     <message>
       <source>Log Filter Presets</source>
@@ -2062,10 +2077,6 @@ Acest joc are un dosar separat pentru actualizare/patch. Va fi arhivat doar jocu
       <translation>Jocul rulează deja!</translation>
     </message>
     <message>
-      <source>shadPS4</source>
-      <translation>shadPS4</translation>
-    </message>
-    <message>
       <source>Play</source>
       <translation>Joacă</translation>
     </message>
@@ -2158,10 +2169,6 @@ Selectați o versiune a emulatorului din panoul din dreapta.</translation>
       <translation>Gestionează dispozitivul Dimensions Toypad</translation>
     </message>
     <message>
-      <source>Game Log</source>
-      <translation>Jurnalul jocului</translation>
-    </message>
-    <message>
       <source>Show Game Log</source>
       <translation>Afișează jurnalul jocului</translation>
     </message>
@@ -2225,6 +2232,10 @@ Dosare procesate: %1</translation>
     <message>
       <source>Incorrect recovery key. Please try again.</source>
       <translation>Cheie de recuperare incorectă. Încercați din nou.</translation>
+    </message>
+    <message>
+      <source> [line truncated; see log file]</source>
+      <translation type="unfinished"> [line truncated; see log file]</translation>
     </message>
   </context>
   <context>
