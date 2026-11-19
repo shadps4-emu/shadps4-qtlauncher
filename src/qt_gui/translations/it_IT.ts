@@ -1817,6 +1817,21 @@ Questo gioco ha una cartella di aggiornamento/patch separata. Solo il gioco di b
     </message>
   </context>
   <context>
+    <name>LogFileViewer</name>
+    <message>
+      <source>Auto-scroll</source>
+      <translation type="unfinished">Auto-scroll</translation>
+    </message>
+    <message>
+      <source>Open Log File</source>
+      <translation type="unfinished">Open Log File</translation>
+    </message>
+    <message>
+      <source>Could not open the log file.</source>
+      <translation type="unfinished">Could not open the log file.</translation>
+    </message>
+  </context>
+  <context>
     <name>LogPresetsDialog</name>
     <message>
       <source>Log Filter Presets</source>
@@ -2062,10 +2077,6 @@ Questo gioco ha una cartella di aggiornamento/patch separata. Solo il gioco di b
       <translation>Il gioco è già in esecuzione!</translation>
     </message>
     <message>
-      <source>shadPS4</source>
-      <translation>shadPS4</translation>
-    </message>
-    <message>
       <source>Play</source>
       <translation>Riproduci</translation>
     </message>
@@ -2158,10 +2169,6 @@ Seleziona una versione di emulatore dal pannello a destra.</translation>
       <translation>Gestisci Toy Pad Dimensions</translation>
     </message>
     <message>
-      <source>Game Log</source>
-      <translation>Registro di gioco</translation>
-    </message>
-    <message>
       <source>Show Game Log</source>
       <translation>Mostra Registro Di Gioco</translation>
     </message>
@@ -2225,6 +2232,10 @@ Cartelle elaborate: %1</translation>
     <message>
       <source>Incorrect recovery key. Please try again.</source>
       <translation>Chiave di recupero errata. Per favore riprova.</translation>
+    </message>
+    <message>
+      <source> [line truncated; see log file]</source>
+      <translation type="unfinished"> [line truncated; see log file]</translation>
     </message>
   </context>
   <context>
