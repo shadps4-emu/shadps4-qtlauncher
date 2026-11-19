@@ -263,8 +263,8 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
 
     QList<QAction*> deleteSaveActionList;
     for (int i = 0; const auto& user : activeUsers) {
-        QString savelabel =
-            "User " + QString::number(i + 1) + ": " + QString::fromStdString(user.user_name);
+        QString savelabel = tr("User") + " " + QString::number(i + 1) + ": " +
+                            QString::fromStdString(user.user_name);
         QAction* action = new QAction(savelabel);
         deleteSaveDataMenu->addAction(action);
         deleteSaveActionList.append(action);
