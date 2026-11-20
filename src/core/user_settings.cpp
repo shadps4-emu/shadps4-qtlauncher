@@ -265,12 +265,26 @@ bool UserSettingsImpl::Save() const {
         j["Users"] = m_userManager.GetUsers();
         j["Users"]["commit_hash"] = std::string(Common::g_scm_rev);
 
+        json existing = json::object();
+        if (std::ifstream existingIn{path}; existingIn.good()) {
+            try {
+                existingIn >> existing;
+            } catch (...) {
+                existing = json::object();
+            }
+        }
+
+        if (existing.contains("Users") && existing["Users"].is_object())
+            existing["Users"].update(j["Users"]);
+        else
+            existing["Users"] = j["Users"];
+
         std::ofstream out(path);
         if (!out) {
             LOG_ERROR(Config, "Failed to open user settings for writing: {}", path.string());
             return false;
         }
-        out << std::setw(2) << j;
+        out << std::setw(2) << existing;
         return !out.fail();
     } catch (const std::exception& e) {
         LOG_ERROR(Config, "Error saving user settings: {}", e.what());

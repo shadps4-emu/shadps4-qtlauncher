@@ -1,4 +1,4 @@
-﻿// SPDX-FileCopyrightText: Copyright 2025-2026 shadLauncher4 Project
+// SPDX-FileCopyrightText: Copyright 2025-2026 shadLauncher4 Project
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include <QHeaderView>
@@ -366,6 +366,9 @@ void UserManagerDialog::OnUserEditShadNet() {
     auto* npid = new QLineEdit(QString::fromStdString(user->shadnet_npid), &dialog);
     npid->setPlaceholderText(tr("Account ID (NPID)"));
 
+    auto* email = new QLineEdit(QString::fromStdString(user->shadnet_email), &dialog);
+    email->setPlaceholderText(tr("Email"));
+
     auto* password = new QLineEdit(QString::fromStdString(user->shadnet_password), &dialog);
     password->setPlaceholderText(tr("Password"));
     password->setEchoMode(QLineEdit::Password);
@@ -375,11 +378,12 @@ void UserManagerDialog::OnUserEditShadNet() {
         password->setEchoMode(on ? QLineEdit::Normal : QLineEdit::Password);
     });
 
-    // NPID/password only make sense when ShadNet is enabled.
+    // NPID/email/password only make sense when ShadNet is enabled.
     auto* form_host = new QWidget(&dialog);
     auto* form = new QFormLayout(form_host);
     form->setContentsMargins(0, 0, 0, 0);
     form->addRow(tr("Account ID (NPID):"), npid);
+    form->addRow(tr("Email:"), email);
     form->addRow(tr("Password:"), password);
     form->addRow(QString(), show_pw);
 
@@ -409,6 +413,7 @@ void UserManagerDialog::OnUserEditShadNet() {
     }
     user->shadnet_enabled = enabled->isChecked();
     user->shadnet_npid = npid->text().trimmed().toStdString();
+    user->shadnet_email = email->text().trimmed().toStdString();
     user->shadnet_password = password->text().toStdString();
     UserManagement.Save();
     UpdateTable();
