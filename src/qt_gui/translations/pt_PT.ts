@@ -1820,15 +1820,15 @@ Este jogo tem uma atualização/pasta de correções separada. Apenas o jogo bas
     <name>LogFileViewer</name>
     <message>
       <source>Auto-scroll</source>
-      <translation type="unfinished">Auto-scroll</translation>
+      <translation>Autodeslocamento</translation>
     </message>
     <message>
       <source>Open Log File</source>
-      <translation type="unfinished">Open Log File</translation>
+      <translation>Abrir Ficheiro de Registo</translation>
     </message>
     <message>
       <source>Could not open the log file.</source>
-      <translation type="unfinished">Could not open the log file.</translation>
+      <translation>Não foi possível abrir o ficheiro de registo.</translation>
     </message>
   </context>
   <context>
@@ -2235,7 +2235,7 @@ Pastas processadas: %1</translation>
     </message>
     <message>
       <source> [line truncated; see log file]</source>
-      <translation type="unfinished"> [line truncated; see log file]</translation>
+      <translation> [linha truncada; veja o ficheiro de registo]</translation>
     </message>
   </context>
   <context>
