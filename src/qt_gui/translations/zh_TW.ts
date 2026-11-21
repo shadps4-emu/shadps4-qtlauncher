@@ -1812,15 +1812,15 @@ This game has a separate update/patch folder. Only the base game will be archive
     <name>LogFileViewer</name>
     <message>
       <source>Auto-scroll</source>
-      <translation type="unfinished">Auto-scroll</translation>
+      <translation>自動捲動</translation>
     </message>
     <message>
       <source>Open Log File</source>
-      <translation type="unfinished">Open Log File</translation>
+      <translation>開啟日誌記錄檔</translation>
     </message>
     <message>
       <source>Could not open the log file.</source>
-      <translation type="unfinished">Could not open the log file.</translation>
+      <translation>無法開啟日誌記錄檔。</translation>
     </message>
   </context>
   <context>
@@ -2227,7 +2227,7 @@ Folders processed: %1</source>
     </message>
     <message>
       <source> [line truncated; see log file]</source>
-      <translation type="unfinished"> [line truncated; see log file]</translation>
+      <translation> [行號截斷；請參閱Log檔]</translation>
     </message>
   </context>
   <context>
