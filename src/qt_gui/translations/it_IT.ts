@@ -1820,15 +1820,15 @@ Questo gioco ha una cartella di aggiornamento/patch separata. Solo il gioco di b
     <name>LogFileViewer</name>
     <message>
       <source>Auto-scroll</source>
-      <translation type="unfinished">Auto-scroll</translation>
+      <translation>Scorrimento automatico</translation>
     </message>
     <message>
       <source>Open Log File</source>
-      <translation type="unfinished">Open Log File</translation>
+      <translation>Apri file di log</translation>
     </message>
     <message>
       <source>Could not open the log file.</source>
-      <translation type="unfinished">Could not open the log file.</translation>
+      <translation>Impossibile aprire il file di log.</translation>
     </message>
   </context>
   <context>
@@ -2235,7 +2235,7 @@ Cartelle elaborate: %1</translation>
     </message>
     <message>
       <source> [line truncated; see log file]</source>
-      <translation type="unfinished"> [line truncated; see log file]</translation>
+      <translation> [linea troncata; vedere file di log]</translation>
     </message>
   </context>
   <context>
