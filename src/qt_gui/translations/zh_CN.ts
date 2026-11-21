@@ -1815,6 +1815,21 @@ This game has a separate update/patch folder. Only the base game will be archive
     </message>
   </context>
   <context>
+    <name>LogFileViewer</name>
+    <message>
+      <source>Auto-scroll</source>
+      <translation type="unfinished">Auto-scroll</translation>
+    </message>
+    <message>
+      <source>Open Log File</source>
+      <translation type="unfinished">Open Log File</translation>
+    </message>
+    <message>
+      <source>Could not open the log file.</source>
+      <translation type="unfinished">Could not open the log file.</translation>
+    </message>
+  </context>
+  <context>
     <name>LogPresetsDialog</name>
     <message>
       <source>Log Filter Presets</source>
@@ -2060,10 +2075,6 @@ This game has a separate update/patch folder. Only the base game will be archive
       <translation>游戏已经在运行中！</translation>
     </message>
     <message>
-      <source>shadPS4</source>
-      <translation>shadPS4</translation>
-    </message>
-    <message>
       <source>Play</source>
       <translation>开始游戏</translation>
     </message>
@@ -2156,10 +2167,6 @@ Select an emulator version from the right panel.</source>
       <translation>管理《乐高次元》控制基座</translation>
     </message>
     <message>
-      <source>Game Log</source>
-      <translation>游戏日志</translation>
-    </message>
-    <message>
       <source>Show Game Log</source>
       <translation>显示游戏日志</translation>
     </message>
@@ -2223,6 +2230,10 @@ Folders processed: %1</translation>
     <message>
       <source>Incorrect recovery key. Please try again.</source>
       <translation>恢复密钥不正确。请重试。</translation>
+    </message>
+    <message>
+      <source> [line truncated; see log file]</source>
+      <translation type="unfinished"> [line truncated; see log file]</translation>
     </message>
   </context>
   <context>

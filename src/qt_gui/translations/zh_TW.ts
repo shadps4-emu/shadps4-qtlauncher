@@ -1809,6 +1809,21 @@ This game has a separate update/patch folder. Only the base game will be archive
     </message>
   </context>
   <context>
+    <name>LogFileViewer</name>
+    <message>
+      <source>Auto-scroll</source>
+      <translation>自動捲動</translation>
+    </message>
+    <message>
+      <source>Open Log File</source>
+      <translation>開啟日誌記錄檔</translation>
+    </message>
+    <message>
+      <source>Could not open the log file.</source>
+      <translation>無法開啟日誌記錄檔。</translation>
+    </message>
+  </context>
+  <context>
     <name>LogPresetsDialog</name>
     <message>
       <source>Log Filter Presets</source>
@@ -2054,10 +2069,6 @@ This game has a separate update/patch folder. Only the base game will be archive
       <translation>已在執行遊戲！</translation>
     </message>
     <message>
-      <source>shadPS4</source>
-      <translation>shadPS4</translation>
-    </message>
-    <message>
       <source>Play</source>
       <translation>遊玩</translation>
     </message>
@@ -2150,10 +2161,6 @@ Select an emulator version from the right panel.</source>
       <translation>管理 Dimensions Toypad</translation>
     </message>
     <message>
-      <source>Game Log</source>
-      <translation>遊戲日誌</translation>
-    </message>
-    <message>
       <source>Show Game Log</source>
       <translation>顯示遊戲日誌</translation>
     </message>
@@ -2217,6 +2224,10 @@ Folders processed: %1</source>
     <message>
       <source>Incorrect recovery key. Please try again.</source>
       <translation>還原金鑰不正確。請再試一次。</translation>
+    </message>
+    <message>
+      <source> [line truncated; see log file]</source>
+      <translation> [行號截斷；請參閱Log檔]</translation>
     </message>
   </context>
   <context>

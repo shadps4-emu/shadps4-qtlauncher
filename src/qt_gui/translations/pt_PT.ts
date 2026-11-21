@@ -1817,6 +1817,21 @@ Este jogo tem uma atualização/pasta de correções separada. Apenas o jogo bas
     </message>
   </context>
   <context>
+    <name>LogFileViewer</name>
+    <message>
+      <source>Auto-scroll</source>
+      <translation>Autodeslocamento</translation>
+    </message>
+    <message>
+      <source>Open Log File</source>
+      <translation>Abrir Ficheiro de Registo</translation>
+    </message>
+    <message>
+      <source>Could not open the log file.</source>
+      <translation>Não foi possível abrir o ficheiro de registo.</translation>
+    </message>
+  </context>
+  <context>
     <name>LogPresetsDialog</name>
     <message>
       <source>Log Filter Presets</source>
@@ -2062,10 +2077,6 @@ Este jogo tem uma atualização/pasta de correções separada. Apenas o jogo bas
       <translation>O jogo já está a ser executado!</translation>
     </message>
     <message>
-      <source>shadPS4</source>
-      <translation>shadPS4</translation>
-    </message>
-    <message>
       <source>Play</source>
       <translation>Reproduzir</translation>
     </message>
@@ -2158,10 +2169,6 @@ Selecione uma versão do emulador no painel direito.</translation>
       <translation>Gerir Toypad do Dimensions</translation>
     </message>
     <message>
-      <source>Game Log</source>
-      <translation>Registo de Jogo</translation>
-    </message>
-    <message>
       <source>Show Game Log</source>
       <translation>Mostrar Registo de Jogo</translation>
     </message>
@@ -2225,6 +2232,10 @@ Pastas processadas: %1</translation>
     <message>
       <source>Incorrect recovery key. Please try again.</source>
       <translation>Chave de recuperação incorreta. Por favor, tente novamente.</translation>
+    </message>
+    <message>
+      <source> [line truncated; see log file]</source>
+      <translation> [linha truncada; veja o ficheiro de registo]</translation>
     </message>
   </context>
   <context>

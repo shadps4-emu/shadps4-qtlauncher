@@ -1815,6 +1815,21 @@ This game has a separate update/patch folder. Only the base game will be archive
     </message>
   </context>
   <context>
+    <name>LogFileViewer</name>
+    <message>
+      <source>Auto-scroll</source>
+      <translation type="unfinished">Auto-scroll</translation>
+    </message>
+    <message>
+      <source>Open Log File</source>
+      <translation type="unfinished">Open Log File</translation>
+    </message>
+    <message>
+      <source>Could not open the log file.</source>
+      <translation type="unfinished">Could not open the log file.</translation>
+    </message>
+  </context>
+  <context>
     <name>LogPresetsDialog</name>
     <message>
       <source>Log Filter Presets</source>
@@ -2060,10 +2075,6 @@ This game has a separate update/patch folder. Only the base game will be archive
       <translation>O jogo já está executando!</translation>
     </message>
     <message>
-      <source>shadPS4</source>
-      <translation>shadPS4</translation>
-    </message>
-    <message>
       <source>Play</source>
       <translation>Jogar</translation>
     </message>
@@ -2156,10 +2167,6 @@ Selecione uma versão do emulador no painel direito.</translation>
       <translation>Gerenciar Toypad Dimensions</translation>
     </message>
     <message>
-      <source>Game Log</source>
-      <translation>Log do Jogo</translation>
-    </message>
-    <message>
       <source>Show Game Log</source>
       <translation>Mostrar Registro do Jogo</translation>
     </message>
@@ -2223,6 +2230,10 @@ Pastas processadas: %1</translation>
     <message>
       <source>Incorrect recovery key. Please try again.</source>
       <translation>Chave de recuperação incorreta. Tente novamente.</translation>
+    </message>
+    <message>
+      <source> [line truncated; see log file]</source>
+      <translation type="unfinished"> [line truncated; see log file]</translation>
     </message>
   </context>
   <context>

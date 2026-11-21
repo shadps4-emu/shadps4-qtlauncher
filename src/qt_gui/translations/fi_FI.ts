@@ -1817,6 +1817,21 @@ Tällä pelillä on erillinen päivitys-/paikkauskansio. Vain pohjapeli arkistoi
     </message>
   </context>
   <context>
+    <name>LogFileViewer</name>
+    <message>
+      <source>Auto-scroll</source>
+      <translation type="unfinished">Auto-scroll</translation>
+    </message>
+    <message>
+      <source>Open Log File</source>
+      <translation type="unfinished">Open Log File</translation>
+    </message>
+    <message>
+      <source>Could not open the log file.</source>
+      <translation type="unfinished">Could not open the log file.</translation>
+    </message>
+  </context>
+  <context>
     <name>LogPresetsDialog</name>
     <message>
       <source>Log Filter Presets</source>
@@ -2062,10 +2077,6 @@ Tällä pelillä on erillinen päivitys-/paikkauskansio. Vain pohjapeli arkistoi
       <translation>Peli on jo käynnissä!</translation>
     </message>
     <message>
-      <source>shadPS4</source>
-      <translation>shadPS4</translation>
-    </message>
-    <message>
       <source>Play</source>
       <translation>Pelaa</translation>
     </message>
@@ -2158,10 +2169,6 @@ Valitse emulaattorin versio oikeanpuoleisesta paneelista.</translation>
       <translation>Dimensions Toypad -hallinta</translation>
     </message>
     <message>
-      <source>Game Log</source>
-      <translation>Pelin loki</translation>
-    </message>
-    <message>
       <source>Show Game Log</source>
       <translation>Näytä pelin loki</translation>
     </message>
@@ -2225,6 +2232,10 @@ Folders processed: %1</translation>
     <message>
       <source>Incorrect recovery key. Please try again.</source>
       <translation>Virheellinen palautusavain. Yritä uudelleen.</translation>
+    </message>
+    <message>
+      <source> [line truncated; see log file]</source>
+      <translation type="unfinished"> [line truncated; see log file]</translation>
     </message>
   </context>
   <context>

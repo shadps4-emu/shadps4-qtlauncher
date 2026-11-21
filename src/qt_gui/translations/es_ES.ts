@@ -1817,6 +1817,21 @@ Este juego tiene una carpeta de actualizaciones/parches aparte. Solo se archivar
     </message>
   </context>
   <context>
+    <name>LogFileViewer</name>
+    <message>
+      <source>Auto-scroll</source>
+      <translation>Desplazamiento automático</translation>
+    </message>
+    <message>
+      <source>Open Log File</source>
+      <translation>Abrir archivo de registro</translation>
+    </message>
+    <message>
+      <source>Could not open the log file.</source>
+      <translation>No se ha podido abrir el archivo de registro.</translation>
+    </message>
+  </context>
+  <context>
     <name>LogPresetsDialog</name>
     <message>
       <source>Log Filter Presets</source>
@@ -2062,10 +2077,6 @@ Este juego tiene una carpeta de actualizaciones/parches aparte. Solo se archivar
       <translation>¡El juego ya se está ejecutando!</translation>
     </message>
     <message>
-      <source>shadPS4</source>
-      <translation>shadPS4</translation>
-    </message>
-    <message>
       <source>Play</source>
       <translation>Jugar</translation>
     </message>
@@ -2158,10 +2169,6 @@ Selecciona una versión del emulador en el panel derecho.</translation>
       <translation>Gestionar Toy Pad de Dimensions</translation>
     </message>
     <message>
-      <source>Game Log</source>
-      <translation>Registro de juego</translation>
-    </message>
-    <message>
       <source>Show Game Log</source>
       <translation>Mostrar registro de juego</translation>
     </message>
@@ -2225,6 +2232,10 @@ Carpetas procesadas: %1</translation>
     <message>
       <source>Incorrect recovery key. Please try again.</source>
       <translation>Clave de recuperación incorrecta. Vuelve a intentarlo.</translation>
+    </message>
+    <message>
+      <source> [line truncated; see log file]</source>
+      <translation> [línea recortada, ver archivo de registro]</translation>
     </message>
   </context>
   <context>
