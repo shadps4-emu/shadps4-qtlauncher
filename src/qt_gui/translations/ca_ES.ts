@@ -1820,15 +1820,15 @@ Aquest joc té una carpeta separada d'actualitzacions/correccions. Només el joc
     <name>LogFileViewer</name>
     <message>
       <source>Auto-scroll</source>
-      <translation type="unfinished">Auto-scroll</translation>
+      <translation>Desplaçament automàtic</translation>
     </message>
     <message>
       <source>Open Log File</source>
-      <translation type="unfinished">Open Log File</translation>
+      <translation>Obre e fitxer de registre</translation>
     </message>
     <message>
       <source>Could not open the log file.</source>
-      <translation type="unfinished">Could not open the log file.</translation>
+      <translation>No s'ha pogut obrir el fitxer de registre.</translation>
     </message>
   </context>
   <context>
@@ -2235,7 +2235,7 @@ Carpetes processades: %1</translation>
     </message>
     <message>
       <source> [line truncated; see log file]</source>
-      <translation type="unfinished"> [line truncated; see log file]</translation>
+      <translation> [línia truncada; mira el fitxer de registre]</translation>
     </message>
   </context>
   <context>
