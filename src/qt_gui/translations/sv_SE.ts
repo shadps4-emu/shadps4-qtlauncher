@@ -1819,15 +1819,15 @@ Det här spelet har en separat mapp för uppdateringar/korrigeringar. Bara grund
     <name>LogFileViewer</name>
     <message>
       <source>Auto-scroll</source>
-      <translation type="unfinished">Auto-scroll</translation>
+      <translation>Automatisk rullning</translation>
     </message>
     <message>
       <source>Open Log File</source>
-      <translation type="unfinished">Open Log File</translation>
+      <translation>Öppna loggfil</translation>
     </message>
     <message>
       <source>Could not open the log file.</source>
-      <translation type="unfinished">Could not open the log file.</translation>
+      <translation>Kunde inte öppna loggfilen.</translation>
     </message>
   </context>
   <context>
@@ -2233,7 +2233,7 @@ Folders processed: %1</source>
     </message>
     <message>
       <source> [line truncated; see log file]</source>
-      <translation type="unfinished"> [line truncated; see log file]</translation>
+      <translation> [rad trunkerad; se loggfil]</translation>
     </message>
   </context>
   <context>
