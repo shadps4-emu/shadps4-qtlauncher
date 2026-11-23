@@ -573,15 +573,19 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
     for (int i = 0; const auto& action : openSaveActionList) {
         if (selected == action) {
             int user_id = activeUsers[i].user_id;
-            if (!std::filesystem::exists(EmulatorSettings.GetHomeDir() / std::to_string(user_id) /
-                                         "savedata" / m_games[itemID].save_dir)) {
+            const auto current_path = EmulatorSettings.GetHomeDir() / FormatUidHex(user_id) /
+                                      "savedata" / m_games[itemID].save_dir;
+            const auto legacy_path = EmulatorSettings.GetHomeDir() / std::to_string(user_id) /
+                                     "savedata" / m_games[itemID].save_dir;
+            const auto target_path =
+                std::filesystem::exists(current_path) ? current_path : legacy_path;
+
+            if (!std::filesystem::exists(target_path)) {
                 QMessageBox::critical(nullptr, tr("Error"),
                                       QString(tr("This game has no save path to open!")));
             } else {
                 QString saveDataPath;
-                Common::FS::PathToQString(saveDataPath, EmulatorSettings.GetHomeDir() /
-                                                            std::to_string(user_id) / "savedata" /
-                                                            m_games[itemID].save_dir);
+                Common::FS::PathToQString(saveDataPath, target_path);
                 QDir(saveDataPath).mkpath(saveDataPath);
                 QDesktopServices::openUrl(QUrl::fromLocalFile(saveDataPath));
             }
@@ -870,12 +874,17 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
             int user_id = activeUsers[i].user_id;
             bool error = false;
 
-            QString save_data_path;
-            Common::FS::PathToQString(save_data_path, EmulatorSettings.GetHomeDir() /
-                                                          std::to_string(user_id) / "savedata" /
-                                                          m_games[itemID].save_dir);
+            const auto current_path = EmulatorSettings.GetHomeDir() / FormatUidHex(user_id) /
+                                      "savedata" / m_games[itemID].save_dir;
+            const auto legacy_path = EmulatorSettings.GetHomeDir() / std::to_string(user_id) /
+                                     "savedata" / m_games[itemID].save_dir;
+            const auto target_path =
+                std::filesystem::exists(current_path) ? current_path : legacy_path;
 
-            if (!std::filesystem::exists(Common::FS::PathFromQString(save_data_path))) {
+            QString save_data_path;
+            Common::FS::PathToQString(save_data_path, target_path);
+
+            if (!std::filesystem::exists(target_path)) {
                 QMessageBox::critical(nullptr, tr("Error"),
                                       QString(tr("This game has no save data to delete!")));
                 error = true;
@@ -891,6 +900,12 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
                     QMessageBox::Yes | QMessageBox::No);
                 if (reply == QMessageBox::Yes) {
                     dir.removeRecursively();
+                    const auto other_path =
+                        (target_path == current_path) ? legacy_path : current_path;
+                    if (std::filesystem::exists(other_path)) {
+                        std::error_code ec;
+                        std::filesystem::remove_all(other_path, ec);
+                    }
                 }
             }
         }

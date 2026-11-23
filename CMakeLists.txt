@@ -458,7 +458,10 @@ if (WIN32)
     target_sources(shadPS4QtLauncher PRIVATE src/shadps4.rc)
 endif()
 
-target_include_directories(shadPS4QtLauncher PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(shadPS4QtLauncher BEFORE PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/externals/spdlog/include
+    ${CMAKE_CURRENT_SOURCE_DIR}
+)
 
 # embed resources
 

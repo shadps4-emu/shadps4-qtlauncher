@@ -21,6 +21,7 @@ bool UserManager::AddUser(const User& user) {
 
     // Create user home directory and subfolders
     const auto user_dir = EmulatorSettings.GetHomeDir() / std::to_string(user.user_id);
+    const auto save_dir = EmulatorSettings.GetHomeDir() / FormatUidHex(user.user_id) / "savedata";
 
     std::error_code ec;
     if (!std::filesystem::exists(user_dir)) {
@@ -28,6 +29,9 @@ bool UserManager::AddUser(const User& user) {
         std::filesystem::create_directories(user_dir / "savedata", ec);
         std::filesystem::create_directories(user_dir / "trophy", ec);
         std::filesystem::create_directories(user_dir / "inputs", ec);
+    }
+    if (!std::filesystem::exists(save_dir)) {
+        std::filesystem::create_directories(save_dir, ec);
     }
 
     Save();
@@ -41,10 +45,15 @@ bool UserManager::RemoveUser(s32 user_id) {
         return false; // not found
 
     const auto user_dir = EmulatorSettings.GetHomeDir() / std::to_string(user_id);
+    const auto alt_user_dir = EmulatorSettings.GetHomeDir() / FormatUidHex(user_id);
 
     if (std::filesystem::exists(user_dir)) {
         std::error_code ec;
         std::filesystem::remove_all(user_dir, ec);
+    }
+    if (std::filesystem::exists(alt_user_dir)) {
+        std::error_code ec;
+        std::filesystem::remove_all(alt_user_dir, ec);
     }
 
     m_users.user.erase(it, m_users.user.end());
@@ -138,12 +147,17 @@ Users UserManager::CreateDefaultUsers() {
 
     for (auto& u : default_users.user) {
         const auto user_dir = EmulatorSettings.GetHomeDir() / std::to_string(u.user_id);
+        const auto save_user_dir = EmulatorSettings.GetHomeDir() / FormatUidHex(u.user_id);
 
         if (!std::filesystem::exists(user_dir)) {
             std::filesystem::create_directory(user_dir);
             std::filesystem::create_directory(user_dir / "savedata");
             std::filesystem::create_directory(user_dir / "trophy");
             std::filesystem::create_directory(user_dir / "inputs");
+        }
+        if (!std::filesystem::exists(save_user_dir)) {
+            std::filesystem::create_directory(save_user_dir);
+            std::filesystem::create_directory(save_user_dir / "savedata");
         }
     }
 
@@ -182,7 +196,8 @@ std::vector<User> UserManager::GetValidUsers() const {
 
     for (const auto& user : m_users.user) {
         const auto user_dir = home_dir / std::to_string(user.user_id);
-        if (std::filesystem::exists(user_dir)) {
+        const auto alt_dir = home_dir / FormatUidHex(user.user_id);
+        if (std::filesystem::exists(user_dir) || std::filesystem::exists(alt_dir)) {
             result.push_back(user);
         }
     }

@@ -22,6 +22,7 @@
 #include "control_settings.h"
 #include "core/emulator_state.h"
 #include "core/file_sys/game_backend.h"
+#include "core/user_settings.h"
 #include "crypto_key_dialog.h"
 #include "dimensions_dialog.h"
 #include "game_install_dialog.h"
@@ -550,6 +551,11 @@ void MainWindow::CreateConnects() {
         Common::FS::PathToQString(userPath, Common::FS::GetUserPath(Common::FS::PathType::UserDir));
         QDesktopServices::openUrl(QUrl::fromLocalFile(userPath));
     });
+
+    auto* rebuildSaveDbAct = new QAction(tr("Rebuild Save Database"), this);
+    ui->menuFile->insertAction(ui->menuRecent->menuAction(), rebuildSaveDbAct);
+    connect(rebuildSaveDbAct, &QAction::triggered, this,
+            [this]() { RebuildSaveDataDatabase(this); });
 
     connect(ui->playButton, &QPushButton::clicked, this, &MainWindow::StartGame);
     connect(ui->pauseButton, &QPushButton::clicked, this, &MainWindow::PauseGame);

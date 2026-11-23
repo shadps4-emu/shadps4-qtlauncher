@@ -447,6 +447,7 @@ void UserManagerDialog::ShowContextMenu(const QPoint& pos) {
     QAction* port_act = context_menu->addAction(tr("&Set Controller Port"));
     QAction* shadnet_act = context_menu->addAction(tr("Shad&Net Settings..."));
     QAction* show_dir_act = context_menu->addAction(tr("&Open User Directory"));
+    QAction* rebuild_db_act = context_menu->addAction(tr("Rebuild Save Database"));
 
     bool enabled = key != m_active_user; // don't allow removing or setting default on active user
 
@@ -463,9 +464,15 @@ void UserManagerDialog::ShowContextMenu(const QPoint& pos) {
 
     connect(show_dir_act, &QAction::triggered, this, [this, key]() {
         QString userDirPath;
-        Common::FS::PathToQString(userDirPath, EmulatorSettings.GetHomeDir() / std::to_string(key));
+        const auto user_dir = EmulatorSettings.GetHomeDir() / FormatUidHex(key);
+        const auto legacy_dir = EmulatorSettings.GetHomeDir() / std::to_string(key);
+        const auto target_dir = std::filesystem::exists(user_dir) ? user_dir : legacy_dir;
+        Common::FS::PathToQString(userDirPath, target_dir);
         QDesktopServices::openUrl(QUrl::fromLocalFile(userDirPath));
     });
+
+    connect(rebuild_db_act, &QAction::triggered, this,
+            [this, key]() { RebuildSaveDataDatabase(this, key); });
 
     context_menu->exec(m_table->viewport()->mapToGlobal(pos));
 }
