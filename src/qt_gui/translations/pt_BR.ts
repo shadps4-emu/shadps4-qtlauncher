@@ -3192,7 +3192,7 @@ Pastas processadas: %1</translation>
     </message>
     <message>
       <source>Enable Shader Patches:\nLoads replacement shaders (.spv) from the shader/patch folder of the user folder instead of the translated ones. Some game patches need this.</source>
-      <translation type="unfinished">Enable Shader Patches:\nLoads replacement shaders (.spv) from the shader/patch folder of the user folder instead of the translated ones. Some game patches need this.</translation>
+      <translation>Habilitar Patch de Shaders:\nCarrega shaders substitutos (.spv) da pasta shader/patch do usuário ao invés da pasta traduzida. O patch de alguns jogos necessitam disso.</translation>
     </message>
   </context>
   <context>
