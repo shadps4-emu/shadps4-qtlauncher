@@ -3186,6 +3186,14 @@ Folders processed: %1</source>
       <source>Browse:\nBrowse for a folder to set as the fonts path.</source>
       <translation>Bläddra:\nVälj en mapp som ska användas för typsnitten.</translation>
     </message>
+    <message>
+      <source>Enable Shader Patches</source>
+      <translation type="unfinished">Enable Shader Patches</translation>
+    </message>
+    <message>
+      <source>Enable Shader Patches:\nLoads replacement shaders (.spv) from the shader/patch folder of the user folder instead of the translated ones. Some game patches need this.</source>
+      <translation type="unfinished">Enable Shader Patches:\nLoads replacement shaders (.spv) from the shader/patch folder of the user folder instead of the translated ones. Some game patches need this.</translation>
+    </message>
   </context>
   <context>
     <name>ShortcutDialog</name>
