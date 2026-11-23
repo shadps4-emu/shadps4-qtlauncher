@@ -186,15 +186,18 @@ bool HasUnmigratedSaveData() {
         return false;
     }
 
-    // 1. Dinosaur path: UserDir / "savedata" / "1"
+    // Legacy pre-multiuser path: savedata/1
     const auto old_dino_dir =
         Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "savedata" / "1";
-    if (fs::exists(old_dino_dir, ec) && !fs::is_symlink(old_dino_dir, ec) &&
-        !fs::is_empty(old_dino_dir, ec)) {
-        return true;
+    if (fs::exists(old_dino_dir, ec) && !fs::is_symlink(old_dino_dir, ec)) {
+        for (const auto& entry : fs::directory_iterator(old_dino_dir, ec)) {
+            if (entry.is_directory(ec) && !entry.is_symlink(ec)) {
+                return true;
+            }
+        }
     }
 
-    // 2. Decimal paths for registered users
+    // Decimal user paths
     for (const auto& user : UserSettings.GetUserManager().GetAllUsers()) {
         if (user.user_id < 0) {
             continue;
@@ -202,12 +205,15 @@ bool HasUnmigratedSaveData() {
         const auto old_save_dir = home_dir / std::to_string(user.user_id) / "savedata";
         const auto new_save_dir = home_dir / FormatUidHex(user.user_id) / "savedata";
         if (old_save_dir != new_save_dir && fs::exists(old_save_dir, ec) &&
-            !fs::is_symlink(old_save_dir, ec) && !fs::is_empty(old_save_dir, ec)) {
-            return true;
+            !fs::is_symlink(old_save_dir, ec)) {
+            for (const auto& entry : fs::directory_iterator(old_save_dir, ec)) {
+                if (entry.is_directory(ec) && !entry.is_symlink(ec)) {
+                    return true;
+                }
+            }
         }
     }
 
-    // 3. Decimal directories in home_dir
     if (fs::exists(home_dir, ec)) {
         for (const auto& entry : fs::directory_iterator(home_dir, ec)) {
             if (!entry.is_directory(ec) || entry.is_symlink(ec)) {
@@ -221,9 +227,13 @@ bool HasUnmigratedSaveData() {
                         const auto target_name = FormatUidHex(static_cast<u32>(raw_id));
                         if (target_name != name) {
                             const auto old_save_dir = entry.path() / "savedata";
-                            if (fs::exists(old_save_dir, ec) && !fs::is_symlink(old_save_dir, ec) &&
-                                !fs::is_empty(old_save_dir, ec)) {
-                                return true;
+                            if (fs::exists(old_save_dir, ec) && !fs::is_symlink(old_save_dir, ec)) {
+                                for (const auto& game_entry :
+                                     fs::directory_iterator(old_save_dir, ec)) {
+                                    if (game_entry.is_directory(ec) && !game_entry.is_symlink(ec)) {
+                                        return true;
+                                    }
+                                }
                             }
                         }
                     }
@@ -233,7 +243,7 @@ bool HasUnmigratedSaveData() {
         }
     }
 
-    // 4. Old trophy base dir
+    // Legacy trophy directory
     const auto old_trophy_base_dir =
         Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "game_data";
     if (fs::exists(old_trophy_base_dir, ec) && !fs::is_empty(old_trophy_base_dir, ec)) {
@@ -285,18 +295,9 @@ bool PerformSaveDataMigration(QWidget* parent) {
         return false;
     }
 
-    std::vector<std::pair<fs::path, fs::path>> migration_pairs;
+    std::vector<std::pair<fs::path, fs::path>> decimal_pairs;
 
-    // 1. Dinosaur path: UserDir / "savedata" / "1" -> home_dir / "000003e8" / "savedata"
-    const auto old_dino_dir =
-        Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "savedata" / "1";
-    const auto dino_target = home_dir / FormatUidHex(1000) / "savedata";
-    if (fs::exists(old_dino_dir, ec) && !fs::is_symlink(old_dino_dir, ec) &&
-        !fs::is_empty(old_dino_dir, ec)) {
-        migration_pairs.emplace_back(old_dino_dir, dino_target);
-    }
-
-    // 2. Decimal paths for registered users
+    // Decimal paths have priority over legacy savedata/1
     for (const auto& user : UserSettings.GetUserManager().GetAllUsers()) {
         if (user.user_id < 0) {
             continue;
@@ -304,16 +305,15 @@ bool PerformSaveDataMigration(QWidget* parent) {
         const auto old_save_dir = home_dir / std::to_string(user.user_id) / "savedata";
         const auto new_save_dir = home_dir / FormatUidHex(user.user_id) / "savedata";
         if (old_save_dir != new_save_dir && fs::exists(old_save_dir, ec) &&
-            !fs::is_symlink(old_save_dir, ec) && !fs::is_empty(old_save_dir, ec)) {
-            if (std::find_if(migration_pairs.begin(), migration_pairs.end(), [&](const auto& p) {
+            !fs::is_symlink(old_save_dir, ec)) {
+            if (std::find_if(decimal_pairs.begin(), decimal_pairs.end(), [&](const auto& p) {
                     return p.first == old_save_dir;
-                }) == migration_pairs.end()) {
-                migration_pairs.emplace_back(old_save_dir, new_save_dir);
+                }) == decimal_pairs.end()) {
+                decimal_pairs.emplace_back(old_save_dir, new_save_dir);
             }
         }
     }
 
-    // 3. Decimal paths found in directory scan
     if (fs::exists(home_dir, ec)) {
         for (const auto& entry : fs::directory_iterator(home_dir, ec)) {
             if (!entry.is_directory(ec) || entry.is_symlink(ec)) {
@@ -328,13 +328,12 @@ bool PerformSaveDataMigration(QWidget* parent) {
                         if (target_name != name) {
                             const auto old_save_dir = entry.path() / "savedata";
                             const auto new_save_dir = home_dir / target_name / "savedata";
-                            if (fs::exists(old_save_dir, ec) && !fs::is_symlink(old_save_dir, ec) &&
-                                !fs::is_empty(old_save_dir, ec)) {
-                                if (std::find_if(migration_pairs.begin(), migration_pairs.end(),
+                            if (fs::exists(old_save_dir, ec) && !fs::is_symlink(old_save_dir, ec)) {
+                                if (std::find_if(decimal_pairs.begin(), decimal_pairs.end(),
                                                  [&](const auto& p) {
                                                      return p.first == old_save_dir;
-                                                 }) == migration_pairs.end()) {
-                                    migration_pairs.emplace_back(old_save_dir, new_save_dir);
+                                                 }) == decimal_pairs.end()) {
+                                    decimal_pairs.emplace_back(old_save_dir, new_save_dir);
                                 }
                             }
                         }
@@ -345,14 +344,13 @@ bool PerformSaveDataMigration(QWidget* parent) {
         }
     }
 
-    // Execute save migration for all pairs
-    for (const auto& [source_root, target_root] : migration_pairs) {
+    for (const auto& [source_root, target_root] : decimal_pairs) {
         LOG_INFO(Loader, "Migrating save data from {} to {}", source_root.string(),
                  target_root.string());
         fs::create_directories(target_root, ec);
 
         for (const auto& title_entry : fs::directory_iterator(source_root, ec)) {
-            if (!title_entry.is_directory(ec)) {
+            if (!title_entry.is_directory(ec) || title_entry.is_symlink(ec)) {
                 continue;
             }
             const auto old_title_dir = title_entry.path();
@@ -375,6 +373,9 @@ bool PerformSaveDataMigration(QWidget* parent) {
                 }
             } else {
                 for (const auto& item_entry : fs::directory_iterator(old_title_dir, ec)) {
+                    if (item_entry.is_symlink(ec)) {
+                        continue;
+                    }
                     const auto old_item = item_entry.path();
                     const auto new_item = new_title_dir / old_item.filename();
 
@@ -402,6 +403,89 @@ bool PerformSaveDataMigration(QWidget* parent) {
                             break;
                         }
                     }
+                }
+            }
+        }
+    }
+
+    // Legacy savedata/1 path
+    const auto old_dino_dir =
+        Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "savedata" / "1";
+    const auto dino_target = home_dir / FormatUidHex(1000) / "savedata";
+    if (fs::exists(old_dino_dir, ec) && !fs::is_symlink(old_dino_dir, ec)) {
+        LOG_INFO(Loader, "Checking legacy save data from {}", old_dino_dir.string());
+        fs::create_directories(dino_target, ec);
+
+        for (const auto& title_entry : fs::directory_iterator(old_dino_dir, ec)) {
+            const auto old_title_dir = title_entry.path();
+            const auto new_title_dir = dino_target / old_title_dir.filename();
+
+            if (title_entry.is_symlink(ec)) {
+                if (user_choice == TransferOption::MoveAndLinkBack &&
+                    fs::exists(new_title_dir, ec)) {
+                    fs::remove(old_title_dir, ec);
+                    fs::create_directory_symlink(new_title_dir, old_title_dir, ec);
+                }
+                continue;
+            }
+
+            if (!title_entry.is_directory(ec)) {
+                continue;
+            }
+
+            if (!fs::exists(new_title_dir, ec)) {
+                switch (user_choice) {
+                case TransferOption::Copy:
+                    fs::copy(old_title_dir, new_title_dir, fs::copy_options::recursive, ec);
+                    break;
+                case TransferOption::Move:
+                    MovePath(old_title_dir, new_title_dir);
+                    break;
+                case TransferOption::MoveAndLinkBack:
+                    MovePath(old_title_dir, new_title_dir);
+                    fs::create_directory_symlink(new_title_dir, old_title_dir, ec);
+                    break;
+                default:
+                    break;
+                }
+            } else {
+                // Keep newer save from decimal path; only copy missing slots
+                for (const auto& item_entry : fs::directory_iterator(old_title_dir, ec)) {
+                    if (item_entry.is_symlink(ec)) {
+                        continue;
+                    }
+                    const auto old_item = item_entry.path();
+                    const auto new_item = new_title_dir / old_item.filename();
+
+                    if (!fs::exists(new_item, ec)) {
+                        switch (user_choice) {
+                        case TransferOption::Copy:
+                            if (item_entry.is_directory(ec)) {
+                                fs::copy(old_item, new_item, fs::copy_options::recursive, ec);
+                            } else {
+                                fs::copy_file(old_item, new_item, ec);
+                            }
+                            break;
+                        case TransferOption::Move:
+                            MovePath(old_item, new_item);
+                            break;
+                        case TransferOption::MoveAndLinkBack:
+                            MovePath(old_item, new_item);
+                            if (item_entry.is_directory(ec)) {
+                                fs::create_directory_symlink(new_item, old_item, ec);
+                            } else {
+                                fs::create_symlink(new_item, old_item, ec);
+                            }
+                            break;
+                        default:
+                            break;
+                        }
+                    }
+                }
+                if (user_choice == TransferOption::MoveAndLinkBack &&
+                    fs::is_empty(old_title_dir, ec)) {
+                    fs::remove(old_title_dir, ec);
+                    fs::create_directory_symlink(new_title_dir, old_title_dir, ec);
                 }
             }
         }
@@ -474,8 +558,10 @@ bool RebuildSaveDataDatabase(QWidget* parent, std::optional<u32> user_id) {
                                  tr("Save data database successfully rebuilt."));
         return true;
     } else {
-        QMessageBox::critical(parent, tr("Rebuild Save Database"),
-                              tr("Failed to rebuild save data database."));
+        QMessageBox::critical(
+            parent, tr("Rebuild Save Database"),
+            tr("Failed to rebuild save data database. Ensure your emulator build supports database "
+               "rebuilding."));
         return false;
     }
 }
