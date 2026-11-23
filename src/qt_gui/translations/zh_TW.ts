@@ -3180,6 +3180,14 @@ Folders processed: %1</source>
       <source>Browse:\nBrowse for a folder to set as the fonts path.</source>
       <translation>瀏覽：\n選取要設定為存放字型的資料夾路徑。</translation>
     </message>
+    <message>
+      <source>Enable Shader Patches</source>
+      <translation type="unfinished">Enable Shader Patches</translation>
+    </message>
+    <message>
+      <source>Enable Shader Patches:\nLoads replacement shaders (.spv) from the shader/patch folder of the user folder instead of the translated ones. Some game patches need this.</source>
+      <translation type="unfinished">Enable Shader Patches:\nLoads replacement shaders (.spv) from the shader/patch folder of the user folder instead of the translated ones. Some game patches need this.</translation>
+    </message>
   </context>
   <context>
     <name>ShortcutDialog</name>
