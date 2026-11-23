@@ -1824,11 +1824,11 @@ This game has a separate update/patch folder. Only the base game will be archive
     </message>
     <message>
       <source>Open Log File</source>
-      <translation type="unfinished">Open Log File</translation>
+      <translation>Günlük Dosyasını Aç</translation>
     </message>
     <message>
       <source>Could not open the log file.</source>
-      <translation type="unfinished">Could not open the log file.</translation>
+      <translation>Günlük dosyası açılamadı.</translation>
     </message>
   </context>
   <context>
