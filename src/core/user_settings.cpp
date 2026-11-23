@@ -35,10 +35,101 @@ enum class TransferOption : s32 {
 };
 
 static void MovePath(fs::path const& _from, fs::path const& _to) {
-    try {
-        fs::rename(_from, _to);
-    } catch (...) {
-        fs::copy(_from, _to, fs::copy_options::recursive | fs::copy_options::skip_existing);
+    std::error_code ec;
+    fs::rename(_from, _to, ec);
+    if (ec) {
+        fs::copy(_from, _to, fs::copy_options::recursive | fs::copy_options::skip_existing, ec);
+        if (!ec) {
+            fs::remove_all(_from, ec);
+        }
+    }
+}
+
+static bool DirectoryContainsFiles(const fs::path& dir, std::error_code& ec) {
+    if (!fs::exists(dir, ec) || fs::is_symlink(dir, ec)) {
+        return false;
+    }
+    for (const auto& entry : fs::recursive_directory_iterator(dir, ec)) {
+        if (!entry.is_directory(ec)) {
+            return true;
+        }
+    }
+    return false;
+}
+
+static void CleanEmptyDirectories(const fs::path& root) {
+    std::error_code ec;
+    if (!fs::exists(root, ec) || fs::is_symlink(root, ec)) {
+        return;
+    }
+    bool has_files = false;
+    for (const auto& entry : fs::recursive_directory_iterator(root, ec)) {
+        if (!entry.is_directory(ec)) {
+            has_files = true;
+            break;
+        }
+    }
+    if (!has_files) {
+        fs::remove_all(root, ec);
+    }
+}
+
+static void TransferDirectoryContents(const fs::path& source_dir, const fs::path& target_dir,
+                                      TransferOption option) {
+    std::error_code ec;
+    if (!fs::exists(source_dir, ec) || fs::is_symlink(source_dir, ec)) {
+        return;
+    }
+    fs::create_directories(target_dir, ec);
+
+    for (const auto& entry : fs::directory_iterator(source_dir, ec)) {
+        if (entry.is_symlink(ec)) {
+            continue;
+        }
+        const auto src_path = entry.path();
+        const auto dst_path = target_dir / src_path.filename();
+
+        if (entry.is_directory(ec)) {
+            if (!fs::exists(dst_path, ec)) {
+                switch (option) {
+                case TransferOption::Copy:
+                    fs::copy(src_path, dst_path, fs::copy_options::recursive, ec);
+                    break;
+                case TransferOption::Move:
+                    MovePath(src_path, dst_path);
+                    break;
+                case TransferOption::MoveAndLinkBack:
+                    MovePath(src_path, dst_path);
+                    fs::create_directory_symlink(dst_path, src_path, ec);
+                    break;
+                default:
+                    break;
+                }
+            } else {
+                TransferDirectoryContents(src_path, dst_path, option);
+                if (option == TransferOption::MoveAndLinkBack && fs::is_empty(src_path, ec)) {
+                    fs::remove(src_path, ec);
+                    fs::create_directory_symlink(dst_path, src_path, ec);
+                }
+            }
+        } else {
+            if (!fs::exists(dst_path, ec)) {
+                switch (option) {
+                case TransferOption::Copy:
+                    fs::copy_file(src_path, dst_path, ec);
+                    break;
+                case TransferOption::Move:
+                    MovePath(src_path, dst_path);
+                    break;
+                case TransferOption::MoveAndLinkBack:
+                    MovePath(src_path, dst_path);
+                    fs::create_symlink(dst_path, src_path, ec);
+                    break;
+                default:
+                    break;
+                }
+            }
+        }
     }
 }
 
@@ -128,23 +219,23 @@ static void CheckAndMigrateTrophies(TransferOption option) {
 static TransferOption AskSaveDataMigrationOption(QWidget* parent = nullptr) {
     QMessageBox msgbox(parent);
 
-    msgbox.setWindowTitle(tr("Save Data Migration"));
+    msgbox.setWindowTitle(tr("User Data Migration"));
 #ifdef _WIN32
-    msgbox.setText(
-        tr("The shadPS4 save data location has been updated, and existing save files have been "
-           "detected in the old location.\n\n"
-           "After migration, rebuilding the save database will be required for the emulator to "
-           "detect your saves. You will be prompted to rebuild it, or you can run 'Rebuild Save "
-           "Database' from the File menu at any time.\n\n"
-           "Do you wish to copy them over, move them over, or continue without doing anything?"));
+    msgbox.setText(tr(
+        "The shadPS4 user data directory structure has been updated to match the PS4 system "
+        "format, and existing profile data has been detected in legacy locations.\n\n"
+        "After migration, rebuilding the save database will be required for the emulator to "
+        "detect your saves. You will be prompted to rebuild it, or you can run 'Rebuild Save "
+        "Database' from the File menu at any time.\n\n"
+        "Do you wish to copy your data over, move it over, or continue without doing anything?"));
 #else
     msgbox.setText(
-        tr("The shadPS4 save data location has been updated, and existing save files have been "
-           "detected in the old location.\n\n"
+        tr("The shadPS4 user data directory structure has been updated to match the PS4 system "
+           "format, and existing profile data has been detected in legacy locations.\n\n"
            "After migration, rebuilding the save database will be required for the emulator to "
            "detect your saves. You will be prompted to rebuild it, or you can run 'Rebuild Save "
            "Database' from the File menu at any time.\n\n"
-           "Do you wish to copy them over, move them over, move and link back to the original "
+           "Do you wish to copy your data over, move it over, move and link back to the original "
            "location, or continue without doing anything?"));
 #endif
 
@@ -179,22 +270,11 @@ static TransferOption AskSaveDataMigrationOption(QWidget* parent = nullptr) {
 
 bool HasUnmigratedSaveData() {
     const auto home_dir = EmulatorSettings.GetHomeDir();
-    const auto migration_done_path = home_dir / ".savedata_migration.complete";
+    const auto migration_done_path = home_dir / ".user_data_migration.complete";
     std::error_code ec;
 
     if (fs::exists(migration_done_path, ec)) {
         return false;
-    }
-
-    // Legacy pre-multiuser path: savedata/1
-    const auto old_dino_dir =
-        Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "savedata" / "1";
-    if (fs::exists(old_dino_dir, ec) && !fs::is_symlink(old_dino_dir, ec)) {
-        for (const auto& entry : fs::directory_iterator(old_dino_dir, ec)) {
-            if (entry.is_directory(ec) && !entry.is_symlink(ec)) {
-                return true;
-            }
-        }
     }
 
     // Decimal user paths
@@ -202,15 +282,10 @@ bool HasUnmigratedSaveData() {
         if (user.user_id < 0) {
             continue;
         }
-        const auto old_save_dir = home_dir / std::to_string(user.user_id) / "savedata";
-        const auto new_save_dir = home_dir / FormatUidHex(user.user_id) / "savedata";
-        if (old_save_dir != new_save_dir && fs::exists(old_save_dir, ec) &&
-            !fs::is_symlink(old_save_dir, ec)) {
-            for (const auto& entry : fs::directory_iterator(old_save_dir, ec)) {
-                if (entry.is_directory(ec) && !entry.is_symlink(ec)) {
-                    return true;
-                }
-            }
+        const auto old_user_dir = home_dir / std::to_string(user.user_id);
+        const auto new_user_dir = home_dir / FormatUidHex(user.user_id);
+        if (old_user_dir != new_user_dir && DirectoryContainsFiles(old_user_dir, ec)) {
+            return true;
         }
     }
 
@@ -225,16 +300,8 @@ bool HasUnmigratedSaveData() {
                     const u64 raw_id = std::stoull(name);
                     if (raw_id <= 0xFFFFFFFFULL) {
                         const auto target_name = FormatUidHex(static_cast<u32>(raw_id));
-                        if (target_name != name) {
-                            const auto old_save_dir = entry.path() / "savedata";
-                            if (fs::exists(old_save_dir, ec) && !fs::is_symlink(old_save_dir, ec)) {
-                                for (const auto& game_entry :
-                                     fs::directory_iterator(old_save_dir, ec)) {
-                                    if (game_entry.is_directory(ec) && !game_entry.is_symlink(ec)) {
-                                        return true;
-                                    }
-                                }
-                            }
+                        if (target_name != name && DirectoryContainsFiles(entry.path(), ec)) {
+                            return true;
                         }
                     }
                 } catch (...) {
@@ -243,15 +310,18 @@ bool HasUnmigratedSaveData() {
         }
     }
 
+    // Legacy pre-multiuser path: savedata/1
+    const auto old_dino_dir =
+        Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "savedata" / "1";
+    if (DirectoryContainsFiles(old_dino_dir, ec)) {
+        return true;
+    }
+
     // Legacy trophy directory
     const auto old_trophy_base_dir =
         Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "game_data";
-    if (fs::exists(old_trophy_base_dir, ec) && !fs::is_empty(old_trophy_base_dir, ec)) {
-        for (const auto& entry : fs::directory_iterator(old_trophy_base_dir, ec)) {
-            if (entry.is_directory(ec) && fs::exists(entry.path() / "TrophyFiles", ec)) {
-                return true;
-            }
-        }
+    if (DirectoryContainsFiles(old_trophy_base_dir, ec)) {
+        return true;
     }
 
     return false;
@@ -284,14 +354,15 @@ static fs::path FindEmulatorExecutable() {
 }
 
 bool PerformSaveDataMigration(QWidget* parent) {
-    LOG_INFO(Loader, "Starting unified save data migration");
+    LOG_INFO(Loader, "Starting unified user data migration");
     const auto home_dir = EmulatorSettings.GetHomeDir();
-    const auto migration_done_path = home_dir / ".savedata_migration.complete";
+    const auto migration_done_path = home_dir / ".user_data_migration.complete";
+    const auto legacy_marker = home_dir / ".savedata_migration.complete";
     std::error_code ec;
 
     TransferOption user_choice = AskSaveDataMigrationOption(parent);
     if (user_choice == TransferOption::Nothing || user_choice == TransferOption::SdlCancelled) {
-        LOG_INFO(Loader, "Save data migration cancelled or deferred by user");
+        LOG_INFO(Loader, "User data migration cancelled or deferred by user");
         return false;
     }
 
@@ -302,14 +373,14 @@ bool PerformSaveDataMigration(QWidget* parent) {
         if (user.user_id < 0) {
             continue;
         }
-        const auto old_save_dir = home_dir / std::to_string(user.user_id) / "savedata";
-        const auto new_save_dir = home_dir / FormatUidHex(user.user_id) / "savedata";
-        if (old_save_dir != new_save_dir && fs::exists(old_save_dir, ec) &&
-            !fs::is_symlink(old_save_dir, ec)) {
+        const auto old_user_dir = home_dir / std::to_string(user.user_id);
+        const auto new_user_dir = home_dir / FormatUidHex(user.user_id);
+        if (old_user_dir != new_user_dir && fs::exists(old_user_dir, ec) &&
+            !fs::is_symlink(old_user_dir, ec)) {
             if (std::find_if(decimal_pairs.begin(), decimal_pairs.end(), [&](const auto& p) {
-                    return p.first == old_save_dir;
+                    return p.first == old_user_dir;
                 }) == decimal_pairs.end()) {
-                decimal_pairs.emplace_back(old_save_dir, new_save_dir);
+                decimal_pairs.emplace_back(old_user_dir, new_user_dir);
             }
         }
     }
@@ -326,14 +397,14 @@ bool PerformSaveDataMigration(QWidget* parent) {
                     if (raw_id <= 0xFFFFFFFFULL) {
                         const auto target_name = FormatUidHex(static_cast<u32>(raw_id));
                         if (target_name != name) {
-                            const auto old_save_dir = entry.path() / "savedata";
-                            const auto new_save_dir = home_dir / target_name / "savedata";
-                            if (fs::exists(old_save_dir, ec) && !fs::is_symlink(old_save_dir, ec)) {
+                            const auto old_user_dir = entry.path();
+                            const auto new_user_dir = home_dir / target_name;
+                            if (fs::exists(old_user_dir, ec) && !fs::is_symlink(old_user_dir, ec)) {
                                 if (std::find_if(decimal_pairs.begin(), decimal_pairs.end(),
                                                  [&](const auto& p) {
-                                                     return p.first == old_save_dir;
+                                                     return p.first == old_user_dir;
                                                  }) == decimal_pairs.end()) {
-                                    decimal_pairs.emplace_back(old_save_dir, new_save_dir);
+                                    decimal_pairs.emplace_back(old_user_dir, new_user_dir);
                                 }
                             }
                         }
@@ -345,65 +416,16 @@ bool PerformSaveDataMigration(QWidget* parent) {
     }
 
     for (const auto& [source_root, target_root] : decimal_pairs) {
-        LOG_INFO(Loader, "Migrating save data from {} to {}", source_root.string(),
+        LOG_INFO(Loader, "Migrating user profile from {} to {}", source_root.string(),
                  target_root.string());
-        fs::create_directories(target_root, ec);
+        TransferDirectoryContents(source_root, target_root, user_choice);
 
-        for (const auto& title_entry : fs::directory_iterator(source_root, ec)) {
-            if (!title_entry.is_directory(ec) || title_entry.is_symlink(ec)) {
-                continue;
-            }
-            const auto old_title_dir = title_entry.path();
-            const auto new_title_dir = target_root / old_title_dir.filename();
-
-            if (!fs::exists(new_title_dir, ec)) {
-                switch (user_choice) {
-                case TransferOption::Copy:
-                    fs::copy(old_title_dir, new_title_dir, fs::copy_options::recursive, ec);
-                    break;
-                case TransferOption::Move:
-                    MovePath(old_title_dir, new_title_dir);
-                    break;
-                case TransferOption::MoveAndLinkBack:
-                    MovePath(old_title_dir, new_title_dir);
-                    fs::create_directory_symlink(new_title_dir, old_title_dir, ec);
-                    break;
-                default:
-                    break;
-                }
-            } else {
-                for (const auto& item_entry : fs::directory_iterator(old_title_dir, ec)) {
-                    if (item_entry.is_symlink(ec)) {
-                        continue;
-                    }
-                    const auto old_item = item_entry.path();
-                    const auto new_item = new_title_dir / old_item.filename();
-
-                    if (!fs::exists(new_item, ec)) {
-                        switch (user_choice) {
-                        case TransferOption::Copy:
-                            if (item_entry.is_directory(ec)) {
-                                fs::copy(old_item, new_item, fs::copy_options::recursive, ec);
-                            } else {
-                                fs::copy_file(old_item, new_item, ec);
-                            }
-                            break;
-                        case TransferOption::Move:
-                            MovePath(old_item, new_item);
-                            break;
-                        case TransferOption::MoveAndLinkBack:
-                            MovePath(old_item, new_item);
-                            if (item_entry.is_directory(ec)) {
-                                fs::create_directory_symlink(new_item, old_item, ec);
-                            } else {
-                                fs::create_symlink(new_item, old_item, ec);
-                            }
-                            break;
-                        default:
-                            break;
-                        }
-                    }
-                }
+        if (user_choice == TransferOption::Move) {
+            CleanEmptyDirectories(source_root);
+        } else if (user_choice == TransferOption::MoveAndLinkBack) {
+            if (fs::exists(source_root, ec) && fs::is_empty(source_root, ec)) {
+                fs::remove(source_root, ec);
+                fs::create_directory_symlink(target_root, source_root, ec);
             }
         }
     }
@@ -414,94 +436,38 @@ bool PerformSaveDataMigration(QWidget* parent) {
     const auto dino_target = home_dir / FormatUidHex(1000) / "savedata";
     if (fs::exists(old_dino_dir, ec) && !fs::is_symlink(old_dino_dir, ec)) {
         LOG_INFO(Loader, "Checking legacy save data from {}", old_dino_dir.string());
-        fs::create_directories(dino_target, ec);
+        TransferDirectoryContents(old_dino_dir, dino_target, user_choice);
 
-        for (const auto& title_entry : fs::directory_iterator(old_dino_dir, ec)) {
-            const auto old_title_dir = title_entry.path();
-            const auto new_title_dir = dino_target / old_title_dir.filename();
-
-            if (title_entry.is_symlink(ec)) {
-                if (user_choice == TransferOption::MoveAndLinkBack &&
-                    fs::exists(new_title_dir, ec)) {
-                    fs::remove(old_title_dir, ec);
-                    fs::create_directory_symlink(new_title_dir, old_title_dir, ec);
-                }
-                continue;
-            }
-
-            if (!title_entry.is_directory(ec)) {
-                continue;
-            }
-
-            if (!fs::exists(new_title_dir, ec)) {
-                switch (user_choice) {
-                case TransferOption::Copy:
-                    fs::copy(old_title_dir, new_title_dir, fs::copy_options::recursive, ec);
-                    break;
-                case TransferOption::Move:
-                    MovePath(old_title_dir, new_title_dir);
-                    break;
-                case TransferOption::MoveAndLinkBack:
-                    MovePath(old_title_dir, new_title_dir);
-                    fs::create_directory_symlink(new_title_dir, old_title_dir, ec);
-                    break;
-                default:
-                    break;
-                }
-            } else {
-                // Keep newer save from decimal path; only copy missing slots
-                for (const auto& item_entry : fs::directory_iterator(old_title_dir, ec)) {
-                    if (item_entry.is_symlink(ec)) {
-                        continue;
-                    }
-                    const auto old_item = item_entry.path();
-                    const auto new_item = new_title_dir / old_item.filename();
-
-                    if (!fs::exists(new_item, ec)) {
-                        switch (user_choice) {
-                        case TransferOption::Copy:
-                            if (item_entry.is_directory(ec)) {
-                                fs::copy(old_item, new_item, fs::copy_options::recursive, ec);
-                            } else {
-                                fs::copy_file(old_item, new_item, ec);
-                            }
-                            break;
-                        case TransferOption::Move:
-                            MovePath(old_item, new_item);
-                            break;
-                        case TransferOption::MoveAndLinkBack:
-                            MovePath(old_item, new_item);
-                            if (item_entry.is_directory(ec)) {
-                                fs::create_directory_symlink(new_item, old_item, ec);
-                            } else {
-                                fs::create_symlink(new_item, old_item, ec);
-                            }
-                            break;
-                        default:
-                            break;
-                        }
-                    }
-                }
-                if (user_choice == TransferOption::MoveAndLinkBack &&
-                    fs::is_empty(old_title_dir, ec)) {
-                    fs::remove(old_title_dir, ec);
-                    fs::create_directory_symlink(new_title_dir, old_title_dir, ec);
-                }
+        if (user_choice == TransferOption::Move) {
+            CleanEmptyDirectories(old_dino_dir);
+            CleanEmptyDirectories(old_dino_dir.parent_path());
+        } else if (user_choice == TransferOption::MoveAndLinkBack) {
+            if (fs::exists(old_dino_dir, ec) && fs::is_empty(old_dino_dir, ec)) {
+                fs::remove(old_dino_dir, ec);
+                fs::create_directory_symlink(dino_target, old_dino_dir, ec);
             }
         }
     }
 
-    // Migrate trophies if any exist in old location
+    // Migrate trophies if any exist in old game_data location
     CheckAndMigrateTrophies(user_choice);
+    const auto old_trophy_base_dir =
+        Common::FS::GetUserPath(Common::FS::PathType::UserDir) / "game_data";
+    if (user_choice == TransferOption::Move) {
+        CleanEmptyDirectories(old_trophy_base_dir);
+    }
 
-    // Mark migration complete only when user actually transferred files
+    // Mark migration complete
     std::ofstream ofs(migration_done_path);
     ofs << "";
+    if (fs::exists(legacy_marker, ec)) {
+        fs::remove(legacy_marker, ec);
+    }
 
     g_rebuild_prompted = true;
     QMessageBox rebuild_box(parent);
     rebuild_box.setWindowTitle(tr("Rebuild Save Database"));
-    rebuild_box.setText(tr("Save data migration completed.\n"
+    rebuild_box.setText(tr("User data migration completed.\n"
                            "Do you want to rebuild the save database now?"));
     rebuild_box.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
     rebuild_box.setDefaultButton(QMessageBox::Yes);
@@ -517,9 +483,9 @@ bool RebuildSaveDataDatabase(QWidget* parent, std::optional<u32> user_id) {
         QMessageBox warn(parent);
         warn.setWindowTitle(tr("Rebuild Save Database"));
         warn.setIcon(QMessageBox::Warning);
-        warn.setText(tr("Unmigrated save files were detected.\n"
+        warn.setText(tr("Unmigrated user profile data was detected.\n"
                         "Migration must be performed before the save database can be rebuilt.\n\n"
-                        "Do you want to migrate your save data now?"));
+                        "Do you want to migrate your user data now?"));
         warn.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
         warn.setDefaultButton(QMessageBox::Yes);
         if (warn.exec() == QMessageBox::Yes) {
