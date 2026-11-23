@@ -1817,6 +1817,21 @@ This game has a separate update/patch folder. Only the base game will be archive
     </message>
   </context>
   <context>
+    <name>LogFileViewer</name>
+    <message>
+      <source>Auto-scroll</source>
+      <translation type="unfinished">Auto-scroll</translation>
+    </message>
+    <message>
+      <source>Open Log File</source>
+      <translation type="unfinished">Open Log File</translation>
+    </message>
+    <message>
+      <source>Could not open the log file.</source>
+      <translation type="unfinished">Could not open the log file.</translation>
+    </message>
+  </context>
+  <context>
     <name>LogPresetsDialog</name>
     <message>
       <source>Log Filter Presets</source>
@@ -2062,10 +2077,6 @@ This game has a separate update/patch folder. Only the base game will be archive
       <translation>গেমটি ইতিমধ্যে চলছে!</translation>
     </message>
     <message>
-      <source>shadPS4</source>
-      <translation>shadPS4</translation>
-    </message>
-    <message>
       <source>Play</source>
       <translation>চালান</translation>
     </message>
@@ -2158,10 +2169,6 @@ Select an emulator version from the right panel.</source>
       <translation>Dimensions Toypad পরিচালনা করুন</translation>
     </message>
     <message>
-      <source>Game Log</source>
-      <translation>গেম লগ</translation>
-    </message>
-    <message>
       <source>Show Game Log</source>
       <translation>গেম লগ দেখান</translation>
     </message>
@@ -2225,6 +2232,10 @@ Folders processed: %1</translation>
     <message>
       <source>Incorrect recovery key. Please try again.</source>
       <translation>রিকভারি কী সঠিক নয়। আবার চেষ্টা করুন।</translation>
+    </message>
+    <message>
+      <source> [line truncated; see log file]</source>
+      <translation type="unfinished"> [line truncated; see log file]</translation>
     </message>
   </context>
   <context>

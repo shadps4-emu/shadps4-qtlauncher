@@ -1817,6 +1817,21 @@ Aquest joc té una carpeta separada d'actualitzacions/correccions. Només el joc
     </message>
   </context>
   <context>
+    <name>LogFileViewer</name>
+    <message>
+      <source>Auto-scroll</source>
+      <translation>Desplaçament automàtic</translation>
+    </message>
+    <message>
+      <source>Open Log File</source>
+      <translation>Obre e fitxer de registre</translation>
+    </message>
+    <message>
+      <source>Could not open the log file.</source>
+      <translation>No s'ha pogut obrir el fitxer de registre.</translation>
+    </message>
+  </context>
+  <context>
     <name>LogPresetsDialog</name>
     <message>
       <source>Log Filter Presets</source>
@@ -2062,10 +2077,6 @@ Aquest joc té una carpeta separada d'actualitzacions/correccions. Només el joc
       <translation>El joc ja està en funcionament!</translation>
     </message>
     <message>
-      <source>shadPS4</source>
-      <translation>shadPS4</translation>
-    </message>
-    <message>
       <source>Play</source>
       <translation>Reprodueix</translation>
     </message>
@@ -2158,10 +2169,6 @@ Selecciona una versió del panell dret.</translation>
       <translation>Administrador del Toypad de Dimensions</translation>
     </message>
     <message>
-      <source>Game Log</source>
-      <translation>Registre de jocs</translation>
-    </message>
-    <message>
       <source>Show Game Log</source>
       <translation>Registre de la llista de jocs</translation>
     </message>
@@ -2225,6 +2232,10 @@ Carpetes processades: %1</translation>
     <message>
       <source>Incorrect recovery key. Please try again.</source>
       <translation>La clau de recuperació no és correcte. Torneu-ho a provar.</translation>
+    </message>
+    <message>
+      <source> [line truncated; see log file]</source>
+      <translation> [línia truncada; mira el fitxer de registre]</translation>
     </message>
   </context>
   <context>

@@ -1816,6 +1816,21 @@ Det här spelet har en separat mapp för uppdateringar/korrigeringar. Bara grund
     </message>
   </context>
   <context>
+    <name>LogFileViewer</name>
+    <message>
+      <source>Auto-scroll</source>
+      <translation>Automatisk rullning</translation>
+    </message>
+    <message>
+      <source>Open Log File</source>
+      <translation>Öppna loggfil</translation>
+    </message>
+    <message>
+      <source>Could not open the log file.</source>
+      <translation>Kunde inte öppna loggfilen.</translation>
+    </message>
+  </context>
+  <context>
     <name>LogPresetsDialog</name>
     <message>
       <source>Log Filter Presets</source>
@@ -2061,10 +2076,6 @@ Det här spelet har en separat mapp för uppdateringar/korrigeringar. Bara grund
       <translation>Spelet är redan igång!</translation>
     </message>
     <message>
-      <source>shadPS4</source>
-      <translation>shadPS4</translation>
-    </message>
-    <message>
       <source>Play</source>
       <translation>Spela</translation>
     </message>
@@ -2157,10 +2168,6 @@ Välj en emulatorversion från den högra panelen.</translation>
       <translation>Hantera Dimensions Toypad</translation>
     </message>
     <message>
-      <source>Game Log</source>
-      <translation>Spellogg</translation>
-    </message>
-    <message>
       <source>Show Game Log</source>
       <translation>Visa spellogg</translation>
     </message>
@@ -2223,6 +2230,10 @@ Folders processed: %1</source>
     <message>
       <source>Incorrect recovery key. Please try again.</source>
       <translation>Felaktig återställningsnyckel. Försök igen.</translation>
+    </message>
+    <message>
+      <source> [line truncated; see log file]</source>
+      <translation> [rad trunkerad; se loggfil]</translation>
     </message>
   </context>
   <context>

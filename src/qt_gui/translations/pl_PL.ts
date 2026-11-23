@@ -1817,6 +1817,21 @@ Ta gra posiada oddzielny folder aktualizacji/łatki. Tylko podstawowa wersja gry
     </message>
   </context>
   <context>
+    <name>LogFileViewer</name>
+    <message>
+      <source>Auto-scroll</source>
+      <translation type="unfinished">Auto-scroll</translation>
+    </message>
+    <message>
+      <source>Open Log File</source>
+      <translation type="unfinished">Open Log File</translation>
+    </message>
+    <message>
+      <source>Could not open the log file.</source>
+      <translation type="unfinished">Could not open the log file.</translation>
+    </message>
+  </context>
+  <context>
     <name>LogPresetsDialog</name>
     <message>
       <source>Log Filter Presets</source>
@@ -2062,10 +2077,6 @@ Ta gra posiada oddzielny folder aktualizacji/łatki. Tylko podstawowa wersja gry
       <translation>Gra jest już uruchomiona!</translation>
     </message>
     <message>
-      <source>shadPS4</source>
-      <translation>shadPS4</translation>
-    </message>
-    <message>
       <source>Play</source>
       <translation>Graj</translation>
     </message>
@@ -2158,10 +2169,6 @@ Wybierz wersję emulatora z prawego panelu.</translation>
       <translation>Zarządzaj panelem Dimensions Toypad</translation>
     </message>
     <message>
-      <source>Game Log</source>
-      <translation>Dziennik zdarzeń gry</translation>
-    </message>
-    <message>
       <source>Show Game Log</source>
       <translation>Pokaż dziennik zdarzeń gier</translation>
     </message>
@@ -2225,6 +2232,10 @@ Folders processed: %1</translation>
     <message>
       <source>Incorrect recovery key. Please try again.</source>
       <translation>Nieprawidłowy klucz odzyskiwania. Spróbuj ponownie.</translation>
+    </message>
+    <message>
+      <source> [line truncated; see log file]</source>
+      <translation type="unfinished"> [line truncated; see log file]</translation>
     </message>
   </context>
   <context>
