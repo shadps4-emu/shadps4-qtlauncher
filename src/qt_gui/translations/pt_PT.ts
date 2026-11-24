@@ -3192,11 +3192,11 @@ Atualmente provoca instabilidade numa abundância de jogos testados.</translatio
     </message>
     <message>
       <source>Enable Shader Patches</source>
-      <translation type="unfinished">Enable Shader Patches</translation>
+      <translation>Ativar Correções de Sombreadores</translation>
     </message>
     <message>
       <source>Enable Shader Patches:\nLoads replacement shaders (.spv) from the shader/patch folder of the user folder instead of the translated ones. Some game patches need this.</source>
-      <translation type="unfinished">Enable Shader Patches:\nLoads replacement shaders (.spv) from the shader/patch folder of the user folder instead of the translated ones. Some game patches need this.</translation>
+      <translation>Ativar Correções de Sombreadores:\nLê sobreadores de substituição (.spv) a partir da pasta de sombreadores/correções do utilizador invés dos traduzidos. Algumas correções de jogos precisam disto.</translation>
     </message>
   </context>
   <context>
