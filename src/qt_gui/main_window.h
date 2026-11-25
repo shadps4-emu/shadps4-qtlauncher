@@ -34,8 +34,9 @@ public:
     bool Init();
     void InstallDirectory();
     void StartGame();
-    void StartGameWithArgs(QStringList args = {});
-    void StartEmulator(std::filesystem::path path, QStringList args = {});
+    void StartGameWithArgs(QStringList args = {}, bool apply_patches = true);
+    void StartEmulator(std::filesystem::path path, QStringList args = {},
+                       bool apply_patches = true);
     void StartEmulatorExecutable(std::filesystem::path emupath, QString gameArg,
                                  QStringList args = {}, bool disable_ipc = false);
     void PauseGame();
@@ -119,6 +120,7 @@ private:
     std::shared_ptr<gui_settings> m_gui_settings;
 
     std::filesystem::path last_game_path;
+    bool last_game_patches = true;
 
 protected:
     bool eventFilter(QObject* obj, QEvent* event) override;

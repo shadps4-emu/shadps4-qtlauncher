@@ -28,7 +28,7 @@ public:
                         std::shared_ptr<CompatibilityInfoClass> m_compat_info,
                         std::shared_ptr<gui_settings> settings,
                         std::shared_ptr<IpcClient> m_ipc_client, QTableWidget* widget, bool isList,
-                        std::function<void(QStringList)> launch_func);
+                        std::function<void(QStringList, bool)> launch_func);
 
     int GetRowIndex(QTreeWidget* treeWidget, QTreeWidgetItem* item);
 

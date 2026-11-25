@@ -1117,7 +1117,7 @@ void MainWindow::PrepareLogFile(const QString& work_dir, const QStringList& args
     }
 }
 
-void MainWindow::StartGameWithArgs(QStringList args) {
+void MainWindow::StartGameWithArgs(QStringList args, bool apply_patches) {
     BackgroundMusicPlayer::getInstance().stopMusic();
     QString gamePath = "";
     int table_mode = m_gui_settings->GetValue(gui::gl_mode).toInt();
@@ -1158,7 +1158,7 @@ void MainWindow::StartGameWithArgs(QStringList args) {
             QMessageBox::critical(nullptr, tr("Run Game"), QString(tr("Eboot.bin file not found")));
             return;
         }
-        StartEmulator(path, args);
+        StartEmulator(path, args, apply_patches);
 
         UpdateToolbarButtons();
     }
@@ -1546,7 +1546,7 @@ bool MainWindow::eventFilter(QObject* obj, QEvent* event) {
     return QMainWindow::eventFilter(obj, event);
 }
 
-void MainWindow::StartEmulator(std::filesystem::path path, QStringList args) {
+void MainWindow::StartEmulator(std::filesystem::path path, QStringList args, bool apply_patches) {
     if (EmulatorState::GetInstance()->IsGameRunning()) {
         QMessageBox::critical(nullptr, tr("Run Game"), QString(tr("Game is already running!")));
         return;
@@ -1577,6 +1577,7 @@ tr("No emulator version was selected.\nThe Version Manager menu will then open.\
 
     EmulatorState::GetInstance()->SetGameRunning(true);
     last_game_path = path;
+    last_game_patches = apply_patches;
 
     QString workDir = QDir::currentPath();
     PrepareLogFile(workDir, final_args);
@@ -1594,6 +1595,7 @@ void MainWindow::StartEmulatorExecutable(std::filesystem::path emuPath, QString 
 
     bool gameFound = false;
     last_game_path.clear();
+    last_game_patches = true;
     if (std::filesystem::exists(Common::FS::PathFromQString(gameArg))) {
         last_game_path = Common::FS::PathFromQString(gameArg);
         if (Core::FileSys::IsZArchiveFile(last_game_path)) {
@@ -1675,7 +1677,8 @@ void MainWindow::RunGame() {
     auto info = gameInfo.readGameInfo(dir);
     auto appVersion = info.version;
     auto gameSerial = info.serial;
-    auto patches = MemoryPatcher::readPatches(gameSerial, appVersion);
+    auto patches = last_game_patches ? MemoryPatcher::readPatches(gameSerial, appVersion)
+                                     : std::vector<MemoryPatcher::PendingPatch>{};
     for (auto patch : patches) {
         m_ipc_client->sendMemoryPatches(patch.modName, patch.address, patch.value, patch.target,
                                         patch.size, patch.maskOffset, patch.littleEndian,
