@@ -60,10 +60,10 @@ bool UserManager::RenameUser(s32 user_id, const std::string& new_name) {
                 return true; // no change
 
             user.user_name = new_name;
+            Save();
             return true;
         }
     }
-    Save();
     return false;
 }
 
@@ -161,7 +161,12 @@ bool UserManager::SetDefaultUser(u32 user_id) {
 }
 
 User UserManager::GetDefaultUser() {
-    return *GetUserByPlayerIndex(1);
+    auto* user = GetUserByPlayerIndex(1);
+    if (user)
+        return *user;
+    if (!m_users.user.empty())
+        return m_users.user.front();
+    return User{};
 }
 
 void UserManager::SetControllerPort(u32 user_id, int port) {
