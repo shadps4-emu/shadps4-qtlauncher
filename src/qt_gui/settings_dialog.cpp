@@ -536,6 +536,9 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         ui->showSplashCheckBox->installEventFilter(this);
         ui->discordRPCCheckbox->installEventFilter(this);
         ui->volumeSliderElement->installEventFilter(this);
+        ui->audioBackendGroupBox->installEventFilter(this);
+        ui->GenAudioGroupBox->installEventFilter(this);
+        ui->DsSpeakerGroupBox->installEventFilter(this);
 #ifdef ENABLE_UPDATER
         ui->updaterGroupBox->installEventFilter(this);
 #endif
@@ -564,6 +567,13 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         ui->graphicsAdapterGroupBox->installEventFilter(this);
         ui->windowSizeGroupBox->installEventFilter(this);
         ui->presentModeGroupBox->installEventFilter(this);
+        ui->displayModeGroupBox->installEventFilter(this);
+        ui->FSRGroupBox->installEventFilter(this);
+        ui->FSRCheckBox->installEventFilter(this);
+        ui->RCASCheckBox->installEventFilter(this);
+        ui->RCASAtenLabel->installEventFilter(this);
+        ui->RCASSlider->installEventFilter(this);
+        ui->RCASValue->installEventFilter(this);
         ui->heightDivider->installEventFilter(this);
         ui->nullGpuCheckBox->installEventFilter(this);
         ui->enableHDRCheckBox->installEventFilter(this);
@@ -1032,6 +1042,16 @@ void SettingsDialog::updateNoteTextEdit(const QString& elementName) {
                   "Mailbox: Frames synchronize with your screen's refresh rate. New frames will replace any pending frames. Reduces latency but may skip frames if running behind.\\n"
                   "Fifo: Frames synchronize with your screen's refresh rate. New frames will be queued behind pending frames. Ensures all frames are presented but may increase latency.\\n"
                   "Immediate: Frames immediately present to your screen when ready. May result in tearing.");
+    } else if (elementName == "displayModeGroupBox") {
+        text = tr("Display Mode:\\nWindowed: Runs the game in a resizable window.\\nFullscreen: Exclusive fullscreen at the display's current video mode.\\nFullscreen (Borderless): Borderless fullscreen window at the desktop resolution.");
+    } else if (elementName == "FSRGroupBox") {
+        text = tr("FSR Settings:\\nFSR upscales the game's image to the size of the window and RCAS sharpens the result.\\nThey only have an effect while the window is larger than the game's resolution.");
+    } else if (elementName == "FSRCheckBox") {
+        text = tr("Enable FSR:\\nUpscales the game's image to the size of the window with FidelityFX Super Resolution.\\nIt is skipped when the game's resolution is already as large as the window.");
+    } else if (elementName == "RCASCheckBox") {
+        text = tr("Enable RCAS (sharpening):\\nSharpens the image after FSR upscaling.\\nIt only applies while FSR is enabled and active.");
+    } else if (elementName == "RCASAtenLabel" || elementName == "RCASSlider" || elementName == "RCASValue") {
+        text = tr("RCAS Attenuation:\\nControls how strongly RCAS sharpens, from 0 to 3. 0 is the sharpest and each +1 halves the sharpness.\\nThe default is 0.25.");
     } else if (elementName == "windowSizeGroupBox") {
         text = tr("Width/Height:\\nSets the size of the emulator window at launch, which can be resized during gameplay.\\nThis is different from the in-game resolution.");
     } else if (elementName == "heightDivider") {
@@ -1100,6 +1120,12 @@ void SettingsDialog::updateNoteTextEdit(const QString& elementName) {
         text = tr("Collect Shaders:\\nYou need this enabled to edit shaders with the debug menu (Ctrl + F10).");
     } else if (elementName == "micComboBox") {
         text = tr("Microphone:\\nNone: Does not use the microphone.\\nDefault Device: Will use the default device defined in the system.\\nOr manually choose the microphone to be used from the list.");
+    } else if (elementName == "audioBackendGroupBox") {
+        text = tr("Audio Backend:\\nChooses the library used to play game audio, SDL or OpenAL.\\nThe audio device lists change with the backend.");
+    } else if (elementName == "GenAudioGroupBox") {
+        text = tr("Audio Device (general):\\nThe device the game's main audio is played on.\\nDefault Device uses the system default.");
+    } else if (elementName == "DsSpeakerGroupBox") {
+        text = tr("Audio Device (DS4 speaker):\\nThe device used for audio the game sends to the controller speaker.\\nIf it is the same device as the general one, that audio is mixed with the main audio.");
     } else if (elementName == "volumeSliderElement") {
         text = tr("Volume:\\nAdjust volume for games on a global level, range goes from 0-500% with the default being 100%.");
     } else if (elementName == "chooseHomeTabGroupBox") {
