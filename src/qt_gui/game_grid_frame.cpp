@@ -40,9 +40,9 @@ GameGridFrame::GameGridFrame(std::shared_ptr<gui_settings> gui_settings,
         int changedFavorite = m_gui_context_menus.RequestGameMenu(
             pos, m_game_info->m_games, m_compat_info, m_gui_settings, m_ipc_client, this, false,
             [mw = QPointer<MainWindow>(qobject_cast<MainWindow*>(this->window()))](
-                const QStringList& args) {
+                const QStringList& args, bool apply_patches) {
                 if (mw)
-                    mw->StartGameWithArgs(args);
+                    mw->StartGameWithArgs(args, apply_patches);
             });
         PopulateGameGrid(m_game_info->m_games, false);
     });

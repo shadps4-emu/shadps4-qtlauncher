@@ -124,7 +124,8 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
                                      std::shared_ptr<CompatibilityInfoClass> m_compat_info,
                                      std::shared_ptr<gui_settings> settings,
                                      std::shared_ptr<IpcClient> m_ipc_client, QTableWidget* widget,
-                                     bool isList, std::function<void(QStringList)> launch_func) {
+                                     bool isList,
+                                     std::function<void(QStringList, bool)> launch_func) {
 
     QPoint global_pos = widget->viewport()->mapToGlobal(pos);
     std::shared_ptr<gui_settings> m_gui_settings = std::move(settings);
@@ -149,10 +150,12 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
         new QAction(tr("Launch with game specific configs (default)"), widget);
     QAction* launchWithGlobalConfig = new QAction(tr("Launch with global config only"), widget);
     QAction* launchCleanly = new QAction(tr("Launch with default settings"), widget);
+    QAction* launchWithoutPatches = new QAction(tr("Launch without patches"), widget);
 
     launchMenu->addAction(launchNormally);
     launchMenu->addAction(launchWithGlobalConfig);
     launchMenu->addAction(launchCleanly);
+    launchMenu->addAction(launchWithoutPatches);
 
     // "Open Path..." submenu
     QMenu* openFolderMenu = new QMenu(tr("Open Path..."), widget);
@@ -524,13 +527,16 @@ int GuiContextMenus::RequestGameMenu(const QPoint& pos, QVector<GameInfo>& m_gam
     }
 
     if (selected == launchNormally) {
-        launch_func({});
+        launch_func({}, true);
     }
     if (selected == launchWithGlobalConfig) {
-        launch_func({"--config-global"});
+        launch_func({"--config-global"}, true);
     }
     if (selected == launchCleanly) {
-        launch_func({"--config-clean"});
+        launch_func({"--config-clean"}, true);
+    }
+    if (selected == launchWithoutPatches) {
+        launch_func({}, false);
     }
 
     if (selected == openGameFolder) {
