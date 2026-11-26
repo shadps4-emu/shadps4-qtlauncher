@@ -57,11 +57,20 @@ private:
     int m_last_opacity = -1; // Track last opacity to avoid unnecessary recomputation
     std::filesystem::path m_current_game_path; // Track current game path to detect changes
     std::shared_ptr<gui_settings> m_gui_settings;
+    QImage m_favoriteIcon;
+    int m_favoriteIconWidth = -1;
+    QTimer* m_iconScrollTimer = nullptr;
+    QHash<QString, QImage> m_scaledIcons;
+    int m_scaledIconSize = -1;
+    QString m_last_search{};
 
 public:
     void PopulateGameList(bool isInitialPopulation = true);
     void ResizeIcons(int iconSize);
+    void LoadVisibleIcons(int iconSize);
+    void LoadIconAt(int row, int iconSize);
     void ApplyLastSorting(bool isInitialPopulation);
+    void SearchGameTable(QString const& text);
     QTableWidgetItem* GetCurrentItem();
     void ToggleColumnVisibility();
     void ShowHeaderContextMenu(const QPoint& pos);
@@ -89,7 +98,7 @@ public:
         return hours * 3600 + minutes * 60 + seconds;
     }
 
-    static bool CompareStringsAscending(GameInfo a, GameInfo b, int columnIndex) {
+    static bool CompareStringsAscending(GameInfo const& a, GameInfo const& b, int columnIndex) {
         switch (columnIndex) {
         case 1: {
             std::string name_a = a.name, name_b = b.name;
@@ -118,7 +127,7 @@ public:
         }
     }
 
-    static bool CompareStringsDescending(GameInfo a, GameInfo b, int columnIndex) {
+    static bool CompareStringsDescending(GameInfo const& a, GameInfo const& b, int columnIndex) {
         switch (columnIndex) {
         case 1: {
             std::string name_a = a.name, name_b = b.name;
@@ -147,5 +156,5 @@ public:
         }
     }
 
-    bool CompareWithFavorite(GameInfo a, GameInfo b, int columnIndex, bool ascending);
+    bool CompareWithFavorite(GameInfo const& a, GameInfo const& b, int columnIndex, bool ascending);
 };

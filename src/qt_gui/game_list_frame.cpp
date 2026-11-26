@@ -57,11 +57,19 @@ GameListFrame::GameListFrame(std::shared_ptr<gui_settings> gui_settings,
     this->horizontalHeader()->setSectionResizeMode(10, QHeaderView::Fixed);
     this->horizontalHeader()->setSectionResizeMode(11, QHeaderView::Stretch);
     this->setColumnHidden(11, true);
-    PopulateGameList();
 
     connect(this, &QTableWidget::currentCellChanged, this, &GameListFrame::onCurrentCellChanged);
-    connect(this->verticalScrollBar(), &QScrollBar::valueChanged, this,
-            &GameListFrame::RefreshListBackgroundImage);
+    connect(verticalScrollBar(), &QScrollBar::valueChanged, this, [this] {
+        RefreshListBackgroundImage();
+        if (!m_iconScrollTimer) {
+            m_iconScrollTimer = new QTimer(this);
+            m_iconScrollTimer->setSingleShot(true);
+            m_iconScrollTimer->setInterval(0);
+            connect(m_iconScrollTimer, &QTimer::timeout, this,
+                    [this] { LoadVisibleIcons(icon_size); });
+        }
+        m_iconScrollTimer->start();
+    });
     connect(this->horizontalScrollBar(), &QScrollBar::valueChanged, this,
             &GameListFrame::RefreshListBackgroundImage);
 
@@ -152,7 +160,6 @@ void GameListFrame::PopulateGameList(bool isInitialPopulation) {
     this->m_current_item = nullptr;
 
     this->setRowCount(m_game_info->m_games.size());
-    ResizeIcons(icon_size);
 
     ApplyLastSorting(isInitialPopulation);
 
@@ -273,7 +280,8 @@ void GameListFrame::resizeEvent(QResizeEvent* event) {
     RefreshListBackgroundImage();
 }
 
-bool GameListFrame::CompareWithFavorite(GameInfo a, GameInfo b, int columnIndex, bool ascending) {
+bool GameListFrame::CompareWithFavorite(GameInfo const& a, GameInfo const& b, int columnIndex,
+                                        bool ascending) {
     std::string serial_a = a.serial;
     std::string serial_b = b.serial;
     QString serialStr_a = QString::fromStdString(a.serial);
@@ -315,20 +323,75 @@ void GameListFrame::ApplyLastSorting(bool isInitialPopulation) {
         SortNameDescending(sortColumn);
         ResizeIcons(icon_size);
     }
+    SearchGameTable(m_last_search);
+}
+void GameListFrame::SearchGameTable(QString const& text) {
+    m_last_search = text;
+    for (int r = 0; r < rowCount(); ++r) {
+        const auto& name = QString::fromStdString(m_game_info->m_games[r].name);
+        setRowHidden(r, !name.contains(text, Qt::CaseInsensitive));
+    }
+    LoadVisibleIcons(icon_size);
+}
+
+void GameListFrame::LoadIconAt(int row, int iconSize) {
+    auto* item = this->item(row, 0);
+    if (!item || item->data(Qt::DecorationRole).isValid())
+        return;
+
+    const auto& game = m_game_info->m_games[row];
+    QString key;
+    Common::FS::PathToQString(key, game.path);
+
+    auto it = m_scaledIcons.find(key);
+    if (it == m_scaledIcons.end()) {
+        const QImage& src = game.icon();
+        if (src.isNull())
+            return;
+        it = m_scaledIcons.insert(key, src.scaled(QSize(iconSize, iconSize), Qt::KeepAspectRatio,
+                                                  Qt::SmoothTransformation));
+    }
+    item->setData(Qt::DecorationRole, it.value());
 }
 
 void GameListFrame::ResizeIcons(int iconSize) {
-    for (int index = 0; auto& game : m_game_info->m_games) {
-        QImage scaledPixmap = game.icon.scaled(QSize(iconSize, iconSize), Qt::KeepAspectRatio,
-                                               Qt::SmoothTransformation);
-        QTableWidgetItem* iconItem = new QTableWidgetItem();
-        this->verticalHeader()->resizeSection(index, scaledPixmap.height());
-        this->horizontalHeader()->resizeSection(0, scaledPixmap.width());
-        iconItem->setData(Qt::DecorationRole, scaledPixmap);
-        this->setItem(index, 0, iconItem);
-        index++;
+    int rowHeight = iconSize;
+    this->horizontalHeader()->resizeSection(0, iconSize);
+    this->verticalHeader()->setDefaultSectionSize(rowHeight);
+    this->verticalHeader()->setSectionResizeMode(
+        QHeaderView::Fixed); // avoids per-row resizeSection
+
+    for (int index = 0; index < m_game_info->m_games.size(); ++index) {
+        auto* iconItem = this->item(index, 0);
+        if (!iconItem) {
+            iconItem = new QTableWidgetItem();
+            this->setItem(index, 0, iconItem);
+        }
+        iconItem->setData(Qt::UserRole, index);
+        iconItem->setData(Qt::DecorationRole, QVariant());
     }
     this->horizontalHeader()->setSectionResizeMode(8, QHeaderView::ResizeToContents);
+    LoadVisibleIcons(iconSize);
+}
+
+void GameListFrame::LoadVisibleIcons(int iconSize) {
+    if (this->rowCount() == 0 || this->verticalHeader()->length() == 0)
+        return;
+
+    const QRect vp = this->viewport()->rect();
+    int first = this->rowAt(vp.top());
+    int last = this->rowAt(vp.bottom());
+
+    if (first < 0)
+        first = 0;
+    if (last < 0)
+        last = this->rowCount() - 1;
+
+    if (first > last)
+        return;
+
+    for (int i = first; i <= last; ++i)
+        LoadIconAt(i, iconSize);
 }
 
 void GameListFrame::SetCompatibilityItem(int row, int column, CompatibilityEntry entry) {
@@ -471,20 +534,21 @@ void GameListFrame::SetRegionFlag(int row, int column, QString itemStr) {
 }
 
 void GameListFrame::SetFavoriteIcon(int row, int column) {
-
-    QString serialStr = QString::fromStdString(m_game_info->m_games[row].serial);
-    QList<QString> list = gui_settings::Var2List(m_gui_settings->GetValue(gui::favorites_list));
-    bool isFavorite = list.contains(serialStr);
+    bool isFavorite = gui_settings::Var2List(m_gui_settings->GetValue(gui::favorites_list))
+                          .contains(QString::fromStdString(m_game_info->m_games[row].serial));
 
     QTableWidgetItem* item = new QTableWidgetItem();
-    QImage scaledPixmap = QImage(":images/favorite_icon.png");
-
-    scaledPixmap = scaledPixmap.scaledToHeight(this->columnWidth(column) / 2.5);
-    scaledPixmap = scaledPixmap.scaledToWidth(this->columnWidth(column) / 2.5);
+    const int targetW = std::max(1, int(columnWidth(column) / 2.5));
+    if (m_favoriteIconWidth != targetW) {
+        QImage src(":images/favorite_icon.png");
+        m_favoriteIcon =
+            src.scaled(targetW, targetW, Qt::KeepAspectRatio, Qt::SmoothTransformation);
+        m_favoriteIconWidth = targetW;
+    }
     QWidget* widget = new QWidget(this);
     QVBoxLayout* layout = new QVBoxLayout(widget);
     QLabel* label = new QLabel(widget);
-    label->setPixmap(QPixmap::fromImage(scaledPixmap));
+    label->setPixmap(QPixmap::fromImage(m_favoriteIcon));
     label->setObjectName("favoriteIcon");
     label->setVisible(isFavorite);
 
