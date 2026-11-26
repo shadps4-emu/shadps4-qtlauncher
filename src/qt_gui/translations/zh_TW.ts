@@ -26,7 +26,7 @@
     </message>
     <message>
       <source>Cheats/Patches are experimental.\nUse with caution.\n\nDownload cheats individually by selecting the repository and clicking the download button.\nIn the Patches tab, you can download all patches at once, choose which ones you want to use, and save your selection.\n\nSince we do not develop the Cheats/Patches,\nplease report issues to the cheat author.\n\nCreated a new cheat? Visit:\n</source>
-      <translation>金手指/修補檔屬於試驗性質功能。\n請小心使用。\n\n透過選取儲存庫並點擊下載按鈕來單獨下載作弊程式。\n在“修補檔”標籤頁中，你可以一次下載所有修補檔，選擇要使用的補丁並保存您的選擇。\n\n由於我們不負責開發金手指/修補檔，\n請將問題匯報給作弊程式的作者。\n\n建立了新的作弊程式？請瀏覽：\n</translation>
+      <translation>金手指/修補檔屬於試驗性質功能。\n請小心使用。\n\n透過選取儲存庫並點擊下載按鈕來單獨下載作弊程式。\n在“修補檔”標籤頁中，你可以一次下載所有修補檔，選擇要使用的修補檔並保存您的選擇。\n\n由於我們不負責開發金手指/修補檔，\n請將問題匯報給作弊程式的作者。\n\n建立了新的作弊程式？請瀏覽：\n</translation>
     </message>
     <message>
       <source>No Image Available</source>
