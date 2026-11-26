@@ -407,10 +407,10 @@ void TrophyViewer::PopulateTrophyWidget(QString title, QString user) {
         index++;
 
         const std::string filename = npCommId + ".xml";
-        std::string userId = "1000";
+        std::string userId = FormatUidHex(1000);
         for (const auto& User : UserSettings.GetUserManager().GetAllUsers()) {
             if (User.user_name == user) {
-                userId = std::to_string(User.user_id);
+                userId = FormatUidHex(User.user_id);
             }
         }
 

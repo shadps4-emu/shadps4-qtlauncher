@@ -7,6 +7,7 @@
 #include <functional>
 #include <memory>
 #include <mutex>
+#include <optional>
 #include <sstream>
 #include <string>
 #include <vector>
@@ -14,6 +15,13 @@
 #include "common/logging/log.h"
 #include "common/types.h"
 #include "core/user_manager.h"
+
+class QWidget;
+
+bool HasUnmigratedSaveData();
+bool PerformSaveDataMigration(QWidget* parent = nullptr);
+bool RebuildSaveDataDatabase(QWidget* parent = nullptr, std::optional<u32> user_id = std::nullopt);
+void CheckSaveAndTrophyMigration();
 
 #define UserSettings (*UserSettingsImpl::GetInstance())
 
