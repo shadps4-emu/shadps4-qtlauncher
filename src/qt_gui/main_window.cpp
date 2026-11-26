@@ -45,6 +45,7 @@ MainWindow::MainWindow(QWidget* parent, bool log_to_terminal)
     m_gui_settings = std::make_shared<gui_settings>();
     ui->toggleLabelsAct->setChecked(
         m_gui_settings->GetValue(gui::mw_showLabelsUnderIcons).toBool());
+    ui->toggleGridSerialAct->setChecked(m_gui_settings->GetValue(gui::gg_showSerial).toBool());
 
     m_ipc_client->gameClosedFunc = [this]() { onGameClosed(); };
     m_ipc_client->restartEmulatorFunc = [this]() { RestartEmulator(); };
@@ -518,6 +519,10 @@ void MainWindow::CreateConnects() {
     connect(ui->refreshButton, &QPushButton::clicked, this, &MainWindow::ForceRefreshGameTable);
     connect(ui->showGameListAct, &QAction::triggered, this, &MainWindow::ShowGameList);
     connect(ui->toggleLabelsAct, &QAction::toggled, this, &MainWindow::toggleLabelsUnderIcons);
+    connect(ui->toggleGridSerialAct, &QAction::toggled, this, [this](bool checked) {
+        m_gui_settings->SetValue(gui::gg_showSerial, checked);
+        m_game_grid_frame->PopulateGameGrid(m_game_info->m_games, false);
+    });
     connect(ui->fullscreenButton, &QPushButton::clicked, this, &MainWindow::toggleFullscreen);
 
     connect(ui->showLogAct, &QAction::triggered, this, [this](bool state) {

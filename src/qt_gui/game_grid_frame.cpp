@@ -142,23 +142,25 @@ void GameGridFrame::PopulateGameGrid(QVector<GameInfo> m_games_search, bool from
         SetFavoriteIcon(image_container, m_games_, gameCounter);
         SetGameConfigIcon(image_container, m_games_, gameCounter);
 
-        QLabel* name_label = new QLabel(QString::fromStdString(m_games_[gameCounter].serial));
-        name_label->setAlignment(Qt::AlignHCenter);
         layout->addWidget(image_container);
-        layout->addWidget(name_label);
+        if (m_gui_settings->GetValue(gui::gg_showSerial).toBool()) {
+            QLabel* name_label = new QLabel(QString::fromStdString(m_games_[gameCounter].serial));
+            name_label->setAlignment(Qt::AlignHCenter);
+            layout->addWidget(name_label);
 
-        // Resizing of font-size.
-        float fontSize = (m_gui_settings->GetValue(gui::gg_icon_size).toInt() / 5.5f);
-        QString styleSheet =
-            QString("color: white; font-weight: bold; font-size: %1px;").arg(fontSize);
-        name_label->setStyleSheet(styleSheet);
+            // Resizing of font-size.
+            float fontSize = (m_gui_settings->GetValue(gui::gg_icon_size).toInt() / 5.5f);
+            QString styleSheet =
+                QString("color: white; font-weight: bold; font-size: %1px;").arg(fontSize);
+            name_label->setStyleSheet(styleSheet);
 
-        QGraphicsDropShadowEffect* shadowEffect = new QGraphicsDropShadowEffect();
-        shadowEffect->setBlurRadius(5);               // Set the blur radius of the shadow
-        shadowEffect->setColor(QColor(0, 0, 0, 160)); // Set the color and opacity of the shadow
-        shadowEffect->setOffset(2, 2);                // Set the offset of the shadow
+            QGraphicsDropShadowEffect* shadowEffect = new QGraphicsDropShadowEffect();
+            shadowEffect->setBlurRadius(5);               // Set the blur radius of the shadow
+            shadowEffect->setColor(QColor(0, 0, 0, 160)); // Set the color and opacity of the shadow
+            shadowEffect->setOffset(2, 2);                // Set the offset of the shadow
 
-        name_label->setGraphicsEffect(shadowEffect);
+            name_label->setGraphicsEffect(shadowEffect);
+        }
         widget->setLayout(layout);
         QString tooltipText = QString::fromStdString(m_games_[gameCounter].name + " (" +
                                                      m_games_[gameCounter].version + ", " +

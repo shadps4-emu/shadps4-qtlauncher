@@ -63,6 +63,7 @@ const gui_value glc_showFavoriteEnabled = gui_value(game_list_column, "showFavor
 // game grid settings
 const gui_value gg_icon_size = gui_value(game_grid, "icon_size", 69);
 const gui_value gg_slider_pos = gui_value(game_grid, "slider_pos", 0);
+const gui_value gg_showSerial = gui_value(game_grid, "showSerial", true);
 
 // favorites list
 const gui_value favorites_list =

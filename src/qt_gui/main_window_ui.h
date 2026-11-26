@@ -29,6 +29,7 @@ public:
     QAction* setIconSizeMediumAct;
     QAction* setIconSizeLargeAct;
     QAction* toggleLabelsAct;
+    QAction* toggleGridSerialAct;
     QAction* setlistModeListAct;
     QAction* setlistModeGridAct;
     QAction* setlistElfAct;
@@ -128,6 +129,9 @@ public:
         toggleLabelsAct = new QAction(MainWindow);
         toggleLabelsAct->setObjectName("toggleLabelsAct");
         toggleLabelsAct->setCheckable(true);
+        toggleGridSerialAct = new QAction(MainWindow);
+        toggleGridSerialAct->setObjectName("toggleGridSerialAct");
+        toggleGridSerialAct->setCheckable(true);
 
         setIconSizeTinyAct = new QAction(MainWindow);
         setIconSizeTinyAct->setObjectName("setIconSizeTinyAct");
@@ -355,6 +359,7 @@ public:
         menuView->addAction(menuGame_List_Mode->menuAction());
         menuView->addAction(menuGame_List_Icons->menuAction());
         menuView->addAction(toggleLabelsAct);
+        menuView->addAction(toggleGridSerialAct);
         menuView->addAction(menuThemes->menuAction());
         menuThemes->addAction(setThemeDark);
         menuThemes->addAction(setThemeLight);
@@ -480,6 +485,8 @@ public:
         toolBar->setWindowTitle(QCoreApplication::translate("MainWindow", "toolBar", nullptr));
         toggleLabelsAct->setText(
             QCoreApplication::translate("MainWindow", "Show Labels Under Icons"));
+        toggleGridSerialAct->setText(
+            QCoreApplication::translate("MainWindow", "Show Serial in Grid View"));
     } // retranslateUi
 };
 
