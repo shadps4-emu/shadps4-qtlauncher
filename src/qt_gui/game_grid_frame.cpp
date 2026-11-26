@@ -115,6 +115,8 @@ void GameGridFrame::PopulateGameGrid(QVector<GameInfo> m_games_search, bool from
     icon_size =
         m_gui_settings->GetValue(gui::gg_icon_size).toInt(); // update icon size for resize event.
 
+    const bool showCompatibility = m_gui_settings->GetValue(gui::glc_showCompatibility).toBool();
+
     int gamesPerRow = windowWidth / (icon_size + 20); // 2 x cell widget border size.
     int row = 0;
     int gameCounter = 0;
@@ -141,6 +143,12 @@ void GameGridFrame::PopulateGameGrid(QVector<GameInfo> m_games_search, bool from
         image_label->move(0, 0);
         SetFavoriteIcon(image_container, m_games_, gameCounter);
         SetGameConfigIcon(image_container, m_games_, gameCounter);
+        CompatibilityStatus compat_status = CompatibilityStatus::Unknown;
+        if (showCompatibility) {
+            compat_status =
+                m_compat_info->GetCompatibilityInfo(m_games_[gameCounter].serial).status;
+            SetCompatibilityIcon(image_container, compat_status);
+        }
 
         QLabel* name_label = new QLabel(QString::fromStdString(m_games_[gameCounter].serial));
         name_label->setAlignment(Qt::AlignHCenter);
@@ -163,6 +171,10 @@ void GameGridFrame::PopulateGameGrid(QVector<GameInfo> m_games_search, bool from
         QString tooltipText = QString::fromStdString(m_games_[gameCounter].name + " (" +
                                                      m_games_[gameCounter].version + ", " +
                                                      m_games_[gameCounter].region + ")");
+        if (showCompatibility) {
+            tooltipText += "\n" + tr("Compatibility") + ": " +
+                           m_compat_info->GetCompatStatusString(compat_status);
+        }
         widget->setToolTip(tooltipText);
         QString tooltipStyle = QString("QToolTip {"
                                        "background-color: #ffffff;"
@@ -285,6 +297,42 @@ void GameGridFrame::SetGameConfigIcon(QWidget* parentWidget, QVector<GameInfo> m
     label->raise();
     label->setVisible(hasGameConfig);
     label->setObjectName("gameConfigIcon");
+}
+
+void GameGridFrame::SetCompatibilityIcon(QWidget* parentWidget, CompatibilityStatus status) {
+    // Same colors as the Compatibility column of the list view.
+    QString color;
+    switch (status) {
+    case CompatibilityStatus::Unknown:
+        color = QStringLiteral("#000000");
+        break;
+    case CompatibilityStatus::Nothing:
+        color = QStringLiteral("#FB2C36");
+        break;
+    case CompatibilityStatus::Boots:
+        color = QStringLiteral("#F0B100");
+        break;
+    case CompatibilityStatus::Menus:
+        color = QStringLiteral("#8E51FF");
+        break;
+    case CompatibilityStatus::Ingame:
+        color = QStringLiteral("#2B7FFF");
+        break;
+    case CompatibilityStatus::Playable:
+        color = QStringLiteral("#00C950");
+        break;
+    }
+
+    const int dot_size = std::clamp(icon_size / 6, 12, 28);
+    QLabel* label = new QLabel(parentWidget);
+    label->setFixedSize(dot_size, dot_size);
+    label->setStyleSheet(QString("background-color: %1; border: 1px solid white; "
+                                 "border-radius: %2px;")
+                             .arg(color)
+                             .arg(dot_size / 2));
+    label->move(2, icon_size - dot_size - 2);
+    label->raise();
+    label->setObjectName("compatibilityIcon");
 }
 
 void GameGridFrame::SortByFavorite(QVector<GameInfo>* game_list) {

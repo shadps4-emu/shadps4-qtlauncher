@@ -42,6 +42,7 @@ private:
     std::shared_ptr<IpcClient> m_ipc_client;
     void SetFavoriteIcon(QWidget* parentWidget, QVector<GameInfo> m_games_, int gameCounter);
     void SetGameConfigIcon(QWidget* parentWidget, QVector<GameInfo> m_games_, int gameCounter);
+    void SetCompatibilityIcon(QWidget* parentWidget, CompatibilityStatus status);
     bool CompareWithFavorite(GameInfo a, GameInfo b);
 
 public:
