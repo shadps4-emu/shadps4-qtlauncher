@@ -3190,11 +3190,11 @@ Cartelle elaborate: %1</translation>
     </message>
     <message>
       <source>Enable Shader Patches</source>
-      <translation type="unfinished">Enable Shader Patches</translation>
+      <translation>Abilita Patch degli Shader</translation>
     </message>
     <message>
       <source>Enable Shader Patches:\nLoads replacement shaders (.spv) from the shader/patch folder of the user folder instead of the translated ones. Some game patches need this.</source>
-      <translation type="unfinished">Enable Shader Patches:\nLoads replacement shaders (.spv) from the shader/patch folder of the user folder instead of the translated ones. Some game patches need this.</translation>
+      <translation>Abilita le patch degli Shader:\nCarica shader di sostituzione (.spv) dalla cartella shader/patch della cartella utente invece di quelli tradotti. Alcune patch di gioco ne hanno bisogno.</translation>
     </message>
   </context>
   <context>

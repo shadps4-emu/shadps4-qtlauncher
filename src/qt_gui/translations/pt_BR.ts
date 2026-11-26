@@ -1818,15 +1818,15 @@ This game has a separate update/patch folder. Only the base game will be archive
     <name>LogFileViewer</name>
     <message>
       <source>Auto-scroll</source>
-      <translation type="unfinished">Auto-scroll</translation>
+      <translation>Rolagem automática</translation>
     </message>
     <message>
       <source>Open Log File</source>
-      <translation type="unfinished">Open Log File</translation>
+      <translation>Abrir arquivo de log</translation>
     </message>
     <message>
       <source>Could not open the log file.</source>
-      <translation type="unfinished">Could not open the log file.</translation>
+      <translation>Não foi possível abrir o arquivo de log.</translation>
     </message>
   </context>
   <context>
@@ -2233,7 +2233,7 @@ Pastas processadas: %1</translation>
     </message>
     <message>
       <source> [line truncated; see log file]</source>
-      <translation type="unfinished"> [line truncated; see log file]</translation>
+      <translation> [linha encurtada; veja o arquivo de log]</translation>
     </message>
   </context>
   <context>
@@ -3188,11 +3188,11 @@ Pastas processadas: %1</translation>
     </message>
     <message>
       <source>Enable Shader Patches</source>
-      <translation type="unfinished">Enable Shader Patches</translation>
+      <translation>Habilitar Patch de Shaders</translation>
     </message>
     <message>
       <source>Enable Shader Patches:\nLoads replacement shaders (.spv) from the shader/patch folder of the user folder instead of the translated ones. Some game patches need this.</source>
-      <translation type="unfinished">Enable Shader Patches:\nLoads replacement shaders (.spv) from the shader/patch folder of the user folder instead of the translated ones. Some game patches need this.</translation>
+      <translation>Habilitar Patch de Shaders:\nCarrega shaders substitutos (.spv) da pasta shader/patch do usuário ao invés da pasta traduzida. O patch de alguns jogos necessitam disso.</translation>
     </message>
   </context>
   <context>

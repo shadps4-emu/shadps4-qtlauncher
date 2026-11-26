@@ -3190,11 +3190,11 @@ Carpetas procesadas: %1</translation>
     </message>
     <message>
       <source>Enable Shader Patches</source>
-      <translation type="unfinished">Enable Shader Patches</translation>
+      <translation>Habilitar parcheado de shaders</translation>
     </message>
     <message>
       <source>Enable Shader Patches:\nLoads replacement shaders (.spv) from the shader/patch folder of the user folder instead of the translated ones. Some game patches need this.</source>
-      <translation type="unfinished">Enable Shader Patches:\nLoads replacement shaders (.spv) from the shader/patch folder of the user folder instead of the translated ones. Some game patches need this.</translation>
+      <translation>Habilitar parcheado de shaders:\nCarga shaders de reemplazo (.spv) de la carpeta de shaders o parches dentro del directorio del usuario en vez de utilizar los shaders traducidos. Esta opción es necesaria para algunos parches para juegos.</translation>
     </message>
   </context>
   <context>

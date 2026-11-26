@@ -3190,11 +3190,11 @@ Carpetes processades: %1</translation>
     </message>
     <message>
       <source>Enable Shader Patches</source>
-      <translation type="unfinished">Enable Shader Patches</translation>
+      <translation>Activa les correccions de shaders</translation>
     </message>
     <message>
       <source>Enable Shader Patches:\nLoads replacement shaders (.spv) from the shader/patch folder of the user folder instead of the translated ones. Some game patches need this.</source>
-      <translation type="unfinished">Enable Shader Patches:\nLoads replacement shaders (.spv) from the shader/patch folder of the user folder instead of the translated ones. Some game patches need this.</translation>
+      <translation>Habilita els pedaços d'ombra:\nCarrega els ombrejats de substitució (.spv) des de la carpeta d'ombres/pedaços de la carpeta de l'usuari en lloc dels traduïts. Alguns pedaços del joc ho necessiten.</translation>
     </message>
   </context>
   <context>
