@@ -3662,7 +3662,7 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
     </message>
     <message>
       <source>Pre-release updated successfully</source>
-      <translation>Vorabversion erfolgreich upgedatet</translation>
+      <translation>Vorabversion erfolgreich aktualisiert</translation>
     </message>
     <message>
       <source>Failed to create the update script file</source>
