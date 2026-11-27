@@ -1602,21 +1602,8 @@ void MainWindow::StartEmulatorExecutable(std::filesystem::path emuPath, QString 
         gameFound = true;
     } else {
         // In install folders, find game folder with same name as gameArg
-        const auto install_dir_array = EmulatorSettings.GetGameInstallDirs();
-        std::vector<bool> install_dirs_enabled;
-
-        try {
-            install_dirs_enabled = EmulatorSettings.GetGameInstallDirsEnabled();
-        } catch (...) {
-            // If it does not exist, assume that all are enabled.
-            install_dirs_enabled.resize(install_dir_array.size(), true);
-        }
-
-        for (size_t i = 0; i < install_dir_array.size(); i++) {
-            std::filesystem::path dir = install_dir_array[i];
-            bool enabled = install_dirs_enabled[i];
-
-            if (enabled && std::filesystem::exists(dir)) {
+        for (const auto& dir : EmulatorSettings.GetGameInstallDirs()) {
+            if (std::filesystem::exists(dir)) {
                 for (const auto& entry : std::filesystem::directory_iterator(dir)) {
                     if (entry.is_directory()) {
                         QString entry_name;
