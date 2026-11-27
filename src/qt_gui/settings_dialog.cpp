@@ -23,6 +23,7 @@
 #include "background_music_player.h"
 #include "common/logging/log.h"
 #include "core/emulator_state.h"
+#include "ime_input_languages.h"
 #include "log_presets_dialog.h"
 #include "sdl_event_wrapper.h"
 #include "settings_dialog.h"
@@ -245,6 +246,15 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
     InitializeEmulatorLanguages();
     LoadValuesFromConfig();
 
+    ui->imeInputLanguagesButton->setEnabled(!is_game_specific);
+    connect(ui->imeInputLanguagesButton, &QPushButton::clicked, this, [this]() {
+        const int console = languageIndexes[ui->consoleLanguageComboBox->currentIndex()];
+        if (EditImeInputLanguages(this, ime_input_languages, {1, console},
+                                  tr("Use English and the console language"))) {
+            UpdateImeInputLanguagesSummary();
+        }
+    });
+
     defaultTextEdit = tr("Point your mouse at an option to display its description.");
     ui->descriptionText->setText(defaultTextEdit);
 
@@ -459,6 +469,20 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
                 ui->fontsPath->setText(fonts_path_string);
             }
         });
+
+        connect(ui->browse_ime_dictionaries, &QPushButton::clicked, this, [this]() {
+            QString initial_path;
+            Common::FS::PathToQString(initial_path, EmulatorSettings.GetImeDictionaryDir());
+
+            const QString ime_dictionaries_path_string = QFileDialog::getExistingDirectory(
+                this, tr("Select the IME dictionary folder"), initial_path);
+
+            const auto file_path = Common::FS::PathFromQString(ime_dictionaries_path_string);
+            if (!file_path.empty()) {
+                EmulatorSettings.SetImeDictionaryDir(file_path);
+                ui->imeDictionariesPath->setText(ime_dictionaries_path_string);
+            }
+        });
     }
 
     // LOG TAB
@@ -553,6 +577,9 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         ui->PortableUserFolderGroupBox->installEventFilter(this);
 
         // Input
+        ui->imeTextInputGroupBox->installEventFilter(this);
+        ui->imeDirectInputCheckBox->installEventFilter(this);
+        ui->imeInputLanguagesButton->installEventFilter(this);
         ui->hideCursorGroupBox->installEventFilter(this);
         ui->idleTimeoutGroupBox->installEventFilter(this);
         ui->backgroundControllerCheckBox->installEventFilter(this);
@@ -580,6 +607,9 @@ SettingsDialog::SettingsDialog(std::shared_ptr<gui_settings> gui_settings,
         ui->fontsGroupBox->installEventFilter(this);
         ui->fontsPath->installEventFilter(this);
         ui->browse_fonts->installEventFilter(this);
+        ui->imeDictionariesGroupBox->installEventFilter(this);
+        ui->imeDictionariesPath->installEventFilter(this);
+        ui->browse_ime_dictionaries->installEventFilter(this);
         ui->homeFolderPath->installEventFilter(this);
         ui->currentDLCFolder->installEventFilter(this);
         ui->homeFolderButton->installEventFilter(this);
@@ -722,6 +752,10 @@ void SettingsDialog::LoadValuesFromConfig() {
         ui->fontsPath->setText(fonts_path_string);
 
         ui->removeFolderButton->setEnabled(!ui->gameFoldersListWidget->selectedItems().isEmpty());
+        QString ime_dictionaries_path_string;
+        Common::FS::PathToQString(ime_dictionaries_path_string,
+                                  EmulatorSettings.GetImeDictionaryDir());
+        ui->imeDictionariesPath->setText(ime_dictionaries_path_string);
 
         SyncRealTimeWidgetstoConfig();
     }
@@ -762,6 +796,10 @@ void SettingsDialog::LoadValuesFromConfig() {
     // First options is auto selection -1, so gpuId on the GUI will always have to subtract 1
     // when setting and add 1 when getting to select the correct gpu in Qt
     ui->graphicsAdapterBox->setCurrentIndex(EmulatorSettings.GetGpuId() + 1);
+
+    ime_input_languages = EmulatorSettings.GetImeInputLanguages();
+    UpdateImeInputLanguagesSummary();
+    ui->imeDirectInputCheckBox->setChecked(EmulatorSettings.IsImeDirectInput());
 
     std::string fullScreenMode = EmulatorSettings.GetFullScreenMode();
     QString translatedText_FullscreenMode =
@@ -1059,6 +1097,14 @@ void SettingsDialog::updateNoteTextEdit(const QString& elementName) {
         text = tr("PS4 Fonts Path:\\nThe folder where PS4 system fonts are loaded from.");
     } else if (elementName == "browse_fonts") {
         text = tr("Browse:\\nBrowse for a folder to set as the fonts path.");
+    } else if (elementName == "imeDirectInputCheckBox") {
+        text = tr("Direct Input:\nType directly using a PC keyboard. Games can disable external keyboard input.");
+    } else if (elementName == "imeTextInputGroupBox" || elementName == "imeInputLanguagesButton") {
+        text = tr("Text Input Languages:\nSelect the keyboards available for text entry. Games can restrict these languages or request a different set.");
+    } else if (elementName == "imeDictionariesGroupBox" || elementName == "imeDictionariesPath") {
+        text = tr("PS4 IME Dictionaries Path:\\nThe folder containing the console IME dictionaries. Select preinst/priv/ime/dic from your console dump.");
+    } else if (elementName == "browse_ime_dictionaries") {
+        text = tr("Browse:\\nBrowse for a folder to set as the IME dictionaries path.");
     }
 
     // DLC Folder
@@ -1216,6 +1262,10 @@ void SettingsDialog::UpdateSettings(bool is_specific) {
     }
 
     // Input tab
+    if (!is_specific) {
+        EmulatorSettings.SetImeInputLanguages(ime_input_languages);
+    }
+    EmulatorSettings.SetImeDirectInput(ui->imeDirectInputCheckBox->isChecked(), is_specific);
     EmulatorSettings.SetMotionControlsEnabled(ui->motionControlsCheckBox->isChecked(), is_specific);
     EmulatorSettings.SetBackgroundControllerInput(ui->backgroundControllerCheckBox->isChecked(),
                                                   is_specific);
@@ -1557,4 +1607,8 @@ void SettingsDialog::GetPhysicalDevices() {
     std::string gpuName = GetAppleGpuName();
     m_physical_devices.push_back(QString::fromStdString(gpuName));
 #endif
+}
+
+void SettingsDialog::UpdateImeInputLanguagesSummary() {
+    ui->imeInputLanguagesSummary->setText(ImeInputLanguagesSummary(ime_input_languages));
 }

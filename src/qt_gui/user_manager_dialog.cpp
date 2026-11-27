@@ -7,6 +7,7 @@
 #include <core/user_settings.h>
 #include "core/emulator_settings.h"
 #include "gui_settings.h"
+#include "ime_input_languages.h"
 #include "table_item_delegate.h"
 #include "user_manager_dialog.h"
 
@@ -446,6 +447,7 @@ void UserManagerDialog::ShowContextMenu(const QPoint& pos) {
     QAction* color_act = context_menu->addAction(tr("&Set Color"));
     QAction* port_act = context_menu->addAction(tr("&Set Controller Port"));
     QAction* shadnet_act = context_menu->addAction(tr("Shad&Net Settings..."));
+    QAction* input_languages_act = context_menu->addAction(tr("Text Input Languages..."));
     QAction* show_dir_act = context_menu->addAction(tr("&Open User Directory"));
 
     bool enabled = key != m_active_user; // don't allow removing or setting default on active user
@@ -461,6 +463,9 @@ void UserManagerDialog::ShowContextMenu(const QPoint& pos) {
     connect(port_act, &QAction::triggered, this, &UserManagerDialog::OnUserSetControllerPort);
     connect(shadnet_act, &QAction::triggered, this, &UserManagerDialog::OnUserEditShadNet);
 
+    connect(input_languages_act, &QAction::triggered, this,
+            &UserManagerDialog::OnUserInputLanguages);
+
     connect(show_dir_act, &QAction::triggered, this, [this, key]() {
         QString userDirPath;
         Common::FS::PathToQString(userDirPath, EmulatorSettings.GetHomeDir() / std::to_string(key));
@@ -468,4 +473,22 @@ void UserManagerDialog::ShowContextMenu(const QPoint& pos) {
     });
 
     context_menu->exec(m_table->viewport()->mapToGlobal(pos));
+}
+
+void UserManagerDialog::OnUserInputLanguages() {
+    auto* user = UserManagement.GetUserByID(GetUserKey());
+    if (!user) {
+        return;
+    }
+    auto selected = user->ime_input_languages;
+    auto defaults = EmulatorSettings.GetImeInputLanguages();
+    if (defaults.empty()) {
+        defaults = {1, EmulatorSettings.GetConsoleLanguage()};
+    }
+    if (EditImeInputLanguages(
+            this, selected, defaults, tr("Use default input languages"),
+            tr("Text Input Languages - %1").arg(QString::fromStdString(user->user_name)))) {
+        user->ime_input_languages = std::move(selected);
+        UserManagement.Save();
+    }
 }

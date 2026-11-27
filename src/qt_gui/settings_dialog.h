@@ -5,6 +5,7 @@
 
 #include <memory>
 #include <span>
+#include <vector>
 #include <QDialog>
 #include <QGroupBox>
 #include <QPushButton>
@@ -52,6 +53,7 @@ private:
     void GetPhysicalDevices();
     void SaveSettings();
     void RefreshAudioDevices();
+    void UpdateImeInputLanguagesSummary();
 
     void closeEvent(QCloseEvent* event) override;
 
@@ -59,6 +61,7 @@ private:
     QString defaultTextEdit;
     int initialHeight;
     std::string gs_serial;
+    std::vector<int> ime_input_languages;
     QFuture<void> Polling;
 
     bool is_game_running = false;

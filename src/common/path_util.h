@@ -33,6 +33,7 @@ enum class PathType {
     FontsDir,         // Where dumped system fonts are stored.
     TrophyDir,        // Where general trophy metadata is stored.
     HomeDir,          // PS4 home directory
+    ImeDictionaryDir,
 };
 
 constexpr auto PORTABLE_DIR = "user";
@@ -55,6 +56,7 @@ constexpr auto CUSTOM_CONFIGS = "custom_configs";
 constexpr auto VERSION_DIR = "versions";
 constexpr auto CACHE_DIR = "cache";
 constexpr auto FONTS_DIR = "fonts";
+constexpr auto IME_DICTIONARY_DIR = "ime/dic";
 constexpr auto HOME_DIR = "home";
 constexpr auto TROPHY_DIR = "trophy";
 

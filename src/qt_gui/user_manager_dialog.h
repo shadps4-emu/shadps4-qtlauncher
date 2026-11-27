@@ -26,6 +26,7 @@ private Q_SLOTS:
     void OnUserSetColor();
     void OnUserSetControllerPort();
     void OnUserEditShadNet();
+    void OnUserInputLanguages();
     void OnSort(int logicalIndex);
 
 private:
