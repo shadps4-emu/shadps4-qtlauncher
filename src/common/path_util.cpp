@@ -158,6 +158,7 @@ static auto UserPaths = [] {
     create_path(PathType::CustomConfigs, user_dir / CUSTOM_CONFIGS);
     create_path(PathType::CacheDir, user_dir / CACHE_DIR);
     create_path(PathType::FontsDir, user_dir / FONTS_DIR);
+    create_path(PathType::ImeDictionaryDir, user_dir / IME_DICTIONARY_DIR);
     create_path(PathType::HomeDir, user_dir / HOME_DIR);
     create_path(PathType::TrophyDir, user_dir / TROPHY_DIR);
 
