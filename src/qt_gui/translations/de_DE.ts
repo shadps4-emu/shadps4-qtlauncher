@@ -3193,11 +3193,11 @@ Hinweis: Der Sound funktioniert nur in Qt-Versionen.</translation>
     </message>
     <message>
       <source>Enable Shader Patches</source>
-      <translation type="unfinished">Enable Shader Patches</translation>
+      <translation>Shader Patches aktivieren</translation>
     </message>
     <message>
       <source>Enable Shader Patches:\nLoads replacement shaders (.spv) from the shader/patch folder of the user folder instead of the translated ones. Some game patches need this.</source>
-      <translation type="unfinished">Enable Shader Patches:\nLoads replacement shaders (.spv) from the shader/patch folder of the user folder instead of the translated ones. Some game patches need this.</translation>
+      <translation>Shader Patches aktivieren:\nLädt einen anderen Shader (.spv) als Ersatz aus dem Shader/Patch-Ordner des Benutzerordners anstelle der vom Emulator übersetzten Shader. Einige Spiel-Patches benötigen dies.</translation>
     </message>
   </context>
   <context>
